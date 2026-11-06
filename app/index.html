@@ -134,15 +134,16 @@ button{cursor:pointer}
 /* Découvrir */
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 13px;font-size:15px;font-weight:500;border:2px solid transparent;background:#fff}
-.chip[aria-pressed=true]{outline:3px solid var(--ink);outline-offset:1px}
-.chip.c-all{background:var(--ink);color:#fff}
-.chip.c-hist{background:#f4e4bf;border-color:#c9a45a}
-.chip.c-geo{background:var(--green);color:#fff;border-color:var(--green-d)}
-.chip.c-soc{background:#ddd4f7;border-color:#7a5fc4}
-.chip.c-sci{background:var(--navy);color:#fff;border-color:var(--navy-d)}
-.chip.c-art{background:#ead2f0;border-color:var(--purple)}
-.chip.c-pop{background:var(--orange);border-color:#c97b16}
-.chip.c-flt{background:var(--grey);padding:6px 10px}
+.chip{--c:var(--ink);--t:#fff;background:#fff;border-color:var(--c);color:var(--ink);transition:background .15s,color .15s,transform .1s}
+.chip:active{transform:scale(.96)}
+.chip[aria-pressed=true]{background:var(--c);color:var(--t);box-shadow:0 3px 0 rgba(23,20,15,.18)}
+.chip.c-hist{--c:#c9a45a;--t:#17140f}
+.chip.c-geo{--c:var(--green)}
+.chip.c-soc{--c:#7a5fc4}
+.chip.c-sci{--c:var(--navy)}
+.chip.c-art{--c:var(--purple)}
+.chip.c-pop{--c:var(--orange);--t:#17140f}
+.chip.c-flt{background:var(--grey);border-color:transparent;padding:6px 10px}
 .chip svg{width:20px;height:20px}
 .search{display:flex;align-items:center;gap:8px;border-radius:14px;background:#fff;padding:0 14px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .search input{border:0;outline:0;padding:12px 0;flex:1;background:transparent;min-width:0}
@@ -161,7 +162,7 @@ button{cursor:pointer}
 .pcard{background:var(--green);color:#fff;border-radius:22px;padding:18px 16px 16px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 18px rgba(23,20,15,.16)}
 .pcard .top{display:flex;gap:14px;align-items:center}
 .avbtn{flex:0 0 112px;height:112px;border-radius:50%;border:3px solid var(--ink);background:#fff;padding:0;overflow:hidden;position:relative}
-.avbtn img{width:100%;height:100%;object-fit:cover;display:block}
+.avbtn img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}
 .avbtn span{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:10.5px;font-weight:700;border-radius:999px;padding:1px 7px;white-space:nowrap}
 .pcard .who{display:flex;flex-direction:column;gap:7px;min-width:0}
 .pcard .nm{font-family:var(--f-serif);font-weight:800;font-size:28px;line-height:1}
@@ -275,8 +276,11 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .seg{display:flex;background:var(--grey);border-radius:999px;padding:3px}
 .seg button{flex:1;border:0;background:none;padding:8px;font-weight:700;font-size:14px;border-radius:999px}
 .seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.qrbox{display:flex;gap:18px;align-items:center}
+.qrbox img{flex:0 0 auto;border-radius:16px;border:3px solid var(--ink);background:#fffaf0}
+.qrbox .steps{flex:1;margin:0}
 .guide{display:flex;gap:12px;align-items:center}
-.guide img{width:76px;height:76px;border-radius:50%;border:3px solid var(--ink);flex:0 0 auto}
+.guide img{width:76px;height:76px;border-radius:50%;border:3px solid var(--ink);flex:0 0 auto;object-fit:cover;object-position:50% 45%}
 .guide p{background:#fff;border-radius:16px;padding:10px 12px;font-size:15px;flex:1}
 .bounce{display:inline-block;animation:b 1s ease-in-out infinite}
 @keyframes b{50%{transform:translateY(5px)}}
@@ -300,6 +304,11 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .day.sel .wd{color:#ccc}
 .day.lock{background:var(--grey);color:#a49f97;box-shadow:none}
 .day .lk{width:13px;height:13px}
+.hnav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hnav select{font:inherit;font-weight:700;font-size:16px;border:2px solid var(--ink);border-radius:12px;background:#fff;padding:6px 10px;color:var(--ink)}
+.iconbtn.sm{width:38px;height:38px}
+.iconbtn:disabled{opacity:.3}
+.hnav .btn{margin-left:auto}
 .month{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
 .month .wh{font-size:11px;font-weight:700;color:var(--muted);text-align:center;text-transform:uppercase}
 .month button{aspect-ratio:1;border:0;border-radius:11px;background:#fff;font-weight:700;font-variant-numeric:tabular-nums;position:relative;padding:0;font-size:14px}
@@ -310,7 +319,7 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .legend{display:flex;gap:14px;font-size:12.5px;color:var(--muted);flex-wrap:wrap}
 .avgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 10px}
 .avgrid button{border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:12.5px;font-weight:700;line-height:1.15;text-align:center}
-.avgrid img{width:86px;height:86px;border-radius:50%;display:block}
+.avgrid img{width:86px;height:86px;border-radius:50%;display:block;object-fit:cover;object-position:50% 45%;border:2.5px solid var(--ink);background:#fff}
 .avgrid button[aria-pressed=true] img{box-shadow:0 0 0 4px var(--cream),0 0 0 7px var(--ink)}
 .tierlist{display:flex;flex-direction:column;gap:8px}
 .tierlist div{background:#fff;border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:3px}
@@ -480,6 +489,8 @@ const POLES = [
   {id:"art", em:"🎨", name:"Art & Culture", color:"#8a55b8", themes:["Histoire de l’art","Arts plastiques","Architecture","Littérature","Expression française"]},
   {id:"pop", em:"🎮", name:"Culture pop", color:"#f2a33a", themes:["Musique","Mode et luxe","Sports","Jeux vidéo"]}
 ];
+const avSrc = i => `assets/avatars/av${i}.webp`;
+function avFix(img, i) { img.onerror = null; img.src = `assets/avatars/av${i}.png`; }
 const poleOf = th => POLES.find(p => p.themes.includes(th));
 
 /* ---------- Stockage local ---------- */
@@ -597,25 +608,67 @@ async function selectDate(date) {
   try { CUR = await loadEdition(date); } catch (e) { toast("Édition indisponible hors ligne"); return; }
   closeSheet(); setTab("home");
 }
+let HM = null; // mois affiché dans l'historique : [année, mois]
 function openHistory() {
   const dates = new Set(INDEX.map(e => e.date));
+  const [ty, tm] = TODAY.split("-").map(Number);
+  if (!HM) { const c = (CUR ? CUR.date : TODAY).split("-").map(Number); HM = [c[0], c[1]]; }
   let days = "";
   for (let o = -14; o <= 0; o++) {
     const iso = shift(TODAY, o), has = dates.has(iso), dd = new Date(iso + "T12:00:00Z");
     days += `<button class="day ${CUR && iso === CUR.date ? "sel" : ""} ${has ? (ME.visited.includes(iso) ? "done" : "") : "lock"}" data-d="${iso}" ${has ? "" : "disabled"} aria-label="${fmtLong(iso)}${has ? "" : ", pas d’édition"}"><span class="wd">${dd.toLocaleDateString("fr-FR", { weekday: "short", timeZone: "UTC" }).replace(".", "")}</span><span class="dn">${dd.getUTCDate()}</span><span class="dot"></span></button>`;
   }
-  const [y, m] = TODAY.split("-").map(Number), first = new Date(Date.UTC(y, m - 1, 1)), lead = (first.getUTCDay() + 6) % 7, dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
-  let cells = ["lun", "mar", "mer", "jeu", "ven", "sam", "dim"].map(w => `<span class="wh">${w}</span>`).join("") + "<span></span>".repeat(lead);
-  for (let d = 1; d <= dim; d++) {
-    const iso = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`, has = dates.has(iso);
-    cells += `<button class="${iso > TODAY ? "fut" : has ? "" : "lock"} ${has && ME.visited.includes(iso) ? "done" : ""} ${CUR && iso === CUR.date ? "sel" : ""}" data-d="${iso}" ${has ? "" : "disabled"}>${d}</button>`;
-  }
+  const oldest = INDEX.length ? INDEX.map(e => e.date).sort()[0] : TODAY;
+  const y0 = Math.min(+oldest.slice(0, 4), ty - 5);
+  const years = []; for (let y = ty; y >= y0; y--) years.push(y);
+  const MONTHS = Array.from({ length: 12 }, (_, i) => cap1(new Date(Date.UTC(2000, i, 1)).toLocaleDateString("fr-FR", { month: "long", timeZone: "UTC" })));
+  const draw = () => {
+    const [y, m] = HM, first = new Date(Date.UTC(y, m - 1, 1)), lead = (first.getUTCDay() + 6) % 7, dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    let cells = ["lun", "mar", "mer", "jeu", "ven", "sam", "dim"].map(w => `<span class="wh">${w}</span>`).join("") + "<span></span>".repeat(lead), n = 0;
+    for (let d = 1; d <= dim; d++) {
+      const iso = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`, has = dates.has(iso); if (has) n++;
+      cells += `<button class="${iso > TODAY ? "fut" : has ? "" : "lock"} ${has && ME.visited.includes(iso) ? "done" : ""} ${CUR && iso === CUR.date ? "sel" : ""}" data-d="${iso}" ${has ? "" : "disabled"}>${d}</button>`;
+    }
+    $("#hMonth").innerHTML = cells;
+    $("#hM").value = m; $("#hY").value = y;
+    $("#hPrev").disabled = y <= y0 && m === 1;
+    $("#hNext").disabled = y > ty || (y === ty && m >= tm);
+    $("#hEmpty").hidden = n > 0;
+    $("#hMonth").querySelectorAll("[data-d]:not([disabled])").forEach(b => b.onclick = () => selectDate(b.dataset.d));
+  };
+  const move = k => { let [y, m] = HM; m += k; if (m < 1) { m = 12; y--; } if (m > 12) { m = 1; y++; } if (y > ty || (y === ty && m > tm)) [y, m] = [ty, tm]; if (y < y0) [y, m] = [y0, 1]; HM = [y, m]; draw(); };
   openSheet(`<h3>Historique</h3><div class="dates" id="hDates">${days}</div>
-    <h4 style="margin:0;font-size:16px">${cap1(first.toLocaleDateString("fr-FR", { month: "long", year: "numeric", timeZone: "UTC" }))}</h4>
-    <div class="month">${cells}</div>
+    <div class="hnav"><button class="iconbtn sm" id="hPrev" aria-label="Mois précédent"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <select id="hM" aria-label="Mois">${MONTHS.map((n, i) => `<option value="${i + 1}">${n}</option>`).join("")}</select>
+      <select id="hY" aria-label="Année">${years.map(y => `<option>${y}</option>`).join("")}</select>
+      <button class="iconbtn sm" id="hNext" aria-label="Mois suivant"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2.6"><path d="M9 5l7 7-7 7"/></svg></button>
+      <button class="btn ghost sm" id="hToday">Aujourd’hui</button></div>
+    <div class="month" id="hMonth"></div>
+    <p class="sub" id="hEmpty" hidden>Aucune édition ce mois-ci. Le Sachoir n’était pas encore né, ou il dormait.</p>
     <div class="legend"><span><b style="color:var(--green)">●</b> Édition lue</span><span>Grisé : pas d’édition</span></div>`);
+  draw();
+  $("#hPrev").onclick = () => move(-1); $("#hNext").onclick = () => move(1);
+  $("#hToday").onclick = () => { HM = [ty, tm]; draw(); };
+  $("#hM").onchange = e => { HM = [HM[0], +e.target.value]; move(0); };
+  $("#hY").onchange = e => { HM = [+e.target.value, HM[1]]; move(0); };
   const sc = $("#hDates"); sc.scrollLeft = sc.scrollWidth;
-  $("#sheet").querySelectorAll("[data-d]:not([disabled])").forEach(b => b.onclick = () => selectDate(b.dataset.d));
+  sc.querySelectorAll("[data-d]:not([disabled])").forEach(b => b.onclick = () => selectDate(b.dataset.d));
+  let x0 = null; const mo = $("#hMonth");
+  mo.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
+  mo.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) move(dx < 0 ? 1 : -1); });
+}
+
+function openInstallQR() {
+  openSheet(`<h3>Le Sachoir se lit dans la poche</h3>
+   <div class="qrbox"><img src="assets/qr-install.png" alt="QR code pour ouvrir Le Sachoir sur votre téléphone" width="222" height="222">
+    <ol class="steps"><li><span class="n">1</span><span><strong>Visez ce code avec l’appareil photo de votre téléphone.</strong><small>Comme pour un menu de restaurant. Vous savez faire.</small></span></li>
+    <li><span class="n">2</span><span><strong>Ouvrez le lien proposé.</strong><small>Le guide d’installation s’affiche tout seul.</small></span></li>
+    <li><span class="n">3</span><span><strong>Suivez les 3 gestes.</strong><small>Et l’édition vous attend chaque matin à 5 h.</small></span></li></ol></div>
+   <div class="guide"><img src="${avSrc(11)}" onerror="avFix(this,11)" alt=""><p><strong>Ulysse, le touriste perdu.</strong> Dix ans pour rentrer à Ithaque. Vous, trois secondes avec ce code.</p></div>
+   ${deferredPrompt ? `<button class="btn ghost sm" id="inNative">Ou l’installer sur cet ordinateur</button>` : ""}
+   <button class="cta" id="inDone">C’est fait !</button>`);
+  const nb = $("#inNative"); if (nb) nb.onclick = async () => { deferredPrompt.prompt(); const r = await deferredPrompt.userChoice; deferredPrompt = null; if (r.outcome === "accepted") { closeSheet(); toast("Installée sur cet ordinateur."); } };
+  $("#inDone").onclick = () => { ME.installDone = true; save(); closeSheet(); toast("Rendez-vous demain à 5 h."); render(); };
 }
 
 /* ---------- Lecteur ---------- */
@@ -749,6 +802,7 @@ function openStory(ed, f) {
 let deferredPrompt = null;
 window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredPrompt = e; });
 function openInstall() {
+  if (DESK.matches && !matchMedia("(display-mode: standalone)").matches) return openInstallQR();
   let os = /iPhone|iPad|iPod/i.test(navigator.userAgent) ? "ios" : "android";
   const ST = {
     ios: [["Touchez l’icône Partager en bas de Safari.", "Le carré avec une flèche vers le haut. Respirez, vous allez y arriver."], ["Faites défiler et touchez « Sur l’écran d’accueil ».", "Oui, il faut descendre un peu. Premier effort de la journée."], ["Touchez « Ajouter » en haut à droite.", "Voilà. Votre mère serait fière."]],
@@ -756,7 +810,7 @@ function openInstall() {
   };
   const draw = () => { $("#inSteps").innerHTML = ST[os].map((s, i) => `<li><span class="n">${i + 1}</span><span><strong>${s[0]}</strong><small>${s[1]}</small></span></li>`).join(""); $("#sheet").querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.os === os)); };
   openSheet(`<h3>Installez Le Sachoir en 3 gestes</h3>
-   <div class="guide"><img src="assets/avatars/av11.png" alt=""><p><strong>Ulysse, le touriste perdu.</strong> Même moi, j’ai trouvé le chemin. Je vous tiens la main.</p></div>
+   <div class="guide"><img src="${avSrc(11)}" onerror="avFix(this,11)" alt=""><p><strong>Ulysse, le touriste perdu.</strong> Même moi, j’ai trouvé le chemin. Je vous tiens la main.</p></div>
    ${deferredPrompt ? `<button class="cta" id="inNative">Installer maintenant</button>` : ""}
    <div class="seg" role="group" aria-label="Votre téléphone"><button data-os="ios">iPhone</button><button data-os="android">Android</button></div>
    <ol class="steps" id="inSteps"></ol>
@@ -777,7 +831,7 @@ function openTiers(type) {
 }
 function openAvatars() {
   openSheet(`<h3>Choisissez votre avatar (pour entrer dans la légende, ou presque)</h3>
-   <div class="avgrid">${AVATARS.map((a, i) => `<button data-a="${i}" aria-pressed="${ME.avatar === i}"><img src="assets/avatars/av${i}.png" alt="" loading="lazy">${a}</button>`).join("")}</div>`);
+   <div class="avgrid">${AVATARS.map((a, i) => `<button data-a="${i}" aria-pressed="${ME.avatar === i}"><img src="${avSrc(i)}" onerror="avFix(this,${i})" alt="" loading="lazy">${a}</button>`).join("")}</div>`);
   $("#sheet").querySelectorAll("[data-a]").forEach(b => b.onclick = () => { ME.avatar = +b.dataset.a; save(); closeSheet(); renderProfile(); toast(`Vous êtes désormais ${AVATARS[ME.avatar]}`); });
 }
 function openName() {
@@ -838,7 +892,7 @@ function renderProfile() {
   const v = $("#v-profile"), s = streak(), st = tierOf(SERIE, SERIE_ZERO, s), et = tierOf(ERUDITION, ERU_ZERO, ME.dossiers.length);
   const I = (bg, fg, path) => `<span class="ico" style="background:${bg};color:${fg}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${path}</svg></span>`;
   v.innerHTML = `<div class="row"><h1 class="h1">Mon Profil</h1><button class="iconbtn" id="prName" aria-label="Changer de prénom"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></button></div>
-   <div class="pcard"><div class="top"><button class="avbtn" id="prAv" aria-label="Changer d’avatar"><img src="assets/avatars/av${ME.avatar}.png" alt=""><span>Changer</span></button>
+   <div class="pcard"><div class="top"><button class="avbtn" id="prAv" aria-label="Changer d’avatar"><img src="${avSrc(ME.avatar)}" onerror="avFix(this,${ME.avatar})" alt=""><span>Changer</span></button>
      <div class="who"><span class="nm">${ME.name ? esc(ME.name) : "Lecteur"}</span><span class="lvl">${esc(AVATARS[ME.avatar])}</span><span class="tiers">${esc(phraseOf("eru"))}</span></div></div>
      <p class="quote">${esc(phraseOf("serie"))}</p></div>
    <div class="tiles"><button class="tile s" id="tS"><b>🔥 ${s} Jour${s > 1 ? "s" : ""}</b><span>De présence consécutive</span><small>${st.name}</small></button>
@@ -868,6 +922,7 @@ if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catc
       const wanted = new URLSearchParams(location.search).get("d");
       CUR = await loadEdition(wanted && INDEX.some(e => e.date === wanted) ? wanted : INDEX[0].date);
     }
+    if (new URLSearchParams(location.search).has("install") && !matchMedia("(display-mode: standalone)").matches) setTimeout(openInstall, 600);
     const fid = new URLSearchParams(location.search).get("f");
     if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); openReader(CUR, fid); return; }
   } catch (e) { if (!navigator.onLine) $("#offline").classList.add("on"); }
