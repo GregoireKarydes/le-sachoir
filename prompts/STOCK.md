@@ -1,6 +1,6 @@
 # Tâche quotidienne : le stock (Culture G, Insolite, Grand Dossier)
 
-Objectif : qu'il y ait toujours **7 jours d'avance** de `cultureg`, `insolite` et `dossier` dans `editions/`.
+Objectif : qu'il y ait toujours **7 jours d'avance** de `cultureg`, `insolite`, `dossier` et `quiz` dans `editions/`.
 Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 
 ## Étapes
@@ -21,6 +21,7 @@ Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 5. **Fact-check** en seconde passe. Retirer tout ce qui n'est pas sourcé.
 6. Écrire dans `editions/<date>/edition.json` (créer avec `"status": "draft"` si besoin, sans toucher aux autres formats). Valider le JSON.
 7. Commit « Stock <date> : <format> », `git push`.
+8. **Le Quiz du jour** : à chaque passage, écrire aussi le `quiz` de **toutes** les dates de demain à J+7 qui n'en ont pas (il n'a pas d'image : il ne compte pas dans la limite de 2 formats). Suivre les règles du quiz de `prompts/SCHEMA.md` ; vérifier chaque réponse par recherche web ; commit « Stock <date> : quiz ».
 
 ## Les 32 thématiques, par pôle
 - **Histoire** : Histoire ancienne, Histoire moderne, Histoire de France, Grandes personnalités, Mythologies et religions

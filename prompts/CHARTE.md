@@ -47,6 +47,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé, avec une touche d'humour |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, gag à chaque étape |
 | Grand Dossier (`dossier`) | 4 à 6 min | 30 à 45 | Humour dosé : la compréhension d'abord |
+| Quiz du jour (`quiz`) | 1 à 2 min | 5 questions, sans image | Mauvaises réponses drôles mais plausibles, explication courte et drôle |
 | Carte « Pour briller » (`final`) | — | 1 | Aucun humour : 25 mots max, exacte |
 
 - Le récitatif (`caption`) porte les faits. Toute énormité qui ressemble à un fait est démentie dans la même case ou la suivante. Les anachronismes sont des blagues évidentes.

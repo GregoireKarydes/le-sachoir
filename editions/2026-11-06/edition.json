@@ -780,6 +780,117 @@
         "source": "Récits rapportés notamment par Floyd Miller (1976). Les détails varient selon les sources."
       },
       "sources": []
+    },
+    {
+      "id": "quiz",
+      "label": "Le Quiz du jour",
+      "title": "Cinq questions, zéro pression (ou presque)",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "theme": "Grandes découvertes",
+          "q": "Le Post-it est né d’un « échec ». Lequel ?",
+          "choices": [
+            "Un papier trop fin pour l’imprimante",
+            "Un ruban adhésif qui refusait de se dérouler",
+            "Une colle trop faible pour coller vraiment",
+            "Un bloc-notes vendu sans stylo"
+          ],
+          "answer": 2,
+          "explain": "En 1968, Spencer Silver, chimiste chez 3M, invente une colle qui colle… à peine. Six ans plus tard, son collègue Art Fry s’en sert pour marquer les pages de son livre de chants. Un échec très réussi.",
+          "source": {
+            "title": "Wikipédia — Post-it",
+            "url": "https://fr.wikipedia.org/wiki/Post-it"
+          }
+        },
+        {
+          "theme": "Histoire de France",
+          "q": "Combien de temps a duré la guerre de Cent Ans ?",
+          "choices": [
+            "100 ans pile, c’est dans le nom",
+            "116 ans",
+            "87 ans, mais on a arrondi",
+            "Une semaine, très mal organisée"
+          ],
+          "answer": 1,
+          "explain": "De 1337 à 1453 : 116 ans, avec de longues trêves. Le nom a été donné au XIXe siècle par des historiens qui aimaient visiblement les chiffres ronds.",
+          "source": {
+            "title": "Wikipédia — Guerre de Cent Ans",
+            "url": "https://fr.wikipedia.org/wiki/Guerre_de_Cent_Ans"
+          }
+        },
+        {
+          "theme": "Expression française",
+          "q": "D’où vient le verbe « baragouiner » ?",
+          "choices": [
+            "Du breton bara (pain) et gwin (vin)",
+            "D’un baron gascon qui parlait la bouche pleine",
+            "D’un perroquet célèbre de la cour de Louis XIV",
+            "D’une marque de chewing-gum des années 1920"
+          ],
+          "answer": 0,
+          "explain": "L’explication la plus courante : des Bretons qui ne parlaient pas français réclamaient « bara » et « gwin », du pain et du vin. Les autres n’y comprenaient rien. Le mot est resté.",
+          "source": {
+            "title": "CNRTL — Étymologie de baragouiner",
+            "url": "https://www.cnrtl.fr/etymologie/baragouiner"
+          }
+        },
+        {
+          "theme": "Sciences physiques",
+          "q": "Quel est le seul métal liquide à 20 °C ?",
+          "choices": [
+            "L’or, quand on est très riche",
+            "Le mercure",
+            "L’aluminium des canettes tièdes",
+            "Le plomb, un lundi matin"
+          ],
+          "answer": 1,
+          "explain": "Le mercure fond à −39 °C. Le gallium, lui, fond vers 30 °C : il fond littéralement dans la main. Mais à 20 °C, seul le mercure coule.",
+          "source": {
+            "title": "Wikipédia — Mercure (chimie)",
+            "url": "https://fr.wikipedia.org/wiki/Mercure_(chimie)"
+          }
+        },
+        {
+          "theme": "L’univers",
+          "q": "Combien de temps met la lumière du Soleil pour arriver jusqu’à la Terre ?",
+          "choices": [
+            "Instantanément, c’est de la lumière",
+            "Environ 8 heures",
+            "Ça dépend de la météo",
+            "Environ 8 minutes"
+          ],
+          "answer": 3,
+          "explain": "Environ 8 minutes et 20 secondes. Le Soleil que vous voyez a donc toujours un léger retard, comme un collègue en visio.",
+          "source": {
+            "title": "Wikipédia — Unité astronomique",
+            "url": "https://fr.wikipedia.org/wiki/Unit%C3%A9_astronomique"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipédia — Post-it",
+          "url": "https://fr.wikipedia.org/wiki/Post-it"
+        },
+        {
+          "title": "Wikipédia — Guerre de Cent Ans",
+          "url": "https://fr.wikipedia.org/wiki/Guerre_de_Cent_Ans"
+        },
+        {
+          "title": "CNRTL — Étymologie de baragouiner",
+          "url": "https://www.cnrtl.fr/etymologie/baragouiner"
+        },
+        {
+          "title": "Wikipédia — Mercure (chimie)",
+          "url": "https://fr.wikipedia.org/wiki/Mercure_(chimie)"
+        },
+        {
+          "title": "Wikipédia — Unité astronomique",
+          "url": "https://fr.wikipedia.org/wiki/Unit%C3%A9_astronomique"
+        }
+      ]
     }
   ]
 }

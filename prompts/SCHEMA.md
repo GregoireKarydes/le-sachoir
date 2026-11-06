@@ -47,6 +47,38 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`. Tout 
 }
 ```
 
+## Le Quiz du jour (`"id": "quiz"`, sans image)
+Le dessert de l'édition : 5 questions de culture générale **indépendantes des BD du jour**, 1 à 2 minutes. Aucune image, aucun casting.
+
+```json
+{
+  "id": "quiz",
+  "label": "Le Quiz du jour",
+  "title": "Cinq questions, zéro pression (ou presque)",   // titre drôle, différent chaque jour
+  "minutes": 1,
+  "theme": "",
+  "questions": [
+    {
+      "theme": "Grandes découvertes",                       // une des 32 thématiques
+      "q": "Le Post-it est né d’un « échec ». Lequel ?",     // 20 mots max
+      "choices": ["…", "…", "Une colle trop faible pour coller vraiment", "…"],  // 3 ou 4 réponses, 10 mots max chacune
+      "answer": 2,                                          // index de la bonne réponse (0 = la première)
+      "explain": "En 1968, Spencer Silver… Un échec très réussi.",  // 40 mots max : le fait + une touche d'humour
+      "source": { "title": "Wikipédia — Post-it", "url": "https://fr.wikipedia.org/wiki/Post-it" }
+    }
+  ],
+  "sources": [ /* les sources des 5 questions */ ]
+}
+```
+
+Règles du quiz :
+- 5 questions, 5 thématiques différentes (idéalement 4 ou 5 pôles différents), environ 3 sur 4 liées à la France.
+- Difficulté : 2 faciles, 2 moyennes, 1 difficile. Ordre libre.
+- Une seule bonne réponse, sans ambiguïté et sourcée. Les mauvaises réponses sont **drôles mais plausibles** (au moins une vraiment tentante par question).
+- Varier la position de la bonne réponse d'une question à l'autre.
+- L'explication apprend quelque chose de plus que la réponse, avec une touche d'humour ; si un fait est discuté, le dire (« l'explication la plus courante… »).
+- Aucun fait déjà utilisé dans `editions/` (BD ou quiz) ; pas de personne vivante sauf fait public sourcé ; rien sur les drames.
+
 ## Règles pour les prompts d'images (champ `image.prompt`)
 - En **anglais**, 40 à 90 mots. Décrire : le décor, chaque personnage par son nom de fiche + position (on the left / on the right / in the foreground), expression, geste, accessoires, cadrage (wide shot, medium shot, close-up, low angle…).
 - Le style et l'interdiction de texte sont ajoutés automatiquement par `pipeline/style.json` : ne pas les répéter.

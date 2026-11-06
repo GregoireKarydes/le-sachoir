@@ -215,7 +215,7 @@ def build(site: Path, index: list):
         published = ed.get("published_at", "")
         ready = {x["id"] for x in entry["formats"]}
         for fmt in ed.get("formats", []):
-            if fmt["id"] not in ready:
+            if fmt["id"] not in ready or fmt["id"] == "quiz":  # pas de page publique pour le quiz (elle donnerait les réponses)
                 continue
             slug = story_slug(date, fmt)
             cover = fmt.get("cover", {})

@@ -362,6 +362,54 @@ body{overscroll-behavior-y:none}
 .seo-links a{display:block;padding:4px 0}
 
 
+
+/* ---------- Le Quiz du jour ---------- */
+.quizcard{background:var(--navy-d);color:#fff;flex-direction:row;align-items:center;gap:14px;padding:16px 18px}
+.quizcard .qc-ic{flex:0 0 58px;height:58px;border-radius:16px;background:var(--yellow);color:var(--ink);display:grid;place-items:center;font-family:var(--f-serif);font-weight:800;font-size:30px;transform:rotate(-6deg);box-shadow:3px 3px 0 rgba(0,0,0,.35)}
+.quizcard .qc-tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
+.quizcard .tag{background:rgba(255,255,255,.16);color:#fff;align-self:flex-start}
+.quizcard h3{font-size:22px}
+.quizcard .qc-st{font-size:13.5px;opacity:.9}
+.quizcard .qc-go{flex:0 0 auto;background:var(--yellow);color:var(--ink);border-radius:999px;padding:9px 15px;font-weight:700;font-size:15px}
+.quiz{position:absolute;inset:0;z-index:35;background:var(--navy-d);display:none;overflow-y:auto;color:#fff}
+.quiz.on{display:block}
+.qz-in{min-height:100%;max-width:620px;margin:0 auto;padding:14px 18px calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:16px}
+.qz-top{display:flex;align-items:center;gap:12px}
+.qz-dots{flex:1;display:flex;gap:5px}
+.qz-dots i{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.22)}
+.qz-dots i.ok{background:#3fcf8e}.qz-dots i.ko{background:#ff5d5d}.qz-dots i.cur{background:var(--yellow)}
+.qz-x{width:38px;height:38px;border-radius:50%;border:0;background:#fff;display:grid;place-items:center;padding:0;flex:0 0 auto}
+.qz-x svg{width:18px;height:18px}
+.qz-meta{display:flex;gap:8px;align-items:center;font-size:13px;font-weight:700;opacity:.85}
+.qz-meta .th{background:rgba(255,255,255,.14);border-radius:999px;padding:3px 10px}
+.qz-q{font-family:var(--f-serif);font-weight:800;font-size:27px;line-height:1.12;margin:4px 0 2px;text-wrap:balance}
+.qz-ch{display:flex;flex-direction:column;gap:10px}
+.qz-ch button{display:flex;gap:12px;align-items:center;text-align:left;border:3px solid var(--ink);background:var(--cream);color:var(--ink);border-radius:16px;padding:13px 14px;font-size:16.5px;font-weight:500;box-shadow:4px 4px 0 rgba(0,0,0,.45);transition:transform .1s}
+.qz-ch button:not(:disabled):active{transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(0,0,0,.45)}
+.qz-ch button b{flex:0 0 30px;height:30px;border-radius:50%;background:var(--ink);color:var(--yellow);display:grid;place-items:center;font-size:14px}
+.qz-ch button.ok{background:#d6f5e6;border-color:#14704a}.qz-ch button.ok b{background:#14704a;color:#fff}
+.qz-ch button.ko{background:#ffe0dd;border-color:#b3261e;animation:qzshake .35s}.qz-ch button.ko b{background:#b3261e;color:#fff}
+.qz-ch button:disabled{cursor:default}
+.qz-ch button.dim{opacity:.55}
+@keyframes qzshake{20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
+.qz-ex{background:#fff;color:var(--ink);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;animation:qzin .25s ease-out}
+.qz-ex strong{font-family:var(--f-serif);font-weight:800;font-size:20px}
+.qz-ex p{margin:0;font-size:15.5px;line-height:1.45}
+.qz-ex a{font-size:12.5px;color:var(--muted)}
+@keyframes qzin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.qz-next{margin-top:auto}
+.qz-res{text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:10px}
+.qz-score{font-family:var(--f-serif);font-weight:800;font-size:76px;line-height:1;color:var(--yellow)}
+.qz-score small{font-size:34px;color:#fff;opacity:.8}
+.qz-verdict{font-family:var(--f-serif);font-weight:800;font-size:24px;line-height:1.15;max-width:22ch;text-wrap:balance;margin:0}
+.qz-grid{font-size:26px;letter-spacing:3px}
+.qz-btns{display:flex;flex-direction:column;gap:10px;width:100%;max-width:380px}
+.qz-btns .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}
+.qz-rev{width:100%;display:flex;flex-direction:column;gap:10px;text-align:left}
+.qz-rev[hidden]{display:none}
+.qz-rev div{background:rgba(255,255,255,.08);border-radius:14px;padding:12px 14px;font-size:14.5px;line-height:1.4}
+.qz-rev b{display:block;font-family:var(--f-serif);font-size:17px;margin-bottom:4px}
+.qz-rev em{font-style:normal;color:#9be7c2;font-weight:700}
 /* ---------- Page de présentation (PC) ---------- */
 #v-about{gap:0;padding-top:0}
 .ab-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding:40px 0 56px}
@@ -596,6 +644,8 @@ body{overscroll-behavior-y:none}
     <button class="nav-arrow next" id="rNext" aria-label="Case suivante"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 
+  <div class="quiz" id="quiz" role="dialog" aria-modal="true" aria-label="Le Quiz du jour"><div class="qz-in" id="qzIn"></div></div>
+
   <div class="scrim" id="scrim"><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div class="offline" id="offline">Hors ligne : édition enregistrée</div>
@@ -606,10 +656,10 @@ body{overscroll-behavior-y:none}
 /* =========================================================
    Le Sachoir — appli PWA (V1 gratuite, données locales)
    ========================================================= */
-const ORDER = ["dossier", "actu", "cultureg", "insolite"];
+const ORDER = ["dossier", "actu", "cultureg", "insolite", "quiz"];
 const DESK = matchMedia("(min-width: 900px)");
-const CLS = { dossier: "green", actu: "navy", cultureg: "orange", insolite: "red" };
-const COLOR = { dossier: "#1f8f5f", actu: "#2f4fa2", cultureg: "#f2a33a", insolite: "#d9473a" };
+const CLS = { dossier: "green", actu: "navy", cultureg: "orange", insolite: "red", quiz: "navy-d" };
+const COLOR = { dossier: "#1f8f5f", actu: "#2f4fa2", cultureg: "#f2a33a", insolite: "#d9473a", quiz: "#14275c" };
 
 const SERIE = [
   {name:"Le Débutant", min:1, max:2, items:["A ouvert l’appli par erreur. Reste pour la gloire.","Premier jour de lucidité. On y croit (un peu).","A décidé d’être moins bête aujourd’hui. Demain est un autre jour.","Motivation intacte (pour les 5 prochaines minutes).","En période d’essai intellectuel. Ne rien signer pour l’instant."]},
@@ -643,7 +693,7 @@ const themeName = th => { for (const p of POLES) { const x = p.themes.find(x => 
 
 /* ---------- Stockage local ---------- */
 const KEY = "sachoir.v1";
-const DEF = { visited: [], dossiers: [], reads: [], favs: [], name: "", installDone: false };
+const DEF = { visited: [], dossiers: [], reads: [], favs: [], quiz: {}, name: "", installDone: false };
 let ME = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { return { ...DEF }; } })();
 ME.favs = (ME.favs || []).filter(x => x.type !== "card"); delete ME.storyColor; delete ME.storyWm;
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ME)); } catch (e) {} };
@@ -719,7 +769,7 @@ function renderAbout() {
   const v = $("#v-about");
   v.querySelectorAll("[data-go]").forEach(b => b.onclick = () => { const g = b.dataset.go; if (g === "install") openInstall(); else setTab(g); });
   const stories = [];
-  INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu") stories.push({ ...f, date: e.date }); }));
+  INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu" && f.id !== "quiz") stories.push({ ...f, date: e.date }); }));
   // Les vraies histoires du moment remplacent les exemples, une carte par format (le dossier d'abord).
   const cls = { dossier: "green", cultureg: "orange", insolite: "red" }, lbl = { dossier: "Le Grand Dossier", cultureg: "Culture G", insolite: "Insolite" };
   const cards = [...$("#abCovers .ab-fan").children];
@@ -769,8 +819,10 @@ function renderHome() {
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
    ${!isToday && CUR.date === INDEX[0]?.date ? `<p class="sub">L’édition d’aujourd’hui est encore sous le crayon. En attendant, voici la dernière.</p>` : ""}
    ${cardsHTML}
+   ${F.quiz ? quizCard(ed, F.quiz) : ""}
    <p class="daily">Chaque jour, une nouvelle édition. Votre culture G, elle, ne prend pas de congés.</p>`;
   v.querySelectorAll("[data-f]").forEach(b => b.onclick = () => openReader(ed, b.dataset.f));
+  v.querySelectorAll("[data-quiz]").forEach(b => b.onclick = () => openQuiz(ed));
   $("#hHist").onclick = openHistory;
 }
 
@@ -903,7 +955,7 @@ $("#track").addEventListener("scroll", () => { if (DESK.matches) return; clearTi
 function go(d) { const tr = $("#track"), i = Math.max(0, Math.min(R.n - 1, R.idx + d)); tr.scrollTo({ left: i * tr.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }
 $("#rPrev").onclick = () => go(-1); $("#rNext").onclick = () => go(1);
 $("#rClose").onclick = () => history.back();
-window.addEventListener("popstate", () => { if ($("#scrim").classList.contains("on")) closeSheet(); else if ($("#reader").classList.contains("on")) closeReader(); });
+window.addEventListener("popstate", () => { if ($("#scrim").classList.contains("on")) closeSheet(); else if ($("#quiz").classList.contains("on")) closeQuiz(); else if ($("#reader").classList.contains("on")) closeReader(); });
 $("#rShare").onclick = async () => {
   const f = R.f, url = new URL(f.url || `./?d=${R.ed.date}&f=${f.id}`, location.href).href;
   const data = { title: `${f.title} — Le Sachoir`, text: `${f.title} : à lire en BD sur Le Sachoir.`, url };
@@ -954,6 +1006,89 @@ $("#track").addEventListener("click", e => {
 function onAct(e) {
   const a = e.currentTarget.dataset.act;
   if (a === "back") history.back();
+}
+
+
+/* ---------- Le Quiz du jour (le dessert de l'édition) ---------- */
+const QZ_VERDICTS = [
+  "Au moins, vous avez de l’humilité. Revenez demain.",
+  "La culture, c’est ce qui reste quand on a tout raté. Il vous reste ça.",
+  "Vous avez appris trois choses. C’était le but, non ?",
+  "Honorable. Vous pouvez briller, mais avec un variateur.",
+  "Presque parfait. Le « presque » va vous hanter toute la journée.",
+  "Sans faute. Socrate vous demande votre numéro."
+];
+const QZ_OK = ["Bien vu !", "Exact !", "Bravo, cerveau !", "Dans le mille !", "Impeccable."];
+const QZ_KO = ["Raté !", "Presque…", "Aïe.", "Pas cette fois.", "Joli piège, hein ?"];
+let Q = null;
+const quizState = date => (ME.quiz || {})[date];
+function quizCard(ed, f) {
+  const st = quizState(ed.date), n = (f.questions || []).length || 5;
+  return `<button class="card quizcard" data-quiz="1"><span class="qc-ic">?</span><span class="qc-tx"><span class="tag">Le dessert</span><h3>${esc(f.title || "Le Quiz du jour")}</h3><span class="qc-st">${st ? `Votre score : ${st.s}/${st.a.length} · revoir les réponses` : `${n} questions · ${f.minutes || 1} min · pour finir en beauté`}</span></span><span class="qc-go">${st ? "Revoir" : "Jouer"}</span></button>`;
+}
+function openQuiz(ed) {
+  const f = ed.formats.find(x => x.id === "quiz"); if (!f || !(f.questions || []).length) return;
+  const st = quizState(ed.date);
+  Q = { ed, f, i: 0, a: st ? st.a.slice() : [], done: !!st };
+  $("#quiz").classList.add("on"); history.pushState({ quiz: true }, "");
+  Q.done ? quizResult() : quizQuestion();
+}
+function closeQuiz() { $("#quiz").classList.remove("on"); Q = null; render(); }
+function qzTop() {
+  const n = Q.f.questions.length;
+  let dots = ""; for (let k = 0; k < n; k++) { const a = Q.a[k]; dots += `<i class="${a === undefined ? (k === Q.i && !Q.done ? "cur" : "") : (a === Q.f.questions[k].answer ? "ok" : "ko")}"></i>`; }
+  return `<div class="qz-top"><div class="qz-dots" aria-hidden="true">${dots}</div><button class="qz-x" id="qzX" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>`;
+}
+function quizQuestion() {
+  const q = Q.f.questions[Q.i], n = Q.f.questions.length;
+  $("#qzIn").innerHTML = `${qzTop()}
+    <div class="qz-meta"><span>Question ${Q.i + 1} / ${n}</span>${q.theme ? `<span class="th">${esc(q.theme)}</span>` : ""}</div>
+    <h2 class="qz-q">${esc(q.q)}</h2>
+    <div class="qz-ch" role="group" aria-label="Réponses">${q.choices.map((c, k) => `<button data-k="${k}"><b>${"ABCD"[k]}</b><span>${esc(c)}</span></button>`).join("")}</div>
+    <div id="qzEx" aria-live="polite"></div>`;
+  $("#qzX").onclick = () => history.back();
+  $("#qzIn").querySelectorAll("[data-k]").forEach(b => b.onclick = () => quizAnswer(+b.dataset.k));
+  $("#quiz").scrollTop = 0;
+}
+function quizAnswer(k) {
+  const q = Q.f.questions[Q.i], good = k === q.answer, n = Q.f.questions.length;
+  Q.a[Q.i] = k; vibrate();
+  $("#qzIn").querySelectorAll("[data-k]").forEach(b => { const j = +b.dataset.k; b.disabled = true; if (j === q.answer) b.classList.add("ok"); else if (j === k) b.classList.add("ko"); else b.classList.add("dim"); });
+  $("#qzIn").querySelector(".qz-dots").outerHTML = qzTop().match(/<div class="qz-dots"[^]*?<\/div>/)[0];
+  const pick = arr => arr[Math.floor(Math.random() * arr.length)], src = q.source?.url && /^https?:\/\//.test(q.source.url) ? `<a href="${esc(q.source.url)}" target="_blank" rel="noopener nofollow">Source : ${esc(q.source.title || q.source.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a>` : "";
+  $("#qzEx").innerHTML = `<div class="qz-ex"><strong>${good ? pick(QZ_OK) : pick(QZ_KO)}</strong><p>${esc(q.explain || "")}</p>${src}</div>`;
+  const last = Q.i === n - 1;
+  $("#qzIn").insertAdjacentHTML("beforeend", `<button class="cta qz-next" id="qzNext">${last ? "Voir mon score" : "Question suivante →"}</button>`);
+  $("#qzNext").onclick = () => { if (last) quizFinish(); else { Q.i++; quizQuestion(); } };
+  $("#qzNext").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+function quizFinish() {
+  const s = Q.a.filter((a, k) => a === Q.f.questions[k].answer).length;
+  ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, s };
+  if (Q.ed.date === TODAY && !ME.visited.includes(TODAY)) { ME.visited.push(TODAY); const k = streak(); toast(`🔥 Série : ${k} jour${k > 1 ? "s" : ""}`); }
+  save(); Q.done = true; quizResult();
+}
+function quizGrid() { return Q.a.map((a, k) => a === Q.f.questions[k].answer ? "🟩" : "🟥").join(""); }
+function quizResult() {
+  const n = Q.f.questions.length, s = Q.a.filter((a, k) => a === Q.f.questions[k].answer).length;
+  const verdict = QZ_VERDICTS[Math.round(s / n * 5)];
+  $("#qzIn").innerHTML = `${qzTop()}
+    <div class="qz-res"><p class="qz-meta">Le Quiz du ${esc(fmtLong(Q.ed.date))}</p>
+      <div class="qz-score">${s}<small>/${n}</small></div>
+      <p class="qz-verdict">${esc(verdict)}</p>
+      <div class="qz-grid" aria-label="${s} bonnes réponses sur ${n}">${quizGrid()}</div>
+      <div class="qz-btns"><button class="cta" id="qzShare">Partager mon score</button><button class="btn ghost" id="qzRev">Revoir les réponses</button><button class="btn ghost" id="qzBack">Retour à l’édition</button></div>
+      <div class="qz-rev" id="qzRevList" hidden>${Q.f.questions.map((q, k) => `<div><b>${k + 1}. ${esc(q.q)}</b>${Q.a[k] === q.answer ? "✅" : "❌"} Réponse : <em>${esc(q.choices[q.answer])}</em><br>${esc(q.explain || "")}</div>`).join("")}</div></div>`;
+  $("#qzX").onclick = () => history.back();
+  $("#qzBack").onclick = () => history.back();
+  $("#qzRev").onclick = () => { const l = $("#qzRevList"); l.hidden = !l.hidden; if (!l.hidden) l.scrollIntoView({ behavior: "smooth", block: "start" }); };
+  $("#qzShare").onclick = async () => {
+    const url = new URL(`./?d=${Q.ed.date}&f=quiz`, location.href).href;
+    const d = new Date(Q.ed.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
+    const text = `Le Sachoir · Quiz du ${d}\n${quizGrid()} ${s}/${n}\n${verdict}`;
+    if (navigator.share) { try { await navigator.share({ title: "Le Quiz du Sachoir", text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
+    try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("Score copié, à vous de frimer"); } catch (e) { toast(text); }
+  };
 }
 
 /* ---------- Feuilles ---------- */
@@ -1016,7 +1151,7 @@ async function invite() {
 let EX = { pole: null, theme: null, q: "", search: false };
 function allStories() {
   const out = [];
-  INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu") out.push({ ...f, theme: themeName(f.theme), date: e.date, demo: e.demo }); }));
+  INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu" && f.id !== "quiz") out.push({ ...f, theme: themeName(f.theme), date: e.date, demo: e.demo }); }));
   return out;
 }
 /* Les filtres sont construits à partir des histoires publiées : un pôle ou une thématique
@@ -1098,7 +1233,7 @@ if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catc
     }
     if (new URLSearchParams(location.search).has("install") && !matchMedia("(display-mode: standalone)").matches) setTimeout(openInstall, 600);
     const fid = new URLSearchParams(location.search).get("f");
-    if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); openReader(CUR, fid); return; }
+    if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); if (fid === "quiz") openQuiz(CUR); else openReader(CUR, fid); return; }
   } catch (e) { if (!navigator.onLine) $("#offline").classList.add("on"); }
   const q = new URLSearchParams(location.search);
   if (DESK.matches && !q.has("d") && !q.has("f") && (q.has("concept") || !ME.reads.length)) return setTab("about");

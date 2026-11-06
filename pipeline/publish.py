@@ -21,6 +21,8 @@ PUBLISH_HOUR = 5
 
 
 def format_ready(fmt: dict) -> bool:
+    if fmt.get("id") == "quiz":  # le quiz n'a pas d'image : prêt dès qu'il a ses questions
+        return len(fmt.get("questions", [])) >= 3
     cases = fmt.get("cases", [])
     return bool(cases) and all(c.get("image", {}).get("status") == "done" for c in cases)
 
@@ -51,13 +53,13 @@ def main():
             ready = [x for x in ed.get("formats", []) if format_ready(x)]
             known = {th.replace("'", "’") for ths in seo.POLES.values() for th in ths}
             for x in ready:
-                if x["id"] != "actu" and (x.get("theme") or "").replace("'", "’") not in known:
+                if x["id"] not in ("actu", "quiz") and (x.get("theme") or "").replace("'", "’") not in known:
                     print(f"! {d.name}/{x['id']} : thématique absente ou inconnue ({x.get('theme')!r}), l'histoire sera rangée dans « Autres »")
             index.append({
                 "date": d.name,
                 "demo": bool(ed.get("demo")),
                 "formats": [{"id": x["id"], "label": x.get("label", ""), "title": x.get("title", ""),
-                              "url": f"histoires/{seo.story_slug(d.name, x)}/",
+                              "url": "" if x["id"] == "quiz" else f"histoires/{seo.story_slug(d.name, x)}/",
                               "theme": x.get("theme", ""), "minutes": x.get("minutes", 0),
                               "tagline": x.get("tagline", ""),
                               "cover": x.get("cover", {}).get("file") if x.get("cover", {}).get("status") == "done" else None}

@@ -1,5 +1,5 @@
 // Service worker du Sachoir (v1.0) : appli disponible hors ligne, éditions mises à jour dès que possible.
-const VERSION = "sachoir-v10";
+const VERSION = "sachoir-v11";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "assets/logo.png", "assets/icon-192.png", "assets/icon-512.png", "assets/books.png"];
 
 self.addEventListener("install", e => {
