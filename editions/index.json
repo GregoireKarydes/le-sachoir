@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T16:22:56.333981+01:00",
+ "updated_at": "2026-11-06T17:36:00.928695+01:00",
  "editions": [
   {
    "date": "2026-11-06",
@@ -9,6 +9,7 @@
      "id": "cultureg",
      "label": "La Pilule de Culture G",
      "title": "Le Chat de Schrödinger expliqué à mon chat",
+     "kind": "",
      "url": "histoires/2026-11-06-le-chat-de-schrodinger-explique-a-mon-chat/",
      "theme": "Sciences physiques",
      "minutes": 2,
@@ -19,6 +20,7 @@
      "id": "insolite",
      "label": "L’Insolite Historique",
      "title": "L’homme qui a vendu la tour Eiffel (deux fois)",
+     "kind": "",
      "url": "histoires/2026-11-06-l-homme-qui-a-vendu-la-tour-eiffel-deux-fois/",
      "theme": "Grandes personnalités",
      "minutes": 2,
@@ -29,6 +31,7 @@
      "id": "quiz",
      "label": "Le Quiz du jour",
      "title": "Cinq questions, zéro pression (ou presque)",
+     "kind": "",
      "url": "",
      "theme": "",
      "minutes": 1,
