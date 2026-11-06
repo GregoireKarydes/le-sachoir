@@ -63,7 +63,8 @@ def generate(prompt: str, size, refs: list[Path]) -> Image.Image:
     r = requests.post(URL, headers={"Authorization": f"Bearer {TOKEN}"}, data=data, files=files, timeout=180)
     if r.status_code == 429 or "allocation" in r.text.lower() or "quota" in r.text.lower():
         raise QuotaExhausted(r.text[:300])
-    r.raise_for_status()
+    if r.status_code >= 400:
+        raise RuntimeError(f"HTTP {r.status_code} : {r.text[:250]}")
     payload = r.json()
     b64 = (payload.get("result") or {}).get("image")
     if not b64:
@@ -141,7 +142,16 @@ def process(d: Path, f: Path, ed: dict) -> int:
             prompt = (f"{STYLE['style']} Character reference portrait: one single head-and-shoulders portrait, facing the viewer, "
                       f"plain light cream background, of {c.get('look', c['id'])}. One image only, no panels, no frames, "
                       f"absolutely no text, no letters, no speech bubbles.")
-            im = generate(prompt, STYLE["cast_size"], [STYLE_REF])
+            try:
+                im = generate(prompt, STYLE["cast_size"], [STYLE_REF])
+            except QuotaExhausted:
+                raise
+            except Exception as e:
+                print(f"  ! fiche {c['id']} : {e}")
+                c["error"] = str(e)[:300]
+                persist()
+                continue
+            c.pop("error", None)
             dest = d / c["file"]
             dest.parent.mkdir(parents=True, exist_ok=True)
             im.save(dest, "PNG")
@@ -193,12 +203,20 @@ def main():
     if not ACCOUNT or not TOKEN:
         sys.exit("CF_ACCOUNT_ID et CF_API_TOKEN sont requis (secrets GitHub).")
     total = 0
+    log = []
     try:
         for d, f, ed in editions_to_process():
             print(f"Édition {d.name}")
             total += process(d, f, ed)
     except QuotaExhausted as e:
         print(f"Quota Cloudflare du jour atteint, reprise au prochain passage. ({e})")
+        log.append(f"quota: {e}")
+    except Exception as e:  # ne jamais perdre les images déjà faites : on journalise et on sort proprement
+        print(f"Erreur inattendue : {e!r}")
+        log.append(f"erreur: {e!r}"[:400])
+    (ROOT / "data").mkdir(exist_ok=True)
+    (ROOT / "data" / "images-last-run.json").write_text(json.dumps(
+        {"at": datetime.now(ZoneInfo("Europe/Paris")).isoformat(), "generated": total, "log": log}, ensure_ascii=False, indent=1))
     print(f"{total} image(s) générée(s).")
 
 

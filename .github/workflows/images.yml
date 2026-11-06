@@ -38,6 +38,6 @@ jobs:
         run: |
           git config user.name "sachoir-bot"
           git config user.email "sachoir-bot@users.noreply.github.com"
-          git add editions
+          git add editions data/images-last-run.json
           git diff --cached --quiet || git commit -m "Images générées"
           git pull --rebase && git push
