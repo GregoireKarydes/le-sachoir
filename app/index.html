@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#faf6ee">
-<meta name="description" content="Chaque matin à 5 h, l'actu et la culture G en BD. Pour briller en société (ou au moins faire semblant).">
-<title>Le Sachoir — L'actu et la culture G en BD, chaque matin à 5 h</title>
+<meta name="description" content="Chaque jour, l'actu et la culture G en BD. Pour briller en société (ou au moins faire semblant).">
+<title>Le Sachoir — L'actu et la culture G en BD, chaque jour</title>
 <link rel="canonical" href="__BASE__">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Le Sachoir">
 <meta property="og:title" content="Le Sachoir — L'actu et la culture G en BD">
-<meta property="og:description" content="Chaque matin à 5 h : l'actu du jour, une pilule de culture G, une histoire insolite et un grand dossier, en BD humoristique.">
+<meta property="og:description" content="Chaque jour : l'actu du jour, une pilule de culture G, une histoire insolite et un grand dossier, en BD humoristique.">
 <meta property="og:url" content="__BASE__">
 <meta property="og:image" content="__BASE__assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Le Sachoir","url":"__BASE__","inLanguage":"fr","description":"L'actu et la culture G en BD humoristique, chaque matin à 5 h."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Le Sachoir","url":"__BASE__","inLanguage":"fr","description":"L'actu et la culture G en BD humoristique, chaque jour."}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
@@ -58,6 +58,9 @@ button{cursor:pointer}
 .logo{display:flex;justify-content:center;padding:18px 0 4px;position:relative}
 .streakmini{position:absolute;right:16px;top:50%;margin-top:-2px;transform:translateY(-50%);display:inline-flex;align-items:center;gap:3px;border:0;background:#fff1cf;border-radius:999px;padding:4px 10px 4px 7px;font-weight:900;font-size:15px;font-variant-numeric:tabular-nums;color:#a3580a}
 .streakmini .fl{font-size:16px;line-height:1}
+.installmini{position:absolute;left:16px;top:50%;margin-top:-2px;transform:translateY(-50%);display:inline-flex;align-items:center;gap:4px;border:0;background:var(--yellow);border-radius:999px;padding:5px 10px 5px 8px;font-weight:700;font-size:13px;color:var(--ink)}
+.installmini svg{width:15px;height:15px}
+.installmini[hidden],.tb-install[hidden]{display:none}
 .logo img{height:46px;width:auto;display:block}
 .main{flex:1;overflow-y:auto;overflow-x:hidden}
 .view{display:none;padding:8px 18px 26px;flex-direction:column;gap:16px}
@@ -121,7 +124,7 @@ button{cursor:pointer}
 .card.wide .pic{flex:0 0 118px;border-radius:12px;overflow:hidden;background:#fff}
 .card.wide .pic svg,.card.wide .pic img{width:100%;height:100%;display:block;object-fit:cover}
 .readstate{font-size:12px;font-weight:700;opacity:.9}
-.countdown{font-size:13px;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums;margin:0}
+.daily{font-size:13.5px;color:var(--muted);text-align:center;margin:0;text-wrap:balance}
 .banner{display:flex;gap:12px;align-items:center;background:#fff;border-radius:16px;padding:12px 14px;box-shadow:0 4px 12px rgba(0,0,0,.07)}
 .banner p{margin:0;font-size:13.5px;flex:1;color:var(--muted)}
 .banner strong{display:block;font-size:15px;color:var(--ink)}
@@ -193,22 +196,21 @@ button{cursor:pointer}
 /* ---------- Lecteur ---------- */
 .reader{position:absolute;inset:0;z-index:30;background:var(--ink);display:none;flex-direction:column}
 .reader.on{display:flex}
-.r-top{position:absolute;top:0;left:0;right:0;z-index:5;padding:12px 12px 0;display:flex;flex-direction:column;gap:7px;pointer-events:none}
-.segs{display:flex;gap:3px}
-.segs i{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.7);box-shadow:0 0 0 1px rgba(23,20,15,.25)}
-.segs i.on{background:var(--ink)}
-.segs i.lk{background:transparent;box-shadow:0 0 0 1px rgba(23,20,15,.35) inset;opacity:.6}
-.r-bar{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.r-bar button{pointer-events:auto;width:38px;height:38px;border-radius:50%;border:0;background:#fff;display:grid;place-items:center;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.2)}
-.r-bar button svg{width:18px;height:18px}
-.r-bar .cnt{font-weight:700;font-size:13px;background:#fff;border-radius:999px;padding:4px 11px;font-variant-numeric:tabular-nums;box-shadow:0 2px 6px rgba(0,0,0,.2)}
-.r-bar .fav.on svg{fill:var(--red);stroke:var(--red)}
+.r-top{position:absolute;top:12px;right:12px;z-index:5}
+.r-top button,.r-bot button{width:38px;height:38px;border-radius:50%;border:0;background:#fff;display:grid;place-items:center;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.2);flex:0 0 auto}
+.r-top button svg,.r-bot button svg{width:18px;height:18px}
+.r-bot{flex:0 0 auto;display:flex;align-items:center;gap:12px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--ink)}
+.segs{display:flex;gap:3px;flex:1;min-width:0}
+.segs i{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.28)}
+.segs i.on{background:var(--yellow)}
+.r-bot .cnt{font-weight:700;font-size:13px;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.r-bot .fav.on svg{fill:var(--red);stroke:var(--red)}
 .track{flex:1;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .track::-webkit-scrollbar{display:none}
 .slide{flex:0 0 100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden;background:var(--cream)}
 .slide > svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .panel-frame{position:absolute;inset:0;border:5px solid var(--ink);pointer-events:none}
-.stack{position:absolute;top:64px;left:14px;right:14px;display:flex;flex-direction:column;gap:9px;z-index:2}
+.stack{position:absolute;top:58px;left:14px;right:14px;display:flex;flex-direction:column;gap:9px;z-index:2}
 .caption{background:#fff1c9;border:3px solid var(--ink);padding:8px 11px;font-family:var(--f-letter);font-size:17.5px;line-height:1.25;box-shadow:3px 3px 0 var(--ink)}
 .caption.fact{background:#fff;border-left:10px solid var(--green)}
 .caption .ctag{display:block;font-family:var(--f-sans);font-weight:900;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--green)}
@@ -283,15 +285,6 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .guide p{background:#fff;border-radius:16px;padding:10px 12px;font-size:15px;flex:1}
 .bounce{display:inline-block;animation:b 1s ease-in-out infinite}
 @keyframes b{50%{transform:translateY(5px)}}
-.story-wrap{display:flex;justify-content:center}
-.story{width:196px;aspect-ratio:9/16;border-radius:18px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:14px}
-.story .mini{background:var(--cream);border:2.5px solid var(--ink);border-radius:14px;padding:12px 10px;font-family:var(--f-serif);font-weight:800;font-size:14px;line-height:1.15;text-align:center}
-.story .mini b{display:block;font-family:var(--f-sans);font-weight:900;font-size:8.5px;letter-spacing:.5px;margin-bottom:6px;text-transform:uppercase}
-.story .wm{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center}
-.story .wm img{height:16px;filter:brightness(0) invert(1)}
-.swatches{display:flex;gap:12px;justify-content:center}
-.swatches button{width:34px;height:34px;border-radius:50%;border:2px solid #fff;padding:0;box-shadow:0 0 0 1px var(--line)}
-.swatches button[aria-pressed=true]{box-shadow:0 0 0 3px var(--ink)}
 .dates{display:flex;gap:7px;overflow-x:auto;padding:2px 2px 6px;scrollbar-width:none}
 .dates::-webkit-scrollbar{display:none}
 .day{flex:0 0 50px;height:68px;border:0;border-radius:14px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:0;box-shadow:0 1px 4px rgba(0,0,0,.08)}
@@ -350,7 +343,6 @@ body{overscroll-behavior-y:none}
 .offline.on{display:block}
 .topbar{display:none}
 .seo-links a{display:block;padding:4px 0}
-.final .linkpage{display:block;text-align:center;font-size:14px;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 
 /* ---------- Expérience PC (≥ 900 px) ---------- */
 @media (min-width:900px){
@@ -363,6 +355,9 @@ body{overscroll-behavior-y:none}
   .tb-nav button svg{width:20px;height:20px}
   .tb-nav button:hover{background:var(--grey)}
   .tb-nav button[aria-current=page]{background:var(--ink);color:#fff;font-weight:700}
+  .tb-install{display:inline-flex;align-items:center;gap:7px;border:0;background:var(--yellow);color:var(--ink);border-radius:999px;padding:8px 15px;font-weight:700;font-size:14.5px;box-shadow:0 2px 0 rgba(23,20,15,.18)}
+  .tb-install svg{width:17px;height:17px}
+  .tb-install:hover{filter:brightness(.96)}
   .tb-streak{position:static;transform:none;margin:0;font-size:16px;padding:6px 14px}
   .main .logo{display:none}
   #nav{display:none}
@@ -378,6 +373,8 @@ body{overscroll-behavior-y:none}
   #v-home > .duo{grid-column:2;grid-template-columns:1fr}
   #v-home > .card.wide{grid-column:2}
   #v-home > .card.wide .pic{flex-basis:140px}
+  #v-home.nobig > .duo{grid-column:1/-1;grid-template-columns:1fr 1fr}
+  #v-home.nobig > .card.wide{grid-column:auto}
   .card.big h3{font-size:40px}
   .card{transition:transform .15s,box-shadow .15s}
   .card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(23,20,15,.18)}
@@ -400,8 +397,9 @@ body{overscroll-behavior-y:none}
   .reader.desk .caption{font-size:16px}
   .reader.desk .bubble{font-size:16.5px}
   .reader.desk .nav-arrow,.reader.desk .segs{display:none}
-  .reader.desk .r-top{padding:14px max(32px,calc((100vw - 1180px)/2)) 0}
-  .reader.desk .r-bar .cnt{font-size:14px}
+  .reader.desk .r-top{top:16px;right:max(32px,calc((100vw - 1180px)/2))}
+  .reader.desk .r-bot{justify-content:center;gap:16px;padding:12px 32px}
+  .reader.desk .r-bot .cnt{font-size:14.5px}
   /* Fenêtres centrées */
   .scrim{align-items:center;justify-content:center}
   .sheet{max-width:560px;max-height:86vh;border-radius:24px}
@@ -415,10 +413,11 @@ body{overscroll-behavior-y:none}
     <header class="topbar" id="topbar">
       <a class="tb-logo" href="./" aria-label="Le Sachoir, accueil"><img src="assets/logo.png" alt="Le Sachoir"></a>
       <nav class="tb-nav" id="navTop" aria-label="Navigation principale"></nav>
+      <button class="tb-install" id="installTop" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg>Installer Le Sachoir</button>
       <button class="streakmini tb-streak" id="streakTop"></button>
     </header>
     <div class="main" id="main">
-      <div class="logo"><img src="assets/logo.png" alt="Le Sachoir"><button class="streakmini" id="streakMini"></button></div>
+      <div class="logo"><button class="installmini" id="installMini" hidden aria-label="Installer Le Sachoir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg>Installer</button><img src="assets/logo.png" alt="Le Sachoir"><button class="streakmini" id="streakMini"></button></div>
       <section class="view on" id="v-home" aria-label="Édition"></section>
       <section class="view" id="v-explore" aria-label="Découvrir"></section>
       <section class="view" id="v-favs" aria-label="Favoris"></section>
@@ -429,14 +428,14 @@ body{overscroll-behavior-y:none}
 
   <div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Lecture">
     <div class="r-top">
-      <div class="segs" id="segs"></div>
-      <div class="r-bar">
-        <button id="rClose" aria-label="Fermer la lecture"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-        <span class="cnt" id="rCount"></span>
-        <button id="rFav" class="fav" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2.4"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
-      </div>
+      <button id="rClose" aria-label="Fermer la lecture"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
     <div class="track" id="track"></div>
+    <div class="r-bot">
+      <div class="segs" id="segs"></div>
+      <span class="cnt" id="rCount"></span>
+      <button id="rFav" class="fav" aria-label="Ajouter l’histoire aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2.4"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+    </div>
     <button class="nav-arrow prev" id="rPrev" aria-label="Case précédente"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="nav-arrow next" id="rNext" aria-label="Case suivante"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
@@ -462,7 +461,7 @@ const SERIE = [
   {name:"La Constance", min:7, max:13, items:["Une semaine de culture. Votre cerveau réclame déjà des vacances.","7 jours sans scroller dans le vide. Un miracle médical.","La régularité d’un métronome (ou d’un chômeur insomniaque).","Une semaine complète. Vous méritez un diplôme en papier crépon.","L’addiction à l’intelligence commence officiellement ici."]},
   {name:"L’Habitude", min:14, max:29, items:["Quinzaine triomphale. Vous commencez à juger secrètement vos amis.","Deux semaines. Votre vocabulaire effraie désormais vos proches.","Officiellement prêt pour gagner “Questions pour un Champion”.","Ne répond plus aux questions existentielles que par des anecdotes historiques.","L’entourage commence à trouver cette soudaine érudition suspecte."]},
   {name:"Le Mois Plein", min:30, max:49, items:["Un mois de snobisme intellectuel. Même Socrate est jaloux.","30 jours. Votre QI a officiellement demandé une augmentation.","Un mois complet. Vous snobez ouvertement les gens normaux.","Vous avez lu plus ce mois-ci que durant toute votre scolarité.","Impossible de vous inviter à dîner sans subir une conférence de 40 minutes."]},
-  {name:"L’Obsession", min:50, max:99, items:["50 jours. Votre canapé a porté plainte pour abandon.","Votre réveil sonne à 5h. Pas pour le sport : pour le Sachoir.","Ne dit plus “bonjour” mais “saviez-vous que…”.","Deux mois de culture. Vos amis ont créé un groupe WhatsApp sans vous.","A remplacé le café du matin par des anecdotes sur l’Empire byzantin."]},
+  {name:"L’Obsession", min:50, max:99, items:["50 jours. Votre canapé a porté plainte pour abandon.","Votre réveil sonne. Pas pour le sport : pour le Sachoir.","Ne dit plus “bonjour” mais “saviez-vous que…”.","Deux mois de culture. Vos amis ont créé un groupe WhatsApp sans vous.","A remplacé le café du matin par des anecdotes sur l’Empire byzantin."]},
   {name:"Le Centenaire", min:100, max:Infinity, items:["100 jours d’affilée. Vous êtes l’invité que tout le monde redoute.","Cent jours. Vous corrigez les profs d’histoire-géo dans la rue.","L’omniscience est proche. Le burn-out social aussi.","Vous êtes la raison pour laquelle on a inventé le mot “pédant”.","Vous avez officiellement terminé le jeu de la culture générale."]}
 ];
 const SERIE_ZERO = {name:"Sans série", min:0, max:0, items:["Aucune série en cours. Le canapé vous salue."]};
@@ -488,8 +487,9 @@ const themeName = th => { for (const p of POLES) { const x = p.themes.find(x => 
 
 /* ---------- Stockage local ---------- */
 const KEY = "sachoir.v1";
-const DEF = { visited: [], dossiers: [], reads: [], favs: [], name: "", installDone: false, storyColor: "#1f8f5f", storyWm: true };
+const DEF = { visited: [], dossiers: [], reads: [], favs: [], name: "", installDone: false };
 let ME = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { return { ...DEF }; } })();
+ME.favs = (ME.favs || []).filter(x => x.type !== "card"); delete ME.storyColor; delete ME.storyWm;
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ME)); } catch (e) {} };
 
 /* ---------- Utilitaires ---------- */
@@ -547,6 +547,8 @@ function renderNav() {
   const html = tabs.map(t => `<button data-tab="${t[0]}" ${TAB === t[0] ? 'aria-current="page"' : ""}>${t[2]}${t[1]}</button>`).join("");
   ["#nav", "#navTop"].forEach(id => { $(id).innerHTML = html; $(id).querySelectorAll("button").forEach(b => b.onclick = () => setTab(b.dataset.tab)); });
   const s = streak();
+  const canInstall = !ME.installDone && !matchMedia("(display-mode: standalone)").matches;
+  ["#installMini", "#installTop"].forEach(id => { const b = $(id); b.hidden = !canInstall; b.onclick = openInstall; });
   ["#streakMini", "#streakTop"].forEach(id => { $(id).innerHTML = `<span class="fl">🔥</span>${s}`; $(id).setAttribute("aria-label", `Série de ${s} jours`); });
 }
 function setTab(t) { TAB = t; document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + t)); $("#main").scrollTop = 0; render(); }
@@ -561,8 +563,8 @@ function readState(ed, f) {
 function renderHome() {
   const v = $("#v-home");
   if (!CUR) {
-    v.innerHTML = `<div class="empty-state"><h2>La première édition arrive</h2><p class="lead">Rendez-vous demain à 5 h.</p><p class="countdown" id="countdown"></p></div>`;
-    tick(); return;
+    v.innerHTML = `<div class="empty-state"><h2>La première édition arrive</h2><p class="lead">Rendez-vous demain. Le crayon chauffe.</p></div>`;
+    return;
   }
   const ed = CUR, F = Object.fromEntries(ed.formats.map(f => [f.id, f]));
   const hello = ME.name ? `Salut, ${esc(ME.name)}` : "Salut !";
@@ -576,25 +578,15 @@ function renderHome() {
   v.innerHTML = `
    <div><h1 class="h1 hello">${hello}</h1><p class="lead">Prêt à briller en société (ou au moins à faire semblant) ?</p></div>
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
-   ${!isToday && CUR.date === INDEX[0]?.date ? `<p class="sub">L’édition d’aujourd’hui arrive à 5 h. En attendant, voici la dernière.</p>` : ""}
+   ${!isToday && CUR.date === INDEX[0]?.date ? `<p class="sub">L’édition d’aujourd’hui est encore sous le crayon. En attendant, voici la dernière.</p>` : ""}
    ${F.dossier ? card.dossier(F.dossier) : ""}
    ${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
    ${F.insolite ? card.wide(F.insolite) : ""}
-   ${!ME.installDone && !matchMedia("(display-mode: standalone)").matches ? `<div class="banner"><p><strong>Installez Le Sachoir</strong>Trois gestes. On vous tient la main.</p><button class="btn sm" id="hInstall">Installer</button></div>` : ""}
-   <p class="countdown" id="countdown"></p>`;
+   <p class="daily">Chaque jour, une nouvelle édition. Votre culture G, elle, ne prend pas de congés.</p>`;
+  v.classList.toggle("nobig", !F.dossier);
   v.querySelectorAll("[data-f]").forEach(b => b.onclick = () => openReader(ed, b.dataset.f));
   $("#hHist").onclick = openHistory;
-  const i = $("#hInstall"); if (i) i.onclick = openInstall;
-  tick();
 }
-function tick() {
-  const el = $("#countdown"); if (!el) return;
-  const now = new Date(); const p = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Paris" }));
-  const n = new Date(p); n.setHours(5, 0, 0, 0); if (n <= p) n.setDate(n.getDate() + 1);
-  const m = Math.round((n - p) / 60000);
-  el.textContent = `Prochaine édition dans ${Math.floor(m / 60)} h ${String(m % 60).padStart(2, "0")} min · tous les jours à 5 h`;
-}
-setInterval(tick, 30000);
 
 async function selectDate(date) {
   try { CUR = await loadEdition(date); } catch (e) { toast("Édition indisponible hors ligne"); return; }
@@ -655,12 +647,12 @@ function openInstallQR() {
    <div class="qrbox"><img src="assets/qr-install.png" alt="QR code pour ouvrir Le Sachoir sur votre téléphone" width="222" height="222">
     <ol class="steps"><li><span class="n">1</span><span><strong>Visez ce code avec l’appareil photo de votre téléphone.</strong><small>Comme pour un menu de restaurant. Vous savez faire.</small></span></li>
     <li><span class="n">2</span><span><strong>Ouvrez le lien proposé.</strong><small>Le guide d’installation s’affiche tout seul.</small></span></li>
-    <li><span class="n">3</span><span><strong>Suivez les 3 gestes.</strong><small>Et l’édition vous attend chaque matin à 5 h.</small></span></li></ol></div>
+    <li><span class="n">3</span><span><strong>Suivez les 3 gestes.</strong><small>Et l’édition vous attend chaque jour.</small></span></li></ol></div>
    <div class="guide"><p><strong>Ulysse, le touriste perdu.</strong> Dix ans pour rentrer à Ithaque. Vous, trois secondes avec ce code.</p></div>
    ${deferredPrompt ? `<button class="btn ghost sm" id="inNative">Ou l’installer sur cet ordinateur</button>` : ""}
    <button class="cta" id="inDone">C’est fait !</button>`);
   const nb = $("#inNative"); if (nb) nb.onclick = async () => { deferredPrompt.prompt(); const r = await deferredPrompt.userChoice; deferredPrompt = null; if (r.outcome === "accepted") { closeSheet(); toast("Installée sur cet ordinateur."); } };
-  $("#inDone").onclick = () => { ME.installDone = true; save(); closeSheet(); toast("Rendez-vous demain à 5 h."); render(); };
+  $("#inDone").onclick = () => { ME.installDone = true; save(); closeSheet(); toast("Rendez-vous demain pour la prochaine édition."); render(); };
 }
 
 /* ---------- Lecteur ---------- */
@@ -675,9 +667,8 @@ function caseHTML(ed, c) {
   return `${art}<div class="stack">${cap}${(c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${esc(b.text)}</div>`).join("")}</div><div class="panel-frame"></div>`;
 }
 function finalHTML(ed, f) {
-  const fav = ME.favs.some(x => x.date === ed.date && x.fid === f.id && x.type === "card");
   return `<div class="ccard"><div class="hd"><span>Pour briller en société</span><em>${fmtLong(ed.date).split(" ").slice(1).join(" ")}</em></div><div class="ph">${esc(f.final?.text || "")}</div><div class="src">${esc(f.label)} · ${esc(f.final?.source || "")}</div>
-  <div class="ft"><button class="btn" data-act="story">Exporter en Story</button><button class="btn ghost" data-act="favcard">${fav ? "Dans vos favoris ♥" : "Garder cette carte ♡"}</button><button class="btn ghost" data-act="back">Retour à l’édition</button>${f.url ? `<a class="linkpage" href="${f.url}">Page de l’histoire, à partager</a>` : ""}</div></div>`;
+  <div class="ft"><button class="btn" data-act="back">Retour à l’édition</button></div></div>`;
 }
 function openReader(ed, fid) {
   const f = ed.formats.find(x => x.id === fid); if (!f) return;
@@ -735,14 +726,12 @@ document.addEventListener("keydown", e => {
 function toggleFav(ed, f, type) {
   const i = ME.favs.findIndex(x => x.date === ed.date && x.fid === f.id && x.type === type);
   if (i >= 0) { ME.favs.splice(i, 1); toast("Retiré des favoris"); }
-  else { ME.favs.push({ date: ed.date, fid: f.id, type, title: type === "card" ? f.final?.text : f.title, label: f.label }); toast("Ajouté aux favoris ♥"); }
+  else { ME.favs.push({ date: ed.date, fid: f.id, type, title: f.title, label: f.label }); toast("Ajouté aux favoris ♥"); }
   save();
 }
 function onAct(e) {
   const a = e.currentTarget.dataset.act;
   if (a === "back") history.back();
-  if (a === "story") openStory(R.ed, R.f);
-  if (a === "favcard") { toggleFav(R.ed, R.f, "card"); e.currentTarget.textContent = ME.favs.some(x => x.date === R.ed.date && x.fid === R.f.id && x.type === "card") ? "Dans vos favoris ♥" : "Garder cette carte ♡"; }
 }
 
 /* ---------- Feuilles ---------- */
@@ -753,44 +742,6 @@ function openSheet(html) {
 function closeSheet() { $("#scrim").classList.remove("on"); }
 $("#scrim").addEventListener("click", e => { if (e.target.id === "scrim") closeSheet(); });
 
-function wrapText(ctx, text, maxW) {
-  const words = text.split(/\s+/), lines = []; let line = "";
-  for (const w of words) { const t = line ? line + " " + w : w; if (ctx.measureText(t).width > maxW && line) { lines.push(line); line = w; } else line = t; }
-  if (line) lines.push(line); return lines;
-}
-async function storyBlob(text, color, wm) {
-  await document.fonts.ready;
-  const c = document.createElement("canvas"); c.width = 1080; c.height = 1920; const x = c.getContext("2d");
-  x.fillStyle = color; x.fillRect(0, 0, 1080, 1920);
-  x.fillStyle = "rgba(255,255,255,.12)"; for (let i = 0; i < 1080; i += 36) for (let j = 0; j < 1920; j += 36) { x.beginPath(); x.arc(i, j, 4, 0, 7); x.fill(); }
-  x.font = "800 66px 'Source Serif 4', Georgia, serif";
-  const lines = wrapText(x, text, 760), lh = 82, h = lines.length * lh + 260, top = (1920 - h) / 2;
-  x.fillStyle = "#17140f"; x.fillRect(150, top + 14, 800, h); x.fillStyle = "#faf6ee"; x.fillRect(136, top, 800, h);
-  x.lineWidth = 8; x.strokeStyle = "#17140f"; x.strokeRect(136, top, 800, h);
-  x.fillStyle = "#f5b62a"; x.fillRect(140, top + 4, 792, 100); x.fillStyle = "#17140f"; x.fillRect(136, top + 104, 800, 8);
-  x.font = "900 34px Roboto, sans-serif"; x.fillText("POUR BRILLER EN SOCIÉTÉ", 186, top + 68);
-  x.font = "800 66px 'Source Serif 4', Georgia, serif"; lines.forEach((l, i) => x.fillText(l, 186, top + 200 + i * lh));
-  if (wm) { const logo = await new Promise(r => { const im = new Image(); im.onload = () => r(im); im.onerror = () => r(null); im.src = "assets/logo.png"; }); if (logo) { const w = 420, hh = w * logo.height / logo.width; x.drawImage(logo, (1080 - w) / 2, 1920 - hh - 120, w, hh); } }
-  return new Promise(r => c.toBlob(r, "image/png"));
-}
-function openStory(ed, f) {
-  const colors = ["#1f8f5f", "#2f4fa2", "#f2a33a", "#d9473a", "#17140f"];
-  const draw = () => { const b = $("#storyBox"); b.style.background = ME.storyColor; b.innerHTML = `<div class="mini"><b>Pour briller en société</b>${esc(f.final?.text || "")}</div>${ME.storyWm ? `<div class="wm"><img src="assets/logo.png" alt="Le Sachoir"></div>` : ""}`; };
-  openSheet(`<h3>Exporter en Story</h3><div class="story-wrap"><div class="story" id="storyBox"></div></div>
-   <div class="swatches" role="group" aria-label="Couleur du fond">${colors.map(c => `<button data-c="${c}" style="background:${c}" aria-label="Fond ${c}" aria-pressed="${c === ME.storyColor}"></button>`).join("")}</div>
-   <label class="check" for="stWm"><input type="checkbox" id="stWm" ${ME.storyWm ? "checked" : ""}> <span>Afficher le logo Le Sachoir</span></label>
-   <button class="cta" id="stShare">Partager l’image</button><button class="btn ghost" id="stCopy">Copier la phrase</button>`);
-  draw();
-  $("#sheet").querySelectorAll(".swatches button").forEach(b => b.onclick = () => { ME.storyColor = b.dataset.c; save(); $("#sheet").querySelectorAll(".swatches button").forEach(x => x.setAttribute("aria-pressed", x === b)); draw(); });
-  $("#stWm").onchange = e => { ME.storyWm = e.target.checked; save(); draw(); };
-  $("#stCopy").onclick = async () => { try { await navigator.clipboard.writeText(`${f.final?.text} — Le Sachoir`); toast("Phrase copiée"); } catch (e) { toast("Copie impossible"); } };
-  $("#stShare").onclick = async () => {
-    const blob = await storyBlob(f.final?.text || "", ME.storyColor, ME.storyWm);
-    const file = new File([blob], "le-sachoir.png", { type: "image/png" });
-    if (navigator.canShare && navigator.canShare({ files: [file] })) { try { await navigator.share({ files: [file], text: "Pour briller en société — Le Sachoir" }); } catch (e) {} }
-    else { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "le-sachoir.png"; a.click(); toast("Image téléchargée"); }
-  };
-}
 let deferredPrompt = null;
 window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredPrompt = e; });
 function openInstall() {
@@ -811,9 +762,9 @@ function openInstall() {
    <div style="display:flex;gap:8px"><button class="btn ghost sm" id="inHelpB" style="flex:1">Je n’y arrive pas</button><button class="btn ghost sm" id="inLater" style="flex:1">Plus tard (je le regretterai)</button></div>`);
   draw();
   $("#sheet").querySelectorAll(".seg button").forEach(b => b.onclick = () => { os = b.dataset.os; draw(); });
-  const nb = $("#inNative"); if (nb) nb.onclick = async () => { deferredPrompt.prompt(); const r = await deferredPrompt.userChoice; deferredPrompt = null; if (r.outcome === "accepted") { ME.installDone = true; save(); closeSheet(); toast("Installée ! Rendez-vous demain à 5 h."); } };
+  const nb = $("#inNative"); if (nb) nb.onclick = async () => { deferredPrompt.prompt(); const r = await deferredPrompt.userChoice; deferredPrompt = null; if (r.outcome === "accepted") { ME.installDone = true; save(); closeSheet(); toast("Installée ! Rendez-vous demain pour la prochaine édition."); } };
   $("#inHelpB").onclick = () => { $("#inHelp").hidden = false; };
-  $("#inDone").onclick = () => { ME.installDone = true; save(); closeSheet(); toast("Rendez-vous demain à 5 h."); render(); };
+  $("#inDone").onclick = () => { ME.installDone = true; save(); closeSheet(); toast("Rendez-vous demain pour la prochaine édition."); render(); };
   $("#inLater").onclick = () => { closeSheet(); toast("On vous le reproposera. Avec insistance."); };
 }
 function openTiers(type) {
@@ -834,7 +785,7 @@ function openBilan() {
    <p class="sub">${top.n ? `Votre point fort : ${top.p.name}. Vos amis le savaient déjà.` : "Lisez quelques histoires pour voir apparaître vos points forts."}</p>`);
 }
 async function invite() {
-  const data = { title: "Le Sachoir", text: "Chaque matin à 5 h, l’actu et la culture G en BD. Pour briller en société.", url: location.origin + location.pathname };
+  const data = { title: "Le Sachoir", text: "Chaque jour, l’actu et la culture G en BD. Pour briller en société.", url: location.origin + location.pathname };
   if (navigator.share) { try { await navigator.share(data); } catch (e) {} }
   else { try { await navigator.clipboard.writeText(data.url); toast("Lien copié"); } catch (e) { toast(data.url); } }
 }
@@ -868,7 +819,7 @@ function renderExplore() {
    ${poles.length + (other ? 1 : 0) > 1 || EX.pole ? `<div class="chips" role="group" aria-label="Filtrer par pôle"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tout ${n(byQ.length)}</button>${poles.map(({ p, n: k }) => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name} ${n(k)}</button>`).join("")}${other ? `<button class="chip c-all" data-p="other" aria-pressed="${EX.pole === "other"}">Autres ${n(other)}</button>` : ""}</div>` : ""}
    ${themes.length > 1 ? `<div class="chips sub" role="group" aria-label="Filtrer par thématique"><button class="chip c-${cur.id}" data-t="" aria-pressed="${!EX.theme}">Toutes</button>${themes.map(({ th, n: k }) => `<button class="chip c-${cur.id}" data-t="${esc(th)}" aria-pressed="${EX.theme === th}">${esc(th)} ${n(k)}</button>`).join("")}</div>` : ""}
    <div class="alist">${res.map(s => `<button class="aitem" data-d="${s.date}" data-f="${s.id}"><i style="background:${poleOf(s.theme)?.color || COLOR[s.id]}"></i><span class="tt">${esc(s.title)}<span class="th">${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""} · ${s.minutes || 2} min</span></span><span class="d">${new Date(s.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</span></button>`).join("")}</div>
-   ${res.length ? "" : `<p class="empty">Aucune histoire ne correspond. Les archives grandissent chaque matin.</p>`}`;
+   ${res.length ? "" : `<p class="empty">Aucune histoire ne correspond. Les archives grandissent chaque jour.</p>`}`;
   $("#exS").onclick = () => { EX.search = !EX.search; renderExplore(); const i = $("#exQ"); if (i) i.focus(); };
   v.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { EX.pole = b.dataset.p || null; EX.theme = null; renderExplore(); });
   v.querySelectorAll("[data-t]").forEach(b => b.onclick = () => { EX.theme = b.dataset.t || null; renderExplore(); });
@@ -879,11 +830,11 @@ function renderExplore() {
 /* ---------- Favoris ---------- */
 function renderFavs() {
   const v = $("#v-favs");
-  v.innerHTML = `<h1 class="h1">Favoris</h1><p class="lead">Vos BD et vos cartes « Pour briller », toujours sous la main.</p>
-   ${ME.favs.length ? `<div class="alist">${ME.favs.slice().reverse().map(x => `<button class="aitem" data-d="${x.date}" data-f="${x.fid}" data-t="${x.type}"><i style="background:${COLOR[x.fid] || "#1f8f5f"}"></i><span class="tt">${esc(x.title)}<span class="th">${x.type === "card" ? "Carte « Pour briller en société »" : esc(x.label)}</span></span></button>`).join("")}</div>`
-    : `<p class="empty">Touchez ♡ pendant une lecture pour garder une BD, ou « Garder cette carte » à la fin d’une histoire.</p>`}`;
+  v.innerHTML = `<h1 class="h1">Favoris</h1><p class="lead">Vos histoires préférées, toujours sous la main.</p>
+   ${ME.favs.length ? `<div class="alist">${ME.favs.slice().reverse().map(x => `<button class="aitem" data-d="${x.date}" data-f="${x.fid}" data-t="${x.type}"><i style="background:${COLOR[x.fid] || "#1f8f5f"}"></i><span class="tt">${esc(x.title)}<span class="th">${esc(x.label)}</span></span></button>`).join("")}</div>`
+    : `<p class="empty">Touchez ♡ en bas de l’écran pendant une lecture pour garder une histoire.</p>`}`;
   v.querySelectorAll("[data-d]").forEach(b => b.onclick = async () => {
-    try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); if (b.dataset.t === "card") requestAnimationFrame(() => { $("#track").scrollLeft = (R.n - 1) * $("#track").clientWidth; updateReader(R.n - 1, true); }); }
+    try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); }
     catch (e) { toast("Indisponible hors ligne"); }
   });
 }
@@ -901,7 +852,7 @@ function renderProfile() {
    <div class="menu">
      <button id="m1">${I("#dff0e6", "#14704a", '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')}<span class="t">Mon Bilan de Culture G<small>Vos thèmes forts, Histoire ou Sciences</small></span>${ICON.chev}</button>
      <button id="m2">${I("#e1e8f7", "#2f4fa2", '<path d="M6 3h12v18l-6-4-6 4z"/>')}<span class="t">Dossiers Enregistrés</span>${ICON.chev}</button>
-     <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter de 5 h<small>Bientôt disponible</small></span>${ICON.chev}</button>
+     <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter quotidienne<small>Bientôt disponible</small></span>${ICON.chev}</button>
      <button id="m5">${I("#ece2f6", "#8a55b8", '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M18 8v6M15 11h6"/>')}<span class="t">Inviter des amis <em>(à devenir moins bêtes)</em></span>${ICON.chev}</button>
      <button id="m6">${I("#efebe3", "#17140f", '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v6M9.5 11.5L12 14l2.5-2.5"/>')}<span class="t">Installer l’application</span>${ICON.chev}</button>
    </div>`;

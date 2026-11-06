@@ -51,12 +51,13 @@ def clip(text: str, n: int = 158) -> str:
 CSS = """
 :root{--cream:#faf6ee;--ink:#17140f;--muted:#5f5a52;--line:#e7e1d4;--grey:#efebe3;--yellow:#f5b62a;--green:#1f8f5f;
 --serif:"Source Serif 4",Georgia,serif;--sans:Roboto,system-ui,-apple-system,"Segoe UI",sans-serif;--letter:"Patrick Hand SC","Comic Sans MS",cursive}
-*{box-sizing:border-box}html,body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.5}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}html,body{margin:0;overflow-x:hidden;background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.5}
 a{color:inherit}img{max-width:100%;display:block}
 .top{display:flex;align-items:center;gap:20px;padding:12px max(20px,calc((100vw - 1180px)/2));border-bottom:1px solid var(--line);flex-wrap:wrap}
 .top img{height:36px}.top nav{display:flex;gap:6px;flex-wrap:wrap}.top nav a{text-decoration:none;padding:7px 12px;border-radius:999px;font-weight:500}
 .top nav a:hover{background:var(--grey)}.top .cta{margin-left:auto}
-.wrap{max-width:1180px;margin:0 auto;padding:20px max(20px,calc((100vw - 1180px)/2)) 60px}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 20px 60px}
+.intro{max-width:780px}
 .crumbs{font-size:13.5px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}.crumbs a{color:var(--muted)}
 h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,48px);line-height:1.05;margin:10px 0 8px;text-wrap:balance}
 .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:14.5px}
@@ -66,7 +67,7 @@ h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,48px);line-
 .cover{border-radius:18px;overflow:hidden;margin:18px 0;aspect-ratio:16/9;background:var(--grey)}.cover img{width:100%;height:100%;object-fit:cover}
 .strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}
 @media (max-width:860px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.strip{grid-template-columns:1fr}}
+@media (max-width:560px){.strip{grid-template-columns:1fr;max-width:440px;margin-inline:auto}.cap{font-size:17px}.bub{font-size:17.5px}.lead{font-size:16.5px}.brille p{font-size:21px}.cover{border-radius:12px;margin:14px -4px}}
 .panel{position:relative;margin:0;aspect-ratio:9/16;border:4px solid var(--ink);border-radius:6px;overflow:hidden;background:#f1e9d6}
 .panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .panel figcaption{position:absolute;top:10px;left:10px;right:10px;display:flex;flex-direction:column;gap:8px}
@@ -83,12 +84,15 @@ h2.sec{font-family:var(--serif);font-weight:800;font-size:26px;margin:36px 0 12p
 .card{display:flex;flex-direction:column;gap:8px;text-decoration:none;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)}
 .card img{aspect-ratio:16/9;object-fit:cover;width:100%;background:var(--grey)}.card div{padding:4px 14px 14px}
 .card strong{font-family:var(--serif);font-weight:800;font-size:19px;line-height:1.15;display:block}.card span{font-size:13px;color:var(--muted)}
-@media (max-width:640px){.top{gap:8px}.top nav{width:100%;flex-wrap:nowrap;overflow-x:auto}.top nav a{white-space:nowrap;padding:6px 10px;font-size:14px}.top .cta{display:none}}
+@media (max-width:640px){.top{gap:8px;padding:10px 16px}.top img{height:30px}.top nav{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.top nav a{white-space:nowrap;padding:6px 10px;font-size:14px}.top .cta{display:none}.wrap{padding:14px 16px 90px}
+.sticky{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:10;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.22)}}
+@media (min-width:641px){.sticky{display:none}}
+@media (min-width:1000px){.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:center}.head .cover{margin:0}}
 footer{border-top:1px solid var(--line);padding:24px max(20px,calc((100vw - 1180px)/2));color:var(--muted);font-size:14px}
 """
 
 
-def head(title, desc, canonical, image, noindex=False, extra=""):
+def head(title, desc, canonical, image, noindex=False, extra="", og_type="website", image_alt=""):
     robots = '<meta name="robots" content="noindex,follow">' if noindex else '<meta name="robots" content="index,follow,max-image-preview:large">'
     verif = f'<meta name="google-site-verification" content="{e(SITE_CFG["google_site_verification"])}">' if SITE_CFG.get("google_site_verification") else ""
     return f"""<!DOCTYPE html>
@@ -106,8 +110,13 @@ def head(title, desc, canonical, image, noindex=False, extra=""):
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{e(canonical)}">
+<meta property="og:type" content="{og_type}">
 <meta property="og:image" content="{e(image)}">
+<meta property="og:image:alt" content="{e(image_alt or title)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}">
+<meta name="twitter:image" content="{e(image)}">
 <meta name="theme-color" content="#faf6ee">
 <link rel="icon" href="{BASE}assets/icon-192.png">
 <link rel="manifest" href="{BASE}manifest.webmanifest">
@@ -123,7 +132,7 @@ def head(title, desc, canonical, image, noindex=False, extra=""):
 """
 
 
-FOOT = f"""<footer>Le Sachoir — l’actu et la culture G en BD, chaque matin à 5 h. Les faits sont vérifiés et sourcés ; les personnages et les dialogues sont des parodies.
+FOOT = f"""<footer>Le Sachoir — l’actu et la culture G en BD, chaque jour. Les faits sont vérifiés et sourcés ; les personnages et les dialogues sont des parodies.
 · <a href="{BASE}archives/">Toutes les histoires</a> · <a href="{BASE}themes/">Thèmes</a></footer>
 </body></html>"""
 
@@ -145,17 +154,17 @@ def story_page(s, ed_dir: Path, related):
     for c in f.get("cases", []):
         img = c.get("image", {})
         src = img_base + img["file"] if img.get("status") == "done" else ""
-        alt = f'{f["title"]}, case {c.get("n", "")}'
+        alt = clip(f'{f["title"]}, case {c.get("n", "")} : {c.get("caption") or " ".join(b.get("text", "") for b in c.get("bubbles", []))}', 180)
         cap = ""
         if c.get("caption"):
             tag = c.get("tag") or {"fact": "Les faits", "react": "La réaction"}.get(c.get("kind", ""), "")
             cap = f'<p class="cap">{"<b>" + e(tag) + "</b>" if tag else ""}{e(c["caption"])}</p>'
         bubs = "".join(f'<p class="bub{" r" if b.get("side") == "r" else ""}">{e(b.get("text"))}</p>' for b in c.get("bubbles", []))
-        pic = f'<img src="{e(src)}" alt="{e(alt)}" loading="lazy" width="1024" height="1792">' if src else ""
+        pic = f'<img src="{e(src)}" alt="{e(alt)}" loading="lazy" decoding="async" width="1024" height="1792">' if src else ""
         panels.append(f'<figure class="panel">{pic}<figcaption>{cap}{bubs}</figcaption></figure>')
     sources = "".join(f'<li><a href="{e(x.get("url"))}" rel="nofollow noopener">{e(x.get("title") or x.get("url"))}</a></li>' for x in f.get("sources", []) if x.get("url"))
     final_src = f.get("final", {}).get("source", "")
-    published = f"{date}T05:00:00+01:00"
+    published = s.get("published") or f"{date}T00:00:00+01:00"
     ld = {
         "@context": "https://schema.org",
         "@graph": [
@@ -169,21 +178,25 @@ def story_page(s, ed_dir: Path, related):
                 {"@type": "ListItem", "position": 1, "name": "Le Sachoir", "item": BASE},
                 {"@type": "ListItem", "position": 2, "name": theme or f.get("label", ""), "item": f"{BASE}themes/{slugify(theme)}/" if theme else f"{BASE}archives/"},
                 {"@type": "ListItem", "position": 3, "name": f["title"], "item": canonical}]}]}
-    extra = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+    extra = (f'<meta property="article:published_time" content="{published}">'
+             + (f'<meta property="article:section" content="{e(theme)}">' if theme else "")
+             + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>')
     crumb_theme = f'<a href="{BASE}themes/{slugify(theme)}/">{e(theme)}</a> ›' if theme else ""
     body = f"""<main class="wrap" style="--fc:{COLOR.get(f['id'], '#1f8f5f')}">
 <nav class="crumbs" aria-label="Fil d’Ariane"><a href="{BASE}">Le Sachoir</a> › {crumb_theme} <span>{e(f['title'])}</span></nav>
+<div class="head"><div class="intro">
 <h1>{e(f['title'])}</h1>
 <div class="meta"><span class="tag">{e(f.get('label', ''))}</span>{('<span>' + e(theme) + '</span>') if theme else ''}<time datetime="{date}">{date_fr(date)}</time><span>{f.get('minutes', 2)} min de lecture</span></div>
 <p class="lead">{e(f.get('tagline', ''))}</p>
-<a class="cta" href="{BASE}?d={date}&amp;f={f['id']}">Lire en BD dans l’appli</a>
-{('<div class="cover"><img src="' + e(s['cover_abs']) + '" alt="' + e(f['title']) + '" width="1792" height="1024"></div>') if s['cover_abs'] else ''}
+<a class="cta" href="{BASE}?d={date}&amp;f={f['id']}">Lire en BD dans l’appli</a></div>
+{('<div class="cover"><img src="' + e(s['cover_abs']) + '" alt="' + e(f['title']) + '" width="1792" height="1024" fetchpriority="high"></div>') if s['cover_abs'] else ''}</div>
 <section class="strip" aria-label="La bande dessinée, case par case">{''.join(panels)}</section>
 <aside class="brille"><h2>Pour briller en société</h2><p>{e(f.get('final', {}).get('text', ''))}</p></aside>
 {('<h2 class="sec">Sources</h2><ul class="sources">' + sources + '</ul>') if sources else ('<p class="meta">Source : ' + e(final_src) + '</p>' if final_src else '')}
 {('<h2 class="sec">À lire aussi</h2><div class="cards">' + ''.join(card(r) for r in related) + '</div>') if related else ''}
+<a class="cta sticky" href="{BASE}?d={date}&amp;f={f['id']}">Lire en BD dans l’appli</a>
 </main>"""
-    return head(title, desc, canonical, image, noindex=s["demo"], extra=extra) + body + FOOT
+    return head(title, desc, canonical, image, noindex=s["demo"], extra=extra, og_type="article", image_alt=f["title"]) + body + FOOT
 
 
 def list_page(title, h1, intro, stories, canonical):
@@ -199,6 +212,7 @@ def build(site: Path, index: list):
         date = entry["date"]
         ed_file = ROOT / "editions" / date / "edition.json"
         ed = json.loads(ed_file.read_text())
+        published = ed.get("published_at", "")
         ready = {x["id"] for x in entry["formats"]}
         for fmt in ed.get("formats", []):
             if fmt["id"] not in ready:
@@ -206,7 +220,7 @@ def build(site: Path, index: list):
             slug = story_slug(date, fmt)
             cover = fmt.get("cover", {})
             stories.append({
-                "fmt": fmt, "date": date, "demo": bool(entry.get("demo")), "slug": slug,
+                "fmt": fmt, "date": date, "demo": bool(entry.get("demo")), "slug": slug, "published": published,
                 "title": fmt.get("title", ""), "label": fmt.get("label", ""), "theme": fmt.get("theme", ""),
                 "url_abs": f"{BASE}histoires/{slug}/",
                 "cover_abs": f"{BASE}editions/{date}/{cover['file']}" if cover.get("status") == "done" else "",
@@ -242,7 +256,7 @@ def build(site: Path, index: list):
     # Sitemap et robots
     urls = [(BASE, now), (f"{BASE}archives/", now), (f"{BASE}themes/", now)]
     urls += [(f"{BASE}themes/{slugify(t)}/", now) for t in themes]
-    urls += [(s["url_abs"], f"{s['date']}T05:00:00+01:00") for s in public]
+    urls += [(s["url_abs"], s["published"] or f"{s['date']}T00:00:00+01:00") for s in public]
     xml = "".join(f"<url><loc>{e(u)}</loc><lastmod>{m}</lastmod></url>" for u, m in urls)
     (site / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{xml}</urlset>\n')
     # Remarque : sur un site de projet GitHub Pages, Google ne lit robots.txt qu'à la racine du domaine.

@@ -1,6 +1,6 @@
 # Le Sachoir
 
-Chaque matin à 5 h, l'actu et la culture G en BD. Pour briller en société (ou au moins faire semblant).
+Chaque jour, l'actu et la culture G en BD. Pour briller en société (ou au moins faire semblant).
 
 **Appli :** https://gregoirekarydes.github.io/le-sachoir/
 

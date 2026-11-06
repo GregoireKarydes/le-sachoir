@@ -1,7 +1,7 @@
 {
   "name": "Le Sachoir",
   "short_name": "Le Sachoir",
-  "description": "Chaque matin à 5 h, l'actu et la culture G en BD.",
+  "description": "Chaque jour, l'actu et la culture G en BD.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
