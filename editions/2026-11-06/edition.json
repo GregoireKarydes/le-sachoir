@@ -16,21 +16,19 @@
           "look": "an American vice-president of the 1950s, dark suit, slicked hair, confident grin",
           "file": "cast/dossier-nixon.png",
           "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (6fa4835a-1584-484e-a2de-51fbd763853a)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (d6c44641-a465-453a-8068-da9958755617)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         },
         {
           "id": "sov",
           "look": "a Soviet official of the 1950s-80s, olive military uniform with red band cap, big grey moustache",
           "file": "cast/dossier-sov.png",
-          "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (915728d0-cc27-4e9c-a309-05996b5ca3e6)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done"
         },
         {
           "id": "boss",
           "look": "the American CEO of a soda company, blue suit, red tie, slicked grey hair",
           "file": "cast/dossier-boss.png",
-          "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (27b7e1b5-3a38-4845-90b0-d342802ae9c6)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done"
         }
       ],
       "cover": {
@@ -162,8 +160,8 @@
             ],
             "file": "images/dossier-05.webp",
             "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (c0d156aa-040a-4714-99d3-d90663e20ae6)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "attempts": 2,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (1697fe37-a258-4e5f-b9c5-95fad0642e6e)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -188,9 +186,8 @@
               "boss"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (56cb53b0-18a7-4936-a250-ffd93b9549ac)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -344,8 +341,7 @@
           "id": "huissier",
           "look": "a parliament usher in black tailcoat with a silver chain",
           "file": "cast/actu-huissier.png",
-          "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (8d11935e-da5e-491f-b325-48a525510b95)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done"
         },
         {
           "id": "gerard",
@@ -807,9 +803,8 @@
               "cat"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (e85774c6-1070-428a-a413-4961caf1a28b)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -905,8 +900,8 @@
               "lustig"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -931,8 +926,8 @@
               "dealer"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -958,8 +953,8 @@
               "poisson"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -980,8 +975,8 @@
               "poisson"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -1006,8 +1001,8 @@
               "lustig"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -1028,8 +1023,8 @@
               "lustig"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
