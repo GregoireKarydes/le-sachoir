@@ -61,9 +61,11 @@ def generate(prompt: str, size, refs: list[Path]) -> Image.Image:
         files = {k: (None, v) for k, v in data.items()}
         data = None
     r = requests.post(URL, headers={"Authorization": f"Bearer {TOKEN}"}, data=data, files=files, timeout=180)
-    if r.status_code == 429 or "allocation" in r.text.lower() or "quota" in r.text.lower():
-        raise QuotaExhausted(r.text[:300])
     if r.status_code >= 400:
+        # Ne chercher « quota » que dans un message d'erreur : une image base64 peut contenir ces lettres par hasard.
+        low = r.text[:2000].lower()
+        if r.status_code == 429 or "allocation" in low or "quota" in low or "neuron" in low:
+            raise QuotaExhausted(r.text[:300])
         raise RuntimeError(f"HTTP {r.status_code} : {r.text[:250]}")
     payload = r.json()
     b64 = (payload.get("result") or {}).get("image")
