@@ -15,19 +15,19 @@
           "id": "nixon",
           "look": "an American vice-president of the 1950s, dark suit, slicked hair, confident grin",
           "file": "cast/dossier-nixon.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "sov",
           "look": "a Soviet official of the 1950s-80s, olive military uniform with red band cap, big grey moustache",
           "file": "cast/dossier-sov.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "boss",
           "look": "the American CEO of a soda company, blue suit, red tie, slicked grey hair",
           "file": "cast/dossier-boss.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -38,7 +38,7 @@
         ],
         "file": "images/dossier-cover.webp",
         "status": "pending",
-        "attempts": 0
+        "attempts": 1
       },
       "cases": [
         {
@@ -63,8 +63,8 @@
               "sov"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -90,7 +90,7 @@
             ],
             "file": "images/dossier-02.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1
           }
         },
         {
@@ -116,7 +116,7 @@
             ],
             "file": "images/dossier-03.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1
           }
         },
         {
@@ -137,8 +137,8 @@
               "sov"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -159,7 +159,7 @@
             ],
             "file": "images/dossier-05.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1
           }
         },
         {
@@ -184,8 +184,8 @@
               "boss"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -205,8 +205,8 @@
               "boss"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -226,8 +226,8 @@
               "boss"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -247,8 +247,8 @@
               "boss"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -270,7 +270,7 @@
             ],
             "file": "images/dossier-10.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1
           }
         },
         {
@@ -296,7 +296,7 @@
             ],
             "file": "images/dossier-11.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1
           }
         },
         {
@@ -317,7 +317,7 @@
             ],
             "file": "images/dossier-12.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1
           }
         }
       ],
@@ -339,43 +339,43 @@
           "id": "huissier",
           "look": "a parliament usher in black tailcoat with a silver chain",
           "file": "cast/actu-huissier.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "gerard",
           "look": "Gérard, a start-up manager, grey shirt, yellow tie, enthusiastic",
           "file": "cast/actu-gerard.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "jeanne",
           "look": "Jeanne, a sharp young woman with a brown bun and round glasses, green cardigan",
           "file": "cast/actu-jeanne.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "cremiere",
           "look": "a market dairy seller with a bun, white apron",
           "file": "cast/actu-cremiere.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "astro",
           "look": "an astronomer in a white lab coat with curly hair and glasses",
           "file": "cast/actu-astro.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "coach",
           "look": "a life coach in an orange sports jacket with blond slick hair, huge smile",
           "file": "cast/actu-coach.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "diplo",
           "look": "a diplomat in a navy suit, bald, thin moustache",
           "file": "cast/actu-diplo.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -384,8 +384,8 @@
           "huissier"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -405,8 +405,8 @@
               "huissier"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -431,8 +431,8 @@
               "jeanne"
             ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -452,8 +452,8 @@
               "cremiere"
             ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -478,8 +478,8 @@
               "jeanne"
             ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -499,8 +499,8 @@
               "astro"
             ],
             "file": "images/actu-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -525,8 +525,8 @@
               "astro"
             ],
             "file": "images/actu-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -546,8 +546,8 @@
               "diplo"
             ],
             "file": "images/actu-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -567,8 +567,8 @@
               "diplo"
             ],
             "file": "images/actu-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
@@ -590,13 +590,13 @@
           "id": "schro",
           "look": "Erwin, a 1930s physicist, slick dark hair, round glasses, grey three-piece suit, dark red tie",
           "file": "cast/cultureg-schro.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "cat",
           "look": "an orange tabby cat with half-closed, unimpressed eyes",
           "file": "cast/cultureg-cat.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -606,8 +606,8 @@
           "cat"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -632,8 +632,8 @@
               "cat"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -658,8 +658,8 @@
               "cat"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -679,8 +679,8 @@
               "schro"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -701,8 +701,8 @@
               "cat"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -727,8 +727,8 @@
               "cat"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -753,8 +753,8 @@
               "cat"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -775,8 +775,8 @@
               "cat"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -801,8 +801,8 @@
               "cat"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
