@@ -204,10 +204,11 @@ button{cursor:pointer}
 .segs i{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.28)}
 .segs i.on{background:var(--yellow)}
 .r-bot .cnt{font-weight:700;font-size:13px;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
-.r-bot .fav{width:44px;height:44px;background:none;box-shadow:none;border-radius:0}
-.r-bot .fav svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linejoin:round;transition:fill .15s,stroke .15s}
-.r-bot .fav.on svg{fill:#ff3040;stroke:#ff3040}
-.r-bot .fav.pop svg{animation:likepop .45s cubic-bezier(.17,.89,.32,1.49)}
+.r-side{position:absolute;right:8px;bottom:84px;z-index:6;display:flex;flex-direction:column;align-items:center;gap:16px}
+.side-btn{border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:center;gap:3px;color:#fff;font-size:11.5px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.side-btn svg{width:31px;height:31px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linejoin:round;stroke-linecap:round;filter:drop-shadow(0 1px 3px rgba(0,0,0,.55));transition:fill .15s,stroke .15s}
+.side-btn.fav.on svg{fill:#ff3040;stroke:#ff3040}
+.side-btn.fav.pop svg{animation:likepop .45s cubic-bezier(.17,.89,.32,1.49)}
 @keyframes likepop{0%{transform:scale(1)}25%{transform:scale(.8)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
 .track{touch-action:pan-x pan-y;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
 .bigheart{position:absolute;z-index:8;width:110px;height:110px;margin:-55px 0 0 -55px;pointer-events:none;
@@ -215,7 +216,7 @@ button{cursor:pointer}
 .slide > svg.bigheart{inset:auto;width:110px;height:110px;display:block}
 .bigheart path{fill:#fff}
 @keyframes bigheart{0%{transform:scale(0) rotate(-12deg);opacity:0}15%{transform:scale(1.2) rotate(0);opacity:1}30%{transform:scale(.95)}45%{transform:scale(1)}80%{opacity:1;transform:scale(1) translateY(0)}100%{opacity:0;transform:scale(.6) translateY(-40px)}}
-@media (prefers-reduced-motion:reduce){.bigheart{animation-duration:.5s}.r-bot .fav.pop svg{animation:none}}
+@media (prefers-reduced-motion:reduce){.bigheart{animation-duration:.5s}.side-btn.fav.pop svg{animation:none}}
 .track{flex:1;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .track::-webkit-scrollbar{display:none}
 .slide{flex:0 0 100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden;background:var(--cream)}
@@ -482,6 +483,7 @@ body{overscroll-behavior-y:none}
   .reader.desk .r-top{top:16px;right:max(32px,calc((100vw - 1180px)/2))}
   .reader.desk .r-bot{justify-content:center;gap:16px;padding:12px 32px}
   .reader.desk .r-bot .cnt{font-size:14.5px}
+  .reader.desk .r-side{right:max(18px,calc((100vw - 1180px)/2 - 64px));bottom:90px}
   /* Fenêtres centrées */
   .scrim{align-items:center;justify-content:center}
   .sheet{max-width:560px;max-height:86vh;border-radius:24px}
@@ -572,10 +574,13 @@ body{overscroll-behavior-y:none}
       <button id="rClose" aria-label="Fermer la lecture"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
     <div class="track" id="track"></div>
+    <div class="r-side">
+      <button id="rFav" class="side-btn fav" aria-label="J’aime cette histoire" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg><span>J’aime</span></button>
+      <button id="rShare" class="side-btn" aria-label="Partager cette histoire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3 9.2 10.1M22 3l-7.4 18-4.1-8.4L2 9.3 22 3z"/></svg><span>Partager</span></button>
+    </div>
     <div class="r-bot">
       <div class="segs" id="segs"></div>
       <span class="cnt" id="rCount"></span>
-      <button id="rFav" class="fav" aria-label="J’aime cette histoire" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg></button>
     </div>
     <button class="nav-arrow prev" id="rPrev" aria-label="Case précédente"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="nav-arrow next" id="rNext" aria-label="Case suivante"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -883,6 +888,12 @@ function go(d) { const tr = $("#track"), i = Math.max(0, Math.min(R.n - 1, R.idx
 $("#rPrev").onclick = () => go(-1); $("#rNext").onclick = () => go(1);
 $("#rClose").onclick = () => history.back();
 window.addEventListener("popstate", () => { if ($("#scrim").classList.contains("on")) closeSheet(); else if ($("#reader").classList.contains("on")) closeReader(); });
+$("#rShare").onclick = async () => {
+  const f = R.f, url = new URL(f.url || `./?d=${R.ed.date}&f=${f.id}`, location.href).href;
+  const data = { title: `${f.title} — Le Sachoir`, text: `${f.title} : à lire en BD sur Le Sachoir.`, url };
+  if (navigator.share) { try { await navigator.share(data); return; } catch (e) { if (e.name === "AbortError") return; } }
+  try { await navigator.clipboard.writeText(url); toast("Lien copié, il n’y a plus qu’à coller"); } catch (e) { toast(url); }
+};
 $("#rFav").onclick = () => { const was = isFav(); toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true); if (!was) popHeart(); };
 document.addEventListener("keydown", e => {
   if ($("#scrim").classList.contains("on")) { if (e.key === "Escape") closeSheet(); return; }
