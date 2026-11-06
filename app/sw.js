@@ -1,4 +1,4 @@
-// Service worker du Sachoir : appli disponible hors ligne, éditions mises à jour dès que possible.
+// Service worker du Sachoir (v1) : appli disponible hors ligne, éditions mises à jour dès que possible.
 const VERSION = "sachoir-v1";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "assets/logo.png", "assets/icon-192.png", "assets/icon-512.png", "assets/books.png"];
 
