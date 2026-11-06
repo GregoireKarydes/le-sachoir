@@ -450,14 +450,24 @@ body{overscroll-behavior-y:none}
   .hello{font-size:38px}
   .lead{font-size:17px}
   .date{font-size:24px}
-  #v-home.on{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);align-items:start}
-  #v-home > *{grid-column:1/-1}
-  #v-home > .card.big{grid-column:1;grid-row:span 3}
-  #v-home > .duo{grid-column:2;grid-template-columns:1fr}
-  #v-home > .card.wide{grid-column:2}
-  #v-home > .card.wide .pic{flex-basis:140px}
-  #v-home.nobig > .duo{grid-column:1/-1;grid-template-columns:1fr 1fr}
-  #v-home.nobig > .card.wide{grid-column:auto}
+  /* Édition : grille alignée. Avec un Grand Dossier : le dossier à gauche, les autres empilés à droite
+     sur toute sa hauteur. Sans dossier : une colonne par histoire, cartes de même hauteur. */
+  .ed-grid{display:grid;gap:20px;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));align-items:stretch}
+  .ed-grid.n1{grid-template-columns:minmax(0,520px)}
+  .ed-grid.has-big{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+  .ed-side{display:grid;gap:20px;grid-template-rows:repeat(var(--k,1),minmax(0,1fr))}
+  .ed-side .card.wide{height:100%;min-height:150px}
+  .ed-side .card.wide .pic{flex-basis:150px}
+  .card.tile{padding:0;gap:0;height:100%}
+  .card.tile .pic{aspect-ratio:16/9;overflow:hidden;background:#fff;border-bottom:3px solid var(--ink)}
+  .card.tile .pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .card.tile .txt{flex:1;display:flex;flex-direction:column;gap:9px;padding:16px 18px 18px}
+  .card.tile h3{font-size:25px}
+  .card.tile .readstate{margin-top:auto}
+  .ed-grid .card.big{height:100%}
+  .ed-grid .card.big .illu{flex:1;margin:4px 0 0;min-height:0}
+  .ed-grid .card.big .illu img{max-width:none;width:100%;height:100%;max-height:330px;object-fit:cover;border-radius:14px;border:3px solid var(--ink)}
+  .ed-grid .card.big .illu .tag{left:12px;bottom:12px}
   .card.big h3{font-size:40px}
   .card{transition:transform .15s,box-shadow .15s}
   .card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(23,20,15,.18)}
@@ -702,7 +712,7 @@ function renderNav() {
 }
 function setTab(t) { if (t === "about" && !DESK.matches) t = "home"; TAB = t; document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + t)); $("#main").scrollTop = 0; render(); }
 function render() { if (TAB === "about" && !DESK.matches) return setTab("home"); renderNav(); ({ about: renderAbout, home: renderHome, explore: renderExplore, favs: renderFavs, profile: renderProfile })[TAB](); }
-DESK.addEventListener("change", () => { if (!DESK.matches && TAB === "about") setTab("home"); else renderNav(); });
+DESK.addEventListener("change", () => { if (!DESK.matches && TAB === "about") setTab("home"); else render(); });
 
 /* ---------- Le concept (page de présentation, PC) ---------- */
 function renderAbout() {
@@ -745,15 +755,21 @@ function renderHome() {
     wide: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} wide" data-f="${f.id}"><div class="txt"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || esc(f.tagline || "")}</span></div>${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}</button>`; }
   };
   const duo = ["actu", "cultureg"].filter(id => F[id]);
+  const others = ["actu", "cultureg", "insolite"].filter(id => F[id]);
+  card.tile = f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} tile" data-f="${f.id}">${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}<div class="txt"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || esc(f.tagline || "")}</span></div></button>`; };
+  const cardsHTML = DESK.matches
+    ? (F.dossier
+        ? `<div class="ed-grid has-big">${card.dossier(F.dossier)}${others.length ? `<div class="ed-side" style="--k:${others.length}">${others.map(id => card.wide(F[id])).join("")}</div>` : ""}</div>`
+        : `<div class="ed-grid n${others.length}" style="--n:${others.length}">${others.map(id => card.tile(F[id])).join("")}</div>`)
+    : `${F.dossier ? card.dossier(F.dossier) : ""}
+   ${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
+   ${F.insolite ? card.wide(F.insolite) : ""}`;
   v.innerHTML = `
    <div><h1 class="h1 hello">${hello}</h1><p class="lead">Prêt à briller en société (ou au moins à faire semblant) ?</p></div>
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
    ${!isToday && CUR.date === INDEX[0]?.date ? `<p class="sub">L’édition d’aujourd’hui est encore sous le crayon. En attendant, voici la dernière.</p>` : ""}
-   ${F.dossier ? card.dossier(F.dossier) : ""}
-   ${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
-   ${F.insolite ? card.wide(F.insolite) : ""}
+   ${cardsHTML}
    <p class="daily">Chaque jour, une nouvelle édition. Votre culture G, elle, ne prend pas de congés.</p>`;
-  v.classList.toggle("nobig", !F.dossier);
   v.querySelectorAll("[data-f]").forEach(b => b.onclick = () => openReader(ed, b.dataset.f));
   $("#hHist").onclick = openHistory;
 }
