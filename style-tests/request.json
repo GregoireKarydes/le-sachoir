@@ -1,0 +1,28 @@
+{
+  "scenes": [
+    "A 1930s physicist with slick dark hair, round glasses and a grey three-piece suit stands in his cluttered study, proudly presenting a cardboard box with both arms; next to him on the desk an orange tabby cat stares at the reader with half-closed, deeply unimpressed eyes. Medium shot",
+    "Ancient Rome: Julius Caesar in a red cloak and laurel wreath strikes a heroic pose on the bank of a tiny muddy stream, sword raised to the sky, while a bored Roman legionary behind him leans on his shield and looks at the reader. Low-angle wide shot"
+  ],
+  "styles": [
+    {
+      "id": "A-gros-nez",
+      "name": "Humour classique « gros nez »",
+      "prompt": "Hand-drawn Franco-Belgian humour comic panel (bande dessinée), in the tradition of 1960s-70s weekly comic magazines: hand-inked brush and pen lines with natural thick-and-thin variation and slightly irregular contours, caricatural cartoon characters with big noses, big expressive eyes and exaggerated expressions, lively dynamic poses, motion lines and sweat drops, a small funny visual gag in the background, flat gouache-like colours with soft hand-painted variations, warm off-white paper. Looks drawn and coloured by hand, not digital."
+    },
+    {
+      "id": "B-ligne-claire",
+      "name": "Ligne claire faite main",
+      "prompt": "Hand-drawn Franco-Belgian 'ligne claire' comic panel: clean pen outlines of steady thickness drawn by hand with tiny natural irregularities, no hatching, flat bright colours as if printed on slightly yellowed vintage comic paper with subtle halftone dots, detailed backgrounds, expressive cartoon faces. Looks drawn and coloured by hand, not digital."
+    },
+    {
+      "id": "C-aquarelle",
+      "name": "Encre et aquarelle",
+      "prompt": "Hand-drawn humorous Franco-Belgian comic panel: lively ink line drawn with a dip pen, loose watercolour washes with visible brush strokes and pigment blooms, white paper showing through, caricatural expressive characters, sketchy spontaneous energy, textured watercolour paper. Looks drawn and coloured by hand, not digital."
+    },
+    {
+      "id": "D-moderne",
+      "name": "Humour moderne",
+      "prompt": "Hand-drawn modern Franco-Belgian humour comic panel: confident brush ink line with thick-and-thin variation, caricatural characters with very expressive faces and cartoon proportions, flat colours with soft hand-painted shading and a few coloured-pencil textures, dynamic composition. Looks drawn and coloured by hand, not digital."
+    }
+  ]
+}

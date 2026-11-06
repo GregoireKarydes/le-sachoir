@@ -52,6 +52,7 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`. Tout 
 - Le style et l'interdiction de texte sont ajoutés automatiquement par `pipeline/style.json` : ne pas les répéter.
 - Jamais de texte, de lettres, de logos ou de marques à dessiner. Pas de nom de dessinateur ou de série existante.
 - Laisser le haut de l'image calme : les bulles s'y posent.
+- Penser en dessinateur de BD d'humour : varier les cadrages d'une case à l'autre (plan large, plan moyen, gros plan, plongée, contre-plongée), exagérer les expressions et les poses, ajouter des effets classiques (traits de vitesse, gouttes de sueur, petites étoiles) et, quand c'est possible, un petit gag visuel dans le décor qui sert le sujet.
 - Personnalités vivantes (Actu) : décrire la fonction et la caricature (silhouette, coiffure, accessoire), jamais le nom.
 - Chemins : `images/<format>-NN.webp` (NN sur 2 chiffres), `images/<format>-cover.webp`, `cast/<format>-<id>.png`.
 

@@ -21,7 +21,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
-from PIL import Image, ImageFilter
+from PIL import Image, ImageChops, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 EDITIONS = ROOT / "editions"
@@ -71,11 +71,25 @@ def generate(prompt: str, size, refs: list[Path]) -> Image.Image:
     return Image.open(io.BytesIO(base64.b64decode(b64))).convert("RGB")
 
 
+def paper(im: Image.Image, strength: float) -> Image.Image:
+    """Ajoute un grain de papier chaud, pour l'effet « dessiné et imprimé à la main »."""
+    if not strength:
+        return im
+    w, h = im.size
+    grain = Image.effect_noise((w // 2, h // 2), 40).resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(0.8))
+    fibres = Image.effect_noise((w // 8, h // 8), 25).resize((w, h), Image.BICUBIC)
+    tex = Image.blend(grain, fibres, 0.5).convert("RGB")
+    warm = Image.new("RGB", (w, h), (247, 238, 220))
+    tex = ImageChops.multiply(tex.point(lambda v: 160 + v * 95 // 255), warm)
+    return Image.blend(im, ImageChops.multiply(im, tex), strength * 2.5)
+
+
 def save_webp(im: Image.Image, dest: Path):
     k = STYLE["upscale"]
     if k and k > 1:
         im = im.resize((im.width * k, im.height * k), Image.LANCZOS)
         im = im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
+    im = paper(im, STYLE.get("paper_texture", 0))
     dest.parent.mkdir(parents=True, exist_ok=True)
     im.save(dest, "WEBP", quality=STYLE["webp_quality"], method=6)
 

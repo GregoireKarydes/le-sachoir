@@ -1,0 +1,43 @@
+name: Test de style
+
+on:
+  schedule:
+    - cron: "7 0 * * *"   # juste après la remise à zéro du quota Cloudflare (00:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Demande en attente ?
+        id: req
+        run: test -f style-tests/request.json && echo "go=1" >> "$GITHUB_OUTPUT" || echo "Rien à tester."
+      - uses: actions/setup-python@v5
+        if: steps.req.outputs.go == '1'
+        with:
+          python-version: "3.12"
+      - if: steps.req.outputs.go == '1'
+        run: pip install -r pipeline/requirements.txt
+      - name: Dessiner les variantes
+        if: steps.req.outputs.go == '1'
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        working-directory: pipeline
+        run: python style_test.py
+      - name: Commit
+        if: steps.req.outputs.go == '1'
+        run: |
+          git config user.name "sachoir-bot"
+          git config user.email "sachoir-bot@users.noreply.github.com"
+          git add -A style-tests
+          git diff --cached --quiet || git commit -m "Test de style"
+          git pull --rebase && git push

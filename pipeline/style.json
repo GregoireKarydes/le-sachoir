@@ -1,6 +1,6 @@
 {
   "model": "@cf/black-forest-labs/flux-2-klein-4b",
-  "style": "Franco-Belgian 'ligne claire' comic book panel: clean black ink outlines of constant thickness, flat bright colours with no gradients, detailed but readable backgrounds, expressive cartoon characters with big readable faces. Wholesome, warm, humorous tone.",
+  "style": "Hand-drawn Franco-Belgian humour comic panel (bande dessinée), in the tradition of 1960s-70s weekly comic magazines: hand-inked brush and pen lines with natural thick-and-thin variation and slightly irregular hand-drawn contours, caricatural cartoon characters with big noses, big expressive eyes and exaggerated facial expressions, lively dynamic poses, classic comic effects such as motion lines, sweat drops and little stars of surprise, a small funny visual gag hidden in the background, flat gouache-like colours with soft hand-painted variations, printed on warm off-white paper. Looks drawn and coloured by hand, not digital.",
   "constraints": "A single illustration that fills the whole frame edge to edge: one panel only, no panel borders, no frames, no gutters, no comic page layout, no blank areas. Absolutely no text, no letters, no numbers, no writing on boards or signs, no speech bubbles, no captions, no logos. The upper quarter of the picture shows a simple background (sky, wall, ceiling) with no important detail.",
   "case_size": [
     512,
@@ -17,5 +17,6 @@
   "upscale": 2,
   "webp_quality": 82,
   "guidance": 3.5,
-  "max_attempts": 3
+  "max_attempts": 3,
+  "paper_texture": 0.1
 }
