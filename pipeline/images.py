@@ -87,7 +87,14 @@ def full_prompt(scene: str, cast_looks: list[str]) -> str:
 
 def editions_to_process():
     today = datetime.now(ZoneInfo("Europe/Paris")).date()
-    for d in sorted(EDITIONS.iterdir()):
+    # Priorité : l'édition du jour, puis le stock le plus proche ; la démo passe en dernier.
+    dirs = [d for d in EDITIONS.iterdir() if d.is_dir()]
+    def demo(d):
+        try:
+            return bool(json.loads((d / "edition.json").read_text()).get("demo"))
+        except Exception:
+            return False
+    for d in sorted(dirs, key=lambda d: (demo(d), d.name)):
         f = d / "edition.json"
         if not f.exists():
             continue
