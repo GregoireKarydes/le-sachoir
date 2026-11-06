@@ -1,7 +1,8 @@
 {
   "model": "@cf/black-forest-labs/flux-2-klein-4b",
-  "style": "Minimalist black-and-white humour webcomic panel, deceptively simple hand-drawn 'scribble' style. Bold, thick, clean black outlines of near-constant width, like a soft felt-tip pen. Large solid pure-black fills for hair, dark clothes and shadows. No hatching, no gradients, no shading, no texture: volume from the silhouette only; few lines. Characters: soft chibi proportions, huge head (a third of the height), floppy noodle limbs without joints, mitten hands, tiny feet; wild messy hair with strands shooting in every direction, filled black; big round slightly vacant eyes with dot pupils; very expressive broken or arched eyebrows; mouth as a flat line, a big round gasp or a lopsided smirk; small pink blush marks on the cheeks. Exaggerated spineless body language: rounded back, dropped shoulders, limp arms, a single sweat drop, sometimes melting into a puddle. Mostly empty white background with one or two essential objects in simple outlines. Black and white plus pink cheeks and at most one or two small flat accent colours. Flat, graphic, hand-drawn; not realistic, not painterly, not 3D.",
-  "constraints": "A single illustration that fills the whole frame: one panel only, no panel borders, no frames, no gutters, no comic page layout, no white margins around the drawing (empty space inside the scene is fine). Absolutely no text, no letters, no numbers, no writing on boards or signs, no speech bubbles, no captions, no logos. The upper quarter of the picture is plain empty background with no important detail.",
+  "style": "Simple black-and-white webcomic doodle, drawn with a thick black felt marker on plain white paper. Slightly wobbly hand-drawn outlines, all the same thickness. Hair and dark clothes are solid pure-black shapes; a few flat light-grey areas for shadows. Characters: oversized round head on a small stubby body, huge round white eyes with small black dot pupils, expressive eyebrows, tiny simple mouth, scruffy spiky hair, floppy noodle arms, mitten hands, pink blush marks on the cheeks. Exaggerated body language, small sweat drops and motion lines. White background left almost empty: one floor or desk line and one or two simple props. Flat colours only, one small accent colour at most.",
+  "style_with_ref": "Draw it in exactly the same drawing style as image 0: same marker line weight, same solid black fills, same huge round eyes and oversized heads, same nearly empty white background. Do not copy the characters or the scene of image 0.",
+  "constraints": "One single full-bleed illustration, edge to edge, no panel borders. Wordless picture: no text, no lettering, no speech bubbles; any sign, board or screen is blank. The top quarter of the picture is empty white background.",
   "case_size": [
     512,
     896
@@ -18,5 +19,14 @@
   "webp_quality": 82,
   "guidance": 3.5,
   "max_attempts": 3,
-  "paper_texture": 0.1
+  "paper_texture": 0,
+  "ink": {
+    "colors": 8,
+    "black_below": 90,
+    "white_above": 175,
+    "grey": 200,
+    "grey_max_saturation": 36,
+    "thicken": 1,
+    "max_colour_share": 0.2
+  }
 }

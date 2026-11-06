@@ -87,19 +87,69 @@ def paper(im: Image.Image, strength: float) -> Image.Image:
     return Image.blend(im, ImageChops.multiply(im, tex), strength * 2.5)
 
 
+def ink(im: Image.Image, cfg: dict | None = None) -> Image.Image:
+    """Rend l'image « encrée » : quelques couleurs plates, noir pur, blanc pur, un seul gris.
+
+    Supprime les dégradés et ombrages que le modèle ajoute, puis épaissit un peu le trait.
+    """
+    cfg = cfg if cfg is not None else STYLE.get("ink")
+    if not cfg:
+        return im
+    # Garde-fou : une image très colorée (hors style) serait abîmée par la réduction ; on la laisse telle quelle.
+    hsv = im.resize((128, 128)).convert("HSV")
+    colourful = sum(1 for _, s, v in hsv.getdata() if s > 90 and v > 60) / (128 * 128)
+    if colourful > cfg.get("max_colour_share", 0.2):
+        return im
+    im = im.filter(ImageFilter.MedianFilter(3))  # enlève le grain avant de réduire les couleurs
+    q = im.quantize(colors=cfg.get("colors", 8), method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
+    pal = q.getpalette()[: 3 * 256]
+    grey = cfg.get("grey", 200)
+    for i in range(0, len(pal), 3):
+        r, g, b = pal[i:i + 3]
+        lum = 0.299 * r + 0.587 * g + 0.114 * b
+        sat = max(r, g, b) - min(r, g, b)
+        pink = r - g > 50 and b - g > 0  # joues roses : on les garde
+        if max(r, g, b) < cfg.get("black_below", 80):  # noir (un rouge foncé reste rouge)
+            pal[i:i + 3] = [0, 0, 0]
+        elif sat <= cfg.get("grey_max_saturation", 36):  # couleur neutre : blanc ou un seul gris
+            v = 255 if lum > cfg.get("white_above", 205) else grey
+            pal[i:i + 3] = [v, v, v]
+        elif lum > 180 and sat < 90 and not pink:  # teintes pâles (peau, papier crème) : blanc
+            pal[i:i + 3] = [255, 255, 255]
+    q.putpalette(pal)
+    out = q.convert("RGB")
+    for _ in range(cfg.get("thicken", 0)):
+        out = out.filter(ImageFilter.MinFilter(3))
+    return out
+
+
 def save_webp(im: Image.Image, dest: Path):
+    raw = im
+    im = ink(im)
     k = STYLE["upscale"]
     if k and k > 1:
         im = im.resize((im.width * k, im.height * k), Image.LANCZOS)
-        im = im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
+        if im is raw:  # pas d'encrage : on garde l'ancien renforcement du trait
+            im = im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
     im = paper(im, STYLE.get("paper_texture", 0))
     dest.parent.mkdir(parents=True, exist_ok=True)
     im.save(dest, "WEBP", quality=STYLE["webp_quality"], method=6)
 
 
-def full_prompt(scene: str, cast_looks: list[str]) -> str:
-    who = (" Characters (match the reference images): " + "; ".join(cast_looks) + ".") if cast_looks else ""
-    return f"{STYLE['style']} Scene: {scene}.{who} {STYLE['constraints']}"
+def build(scene: str, cast: list[tuple[str, Path]]) -> tuple[str, list[Path]]:
+    """Prompt et références. La référence de style est toujours l'image 0, puis une fiche par personnage."""
+    refs, who = [], []
+    if STYLE_REF.exists():
+        refs.append(STYLE_REF)
+    for look, sheet in cast:
+        if sheet and sheet.exists() and len(refs) < 4:
+            who.append(f"image {len(refs)} shows {look}")
+            refs.append(sheet)
+        else:
+            who.append(look)
+    head = STYLE["style_with_ref"] + " " if STYLE_REF.exists() else ""
+    chars = (" Characters, same faces, hair and clothes as their reference: " + "; ".join(who) + ".") if who else ""
+    return f"Scene: {scene}.{chars} {head}{STYLE['style']} {STYLE['constraints']}", refs
 
 
 def editions_to_process():
@@ -141,11 +191,13 @@ def process(d: Path, f: Path, ed: dict) -> int:
         for c in fmt.get("cast", []):
             if c.get("status") == "done" and (d / c["file"]).exists():
                 continue
-            prompt = (f"{STYLE['style']} Character reference portrait: one single head-and-shoulders portrait, facing the viewer, "
-                      f"plain light cream background, of {c.get('look', c['id'])}. One image only, no panels, no frames, "
-                      f"absolutely no text, no letters, no speech bubbles.")
+            head = STYLE["style_with_ref"] + " " if STYLE_REF.exists() else ""
+            prompt = (f"Character reference portrait: one single character, head and upper body, facing the viewer, "
+                      f"plain white background, of {c.get('look', c['id'])}. {head}{STYLE['style']} "
+                      f"One image only, no panel borders. Wordless picture: no text, no lettering.")
             try:
                 im = generate(prompt, STYLE["cast_size"], [STYLE_REF])
+                im = ink(im)
             except QuotaExhausted:
                 raise
             except Exception as e:
@@ -175,8 +227,7 @@ def process(d: Path, f: Path, ed: dict) -> int:
                 persist()
                 continue
             cast = img.get("cast", [])
-            refs = [sheets[c] for c in cast if c in sheets][:3] + [STYLE_REF]
-            prompt = full_prompt(img["prompt"], [looks[c] for c in cast if c in looks])
+            prompt, refs = build(img["prompt"], [(looks[c], sheets.get(c)) for c in cast if c in looks])
             img["attempts"] = img.get("attempts", 0) + 1
             try:
                 im = generate(prompt, size, refs)

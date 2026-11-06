@@ -27,10 +27,14 @@ def main():
     try:
         for s in req["styles"]:
             for i, scene in enumerate(req["scenes"], 1):
-                prompt = f"{s['prompt']} Scene: {scene}. {gen.STYLE['constraints']}"
-                im = gen.generate(prompt, gen.STYLE["case_size"], [])
+                if s.get("prompt"):  # style libre à comparer
+                    prompt, refs = f"Scene: {scene}. {s['prompt']} {gen.STYLE['constraints']}", []
+                else:  # style actuel de style.json (avec style_ref.png s'il existe)
+                    prompt, refs = gen.build(scene, [])
+                im = gen.generate(prompt, gen.STYLE["case_size"], refs)
                 dest = out / f"{s['id']}-{i}.webp"
                 gen.save_webp(im, dest)
+                gen.ink(im).save(out / f"{s['id']}-{i}.png")  # candidate possible pour style_ref.png
                 results.append({"style": s["id"], "name": s["name"], "scene": i, "file": dest.name})
                 print(f"  {dest.name}")
     except gen.QuotaExhausted as e:
