@@ -48,8 +48,10 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`. Tout 
 ```
 
 ## Le jeu du jour (`"id": "quiz"`, sans image)
-Le jeu de fin d'édition. **Deux variantes qui alternent d'un jour à l'autre** : le Quiz culture G (`"kind": "culture"`, 5 questions) et le Quiz géo (`"kind": "geo"`, 3 questions, voir plus bas).
-Règle d'alternance : prendre l'inverse du `kind` du jeu de la veille (un jeu sans `kind` compte comme `culture`) ; s'il n'y a pas de jeu la veille, faire un Quiz géo.
+Le jeu de fin d'édition. **Huit jeux qui tournent d'un jour à l'autre**, dans cet ordre (champ `kind`) :
+`culture` → `geo` → `frise` → `dico` → `plusmoins` → `swipe` → `chiffre` → `citation` → puis on recommence.
+Règle : prendre le jeu **suivant** celui de la veille dans cette liste (un jeu sans `kind` compte comme `culture`) ; s'il n'y a pas de jeu la veille, faire un Quiz géo.
+Le `title` est drôle et différent chaque jour ; le `label` est le nom du jeu (« Le Quiz géo », « La Frise »…).
 Le lecteur ne joue qu'une fois par jour : ses réponses sont enregistrées aussitôt, il peut ensuite seulement les revoir.
 
 ### Quiz culture G (`"kind": "culture"`)
@@ -126,6 +128,31 @@ Les 3 questions :
    - **Le numéro** (`"type": "choice"`) : « 13 ? » → Bouches-du-Rhône, ou l'inverse.
 
 Règles du Quiz géo : environ 2 questions sur 3 liées à la France ; une seule bonne réponse, sourcée ; explication drôle de 40 mots maximum qui apprend un fait de plus ; ne pas reprendre un lieu déjà utilisé dans un Quiz géo des 60 derniers jours.
+
+### Les autres jeux
+Règles communes : faits vérifiés par recherche web et sourcés (`source` dans chaque question, liste `sources` du format) ; environ 3 sur 4 liés à la France ; explications de 40 mots maximum, drôles, qui apprennent quelque chose ; aucun fait déjà utilisé dans `editions/` ; rien sur les drames ; personne vivante seulement pour un fait public sourcé.
+
+**La Frise** (`"kind": "frise"`, 3 questions `"type": "order"`, `"by": "chrono"`) : 4 événements à remettre du plus ancien au plus récent. Chaque item : `{ "name": "Règne de Cléopâtre", "year": -51, "label": "51 av. J.-C." }` (`year` négatif avant J.-C. ; `label` facultatif, pour « vers 1096 » ou une période). Viser les surprises (Cléopâtre plus proche de l'iPhone que de Khéops, Oxford plus vieille que les Aztèques), au moins 5 ans d'écart entre deux événements.
+
+**Le Dico menteur** (`"kind": "dico"`, 4 questions `"type": "choice"`) : un mot français rare, ancien ou régional (« Vergogne, c'est… ») et 4 définitions : une vraie, trois inventées, drôles mais crédibles. L'explication donne l'étymologie ou un exemple d'emploi.
+
+**Plus ou moins** (`"kind": "plusmoins"`, 1 question `"type": "chain"`) : une suite de 8 à 10 éléments comparés deux à deux ; le joueur enchaîne les duels jusqu'à la première erreur.
+```json
+{ "type": "chain", "q": "Lequel est le plus ancien ?", "crit": "plus ancien", "pick": "min",   // "min" ou "max" (par défaut)
+  "items": [ { "name": "Le Coca-Cola", "value": 1886, "label": "1886", "explain": "facultatif, 20 mots max" }, … ],
+  "explain": "…", "source": { … } }
+```
+Une seule grandeur par jeu (date, population, hauteur, distance…), pas d'égalité entre deux éléments voisins, des duels qui piègent (le bon sens doit souvent se tromper).
+
+**Le Swipe** (`"kind": "swipe"`, 1 question `"type": "swipe"`) : 10 affirmations vrai ou faux en 60 secondes.
+`{ "type": "swipe", "seconds": 60, "items": [ { "text": "Napoléon était petit.", "ok": false, "explain": "Environ 1,69 m, dans la moyenne de son époque." }, … ], "source": { … } }`
+Affirmations de 12 mots maximum, environ moitié vraies, beaucoup d'idées reçues.
+
+**Le Chiffre** (`"kind": "chiffre"`, 3 questions `"type": "estimate"`) : estimer un nombre avec un curseur.
+`{ "type": "estimate", "q": "Combien de marches jusqu'au sommet de la tour Eiffel ?", "answer": 1665, "unit": "marches", "min": 100, "max": 10000, "scale": "log" }`
+`scale` : `"log"` quand la bonne réponse peut varier d'un facteur 10 et plus, sinon `"lin"`. La réponse ne doit pas être au milieu exact du curseur. Juste à 10 % près, presque à 35 % (réglables avec `"ok"` et `"mid"`).
+
+**Qui a dit ça ?** (`"kind": "citation"`, 4 questions `"type": "choice"`) : une citation célèbre et 4 auteurs possibles, ou une citation à attribuer à « Personne de connu » quand elle est apocryphe (« Qu'ils mangent de la brioche »). Citations exactes et sourcées ; aucune citation inventée présentée comme vraie.
 
 ## Règles pour les prompts d'images (champ `image.prompt`)
 - En **anglais**, 40 à 90 mots. Décrire : le décor, chaque personnage par son nom de fiche + position (on the left / on the right / in the foreground), expression, geste, accessoires, cadrage (wide shot, medium shot, close-up, low angle…).

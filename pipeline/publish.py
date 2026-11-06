@@ -22,7 +22,7 @@ PUBLISH_HOUR = 5
 
 def format_ready(fmt: dict) -> bool:
     if fmt.get("id") == "quiz":  # le quiz n'a pas d'image : prêt dès qu'il a ses questions
-        return len(fmt.get("questions", [])) >= 3
+        return len(fmt.get("questions", [])) >= 1  # Plus ou moins et Swipe tiennent en une seule « question »
     cases = fmt.get("cases", [])
     return bool(cases) and all(c.get("image", {}).get("status") == "done" for c in cases)
 

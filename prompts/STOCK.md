@@ -21,7 +21,7 @@ Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 5. **Fact-check** en seconde passe. Retirer tout ce qui n'est pas sourcé.
 6. Écrire dans `editions/<date>/edition.json` (créer avec `"status": "draft"` si besoin, sans toucher aux autres formats). Valider le JSON.
 7. Commit « Stock <date> : <format> », `git push`.
-8. **Le jeu du jour** : à chaque passage, écrire aussi le `quiz` de **toutes** les dates de demain à J+7 qui n'en ont pas (il n'a pas d'image : il ne compte pas dans la limite de 2 formats). Il **alterne** chaque jour entre Quiz culture G (`"kind": "culture"`) et Quiz géo (`"kind": "geo"`) : prendre l'inverse du jeu de la veille (voir `prompts/SCHEMA.md`). Vérifier chaque réponse par recherche web, et pour le Quiz géo chaque coordonnée et chaque code (départements, ISO alpha-3) ; commit « Stock <date> : quiz ».
+8. **Le jeu du jour** : à chaque passage, écrire aussi le `quiz` de **toutes** les dates de demain à J+7 qui n'en ont pas (il n'a pas d'image : il ne compte pas dans la limite de 2 formats). Il **tourne** entre huit jeux (culture, géo, Frise, Dico menteur, Plus ou moins, Swipe, Chiffre, Qui a dit ça ?) : prendre le jeu suivant celui de la veille, selon `prompts/SCHEMA.md`. Vérifier chaque réponse par recherche web, et pour le Quiz géo chaque coordonnée et chaque code (départements, ISO alpha-3) ; commit « Stock <date> : quiz ».
 
 ## Les 32 thématiques, par pôle
 - **Histoire** : Histoire ancienne, Histoire moderne, Histoire de France, Grandes personnalités, Mythologies et religions

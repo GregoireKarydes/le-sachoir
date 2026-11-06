@@ -213,8 +213,12 @@ button{cursor:pointer}
 .track{touch-action:pan-x pan-y;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
 .bigheart{position:absolute;z-index:8;width:110px;height:110px;margin:-55px 0 0 -55px;pointer-events:none;
   animation:bigheart .9s ease-out forwards;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
-.slide > svg.bigheart{inset:auto;width:110px;height:110px;display:block}
-.bigheart path{fill:#fff}
+.slide > svg.bigheart{inset:auto;left:50%;top:50%;width:110px;height:110px;display:block}
+.bigheart{left:50%;top:50%}
+.bigheart path{fill:#ff3040}
+.bigheart.off{animation-name:bigheartoff}
+.bigheart.off path{fill:rgba(255,255,255,.18);stroke:#fff;stroke-width:1.4}
+@keyframes bigheartoff{0%{transform:scale(1.15);opacity:0}15%{transform:scale(1);opacity:1}60%{transform:scale(.9) rotate(-8deg);opacity:1}100%{transform:scale(.3) rotate(-20deg);opacity:0}}
 @keyframes bigheart{0%{transform:scale(0) rotate(-12deg);opacity:0}15%{transform:scale(1.2) rotate(0);opacity:1}30%{transform:scale(.95)}45%{transform:scale(1)}80%{opacity:1;transform:scale(1) translateY(0)}100%{opacity:0;transform:scale(.6) translateY(-40px)}}
 @media (prefers-reduced-motion:reduce){.bigheart{animation-duration:.5s}.side-btn.fav.pop svg{animation:none}}
 .track{flex:1;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
@@ -441,6 +445,36 @@ body{overscroll-behavior-y:none}
 .qz-ord small{margin-left:auto;font-weight:500;opacity:.7}
 .quizcard.geo .qc-ic{background:#3fcf8e;font-family:inherit}
 .cta:disabled{opacity:.5}
+.quizcard.k-frise .qc-ic{background:#f2a33a}.quizcard.k-dico .qc-ic{background:#ff8fa3;font-family:var(--f-serif)}
+.quizcard.k-plusmoins .qc-ic{background:#8ec5ff}.quizcard.k-swipe .qc-ic{background:#c9a7ff}
+.quizcard.k-chiffre .qc-ic{background:#fff}.quizcard.k-citation .qc-ic{background:#ffe66d;font-family:var(--f-serif)}
+#qzChain,#qzSwipe{display:flex;flex-direction:column;gap:12px}
+.qz-duel{display:flex;flex-direction:column;gap:8px;align-items:stretch}
+.qz-duel i{text-align:center;font-style:normal;font-weight:800;opacity:.8}
+.qz-duel button{display:flex;flex-direction:column;gap:4px;align-items:center;border:3px solid var(--ink);background:var(--cream);color:var(--ink);border-radius:18px;padding:18px 14px;font-size:19px;font-weight:700;box-shadow:4px 4px 0 rgba(0,0,0,.45)}
+.qz-duel small{font-family:var(--f-serif);font-size:24px;font-weight:800;color:#14704a}
+.qz-duel small.hid{color:var(--muted)}
+.qz-duel button.ok{background:#d6f5e6;border-color:#14704a}.qz-duel button.ko{background:#ffe0dd;border-color:#b3261e}
+.qz-flash{animation:qzin .25s ease-out}
+.qz-timer{height:10px;border-radius:6px;background:rgba(255,255,255,.18);overflow:hidden}
+.qz-timer i{display:block;height:100%;background:#3fcf8e;transition:width .2s linear}
+.qz-timer i.low{background:#ff5d5d}
+.qz-card{min-height:190px;display:grid;place-items:center;text-align:center;background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:22px;padding:22px;font-family:var(--f-serif);font-weight:800;font-size:23px;line-height:1.2;box-shadow:5px 5px 0 rgba(0,0,0,.45);touch-action:none;user-select:none;cursor:grab;transition:transform .25s,opacity .25s}
+.qz-card.goR{transform:translateX(120%) rotate(18deg)!important;opacity:0}.qz-card.goL{transform:translateX(-120%) rotate(-18deg)!important;opacity:0}
+.qz-card.ok{background:#d6f5e6}.qz-card.ko{background:#ffe0dd}
+.qz-tf{display:flex;gap:10px}
+.qz-tf button{flex:1;border:3px solid var(--ink);border-radius:16px;padding:14px;font-size:18px;font-weight:800;box-shadow:4px 4px 0 rgba(0,0,0,.45)}
+.qz-tf button[data-v="0"]{background:#ffe0dd;color:#b3261e}.qz-tf button[data-v="1"]{background:#d6f5e6;color:#14704a}
+.qz-sw-list{display:flex;flex-direction:column;gap:8px}
+.qz-sw-list div{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;background:rgba(255,255,255,.08);border-left:5px solid #ff5d5d;border-radius:12px;padding:10px 12px;font-size:14.5px;line-height:1.35}
+.qz-sw-list div.ok{border-left-color:#3fcf8e}
+.qz-sw-list b{grid-row:span 2;font-family:var(--f-serif)}
+.qz-sw-list small{opacity:.8}
+.qz-est{background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:18px;padding:18px 16px;box-shadow:4px 4px 0 rgba(0,0,0,.45);display:flex;flex-direction:column;gap:12px}
+.qz-est-v{text-align:center;font-family:var(--f-serif);font-weight:800;font-size:44px;line-height:1}
+.qz-est-v small{font-size:18px}
+.qz-est input{width:100%;accent-color:var(--navy-d);height:34px}
+.qz-est-sc{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
 /* ---------- Page de présentation (PC) ---------- */
 #v-about{gap:0;padding-top:0}
 .ab-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding:40px 0 56px}
@@ -1008,18 +1042,20 @@ function toggleFav(ed, f, type, silent) {
 const isFav = () => ME.favs.some(x => x.date === R.ed.date && x.fid === R.f.id && x.type === "bd");
 function popHeart() { const b = $("#rFav"); b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); }
 /* Comme sur Instagram : toucher à gauche = case précédente, à droite = case suivante,
-   double toucher = j'aime (avec un grand cœur), le cœur en bas ajoute ou retire. */
-function bigHeart(slide, x, y) {
-  const r = slide.getBoundingClientRect();
+   double toucher = j'aime (grand cœur rouge au centre de la case) ; double toucher sur une histoire déjà aimée = retire le j'aime. */
+function bigHeart(slide, off) {
   const h = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   h.setAttribute("viewBox", "0 0 24 24"); h.setAttribute("class", "bigheart"); h.setAttribute("aria-hidden", "true");
   h.innerHTML = '<path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/>';
-  h.style.left = (x - r.left) + "px"; h.style.top = (y - r.top) + "px";
+  if (off) h.classList.add("off");
+  slide.querySelectorAll(".bigheart").forEach(x => x.remove());
   slide.appendChild(h); setTimeout(() => h.remove(), 950);
 }
-function likeByTap(slide, x, y) {
-  bigHeart(slide, x, y);
-  if (!isFav()) { toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true); popHeart(); }
+function likeByTap(slide) {
+  const was = isFav();
+  bigHeart(slide, was);
+  toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true);
+  if (!was) popHeart();
   vibrate();
 }
 let tapT = null, lastTap = { t: 0, x: 0, y: 0 };
@@ -1029,7 +1065,7 @@ $("#track").addEventListener("click", e => {
   const now = Date.now(), dbl = now - lastTap.t < 300 && Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 40;
   lastTap = { t: dbl ? 0 : now, x: e.clientX, y: e.clientY };
   clearTimeout(tapT);
-  if (dbl) { likeByTap(slide, e.clientX, e.clientY); return; }
+  if (dbl) { likeByTap(slide); return; }
   if (DESK.matches) return; // sur PC, la planche défile : seul le double clic agit
   const tr = $("#track").getBoundingClientRect(), left = e.clientX - tr.left < tr.width / 3;
   tapT = setTimeout(() => go(left ? -1 : 1), 260);
@@ -1042,7 +1078,7 @@ function onAct(e) {
 
 /* ---------- Le jeu du jour (fin de l'édition) ---------- */
 // Une seule partie par jour : chaque réponse est enregistrée aussitôt, on ne peut ni rejouer ni changer d'avis.
-// Deux variantes qui alternent d'un jour à l'autre : culture G (5 questions) et géo (3 questions).
+// Huit jeux qui tournent d'un jour à l'autre (champ « kind » du format quiz) : voir QZ_KINDS et prompts/SCHEMA.md.
 const QZ_VERDICTS = [
   "Au moins, vous avez de l’humilité. Revenez demain.",
   "La culture, c’est ce qui reste quand on a tout raté. Il vous reste ça.",
@@ -1062,40 +1098,77 @@ const QZ_GEO_VERDICTS = [
 const QZ_OK = ["Bien vu !", "Exact !", "Bravo, cerveau !", "Dans le mille !", "Impeccable."];
 const QZ_KO = ["Raté !", "Presque…", "Aïe.", "Pas cette fois.", "Joli piège, hein ?"];
 const QZ_MID = ["Pas loin !", "Dans le coin !", "Ça chauffe…", "À un détour près."];
+const QZ_KINDS = {
+  culture:   { name: "Quiz culture G",  ic: "?",  sub: "une seule partie, pas de triche" },
+  geo:       { name: "Quiz géo",        ic: "⌖",  sub: "cartes à l’appui" },
+  frise:     { name: "La Frise",        ic: "⏳", sub: "remettez l’Histoire dans l’ordre" },
+  dico:      { name: "Le Dico menteur", ic: "Aa", sub: "une vraie définition, trois mensonges" },
+  plusmoins: { name: "Plus ou moins",   ic: "⇅",  sub: "jusqu’à la première erreur" },
+  swipe:     { name: "Le Swipe",        ic: "⇆",  sub: "vrai ou faux, contre la montre" },
+  chiffre:   { name: "Le Chiffre",      ic: "#",  sub: "estimez, sans calculette" },
+  citation:  { name: "Qui a dit ça ?",  ic: "❝",  sub: "vraies citations, faux témoins" },
+};
+const qzKind = f => QZ_KINDS[f.kind] ? f.kind : "culture";
 let Q = null, GEO = null;
 const quizState = date => (ME.quiz || {})[date];
 const qzDone = st => !!st && (st.done ?? ("s" in st)); // anciens enregistrements : { a, s } = partie finie
 function qzSave() { ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, done: false }; save(); }
 const isGeo = f => f.kind === "geo";
+const fmtNum = v => Math.abs(v) >= 100 ? Math.round(v).toLocaleString("fr-FR") : (+v.toPrecision(3)).toLocaleString("fr-FR");
+const fmtYear = y => y < 0 ? `${-y} av. J.-C.` : String(y);
 const qType = q => q.type || "choice";
 const loadGeo = () => GEO || (GEO = fetch("assets/geo.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(e => { GEO = null; throw e; }));
 const pick = arr => arr[Math.floor(Math.random() * arr.length)];
 const fmtKm = km => km < 1 ? "pile dessus" : `${Math.round(km).toLocaleString("fr-FR")} km`;
 
+// Une question est « répondue » quand sa réponse est enregistrée et close (Plus ou moins et Swipe se jouent en plusieurs gestes).
+const qzAnswered = a => a !== undefined && a !== null && !(typeof a === "object" && !Array.isArray(a) && a.end === false);
 // Note d'une réponse : 2 = juste, 1 = presque, 0 = faux
 function qzGrade(q, a) {
-  if (a === undefined || a === null) return 0;
+  if (!qzAnswered(a)) return 0;
   const t = qType(q);
-  if (t === "map") return a.g;
+  if (t === "map" || t === "estimate") return a.g;
   if (t === "order") { const good = qzOrderTruth(q); const n = a.filter((v, i) => v === good[i]).length; return n === good.length ? 2 : n * 2 >= good.length ? 1 : 0; }
+  if (t === "chain" || t === "swipe") { const { p, max } = qzPts(q, a); return p === max ? 2 : p * 2 >= max ? 1 : 0; }
   return a === q.answer ? 2 : 0;
 }
-const qzScore = () => Q.f.questions.reduce((s, q, k) => s + qzGrade(q, Q.a[k]), 0) / 2;
-const fmtScore = s => String(s).replace(".", ",");
+// Points d'une question : { p, max, cells } (cells = cases de la grille à partager)
+function qzPts(q, a) {
+  const t = qType(q), C = ["🟥", "🟨", "🟩"];
+  if (t === "chain") {
+    const picks = qzAnswered(a) || a ? (a?.picks || []) : [];
+    let p = 0; for (const b of picks) { if (!b) break; p++; }
+    return { p, max: q.items.length - 1, cells: picks.map(b => b ? "🟩" : "🟥") };
+  }
+  if (t === "swipe") {
+    const r = a?.r || [];
+    const cells = q.items.map((it, k) => r[k] === undefined || r[k] === null ? "⬜" : r[k] === it.ok ? "🟩" : "🟥");
+    return { p: cells.filter(c => c === "🟩").length, max: q.items.length, cells };
+  }
+  const g = qzGrade(q, a);
+  return { p: g / 2, max: 1, cells: [C[g]] };
+}
+const qzTotals = () => Q.f.questions.reduce((t, q, k) => { const x = qzPts(q, Q.a[k]); t.p += x.p; t.max += x.max; return t; }, { p: 0, max: 0 });
+const qzScore = () => qzTotals().p;
+const fmtScore = s => String(Math.round(s * 10) / 10).replace(".", ",");
 
 function quizCard(ed, f) {
-  const st = quizState(ed.date), n = (f.questions || []).length || 5, geo = isGeo(f), done = qzDone(st);
+  const st = quizState(ed.date), qs = f.questions || [], n = qs.length || 5, kind = qzKind(f), K = QZ_KINDS[kind], done = qzDone(st);
   const played = st ? st.a.filter(a => a !== undefined && a !== null).length : 0;
-  const status = done ? `Votre score : ${fmtScore(st.s ?? 0)}/${n} · revoir les réponses`
-    : played ? `Partie en cours : ${played}/${n} · une seule partie par jour`
-    : `${n} questions · ${f.minutes || 1} min · ${geo ? "cartes à l’appui" : "une seule partie, pas de triche"}`;
-  return `<button class="card quizcard${geo ? " geo" : ""}" data-quiz="1"><span class="qc-ic">${geo ? "⌖" : "?"}</span><span class="qc-tx"><span class="tag">Le jeu du jour</span><h3>${esc(f.title || (geo ? "Le Quiz géo" : "Le Quiz du jour"))}</h3><span class="qc-st">${status}</span></span><span class="qc-go">${done ? "Revoir" : played ? "Reprendre" : "Jouer"}</span></button>`;
+  const max = qs.reduce((t, q) => t + qzPts(q, undefined).max, 0) || n;
+  const size = qs.length === 1 && qType(qs[0]) === "swipe" ? `${qs[0].items.length} affirmations · ${qs[0].seconds || 60} s`
+    : qs.length === 1 && qType(qs[0]) === "chain" ? `${qs[0].items.length} manches max`
+    : `${n} question${n > 1 ? "s" : ""} · ${f.minutes || 1} min`;
+  const status = done ? `Votre score : ${fmtScore(st.s ?? 0)}/${max} · revoir les réponses`
+    : played ? `Partie en cours · une seule partie par jour`
+    : `${size} · ${K.sub}`;
+  return `<button class="card quizcard k-${kind}" data-quiz="1"><span class="qc-ic">${K.ic}</span><span class="qc-tx"><span class="tag">${esc(K.name)}</span><h3>${esc(f.title || K.name)}</h3><span class="qc-st">${status}</span></span><span class="qc-go">${done ? "Revoir" : played ? "Reprendre" : "Jouer"}</span></button>`;
 }
 async function openQuiz(ed) {
   const f = ed.formats.find(x => x.id === "quiz"); if (!f || !(f.questions || []).length) return;
   const st = quizState(ed.date);
   const a = st ? st.a.slice() : [];
-  let i = 0; while (i < f.questions.length && a[i] !== undefined && a[i] !== null) i++;
+  let i = 0; while (i < f.questions.length && qzAnswered(a[i])) i++;
   Q = { ed, f, i: Math.min(i, f.questions.length - 1), a, done: qzDone(st) || i >= f.questions.length };
   $("#quiz").classList.toggle("geo", isGeo(f));
   $("#quiz").classList.add("on"); history.pushState({ quiz: true }, "");
@@ -1112,7 +1185,7 @@ async function openQuiz(ed) {
 function closeQuiz() { $("#quiz").classList.remove("on"); Q = null; render(); }
 function qzDots() {
   let dots = "";
-  Q.f.questions.forEach((q, k) => { const a = Q.a[k]; dots += `<i class="${a === undefined ? (k === Q.i && !Q.done ? "cur" : "") : ["ko", "mid", "ok"][qzGrade(q, a)]}"></i>`; });
+  Q.f.questions.forEach((q, k) => { const a = Q.a[k]; dots += `<i class="${!qzAnswered(a) ? (k === Q.i && !Q.done ? "cur" : "") : ["ko", "mid", "ok"][qzGrade(q, a)]}"></i>`; });
   return `<div class="qz-dots" aria-hidden="true">${dots}</div>`;
 }
 function qzTop() {
@@ -1120,20 +1193,28 @@ function qzTop() {
 }
 function quizQuestion() {
   const q = Q.f.questions[Q.i], n = Q.f.questions.length, t = qType(q);
-  const meta = q.theme || (isGeo(Q.f) ? { map: "Sur la carte", choice: "Capitales", silhouette: "Silhouette", order: "Boussole" }[t] : "");
+  const kind = qzKind(Q.f);
+  const meta = q.theme || (kind === "geo" ? { map: "Sur la carte", choice: "Capitales", silhouette: "Silhouette", order: "Boussole" }[t]
+    : kind !== "culture" ? QZ_KINDS[kind].name : "");
   let body = "";
   if (t === "choice" || t === "silhouette") body = `${t === "silhouette" ? qzSilhouette(q) : ""}<div class="qz-ch" role="group" aria-label="Réponses">${q.choices.map((c, k) => `<button data-k="${k}"><b>${"ABCD"[k]}</b><span>${esc(c)}</span></button>`).join("")}</div>`;
   else if (t === "map") body = `<div class="qz-map" id="qzMap"></div><p class="qz-hint" id="qzHint">Touchez la carte pour planter votre épingle. Pincez ou utilisez + et − pour zoomer.</p><button class="cta" id="qzOk" disabled>Valider mon épingle</button>`;
-  else if (t === "order") body = `<p class="qz-hint">${q.by === "ouest-est" ? "Touchez du plus à l’ouest au plus à l’est." : "Touchez du plus au nord au plus au sud."}</p><div class="qz-ord" id="qzOrd">${q.items.map((it, k) => `<button data-o="${k}"><b></b><span>${esc(it.name)}</span></button>`).join("")}</div><button class="cta" id="qzOk" disabled>Valider mon ordre</button>`;
+  else if (t === "chain") body = `<div id="qzChain"></div>`;
+  else if (t === "swipe") body = `<div id="qzSwipe"></div>`;
+  else if (t === "estimate") body = qzEstimateHtml(q);
+  else if (t === "order") body = `<p class="qz-hint">${q.by === "chrono" ? "Touchez du plus ancien au plus récent." : q.by === "ouest-est" ? "Touchez du plus à l’ouest au plus à l’est." : "Touchez du plus au nord au plus au sud."}</p><div class="qz-ord" id="qzOrd">${q.items.map((it, k) => `<button data-o="${k}"><b></b><span>${esc(it.name)}</span></button>`).join("")}</div><button class="cta" id="qzOk" disabled>Valider mon ordre</button>`;
   $("#qzIn").innerHTML = `${qzTop()}
-    <div class="qz-meta"><span>Question ${Q.i + 1} / ${n}</span>${meta ? `<span class="th">${esc(meta)}</span>` : ""}</div>
-    <h2 class="qz-q">${esc(q.q)}</h2>${body}
+    <div class="qz-meta">${n > 1 ? `<span>Question ${Q.i + 1} / ${n}</span>` : `<span>Le jeu du jour</span>`}${meta ? `<span class="th">${esc(meta)}</span>` : ""}</div>
+    <h2 class="qz-q">${esc(q.q || (t === "swipe" ? "Vrai ou faux ?" : ""))}</h2>${body}
     <div id="qzEx" aria-live="polite"></div>`;
   $("#qzX").onclick = () => history.back();
   if (t === "choice" || t === "silhouette") $("#qzIn").querySelectorAll("[data-k]").forEach(b => b.onclick = () => quizAnswer(+b.dataset.k));
   if (t === "silhouette") qzFitSilhouette();
   if (t === "map") qzMapAsk(q);
   if (t === "order") qzOrderAsk(q);
+  if (t === "chain") qzChain(q);
+  if (t === "swipe") qzSwipe(q);
+  if (t === "estimate") qzEstimateAsk(q);
   $("#quiz").scrollTop = 0;
 }
 function qzExplain(q, g, extra = "") {
@@ -1275,6 +1356,7 @@ function qzFitSilhouette() {
 /* ----- Ordre nord → sud (ou ouest → est) ----- */
 function qzOrderTruth(q) {
   const ix = q.items.map((_, k) => k);
+  if (q.by === "chrono") return ix.sort((a, b) => q.items[a].year - q.items[b].year);
   return q.by === "ouest-est" ? ix.sort((a, b) => q.items[a].lon - q.items[b].lon) : ix.sort((a, b) => q.items[b].lat - q.items[a].lat);
 }
 function qzOrderAsk(q) {
@@ -1285,8 +1367,93 @@ function qzOrderAsk(q) {
   $("#qzOk").onclick = () => {
     Q.a[Q.i] = seq.slice(); qzSave(); $("#qzOk").remove();
     const good = qzOrderTruth(q);
-    $("#qzOrd").outerHTML = `<div class="qz-ord done">${good.map((k, i) => `<div class="${seq[i] === k ? "ok" : "ko"}"><b>${i + 1}</b><span>${esc(q.items[k].name)}</span><small>${q.by === "ouest-est" ? `${Math.abs(q.items[k].lon).toFixed(1)}° ${q.items[k].lon < 0 ? "O" : "E"}` : `${Math.abs(q.items[k].lat).toFixed(1)}° ${q.items[k].lat < 0 ? "S" : "N"}`}</small></div>`).join("")}</div>`;
+    $("#qzOrd").outerHTML = `<div class="qz-ord done">${good.map((k, i) => `<div class="${seq[i] === k ? "ok" : "ko"}"><b>${i + 1}</b><span>${esc(q.items[k].name)}</span><small>${q.by === "chrono" ? esc(q.items[k].label || fmtYear(q.items[k].year)) : q.by === "ouest-est" ? `${Math.abs(q.items[k].lon).toFixed(1)}° ${q.items[k].lon < 0 ? "O" : "E"}` : `${Math.abs(q.items[k].lat).toFixed(1)}° ${q.items[k].lat < 0 ? "S" : "N"}`}</small></div>`).join("")}</div>`;
     qzExplain(q, qzGrade(q, seq), `<p class="qz-km">Votre ordre : ${seq.map(k => esc(q.items[k].name)).join(" → ")}</p>`);
+  };
+}
+
+/* ----- Plus ou moins : on enchaîne les duels jusqu'à la première erreur ----- */
+function qzChain(q) {
+  const box = $("#qzChain"), it = q.items, more = q.pick !== "min";
+  let a = Q.a[Q.i] && Q.a[Q.i].end === false ? Q.a[Q.i] : { picks: [], end: false };
+  Q.a[Q.i] = a; qzSave();
+  const lab = x => esc(x.label ?? fmtNum(x.value));
+  function duel() {
+    const k = a.picks.length, A = it[k], B = it[k + 1];
+    box.innerHTML = `<p class="qz-hint">Manche ${k + 1} / ${it.length - 1} · touchez le ${esc(q.crit || (more ? "plus grand" : "plus petit"))}.</p>
+      <div class="qz-duel"><button data-c="0"><span>${esc(A.name)}</span><small>${lab(A)}</small></button><i>ou</i><button data-c="1"><span>${esc(B.name)}</span><small class="hid">?</small></button></div>`;
+    box.querySelectorAll("[data-c]").forEach(b => b.onclick = () => choose(+b.dataset.c));
+  }
+  function choose(c) {
+    const k = a.picks.length, A = it[k], B = it[k + 1];
+    const win = more ? (B.value > A.value ? 1 : 0) : (B.value < A.value ? 1 : 0), ok = c === win;
+    a.picks.push(ok); vibrate();
+    const btns = box.querySelectorAll("[data-c]");
+    btns.forEach(b => { b.disabled = true; b.classList.add(+b.dataset.c === win ? "ok" : "ko"); });
+    btns[1].querySelector("small").outerHTML = `<small>${lab(B)}</small>`;
+    const over = !ok || a.picks.length >= it.length - 1;
+    if (over) { a.end = true; qzSave(); const x = qzPts(q, a);
+      return qzExplain(q, qzGrade(q, a), `<p class="qz-km">${ok ? "Sans faute jusqu’au bout !" : `Perdu à la manche ${a.picks.length}.`} ${x.p} manche${x.p > 1 ? "s" : ""} gagnée${x.p > 1 ? "s" : ""}.</p>${B.explain ? `<p>${esc(B.explain)}</p>` : ""}`); }
+    qzSave();
+    box.insertAdjacentHTML("beforeend", `<p class="qz-km qz-flash">${pick(QZ_OK)} ${B.explain ? esc(B.explain) : ""}</p><button class="cta" id="qzGo">Manche suivante →</button>`);
+    $("#qzGo").onclick = duel;
+  }
+  if (a.picks.length && !a.picks[a.picks.length - 1]) { a.end = true; qzSave(); return qzExplain(q, qzGrade(q, a)); }
+  duel();
+}
+
+/* ----- Le Swipe : vrai ou faux contre la montre (le chrono continue si on quitte) ----- */
+function qzSwipe(q) {
+  const box = $("#qzSwipe"), secs = q.seconds || 60;
+  let a = Q.a[Q.i] && Q.a[Q.i].end === false ? Q.a[Q.i] : null, timer = null;
+  const left = () => Math.max(0, secs - (Date.now() - a.t0) / 1000);
+  if (!a) {
+    box.innerHTML = `<div class="qz-ex"><strong>${q.items.length} affirmations, ${secs} secondes.</strong><p>Balayez vers la droite si c’est vrai, vers la gauche si c’est faux (ou utilisez les boutons). Une fois lancé, le chrono ne s’arrête plus, même si vous quittez.</p></div><button class="cta" id="qzStart">C’est parti</button>`;
+    $("#qzStart").onclick = () => { a = { r: [], t0: Date.now(), end: false }; Q.a[Q.i] = a; qzSave(); play(); };
+    return;
+  }
+  play();
+  function finish() {
+    clearInterval(timer); a.end = true; qzSave();
+    const x = qzPts(q, a);
+    box.innerHTML = `<div class="qz-sw-list">${q.items.map((it, k) => `<div class="${a.r[k] === it.ok ? "ok" : "ko"}"><b>${it.ok ? "Vrai" : "Faux"}</b><span>${esc(it.text)}</span><small>${esc(it.explain || "")}</small></div>`).join("")}</div>`;
+    qzExplain(q, qzGrade(q, a), `<p class="qz-km">${x.p} / ${x.max} bonnes réponses.</p>`);
+  }
+  function play() {
+    const k = a.r.length;
+    if (k >= q.items.length || left() <= 0) return finish();
+    box.innerHTML = `<div class="qz-timer"><i id="qzT"></i></div><p class="qz-hint">${k + 1} / ${q.items.length}</p>
+      <div class="qz-card" id="qzCard">${esc(q.items[k].text)}</div>
+      <div class="qz-tf"><button data-v="0">✗ Faux</button><button data-v="1">Vrai ✓</button></div>`;
+    const bar = $("#qzT"), tick = () => { const l = left(); bar.style.width = (l / secs * 100) + "%"; bar.classList.toggle("low", l < 10); if (l <= 0) finish(); };
+    clearInterval(timer); timer = setInterval(() => { if (!$("#qzT")) return clearInterval(timer); tick(); }, 200); tick();
+    const answer = v => { if (a.end) return; a.r.push(v); qzSave(); vibrate(); const card = $("#qzCard"); card.classList.add(v === q.items[k].ok ? "ok" : "ko", v ? "goR" : "goL"); setTimeout(play, 260); };
+    box.querySelectorAll("[data-v]").forEach(b => b.onclick = () => answer(b.dataset.v === "1"));
+    const card = $("#qzCard"); let x0 = null;
+    card.addEventListener("pointerdown", e => { x0 = e.clientX; card.setPointerCapture(e.pointerId); });
+    card.addEventListener("pointermove", e => { if (x0 === null) return; const dx = e.clientX - x0; card.style.transform = `translateX(${dx}px) rotate(${dx / 20}deg)`; });
+    card.addEventListener("pointerup", e => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 70) answer(dx > 0); else card.style.transform = ""; });
+  }
+}
+
+/* ----- Le Chiffre : estimation au curseur ----- */
+function qzEstimateHtml(q) {
+  return `<div class="qz-est"><div class="qz-est-v"><span id="qzEv">?</span> <small>${esc(q.unit || "")}</small></div>
+    <input type="range" id="qzEr" min="0" max="1000" value="500" aria-label="Votre estimation">
+    <div class="qz-est-sc"><span>${esc(fmtNum(q.min))}</span><span>${esc(fmtNum(q.max))}</span></div></div>
+    <button class="cta" id="qzOk">Valider mon estimation</button>`;
+}
+function qzEstimateAsk(q) {
+  const log = q.scale === "log" && q.min > 0;
+  const val = t => { const f = t / 1000; const v = log ? q.min * Math.pow(q.max / q.min, f) : q.min + (q.max - q.min) * f; const d = Math.pow(10, Math.floor(Math.log10(Math.abs(v) || 1)) - 1); return Math.round(v / d) * d; };
+  const show = () => { $("#qzEv").textContent = fmtNum(val(+$("#qzEr").value)); };
+  $("#qzEr").oninput = show; show();
+  $("#qzOk").onclick = () => {
+    const v = val(+$("#qzEr").value), err = Math.abs(v - q.answer) / Math.abs(q.answer);
+    const g = err <= (q.ok ?? 0.1) ? 2 : err <= (q.mid ?? 0.35) ? 1 : 0;
+    Q.a[Q.i] = { v, g }; qzSave(); vibrate();
+    $("#qzEr").disabled = true; $("#qzOk").remove();
+    qzExplain(q, g, `<p class="qz-km">Réponse : ${esc(fmtNum(q.answer))} ${esc(q.unit || "")}. Vous : ${esc(fmtNum(v))} (écart de ${Math.round(err * 100)} %).</p>`);
   };
 }
 
@@ -1296,23 +1463,26 @@ function quizFinish() {
   if (Q.ed.date === TODAY && !ME.visited.includes(TODAY)) { ME.visited.push(TODAY); const k = streak(); toast(`🔥 Série : ${k} jour${k > 1 ? "s" : ""}`); }
   save(); Q.done = true; quizResult();
 }
-function quizGrid() { return Q.f.questions.map((q, k) => ["🟥", "🟨", "🟩"][qzGrade(q, Q.a[k])]).join(""); }
+function quizGrid() { return Q.f.questions.map((q, k) => qzPts(q, Q.a[k]).cells.join("")).join(""); }
 function qzReview(q, a) {
   const t = qType(q), mark = ["❌", "🟡", "✅"][qzGrade(q, a)];
   let ans = "";
   if (t === "map") { const P = geoProj(q.map || "france"), tg = qzTarget(q, P); ans = `${esc(tg.name)} · votre écart : ${esc(fmtKm(a?.km ?? 0))}`; }
   else if (t === "order") ans = qzOrderTruth(q).map(k => esc(q.items[k].name)).join(" → ");
+  else if (t === "estimate") ans = `${esc(fmtNum(q.answer))} ${esc(q.unit || "")} · vous : ${esc(fmtNum(a?.v ?? 0))}`;
+  else if (t === "chain") { const x = qzPts(q, a); ans = `${x.p} manche${x.p > 1 ? "s" : ""} gagnée${x.p > 1 ? "s" : ""} sur ${x.max}`; }
+  else if (t === "swipe") return `<div><b>${esc(q.q || "Vrai ou faux ?")}</b>${q.items.map((it, k) => `${a?.r?.[k] === it.ok ? "✅" : "❌"} ${esc(it.text)} <em>${it.ok ? "Vrai" : "Faux"}</em><br><small>${esc(it.explain || "")}</small>`).join("<br>")}</div>`;
   else ans = esc(q.choices[q.answer]);
   return `<div><b>${Q.f.questions.indexOf(q) + 1}. ${esc(q.q)}</b>${mark} Réponse : <em>${ans}</em><br>${esc(q.explain || "")}</div>`;
 }
 function quizResult() {
-  const n = Q.f.questions.length, s = qzScore(), geo = isGeo(Q.f);
+  const { p: s, max: n } = qzTotals(), geo = isGeo(Q.f);
   const verdict = (geo ? QZ_GEO_VERDICTS : QZ_VERDICTS)[Math.round(s / n * 5)];
   const kmTot = Q.f.questions.reduce((t, q, k) => t + (qType(q) === "map" ? (Q.a[k]?.km || 0) : 0), 0);
   const hasMap = Q.f.questions.some(q => qType(q) === "map");
-  const name = geo ? "Quiz géo" : "Quiz";
+  const name = QZ_KINDS[qzKind(Q.f)].name;
   $("#qzIn").innerHTML = `${qzTop()}
-    <div class="qz-res"><p class="qz-meta">Le ${name} du ${esc(fmtLong(Q.ed.date))}</p>
+    <div class="qz-res"><p class="qz-meta">${esc(name)} · ${esc(fmtLong(Q.ed.date))}</p>
       <div class="qz-score">${fmtScore(s)}<small>/${n}</small></div>
       <p class="qz-verdict">${esc(verdict)}</p>
       <div class="qz-grid" aria-label="${fmtScore(s)} sur ${n}">${quizGrid()}</div>
@@ -1325,8 +1495,8 @@ function quizResult() {
   $("#qzShare").onclick = async () => {
     const url = new URL(`./?d=${Q.ed.date}&f=quiz`, location.href).href;
     const d = new Date(Q.ed.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
-    const text = `Le Sachoir · ${name} du ${d}\n${quizGrid()} ${fmtScore(s)}/${n}${hasMap ? `\n📍 ${fmtKm(kmTot)} d’écart` : ""}\n${verdict}`;
-    if (navigator.share) { try { await navigator.share({ title: `Le ${name} du Sachoir`, text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
+    const text = `Le Sachoir · ${name} · ${d}\n${quizGrid()} ${fmtScore(s)}/${n}${hasMap ? `\n📍 ${fmtKm(kmTot)} d’écart` : ""}\n${verdict}`;
+    if (navigator.share) { try { await navigator.share({ title: `${name} · Le Sachoir`, text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
     try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("Score copié, à vous de frimer"); } catch (e) { toast(text); }
   };
 }
