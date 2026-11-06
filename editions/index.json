@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T13:32:33.325242+01:00",
+ "updated_at": "2026-11-06T13:40:29.285103+01:00",
  "editions": [
   {
    "date": "2026-11-06",
@@ -12,6 +12,7 @@
      "url": "histoires/2026-11-06-remaniement-ou-kamoulox/",
      "theme": "",
      "minutes": 1,
+     "tagline": "Le monde va mal, rions-en",
      "cover": "images/actu-cover.webp"
     },
     {
@@ -21,6 +22,7 @@
      "url": "histoires/2026-11-06-le-chat-de-schrodinger-explique-a-mon-chat/",
      "theme": "Sciences physiques",
      "minutes": 2,
+     "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
      "cover": "images/cultureg-cover.webp"
     },
     {
@@ -30,6 +32,7 @@
      "url": "histoires/2026-11-06-l-homme-qui-a-vendu-la-tour-eiffel-deux-fois/",
      "theme": "Grandes personnalités",
      "minutes": 2,
+     "tagline": "Le roi de l’arnaque avait le sens du recyclage.",
      "cover": "images/insolite-cover.webp"
     }
    ]
