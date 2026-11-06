@@ -164,9 +164,6 @@ button{cursor:pointer}
 /* Profil */
 .pcard{background:var(--green);color:#fff;border-radius:22px;padding:18px 16px 16px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 18px rgba(23,20,15,.16)}
 .pcard .top{display:flex;gap:14px;align-items:center}
-.avbtn{flex:0 0 112px;height:112px;border-radius:50%;border:3px solid var(--ink);background:#fff;padding:0;overflow:hidden;position:relative}
-.avbtn img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}
-.avbtn span{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:10.5px;font-weight:700;border-radius:999px;padding:1px 7px;white-space:nowrap}
 .pcard .who{display:flex;flex-direction:column;gap:7px;min-width:0}
 .pcard .nm{font-family:var(--f-serif);font-weight:800;font-size:28px;line-height:1}
 .pcard .lvl{align-self:flex-start;background:rgba(0,0,0,.22);border-radius:999px;padding:4px 11px;font-weight:700;font-size:14px}
@@ -283,7 +280,6 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .qrbox img{flex:0 0 auto;border-radius:16px;border:3px solid var(--ink);background:#fffaf0}
 .qrbox .steps{flex:1;margin:0}
 .guide{display:flex;gap:12px;align-items:center}
-.guide img{width:76px;height:76px;border-radius:50%;border:3px solid var(--ink);flex:0 0 auto;object-fit:cover;object-position:50% 45%}
 .guide p{background:#fff;border-radius:16px;padding:10px 12px;font-size:15px;flex:1}
 .bounce{display:inline-block;animation:b 1s ease-in-out infinite}
 @keyframes b{50%{transform:translateY(5px)}}
@@ -320,10 +316,6 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .month button.fut{opacity:.35;cursor:default}
 .month button.sel{background:var(--ink);color:#fff}
 .legend{display:flex;gap:14px;font-size:12.5px;color:var(--muted);flex-wrap:wrap}
-.avgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 10px}
-.avgrid button{border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:12.5px;font-weight:700;line-height:1.15;text-align:center}
-.avgrid img{width:86px;height:86px;border-radius:50%;display:block;object-fit:cover;object-position:50% 45%;border:2.5px solid var(--ink);background:#fff}
-.avgrid button[aria-pressed=true] img{box-shadow:0 0 0 4px var(--cream),0 0 0 7px var(--ink)}
 .tierlist{display:flex;flex-direction:column;gap:8px}
 .tierlist div{background:#fff;border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:3px}
 .tierlist div.cur{box-shadow:0 0 0 3px var(--green)}
@@ -483,7 +475,6 @@ const ERUDITION = [
   {name:"La Légende", min:100, max:Infinity, items:["Divinité de l’Olympe. Sait tout sur tout, mais galère avec le micro-ondes.","Puits de science absolue. Corrige les fautes de Wikipédia le dimanche.","A fusionné spirituellement avec la bibliothèque d’Alexandrie.","Même les professeurs d’université prennent des notes quand il parle.","L’incarnation du Sachoir. Le boss final de la culture G."]}
 ];
 const ERU_ZERO = {name:"Page blanche", min:0, max:0, items:["Aucun dossier dévoré. Une page blanche, pleine de promesses."]};
-const AVATARS = ["César le procrastinateur","Athéna l’éternelle insatisfaite","Zeus le séducteur fatigué","Vénus influenceuse","Hercule fatigué du crossfit","Méduse mauvaise journée","Mercure le coursier stressé","Cléopâtre la drama queen","Bacchus le fêtard du mardi","Artémis la rebelle","Achille et son talon sensible","Ulysse le touriste perdu"];
 const POLES = [
   {id:"hist", em:"📜", name:"Histoire", color:"#c9a45a", themes:["Histoire ancienne","Histoire moderne","Histoire de France","Grandes personnalités","Mythologies et religions"]},
   {id:"geo", em:"🌍", name:"Géopolitique & éco", color:"#1f8f5f", themes:["Géopolitique","Économie","Politique française","Entreprises et marques"]},
@@ -492,15 +483,13 @@ const POLES = [
   {id:"art", em:"🎨", name:"Art & Culture", color:"#8a55b8", themes:["Histoire de l’art","Arts plastiques","Architecture","Littérature","Expression française"]},
   {id:"pop", em:"🎮", name:"Culture pop", color:"#f2a33a", themes:["Musique","Mode et luxe","Sports","Jeux vidéo"]}
 ];
-const avSrc = i => `assets/avatars/av${i}.webp`;
-function avFix(img, i) { img.onerror = null; img.src = `assets/avatars/av${i}.png`; }
 const normTh = th => (th || "").replace(/['`]/g, "’").trim().toLowerCase();
 const poleOf = th => POLES.find(p => p.themes.some(x => normTh(x) === normTh(th)));
 const themeName = th => { for (const p of POLES) { const x = p.themes.find(x => normTh(x) === normTh(th)); if (x) return x; } return ""; };
 
 /* ---------- Stockage local ---------- */
 const KEY = "sachoir.v1";
-const DEF = { visited: [], dossiers: [], reads: [], favs: [], avatar: 0, name: "", installDone: false, storyColor: "#1f8f5f", storyWm: true };
+const DEF = { visited: [], dossiers: [], reads: [], favs: [], name: "", installDone: false, storyColor: "#1f8f5f", storyWm: true };
 let ME = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { return { ...DEF }; } })();
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ME)); } catch (e) {} };
 
@@ -669,7 +658,7 @@ function openInstallQR() {
     <ol class="steps"><li><span class="n">1</span><span><strong>Visez ce code avec l’appareil photo de votre téléphone.</strong><small>Comme pour un menu de restaurant. Vous savez faire.</small></span></li>
     <li><span class="n">2</span><span><strong>Ouvrez le lien proposé.</strong><small>Le guide d’installation s’affiche tout seul.</small></span></li>
     <li><span class="n">3</span><span><strong>Suivez les 3 gestes.</strong><small>Et l’édition vous attend chaque matin à 5 h.</small></span></li></ol></div>
-   <div class="guide"><img src="${avSrc(11)}" onerror="avFix(this,11)" alt=""><p><strong>Ulysse, le touriste perdu.</strong> Dix ans pour rentrer à Ithaque. Vous, trois secondes avec ce code.</p></div>
+   <div class="guide"><p><strong>Ulysse, le touriste perdu.</strong> Dix ans pour rentrer à Ithaque. Vous, trois secondes avec ce code.</p></div>
    ${deferredPrompt ? `<button class="btn ghost sm" id="inNative">Ou l’installer sur cet ordinateur</button>` : ""}
    <button class="cta" id="inDone">C’est fait !</button>`);
   const nb = $("#inNative"); if (nb) nb.onclick = async () => { deferredPrompt.prompt(); const r = await deferredPrompt.userChoice; deferredPrompt = null; if (r.outcome === "accepted") { closeSheet(); toast("Installée sur cet ordinateur."); } };
@@ -815,7 +804,7 @@ function openInstall() {
   };
   const draw = () => { $("#inSteps").innerHTML = ST[os].map((s, i) => `<li><span class="n">${i + 1}</span><span><strong>${s[0]}</strong><small>${s[1]}</small></span></li>`).join(""); $("#sheet").querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", b.dataset.os === os)); };
   openSheet(`<h3>Installez Le Sachoir en 3 gestes</h3>
-   <div class="guide"><img src="${avSrc(11)}" onerror="avFix(this,11)" alt=""><p><strong>Ulysse, le touriste perdu.</strong> Même moi, j’ai trouvé le chemin. Je vous tiens la main.</p></div>
+   <div class="guide"><p><strong>Ulysse, le touriste perdu.</strong> Même moi, j’ai trouvé le chemin. Je vous tiens la main.</p></div>
    ${deferredPrompt ? `<button class="cta" id="inNative">Installer maintenant</button>` : ""}
    <div class="seg" role="group" aria-label="Votre téléphone"><button data-os="ios">iPhone</button><button data-os="android">Android</button></div>
    <ol class="steps" id="inSteps"></ol>
@@ -833,11 +822,6 @@ function openTiers(type) {
   const list = type === "serie" ? SERIE : ERUDITION, n = type === "serie" ? streak() : ME.dossiers.length, cur = tierOf(list, {}, n);
   openSheet(`<h3>${type === "serie" ? "🔥 Vos paliers de série" : "📚 Vos paliers d’érudition"}</h3><p class="sub">${type === "serie" ? `${n} jour(s) consécutif(s)` : `${n} dossier(s) dévoré(s)`}</p>
    <div class="tierlist">${list.map(t => `<div class="${t === cur ? "cur" : t.min > n ? "off" : ""}"><b>${t.name}</b><span>${t.max === Infinity ? `${t.min} et +` : `${t.min} à ${t.max}`} ${type === "serie" ? "jours" : "dossiers"}</span>${t === cur ? `<em>« ${esc(t.items[0])} »</em>` : ""}</div>`).join("")}</div>`);
-}
-function openAvatars() {
-  openSheet(`<h3>Choisissez votre avatar (pour entrer dans la légende, ou presque)</h3>
-   <div class="avgrid">${AVATARS.map((a, i) => `<button data-a="${i}" aria-pressed="${ME.avatar === i}"><img src="${avSrc(i)}" onerror="avFix(this,${i})" alt="" loading="lazy">${a}</button>`).join("")}</div>`);
-  $("#sheet").querySelectorAll("[data-a]").forEach(b => b.onclick = () => { ME.avatar = +b.dataset.a; save(); closeSheet(); renderProfile(); toast(`Vous êtes désormais ${AVATARS[ME.avatar]}`); });
 }
 function openName() {
   openSheet(`<h3>Comment vous appelle-t-on ?</h3><form id="nmF" class="field"><label for="nmI">Prénom ou surnom</label><input type="text" id="nmI" maxlength="24" value="${esc(ME.name)}" autocomplete="given-name"></form><button class="cta" id="nmOk">Enregistrer</button><p class="sub">Il reste sur ce téléphone. Aucun compte n’est nécessaire.</p>`);
@@ -912,8 +896,7 @@ function renderProfile() {
   const v = $("#v-profile"), s = streak(), st = tierOf(SERIE, SERIE_ZERO, s), et = tierOf(ERUDITION, ERU_ZERO, ME.dossiers.length);
   const I = (bg, fg, path) => `<span class="ico" style="background:${bg};color:${fg}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${path}</svg></span>`;
   v.innerHTML = `<div class="row"><h1 class="h1">Mon Profil</h1><button class="iconbtn" id="prName" aria-label="Changer de prénom"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></button></div>
-   <div class="pcard"><div class="top"><button class="avbtn" id="prAv" aria-label="Changer d’avatar"><img src="${avSrc(ME.avatar)}" onerror="avFix(this,${ME.avatar})" alt=""><span>Changer</span></button>
-     <div class="who"><span class="nm">${ME.name ? esc(ME.name) : "Lecteur"}</span><span class="lvl">${esc(AVATARS[ME.avatar])}</span><span class="tiers">${esc(phraseOf("eru"))}</span></div></div>
+   <div class="pcard"><div class="top"><div class="who"><span class="nm">${ME.name ? esc(ME.name) : "Lecteur"}</span><span class="lvl">📚 ${esc(et.name)}</span><span class="tiers">${esc(phraseOf("eru"))}</span></div></div>
      <p class="quote">${esc(phraseOf("serie"))}</p></div>
    <div class="tiles"><button class="tile s" id="tS"><b>🔥 ${s} Jour${s > 1 ? "s" : ""}</b><span>De présence consécutive</span><small>${st.name}</small></button>
      <button class="tile e" id="tE"><b>📚 ${ME.dossiers.length}</b><span>Dossiers</span><small>Dévorés avec succès</small><img src="assets/books.png" alt=""></button></div>
@@ -924,7 +907,7 @@ function renderProfile() {
      <button id="m5">${I("#ece2f6", "#8a55b8", '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M18 8v6M15 11h6"/>')}<span class="t">Inviter des amis <em>(à devenir moins bêtes)</em></span>${ICON.chev}</button>
      <button id="m6">${I("#efebe3", "#17140f", '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v6M9.5 11.5L12 14l2.5-2.5"/>')}<span class="t">Installer l’application</span>${ICON.chev}</button>
    </div>`;
-  $("#prAv").onclick = openAvatars; $("#prName").onclick = openName;
+  $("#prName").onclick = openName;
   $("#tS").onclick = () => openTiers("serie"); $("#tE").onclick = () => openTiers("eru");
   $("#m1").onclick = openBilan; $("#m2").onclick = () => setTab("favs"); $("#m3").onclick = () => toast("La newsletter arrive bientôt");
   $("#m5").onclick = invite; $("#m6").onclick = openInstall;
