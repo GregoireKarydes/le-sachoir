@@ -9,9 +9,15 @@ Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
    - thématique dans le catalogue ci-dessous ;
    - jamais deux jours de suite le même pôle ; une thématique pas avant 20 jours ;
    - aucun fait déjà utilisé (chercher dans `editions/` avec `grep`) ; un sujet de Grand Dossier pas avant 12 mois ;
-   - un sujet qui donne envie de le raconter en société.
+   - **environ 3 sujets sur 4 liés à la France** (histoire, personnages, lieux, inventions, langue françaises), 1 sur 4 international ;
+   - **Grand Dossier** : un **grand sujet connu et important**, qui « refait la culture » du lecteur, vu dans son ensemble (environ 3 sur 4 de ces sujets sont des classiques). Partir de la thématique et viser large : Histoire → « La guerre froide », « Les rois de France » ; Sciences physiques → « Les atomes » ; Économie → « Les grandes crises » ; Littérature → « Les Misérables ». Varier les thèmes ;
+   - **Culture G et Insolite** : plutôt des sujets **méconnus** (environ 3 sur 4), qui donnent envie de les raconter en société ;
+   - sujets graves (guerres, épidémies, catastrophes) : possibles en Grand Dossier seulement, selon les garde-fous de la charte.
 3. **Rechercher** les faits par recherche web (sources fiables : encyclopédies, institutions, ouvrages, presse de référence). Noter les URL dans `sources`.
-4. **Écrire** selon la charte : casting adapté au sujet (humains, animaux, objets, cellules…), un personnage lucide, au moins deux leviers, gag porteur, chute en écho. Grand Dossier : 30 à 45 cases en 4 chapitres (contexte, péripéties, analyse, conséquences modernes), humour dosé, cliffhanger en case 4.
+4. **Écrire** selon la charte : personnages humains (ou animaux réels), jamais d'objets ou de cellules qui parlent ; personnage lucide seulement s'il est utile ; au moins deux leviers ; titre drôle ; la durée de lecture compte plus que le nombre de cases.
+   - Culture G : un concept expliqué et vulgarisé, avec une touche d'humour (1 à 2 min).
+   - Insolite : un fait ahurissant ou une idée reçue démontée (1 min).
+   - Grand Dossier : 30 à 45 cases (4 à 6 min), découpées en chapitres adaptés au sujet (pas forcément « conséquences modernes » à la fin), compréhension d'abord, humour dosé, cliffhanger en case 4. Cases « pause » permises quand c'est utile (chiffre clé, frise, carte), le contenu dans le récitatif.
 5. **Fact-check** en seconde passe. Retirer tout ce qui n'est pas sourcé.
 6. Écrire dans `editions/<date>/edition.json` (créer avec `"status": "draft"` si besoin, sans toucher aux autres formats). Valider le JSON.
 7. Commit « Stock <date> : <format> », `git push`.

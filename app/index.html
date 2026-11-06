@@ -245,6 +245,11 @@ button{cursor:pointer}
 .ccard .hd em{font-style:normal;font-weight:700;font-size:12px;font-variant-numeric:tabular-nums}
 .ccard .ph{padding:20px 18px 12px;font-family:var(--f-serif);font-weight:800;font-size:23px;line-height:1.15;text-wrap:balance}
 .ccard .src{font-size:12px;color:var(--muted);padding:0 18px 12px}
+.ccard .srcs{padding:0 18px 12px;font-size:12.5px}
+.ccard .srcs summary{cursor:pointer;font-weight:700;color:var(--ink)}
+.ccard .srcs ul{margin:6px 0 0;padding-left:18px;max-height:120px;overflow:auto}
+.ccard .srcs li{margin:3px 0}
+.ccard .srcs a{color:var(--ink);text-underline-offset:2px;word-break:break-word}
 .ccard .ft{padding:0 14px 14px;display:flex;flex-direction:column;gap:8px}
 
 /* ---------- Feuilles ---------- */
@@ -667,7 +672,8 @@ function caseHTML(ed, c) {
   return `${art}<div class="stack">${cap}${(c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${esc(b.text)}</div>`).join("")}</div><div class="panel-frame"></div>`;
 }
 function finalHTML(ed, f) {
-  return `<div class="ccard"><div class="hd"><span>Pour briller en société</span><em>${fmtLong(ed.date).split(" ").slice(1).join(" ")}</em></div><div class="ph">${esc(f.final?.text || "")}</div><div class="src">${esc(f.label)} · ${esc(f.final?.source || "")}</div>
+  const srcs = (f.sources || []).filter(s => s && /^https?:\/\//.test(s.url || ""));
+  return `<div class="ccard"><div class="hd"><span>Pour briller en société</span><em>${fmtLong(ed.date).split(" ").slice(1).join(" ")}</em></div><div class="ph">${esc(f.final?.text || "")}</div><div class="src">${esc(f.label)} · ${esc(f.final?.source || "")}</div>${srcs.length ? `<details class="srcs"><summary>Sources (${srcs.length})</summary><ul>${srcs.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.title || s.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a></li>`).join("")}</ul></details>` : ""}
   <div class="ft"><button class="btn" data-act="back">Retour à l’édition</button></div></div>`;
 }
 function openReader(ed, fid) {

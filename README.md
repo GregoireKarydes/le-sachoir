@@ -10,7 +10,7 @@ Chaque jour, l'actu et la culture G en BD. Pour briller en société (ou au moin
 |---|---|---|
 | Chaque jour | Tâche planifiée Claude « Stock » | Écrit à l'avance Culture G, Insolite et Grand Dossier (7 jours d'avance) → `editions/` |
 | 0 h 05 | GitHub Actions `rss.yml` | Collecte les titres de la veille → `data/rss/` |
-| 1 h | Tâche planifiée Claude « Actu » | Choisit et vérifie 4 sujets, écrit les 8 cases → `editions/<date>/edition.json` |
+| 1 h | Tâche planifiée Claude « Actu » | Choisit et vérifie 3 à 5 sujets, écrit 1 ou 2 cases par sujet → `editions/<date>/edition.json` |
 | À chaque push + toutes les heures la nuit | GitHub Actions `images.yml` | Génère les images manquantes avec Cloudflare Workers AI (FLUX.2 klein 4B, quota gratuit) |
 | 3 h 30 | Tâche planifiée Claude « Contrôle » | Relit les images, demande les régénérations |
 | 5 h | GitHub Actions `publish.yml` | Publie l'édition du jour et déploie l'appli sur GitHub Pages |

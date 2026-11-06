@@ -54,7 +54,8 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`. Tout 
 - Laisser le haut de l'image calme : les bulles s'y posent.
 - Penser en dessinateur de strip minimaliste : le jeu d'acteur fait le gag. Décor réduit à un ou deux objets utiles au sujet (un bureau, un canapé, un télescope), le reste vide. Exagérer les postures (dos voûté, épaules tombantes, bras ballants, personnage qui s'affale ou « fond » sur place), les sourcils et la bouche ; gouttes de sueur et joues roses pour la gêne. Rythme : cases calmes et assez statiques, puis explosion d'expression sur la chute (changement de posture radical ou gros plan sur la réaction). Varier quand même les cadrages (plan moyen, gros plan, plan large).
 - Dans les fiches casting (`look`), garder pour chaque personnage un trait fort lisible en gros trait noir : coiffure (souvent en bataille), silhouette, accessoire, une couleur d'accent au plus.
-- Personnalités vivantes (Actu) : décrire la fonction et la caricature (silhouette, coiffure, accessoire), jamais le nom.
+- Personnalités vivantes : décrire la fonction et la caricature cartoon (silhouette, coiffure, accessoire), **jamais le nom** dans le prompt d'image, même quand la BD les nomme (formats hors Actu).
+- **Coller au style** : décrire les vêtements et les objets surtout en noir, blanc ou gris, avec une seule couleur d'accent par case (« a black suit », « a white lab coat », « a red scarf as the only colour »). Pas de décor détaillé, pas d'adjectifs qui poussent vers le réalisme ou la peinture (realistic, detailed, painterly, watercolor, cinematic, lighting). Préférer des actions corporelles exagérées : « slumped on the desk », « melting into a puddle of despair », « frozen with a tiny sweat drop », « tiny pink blush marks ».
 - Chemins : `images/<format>-NN.webp` (NN sur 2 chiffres), `images/<format>-cover.webp`, `cast/<format>-<id>.png`.
 
 ## Demander une nouvelle image
