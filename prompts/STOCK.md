@@ -24,4 +24,4 @@ Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 - **Art & Culture** : Histoire de l’art, Arts plastiques, Architecture, Littérature, Expression française
 - **Culture pop** : Musique, Mode et luxe, Sports, Jeux vidéo
 
-Écrire le champ `theme` exactement comme ci-dessus.
+Chaque format (`cultureg`, `insolite`, `dossier`) a **obligatoirement** un champ `theme`, écrit exactement comme ci-dessus (apostrophe typographique ’ comprise). C'est lui qui range l'histoire dans les filtres de l'écran Découvrir et qui sert aux règles d'alternance.

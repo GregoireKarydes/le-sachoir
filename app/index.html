@@ -145,6 +145,9 @@ button{cursor:pointer}
 .chip.c-pop{--c:var(--orange);--t:#17140f}
 .chip.c-flt{background:var(--grey);border-color:transparent;padding:6px 10px}
 .chip svg{width:20px;height:20px}
+.chip .cnt{font-size:12px;font-weight:700;opacity:.7}
+.chips.sub{margin-top:8px}
+.chips.sub .chip{font-size:13.5px;padding:4px 11px;border-width:1.5px}
 .search{display:flex;align-items:center;gap:8px;border-radius:14px;background:#fff;padding:0 14px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .search input{border:0;outline:0;padding:12px 0;flex:1;background:transparent;min-width:0}
 .alist{display:flex;flex-direction:column;gap:10px}
@@ -491,7 +494,9 @@ const POLES = [
 ];
 const avSrc = i => `assets/avatars/av${i}.webp`;
 function avFix(img, i) { img.onerror = null; img.src = `assets/avatars/av${i}.png`; }
-const poleOf = th => POLES.find(p => p.themes.includes(th));
+const normTh = th => (th || "").replace(/['`]/g, "’").trim().toLowerCase();
+const poleOf = th => POLES.find(p => p.themes.some(x => normTh(x) === normTh(th)));
+const themeName = th => { for (const p of POLES) { const x = p.themes.find(x => normTh(x) === normTh(th)); if (x) return x; } return ""; };
 
 /* ---------- Stockage local ---------- */
 const KEY = "sachoir.v1";
@@ -840,7 +845,7 @@ function openName() {
   $("#nmOk").onclick = ok; $("#nmF").onsubmit = e => { e.preventDefault(); ok(); };
 }
 function openBilan() {
-  const counts = POLES.map(p => ({ p, n: ME.reads.filter(r => r.max >= 1 && p.themes.includes(r.theme)).length }));
+  const counts = POLES.map(p => ({ p, n: ME.reads.filter(r => r.max >= 1 && poleOf(r.theme) === p).length }));
   const max = Math.max(1, ...counts.map(c => c.n)), top = counts.slice().sort((a, b) => b.n - a.n)[0];
   openSheet(`<h3>📊 Mon Bilan de Culture G</h3><p class="sub">${ME.reads.length} histoire(s) ouverte(s), ${ME.dossiers.length} dossier(s) dévoré(s).</p>
    ${counts.map(({ p, n }) => `<div class="barrow"><div class="lbl"><span>${p.em} ${p.name}</span><span>${n}</span></div><div class="bar"><i style="width:${Math.round(n / max * 100)}%;background:${p.color}"></i></div></div>`).join("")}
@@ -853,23 +858,38 @@ async function invite() {
 }
 
 /* ---------- Découvrir ---------- */
-let EX = { pole: null, q: "", search: false };
+let EX = { pole: null, theme: null, q: "", search: false };
 function allStories() {
   const out = [];
-  INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu") out.push({ ...f, date: e.date, demo: e.demo }); }));
+  INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu") out.push({ ...f, theme: themeName(f.theme), date: e.date, demo: e.demo }); }));
   return out;
 }
+/* Les filtres sont construits à partir des histoires publiées : un pôle ou une thématique
+   n'apparaît que s'il a au moins une histoire, avec son nombre d'histoires. */
 function renderExplore() {
   const v = $("#v-explore"), q = EX.q.toLowerCase();
-  const res = allStories().filter(s => (!EX.pole || poleOf(s.theme)?.id === EX.pole) && (!q || (s.title + " " + s.theme).toLowerCase().includes(q)));
+  const all = allStories();
+  const byQ = all.filter(s => !q || (s.title + " " + s.theme + " " + (s.tagline || "")).toLowerCase().includes(q));
+  const poles = POLES.map(p => ({ p, n: byQ.filter(s => poleOf(s.theme) === p).length })).filter(x => x.n);
+  const other = byQ.filter(s => !poleOf(s.theme)).length;
+  if (EX.pole && EX.pole !== "other" && !poles.some(x => x.p.id === EX.pole)) { EX.pole = null; EX.theme = null; }
+  if (EX.pole === "other" && !other) EX.pole = null;
+  const cur = POLES.find(p => p.id === EX.pole);
+  const themes = cur ? cur.themes.map(th => ({ th, n: byQ.filter(s => s.theme === th).length })).filter(x => x.n) : [];
+  if (EX.theme && !themes.some(x => x.th === EX.theme)) EX.theme = null;
+  const res = byQ.filter(s => !EX.pole || (EX.pole === "other" ? !poleOf(s.theme) : poleOf(s.theme)?.id === EX.pole))
+                 .filter(s => !EX.theme || s.theme === EX.theme);
+  const n = k => `<span class="cnt">${k}</span>`;
   v.innerHTML = `<div class="row" style="align-items:flex-start"><div><h1 class="h1">Découvrir</h1><p class="lead">Explorez nos dossiers (pour briller en société sans trop d’efforts)</p></div>
      <button class="iconbtn" id="exS" aria-label="Rechercher"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg></button></div>
    ${EX.search ? `<label class="search" for="exQ"><input id="exQ" type="search" placeholder="Napoléon, krach, quantique…" value="${esc(EX.q)}" aria-label="Rechercher"></label>` : ""}
-   <div class="chips" role="group" aria-label="Filtrer par pôle"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tout</button>${POLES.map(p => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name}</button>`).join("")}</div>
+   ${poles.length + (other ? 1 : 0) > 1 || EX.pole ? `<div class="chips" role="group" aria-label="Filtrer par pôle"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tout ${n(byQ.length)}</button>${poles.map(({ p, n: k }) => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name} ${n(k)}</button>`).join("")}${other ? `<button class="chip c-all" data-p="other" aria-pressed="${EX.pole === "other"}">Autres ${n(other)}</button>` : ""}</div>` : ""}
+   ${themes.length > 1 ? `<div class="chips sub" role="group" aria-label="Filtrer par thématique"><button class="chip c-${cur.id}" data-t="" aria-pressed="${!EX.theme}">Toutes</button>${themes.map(({ th, n: k }) => `<button class="chip c-${cur.id}" data-t="${esc(th)}" aria-pressed="${EX.theme === th}">${esc(th)} ${n(k)}</button>`).join("")}</div>` : ""}
    <div class="alist">${res.map(s => `<button class="aitem" data-d="${s.date}" data-f="${s.id}"><i style="background:${poleOf(s.theme)?.color || COLOR[s.id]}"></i><span class="tt">${esc(s.title)}<span class="th">${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""} · ${s.minutes || 2} min</span></span><span class="d">${new Date(s.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</span></button>`).join("")}</div>
    ${res.length ? "" : `<p class="empty">Aucune histoire ne correspond. Les archives grandissent chaque matin.</p>`}`;
   $("#exS").onclick = () => { EX.search = !EX.search; renderExplore(); const i = $("#exQ"); if (i) i.focus(); };
-  v.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { EX.pole = b.dataset.p || null; renderExplore(); });
+  v.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { EX.pole = b.dataset.p || null; EX.theme = null; renderExplore(); });
+  v.querySelectorAll("[data-t]").forEach(b => b.onclick = () => { EX.theme = b.dataset.t || null; renderExplore(); });
   v.querySelectorAll("[data-d]").forEach(b => b.onclick = async () => { try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); } catch (e) { toast("Indisponible hors ligne"); } });
   const inp = $("#exQ"); if (inp) inp.oninput = () => { EX.q = inp.value; const p = inp.selectionStart; renderExplore(); const n = $("#exQ"); n.focus(); n.setSelectionRange(p, p); };
 }

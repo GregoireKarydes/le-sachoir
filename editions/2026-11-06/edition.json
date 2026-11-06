@@ -586,7 +586,7 @@
       "title": "Le Chat de Schrödinger expliqué à mon chat",
       "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
       "minutes": 2,
-      "theme": "",
+      "theme": "Sciences physiques",
       "cast": [
         {
           "id": "schro",
@@ -846,7 +846,7 @@
       "title": "L’homme qui a vendu la tour Eiffel (deux fois)",
       "tagline": "Le roi de l’arnaque avait le sens du recyclage.",
       "minutes": 2,
-      "theme": "",
+      "theme": "Grandes personnalités",
       "cast": [
         {
           "id": "lustig",

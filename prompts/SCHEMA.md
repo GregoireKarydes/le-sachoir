@@ -14,7 +14,7 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`. Tout 
       "title": "Le Chat de Schrödinger expliqué à mon chat",
       "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
       "minutes": 2,
-      "theme": "Sciences physiques",  // une des 32 thématiques (voir prompts/STOCK.md)
+      "theme": "Sciences physiques",  // OBLIGATOIRE pour cultureg, insolite et dossier : une des 32 thématiques, écrite exactement comme dans prompts/STOCK.md ; vide pour actu
       "cast": [
         { "id": "schro", "look": "Erwin, a 1930s physicist, slick dark hair, round glasses, grey three-piece suit, dark red tie",
           "file": "cast/cultureg-schro.png", "status": "pending" }
