@@ -45,8 +45,9 @@ def main():
             items.append({
                 "source": feed["name"],
                 "rubrique": feed.get("rubrique", ""),
-                "title": clean(e.get("title", ""), 200),
-                "summary": clean(e.get("summary", "")),
+                "role": feed.get("role", "veille"),  # "selection" = liste de sujets de référence (HugoDécrypte)
+                "title": clean(e.get("title", ""), 300),
+                "summary": clean(e.get("summary", ""), 900 if feed.get("role") == "selection" else 280),
                 "link": e.get("link", ""),
                 "published": when.isoformat() if when else None,
             })
