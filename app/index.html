@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#faf6ee">
-<meta name="description" content="Chaque jour, l'actu et la culture G en BD. Pour briller en société (ou au moins faire semblant).">
-<title>Le Sachoir — L'actu et la culture G en BD, chaque jour</title>
+<meta name="description" content="Chaque jour, l’actualité et la culture générale racontées en BD courtes, drôles et vérifiées. Gratuit, sans compte : 5 minutes pour briller en société (ou au moins faire semblant).">
+<title>Le Sachoir — L’actu et la culture générale en BD, chaque jour</title>
 <link rel="canonical" href="__BASE__">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Le Sachoir">
@@ -14,7 +14,7 @@
 <meta property="og:url" content="__BASE__">
 <meta property="og:image" content="__BASE__assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Le Sachoir","url":"__BASE__","inLanguage":"fr","description":"L'actu et la culture G en BD humoristique, chaque jour."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Le Sachoir", "url": "__BASE__", "inLanguage": "fr", "description": "L’actualité et la culture générale en bandes dessinées humoristiques et vérifiées, chaque jour."}, {"@type": "Organization", "name": "Le Sachoir", "url": "__BASE__", "logo": "__BASE__assets/icon-512.png"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Le Sachoir, c’est gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L’édition du jour se lit gratuitement, sans compte et sans carte bancaire. Une offre Premium arrivera plus tard pour fouiller toutes les archives ; votre culture G du jour, elle, restera gratuite."}}, {"@type": "Question", "name": "Les informations sont-elles fiables ?", "acceptedAnswer": {"@type": "Answer", "text": "Les faits, les dates et les chiffres sont vérifiés dans plusieurs sources, citées à la fin de chaque histoire. Les dialogues, eux, sont inventés : Napoléon n’a jamais parlé de KPI."}}, {"@type": "Question", "name": "Qui écrit et dessine les BD ?", "acceptedAnswer": {"@type": "Answer", "text": "Les histoires sont écrites et illustrées avec l’aide d’outils d’intelligence artificielle, à partir de sources vérifiées et citées. L’humour est garanti fait maison… enfin, presque."}}, {"@type": "Question", "name": "Faut-il installer une application ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le Sachoir se lit dans le navigateur, sur téléphone comme sur ordinateur. Vous pouvez l’ajouter à l’écran d’accueil de votre téléphone en trois gestes, sans passer par un store."}}, {"@type": "Question", "name": "C’est pour qui ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour les curieux pressés, les étudiants qui révisent sans en avoir l’air, et tous ceux qui veulent placer « en fait, techniquement… » au prochain dîner."}}, {"@type": "Question", "name": "Quand sort une nouvelle édition ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque jour. Avant votre café, et sans doute avant votre motivation."}}]}]}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
@@ -204,7 +204,18 @@ button{cursor:pointer}
 .segs i{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.28)}
 .segs i.on{background:var(--yellow)}
 .r-bot .cnt{font-weight:700;font-size:13px;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
-.r-bot .fav.on svg{fill:var(--red);stroke:var(--red)}
+.r-bot .fav{width:44px;height:44px;background:none;box-shadow:none;border-radius:0}
+.r-bot .fav svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linejoin:round;transition:fill .15s,stroke .15s}
+.r-bot .fav.on svg{fill:#ff3040;stroke:#ff3040}
+.r-bot .fav.pop svg{animation:likepop .45s cubic-bezier(.17,.89,.32,1.49)}
+@keyframes likepop{0%{transform:scale(1)}25%{transform:scale(.8)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+.track{touch-action:pan-x pan-y;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+.bigheart{position:absolute;z-index:8;width:110px;height:110px;margin:-55px 0 0 -55px;pointer-events:none;
+  animation:bigheart .9s ease-out forwards;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.slide > svg.bigheart{inset:auto;width:110px;height:110px;display:block}
+.bigheart path{fill:#fff}
+@keyframes bigheart{0%{transform:scale(0) rotate(-12deg);opacity:0}15%{transform:scale(1.2) rotate(0);opacity:1}30%{transform:scale(.95)}45%{transform:scale(1)}80%{opacity:1;transform:scale(1) translateY(0)}100%{opacity:0;transform:scale(.6) translateY(-40px)}}
+@media (prefers-reduced-motion:reduce){.bigheart{animation-duration:.5s}.r-bot .fav.pop svg{animation:none}}
 .track{flex:1;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .track::-webkit-scrollbar{display:none}
 .slide{flex:0 0 100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always;position:relative;overflow:hidden;background:var(--cream)}
@@ -349,6 +360,72 @@ body{overscroll-behavior-y:none}
 .topbar{display:none}
 .seo-links a{display:block;padding:4px 0}
 
+
+/* ---------- Page de présentation (PC) ---------- */
+#v-about{gap:0;padding-top:0}
+.ab-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding:40px 0 56px}
+.ab-eyebrow{display:flex;gap:8px;margin:0 0 18px;flex-wrap:wrap}
+.ab-eyebrow span{background:#fff1cf;color:#7a4a06;border-radius:999px;padding:5px 12px;font-weight:700;font-size:13.5px}
+#abH1{font-family:var(--f-serif);font-weight:800;font-size:clamp(38px,4.4vw,60px);line-height:1.02;margin:0;letter-spacing:-.6px;text-wrap:balance}
+#abH1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--yellow) 62%,var(--yellow) 92%,transparent 92%)}
+.ab-lead{font-size:19px;line-height:1.5;color:#2d2924;margin:22px 0 26px;max-width:58ch}
+.ab-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.ab-btn{border:0;border-radius:999px;background:var(--yellow);color:var(--ink);font-weight:700;font-size:17px;padding:14px 24px;box-shadow:0 3px 0 rgba(23,20,15,.2);transition:transform .12s,filter .12s}
+.ab-btn:hover{transform:translateY(-2px);filter:brightness(.97)}
+.ab-btn.ghost{background:#fff;box-shadow:inset 0 0 0 2px var(--ink)}
+.ab-note{margin:14px 0 0;color:var(--muted);font-size:14.5px}
+.ab-visual{position:relative;height:440px}
+.ab-fan{position:absolute;inset:0}
+.ab-c{position:absolute;width:82%;height:132px;border-radius:20px;border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink);overflow:hidden;display:flex;align-items:stretch;color:#fff;transition:transform .25s}
+.ab-c .tx{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:7px;padding:14px 16px}
+.ab-c b{font-size:11.5px;letter-spacing:.6px;text-transform:uppercase;background:rgba(0,0,0,.22);align-self:flex-start;border-radius:6px;padding:3px 8px}
+.ab-c span{font-family:var(--f-serif);font-weight:800;font-size:21px;line-height:1.08;text-wrap:balance}
+.ab-c img{flex:0 0 132px;width:132px;object-fit:cover;border-left:3px solid var(--ink);background:#fff}
+.ab-c.green{background:var(--green)}.ab-c.orange{background:var(--orange);color:var(--ink)}.ab-c.red{background:var(--red)}.ab-c.navy{background:var(--navy)}
+.ab-c.c1{left:0;top:6px;transform:rotate(-3deg);z-index:1}
+.ab-c.c2{left:16%;top:150px;transform:rotate(2deg);z-index:2}
+.ab-c.c3{left:4%;top:294px;transform:rotate(-1.5deg);z-index:3}
+.ab-visual:hover .c1{transform:rotate(-4.5deg) translateX(-6px)}.ab-visual:hover .c2{transform:rotate(3deg) translateX(8px)}.ab-visual:hover .c3{transform:rotate(-2.5deg) translateX(-4px)}
+.ab-stamp{position:absolute;right:-6px;top:-14px;z-index:4;font-family:var(--f-hand);font-size:24px;line-height:.95;text-align:center;transform:rotate(-8deg);background:var(--yellow);border:3px solid var(--ink);border-radius:14px;padding:8px 12px}
+.ab-sec{padding:44px 0;border-top:1px solid var(--line)}
+.ab-sec h2{font-family:var(--f-serif);font-weight:800;font-size:36px;line-height:1.08;margin:0 0 8px;letter-spacing:-.3px}
+.ab-sub{font-size:17px;color:#2d2924;margin:0 0 24px;max-width:62ch;line-height:1.45}
+.ab-menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ab-f{border-radius:20px;padding:20px 18px;color:#fff;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 18px rgba(23,20,15,.14)}
+.ab-f.navy{background:var(--navy)}.ab-f.orange{background:var(--orange);color:var(--ink)}.ab-f.red{background:var(--red)}.ab-f.green{background:var(--green)}
+.ab-f h3{font-family:var(--f-serif);font-weight:800;font-size:23px;line-height:1.08;margin:0}
+.ab-f p{margin:0;font-size:15px;line-height:1.45}
+.ab-t{align-self:flex-start;background:rgba(0,0,0,.2);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12.5px}
+.ab-brille{display:flex;justify-content:center;margin-top:28px}
+.ab-brille .ccard{max-width:520px;transform:rotate(-1.2deg)}
+.ab-why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:20px}
+.ab-why h3{font-family:var(--f-serif);font-weight:800;font-size:22px;margin:10px 0 6px}
+.ab-why p{margin:0;font-size:15.5px;line-height:1.5;color:#2d2924}
+.ab-n{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--yellow);font-family:var(--f-serif);font-weight:800;font-size:22px}
+.ab-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:18px}
+.ab-link{border:0;background:none;font-weight:700;font-size:16px;text-decoration:underline;text-underline-offset:3px}
+.ab-latest{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ab-story{border:0;background:#fff;border-radius:18px;overflow:hidden;text-align:left;padding:0;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(0,0,0,.07);transition:transform .15s,box-shadow .15s}
+.ab-story:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.12)}
+.ab-story img,.ab-story .ph0{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--grey)}
+.ab-story div{padding:12px 14px 16px;display:flex;flex-direction:column;gap:5px}
+.ab-story strong{font-family:var(--f-serif);font-weight:800;font-size:19px;line-height:1.12}
+.ab-story small{color:var(--muted);font-size:13px}
+.ab-pocket{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.ab-pocket img{border:3px solid var(--ink);border-radius:16px;background:#fff;padding:8px;box-shadow:6px 6px 0 var(--ink);flex:0 0 auto}
+.ab-faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;margin-top:14px}
+.ab-q{background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.ab-q summary{font-weight:700;font-size:16.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.ab-q summary::-webkit-details-marker{display:none}
+.ab-q summary::after{content:"+";font-size:22px;line-height:1;color:var(--muted)}
+.ab-q[open] summary::after{content:"–"}
+.ab-q p{margin:10px 0 0;font-size:15.5px;line-height:1.5;color:#2d2924}
+.ab-end{margin:20px 0 10px;background:var(--ink);color:#fff;border-radius:26px;padding:44px 32px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
+.ab-end p{font-family:var(--f-serif);font-weight:800;font-size:34px;line-height:1.1;margin:0;text-wrap:balance}
+.ab-foot{padding:24px 0 8px;color:var(--muted);font-size:14px}
+.ab-foot a{color:inherit}
+@media (max-width:1100px){.ab-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:899px){#v-about{display:none!important}}
 /* ---------- Expérience PC (≥ 900 px) ---------- */
 @media (min-width:900px){
   .phone{max-width:none;box-shadow:none}
@@ -423,6 +500,65 @@ body{overscroll-behavior-y:none}
     </header>
     <div class="main" id="main">
       <div class="logo"><button class="installmini" id="installMini" hidden aria-label="Installer Le Sachoir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg>Installer</button><img src="assets/logo.png" alt="Le Sachoir"><button class="streakmini" id="streakMini"></button></div>
+      <section class="view" id="v-about" aria-labelledby="abH1">
+        <div class="ab-hero">
+          <div class="ab-copy">
+            <p class="ab-eyebrow"><span>Gratuit</span><span>Sans compte</span><span>Chaque jour</span></p>
+            <h1 id="abH1">L’actu et la culture G en BD.<br><em>Pour briller en société</em> (ou au moins faire semblant).</h1>
+            <p class="ab-lead">Chaque jour, Le Sachoir transforme l’actualité et la culture générale en bandes dessinées courtes, drôles et vérifiées. Cinq minutes de lecture, zéro effort apparent, et vous voilà la personne qui « sait des trucs » au dîner.</p>
+            <div class="ab-ctas"><button class="ab-btn" data-go="home">Lire l’édition du jour</button><button class="ab-btn ghost" data-go="install">L’avoir dans ma poche</button></div>
+            <p class="ab-note">Aucune inscription. Aucun abonnement. Aucune excuse.</p>
+          </div>
+          <div class="ab-visual" id="abCovers" aria-hidden="true">
+            <div class="ab-fan"><div class="ab-c c1 green"><div class="tx"><b>Le Grand Dossier</b><span>La guerre froide, racontée à ceux qui dormaient en cours</span></div></div><div class="ab-c c2 orange"><div class="tx"><b>Culture G</b><span>Le chat de Schrödinger expliqué à mon chat</span></div></div><div class="ab-c c3 red"><div class="tx"><b>Insolite</b><span>L’homme qui a vendu la tour Eiffel (deux fois)</span></div></div></div>
+            <span class="ab-stamp">Histoire vraie<br>mais absurde</span>
+          </div>
+        </div>
+
+        <div class="ab-sec">
+          <h2>Au menu, chaque jour</h2>
+          <p class="ab-sub">Quatre BD, un seul objectif : que vous ayez l’air cultivé sans avoir eu l’air de réviser.</p>
+          <div class="ab-menu">
+            <article class="ab-f navy"><span class="ab-t">1 à 2 min</span><h3>L’Actu du jour</h3><p>Les sujets qui font l’actualité, décodés et détournés. Les faits sont exacts, les dialogues beaucoup moins.</p></article>
+            <article class="ab-f orange"><span class="ab-t">2 min</span><h3>La Pilule de Culture G</h3><p>Un concept expliqué simplement. Le genre de truc que tout le monde fait semblant de connaître depuis toujours.</p></article>
+            <article class="ab-f red"><span class="ab-t">1 min</span><h3>L’Insolite historique</h3><p>Une histoire vraie si absurde qu’on vérifie deux fois. Rassurez-vous : nous aussi, on a vérifié.</p></article>
+            <article class="ab-f green"><span class="ab-t">5 min</span><h3>Le Grand Dossier</h3><p>Un grand sujet raconté en entier : la guerre froide, les rois de France, les atomes. Des années de cours séchés, rattrapées en un café.</p></article>
+          </div>
+          <div class="ab-brille"><div class="ccard"><div class="hd"><span>Pour briller en société</span><em>Exemple</em></div><div class="ph">En 1925, Victor Lustig a vendu la tour Eiffel à un ferrailleur. Puis il a essayé une deuxième fois.</div><div class="src">À la fin de chaque histoire : une phrase à ressortir au prochain apéro.</div></div></div>
+        </div>
+
+        <div class="ab-sec">
+          <h2>Pourquoi ça marche</h2>
+          <div class="ab-why">
+            <div><span class="ab-n">1</span><h3>On rit, donc on retient</h3><p>Chaque blague s’accroche à un fait. Vous riez, votre mémoire prend des notes. C’est de la pédagogie, mais elle porte un nez rouge.</p></div>
+            <div><span class="ab-n">2</span><h3>Des faits vérifiés et sourcés</h3><p>Dates, chiffres et explications sont vérifiés dans plusieurs sources, affichées à la fin de chaque histoire. Les personnages exagèrent, les faits jamais.</p></div>
+            <div><span class="ab-n">3</span><h3>Cinq minutes, au pouce</h3><p>Une case par écran, on glisse et c’est lu. Parfait pour le métro, la file d’attente ou la réunion qui aurait pu être un e-mail.</p></div>
+          </div>
+        </div>
+
+        <div class="ab-sec" id="abLatestSec" hidden>
+          <div class="ab-row"><h2>Les dernières histoires</h2><button class="ab-link" data-go="explore">Tout explorer →</button></div>
+          <div class="ab-latest" id="abLatest"></div>
+        </div>
+
+        <div class="ab-sec ab-pocket">
+          <div><h2>Le Sachoir se lit dans la poche</h2>
+            <p class="ab-sub">Visez ce code avec l’appareil photo de votre téléphone, ouvrez le lien, ajoutez Le Sachoir à l’écran d’accueil. Trois gestes, pas de store, pas de mot de passe à oublier.</p>
+            <button class="ab-btn ghost" data-go="install">Voir les 3 gestes</button></div>
+          <img src="assets/qr-install.png" alt="QR code pour ouvrir Le Sachoir sur votre téléphone" width="190" height="190" loading="lazy">
+        </div>
+
+        <div class="ab-sec">
+          <h2>Les questions qu’on nous pose (parfois)</h2>
+          <div class="ab-faq"><details class="ab-q"><summary>Le Sachoir, c’est gratuit ?</summary><p>Oui. L’édition du jour se lit gratuitement, sans compte et sans carte bancaire. Une offre Premium arrivera plus tard pour fouiller toutes les archives ; votre culture G du jour, elle, restera gratuite.</p></details><details class="ab-q"><summary>Les informations sont-elles fiables ?</summary><p>Les faits, les dates et les chiffres sont vérifiés dans plusieurs sources, citées à la fin de chaque histoire. Les dialogues, eux, sont inventés : Napoléon n’a jamais parlé de KPI.</p></details><details class="ab-q"><summary>Qui écrit et dessine les BD ?</summary><p>Les histoires sont écrites et illustrées avec l’aide d’outils d’intelligence artificielle, à partir de sources vérifiées et citées. L’humour est garanti fait maison… enfin, presque.</p></details><details class="ab-q"><summary>Faut-il installer une application ?</summary><p>Non. Le Sachoir se lit dans le navigateur, sur téléphone comme sur ordinateur. Vous pouvez l’ajouter à l’écran d’accueil de votre téléphone en trois gestes, sans passer par un store.</p></details><details class="ab-q"><summary>C’est pour qui ?</summary><p>Pour les curieux pressés, les étudiants qui révisent sans en avoir l’air, et tous ceux qui veulent placer « en fait, techniquement… » au prochain dîner.</p></details><details class="ab-q"><summary>Quand sort une nouvelle édition ?</summary><p>Chaque jour. Avant votre café, et sans doute avant votre motivation.</p></details></div>
+        </div>
+
+        <div class="ab-end">
+          <p>Votre culture G ne va pas s’entretenir toute seule.</p>
+          <button class="ab-btn" data-go="home">Lire l’édition du jour</button>
+        </div>
+        <footer class="ab-foot">Le Sachoir — l’actu et la culture G en BD, chaque jour. Les faits sont vérifiés et sourcés ; les personnages et les dialogues sont des parodies. · <a href="archives/">Toutes les histoires</a> · <a href="themes/">Thèmes</a></footer>
+      </section>
       <section class="view on" id="v-home" aria-label="Édition"></section>
       <section class="view" id="v-explore" aria-label="Découvrir"></section>
       <section class="view" id="v-favs" aria-label="Favoris"></section>
@@ -439,7 +575,7 @@ body{overscroll-behavior-y:none}
     <div class="r-bot">
       <div class="segs" id="segs"></div>
       <span class="cnt" id="rCount"></span>
-      <button id="rFav" class="fav" aria-label="Ajouter l’histoire aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2.4"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button>
+      <button id="rFav" class="fav" aria-label="J’aime cette histoire" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg></button>
     </div>
     <button class="nav-arrow prev" id="rPrev" aria-label="Case précédente"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="nav-arrow next" id="rNext" aria-label="Case suivante"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -549,15 +685,39 @@ function renderNav() {
     ["explore", "Découvrir", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="currentColor"/></svg>`],
     ["favs", "Favoris", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg>`],
     ["profile", "Profil", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/></svg>`]];
-  const html = tabs.map(t => `<button data-tab="${t[0]}" ${TAB === t[0] ? 'aria-current="page"' : ""}>${t[2]}${t[1]}</button>`).join("");
-  ["#nav", "#navTop"].forEach(id => { $(id).innerHTML = html; $(id).querySelectorAll("button").forEach(b => b.onclick = () => setTab(b.dataset.tab)); });
+  const btn = t => `<button data-tab="${t[0]}" ${TAB === t[0] ? 'aria-current="page"' : ""}>${t[2]}${t[1]}</button>`;
+  const about = ["about", "Le concept", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>`];
+  $("#nav").innerHTML = tabs.map(btn).join("");
+  $("#navTop").innerHTML = [about, ...tabs].map(btn).join("");
+  ["#nav", "#navTop"].forEach(id => $(id).querySelectorAll("button").forEach(b => b.onclick = () => setTab(b.dataset.tab)));
   const s = streak();
   const canInstall = !ME.installDone && !matchMedia("(display-mode: standalone)").matches;
   ["#installMini", "#installTop"].forEach(id => { const b = $(id); b.hidden = !canInstall; b.onclick = openInstall; });
   ["#streakMini", "#streakTop"].forEach(id => { $(id).innerHTML = `<span class="fl">🔥</span>${s}`; $(id).setAttribute("aria-label", `Série de ${s} jours`); });
 }
-function setTab(t) { TAB = t; document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + t)); $("#main").scrollTop = 0; render(); }
-function render() { renderNav(); ({ home: renderHome, explore: renderExplore, favs: renderFavs, profile: renderProfile })[TAB](); }
+function setTab(t) { if (t === "about" && !DESK.matches) t = "home"; TAB = t; document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + t)); $("#main").scrollTop = 0; render(); }
+function render() { if (TAB === "about" && !DESK.matches) return setTab("home"); renderNav(); ({ about: renderAbout, home: renderHome, explore: renderExplore, favs: renderFavs, profile: renderProfile })[TAB](); }
+DESK.addEventListener("change", () => { if (!DESK.matches && TAB === "about") setTab("home"); else renderNav(); });
+
+/* ---------- Le concept (page de présentation, PC) ---------- */
+function renderAbout() {
+  const v = $("#v-about");
+  v.querySelectorAll("[data-go]").forEach(b => b.onclick = () => { const g = b.dataset.go; if (g === "install") openInstall(); else setTab(g); });
+  const stories = [];
+  INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu") stories.push({ ...f, date: e.date }); }));
+  // Les vraies histoires du moment remplacent les exemples, une carte par format (le dossier d'abord).
+  const cls = { dossier: "green", cultureg: "orange", insolite: "red" }, lbl = { dossier: "Le Grand Dossier", cultureg: "Culture G", insolite: "Insolite" };
+  const cards = [...$("#abCovers .ab-fan").children];
+  ["dossier", "cultureg", "insolite"].forEach((id, i) => {
+    const s = stories.find(x => x.id === id); if (!s || !cards[i]) return;
+    cards[i].className = `ab-c c${i + 1} ${cls[id]}`;
+    cards[i].innerHTML = `<div class="tx"><b>${lbl[id]}</b><span>${esc(s.title)}</span></div>${s.cover ? `<img src="editions/${s.date}/${s.cover}" alt="" loading="lazy">` : ""}`;
+  });
+  const sec = $("#abLatestSec"), list = stories.slice(0, 6);
+  sec.hidden = !list.length;
+  $("#abLatest").innerHTML = list.map(s => `<button class="ab-story" data-d="${s.date}" data-f="${s.id}">${s.cover ? `<img src="editions/${s.date}/${s.cover}" alt="" loading="lazy">` : `<span class="ph0"></span>`}<div><small>${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""}</small><strong>${esc(s.title)}</strong><small>${esc(s.tagline || "")}</small></div></button>`).join("");
+  $("#abLatest").querySelectorAll("[data-d]").forEach(b => b.onclick = async () => { try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); } catch (e) { toast("Indisponible hors ligne"); } });
+}
 
 /* ---------- Édition ---------- */
 function readState(ed, f) {
@@ -723,18 +883,47 @@ function go(d) { const tr = $("#track"), i = Math.max(0, Math.min(R.n - 1, R.idx
 $("#rPrev").onclick = () => go(-1); $("#rNext").onclick = () => go(1);
 $("#rClose").onclick = () => history.back();
 window.addEventListener("popstate", () => { if ($("#scrim").classList.contains("on")) closeSheet(); else if ($("#reader").classList.contains("on")) closeReader(); });
-$("#rFav").onclick = () => { toggleFav(R.ed, R.f, "bd"); updateReader(R.idx, true); };
+$("#rFav").onclick = () => { const was = isFav(); toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true); if (!was) popHeart(); };
 document.addEventListener("keydown", e => {
   if ($("#scrim").classList.contains("on")) { if (e.key === "Escape") closeSheet(); return; }
   if (!$("#reader").classList.contains("on")) return;
   if (e.key === "ArrowRight") go(1); if (e.key === "ArrowLeft") go(-1); if (e.key === "Escape") history.back();
 });
-function toggleFav(ed, f, type) {
+function toggleFav(ed, f, type, silent) {
   const i = ME.favs.findIndex(x => x.date === ed.date && x.fid === f.id && x.type === type);
-  if (i >= 0) { ME.favs.splice(i, 1); toast("Retiré des favoris"); }
-  else { ME.favs.push({ date: ed.date, fid: f.id, type, title: f.title, label: f.label }); toast("Ajouté aux favoris ♥"); }
+  if (i >= 0) { ME.favs.splice(i, 1); if (!silent) toast("Retiré des favoris"); }
+  else { ME.favs.push({ date: ed.date, fid: f.id, type, title: f.title, label: f.label }); if (!silent) toast("Ajouté aux favoris ♥"); }
   save();
 }
+const isFav = () => ME.favs.some(x => x.date === R.ed.date && x.fid === R.f.id && x.type === "bd");
+function popHeart() { const b = $("#rFav"); b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); }
+/* Comme sur Instagram : toucher à gauche = case précédente, à droite = case suivante,
+   double toucher = j'aime (avec un grand cœur), le cœur en bas ajoute ou retire. */
+function bigHeart(slide, x, y) {
+  const r = slide.getBoundingClientRect();
+  const h = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  h.setAttribute("viewBox", "0 0 24 24"); h.setAttribute("class", "bigheart"); h.setAttribute("aria-hidden", "true");
+  h.innerHTML = '<path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/>';
+  h.style.left = (x - r.left) + "px"; h.style.top = (y - r.top) + "px";
+  slide.appendChild(h); setTimeout(() => h.remove(), 950);
+}
+function likeByTap(slide, x, y) {
+  bigHeart(slide, x, y);
+  if (!isFav()) { toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true); popHeart(); }
+  vibrate();
+}
+let tapT = null, lastTap = { t: 0, x: 0, y: 0 };
+$("#track").addEventListener("click", e => {
+  if (e.target.closest("a,button,details,summary,input,label,.paybox,.ccard")) return;
+  const slide = e.target.closest(".slide"); if (!slide) return;
+  const now = Date.now(), dbl = now - lastTap.t < 300 && Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 40;
+  lastTap = { t: dbl ? 0 : now, x: e.clientX, y: e.clientY };
+  clearTimeout(tapT);
+  if (dbl) { likeByTap(slide, e.clientX, e.clientY); return; }
+  if (DESK.matches) return; // sur PC, la planche défile : seul le double clic agit
+  const tr = $("#track").getBoundingClientRect(), left = e.clientX - tr.left < tr.width / 3;
+  tapT = setTimeout(() => go(left ? -1 : 1), 260);
+});
 function onAct(e) {
   const a = e.currentTarget.dataset.act;
   if (a === "back") history.back();
@@ -884,6 +1073,8 @@ if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catc
     const fid = new URLSearchParams(location.search).get("f");
     if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); openReader(CUR, fid); return; }
   } catch (e) { if (!navigator.onLine) $("#offline").classList.add("on"); }
+  const q = new URLSearchParams(location.search);
+  if (DESK.matches && !q.has("d") && !q.has("f") && (q.has("concept") || !ME.reads.length)) return setTab("about");
   render();
 })();
 
