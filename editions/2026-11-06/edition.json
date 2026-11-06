@@ -15,19 +15,19 @@
           "id": "nixon",
           "look": "an American vice-president of the 1950s, dark suit, slicked hair, confident grin",
           "file": "cast/dossier-nixon.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "sov",
           "look": "a Soviet official of the 1950s-80s, olive military uniform with red band cap, big grey moustache",
           "file": "cast/dossier-sov.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "boss",
           "look": "the American CEO of a soda company, blue suit, red tie, slicked grey hair",
           "file": "cast/dossier-boss.png",
-          "status": "done"
+          "status": "pending"
         }
       ],
       "cover": {
@@ -38,7 +38,7 @@
         ],
         "file": "images/dossier-cover.webp",
         "status": "pending",
-        "attempts": 1
+        "attempts": 0
       },
       "cases": [
         {
@@ -63,8 +63,8 @@
               "sov"
             ],
             "file": "images/dossier-01.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -90,7 +90,7 @@
             ],
             "file": "images/dossier-02.webp",
             "status": "pending",
-            "attempts": 1
+            "attempts": 0
           }
         },
         {
@@ -116,7 +116,7 @@
             ],
             "file": "images/dossier-03.webp",
             "status": "pending",
-            "attempts": 1
+            "attempts": 0
           }
         },
         {
@@ -137,8 +137,8 @@
               "sov"
             ],
             "file": "images/dossier-04.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -159,7 +159,7 @@
             ],
             "file": "images/dossier-05.webp",
             "status": "pending",
-            "attempts": 1
+            "attempts": 0
           }
         },
         {
@@ -184,8 +184,8 @@
               "boss"
             ],
             "file": "images/dossier-06.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -205,8 +205,8 @@
               "boss"
             ],
             "file": "images/dossier-07.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -226,8 +226,8 @@
               "boss"
             ],
             "file": "images/dossier-08.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -247,8 +247,8 @@
               "boss"
             ],
             "file": "images/dossier-09.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -270,7 +270,7 @@
             ],
             "file": "images/dossier-10.webp",
             "status": "pending",
-            "attempts": 1
+            "attempts": 0
           }
         },
         {
@@ -296,7 +296,7 @@
             ],
             "file": "images/dossier-11.webp",
             "status": "pending",
-            "attempts": 1
+            "attempts": 0
           }
         },
         {
@@ -317,7 +317,7 @@
             ],
             "file": "images/dossier-12.webp",
             "status": "pending",
-            "attempts": 1
+            "attempts": 0
           }
         }
       ],
@@ -339,43 +339,43 @@
           "id": "huissier",
           "look": "a parliament usher in black tailcoat with a silver chain",
           "file": "cast/actu-huissier.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "gerard",
           "look": "Gérard, a start-up manager, grey shirt, yellow tie, enthusiastic",
           "file": "cast/actu-gerard.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "jeanne",
           "look": "Jeanne, a sharp young woman with a brown bun and round glasses, green cardigan",
           "file": "cast/actu-jeanne.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "cremiere",
           "look": "a market dairy seller with a bun, white apron",
           "file": "cast/actu-cremiere.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "astro",
           "look": "an astronomer in a white lab coat with curly hair and glasses",
           "file": "cast/actu-astro.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "coach",
           "look": "a life coach in an orange sports jacket with blond slick hair, huge smile",
           "file": "cast/actu-coach.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "diplo",
           "look": "a diplomat in a navy suit, bald, thin moustache",
           "file": "cast/actu-diplo.png",
-          "status": "done"
+          "status": "pending"
         }
       ],
       "cover": {
@@ -384,8 +384,8 @@
           "huissier"
         ],
         "file": "images/actu-cover.webp",
-        "status": "done",
-        "attempts": 1
+        "status": "pending",
+        "attempts": 0
       },
       "cases": [
         {
@@ -405,8 +405,8 @@
               "huissier"
             ],
             "file": "images/actu-01.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -431,8 +431,8 @@
               "jeanne"
             ],
             "file": "images/actu-02.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -452,8 +452,8 @@
               "cremiere"
             ],
             "file": "images/actu-03.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -478,8 +478,8 @@
               "jeanne"
             ],
             "file": "images/actu-04.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -499,8 +499,8 @@
               "astro"
             ],
             "file": "images/actu-05.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -525,8 +525,8 @@
               "astro"
             ],
             "file": "images/actu-06.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -546,8 +546,8 @@
               "diplo"
             ],
             "file": "images/actu-07.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -567,8 +567,8 @@
               "diplo"
             ],
             "file": "images/actu-08.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         }
       ],
@@ -590,24 +590,24 @@
           "id": "schro",
           "look": "Erwin, a 1930s physicist, slick dark hair, round glasses, grey three-piece suit, dark red tie",
           "file": "cast/cultureg-schro.png",
-          "status": "done"
+          "status": "pending"
         },
         {
           "id": "cat",
           "look": "an orange tabby cat with half-closed, unimpressed eyes",
           "file": "cast/cultureg-cat.png",
-          "status": "done"
+          "status": "pending"
         }
       ],
       "cover": {
-        "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+        "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
         "cast": [
           "schro",
           "cat"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "done",
-        "attempts": 1
+        "status": "pending",
+        "attempts": 0
       },
       "cases": [
         {
@@ -626,14 +626,14 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
             "cast": [
               "schro",
               "cat"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -652,14 +652,14 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), smug, self-satisfied, half-closed eyes, hands on hips. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), smug, self-satisfied, half-closed eyes, hands on hips. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
             "cast": [
               "schro",
               "cat"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -674,13 +674,13 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), calm and serious, gesturing with one hand as if explaining. Also in the scene: an old brass Geiger counter with a dial and a tiny cute face",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), calm and serious, gesturing with one hand as if explaining. Also in the scene: an old brass Geiger counter with a dial and a tiny cute face",
             "cast": [
               "schro"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -695,14 +695,14 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), calm and serious, standing with arms at his sides. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), calm and serious, standing with arms at his sides. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
             "cast": [
               "schro",
               "cat"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -721,14 +721,14 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), shocked, wide eyes, open mouth, one arm raised enthusiastically. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), shocked, wide eyes, open mouth, one arm raised enthusiastically. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
             "cast": [
               "schro",
               "cat"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -747,14 +747,14 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: a modern smartphone (a funny anachronism), an orange cat sitting, judging everyone with half-closed eyes",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: a modern smartphone (a funny anachronism), an orange cat sitting, judging everyone with half-closed eyes",
             "cast": [
               "schro",
               "cat"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -769,14 +769,14 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), worried, raised eyebrows, arms spread in a shrug. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), worried, raised eyebrows, arms spread in a shrug. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
             "cast": [
               "schro",
               "cat"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -795,14 +795,14 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), calm and serious, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), calm and serious, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
             "cast": [
               "schro",
               "cat"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -821,7 +821,7 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), shocked, wide eyes, open mouth, arms spread in a shrug. Also in the scene: a closed cardboard box, an orange cat sitting, judging everyone with half-closed eyes",
+            "prompt": "a 1930s physicist's study with wooden bookshelves, brass instruments and a desk lamp. Erwin (on the left), shocked, wide eyes, open mouth, arms spread in a shrug. Also in the scene: a closed cardboard box, an orange cat sitting, judging everyone with half-closed eyes",
             "cast": [
               "schro",
               "cat"

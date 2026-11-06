@@ -117,8 +117,9 @@ def process(d: Path, f: Path, ed: dict) -> int:
         for c in fmt.get("cast", []):
             if c.get("status") == "done" and (d / c["file"]).exists():
                 continue
-            prompt = (f"{STYLE['style']} Character model sheet: a single full-face portrait, head and shoulders, "
-                      f"plain light background, of {c.get('look', c['id'])}. {STYLE['constraints']}")
+            prompt = (f"{STYLE['style']} Character reference portrait: one single head-and-shoulders portrait, facing the viewer, "
+                      f"plain light cream background, of {c.get('look', c['id'])}. One image only, no panels, no frames, "
+                      f"absolutely no text, no letters, no speech bubbles.")
             im = generate(prompt, STYLE["cast_size"], [STYLE_REF])
             dest = d / c["file"]
             dest.parent.mkdir(parents=True, exist_ok=True)
@@ -152,12 +153,14 @@ def process(d: Path, f: Path, ed: dict) -> int:
                 raise
             except Exception as e:  # une image ratée ne bloque pas les autres
                 print(f"  ! {img['file']} : {e}")
+                img["error"] = str(e)[:300]
                 img["status"] = "pending" if img["attempts"] < max_att else "failed"
                 persist()
                 continue
             save_webp(im, d / img["file"])
             img["status"] = "done"
             img.pop("qa", None)
+            img.pop("error", None)
             done += 1
             persist()
             print(f"  image {img['file']}")
