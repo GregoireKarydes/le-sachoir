@@ -345,7 +345,6 @@ body{overscroll-behavior-y:none}
 .card.wide .pic img{object-fit:cover}
 .empty-state{padding:30px 10px;text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center}
 .empty-state h2{font-family:var(--f-serif);font-weight:800;font-size:24px;margin:0}
-.demo-chip{align-self:flex-start;background:#fff1cf;border-radius:999px;padding:3px 10px;font-size:12.5px;font-weight:700}
 .field input[type=text]{border:2px solid var(--line);border-radius:12px;padding:11px 12px;background:#fff}
 .offline{position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:95;background:var(--ink);color:#fff;font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 12px;display:none}
 .offline.on{display:block}
@@ -577,7 +576,6 @@ function renderHome() {
   v.innerHTML = `
    <div><h1 class="h1 hello">${hello}</h1><p class="lead">Prêt à briller en société (ou au moins à faire semblant) ?</p></div>
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
-   ${ed.demo ? `<span class="demo-chip">Édition de démonstration</span>` : ""}
    ${!isToday && CUR.date === INDEX[0]?.date ? `<p class="sub">L’édition d’aujourd’hui arrive à 5 h. En attendant, voici la dernière.</p>` : ""}
    ${F.dossier ? card.dossier(F.dossier) : ""}
    ${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
