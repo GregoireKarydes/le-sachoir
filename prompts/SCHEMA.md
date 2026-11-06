@@ -52,7 +52,8 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`. Tout 
 - Le style et l'interdiction de texte sont ajoutés automatiquement par `pipeline/style.json` : ne pas les répéter.
 - Jamais de texte, de lettres, de logos ou de marques à dessiner. Pas de nom de dessinateur ou de série existante.
 - Laisser le haut de l'image calme : les bulles s'y posent.
-- Penser en dessinateur de BD d'humour : varier les cadrages d'une case à l'autre (plan large, plan moyen, gros plan, plongée, contre-plongée), exagérer les expressions et les poses, ajouter des effets classiques (traits de vitesse, gouttes de sueur, petites étoiles) et, quand c'est possible, un petit gag visuel dans le décor qui sert le sujet.
+- Penser en dessinateur de strip minimaliste : le jeu d'acteur fait le gag. Décor réduit à un ou deux objets utiles au sujet (un bureau, un canapé, un télescope), le reste vide. Exagérer les postures (dos voûté, épaules tombantes, bras ballants, personnage qui s'affale ou « fond » sur place), les sourcils et la bouche ; gouttes de sueur et joues roses pour la gêne. Rythme : cases calmes et assez statiques, puis explosion d'expression sur la chute (changement de posture radical ou gros plan sur la réaction). Varier quand même les cadrages (plan moyen, gros plan, plan large).
+- Dans les fiches casting (`look`), garder pour chaque personnage un trait fort lisible en gros trait noir : coiffure (souvent en bataille), silhouette, accessoire, une couleur d'accent au plus.
 - Personnalités vivantes (Actu) : décrire la fonction et la caricature (silhouette, coiffure, accessoire), jamais le nom.
 - Chemins : `images/<format>-NN.webp` (NN sur 2 chiffres), `images/<format>-cover.webp`, `cast/<format>-<id>.png`.
 
