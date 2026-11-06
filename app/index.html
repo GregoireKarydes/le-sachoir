@@ -5,7 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#faf6ee">
 <meta name="description" content="Chaque matin à 5 h, l'actu et la culture G en BD. Pour briller en société (ou au moins faire semblant).">
-<title>Le Sachoir</title>
+<title>Le Sachoir — L'actu et la culture G en BD, chaque matin à 5 h</title>
+<link rel="canonical" href="__BASE__">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Le Sachoir">
+<meta property="og:title" content="Le Sachoir — L'actu et la culture G en BD">
+<meta property="og:description" content="Chaque matin à 5 h : l'actu du jour, une pilule de culture G, une histoire insolite et un grand dossier, en BD humoristique.">
+<meta property="og:url" content="__BASE__">
+<meta property="og:image" content="__BASE__assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Le Sachoir","url":"__BASE__","inLanguage":"fr","description":"L'actu et la culture G en BD humoristique, chaque matin à 5 h."}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
@@ -336,11 +345,75 @@ body{overscroll-behavior-y:none}
 .field input[type=text]{border:2px solid var(--line);border-radius:12px;padding:11px 12px;background:#fff}
 .offline{position:absolute;top:8px;left:50%;transform:translateX(-50%);z-index:95;background:var(--ink);color:#fff;font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 12px;display:none}
 .offline.on{display:block}
+.topbar{display:none}
+.seo-links a{display:block;padding:4px 0}
+.final .linkpage{display:block;text-align:center;font-size:14px;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- Expérience PC (≥ 900 px) ---------- */
+@media (min-width:900px){
+  .phone{max-width:none;box-shadow:none}
+  .app{flex-direction:column}
+  .topbar{display:flex;align-items:center;gap:28px;padding:12px max(32px,calc((100vw - 1180px)/2));background:var(--cream);border-bottom:1px solid var(--line);position:relative;z-index:5}
+  .tb-logo img{height:40px;display:block}
+  .tb-nav{display:flex;gap:6px;flex:1}
+  .tb-nav button{display:flex;align-items:center;gap:8px;border:0;background:none;padding:9px 14px;border-radius:999px;font-weight:500;font-size:15.5px;color:#3d3832}
+  .tb-nav button svg{width:20px;height:20px}
+  .tb-nav button:hover{background:var(--grey)}
+  .tb-nav button[aria-current=page]{background:var(--ink);color:#fff;font-weight:700}
+  .tb-streak{position:static;transform:none;margin:0;font-size:16px;padding:6px 14px}
+  .main .logo{display:none}
+  #nav{display:none}
+  .main{padding:8px 0 40px}
+  .view{max-width:1180px;margin:0 auto;padding:24px 32px 40px;gap:22px}
+  .h1{font-size:38px}
+  .hello{font-size:38px}
+  .lead{font-size:17px}
+  .date{font-size:24px}
+  #v-home.on{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);align-items:start}
+  #v-home > *{grid-column:1/-1}
+  #v-home > .card.big{grid-column:1;grid-row:span 3}
+  #v-home > .duo{grid-column:2;grid-template-columns:1fr}
+  #v-home > .card.wide{grid-column:2}
+  #v-home > .card.wide .pic{flex-basis:140px}
+  .card.big h3{font-size:40px}
+  .card{transition:transform .15s,box-shadow .15s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(23,20,15,.18)}
+  .card.small{min-height:150px}
+  #v-explore .alist,#v-favs .alist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .aitem:hover{box-shadow:0 6px 16px rgba(0,0,0,.1)}
+  #v-profile.on{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+  #v-profile > .row{grid-column:1/-1}
+  #v-profile > .pcard,#v-profile > .tiles{grid-column:1}
+  #v-profile > .menu{grid-column:2;grid-row:2 / span 2}
+  .banner{max-width:640px}
+  /* Lecteur : la BD en planche */
+  .reader{background:#1d1915}
+  .reader.desk .track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;overflow-y:auto;overflow-x:hidden;scroll-snap-type:none;
+    padding:76px max(32px,calc((100vw - 1180px)/2)) 48px;align-content:start}
+  .reader.desk .track{grid-auto-rows:calc((min(100vw - 64px, 1180px) - 52px) / 3 * 16 / 9)}
+  .reader.desk .slide{height:100%;border-radius:6px}
+  .reader.desk .slide.final{grid-column:1/-1;aspect-ratio:auto;padding:40px 20px;border-radius:16px}
+  .reader.desk .stack{top:14px;left:12px;right:12px}
+  .reader.desk .caption{font-size:16px}
+  .reader.desk .bubble{font-size:16.5px}
+  .reader.desk .nav-arrow,.reader.desk .segs{display:none}
+  .reader.desk .r-top{padding:14px max(32px,calc((100vw - 1180px)/2)) 0}
+  .reader.desk .r-bar .cnt{font-size:14px}
+  /* Fenêtres centrées */
+  .scrim{align-items:center;justify-content:center}
+  .sheet{max-width:560px;max-height:86vh;border-radius:24px}
+  .toast{bottom:32px}
+}
 </style>
 </head>
 <body>
 <div class="phone" id="phone">
   <div class="app">
+    <header class="topbar" id="topbar">
+      <a class="tb-logo" href="./" aria-label="Le Sachoir, accueil"><img src="assets/logo.png" alt="Le Sachoir"></a>
+      <nav class="tb-nav" id="navTop" aria-label="Navigation principale"></nav>
+      <button class="streakmini tb-streak" id="streakTop"></button>
+    </header>
     <div class="main" id="main">
       <div class="logo"><img src="assets/logo.png" alt="Le Sachoir"><button class="streakmini" id="streakMini"></button></div>
       <section class="view on" id="v-home" aria-label="Édition"></section>
@@ -369,12 +442,14 @@ body{overscroll-behavior-y:none}
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div class="offline" id="offline">Hors ligne : édition enregistrée</div>
 </div>
+<noscript><nav class="seo-links" aria-label="Dernières histoires"><!--SEO_LINKS--></nav></noscript>
 <script>
 "use strict";
 /* =========================================================
    Le Sachoir — appli PWA (V1 gratuite, données locales)
    ========================================================= */
 const ORDER = ["dossier", "actu", "cultureg", "insolite"];
+const DESK = matchMedia("(min-width: 900px)");
 const CLS = { dossier: "green", actu: "navy", cultureg: "orange", insolite: "red" };
 const COLOR = { dossier: "#1f8f5f", actu: "#2f4fa2", cultureg: "#f2a33a", insolite: "#d9473a" };
 
@@ -450,6 +525,7 @@ async function loadEdition(date) {
   const entry = INDEX.find(e => e.date === date);
   const ok = new Set((entry?.formats || []).map(f => f.id));
   ed.formats = (ed.formats || []).filter(f => ok.has(f.id)).sort((a, b) => ORDER.indexOf(a.id) - ORDER.indexOf(b.id));
+  ed.formats.forEach(f => { f.url = entry.formats.find(x => x.id === f.id)?.url || ""; });
   ed.base = `editions/${date}/`;
   editionCache[date] = ed;
   return ed;
@@ -464,9 +540,10 @@ function renderNav() {
     ["explore", "Découvrir", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="currentColor"/></svg>`],
     ["favs", "Favoris", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg>`],
     ["profile", "Profil", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/></svg>`]];
-  $("#nav").innerHTML = tabs.map(t => `<button data-tab="${t[0]}" ${TAB === t[0] ? 'aria-current="page"' : ""}>${t[2]}${t[1]}</button>`).join("");
-  $("#nav").querySelectorAll("button").forEach(b => b.onclick = () => setTab(b.dataset.tab));
-  const s = streak(); $("#streakMini").innerHTML = `<span class="fl">🔥</span>${s}`; $("#streakMini").setAttribute("aria-label", `Série de ${s} jours`);
+  const html = tabs.map(t => `<button data-tab="${t[0]}" ${TAB === t[0] ? 'aria-current="page"' : ""}>${t[2]}${t[1]}</button>`).join("");
+  ["#nav", "#navTop"].forEach(id => { $(id).innerHTML = html; $(id).querySelectorAll("button").forEach(b => b.onclick = () => setTab(b.dataset.tab)); });
+  const s = streak();
+  ["#streakMini", "#streakTop"].forEach(id => { $(id).innerHTML = `<span class="fl">🔥</span>${s}`; $(id).setAttribute("aria-label", `Série de ${s} jours`); });
 }
 function setTab(t) { TAB = t; document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + t)); $("#main").scrollTop = 0; render(); }
 function render() { renderNav(); ({ home: renderHome, explore: renderExplore, favs: renderFavs, profile: renderProfile })[TAB](); }
@@ -555,7 +632,7 @@ function caseHTML(ed, c) {
 function finalHTML(ed, f) {
   const fav = ME.favs.some(x => x.date === ed.date && x.fid === f.id && x.type === "card");
   return `<div class="ccard"><div class="hd"><span>Pour briller en société</span><em>${fmtLong(ed.date).split(" ").slice(1).join(" ")}</em></div><div class="ph">${esc(f.final?.text || "")}</div><div class="src">${esc(f.label)} · ${esc(f.final?.source || "")}</div>
-  <div class="ft"><button class="btn" data-act="story">Exporter en Story</button><button class="btn ghost" data-act="favcard">${fav ? "Dans vos favoris ♥" : "Garder cette carte ♡"}</button><button class="btn ghost" data-act="back">Retour à l’édition</button></div></div>`;
+  <div class="ft"><button class="btn" data-act="story">Exporter en Story</button><button class="btn ghost" data-act="favcard">${fav ? "Dans vos favoris ♥" : "Garder cette carte ♡"}</button><button class="btn ghost" data-act="back">Retour à l’édition</button>${f.url ? `<a class="linkpage" href="${f.url}">Page de l’histoire, à partager</a>` : ""}</div></div>`;
 }
 function openReader(ed, fid) {
   const f = ed.formats.find(x => x.id === fid); if (!f) return;
@@ -563,14 +640,25 @@ function openReader(ed, fid) {
   const tr = $("#track");
   tr.innerHTML = f.cases.map(c => `<div class="slide">${caseHTML(ed, c)}</div>`).join("") + `<div class="slide final" style="--fc:${COLOR[f.id] || "#1f8f5f"}">${finalHTML(ed, f)}</div>`;
   tr.querySelectorAll("[data-act]").forEach(b => b.onclick = onAct);
-  $("#reader").classList.add("on"); tr.scrollLeft = 0; updateReader(0, true);
+  const desk = DESK.matches;
+  $("#reader").classList.toggle("desk", desk);
+  $("#reader").classList.add("on"); tr.scrollLeft = 0; tr.scrollTop = 0; updateReader(0, true);
+  if (desk) {
+    if (R.io) R.io.disconnect();
+    R.io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const i = [...tr.children].indexOf(e.target);
+      if (i > R.idx) updateReader(i, true);
+    }), { root: tr, threshold: 0.6 });
+    [...tr.children].forEach(el => R.io.observe(el));
+  }
   history.pushState({ reader: true }, "");
 }
 function updateReader(i, init) {
   const { ed, f } = R, total = f.cases.length; R.idx = i;
   let seg = ""; for (let k = 0; k <= total; k++) seg += `<i class="${k <= i ? "on" : ""}"></i>`;
   $("#segs").innerHTML = seg;
-  $("#rCount").textContent = i >= total ? "Pour briller" : `${i + 1} / ${total}`;
+  $("#rCount").textContent = DESK.matches ? `${esc(f.label)} · ${total} cases` : (i >= total ? "Pour briller" : `${i + 1} / ${total}`);
   const fav = ME.favs.some(x => x.date === ed.date && x.fid === f.id && x.type === "bd");
   $("#rFav").classList.toggle("on", fav); $("#rFav").setAttribute("aria-pressed", fav);
   $("#rPrev").hidden = i === 0; $("#rNext").hidden = i === total;
@@ -584,11 +672,11 @@ function updateReader(i, init) {
   // érudition : un Grand Dossier compte dès la case 5
   if (f.id === "dossier" && i >= 4 && !ME.dossiers.includes(ed.date)) { ME.dossiers.push(ed.date); toast(`📚 Dossier dévoré : ${ME.dossiers.length}`); }
   save();
-  if (i === total && !ME.installDone && !sessionStorage.getItem("installAsked") && !matchMedia("(display-mode: standalone)").matches) { sessionStorage.setItem("installAsked", "1"); setTimeout(openInstall, 900); }
+  if (i === total && !DESK.matches && !ME.installDone && !sessionStorage.getItem("installAsked") && !matchMedia("(display-mode: standalone)").matches) { sessionStorage.setItem("installAsked", "1"); setTimeout(openInstall, 900); }
 }
-function closeReader() { $("#reader").classList.remove("on"); render(); }
+function closeReader() { $("#reader").classList.remove("on"); if (R.io) R.io.disconnect(); render(); }
 let scT;
-$("#track").addEventListener("scroll", () => { clearTimeout(scT); scT = setTimeout(() => { const tr = $("#track"), i = Math.round(tr.scrollLeft / tr.clientWidth); if (i !== R.idx) updateReader(i); }, 60); });
+$("#track").addEventListener("scroll", () => { if (DESK.matches) return; clearTimeout(scT); scT = setTimeout(() => { const tr = $("#track"), i = Math.round(tr.scrollLeft / tr.clientWidth); if (i !== R.idx) updateReader(i); }, 60); });
 function go(d) { const tr = $("#track"), i = Math.max(0, Math.min(R.n - 1, R.idx + d)); tr.scrollTo({ left: i * tr.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }
 $("#rPrev").onclick = () => go(-1); $("#rNext").onclick = () => go(1);
 $("#rClose").onclick = () => history.back();
@@ -780,6 +868,8 @@ if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catc
       const wanted = new URLSearchParams(location.search).get("d");
       CUR = await loadEdition(wanted && INDEX.some(e => e.date === wanted) ? wanted : INDEX[0].date);
     }
+    const fid = new URLSearchParams(location.search).get("f");
+    if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); openReader(CUR, fid); return; }
   } catch (e) { if (!navigator.onLine) $("#offline").classList.add("on"); }
   render();
 })();

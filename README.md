@@ -17,6 +17,11 @@ Chaque matin à 5 h, l'actu et la culture G en BD. Pour briller en société (ou
 
 Les bulles et les récitatifs ne sont jamais dessinés dans les images : l'appli les pose par-dessus.
 
+## Référencement (SEO)
+À chaque publication, `pipeline/seo.py` génère pour chaque histoire une page statique indexable (`/histoires/<date>-<titre>/`) avec le texte complet des cases, les images, la description, Open Graph et les données structurées (Article, fil d'Ariane). Il génère aussi les pages `/themes/`, `/archives/`, `sitemap.xml` et `robots.txt`. L'édition de démonstration est en `noindex`.
+
+L'adresse du site se règle dans `pipeline/site.json` (`base_url`), avec le code de vérification Google Search Console (`google_site_verification`).
+
 ## Dossiers
 - `app/` : l'appli PWA (un seul `index.html`, service worker, manifeste, images de l'interface).
 - `editions/` : une édition par jour (`edition.json` + `images/` + `cast/`), et `index.json` (éditions publiées).

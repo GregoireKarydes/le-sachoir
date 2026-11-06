@@ -6,9 +6,13 @@ Construit aussi le dossier _site/ déployé sur GitHub Pages (appli + éditions 
 """
 import json
 import shutil
+import sys
 from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import seo  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 EDITIONS = ROOT / "editions"
@@ -49,6 +53,7 @@ def main():
                 "date": d.name,
                 "demo": bool(ed.get("demo")),
                 "formats": [{"id": x["id"], "label": x.get("label", ""), "title": x.get("title", ""),
+                              "url": f"histoires/{seo.story_slug(d.name, x)}/",
                               "theme": x.get("theme", ""), "minutes": x.get("minutes", 0),
                               "cover": x.get("cover", {}).get("file") if x.get("cover", {}).get("status") == "done" else None}
                              for x in ready],
@@ -68,6 +73,7 @@ def main():
         dst = SITE / "editions" / e["date"]
         shutil.copytree(src, dst, ignore=shutil.ignore_patterns("cast", "*.md"))
     (SITE / ".nojekyll").write_text("")
+    seo.build(SITE, index)
     print("Site construit dans _site/")
 
 
