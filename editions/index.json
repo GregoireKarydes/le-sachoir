@@ -1,10 +1,20 @@
 {
- "updated_at": "2026-11-06T10:52:10.038090+01:00",
+ "updated_at": "2026-11-06T10:57:27.826463+01:00",
  "editions": [
   {
    "date": "2026-11-06",
    "demo": true,
-   "formats": []
+   "formats": [
+    {
+     "id": "actu",
+     "label": "L’Actu du Jour",
+     "title": "Remaniement ou Kamoulox ?",
+     "url": "histoires/2026-11-06-remaniement-ou-kamoulox/",
+     "theme": "",
+     "minutes": 1,
+     "cover": "images/actu-cover.webp"
+    }
+   ]
   }
  ]
 }
