@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T14:45:21.941520+01:00",
+ "updated_at": "2026-11-06T14:52:11.771160+01:00",
  "editions": [
   {
    "date": "2026-11-06",
@@ -24,6 +24,16 @@
      "minutes": 2,
      "tagline": "Le roi de l’arnaque avait le sens du recyclage.",
      "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Quiz du jour",
+     "title": "Cinq questions, zéro pression (ou presque)",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cover": null
     }
    ]
   }
