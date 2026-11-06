@@ -1,0 +1,43 @@
+name: Images
+
+on:
+  push:
+    paths:
+      - "editions/**/edition.json"
+      - "pipeline/style.json"
+      - "pipeline/style_ref.png"
+  schedule:
+    - cron: "17 0-6 * * *"     # toutes les heures la nuit : reprend les images en attente
+    - cron: "17 9,15,21 * * *" # et dans la journée pour le stock
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: pip install -r pipeline/requirements.txt
+      - name: Générer les images manquantes
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python pipeline/images.py
+      - name: Commit
+        run: |
+          git config user.name "sachoir-bot"
+          git config user.email "sachoir-bot@users.noreply.github.com"
+          git add editions
+          git diff --cached --quiet || git commit -m "Images générées"
+          git pull --rebase && git push

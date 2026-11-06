@@ -1,0 +1,1036 @@
+{
+  "date": "2026-11-06",
+  "status": "published",
+  "demo": true,
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Comment le KGB a perdu une guerre à cause du Pepsi",
+      "tagline": "Attention, l’abus de culture générale nuit gravement à l’ignorance.",
+      "minutes": 4,
+      "theme": "Géopolitique",
+      "cast": [
+        {
+          "id": "nixon",
+          "look": "an American vice-president of the 1950s, dark suit, slicked hair, confident grin",
+          "file": "cast/dossier-nixon.png",
+          "status": "pending"
+        },
+        {
+          "id": "sov",
+          "look": "a Soviet official of the 1950s-80s, olive military uniform with red band cap, big grey moustache",
+          "file": "cast/dossier-sov.png",
+          "status": "pending"
+        },
+        {
+          "id": "boss",
+          "look": "the American CEO of a soda company, blue suit, red tie, slicked grey hair",
+          "file": "cast/dossier-boss.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. an American vice-president of the 1950s (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; a Soviet official of the 1950s-80s (on the right), annoyed frown, hands on hips",
+        "cast": [
+          "nixon",
+          "sov"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Le contexte",
+          "caption": "Moscou, 1959. En pleine guerre froide, les États-Unis organisent une grande exposition sur le mode de vie américain.",
+          "bubbles": [
+            {
+              "text": "Regardez cette cuisine : le capitalisme, c’est le confort.",
+              "side": "l"
+            },
+            {
+              "text": "Chez nous, les cuisines aussi ont des machines. Et des missiles.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. an American vice-president of the 1950s (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; a Soviet official of the 1950s-80s (on the right), annoyed frown, hands on hips",
+            "cast": [
+              "nixon",
+              "sov"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "",
+          "caption": "Le patron de Pepsi, Donald Kendall, convainc Nixon d’amener Khrouchtchev à son stand. La photo du dirigeant soviétique buvant un Pepsi fait le tour du monde.",
+          "bubbles": [
+            {
+              "text": "Goûtez, c’est la saveur de la liberté !",
+              "side": "l"
+            },
+            {
+              "text": "… C’est sucré, la liberté.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. the American CEO of a soda company (on the left), broad happy smile, gesturing with one hand as if explaining; a Soviet official of the 1950s-80s (on the right), shocked, wide eyes, open mouth, standing with arms at his sides. Also in the scene: an unlabelled glass soda bottle",
+            "cast": [
+              "boss",
+              "sov"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Le troc",
+          "caption": "1972. Pepsi obtient le droit de vendre son soda en URSS. Problème : le rouble ne s’échange pas contre des dollars.",
+          "bubbles": [
+            {
+              "text": "Et vous me payez comment ?",
+              "side": "l"
+            },
+            {
+              "text": "Nous avons une idée très russe.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office with a window and a framed chart on the wall. the American CEO of a soda company (on the left), worried, raised eyebrows, arms spread in a shrug; a Soviet official of the 1950s-80s (on the right), smug, self-satisfied, half-closed eyes, standing with arms at his sides",
+            "cast": [
+              "boss",
+              "sov"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Solution : le troc. En échange, Pepsi obtient l’exclusivité de la vodka Stolitchnaïa aux États-Unis.",
+          "bubbles": [
+            {
+              "text": "Un soda contre une vodka. Le cocktail parfait.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office with a window and a framed chart on the wall. the American CEO of a soda company (on the left), broad happy smile, one arm raised enthusiastically; a Soviet official of the 1950s-80s (on the right), broad happy smile, gesturing with one hand as if explaining. Also in the scene: an unlabelled clear vodka bottle",
+            "cast": [
+              "boss",
+              "sov"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "Les usines Pepsi s’installent en URSS : la première ouvre en 1974 à Novorossiisk, sur la mer Noire.",
+          "bubbles": [
+            {
+              "text": "Le peuple a soif. Le Parti a des bulles.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. a Soviet official of the 1950s-80s (on the left), broad happy smile, one arm raised enthusiastically. Also in the scene: an unlabelled glass soda bottle",
+            "cast": [
+              "sov"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "",
+          "caption": "1989. Le contrat doit être renouvelé, mais la vodka ne suffit plus à payer les volumes vendus.",
+          "bubbles": [
+            {
+              "text": "Vous acceptez les sous-marins ?",
+              "side": "l"
+            },
+            {
+              "text": "… Avec ou sans glaçons ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office with a window and a framed chart on the wall. a Soviet official of the 1950s-80s (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; the American CEO of a soda company (on the right), shocked, wide eyes, open mouth, arms spread in a shrug",
+            "cast": [
+              "sov",
+              "boss"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "chap",
+          "tag": "Chapitre 3 · La flotte",
+          "caption": "L’URSS paie avec des navires : 17 vieux sous-marins, un croiseur, une frégate et un destroyer.",
+          "bubbles": [
+            {
+              "text": "Amiral Pepsi. Ça sonne bien, non ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a wooden dock by a calm blue sea with small white clouds. the American CEO of a soda company (on the left), smug, self-satisfied, half-closed eyes, hands on hips. Also in the scene: an old rusty grey submarine",
+            "cast": [
+              "boss"
+            ],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "",
+          "caption": "Selon la presse, Kendall glisse au conseiller à la sécurité nationale de la Maison-Blanche : « Nous désarmons l’Union soviétique plus vite que vous. »",
+          "bubbles": [
+            {
+              "text": "Le soda, c’est la paix par d’autres moyens.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office with a window and a framed chart on the wall. the American CEO of a soda company (on the left), broad happy smile, one arm raised enthusiastically",
+            "cast": [
+              "boss"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Mythbuster",
+          "caption": "Non, Pepsi n’a jamais eu « la 6e flotte du monde » : ces navires hors d’usage sont revendus pour la ferraille.",
+          "bubbles": [
+            {
+              "text": "Moi, je préférais quand c’était de la vodka.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a wooden dock by a calm blue sea with small white clouds. the American CEO of a soda company (on the left), worried, raised eyebrows, standing with arms at his sides. Also in the scene: a big orange fish jumping out of the water",
+            "cast": [
+              "boss"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "chap",
+          "tag": "Chapitre 4 · La guerre perdue",
+          "caption": "1990. Un accord record d’environ 3 milliards de dollars est signé, payé en partie avec des pétroliers construits en URSS.",
+          "bubbles": [
+            {
+              "text": "Cette fois, je prends les bateaux qui flottent.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office with a window and a framed chart on the wall. the American CEO of a soda company (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; a Soviet official of the 1950s-80s (on the right), broad happy smile, standing with arms at his sides. Also in the scene: a signed treaty document",
+            "cast": [
+              "boss",
+              "sov"
+            ],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "",
+          "tag": "",
+          "caption": "Décembre 1991 : l’URSS disparaît. Usines, partenaires et contrats se dispersent entre quinze nouveaux pays.",
+          "bubbles": [
+            {
+              "text": "Mon client a… disparu ?",
+              "side": "l"
+            },
+            {
+              "text": "Il a été remanié. En quinze morceaux.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. the American CEO of a soda company (on the left), shocked, wide eyes, open mouth, arms spread in a shrug; a Soviet official of the 1950s-80s (on the right), worried, raised eyebrows, standing with arms at his sides",
+            "cast": [
+              "boss",
+              "sov"
+            ],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "Le fin mot",
+          "caption": "Coca-Cola profite du chaos pour s’implanter et finit par passer devant Pepsi en Russie. La guerre perdue n’était pas militaire : c’était celle des colas.",
+          "bubbles": [
+            {
+              "text": "Le KGB n’y est pour rien. Mais le titre était plus vendeur.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a 1920s Parisian street with cream Haussmann buildings and a red café awning. the American CEO of a soda company (on the left), annoyed frown, standing with arms at his sides",
+            "cast": [
+              "boss"
+            ],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "L’URSS a payé Pepsi en vodka, puis, en 1989, avec 17 sous-marins et 3 navires de guerre.",
+        "source": "Accords PepsiCo–URSS de 1972, 1989 et 1990, documentés par la presse de l’époque."
+      },
+      "sources": []
+    },
+    {
+      "id": "actu",
+      "label": "L’Actu du Jour",
+      "title": "Remaniement ou Kamoulox ?",
+      "tagline": "Le monde va mal, rions-en",
+      "minutes": 1,
+      "theme": "",
+      "cast": [
+        {
+          "id": "huissier",
+          "look": "a parliament usher in black tailcoat with a silver chain",
+          "file": "cast/actu-huissier.png",
+          "status": "pending"
+        },
+        {
+          "id": "gerard",
+          "look": "Gérard, a start-up manager, grey shirt, yellow tie, enthusiastic",
+          "file": "cast/actu-gerard.png",
+          "status": "pending"
+        },
+        {
+          "id": "jeanne",
+          "look": "Jeanne, a sharp young woman with a brown bun and round glasses, green cardigan",
+          "file": "cast/actu-jeanne.png",
+          "status": "pending"
+        },
+        {
+          "id": "cremiere",
+          "look": "a market dairy seller with a bun, white apron",
+          "file": "cast/actu-cremiere.png",
+          "status": "pending"
+        },
+        {
+          "id": "astro",
+          "look": "an astronomer in a white lab coat with curly hair and glasses",
+          "file": "cast/actu-astro.png",
+          "status": "pending"
+        },
+        {
+          "id": "coach",
+          "look": "a life coach in an orange sports jacket with blond slick hair, huge smile",
+          "file": "cast/actu-coach.png",
+          "status": "pending"
+        },
+        {
+          "id": "diplo",
+          "look": "a diplomat in a navy suit, bald, thin moustache",
+          "file": "cast/actu-diplo.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a semicircular parliament chamber with rows of red seats. a parliament usher in black tailcoat with a silver chain (on the left), calm and serious, one arm raised enthusiastically",
+        "cast": [
+          "huissier"
+        ],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "",
+          "caption": "POLITIQUE · Un remaniement est annoncé : plusieurs ministères changent de titulaire et deux sont renommés.",
+          "bubbles": [
+            {
+              "text": "Le ministre de l’Agriculture devient ministre du Numérique. Les deux ont des champs.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a semicircular parliament chamber with rows of red seats. a parliament usher in black tailcoat with a silver chain (on the left), calm and serious, one arm raised enthusiastically",
+            "cast": [
+              "huissier"
+            ],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "react",
+          "tag": "",
+          "caption": "Pendant ce temps, à la machine à café…",
+          "bubbles": [
+            {
+              "text": "Je mets le ministère des Sports dans un tiroir à chaussettes.",
+              "side": "l"
+            },
+            {
+              "text": "Kamoulox.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office with a window and a framed chart on the wall. Gérard (on the left), smug, self-satisfied, half-closed eyes, one arm raised enthusiastically; Jeanne (on the right), annoyed frown, standing with arms at his sides",
+            "cast": [
+              "gerard",
+              "jeanne"
+            ],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "",
+          "caption": "ÉCONOMIE · Le prix du beurre baisse de 4 % sur un an, grâce à une meilleure collecte de lait.",
+          "bubbles": [
+            {
+              "text": "Moins 4 %. Les chiffres sont têtus. Le beurre, lui, est doux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "an outdoor market stall with a red and white striped awning. a market dairy seller with a bun (on the left), calm and serious, gesturing with one hand as if explaining. Also in the scene: blocks of butter on the counter",
+            "cast": [
+              "cremiere"
+            ],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "react",
+          "tag": "",
+          "caption": "Une start-up de viennoiserie réagit.",
+          "bubbles": [
+            {
+              "text": "On pivote : le croissant devient une offre beurre-as-a-service.",
+              "side": "l"
+            },
+            {
+              "text": "C’est un croissant, Gérard.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office with a window and a framed chart on the wall. Gérard (on the left), smug, self-satisfied, half-closed eyes, one arm raised enthusiastically; Jeanne (on the right), annoyed frown, standing with arms at his sides",
+            "cast": [
+              "gerard",
+              "jeanne"
+            ],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "",
+          "caption": "SCIENCES · Un télescope repère une exoplanète qui fait le tour de son étoile en 16 heures.",
+          "bubbles": [
+            {
+              "text": "Une année entière entre le petit-déjeuner et le dîner !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "an observatory platform at night under a starry sky with a ringed orange planet. an astronomer in a white lab coat with curly hair and glasses (on the left), shocked, wide eyes, open mouth, one arm raised enthusiastically",
+            "cast": [
+              "astro"
+            ],
+            "file": "images/actu-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "",
+          "caption": "Un coach de vie y voit une opportunité.",
+          "bubbles": [
+            {
+              "text": "Là-bas, je prends mes résolutions du Nouvel An deux fois par jour.",
+              "side": "l"
+            },
+            {
+              "text": "Et tu les abandonnes à quelle heure ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "an observatory platform at night under a starry sky with a ringed orange planet. a life coach in an orange sports jacket with blond slick hair (on the left), broad happy smile, one arm raised enthusiastically; an astronomer in a white lab coat with curly hair and glasses (on the right), annoyed frown, standing with arms at his sides",
+            "cast": [
+              "coach",
+              "astro"
+            ],
+            "file": "images/actu-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "",
+          "caption": "INTERNATIONAL · Deux pays voisins signent un accord pour partager les quotas de pêche en mer du Nord.",
+          "bubbles": [
+            {
+              "text": "Accord historique. Nous avons même partagé le stylo.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a wooden dock by a calm blue sea with small white clouds. a diplomat in a navy suit (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining. Also in the scene: a signed treaty document",
+            "cast": [
+              "diplo"
+            ],
+            "file": "images/actu-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "react",
+          "tag": "",
+          "caption": "Côté poissons, la réception est mitigée.",
+          "bubbles": [
+            {
+              "text": "Personne n’a pensé à inviter les principaux concernés.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a wooden dock by a calm blue sea with small white clouds. a diplomat in a navy suit (on the left), worried, raised eyebrows, standing with arms at his sides. Also in the scene: a big orange fish jumping out of the water",
+            "cast": [
+              "diplo"
+            ],
+            "file": "images/actu-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Une actu comprise vaut mieux que dix titres partagés sans les avoir lus.",
+        "source": "Exemple fictif pour le prototype"
+      },
+      "sources": []
+    },
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le Chat de Schrödinger expliqué à mon chat",
+      "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
+      "minutes": 2,
+      "theme": "",
+      "cast": [
+        {
+          "id": "schro",
+          "look": "Erwin, a 1930s physicist, slick dark hair, round glasses, grey three-piece suit, dark red tie",
+          "file": "cast/cultureg-schro.png",
+          "status": "pending"
+        },
+        {
+          "id": "cat",
+          "look": "an orange tabby cat with half-closed, unimpressed eyes",
+          "file": "cast/cultureg-cat.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+        "cast": [
+          "schro",
+          "cat"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1935",
+          "caption": "Erwin Schrödinger veut montrer qu’une idée de la physique quantique est absurde.",
+          "bubbles": [
+            {
+              "text": "Il me faut un exemple qui parle à tout le monde.",
+              "side": "l"
+            },
+            {
+              "text": "Évitez les chats.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "cast": [
+              "schro",
+              "cat"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Son idée : enfermer un chat dans une boîte. En pensée seulement.",
+          "bubbles": [
+            {
+              "text": "Rassure-toi : tu es imaginaire.",
+              "side": "l"
+            },
+            {
+              "text": "C’est ce qu’ils disent tous.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), smug, self-satisfied, half-closed eyes, hands on hips. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "cast": [
+              "schro",
+              "cat"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Dans la boîte : un atome radioactif, un compteur Geiger, une fiole de poison.",
+          "bubbles": [
+            {
+              "text": "Je ne fais que mon travail.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), calm and serious, gesturing with one hand as if explaining. Also in the scene: an old brass Geiger counter with a dial and a tiny cute face",
+            "cast": [
+              "schro"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "",
+          "caption": "Si l’atome se désintègre, le poison est libéré. Une chance sur deux en une heure.",
+          "bubbles": [
+            {
+              "text": "Une chance sur deux. J’ai connu de meilleurs contrats.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), calm and serious, standing with arms at his sides. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "cast": [
+              "schro",
+              "cat"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Selon la physique quantique, tant qu’on n’observe pas, l’atome est dans les deux états.",
+          "bubbles": [
+            {
+              "text": "Donc tu es mort ET vivant !",
+              "side": "l"
+            },
+            {
+              "text": "Comme tous les lundis.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), shocked, wide eyes, open mouth, one arm raised enthusiastically. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "cast": [
+              "schro",
+              "cat"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "",
+          "caption": "",
+          "bubbles": [
+            {
+              "text": "Je poste ça sur LinkedIn : « Fier d’annoncer mon chat quantique. »",
+              "side": "l"
+            },
+            {
+              "text": "Trois likes. Dont un doctorant.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), broad happy smile, gesturing with one hand as if explaining. Also in the scene: a modern smartphone (a funny anachronism), an orange cat sitting, judging everyone with half-closed eyes",
+            "cast": [
+              "schro",
+              "cat"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Mythbuster",
+          "caption": "Mythe : Schrödinger croyait au chat mort-vivant. En réalité, il trouvait l’idée absurde.",
+          "bubbles": [
+            {
+              "text": "Il voulait dire « c’est absurde ». Internet a compris « c’est génial ».",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), worried, raised eyebrows, arms spread in a shrug. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "cast": [
+              "schro",
+              "cat"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "",
+          "caption": "La décohérence explique pourquoi un chat ne reste pas dans deux états. Une particule, si.",
+          "bubbles": [
+            {
+              "text": "Donc je suis trop gros pour être quantique.",
+              "side": "r"
+            },
+            {
+              "text": "… Je n’ai pas dit ça.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), calm and serious, gesturing with one hand as if explaining. Also in the scene: an orange cat sitting, judging everyone with half-closed eyes",
+            "cast": [
+              "schro",
+              "cat"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "",
+          "caption": "",
+          "bubbles": [
+            {
+              "text": "Il n’y a jamais eu de chat dedans !",
+              "side": "l"
+            },
+            {
+              "text": "Je vous l’avais dit. Évitez les chats.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s physicist's study with a green chalkboard covered in equations and bookshelves. Erwin (on the left), shocked, wide eyes, open mouth, arms spread in a shrug. Also in the scene: a closed cardboard box, an orange cat sitting, judging everyone with half-closed eyes",
+            "cast": [
+              "schro",
+              "cat"
+            ],
+            "file": "images/cultureg-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le chat de Schrödinger n’est pas une preuve : c’est une expérience imaginée en 1935 pour montrer l’absurdité de la superposition à notre échelle.",
+        "source": "E. Schrödinger, Die Naturwissenschaften, 1935"
+      },
+      "sources": []
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "L’homme qui a vendu la tour Eiffel (deux fois)",
+      "tagline": "Le roi de l’arnaque avait le sens du recyclage.",
+      "minutes": 2,
+      "theme": "",
+      "cast": [
+        {
+          "id": "lustig",
+          "look": "Victor, a dapper 1920s con man in his thirties, slick black hair, thin moustache, black suit, red tie, top hat",
+          "file": "cast/insolite-lustig.png",
+          "status": "pending"
+        },
+        {
+          "id": "dealer",
+          "look": "a 1920s scrap-metal dealer, olive suit, bowler hat",
+          "file": "cast/insolite-dealer.png",
+          "status": "pending"
+        },
+        {
+          "id": "poisson",
+          "look": "André, a balding 1920s scrap-metal dealer in his fifties, brown suit, green tie, round face",
+          "file": "cast/insolite-poisson.png",
+          "status": "pending"
+        },
+        {
+          "id": "flic",
+          "look": "a 1920s French policeman, navy uniform, kepi, thin moustache",
+          "file": "cast/insolite-flic.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "Paris in 1925, a street with the Eiffel Tower in the background, clear blue sky. Victor (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining",
+        "cast": [
+          "lustig"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Paris, 1925",
+          "caption": "La tour Eiffel ne devait rester que 20 ans, et son entretien coûte une fortune. Un escroc, Victor Lustig, lit un article sur le sujet.",
+          "bubbles": [
+            {
+              "text": "Une tour encombrante… C’est une opportunité de marché.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Paris in 1925, a street with the Eiffel Tower in the background, clear blue sky. Victor (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining",
+            "cast": [
+              "lustig"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "",
+          "caption": "Se faisant passer pour un haut fonctionnaire du ministère des Postes, il convoque six ferrailleurs à l’hôtel de Crillon.",
+          "bubbles": [
+            {
+              "text": "Messieurs, la tour sera démolie. Affaire d’État : discrétion absolue.",
+              "side": "l"
+            },
+            {
+              "text": "On peut avoir une note de frais ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a luxurious 1920s hotel salon with red velvet curtains and a golden chandelier. Victor (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; a 1920s scrap-metal dealer (on the right), shocked, wide eyes, open mouth, standing with arms at his sides",
+            "cast": [
+              "lustig",
+              "dealer"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "",
+          "caption": "Le ferrailleur André Poisson trouve le vendeur louche. Lustig retourne la situation : il réclame un pot-de-vin.",
+          "bubbles": [
+            {
+              "text": "Un fonctionnaire gagne si peu…",
+              "side": "l"
+            },
+            {
+              "text": "S’il veut un bakchich, c’est qu’il est vraiment fonctionnaire !",
+              "side": "r",
+              "thought": true
+            }
+          ],
+          "image": {
+            "prompt": "a luxurious 1920s hotel salon with red velvet curtains and a golden chandelier. Victor (on the left), worried, raised eyebrows, arms spread in a shrug; André (on the right), broad happy smile, standing with arms at his sides",
+            "cast": [
+              "lustig",
+              "poisson"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Poisson paie. Lustig file à Vienne. Humilié, Poisson ne porte jamais plainte.",
+          "bubbles": [
+            {
+              "text": "Si je raconte ça, je suis la risée de Paris.",
+              "side": "l",
+              "thought": true
+            }
+          ],
+          "image": {
+            "prompt": "a 1920s Parisian street with cream Haussmann buildings and a red café awning. André (on the left), worried, raised eyebrows, standing with arms at his sides",
+            "cast": [
+              "poisson"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "Quelques semaines plus tard, Lustig revient et recommence. Cette fois, la victime prévient la police : il s’enfuit aux États-Unis.",
+          "bubbles": [
+            {
+              "text": "Halte !",
+              "side": "l"
+            },
+            {
+              "text": "Pourquoi changer une méthode qui gagne ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Paris in 1925, a street with the Eiffel Tower in the background, clear blue sky. a 1920s French policeman (on the left), annoyed frown, one arm raised enthusiastically; Victor (on the right), shocked, wide eyes, open mouth, arms spread in a shrug",
+            "cast": [
+              "flic",
+              "lustig"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "Épilogue",
+          "caption": "Reconverti dans la fausse monnaie, il est arrêté en 1935, passe par Alcatraz et meurt en détention en 1947.",
+          "bubbles": [
+            {
+              "text": "J’aurais dû vendre Alcatraz.",
+              "side": "l",
+              "thought": true
+            }
+          ],
+          "image": {
+            "prompt": "a grey prison cell with iron bars. Victor (on the right), worried, raised eyebrows, standing with arms at his sides. seen through prison bars",
+            "cast": [
+              "lustig"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "En 1925, Victor Lustig a vendu la tour Eiffel à un ferrailleur. Puis il a essayé une deuxième fois.",
+        "source": "Récits rapportés notamment par Floyd Miller (1976). Les détails varient selon les sources."
+      },
+      "sources": []
+    }
+  ]
+}
