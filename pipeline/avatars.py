@@ -18,7 +18,7 @@ BG = ["pale sky blue", "soft olive green", "warm peach", "pale pink", "light och
 WHO = [
     "Julius Caesar as a lazy procrastinator: laurel wreath askew, toga, slumped and yawning, holding a half-eaten bunch of grapes, heavy-lidded sleepy eyes",
     "the goddess Athena as an eternally dissatisfied perfectionist: crested Greek helmet pushed back, owl perched on her shoulder, one eyebrow raised, arms crossed, sceptical pout",
-    "the god Zeus as a tired ageing seducer: big white curly beard, receding hair combed over, open toga showing a hairy chest, a small lightning bolt held like a cigarette, weary charming wink",
+    "the god Zeus as a tired old charmer: big white curly beard, a few hairs combed over a bald head, white toga, holding a small zigzag lightning bolt, weary wink and a tired charming smile",
     "the goddess Venus as an influencer: flowing golden hair with a seashell hair clip, duck-face pout, holding a small hand mirror like a phone for a selfie",
     "Hercules tired of crossfit: huge muscles, lion-skin hood, sweaty forehead with sweat drops, towel around the neck, exhausted puffed cheeks",
     "Medusa having a bad day: small green snakes for hair all tangled and grumpy, dark circles under her eyes, holding a steaming coffee mug, deadpan annoyed look",
