@@ -153,14 +153,13 @@
             }
           ],
           "image": {
-            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. a Soviet official of the 1950s-80s (on the left), broad happy smile, one arm raised enthusiastically. Also in the scene: an unlabelled glass soda bottle",
+            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. a Soviet official of the 1950s-80s (on the left), broad happy smile, proudly holding up an unlabelled glass soda bottle with both hands, eyes sparkling. Medium shot",
             "cast": [
               "sov"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 2,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (1697fe37-a258-4e5f-b9c5-95fad0642e6e)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "retry",
+            "attempts": 0
           }
         },
         {
