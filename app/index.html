@@ -410,6 +410,37 @@ body{overscroll-behavior-y:none}
 .qz-rev div{background:rgba(255,255,255,.08);border-radius:14px;padding:12px 14px;font-size:14.5px;line-height:1.4}
 .qz-rev b{display:block;font-family:var(--f-serif);font-size:17px;margin-bottom:4px}
 .qz-rev em{font-style:normal;color:#9be7c2;font-weight:700}
+.qz-load{text-align:center;opacity:.85;margin-top:40vh;font-weight:700}
+.qz-dots i.mid{background:#ffb347}
+.qz-hint{margin:-4px 0 0;font-size:14px;opacity:.85}
+.qz-km{margin:0;font-weight:700;font-size:15.5px}
+.qz-map{position:relative;border:3px solid var(--ink);border-radius:18px;overflow:hidden;background:#cfe3f2;box-shadow:4px 4px 0 rgba(0,0,0,.45)}
+.qz-map svg{display:block;width:100%;height:auto;max-height:58vh;aspect-ratio:1/1;touch-action:none;cursor:crosshair;user-select:none}
+.qz-map svg.world{aspect-ratio:4/3}
+.qz-map .sea{fill:#cfe3f2}
+.qz-map .land path{fill:var(--cream);stroke:#5a5348;stroke-width:.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.qz-map svg.france .land path{stroke-width:.8}
+.qz-map .land path.target{fill:#3fcf8e}
+.qz-map .land path.wrong{fill:#ffb3ab}
+.qz-map g[data-pin] path{stroke:var(--ink);stroke-width:2.5;vector-effect:non-scaling-stroke}
+.qz-map g.me path{fill:#ff5d5d}.qz-map g.goal path{fill:#3fcf8e}
+.qz-map g[data-pin] circle{fill:#fff}
+.qz-map line{stroke:var(--ink);stroke-dasharray:6 5;vector-effect:non-scaling-stroke}
+.qz-zoom{position:absolute;right:8px;top:8px;display:flex;flex-direction:column;gap:6px}
+.qz-zoom button{width:38px;height:38px;border-radius:10px;border:2px solid var(--ink);background:#fff;color:var(--ink);font-size:22px;font-weight:800;line-height:1;padding:0}
+.qz-credit{position:absolute;left:8px;bottom:5px;font-size:10.5px;color:#4a5560;pointer-events:none}
+.qz-sil{background:#fff;border:3px solid var(--ink);border-radius:18px;display:grid;place-items:center;padding:10px;box-shadow:4px 4px 0 rgba(0,0,0,.45)}
+.qz-sil svg{width:min(60vw,240px);height:min(60vw,240px)}
+.qz-sil path{fill:var(--ink);stroke:var(--ink);stroke-linejoin:round}
+.qz-ord{display:flex;flex-direction:column;gap:10px}
+.qz-ord button,.qz-ord.done div{display:flex;gap:12px;align-items:center;text-align:left;border:3px solid var(--ink);background:var(--cream);color:var(--ink);border-radius:16px;padding:13px 14px;font-size:16.5px;font-weight:600;box-shadow:4px 4px 0 rgba(0,0,0,.45)}
+.qz-ord b{flex:0 0 30px;height:30px;border-radius:50%;border:2px dashed var(--ink);display:grid;place-items:center;font-size:15px}
+.qz-ord button.sel b{background:var(--yellow);border-style:solid}
+.qz-ord.done div.ok{background:#d6f5e6;border-color:#14704a}.qz-ord.done div.ko{background:#ffe0dd;border-color:#b3261e}
+.qz-ord.done b{border-style:solid;background:#fff}
+.qz-ord small{margin-left:auto;font-weight:500;opacity:.7}
+.quizcard.geo .qc-ic{background:#3fcf8e;font-family:inherit}
+.cta:disabled{opacity:.5}
 /* ---------- Page de présentation (PC) ---------- */
 #v-about{gap:0;padding-top:0}
 .ab-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding:40px 0 56px}
@@ -644,7 +675,7 @@ body{overscroll-behavior-y:none}
     <button class="nav-arrow next" id="rNext" aria-label="Case suivante"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
 
-  <div class="quiz" id="quiz" role="dialog" aria-modal="true" aria-label="Le Quiz du jour"><div class="qz-in" id="qzIn"></div></div>
+  <div class="quiz" id="quiz" role="dialog" aria-modal="true" aria-label="Le jeu du jour"><div class="qz-in" id="qzIn"></div></div>
 
   <div class="scrim" id="scrim"><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -1009,7 +1040,9 @@ function onAct(e) {
 }
 
 
-/* ---------- Le Quiz du jour (le dessert de l'édition) ---------- */
+/* ---------- Le jeu du jour (fin de l'édition) ---------- */
+// Une seule partie par jour : chaque réponse est enregistrée aussitôt, on ne peut ni rejouer ni changer d'avis.
+// Deux variantes qui alternent d'un jour à l'autre : culture G (5 questions) et géo (3 questions).
 const QZ_VERDICTS = [
   "Au moins, vous avez de l’humilité. Revenez demain.",
   "La culture, c’est ce qui reste quand on a tout raté. Il vous reste ça.",
@@ -1018,75 +1051,282 @@ const QZ_VERDICTS = [
   "Presque parfait. Le « presque » va vous hanter toute la journée.",
   "Sans faute. Socrate vous demande votre numéro."
 ];
+const QZ_GEO_VERDICTS = [
+  "Votre GPS a démissionné. On le comprend.",
+  "Vous êtes du genre à chercher la mer depuis Clermont-Ferrand.",
+  "Pas mal. Vous savez au moins où est le nord (environ).",
+  "Solide. Les pigeons voyageurs vous demandent conseil.",
+  "Presque parfait. Magellan a fait moins bien, et il avait un bateau.",
+  "Sans faute. Vous êtes un atlas qui marche."
+];
 const QZ_OK = ["Bien vu !", "Exact !", "Bravo, cerveau !", "Dans le mille !", "Impeccable."];
 const QZ_KO = ["Raté !", "Presque…", "Aïe.", "Pas cette fois.", "Joli piège, hein ?"];
-let Q = null;
+const QZ_MID = ["Pas loin !", "Dans le coin !", "Ça chauffe…", "À un détour près."];
+let Q = null, GEO = null;
 const quizState = date => (ME.quiz || {})[date];
-function quizCard(ed, f) {
-  const st = quizState(ed.date), n = (f.questions || []).length || 5;
-  return `<button class="card quizcard" data-quiz="1"><span class="qc-ic">?</span><span class="qc-tx"><span class="tag">Le dessert</span><h3>${esc(f.title || "Le Quiz du jour")}</h3><span class="qc-st">${st ? `Votre score : ${st.s}/${st.a.length} · revoir les réponses` : `${n} questions · ${f.minutes || 1} min · pour finir en beauté`}</span></span><span class="qc-go">${st ? "Revoir" : "Jouer"}</span></button>`;
+const qzDone = st => !!st && (st.done ?? ("s" in st)); // anciens enregistrements : { a, s } = partie finie
+function qzSave() { ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, done: false }; save(); }
+const isGeo = f => f.kind === "geo";
+const qType = q => q.type || "choice";
+const loadGeo = () => GEO || (GEO = fetch("assets/geo.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(e => { GEO = null; throw e; }));
+const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+const fmtKm = km => km < 1 ? "pile dessus" : `${Math.round(km).toLocaleString("fr-FR")} km`;
+
+// Note d'une réponse : 2 = juste, 1 = presque, 0 = faux
+function qzGrade(q, a) {
+  if (a === undefined || a === null) return 0;
+  const t = qType(q);
+  if (t === "map") return a.g;
+  if (t === "order") { const good = qzOrderTruth(q); const n = a.filter((v, i) => v === good[i]).length; return n === good.length ? 2 : n * 2 >= good.length ? 1 : 0; }
+  return a === q.answer ? 2 : 0;
 }
-function openQuiz(ed) {
+const qzScore = () => Q.f.questions.reduce((s, q, k) => s + qzGrade(q, Q.a[k]), 0) / 2;
+const fmtScore = s => String(s).replace(".", ",");
+
+function quizCard(ed, f) {
+  const st = quizState(ed.date), n = (f.questions || []).length || 5, geo = isGeo(f), done = qzDone(st);
+  const played = st ? st.a.filter(a => a !== undefined && a !== null).length : 0;
+  const status = done ? `Votre score : ${fmtScore(st.s ?? 0)}/${n} · revoir les réponses`
+    : played ? `Partie en cours : ${played}/${n} · une seule partie par jour`
+    : `${n} questions · ${f.minutes || 1} min · ${geo ? "cartes à l’appui" : "une seule partie, pas de triche"}`;
+  return `<button class="card quizcard${geo ? " geo" : ""}" data-quiz="1"><span class="qc-ic">${geo ? "⌖" : "?"}</span><span class="qc-tx"><span class="tag">Le jeu du jour</span><h3>${esc(f.title || (geo ? "Le Quiz géo" : "Le Quiz du jour"))}</h3><span class="qc-st">${status}</span></span><span class="qc-go">${done ? "Revoir" : played ? "Reprendre" : "Jouer"}</span></button>`;
+}
+async function openQuiz(ed) {
   const f = ed.formats.find(x => x.id === "quiz"); if (!f || !(f.questions || []).length) return;
   const st = quizState(ed.date);
-  Q = { ed, f, i: 0, a: st ? st.a.slice() : [], done: !!st };
+  const a = st ? st.a.slice() : [];
+  let i = 0; while (i < f.questions.length && a[i] !== undefined && a[i] !== null) i++;
+  Q = { ed, f, i: Math.min(i, f.questions.length - 1), a, done: qzDone(st) || i >= f.questions.length };
+  $("#quiz").classList.toggle("geo", isGeo(f));
   $("#quiz").classList.add("on"); history.pushState({ quiz: true }, "");
-  Q.done ? quizResult() : quizQuestion();
+  const needsMap = f.questions.some(q => ["map", "silhouette"].includes(qType(q)));
+  if (needsMap) {
+    $("#qzIn").innerHTML = `<p class="qz-load">Dépliage des cartes…</p>`;
+    try { Q.geo = await loadGeo(); } catch (e) { $("#qzIn").innerHTML = `${qzTop()}<p class="qz-load">Les cartes n’ont pas pu se charger. Vérifiez la connexion et réessayez.</p>`; $("#qzX").onclick = () => history.back(); return; }
+    if (!Q) return;
+  }
+  if (!Q.done) return quizQuestion();
+  if (!qzDone(st)) return quizFinish(); // toutes les réponses données mais partie pas close
+  quizResult();
 }
 function closeQuiz() { $("#quiz").classList.remove("on"); Q = null; render(); }
+function qzDots() {
+  let dots = "";
+  Q.f.questions.forEach((q, k) => { const a = Q.a[k]; dots += `<i class="${a === undefined ? (k === Q.i && !Q.done ? "cur" : "") : ["ko", "mid", "ok"][qzGrade(q, a)]}"></i>`; });
+  return `<div class="qz-dots" aria-hidden="true">${dots}</div>`;
+}
 function qzTop() {
-  const n = Q.f.questions.length;
-  let dots = ""; for (let k = 0; k < n; k++) { const a = Q.a[k]; dots += `<i class="${a === undefined ? (k === Q.i && !Q.done ? "cur" : "") : (a === Q.f.questions[k].answer ? "ok" : "ko")}"></i>`; }
-  return `<div class="qz-top"><div class="qz-dots" aria-hidden="true">${dots}</div><button class="qz-x" id="qzX" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>`;
+  return `<div class="qz-top">${qzDots()}<button class="qz-x" id="qzX" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>`;
 }
 function quizQuestion() {
-  const q = Q.f.questions[Q.i], n = Q.f.questions.length;
+  const q = Q.f.questions[Q.i], n = Q.f.questions.length, t = qType(q);
+  const meta = q.theme || (isGeo(Q.f) ? { map: "Sur la carte", choice: "Capitales", silhouette: "Silhouette", order: "Boussole" }[t] : "");
+  let body = "";
+  if (t === "choice" || t === "silhouette") body = `${t === "silhouette" ? qzSilhouette(q) : ""}<div class="qz-ch" role="group" aria-label="Réponses">${q.choices.map((c, k) => `<button data-k="${k}"><b>${"ABCD"[k]}</b><span>${esc(c)}</span></button>`).join("")}</div>`;
+  else if (t === "map") body = `<div class="qz-map" id="qzMap"></div><p class="qz-hint" id="qzHint">Touchez la carte pour planter votre épingle. Pincez ou utilisez + et − pour zoomer.</p><button class="cta" id="qzOk" disabled>Valider mon épingle</button>`;
+  else if (t === "order") body = `<p class="qz-hint">${q.by === "ouest-est" ? "Touchez du plus à l’ouest au plus à l’est." : "Touchez du plus au nord au plus au sud."}</p><div class="qz-ord" id="qzOrd">${q.items.map((it, k) => `<button data-o="${k}"><b></b><span>${esc(it.name)}</span></button>`).join("")}</div><button class="cta" id="qzOk" disabled>Valider mon ordre</button>`;
   $("#qzIn").innerHTML = `${qzTop()}
-    <div class="qz-meta"><span>Question ${Q.i + 1} / ${n}</span>${q.theme ? `<span class="th">${esc(q.theme)}</span>` : ""}</div>
-    <h2 class="qz-q">${esc(q.q)}</h2>
-    <div class="qz-ch" role="group" aria-label="Réponses">${q.choices.map((c, k) => `<button data-k="${k}"><b>${"ABCD"[k]}</b><span>${esc(c)}</span></button>`).join("")}</div>
+    <div class="qz-meta"><span>Question ${Q.i + 1} / ${n}</span>${meta ? `<span class="th">${esc(meta)}</span>` : ""}</div>
+    <h2 class="qz-q">${esc(q.q)}</h2>${body}
     <div id="qzEx" aria-live="polite"></div>`;
   $("#qzX").onclick = () => history.back();
-  $("#qzIn").querySelectorAll("[data-k]").forEach(b => b.onclick = () => quizAnswer(+b.dataset.k));
+  if (t === "choice" || t === "silhouette") $("#qzIn").querySelectorAll("[data-k]").forEach(b => b.onclick = () => quizAnswer(+b.dataset.k));
+  if (t === "silhouette") qzFitSilhouette();
+  if (t === "map") qzMapAsk(q);
+  if (t === "order") qzOrderAsk(q);
   $("#quiz").scrollTop = 0;
 }
-function quizAnswer(k) {
-  const q = Q.f.questions[Q.i], good = k === q.answer, n = Q.f.questions.length;
-  Q.a[Q.i] = k; vibrate();
-  $("#qzIn").querySelectorAll("[data-k]").forEach(b => { const j = +b.dataset.k; b.disabled = true; if (j === q.answer) b.classList.add("ok"); else if (j === k) b.classList.add("ko"); else b.classList.add("dim"); });
-  $("#qzIn").querySelector(".qz-dots").outerHTML = qzTop().match(/<div class="qz-dots"[^]*?<\/div>/)[0];
-  const pick = arr => arr[Math.floor(Math.random() * arr.length)], src = q.source?.url && /^https?:\/\//.test(q.source.url) ? `<a href="${esc(q.source.url)}" target="_blank" rel="noopener nofollow">Source : ${esc(q.source.title || q.source.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a>` : "";
-  $("#qzEx").innerHTML = `<div class="qz-ex"><strong>${good ? pick(QZ_OK) : pick(QZ_KO)}</strong><p>${esc(q.explain || "")}</p>${src}</div>`;
-  const last = Q.i === n - 1;
+function qzExplain(q, g, extra = "") {
+  const src = q.source?.url && /^https?:\/\//.test(q.source.url) ? `<a href="${esc(q.source.url)}" target="_blank" rel="noopener nofollow">Source : ${esc(q.source.title || q.source.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a>` : "";
+  $("#qzEx").innerHTML = `<div class="qz-ex"><strong>${g === 2 ? pick(QZ_OK) : g === 1 ? pick(QZ_MID) : pick(QZ_KO)}</strong>${extra}<p>${esc(q.explain || "")}</p>${src}</div>`;
+  $("#qzIn").querySelector(".qz-dots").outerHTML = qzDots();
+  const last = Q.i === Q.f.questions.length - 1;
   $("#qzIn").insertAdjacentHTML("beforeend", `<button class="cta qz-next" id="qzNext">${last ? "Voir mon score" : "Question suivante →"}</button>`);
   $("#qzNext").onclick = () => { if (last) quizFinish(); else { Q.i++; quizQuestion(); } };
   $("#qzNext").scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
+function quizAnswer(k) {
+  const q = Q.f.questions[Q.i];
+  if (Q.a[Q.i] !== undefined) return;
+  Q.a[Q.i] = k; qzSave(); vibrate();
+  $("#qzIn").querySelectorAll("[data-k]").forEach(b => { const j = +b.dataset.k; b.disabled = true; if (j === q.answer) b.classList.add("ok"); else if (j === k) b.classList.add("ko"); else b.classList.add("dim"); });
+  qzExplain(q, qzGrade(q, k));
+}
+
+/* ----- Cartes : projections (inverse comprise) ----- */
+const RAD = Math.PI / 180;
+function geoProj(scope) {
+  const G = Q.geo;
+  if (scope === "france") {
+    const F = G.france;
+    return { shapes: F.shapes, box: F.box, fw: v => v,
+      p: (lon, lat) => [(lon - F.lon0) * F.k * F.S, (F.lat0 - lat) * F.S],
+      inv: (x, y) => [x / (F.k * F.S) + F.lon0, F.lat0 - y / F.S] };
+  }
+  const W = G.world, my = lat => 1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * lat * RAD)) / RAD;
+  const p = (lon, lat) => [(lon + 180) * W.S, (W.top - my(Math.max(W.latMin, Math.min(W.latMax, lat)))) * W.S];
+  const inv = (x, y) => [x / W.S - 180, (Math.atan(Math.exp((W.top - y / W.S) * RAD / 1.25)) - Math.PI / 4) / 0.4 / RAD];
+  let box = [0, 0, W.w, W.h];
+  if (scope === "europe") { const [x0, y0] = p(-13, 71.5), [x1, y1] = p(42, 34); box = [x0, y0, x1 - x0, y1 - y0]; }
+  return { shapes: W.shapes, box, p, inv };
+}
+function km(a, b) { // haversine, [lon, lat]
+  const dLat = (b[1] - a[1]) * RAD, dLon = (b[0] - a[0]) * RAD;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[1] * RAD) * Math.cos(b[1] * RAD) * Math.sin(dLon / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+}
+function qzTarget(q, P) {
+  const t = q.target || {};
+  const id = t.dept || t.country || null;
+  const sh = id ? P.shapes[id] : null;
+  return { id, sh, ll: sh ? sh.c : [t.lon, t.lat], name: q.name || (sh ? sh.n : "") };
+}
+function qzLimits(scope) { return scope === "france" ? [35, 120] : scope === "europe" ? [150, 450] : [400, 1200]; }
+
+/* ----- Carte interactive : épingle, zoom, déplacement ----- */
+function qzMapAsk(q) {
+  const scope = q.map || "france", P = geoProj(scope);
+  const host = $("#qzMap");
+  const paths = Object.entries(P.shapes).map(([id, s]) => `<path data-id="${esc(id)}" d="${s.d}"/>`).join("");
+  host.innerHTML = `<svg id="qzSvg" class="${scope}" viewBox="${P.box.join(" ")}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Carte"><rect x="-4000" y="-4000" width="9000" height="9000" class="sea"/><g class="land">${paths}</g><g id="qzOver"></g></svg>
+    <div class="qz-zoom"><button data-z="1.6" aria-label="Zoomer">+</button><button data-z="0.625" aria-label="Dézoomer">−</button></div><span class="qz-credit">Cartes : Natural Earth, IGN</span>`;
+  const svg = $("#qzSvg"), full = P.box.slice();
+  let vb = P.box.slice();
+  const setVb = () => svg.setAttribute("viewBox", vb.map(v => v.toFixed(1)).join(" "));
+  const clamp = () => {
+    const minW = full[2] / (scope === "world" ? 40 : 14);
+    if (vb[2] > full[2] * 1.05) { const k = full[2] * 1.05 / vb[2]; vb[2] *= k; vb[3] *= k; }
+    if (vb[2] < minW) { const k = minW / vb[2]; vb[2] *= k; vb[3] *= k; }
+    vb[0] = Math.max(full[0] - vb[2] * 0.3, Math.min(full[0] + full[2] - vb[2] * 0.7, vb[0]));
+    vb[1] = Math.max(full[1] - vb[3] * 0.3, Math.min(full[1] + full[3] - vb[3] * 0.7, vb[1]));
+  };
+  const toSvg = (cx, cy) => { const m = svg.getScreenCTM().inverse(); const pt = new DOMPoint(cx, cy).matrixTransform(m); return [pt.x, pt.y]; };
+  const zoomAt = (k, cx, cy) => { const [x, y] = toSvg(cx, cy); vb = [x - (x - vb[0]) / k, y - (y - vb[1]) / k, vb[2] / k, vb[3] / k]; clamp(); setVb(); syncPin(); };
+  const pointers = new Map(); let moved = 0, start = null, pinch = null;
+  svg.addEventListener("pointerdown", e => { svg.setPointerCapture(e.pointerId); pointers.set(e.pointerId, [e.clientX, e.clientY]); if (pointers.size === 1) { moved = 0; start = [e.clientX, e.clientY]; } if (pointers.size === 2) { const [a, b] = [...pointers.values()]; pinch = Math.hypot(a[0] - b[0], a[1] - b[1]); moved = 99; } });
+  svg.addEventListener("pointermove", e => {
+    if (!pointers.has(e.pointerId) || Q.locked) return;
+    const prev = pointers.get(e.pointerId); pointers.set(e.pointerId, [e.clientX, e.clientY]);
+    if (pointers.size === 2) { const [a, b] = [...pointers.values()]; const d = Math.hypot(a[0] - b[0], a[1] - b[1]); if (pinch) zoomAt(d / pinch, (a[0] + b[0]) / 2, (a[1] + b[1]) / 2); pinch = d; return; }
+    moved += Math.abs(e.clientX - prev[0]) + Math.abs(e.clientY - prev[1]);
+    if (moved > 6) { const r = svg.getBoundingClientRect(), s = Math.max(vb[2] / r.width, vb[3] / r.height); vb[0] -= (e.clientX - prev[0]) * s; vb[1] -= (e.clientY - prev[1]) * s; clamp(); setVb(); syncPin(); }
+  });
+  const up = e => {
+    const was = pointers.size; pointers.delete(e.pointerId); if (pointers.size < 2) pinch = null;
+    if (was === 1 && moved <= 6 && !Q.locked && e.type === "pointerup") place(e.clientX, e.clientY);
+  };
+  svg.addEventListener("pointerup", up); svg.addEventListener("pointercancel", up);
+  svg.addEventListener("wheel", e => { e.preventDefault(); zoomAt(e.deltaY < 0 ? 1.25 : 0.8, e.clientX, e.clientY); }, { passive: false });
+  host.querySelectorAll("[data-z]").forEach(b => b.onclick = () => { const r = svg.getBoundingClientRect(); zoomAt(+b.dataset.z, r.left + r.width / 2, r.top + r.height / 2); });
+
+  // Épingle (taille constante à l'écran)
+  let pin = null;
+  const pinScale = () => { const r = svg.getBoundingClientRect(); return Math.max(vb[2] / r.width, vb[3] / r.height); };
+  function syncPin() { $("#qzOver").querySelectorAll("[data-pin]").forEach(g => { const [x, y] = g.dataset.pin.split(",").map(Number); g.setAttribute("transform", `translate(${x} ${y}) scale(${pinScale()})`); }); $("#qzOver").querySelectorAll("line").forEach(l => l.setAttribute("stroke-width", 2.5 * pinScale())); }
+  const pinSvg = (x, y, cls) => `<g data-pin="${x},${y}" class="${cls}"><path d="M0 0C-3-9-11-12-11-20a11 11 0 0 1 22 0c0 8-8 11-11 20z"/><circle cy="-20" r="4"/></g>`;
+  function place(cx, cy) {
+    const [x, y] = toSvg(cx, cy);
+    const el = document.elementFromPoint(cx, cy), id = el?.closest?.("path[data-id]")?.dataset.id || null;
+    pin = { x, y, id };
+    $("#qzOver").innerHTML = pinSvg(x, y, "me"); syncPin(); vibrate();
+    $("#qzOk").disabled = false;
+    $("#qzHint").textContent = id && P.shapes[id] ? `Épingle plantée : ${P.shapes[id].n}. Vous pouvez la déplacer avant de valider.` : "Épingle plantée. Vous pouvez la déplacer avant de valider.";
+  }
+  $("#qzOk").onclick = () => {
+    if (!pin) return;
+    Q.locked = true;
+    const tg = qzTarget(q, P), ll = P.inv(pin.x, pin.y), [okKm, midKm] = qzLimits(scope);
+    const hit = !!tg.id && pin.id === tg.id, d = hit ? 0 : km(ll, tg.ll);
+    const g = hit || (!tg.id && d <= okKm) ? 2 : d <= midKm ? 1 : 0;
+    Q.a[Q.i] = { lon: +ll[0].toFixed(3), lat: +ll[1].toFixed(3), id: pin.id, km: Math.round(d), g }; qzSave();
+    $("#qzOk").remove(); $("#qzHint").remove(); vibrate();
+    qzMapReveal(q, P, Q.a[Q.i]);
+    let extra = `<p class="qz-km">${hit ? `En plein dans le mille : ${esc(tg.name)}.` : `${esc(fmtKm(d))} d’écart. Réponse : ${esc(tg.name)}.`}</p>`;
+    qzExplain(q, g, extra);
+  };
+  function qzMapReveal(q, P, a) {
+    const tg = qzTarget(q, P), [tx, ty] = P.p(tg.ll[0], tg.ll[1]), [mx, my] = P.p(a.lon, a.lat);
+    if (tg.id) svg.querySelector(`path[data-id="${CSS.escape(tg.id)}"]`)?.classList.add("target");
+    if (tg.id && a.id && a.id !== tg.id) svg.querySelector(`path[data-id="${CSS.escape(a.id)}"]`)?.classList.add("wrong");
+    $("#qzOver").innerHTML = (a.km ? `<line x1="${mx}" y1="${my}" x2="${tx}" y2="${ty}"/>` : "") + pinSvg(mx, my, "me") + (a.km || !tg.id ? pinSvg(tx, ty, "goal") : "");
+    // Recadrer pour montrer l'épingle et la bonne réponse
+    const pad = Math.max(full[2], full[3]) * 0.06, x0 = Math.min(mx, tx) - pad, x1 = Math.max(mx, tx) + pad, y0 = Math.min(my, ty) - pad * 1.6, y1 = Math.max(my, ty) + pad;
+    const r = svg.getBoundingClientRect(), ar = r.width / r.height; let w = Math.max(x1 - x0, full[2] / (scope === "world" ? 5 : 2.6)), h = y1 - y0;
+    if (w / h > ar) h = w / ar; else w = h * ar;
+    vb = [(x0 + x1) / 2 - w / 2, (y0 + y1) / 2 - h / 2, w, h]; clamp(); setVb(); syncPin();
+  }
+  Q.locked = false;
+  Q.reveal = qzMapReveal;
+}
+
+/* ----- Silhouette ----- */
+function qzSilhouette(q) {
+  const sc = q.shape?.map === "france" ? "france" : "world", s = Q.geo[sc].shapes[q.shape?.id];
+  if (!s) return "";
+  return `<div class="qz-sil"><svg id="qzSil" viewBox="0 0 10 10"><path d="${s.m || s.d}" style="transform:rotate(${+q.rotate || 0}deg);transform-box:fill-box;transform-origin:center"/></svg></div>`;
+}
+function qzFitSilhouette() {
+  const svg = $("#qzSil"); if (!svg) return;
+  const b = svg.querySelector("path").getBBox(), m = Math.max(b.width, b.height), pad = m * 0.12;
+  svg.setAttribute("viewBox", `${b.x + b.width / 2 - m / 2 - pad} ${b.y + b.height / 2 - m / 2 - pad} ${m + 2 * pad} ${m + 2 * pad}`);
+  svg.querySelector("path").style.strokeWidth = (m / 120).toFixed(2);
+}
+
+/* ----- Ordre nord → sud (ou ouest → est) ----- */
+function qzOrderTruth(q) {
+  const ix = q.items.map((_, k) => k);
+  return q.by === "ouest-est" ? ix.sort((a, b) => q.items[a].lon - q.items[b].lon) : ix.sort((a, b) => q.items[b].lat - q.items[a].lat);
+}
+function qzOrderAsk(q) {
+  const seq = [];
+  const paint = () => { $("#qzOrd").querySelectorAll("[data-o]").forEach(b => { const p = seq.indexOf(+b.dataset.o); b.classList.toggle("sel", p >= 0); b.querySelector("b").textContent = p >= 0 ? p + 1 : ""; }); $("#qzOk").disabled = seq.length !== q.items.length; };
+  $("#qzOrd").querySelectorAll("[data-o]").forEach(b => b.onclick = () => { const k = +b.dataset.o, p = seq.indexOf(k); if (p >= 0) seq.splice(p, 1); else seq.push(k); vibrate(); paint(); });
+  paint();
+  $("#qzOk").onclick = () => {
+    Q.a[Q.i] = seq.slice(); qzSave(); $("#qzOk").remove();
+    const good = qzOrderTruth(q);
+    $("#qzOrd").outerHTML = `<div class="qz-ord done">${good.map((k, i) => `<div class="${seq[i] === k ? "ok" : "ko"}"><b>${i + 1}</b><span>${esc(q.items[k].name)}</span><small>${q.by === "ouest-est" ? `${Math.abs(q.items[k].lon).toFixed(1)}° ${q.items[k].lon < 0 ? "O" : "E"}` : `${Math.abs(q.items[k].lat).toFixed(1)}° ${q.items[k].lat < 0 ? "S" : "N"}`}</small></div>`).join("")}</div>`;
+    qzExplain(q, qzGrade(q, seq), `<p class="qz-km">Votre ordre : ${seq.map(k => esc(q.items[k].name)).join(" → ")}</p>`);
+  };
+}
+
 function quizFinish() {
-  const s = Q.a.filter((a, k) => a === Q.f.questions[k].answer).length;
-  ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, s };
+  const s = qzScore();
+  ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, s, done: true };
   if (Q.ed.date === TODAY && !ME.visited.includes(TODAY)) { ME.visited.push(TODAY); const k = streak(); toast(`🔥 Série : ${k} jour${k > 1 ? "s" : ""}`); }
   save(); Q.done = true; quizResult();
 }
-function quizGrid() { return Q.a.map((a, k) => a === Q.f.questions[k].answer ? "🟩" : "🟥").join(""); }
+function quizGrid() { return Q.f.questions.map((q, k) => ["🟥", "🟨", "🟩"][qzGrade(q, Q.a[k])]).join(""); }
+function qzReview(q, a) {
+  const t = qType(q), mark = ["❌", "🟡", "✅"][qzGrade(q, a)];
+  let ans = "";
+  if (t === "map") { const P = geoProj(q.map || "france"), tg = qzTarget(q, P); ans = `${esc(tg.name)} · votre écart : ${esc(fmtKm(a?.km ?? 0))}`; }
+  else if (t === "order") ans = qzOrderTruth(q).map(k => esc(q.items[k].name)).join(" → ");
+  else ans = esc(q.choices[q.answer]);
+  return `<div><b>${Q.f.questions.indexOf(q) + 1}. ${esc(q.q)}</b>${mark} Réponse : <em>${ans}</em><br>${esc(q.explain || "")}</div>`;
+}
 function quizResult() {
-  const n = Q.f.questions.length, s = Q.a.filter((a, k) => a === Q.f.questions[k].answer).length;
-  const verdict = QZ_VERDICTS[Math.round(s / n * 5)];
+  const n = Q.f.questions.length, s = qzScore(), geo = isGeo(Q.f);
+  const verdict = (geo ? QZ_GEO_VERDICTS : QZ_VERDICTS)[Math.round(s / n * 5)];
+  const kmTot = Q.f.questions.reduce((t, q, k) => t + (qType(q) === "map" ? (Q.a[k]?.km || 0) : 0), 0);
+  const hasMap = Q.f.questions.some(q => qType(q) === "map");
+  const name = geo ? "Quiz géo" : "Quiz";
   $("#qzIn").innerHTML = `${qzTop()}
-    <div class="qz-res"><p class="qz-meta">Le Quiz du ${esc(fmtLong(Q.ed.date))}</p>
-      <div class="qz-score">${s}<small>/${n}</small></div>
+    <div class="qz-res"><p class="qz-meta">Le ${name} du ${esc(fmtLong(Q.ed.date))}</p>
+      <div class="qz-score">${fmtScore(s)}<small>/${n}</small></div>
       <p class="qz-verdict">${esc(verdict)}</p>
-      <div class="qz-grid" aria-label="${s} bonnes réponses sur ${n}">${quizGrid()}</div>
+      <div class="qz-grid" aria-label="${fmtScore(s)} sur ${n}">${quizGrid()}</div>
+      ${hasMap ? `<p class="qz-km">📍 Écart total sur la carte : ${esc(fmtKm(kmTot))}</p>` : ""}
       <div class="qz-btns"><button class="cta" id="qzShare">Partager mon score</button><button class="btn ghost" id="qzRev">Revoir les réponses</button><button class="btn ghost" id="qzBack">Retour à l’édition</button></div>
-      <div class="qz-rev" id="qzRevList" hidden>${Q.f.questions.map((q, k) => `<div><b>${k + 1}. ${esc(q.q)}</b>${Q.a[k] === q.answer ? "✅" : "❌"} Réponse : <em>${esc(q.choices[q.answer])}</em><br>${esc(q.explain || "")}</div>`).join("")}</div></div>`;
+      <div class="qz-rev" id="qzRevList" hidden>${Q.f.questions.map((q, k) => qzReview(q, Q.a[k])).join("")}</div></div>`;
   $("#qzX").onclick = () => history.back();
   $("#qzBack").onclick = () => history.back();
   $("#qzRev").onclick = () => { const l = $("#qzRevList"); l.hidden = !l.hidden; if (!l.hidden) l.scrollIntoView({ behavior: "smooth", block: "start" }); };
   $("#qzShare").onclick = async () => {
     const url = new URL(`./?d=${Q.ed.date}&f=quiz`, location.href).href;
     const d = new Date(Q.ed.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
-    const text = `Le Sachoir · Quiz du ${d}\n${quizGrid()} ${s}/${n}\n${verdict}`;
-    if (navigator.share) { try { await navigator.share({ title: "Le Quiz du Sachoir", text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
+    const text = `Le Sachoir · ${name} du ${d}\n${quizGrid()} ${fmtScore(s)}/${n}${hasMap ? `\n📍 ${fmtKm(kmTot)} d’écart` : ""}\n${verdict}`;
+    if (navigator.share) { try { await navigator.share({ title: `Le ${name} du Sachoir`, text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
     try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("Score copié, à vous de frimer"); } catch (e) { toast(text); }
   };
 }

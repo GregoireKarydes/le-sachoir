@@ -58,7 +58,7 @@ def main():
             index.append({
                 "date": d.name,
                 "demo": bool(ed.get("demo")),
-                "formats": [{"id": x["id"], "label": x.get("label", ""), "title": x.get("title", ""),
+                "formats": [{"id": x["id"], "label": x.get("label", ""), "title": x.get("title", ""), "kind": x.get("kind", ""),
                               "url": "" if x["id"] == "quiz" else f"histoires/{seo.story_slug(d.name, x)}/",
                               "theme": x.get("theme", ""), "minutes": x.get("minutes", 0),
                               "tagline": x.get("tagline", ""),

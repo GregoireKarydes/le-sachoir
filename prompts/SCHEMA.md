@@ -47,12 +47,18 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`. Tout 
 }
 ```
 
-## Le Quiz du jour (`"id": "quiz"`, sans image)
-Le dessert de l'édition : 5 questions de culture générale **indépendantes des BD du jour**, 1 à 2 minutes. Aucune image, aucun casting.
+## Le jeu du jour (`"id": "quiz"`, sans image)
+Le jeu de fin d'édition. **Deux variantes qui alternent d'un jour à l'autre** : le Quiz culture G (`"kind": "culture"`, 5 questions) et le Quiz géo (`"kind": "geo"`, 3 questions, voir plus bas).
+Règle d'alternance : prendre l'inverse du `kind` du jeu de la veille (un jeu sans `kind` compte comme `culture`) ; s'il n'y a pas de jeu la veille, faire un Quiz géo.
+Le lecteur ne joue qu'une fois par jour : ses réponses sont enregistrées aussitôt, il peut ensuite seulement les revoir.
+
+### Quiz culture G (`"kind": "culture"`)
+5 questions de culture générale **indépendantes des BD du jour**, 1 à 2 minutes. Aucune image, aucun casting.
 
 ```json
 {
   "id": "quiz",
+  "kind": "culture",
   "label": "Le Quiz du jour",
   "title": "Cinq questions, zéro pression (ou presque)",   // titre drôle, différent chaque jour
   "minutes": 1,
@@ -78,6 +84,48 @@ Règles du quiz :
 - Varier la position de la bonne réponse d'une question à l'autre.
 - L'explication apprend quelque chose de plus que la réponse, avec une touche d'humour ; si un fait est discuté, le dire (« l'explication la plus courante… »).
 - Aucun fait déjà utilisé dans `editions/` (BD ou quiz) ; pas de personne vivante sauf fait public sourcé ; rien sur les drames.
+
+### Quiz géo (`"kind": "geo"`)
+3 questions, environ 1 minute, cartes dessinées par l'appli (aucune image à générer).
+
+```json
+{
+  "id": "quiz",
+  "kind": "geo",
+  "label": "Le Quiz géo",
+  "title": "Trois questions, zéro boussole",        // titre drôle, différent chaque jour
+  "minutes": 1,
+  "theme": "",
+  "questions": [
+    { "type": "map", "map": "france",                 // "france" | "europe" | "world"
+      "q": "Où se trouve Carcassonne ?",
+      "target": { "lat": 43.213, "lon": 2.349 },      // une ville : coordonnées vérifiées
+      "name": "Carcassonne",
+      "explain": "…", "source": { "title": "…", "url": "https://…" } },
+    { "type": "choice", "q": "Quelle est la capitale de l’Australie ?",
+      "choices": ["Sydney", "Melbourne", "Canberra", "Perth"], "answer": 2, "explain": "…", "source": { … } },
+    { "type": "silhouette", "shape": { "map": "world", "id": "ITA" }, "rotate": 90,
+      "q": "Quel pays se cache derrière cette silhouette ?", "choices": ["…", "…", "…", "…"], "answer": 1, "explain": "…", "source": { … } }
+  ],
+  "sources": [ /* les sources des 3 questions */ ]
+}
+```
+
+Les 3 questions :
+1. **Où c'est ?** (`"type": "map"`) : une ville, un département ou un pays à placer sur la carte. Cible au choix :
+   - ville ou lieu : `"target": { "lat": …, "lon": … }` (coordonnées vérifiées, 3 décimales) ;
+   - département : `"target": { "dept": "29" }` (code officiel, `2A`/`2B` pour la Corse), carte `france` ;
+   - pays : `"target": { "country": "PER" }` (code ISO 3166 alpha-3), carte `europe` pour un pays d'Europe, sinon `world`.
+   `name` = le nom affiché dans la correction (« le Finistère », « Carcassonne »). Points : dans la forme ou à moins de 35 km (France), 150 km (Europe), 400 km (monde) = juste ; jusqu'à 120 / 450 / 1 200 km = presque.
+2. **Capitales** (`"type": "choice"`) : un pays → sa capitale, ou une capitale → son pays, en alternant ; parfois un département → sa préfecture. 4 choix, des pièges crédibles (Sydney, Istanbul, Rio, Zurich).
+3. **Le joker**, qui tourne d'un Quiz géo à l'autre (ne pas reprendre le joker du Quiz géo précédent) :
+   - **Silhouette** (`"type": "silhouette"`) : un pays (`"map": "world"`, code alpha-3) ou un département (`"map": "france"`, code) en ombre noire ; `rotate` 0, 90, 180 ou 270 pour corser ; le dire dans la question si c'est tourné. Choisir une forme reconnaissable (pas un petit pays carré).
+   - **Vrai village ou canular ?** (`"type": "choice"`) : quatre noms de communes françaises dont **un seul inventé** (ou l'inverse : un seul vrai). Vérifier chaque vrai nom dans le Code officiel géographique de l'Insee. Les noms inventés restent crédibles et sans vulgarité.
+   - **Le fromage (ou le plat) perdu** (`"type": "map"`, carte `france`) : placer l'origine d'un fromage AOP, d'une spécialité ou d'un vin ; cible = la commune ou le département d'origine.
+   - **Du nord au sud** (`"type": "order"`) : 4 villes à classer du nord au sud (`"by": "nord-sud"`) ou d'ouest en est (`"by": "ouest-est"`), choisies pour piéger (Rome, New York, Madrid, Pékin). `"items": [{ "name": "Rome", "lat": 41.903, "lon": 12.496 }, …]`, coordonnées vérifiées ; l'appli calcule le bon ordre. Écarts d'au moins 0,1° entre villes.
+   - **Le numéro** (`"type": "choice"`) : « 13 ? » → Bouches-du-Rhône, ou l'inverse.
+
+Règles du Quiz géo : environ 2 questions sur 3 liées à la France ; une seule bonne réponse, sourcée ; explication drôle de 40 mots maximum qui apprend un fait de plus ; ne pas reprendre un lieu déjà utilisé dans un Quiz géo des 60 derniers jours.
 
 ## Règles pour les prompts d'images (champ `image.prompt`)
 - En **anglais**, 40 à 90 mots. Décrire : le décor, chaque personnage par son nom de fiche + position (on the left / on the right / in the foreground), expression, geste, accessoires, cadrage (wide shot, medium shot, close-up, low angle…).
