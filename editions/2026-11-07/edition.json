@@ -96,8 +96,8 @@
               "archi"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "done",
-            "attempts": 1,
+            "status": "retry",
+            "attempts": 0,
             "via": "fal"
           }
         },

@@ -273,6 +273,7 @@ def ink(im: Image.Image, cfg: dict | None = None) -> Image.Image:
     im = im.filter(ImageFilter.MedianFilter(3))  # enlève le grain avant de réduire les couleurs
     q = im.quantize(colors=cfg.get("colors", 8), method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
     pal = q.getpalette()[: 3 * 256]
+    orig = list(pal)
     grey = cfg.get("grey", 200)
     for i in range(0, len(pal), 3):
         r, g, b = pal[i:i + 3]
@@ -281,11 +282,18 @@ def ink(im: Image.Image, cfg: dict | None = None) -> Image.Image:
         pink = r - g > 50 and b - g > 0  # joues roses : on les garde
         if max(r, g, b) < cfg.get("black_below", 80):  # noir (un rouge foncé reste rouge)
             pal[i:i + 3] = [0, 0, 0]
-        elif sat <= cfg.get("grey_max_saturation", 36):  # couleur neutre : blanc ou un seul gris
-            v = 255 if lum > cfg.get("white_above", 205) else grey
+        elif sat <= cfg.get("grey_max_saturation", 36):  # couleur neutre : noir, blanc ou un seul gris
+            # Un trait dessiné en gris foncé reste un trait : il passe en noir, pas en gris clair
+            # (bug du 7 novembre : une image aux traits gris sortait entièrement délavée).
+            v = 0 if lum < cfg.get("line_below", 140) else 255 if lum > cfg.get("white_above", 205) else grey
             pal[i:i + 3] = [v, v, v]
         elif lum > 180 and sat < 90 and not pink:  # teintes pâles (peau, papier crème) : blanc
             pal[i:i + 3] = [255, 255, 255]
+    # Garde-fou : s'il ne reste aucun noir, la couleur neutre la plus sombre devient le trait.
+    used = {c for _, c in q.getcolors(256) or []}
+    if used and not any(pal[3 * c:3 * c + 3] == [0, 0, 0] for c in used):
+        darkest = min(used, key=lambda c: sum(orig[3 * c:3 * c + 3]))
+        pal[3 * darkest:3 * darkest + 3] = [0, 0, 0]
     q.putpalette(pal)
     out = q.convert("RGB")
     for _ in range(cfg.get("thicken", 0)):
