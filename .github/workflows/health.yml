@@ -70,7 +70,7 @@ jobs:
         run: |
           gh label create avance --color FBCA04 --description "Moins de 2 jours d'images d'avance" 2>/dev/null || true
           n=$(gh issue list --label avance --state open --json number -q '.[0].number')
-          ahead="${{ steps.h1.outputs.ahead }}"
+          ahead="${{ steps.h2.outputs.ahead || steps.h1.outputs.ahead }}"
           if [ "${ahead:-0}" -lt 2 ]; then
             [ -z "$n" ] && gh issue create --title "⚠️ Avance d'images faible (${ahead:-0} jour)" --label avance \
               --body "$(cat health-report.md)" || true
