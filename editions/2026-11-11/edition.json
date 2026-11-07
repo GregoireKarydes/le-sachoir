@@ -1,0 +1,86 @@
+{
+ "date": "2026-11-11",
+ "status": "draft",
+ "formats": [
+  {
+   "id": "quiz",
+   "kind": "plusmoins",
+   "label": "Plus ou moins",
+   "title": "Plus haut que vous ne le pensez",
+   "minutes": 1,
+   "theme": "",
+   "questions": [
+    {
+     "type": "chain",
+     "q": "Lequel est le plus haut ?",
+     "crit": "plus haut",
+     "pick": "max",
+     "items": [
+      {
+       "name": "La tour Montparnasse",
+       "value": 210,
+       "label": "210 m"
+      },
+      {
+       "name": "Le viaduc de Millau",
+       "value": 343,
+       "label": "343 m",
+       "explain": "Au sommet de son plus haut pylône."
+      },
+      {
+       "name": "La tour Eiffel",
+       "value": 330,
+       "label": "330 m",
+       "explain": "Antennes comprises."
+      },
+      {
+       "name": "La pyramide de Khéops",
+       "value": 138,
+       "label": "138 m",
+       "explain": "Environ 146 m à l’origine : elle a perdu son sommet."
+      },
+      {
+       "name": "La flèche de la cathédrale de Rouen",
+       "value": 151,
+       "label": "151 m",
+       "explain": "La plus haute flèche de France."
+      },
+      {
+       "name": "La statue de la Liberté",
+       "value": 93,
+       "label": "93 m",
+       "explain": "Du sol à la torche, socle compris."
+      },
+      {
+       "name": "Big Ben (la tour Elizabeth)",
+       "value": 96,
+       "label": "96 m"
+      },
+      {
+       "name": "Le Christ rédempteur de Rio",
+       "value": 38,
+       "label": "38 m",
+       "explain": "30 m de statue sur 8 m de socle."
+      },
+      {
+       "name": "L’Arc de triomphe",
+       "value": 50,
+       "label": "50 m"
+      }
+     ],
+     "explain": "Le viaduc de Millau culmine à 343 m : plus haut que la tour Eiffel. Un pont qui se prend pour une tour, et qui a raison.",
+     "source": {
+      "title": "France.fr — Le viaduc de Millau",
+      "url": "https://www.france.fr/en/article/viaduc-millau/"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "title": "France.fr — Le viaduc de Millau",
+     "url": "https://www.france.fr/en/article/viaduc-millau/"
+    }
+   ]
+  }
+ ]
+}
