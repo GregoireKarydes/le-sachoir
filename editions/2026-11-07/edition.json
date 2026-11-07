@@ -14,25 +14,29 @@
           "id": "haussmann",
           "look": "Haussmann, a very tall stiff 1860s Paris prefect in his fifties, balding head, thick grey chinstrap beard, black frock coat buttoned to the top, a red sash across the chest as the only colour",
           "file": "cast/cultureg-haussmann.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "archi",
           "look": "Victor, a nervous short 1860s architect in his thirties, messy black hair sticking up, thin moustache, grey waistcoat with rolled-up white sleeves, always holding a big rolled blank plan",
           "file": "cast/cultureg-archi.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "madame",
           "look": "Madame, a haughty 1860s Parisian bourgeoise in her forties, high tight bun, chin always up, wide black crinoline dress, a small blue fan as the only colour",
           "file": "cast/cultureg-madame.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "melie",
           "look": "Mélie, a skinny 1860s housemaid around twenty, frizzy red hair escaping a white cap, freckles, plain grey dress, white apron, heavy black boots",
           "file": "cast/cultureg-melie.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         }
       ],
       "cover": {
@@ -42,8 +46,9 @@
           "melie"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -68,8 +73,9 @@
               "archi"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -90,8 +96,9 @@
               "archi"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -116,8 +123,9 @@
               "archi"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -142,8 +150,9 @@
               "archi"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -163,8 +172,9 @@
               "madame"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -184,8 +194,9 @@
               "melie"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -210,8 +221,9 @@
               "archi"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -231,8 +243,9 @@
               "melie"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
@@ -267,25 +280,28 @@
           "id": "francois",
           "look": "François, a slick 1830s Bordeaux trader in his late twenties, oiled black hair with a sharp side parting, thin pencil moustache, black tailcoat, white high collar, a gold waistcoat as the only colour",
           "file": "cast/insolite-francois.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "louis",
           "look": "Louis, François's identical twin, same oiled black hair and pencil moustache, but always slightly dishevelled, black tailcoat, white high collar, a crooked green cravat as the only colour",
           "file": "cast/insolite-louis.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "employe",
           "look": "Gaston, a shifty 1830s telegraph operator in his forties, round bald head, bushy grey sideburns, grey uniform jacket with brass buttons, small round spectacles",
           "file": "cast/insolite-employe.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "ami",
           "look": "Honoré, a very upright honest 1830s man in his thirties, neat blond hair, big earnest eyes, plain black jacket, white shirt, hands always clasped",
           "file": "cast/insolite-ami.png",
-          "status": "pending"
+          "status": "skipped"
         }
       ],
       "cover": {
@@ -295,8 +311,9 @@
           "louis"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -321,8 +338,9 @@
               "louis"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -342,8 +360,9 @@
               "francois"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -363,8 +382,9 @@
               "employe"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -389,8 +409,9 @@
               "louis"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -415,8 +436,9 @@
               "ami"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -437,8 +459,9 @@
               "louis"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -458,8 +481,9 @@
               "francois"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
