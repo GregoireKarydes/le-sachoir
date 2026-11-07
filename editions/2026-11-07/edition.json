@@ -1,0 +1,80 @@
+{
+ "date": "2026-11-07",
+ "status": "draft",
+ "formats": [
+  {
+   "id": "quiz",
+   "kind": "geo",
+   "label": "Le Quiz géo",
+   "title": "Trois questions et un village qui n’existe pas",
+   "minutes": 1,
+   "theme": "",
+   "questions": [
+    {
+     "type": "map",
+     "map": "france",
+     "q": "Où se trouve la Lozère ?",
+     "target": {
+      "dept": "48"
+     },
+     "name": "la Lozère",
+     "explain": "C’est le département le moins peuplé de France : environ 75 500 habitants (Insee, 2019). Ici, les embouteillages sont surtout composés de brebis.",
+     "source": {
+      "title": "Connexion — Which French departments are the least populated?",
+      "url": "https://www.connexionfrance.com/news/map-which-french-departments-are-the-least-populated/131122"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "De quel pays Astana est-elle la capitale ?",
+     "choices": [
+      "L’Ouzbékistan",
+      "Le Kazakhstan",
+      "Le Kirghizistan",
+      "Le Turkménistan"
+     ],
+     "answer": 1,
+     "explain": "Astana a été rebaptisée Nur-Sultan en 2019, en l’honneur de l’ex-président, puis est redevenue Astana en 2022. Les cartographes ont demandé un congé.",
+     "source": {
+      "title": "Al Jazeera — Kazakhstan approves proposal to restore capital’s old name Astana",
+      "url": "https://www.aljazeera.com/news/2022/9/13/kazakhstan-considers-reinstating-capitals-old-name-astana"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "Vrai village ou canular ? Trois de ces communes existent. Laquelle est inventée ?",
+     "choices": [
+      "Y",
+      "Arnac-la-Poste",
+      "Bourg-la-Sieste",
+      "Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson"
+     ],
+     "answer": 2,
+     "explain": "Bourg-la-Sieste n’existe pas (hélas). Y, dans la Somme, a le nom le plus court de France ; Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, dans la Marne, le plus long : 38 lettres.",
+     "source": {
+      "title": "The Local — Revealed: the longest place name in France",
+      "url": "https://www.thelocal.fr/20260805/revealed-the-longest-place-name-in-france"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "title": "Connexion — Which French departments are the least populated?",
+     "url": "https://www.connexionfrance.com/news/map-which-french-departments-are-the-least-populated/131122"
+    },
+    {
+     "title": "Al Jazeera — Kazakhstan approves proposal to restore capital’s old name Astana",
+     "url": "https://www.aljazeera.com/news/2022/9/13/kazakhstan-considers-reinstating-capitals-old-name-astana"
+    },
+    {
+     "title": "The Local — Revealed: the longest place name in France",
+     "url": "https://www.thelocal.fr/20260805/revealed-the-longest-place-name-in-france"
+    },
+    {
+     "title": "Banatic (ministère de l’Intérieur) — Commune Arnac-la-Poste (87003)",
+     "url": "https://www.banatic.interieur.gouv.fr/commune/87003-Arnac-la-Poste"
+    }
+   ]
+  }
+ ]
+}
