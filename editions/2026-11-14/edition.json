@@ -1,0 +1,98 @@
+{
+ "date": "2026-11-14",
+ "status": "draft",
+ "formats": [
+  {
+   "id": "quiz",
+   "kind": "citation",
+   "label": "Qui a dit ça ?",
+   "title": "Ils l’ont dit (ou pas)",
+   "minutes": 1,
+   "theme": "",
+   "questions": [
+    {
+     "type": "choice",
+     "q": "« Qu’ils mangent de la brioche ! »",
+     "choices": [
+      "Marie-Antoinette",
+      "Louis XVI",
+      "Personne de connu",
+      "Madame de Pompadour"
+     ],
+     "answer": 2,
+     "explain": "Rousseau prête la phrase à « une grande princesse » dans ses Confessions, écrites quand Marie-Antoinette était encore une enfant en Autriche. Une brioche qui a beaucoup voyagé.",
+     "source": {
+      "title": "Britannica — Did Marie-Antoinette really say “Let them eat cake”?",
+      "url": "https://www.britannica.com/story/did-marie-antoinette-really-say-let-them-eat-cake"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "« Le cœur a ses raisons que la raison ne connaît point. »",
+     "choices": [
+      "Molière",
+      "Blaise Pascal",
+      "René Descartes",
+      "Victor Hugo"
+     ],
+     "answer": 1,
+     "explain": "C’est dans les Pensées, publiées en 1670, après sa mort. Pascal avait aussi inventé une machine à calculer : la raison, il connaissait.",
+     "source": {
+      "title": "BnF — Dossier de presse Pascal",
+      "url": "https://www.bnf.fr/sites/default/files/2019-02/dp_pascal.pdf"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "« L’enfer, c’est les autres. »",
+     "choices": [
+      "Albert Camus",
+      "Simone de Beauvoir",
+      "Voltaire",
+      "Jean-Paul Sartre"
+     ],
+     "answer": 3,
+     "explain": "Réplique de Garcin dans Huis clos (1944), où trois morts sont enfermés ensemble pour l’éternité. Sartre a dû expliquer plus tard qu’on l’avait mal compris. Classique.",
+     "source": {
+      "title": "Universalis — Huis clos, Jean-Paul Sartre",
+      "url": "https://www.universalis.fr/encyclopedie/huis-clos/"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "« C’est un petit pas pour l’homme, un bond de géant pour l’humanité. »",
+     "choices": [
+      "Neil Armstrong",
+      "Buzz Aldrin",
+      "Youri Gagarine",
+      "John F. Kennedy"
+     ],
+     "answer": 0,
+     "explain": "Sur la Lune, le 21 juillet 1969 (heure française). Armstrong assurait avoir dit « a man », un homme : le « a » se serait perdu à la radio. 384 000 km, ça grésille.",
+     "source": {
+      "title": "Space.com — Neil Armstrong, first man on the moon",
+      "url": "https://www.space.com/15519-neil-armstrong-man-moon.html"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "title": "Britannica — Did Marie-Antoinette really say “Let them eat cake”?",
+     "url": "https://www.britannica.com/story/did-marie-antoinette-really-say-let-them-eat-cake"
+    },
+    {
+     "title": "BnF — Dossier de presse Pascal",
+     "url": "https://www.bnf.fr/sites/default/files/2019-02/dp_pascal.pdf"
+    },
+    {
+     "title": "Universalis — Huis clos, Jean-Paul Sartre",
+     "url": "https://www.universalis.fr/encyclopedie/huis-clos/"
+    },
+    {
+     "title": "Space.com — Neil Armstrong, first man on the moon",
+     "url": "https://www.space.com/15519-neil-armstrong-man-moon.html"
+    }
+   ]
+  }
+ ]
+}
