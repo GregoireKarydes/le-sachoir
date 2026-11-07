@@ -320,14 +320,14 @@
           "n": 1,
           "kind": "chap",
           "tag": "Bordeaux, 1834",
-          "caption": "Bordeaux, 1834. Les jumeaux Blanc parient sur la rente d’État, un titre dont le prix se fixe à Paris.",
+          "caption": "Comment deux jumeaux ont-ils piraté un réseau ? À Bordeaux, ils parient sur la rente, un placement coté à Paris.",
           "bubbles": [
             {
-              "text": "Problème : les cours de Paris arrivent ici avec des jours de retard.",
+              "text": "Problème : les cours de Paris arrivent ici par diligence, des jours plus tard.",
               "side": "l"
             },
             {
-              "text": "Celui qui les connaît avant les autres gagne à coup sûr.",
+              "text": "Celui qui les connaît en premier gagne à coup sûr.",
               "side": "r"
             }
           ],
@@ -347,7 +347,7 @@
           "n": 2,
           "kind": "fact",
           "tag": "Le télégraphe Chappe",
-          "caption": "Le télégraphe Chappe relaie des signaux de tour en tour, avec des bras articulés : bien plus vite qu’un cheval.",
+          "caption": "Plus rapide : le télégraphe Chappe, des tours qui se recopient des signaux à vue. Mais il est réservé à l’État.",
           "bubbles": [
             {
               "text": "Un réseau ultrarapide, interdit au public. Je suis amoureux.",
@@ -369,10 +369,10 @@
           "n": 3,
           "kind": "",
           "tag": "",
-          "caption": "Le plan : à Tours, un employé payé glisse un faux signal dans un vrai message, puis le signe « annuler ».",
+          "caption": "Le plan : un complice parisien poste la tendance de la Bourse à Tours, à un employé du télégraphe soudoyé.",
           "bubbles": [
             {
-              "text": "Le message officiel reste juste. Mais ceux qui regardent passer l’erreur…",
+              "text": "J’ajoute un signal en trop à un message officiel, puis le signe « erreur ».",
               "side": "r"
             }
           ],
@@ -391,7 +391,7 @@
           "n": 4,
           "kind": "fact",
           "tag": "",
-          "caption": "Près de Bordeaux, un complice repère l’erreur à la longue-vue : selon le signal, la rente monte ou baisse.",
+          "caption": "Le signal en trop file de tour en tour vers Bordeaux. Avant la ville, on le lit à la longue-vue.",
           "bubbles": [
             {
               "text": "Hausse ! On achète avant tout le monde.",
@@ -418,10 +418,10 @@
           "n": 5,
           "kind": "",
           "tag": "1836",
-          "caption": "1836 : l’employé tombe malade et demande à un ami de le remplacer, en lui expliquant la combine.",
+          "caption": "Grâce au signe « erreur », le message officiel arrive intact : personne ne voit rien. Jusqu’en 1836, où l’employé tombe malade.",
           "bubbles": [
             {
-              "text": "C’est simple : tu fais des erreurs exprès.",
+              "text": "Tu me remplaces ? C’est simple : tu fais des erreurs exprès.",
               "side": "l"
             },
             {
@@ -445,7 +445,7 @@
           "n": 6,
           "kind": "react",
           "tag": "Le procès",
-          "caption": "L’ami dénonce tout. Mais aucune loi ne punit le détournement du télégraphe : seul le pot-de-vin est condamné.",
+          "caption": "Le remplaçant dénonce tout. Mais aucune loi n’interdit d’utiliser le télégraphe en douce : seuls les pots-de-vin sont punis.",
           "bubbles": [
             {
               "text": "Pirater un réseau ? Ce crime n’existe pas encore.",
