@@ -1,0 +1,90 @@
+{
+ "date": "2026-11-12",
+ "status": "draft",
+ "formats": [
+  {
+   "id": "quiz",
+   "kind": "swipe",
+   "label": "Le Swipe",
+   "title": "Vrai ou faux, et que ça saute",
+   "minutes": 1,
+   "theme": "",
+   "questions": [
+    {
+     "type": "swipe",
+     "seconds": 60,
+     "items": [
+      {
+       "text": "La tour Eiffel grandit de plusieurs centimètres en été.",
+       "ok": true,
+       "explain": "Le fer se dilate à la chaleur : la tour prend une dizaine de centimètres et plus."
+      },
+      {
+       "text": "Les Gaulois portaient des casques à ailes.",
+       "ok": false,
+       "explain": "Une invention des peintres et sculpteurs du XIXe siècle."
+      },
+      {
+       "text": "La couleur rouge rend les taureaux furieux.",
+       "ok": false,
+       "explain": "Ils distinguent mal le rouge : c’est le mouvement de la cape qui les excite."
+      },
+      {
+       "text": "Le français a longtemps été la langue de la cour d’Angleterre.",
+       "ok": true,
+       "explain": "Depuis Guillaume le Conquérant, en 1066, et pendant plus de trois siècles."
+      },
+      {
+       "text": "La Joconde n’a pas de sourcils visibles.",
+       "ok": true,
+       "explain": "Ni sourcils ni cils visibles. Des analyses suggèrent qu’ils ont été effacés avec le temps."
+      },
+      {
+       "text": "Une huître peut changer de sexe.",
+       "ok": true,
+       "explain": "L’huître creuse alterne entre mâle et femelle au fil des saisons."
+      },
+      {
+       "text": "La Grande Muraille de Chine se voit depuis la Lune.",
+       "ok": false,
+       "explain": "Bien trop étroite : on ne la voit pas à l’œil nu depuis la Lune."
+      },
+      {
+       "text": "Une commune française s’appelle Y.",
+       "ok": true,
+       "explain": "Dans la Somme. Une seule lettre, zéro faute d’orthographe."
+      },
+      {
+       "text": "Le mot OK vient de l’expression « aux quais ».",
+       "ok": false,
+       "explain": "Il naît à Boston en 1839 : « oll korrect », une blague de journalistes."
+      },
+      {
+       "text": "Le mont Blanc a toujours la même hauteur.",
+       "ok": false,
+       "explain": "Sa calotte de glace varie : 4 805,59 m en 2023, 2,22 m de moins qu’en 2021."
+      }
+     ],
+     "source": {
+      "title": "Futura — La tour Eiffel change-t-elle de taille ?",
+      "url": "https://www.futura-sciences.com/planete/questions-reponses/monuments-tour-eiffel-change-t-elle-taille-12124/"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "title": "Futura — La tour Eiffel change-t-elle de taille ?",
+     "url": "https://www.futura-sciences.com/planete/questions-reponses/monuments-tour-eiffel-change-t-elle-taille-12124/"
+    },
+    {
+     "title": "L’Info durable — Le mont Blanc mesuré à 4 805,59 mètres",
+     "url": "https://www.linfodurable.fr/le-mont-blanc-mesure-480559-metres-222-m-de-moins-quen-2021-41483"
+    },
+    {
+     "title": "Smithsonian — How the word OK was invented",
+     "url": "https://www.smithsonianmag.com/smart-news/how-word-ok-was-invented-175-years-ago-180953258/"
+    }
+   ]
+  }
+ ]
+}
