@@ -1,0 +1,120 @@
+{
+ "date": "2026-11-09",
+ "status": "draft",
+ "formats": [
+  {
+   "id": "quiz",
+   "kind": "frise",
+   "label": "La Frise",
+   "title": "Quatre dates, zéro machine à remonter le temps",
+   "minutes": 1,
+   "theme": "",
+   "questions": [
+    {
+     "type": "order",
+     "by": "chrono",
+     "q": "Du plus ancien au plus récent",
+     "items": [
+      {
+       "name": "Sacre de Charles VII à Reims",
+       "year": 1429
+      },
+      {
+       "name": "Début du chantier de Notre-Dame de Paris",
+       "year": 1163
+      },
+      {
+       "name": "Bible de Gutenberg",
+       "year": 1455,
+       "label": "vers 1455"
+      },
+      {
+       "name": "Fondation de Tenochtitlan (Mexico)",
+       "year": 1325,
+       "label": "vers 1325"
+      }
+     ],
+     "explain": "Notre-Dame était en chantier depuis plus de 160 ans quand les Aztèques ont fondé Tenochtitlan, l’actuelle Mexico. Les cathédrales, c’est long. Les capitales, parfois plus rapide.",
+     "source": {
+      "title": "Wikipédia — Tenochtitlan",
+      "url": "https://fr.wikipedia.org/wiki/Tenochtitlan"
+     }
+    },
+    {
+     "type": "order",
+     "by": "chrono",
+     "q": "Du plus ancien au plus récent",
+     "items": [
+      {
+       "name": "Brevet du téléphone par Graham Bell",
+       "year": 1876
+      },
+      {
+       "name": "Inauguration de la tour Eiffel",
+       "year": 1889
+      },
+      {
+       "name": "Brevet du fax par Alexander Bain",
+       "year": 1843
+      },
+      {
+       "name": "Abolition de l’esclavage en France",
+       "year": 1848
+      }
+     ],
+     "explain": "Le fax est plus vieux que le téléphone : l’Écossais Alexander Bain le brevète en 1843, 33 ans avant Bell. Votre vieille imprimante de bureau a donc des ancêtres.",
+     "source": {
+      "title": "Britannica — Fax",
+      "url": "https://britannica.com/technology/fax"
+     }
+    },
+    {
+     "type": "order",
+     "by": "chrono",
+     "q": "Du plus ancien au plus récent",
+     "items": [
+      {
+       "name": "Fondation de Marseille par des Grecs",
+       "year": -600,
+       "label": "vers 600 av. J.-C."
+      },
+      {
+       "name": "Disparition des derniers mammouths",
+       "year": -2000,
+       "label": "vers 2000 av. J.-C."
+      },
+      {
+       "name": "Grande pyramide de Khéops",
+       "year": -2560,
+       "label": "vers 2560 av. J.-C."
+      },
+      {
+       "name": "Fondation légendaire de Rome",
+       "year": -753,
+       "label": "753 av. J.-C."
+      }
+     ],
+     "explain": "Des mammouths vivaient encore sur l’île Wrangel, en Arctique, des siècles après la construction de Khéops. Les pharaons auraient pu en commander un. Ils ne l’ont pas fait.",
+     "source": {
+      "title": "Futura — Les derniers mammouths sont morts brutalement sur une île isolée",
+      "url": "https://www.futura-sciences.com/planete/actualites/paleontologie-derniers-mammouths-sont-morts-brutalement-ile-isolee-77847/"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "title": "Wikipédia — Tenochtitlan",
+     "url": "https://fr.wikipedia.org/wiki/Tenochtitlan"
+    },
+    {
+     "title": "Britannica — Fax",
+     "url": "https://britannica.com/technology/fax"
+    },
+    {
+     "title": "Futura — Les derniers mammouths sont morts brutalement sur une île isolée",
+     "url": "https://www.futura-sciences.com/planete/actualites/paleontologie-derniers-mammouths-sont-morts-brutalement-ile-isolee-77847/"
+    }
+   ]
+  }
+ ]
+}
