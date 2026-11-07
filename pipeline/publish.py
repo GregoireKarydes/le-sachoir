@@ -136,6 +136,12 @@ def write_health(health: dict, index: list, today: date):
         health["quota"] = json.loads((ROOT / "data" / "images-quota.json").read_text())
     except Exception:
         health["quota"] = None
+    try:
+        fal = json.loads((ROOT / "data" / "images-fal.json").read_text())
+        health["fal"] = {"month": fal.get("month"), "spent_usd": fal.get("spent"), "images": fal.get("images"),
+                         "today_usd": fal.get("days", {}).get(today.isoformat(), 0), "blocked": fal.get("blocked")}
+    except Exception:
+        health["fal"] = None
     (ROOT / "data").mkdir(exist_ok=True)
     (ROOT / "data" / "health.json").write_text(json.dumps(health, ensure_ascii=False, indent=1))
     print(f"Santé : édition du jour {'en ligne' if pub else 'ABSENTE'}, {ahead} jour(s) d'avance dessinés, "

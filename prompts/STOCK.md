@@ -12,7 +12,7 @@ Ces formats comptent dans la limite de 6 par passage ; continuer ensuite normale
 ## Étapes
 1. `git pull`. Pour chaque date de demain à J+7 (heure de Paris), regarder quels formats manquent dans `editions/<date>/edition.json` :
    - `cultureg` et `insolite` : **tous les jours** ;
-   - `dossier` : seulement le lundi, le mercredi et le vendredi (`TZ=Europe/Paris date -d <date> +%u` donne 1, 3 ou 5). Les Grands Dossiers de la semaine sont écrits **le dimanche soir** par une tâche à part (`prompts/DOSSIERS.md`). Cette tâche-ci n'en écrit un que **en secours** : s'il manque pour demain ou après-demain.
+   - `dossier` : **tous les jours**, mais écrit par une tâche à part, chaque soir (`prompts/DOSSIERS.md`). Cette tâche-ci n'en écrit un que **en secours** : s'il manque pour demain ou après-demain.
    Écrire **tous les formats manquants**, en commençant par la date la plus proche, dans la limite de **6 formats par passage** (un Grand Dossier de secours compte pour 2). Les images sont dessinées ensuite par GitHub Actions, l'Actu d'abord puis le stock dans l'ordre des dates, au fil du quota : il n'y a pas à se limiter pour elles.
 2. **Choisir le sujet** :
    - thématique dans le catalogue ci-dessous ;

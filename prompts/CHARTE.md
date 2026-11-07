@@ -43,7 +43,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 
 | Format | Durée visée | Cases (repère) | Humour |
 |---|---|---|---|
-| Actu du jour (`actu`) | 1 à 2 min | 1 à 2 cases par sujet, 3 à 5 sujets, 8 cases au plus | L'actu racontée de façon détournée et drôle, sans case « réaction » obligatoire |
+| Actu du jour (`actu`) | 1 à 2 min | 1 à 2 cases par sujet, 3 à 5 sujets | L'actu racontée de façon détournée et drôle, sans case « réaction » obligatoire |
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé, avec une touche d'humour |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, gag à chaque étape |
 | Grand Dossier (`dossier`) | environ 4 min | 30 au plus (quota d'images) | Humour dosé : la compréhension d'abord |

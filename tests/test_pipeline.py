@@ -130,3 +130,64 @@ def test_fiche_casting_inutile_sautee(tmp_path, monkeypatch):
         images.process(d, d / "edition.json", ed)
     cast = {c["id"]: c.get("status") for c in ed["formats"][0]["cast"]}
     assert cast["b"] == "skipped" and cast["a"] != "skipped"
+
+
+class FakeResp:
+    def __init__(self, code=200, body=None):
+        self.status_code, self._body = code, body or {}
+        self.text = json.dumps(self._body)
+
+    def json(self):
+        return self._body
+
+
+def png_data_uri():
+    import base64, io
+    from PIL import Image
+    buf = io.BytesIO()
+    Image.new("RGB", (8, 8), "white").save(buf, "PNG")
+    return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
+
+
+@pytest.fixture
+def fal(tmp_path, monkeypatch):
+    monkeypatch.setattr(images, "QUOTA_FILE", tmp_path / "q.json")
+    monkeypatch.setattr(images, "FAL_FILE", tmp_path / "fal.json")
+    monkeypatch.setattr(images, "FAL_KEY", "test")
+    monkeypatch.setattr(images, "CF_BLOCKED", None)
+    monkeypatch.setattr(images, "next_actu_drawn", lambda: True)
+    day = datetime.now(ZoneInfo("UTC")).date().isoformat()
+    (tmp_path / "q.json").write_text(json.dumps({"day": day, "count": 60, "neurons": images.NEURON_BUDGET}))
+    calls = []
+    monkeypatch.setattr(images.requests, "post", lambda url, **k: calls.append(url) or FakeResp(200, {"images": [{"url": png_data_uri()}]}))
+    return calls
+
+
+def test_renfort_fal_quand_cloudflare_est_plein(fal):
+    soon = images.next_actu_date()
+    im, via = images.draw({"id": "cultureg"}, soon, "p", (512, 896), [images.STYLE_REF], "case")
+    assert via == "fal" and fal and "fal.run" in fal[0]
+    st = json.loads(images.FAL_FILE.read_text())
+    assert st["images"] == 1 and 0 < st["spent"] < 0.02
+
+
+def test_pas_de_renfort_pour_le_stock_lointain(fal):
+    from datetime import timedelta
+    with pytest.raises(images.QuotaExhausted):
+        images.draw({"id": "cultureg"}, images.next_actu_date() + timedelta(days=3), "p", (512, 896), [images.STYLE_REF], "case")
+    assert not fal
+
+
+def test_plafond_fal(fal, monkeypatch):
+    monkeypatch.setattr(images, "FAL_DAILY", 0.001)
+    with pytest.raises(images.QuotaExhausted):
+        images.draw({"id": "actu"}, images.next_actu_date(), "p", (512, 896), [images.STYLE_REF], "case")
+    assert not fal
+
+
+def test_credit_fal_epuise(fal, monkeypatch):
+    monkeypatch.setattr(images.requests, "post", lambda url, **k: FakeResp(403, {"detail": "Exhausted balance"}))
+    with pytest.raises(images.QuotaExhausted):
+        images.draw({"id": "actu"}, images.next_actu_date(), "p", (512, 896), [images.STYLE_REF], "case")
+    st = json.loads(images.FAL_FILE.read_text())
+    assert st["blocked"] and st["images"] == 0

@@ -35,5 +35,10 @@
     "cover": 200,
     "cast": 80
   },
-  "actu_reserve_neurons": 2600
+  "actu_reserve_neurons": 2600,
+  "fal_model": "fal-ai/flux-2/klein/4b/edit",
+  "fal_usd_per_mp": 0.01,
+  "fal_daily_usd": 0.4,
+  "fal_monthly_usd": 9.0,
+  "fal_days_ahead": 1
 }

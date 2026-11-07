@@ -66,6 +66,10 @@ def main():
         q = h.get("quota") or {}
         lines.append(f"📦 Avance dessinée : {h.get('days_ahead_drawn', 0)} jour(s) ; écrite : {h.get('days_ahead_written', 0)} jour(s).")
         lines.append(f"🎨 Quota du jour (UTC {q.get('day', '?')}) : {q.get('count', '?')} appels, ~{q.get('neurons', '?')} neurones estimés.")
+        fal = h.get("fal") or {}
+        if fal:
+            lines.append(f"💶 Renfort fal.ai ({fal.get('month')}) : {fal.get('images', 0)} images, ~{fal.get('spent_usd', 0):.2f} $"
+                         + (" — refusé aujourd'hui (crédit épuisé ?)" if fal.get("blocked") == today else ""))
         for p in h.get("problems", [])[:10]:
             lines.append(f"⚠️ {p}")
         for d in h.get("days", [])[:4]:

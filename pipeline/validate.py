@@ -22,7 +22,7 @@ IMAGE_STATUS = {None, "pending", "retry", "done", "failed"}
 CAST_STATUS = {None, "pending", "done", "skipped", "failed"}
 THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
 CAPTION_MAX, BUBBLE_MAX = 15, 12  # mots, d'après prompts/CHARTE.md
-MAX_CASES = {"actu": 8, "dossier": 30}  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
+MAX_CASES = {"dossier": 30}  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 
 def words(t: str) -> int:

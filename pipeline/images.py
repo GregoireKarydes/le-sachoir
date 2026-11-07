@@ -8,7 +8,11 @@ Pour chaque édition non publiée (et celle du jour) :
 Le script s'arrête proprement quand le quota quotidien est épuisé :
 les images restantes restent "pending" et seront faites au prochain passage.
 
-Variables d'environnement : CF_ACCOUNT_ID, CF_API_TOKEN.
+Renfort payant fal.ai (même modèle FLUX.2 klein 4B) : seulement quand le budget gratuit Cloudflare du jour
+est atteint, seulement pour les deux prochaines éditions à publier, et dans la limite de plafonds en dollars
+(`fal_daily_usd`, `fal_monthly_usd` dans style.json, suivis dans data/images-fal.json). Crédits prépayés sans recharge.
+
+Variables d'environnement : CF_ACCOUNT_ID, CF_API_TOKEN, et facultatif FAL_KEY.
 """
 import base64
 import io
@@ -31,6 +35,13 @@ STYLE_REF = ROOT / "pipeline" / "style_ref.png"  # facultatif : une case validé
 ACCOUNT = os.environ.get("CF_ACCOUNT_ID")
 TOKEN = os.environ.get("CF_API_TOKEN")
 URL = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/ai/run/{STYLE['model']}"
+FAL_KEY = os.environ.get("FAL_KEY")
+FAL_URL = "https://fal.run/" + STYLE.get("fal_model", "fal-ai/flux-2/klein/4b/edit")
+FAL_FILE = ROOT / "data" / "images-fal.json"
+FAL_DAILY = STYLE.get("fal_daily_usd", 0.40)
+FAL_MONTHLY = STYLE.get("fal_monthly_usd", 9.0)
+FAL_PRICE_MP = STYLE.get("fal_usd_per_mp", 0.01)    # prix public : 0,01 $ par mégapixel
+FAL_DAYS_AHEAD = STYLE.get("fal_days_ahead", 1)       # 0 = prochaine édition seulement, 1 = et la suivante
 
 
 class QuotaExhausted(Exception):
@@ -126,6 +137,111 @@ def generate(prompt: str, size, refs: list[Path], kind: str = "case") -> Image.I
     if not b64:
         raise RuntimeError(f"Réponse sans image : {str(payload)[:300]}")
     return Image.open(io.BytesIO(base64.b64decode(b64))).convert("RGB")
+
+
+class FalUnavailable(Exception):
+    """Pas de renfort payant possible (pas de clé, plafond atteint, crédit épuisé, date trop lointaine)."""
+
+
+def fal_state() -> dict:
+    now = datetime.now(ZoneInfo("Europe/Paris"))
+    try:
+        st = json.loads(FAL_FILE.read_text())
+    except Exception:
+        st = {}
+    if st.get("month") != now.strftime("%Y-%m"):
+        st = {"month": now.strftime("%Y-%m"), "spent": 0.0, "images": 0, "days": {}}
+    st.setdefault("days", {})
+    st.setdefault("blocked", None)
+    return st
+
+
+def save_fal(st: dict):
+    FAL_FILE.parent.mkdir(exist_ok=True)
+    FAL_FILE.write_text(json.dumps(st, indent=1))
+
+
+def fal_cost(size, refs: list[Path]) -> float:
+    """Estimation prudente : sortie + images de référence, à 0,01 $ le mégapixel."""
+    mp = size[0] * size[1] / 1e6
+    for r in refs:
+        try:
+            w, h = Image.open(r).size
+            k = min(1.0, 448 / max(w, h))  # ref_bytes réduit à 448 px
+            mp += w * h * k * k / 1e6
+        except Exception:
+            mp += 0.2
+    return round(mp * FAL_PRICE_MP, 5)
+
+
+def fal_eligible(day: date) -> bool:
+    return day <= next_actu_date() + timedelta(days=FAL_DAYS_AHEAD)
+
+
+def fal_generate(prompt: str, size, refs: list[Path]) -> Image.Image:
+    if not FAL_KEY:
+        raise FalUnavailable("pas de clé FAL_KEY")
+    st = fal_state()
+    today = datetime.now(ZoneInfo("Europe/Paris")).date().isoformat()
+    if st.get("blocked") == today:
+        raise FalUnavailable("fal.ai a refusé plus tôt aujourd'hui (crédit épuisé ?)")
+    cost = fal_cost(size, refs)
+    day_spent = st["days"].get(today, 0.0)
+    if day_spent + cost > FAL_DAILY:
+        raise FalUnavailable(f"plafond du jour atteint ({day_spent:.2f} $ / {FAL_DAILY:.2f} $)")
+    if st["spent"] + cost > FAL_MONTHLY:
+        raise FalUnavailable(f"plafond du mois atteint ({st['spent']:.2f} $ / {FAL_MONTHLY:.2f} $)")
+    urls = ["data:image/png;base64," + base64.b64encode(ref_bytes(r)).decode() for r in refs if r.exists()][:4]
+    if not urls:  # le mode « edit » demande au moins une image : la référence de style est toujours là en pratique
+        raise FalUnavailable("aucune image de référence")
+    body = {"prompt": prompt, "image_urls": urls, "image_size": {"width": size[0], "height": size[1]},
+            "num_inference_steps": 4, "output_format": "png", "sync_mode": True, "num_images": 1}
+    r = requests.post(FAL_URL, headers={"Authorization": f"Key {FAL_KEY}", "Content-Type": "application/json"},
+                      json=body, timeout=180)
+    # On compte la dépense dès l'appel (un appel raté peut être facturé) : estimation prudente.
+    st["spent"] = round(st["spent"] + cost, 5)
+    st["days"][today] = round(day_spent + cost, 5)
+    st["images"] += 1
+    low = r.text[:500].lower() if r.status_code >= 400 else ""  # une image base64 peut contenir ces lettres
+    if r.status_code in (401, 402, 403) or "balance" in low or "credit" in low:
+        st["spent"] = round(st["spent"] - cost, 5)
+        st["days"][today] = round(day_spent, 5)
+        st["images"] -= 1
+        st["blocked"] = today
+        save_fal(st)
+        raise FalUnavailable(f"fal.ai refuse ({r.status_code}) : {r.text[:200]}")
+    save_fal(st)
+    if r.status_code >= 400:
+        raise RuntimeError(f"fal HTTP {r.status_code} : {r.text[:250]}")
+    url = ((r.json().get("images") or [{}])[0]).get("url", "")
+    if url.startswith("data:"):
+        raw = base64.b64decode(url.split(",", 1)[1])
+    elif url:
+        raw = requests.get(url, timeout=60).content
+    else:
+        raise RuntimeError(f"fal : réponse sans image {r.text[:200]}")
+    return Image.open(io.BytesIO(raw)).convert("RGB")
+
+
+CF_BLOCKED = None  # raison du blocage Cloudflare pour ce passage (budget gratuit atteint ou refus)
+
+
+def draw(fmt: dict, day: date, prompt: str, size, refs: list[Path], kind: str) -> tuple[Image.Image, str]:
+    """Cloudflare gratuit d'abord ; fal.ai en renfort pour les éditions proches. Renvoie (image, fournisseur)."""
+    global CF_BLOCKED
+    if not CF_BLOCKED:
+        try:
+            check_budget(fmt, kind)   # BudgetReserved remonte : le stock attend sans payer
+            return generate(prompt, size, refs, kind), "cloudflare"
+        except QuotaExhausted as e:
+            CF_BLOCKED = str(e)
+            print(f"  Cloudflare arrêté pour aujourd'hui : {e}")
+    if not fal_eligible(day):
+        raise QuotaExhausted(f"{CF_BLOCKED} ; {day} trop lointaine pour le renfort payant")
+    try:
+        return fal_generate(prompt, size, refs), "fal"
+    except FalUnavailable as e:
+        raise QuotaExhausted(f"{CF_BLOCKED} ; renfort fal.ai indisponible : {e}")
 
 
 def paper(im: Image.Image, strength: float) -> Image.Image:
@@ -283,6 +399,10 @@ def uses(fmt: dict) -> dict:
 def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
     done = 0
     max_att = STYLE["max_attempts"]
+    try:
+        day = date.fromisoformat(d.name)
+    except ValueError:
+        day = date.max  # démo : jamais de renfort payant
 
     def persist():
         f.write_text(json.dumps(ed, ensure_ascii=False, indent=2))
@@ -307,11 +427,10 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
             prompt = (f"Character reference portrait: one single character, head and upper body, facing the viewer, "
                       f"plain white background, of {c.get('look', c['id'])}. {head}{STYLE['style']} "
                       f"One image only, no panel borders. Wordless picture: no text, no lettering.")
-            check_budget(fmt, "cast")
             try:
-                im = generate(prompt, STYLE["cast_size"], [STYLE_REF], "cast")
+                im, via = draw(fmt, day, prompt, STYLE["cast_size"], [STYLE_REF], "cast")
                 im = ink(im)
-            except QuotaExhausted:
+            except (QuotaExhausted, BudgetReserved):
                 raise
             except Exception as e:
                 print(f"  ! fiche {c['id']} : {e}")
@@ -323,9 +442,11 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
             dest.parent.mkdir(parents=True, exist_ok=True)
             im.save(dest, "PNG")
             c["status"] = "done"
+            if via != "cloudflare":
+                c["via"] = via
             done += 1
             persist()
-            print(f"  fiche {fmt['id']}/{c['id']}")
+            print(f"  fiche {fmt['id']}/{c['id']} ({via})")
 
         # 2. Couverture puis 3. cases
         jobs = []
@@ -341,11 +462,10 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
                 continue
             cast = img.get("cast", [])
             prompt, refs = build(img["prompt"], [(looks[c], sheets.get(c)) for c in cast if c in looks])
-            check_budget(fmt, kind)
             img["attempts"] = img.get("attempts", 0) + 1
             try:
-                im = generate(prompt, size, refs, kind)
-            except QuotaExhausted:
+                im, via = draw(fmt, day, prompt, size, refs, kind)
+            except (QuotaExhausted, BudgetReserved):
                 img["attempts"] -= 1
                 persist()
                 raise
@@ -357,11 +477,13 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
                 continue
             save_webp(im, d / img["file"])
             img["status"] = "done"
+            if via != "cloudflare":
+                img["via"] = via
             img.pop("qa", None)
             img.pop("error", None)
             done += 1
             persist()
-            print(f"  image {img['file']}")
+            print(f"  image {img['file']} ({via})")
             time.sleep(0.5)
     return done
 
