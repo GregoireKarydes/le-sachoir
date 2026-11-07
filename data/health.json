@@ -1,22 +1,13 @@
 {
- "updated_at": "2026-11-07T21:14:16.180205+01:00",
- "today": "2026-11-07",
+ "updated_at": "2026-11-08T00:39:46.935332+01:00",
+ "today": "2026-11-08",
  "problems": [],
  "days": [
-  {
-   "date": "2026-11-07",
-   "status": "published",
-   "formats": {
-    "cultureg": "1 image(s) à faire",
-    "insolite": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-08",
    "status": "draft",
    "formats": {
-    "dossier": "31 image(s) à faire",
+    "dossier": "prêt",
     "actu": "prêt",
     "cultureg": "prêt",
     "insolite": "prêt",
@@ -29,7 +20,7 @@
    "formats": {
     "dossier": "prêt",
     "cultureg": "prêt",
-    "insolite": "3 image(s) à faire",
+    "insolite": "prêt",
     "quiz": "prêt"
    }
   },
@@ -80,13 +71,11 @@
    }
   }
  ],
- "today_published": true,
- "today_stories": [
-  "insolite"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-07",
- "days_ahead_drawn": 0,
- "days_ahead_written": 7,
+ "days_ahead_drawn": 1,
+ "days_ahead_written": 6,
  "quota": {
   "day": "2026-11-07",
   "count": 80,
@@ -95,9 +84,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 0.39343,
-  "images": 52,
-  "today_usd": 0.39343,
+  "spent_usd": 0.71304,
+  "images": 90,
+  "today_usd": 0.31961,
   "blocked": null
  }
 }
