@@ -863,19 +863,21 @@
           "id": "skipper",
           "look": "a young solo sailor, short very messy sandy hair blown sideways by the wind, bright red sailing jacket as the only colour, black waterproof trousers, black boots, tiny sunburned nose",
           "file": "cast/actu-skipper.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "hote",
           "look": "a cheerful round host diplomat, bald head, thick black moustache, black suit, white shirt, bright red scarf as the only colour, always opening his arms wide",
           "file": "cast/actu-hote.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "nego",
           "look": "a brisk tall negotiator woman, short grey bob haircut, black trouser suit, white shirt, yellow folder as the only colour, holding a microphone",
           "file": "cast/actu-nego.png",
-          "status": "pending"
+          "status": "skipped"
         }
       ],
       "cover": {
@@ -886,8 +888,9 @@
           "hote"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -912,8 +915,9 @@
               "ministre"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -938,8 +942,9 @@
               "ministre"
             ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -964,8 +969,9 @@
               "skipper"
             ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -990,8 +996,9 @@
               "skipper"
             ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -1016,8 +1023,9 @@
               "lambda"
             ],
             "file": "images/actu-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -1042,8 +1050,9 @@
               "nego"
             ],
             "file": "images/actu-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
