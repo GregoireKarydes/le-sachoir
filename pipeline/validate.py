@@ -21,7 +21,7 @@ QUIZ_KINDS = {"", "culture", "geo", "frise", "dico", "plusmoins", "swipe", "chif
 IMAGE_STATUS = {None, "pending", "retry", "done", "failed"}
 CAST_STATUS = {None, "pending", "done", "skipped", "failed"}
 THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
-CAPTION_MAX, BUBBLE_MAX = 15, 12  # mots, d'après prompts/CHARTE.md
+CAPTION_MAX, BUBBLE_MAX = 20, 15  # mots, d'après prompts/CHARTE.md (7 novembre 2026 : plus de place pour expliquer)
 MAX_CASES = {"dossier": 30}  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 

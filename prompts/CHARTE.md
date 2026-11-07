@@ -1,10 +1,20 @@
 # Charte de l'humour du Sachoir
 
-Ce fichier est la référence à jour (révisée le 6 novembre 2026 d'après le questionnaire de Greg).
+Ce fichier est la référence à jour (révisée le 6 novembre 2026 d'après le questionnaire de Greg, puis le 7 novembre : **la clarté passe avant l'humour**).
 L'ancienne charte publiée (https://claude.ai/artifact/X1ntQuLVCbehitA1mLZP5d) n'est plus à jour : en cas de différence, ce fichier gagne.
 
 ## Promesse
 On apprend en riant. Chaque BD explique et vulgarise un sujet exact, avec une vraie touche d'humour, et laisse au lecteur au moins un fait qu'il répétera le soir même.
+**On comprend d'abord, on rit ensuite.** Retour de Greg (7 novembre) : des BD drôles mais dures à lire, trop de gags et pas assez d'explications, on s'y perd. Une BD qu'on ne comprend pas est ratée, même si elle est drôle.
+
+## Clarté d'abord (Culture G, Insolite, Grand Dossier)
+- **Un fil clair.** La case 1 pose la question que promet le titre (« Pourquoi les balcons sont-ils au 2e et au 5e ? »). Chaque case suivante fait avancer la réponse d'un cran, avec un lien logique visible (« parce que », « donc », « du coup »). L'avant-dernière case (ou la dernière) résume la réponse en une phrase simple.
+- **Le pourquoi avec chaque fait.** Pas de fait sec : on dit la cause ou la conséquence. « Pas d'ascenseur » ne suffit pas : « Pas d'ascenseur : monter six étages à pied, c'est pénible, donc les étages hauts coûtent moins cher. »
+- **Zéro jargon non expliqué.** Tout mot technique ou ancien est expliqué la première fois, en quelques mots (« un balcon filant, qui court sur toute la façade »). Un chiffre a toujours une comparaison ou une unité parlante.
+- **Le duo qui explique** (Culture G surtout) : un personnage curieux pose les questions naïves que se pose le lecteur, un autre répond simplement. Le lecteur s'identifie au curieux.
+- **Les bulles peuvent expliquer.** Le récitatif donne le fait, la bulle peut donner le pourquoi ou un exemple concret ; les gags viennent en plus, pas à la place.
+- **Dosage : un vrai gag toutes les 2 ou 3 cases**, pas à chaque case. Les autres cases sont des cases d'explication, vivantes (expressions, petites réactions) mais sans chute forcée.
+- **Une idée par case.** Si une case contient deux faits, la couper ou en garder un.
 Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The Office**, **Kaamelott**, et pour l'image et le jeu d'acteur **le strip minimaliste façon Sarah's Scribbles**.
 
 ## Le casting : adapté à l'histoire
@@ -16,7 +26,7 @@ Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The O
 - Personnes vivantes : voir « Garde-fous ».
 - Fiche casting obligatoire : `id`, `look` (description visuelle précise en anglais, constante), utilisée comme référence pour toutes les images de l'histoire.
 
-## Les leviers de l'humour (au moins deux par BD)
+## Les leviers de l'humour (un ou deux par BD, toujours au service de l'explication)
 1. **Anachronisme** : le monde moderne dans le passé (SMS, LinkedIn, jargon de bureau). César envoie « Veni, vidi, vici » par SMS : « le premier tweet de l'histoire ».
 2. **Absurde** : situations improbables traitées très sérieusement.
 3. **Second degré / ironie** : un personnage commente avec détachement. « Jolie histoire. Aucune preuve. »
@@ -44,8 +54,8 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 | Format | Durée visée | Cases (repère) | Humour |
 |---|---|---|---|
 | Actu du jour (`actu`) | 1 à 2 min | 1 à 2 cases par sujet, 3 à 5 sujets | L'actu racontée de façon détournée et drôle, sans case « réaction » obligatoire |
-| Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé, avec une touche d'humour |
-| Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, gag à chaque étape |
+| Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par un duo curieux / qui sait ; un gag toutes les 2 ou 3 cases |
+| Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, raconté clairement ; un gag toutes les 2 ou 3 cases |
 | Grand Dossier (`dossier`) | environ 4 min | 30 au plus (quota d'images) | Humour dosé : la compréhension d'abord |
 | Jeu du jour (`quiz`), Quiz culture G | 1 à 2 min | 5 questions, sans image | Mauvaises réponses drôles mais plausibles, explication courte et drôle |
 | Jeu du jour (`quiz`), Quiz géo | 1 min | 3 questions : où c'est (carte), capitales, joker | Pièges crédibles, explication courte et drôle |
@@ -55,7 +65,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - Le récitatif (`caption`) porte les faits. Toute énormité qui ressemble à un fait est démentie dans la même case ou la suivante. Les anachronismes sont des blagues évidentes.
 - Grand Dossier : des **cases « pause »** sont permises quand c'est utile (chiffre clé, frise, carte du monde) ; le contenu est dans le récitatif, l'image reste un dessin sans texte (ex. un personnage qui déroule une longue frise vierge).
 - Chaque chiffre et chaque date ont une source dans `sources` (affichées en fin d'histoire dans l'appli).
-- Récitatif : 15 mots max. Bulle : 12 mots max. 2 bulles par case (3 si la dernière fait 3 mots ou moins). 3 personnages max par case. Une bulle ne répète jamais le récitatif.
+- Récitatif : 20 mots max (phrases complètes, avec le « parce que »). Bulle : 15 mots max. 2 bulles par case (3 si la dernière fait 3 mots ou moins). 3 personnages max par case. Une bulle ne répète pas le récitatif mais peut le compléter (le pourquoi, un exemple).
 
 ## Garde-fous
 - Humour bienveillant : on se moque des légendes, des situations et de ce que font les personnalités publiques, jamais des gens pour ce qu'ils sont.
@@ -68,7 +78,10 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 
 ## Checklist avant de pousser une BD
 - [ ] Personnages humains (ou animaux réels), chacun avec une fiche casting ; aucun objet, cellule ou molécule qui parle.
-- [ ] Au moins deux leviers, et chaque gag sert un fait.
+- [ ] Test du néophyte : quelqu'un qui ne connaît rien au sujet peut répondre à la question du titre à la fin.
+- [ ] Case 1 = la question ; un lien logique d'une case à l'autre ; résumé à la fin.
+- [ ] Chaque fait a son pourquoi ; aucun mot technique sans explication.
+- [ ] Un gag toutes les 2 ou 3 cases, chaque gag sert un fait.
 - [ ] Titre drôle.
 - [ ] Durée de lecture dans la cible du format.
 - [ ] Faits dans les récitatifs, aucune énormité sans démenti, sources renseignées.
