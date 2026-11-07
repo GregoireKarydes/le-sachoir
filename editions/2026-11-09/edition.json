@@ -1,1155 +1,1609 @@
 {
- "date": "2026-11-09",
- "status": "draft",
- "formats": [
-  {
-   "id": "dossier",
-   "label": "Le Grand Dossier",
-   "title": "1789-1799 : dix ans, un roi en moins, un général en plus",
-   "tagline": "La Révolution française en entier, de la salle de jeu de paume au coup d’État de Saint-Cloud",
-   "minutes": 5,
-   "theme": "Histoire de France",
-   "cast": [
+  "date": "2026-11-09",
+  "status": "draft",
+  "formats": [
     {
-     "id": "louis",
-     "look": "Louis, a chubby 1780s French king, tall powdered white wig, round soft face with a double chin, black velvet coat with white lace jabot, a small gold crown slightly askew as the only colour",
-     "file": "cast/dossier-louis.png",
-     "status": "pending"
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "1789-1799 : dix ans, un roi en moins, un général en plus",
+      "tagline": "La Révolution française en entier, de la salle de jeu de paume au coup d’État de Saint-Cloud",
+      "minutes": 5,
+      "theme": "Histoire de France",
+      "cast": [
+        {
+          "id": "louis",
+          "look": "Louis, a chubby 1780s French king, tall powdered white wig, round soft face with a double chin, black velvet coat with white lace jabot, a small gold crown slightly askew as the only colour",
+          "file": "cast/dossier-louis.png",
+          "status": "done"
+        },
+        {
+          "id": "jeanne",
+          "look": "Jeanne, a sharp-tongued Parisian laundress in her thirties, messy dark bun with loose strands, thick eyebrows, plain black dress with rolled sleeves, white apron, a small red cockade pinned on her chest as the only colour",
+          "file": "cast/dossier-jeanne.png",
+          "status": "done"
+        },
+        {
+          "id": "robes",
+          "look": "Maximilien, a stiff prim 1790s politician, small neat powdered wig, thin pinched face, round tinted spectacles, black tailcoat, tall white cravat, always holding a long sheet of paper",
+          "file": "cast/dossier-robes.png",
+          "status": "done"
+        },
+        {
+          "id": "bonap",
+          "look": "Napoleon, a thin young 1790s general, long straight dark hair to the shoulders, hollow cheeks, intense eyes, black bicorne hat, black uniform coat, a red sash as the only colour",
+          "file": "cast/dossier-bonap.png",
+          "status": "done"
+        }
+      ],
+      "cover": {
+        "prompt": "an empty grey palace hall with a single golden throne. Louis (on the left) clinging to the throne, worried, sweat drops; Jeanne (in the middle) pulling the throne away with both hands, determined; Napoleon (on the right) arms crossed, smirking, waiting for his turn. wide shot",
+        "cast": [
+          "louis",
+          "jeanne",
+          "bonap"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · La faillite",
+          "caption": "1788. L’État est si endetté que plus personne ne veut lui prêter.",
+          "bubbles": [
+            {
+              "text": "On peut rembourser en parties de chasse ?",
+              "side": "l"
+            },
+            {
+              "text": "Les banquiers préfèrent l’or, Majesté.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare palace room with one small desk covered in a mountain of unpaid bills. Louis (on the left) slumped on the desk, hiding his face behind a pile of papers, shoulders dropped; Jeanne (on the right) standing with arms crossed, one eyebrow raised, unimpressed. medium shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (dbda49f8-241a-420d-a2dc-db251bd96636)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "",
+          "caption": "Louis XVI convoque les états généraux, pas réunis depuis 1614.",
+          "bubbles": [
+            {
+              "text": "Quelqu’un se souvient de comment ça marche ?",
+              "side": "l"
+            },
+            {
+              "text": "La dernière fois, c’était il y a 175 ans.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a dusty archive shelf. Louis (on the left) blowing dust off a huge old book, coughing in a cloud of grey dust; Jeanne (on the right) holding a tiny candle, deadpan face. medium shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "5 mai 1789",
+          "caption": "À Versailles : 291 députés du clergé, 285 de la noblesse, 578 du tiers état.",
+          "bubbles": [
+            {
+              "text": "On est deux fois plus nombreux. On gagne ?",
+              "side": "r"
+            },
+            {
+              "text": "Si on vote par ordre, non. Un ordre, une voix.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple stage split in three blocks of tiny identical deputies: a small block in black robes, a small block with feathered hats, and a big block twice as large in plain grey coats. Louis (on the left) pointing at the small blocks with a smug smile; Jeanne (on the right) standing in front of the big block, hopeful. wide shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "",
+          "caption": "Le roi laisse traîner. Sans le savoir, il vient de lancer la Révolution française.",
+          "bubbles": [
+            {
+              "text": "On attend. Qu’est-ce qui pourrait arriver ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Louis (in the foreground) sitting on his throne, eating a cake with a relaxed smile, totally unaware; behind him through a big window, tiny grey silhouettes of a crowd gathering with raised fists. Jeanne (on the right edge) staring straight at the reader, frozen, one tiny sweat drop. medium shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · 1789, l’année où tout bascule",
+          "caption": "20 juin 1789 : réunis dans une salle de jeu de paume, les députés du tiers prêtent serment.",
+          "bubbles": [
+            {
+              "text": "Une révolution dans une salle de sport ?",
+              "side": "l"
+            },
+            {
+              "text": "Ils jurent de ne pas partir sans constitution.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare indoor tennis hall with a net in the background and many tiny deputies raising their right arms together. Louis (on the left) peeking through a door, puzzled, holding a tennis racket; Jeanne (on the right) raising her arm proudly with the crowd. wide shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "14 juillet 1789",
+          "caption": "Les Parisiens prennent la Bastille, forteresse où ils cherchent de la poudre.",
+          "bubbles": [
+            {
+              "text": "Libérons les prisonniers !",
+              "side": "r"
+            },
+            {
+              "text": "Ils sont sept.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the open gate of a grey stone fortress with a big crowd of tiny silhouettes pouring in. Jeanne (on the right) running in with a raised fist, heroic; next to the gate, seven tiny bewildered prisoners in grey rags blinking at the light. wide shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Vraie note",
+          "caption": "Le soir, dans son carnet de chasse, Louis XVI écrit : « Rien ».",
+          "bubbles": [
+            {
+              "text": "Pas un seul cerf. Journée nulle.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small study with a single candle. Louis (in the foreground) writing in a tiny notebook with a quill, sighing, bored; through the window behind him, small grey smoke clouds rise over a distant city. medium shot",
+            "cast": [
+              "louis"
+            ],
+            "file": "images/dossier-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "4 août 1789",
+          "caption": "Face aux révoltes paysannes, l’Assemblée abolit les privilèges : dîme, corvées, droits féodaux.",
+          "bubbles": [
+            {
+              "text": "Les nobles renoncent à leurs privilèges ? Eux-mêmes ?",
+              "side": "l"
+            },
+            {
+              "text": "La peur des fourches, ça aide à partager.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a night scene in a bare assembly room. Louis (on the left) jaw dropped, crown sliding off his wig; Jeanne (on the right) leaning on a pitchfork, smug half smile; in the background tiny nobles throwing their feathered hats into a pile. medium shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "26 août 1789",
+          "caption": "Déclaration des droits : « Les hommes naissent et demeurent libres et égaux en droits. »",
+          "bubbles": [
+            {
+              "text": "Égaux. Même avec un roi ?",
+              "side": "r"
+            },
+            {
+              "text": "Je sens que la question va revenir.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Jeanne (on the right) holding up a big blank parchment scroll with both hands like a trophy, beaming; Louis (on the left) reading over her shoulder, nervous, pulling at his collar, tiny sweat drops. plain background. medium shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 10,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Le roi qui voulait partir",
+          "caption": "Nuit du 20 au 21 juin 1791 : la famille royale fuit Paris en berline.",
+          "bubbles": [
+            {
+              "text": "Discrétion totale. Personne ne nous verra.",
+              "side": "l"
+            },
+            {
+              "text": "Dans une berline énorme et surchargée.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a dark empty road at night. a huge overloaded black carriage piled high with trunks and hat boxes. Louis (on the left) leaning out of the carriage window with a fake moustache, putting a finger on his lips; Jeanne (on the right) by the roadside with a lantern, staring in disbelief. wide shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-10.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 11,
+          "kind": "",
+          "tag": "",
+          "caption": "Retards en série. À Sainte-Menehould, Drouet, fils du maître de poste, les repère.",
+          "bubbles": [
+            {
+              "text": "Ce gros monsieur ressemble beaucoup au roi.",
+              "side": "r"
+            },
+            {
+              "text": "Pure coïncidence. Je suis… quelqu’un d’autre.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small village relay station. Louis (on the left) inside the carriage window, smiling far too widely, sweating heavily; Jeanne (on the right) holding up a coin next to his face, comparing the profile, eyes narrowed. close-up",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-11.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "Varennes",
+          "caption": "Drouet prend un raccourci et donne l’alerte : le roi est arrêté à Varennes.",
+          "bubbles": [
+            {
+              "text": "On était presque arrivés…",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a narrow village street blocked by an overturned cart. the big black carriage stopped in front of it. Louis (in the foreground) melting down against the carriage door, arms dangling, defeated; tiny villagers with lanterns surrounding the carriage. medium shot",
+            "cast": [
+              "louis"
+            ],
+            "file": "images/dossier-12.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 13,
+          "kind": "react",
+          "tag": "25 juin 1791",
+          "caption": "Retour à Paris. La foule regarde passer le roi en silence. La confiance est brisée.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a long silent street lined with a crowd of tiny grey figures, all with arms crossed, backs straight, staring. the black carriage rolls slowly in the middle. Jeanne (on the right, in the foreground) arms crossed, stone-faced, not saying a word. wide shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 14,
+          "kind": "",
+          "tag": "Septembre 1791",
+          "caption": "Première Constitution : la France devient une monarchie constitutionnelle. Le roi garde son trône.",
+          "bubbles": [
+            {
+              "text": "Donc je reste roi ?",
+              "side": "l"
+            },
+            {
+              "text": "En période d’essai.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room with a throne. Louis (on the left) sitting very straight on the throne, relieved, hand on heart; Jeanne (on the right) holding a clipboard and a quill, checking boxes, strict like an inspector. medium shot",
+            "cast": [
+              "louis",
+              "jeanne"
+            ],
+            "file": "images/dossier-14.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 15,
+          "kind": "chap",
+          "tag": "Chapitre 4 · La République",
+          "caption": "Avril 1792 : la France déclare la guerre à l’Autriche, patrie de la reine.",
+          "bubbles": [
+            {
+              "text": "La guerre contre ma belle-famille. Les repas vont être tendus.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a long empty dinner table. Louis (on the left) sitting alone at one end, hunched, holding a fork, very awkward, tiny blush marks; a map of Europe pinned on the wall behind him with a big arrow drawn on it. medium shot",
+            "cast": [
+              "louis"
+            ],
+            "file": "images/dossier-15.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 16,
+          "kind": "fact",
+          "tag": "10 août 1792",
+          "caption": "Les sans-culottes prennent le palais des Tuileries. Environ 600 gardes suisses sont tués.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a sober scene: the grey facade of a large palace at dusk with smoke rising from its windows, an abandoned red-coated soldier's hat on the empty steps in the foreground. no characters. quiet, still, wide shot",
+            "cast": [],
+            "file": "images/dossier-16.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 17,
+          "kind": "",
+          "tag": "",
+          "caption": "Roi suspendu, enfermé au Temple. On élit une Convention au suffrage universel masculin.",
+          "bubbles": [
+            {
+              "text": "Tous les hommes votent ?",
+              "side": "r"
+            },
+            {
+              "text": "Les femmes, ce sera pour plus tard. Beaucoup plus tard.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple ballot box on a table. Jeanne (on the right) holding a voting paper, about to drop it in, then noticing tiny men in line pushing her aside, her face falling into deep annoyance. medium shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-17.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 18,
+          "kind": "fact",
+          "tag": "22 septembre 1792",
+          "caption": "La Convention abolit la monarchie : c’est la Première République. On repart à l’an I.",
+          "bubbles": [
+            {
+              "text": "On remet les compteurs à zéro.",
+              "side": "r"
+            },
+            {
+              "text": "Même mon âge ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Jeanne (in the middle) standing on a chair, flipping a big wall calendar to a fresh blank page with a triumphant grin, her red cockade shining; plain background. medium shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-18.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 19,
+          "kind": "",
+          "tag": "Octobre 1793",
+          "caption": "Nouveau calendrier : douze mois de 30 jours, découpés en décades de dix jours.",
+          "bubbles": [
+            {
+              "text": "La semaine fait dix jours. C’est plus rationnel.",
+              "side": "l"
+            },
+            {
+              "text": "Et le week-end, il est rationnel aussi ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare office. Maximilien (on the left) proudly unrolling his long sheet of paper showing a grid of ten empty columns; Jeanne (on the right) slumped against the wall, exhausted just looking at it, dark circles under her eyes. medium shot",
+            "cast": [
+              "robes",
+              "jeanne"
+            ],
+            "file": "images/dossier-19.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 20,
+          "kind": "fact",
+          "tag": "Vrai",
+          "caption": "Chaque jour porte un nom de plante, d’animal ou d’outil. Le 13 brumaire : « Topinambour ».",
+          "bubbles": [
+            {
+              "text": "Joyeux Topinambour, Maximilien.",
+              "side": "r"
+            },
+            {
+              "text": "Merci. Je préfère Dindon, le 15.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Jeanne (on the right) handing Maximilien (on the left) a single knobbly root vegetable with a fake smile like a birthday gift; Maximilien holding it at arm's length, deeply serious, pinched lips. plain background. medium shot",
+            "cast": [
+              "robes",
+              "jeanne"
+            ],
+            "file": "images/dossier-20.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 21,
+          "kind": "",
+          "tag": "21 janvier 1793",
+          "caption": "Jugé par la Convention, Louis XVI est guillotiné à Paris.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a sober scene: an empty grey square in winter, a small golden crown lying alone on the cobblestones in the foreground. Jeanne (far in the background) standing still, head lowered. quiet, still, wide shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-21.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 22,
+          "kind": "chap",
+          "tag": "Chapitre 5 · La Terreur",
+          "caption": "1793 : guerre aux frontières, révoltes à l’intérieur. Le Comité de salut public prend les commandes.",
+          "bubbles": [
+            {
+              "text": "La République est en danger. Je m’en occupe.",
+              "side": "l"
+            },
+            {
+              "text": "C’est ce qui m’inquiète.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare committee room with one long table. Maximilien (on the left) standing stiff behind the table, chin up, holding his long sheet of paper; Jeanne (on the right) taking a small step back, eyes wide, clutching her apron. medium shot",
+            "cast": [
+              "robes",
+              "jeanne"
+            ],
+            "file": "images/dossier-22.webp",
+            "status": "pending",
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (349a3c07-50d3-4ea5-be9b-807b58e2fe35)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          }
+        },
+        {
+          "n": 23,
+          "kind": "",
+          "tag": "",
+          "caption": "Loi des suspects, tribunaux révolutionnaires : on arrête sur simple soupçon.",
+          "bubbles": [
+            {
+              "text": "Et on devient suspect comment ?",
+              "side": "r"
+            },
+            {
+              "text": "En posant ce genre de question.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Maximilien (on the left) slowly lowering his spectacles to stare at Jeanne, quill already raised above his long list; Jeanne (on the right) freezing mid-sentence, hand over her mouth, tiny sweat drop. close-up",
+            "cast": [
+              "robes",
+              "jeanne"
+            ],
+            "file": "images/dossier-23.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 24,
+          "kind": "fact",
+          "tag": "Le chiffre",
+          "caption": "Environ 17 000 exécutions officielles, et peut-être 10 000 morts en prison ou sans procès.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a sober pause panel: an endless blank scroll of paper unrolling from a desk across the whole floor and out of the frame. no characters. plain grey background, quiet, wide shot",
+            "cast": [],
+            "file": "images/dossier-24.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 25,
+          "kind": "",
+          "tag": "9 thermidor an II",
+          "caption": "27 juillet 1794 : la Convention se retourne contre Robespierre et le fait arrêter.",
+          "bubbles": [
+            {
+              "text": "Moi ? Sur ma propre liste ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Maximilien (in the middle) reading his own long sheet of paper, his face draining white, spectacles sliding down his nose, the paper trembling in his hands; two tiny grey hands entering the frame to grab his shoulders. close-up",
+            "cast": [
+              "robes"
+            ],
+            "file": "images/dossier-25.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 26,
+          "kind": "fact",
+          "tag": "Vrai",
+          "caption": "Il est exécuté le lendemain. Dans le calendrier, le 9 thermidor s’appelait « Absinthe ».",
+          "bubbles": [
+            {
+              "text": "Un nom amer pour une journée amère.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Jeanne (on the right) sitting on a bench, exhausted but relieved, letting out a long sigh, shoulders finally relaxing; a small green plant in a pot next to her. plain background. medium shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-26.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 27,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Le Directoire, puis le général",
+          "caption": "1795 : le pouvoir passe au Directoire, cinq directeurs à la fois.",
+          "bubbles": [
+            {
+              "text": "Cinq chefs. Donc aucun.",
+              "side": "r"
+            },
+            {
+              "text": "J’en connais un sixième qui attend.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "five tiny identical men in feathered hats all pulling a small steering wheel in different directions. Jeanne (on the right) facepalming; Napoleon (on the left) leaning casually against the wall, arms crossed, watching with a little smile. wide shot",
+            "cast": [
+              "bonap",
+              "jeanne"
+            ],
+            "file": "images/dossier-27.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 28,
+          "kind": "",
+          "tag": "",
+          "caption": "Un jeune général, auréolé de victoires, se fait un nom : Napoléon Bonaparte.",
+          "bubbles": [
+            {
+              "text": "J’ai gagné une bataille. Puis une autre. Puis…",
+              "side": "l"
+            },
+            {
+              "text": "On a compris. Vous faites un CV ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Napoleon (on the left) proudly unrolling a very long list from his sleeve that falls to the floor and keeps going; Jeanne (on the right) holding her chin, bored, eyes half closed. plain background. medium shot",
+            "cast": [
+              "bonap",
+              "jeanne"
+            ],
+            "file": "images/dossier-28.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 29,
+          "kind": "fact",
+          "tag": "18 brumaire an VIII",
+          "caption": "9 novembre 1799 : prétextant un complot, on transfère les deux assemblées à Saint-Cloud.",
+          "bubbles": [
+            {
+              "text": "Pourquoi Saint-Cloud ?",
+              "side": "r"
+            },
+            {
+              "text": "Moins de Parisiens. Plus de soldats.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple country road leading to a small grey castle in the distance, with rows of tiny soldiers lining the road. Napoleon (on the left) pointing to the castle with a confident grin; Jeanne (on the right) squinting at the soldiers, suspicious. wide shot",
+            "cast": [
+              "bonap",
+              "jeanne"
+            ],
+            "file": "images/dossier-29.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 30,
+          "kind": "",
+          "tag": "19 brumaire",
+          "caption": "Devant le Conseil des Cinq-Cents, Bonaparte se fait huer : « À bas le dictateur ! »",
+          "bubbles": [
+            {
+              "text": "Je… euh… la Patrie… les… voilà.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a long orangery hall full of tiny angry deputies shaking their fists. Napoleon (in the foreground) standing at a lectern, shrinking, tiny sweat drops flying, hat sliding over his eyes, totally lost. medium shot",
+            "cast": [
+              "bonap"
+            ],
+            "file": "images/dossier-30.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 31,
+          "kind": "",
+          "tag": "",
+          "caption": "Son frère Lucien appelle la troupe. Les députés fuient par les fenêtres.",
+          "bubbles": [
+            {
+              "text": "Ils sortent par les fenêtres ?",
+              "side": "r"
+            },
+            {
+              "text": "Évacuation express. Très moderne.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a tall window in a bare hall with tiny deputies in red togas jumping out one after another. Napoleon (on the left) dusting off his coat, recovered, satisfied; Jeanne (on the right) watching the window with her jaw dropped. wide shot",
+            "cast": [
+              "bonap",
+              "jeanne"
+            ],
+            "file": "images/dossier-31.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 32,
+          "kind": "fact",
+          "tag": "La nuit suivante",
+          "caption": "Trois consuls sont nommés. Bonaparte, 30 ans, devient bientôt Premier Consul, et seul vrai chef.",
+          "bubbles": [
+            {
+              "text": "Trois consuls, c’est très équilibré.",
+              "side": "l"
+            },
+            {
+              "text": "Dont un qui décide.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "three chairs in a row: a huge one in the middle and two tiny ones on the sides. Napoleon (in the middle) sitting on the huge chair, legs crossed, very satisfied; Jeanne (on the right) pointing at the tiny chairs, eyebrow raised. medium shot",
+            "cast": [
+              "bonap",
+              "jeanne"
+            ],
+            "file": "images/dossier-32.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 33,
+          "kind": "conf",
+          "tag": "Vrai",
+          "caption": "Dans le calendrier révolutionnaire, le 18 brumaire s’appelait « Dentelaire », une petite fleur.",
+          "bubbles": [
+            {
+              "text": "Le coup d’État de la Dentelaire. Ça fait moins peur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Jeanne (in the middle) in a confession-style close-up, looking straight at the reader, deadpan, holding a tiny blue flower between two fingers. plain background",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-33.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 34,
+          "kind": "chap",
+          "tag": "Chapitre 7 · Le bilan",
+          "caption": "Privilèges abolis, droits proclamés, roi exécuté, République fondée, Terreur, puis un général.",
+          "bubbles": [
+            {
+              "text": "Dix ans. J’ai l’impression d’en avoir pris quarante.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a pause panel: Jeanne (on the right) unrolling a very long blank timeline scroll across the floor, leaning on it exhausted, hair messier than ever. plain background. wide shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-34.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 35,
+          "kind": "react",
+          "tag": "Il y a 227 ans jour pour jour",
+          "caption": "Le 18 brumaire met fin à la Révolution et ouvre le Consulat.",
+          "bubbles": [
+            {
+              "text": "Je vais tout stabiliser. Qu’est-ce qui pourrait arriver ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Napoleon (on the left) sitting on a throne exactly like the first king's, relaxed, smiling, eating a cake; Jeanne (on the right) turning slowly to stare straight at the reader, frozen, one tiny sweat drop. medium shot",
+            "cast": [
+              "bonap",
+              "jeanne"
+            ],
+            "file": "images/dossier-35.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "La Révolution française s’étend de 1789 au coup d’État du 18 brumaire an VIII (9 novembre 1799), qui porte Bonaparte au pouvoir.",
+        "source": "Hérodote.net, Schoolmouv"
+      },
+      "sources": [
+        {
+          "title": "Hérodote — 5 mai 1789, ouverture des états généraux",
+          "url": "https://www.herodote.net/5_mai_1789-evenement-17890505.php"
+        },
+        {
+          "title": "Schoolmouv — La Révolution française, de 1789 à 1799",
+          "url": "https://www.schoolmouv.fr/cours/les-temps-forts-de-la-revolution-de-1789-a-1799/"
+        },
+        {
+          "title": "Paris ZigZag — Petite histoire de la prison de la Bastille",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/histoire-prison-bastille/"
+        },
+        {
+          "title": "Hérodote — 14 juillet 1789",
+          "url": "https://www.herodote.net/14_juillet_1789-evenement-17890714.php"
+        },
+        {
+          "title": "Tea at Trianon — The royal hunt and Bastille Day (« Rien »)",
+          "url": "https://teaattrianon.blogspot.com/2014/07/the-royal-hunt-and-bastille-day.html"
+        },
+        {
+          "title": "Vikidia — Abolition des privilèges",
+          "url": "https://fr.vikidia.org/wiki/Abolition_des_privilèges"
+        },
+        {
+          "title": "Schoolmouv — Déclaration des droits de l’homme et du citoyen",
+          "url": "https://www.schoolmouv.fr/cours/declaration-des-droits-de-l-homme-et-du-citoyen-26-aout-1789/"
+        },
+        {
+          "title": "Hérodote — 21 juin 1791, la fuite à Varennes",
+          "url": "https://www.herodote.net/21_juin_1791-evenement-17910621.php"
+        },
+        {
+          "title": "Hérodote — 10 août 1792",
+          "url": "https://www.herodote.net/10_aout_1792-evenement-17920810.php"
+        },
+        {
+          "title": "Vikidia — Calendrier républicain",
+          "url": "https://fr.vikidia.org/wiki/Calendrier_r%C3%A9publicain"
+        },
+        {
+          "title": "Fondation Napoléon — Noms des jours du calendrier républicain",
+          "url": "https://www.napoleon.org/wp-content/uploads/2016/04/nomsjourscalendrierrepublicain.pdf"
+        },
+        {
+          "title": "Britannica — Reign of Terror",
+          "url": "https://www.britannica.com/event/Reign-of-Terror"
+        },
+        {
+          "title": "Hérodote — 9 novembre 1799, le 18 Brumaire",
+          "url": "https://www.herodote.net/9_novembre_1799-evenement-17991109.php"
+        }
+      ]
     },
     {
-     "id": "jeanne",
-     "look": "Jeanne, a sharp-tongued Parisian laundress in her thirties, messy dark bun with loose strands, thick eyebrows, plain black dress with rolled sleeves, white apron, a small red cockade pinned on her chest as the only colour",
-     "file": "cast/dossier-jeanne.png",
-     "status": "pending"
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "L’Écossais qui a inventé le billet (et la faillite qui va avec)",
+      "tagline": "Comment la France de 1720 a découvert le papier-monnaie, la bulle spéculative et le mot « millionnaire »",
+      "minutes": 2,
+      "theme": "Économie",
+      "cast": [
+        {
+          "id": "law",
+          "look": "John, a tall elegant Scottish gambler of the 1710s, long curly brown wig, sly confident smile, black frock coat, a red waistcoat as the only colour, playing cards peeking out of his pocket",
+          "file": "cast/cultureg-law.png",
+          "status": "pending"
+        },
+        {
+          "id": "regent",
+          "look": "Philippe, the Regent of France in the 1710s, plump middle-aged man, huge black curly wig, heavy sleepy eyelids, black coat with a big white lace jabot",
+          "file": "cast/cultureg-regent.png",
+          "status": "pending"
+        },
+        {
+          "id": "spec",
+          "look": "Gaspard, a frantic thin Parisian speculator of 1720, crooked white wig, wide crazy eyes, grey coat with bulging pockets stuffed with papers, a quill behind his ear",
+          "file": "cast/cultureg-spec.png",
+          "status": "pending"
+        },
+        {
+          "id": "bossu",
+          "look": "an old hunchbacked Parisian man of 1720, bald head with white tufts, big hump on his back, patched grey coat, sly toothless grin",
+          "file": "cast/cultureg-bossu.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare Paris street. John (in the middle) throwing handfuls of blank paper sheets into the air like confetti, grinning; Gaspard (on the right) jumping to catch them, ecstatic; Philippe (on the left) watching, half asleep, holding an empty money chest. wide shot",
+        "cast": [
+          "law",
+          "spec",
+          "regent"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1715",
+          "caption": "Louis XIV meurt. Le Régent hérite d’un royaume écrasé de dettes.",
+          "bubbles": [
+            {
+              "text": "Une idée qui rembourse tout sans effort ?",
+              "side": "l"
+            },
+            {
+              "text": "J’en ai une. Je suis joueur professionnel.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare palace room with an open empty money chest. Philippe (on the left) slumped in an armchair, head in hand, exhausted; John (on the right) leaning in with a big salesman smile, shuffling a deck of cards. medium shot",
+            "cast": [
+              "regent",
+              "law"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le CV",
+          "caption": "John Law : Écossais, financier, joueur, et condamné pour avoir tué un homme en duel.",
+          "bubbles": [
+            {
+              "text": "Et votre plan ?",
+              "side": "l"
+            },
+            {
+              "text": "Remplacer l’or par du papier.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "John (on the right) proudly holding up a single blank sheet of paper like a treasure; Philippe (on the left) leaning forward, squinting at it, one eyebrow very high. plain background. close-up",
+            "cast": [
+              "regent",
+              "law"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "1716",
+          "caption": "Law fonde la Banque générale. Ses billets s’échangent contre de l’or.",
+          "bubbles": [
+            {
+              "text": "Un papier qui vaut de l’or ?",
+              "side": "l"
+            },
+            {
+              "text": "Tant que tout le monde y croit.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple bank counter. John (on the right) behind the counter handing a blank paper note to Philippe (on the left), who weighs it on his palm, amazed by how light it is, mouth open. medium shot",
+            "cast": [
+              "regent",
+              "law"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1717",
+          "caption": "Il lance une compagnie pour exploiter la Louisiane, et vend ses actions au public.",
+          "bubbles": [
+            {
+              "text": "La Louisiane : un Eldorado !",
+              "side": "l"
+            },
+            {
+              "text": "Vous y êtes allé ?",
+              "side": "r"
+            },
+            {
+              "text": "Non.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "John (on the left) pointing with a stick at a big map drawn with a simple coastline and a huge sun, enthusiastic; Gaspard (on the right) holding his wallet, hypnotized, drooling a little. plain background. medium shot",
+            "cast": [
+              "law",
+              "spec"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Rue Quincampoix",
+          "caption": "Les Parisiens s’arrachent les actions. En janvier 1720, l’action atteint 10 000 livres.",
+          "bubbles": [
+            {
+              "text": "J’achète ! J’achète tout ! Je ne sais pas quoi !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a narrow street packed with tiny grey figures waving papers. Gaspard (in the foreground, on the right) climbing over the crowd, wig flying off, waving fistfuls of papers, wild eyes. wide shot",
+            "cast": [
+              "spec"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Vrai",
+          "caption": "Un vieux bossu loue sa bosse comme pupitre aux spéculateurs pressés.",
+          "bubbles": [
+            {
+              "text": "Signature rapide, tarif rapide.",
+              "side": "l"
+            },
+            {
+              "text": "Je signe sur votre dos ? Génial !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the old hunchbacked man (on the left) bent forward proudly, offering his hump as a desk, open palm out for coins; Gaspard (on the right) signing a paper on the hump with his quill, delighted. plain background. medium shot",
+            "cast": [
+              "bossu",
+              "spec"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "",
+          "caption": "C’est dans cette folie que se répand un mot nouveau : « millionnaire ».",
+          "bubbles": [
+            {
+              "text": "Je suis millionnaire !",
+              "side": "r"
+            },
+            {
+              "text": "En papier.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Gaspard (on the right) standing on a pile of paper sheets, arms up in victory, eyes sparkling; the old hunchbacked man (on the left) looking up at him, deadpan, counting a few real coins in his hand. medium shot",
+            "cast": [
+              "bossu",
+              "spec"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "chap",
+          "tag": "1720",
+          "caption": "Les clients veulent récupérer leur or. La banque n’en a pas assez.",
+          "bubbles": [
+            {
+              "text": "Mon or, s’il vous plaît.",
+              "side": "r"
+            },
+            {
+              "text": "Aujourd’hui ? Genre… maintenant ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the bank counter again. Gaspard (on the right) holding out a blank paper note, insistent; John (on the left) behind the counter, sweating buckets, slowly hiding an almost empty little chest behind his back. medium shot",
+            "cast": [
+              "law",
+              "spec"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Décembre 1720",
+          "caption": "L’action retombe à 1 000 livres. Law s’enfuit de France.",
+          "bubbles": [
+            {
+              "text": "Il est où, l’Écossais ?",
+              "side": "l"
+            },
+            {
+              "text": "Parti. Ses billets, eux, sont restés.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "an empty bank counter with papers scattered everywhere. Philippe (on the left) looking around confused, holding a candle; Gaspard (on the right) sitting on the floor in a pile of worthless papers, melting in despair, wig crooked. medium shot",
+            "cast": [
+              "regent",
+              "spec"
+            ],
+            "file": "images/cultureg-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "conf",
+          "tag": "La leçon",
+          "caption": "Law meurt à Venise en 1729. Leçon retenue : un billet vaut ce qu’on croit qu’il vaut.",
+          "bubbles": [
+            {
+              "text": "J’avais raison. Juste un peu trop vite.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "John (in the middle) in a confession-style close-up, looking straight at the reader with a sheepish shrug, a single blank paper note tucked in his red waistcoat. plain background",
+            "cast": [
+              "law"
+            ],
+            "file": "images/cultureg-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Sous la Régence, l’action de la compagnie de John Law atteint 10 000 livres en janvier 1720, puis s’effondre : le système fait faillite la même année.",
+        "source": "Hérodote.net, Winton"
+      },
+      "sources": [
+        {
+          "title": "Hérodote — 2 mai 1716 - 26 janvier 1721, le système de Law",
+          "url": "https://www.herodote.net/2_mai_1716_26_janvier_1721-evenement-17160502.php"
+        },
+        {
+          "title": "Vikidia — Système de Law",
+          "url": "https://fr.vikidia.org/wiki/Syst%C3%A8me_de_Law"
+        },
+        {
+          "title": "Winton — The Mississippi Bubble",
+          "url": "https://www.winton.com/longer-view/the-mississippi-bubble"
+        },
+        {
+          "title": "Messy Nessy — The birth of the millionaire",
+          "url": "https://messynessychic.com/2020/03/24/the-birth-of-the-millionaire"
+        }
+      ]
     },
     {
-     "id": "robes",
-     "look": "Maximilien, a stiff prim 1790s politician, small neat powdered wig, thin pinched face, round tinted spectacles, black tailcoat, tall white cravat, always holding a long sheet of paper",
-     "file": "cast/dossier-robes.png",
-     "status": "pending"
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "La Joconde est devenue une star en disparaissant",
+      "tagline": "En 1911, un vitrier la décroche du Louvre. Et le monde entier vient admirer… le mur vide.",
+      "minutes": 1,
+      "theme": "Histoire de l’art",
+      "cast": [
+        {
+          "id": "peruggia",
+          "look": "Vincenzo, an Italian glazier of 1911, short and stocky, thick black moustache, flat grey cap, long white workman's smock",
+          "file": "cast/insolite-peruggia.png",
+          "status": "pending"
+        },
+        {
+          "id": "beroud",
+          "look": "Louis, a Parisian painter of 1911, pointy grey beard, black beret, black jacket, a red scarf as the only colour, carrying an easel",
+          "file": "cast/insolite-beroud.png",
+          "status": "pending"
+        },
+        {
+          "id": "apo",
+          "look": "Guillaume, a stocky poet of 1911, big round face, slicked-back dark hair, small moustache, black suit, white bow tie, a notebook in hand",
+          "file": "cast/insolite-apo.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare museum wall with four small hooks and an empty rectangle. Louis (on the left) pointing at the empty space, shocked, beret flying off; Vincenzo (on the right) tiptoeing away with a large flat rectangle hidden under his white smock, innocent whistle. wide shot",
+        "cast": [
+          "beroud",
+          "peruggia"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "21 août 1911",
+          "caption": "Le Louvre est fermé. Vincenzo Peruggia, vitrier qui y a travaillé, décroche la Joconde.",
+          "bubbles": [
+            {
+              "text": "Personne ne regarde jamais les ouvriers.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare museum wall with an empty frame on the floor. Vincenzo (on the right) holding a small painting turned backwards, glancing left and right, tiny sweat drop, pretending to be calm. medium shot",
+            "cast": [
+              "peruggia"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "",
+          "caption": "Il sort tranquillement, le tableau caché sous sa blouse de travail.",
+          "bubbles": [
+            {
+              "text": "Bonne journée ! Rien à signaler !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a museum exit door. Vincenzo (on the right) walking out stiffly like a robot, his white smock perfectly flat and rectangular on his chest, big fake smile, waving. medium shot",
+            "cast": [
+              "peruggia"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "22 août",
+          "caption": "Le lendemain, le peintre Louis Béroud vient la copier. Il ne trouve que le cadre.",
+          "bubbles": [
+            {
+              "text": "Elle est chez le photographe, sans doute.",
+              "side": "l"
+            },
+            {
+              "text": "Sans doute.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Louis (on the left) setting up his easel in front of a bare wall with four small hooks, smiling at first, then frozen with his brush in the air, eyes slowly widening. plain background. medium shot",
+            "cast": [
+              "beroud"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Septembre 1911",
+          "caption": "Soixante inspecteurs fouillent le musée. Le poète Apollinaire passe six jours en prison.",
+          "bubbles": [
+            {
+              "text": "Je suis poète, pas cambrioleur !",
+              "side": "l"
+            },
+            {
+              "text": "Dites ça en alexandrins, ça passera mieux.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare prison cell with one stool. Guillaume (on the left) gripping the bars, outraged, notebook in hand; Louis (on the right) visiting outside the bars, shrugging with a sorry smile. medium shot",
+            "cast": [
+              "apo",
+              "beroud"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "Interrogé, il cite son ami Picasso. Tous deux seront mis hors de cause.",
+          "bubbles": [
+            {
+              "text": "Pablo, pardon. J’ai paniqué.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Guillaume (on the left) sitting on a chair under a single hanging lamp, shrinking, tiny pink blush marks, nervously chewing his notebook. plain dark background. close-up",
+            "cast": [
+              "apo"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "",
+          "caption": "Pendant ce temps, la foule vient au Louvre voir… le mur vide. Certains y déposent des fleurs.",
+          "bubbles": [
+            {
+              "text": "On fait la queue pour quatre clous.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a long queue of tiny grey visitors in front of a bare wall with four hooks, a few flowers on the floor below. Louis (on the left, in the foreground) standing in the queue, arms crossed, deadpan, staring at the reader. wide shot",
+            "cast": [
+              "beroud"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "1913",
+          "caption": "Deux ans plus tard, Peruggia tente de la vendre à un marchand de Florence. Il est arrêté.",
+          "bubbles": [
+            {
+              "text": "Je voulais la rendre à l’Italie !",
+              "side": "r"
+            },
+            {
+              "text": "Et le prix, c’était pour l’Italie aussi ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small hotel room with a bed and an open suitcase. Vincenzo (on the right) clutching a small painting turned backwards against his chest, protesting, chest puffed out; Louis (on the left) leaning in the doorway, unconvinced. medium shot",
+            "cast": [
+              "peruggia",
+              "beroud"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "Elle revient au Louvre le 4 janvier 1914. Entre-temps, sa célébrité a explosé.",
+          "bubbles": [
+            {
+              "text": "Son meilleur agent ? Un voleur.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Louis (in the middle) in a confession-style close-up, looking straight at the reader with a tired half smile, holding a stack of postcards with blank fronts. plain background",
+            "cast": [
+              "beroud"
+            ],
+            "file": "images/insolite-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "La Joconde a été volée au Louvre le 21 août 1911 par le vitrier Vincenzo Peruggia ; elle n’y est revenue que le 4 janvier 1914.",
+        "source": "Paris ZigZag"
+      },
+      "sources": [
+        {
+          "title": "Paris ZigZag — L’incroyable histoire du vol de la Joconde",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/vol-joconde-louvre/"
+        },
+        {
+          "title": "La Libre — La folle histoire du vol de la Joconde",
+          "url": "https://www.lalibre.be/culture/arts/2018/12/29/la-folle-histoire-du-vol-de-la-joconde-le-tableau-le-plus-connu-du-monde-il-y-a-plus-dun-siecle-IOABR5GS6JFPHLGL5MPQAZLSZI/"
+        },
+        {
+          "title": "Numéro — Guillaume Apollinaire et le vol du Louvre",
+          "url": "https://numero.com/art/art-art/guillaume-apollinaire-vol-musee-louvre/"
+        },
+        {
+          "title": "My Modern Met — How the Mona Lisa’s theft transformed it into an icon",
+          "url": "https://mymodernmet.com/mona-lisa-theft-1911/"
+        }
+      ]
     },
     {
-     "id": "bonap",
-     "look": "Napoleon, a thin young 1790s general, long straight dark hair to the shoulders, hollow cheeks, intense eyes, black bicorne hat, black uniform coat, a red sash as the only colour",
-     "file": "cast/dossier-bonap.png",
-     "status": "pending"
+      "id": "quiz",
+      "kind": "frise",
+      "label": "La Frise",
+      "title": "Quatre dates, zéro machine à remonter le temps",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "items": [
+            {
+              "name": "Sacre de Charles VII à Reims",
+              "year": 1429
+            },
+            {
+              "name": "Début du chantier de Notre-Dame de Paris",
+              "year": 1163
+            },
+            {
+              "name": "Bible de Gutenberg",
+              "year": 1455,
+              "label": "vers 1455"
+            },
+            {
+              "name": "Fondation de Tenochtitlan (Mexico)",
+              "year": 1325,
+              "label": "vers 1325"
+            }
+          ],
+          "explain": "Notre-Dame était en chantier depuis plus de 160 ans quand les Aztèques ont fondé Tenochtitlan, l’actuelle Mexico. Les cathédrales, c’est long. Les capitales, parfois plus rapide.",
+          "source": {
+            "title": "Wikipédia — Tenochtitlan",
+            "url": "https://fr.wikipedia.org/wiki/Tenochtitlan"
+          }
+        },
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "items": [
+            {
+              "name": "Brevet du téléphone par Graham Bell",
+              "year": 1876
+            },
+            {
+              "name": "Inauguration de la tour Eiffel",
+              "year": 1889
+            },
+            {
+              "name": "Brevet du fax par Alexander Bain",
+              "year": 1843
+            },
+            {
+              "name": "Abolition de l’esclavage en France",
+              "year": 1848
+            }
+          ],
+          "explain": "Le fax est plus vieux que le téléphone : l’Écossais Alexander Bain le brevète en 1843, 33 ans avant Bell. Votre vieille imprimante de bureau a donc des ancêtres.",
+          "source": {
+            "title": "Britannica — Fax",
+            "url": "https://britannica.com/technology/fax"
+          }
+        },
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "items": [
+            {
+              "name": "Fondation de Marseille par des Grecs",
+              "year": -600,
+              "label": "vers 600 av. J.-C."
+            },
+            {
+              "name": "Disparition des derniers mammouths",
+              "year": -2000,
+              "label": "vers 2000 av. J.-C."
+            },
+            {
+              "name": "Grande pyramide de Khéops",
+              "year": -2560,
+              "label": "vers 2560 av. J.-C."
+            },
+            {
+              "name": "Fondation légendaire de Rome",
+              "year": -753,
+              "label": "753 av. J.-C."
+            }
+          ],
+          "explain": "Des mammouths vivaient encore sur l’île Wrangel, en Arctique, des siècles après la construction de Khéops. Les pharaons auraient pu en commander un. Ils ne l’ont pas fait.",
+          "source": {
+            "title": "Futura — Les derniers mammouths sont morts brutalement sur une île isolée",
+            "url": "https://www.futura-sciences.com/planete/actualites/paleontologie-derniers-mammouths-sont-morts-brutalement-ile-isolee-77847/"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Wikipédia — Tenochtitlan",
+          "url": "https://fr.wikipedia.org/wiki/Tenochtitlan"
+        },
+        {
+          "title": "Britannica — Fax",
+          "url": "https://britannica.com/technology/fax"
+        },
+        {
+          "title": "Futura — Les derniers mammouths sont morts brutalement sur une île isolée",
+          "url": "https://www.futura-sciences.com/planete/actualites/paleontologie-derniers-mammouths-sont-morts-brutalement-ile-isolee-77847/"
+        }
+      ]
     }
-   ],
-   "cover": {
-    "prompt": "an empty grey palace hall with a single golden throne. Louis (on the left) clinging to the throne, worried, sweat drops; Jeanne (in the middle) pulling the throne away with both hands, determined; Napoleon (on the right) arms crossed, smirking, waiting for his turn. wide shot",
-    "cast": ["louis", "jeanne", "bonap"],
-    "file": "images/dossier-cover.webp",
-    "status": "pending",
-    "attempts": 0
-   },
-   "cases": [
-    {
-     "n": 1,
-     "kind": "chap",
-     "tag": "Chapitre 1 · La faillite",
-     "caption": "1788. L’État est si endetté que plus personne ne veut lui prêter.",
-     "bubbles": [
-      { "text": "On peut rembourser en parties de chasse ?", "side": "l" },
-      { "text": "Les banquiers préfèrent l’or, Majesté.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a bare palace room with one small desk covered in a mountain of unpaid bills. Louis (on the left) slumped on the desk, hiding his face behind a pile of papers, shoulders dropped; Jeanne (on the right) standing with arms crossed, one eyebrow raised, unimpressed. medium shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-01.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 2,
-     "kind": "",
-     "tag": "",
-     "caption": "Louis XVI convoque les états généraux, pas réunis depuis 1614.",
-     "bubbles": [
-      { "text": "Quelqu’un se souvient de comment ça marche ?", "side": "l" },
-      { "text": "La dernière fois, c’était il y a 175 ans.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a dusty archive shelf. Louis (on the left) blowing dust off a huge old book, coughing in a cloud of grey dust; Jeanne (on the right) holding a tiny candle, deadpan face. medium shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-02.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 3,
-     "kind": "fact",
-     "tag": "5 mai 1789",
-     "caption": "À Versailles : 291 députés du clergé, 285 de la noblesse, 578 du tiers état.",
-     "bubbles": [
-      { "text": "On est deux fois plus nombreux. On gagne ?", "side": "r" },
-      { "text": "Si on vote par ordre, non. Un ordre, une voix.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a simple stage split in three blocks of tiny identical deputies: a small block in black robes, a small block with feathered hats, and a big block twice as large in plain grey coats. Louis (on the left) pointing at the small blocks with a smug smile; Jeanne (on the right) standing in front of the big block, hopeful. wide shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-03.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 4,
-     "kind": "",
-     "tag": "",
-     "caption": "Le roi laisse traîner. Sans le savoir, il vient de lancer la Révolution française.",
-     "bubbles": [
-      { "text": "On attend. Qu’est-ce qui pourrait arriver ?", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Louis (in the foreground) sitting on his throne, eating a cake with a relaxed smile, totally unaware; behind him through a big window, tiny grey silhouettes of a crowd gathering with raised fists. Jeanne (on the right edge) staring straight at the reader, frozen, one tiny sweat drop. medium shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-04.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 5,
-     "kind": "chap",
-     "tag": "Chapitre 2 · 1789, l’année où tout bascule",
-     "caption": "20 juin 1789 : réunis dans une salle de jeu de paume, les députés du tiers prêtent serment.",
-     "bubbles": [
-      { "text": "Une révolution dans une salle de sport ?", "side": "l" },
-      { "text": "Ils jurent de ne pas partir sans constitution.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a bare indoor tennis hall with a net in the background and many tiny deputies raising their right arms together. Louis (on the left) peeking through a door, puzzled, holding a tennis racket; Jeanne (on the right) raising her arm proudly with the crowd. wide shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-05.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 6,
-     "kind": "fact",
-     "tag": "14 juillet 1789",
-     "caption": "Les Parisiens prennent la Bastille, forteresse où ils cherchent de la poudre.",
-     "bubbles": [
-      { "text": "Libérons les prisonniers !", "side": "r" },
-      { "text": "Ils sont sept.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "the open gate of a grey stone fortress with a big crowd of tiny silhouettes pouring in. Jeanne (on the right) running in with a raised fist, heroic; next to the gate, seven tiny bewildered prisoners in grey rags blinking at the light. wide shot",
-      "cast": ["jeanne"],
-      "file": "images/dossier-06.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 7,
-     "kind": "",
-     "tag": "Vraie note",
-     "caption": "Le soir, dans son carnet de chasse, Louis XVI écrit : « Rien ».",
-     "bubbles": [
-      { "text": "Pas un seul cerf. Journée nulle.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a small study with a single candle. Louis (in the foreground) writing in a tiny notebook with a quill, sighing, bored; through the window behind him, small grey smoke clouds rise over a distant city. medium shot",
-      "cast": ["louis"],
-      "file": "images/dossier-07.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 8,
-     "kind": "",
-     "tag": "4 août 1789",
-     "caption": "Face aux révoltes paysannes, l’Assemblée abolit les privilèges : dîme, corvées, droits féodaux.",
-     "bubbles": [
-      { "text": "Les nobles renoncent à leurs privilèges ? Eux-mêmes ?", "side": "l" },
-      { "text": "La peur des fourches, ça aide à partager.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a night scene in a bare assembly room. Louis (on the left) jaw dropped, crown sliding off his wig; Jeanne (on the right) leaning on a pitchfork, smug half smile; in the background tiny nobles throwing their feathered hats into a pile. medium shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-08.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 9,
-     "kind": "fact",
-     "tag": "26 août 1789",
-     "caption": "Déclaration des droits : « Les hommes naissent et demeurent libres et égaux en droits. »",
-     "bubbles": [
-      { "text": "Égaux. Même avec un roi ?", "side": "r" },
-      { "text": "Je sens que la question va revenir.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Jeanne (on the right) holding up a big blank parchment scroll with both hands like a trophy, beaming; Louis (on the left) reading over her shoulder, nervous, pulling at his collar, tiny sweat drops. plain background. medium shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-09.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 10,
-     "kind": "chap",
-     "tag": "Chapitre 3 · Le roi qui voulait partir",
-     "caption": "Nuit du 20 au 21 juin 1791 : la famille royale fuit Paris en berline.",
-     "bubbles": [
-      { "text": "Discrétion totale. Personne ne nous verra.", "side": "l" },
-      { "text": "Dans une berline énorme et surchargée.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a dark empty road at night. a huge overloaded black carriage piled high with trunks and hat boxes. Louis (on the left) leaning out of the carriage window with a fake moustache, putting a finger on his lips; Jeanne (on the right) by the roadside with a lantern, staring in disbelief. wide shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-10.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 11,
-     "kind": "",
-     "tag": "",
-     "caption": "Retards en série. À Sainte-Menehould, Drouet, fils du maître de poste, les repère.",
-     "bubbles": [
-      { "text": "Ce gros monsieur ressemble beaucoup au roi.", "side": "r" },
-      { "text": "Pure coïncidence. Je suis… quelqu’un d’autre.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a small village relay station. Louis (on the left) inside the carriage window, smiling far too widely, sweating heavily; Jeanne (on the right) holding up a coin next to his face, comparing the profile, eyes narrowed. close-up",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-11.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 12,
-     "kind": "fact",
-     "tag": "Varennes",
-     "caption": "Drouet prend un raccourci et donne l’alerte : le roi est arrêté à Varennes.",
-     "bubbles": [
-      { "text": "On était presque arrivés…", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a narrow village street blocked by an overturned cart. the big black carriage stopped in front of it. Louis (in the foreground) melting down against the carriage door, arms dangling, defeated; tiny villagers with lanterns surrounding the carriage. medium shot",
-      "cast": ["louis"],
-      "file": "images/dossier-12.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 13,
-     "kind": "react",
-     "tag": "25 juin 1791",
-     "caption": "Retour à Paris. La foule regarde passer le roi en silence. La confiance est brisée.",
-     "bubbles": [],
-     "image": {
-      "prompt": "a long silent street lined with a crowd of tiny grey figures, all with arms crossed, backs straight, staring. the black carriage rolls slowly in the middle. Jeanne (on the right, in the foreground) arms crossed, stone-faced, not saying a word. wide shot",
-      "cast": ["jeanne"],
-      "file": "images/dossier-13.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 14,
-     "kind": "",
-     "tag": "Septembre 1791",
-     "caption": "Première Constitution : la France devient une monarchie constitutionnelle. Le roi garde son trône.",
-     "bubbles": [
-      { "text": "Donc je reste roi ?", "side": "l" },
-      { "text": "En période d’essai.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a bare room with a throne. Louis (on the left) sitting very straight on the throne, relieved, hand on heart; Jeanne (on the right) holding a clipboard and a quill, checking boxes, strict like an inspector. medium shot",
-      "cast": ["louis", "jeanne"],
-      "file": "images/dossier-14.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 15,
-     "kind": "chap",
-     "tag": "Chapitre 4 · La République",
-     "caption": "Avril 1792 : la France déclare la guerre à l’Autriche, patrie de la reine.",
-     "bubbles": [
-      { "text": "La guerre contre ma belle-famille. Les repas vont être tendus.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a long empty dinner table. Louis (on the left) sitting alone at one end, hunched, holding a fork, very awkward, tiny blush marks; a map of Europe pinned on the wall behind him with a big arrow drawn on it. medium shot",
-      "cast": ["louis"],
-      "file": "images/dossier-15.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 16,
-     "kind": "fact",
-     "tag": "10 août 1792",
-     "caption": "Les sans-culottes prennent le palais des Tuileries. Environ 600 gardes suisses sont tués.",
-     "bubbles": [],
-     "image": {
-      "prompt": "a sober scene: the grey facade of a large palace at dusk with smoke rising from its windows, an abandoned red-coated soldier's hat on the empty steps in the foreground. no characters. quiet, still, wide shot",
-      "cast": [],
-      "file": "images/dossier-16.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 17,
-     "kind": "",
-     "tag": "",
-     "caption": "Roi suspendu, enfermé au Temple. On élit une Convention au suffrage universel masculin.",
-     "bubbles": [
-      { "text": "Tous les hommes votent ?", "side": "r" },
-      { "text": "Les femmes, ce sera pour plus tard. Beaucoup plus tard.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a simple ballot box on a table. Jeanne (on the right) holding a voting paper, about to drop it in, then noticing tiny men in line pushing her aside, her face falling into deep annoyance. medium shot",
-      "cast": ["jeanne"],
-      "file": "images/dossier-17.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 18,
-     "kind": "fact",
-     "tag": "22 septembre 1792",
-     "caption": "La Convention abolit la monarchie : c’est la Première République. On repart à l’an I.",
-     "bubbles": [
-      { "text": "On remet les compteurs à zéro.", "side": "r" },
-      { "text": "Même mon âge ?", "side": "r" }
-     ],
-     "image": {
-      "prompt": "Jeanne (in the middle) standing on a chair, flipping a big wall calendar to a fresh blank page with a triumphant grin, her red cockade shining; plain background. medium shot",
-      "cast": ["jeanne"],
-      "file": "images/dossier-18.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 19,
-     "kind": "",
-     "tag": "Octobre 1793",
-     "caption": "Nouveau calendrier : douze mois de 30 jours, découpés en décades de dix jours.",
-     "bubbles": [
-      { "text": "La semaine fait dix jours. C’est plus rationnel.", "side": "l" },
-      { "text": "Et le week-end, il est rationnel aussi ?", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a bare office. Maximilien (on the left) proudly unrolling his long sheet of paper showing a grid of ten empty columns; Jeanne (on the right) slumped against the wall, exhausted just looking at it, dark circles under her eyes. medium shot",
-      "cast": ["robes", "jeanne"],
-      "file": "images/dossier-19.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 20,
-     "kind": "fact",
-     "tag": "Vrai",
-     "caption": "Chaque jour porte un nom de plante, d’animal ou d’outil. Le 13 brumaire : « Topinambour ».",
-     "bubbles": [
-      { "text": "Joyeux Topinambour, Maximilien.", "side": "r" },
-      { "text": "Merci. Je préfère Dindon, le 15.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Jeanne (on the right) handing Maximilien (on the left) a single knobbly root vegetable with a fake smile like a birthday gift; Maximilien holding it at arm's length, deeply serious, pinched lips. plain background. medium shot",
-      "cast": ["robes", "jeanne"],
-      "file": "images/dossier-20.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 21,
-     "kind": "",
-     "tag": "21 janvier 1793",
-     "caption": "Jugé par la Convention, Louis XVI est guillotiné à Paris.",
-     "bubbles": [],
-     "image": {
-      "prompt": "a sober scene: an empty grey square in winter, a small golden crown lying alone on the cobblestones in the foreground. Jeanne (far in the background) standing still, head lowered. quiet, still, wide shot",
-      "cast": ["jeanne"],
-      "file": "images/dossier-21.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 22,
-     "kind": "chap",
-     "tag": "Chapitre 5 · La Terreur",
-     "caption": "1793 : guerre aux frontières, révoltes à l’intérieur. Le Comité de salut public prend les commandes.",
-     "bubbles": [
-      { "text": "La République est en danger. Je m’en occupe.", "side": "l" },
-      { "text": "C’est ce qui m’inquiète.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a bare committee room with one long table. Maximilien (on the left) standing stiff behind the table, chin up, holding his long sheet of paper; Jeanne (on the right) taking a small step back, eyes wide, clutching her apron. medium shot",
-      "cast": ["robes", "jeanne"],
-      "file": "images/dossier-22.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 23,
-     "kind": "",
-     "tag": "",
-     "caption": "Loi des suspects, tribunaux révolutionnaires : on arrête sur simple soupçon.",
-     "bubbles": [
-      { "text": "Et on devient suspect comment ?", "side": "r" },
-      { "text": "En posant ce genre de question.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Maximilien (on the left) slowly lowering his spectacles to stare at Jeanne, quill already raised above his long list; Jeanne (on the right) freezing mid-sentence, hand over her mouth, tiny sweat drop. close-up",
-      "cast": ["robes", "jeanne"],
-      "file": "images/dossier-23.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 24,
-     "kind": "fact",
-     "tag": "Le chiffre",
-     "caption": "Environ 17 000 exécutions officielles, et peut-être 10 000 morts en prison ou sans procès.",
-     "bubbles": [],
-     "image": {
-      "prompt": "a sober pause panel: an endless blank scroll of paper unrolling from a desk across the whole floor and out of the frame. no characters. plain grey background, quiet, wide shot",
-      "cast": [],
-      "file": "images/dossier-24.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 25,
-     "kind": "",
-     "tag": "9 thermidor an II",
-     "caption": "27 juillet 1794 : la Convention se retourne contre Robespierre et le fait arrêter.",
-     "bubbles": [
-      { "text": "Moi ? Sur ma propre liste ?", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Maximilien (in the middle) reading his own long sheet of paper, his face draining white, spectacles sliding down his nose, the paper trembling in his hands; two tiny grey hands entering the frame to grab his shoulders. close-up",
-      "cast": ["robes"],
-      "file": "images/dossier-25.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 26,
-     "kind": "fact",
-     "tag": "Vrai",
-     "caption": "Il est exécuté le lendemain. Dans le calendrier, le 9 thermidor s’appelait « Absinthe ».",
-     "bubbles": [
-      { "text": "Un nom amer pour une journée amère.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "Jeanne (on the right) sitting on a bench, exhausted but relieved, letting out a long sigh, shoulders finally relaxing; a small green plant in a pot next to her. plain background. medium shot",
-      "cast": ["jeanne"],
-      "file": "images/dossier-26.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 27,
-     "kind": "chap",
-     "tag": "Chapitre 6 · Le Directoire, puis le général",
-     "caption": "1795 : le pouvoir passe au Directoire, cinq directeurs à la fois.",
-     "bubbles": [
-      { "text": "Cinq chefs. Donc aucun.", "side": "r" },
-      { "text": "J’en connais un sixième qui attend.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "five tiny identical men in feathered hats all pulling a small steering wheel in different directions. Jeanne (on the right) facepalming; Napoleon (on the left) leaning casually against the wall, arms crossed, watching with a little smile. wide shot",
-      "cast": ["bonap", "jeanne"],
-      "file": "images/dossier-27.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 28,
-     "kind": "",
-     "tag": "",
-     "caption": "Un jeune général, auréolé de victoires, se fait un nom : Napoléon Bonaparte.",
-     "bubbles": [
-      { "text": "J’ai gagné une bataille. Puis une autre. Puis…", "side": "l" },
-      { "text": "On a compris. Vous faites un CV ?", "side": "r" }
-     ],
-     "image": {
-      "prompt": "Napoleon (on the left) proudly unrolling a very long list from his sleeve that falls to the floor and keeps going; Jeanne (on the right) holding her chin, bored, eyes half closed. plain background. medium shot",
-      "cast": ["bonap", "jeanne"],
-      "file": "images/dossier-28.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 29,
-     "kind": "fact",
-     "tag": "18 brumaire an VIII",
-     "caption": "9 novembre 1799 : prétextant un complot, on transfère les deux assemblées à Saint-Cloud.",
-     "bubbles": [
-      { "text": "Pourquoi Saint-Cloud ?", "side": "r" },
-      { "text": "Moins de Parisiens. Plus de soldats.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a simple country road leading to a small grey castle in the distance, with rows of tiny soldiers lining the road. Napoleon (on the left) pointing to the castle with a confident grin; Jeanne (on the right) squinting at the soldiers, suspicious. wide shot",
-      "cast": ["bonap", "jeanne"],
-      "file": "images/dossier-29.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 30,
-     "kind": "",
-     "tag": "19 brumaire",
-     "caption": "Devant le Conseil des Cinq-Cents, Bonaparte se fait huer : « À bas le dictateur ! »",
-     "bubbles": [
-      { "text": "Je… euh… la Patrie… les… voilà.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a long orangery hall full of tiny angry deputies shaking their fists. Napoleon (in the foreground) standing at a lectern, shrinking, tiny sweat drops flying, hat sliding over his eyes, totally lost. medium shot",
-      "cast": ["bonap"],
-      "file": "images/dossier-30.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 31,
-     "kind": "",
-     "tag": "",
-     "caption": "Son frère Lucien appelle la troupe. Les députés fuient par les fenêtres.",
-     "bubbles": [
-      { "text": "Ils sortent par les fenêtres ?", "side": "r" },
-      { "text": "Évacuation express. Très moderne.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a tall window in a bare hall with tiny deputies in red togas jumping out one after another. Napoleon (on the left) dusting off his coat, recovered, satisfied; Jeanne (on the right) watching the window with her jaw dropped. wide shot",
-      "cast": ["bonap", "jeanne"],
-      "file": "images/dossier-31.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 32,
-     "kind": "fact",
-     "tag": "La nuit suivante",
-     "caption": "Trois consuls sont nommés. Bonaparte, 30 ans, devient bientôt Premier Consul, et seul vrai chef.",
-     "bubbles": [
-      { "text": "Trois consuls, c’est très équilibré.", "side": "l" },
-      { "text": "Dont un qui décide.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "three chairs in a row: a huge one in the middle and two tiny ones on the sides. Napoleon (in the middle) sitting on the huge chair, legs crossed, very satisfied; Jeanne (on the right) pointing at the tiny chairs, eyebrow raised. medium shot",
-      "cast": ["bonap", "jeanne"],
-      "file": "images/dossier-32.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 33,
-     "kind": "conf",
-     "tag": "Vrai",
-     "caption": "Dans le calendrier révolutionnaire, le 18 brumaire s’appelait « Dentelaire », une petite fleur.",
-     "bubbles": [
-      { "text": "Le coup d’État de la Dentelaire. Ça fait moins peur.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "Jeanne (in the middle) in a confession-style close-up, looking straight at the reader, deadpan, holding a tiny blue flower between two fingers. plain background",
-      "cast": ["jeanne"],
-      "file": "images/dossier-33.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 34,
-     "kind": "chap",
-     "tag": "Chapitre 7 · Le bilan",
-     "caption": "Privilèges abolis, droits proclamés, roi exécuté, République fondée, Terreur, puis un général.",
-     "bubbles": [
-      { "text": "Dix ans. J’ai l’impression d’en avoir pris quarante.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a pause panel: Jeanne (on the right) unrolling a very long blank timeline scroll across the floor, leaning on it exhausted, hair messier than ever. plain background. wide shot",
-      "cast": ["jeanne"],
-      "file": "images/dossier-34.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 35,
-     "kind": "react",
-     "tag": "Il y a 227 ans jour pour jour",
-     "caption": "Le 18 brumaire met fin à la Révolution et ouvre le Consulat.",
-     "bubbles": [
-      { "text": "Je vais tout stabiliser. Qu’est-ce qui pourrait arriver ?", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Napoleon (on the left) sitting on a throne exactly like the first king's, relaxed, smiling, eating a cake; Jeanne (on the right) turning slowly to stare straight at the reader, frozen, one tiny sweat drop. medium shot",
-      "cast": ["bonap", "jeanne"],
-      "file": "images/dossier-35.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    }
-   ],
-   "final": {
-    "text": "La Révolution française s’étend de 1789 au coup d’État du 18 brumaire an VIII (9 novembre 1799), qui porte Bonaparte au pouvoir.",
-    "source": "Hérodote.net, Schoolmouv"
-   },
-   "sources": [
-    { "title": "Hérodote — 5 mai 1789, ouverture des états généraux", "url": "https://www.herodote.net/5_mai_1789-evenement-17890505.php" },
-    { "title": "Schoolmouv — La Révolution française, de 1789 à 1799", "url": "https://www.schoolmouv.fr/cours/les-temps-forts-de-la-revolution-de-1789-a-1799/" },
-    { "title": "Paris ZigZag — Petite histoire de la prison de la Bastille", "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/histoire-prison-bastille/" },
-    { "title": "Hérodote — 14 juillet 1789", "url": "https://www.herodote.net/14_juillet_1789-evenement-17890714.php" },
-    { "title": "Tea at Trianon — The royal hunt and Bastille Day (« Rien »)", "url": "https://teaattrianon.blogspot.com/2014/07/the-royal-hunt-and-bastille-day.html" },
-    { "title": "Vikidia — Abolition des privilèges", "url": "https://fr.vikidia.org/wiki/Abolition_des_privilèges" },
-    { "title": "Schoolmouv — Déclaration des droits de l’homme et du citoyen", "url": "https://www.schoolmouv.fr/cours/declaration-des-droits-de-l-homme-et-du-citoyen-26-aout-1789/" },
-    { "title": "Hérodote — 21 juin 1791, la fuite à Varennes", "url": "https://www.herodote.net/21_juin_1791-evenement-17910621.php" },
-    { "title": "Hérodote — 10 août 1792", "url": "https://www.herodote.net/10_aout_1792-evenement-17920810.php" },
-    { "title": "Vikidia — Calendrier républicain", "url": "https://fr.vikidia.org/wiki/Calendrier_r%C3%A9publicain" },
-    { "title": "Fondation Napoléon — Noms des jours du calendrier républicain", "url": "https://www.napoleon.org/wp-content/uploads/2016/04/nomsjourscalendrierrepublicain.pdf" },
-    { "title": "Britannica — Reign of Terror", "url": "https://www.britannica.com/event/Reign-of-Terror" },
-    { "title": "Hérodote — 9 novembre 1799, le 18 Brumaire", "url": "https://www.herodote.net/9_novembre_1799-evenement-17991109.php" }
-   ]
-  },
-  {
-   "id": "cultureg",
-   "label": "La Pilule de Culture G",
-   "title": "L’Écossais qui a inventé le billet (et la faillite qui va avec)",
-   "tagline": "Comment la France de 1720 a découvert le papier-monnaie, la bulle spéculative et le mot « millionnaire »",
-   "minutes": 2,
-   "theme": "Économie",
-   "cast": [
-    {
-     "id": "law",
-     "look": "John, a tall elegant Scottish gambler of the 1710s, long curly brown wig, sly confident smile, black frock coat, a red waistcoat as the only colour, playing cards peeking out of his pocket",
-     "file": "cast/cultureg-law.png",
-     "status": "pending"
-    },
-    {
-     "id": "regent",
-     "look": "Philippe, the Regent of France in the 1710s, plump middle-aged man, huge black curly wig, heavy sleepy eyelids, black coat with a big white lace jabot",
-     "file": "cast/cultureg-regent.png",
-     "status": "pending"
-    },
-    {
-     "id": "spec",
-     "look": "Gaspard, a frantic thin Parisian speculator of 1720, crooked white wig, wide crazy eyes, grey coat with bulging pockets stuffed with papers, a quill behind his ear",
-     "file": "cast/cultureg-spec.png",
-     "status": "pending"
-    },
-    {
-     "id": "bossu",
-     "look": "an old hunchbacked Parisian man of 1720, bald head with white tufts, big hump on his back, patched grey coat, sly toothless grin",
-     "file": "cast/cultureg-bossu.png",
-     "status": "pending"
-    }
-   ],
-   "cover": {
-    "prompt": "a bare Paris street. John (in the middle) throwing handfuls of blank paper sheets into the air like confetti, grinning; Gaspard (on the right) jumping to catch them, ecstatic; Philippe (on the left) watching, half asleep, holding an empty money chest. wide shot",
-    "cast": ["law", "spec", "regent"],
-    "file": "images/cultureg-cover.webp",
-    "status": "pending",
-    "attempts": 0
-   },
-   "cases": [
-    {
-     "n": 1,
-     "kind": "chap",
-     "tag": "1715",
-     "caption": "Louis XIV meurt. Le Régent hérite d’un royaume écrasé de dettes.",
-     "bubbles": [
-      { "text": "Une idée qui rembourse tout sans effort ?", "side": "l" },
-      { "text": "J’en ai une. Je suis joueur professionnel.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a bare palace room with an open empty money chest. Philippe (on the left) slumped in an armchair, head in hand, exhausted; John (on the right) leaning in with a big salesman smile, shuffling a deck of cards. medium shot",
-      "cast": ["regent", "law"],
-      "file": "images/cultureg-01.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 2,
-     "kind": "fact",
-     "tag": "Le CV",
-     "caption": "John Law : Écossais, financier, joueur, et condamné pour avoir tué un homme en duel.",
-     "bubbles": [
-      { "text": "Et votre plan ?", "side": "l" },
-      { "text": "Remplacer l’or par du papier.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "John (on the right) proudly holding up a single blank sheet of paper like a treasure; Philippe (on the left) leaning forward, squinting at it, one eyebrow very high. plain background. close-up",
-      "cast": ["regent", "law"],
-      "file": "images/cultureg-02.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 3,
-     "kind": "fact",
-     "tag": "1716",
-     "caption": "Law fonde la Banque générale. Ses billets s’échangent contre de l’or.",
-     "bubbles": [
-      { "text": "Un papier qui vaut de l’or ?", "side": "l" },
-      { "text": "Tant que tout le monde y croit.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a simple bank counter. John (on the right) behind the counter handing a blank paper note to Philippe (on the left), who weighs it on his palm, amazed by how light it is, mouth open. medium shot",
-      "cast": ["regent", "law"],
-      "file": "images/cultureg-03.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 4,
-     "kind": "",
-     "tag": "1717",
-     "caption": "Il lance une compagnie pour exploiter la Louisiane, et vend ses actions au public.",
-     "bubbles": [
-      { "text": "La Louisiane : un Eldorado !", "side": "l" },
-      { "text": "Vous y êtes allé ?", "side": "r" },
-      { "text": "Non.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "John (on the left) pointing with a stick at a big map drawn with a simple coastline and a huge sun, enthusiastic; Gaspard (on the right) holding his wallet, hypnotized, drooling a little. plain background. medium shot",
-      "cast": ["law", "spec"],
-      "file": "images/cultureg-04.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 5,
-     "kind": "fact",
-     "tag": "Rue Quincampoix",
-     "caption": "Les Parisiens s’arrachent les actions. En janvier 1720, l’action atteint 10 000 livres.",
-     "bubbles": [
-      { "text": "J’achète ! J’achète tout ! Je ne sais pas quoi !", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a narrow street packed with tiny grey figures waving papers. Gaspard (in the foreground, on the right) climbing over the crowd, wig flying off, waving fistfuls of papers, wild eyes. wide shot",
-      "cast": ["spec"],
-      "file": "images/cultureg-05.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 6,
-     "kind": "",
-     "tag": "Vrai",
-     "caption": "Un vieux bossu loue sa bosse comme pupitre aux spéculateurs pressés.",
-     "bubbles": [
-      { "text": "Signature rapide, tarif rapide.", "side": "l" },
-      { "text": "Je signe sur votre dos ? Génial !", "side": "r" }
-     ],
-     "image": {
-      "prompt": "the old hunchbacked man (on the left) bent forward proudly, offering his hump as a desk, open palm out for coins; Gaspard (on the right) signing a paper on the hump with his quill, delighted. plain background. medium shot",
-      "cast": ["bossu", "spec"],
-      "file": "images/cultureg-06.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 7,
-     "kind": "fact",
-     "tag": "",
-     "caption": "C’est dans cette folie que se répand un mot nouveau : « millionnaire ».",
-     "bubbles": [
-      { "text": "Je suis millionnaire !", "side": "r" },
-      { "text": "En papier.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Gaspard (on the right) standing on a pile of paper sheets, arms up in victory, eyes sparkling; the old hunchbacked man (on the left) looking up at him, deadpan, counting a few real coins in his hand. medium shot",
-      "cast": ["bossu", "spec"],
-      "file": "images/cultureg-07.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 8,
-     "kind": "chap",
-     "tag": "1720",
-     "caption": "Les clients veulent récupérer leur or. La banque n’en a pas assez.",
-     "bubbles": [
-      { "text": "Mon or, s’il vous plaît.", "side": "r" },
-      { "text": "Aujourd’hui ? Genre… maintenant ?", "side": "l" }
-     ],
-     "image": {
-      "prompt": "the bank counter again. Gaspard (on the right) holding out a blank paper note, insistent; John (on the left) behind the counter, sweating buckets, slowly hiding an almost empty little chest behind his back. medium shot",
-      "cast": ["law", "spec"],
-      "file": "images/cultureg-08.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 9,
-     "kind": "fact",
-     "tag": "Décembre 1720",
-     "caption": "L’action retombe à 1 000 livres. Law s’enfuit de France.",
-     "bubbles": [
-      { "text": "Il est où, l’Écossais ?", "side": "l" },
-      { "text": "Parti. Ses billets, eux, sont restés.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "an empty bank counter with papers scattered everywhere. Philippe (on the left) looking around confused, holding a candle; Gaspard (on the right) sitting on the floor in a pile of worthless papers, melting in despair, wig crooked. medium shot",
-      "cast": ["regent", "spec"],
-      "file": "images/cultureg-09.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 10,
-     "kind": "conf",
-     "tag": "La leçon",
-     "caption": "Law meurt à Venise en 1729. Leçon retenue : un billet vaut ce qu’on croit qu’il vaut.",
-     "bubbles": [
-      { "text": "J’avais raison. Juste un peu trop vite.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "John (in the middle) in a confession-style close-up, looking straight at the reader with a sheepish shrug, a single blank paper note tucked in his red waistcoat. plain background",
-      "cast": ["law"],
-      "file": "images/cultureg-10.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    }
-   ],
-   "final": {
-    "text": "Sous la Régence, l’action de la compagnie de John Law atteint 10 000 livres en janvier 1720, puis s’effondre : le système fait faillite la même année.",
-    "source": "Hérodote.net, Winton"
-   },
-   "sources": [
-    { "title": "Hérodote — 2 mai 1716 - 26 janvier 1721, le système de Law", "url": "https://www.herodote.net/2_mai_1716_26_janvier_1721-evenement-17160502.php" },
-    { "title": "Vikidia — Système de Law", "url": "https://fr.vikidia.org/wiki/Syst%C3%A8me_de_Law" },
-    { "title": "Winton — The Mississippi Bubble", "url": "https://www.winton.com/longer-view/the-mississippi-bubble" },
-    { "title": "Messy Nessy — The birth of the millionaire", "url": "https://messynessychic.com/2020/03/24/the-birth-of-the-millionaire" }
-   ]
-  },
-  {
-   "id": "insolite",
-   "label": "L’Insolite Historique",
-   "title": "La Joconde est devenue une star en disparaissant",
-   "tagline": "En 1911, un vitrier la décroche du Louvre. Et le monde entier vient admirer… le mur vide.",
-   "minutes": 1,
-   "theme": "Histoire de l’art",
-   "cast": [
-    {
-     "id": "peruggia",
-     "look": "Vincenzo, an Italian glazier of 1911, short and stocky, thick black moustache, flat grey cap, long white workman's smock",
-     "file": "cast/insolite-peruggia.png",
-     "status": "pending"
-    },
-    {
-     "id": "beroud",
-     "look": "Louis, a Parisian painter of 1911, pointy grey beard, black beret, black jacket, a red scarf as the only colour, carrying an easel",
-     "file": "cast/insolite-beroud.png",
-     "status": "pending"
-    },
-    {
-     "id": "apo",
-     "look": "Guillaume, a stocky poet of 1911, big round face, slicked-back dark hair, small moustache, black suit, white bow tie, a notebook in hand",
-     "file": "cast/insolite-apo.png",
-     "status": "pending"
-    }
-   ],
-   "cover": {
-    "prompt": "a bare museum wall with four small hooks and an empty rectangle. Louis (on the left) pointing at the empty space, shocked, beret flying off; Vincenzo (on the right) tiptoeing away with a large flat rectangle hidden under his white smock, innocent whistle. wide shot",
-    "cast": ["beroud", "peruggia"],
-    "file": "images/insolite-cover.webp",
-    "status": "pending",
-    "attempts": 0
-   },
-   "cases": [
-    {
-     "n": 1,
-     "kind": "chap",
-     "tag": "21 août 1911",
-     "caption": "Le Louvre est fermé. Vincenzo Peruggia, vitrier qui y a travaillé, décroche la Joconde.",
-     "bubbles": [
-      { "text": "Personne ne regarde jamais les ouvriers.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a bare museum wall with an empty frame on the floor. Vincenzo (on the right) holding a small painting turned backwards, glancing left and right, tiny sweat drop, pretending to be calm. medium shot",
-      "cast": ["peruggia"],
-      "file": "images/insolite-01.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 2,
-     "kind": "",
-     "tag": "",
-     "caption": "Il sort tranquillement, le tableau caché sous sa blouse de travail.",
-     "bubbles": [
-      { "text": "Bonne journée ! Rien à signaler !", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a museum exit door. Vincenzo (on the right) walking out stiffly like a robot, his white smock perfectly flat and rectangular on his chest, big fake smile, waving. medium shot",
-      "cast": ["peruggia"],
-      "file": "images/insolite-02.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 3,
-     "kind": "fact",
-     "tag": "22 août",
-     "caption": "Le lendemain, le peintre Louis Béroud vient la copier. Il ne trouve que le cadre.",
-     "bubbles": [
-      { "text": "Elle est chez le photographe, sans doute.", "side": "l" },
-      { "text": "Sans doute.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Louis (on the left) setting up his easel in front of a bare wall with four small hooks, smiling at first, then frozen with his brush in the air, eyes slowly widening. plain background. medium shot",
-      "cast": ["beroud"],
-      "file": "images/insolite-03.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 4,
-     "kind": "fact",
-     "tag": "Septembre 1911",
-     "caption": "Soixante inspecteurs fouillent le musée. Le poète Apollinaire passe six jours en prison.",
-     "bubbles": [
-      { "text": "Je suis poète, pas cambrioleur !", "side": "l" },
-      { "text": "Dites ça en alexandrins, ça passera mieux.", "side": "r" }
-     ],
-     "image": {
-      "prompt": "a bare prison cell with one stool. Guillaume (on the left) gripping the bars, outraged, notebook in hand; Louis (on the right) visiting outside the bars, shrugging with a sorry smile. medium shot",
-      "cast": ["apo", "beroud"],
-      "file": "images/insolite-04.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 5,
-     "kind": "",
-     "tag": "",
-     "caption": "Interrogé, il cite son ami Picasso. Tous deux seront mis hors de cause.",
-     "bubbles": [
-      { "text": "Pablo, pardon. J’ai paniqué.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Guillaume (on the left) sitting on a chair under a single hanging lamp, shrinking, tiny pink blush marks, nervously chewing his notebook. plain dark background. close-up",
-      "cast": ["apo"],
-      "file": "images/insolite-05.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 6,
-     "kind": "react",
-     "tag": "",
-     "caption": "Pendant ce temps, la foule vient au Louvre voir… le mur vide. Certains y déposent des fleurs.",
-     "bubbles": [
-      { "text": "On fait la queue pour quatre clous.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a long queue of tiny grey visitors in front of a bare wall with four hooks, a few flowers on the floor below. Louis (on the left, in the foreground) standing in the queue, arms crossed, deadpan, staring at the reader. wide shot",
-      "cast": ["beroud"],
-      "file": "images/insolite-06.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 7,
-     "kind": "fact",
-     "tag": "1913",
-     "caption": "Deux ans plus tard, Peruggia tente de la vendre à un marchand de Florence. Il est arrêté.",
-     "bubbles": [
-      { "text": "Je voulais la rendre à l’Italie !", "side": "r" },
-      { "text": "Et le prix, c’était pour l’Italie aussi ?", "side": "l" }
-     ],
-     "image": {
-      "prompt": "a small hotel room with a bed and an open suitcase. Vincenzo (on the right) clutching a small painting turned backwards against his chest, protesting, chest puffed out; Louis (on the left) leaning in the doorway, unconvinced. medium shot",
-      "cast": ["peruggia", "beroud"],
-      "file": "images/insolite-07.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 8,
-     "kind": "conf",
-     "tag": "Le fin mot",
-     "caption": "Elle revient au Louvre le 4 janvier 1914. Entre-temps, sa célébrité a explosé.",
-     "bubbles": [
-      { "text": "Son meilleur agent ? Un voleur.", "side": "l" }
-     ],
-     "image": {
-      "prompt": "Louis (in the middle) in a confession-style close-up, looking straight at the reader with a tired half smile, holding a stack of postcards with blank fronts. plain background",
-      "cast": ["beroud"],
-      "file": "images/insolite-08.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    }
-   ],
-   "final": {
-    "text": "La Joconde a été volée au Louvre le 21 août 1911 par le vitrier Vincenzo Peruggia ; elle n’y est revenue que le 4 janvier 1914.",
-    "source": "Paris ZigZag"
-   },
-   "sources": [
-    { "title": "Paris ZigZag — L’incroyable histoire du vol de la Joconde", "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/vol-joconde-louvre/" },
-    { "title": "La Libre — La folle histoire du vol de la Joconde", "url": "https://www.lalibre.be/culture/arts/2018/12/29/la-folle-histoire-du-vol-de-la-joconde-le-tableau-le-plus-connu-du-monde-il-y-a-plus-dun-siecle-IOABR5GS6JFPHLGL5MPQAZLSZI/" },
-    { "title": "Numéro — Guillaume Apollinaire et le vol du Louvre", "url": "https://numero.com/art/art-art/guillaume-apollinaire-vol-musee-louvre/" },
-    { "title": "My Modern Met — How the Mona Lisa’s theft transformed it into an icon", "url": "https://mymodernmet.com/mona-lisa-theft-1911/" }
-   ]
-  },
-  {
-   "id": "quiz",
-   "kind": "frise",
-   "label": "La Frise",
-   "title": "Quatre dates, zéro machine à remonter le temps",
-   "minutes": 1,
-   "theme": "",
-   "questions": [
-    {
-     "type": "order",
-     "by": "chrono",
-     "q": "Du plus ancien au plus récent",
-     "items": [
-      {
-       "name": "Sacre de Charles VII à Reims",
-       "year": 1429
-      },
-      {
-       "name": "Début du chantier de Notre-Dame de Paris",
-       "year": 1163
-      },
-      {
-       "name": "Bible de Gutenberg",
-       "year": 1455,
-       "label": "vers 1455"
-      },
-      {
-       "name": "Fondation de Tenochtitlan (Mexico)",
-       "year": 1325,
-       "label": "vers 1325"
-      }
-     ],
-     "explain": "Notre-Dame était en chantier depuis plus de 160 ans quand les Aztèques ont fondé Tenochtitlan, l’actuelle Mexico. Les cathédrales, c’est long. Les capitales, parfois plus rapide.",
-     "source": {
-      "title": "Wikipédia — Tenochtitlan",
-      "url": "https://fr.wikipedia.org/wiki/Tenochtitlan"
-     }
-    },
-    {
-     "type": "order",
-     "by": "chrono",
-     "q": "Du plus ancien au plus récent",
-     "items": [
-      {
-       "name": "Brevet du téléphone par Graham Bell",
-       "year": 1876
-      },
-      {
-       "name": "Inauguration de la tour Eiffel",
-       "year": 1889
-      },
-      {
-       "name": "Brevet du fax par Alexander Bain",
-       "year": 1843
-      },
-      {
-       "name": "Abolition de l’esclavage en France",
-       "year": 1848
-      }
-     ],
-     "explain": "Le fax est plus vieux que le téléphone : l’Écossais Alexander Bain le brevète en 1843, 33 ans avant Bell. Votre vieille imprimante de bureau a donc des ancêtres.",
-     "source": {
-      "title": "Britannica — Fax",
-      "url": "https://britannica.com/technology/fax"
-     }
-    },
-    {
-     "type": "order",
-     "by": "chrono",
-     "q": "Du plus ancien au plus récent",
-     "items": [
-      {
-       "name": "Fondation de Marseille par des Grecs",
-       "year": -600,
-       "label": "vers 600 av. J.-C."
-      },
-      {
-       "name": "Disparition des derniers mammouths",
-       "year": -2000,
-       "label": "vers 2000 av. J.-C."
-      },
-      {
-       "name": "Grande pyramide de Khéops",
-       "year": -2560,
-       "label": "vers 2560 av. J.-C."
-      },
-      {
-       "name": "Fondation légendaire de Rome",
-       "year": -753,
-       "label": "753 av. J.-C."
-      }
-     ],
-     "explain": "Des mammouths vivaient encore sur l’île Wrangel, en Arctique, des siècles après la construction de Khéops. Les pharaons auraient pu en commander un. Ils ne l’ont pas fait.",
-     "source": {
-      "title": "Futura — Les derniers mammouths sont morts brutalement sur une île isolée",
-      "url": "https://www.futura-sciences.com/planete/actualites/paleontologie-derniers-mammouths-sont-morts-brutalement-ile-isolee-77847/"
-     }
-    }
-   ],
-   "sources": [
-    {
-     "title": "Wikipédia — Tenochtitlan",
-     "url": "https://fr.wikipedia.org/wiki/Tenochtitlan"
-    },
-    {
-     "title": "Britannica — Fax",
-     "url": "https://britannica.com/technology/fax"
-    },
-    {
-     "title": "Futura — Les derniers mammouths sont morts brutalement sur une île isolée",
-     "url": "https://www.futura-sciences.com/planete/actualites/paleontologie-derniers-mammouths-sont-morts-brutalement-ile-isolee-77847/"
-    }
-   ]
-  }
- ]
+  ]
 }
