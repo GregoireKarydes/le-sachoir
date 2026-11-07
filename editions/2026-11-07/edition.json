@@ -1,0 +1,303 @@
+{
+ "date": "2026-11-07",
+ "status": "draft",
+ "formats": [
+  {
+   "id": "actu",
+   "label": "L’Actu du jour",
+   "title": "Le train de 2024 est arrivé (en 2026)",
+   "tagline": "Un TGV à l’heure à deux ans près, un lac sur liste d’invités, un smic au centime près et un pick-up qui prend sa retraite.",
+   "minutes": 2,
+   "theme": "",
+   "cast": [
+    {
+     "id": "lambda",
+     "look": "Bastien, an ordinary man in his thirties, very messy black hair sticking up, big oversized grey hoodie, black jeans, white sneakers, tired eyes",
+     "file": "cast/actu-lambda.png",
+     "status": "pending"
+    },
+    {
+     "id": "cheminot",
+     "look": "a middle-aged train driver, bushy grey walrus mustache, black uniform cap, black jacket, white shirt, red tie as the only colour",
+     "file": "cast/actu-cheminot.png",
+     "status": "pending"
+    },
+    {
+     "id": "garde",
+     "look": "a young mountain eco-guide, curly brown hair in a big messy bun, green fleece jacket as the only colour, black hiking trousers, clipboard",
+     "file": "cast/actu-garde.png",
+     "status": "pending"
+    },
+    {
+     "id": "ministre",
+     "look": "a cartoon government minister, tall and thin, neat white hair, small rimless glasses, black suit, white shirt, blue tie as the only colour",
+     "file": "cast/actu-ministre.png",
+     "status": "pending"
+    },
+    {
+     "id": "patron",
+     "look": "a cartoon tech company boss, short slicked-back dark hair, wide smug grin, plain black t-shirt, black jeans, silver smartwatch as the only accent",
+     "file": "cast/actu-patron.png",
+     "status": "pending"
+    }
+   ],
+   "cover": {
+    "prompt": "A bare station platform. cheminot in the centre, proudly waving a small red flag as a sleek white high-speed train nose arrives. lambda on the right with a hiking backpack, checking his empty wrist as if reading a watch, deadpan. Wide shot, calm empty space above.",
+    "cast": [
+     "cheminot",
+     "lambda"
+    ],
+    "file": "images/actu-cover.webp",
+    "status": "pending",
+    "attempts": 0
+   },
+   "cases": [
+    {
+     "n": 1,
+     "kind": "fact",
+     "tag": "Rail",
+     "caption": "Vendredi, le nouveau TGV M a fait son premier trajet commercial, Paris-Marseille.",
+     "bubbles": [
+      {
+       "text": "Je suis dans un train neuf. Il sent le neuf.",
+       "side": "l"
+      },
+      {
+       "text": "Ne léchez pas les sièges, monsieur.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "Inside a brand new high-speed train carriage, a few empty white seats. lambda on the left hugs his seat headrest with closed eyes and a blissful smile, tiny pink blush marks. cheminot on the right, standing stiff in the aisle, one eyebrow raised, finger pointing at him in mild horror. Medium shot, calm empty space above.",
+      "cast": [
+       "lambda",
+       "cheminot"
+      ],
+      "file": "images/actu-01.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 2,
+     "kind": "fact",
+     "tag": "Rail",
+     "caption": "Prévu pour les JO de 2024, il arrive avec plus de deux ans de retard.",
+     "bubbles": [
+      {
+       "text": "Mesdames et messieurs, le train de 2024 entre en gare.",
+       "side": "l"
+      },
+      {
+       "text": "Pile à l’heure. Enfin, à l’année.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "A bare station platform with one clock on a pole. cheminot on the left, chest puffed out proudly, holding a whistle, presenting the sleek white train nose behind him with a grand arm gesture. lambda on the right, slumped on a bench with a long grey beard grown down to his knees, deadpan stare. Wide shot.",
+      "cast": [
+       "cheminot",
+       "lambda"
+      ],
+      "file": "images/actu-02.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 3,
+     "kind": "fact",
+     "tag": "Montagne",
+     "caption": "Chamonix prépare des quotas pour le lac Blanc dès l’été 2027, sur réservation.",
+     "bubbles": [
+      {
+       "text": "Vous êtes sur la liste ?",
+       "side": "l"
+      },
+      {
+       "text": "C’est un lac, pas une boîte de nuit !",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "A rocky mountain path with a small lake in the distance and a velvet rope on two brass posts blocking the trail. garde on the left, arms crossed like a nightclub bouncer, holding a clipboard, stern face. lambda on the right in hiking gear with a huge backpack, mouth wide open in outrage. Medium shot, empty sky above.",
+      "cast": [
+       "garde",
+       "lambda"
+      ],
+      "file": "images/actu-03.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 4,
+     "kind": "fact",
+     "tag": "Montagne",
+     "caption": "Jusqu’à 4 000 visiteurs par jour en été. Les habitants devront réserver aussi.",
+     "bubbles": [
+      {
+       "text": "J’habite ici depuis quarante ans !",
+       "side": "r"
+      },
+      {
+       "text": "Parfait. Créneau de 14 h 10.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "Same mountain path with the velvet rope. garde on the left, calmly checking her clipboard with a polite professional smile. lambda on the right, melting to his knees in despair, backpack sliding off, tiny sweat drops flying. Close-up on the two, plain background.",
+      "cast": [
+       "garde",
+       "lambda"
+      ],
+      "file": "images/actu-04.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 5,
+     "kind": "fact",
+     "tag": "Salaires",
+     "caption": "Le gouvernement vise un smic au-dessus de 1 500 € net, contre 1 477,93 € aujourd’hui.",
+     "bubbles": [
+      {
+       "text": "Une hausse de vingt-deux euros, c’est historique !",
+       "side": "l"
+      },
+      {
+       "text": "Soit un demi-plein. De scooter.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "A plain office with one desk. ministre on the left, beaming with pride, holding up a giant pocket calculator above his head like a trophy. lambda on the right, arms dangling, shoulders dropped, staring blankly at a single small coin in his open palm. Medium shot, calm space above.",
+      "cast": [
+       "ministre",
+       "lambda"
+      ],
+      "file": "images/actu-05.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 6,
+     "kind": "conf",
+     "tag": "Salaires",
+     "caption": "Syndicats : +100 € pour la CFDT, +10 % pour la CGT. Conférence sociale lundi.",
+     "bubbles": [
+      {
+       "text": "Entre 22 et 150 euros, on va bien trouver un chiffre.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "Confessional close-up: ministre alone, seated against a plain grey wall, looking straight at the camera with a forced optimistic smile and a tiny sweat drop, holding a round dartboard in one hand and a single dart in the other, aiming nervously without looking. Chest-up close-up, empty space above his head.",
+      "cast": [
+       "ministre"
+      ],
+      "file": "images/actu-06.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 7,
+     "kind": "fact",
+     "tag": "Auto",
+     "caption": "Le patron de Tesla annonce la fin du Cybertruck d’ici mi-2027.",
+     "bubbles": [
+      {
+       "text": "Le Cybertruck nous quitte. Il est parti trop carré.",
+       "side": "l"
+      },
+      {
+       "text": "On dit « trop tôt ».",
+       "side": "r"
+      },
+      {
+       "text": "Non.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "An empty parking lot. patron on the left, hand on his heart, solemn like at a farewell, standing next to a very angular boxy steel pickup truck drawn as simple flat triangles. lambda on the right, leaning in, finger raised to correct him, puzzled frown. Wide shot, empty sky above.",
+      "cast": [
+       "patron",
+       "lambda"
+      ],
+      "file": "images/actu-07.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 8,
+     "kind": "fact",
+     "tag": "Auto",
+     "caption": "Objectif : libérer l’usine du Texas pour le Cybercab, son robotaxi sans volant.",
+     "bubbles": [
+      {
+       "text": "Euh… il est où, le chauffeur ?",
+       "side": "r"
+      },
+      {
+       "text": "C’est tout le concept.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "Inside a small two-seat robotaxi with no steering wheel and no pedals. patron standing outside on the left, leaning on the open door, smug grin, thumbs up. lambda on the right, alone inside, clutching the seat with both hands, eyes huge, frozen with sweat drops. Medium shot, plain background.",
+      "cast": [
+       "patron",
+       "lambda"
+      ],
+      "file": "images/actu-08.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    }
+   ],
+   "final": {
+    "text": "Premier trajet commercial le 6 novembre 2026 : le TGV M offre jusqu’à 740 places, environ 20 % de plus que ses prédécesseurs.",
+    "source": "Enerzine / L’Automobiliste"
+   },
+   "sources": [
+    {
+     "title": "Enerzine — Le TGV M arrive enfin sur Paris-Marseille",
+     "url": "https://www.enerzine.com/tgv-m-entree-service-paris-marseille/199593-2026-11"
+    },
+    {
+     "title": "L’Automobiliste — Le TGV M a transporté ses premiers voyageurs",
+     "url": "https://lautomobiliste.fr/06/11/2026/tgv-m-premier-trajet-commercial-paris-marseille-6-novembre-2026/"
+    },
+    {
+     "title": "Lyon Capitale — Des quotas pour aller au lac Blanc",
+     "url": "https://www.lyoncapitale.fr/regions/aura/haute-savoie/chamonix-des-quotas-pour-acceder-au-lac-blanc-des-l-ete-prochain"
+    },
+    {
+     "title": "Outside — Chamonix prépare un système de réservation pour le lac Blanc",
+     "url": "https://www.outside.fr/chamonix-prepare-un-systeme-de-reservation-pour-reguler-la-frequentation-du-lac-blanc/"
+    },
+    {
+     "title": "Boursorama (AFP) — Hausse du smic : la barre des 1 500 euros net",
+     "url": "https://www.boursorama.com/actualite-economique/actualites/hausse-du-smic-le-gouvernement-veut-obtenir-un-compromis-des-partenaires-sociaux-pour-franchir-la-barre-des-1-500-euros-net-a8fcae4d1ffd2e45fcc6233945d1f375"
+    },
+    {
+     "title": "Echos Plus — Smic à 1 500 euros net avant la conférence sociale",
+     "url": "https://echosplus.com/2026/11/06/smic-a-1-500-euros-net-jean-pierre-farandou-evoque-ce-seuil-avant-la-conference-sociale-a-matignon/"
+    },
+    {
+     "title": "CBS News — Musk says Tesla will end Cybertruck production in 2027",
+     "url": "https://www.cbsnews.com/news/tesla-ending-cybertruck-production-next-year/"
+    },
+    {
+     "title": "CNBC — Tesla to wind down Cybertruck production in Texas",
+     "url": "https://www.cnbc.com/2026/11/06/tesla-cybertruck-texas-musk.html"
+    }
+   ]
+  }
+ ]
+}
