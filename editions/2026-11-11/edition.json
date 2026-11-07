@@ -3,6 +3,354 @@
  "status": "draft",
  "formats": [
   {
+   "id": "cultureg",
+   "label": "La Pilule de Culture G",
+   "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
+   "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
+   "minutes": 2,
+   "theme": "Expression française",
+   "cast": [
+    {
+     "id": "sofie",
+     "look": "Sofie, a modern Belgian tourist in her thirties, short blond bob, black raincoat, a red umbrella as the only colour",
+     "file": "cast/cultureg-sofie.png",
+     "status": "pending"
+    },
+    {
+     "id": "marc",
+     "look": "Marc, a modern Parisian café waiter, tall and lanky, slicked black hair, thin moustache, white shirt, black waistcoat, long white apron",
+     "file": "cast/cultureg-marc.png",
+     "status": "pending"
+    },
+    {
+     "id": "gautier",
+     "look": "Gautier, a 13th-century Parisian cloth merchant, round belly, bowl haircut, grey tunic with a black belt, a small purse at his waist, counting on his fingers",
+     "file": "cast/cultureg-gautier.png",
+     "status": "pending"
+    },
+    {
+     "id": "vaugelas",
+     "look": "Claude, a pompous 17th-century grammarian, enormous curly black wig, pointy little moustache, black coat with a huge white lace collar, nose in the air, holding a thick book",
+     "file": "cast/cultureg-vaugelas.png",
+     "status": "pending"
+    }
+   ],
+   "cover": {
+    "prompt": "a small café table. Sofie (on the left) holding a restaurant bill, counting desperately on all ten fingers, eyes crossed; Marc (on the right) standing with a tray, smiling politely, waiting. medium shot",
+    "cast": ["sofie", "marc"],
+    "file": "images/cultureg-cover.webp",
+    "status": "pending",
+    "attempts": 0
+   },
+   "cases": [
+    {
+     "n": 1,
+     "kind": "chap",
+     "tag": "Aujourd’hui",
+     "caption": "En France, 97 se dit « quatre-vingt-dix-sept » : quatre fois vingt, plus dix-sept.",
+     "bubbles": [
+      { "text": "Ça fera quatre-vingt-dix-sept euros.", "side": "r" },
+      { "text": "Nonante-sept, donc. Pourquoi faire compliqué ?", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a bare café with one small round table. Marc (on the right) handing over a bill with a polite smile; Sofie (on the left) sitting, staring at the bill, one eyebrow very high, pen frozen in the air. medium shot",
+      "cast": ["sofie", "marc"],
+      "file": "images/cultureg-01.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 2,
+     "kind": "fact",
+     "tag": "Moyen Âge",
+     "caption": "Au Moyen Âge, on compte par vingtaines : « deux vins » pour 40, « trois vins » pour 60.",
+     "bubbles": [
+      { "text": "Ce drap vaut trois vins deniers.", "side": "l" },
+      { "text": "Soixante ? Dites soixante !", "side": "r" },
+      { "text": "Soixante quoi ?", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a simple medieval market stall with one roll of grey cloth. Gautier (on the left) counting proudly on his fingers in groups; Marc (on the right), out of place in his waiter apron, pulling his own hair in frustration. medium shot",
+      "cast": ["gautier", "marc"],
+      "file": "images/cultureg-02.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 3,
+     "kind": "fact",
+     "tag": "Vers 1260",
+     "caption": "Saint Louis fonde à Paris l’hospice des Quinze-Vingts : 300 lits, soit quinze fois vingt.",
+     "bubbles": [
+      { "text": "Combien de lits ? Quinze-vingts.", "side": "l" },
+      { "text": "Le nom est resté : l’hôpital existe toujours.", "side": "r" }
+     ],
+     "image": {
+      "prompt": "a long bare hall with many identical small beds in a row disappearing into the distance. Gautier (on the left) proudly pointing down the row; Marc (on the right) trying to count the beds one by one with his finger, dizzy. wide shot",
+      "cast": ["gautier", "marc"],
+      "file": "images/cultureg-03.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 4,
+     "kind": "",
+     "tag": "",
+     "caption": "D’où vient ce système ? Peut-être des Celtes, peut-être des Normands. Personne n’en est sûr.",
+     "bubbles": [
+      { "text": "Mon grand-père comptait comme ça. Et le sien.", "side": "l" },
+      { "text": "Et le premier ?", "side": "r" },
+      { "text": "Mystère.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "Gautier (on the left) shrugging with both palms up, totally unbothered; Marc (on the right) leaning forward with a notebook, eager, then deflating. plain background. medium shot",
+      "cast": ["gautier", "marc"],
+      "file": "images/cultureg-04.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 5,
+     "kind": "",
+     "tag": "Fin du Moyen Âge",
+     "caption": "Trente, quarante, cinquante et soixante finissent par s’imposer.",
+     "bubbles": [
+      { "text": "Adieu, « trois vins ». Tu étais si joli.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "Gautier (in the middle) sitting alone on his market stool, slumped, a single tear rolling down, holding his ten fingers up sadly. plain background. close-up",
+      "cast": ["gautier"],
+      "file": "images/cultureg-05.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 6,
+     "kind": "chap",
+     "tag": "XVIIe siècle",
+     "caption": "Mais sous l’influence de Vaugelas, l’Académie retient soixante-dix, quatre-vingts et quatre-vingt-dix.",
+     "bubbles": [
+      { "text": "Septante ? Quelle horreur. Dites soixante-dix.", "side": "l" },
+      { "text": "C’est plus long.", "side": "r" },
+      { "text": "C’est plus chic.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a bare salon with one gilded chair. Claude (on the left) nose in the air, waving a lace handkerchief in disgust; Marc (on the right) holding his notepad, mouth open in disbelief. medium shot",
+      "cast": ["vaugelas", "marc"],
+      "file": "images/cultureg-06.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 7,
+     "kind": "fact",
+     "tag": "",
+     "caption": "En Belgique et en Suisse, septante et nonante sont officiels. En Suisse, on dit même huitante.",
+     "bubbles": [
+      { "text": "Nous, on compte par dizaines. Comme pour soixante.", "side": "l" },
+      { "text": "Huitante ? Je vais défaillir.", "side": "r" }
+     ],
+     "image": {
+      "prompt": "Sofie (on the left) calmly counting on her fingers in neat groups, relaxed smile, red umbrella under her arm; Claude (on the right) fainting backwards dramatically, wig sliding off, the back of his hand on his forehead. plain background. medium shot",
+      "cast": ["sofie", "vaugelas"],
+      "file": "images/cultureg-07.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 8,
+     "kind": "conf",
+     "tag": "Le fin mot",
+     "caption": "Septante reste au dictionnaire. En France, il n’est pas interdit : juste « vieilli ».",
+     "bubbles": [
+      { "text": "Vieilli ? Comme « trois vins », alors.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "Sofie (in the middle) in a confession-style close-up, looking straight at the reader with a satisfied little smile, holding up seven fingers. plain background",
+      "cast": ["sofie"],
+      "file": "images/cultureg-08.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    }
+   ],
+   "final": {
+    "text": "« Quatre-vingts » est un vestige du comptage par vingt du Moyen Âge ; l’hospice parisien des Quinze-Vingts comptait 300 lits.",
+    "source": "Académie française, Techno-Science"
+   },
+   "sources": [
+    { "title": "Académie française — Questions de langue : soixante-dix, quatre-vingts, quatre-vingt-dix", "url": "https://dictionnaire-academie.fr/article/QDL078" },
+    { "title": "Techno-Science — Hôpital des Quinze-Vingts", "url": "https://www.techno-science.net/fr/definitions/hopital-des-quinze-vingts" }
+   ]
+  },
+  {
+   "id": "insolite",
+   "label": "L’Insolite Historique",
+   "title": "La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter)",
+   "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
+   "minutes": 1,
+   "theme": "Musique",
+   "cast": [
+    {
+     "id": "rouget",
+     "look": "Claude-Joseph, a young 1790s army engineer captain, curly powdered hair tied back, eager face, black uniform coat with a red collar as the only colour, holding a violin",
+     "file": "cast/insolite-rouget.png",
+     "status": "pending"
+    },
+    {
+     "id": "dietrich",
+     "look": "Philippe-Frédéric, the mayor of Strasbourg in 1792, plump and jovial, white powdered wig, rosy cheeks, black coat, a wide black sash",
+     "file": "cast/insolite-dietrich.png",
+     "status": "pending"
+    },
+    {
+     "id": "federe",
+     "look": "a 1792 volunteer from Marseille, sunburnt, big black moustache, broad grin, white shirt, black trousers, a red bonnet as the only colour, a musket on his shoulder",
+     "file": "cast/insolite-federe.png",
+     "status": "pending"
+    }
+   ],
+   "cover": {
+    "prompt": "a long road. a column of singing volunteers marching in the background. the volunteer (on the right, in front) singing at full lungs, chest out; Claude-Joseph (on the left) running after them waving his violin, shouting, sweating. wide shot",
+    "cast": ["rouget", "federe"],
+    "file": "images/insolite-cover.webp",
+    "status": "pending",
+    "attempts": 0
+   },
+   "cases": [
+    {
+     "n": 1,
+     "kind": "chap",
+     "tag": "25 avril 1792",
+     "caption": "Strasbourg. La France vient de déclarer la guerre. On se réunit chez le maire, Dietrich.",
+     "bubbles": [
+      { "text": "Il nous faudrait un chant pour l’armée !", "side": "r" },
+      { "text": "Je suis ingénieur. Mais j’ai un violon.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a bare dining room with one table and a candelabra. Philippe-Frédéric (on the right) raising a glass enthusiastically; Claude-Joseph (on the left) shyly lifting his violin from under the table, blushing. medium shot",
+      "cast": ["rouget", "dietrich"],
+      "file": "images/insolite-01.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 2,
+     "kind": "fact",
+     "tag": "",
+     "caption": "Le capitaine Rouget de Lisle l’écrit dans la nuit du 25 au 26 avril.",
+     "bubbles": [
+      { "text": "Allons enfants… de la… de la quoi, déjà ?", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a small room at night lit by one candle. Claude-Joseph (in the middle) sitting at a desk covered in crumpled papers, hair standing up, violin under his chin, writing with a quill at the same time, wild inspired eyes. medium shot",
+      "cast": ["rouget"],
+      "file": "images/insolite-02.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 3,
+     "kind": "fact",
+     "tag": "",
+     "caption": "Son titre : « Chant de guerre pour l’armée du Rhin ». Pas un mot sur Marseille.",
+     "bubbles": [
+      { "text": "Superbe. Strasbourg tient son hymne !", "side": "r" },
+      { "text": "Pour l’instant.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "Philippe-Frédéric (on the right) holding up a sheet of music with both hands like a trophy, tearful with pride; Claude-Joseph (on the left) exhausted, dark circles, slumped against the wall, giving a weak thumbs up. plain background. medium shot",
+      "cast": ["rouget", "dietrich"],
+      "file": "images/insolite-03.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 4,
+     "kind": "",
+     "tag": "Juillet 1792",
+     "caption": "Le chant voyage jusqu’à Marseille. Des volontaires l’emportent en montant vers Paris.",
+     "bubbles": [
+      { "text": "Ça se chante super bien en marchant, ce truc !", "side": "r" }
+     ],
+     "image": {
+      "prompt": "an empty sunny road with a single milestone. the volunteer (on the right) marching with a huge grin, singing with his mouth wide open, musket on his shoulder, a crumpled music sheet sticking out of his pocket. tiny marching silhouettes behind him. wide shot",
+      "cast": ["federe"],
+      "file": "images/insolite-04.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 5,
+     "kind": "fact",
+     "tag": "30 juillet 1792",
+     "caption": "Ils entrent dans Paris en le chantant. Les Parisiens l’appellent l’hymne des Marseillais.",
+     "bubbles": [
+      { "text": "Euh… c’est moi qui l’ai écrite.", "side": "l" },
+      { "text": "Qui ça ?", "side": "r" }
+     ],
+     "image": {
+      "prompt": "a Paris street full of tiny cheering silhouettes throwing hats in the air. the volunteer (on the right) waving to the crowd like a star; Claude-Joseph (on the left) squeezed in the corner, raising a small finger, totally ignored. wide shot",
+      "cast": ["rouget", "federe"],
+      "file": "images/insolite-05.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 6,
+     "kind": "",
+     "tag": "14 juillet 1795",
+     "caption": "Elle devient chant national. Puis elle est interdite sous l’Empire et la Restauration.",
+     "bubbles": [
+      { "text": "Interdite ? Mon tube ?", "side": "l" }
+     ],
+     "image": {
+      "prompt": "Claude-Joseph (in the middle) holding his violin with a big black cross painted over a music sheet pinned on the wall behind him, jaw dropped, melting in despair, arms dangling. plain background. medium shot",
+      "cast": ["rouget"],
+      "file": "images/insolite-06.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 7,
+     "kind": "conf",
+     "tag": "1879",
+     "caption": "La IIIe République en fait l’hymne national. Et le nom de Marseille est resté.",
+     "bubbles": [
+      { "text": "Écrite à Strasbourg. Mais d’accord. Pas de souci.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "Claude-Joseph (in the middle) in a confession-style close-up, looking straight at the reader with a very forced smile and one twitching eye, clutching his violin. plain background",
+      "cast": ["rouget"],
+      "file": "images/insolite-07.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    }
+   ],
+   "final": {
+    "text": "La Marseillaise est née à Strasbourg, sous la plume de Rouget de Lisle, en avril 1792 ; elle est hymne national depuis 1879.",
+    "source": "Élysée, Paris ZigZag"
+   },
+   "sources": [
+    { "title": "Élysée — La Marseillaise de Rouget de Lisle", "url": "https://www.elysee.fr/la-presidence/la-marseillaise-de-rouget-de-lisle" },
+    { "title": "Paris ZigZag — Pourquoi la Marseillaise s’appelle-t-elle ainsi ?", "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/pourquoi-la-marseillaise-sappelle-t-elle-ainsi/" }
+   ]
+  },
+  {
    "id": "quiz",
    "kind": "plusmoins",
    "label": "Plus ou moins",
