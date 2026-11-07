@@ -88,7 +88,17 @@ def generate(prompt: str, size, refs: list[Path]) -> Image.Image:
         data = None
     q = quota_state()
     if q.get("exhausted"):
-        raise QuotaExhausted("quota du jour déjà épuisé (data/images-quota.json)")
+        # Un refus peut être passager (7 novembre : refus « allocation used up » avec 0 neurone compté).
+        # On retente un appel au plus toutes les 2 h au lieu de bloquer toute la journée.
+        since = q.get("exhausted_at")
+        try:
+            stale = since is None or datetime.now(ZoneInfo("UTC")) - datetime.fromisoformat(since) >= timedelta(hours=2)
+        except ValueError:
+            stale = True
+        if not stale:
+            raise QuotaExhausted("quota du jour déjà épuisé (data/images-quota.json)")
+        q["exhausted"] = False
+        save_quota(q)
     r = requests.post(URL, headers={"Authorization": f"Bearer {TOKEN}"}, data=data, files=files, timeout=180)
     q["count"] += 1  # un appel refusé ou raté peut aussi consommer : on compte tout
     save_quota(q)
@@ -98,6 +108,7 @@ def generate(prompt: str, size, refs: list[Path]) -> Image.Image:
         if r.status_code == 429 or "allocation" in low or "quota" in low or "neuron" in low:
             q["count"] -= 1
             q["exhausted"] = True
+            q["exhausted_at"] = datetime.now(ZoneInfo("UTC")).isoformat()
             save_quota(q)
             raise QuotaExhausted(r.text[:300])
         raise RuntimeError(f"HTTP {r.status_code} : {r.text[:250]}")

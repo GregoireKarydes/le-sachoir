@@ -3,6 +3,12 @@
 Objectif : qu'il y ait toujours **7 jours d'avance** de `cultureg`, `insolite`, `dossier` et `quiz` dans `editions/`.
 Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 
+## Rattrapage du jour (lancement par l'orchestrateur)
+Si le message de lancement commence par « Rattrapage <date> » (la date du jour, heure de Paris), l'édition de ce jour est vide : avant tout le reste, écrire pour **cette date-là** (même si c'est aujourd'hui) :
+1. le `quiz` d'abord (sans image, il est publié tout de suite et compte pour la série) — commit et push aussitôt ;
+2. puis `cultureg` et `insolite` s'ils manquent (pas de Grand Dossier en rattrapage) — commit et push après chacun.
+Ces formats comptent dans la limite de 6 par passage ; continuer ensuite normalement avec demain à J+7.
+
 ## Étapes
 1. `git pull`. Pour chaque date de demain à J+7 (heure de Paris), regarder quels formats manquent dans `editions/<date>/edition.json` :
    - `cultureg` et `insolite` : **tous les jours** ;
