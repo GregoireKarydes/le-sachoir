@@ -1,0 +1,98 @@
+{
+ "date": "2026-11-10",
+ "status": "draft",
+ "formats": [
+  {
+   "id": "quiz",
+   "kind": "dico",
+   "label": "Le Dico menteur",
+   "title": "Le dictionnaire a menti (trois fois sur quatre)",
+   "minutes": 1,
+   "theme": "",
+   "questions": [
+    {
+     "type": "choice",
+     "q": "Zinzinuler, c’est…",
+     "choices": [
+      "Chanter, pour une mésange ou une fauvette",
+      "Hésiter longuement avant de répondre",
+      "Faire tinter des pièces dans sa poche",
+      "Avoir les oreilles qui sifflent"
+     ],
+     "answer": 0,
+     "explain": "Du latin zinzilulare, « gazouiller » : le mot imite l’oiseau. Votre réveil, lui, ne zinzinule pas. Il sonne.",
+     "source": {
+      "title": "CNRTL — Zinzinuler",
+      "url": "https://www.cnrtl.fr/definition/zinzinuler"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "Une escarbille, c’est…",
+     "choices": [
+      "Une petite crêpe bretonne roulée",
+      "Une dispute entre voisins de palier",
+      "Un morceau de charbon mal brûlé qui s’échappe du feu",
+      "Une écaille de poisson coincée sous l’ongle"
+     ],
+     "answer": 2,
+     "explain": "Les escarbilles s’envolaient des cheminées des locomotives à vapeur. Le mot vient du wallon escarbyi, « gratter ». Voyager en train, c’était chic et légèrement inflammable.",
+     "source": {
+      "title": "Dictionnaire de l’Académie française — Escarbille",
+      "url": "https://dictionnaire-academie.fr/article/A9E2561"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "Une mine chafouine, c’est une mine…",
+     "choices": [
+      "Ébouriffée, comme au réveil",
+      "Sournoise et rusée",
+      "Enrhumée",
+      "Passionnée par les chats"
+     ],
+     "answer": 1,
+     "explain": "Chafouin vient de « chat » et de « fouin », le mâle de la fouine : deux champions de l’air innocent. Aujourd’hui, on l’emploie aussi pour « un peu contrarié ».",
+     "source": {
+      "title": "Larousse — Chafouin",
+      "url": "https://www.larousse.fr/dictionnaires/francais/chafouin"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "Faire la ribouldingue, c’est…",
+     "choices": [
+      "Dévaler une pente en roulant",
+      "Râler sans arrêt",
+      "Jouer aux boules en trichant",
+      "Faire la fête"
+     ],
+     "answer": 3,
+     "explain": "Mot populaire du XIXe siècle, sans doute tiré du dialectal riboula, le festin de fin des moissons. Alphonse Allais en a même fait un titre : « En ribouldinguant ».",
+     "source": {
+      "title": "Dictionnaire de l’Académie française — Ribouldingue",
+      "url": "https://dictionnaire-academie.fr/article/A9R2585"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "title": "CNRTL — Zinzinuler",
+     "url": "https://www.cnrtl.fr/definition/zinzinuler"
+    },
+    {
+     "title": "Dictionnaire de l’Académie française — Escarbille",
+     "url": "https://dictionnaire-academie.fr/article/A9E2561"
+    },
+    {
+     "title": "Larousse — Chafouin",
+     "url": "https://www.larousse.fr/dictionnaires/francais/chafouin"
+    },
+    {
+     "title": "Dictionnaire de l’Académie française — Ribouldingue",
+     "url": "https://dictionnaire-academie.fr/article/A9R2585"
+    }
+   ]
+  }
+ ]
+}
