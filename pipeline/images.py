@@ -307,7 +307,7 @@ def save_webp(im: Image.Image, dest: Path):
     k = STYLE["upscale"]
     if k and k > 1:
         im = im.resize((im.width * k, im.height * k), Image.LANCZOS)
-        if im is raw:  # pas d'encrage : on garde l'ancien renforcement du trait
+        if im is raw and STYLE.get("sharpen"):  # renforcement du trait, désactivé avec l'encrage le 7 novembre
             im = im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
     im = paper(im, STYLE.get("paper_texture", 0))
     dest.parent.mkdir(parents=True, exist_ok=True)

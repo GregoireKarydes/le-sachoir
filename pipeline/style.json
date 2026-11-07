@@ -20,15 +20,6 @@
   "guidance": 3.5,
   "max_attempts": 3,
   "paper_texture": 0,
-  "ink": {
-    "colors": 8,
-    "black_below": 90,
-    "white_above": 175,
-    "grey": 200,
-    "grey_max_saturation": 36,
-    "thicken": 1,
-    "max_colour_share": 0.2
-  },
   "neuron_budget": 9000,
   "neuron_cost": {
     "case": 200,
@@ -40,5 +31,15 @@
   "fal_usd_per_mp": 0.01,
   "fal_daily_usd": 0.4,
   "fal_monthly_usd": 9.0,
-  "fal_days_ahead": 1
+  "fal_days_ahead": 1,
+  "ink_disabled_2026_11_07": {
+    "colors": 8,
+    "black_below": 90,
+    "white_above": 175,
+    "grey": 200,
+    "grey_max_saturation": 36,
+    "thicken": 1,
+    "max_colour_share": 0.2
+  },
+  "ink": null
 }
