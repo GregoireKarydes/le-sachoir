@@ -1,0 +1,72 @@
+{
+ "date": "2026-11-13",
+ "status": "draft",
+ "formats": [
+  {
+   "id": "quiz",
+   "kind": "chiffre",
+   "label": "Le Chiffre",
+   "title": "Sortez vos doigts, on compte",
+   "minutes": 1,
+   "theme": "",
+   "questions": [
+    {
+     "type": "estimate",
+     "q": "Combien de communes compte la France au 1er janvier 2026 ?",
+     "answer": 34875,
+     "unit": "communes",
+     "min": 1000,
+     "max": 300000,
+     "scale": "log",
+     "explain": "34 875, un record en Europe. Le chiffre n’a pas bougé depuis 2025 : on ne crée pas de commune nouvelle l’année qui précède les municipales.",
+     "source": {
+      "title": "Collectivités locales — Les structures territoriales au 1er janvier 2026",
+      "url": "https://www.collectivites-locales.gouv.fr/actualites/bis-206-les-structures-territoriales-au-1er-janvier"
+     }
+    },
+    {
+     "type": "estimate",
+     "q": "Combien de rivets compte la tour Eiffel ?",
+     "answer": 2500000,
+     "unit": "rivets",
+     "min": 10000,
+     "max": 100000000,
+     "scale": "log",
+     "explain": "Environ 2,5 millions de rivets pour 18 038 pièces de fer. Un meuble en kit géant, sans notice et sans clé Allen.",
+     "source": {
+      "title": "Structurae — Tour Eiffel",
+      "url": "https://structurae.net/fr/ouvrages/tour-eiffel"
+     }
+    },
+    {
+     "type": "estimate",
+     "q": "Combien de kilomètres mesure la Loire ?",
+     "answer": 1006,
+     "unit": "km",
+     "min": 100,
+     "max": 3000,
+     "scale": "lin",
+     "explain": "Environ 1 006 km, du mont Gerbier-de-Jonc (Ardèche) à l’Atlantique : le plus long fleuve coulant entièrement en France. Le Rhin est plus long, mais il voyage.",
+     "source": {
+      "title": "Wikipédia — Loire (fleuve)",
+      "url": "https://fr.wikipedia.org/wiki/Loire_(fleuve)"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "title": "Collectivités locales — Les structures territoriales au 1er janvier 2026",
+     "url": "https://www.collectivites-locales.gouv.fr/actualites/bis-206-les-structures-territoriales-au-1er-janvier"
+    },
+    {
+     "title": "Structurae — Tour Eiffel",
+     "url": "https://structurae.net/fr/ouvrages/tour-eiffel"
+    },
+    {
+     "title": "Wikipédia — Loire (fleuve)",
+     "url": "https://fr.wikipedia.org/wiki/Loire_(fleuve)"
+    }
+   ]
+  }
+ ]
+}
