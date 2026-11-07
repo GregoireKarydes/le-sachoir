@@ -1,564 +1,565 @@
 {
- "date": "2026-11-07",
- "status": "draft",
- "formats": [
-  {
-   "id": "cultureg",
-   "label": "La Pilule de Culture G",
-   "title": "L’immeuble haussmannien, ou l’ascenseur social à l’envers",
-   "tagline": "Pourquoi les balcons sont au 2e et au 5e (et pourquoi la bonne avait la plus belle vue)",
-   "minutes": 2,
-   "theme": "Architecture",
-   "cast": [
+  "date": "2026-11-07",
+  "status": "published",
+  "formats": [
     {
-     "id": "haussmann",
-     "look": "Haussmann, a very tall stiff 1860s Paris prefect in his fifties, balding head, thick grey chinstrap beard, black frock coat buttoned to the top, a red sash across the chest as the only colour",
-     "file": "cast/cultureg-haussmann.png",
-     "status": "pending"
-    },
-    {
-     "id": "archi",
-     "look": "Victor, a nervous short 1860s architect in his thirties, messy black hair sticking up, thin moustache, grey waistcoat with rolled-up white sleeves, always holding a big rolled blank plan",
-     "file": "cast/cultureg-archi.png",
-     "status": "pending"
-    },
-    {
-     "id": "madame",
-     "look": "Madame, a haughty 1860s Parisian bourgeoise in her forties, high tight bun, chin always up, wide black crinoline dress, a small blue fan as the only colour",
-     "file": "cast/cultureg-madame.png",
-     "status": "pending"
-    },
-    {
-     "id": "melie",
-     "look": "Mélie, a skinny 1860s housemaid around twenty, frizzy red hair escaping a white cap, freckles, plain grey dress, white apron, heavy black boots",
-     "file": "cast/cultureg-melie.png",
-     "status": "pending"
-    }
-   ],
-   "cover": {
-    "prompt": "a cutaway of a six-storey Paris building drawn as a simple outline. Madame (on the left, second-floor balcony) fanning herself proudly; Mélie (on the right, tiny attic window at the top) leaning out, chin in hands, dreamy smile at the view. wide shot",
-    "cast": [
-     "madame",
-     "melie"
-    ],
-    "file": "images/cultureg-cover.webp",
-    "status": "pending",
-    "attempts": 0
-   },
-   "cases": [
-    {
-     "n": 1,
-     "kind": "chap",
-     "tag": "Juin 1853",
-     "caption": "Napoléon III nomme Haussmann préfet de la Seine. Mission : « embellir Paris ».",
-     "bubbles": [
-      {
-       "text": "On garde quelque chose de l’ancien Paris ?",
-       "side": "r"
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "L’immeuble haussmannien, ou l’ascenseur social à l’envers",
+      "tagline": "Pourquoi les balcons sont au 2e et au 5e (et pourquoi la bonne avait la plus belle vue)",
+      "minutes": 2,
+      "theme": "Architecture",
+      "cast": [
+        {
+          "id": "haussmann",
+          "look": "Haussmann, a very tall stiff 1860s Paris prefect in his fifties, balding head, thick grey chinstrap beard, black frock coat buttoned to the top, a red sash across the chest as the only colour",
+          "file": "cast/cultureg-haussmann.png",
+          "status": "pending"
+        },
+        {
+          "id": "archi",
+          "look": "Victor, a nervous short 1860s architect in his thirties, messy black hair sticking up, thin moustache, grey waistcoat with rolled-up white sleeves, always holding a big rolled blank plan",
+          "file": "cast/cultureg-archi.png",
+          "status": "pending"
+        },
+        {
+          "id": "madame",
+          "look": "Madame, a haughty 1860s Parisian bourgeoise in her forties, high tight bun, chin always up, wide black crinoline dress, a small blue fan as the only colour",
+          "file": "cast/cultureg-madame.png",
+          "status": "pending"
+        },
+        {
+          "id": "melie",
+          "look": "Mélie, a skinny 1860s housemaid around twenty, frizzy red hair escaping a white cap, freckles, plain grey dress, white apron, heavy black boots",
+          "file": "cast/cultureg-melie.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a cutaway of a six-storey Paris building drawn as a simple outline. Madame (on the left, second-floor balcony) fanning herself proudly; Mélie (on the right, tiny attic window at the top) leaning out, chin in hands, dreamy smile at the view. wide shot",
+        "cast": [
+          "madame",
+          "melie"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
       },
-      {
-       "text": "Les numéros de rue. Peut-être.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "a bare office with one big desk and a map of crooked streets pinned on the wall. Haussmann (on the left), towering, arms crossed, cold satisfied smile; Victor (on the right), clutching his rolled plan to his chest, tiny sweat drop, looking up at him. medium shot",
-      "cast": [
-       "haussmann",
-       "archi"
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Juin 1853",
+          "caption": "Napoléon III nomme Haussmann préfet de la Seine. Mission : « embellir Paris ».",
+          "bubbles": [
+            {
+              "text": "On garde quelque chose de l’ancien Paris ?",
+              "side": "r"
+            },
+            {
+              "text": "Les numéros de rue. Peut-être.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare office with one big desk and a map of crooked streets pinned on the wall. Haussmann (on the left), towering, arms crossed, cold satisfied smile; Victor (on the right), clutching his rolled plan to his chest, tiny sweat drop, looking up at him. medium shot",
+            "cast": [
+              "haussmann",
+              "archi"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Environ 25 000 maisons démolies en dix ans, et 64 km de rues percées.",
+          "bubbles": [
+            {
+              "text": "Je ne démolis pas. Je libère de l’espace.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "an empty street with a pile of rubble behind. Haussmann (on the left) drawing a perfectly straight line on the ground with a long ruler, serene and proud; Victor (on the right) frozen, mouth open, his rolled plan slipping from his hands. wide shot",
+            "cast": [
+              "haussmann",
+              "archi"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "",
+          "caption": "Les nouveaux immeubles, collés et alignés, forment une « rue mur ».",
+          "bubbles": [
+            {
+              "text": "Et si un client veut une façade originale ?",
+              "side": "r"
+            },
+            {
+              "text": "Il déménage à Londres.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a long row of identical simple building outlines in a straight line. Haussmann (on the left) pointing at the row with a stern finger, eyebrows lowered; Victor (on the right) timidly holding up a little sketch, shoulders hunched, blush marks. medium shot",
+            "cast": [
+              "haussmann",
+              "archi"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "1859",
+          "caption": "Règlement de 1859 : rue de plus de 20 m, façade de 20 m maximum.",
+          "bubbles": [
+            {
+              "text": "Et le toit ?",
+              "side": "r"
+            },
+            {
+              "text": "Incliné à 45 degrés. Pas 44. Pas 46.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a plain background with a giant wooden set square. Haussmann (on the left) kneeling, measuring the slope of a small model roof with a protractor, one eye closed, very serious; Victor (on the right) slumped, arms dangling, exhausted. medium shot",
+            "cast": [
+              "haussmann",
+              "archi"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "L’étage noble",
+          "caption": "Au rez-de-chaussée, boutiques et concierge. Au 2e, l’étage bourgeois : hauts plafonds, balcon filant.",
+          "bubbles": [
+            {
+              "text": "Assez haut pour fuir la boue, assez bas pour l’escalier.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a long wrought-iron balcony seen from the street below. Madame (on the left) standing on the balcony, chin very high, fanning herself slowly, eyes half closed with smugness. low angle, medium shot",
+            "cast": [
+              "madame"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "",
+          "caption": "Pas d’ascenseur : plus on monte, moins c’est cher. Sous les combles, les domestiques.",
+          "bubbles": [
+            {
+              "text": "Six étages par jour. Je n’ai jamais payé de salle de sport.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a narrow spiral staircase going up forever. Mélie (on the right) climbing, bent double, carrying a heavy coal bucket, face red, big sweat drops, tongue out, legs wobbling like jelly. medium shot",
+            "cast": [
+              "melie"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Au 5e, un second balcon filant : surtout pour la symétrie de la façade.",
+          "bubbles": [
+            {
+              "text": "Donc il ne sert à rien ?",
+              "side": "r"
+            },
+            {
+              "text": "Il sert à ce que ce soit joli. C’est énorme.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple building facade outline with two long balconies. Haussmann (on the left) framing the facade with his fingers like a painter, deeply moved, one tear of joy; Victor (on the right) scratching his head, puzzled, one eyebrow raised. medium shot",
+            "cast": [
+              "haussmann",
+              "archi"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "conf",
+          "tag": "Aujourd’hui",
+          "caption": "Aujourd’hui, les derniers étages, pour la vue, sont parmi les plus recherchés.",
+          "bubbles": [
+            {
+              "text": "J’avais un rooftop avec vue. On appelait ça une chambre de bonne.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "plain empty background. Mélie (in the centre) sitting on a small wooden stool facing the viewer like in an interview, arms crossed, unimpressed half-lidded stare, one eyebrow raised, her white cap slightly crooked. medium shot",
+            "cast": [
+              "melie"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
       ],
-      "file": "images/cultureg-01.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 2,
-     "kind": "fact",
-     "tag": "",
-     "caption": "Environ 25 000 maisons démolies en dix ans, et 64 km de rues percées.",
-     "bubbles": [
-      {
-       "text": "Je ne démolis pas. Je libère de l’espace.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "an empty street with a pile of rubble behind. Haussmann (on the left) drawing a perfectly straight line on the ground with a long ruler, serene and proud; Victor (on the right) frozen, mouth open, his rolled plan slipping from his hands. wide shot",
-      "cast": [
-       "haussmann",
-       "archi"
-      ],
-      "file": "images/cultureg-02.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 3,
-     "kind": "",
-     "tag": "",
-     "caption": "Les nouveaux immeubles, collés et alignés, forment une « rue mur ».",
-     "bubbles": [
-      {
-       "text": "Et si un client veut une façade originale ?",
-       "side": "r"
+      "final": {
+        "text": "Dans un immeuble haussmannien, le balcon filant du 2e signale l’étage noble ; celui du 5e sert surtout la symétrie de la façade.",
+        "source": "Paris ZigZag — Pourquoi les balcons filants sont aux 2e et 5e étages"
       },
-      {
-       "text": "Il déménage à Londres.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "a long row of identical simple building outlines in a straight line. Haussmann (on the left) pointing at the row with a stern finger, eyebrows lowered; Victor (on the right) timidly holding up a little sketch, shoulders hunched, blush marks. medium shot",
-      "cast": [
-       "haussmann",
-       "archi"
-      ],
-      "file": "images/cultureg-03.webp",
-      "status": "pending",
-      "attempts": 0
-     }
+      "sources": [
+        {
+          "title": "Ville de Paris — Haussmann, l’homme qui a transformé Paris",
+          "url": "https://www.paris.fr/pages/haussmann-l-homme-qui-a-transforme-paris-23091"
+        },
+        {
+          "title": "Paris ZigZag — Pourquoi les balcons filants des immeubles haussmanniens sont-ils toujours aux 2e et 5e étages ?",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/balcons-filants-immeubles-haussmanniens-paris/"
+        },
+        {
+          "title": "Techno-Science — Règlements d’urbanisme de Paris (1859, 1884, 1902)",
+          "url": "https://www.techno-science.net/fr/definitions/reglements-d-urbanisme-de-paris"
+        }
+      ]
     },
     {
-     "n": 4,
-     "kind": "fact",
-     "tag": "1859",
-     "caption": "Règlement de 1859 : rue de plus de 20 m, façade de 20 m maximum.",
-     "bubbles": [
-      {
-       "text": "Et le toit ?",
-       "side": "r"
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Le premier piratage de l’histoire s’est fait à la longue-vue",
+      "tagline": "En 1834, deux jumeaux bordelais détournent le télégraphe de l’État pour battre la Bourse.",
+      "minutes": 1,
+      "theme": "Informatique et numérique",
+      "cast": [
+        {
+          "id": "francois",
+          "look": "François, a slick 1830s Bordeaux trader in his late twenties, oiled black hair with a sharp side parting, thin pencil moustache, black tailcoat, white high collar, a gold waistcoat as the only colour",
+          "file": "cast/insolite-francois.png",
+          "status": "pending"
+        },
+        {
+          "id": "louis",
+          "look": "Louis, François's identical twin, same oiled black hair and pencil moustache, but always slightly dishevelled, black tailcoat, white high collar, a crooked green cravat as the only colour",
+          "file": "cast/insolite-louis.png",
+          "status": "pending"
+        },
+        {
+          "id": "employe",
+          "look": "Gaston, a shifty 1830s telegraph operator in his forties, round bald head, bushy grey sideburns, grey uniform jacket with brass buttons, small round spectacles",
+          "file": "cast/insolite-employe.png",
+          "status": "pending"
+        },
+        {
+          "id": "ami",
+          "look": "Honoré, a very upright honest 1830s man in his thirties, neat blond hair, big earnest eyes, plain black jacket, white shirt, hands always clasped",
+          "file": "cast/insolite-ami.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a hilltop with a simple wooden telegraph tower with two arms. François (on the left) peering through a long brass telescope, delighted grin; Louis (on the right) rubbing his hands greedily, eyebrows wiggling. wide shot",
+        "cast": [
+          "francois",
+          "louis"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
       },
-      {
-       "text": "Incliné à 45 degrés. Pas 44. Pas 46.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "a plain background with a giant wooden set square. Haussmann (on the left) kneeling, measuring the slope of a small model roof with a protractor, one eye closed, very serious; Victor (on the right) slumped, arms dangling, exhausted. medium shot",
-      "cast": [
-       "haussmann",
-       "archi"
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Bordeaux, 1834",
+          "caption": "Les jumeaux François et Louis Blanc spéculent sur la rente d’État à Bordeaux.",
+          "bubbles": [
+            {
+              "text": "Les cours de Paris arrivent ici avec des jours de retard.",
+              "side": "l"
+            },
+            {
+              "text": "Il nous faudrait Internet.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare office with one desk and a big empty ledger. François (on the left) slumped over the ledger, chin on the desk, bored and annoyed; Louis (on the right) lying on his back on the desk, legs in the air, staring at the ceiling. medium shot",
+            "cast": [
+              "francois",
+              "louis"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le télégraphe Chappe",
+          "caption": "Le télégraphe Chappe relaie des signaux de tour en tour. Réservé à l’administration.",
+          "bubbles": [
+            {
+              "text": "Un réseau ultrarapide, interdit au public. Je suis amoureux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a grassy hill with a simple wooden telegraph tower with two articulated arms in the distance. François (on the left) on his knees in the grass, hands clasped on his heart, starry eyes, tiny pink blush marks, gazing at the tower like a lover. wide shot",
+            "cast": [
+              "francois"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "",
+          "caption": "À Tours, un employé soudoyé glisse un faux signal, suivi du signe « annuler ».",
+          "bubbles": [
+            {
+              "text": "Ce n’est pas une erreur. C’est une erreur rémunérée.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "inside a cramped wooden telegraph room with two big levers. Gaston (on the right) pulling one lever with one hand, the other hand hiding a small bag of coins behind his back, looking sideways with a guilty smirk, sweat drop. medium shot",
+            "cast": [
+              "employe"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Près de Bordeaux, un complice lit le faux signal à la longue-vue : hausse ou baisse.",
+          "bubbles": [
+            {
+              "text": "Hausse ! On achète tout.",
+              "side": "l"
+            },
+            {
+              "text": "J’adore la fibre optique.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a hilltop at dawn, a tiny telegraph tower far away. François (on the left) looking through a long brass telescope, mouth wide open in excitement; Louis (on the right) hugging him from behind, both bouncing on their toes. medium shot",
+            "cast": [
+              "francois",
+              "louis"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "1836",
+          "caption": "Deux ans plus tard, l’employé tombe malade et propose sa place à un ami.",
+          "bubbles": [
+            {
+              "text": "C’est simple : tu fais des erreurs exprès.",
+              "side": "l"
+            },
+            {
+              "text": "Je vais réfléchir. Chez les gendarmes.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare bedroom with one bed. Gaston (on the left) in bed with a nightcap, a thermometer in his mouth, winking and giving a thumbs up; Honoré (on the right) standing stiff as a post, hands clasped, eyes narrowed, slowly backing away. medium shot",
+            "cast": [
+              "employe",
+              "ami"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "Le procès",
+          "caption": "L’ami dénonce tout. Mais aucune loi ne punit ce détournement : seule la corruption est condamnée.",
+          "bubbles": [
+            {
+              "text": "Pirater un réseau ? Ce crime n’existe pas encore.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare courtroom with a tall wooden bench. François (on the left) standing in the dock, chest puffed out, finger raised like a professor, smug; Louis (on the right) beside him, shrugging with an innocent angelic smile, halo-like glow around his head. medium shot",
+            "cast": [
+              "francois",
+              "louis"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "conf",
+          "tag": "Épilogue",
+          "caption": "Fortune à peine entamée, les jumeaux ouvrent des casinos. François lancera Monte-Carlo.",
+          "bubbles": [
+            {
+              "text": "Après le télégraphe truqué, la roulette m’a semblé très honnête.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "plain empty background. François (in the centre) sitting on a wooden stool facing the viewer like in an interview, spinning a small roulette wheel on his knee, relaxed smug smile, one eyebrow raised. medium shot",
+            "cast": [
+              "francois"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
       ],
-      "file": "images/cultureg-04.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 5,
-     "kind": "fact",
-     "tag": "L’étage noble",
-     "caption": "Au rez-de-chaussée, boutiques et concierge. Au 2e, l’étage bourgeois : hauts plafonds, balcon filant.",
-     "bubbles": [
-      {
-       "text": "Assez haut pour fuir la boue, assez bas pour l’escalier.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "a long wrought-iron balcony seen from the street below. Madame (on the left) standing on the balcony, chin very high, fanning herself slowly, eyes half closed with smugness. low angle, medium shot",
-      "cast": [
-       "madame"
-      ],
-      "file": "images/cultureg-05.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 6,
-     "kind": "",
-     "tag": "",
-     "caption": "Pas d’ascenseur : plus on monte, moins c’est cher. Sous les combles, les domestiques.",
-     "bubbles": [
-      {
-       "text": "Six étages par jour. Je n’ai jamais payé de salle de sport.",
-       "side": "r"
-      }
-     ],
-     "image": {
-      "prompt": "a narrow spiral staircase going up forever. Mélie (on the right) climbing, bent double, carrying a heavy coal bucket, face red, big sweat drops, tongue out, legs wobbling like jelly. medium shot",
-      "cast": [
-       "melie"
-      ],
-      "file": "images/cultureg-06.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 7,
-     "kind": "fact",
-     "tag": "",
-     "caption": "Au 5e, un second balcon filant : surtout pour la symétrie de la façade.",
-     "bubbles": [
-      {
-       "text": "Donc il ne sert à rien ?",
-       "side": "r"
+      "final": {
+        "text": "Dès 1834, les jumeaux Blanc détournaient le télégraphe Chappe pour connaître avant tout le monde, à Bordeaux, les cours de la Bourse.",
+        "source": "Encyclopædia Universalis — Blanc François et Louis"
       },
-      {
-       "text": "Il sert à ce que ce soit joli. C’est énorme.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "a simple building facade outline with two long balconies. Haussmann (on the left) framing the facade with his fingers like a painter, deeply moved, one tear of joy; Victor (on the right) scratching his head, puzzled, one eyebrow raised. medium shot",
-      "cast": [
-       "haussmann",
-       "archi"
-      ],
-      "file": "images/cultureg-07.webp",
-      "status": "pending",
-      "attempts": 0
-     }
+      "sources": [
+        {
+          "title": "Encyclopædia Universalis — Blanc François (1806-1877) et Louis (1806-1854)",
+          "url": "https://www.universalis.fr/encyclopedie/blanc-francois-et-louis/"
+        },
+        {
+          "title": "Security Boulevard — 1834: The First Cyberattack",
+          "url": "https://securityboulevard.com/2018/05/1834-the-first-cyberattack"
+        },
+        {
+          "title": "Amusing Planet — The world’s first cyber attack happened nearly two hundred years ago",
+          "url": "https://www.amusingplanet.com/2019/03/the-worlds-first-cyber-attack-happened.html"
+        },
+        {
+          "title": "Parisian Fields — The rise and fall of the visual telegraph",
+          "url": "https://parisianfields.com/2017/11/05/the-rise-and-fall-of-the-visual-telegraph/"
+        }
+      ]
     },
     {
-     "n": 8,
-     "kind": "conf",
-     "tag": "Aujourd’hui",
-     "caption": "Aujourd’hui, les derniers étages, pour la vue, sont parmi les plus recherchés.",
-     "bubbles": [
-      {
-       "text": "J’avais un rooftop avec vue. On appelait ça une chambre de bonne.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "plain empty background. Mélie (in the centre) sitting on a small wooden stool facing the viewer like in an interview, arms crossed, unimpressed half-lidded stare, one eyebrow raised, her white cap slightly crooked. medium shot",
-      "cast": [
-       "melie"
+      "id": "quiz",
+      "kind": "geo",
+      "label": "Le Quiz géo",
+      "title": "Trois questions et un village qui n’existe pas",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "map",
+          "map": "france",
+          "q": "Où se trouve la Lozère ?",
+          "target": {
+            "dept": "48"
+          },
+          "name": "la Lozère",
+          "explain": "C’est le département le moins peuplé de France : environ 75 500 habitants (Insee, 2019). Ici, les embouteillages sont surtout composés de brebis.",
+          "source": {
+            "title": "Connexion — Which French departments are the least populated?",
+            "url": "https://www.connexionfrance.com/news/map-which-french-departments-are-the-least-populated/131122"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "De quel pays Astana est-elle la capitale ?",
+          "choices": [
+            "L’Ouzbékistan",
+            "Le Kazakhstan",
+            "Le Kirghizistan",
+            "Le Turkménistan"
+          ],
+          "answer": 1,
+          "explain": "Astana a été rebaptisée Nur-Sultan en 2019, en l’honneur de l’ex-président, puis est redevenue Astana en 2022. Les cartographes ont demandé un congé.",
+          "source": {
+            "title": "Al Jazeera — Kazakhstan approves proposal to restore capital’s old name Astana",
+            "url": "https://www.aljazeera.com/news/2022/9/13/kazakhstan-considers-reinstating-capitals-old-name-astana"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "Vrai village ou canular ? Trois de ces communes existent. Laquelle est inventée ?",
+          "choices": [
+            "Y",
+            "Arnac-la-Poste",
+            "Bourg-la-Sieste",
+            "Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson"
+          ],
+          "answer": 2,
+          "explain": "Bourg-la-Sieste n’existe pas (hélas). Y, dans la Somme, a le nom le plus court de France ; Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, dans la Marne, le plus long : 38 lettres.",
+          "source": {
+            "title": "The Local — Revealed: the longest place name in France",
+            "url": "https://www.thelocal.fr/20260805/revealed-the-longest-place-name-in-france"
+          }
+        }
       ],
-      "file": "images/cultureg-08.webp",
-      "status": "pending",
-      "attempts": 0
-     }
+      "sources": [
+        {
+          "title": "Connexion — Which French departments are the least populated?",
+          "url": "https://www.connexionfrance.com/news/map-which-french-departments-are-the-least-populated/131122"
+        },
+        {
+          "title": "Al Jazeera — Kazakhstan approves proposal to restore capital’s old name Astana",
+          "url": "https://www.aljazeera.com/news/2022/9/13/kazakhstan-considers-reinstating-capitals-old-name-astana"
+        },
+        {
+          "title": "The Local — Revealed: the longest place name in France",
+          "url": "https://www.thelocal.fr/20260805/revealed-the-longest-place-name-in-france"
+        },
+        {
+          "title": "Banatic (ministère de l’Intérieur) — Commune Arnac-la-Poste (87003)",
+          "url": "https://www.banatic.interieur.gouv.fr/commune/87003-Arnac-la-Poste"
+        }
+      ]
     }
-   ],
-   "final": {
-    "text": "Dans un immeuble haussmannien, le balcon filant du 2e signale l’étage noble ; celui du 5e sert surtout la symétrie de la façade.",
-    "source": "Paris ZigZag — Pourquoi les balcons filants sont aux 2e et 5e étages"
-   },
-   "sources": [
-    {
-     "title": "Ville de Paris — Haussmann, l’homme qui a transformé Paris",
-     "url": "https://www.paris.fr/pages/haussmann-l-homme-qui-a-transforme-paris-23091"
-    },
-    {
-     "title": "Paris ZigZag — Pourquoi les balcons filants des immeubles haussmanniens sont-ils toujours aux 2e et 5e étages ?",
-     "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/balcons-filants-immeubles-haussmanniens-paris/"
-    },
-    {
-     "title": "Techno-Science — Règlements d’urbanisme de Paris (1859, 1884, 1902)",
-     "url": "https://www.techno-science.net/fr/definitions/reglements-d-urbanisme-de-paris"
-    }
-   ]
-  },
-  {
-   "id": "insolite",
-   "label": "L’Insolite Historique",
-   "title": "Le premier piratage de l’histoire s’est fait à la longue-vue",
-   "tagline": "En 1834, deux jumeaux bordelais détournent le télégraphe de l’État pour battre la Bourse.",
-   "minutes": 1,
-   "theme": "Informatique et numérique",
-   "cast": [
-    {
-     "id": "francois",
-     "look": "François, a slick 1830s Bordeaux trader in his late twenties, oiled black hair with a sharp side parting, thin pencil moustache, black tailcoat, white high collar, a gold waistcoat as the only colour",
-     "file": "cast/insolite-francois.png",
-     "status": "pending"
-    },
-    {
-     "id": "louis",
-     "look": "Louis, François's identical twin, same oiled black hair and pencil moustache, but always slightly dishevelled, black tailcoat, white high collar, a crooked green cravat as the only colour",
-     "file": "cast/insolite-louis.png",
-     "status": "pending"
-    },
-    {
-     "id": "employe",
-     "look": "Gaston, a shifty 1830s telegraph operator in his forties, round bald head, bushy grey sideburns, grey uniform jacket with brass buttons, small round spectacles",
-     "file": "cast/insolite-employe.png",
-     "status": "pending"
-    },
-    {
-     "id": "ami",
-     "look": "Honoré, a very upright honest 1830s man in his thirties, neat blond hair, big earnest eyes, plain black jacket, white shirt, hands always clasped",
-     "file": "cast/insolite-ami.png",
-     "status": "pending"
-    }
-   ],
-   "cover": {
-    "prompt": "a hilltop with a simple wooden telegraph tower with two arms. François (on the left) peering through a long brass telescope, delighted grin; Louis (on the right) rubbing his hands greedily, eyebrows wiggling. wide shot",
-    "cast": [
-     "francois",
-     "louis"
-    ],
-    "file": "images/insolite-cover.webp",
-    "status": "pending",
-    "attempts": 0
-   },
-   "cases": [
-    {
-     "n": 1,
-     "kind": "chap",
-     "tag": "Bordeaux, 1834",
-     "caption": "Les jumeaux François et Louis Blanc spéculent sur la rente d’État à Bordeaux.",
-     "bubbles": [
-      {
-       "text": "Les cours de Paris arrivent ici avec des jours de retard.",
-       "side": "l"
-      },
-      {
-       "text": "Il nous faudrait Internet.",
-       "side": "r"
-      }
-     ],
-     "image": {
-      "prompt": "a bare office with one desk and a big empty ledger. François (on the left) slumped over the ledger, chin on the desk, bored and annoyed; Louis (on the right) lying on his back on the desk, legs in the air, staring at the ceiling. medium shot",
-      "cast": [
-       "francois",
-       "louis"
-      ],
-      "file": "images/insolite-01.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 2,
-     "kind": "fact",
-     "tag": "Le télégraphe Chappe",
-     "caption": "Le télégraphe Chappe relaie des signaux de tour en tour. Réservé à l’administration.",
-     "bubbles": [
-      {
-       "text": "Un réseau ultrarapide, interdit au public. Je suis amoureux.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "a grassy hill with a simple wooden telegraph tower with two articulated arms in the distance. François (on the left) on his knees in the grass, hands clasped on his heart, starry eyes, tiny pink blush marks, gazing at the tower like a lover. wide shot",
-      "cast": [
-       "francois"
-      ],
-      "file": "images/insolite-02.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 3,
-     "kind": "",
-     "tag": "",
-     "caption": "À Tours, un employé soudoyé glisse un faux signal, suivi du signe « annuler ».",
-     "bubbles": [
-      {
-       "text": "Ce n’est pas une erreur. C’est une erreur rémunérée.",
-       "side": "r"
-      }
-     ],
-     "image": {
-      "prompt": "inside a cramped wooden telegraph room with two big levers. Gaston (on the right) pulling one lever with one hand, the other hand hiding a small bag of coins behind his back, looking sideways with a guilty smirk, sweat drop. medium shot",
-      "cast": [
-       "employe"
-      ],
-      "file": "images/insolite-03.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 4,
-     "kind": "fact",
-     "tag": "",
-     "caption": "Près de Bordeaux, un complice lit le faux signal à la longue-vue : hausse ou baisse.",
-     "bubbles": [
-      {
-       "text": "Hausse ! On achète tout.",
-       "side": "l"
-      },
-      {
-       "text": "J’adore la fibre optique.",
-       "side": "r"
-      }
-     ],
-     "image": {
-      "prompt": "a hilltop at dawn, a tiny telegraph tower far away. François (on the left) looking through a long brass telescope, mouth wide open in excitement; Louis (on the right) hugging him from behind, both bouncing on their toes. medium shot",
-      "cast": [
-       "francois",
-       "louis"
-      ],
-      "file": "images/insolite-04.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 5,
-     "kind": "",
-     "tag": "1836",
-     "caption": "Deux ans plus tard, l’employé tombe malade et propose sa place à un ami.",
-     "bubbles": [
-      {
-       "text": "C’est simple : tu fais des erreurs exprès.",
-       "side": "l"
-      },
-      {
-       "text": "Je vais réfléchir. Chez les gendarmes.",
-       "side": "r"
-      }
-     ],
-     "image": {
-      "prompt": "a bare bedroom with one bed. Gaston (on the left) in bed with a nightcap, a thermometer in his mouth, winking and giving a thumbs up; Honoré (on the right) standing stiff as a post, hands clasped, eyes narrowed, slowly backing away. medium shot",
-      "cast": [
-       "employe",
-       "ami"
-      ],
-      "file": "images/insolite-05.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 6,
-     "kind": "react",
-     "tag": "Le procès",
-     "caption": "L’ami dénonce tout. Mais aucune loi ne punit ce détournement : seule la corruption est condamnée.",
-     "bubbles": [
-      {
-       "text": "Pirater un réseau ? Ce crime n’existe pas encore.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "a bare courtroom with a tall wooden bench. François (on the left) standing in the dock, chest puffed out, finger raised like a professor, smug; Louis (on the right) beside him, shrugging with an innocent angelic smile, halo-like glow around his head. medium shot",
-      "cast": [
-       "francois",
-       "louis"
-      ],
-      "file": "images/insolite-06.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    },
-    {
-     "n": 7,
-     "kind": "conf",
-     "tag": "Épilogue",
-     "caption": "Fortune à peine entamée, les jumeaux ouvrent des casinos. François lancera Monte-Carlo.",
-     "bubbles": [
-      {
-       "text": "Après le télégraphe truqué, la roulette m’a semblé très honnête.",
-       "side": "l"
-      }
-     ],
-     "image": {
-      "prompt": "plain empty background. François (in the centre) sitting on a wooden stool facing the viewer like in an interview, spinning a small roulette wheel on his knee, relaxed smug smile, one eyebrow raised. medium shot",
-      "cast": [
-       "francois"
-      ],
-      "file": "images/insolite-07.webp",
-      "status": "pending",
-      "attempts": 0
-     }
-    }
-   ],
-   "final": {
-    "text": "Dès 1834, les jumeaux Blanc détournaient le télégraphe Chappe pour connaître avant tout le monde, à Bordeaux, les cours de la Bourse.",
-    "source": "Encyclopædia Universalis — Blanc François et Louis"
-   },
-   "sources": [
-    {
-     "title": "Encyclopædia Universalis — Blanc François (1806-1877) et Louis (1806-1854)",
-     "url": "https://www.universalis.fr/encyclopedie/blanc-francois-et-louis/"
-    },
-    {
-     "title": "Security Boulevard — 1834: The First Cyberattack",
-     "url": "https://securityboulevard.com/2018/05/1834-the-first-cyberattack"
-    },
-    {
-     "title": "Amusing Planet — The world’s first cyber attack happened nearly two hundred years ago",
-     "url": "https://www.amusingplanet.com/2019/03/the-worlds-first-cyber-attack-happened.html"
-    },
-    {
-     "title": "Parisian Fields — The rise and fall of the visual telegraph",
-     "url": "https://parisianfields.com/2017/11/05/the-rise-and-fall-of-the-visual-telegraph/"
-    }
-   ]
-  },
-  {
-   "id": "quiz",
-   "kind": "geo",
-   "label": "Le Quiz géo",
-   "title": "Trois questions et un village qui n’existe pas",
-   "minutes": 1,
-   "theme": "",
-   "questions": [
-    {
-     "type": "map",
-     "map": "france",
-     "q": "Où se trouve la Lozère ?",
-     "target": {
-      "dept": "48"
-     },
-     "name": "la Lozère",
-     "explain": "C’est le département le moins peuplé de France : environ 75 500 habitants (Insee, 2019). Ici, les embouteillages sont surtout composés de brebis.",
-     "source": {
-      "title": "Connexion — Which French departments are the least populated?",
-      "url": "https://www.connexionfrance.com/news/map-which-french-departments-are-the-least-populated/131122"
-     }
-    },
-    {
-     "type": "choice",
-     "q": "De quel pays Astana est-elle la capitale ?",
-     "choices": [
-      "L’Ouzbékistan",
-      "Le Kazakhstan",
-      "Le Kirghizistan",
-      "Le Turkménistan"
-     ],
-     "answer": 1,
-     "explain": "Astana a été rebaptisée Nur-Sultan en 2019, en l’honneur de l’ex-président, puis est redevenue Astana en 2022. Les cartographes ont demandé un congé.",
-     "source": {
-      "title": "Al Jazeera — Kazakhstan approves proposal to restore capital’s old name Astana",
-      "url": "https://www.aljazeera.com/news/2022/9/13/kazakhstan-considers-reinstating-capitals-old-name-astana"
-     }
-    },
-    {
-     "type": "choice",
-     "q": "Vrai village ou canular ? Trois de ces communes existent. Laquelle est inventée ?",
-     "choices": [
-      "Y",
-      "Arnac-la-Poste",
-      "Bourg-la-Sieste",
-      "Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson"
-     ],
-     "answer": 2,
-     "explain": "Bourg-la-Sieste n’existe pas (hélas). Y, dans la Somme, a le nom le plus court de France ; Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson, dans la Marne, le plus long : 38 lettres.",
-     "source": {
-      "title": "The Local — Revealed: the longest place name in France",
-      "url": "https://www.thelocal.fr/20260805/revealed-the-longest-place-name-in-france"
-     }
-    }
-   ],
-   "sources": [
-    {
-     "title": "Connexion — Which French departments are the least populated?",
-     "url": "https://www.connexionfrance.com/news/map-which-french-departments-are-the-least-populated/131122"
-    },
-    {
-     "title": "Al Jazeera — Kazakhstan approves proposal to restore capital’s old name Astana",
-     "url": "https://www.aljazeera.com/news/2022/9/13/kazakhstan-considers-reinstating-capitals-old-name-astana"
-    },
-    {
-     "title": "The Local — Revealed: the longest place name in France",
-     "url": "https://www.thelocal.fr/20260805/revealed-the-longest-place-name-in-france"
-    },
-    {
-     "title": "Banatic (ministère de l’Intérieur) — Commune Arnac-la-Poste (87003)",
-     "url": "https://www.banatic.interieur.gouv.fr/commune/87003-Arnac-la-Poste"
-    }
-   ]
-  }
- ]
+  ],
+  "published_at": "2026-11-07T14:54:21.919055+01:00"
 }
