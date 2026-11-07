@@ -126,6 +126,18 @@
         },
         {
           "n": 4,
+          "kind": "explain",
+          "title": "Trouver une planète par le calcul",
+          "steps": [
+            "Les lois de Newton prédisent la trajectoire d’Uranus",
+            "Uranus s’en écarte un peu : quelque chose la tire",
+            "Le Verrier calcule où devrait se trouver ce « quelque chose »",
+            "Il ne reste plus qu’à pointer un télescope au bon endroit"
+          ],
+          "joke": "Le premier GPS de l’histoire. Il fallait quand même quelqu’un pour regarder."
+        },
+        {
+          "n": 5,
           "kind": "fact",
           "tag": "31 août 1846",
           "caption": "31 août 1846 : Le Verrier publie l’endroit du ciel où chercher, puis écrit à l’observatoire de Berlin.",
@@ -146,7 +158,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "fact",
           "tag": "23 septembre 1846",
           "caption": "Johann Galle reçoit la lettre. Il trouve la planète en moins d’une heure.",
@@ -167,7 +179,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "react",
           "tag": "",
           "caption": "Écart avec la prédiction : moins d’un degré, à peine deux fois la largeur de la Lune. On la baptise Neptune.",
@@ -188,7 +200,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "fact",
           "tag": "Vraie citation",
           "caption": "Arago résume : Le Verrier a trouvé le nouvel astre « au bout de sa plume », par le seul calcul.",
@@ -210,7 +222,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "Épilogue",
           "caption": "Galilée l’avait observée dès 1612… et prise pour une étoile.",
@@ -248,7 +260,8 @@
           "title": "Wikipedia — Discovery of Neptune",
           "url": "https://en.wikipedia.org/wiki/Discovery_of_Neptune"
         }
-      ]
+      ],
+      "story": "Au début des années 1840, les astronomes ont un problème : Uranus, la planète la plus lointaine connue alors, ne suit pas exactement la trajectoire prévue par les lois de la gravitation. Soit ces lois sont fausses, soit une planète inconnue, plus lointaine, attire Uranus et la dévie.\nFrançois Arago, directeur de l’Observatoire de Paris, confie l’énigme au mathématicien Urbain Le Verrier. Pendant des mois, celui-ci calcule à l’envers : à partir des écarts d’Uranus, il déduit la position que devrait avoir la planète mystère.\nLe 31 août 1846, il publie ses résultats, puis écrit à l’astronome Johann Galle, à l’observatoire de Berlin. Le 23 septembre, Galle reçoit la lettre et trouve la planète en moins d’une heure, à moins d’un degré de l’endroit prédit. On la baptise Neptune.\nC’est la première planète découverte par le calcul avant d’être observée. Arago résume : Le Verrier a trouvé le nouvel astre « au bout de sa plume ». Ironie de l’histoire : Galilée l’avait aperçue dès 1612, mais l’avait prise pour une étoile."
     },
     {
       "id": "insolite",
@@ -343,6 +356,13 @@
         },
         {
           "n": 3,
+          "kind": "explain",
+          "title": "Pourquoi l’urine valait de l’argent",
+          "text": "En vieillissant, l’urine dégage de l’ammoniaque, un puissant nettoyant. Les foulons, les blanchisseurs de Rome, s’en servaient pour dégraisser et blanchir la laine et les toges. Ils achetaient donc celle des toilettes publiques.",
+          "joke": "Le recyclage, version romaine. Le parfum en moins."
+        },
+        {
+          "n": 4,
           "kind": "fact",
           "tag": "",
           "caption": "Vespasien taxe donc l’urine récoltée dans les toilettes publiques et revendue aux ateliers.",
@@ -363,7 +383,7 @@
           }
         },
         {
-          "n": 4,
+          "n": 5,
           "kind": "",
           "tag": "",
           "caption": "Son fils Titus trouve la mesure indigne d’un empereur.",
@@ -385,7 +405,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "react",
           "tag": "Selon Suétone",
           "caption": "Vespasien met sous le nez de Titus une pièce issue de la taxe.",
@@ -415,7 +435,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "fact",
           "tag": "",
           "caption": "D’où « l’argent n’a pas d’odeur », formule qu’il n’a pas prononcée telle quelle.",
@@ -436,7 +456,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "conf",
           "tag": "Paris, 1834",
           "caption": "Bilan : en 1834, le préfet Rambuteau installe à Paris des urinoirs publics, baptisés « vespasiennes » en souvenir de cette taxe.",
@@ -478,7 +498,8 @@
           "title": "Paris ZigZag — La dernière vespasienne de Paris",
           "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/vespasienne-derniere/"
         }
-      ]
+      ],
+      "story": "Au Ier siècle, l’empereur Vespasien prend la tête d’un empire aux finances fragiles. Il cherche donc de nouvelles recettes.\nÀ Rome, l’urine a de la valeur. En vieillissant, elle dégage de l’ammoniaque, et les foulons, ces artisans qui nettoient et blanchissent les tissus, l’utilisent pour dégraisser la laine et les toges. Ils récupèrent celle des toilettes publiques. Vespasien a l’idée de taxer ce commerce.\nSelon l’historien Suétone, son fils Titus trouve la mesure indigne. Vespasien lui met alors sous le nez une pièce tirée de cette taxe et lui demande si elle sent mauvais. Titus répond que non. Et pourtant, elle vient de l’urine, réplique l’empereur. De cet échange est née l’expression « l’argent n’a pas d’odeur », même si Vespasien ne l’a pas prononcée telle quelle.\nDix-huit siècles plus tard, en 1834, le préfet Rambuteau installe à Paris des urinoirs publics en forme de colonnes. On les surnomme « vespasiennes », en souvenir de l’empereur qui taxait l’urine. Les Parisiens les ont aussi appelées « colonnes Rambuteau »."
     },
     {
       "id": "quiz",

@@ -120,6 +120,18 @@
         },
         {
           "n": 4,
+          "kind": "explain",
+          "title": "Mesurer un pays avec des triangles",
+          "steps": [
+            "On mesure une seule longueur au sol, très précisément",
+            "D’un clocher, on vise deux autres points et on mesure les angles",
+            "La géométrie donne les côtés du triangle",
+            "On enchaîne les triangles de Dunkerque à Barcelone"
+          ],
+          "joke": "Pas besoin de 1 000 km de mètre ruban. Heureusement : le mètre n’existait pas encore."
+        },
+        {
+          "n": 5,
           "kind": "fact",
           "tag": "Septembre 1792",
           "caption": "1792, en pleine Révolution : un homme qui observe du haut des clochers avec un instrument a tout d’un espion.",
@@ -145,7 +157,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "",
           "tag": "",
           "caption": "Méchain, lui, est retenu deux mois : ses caisses d’instruments inquiètent les patriotes.",
@@ -171,7 +183,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "fact",
           "tag": "Barcelone, 1794",
           "caption": "À Barcelone, Méchain mesure deux fois sa position nord-sud. Les deux résultats diffèrent d’environ 100 mètres sur le terrain.",
@@ -192,7 +204,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "conf",
           "tag": "",
           "caption": "Il cache l’écart et retouche ses relevés. Ce secret le hantera jusqu’à sa mort, en 1804.",
@@ -213,7 +225,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "chap",
           "tag": "1798-1799",
           "caption": "Delambre découvre le secret, publie quand même et scelle les lettres aux archives.",
@@ -234,7 +246,7 @@
           }
         },
         {
-          "n": 9,
+          "n": 10,
           "kind": "fact",
           "tag": "22 juin 1799",
           "caption": "22 juin 1799 : une barre de platine, le « mètre des Archives », devient la référence officielle de tous les mètres.",
@@ -260,7 +272,7 @@
           }
         },
         {
-          "n": 10,
+          "n": 11,
           "kind": "react",
           "tag": "Le verdict",
           "caption": "Verdict : le mètre officiel est environ 0,2 mm trop court, l’épaisseur de deux feuilles de papier.",
@@ -311,7 +323,8 @@
           "title": "Simon & Schuster — Ken Alder, The Measure of All Things",
           "url": "https://www.simonandschuster.ca/books/The-Measure-of-All-Things/Ken-Alder/9780743216760"
         }
-      ]
+      ],
+      "story": "En 1791, la France révolutionnaire veut en finir avec la jungle des mesures locales. Elle choisit une unité universelle tirée de la Terre elle-même : le mètre sera le dix-millionième de la distance entre le pôle Nord et l’équateur.\nImpossible, bien sûr, de mesurer jusqu’au pôle. Les astronomes Delambre et Méchain mesurent donc un morceau de méridien, de Dunkerque à Barcelone, puis calculent le reste. Leur méthode, la triangulation, consiste à viser d’un point haut à l’autre, souvent des clochers, et à mesurer des angles : la géométrie donne les distances.\nPartis en 1792, ils travaillent en pleine Révolution. Delambre est arrêté par une milice qui le prend pour un espion ; Méchain est retenu deux mois. Le chantier dure plus de six ans.\nÀ Barcelone, Méchain découvre que deux mesures de sa latitude ne concordent pas : un écart de trois secondes d’arc, environ 100 mètres sur le terrain. Il cache cette erreur et en restera hanté jusqu’à sa mort, en 1804.\nLe 22 juin 1799, une barre de platine, le « mètre des Archives », devient l’étalon officiel. On sait aujourd’hui que ce mètre est environ 0,2 mm plus court que sa définition."
     },
     {
       "id": "insolite",
@@ -477,6 +490,13 @@
         },
         {
           "n": 6,
+          "kind": "explain",
+          "title": "Comment un texte peut durer 213 ans",
+          "text": "Une règle ne disparaît pas toute seule : il faut la supprimer officiellement. Celle-ci, plus personne ne l’appliquait, mais personne ne l’a abrogée. Elle a donc continué d’exister, sur le papier, pendant des générations.",
+          "joke": "Comme un vieux mot de passe que personne n’a pensé à changer."
+        },
+        {
+          "n": 7,
           "kind": "fact",
           "tag": "31 janvier 2013",
           "caption": "Jamais supprimé, le texte était juste oublié. En 2013, le ministère des Droits des femmes le déclare « implicitement abrogé ».",
@@ -502,7 +522,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "La raison : il est contraire à l’égalité entre femmes et hommes, inscrite dans la Constitution. Il aura fallu 213 ans.",
@@ -548,7 +568,8 @@
           "title": "The Connexion — Women’s trouser ban is annulled",
           "url": "https://www.connexionfrance.com/news/womens-trouser-ban-is-annulled/611805"
         }
-      ]
+      ],
+      "story": "Le 7 novembre 1800, le préfet de police de Paris, Louis Nicolas Dubois, signe une ordonnance sur le « travestissement des femmes ». Toute Parisienne qui veut s’habiller « en homme », donc porter le pantalon, doit en demander l’autorisation à la préfecture, avec un motif.\nCes permissions sont rares et accordées surtout pour raison de santé ou de métier. La peintre Rosa Bonheur, qui travaille dans les foires aux chevaux, en obtient une, à renouveler tous les six mois. Même avec ce papier, le costume masculin reste interdit aux spectacles, aux bals et aux réunions publiques.\nAvec le temps, des circulaires assouplissent la règle : selon des textes cités au Sénat, le pantalon est toléré si la femme tient un guidon de vélo ou les rênes d’un cheval. Puis la règle tombe dans l’oubli : plus personne ne l’applique, mais personne ne l’abroge non plus.\nIl faut attendre le 31 janvier 2013 pour que le ministère des Droits des femmes la déclare « implicitement abrogée », car contraire à l’égalité entre les femmes et les hommes garantie par la Constitution. L’ordonnance aura survécu 213 ans, sur le papier seulement."
     },
     {
       "id": "quiz",

@@ -104,6 +104,18 @@
         },
         {
           "n": 3,
+          "kind": "explain",
+          "title": "Compter par vingt, comment ça marche ?",
+          "steps": [
+            "On compte jusqu’à vingt, puis par paquets de vingt",
+            "40 = deux-vingts, 60 = trois-vingts",
+            "120 = six-vingts, 300 = quinze-vingts",
+            "Il nous en reste quatre-vingts et quatre-vingt-dix"
+          ],
+          "joke": "Le français a gardé deux souvenirs de ce système. Comme deux vieilles photos dans un tiroir."
+        },
+        {
+          "n": 4,
           "kind": "fact",
           "tag": "Vers 1260",
           "caption": "Une trace existe encore : vers 1260, Saint Louis fonde à Paris l’hospice des Quinze-Vingts. 300 lits, soit quinze fois vingt.",
@@ -129,7 +141,7 @@
           }
         },
         {
-          "n": 4,
+          "n": 5,
           "kind": "",
           "tag": "",
           "caption": "Pourquoi compter par vingt ? Peut-être un héritage celte, peut-être normand. Les historiens n’en sont pas sûrs.",
@@ -159,7 +171,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "",
           "tag": "Fin du Moyen Âge",
           "caption": "Peu à peu, le comptage par dix l’emporte : trente, quarante, cinquante et soixante remplacent les vingtaines.",
@@ -180,7 +192,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "chap",
           "tag": "XVIIe siècle",
           "caption": "Pour 70, 80 et 90, deux façons coexistent. Au XVIIe siècle, le grammairien Vaugelas fait pencher l’Académie pour les vingtaines.",
@@ -210,7 +222,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "fact",
           "tag": "",
           "caption": "La Belgique et la Suisse ont gardé les dizaines : septante, nonante, et même huitante dans une partie de la Suisse.",
@@ -236,7 +248,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "Bilan : « quatre-vingts » est un reste du comptage par vingt. Septante existe toujours en France, juste « vieilli ».",
@@ -270,7 +282,8 @@
           "title": "Techno-Science — Hôpital des Quinze-Vingts",
           "url": "https://www.techno-science.net/fr/definitions/hopital-des-quinze-vingts"
         }
-      ]
+      ],
+      "story": "En France, 97 se dit « quatre-vingt-dix-sept » : littéralement quatre fois vingt, plus dix-sept. C’est le reste d’une vieille habitude. Au Moyen Âge, on comptait souvent par vingtaines : on disait « deux-vingts » pour 40, « trois-vingts » pour 60, et ainsi de suite.\nUne trace de ce système existe encore à Paris : vers 1260, Saint Louis fonde l’hospice des Quinze-Vingts, prévu pour 300 lits, soit quinze fois vingt. L’établissement porte toujours ce nom.\nD’où vient ce comptage ? Les hypothèses varient, héritage celte ou influence normande, et les spécialistes n’ont pas tranché.\nPeu à peu, le comptage par dizaines l’emporte : trente, quarante, cinquante et soixante remplacent les vingtaines. Mais pour 70, 80 et 90, les deux façons coexistent longtemps. Au XVIIe siècle, sous l’influence du grammairien Vaugelas, l’Académie retient soixante-dix, quatre-vingts et quatre-vingt-dix.\nLa Belgique et la Suisse, elles, ont gardé septante et nonante, et une partie de la Suisse dit même huitante. En France, ces mots ne sont pas interdits : le dictionnaire les dit simplement vieillis ou régionaux."
     },
     {
       "id": "insolite",
@@ -432,6 +445,18 @@
         },
         {
           "n": 6,
+          "kind": "explain",
+          "title": "Du Rhin à Marseille, le trajet d’un tube",
+          "steps": [
+            "Avril 1792 : écrit à Strasbourg pour l’armée du Rhin",
+            "Le chant circule et arrive jusqu’à Marseille",
+            "Juillet 1792 : des volontaires marseillais montent à Paris en le chantant",
+            "Les Parisiens le baptisent « l’hymne des Marseillais »"
+          ],
+          "joke": "Morale : ce n’est pas l’auteur qui baptise un tube, c’est le public."
+        },
+        {
+          "n": 7,
           "kind": "",
           "tag": "14 juillet 1795",
           "caption": "1795 : il devient chant national. Puis l’Empire et la Restauration l’interdisent : trop révolutionnaire.",
@@ -452,7 +477,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "conf",
           "tag": "1879",
           "caption": "La IIIe République en fait l’hymne national. Et le nom de Marseille est resté.",
@@ -486,7 +511,8 @@
           "title": "Paris ZigZag — Pourquoi la Marseillaise s’appelle-t-elle ainsi ?",
           "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/pourquoi-la-marseillaise-sappelle-t-elle-ainsi/"
         }
-      ]
+      ],
+      "story": "Le 25 avril 1792, la France vient de déclarer la guerre. À Strasbourg, chez le maire Philippe-Frédéric de Dietrich, on regrette qu’il n’existe pas de chant pour encourager les soldats. Un jeune capitaine du génie, Claude-Joseph Rouget de Lisle, compose paroles et musique dans la nuit. Son titre : « Chant de guerre pour l’armée du Rhin ».\nLe chant circule vite et arrive jusqu’à Marseille. En juillet 1792, des volontaires marseillais l’adoptent et le chantent tout au long de leur marche vers Paris. Le 30 juillet, ils entrent dans la capitale en le chantant ; les Parisiens l’appellent aussitôt l’hymne des Marseillais. Le nom est resté.\nLe 14 juillet 1795, la Marseillaise devient chant national. Jugée trop révolutionnaire, elle est ensuite interdite sous l’Empire et la Restauration. Il faut attendre 1879 et la IIIe République pour qu’elle devienne l’hymne national.\nAinsi, l’hymne de la France porte le nom d’une ville où il n’a pas été écrit : il doit son nom à ceux qui l’ont rendu célèbre, pas à celui qui l’a composé."
     },
     {
       "id": "quiz",

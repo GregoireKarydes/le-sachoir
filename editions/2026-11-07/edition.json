@@ -228,6 +228,19 @@
         },
         {
           "n": 8,
+          "kind": "explain",
+          "title": "Lire une façade de bas en haut",
+          "steps": [
+            "Rez-de-chaussée : boutiques et concierge",
+            "2e étage, l’« étage noble » : plafonds hauts, balcon sur toute la façade",
+            "3e et 4e : moins de décor à mesure qu’on monte",
+            "5e : second balcon filant, pour la symétrie",
+            "Sous le toit à 45° : les chambres de bonne"
+          ],
+          "joke": "Plus on monte, moins il y a de sculptures. Et plus il y a de marches."
+        },
+        {
+          "n": 9,
           "kind": "conf",
           "tag": "Aujourd’hui",
           "caption": "Au 2e, le balcon des riches ; au 5e, celui de la symétrie. Aujourd’hui, ce sont les étages hauts qu’on s’arrache.",
@@ -266,7 +279,8 @@
           "title": "Techno-Science — Règlements d’urbanisme de Paris (1859, 1884, 1902)",
           "url": "https://www.techno-science.net/fr/definitions/reglements-d-urbanisme-de-paris"
         }
-      ]
+      ],
+      "story": "En 1853, Napoléon III confie au préfet Haussmann une mission : transformer Paris, alors fait de ruelles étroites, sombres et insalubres. Haussmann fait raser environ 25 000 maisons et percer 64 km de rues larges et droites.\nLe long de ces rues, les immeubles obéissent à des règles strictes : alignés, collés les uns aux autres, de même hauteur. Le règlement de 1859 lie la hauteur à la largeur de la rue, jusqu’à 20 m sur les rues d’au moins 20 m, pour que la lumière descende jusqu’au trottoir, et impose un toit incliné à 45°.\nÀ l’intérieur, sans ascenseur, l’étage dit tout de la richesse. Le 2e, assez haut pour échapper à la boue de la rue mais pas trop loin à pied, est l’« étage noble » : plafonds hauts et balcon filant sur toute la façade. Plus on monte, moins c’est cher ; sous le toit logent les domestiques, dans les chambres de bonne.\nLe second balcon filant, au 5e, sert surtout l’harmonie de la façade : il souligne le haut de l’immeuble et répond à celui du 2e. Avec l’arrivée de l’ascenseur, la hiérarchie s’est inversée : aujourd’hui, ce sont les derniers étages, avec leur vue, qu’on s’arrache."
     },
     {
       "id": "insolite",
@@ -416,6 +430,19 @@
         },
         {
           "n": 5,
+          "kind": "explain",
+          "title": "Le circuit de l’information truquée",
+          "steps": [
+            "Paris : un complice note si la rente monte ou baisse",
+            "Il l’envoie par colis à Tours",
+            "Tours : l’employé soudoyé glisse un signal en trop, puis « erreur »",
+            "Le signal passe de tour en tour vers Bordeaux",
+            "Avant Bordeaux, on le lit à la longue-vue"
+          ],
+          "joke": "Colis, télégraphe, longue-vue : le haut débit de 1834."
+        },
+        {
+          "n": 6,
           "kind": "",
           "tag": "1836",
           "caption": "Grâce au signe « erreur », le message officiel arrive intact : personne ne voit rien. Jusqu’en 1836, où l’employé tombe malade.",
@@ -442,7 +469,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "react",
           "tag": "Le procès",
           "caption": "Le remplaçant dénonce tout. Mais aucune loi n’interdit d’utiliser le télégraphe en douce : seuls les pots-de-vin sont punis.",
@@ -465,7 +492,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "conf",
           "tag": "Épilogue",
           "caption": "Bilan : un des premiers piratages de réseau, presque impuni. Les jumeaux ouvriront ensuite des casinos, dont Monte-Carlo.",
@@ -508,7 +535,8 @@
           "title": "Parisian Fields — The rise and fall of the visual telegraph",
           "url": "https://parisianfields.com/2017/11/05/the-rise-and-fall-of-the-visual-telegraph/"
         }
-      ]
+      ],
+      "story": "Dans les années 1830, les jumeaux François et Louis Blanc spéculent à Bordeaux sur la rente d’État, un placement dont le prix se fixe à la Bourse de Paris. Problème : les nouvelles de Paris arrivent par la malle-poste, avec plusieurs jours de retard. Qui les connaît en premier peut acheter ou vendre avant tout le monde.\nIl existe un moyen bien plus rapide : le télégraphe optique de Chappe, une chaîne de tours qui se recopient des signaux à vue. Mais il est réservé à l’État.\nÀ partir de 1834, les jumeaux trouvent la faille. Un complice parisien envoie par colis la tendance de la Bourse à un employé du télégraphe de Tours, soudoyé. Celui-ci ajoute un signal en trop dans un message officiel en route vers Bordeaux, suivi du signe d’erreur. Le message officiel arrive donc intact, mais près de Bordeaux, un guetteur lit le signal parasite à la longue-vue : hausse ou baisse.\nLa combine dure deux ans. En 1836, l’employé, malade, propose à un ami de le remplacer ; l’ami dénonce tout. Au procès, les jumeaux s’en sortent : aucune loi n’interdisait d’utiliser le télégraphe ainsi, seule la corruption était punie. En 1837, une loi réserve à l’État le monopole des transmissions. Les Blanc, eux, ouvriront des casinos, dont celui de Monte-Carlo."
     },
     {
       "id": "quiz",

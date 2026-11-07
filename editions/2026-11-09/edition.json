@@ -128,6 +128,17 @@
         },
         {
           "n": 4,
+          "kind": "explain",
+          "title": "Vote par ordre ou par tête ?",
+          "steps": [
+            "Par ordre : clergé, noblesse et tiers état ont chacun une seule voix",
+            "Clergé + noblesse = 2 voix contre 1 : le tiers perd toujours",
+            "Par tête : chaque député vote, et le tiers, aussi nombreux que les deux autres réunis, peut l’emporter"
+          ],
+          "joke": "Toute la Révolution commence par une question de règlement intérieur."
+        },
+        {
+          "n": 5,
           "kind": "",
           "tag": "",
           "caption": "Le roi laisse traîner. Sans le savoir, il vient de lancer la Révolution française.",
@@ -149,7 +160,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "chap",
           "tag": "Chapitre 2 · 1789, l’année où tout bascule",
           "caption": "20 juin 1789 : réunis dans une salle de jeu de paume, les députés du tiers prêtent serment.",
@@ -175,7 +186,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "fact",
           "tag": "14 juillet 1789",
           "caption": "Les Parisiens prennent la Bastille, forteresse où ils cherchent de la poudre.",
@@ -200,7 +211,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "",
           "tag": "Vraie note",
           "caption": "Le soir, dans son carnet de chasse, Louis XVI écrit : « Rien ».",
@@ -221,7 +232,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "",
           "tag": "4 août 1789",
           "caption": "Face aux révoltes paysannes, l’Assemblée abolit les privilèges : dîme, corvées, droits féodaux.",
@@ -247,7 +258,7 @@
           }
         },
         {
-          "n": 9,
+          "n": 10,
           "kind": "fact",
           "tag": "26 août 1789",
           "caption": "Déclaration des droits : « Les hommes naissent et demeurent libres et égaux en droits. »",
@@ -273,7 +284,7 @@
           }
         },
         {
-          "n": 10,
+          "n": 11,
           "kind": "chap",
           "tag": "Chapitre 3 · Le roi qui voulait partir",
           "caption": "Nuit du 20 au 21 juin 1791 : la famille royale fuit Paris en berline.",
@@ -299,7 +310,7 @@
           }
         },
         {
-          "n": 11,
+          "n": 12,
           "kind": "",
           "tag": "",
           "caption": "Retards en série. À Sainte-Menehould, Drouet, fils du maître de poste, les repère.",
@@ -325,7 +336,7 @@
           }
         },
         {
-          "n": 12,
+          "n": 13,
           "kind": "fact",
           "tag": "Varennes",
           "caption": "Drouet prend un raccourci et donne l’alerte : le roi est arrêté à Varennes.",
@@ -346,7 +357,7 @@
           }
         },
         {
-          "n": 13,
+          "n": 14,
           "kind": "react",
           "tag": "25 juin 1791",
           "caption": "Retour à Paris. La foule regarde passer le roi en silence. La confiance est brisée.",
@@ -362,7 +373,7 @@
           }
         },
         {
-          "n": 14,
+          "n": 15,
           "kind": "",
           "tag": "Septembre 1791",
           "caption": "Première Constitution : la France devient une monarchie constitutionnelle. Le roi garde son trône.",
@@ -388,7 +399,14 @@
           }
         },
         {
-          "n": 15,
+          "n": 16,
+          "kind": "explain",
+          "title": "Monarchie constitutionnelle, c’est quoi ?",
+          "text": "Avant 1789, le roi décide seul : c’est la monarchie absolue. Avec la Constitution de 1791, le roi reste, mais les lois sont votées par une Assemblée élue, et il doit les respecter.",
+          "joke": "Le roi garde la couronne. Mais plus le stylo."
+        },
+        {
+          "n": 17,
           "kind": "chap",
           "tag": "Chapitre 4 · La République",
           "caption": "Avril 1792 : la France déclare la guerre à l’Autriche, patrie de la reine.",
@@ -409,7 +427,7 @@
           }
         },
         {
-          "n": 16,
+          "n": 18,
           "kind": "fact",
           "tag": "10 août 1792",
           "caption": "Les sans-culottes prennent le palais des Tuileries. Environ 600 gardes suisses sont tués.",
@@ -423,7 +441,7 @@
           }
         },
         {
-          "n": 17,
+          "n": 19,
           "kind": "",
           "tag": "",
           "caption": "Roi suspendu, enfermé au Temple. On élit une Convention au suffrage universel masculin.",
@@ -448,7 +466,7 @@
           }
         },
         {
-          "n": 18,
+          "n": 20,
           "kind": "fact",
           "tag": "22 septembre 1792",
           "caption": "La Convention abolit la monarchie : c’est la Première République. On repart à l’an I.",
@@ -473,7 +491,7 @@
           }
         },
         {
-          "n": 19,
+          "n": 21,
           "kind": "",
           "tag": "Octobre 1793",
           "caption": "Nouveau calendrier : douze mois de 30 jours, découpés en décades de dix jours.",
@@ -499,7 +517,7 @@
           }
         },
         {
-          "n": 20,
+          "n": 22,
           "kind": "fact",
           "tag": "Vrai",
           "caption": "Chaque jour porte un nom de plante, d’animal ou d’outil. Le 13 brumaire : « Topinambour ».",
@@ -525,7 +543,7 @@
           }
         },
         {
-          "n": 21,
+          "n": 23,
           "kind": "",
           "tag": "21 janvier 1793",
           "caption": "Jugé par la Convention, Louis XVI est guillotiné à Paris.",
@@ -541,7 +559,7 @@
           }
         },
         {
-          "n": 22,
+          "n": 24,
           "kind": "chap",
           "tag": "Chapitre 5 · La Terreur",
           "caption": "1793 : guerre aux frontières, révoltes à l’intérieur. Le Comité de salut public prend les commandes.",
@@ -568,7 +586,7 @@
           }
         },
         {
-          "n": 23,
+          "n": 25,
           "kind": "",
           "tag": "",
           "caption": "Loi des suspects, tribunaux révolutionnaires : on arrête sur simple soupçon.",
@@ -594,7 +612,13 @@
           }
         },
         {
-          "n": 24,
+          "n": 26,
+          "kind": "explain",
+          "title": "Pourquoi la Terreur ?",
+          "text": "En 1793, la République se croit menacée de partout : armées étrangères aux frontières, révoltes en Vendée et dans plusieurs villes. Le Comité de salut public concentre le pouvoir et pourchasse les « ennemis de la Révolution », réels ou supposés."
+        },
+        {
+          "n": 27,
           "kind": "fact",
           "tag": "Le chiffre",
           "caption": "Environ 17 000 exécutions officielles, et peut-être 10 000 morts en prison ou sans procès.",
@@ -608,7 +632,7 @@
           }
         },
         {
-          "n": 25,
+          "n": 28,
           "kind": "",
           "tag": "9 thermidor an II",
           "caption": "27 juillet 1794 : la Convention se retourne contre Robespierre et le fait arrêter.",
@@ -629,7 +653,7 @@
           }
         },
         {
-          "n": 26,
+          "n": 29,
           "kind": "fact",
           "tag": "Vrai",
           "caption": "Il est exécuté le lendemain. Dans le calendrier, le 9 thermidor s’appelait « Absinthe ».",
@@ -650,7 +674,7 @@
           }
         },
         {
-          "n": 27,
+          "n": 30,
           "kind": "chap",
           "tag": "Chapitre 6 · Le Directoire, puis le général",
           "caption": "1795 : le pouvoir passe au Directoire, cinq directeurs à la fois.",
@@ -676,7 +700,17 @@
           }
         },
         {
-          "n": 28,
+          "n": 31,
+          "kind": "explain",
+          "title": "Pourquoi un général prend le pouvoir",
+          "steps": [
+            "Le Directoire est faible : cinq chefs, des crises, des coups de force",
+            "L’armée, elle, gagne des batailles et devient populaire",
+            "Bonaparte s’appuie sur ses soldats pour imposer un pouvoir fort"
+          ]
+        },
+        {
+          "n": 32,
           "kind": "",
           "tag": "",
           "caption": "Un jeune général, auréolé de victoires, se fait un nom : Napoléon Bonaparte.",
@@ -702,7 +736,7 @@
           }
         },
         {
-          "n": 29,
+          "n": 33,
           "kind": "fact",
           "tag": "18 brumaire an VIII",
           "caption": "9 novembre 1799 : prétextant un complot, on transfère les deux assemblées à Saint-Cloud.",
@@ -728,7 +762,7 @@
           }
         },
         {
-          "n": 30,
+          "n": 34,
           "kind": "",
           "tag": "19 brumaire",
           "caption": "Devant le Conseil des Cinq-Cents, Bonaparte se fait huer : « À bas le dictateur ! »",
@@ -749,7 +783,7 @@
           }
         },
         {
-          "n": 31,
+          "n": 35,
           "kind": "",
           "tag": "",
           "caption": "Son frère Lucien appelle la troupe. Les députés fuient par les fenêtres.",
@@ -775,7 +809,7 @@
           }
         },
         {
-          "n": 32,
+          "n": 36,
           "kind": "fact",
           "tag": "La nuit suivante",
           "caption": "Trois consuls sont nommés. Bonaparte, 30 ans, devient bientôt Premier Consul, et seul vrai chef.",
@@ -801,7 +835,7 @@
           }
         },
         {
-          "n": 33,
+          "n": 37,
           "kind": "conf",
           "tag": "Vrai",
           "caption": "Dans le calendrier révolutionnaire, le 18 brumaire s’appelait « Dentelaire », une petite fleur.",
@@ -822,7 +856,7 @@
           }
         },
         {
-          "n": 34,
+          "n": 38,
           "kind": "chap",
           "tag": "Chapitre 7 · Le bilan",
           "caption": "Privilèges abolis, droits proclamés, roi exécuté, République fondée, Terreur, puis un général.",
@@ -844,7 +878,7 @@
           }
         },
         {
-          "n": 35,
+          "n": 39,
           "kind": "react",
           "tag": "Il y a 227 ans jour pour jour",
           "caption": "Le 18 brumaire met fin à la Révolution et ouvre le Consulat.",
@@ -924,7 +958,8 @@
           "title": "Hérodote — 9 novembre 1799, le 18 Brumaire",
           "url": "https://www.herodote.net/9_novembre_1799-evenement-17991109.php"
         }
-      ]
+      ],
+      "story": "En 1788, la monarchie française est en faillite : l’État est si endetté que plus personne ne veut lui prêter. Pour trouver de l’argent, Louis XVI convoque les états généraux, l’assemblée des trois ordres (clergé, noblesse, tiers état), qui ne s’était pas réunie depuis 1614.\nDès mai 1789, la question du vote bloque tout : si chaque ordre ne compte que pour une voix, le tiers état perd toujours. Le 20 juin, ses députés jurent de ne pas se séparer avant d’avoir donné une constitution à la France. Le 14 juillet, les Parisiens prennent la Bastille ; le 4 août, l’Assemblée abolit les privilèges ; le 26 août, elle proclame les droits de l’homme et du citoyen.\nEn juin 1791, le roi tente de fuir et se fait arrêter à Varennes : la confiance est brisée. La guerre contre l’Autriche, en 1792, radicalise la Révolution. La monarchie est abolie le 22 septembre 1792, et Louis XVI est guillotiné le 21 janvier 1793.\nMenacée de toutes parts, la République confie le pouvoir au Comité de salut public : c’est la Terreur, avec environ 17 000 exécutions officielles, jusqu’à la chute de Robespierre en juillet 1794.\nLe Directoire qui suit reste fragile. Le 18 brumaire an VIII, soit le 9 novembre 1799, le général Bonaparte s’empare du pouvoir. La Révolution s’achève, mais plusieurs de ses principes, comme l’égalité devant la loi, lui survivront."
     },
     {
       "id": "cultureg",
@@ -1090,6 +1125,13 @@
         },
         {
           "n": 5,
+          "kind": "explain",
+          "title": "Une action, c’est quoi ?",
+          "text": "Une action est une petite part d’une entreprise. Si l’entreprise gagne de l’argent, la part rapporte et se revend plus cher. Mais si tout le monde en veut, son prix monte… même sans aucun profit réel.",
+          "joke": "La Louisiane n’avait encore rien rapporté. Le prix, lui, grimpait déjà."
+        },
+        {
+          "n": 6,
           "kind": "fact",
           "tag": "Rue Quincampoix",
           "caption": "Rue Quincampoix, à Paris, on s’arrache les actions : leur prix grimpe jusqu’à 10 000 livres en janvier 1720.",
@@ -1111,7 +1153,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "",
           "tag": "Vrai",
           "caption": "La cohue est telle qu’un vieux bossu loue sa bosse comme pupitre aux acheteurs pressés.",
@@ -1138,7 +1180,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "fact",
           "tag": "",
           "caption": "Certains deviennent riches en quelques semaines… sur le papier. C’est là que se répand un mot nouveau : « millionnaire ».",
@@ -1165,7 +1207,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "chap",
           "tag": "1720",
           "caption": "1720 : inquiets, les clients réclament de l’or contre leurs billets. Mais Law a imprimé bien plus de billets que d’or.",
@@ -1192,7 +1234,19 @@
           }
         },
         {
-          "n": 9,
+          "n": 10,
+          "kind": "explain",
+          "title": "Pourquoi la banque ne peut pas payer",
+          "steps": [
+            "La banque imprime des billets, échangeables contre de l’or",
+            "Elle en imprime bien plus que l’or qu’elle possède",
+            "Tant que peu de gens viennent échanger, tout va bien",
+            "Si tout le monde vient en même temps, l’or manque"
+          ],
+          "joke": "Un billet, c’est une promesse. Et une promesse, ça ne pèse rien."
+        },
+        {
+          "n": 11,
           "kind": "fact",
           "tag": "Décembre 1720",
           "caption": "La confiance s’effondre : l’action retombe à 1 000 livres. Ruiné et détesté, Law s’enfuit de France.",
@@ -1219,7 +1273,7 @@
           }
         },
         {
-          "n": 10,
+          "n": 12,
           "kind": "conf",
           "tag": "La leçon",
           "caption": "La leçon : un billet ne vaut que la confiance qu’on lui fait. Law, lui, meurt à Venise en 1729.",
@@ -1262,7 +1316,8 @@
           "title": "Messy Nessy — The birth of the millionaire",
           "url": "https://messynessychic.com/2020/03/24/the-birth-of-the-millionaire"
         }
-      ]
+      ],
+      "story": "En 1715, Louis XIV meurt en laissant un royaume écrasé de dettes. Le Régent écoute alors un Écossais au parcours singulier, John Law, financier et joueur, qui propose une idée neuve : payer avec du papier plutôt qu’avec des pièces d’or.\nEn 1716, Law fonde une banque dont les billets peuvent être échangés contre des pièces. Plus légers que l’or, ils circulent facilement, tant que chacun est sûr de pouvoir les échanger. En 1717, il crée une compagnie chargée d’exploiter la Louisiane et vend ses actions au public.\nLa spéculation s’emballe rue Quincampoix, à Paris : l’action atteint 10 000 livres en janvier 1720. Certains s’enrichissent en quelques semaines, et le mot « millionnaire » se répand.\nMais Law a émis bien plus de billets que la banque ne possède d’or. En 1720, des clients inquiets viennent réclamer leurs pièces ; la confiance s’effondre, l’action retombe à 1 000 livres, et Law s’enfuit. Il meurt à Venise en 1729.\nLa leçon est restée : un billet ne vaut que la confiance qu’on lui accorde. Le souvenir de cette faillite a longtemps rendu les Français méfiants envers le papier-monnaie."
     },
     {
       "id": "insolite",
@@ -1448,6 +1503,18 @@
         },
         {
           "n": 7,
+          "kind": "explain",
+          "title": "Pourquoi le vol l’a rendue célèbre",
+          "steps": [
+            "Avant 1911 : un chef-d’œuvre connu surtout des amateurs d’art",
+            "Le vol fait la une des journaux du monde entier",
+            "Son visage est reproduit partout, pendant deux ans",
+            "1914 : elle revient en star mondiale"
+          ],
+          "joke": "Meilleure campagne de publicité de l’histoire de l’art. Budget : zéro."
+        },
+        {
+          "n": 8,
           "kind": "fact",
           "tag": "1913",
           "caption": "Deux ans plus tard, Peruggia tente de vendre le tableau à un marchand de Florence. Il est arrêté.",
@@ -1473,7 +1540,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "Elle revient au Louvre le 4 janvier 1914. Deux ans à la une des journaux en ont fait une star.",
@@ -1515,7 +1582,8 @@
           "title": "My Modern Met — How the Mona Lisa’s theft transformed it into an icon",
           "url": "https://mymodernmet.com/mona-lisa-theft-1911/"
         }
-      ]
+      ],
+      "story": "Le 21 août 1911, un lundi, le Louvre est fermé. Vincenzo Peruggia, un vitrier italien qui a travaillé au musée, décroche la Joconde et repart avec le tableau caché sous sa blouse. Personne ne remarque rien avant le lendemain, quand le peintre Louis Béroud vient la copier et ne trouve que quatre crochets.\nL’enquête s’emballe : une soixantaine d’inspecteurs fouillent le musée, et le poète Guillaume Apollinaire, soupçonné, passe six jours en prison. Interrogé, il cite son ami Picasso ; tous deux sont finalement mis hors de cause.\nPendant ce temps, l’affaire fait la une des journaux du monde entier. Le visage de la Joconde est reproduit partout, et la foule se presse au Louvre pour voir… l’emplacement vide.\nEn 1913, Peruggia, qui a gardé le tableau chez lui, tente de le vendre à un marchand de Florence. Il est arrêté et affirme avoir voulu rendre l’œuvre à l’Italie. La Joconde revient au Louvre le 4 janvier 1914.\nAvant le vol, c’était un chef-d’œuvre connu des amateurs d’art. Après deux ans de feuilleton, elle est devenue le tableau le plus célèbre du monde."
     },
     {
       "id": "quiz",

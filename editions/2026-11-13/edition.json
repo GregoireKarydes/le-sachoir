@@ -200,6 +200,17 @@
         },
         {
           "n": 7,
+          "kind": "explain",
+          "title": "Les étoiles, mode d’emploi",
+          "steps": [
+            "1 étoile : une très bonne table dans sa catégorie",
+            "2 étoiles : une table excellente, qui mérite un détour",
+            "3 étoiles : une des meilleures tables, qui vaut le voyage"
+          ],
+          "joke": "Traduction Michelin : plus d’étoiles, plus de kilomètres, plus de pneus."
+        },
+        {
+          "n": 8,
           "kind": "fact",
           "tag": "1933",
           "caption": "Pour rester crédible, Michelin crée en 1933 des inspecteurs anonymes, payés par le guide, qui jugent en toute indépendance.",
@@ -220,7 +231,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie.",
@@ -263,7 +274,8 @@
           "title": "Hérodote — En route vers les étoiles",
           "url": "https://www.herodote.net/En_route_vers_les_etoiles-synthese-2517.php"
         }
-      ]
+      ],
+      "story": "En 1900, les frères André et Édouard Michelin fabriquent des pneus. Les automobiles sont encore rares, et leur calcul est simple : plus les gens roulent, plus ils usent de pneus. Il faut donc leur donner envie de partir.\nIls publient un guide gratuit de 400 pages, tiré à 35 000 exemplaires et offert aux automobilistes : adresses de garages et de médecins, plans de villes, et bien sûr la méthode pour changer un pneu.\nSelon la légende maison, André découvre un jour un vendeur de pneus qui cale son établi avec des guides. Gratuit, le livre n’a aucune valeur aux yeux des clients. En 1920, il devient payant, et la publicité disparaît.\nÀ partir de 1926, le guide classe les restaurants et attribue une étoile aux bonnes tables. En 1931, l’échelle passe à trois étoiles ; la troisième signifie que la table « vaut le voyage ». Le calcul reste le même : pour aller dîner loin, il faut rouler.\nPour être crédible, Michelin emploie des inspecteurs anonymes, salariés du guide, qui jugent en toute indépendance. Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie."
     },
     {
       "id": "insolite",
@@ -373,6 +385,13 @@
         },
         {
           "n": 4,
+          "kind": "explain",
+          "title": "Pourquoi la Guyane est française",
+          "text": "La Guyane est française depuis le XVIIe siècle, et département depuis 1946 : aussi française que la Bretagne, mais en Amérique du Sud. Ses frontières sont donc celles de la France : le Suriname à l’ouest, le Brésil à l’est et au sud.",
+          "joke": "Pas besoin de passeport pour Cayenne. Prévoyez quand même un peu plus qu’un ticket de métro."
+        },
+        {
+          "n": 5,
           "kind": "",
           "tag": "1900",
           "caption": "Cette frontière suit surtout le fleuve Oyapock. Son tracé est fixé en 1900 par un arbitre suisse, après un litige.",
@@ -398,7 +417,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "fact",
           "tag": "2011-2017",
           "caption": "Un pont franco-brésilien est achevé en 2011. Il n’ouvre qu’en 2017.",
@@ -424,7 +443,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "",
           "tag": "",
           "caption": "Aujourd’hui encore, il reste peu emprunté : beaucoup d’habitants préfèrent traverser en bateau.",
@@ -445,7 +464,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "En Europe, la plus longue frontière française est avec la Belgique, de peu devant l’Espagne.",
@@ -488,7 +507,8 @@
           "title": "Le Petit Journal — Découvrir la frontière franco-espagnole",
           "url": "https://lepetitjournal.com/vivre-a-madrid/decouvrir-frontiere-franco-espagnole-269106"
         }
-      ]
+      ],
+      "story": "Avec quel pays la France partage-t-elle sa plus longue frontière terrestre ? On pense spontanément à l’Espagne ou à la Belgique. La bonne réponse est le Brésil, avec plus de 730 km de frontière.\nL’explication tient en un mot : la Guyane. Cette région d’Amérique du Sud est française depuis le XVIIe siècle, et département depuis 1946. Ses frontières sont donc des frontières de la France : le Suriname à l’ouest, le Brésil à l’est et au sud.\nLa frontière franco-brésilienne suit en grande partie le fleuve Oyapock. Son tracé a longtemps été disputé entre les deux pays, jusqu’à un arbitrage suisse qui le fixe en 1900.\nAu XXIe siècle, un pont est construit sur l’Oyapock pour relier les deux pays. Achevé en 2011, il n’ouvre à la circulation qu’en 2017 et reste peu emprunté : beaucoup d’habitants continuent de traverser le fleuve en bateau.\nEt en Europe ? La plus longue frontière française est celle avec la Belgique, de peu devant l’Espagne."
     },
     {
       "id": "quiz",

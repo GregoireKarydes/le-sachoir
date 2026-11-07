@@ -146,6 +146,13 @@
         },
         {
           "n": 5,
+          "kind": "explain",
+          "title": "Pourquoi tant de dates différentes ?",
+          "text": "Chaque région suivait sa tradition religieuse : Noël, le 25 mars (fête de l’Annonciation) ou Pâques. Résultat : un même jour pouvait appartenir à deux années différentes selon la ville où l’on se trouvait.",
+          "joke": "Pratique pour rajeunir d’un an en changeant de ville. Moins pour dater un contrat."
+        },
+        {
+          "n": 6,
           "kind": "chap",
           "tag": "9 août 1564",
           "caption": "Pour mettre de l’ordre, le 9 août 1564 à Roussillon, le roi signe un édit du chancelier Michel de L’Hospital.",
@@ -171,7 +178,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "fact",
           "tag": "Article 39",
           "caption": "Elle tient en un article, le 39e, perdu parmi des articles sur la justice.",
@@ -197,7 +204,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "",
           "tag": "1567",
           "caption": "La règle s’applique dès le 1er janvier 1567. En 1622, le pape l’étend à tout le monde catholique.",
@@ -218,7 +225,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "Mythbuster",
           "caption": "On dit que le poisson d’avril viendrait de ce changement. Explication répandue, mais discutée.",
@@ -256,7 +263,8 @@
           "title": "Actu-Juridique — Qui a volé le premier de l’an ?",
           "url": "https://www.actu-juridique.fr/culture/conte-autour-de-charles-ix-qui-a-vole-le-premier-de-lan-ii/"
         }
-      ]
+      ],
+      "story": "Au XVIe siècle, le royaume de France ne commence pas l’année le même jour partout. Selon les diocèses, on change d’année à Noël, comme à Lyon, le 25 mars, comme à Reims, Vienne ou Limoges, ou encore à Pâques, comme en Artois. Or Pâques change de date chaque année : le Nouvel An bougeait donc aussi.\nEn 1564, le jeune roi Charles IX et sa mère, Catherine de Médicis, entreprennent un long tour du royaume. Pour mettre de l’ordre, le roi signe le 9 août 1564, à Roussillon, un édit préparé par le chancelier Michel de L’Hospital. Son article 39 fixe le début de l’année au 1er janvier, partout dans le royaume. Glissée parmi des articles sur la justice, la mesure s’applique à partir du 1er janvier 1567.\nEn 1622, le pape étend ce choix à tout le monde catholique.\nOn raconte souvent que le poisson d’avril serait né de ce changement, en souvenir de l’ancien Nouvel An de printemps. L’explication est répandue, mais les historiens la discutent."
     },
     {
       "id": "insolite",
@@ -354,6 +362,13 @@
         },
         {
           "n": 3,
+          "kind": "explain",
+          "title": "Pourquoi saigner un malade ?",
+          "text": "Depuis l’Antiquité, on pense qu’une maladie vient souvent d’un excès de sang ou d’« humeurs ». Retirer du sang paraît donc logique. Broussais pousse l’idée à l’extrême : tout vient d’une inflammation, et une inflammation se calme en saignant.",
+          "joke": "Spoiler : la médecine a changé d’avis depuis."
+        },
+        {
+          "n": 4,
           "kind": "fact",
           "tag": "Vrai",
           "caption": "Il en pose de 40 à 200 à la fois. Surnom : « le vampire de la médecine ».",
@@ -375,7 +390,7 @@
           }
         },
         {
-          "n": 4,
+          "n": 5,
           "kind": "",
           "tag": "",
           "caption": "La demande explose : poser des sangsues devient presque un métier, souvent exercé à domicile par des femmes.",
@@ -401,7 +416,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "fact",
           "tag": "1833",
           "caption": "Rien qu’en 1833, la France utilise entre 30 et 40 millions de sangsues : environ une par habitant.",
@@ -422,7 +437,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "",
           "tag": "",
           "caption": "Résultat : les étangs français sont vidés. Il faut importer des sangsues de Pologne et de Hongrie.",
@@ -448,7 +463,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "Broussais meurt en 1838. Sa mode des sangsues aura saigné la France pendant deux décennies.",
@@ -482,7 +497,8 @@
           "title": "Revue médicale de Bruxelles (AMUB) — Histoire des sangsues en médecine",
           "url": "https://amub-ulb.be/system/files/rmb/old/581"
         }
-      ]
+      ],
+      "story": "Au début du XIXe siècle, le médecin François Broussais est l’une des grandes figures de la médecine parisienne. Sa théorie : presque toutes les maladies viennent d’une inflammation, en particulier de l’intestin. Pour la calmer, il faut retirer du sang au malade.\nSon outil préféré : la sangsue, un petit ver qui se fixe sur la peau et aspire le sang. Broussais en pose de 40 à 200 à la fois, ce qui lui vaut le surnom de « vampire de la médecine ».\nSa méthode devient une mode. Poser des sangsues devient presque un métier, exercé à domicile, souvent par des femmes. En 1833, la France en utilise entre 30 et 40 millions, environ une par habitant. Les étangs français se vident, et il faut en importer de Pologne et de Hongrie.\nAprès la mort de Broussais, en 1838, la mode décline peu à peu : les médecins comprennent que saigner les malades les affaiblit plus qu’il ne les soigne. La sangsue n’a pourtant pas disparu : on l’utilise encore dans quelques cas précis, en chirurgie réparatrice, pour aider le sang à circuler."
     },
     {
       "id": "quiz",
