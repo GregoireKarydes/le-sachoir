@@ -842,8 +842,8 @@
     {
       "id": "actu",
       "label": "L’Actu du jour",
-      "title": "Le train de 2024 est arrivé (en 2026)",
-      "tagline": "Un TGV à l’heure à deux ans près, un lac sur liste d’invités, un smic au centime près et un pick-up qui prend sa retraite.",
+      "title": "La COP en colocation (et autres records)",
+      "tagline": "Des chiffres qui ne tombent jamais d’accord, un marin qui ne traîne pas et un sommet du climat à deux pays.",
       "minutes": 2,
       "theme": "",
       "cast": [
@@ -854,285 +854,259 @@
           "status": "done"
         },
         {
-          "id": "cheminot",
-          "look": "a middle-aged train driver, bushy grey walrus mustache, black uniform cap, black jacket, white shirt, red tie as the only colour",
-          "file": "cast/actu-cheminot.png",
-          "status": "done"
-        },
-        {
-          "id": "garde",
-          "look": "a young mountain eco-guide, curly brown hair in a big messy bun, green fleece jacket as the only colour, black hiking trousers, clipboard",
-          "file": "cast/actu-garde.png",
-          "status": "done"
-        },
-        {
           "id": "ministre",
           "look": "a cartoon government minister, tall and thin, neat white hair, small rimless glasses, black suit, white shirt, blue tie as the only colour",
           "file": "cast/actu-ministre.png",
           "status": "done"
         },
         {
-          "id": "patron",
-          "look": "a cartoon tech company boss, short slicked-back dark hair, wide smug grin, plain black t-shirt, black jeans, silver smartwatch as the only accent",
-          "file": "cast/actu-patron.png",
-          "status": "done"
+          "id": "skipper",
+          "look": "a young solo sailor, short very messy sandy hair blown sideways by the wind, bright red sailing jacket as the only colour, black waterproof trousers, black boots, tiny sunburned nose",
+          "file": "cast/actu-skipper.png",
+          "status": "pending"
+        },
+        {
+          "id": "hote",
+          "look": "a cheerful round host diplomat, bald head, thick black moustache, black suit, white shirt, bright red scarf as the only colour, always opening his arms wide",
+          "file": "cast/actu-hote.png",
+          "status": "pending"
+        },
+        {
+          "id": "nego",
+          "look": "a brisk tall negotiator woman, short grey bob haircut, black trouser suit, white shirt, yellow folder as the only colour, holding a microphone",
+          "file": "cast/actu-nego.png",
+          "status": "pending"
         }
       ],
       "cover": {
-        "prompt": "A bare station platform. cheminot in the centre, proudly waving a small red flag as a sleek white high-speed train nose arrives. lambda on the right with a hiking backpack, checking his empty wrist as if reading a watch, deadpan. Wide shot, calm empty space above.",
+        "prompt": "A small wooden pier by the sea. skipper in the centre, standing on the bow of a giant three-hulled racing sailboat, fist raised in triumph, light-blue sweat drops. lambda on the left on the pier, holding a blank protest sign, jaw dropped. hote on the right, arms wide open in welcome, tiny pink blush on his cheeks. Wide shot, calm empty sky above.",
         "cast": [
-          "cheminot",
-          "lambda"
+          "skipper",
+          "lambda",
+          "hote"
         ],
         "file": "images/actu-cover.webp",
-        "status": "done",
-        "attempts": 1
+        "status": "pending",
+        "attempts": 0
       },
       "cases": [
         {
           "n": 1,
           "kind": "fact",
-          "tag": "Rail",
-          "caption": "Vendredi, le nouveau TGV M a fait son premier trajet commercial, Paris-Marseille.",
+          "tag": "Société",
+          "caption": "Samedi, quatrième samedi de manifestations contre la vie chère, un mouvement lancé par les lycéens.",
           "bubbles": [
             {
-              "text": "Je suis dans un train neuf. Il sent le neuf.",
+              "text": "On manifeste contre la vie chère !",
               "side": "l"
             },
             {
-              "text": "Ne léchez pas les sièges, monsieur.",
+              "text": "Très bien. Je compte. Ne bougez plus.",
               "side": "r"
             }
           ],
           "image": {
-            "prompt": "Inside a brand new high-speed train carriage, a few empty white seats. lambda on the left hugs his seat headrest with closed eyes and a blissful smile, tiny pink blush marks. cheminot on the right, standing stiff in the aisle, one eyebrow raised, finger pointing at him in mild horror. Medium shot, calm empty space above.",
+            "prompt": "A plain street. lambda on the left marching, holding a blank cardboard protest sign high, determined frown, red angry flush on his cheeks. ministre on the right, standing on a small stepladder, clicking a handheld tally counter with intense concentration, one eye squinting, light-blue sweat drop. Medium shot, calm empty space above.",
             "cast": [
               "lambda",
-              "cheminot"
+              "ministre"
             ],
             "file": "images/actu-01.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
           "n": 2,
           "kind": "fact",
-          "tag": "Rail",
-          "caption": "Prévu pour les JO de 2024, il arrive avec plus de deux ans de retard.",
+          "tag": "Société",
+          "caption": "146 000 manifestants selon l’Intérieur, 250 000 selon les organisateurs. Lundi, syndicats et patronat sont reçus à Matignon.",
           "bubbles": [
             {
-              "text": "Mesdames et messieurs, le train de 2024 entre en gare.",
+              "text": "On était 250 000 !",
               "side": "l"
             },
             {
-              "text": "Pile à l’heure. Enfin, à l’année.",
+              "text": "146 000. J’ai compté les chaussures et divisé par deux.",
               "side": "r"
             }
           ],
           "image": {
-            "prompt": "A bare station platform with one clock on a pole. cheminot on the left, chest puffed out proudly, holding a whistle, presenting the sleek white train nose behind him with a grand arm gesture. lambda on the right, slumped on a bench with a long grey beard grown down to his knees, deadpan stare. Wide shot.",
+            "prompt": "A plain office with one desk covered in a messy pile of sneakers and shoes. ministre on the right, sitting behind the desk, holding one sneaker up like evidence, smug calm smile. lambda on the left, leaning over the desk, arms flung wide in outrage, eyes huge, red angry flush. Medium shot, calm space above.",
             "cast": [
-              "cheminot",
-              "lambda"
+              "lambda",
+              "ministre"
             ],
             "file": "images/actu-02.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
           "n": 3,
           "kind": "fact",
-          "tag": "Montagne",
-          "caption": "Chamonix prépare des quotas pour le lac Blanc dès l’été 2027, sur réservation.",
+          "tag": "Voile",
+          "caption": "Route du Rhum : parti de Saint-Malo, un skipper de 29 ans arrive cette nuit en Guadeloupe, largement en tête.",
           "bubbles": [
             {
-              "text": "Vous êtes sur la liste ?",
+              "text": "Alors, cette traversée en solitaire ?",
               "side": "l"
             },
             {
-              "text": "C’est un lac, pas une boîte de nuit !",
+              "text": "J’ai parlé à une mouette. Elle m’a laissé en vu.",
               "side": "r"
             }
           ],
           "image": {
-            "prompt": "A rocky mountain path with a small lake in the distance and a velvet rope on two brass posts blocking the trail. garde on the left, arms crossed like a nightclub bouncer, holding a clipboard, stern face. lambda on the right in hiking gear with a huge backpack, mouth wide open in outrage. Medium shot, empty sky above.",
+            "prompt": "A tropical harbour pontoon at night with one small lamp. lambda on the left on the pontoon, holding out a flower garland in welcome, curious smile. skipper on the right, stepping off a giant three-hulled racing sailboat, hair wild and salty, eyes hollow with dark circles, slumped shoulders, single light-blue tear. Medium shot, calm dark sky above.",
             "cast": [
-              "garde",
-              "lambda"
+              "lambda",
+              "skipper"
             ],
             "file": "images/actu-03.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
           "n": 4,
           "kind": "fact",
-          "tag": "Montagne",
-          "caption": "Jusqu’à 4 000 visiteurs par jour en été. Les habitants devront réserver aussi.",
+          "tag": "Voile",
+          "caption": "Il vise le record de la course, établi en 2022 : 6 jours et 19 heures pour traverser l’Atlantique.",
           "bubbles": [
             {
-              "text": "J’habite ici depuis quarante ans !",
-              "side": "r"
+              "text": "Moins d’une semaine ? Mon colis de Lyon met plus longtemps.",
+              "side": "l"
             },
             {
-              "text": "Parfait. Créneau de 14 h 10.",
-              "side": "l"
+              "text": "Il a dû prendre le mauvais bateau.",
+              "side": "r"
             }
           ],
           "image": {
-            "prompt": "Same mountain path with the velvet rope. garde on the left, calmly checking her clipboard with a polite professional smile. lambda on the right, melting to his knees in despair, backpack sliding off, tiny sweat drops flying. Close-up on the two, plain background.",
+            "prompt": "Same pontoon. lambda on the left, holding a small cardboard parcel and staring at it with deep suspicion, one eyebrow raised. skipper on the right, sitting slumped on a bollard, wrapped in a grey blanket, giving a tired thumbs up, tiny yellow sparkles of pride around him. Close-up on the two, plain background.",
             "cast": [
-              "garde",
-              "lambda"
+              "lambda",
+              "skipper"
             ],
             "file": "images/actu-04.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
           "n": 5,
           "kind": "fact",
-          "tag": "Salaires",
-          "caption": "Le gouvernement vise un smic au-dessus de 1 500 € net, contre 1 477,93 € aujourd’hui.",
+          "tag": "Climat",
+          "caption": "Lundi s’ouvre la COP31, le grand sommet de l’ONU sur le climat, à Antalya, en Turquie, jusqu’au 20 novembre.",
           "bubbles": [
             {
-              "text": "Une hausse de vingt-deux euros, c’est historique !",
+              "text": "Près de 200 pays à table pendant deux semaines.",
               "side": "l"
             },
             {
-              "text": "Soit un demi-plein. De scooter.",
+              "text": "Et personne ne veut la place près de la porte.",
               "side": "r"
             }
           ],
           "image": {
-            "prompt": "A plain office with one desk. ministre on the left, beaming with pride, holding up a giant pocket calculator above his head like a trophy. lambda on the right, arms dangling, shoulders dropped, staring blankly at a single small coin in his open palm. Medium shot, calm space above.",
+            "prompt": "A huge empty conference room with an endless row of identical chairs disappearing into the distance. hote on the left, arms wide open in proud welcome, beaming, pink blush on his cheeks. lambda on the right, carrying a tall wobbly stack of folding chairs, knees buckling, light-blue sweat drops flying. Wide shot, calm empty space above.",
             "cast": [
-              "ministre",
+              "hote",
               "lambda"
             ],
             "file": "images/actu-05.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
           "n": 6,
-          "kind": "conf",
-          "tag": "Salaires",
-          "caption": "Syndicats : +100 € pour la CFDT, +10 % pour la CGT. Conférence sociale lundi.",
+          "kind": "fact",
+          "tag": "Climat",
+          "caption": "Compromis inhabituel : la Turquie accueille le sommet, mais c’est l’Australie qui pilote les négociations.",
           "bubbles": [
             {
-              "text": "Entre 22 et 150 euros, on va bien trouver un chiffre.",
+              "text": "Chez moi, c’est moi qui décide !",
               "side": "l"
+            },
+            {
+              "text": "Sauf l’ordre du jour, les débats et le micro.",
+              "side": "r"
             }
           ],
           "image": {
-            "prompt": "Confessional close-up: ministre alone, seated against a plain grey wall, looking straight at the camera with a forced optimistic smile and a tiny sweat drop, holding a round dartboard in one hand and a single dart in the other, aiming nervously without looking. Chest-up close-up, empty space above his head.",
+            "prompt": "A conference stage with one podium. hote on the left, chest puffed out, finger raised, trying to speak, then frozen mid-word with a light-blue sweat drop. nego on the right, calmly sliding the microphone away from him toward herself, polite efficient smile, yellow folder under her arm. Medium shot, calm space above.",
             "cast": [
-              "ministre"
+              "hote",
+              "nego"
             ],
             "file": "images/actu-06.webp",
-            "status": "done",
-            "attempts": 1
-          }
-        },
-        {
-          "n": 7,
-          "kind": "fact",
-          "tag": "Auto",
-          "caption": "Le patron de Tesla annonce la fin du Cybertruck d’ici mi-2027.",
-          "bubbles": [
-            {
-              "text": "Le Cybertruck nous quitte. Il est parti trop carré.",
-              "side": "l"
-            },
-            {
-              "text": "On dit « trop tôt ».",
-              "side": "r"
-            },
-            {
-              "text": "Non.",
-              "side": "l"
-            }
-          ],
-          "image": {
-            "prompt": "An empty parking lot. patron on the left, hand on his heart, solemn like at a farewell, standing next to a very angular boxy steel pickup truck drawn as simple flat triangles. lambda on the right, leaning in, finger raised to correct him, puzzled frown. Wide shot, empty sky above.",
-            "cast": [
-              "patron",
-              "lambda"
-            ],
-            "file": "images/actu-07.webp",
-            "status": "done",
-            "attempts": 1
-          }
-        },
-        {
-          "n": 8,
-          "kind": "fact",
-          "tag": "Auto",
-          "caption": "Objectif : libérer l’usine du Texas pour le Cybercab, son robotaxi sans volant.",
-          "bubbles": [
-            {
-              "text": "Euh… il est où, le chauffeur ?",
-              "side": "r"
-            },
-            {
-              "text": "C’est tout le concept.",
-              "side": "l"
-            }
-          ],
-          "image": {
-            "prompt": "Inside a small two-seat robotaxi with no steering wheel and no pedals. patron standing outside on the left, leaning on the open door, smug grin, thumbs up. lambda on the right, alone inside, clutching the seat with both hands, eyes huge, frozen with sweat drops. Medium shot, plain background.",
-            "cast": [
-              "patron",
-              "lambda"
-            ],
-            "file": "images/actu-08.webp",
-            "status": "done",
-            "attempts": 1
+            "status": "pending",
+            "attempts": 0
           }
         }
       ],
       "final": {
-        "text": "Premier trajet commercial le 6 novembre 2026 : le TGV M offre jusqu’à 740 places, environ 20 % de plus que ses prédécesseurs.",
-        "source": "Enerzine / L’Automobiliste"
+        "text": "La COP31 se tient à Antalya du 9 au 20 novembre 2026 : la Turquie accueille, l’Australie mène les négociations, un partage des rôles inhabituel.",
+        "source": "ONU (UNRIC) / gouvernement australien"
       },
       "sources": [
         {
-          "title": "Enerzine — Le TGV M arrive enfin sur Paris-Marseille",
-          "url": "https://www.enerzine.com/tgv-m-entree-service-paris-marseille/199593-2026-11"
+          "title": "franceinfo — Mobilisation du 7 novembre : 146 000 manifestants selon l’Intérieur, 250 000 selon l’intersyndicale de la jeunesse",
+          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-du-7-novembre-suivez-avec-nous-cette-nouvelle-journee-de-manifestations_8272010.html"
         },
         {
-          "title": "L’Automobiliste — Le TGV M a transporté ses premiers voyageurs",
-          "url": "https://lautomobiliste.fr/06/11/2026/tgv-m-premier-trajet-commercial-paris-marseille-6-novembre-2026/"
+          "title": "Impact European — Paris : la mobilisation de la jeunesse met la vie chère au premier plan",
+          "url": "https://impact-european.eu/paris-mobilisation-jeunesse-vie-chere-7-novembre-2026/"
         },
         {
-          "title": "Lyon Capitale — Des quotas pour aller au lac Blanc",
-          "url": "https://www.lyoncapitale.fr/regions/aura/haute-savoie/chamonix-des-quotas-pour-acceder-au-lac-blanc-des-l-ete-prochain"
+          "title": "ICI — Mobilisation du 7 novembre : participation en « net recul » selon le gouvernement",
+          "url": "https://www.ici.fr/infos/societe/direct-mobilisation-du-7-novembre-suivez-l-acte-iv-des-manifestations-contre-la-vie-chere-1202790"
         },
         {
-          "title": "Outside — Chamonix prépare un système de réservation pour le lac Blanc",
-          "url": "https://www.outside.fr/chamonix-prepare-un-systeme-de-reservation-pour-reguler-la-frequentation-du-lac-blanc/"
+          "title": "Euronews — France : grève générale le 5 novembre après trois samedis de manifestations",
+          "url": "https://fr.euronews.com/2026/11/04/france-greve-generale-le-5-novembre-apres-trois-samedis-de-manifestations"
         },
         {
-          "title": "Boursorama (AFP) — Hausse du smic : la barre des 1 500 euros net",
-          "url": "https://www.boursorama.com/actualite-economique/actualites/hausse-du-smic-le-gouvernement-veut-obtenir-un-compromis-des-partenaires-sociaux-pour-franchir-la-barre-des-1-500-euros-net-a8fcae4d1ffd2e45fcc6233945d1f375"
+          "title": "LCP — Pouvoir d’achat : syndicats et patronat réunis lundi à Matignon",
+          "url": "https://lcp.fr/actualites/pouvoir-d-achat-sebastien-lecornu-reunira-syndicats-et-patronat-lundi-pour-apporter-des"
         },
         {
-          "title": "Echos Plus — Smic à 1 500 euros net avant la conférence sociale",
-          "url": "https://echosplus.com/2026/11/06/smic-a-1-500-euros-net-jean-pierre-farandou-evoque-ce-seuil-avant-la-conference-sociale-a-matignon/"
+          "title": "Route du Rhum — Victory calling, course record likely",
+          "url": "https://www.routedurhum.com/en/post/victory-calling-course-record-likely"
         },
         {
-          "title": "CBS News — Musk says Tesla will end Cybertruck production in 2027",
-          "url": "https://www.cbsnews.com/news/tesla-ending-cybertruck-production-next-year/"
+          "title": "Bateaux.com — Jour 6 Route du Rhum : Tom Laperche fonce vers la Guadeloupe",
+          "url": "https://www.bateaux.com/article/52935/jour-6-route-du-rhum-laperche-fonce-vers-la-guadeloupe-les-class40-sous-pression"
         },
         {
-          "title": "CNBC — Tesla to wind down Cybertruck production in Texas",
-          "url": "https://www.cnbc.com/2026/11/06/tesla-cybertruck-texas-musk.html"
+          "title": "franceinfo — En tête de la Route du Rhum, attendu dans la nuit de samedi à dimanche à Pointe-à-Pitre",
+          "url": "https://www.franceinfo.fr/sports/voile/route-du-rhum/en-tete-de-la-route-du-rhum-tom-laperche-attendu-dans-la-nuit-de-samedi-a-dimanche-a-pointe-a-pitre_8272064.html"
+        },
+        {
+          "title": "Alouette — Record en vue dans la Route du Rhum",
+          "url": "https://www.alouette.fr/record-route-du-rhum-2026-laperche"
+        },
+        {
+          "title": "UNRIC (ONU) — UNFCCC COP31 : the road to Antalya",
+          "url": "https://unric.org/en/unfccc-cop31-the-road-to-antalya/"
+        },
+        {
+          "title": "Commonspace — COP 31 will be held in Antalya, Turkey, from 9 - 20 November 2026",
+          "url": "https://www.commonspace.eu/node/13564"
+        },
+        {
+          "title": "Semafor — Turkey to host COP31 in deal with Australia",
+          "url": "https://www.semafor.com/article/11/20/2025/turkey-to-host-cop31-in-deal-with-australia"
+        },
+        {
+          "title": "Gouvernement australien — COP to be hosted by Türkiye with Australia leading negotiations",
+          "url": "https://www.foreignminister.gov.au/minister/penny-wong/media-release/cop-be-hosted-turkiye-australia-leading-negotiations"
+        },
+        {
+          "title": "To Vima — Turkey to host COP31 as Australia takes lead on negotiations",
+          "url": "https://www.tovima.com/climate/turkey-to-host-cop31-as-australia-takes-lead-on-negotiations"
         }
       ]
     },
