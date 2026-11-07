@@ -1,7 +1,7 @@
 {
- "at": "2026-11-07T15:53:14.265167+01:00",
+ "at": "2026-11-07T17:11:32.050717+01:00",
  "generated": 0,
  "log": [
-  "quota: 14400 neurones estimés aujourd'hui (plafond 9000)"
+  "quota: 14400 neurones estimés aujourd'hui (plafond 9000) ; renfort fal.ai indisponible : pas de clé FAL_KEY"
  ]
 }
