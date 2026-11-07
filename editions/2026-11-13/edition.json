@@ -3,6 +3,353 @@
  "status": "draft",
  "formats": [
   {
+   "id": "cultureg",
+   "label": "La Pilule de Culture G",
+   "title": "Le guide Michelin, ou comment vendre des pneus avec un bon dîner",
+   "tagline": "Avant de distribuer des étoiles, le guide rouge était une pub gratuite pour automobilistes",
+   "minutes": 2,
+   "theme": "Entreprises et marques",
+   "cast": [
+    {
+     "id": "andre",
+     "look": "André, a French industrialist around 1900, round bald head, bushy white moustache, black three-piece suit, a gold watch chain as the only colour",
+     "file": "cast/cultureg-andre.png",
+     "status": "pending"
+    },
+    {
+     "id": "edouard",
+     "look": "Édouard, his younger brother around 1900, thin, neat dark goatee, slicked hair, black suit, always holding a small rubber tyre under his arm",
+     "file": "cast/cultureg-edouard.png",
+     "status": "pending"
+    },
+    {
+     "id": "firmin",
+     "look": "Firmin, a 1910s tyre dealer and mechanic, grease-stained grey overalls, flat black cap, bushy black moustache, a spanner in his back pocket",
+     "file": "cast/cultureg-firmin.png",
+     "status": "pending"
+    },
+    {
+     "id": "inspecteur",
+     "look": "a 1930s anonymous restaurant inspector, black hat pulled low over the eyes, black coat with the collar up, thin moustache, a tiny notebook hidden in his palm",
+     "file": "cast/cultureg-inspecteur.png",
+     "status": "pending"
+    }
+   ],
+   "cover": {
+    "prompt": "a bare restaurant table with one plate. André (on the left) tucking a napkin into his collar, holding a fork and a tyre at the same time, delighted; Édouard (on the right) presenting a small red book like a precious jewel. medium shot",
+    "cast": ["andre", "edouard"],
+    "file": "images/cultureg-cover.webp",
+    "status": "pending",
+    "attempts": 0
+   },
+   "cases": [
+    {
+     "n": 1,
+     "kind": "chap",
+     "tag": "1900",
+     "caption": "André et Édouard Michelin fabriquent des pneus. Leur idée : faire rouler les gens.",
+     "bubbles": [
+      { "text": "Plus ils roulent, plus ils usent de pneus.", "side": "r" },
+      { "text": "Donc il faut leur donner envie de partir.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a bare office with a map of France pinned on the wall. Édouard (on the right) spinning a small tyre on one finger; André (on the left) pointing at the map with a sly grin, stroking his white moustache. medium shot",
+      "cast": ["andre", "edouard"],
+      "file": "images/cultureg-01.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 2,
+     "kind": "fact",
+     "tag": "",
+     "caption": "Ils créent un guide de 400 pages, tiré à 35 000 exemplaires, offert avec les pneus.",
+     "bubbles": [
+      { "text": "Gratuit ! Garages, médecins, plans de villes.", "side": "l" },
+      { "text": "Et comment changer un pneu. Évidemment.", "side": "r" }
+     ],
+     "image": {
+      "prompt": "a simple shop counter with a tall stack of small red books. André (on the left) handing a book to an invisible customer with a huge salesman smile; Édouard (on the right) adding a tyre on top of the pile. medium shot",
+      "cast": ["andre", "edouard"],
+      "file": "images/cultureg-02.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 3,
+     "kind": "fact",
+     "tag": "La légende maison",
+     "caption": "Version officielle : André surprend un vendeur de pneus calant son établi avec des guides.",
+     "bubbles": [
+      { "text": "Il est très utile, votre guide. Pile la bonne hauteur.", "side": "r" }
+     ],
+     "image": {
+      "prompt": "a bare garage with one wobbly workbench propped up by a stack of small red books under one leg. Firmin (on the right) leaning happily on the bench; André (on the left) frozen in the doorway, jaw dropped, moustache bristling. medium shot",
+      "cast": ["andre", "firmin"],
+      "file": "images/cultureg-03.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 4,
+     "kind": "",
+     "tag": "1920",
+     "caption": "Le guide devient payant. En 1921, il coûte 7 francs, et la publicité disparaît.",
+     "bubbles": [
+      { "text": "Ce qu’on paie, on le respecte.", "side": "l" },
+      { "text": "Je calerai avec l’annuaire.", "side": "r" }
+     ],
+     "image": {
+      "prompt": "André (on the left) holding a small red book high out of reach, stern like a teacher; Firmin (on the right) shrugging, already sliding a thick grey book under his workbench leg. plain background. medium shot",
+      "cast": ["andre", "firmin"],
+      "file": "images/cultureg-04.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 5,
+     "kind": "fact",
+     "tag": "1926",
+     "caption": "Les restaurants y sont désormais classés. Une première étoile récompense les bonnes tables.",
+     "bubbles": [
+      { "text": "Une étoile pour un bon dîner ?", "side": "r" },
+      { "text": "Et un client qui use ses pneus pour y aller.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a single restaurant table with a steaming plate. André (on the left) placing a small paper star on the table with great ceremony; Édouard (on the right) tasting with closed eyes, blissful. medium shot",
+      "cast": ["andre", "edouard"],
+      "file": "images/cultureg-05.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 6,
+     "kind": "",
+     "tag": "1931",
+     "caption": "L’échelle passe à trois étoiles. La troisième : « vaut le voyage ».",
+     "bubbles": [
+      { "text": "Le voyage… en voiture ?", "side": "r" },
+      { "text": "Avec nos pneus. C’est tout le principe.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "André (on the left) holding up three small paper stars like a magician, sly wink; Édouard (on the right) slowly understanding, pointing at the tyre under his arm, mouth forming an O. plain background. medium shot",
+      "cast": ["andre", "edouard"],
+      "file": "images/cultureg-06.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 7,
+     "kind": "fact",
+     "tag": "1933",
+     "caption": "Michelin crée les inspecteurs : des salariés anonymes qui jugent en toute indépendance.",
+     "bubbles": [
+      { "text": "Je suis un client parfaitement normal.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a single restaurant table. the inspector (in the middle) sitting stiffly, hat pulled down to his nose, collar up, hiding a tiny notebook under his napkin, eyes darting suspiciously left and right. medium shot",
+      "cast": ["inspecteur"],
+      "file": "images/cultureg-07.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 8,
+     "kind": "conf",
+     "tag": "Le fin mot",
+     "caption": "Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie.",
+     "bubbles": [
+      { "text": "Et plus personne ne pense aux pneus.", "side": "l" },
+      { "text": "Si. Nous.", "side": "r" }
+     ],
+     "image": {
+      "prompt": "André (on the left) and Édouard (on the right) in a confession-style shot, side by side, looking straight at the reader, André smug, Édouard hugging his little tyre tenderly. plain background",
+      "cast": ["andre", "edouard"],
+      "file": "images/cultureg-08.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    }
+   ],
+   "final": {
+    "text": "Le premier guide Michelin, en 1900, était un livret gratuit de 400 pages tiré à 35 000 exemplaires et offert aux acheteurs de pneus.",
+    "source": "Guide Michelin"
+   },
+   "sources": [
+    { "title": "Guide Michelin — Le Guide MICHELIN, une longue histoire", "url": "https://guide.michelin.com/fr/fr/article/features/le-guide-michelin-une-longue-histoire" },
+    { "title": "Moniteur Automobile — Le saviez-vous ? Le guide rouge Michelin a 120 ans", "url": "https://www.moniteurautomobile.be/actu-auto/nostalgie/saviez-vous-le-guide-rouge-michelin-120-ans.html" },
+    { "title": "Hérodote — En route vers les étoiles", "url": "https://www.herodote.net/En_route_vers_les_etoiles-synthese-2517.php" }
+   ]
+  },
+  {
+   "id": "insolite",
+   "label": "L’Insolite Historique",
+   "title": "La plus longue frontière de la France ? Avec le Brésil",
+   "tagline": "Plus de 730 km de frontière, et pas un seul Pyrénéen à l’horizon",
+   "minutes": 1,
+   "theme": "Géographie",
+   "cast": [
+    {
+     "id": "patrick",
+     "look": "Patrick, a smooth TV quiz show host, shiny swept-back grey hair, huge white smile, black tuxedo, a red bow tie as the only colour, holding question cards",
+     "file": "cast/insolite-patrick.png",
+     "status": "pending"
+    },
+    {
+     "id": "bernard",
+     "look": "Bernard, a modern quiz show contestant in his fifties, bald and round, thick black glasses, grey cardigan over a white shirt, very sweaty forehead",
+     "file": "cast/insolite-bernard.png",
+     "status": "pending"
+    },
+    {
+     "id": "helene",
+     "look": "Hélène, a French geography teacher, short grey bob, big round black glasses, black turtleneck, holding a rolled-up map",
+     "file": "cast/insolite-helene.png",
+     "status": "pending"
+    }
+   ],
+   "cover": {
+    "prompt": "a simple TV quiz stage with two lecterns. Bernard (on the right) behind his lectern, sweating, pointing at a blank map of Europe with confidence; Patrick (on the left) holding a card, smiling very slowly and suspiciously. medium shot",
+    "cast": ["patrick", "bernard"],
+    "file": "images/insolite-cover.webp",
+    "status": "pending",
+    "attempts": 0
+   },
+   "cases": [
+    {
+     "n": 1,
+     "kind": "chap",
+     "tag": "Question à 1 000 euros",
+     "caption": "Avec quel pays la France partage-t-elle sa plus longue frontière terrestre ?",
+     "bubbles": [
+      { "text": "L’Espagne ! 623 km de Pyrénées !", "side": "r" },
+      { "text": "C’est votre dernier mot ?", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a simple TV quiz stage. Bernard (on the right) slamming his buzzer with both hands, triumphant, glasses flying; Patrick (on the left) leaning on his lectern, smiling very slowly, eyebrows raised. medium shot",
+      "cast": ["patrick", "bernard"],
+      "file": "images/insolite-01.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 2,
+     "kind": "fact",
+     "tag": "",
+     "caption": "Raté. La plus longue frontière terrestre française fait plus de 730 km : avec le Brésil.",
+     "bubbles": [],
+     "image": {
+      "prompt": "Bernard (in the middle) frozen behind his lectern, face draining white, one tiny sweat drop, glasses crooked, a long silent stare at the reader. plain background. close-up",
+      "cast": ["bernard"],
+      "file": "images/insolite-02.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 3,
+     "kind": "fact",
+     "tag": "",
+     "caption": "Grâce à la Guyane, région française située en Amérique du Sud.",
+     "bubbles": [
+      { "text": "La France ne s’arrête pas à Brest, Bernard.", "side": "l" },
+      { "text": "Depuis quand ?", "side": "r" }
+     ],
+     "image": {
+      "prompt": "Hélène (on the left) unrolling a big blank world map and tapping a spot in South America with her finger, patient but firm; Bernard (on the right) squinting at the map, holding his glasses up to his nose. plain background. medium shot",
+      "cast": ["helene", "bernard"],
+      "file": "images/insolite-03.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 4,
+     "kind": "",
+     "tag": "1900",
+     "caption": "Elle suit surtout le fleuve Oyapock. Tracé reconnu en 1900, après un arbitrage suisse.",
+     "bubbles": [
+      { "text": "Les Suisses, toujours neutres.", "side": "r" },
+      { "text": "Et très précis.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a calm wide river drawn with a few lines, thick jungle on both banks. Hélène (on the left) standing on one bank pointing at the river with her map; Patrick (on the right) on the other bank, waving across, smiling for the camera. wide shot",
+      "cast": ["helene", "patrick"],
+      "file": "images/insolite-04.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 5,
+     "kind": "fact",
+     "tag": "2011-2017",
+     "caption": "Un pont franco-brésilien est achevé en 2011. Il n’ouvre qu’en 2017.",
+     "bubbles": [
+      { "text": "Six ans pour ouvrir un pont ?", "side": "r" },
+      { "text": "Il fallait trouver les clés.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "a long modern bridge over a river, completely empty, with a small closed barrier in the middle. Bernard (on the right) sitting on the barrier, bored, chin in hand; Hélène (on the left) checking her watch, deadpan. wide shot",
+      "cast": ["helene", "bernard"],
+      "file": "images/insolite-05.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 6,
+     "kind": "",
+     "tag": "",
+     "caption": "Aujourd’hui encore, il reste peu emprunté : beaucoup d’habitants préfèrent traverser en bateau.",
+     "bubbles": [
+      { "text": "Un pont tout neuf, et tout le monde prend le bateau.", "side": "r" }
+     ],
+     "image": {
+      "prompt": "the same empty bridge in the background. in the foreground a small wooden boat full of tiny cheerful passengers crossing the river; Bernard (on the right) standing alone on the bridge, arms dangling, abandoned. wide shot",
+      "cast": ["bernard"],
+      "file": "images/insolite-06.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 7,
+     "kind": "conf",
+     "tag": "Le fin mot",
+     "caption": "En Europe, la plus longue frontière française est avec la Belgique, de peu devant l’Espagne.",
+     "bubbles": [
+      { "text": "Donc j’avais faux deux fois.", "side": "r" },
+      { "text": "Un record.", "side": "l" }
+     ],
+     "image": {
+      "prompt": "Bernard (on the right) in a confession-style shot, looking straight at the reader, slumped on his lectern, melting in despair; Patrick (on the left) giving a big thumbs up to the camera with his huge white smile. plain background",
+      "cast": ["patrick", "bernard"],
+      "file": "images/insolite-07.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    }
+   ],
+   "final": {
+    "text": "La plus longue frontière terrestre de la France est celle qu’elle partage avec le Brésil, en Guyane : plus de 730 km.",
+    "source": "Sénat"
+   },
+   "sources": [
+    { "title": "Sénat — Rapport d’information n° 846 (2022-2023), coopération transfrontalière franco-brésilienne", "url": "https://www.senat.fr/rap/r22-846/r22-84621.html" },
+    { "title": "Flytrippers — Avec quel pays la France partage sa plus longue frontière ?", "url": "https://flytrippers.com/fr/avec-quel-pays-la-france-partage-sa-plus-longue-frontiere/" },
+    { "title": "Le Petit Journal — Découvrir la frontière franco-espagnole", "url": "https://lepetitjournal.com/vivre-a-madrid/decouvrir-frontiere-franco-espagnole-269106" }
+   ]
+  },
+  {
    "id": "quiz",
    "kind": "chiffre",
    "label": "Le Chiffre",
