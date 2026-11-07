@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T18:03:23.585296+01:00",
+ "updated_at": "2026-11-07T19:28:49.293096+01:00",
  "today": "2026-11-07",
  "problems": [],
  "days": [
@@ -16,6 +16,7 @@
    "date": "2026-11-08",
    "status": "draft",
    "formats": {
+    "dossier": "31 image(s) à faire",
     "actu": "prêt",
     "cultureg": "prêt",
     "insolite": "prêt",
@@ -83,7 +84,7 @@
   "insolite"
  ],
  "last_published": "2026-11-07",
- "days_ahead_drawn": 1,
+ "days_ahead_drawn": 0,
  "days_ahead_written": 7,
  "quota": {
   "day": "2026-11-07",
