@@ -15,6 +15,7 @@ On apprend en riant. Chaque BD explique et vulgarise un sujet exact, avec une vr
 - **Les bulles peuvent expliquer.** Le récitatif donne le fait, la bulle peut donner le pourquoi ou un exemple concret ; les gags viennent en plus, pas à la place.
 - **Dosage : un vrai gag toutes les 2 ou 3 cases**, pas à chaque case. Les autres cases sont des cases d'explication, vivantes (expressions, petites réactions) mais sans chute forcée.
 - **Une idée par case.** Si une case contient deux faits, la couper ou en garder un.
+- **Un mécanisme se raconte maillon par maillon** (une arnaque, une invention, un phénomène) : qui fait quoi, comment l'information ou l'objet passe d'une étape à la suivante, pourquoi personne ne s'en aperçoit. Aucun maillon sauté : si le lecteur doit deviner une étape, elle manque. Exemple raté (7 novembre) : le piratage des frères Blanc sans dire comment l'employé de Tours connaissait les cours de Paris.
 Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The Office**, **Kaamelott**, et pour l'image et le jeu d'acteur **le strip minimaliste façon Sarah's Scribbles**.
 
 ## Le casting : adapté à l'histoire
