@@ -26,7 +26,8 @@ MAX_CASES = {"dossier": 30}  # plafonds fixés le 7 novembre 2026 pour tenir dan
 
 
 def words(t: str) -> int:
-    return len(str(t or "").split())
+    """Mots réels : la ponctuation française espacée (« : ; ? ! ») ne compte pas."""
+    return sum(1 for w in str(t or "").split() if any(ch.isalnum() for ch in w))
 
 
 def check_quiz(fmt: dict, err, warn):

@@ -55,14 +55,14 @@
           "n": 1,
           "kind": "chap",
           "tag": "Juin 1853",
-          "caption": "Napoléon III nomme Haussmann préfet de la Seine. Mission : « embellir Paris ».",
+          "caption": "Pourquoi les immeubles parisiens ont-ils un balcon au 2e et au 5e ? Tout commence en 1853 avec Haussmann.",
           "bubbles": [
             {
-              "text": "On garde quelque chose de l’ancien Paris ?",
+              "text": "Napoléon III veut un Paris plus beau. Ça veut dire quoi ?",
               "side": "r"
             },
             {
-              "text": "Les numéros de rue. Peut-être.",
+              "text": "Plus large. Plus droit. Plus pareil.",
               "side": "l"
             }
           ],
@@ -82,7 +82,7 @@
           "n": 2,
           "kind": "fact",
           "tag": "",
-          "caption": "Environ 25 000 maisons démolies en dix ans, et 64 km de rues percées.",
+          "caption": "Pour aérer les quartiers étroits et insalubres, Haussmann rase environ 25 000 maisons et perce 64 km de rues larges.",
           "bubbles": [
             {
               "text": "Je ne démolis pas. Je libère de l’espace.",
@@ -105,14 +105,14 @@
           "n": 3,
           "kind": "",
           "tag": "",
-          "caption": "Les nouveaux immeubles, collés et alignés, forment une « rue mur ».",
+          "caption": "Le long de ces rues, les immeubles sont collés, alignés, de même hauteur : la rue forme une seule façade.",
           "bubbles": [
             {
-              "text": "Et si un client veut une façade originale ?",
+              "text": "Pourquoi les faire tous pareils ?",
               "side": "r"
             },
             {
-              "text": "Il déménage à Londres.",
+              "text": "Pour une rue grande et ordonnée. L’originalité, c’est à Londres.",
               "side": "l"
             }
           ],
@@ -132,14 +132,14 @@
           "n": 4,
           "kind": "fact",
           "tag": "1859",
-          "caption": "Règlement de 1859 : rue de plus de 20 m, façade de 20 m maximum.",
+          "caption": "En 1859, la hauteur suit la largeur de la rue : jusqu’à 20 m, sur les rues d’au moins 20 m.",
           "bubbles": [
             {
-              "text": "Et le toit ?",
+              "text": "Pourquoi lier la hauteur à la rue ?",
               "side": "r"
             },
             {
-              "text": "Incliné à 45 degrés. Pas 44. Pas 46.",
+              "text": "Pour que la lumière arrive au trottoir. Et le toit à 45°. Pas 44.",
               "side": "l"
             }
           ],
@@ -159,10 +159,10 @@
           "n": 5,
           "kind": "fact",
           "tag": "L’étage noble",
-          "caption": "Au rez-de-chaussée, boutiques et concierge. Au 2e, l’étage bourgeois : hauts plafonds, balcon filant.",
+          "caption": "Le 2e étage est le plus cher : loin de la boue de la rue, mais sans trop d’escaliers.",
           "bubbles": [
             {
-              "text": "Assez haut pour fuir la boue, assez bas pour l’escalier.",
+              "text": "D’où mon long balcon sur toute la façade. C’est l’étage noble.",
               "side": "l"
             }
           ],
@@ -181,10 +181,10 @@
           "n": 6,
           "kind": "",
           "tag": "",
-          "caption": "Pas d’ascenseur : plus on monte, moins c’est cher. Sous les combles, les domestiques.",
+          "caption": "Sans ascenseur, chaque étage se monte à pied : plus c’est haut, moins c’est cher. Sous le toit, les domestiques.",
           "bubbles": [
             {
-              "text": "Six étages par jour. Je n’ai jamais payé de salle de sport.",
+              "text": "Six étages par jour, avec le charbon. Pas besoin de salle de sport.",
               "side": "r"
             }
           ],
@@ -203,7 +203,7 @@
           "n": 7,
           "kind": "fact",
           "tag": "",
-          "caption": "Au 5e, un second balcon filant : surtout pour la symétrie de la façade.",
+          "caption": "Au 5e, un second balcon court sur toute la façade. Il souligne le haut de l’immeuble et équilibre la façade.",
           "bubbles": [
             {
               "text": "Donc il ne sert à rien ?",
@@ -230,7 +230,7 @@
           "n": 8,
           "kind": "conf",
           "tag": "Aujourd’hui",
-          "caption": "Aujourd’hui, les derniers étages, pour la vue, sont parmi les plus recherchés.",
+          "caption": "Au 2e, le balcon des riches ; au 5e, celui de la symétrie. Aujourd’hui, ce sont les étages hauts qu’on s’arrache.",
           "bubbles": [
             {
               "text": "J’avais un rooftop avec vue. On appelait ça une chambre de bonne.",
@@ -320,14 +320,14 @@
           "n": 1,
           "kind": "chap",
           "tag": "Bordeaux, 1834",
-          "caption": "Les jumeaux François et Louis Blanc spéculent sur la rente d’État à Bordeaux.",
+          "caption": "Bordeaux, 1834. Les jumeaux Blanc parient sur la rente d’État, un titre dont le prix se fixe à Paris.",
           "bubbles": [
             {
-              "text": "Les cours de Paris arrivent ici avec des jours de retard.",
+              "text": "Problème : les cours de Paris arrivent ici avec des jours de retard.",
               "side": "l"
             },
             {
-              "text": "Il nous faudrait Internet.",
+              "text": "Celui qui les connaît avant les autres gagne à coup sûr.",
               "side": "r"
             }
           ],
@@ -347,7 +347,7 @@
           "n": 2,
           "kind": "fact",
           "tag": "Le télégraphe Chappe",
-          "caption": "Le télégraphe Chappe relaie des signaux de tour en tour. Réservé à l’administration.",
+          "caption": "Le télégraphe Chappe relaie des signaux de tour en tour, avec des bras articulés : bien plus vite qu’un cheval.",
           "bubbles": [
             {
               "text": "Un réseau ultrarapide, interdit au public. Je suis amoureux.",
@@ -369,10 +369,10 @@
           "n": 3,
           "kind": "",
           "tag": "",
-          "caption": "À Tours, un employé soudoyé glisse un faux signal, suivi du signe « annuler ».",
+          "caption": "Le plan : à Tours, un employé payé glisse un faux signal dans un vrai message, puis le signe « annuler ».",
           "bubbles": [
             {
-              "text": "Ce n’est pas une erreur. C’est une erreur rémunérée.",
+              "text": "Le message officiel reste juste. Mais ceux qui regardent passer l’erreur…",
               "side": "r"
             }
           ],
@@ -391,10 +391,10 @@
           "n": 4,
           "kind": "fact",
           "tag": "",
-          "caption": "Près de Bordeaux, un complice lit le faux signal à la longue-vue : hausse ou baisse.",
+          "caption": "Près de Bordeaux, un complice repère l’erreur à la longue-vue : selon le signal, la rente monte ou baisse.",
           "bubbles": [
             {
-              "text": "Hausse ! On achète tout.",
+              "text": "Hausse ! On achète avant tout le monde.",
               "side": "l"
             },
             {
@@ -418,7 +418,7 @@
           "n": 5,
           "kind": "",
           "tag": "1836",
-          "caption": "Deux ans plus tard, l’employé tombe malade et propose sa place à un ami.",
+          "caption": "1836 : l’employé tombe malade et demande à un ami de le remplacer, en lui expliquant la combine.",
           "bubbles": [
             {
               "text": "C’est simple : tu fais des erreurs exprès.",
@@ -445,7 +445,7 @@
           "n": 6,
           "kind": "react",
           "tag": "Le procès",
-          "caption": "L’ami dénonce tout. Mais aucune loi ne punit ce détournement : seule la corruption est condamnée.",
+          "caption": "L’ami dénonce tout. Mais aucune loi ne punit le détournement du télégraphe : seul le pot-de-vin est condamné.",
           "bubbles": [
             {
               "text": "Pirater un réseau ? Ce crime n’existe pas encore.",
@@ -468,7 +468,7 @@
           "n": 7,
           "kind": "conf",
           "tag": "Épilogue",
-          "caption": "Fortune à peine entamée, les jumeaux ouvrent des casinos. François lancera Monte-Carlo.",
+          "caption": "Bilan : un des premiers piratages de réseau, presque impuni. Les jumeaux ouvriront ensuite des casinos, dont Monte-Carlo.",
           "bubbles": [
             {
               "text": "Après le télégraphe truqué, la roulette m’a semblé très honnête.",

@@ -980,14 +980,14 @@
           "n": 1,
           "kind": "chap",
           "tag": "1715",
-          "caption": "Louis XIV meurt. Le Régent hérite d’un royaume écrasé de dettes.",
+          "caption": "Comment un joueur écossais a-t-il fait découvrir les billets à la France ? 1715 : Louis XIV meurt, couvert de dettes.",
           "bubbles": [
             {
-              "text": "Une idée qui rembourse tout sans effort ?",
+              "text": "Il me faudrait de l’argent. Beaucoup. Tout de suite.",
               "side": "l"
             },
             {
-              "text": "J’en ai une. Je suis joueur professionnel.",
+              "text": "J’ai une idée. Je suis joueur professionnel.",
               "side": "r"
             }
           ],
@@ -1007,14 +1007,14 @@
           "n": 2,
           "kind": "fact",
           "tag": "Le CV",
-          "caption": "John Law : Écossais, financier, joueur, et condamné pour avoir tué un homme en duel.",
+          "caption": "John Law : financier écossais, joueur de cartes, et condamné pour avoir tué un homme en duel.",
           "bubbles": [
             {
               "text": "Et votre plan ?",
               "side": "l"
             },
             {
-              "text": "Remplacer l’or par du papier.",
+              "text": "Payer avec du papier au lieu de pièces d’or.",
               "side": "r"
             }
           ],
@@ -1034,14 +1034,14 @@
           "n": 3,
           "kind": "fact",
           "tag": "1716",
-          "caption": "Law fonde la Banque générale. Ses billets s’échangent contre de l’or.",
+          "caption": "1716 : Law ouvre une banque. Ses billets sont des promesses : on peut les échanger à la banque contre des pièces.",
           "bubbles": [
             {
-              "text": "Un papier qui vaut de l’or ?",
+              "text": "Pourquoi prendre un papier plutôt que de l’or ?",
               "side": "l"
             },
             {
-              "text": "Tant que tout le monde y croit.",
+              "text": "Il est plus léger. Et tant qu’on peut l’échanger, il en vaut autant.",
               "side": "r"
             }
           ],
@@ -1061,7 +1061,7 @@
           "n": 4,
           "kind": "",
           "tag": "1717",
-          "caption": "Il lance une compagnie pour exploiter la Louisiane, et vend ses actions au public.",
+          "caption": "1717 : il crée une compagnie pour exploiter la Louisiane, et vend des actions, c’est-à-dire des parts de ses futurs profits.",
           "bubbles": [
             {
               "text": "La Louisiane : un Eldorado !",
@@ -1092,7 +1092,7 @@
           "n": 5,
           "kind": "fact",
           "tag": "Rue Quincampoix",
-          "caption": "Les Parisiens s’arrachent les actions. En janvier 1720, l’action atteint 10 000 livres.",
+          "caption": "Rue Quincampoix, à Paris, on s’arrache les actions : leur prix grimpe jusqu’à 10 000 livres en janvier 1720.",
           "bubbles": [
             {
               "text": "J’achète ! J’achète tout ! Je ne sais pas quoi !",
@@ -1114,7 +1114,7 @@
           "n": 6,
           "kind": "",
           "tag": "Vrai",
-          "caption": "Un vieux bossu loue sa bosse comme pupitre aux spéculateurs pressés.",
+          "caption": "La cohue est telle qu’un vieux bossu loue sa bosse comme pupitre aux acheteurs pressés.",
           "bubbles": [
             {
               "text": "Signature rapide, tarif rapide.",
@@ -1141,7 +1141,7 @@
           "n": 7,
           "kind": "fact",
           "tag": "",
-          "caption": "C’est dans cette folie que se répand un mot nouveau : « millionnaire ».",
+          "caption": "Certains deviennent riches en quelques semaines… sur le papier. C’est là que se répand un mot nouveau : « millionnaire ».",
           "bubbles": [
             {
               "text": "Je suis millionnaire !",
@@ -1168,7 +1168,7 @@
           "n": 8,
           "kind": "chap",
           "tag": "1720",
-          "caption": "Les clients veulent récupérer leur or. La banque n’en a pas assez.",
+          "caption": "1720 : inquiets, les clients réclament de l’or contre leurs billets. Mais Law a imprimé bien plus de billets que d’or.",
           "bubbles": [
             {
               "text": "Mon or, s’il vous plaît.",
@@ -1195,7 +1195,7 @@
           "n": 9,
           "kind": "fact",
           "tag": "Décembre 1720",
-          "caption": "L’action retombe à 1 000 livres. Law s’enfuit de France.",
+          "caption": "La confiance s’effondre : l’action retombe à 1 000 livres. Ruiné et détesté, Law s’enfuit de France.",
           "bubbles": [
             {
               "text": "Il est où, l’Écossais ?",
@@ -1222,7 +1222,7 @@
           "n": 10,
           "kind": "conf",
           "tag": "La leçon",
-          "caption": "Law meurt à Venise en 1729. Leçon retenue : un billet vaut ce qu’on croit qu’il vaut.",
+          "caption": "La leçon : un billet ne vaut que la confiance qu’on lui fait. Law, lui, meurt à Venise en 1729.",
           "bubbles": [
             {
               "text": "J’avais raison. Juste un peu trop vite.",
@@ -1310,7 +1310,7 @@
           "n": 1,
           "kind": "chap",
           "tag": "21 août 1911",
-          "caption": "Le Louvre est fermé. Vincenzo Peruggia, vitrier qui y a travaillé, décroche la Joconde.",
+          "caption": "Comment la Joconde est-elle devenue si célèbre ? 21 août 1911 : un vitrier qui a travaillé au Louvre la décroche.",
           "bubbles": [
             {
               "text": "Personne ne regarde jamais les ouvriers.",
@@ -1332,7 +1332,7 @@
           "n": 2,
           "kind": "",
           "tag": "",
-          "caption": "Il sort tranquillement, le tableau caché sous sa blouse de travail.",
+          "caption": "Vincenzo Peruggia ressort tranquillement, musée fermé, le tableau caché sous sa blouse de travail.",
           "bubbles": [
             {
               "text": "Bonne journée ! Rien à signaler !",
@@ -1354,7 +1354,7 @@
           "n": 3,
           "kind": "fact",
           "tag": "22 août",
-          "caption": "Le lendemain, le peintre Louis Béroud vient la copier. Il ne trouve que le cadre.",
+          "caption": "Le lendemain, le peintre Louis Béroud vient la copier. À sa place : quatre crochets vides.",
           "bubbles": [
             {
               "text": "Elle est chez le photographe, sans doute.",
@@ -1380,7 +1380,7 @@
           "n": 4,
           "kind": "fact",
           "tag": "Septembre 1911",
-          "caption": "Soixante inspecteurs fouillent le musée. Le poète Apollinaire passe six jours en prison.",
+          "caption": "L’enquête s’emballe : soixante inspecteurs fouillent le musée, et le poète Apollinaire, soupçonné, passe six jours en prison.",
           "bubbles": [
             {
               "text": "Je suis poète, pas cambrioleur !",
@@ -1407,7 +1407,7 @@
           "n": 5,
           "kind": "",
           "tag": "",
-          "caption": "Interrogé, il cite son ami Picasso. Tous deux seront mis hors de cause.",
+          "caption": "Interrogé, il cite son ami Picasso. Tous deux sont finalement mis hors de cause.",
           "bubbles": [
             {
               "text": "Pablo, pardon. J’ai paniqué.",
@@ -1429,7 +1429,7 @@
           "n": 6,
           "kind": "react",
           "tag": "",
-          "caption": "Pendant ce temps, la foule vient au Louvre voir… le mur vide. Certains y déposent des fleurs.",
+          "caption": "Les journaux du monde entier racontent le vol. Résultat : la foule vient au Louvre voir… le mur vide.",
           "bubbles": [
             {
               "text": "On fait la queue pour quatre clous.",
@@ -1450,7 +1450,7 @@
           "n": 7,
           "kind": "fact",
           "tag": "1913",
-          "caption": "Deux ans plus tard, Peruggia tente de la vendre à un marchand de Florence. Il est arrêté.",
+          "caption": "Deux ans plus tard, Peruggia tente de vendre le tableau à un marchand de Florence. Il est arrêté.",
           "bubbles": [
             {
               "text": "Je voulais la rendre à l’Italie !",
@@ -1476,7 +1476,7 @@
           "n": 8,
           "kind": "conf",
           "tag": "Le fin mot",
-          "caption": "Elle revient au Louvre le 4 janvier 1914. Entre-temps, sa célébrité a explosé.",
+          "caption": "Elle revient au Louvre le 4 janvier 1914. Deux ans à la une des journaux en ont fait une star.",
           "bubbles": [
             {
               "text": "Son meilleur agent ? Un voleur.",
