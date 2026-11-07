@@ -793,8 +793,10 @@ async function loadIndex() {
   const r = await fetch("editions/index.json", { cache: "no-cache" });
   INDEX = (await r.json()).editions || [];
 }
+const emptyEdition = date => ({ date, formats: [], base: `editions/${date}/`, empty: true });
 async function loadEdition(date) {
   if (editionCache[date]) return editionCache[date];
+  if (!INDEX.some(e => e.date === date)) return emptyEdition(date);
   const r = await fetch(`editions/${date}/edition.json`, { cache: "no-cache" });
   const ed = await r.json();
   const entry = INDEX.find(e => e.date === date);
@@ -862,6 +864,7 @@ function renderHome() {
     return;
   }
   const ed = CUR, F = Object.fromEntries(ed.formats.map(f => [f.id, f]));
+  const last = INDEX.map(e => e.date).filter(d => d < ed.date).sort().pop();
   const hello = ME.name ? `Salut, ${esc(ME.name)}` : "Salut !";
   const isToday = ed.date === TODAY;
   const card = {
@@ -882,13 +885,15 @@ function renderHome() {
   v.innerHTML = `
    <div><h1 class="h1 hello">${hello}</h1><p class="lead">Prêt à briller en société (ou au moins à faire semblant) ?</p></div>
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
-   ${!isToday && CUR.date === INDEX[0]?.date ? `<p class="sub">L’édition d’aujourd’hui est encore sous le crayon. En attendant, voici la dernière.</p>` : ""}
-   ${cardsHTML}
+   ${ed.empty
+      ? `<div class="empty-state"><h2>${isToday ? "L’édition du jour est encore sous le crayon" : "Pas d’édition ce jour-là"}</h2><p class="lead">${isToday ? "Le dessinateur taille ses mines. Revenez un peu plus tard." : "Le Sachoir dormait. Ça arrive aux meilleurs."}</p>${last ? `<button class="btn ghost sm" id="hLast">Lire la dernière édition (${fmtLong(last)})</button>` : ""}</div>`
+      : cardsHTML}
    ${F.quiz ? quizCard(ed, F.quiz) : ""}
    <p class="daily">Chaque jour, une nouvelle édition. Votre culture G, elle, ne prend pas de congés.</p>`;
   v.querySelectorAll("[data-f]").forEach(b => b.onclick = () => openReader(ed, b.dataset.f));
   v.querySelectorAll("[data-quiz]").forEach(b => b.onclick = () => openQuiz(ed));
   $("#hHist").onclick = openHistory;
+  if ($("#hLast")) $("#hLast").onclick = () => selectDate(last);
 }
 
 async function selectDate(date) {
@@ -902,7 +907,7 @@ function openHistory() {
   if (!HM) { const c = (CUR ? CUR.date : TODAY).split("-").map(Number); HM = [c[0], c[1]]; }
   let days = "";
   for (let o = -14; o <= 0; o++) {
-    const iso = shift(TODAY, o), has = dates.has(iso), dd = new Date(iso + "T12:00:00Z");
+    const iso = shift(TODAY, o), has = dates.has(iso) || iso === TODAY, dd = new Date(iso + "T12:00:00Z");
     days += `<button class="day ${CUR && iso === CUR.date ? "sel" : ""} ${has ? (ME.visited.includes(iso) ? "done" : "") : "lock"}" data-d="${iso}" ${has ? "" : "disabled"} aria-label="${fmtLong(iso)}${has ? "" : ", pas d’édition"}"><span class="wd">${dd.toLocaleDateString("fr-FR", { weekday: "short", timeZone: "UTC" }).replace(".", "")}</span><span class="dn">${dd.getUTCDate()}</span><span class="dot"></span></button>`;
   }
   const oldest = INDEX.length ? INDEX.map(e => e.date).sort()[0] : TODAY;
@@ -913,7 +918,7 @@ function openHistory() {
     const [y, m] = HM, first = new Date(Date.UTC(y, m - 1, 1)), lead = (first.getUTCDay() + 6) % 7, dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
     let cells = ["lun", "mar", "mer", "jeu", "ven", "sam", "dim"].map(w => `<span class="wh">${w}</span>`).join("") + "<span></span>".repeat(lead), n = 0;
     for (let d = 1; d <= dim; d++) {
-      const iso = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`, has = dates.has(iso); if (has) n++;
+      const iso = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`, has = dates.has(iso) || iso === TODAY; if (dates.has(iso)) n++;
       cells += `<button class="${iso > TODAY ? "fut" : has ? "" : "lock"} ${has && ME.visited.includes(iso) ? "done" : ""} ${CUR && iso === CUR.date ? "sel" : ""}" data-d="${iso}" ${has ? "" : "disabled"}>${d}</button>`;
     }
     $("#hMonth").innerHTML = cells;
@@ -1637,10 +1642,8 @@ if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catc
 (async () => {
   try {
     await loadIndex();
-    if (INDEX.length) {
-      const wanted = new URLSearchParams(location.search).get("d");
-      CUR = await loadEdition(wanted && INDEX.some(e => e.date === wanted) ? wanted : INDEX[0].date);
-    }
+    const wanted = new URLSearchParams(location.search).get("d");
+    CUR = await loadEdition(wanted && INDEX.some(e => e.date === wanted) ? wanted : TODAY);
     if (new URLSearchParams(location.search).has("install") && !matchMedia("(display-mode: standalone)").matches) setTimeout(openInstall, 600);
     const fid = new URLSearchParams(location.search).get("f");
     if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); if (fid === "quiz") openQuiz(CUR); else openReader(CUR, fid); return; }
