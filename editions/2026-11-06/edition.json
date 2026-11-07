@@ -12,7 +12,7 @@
       "cast": [
         {
           "id": "nixon",
-          "look": "an American vice-president of the 1950s, dark suit, slicked hair, confident grin",
+          "look": "a 1950s American politician, black suit, white shirt, thin black tie, dark slicked-back hair with a widow's peak, big ski-jump nose, confident grin",
           "file": "cast/dossier-nixon.png",
           "status": "pending",
           "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (d6c44641-a465-453a-8068-da9958755617)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
@@ -31,13 +31,13 @@
         }
       ],
       "cover": {
-        "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. an American vice-president of the 1950s (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; a Soviet official of the 1950s-80s (on the right), annoyed frown, hands on hips",
+        "prompt": "Two men face each other in an empty snowy square, one small onion-dome silhouette far behind. On the left nixon (American politician, black suit, dark slicked hair, big nose, no moustache), smug, chin up, explaining with one finger raised. On the right sov (Soviet official in an olive uniform jacket and peaked cap with a red band, big grey moustache), arms crossed, deeply annoyed frown. Two distinct people, medium wide shot, plain white sky.",
         "cast": [
           "nixon",
           "sov"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "done",
+        "status": "retry",
         "attempts": 1
       },
       "cases": [
@@ -57,13 +57,13 @@
             }
           ],
           "image": {
-            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. an American vice-president of the 1950s (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; a Soviet official of the 1950s-80s (on the right), annoyed frown, hands on hips",
+            "prompt": "Single panel. Snowy empty square, one small onion dome far in the background. On the left nixon (American politician, black suit, dark slicked hair, big nose, no moustache), smug half-closed eyes, gesturing proudly at a plain white kitchen stove. On the right sov (Soviet official in an olive uniform jacket and peaked cap with a red band, big grey moustache), hands on hips, annoyed frown. Two distinct people, medium shot, empty white sky.",
             "cast": [
               "nixon",
               "sov"
             ],
             "file": "images/dossier-01.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -83,13 +83,13 @@
             }
           ],
           "image": {
-            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. the American CEO of a soda company (on the left), broad happy smile, gesturing with one hand as if explaining; a Soviet official of the 1950s-80s (on the right), shocked, wide eyes, open mouth, standing with arms at his sides. Also in the scene: an unlabelled glass soda bottle",
+            "prompt": "Single panel, snowy empty square. On the left boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven), beaming, holding out a plain unlabelled glass soda bottle. On the right sov (Soviet official in an olive uniform jacket and peaked cap with a red band, big grey moustache), frozen after a sip, wide eyes, tiny pink blush marks. Two distinct people, medium shot, empty white sky.",
             "cast": [
               "boss",
               "sov"
             ],
             "file": "images/dossier-02.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -109,13 +109,13 @@
             }
           ],
           "image": {
-            "prompt": "a simple office with a window and a framed chart on the wall. the American CEO of a soda company (on the left), worried, raised eyebrows, arms spread in a shrug; a Soviet official of the 1950s-80s (on the right), smug, self-satisfied, half-closed eyes, standing with arms at his sides",
+            "prompt": "Bare office with one plain desk. On the left boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven), worried raised eyebrows, arms spread in a big shrug, tiny sweat drop. On the right sov (Soviet official in an olive uniform jacket and peaked cap with a red band, big grey moustache), smug half-closed eyes, arms crossed. Two distinct people, medium shot, blank white wall.",
             "cast": [
               "boss",
               "sov"
             ],
             "file": "images/dossier-03.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -131,13 +131,13 @@
             }
           ],
           "image": {
-            "prompt": "a simple office with a window and a framed chart on the wall. the American CEO of a soda company (on the left), broad happy smile, one arm raised enthusiastically; a Soviet official of the 1950s-80s (on the right), broad happy smile, gesturing with one hand as if explaining. Also in the scene: an unlabelled clear vodka bottle",
+            "prompt": "Bare office with one plain desk holding an unlabelled clear bottle. On the left boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven), broad grin, one arm raised. On the right sov (Soviet official in an olive uniform jacket and peaked cap with a red band, big grey moustache), broad grin, shaking his hand. Two distinct people, medium shot, blank white wall, no posters.",
             "cast": [
               "boss",
               "sov"
             ],
             "file": "images/dossier-04.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -178,13 +178,13 @@
             }
           ],
           "image": {
-            "prompt": "a simple office with a window and a framed chart on the wall. a Soviet official of the 1950s-80s (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; the American CEO of a soda company (on the right), shocked, wide eyes, open mouth, arms spread in a shrug",
+            "prompt": "Bare office, one plain desk. On the left sov (Soviet official in an olive uniform jacket and peaked cap with a red band, big grey moustache), smug half-closed eyes, casually offering a tiny toy submarine on his palm. On the right boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven), frozen in shock, jaw dropped, big sweat drop. Only these two people, medium shot, blank white wall.",
             "cast": [
               "sov",
               "boss"
             ],
             "file": "images/dossier-06.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 2
           }
         },
@@ -206,7 +206,8 @@
             ],
             "file": "images/dossier-07.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -221,12 +222,12 @@
             }
           ],
           "image": {
-            "prompt": "a simple office with a window and a framed chart on the wall. the American CEO of a soda company (on the left), broad happy smile, one arm raised enthusiastically",
+            "prompt": "Bare office, blank white wall, one plain desk. boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven) alone in the centre, huge proud grin, one fist raised in victory, tiny pink blush marks. Medium shot, no posters, empty space above.",
             "cast": [
               "boss"
             ],
             "file": "images/dossier-08.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -242,12 +243,12 @@
             }
           ],
           "image": {
-            "prompt": "a wooden dock by a calm blue sea with small white clouds. the American CEO of a soda company (on the left), worried, raised eyebrows, standing with arms at his sides. Also in the scene: a big orange fish jumping out of the water",
+            "prompt": "Empty wooden dock by a calm grey sea, rusty old submarine in the distance. boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven) standing on the dock on the left, shoulders slumped, worried raised eyebrows, holding a small scrap of rusty metal. Full body, medium wide shot, empty sky.",
             "cast": [
               "boss"
             ],
             "file": "images/dossier-09.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -263,13 +264,13 @@
             }
           ],
           "image": {
-            "prompt": "a simple office with a window and a framed chart on the wall. the American CEO of a soda company (on the left), smug, self-satisfied, half-closed eyes, gesturing with one hand as if explaining; a Soviet official of the 1950s-80s (on the right), broad happy smile, standing with arms at his sides. Also in the scene: a signed treaty document",
+            "prompt": "Bare office, one plain desk with a blank sheet of paper. On the left boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven), smug, signing the paper with a pen. On the right sov (Soviet official in an olive uniform jacket and peaked cap with a red band, big grey moustache), broad grin, arms at his sides. Two distinct people, medium shot, blank white wall, no posters.",
             "cast": [
               "boss",
               "sov"
             ],
             "file": "images/dossier-10.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -289,13 +290,13 @@
             }
           ],
           "image": {
-            "prompt": "Moscow in 1959, a pavilion with colourful onion domes in the background, snowy ground. the American CEO of a soda company (on the left), shocked, wide eyes, open mouth, arms spread in a shrug; a Soviet official of the 1950s-80s (on the right), worried, raised eyebrows, standing with arms at his sides",
+            "prompt": "Empty snowy square, nothing else. On the left boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven), shocked, wide eyes, arms spread in a shrug. On the right sov (Soviet official in an olive uniform jacket and peaked cap with a red band, big grey moustache), worried raised eyebrows, holding a crumpled map torn into many pieces. Two distinct people, medium shot, empty white sky.",
             "cast": [
               "boss",
               "sov"
             ],
             "file": "images/dossier-11.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -311,12 +312,12 @@
             }
           ],
           "image": {
-            "prompt": "a 1920s Parisian street with cream Haussmann buildings and a red café awning. the American CEO of a soda company (on the left), annoyed frown, standing with arms at his sides",
+            "prompt": "Empty snowy square, one small onion dome far behind. boss (soda company CEO, plain black suit, red tie as the only colour, slicked grey hair, clean-shaven) alone, annoyed frown, arms hanging, holding an empty plain glass soda bottle upside down, one last drop falling. Medium shot, empty white sky.",
             "cast": [
               "boss"
             ],
             "file": "images/dossier-12.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         }
