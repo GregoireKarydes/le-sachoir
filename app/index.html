@@ -255,6 +255,23 @@ button{cursor:pointer}
 .paybox p{margin:0;font-size:14px;opacity:.92}
 .paybox .later{background:none;border:0;color:#fff;text-decoration:underline;font-size:14px;padding:4px}
 .final{display:flex;align-items:center;justify-content:center;padding:70px 20px 24px;background:var(--fc,#1f8f5f)}
+.final .ccard{max-height:100%;overflow-y:auto;overscroll-behavior:contain}
+/* « Pour mieux comprendre » : case de texte entre deux cases dessinées (aucune image) */
+.slide.explain{background:var(--cream);display:flex;align-items:center;justify-content:center;padding:64px 18px 70px}
+.exbox{width:100%;max-width:360px;background:#fff;border:3px solid var(--ink);border-radius:20px;box-shadow:5px 5px 0 var(--ink);padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;max-height:100%;overflow-y:auto}
+.exbox .ex-tag{align-self:flex-start;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:3px 10px;font-weight:900;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase}
+.exbox h3{margin:0;font-family:var(--f-serif);font-weight:800;font-size:23px;line-height:1.12;text-wrap:balance}
+.exbox p{margin:0;font-size:16.5px;line-height:1.42}
+.exbox ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:0}
+.exbox ol li{position:relative;padding:8px 10px 8px 40px;font-size:15.5px;line-height:1.35;background:#fff8e3;border:2px solid var(--ink);border-radius:12px}
+.exbox ol li::before{content:counter(list-item);position:absolute;left:9px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;font-size:12.5px;display:grid;place-items:center}
+.exbox ol li + li{margin-top:14px}
+.exbox ol li + li::after{content:"↓";position:absolute;left:16px;top:-15px;font-weight:900;font-size:13px;line-height:1}
+.exbox .ex-joke{font-family:var(--f-letter);font-size:17px;line-height:1.25;border-top:2px dashed var(--line,#ddd);padding-top:9px}
+.ccard .story{border-top:2px solid var(--ink);padding:0 16px}
+.ccard .story summary{cursor:pointer;font-weight:800;padding:12px 0;font-size:15px}
+.ccard .story p{margin:0 0 10px;font-size:15px;line-height:1.45}
+.reader.desk .slide.explain{padding:20px 14px}
 .ccard{width:100%;max-width:330px;background:var(--cream);border-radius:22px;box-shadow:0 14px 30px rgba(0,0,0,.3);overflow:hidden;display:flex;flex-direction:column;border:3px solid var(--ink)}
 .ccard .hd{background:var(--yellow);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:3px solid var(--ink)}
 .ccard .hd span{font-weight:900;font-size:12.5px;letter-spacing:.5px;text-transform:uppercase}
@@ -965,7 +982,13 @@ function openInstallQR() {
 
 /* ---------- Lecteur ---------- */
 let R = { ed: null, f: null, idx: 0, n: 0 };
+function explainHTML(c) {
+  const paras = String(c.text || "").split(/\n+/).filter(Boolean).map(t => `<p>${esc(t)}</p>`).join("");
+  const steps = (c.steps || []).length ? `<ol>${c.steps.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : "";
+  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${esc(c.title)}</h3>` : ""}${paras}${steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}</div>`;
+}
 function caseHTML(ed, c) {
+  if (c.kind === "explain") return explainHTML(c);
   let cap = "";
   if (c.caption || c.kind === "conf") {
     const tag = c.tag || (c.kind === "fact" ? "Les faits" : c.kind === "react" ? "La réaction" : "");
@@ -976,14 +999,14 @@ function caseHTML(ed, c) {
 }
 function finalHTML(ed, f) {
   const srcs = (f.sources || []).filter(s => s && /^https?:\/\//.test(s.url || ""));
-  return `<div class="ccard"><div class="hd"><span>Pour briller en société</span><em>${fmtLong(ed.date).split(" ").slice(1).join(" ")}</em></div><div class="ph">${esc(f.final?.text || "")}</div><div class="src">${esc(f.label)} · ${esc(f.final?.source || "")}</div>${srcs.length ? `<details class="srcs"><summary>Sources (${srcs.length})</summary><ul>${srcs.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.title || s.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a></li>`).join("")}</ul></details>` : ""}
+  return `<div class="ccard"><div class="hd"><span>Pour briller en société</span><em>${fmtLong(ed.date).split(" ").slice(1).join(" ")}</em></div><div class="ph">${esc(f.final?.text || "")}</div><div class="src">${esc(f.label)} · ${esc(f.final?.source || "")}</div>${f.story ? `<details class="story"><summary>L’histoire complète</summary>${String(f.story).split(/\n+/).filter(Boolean).map(t => `<p>${esc(t)}</p>`).join("")}</details>` : ""}${srcs.length ? `<details class="srcs"><summary>Sources (${srcs.length})</summary><ul>${srcs.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.title || s.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a></li>`).join("")}</ul></details>` : ""}
   <div class="ft"><button class="btn" data-act="back">Retour à l’édition</button></div></div>`;
 }
 function openReader(ed, fid) {
   const f = ed.formats.find(x => x.id === fid); if (!f) return;
   R = { ed, f, idx: 0, n: f.cases.length + 1 };
   const tr = $("#track");
-  tr.innerHTML = f.cases.map(c => `<div class="slide">${caseHTML(ed, c)}</div>`).join("") + `<div class="slide final" style="--fc:${COLOR[f.id] || "#1f8f5f"}">${finalHTML(ed, f)}</div>`;
+  tr.innerHTML = f.cases.map(c => `<div class="slide${c.kind === "explain" ? " explain" : ""}">${caseHTML(ed, c)}</div>`).join("") + `<div class="slide final" style="--fc:${COLOR[f.id] || "#1f8f5f"}">${finalHTML(ed, f)}</div>`;
   tr.querySelectorAll("[data-act]").forEach(b => b.onclick = onAct);
   const desk = DESK.matches;
   $("#reader").classList.toggle("desk", desk);

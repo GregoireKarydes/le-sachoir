@@ -22,7 +22,9 @@ IMAGE_STATUS = {None, "pending", "retry", "done", "failed"}
 CAST_STATUS = {None, "pending", "done", "skipped", "failed"}
 THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
 CAPTION_MAX, BUBBLE_MAX = 20, 15  # mots, d'après prompts/CHARTE.md (7 novembre 2026 : plus de place pour expliquer)
-MAX_CASES = {"dossier": 30}  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
+MAX_CASES = {"dossier": 30}
+EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
+STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 
 def words(t: str) -> int:
@@ -61,8 +63,9 @@ def check_story(fmt: dict, d: Path, err, warn):
     if not isinstance(cases, list) or not cases:
         err("aucune case")
         return
-    if len(cases) > MAX_CASES.get(fid, 99):
-        warn(f"{len(cases)} cases, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
+    drawn = [c for c in cases if isinstance(c, dict) and c.get("kind") != "explain"]
+    if len(drawn) > MAX_CASES.get(fid, 99):
+        warn(f"{len(drawn)} cases dessinées, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
     cast_ids = set()
     for c in fmt.get("cast", []) or []:
         if not c.get("id") or not c.get("file"):
@@ -75,6 +78,15 @@ def check_story(fmt: dict, d: Path, err, warn):
     for i, case in enumerate(cases, 1):
         if not isinstance(case, dict):
             err(f"case {i} n'est pas un objet")
+            continue
+        if case.get("kind") == "explain":  # « Pour mieux comprendre » : texte seul, sans image
+            if not case.get("title") or not (case.get("text") or case.get("steps")):
+                err(f"case {i} (Pour mieux comprendre) : « title » et « text » ou « steps » obligatoires")
+            n = words(case.get("text")) + sum(words(x) for x in case.get("steps") or []) + words(case.get("joke"))
+            if n > EXPLAIN_MAX:
+                warn(f"case {i} (Pour mieux comprendre) : {n} mots (max {EXPLAIN_MAX})")
+            if case.get("image"):
+                err(f"case {i} (Pour mieux comprendre) : pas d’image pour ce type de case")
             continue
         if words(case.get("caption")) > CAPTION_MAX:
             warn(f"case {i} : récitatif de {words(case.get('caption'))} mots (max {CAPTION_MAX})")
@@ -101,6 +113,12 @@ def check_story(fmt: dict, d: Path, err, warn):
         unknown = set(img.get("cast", []) or []) - cast_ids
         if unknown:
             err(f"{name} : personnages sans fiche casting {sorted(unknown)}")
+    if fid != "actu":
+        sw = words(fmt.get("story"))
+        if not sw:
+            warn("« L’histoire complète » (champ story) manquante")
+        elif not STORY_RANGE[0] <= sw <= STORY_RANGE[1]:
+            warn(f"« L’histoire complète » : {sw} mots (repère {STORY_RANGE[0]} à {STORY_RANGE[1]})")
     if not (fmt.get("final") or {}).get("text"):
         warn("carte « Pour briller » manquante")
     if not fmt.get("sources"):

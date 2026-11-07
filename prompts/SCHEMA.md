@@ -41,11 +41,37 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`. Tout 
         }
       ],
       "final": { "text": "Phrase « Pour briller en société », 25 mots max, exacte.", "source": "Source principale" },
+      "story": "L’histoire complète : 150 à 250 mots, 2 à 4 paragraphes séparés par \n (voir plus bas).",
       "sources": [ { "title": "…", "url": "https://…" } ]
     }
   ]
 }
 ```
+
+## « Pour mieux comprendre » : case de texte sans image (`"kind": "explain"`)
+Une case de texte glissée dans la BD, entre deux cases dessinées, là où le lecteur risque de décrocher (un mécanisme, une notion, un ordre de grandeur). Elle ne coûte aucune image.
+
+```json
+{
+  "n": 4,
+  "kind": "explain",
+  "tag": "Pour mieux comprendre",          // facultatif : « Pour mieux comprendre » par défaut ; ou « En clair », « Le mécanisme »…
+  "title": "Comment l’info passait de Paris à Bordeaux",   // 10 mots max, clair
+  "text": "Une ou deux phrases qui posent le principe.",   // facultatif si steps ; \n pour un nouveau paragraphe
+  "steps": ["Paris : un complice note la tendance de la Bourse", "Il l’envoie par colis à Tours", "…"],  // facultatif : une chaîne d’étapes, 3 à 5, affichée avec des flèches
+  "joke": "Une petite phrase drôle pour finir (facultatif)."
+}
+```
+- **Pas d’image** (pas de champ `image`), pas de bulles. 70 mots au plus en tout (`text` + `steps` + `joke`).
+- Combien : 1 ou 2 par Culture G ou Insolite, 3 à 5 par Grand Dossier, jamais en case 1 ni deux de suite. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
+- La numérotation `n` suit l’ordre de lecture (les cases dessinées et les cases texte se suivent : 1, 2, 3…).
+- Même ton que le Sachoir : simple, concret, une touche d’humour, mais la clarté d’abord.
+
+## « L’histoire complète » (champ `story` du format)
+Un texte continu, affiché replié après la carte « Pour briller » et en clair sur la page publique de l’histoire (référencement).
+- 150 à 250 mots, 2 à 4 paragraphes séparés par `\n`. Pour Culture G, Insolite et Grand Dossier (pas pour l’Actu ni le jeu).
+- Il raconte tout dans l’ordre, avec les « parce que » et les « donc » : le contexte, le mécanisme maillon par maillon, la suite et pourquoi ça compte aujourd’hui. Quelqu’un qui n’a pas lu la BD doit tout comprendre.
+- Uniquement des faits vérifiés et présents dans `sources` (ajouter la source si un fait nouveau est utilisé). Une touche d’humour possible, jamais au détriment de l’exactitude.
 
 ## Le jeu du jour (`"id": "quiz"`, sans image)
 Le jeu de fin d'édition. **Huit jeux qui tournent d'un jour à l'autre**, dans cet ordre (champ `kind`) :

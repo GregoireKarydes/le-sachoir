@@ -34,7 +34,7 @@ def write(root: Path, day: str, formats, raw: str | None = None):
     (d / "images").mkdir(parents=True)
     for f in formats:
         for c in f.get("cases", []):
-            if c["image"]["status"] == "done":
+            if c.get("image", {}).get("status") == "done":
                 (d / c["image"]["file"]).write_bytes(b"x")
     (d / "edition.json").write_text(raw if raw is not None else json.dumps({"date": day, "status": "draft", "formats": formats}))
     return d
@@ -191,3 +191,14 @@ def test_credit_fal_epuise(fal, monkeypatch):
         images.draw({"id": "actu"}, images.next_actu_date(), "p", (512, 896), [images.STYLE_REF], "case")
     st = json.loads(images.FAL_FILE.read_text())
     assert st["blocked"] and st["images"] == 0
+
+
+def test_case_explicative_ne_bloque_pas(site):
+    s = story()
+    s["cases"].insert(1, {"n": 99, "kind": "explain", "title": "Pour comprendre", "text": "Un texte court."})
+    s["story"] = " ".join(["mot"] * 150)
+    write(site, "2026-11-07", [s, QUIZ])
+    publish.main(datetime(2026, 11, 7, 6, 0, tzinfo=PARIS))
+    assert published(site) == ["2026-11-07"]
+    r = validate.check_edition(site / "editions" / "2026-11-07")
+    assert r["ok"], r["errors"]

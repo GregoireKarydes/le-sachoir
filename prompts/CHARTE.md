@@ -14,6 +14,8 @@ On apprend en riant. Chaque BD explique et vulgarise un sujet exact, avec une vr
 - **Le duo qui explique** (Culture G surtout) : un personnage curieux pose les questions naïves que se pose le lecteur, un autre répond simplement. Le lecteur s'identifie au curieux.
 - **Les bulles peuvent expliquer.** Le récitatif donne le fait, la bulle peut donner le pourquoi ou un exemple concret ; les gags viennent en plus, pas à la place.
 - **Dosage : un vrai gag toutes les 2 ou 3 cases**, pas à chaque case. Les autres cases sont des cases d'explication, vivantes (expressions, petites réactions) mais sans chute forcée.
+- **Cases « Pour mieux comprendre »** (texte seul, sans image, voir `prompts/SCHEMA.md`) : 1 ou 2 par Culture G ou Insolite, 3 à 5 par Grand Dossier, là où un mécanisme ou une notion ne tient pas dans une case dessinée. Souvent une chaîne d’étapes. Elles ne coûtent aucune image : ne pas hésiter.
+- **« L’histoire complète »** (champ `story`, 150 à 250 mots) : l’explication continue, en fin d’histoire, pour qui veut tout comprendre. Elle doit se suffire à elle-même.
 - **Une idée par case.** Si une case contient deux faits, la couper ou en garder un.
 - **Un mécanisme se raconte maillon par maillon** (une arnaque, une invention, un phénomène) : qui fait quoi, comment l'information ou l'objet passe d'une étape à la suivante, pourquoi personne ne s'en aperçoit. Aucun maillon sauté : si le lecteur doit deviner une étape, elle manque. Exemple raté (7 novembre) : le piratage des frères Blanc sans dire comment l'employé de Tours connaissait les cours de Paris.
 Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The Office**, **Kaamelott**, et pour l'image et le jeu d'acteur **le strip minimaliste façon Sarah's Scribbles**.
@@ -82,6 +84,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - [ ] Test du néophyte : quelqu'un qui ne connaît rien au sujet peut répondre à la question du titre à la fin.
 - [ ] Case 1 = la question ; un lien logique d'une case à l'autre ; résumé à la fin.
 - [ ] Chaque fait a son pourquoi ; aucun mot technique sans explication.
+- [ ] 1 ou 2 cases « Pour mieux comprendre » (3 à 5 en Grand Dossier) et « L’histoire complète » (150 à 250 mots, faits sourcés).
 - [ ] Un gag toutes les 2 ou 3 cases, chaque gag sert un fait.
 - [ ] Titre drôle.
 - [ ] Durée de lecture dans la cible du format.

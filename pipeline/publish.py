@@ -28,11 +28,12 @@ def format_ready(fmt: dict) -> bool:
     if fmt.get("id") == "quiz":  # le quiz n'a pas d'image : prêt dès qu'il a ses questions
         return len(fmt.get("questions", [])) >= 1  # Plus ou moins et Swipe tiennent en une seule « question »
     cases = fmt.get("cases", [])
-    return bool(cases) and all(c.get("image", {}).get("status") == "done" for c in cases)
+    drawn = [c for c in cases if c.get("kind") != "explain"]  # « Pour mieux comprendre » : texte seul, rien à dessiner
+    return bool(drawn) and all(c.get("image", {}).get("status") == "done" for c in drawn)
 
 
 def pending_images(fmt: dict) -> int:
-    imgs = [c.get("image") or {} for c in fmt.get("cases", [])] + ([fmt["cover"]] if fmt.get("cover") else [])
+    imgs = [c.get("image") or {} for c in fmt.get("cases", []) if c.get("kind") != "explain"] + ([fmt["cover"]] if fmt.get("cover") else [])
     return sum(1 for i in imgs if i.get("status") != "done")
 
 

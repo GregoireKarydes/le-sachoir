@@ -75,6 +75,13 @@ h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,48px);line-
 .cap b{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--green)}
 .bub{max-width:82%;background:#fff;border:3px solid var(--ink);border-radius:18px;padding:7px 12px;font-family:var(--letter);font-size:16.5px;line-height:1.2;align-self:flex-start}
 .bub.r{align-self:flex-end}
+.panel.explain{background:#fff;aspect-ratio:auto;min-height:100%;display:flex}
+.panel.explain figcaption{position:static;padding:16px;gap:9px;font-size:15.5px;line-height:1.4}
+.panel.explain p{margin:0}.panel.explain strong{font-family:var(--serif);font-size:21px;line-height:1.15}
+.panel.explain ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.panel.explain .ex-tag{align-self:flex-start;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:2px 9px;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
+.panel.explain .ex-joke{font-family:var(--letter);border-top:2px dashed var(--line);padding-top:8px}
+.story{max-width:72ch}.story p{font-size:17px;line-height:1.6;margin:0 0 12px}
 .brille{background:var(--cream);border:3px solid var(--ink);border-radius:20px;overflow:hidden;max-width:720px;margin:30px 0;box-shadow:6px 6px 0 var(--ink)}
 .brille h2{margin:0;background:var(--yellow);border-bottom:3px solid var(--ink);padding:10px 16px;font-size:14px;letter-spacing:.5px;text-transform:uppercase}
 .brille p{margin:0;padding:18px 18px 20px;font-family:var(--serif);font-weight:800;font-size:24px;line-height:1.2}
@@ -152,6 +159,13 @@ def story_page(s, ed_dir: Path, related):
     theme = f.get("theme", "")
     panels = []
     for c in f.get("cases", []):
+        if c.get("kind") == "explain":
+            paras = "".join(f"<p>{e(t)}</p>" for t in str(c.get("text") or "").split("\n") if t.strip())
+            steps = ("<ol>" + "".join(f"<li>{e(t)}</li>" for t in c.get("steps") or []) + "</ol>") if c.get("steps") else ""
+            joke = f'<p class="ex-joke">{e(c["joke"])}</p>' if c.get("joke") else ""
+            panels.append(f'<figure class="panel explain"><figcaption><b class="ex-tag">{e(c.get("tag") or "Pour mieux comprendre")}</b>'
+                          f'<strong>{e(c.get("title", ""))}</strong>{paras}{steps}{joke}</figcaption></figure>')
+            continue
         img = c.get("image", {})
         src = img_base + img["file"] if img.get("status") == "done" else ""
         alt = clip(f'{f["title"]}, case {c.get("n", "")} : {c.get("caption") or " ".join(b.get("text", "") for b in c.get("bubbles", []))}', 180)
@@ -191,6 +205,7 @@ def story_page(s, ed_dir: Path, related):
 <a class="cta" href="{BASE}?d={date}&amp;f={f['id']}">Lire en BD dans l’appli</a></div>
 {('<div class="cover"><img src="' + e(s['cover_abs']) + '" alt="' + e(f['title']) + '" width="1792" height="1024" fetchpriority="high"></div>') if s['cover_abs'] else ''}</div>
 <section class="strip" aria-label="La bande dessinée, case par case">{''.join(panels)}</section>
+{('<section class="story"><h2 class="sec">L’histoire complète</h2>' + ''.join('<p>' + e(t) + '</p>' for t in str(f.get('story')).split(chr(10)) if t.strip()) + '</section>') if f.get('story') else ''}
 <aside class="brille"><h2>Pour briller en société</h2><p>{e(f.get('final', {}).get('text', ''))}</p></aside>
 {('<h2 class="sec">Sources</h2><ul class="sources">' + sources + '</ul>') if sources else ('<p class="meta">Source : ' + e(final_src) + '</p>' if final_src else '')}
 {('<h2 class="sec">À lire aussi</h2><div class="cards">' + ''.join(card(r) for r in related) + '</div>') if related else ''}
