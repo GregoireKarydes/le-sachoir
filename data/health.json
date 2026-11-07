@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T15:53:27.788520+01:00",
+ "updated_at": "2026-11-07T17:11:29.799820+01:00",
  "today": "2026-11-07",
  "problems": [],
  "days": [
@@ -88,5 +88,6 @@
   "count": 80,
   "exhausted": false,
   "neurons": 14400
- }
+ },
+ "fal": null
 }
