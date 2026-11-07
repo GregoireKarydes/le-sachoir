@@ -256,6 +256,237 @@
    ]
   },
   {
+   "id": "insolite",
+   "label": "L’Insolite Historique",
+   "title": "Le premier piratage de l’histoire s’est fait à la longue-vue",
+   "tagline": "En 1834, deux jumeaux bordelais détournent le télégraphe de l’État pour battre la Bourse.",
+   "minutes": 1,
+   "theme": "Informatique et numérique",
+   "cast": [
+    {
+     "id": "francois",
+     "look": "François, a slick 1830s Bordeaux trader in his late twenties, oiled black hair with a sharp side parting, thin pencil moustache, black tailcoat, white high collar, a gold waistcoat as the only colour",
+     "file": "cast/insolite-francois.png",
+     "status": "pending"
+    },
+    {
+     "id": "louis",
+     "look": "Louis, François's identical twin, same oiled black hair and pencil moustache, but always slightly dishevelled, black tailcoat, white high collar, a crooked green cravat as the only colour",
+     "file": "cast/insolite-louis.png",
+     "status": "pending"
+    },
+    {
+     "id": "employe",
+     "look": "Gaston, a shifty 1830s telegraph operator in his forties, round bald head, bushy grey sideburns, grey uniform jacket with brass buttons, small round spectacles",
+     "file": "cast/insolite-employe.png",
+     "status": "pending"
+    },
+    {
+     "id": "ami",
+     "look": "Honoré, a very upright honest 1830s man in his thirties, neat blond hair, big earnest eyes, plain black jacket, white shirt, hands always clasped",
+     "file": "cast/insolite-ami.png",
+     "status": "pending"
+    }
+   ],
+   "cover": {
+    "prompt": "a hilltop with a simple wooden telegraph tower with two arms. François (on the left) peering through a long brass telescope, delighted grin; Louis (on the right) rubbing his hands greedily, eyebrows wiggling. wide shot",
+    "cast": [
+     "francois",
+     "louis"
+    ],
+    "file": "images/insolite-cover.webp",
+    "status": "pending",
+    "attempts": 0
+   },
+   "cases": [
+    {
+     "n": 1,
+     "kind": "chap",
+     "tag": "Bordeaux, 1834",
+     "caption": "Les jumeaux François et Louis Blanc spéculent sur la rente d’État à Bordeaux.",
+     "bubbles": [
+      {
+       "text": "Les cours de Paris arrivent ici avec des jours de retard.",
+       "side": "l"
+      },
+      {
+       "text": "Il nous faudrait Internet.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a bare office with one desk and a big empty ledger. François (on the left) slumped over the ledger, chin on the desk, bored and annoyed; Louis (on the right) lying on his back on the desk, legs in the air, staring at the ceiling. medium shot",
+      "cast": [
+       "francois",
+       "louis"
+      ],
+      "file": "images/insolite-01.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 2,
+     "kind": "fact",
+     "tag": "Le télégraphe Chappe",
+     "caption": "Le télégraphe Chappe relaie des signaux de tour en tour. Réservé à l’administration.",
+     "bubbles": [
+      {
+       "text": "Un réseau ultrarapide, interdit au public. Je suis amoureux.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "a grassy hill with a simple wooden telegraph tower with two articulated arms in the distance. François (on the left) on his knees in the grass, hands clasped on his heart, starry eyes, tiny pink blush marks, gazing at the tower like a lover. wide shot",
+      "cast": [
+       "francois"
+      ],
+      "file": "images/insolite-02.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 3,
+     "kind": "",
+     "tag": "",
+     "caption": "À Tours, un employé soudoyé glisse un faux signal, suivi du signe « annuler ».",
+     "bubbles": [
+      {
+       "text": "Ce n’est pas une erreur. C’est une erreur rémunérée.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "inside a cramped wooden telegraph room with two big levers. Gaston (on the right) pulling one lever with one hand, the other hand hiding a small bag of coins behind his back, looking sideways with a guilty smirk, sweat drop. medium shot",
+      "cast": [
+       "employe"
+      ],
+      "file": "images/insolite-03.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 4,
+     "kind": "fact",
+     "tag": "",
+     "caption": "Près de Bordeaux, un complice lit le faux signal à la longue-vue : hausse ou baisse.",
+     "bubbles": [
+      {
+       "text": "Hausse ! On achète tout.",
+       "side": "l"
+      },
+      {
+       "text": "J’adore la fibre optique.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a hilltop at dawn, a tiny telegraph tower far away. François (on the left) looking through a long brass telescope, mouth wide open in excitement; Louis (on the right) hugging him from behind, both bouncing on their toes. medium shot",
+      "cast": [
+       "francois",
+       "louis"
+      ],
+      "file": "images/insolite-04.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 5,
+     "kind": "",
+     "tag": "1836",
+     "caption": "Deux ans plus tard, l’employé tombe malade et propose sa place à un ami.",
+     "bubbles": [
+      {
+       "text": "C’est simple : tu fais des erreurs exprès.",
+       "side": "l"
+      },
+      {
+       "text": "Je vais réfléchir. Chez les gendarmes.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a bare bedroom with one bed. Gaston (on the left) in bed with a nightcap, a thermometer in his mouth, winking and giving a thumbs up; Honoré (on the right) standing stiff as a post, hands clasped, eyes narrowed, slowly backing away. medium shot",
+      "cast": [
+       "employe",
+       "ami"
+      ],
+      "file": "images/insolite-05.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 6,
+     "kind": "react",
+     "tag": "Le procès",
+     "caption": "L’ami dénonce tout. Mais aucune loi ne punit ce détournement : seule la corruption est condamnée.",
+     "bubbles": [
+      {
+       "text": "Pirater un réseau ? Ce crime n’existe pas encore.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "a bare courtroom with a tall wooden bench. François (on the left) standing in the dock, chest puffed out, finger raised like a professor, smug; Louis (on the right) beside him, shrugging with an innocent angelic smile, halo-like glow around his head. medium shot",
+      "cast": [
+       "francois",
+       "louis"
+      ],
+      "file": "images/insolite-06.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 7,
+     "kind": "conf",
+     "tag": "Épilogue",
+     "caption": "Fortune à peine entamée, les jumeaux ouvrent des casinos. François lancera Monte-Carlo.",
+     "bubbles": [
+      {
+       "text": "Après le télégraphe truqué, la roulette m’a semblé très honnête.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "plain empty background. François (in the centre) sitting on a wooden stool facing the viewer like in an interview, spinning a small roulette wheel on his knee, relaxed smug smile, one eyebrow raised. medium shot",
+      "cast": [
+       "francois"
+      ],
+      "file": "images/insolite-07.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    }
+   ],
+   "final": {
+    "text": "Dès 1834, les jumeaux Blanc détournaient le télégraphe Chappe pour connaître avant tout le monde, à Bordeaux, les cours de la Bourse.",
+    "source": "Encyclopædia Universalis — Blanc François et Louis"
+   },
+   "sources": [
+    {
+     "title": "Encyclopædia Universalis — Blanc François (1806-1877) et Louis (1806-1854)",
+     "url": "https://www.universalis.fr/encyclopedie/blanc-francois-et-louis/"
+    },
+    {
+     "title": "Security Boulevard — 1834: The First Cyberattack",
+     "url": "https://securityboulevard.com/2018/05/1834-the-first-cyberattack"
+    },
+    {
+     "title": "Amusing Planet — The world’s first cyber attack happened nearly two hundred years ago",
+     "url": "https://www.amusingplanet.com/2019/03/the-worlds-first-cyber-attack-happened.html"
+    },
+    {
+     "title": "Parisian Fields — The rise and fall of the visual telegraph",
+     "url": "https://parisianfields.com/2017/11/05/the-rise-and-fall-of-the-visual-telegraph/"
+    }
+   ]
+  },
+  {
    "id": "quiz",
    "kind": "geo",
    "label": "Le Quiz géo",
