@@ -28,5 +28,7 @@
     "grey_max_saturation": 36,
     "thicken": 1,
     "max_colour_share": 0.2
-  }
+  },
+  "daily_budget": 80,
+  "actu_reserve": 15
 }

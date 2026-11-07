@@ -6,8 +6,8 @@ Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 ## Étapes
 1. `git pull`. Pour chaque date de demain à J+7 (heure de Paris), regarder quels formats manquent dans `editions/<date>/edition.json` :
    - `cultureg` et `insolite` : **tous les jours** ;
-   - `dossier` : **seulement le lundi, le mercredi et le vendredi** (`TZ=Europe/Paris date -d <date> +%u` donne 1, 3 ou 5). Les autres jours, pas de Grand Dossier : c'est ce qui laisse au quota d'images gratuit (environ 60 à 70 images par jour) la marge pour prendre de l'avance.
-   Écrire **tous les formats manquants**, en commençant par la date la plus proche, dans la limite de **6 formats par passage** (le Grand Dossier compte pour 2). Les images sont dessinées ensuite par GitHub Actions, dans l'ordre des dates, au fil du quota : il n'y a pas à se limiter pour elles.
+   - `dossier` : seulement le lundi, le mercredi et le vendredi (`TZ=Europe/Paris date -d <date> +%u` donne 1, 3 ou 5). Les Grands Dossiers de la semaine sont écrits **le dimanche soir** par une tâche à part (`prompts/DOSSIERS.md`). Cette tâche-ci n'en écrit un que **en secours** : s'il manque pour demain ou après-demain.
+   Écrire **tous les formats manquants**, en commençant par la date la plus proche, dans la limite de **6 formats par passage** (un Grand Dossier de secours compte pour 2). Les images sont dessinées ensuite par GitHub Actions, l'Actu d'abord puis le stock dans l'ordre des dates, au fil du quota : il n'y a pas à se limiter pour elles.
 2. **Choisir le sujet** :
    - thématique dans le catalogue ci-dessous ;
    - jamais deux jours de suite le même pôle ; une thématique pas avant 20 jours ;

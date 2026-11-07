@@ -8,7 +8,7 @@ on:
       - "pipeline/style_ref.png"
   schedule:
     - cron: "17 0-6 * * *"     # toutes les heures la nuit : reprend les images en attente
-    - cron: "17 9,15,21 * * *" # et dans la journée pour le stock
+    - cron: "17 8-22/2 * * *"  # et toutes les 2 h dans la journée : le stock prend de l'avance quand il reste du quota
   workflow_dispatch:
 
 permissions:
@@ -38,6 +38,6 @@ jobs:
         run: |
           git config user.name "sachoir-bot"
           git config user.email "sachoir-bot@users.noreply.github.com"
-          git add editions data/images-last-run.json
+          git add editions data/images-last-run.json data/images-quota.json
           git diff --cached --quiet || git commit -m "Images générées"
           git pull --rebase && git push

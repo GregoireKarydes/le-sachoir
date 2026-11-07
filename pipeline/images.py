@@ -37,6 +37,32 @@ class QuotaExhausted(Exception):
     pass
 
 
+class BudgetReserved(Exception):
+    """Le reste du quota du jour est gardé pour l'Actu, écrite au dernier moment."""
+
+
+# Compteur du quota Cloudflare, remis à zéro chaque jour à 00:00 UTC (1 h ou 2 h à Paris).
+QUOTA_FILE = ROOT / "data" / "images-quota.json"
+DAILY_BUDGET = STYLE.get("daily_budget", 80)   # images par jour à peu près permises par le quota gratuit
+ACTU_RESERVE = STYLE.get("actu_reserve", 15)   # images gardées pour la prochaine Actu tant qu'elle n'est pas dessinée
+
+
+def quota_state() -> dict:
+    day = datetime.now(ZoneInfo("UTC")).date().isoformat()
+    try:
+        q = json.loads(QUOTA_FILE.read_text())
+    except Exception:
+        q = {}
+    if q.get("day") != day:
+        q = {"day": day, "count": 0, "exhausted": False}
+    return q
+
+
+def save_quota(q: dict):
+    QUOTA_FILE.parent.mkdir(exist_ok=True)
+    QUOTA_FILE.write_text(json.dumps(q, indent=1))
+
+
 def ref_bytes(path: Path) -> bytes:
     """Les images de référence doivent faire moins de 512x512."""
     im = Image.open(path).convert("RGB")
@@ -60,11 +86,19 @@ def generate(prompt: str, size, refs: list[Path]) -> Image.Image:
     if not files:
         files = {k: (None, v) for k, v in data.items()}
         data = None
+    q = quota_state()
+    if q.get("exhausted"):
+        raise QuotaExhausted("quota du jour déjà épuisé (data/images-quota.json)")
     r = requests.post(URL, headers={"Authorization": f"Bearer {TOKEN}"}, data=data, files=files, timeout=180)
+    q["count"] += 1  # un appel refusé ou raté peut aussi consommer : on compte tout
+    save_quota(q)
     if r.status_code >= 400:
         # Ne chercher « quota » que dans un message d'erreur : une image base64 peut contenir ces lettres par hasard.
         low = r.text[:2000].lower()
         if r.status_code == 429 or "allocation" in low or "quota" in low or "neuron" in low:
+            q["count"] -= 1
+            q["exhausted"] = True
+            save_quota(q)
             raise QuotaExhausted(r.text[:300])
         raise RuntimeError(f"HTTP {r.status_code} : {r.text[:250]}")
     payload = r.json()
@@ -176,7 +210,35 @@ def editions_to_process():
         yield d, f, ed
 
 
-def process(d: Path, f: Path, ed: dict) -> int:
+def next_actu_date() -> date:
+    """Date de la prochaine édition à publier : aujourd'hui avant 5 h (Paris), demain ensuite."""
+    now = datetime.now(ZoneInfo("Europe/Paris"))
+    return now.date() if now.hour < 5 else now.date() + timedelta(days=1)
+
+
+def next_actu_drawn() -> bool:
+    f = EDITIONS / next_actu_date().isoformat() / "edition.json"
+    try:
+        ed = json.loads(f.read_text())
+    except Exception:
+        return False
+    for fmt in ed.get("formats", []):
+        if fmt.get("id") == "actu":
+            imgs = [c["image"] for c in fmt.get("cases", []) if c.get("image")] + ([fmt["cover"]] if fmt.get("cover") else [])
+            return all(i.get("status") in ("done", "failed") for i in imgs)
+    return False
+
+
+def check_budget(fmt: dict):
+    """L'Actu passe toujours ; le stock s'arrête avant la réserve tant que la prochaine Actu n'est pas dessinée."""
+    if fmt.get("id") == "actu":
+        return
+    reserve = 0 if next_actu_drawn() else ACTU_RESERVE
+    if quota_state()["count"] >= DAILY_BUDGET - reserve:
+        raise BudgetReserved(f"{quota_state()['count']} images aujourd'hui, {reserve} gardées pour l'Actu")
+
+
+def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
     done = 0
     max_att = STYLE["max_attempts"]
 
@@ -184,6 +246,8 @@ def process(d: Path, f: Path, ed: dict) -> int:
         f.write_text(json.dumps(ed, ensure_ascii=False, indent=2))
 
     for fmt in ed.get("formats", []):
+        if (fmt.get("id") == "actu") != only_actu:
+            continue
         looks = {c["id"]: c.get("look", c["id"]) for c in fmt.get("cast", [])}
         sheets = {c["id"]: d / c["file"] for c in fmt.get("cast", [])}
 
@@ -195,6 +259,7 @@ def process(d: Path, f: Path, ed: dict) -> int:
             prompt = (f"Character reference portrait: one single character, head and upper body, facing the viewer, "
                       f"plain white background, of {c.get('look', c['id'])}. {head}{STYLE['style']} "
                       f"One image only, no panel borders. Wordless picture: no text, no lettering.")
+            check_budget(fmt)
             try:
                 im = generate(prompt, STYLE["cast_size"], [STYLE_REF])
                 im = ink(im)
@@ -228,6 +293,7 @@ def process(d: Path, f: Path, ed: dict) -> int:
                 continue
             cast = img.get("cast", [])
             prompt, refs = build(img["prompt"], [(looks[c], sheets.get(c)) for c in cast if c in looks])
+            check_budget(fmt)
             img["attempts"] = img.get("attempts", 0) + 1
             try:
                 im = generate(prompt, size, refs)
@@ -258,15 +324,23 @@ def main():
     total = 0
     log = []
     try:
+        # 1. L'Actu d'abord (écrite au dernier moment, elle ne doit jamais manquer de quota),
+        for d, f, ed in editions_to_process():
+            total += process(d, f, ed, only_actu=True)
+        # 2. puis le stock, du plus proche au plus lointain, sans entamer la réserve de l'Actu.
         for d, f, ed in editions_to_process():
             print(f"Édition {d.name}")
             total += process(d, f, ed)
+    except BudgetReserved as e:
+        print(f"Stock en pause : {e}.")
+        log.append(f"réserve: {e}")
     except QuotaExhausted as e:
         print(f"Quota Cloudflare du jour atteint, reprise au prochain passage. ({e})")
         log.append(f"quota: {e}")
     except Exception as e:  # ne jamais perdre les images déjà faites : on journalise et on sort proprement
         print(f"Erreur inattendue : {e!r}")
         log.append(f"erreur: {e!r}"[:400])
+    save_quota(quota_state())  # toujours présent pour le commit du workflow
     (ROOT / "data").mkdir(exist_ok=True)
     (ROOT / "data" / "images-last-run.json").write_text(json.dumps(
         {"at": datetime.now(ZoneInfo("Europe/Paris")).isoformat(), "generated": total, "log": log}, ensure_ascii=False, indent=1))
