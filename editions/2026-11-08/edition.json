@@ -298,6 +298,602 @@
      "url": "https://www.cnbc.com/2026/11/06/tesla-cybertruck-texas-musk.html"
     }
    ]
+  },
+  {
+   "id": "cultureg",
+   "label": "La Pilule de Culture G",
+   "title": "Tirer sur la corde ou tirer au flanc ?",
+   "tagline": "Pourquoi huit personnes tirent comme quatre (et votre réunion d’équipe aussi)",
+   "minutes": 2,
+   "theme": "Psychologie",
+   "cast": [
+    {
+     "id": "ringel",
+     "look": "Max, a French agricultural engineer in his twenties in the 1880s, big bushy black moustache, round wire glasses, black frock coat, white shirt, red bow tie as the only colour",
+     "file": "cast/cultureg-ringel.png",
+     "status": "pending"
+    },
+    {
+     "id": "gaston",
+     "look": "Gaston, a very tall and skinny 1880s farm-school student, messy hair sticking up, white shirt with rolled sleeves, grey trousers with black braces",
+     "file": "cast/cultureg-gaston.png",
+     "status": "pending"
+    },
+    {
+     "id": "eugene",
+     "look": "Eugène, a short chubby 1880s farm-school student, round face, sleepy half-closed eyes, flat black cap, black waistcoat over a white shirt",
+     "file": "cast/cultureg-eugene.png",
+     "status": "pending"
+    },
+    {
+     "id": "psy",
+     "look": "a 1970s psychology researcher, big curly hair and long sideburns, thick black-rimmed glasses, white lab coat over a black turtleneck, holding a clipboard",
+     "file": "cast/cultureg-psy.png",
+     "status": "pending"
+    },
+    {
+     "id": "cobaye",
+     "look": "a 1970s college student volunteer, shaggy long hair, plain white t-shirt, flared jeans, a black blindfold",
+     "file": "cast/cultureg-cobaye.png",
+     "status": "pending"
+    }
+   ],
+   "cover": {
+    "prompt": "a bare farmyard with a thick rope. Gaston (on the left) pulling the rope with all his strength, red-faced, leaning back; Eugène (on the right) holding the same rope with two fingers, sipping from a cup, totally relaxed. wide shot",
+    "cast": [
+     "gaston",
+     "eugene"
+    ],
+    "file": "images/cultureg-cover.webp",
+    "status": "pending",
+    "attempts": 0
+   },
+   "cases": [
+    {
+     "n": 1,
+     "kind": "chap",
+     "tag": "Années 1880",
+     "caption": "À l’école d’agriculture de Grand-Jouan, l’ingénieur Max Ringelmann mesure la force humaine.",
+     "bubbles": [
+      {
+       "text": "Messieurs, tirez sur cette corde. Pour la science.",
+       "side": "l"
+      },
+      {
+       "text": "Il y a une note ?",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a bare farmyard with a single wooden post, a thick rope tied to a round dial gauge. Max (on the left), proud, holding the rope out like a precious gift; Gaston (on the right), suspicious squint, arms crossed. medium shot",
+      "cast": [
+       "ringel",
+       "gaston"
+      ],
+      "file": "images/cultureg-01.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 2,
+     "kind": "",
+     "tag": "",
+     "caption": "Seul, chaque étudiant tire de toutes ses forces. Un dynamomètre mesure l’effort.",
+     "bubbles": [
+      {
+       "text": "Superbe ! Cent pour cent.",
+       "side": "l"
+      },
+      {
+       "text": "Je… vois… ma grand-mère…",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a bare farmyard with a single wooden post, a thick rope tied to a round dial gauge. Gaston (on the right) pulling the rope alone with all his strength, leaning back almost horizontal, face bright red, eyes squeezed shut; Max (on the left) clapping, delighted. medium shot",
+      "cast": [
+       "ringel",
+       "gaston"
+      ],
+      "file": "images/cultureg-02.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 3,
+     "kind": "",
+     "tag": "",
+     "caption": "En toute logique, huit hommes devraient tirer huit fois plus fort qu’un seul.",
+     "bubbles": [
+      {
+       "text": "C’est mathématique. Rien ne peut mal tourner.",
+       "side": "l"
+      },
+      {
+       "text": "Phrase célèbre, juste avant les catastrophes.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a bare farmyard with a single wooden post, a thick rope tied to a round dial gauge. Max (on the left) raising his index finger, chest puffed out, very confident; Eugène (on the right) leaning lazily against the wooden post, half-asleep, unimpressed. medium shot",
+      "cast": [
+       "ringel",
+       "eugene"
+      ],
+      "file": "images/cultureg-03.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 4,
+     "kind": "fact",
+     "tag": "",
+     "caption": "Résultat : à huit, ils tirent à peine comme quatre.",
+     "bubbles": [
+      {
+       "text": "Je soutiens l’équipe. Moralement.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a bare farmyard with a single wooden post, a thick rope tied to a round dial gauge. Gaston (in the foreground) pulling the rope desperately, red-faced, sweat drops; Eugène (on the right, behind him) holding the rope limply with one hand, yawning; Max (on the left) staring at the dial in shock. wide shot",
+      "cast": [
+       "gaston",
+       "eugene",
+       "ringel"
+      ],
+      "file": "images/cultureg-04.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 5,
+     "kind": "fact",
+     "tag": "Le chiffre",
+     "caption": "L’effort moyen de chacun chute : 93 % à deux, 49 % à huit.",
+     "bubbles": [
+      {
+       "text": "Plus on est de fous, moins on tire.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "close-up of Max holding the round dial gauge in both hands, shoulders dropped, moustache drooping, empty eyes, a tiny sweat drop, the frayed rope lying limp at his feet like a dead snake, plain empty background",
+      "cast": [
+       "ringel"
+      ],
+      "file": "images/cultureg-05.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 6,
+     "kind": "",
+     "tag": "",
+     "caption": "Ringelmann accuse surtout la coordination : personne ne tire exactement au même moment.",
+     "bubbles": [
+      {
+       "text": "À trois, on tire. Un, deux…",
+       "side": "l"
+      },
+      {
+       "text": "On tire à trois, ou après trois ?",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a bare farmyard with a single wooden post, a thick rope tied to a round dial gauge. Max (on the left) counting on his raised fingers like an orchestra conductor; Gaston (on the right) holding the rope, frozen mid-pull, confused, one eyebrow raised. medium shot",
+      "cast": [
+       "ringel",
+       "gaston"
+      ],
+      "file": "images/cultureg-06.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 7,
+     "kind": "chap",
+     "tag": "États-Unis, 1974",
+     "caption": "Des psychologues refont l’expérience, yeux bandés : le cobaye croit tirer avec d’autres.",
+     "bubbles": [
+      {
+       "text": "Les autres tirent bien, derrière ?",
+       "side": "r"
+      },
+      {
+       "text": "Oh oui. Énormément.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "a bare grey laboratory with one rope attached to a gauge on the wall. the student (on the right) blindfolded, pulling the rope, nobody behind him; the researcher (on the left) holding a clipboard, nodding with a fake reassuring smile. medium shot",
+      "cast": [
+       "psy",
+       "cobaye"
+      ],
+      "file": "images/cultureg-07.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 8,
+     "kind": "react",
+     "tag": "",
+     "caption": "Même seul, celui qui croit être en équipe tire moins : c’est la « paresse sociale ».",
+     "bubbles": [],
+     "image": {
+      "prompt": "the same bare laboratory. the student (in the centre), blindfold pushed up on his forehead, holding the rope, staring straight at the viewer, deadpan, tiny pink blush marks, empty room behind him. close-up",
+      "cast": [
+       "cobaye"
+      ],
+      "file": "images/cultureg-08.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 9,
+     "kind": "conf",
+     "tag": "La parade",
+     "caption": "Le remède le plus étudié : rendre visible l’effort de chacun.",
+     "bubbles": [
+      {
+       "text": "Désormais, chacun aura son propre dynamomètre.",
+       "side": "l"
+      },
+      {
+       "text": "Je démissionne. Moralement.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "plain empty background. Max (on the left) facing the viewer like in an interview, smug, holding up a small dial gauge; Eugène (on the right, slightly behind) slumped, melting in despair, holding his own little gauge. medium shot",
+      "cast": [
+       "ringel",
+       "eugene"
+      ],
+      "file": "images/cultureg-09.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    }
+   ],
+   "final": {
+    "text": "Selon Max Ringelmann, huit hommes tirant ensemble sur une corde ne fournissent qu’environ quatre fois la force d’un seul.",
+    "source": "Ringelmann (1913), repris par Kravitz et Martin (1986)"
+   },
+   "sources": [
+    {
+     "title": "Wikipedia — Max Ringelmann",
+     "url": "https://en.wikipedia.org/wiki/Max_Ringelmann"
+    },
+    {
+     "title": "Kravitz & Martin (1986), « Ringelmann rediscovered », Journal of Personality and Social Psychology",
+     "url": "https://mason.gmu.edu/~dkravitz/Pubs/JPSPv50p936.htm"
+    },
+    {
+     "title": "Encyclopedia of Social Psychology — Ringelmann effect (chiffres de 1 à 8 tireurs)",
+     "url": "https://psychology.iresearchnet.com/social-psychology/group/ringelmann-effect/"
+    },
+    {
+     "title": "Open Social Psychology — Social loafing (Ingham et al., 1974 ; Williams et al., 1981)",
+     "url": "https://forrt.org/open-social-psychology/chapter7.html"
+    }
+   ]
+  },
+  {
+   "id": "insolite",
+   "label": "L’Insolite Historique",
+   "title": "Le Tour de France gagné par le cinquième",
+   "tagline": "En 1904, trains, voitures et clous : les quatre premiers ont tous été déclassés.",
+   "minutes": 1,
+   "theme": "Sports",
+   "cast": [
+    {
+     "id": "garin",
+     "look": "Maurice, a 1904 French racing cyclist in his thirties, thick black walrus moustache, flat cap, black wool jersey, knee-length white shorts, a spare tyre looped across his chest",
+     "file": "cast/insolite-garin.png",
+     "status": "pending"
+    },
+    {
+     "id": "desgrange",
+     "look": "Desgrange, a 1904 sports newspaper director in his forties, neatly parted hair, small pointed moustache, black three-piece suit, white high collar, green bow tie as the only colour",
+     "file": "cast/insolite-desgrange.png",
+     "status": "pending"
+    },
+    {
+     "id": "pothier",
+     "look": "Lucien, a wiry 1904 French racing cyclist, bald head, big sticking-out ears, grey wool jersey, knee-length black shorts, a red scarf as the only colour",
+     "file": "cast/insolite-pothier.png",
+     "status": "pending"
+    },
+    {
+     "id": "cornet",
+     "look": "Cornet, a skinny 19-year-old cyclist in 1904, boyish face, big wide eyes, unruly black curls, oversized white wool jersey, black shorts",
+     "file": "cast/insolite-cornet.png",
+     "status": "pending"
+    },
+    {
+     "id": "uvf",
+     "look": "a stern 1904 cycling federation official, grey beard, pince-nez glasses, black frock coat, black top hat",
+     "file": "cast/insolite-uvf.png",
+     "status": "pending"
+    }
+   ],
+   "cover": {
+    "prompt": "a country road with a small steam train passing in the background. Maurice (on the left) and Lucien (on the right) riding bicycles side by side, glancing suspiciously at each other, sweat drops. wide shot",
+    "cast": [
+     "garin",
+     "pothier"
+    ],
+    "file": "images/insolite-cover.webp",
+    "status": "pending",
+    "attempts": 0
+   },
+   "cases": [
+    {
+     "n": 1,
+     "kind": "chap",
+     "tag": "Juillet 1904",
+     "caption": "Tour de France 1904 : 2 428 km, six étapes. Favori : Maurice Garin, vainqueur en 1903.",
+     "bubbles": [
+      {
+       "text": "Règle d’or : aucune aide extérieure.",
+       "side": "l"
+      },
+      {
+       "text": "Évidemment. Qui tricherait à vélo ?",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "a dusty country road with a small wooden table as a start line. Desgrange (on the left), proud, chin up, finger raised like a strict schoolteacher; Maurice (on the right), leaning on his bicycle, innocent angelic smile, hand on heart. medium shot",
+      "cast": [
+       "desgrange",
+       "garin"
+      ],
+      "file": "images/insolite-01.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 2,
+     "kind": "",
+     "tag": "",
+     "caption": "Des témoins disent avoir vu des coureurs monter en voiture, ou même dans le train.",
+     "bubbles": [
+      {
+       "text": "Je récupère. Et le train va dans le bon sens.",
+       "side": "r"
+      }
+     ],
+     "image": {
+      "prompt": "inside a bare wooden train compartment. Lucien (on the right) sitting comfortably by the window, his bicycle squeezed on his lap, reading a newspaper, legs crossed, relaxed satisfied smile. medium shot",
+      "cast": [
+       "pothier"
+      ],
+      "file": "images/insolite-02.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 3,
+     "kind": "",
+     "tag": "",
+     "caption": "Des clous jonchent la route : Henri Cornet roule 40 km sur deux pneus crevés.",
+     "bubbles": [
+      {
+       "text": "Bonne nouvelle : je ne peux plus crever.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "an empty country road scattered with tiny nails. Cornet (in the centre) riding a bicycle with two completely flat wobbly tyres, exhausted, sweat drops, forced brave smile. wide shot",
+      "cast": [
+       "cornet"
+      ],
+      "file": "images/insolite-03.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 4,
+     "kind": "",
+     "tag": "",
+     "caption": "Garin gagne. Dans son journal, L’Auto, Desgrange craint que cette édition soit « la dernière ».",
+     "bubbles": [
+      {
+       "text": "J’ai inventé une course. Ils ont inventé le raccourci.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "a bare newspaper office with one wooden desk. Desgrange (in the centre) slumped face-down on the desk among scattered blank papers, arms dangling, melting in despair. medium shot",
+      "cast": [
+       "desgrange"
+      ],
+      "file": "images/insolite-04.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 5,
+     "kind": "fact",
+     "tag": "",
+     "caption": "Fin 1904, l’Union vélocipédique de France sanctionne 29 coureurs et déclasse les quatre premiers.",
+     "bubbles": [
+      {
+       "text": "Les quatre premiers ? Même le premier ?",
+       "side": "r"
+      },
+      {
+       "text": "Surtout le premier. Deux ans de suspension.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "a bare office with a tall wooden lectern. the official (on the left) reading a long blank scroll with a stern frown; Maurice (on the right), jaw dropped, eyes wide, his flat cap flying off his head. medium shot",
+      "cast": [
+       "uvf",
+       "garin"
+      ],
+      "file": "images/insolite-05.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 6,
+     "kind": "react",
+     "tag": "",
+     "caption": "Le 2 décembre, le cinquième, Henri Cornet, est déclaré vainqueur. Il a 19 ans.",
+     "bubbles": [
+      {
+       "text": "J’ai gagné… en arrivant cinquième ?",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "a tiny bare kitchen with one chair. Cornet (in the centre) holding an opened letter, frozen, huge eyes, tiny sweat drop, mouth a small o, looking straight at the viewer. close-up",
+      "cast": [
+       "cornet"
+      ],
+      "file": "images/insolite-06.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    },
+    {
+     "n": 7,
+     "kind": "conf",
+     "tag": "Épilogue",
+     "caption": "Le Tour repart en 1905. Cornet reste le plus jeune vainqueur de son histoire.",
+     "bubbles": [
+      {
+       "text": "Mon conseil aux jeunes : visez la cinquième place.",
+       "side": "l"
+      }
+     ],
+     "image": {
+      "prompt": "plain empty background. Cornet (in the centre) sitting on a wooden stool facing the viewer like in an interview, holding a small trophy cup, smug relaxed smile, one eyebrow raised. medium shot",
+      "cast": [
+       "cornet"
+      ],
+      "file": "images/insolite-07.webp",
+      "status": "pending",
+      "attempts": 0
+     }
+    }
+   ],
+   "final": {
+    "text": "En 1904, les quatre premiers du Tour de France ont été déclassés. Le vainqueur officiel, Henri Cornet, 19 ans, était arrivé cinquième.",
+    "source": "Wikipédia — Tour de France 1904"
+   },
+   "sources": [
+    {
+     "title": "Wikipédia — Tour de France 1904",
+     "url": "https://fr.wikipedia.org/wiki/Tour_de_France_1904"
+    },
+    {
+     "title": "Wikipedia — 1904 Tour de France",
+     "url": "https://en.wikipedia.org/wiki/1904_Tour_de_France"
+    },
+    {
+     "title": "Il Post — Alla sua seconda edizione il Tour de France rischiò di scomparire",
+     "url": "https://www.ilpost.it/2024/07/24/alla-sua-seconda-edizione-il-tour-de-france-rischio-di-scomparire/"
+    },
+    {
+     "title": "Guinness World Records — Youngest Tour de France winner",
+     "url": "https://www.guinnessworldrecords.com/world-records/youngest-tour-de-france-winner"
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "kind": "geo",
+   "label": "Le Quiz géo",
+   "title": "Trois questions, zéro GPS",
+   "minutes": 1,
+   "theme": "",
+   "questions": [
+    {
+     "type": "map",
+     "map": "france",
+     "q": "Où se trouve le Cantal ?",
+     "target": {
+      "dept": "15"
+     },
+     "name": "le Cantal",
+     "explain": "Le Cantal abrite le plus grand stratovolcan d’Europe : 70 km de diamètre. Rassurez-vous, il dort depuis environ 3 millions d’années. Le fromage, lui, est bien réveillé.",
+     "source": {
+      "title": "Puy Mary — Le plus grand stratovolcan d’Europe",
+      "url": "https://www.puymary.fr/le-plus-grand-stratovolcan-deurope/?lang=en"
+     }
+    },
+    {
+     "type": "choice",
+     "q": "Quelle est la capitale du Canada ?",
+     "choices": [
+      "Toronto",
+      "Montréal",
+      "Vancouver",
+      "Ottawa"
+     ],
+     "answer": 3,
+     "explain": "En 1857, Kingston, Montréal, Toronto et Québec se disputent le titre. La reine Victoria tranche : ce sera Ottawa. Une façon royale de vexer tout le monde.",
+     "source": {
+      "title": "Parcs Canada — La capitale du Canada",
+      "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1578"
+     }
+    },
+    {
+     "type": "silhouette",
+     "shape": {
+      "map": "world",
+      "id": "CHL"
+     },
+     "rotate": 90,
+     "q": "Quel pays se cache derrière cette silhouette (tournée d’un quart de tour) ?",
+     "choices": [
+      "Norvège",
+      "Chili",
+      "Argentine",
+      "Pérou"
+     ],
+     "answer": 1,
+     "explain": "Le Chili mesure environ 4 300 km de long pour 175 km de large en moyenne. Le pays le plus « spaghetti » du monde.",
+     "source": {
+      "title": "Guinness World Records — Narrowest country",
+      "url": "https://www.guinnessworldrecords.com/world-records/90899-narrowest-country"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "title": "Puy Mary — Le plus grand stratovolcan d’Europe",
+     "url": "https://www.puymary.fr/le-plus-grand-stratovolcan-deurope/?lang=en"
+    },
+    {
+     "title": "Parcs Canada — La capitale du Canada",
+     "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=1578"
+    },
+    {
+     "title": "Guinness World Records — Narrowest country",
+     "url": "https://www.guinnessworldrecords.com/world-records/90899-narrowest-country"
+    }
+   ]
   }
  ]
 }
