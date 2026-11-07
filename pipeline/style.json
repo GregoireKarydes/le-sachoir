@@ -1,7 +1,7 @@
 {
   "model": "@cf/black-forest-labs/flux-2-klein-4b",
-  "style": "Simple black-and-white webcomic doodle, drawn with a thick black felt marker on plain white paper. Slightly wobbly hand-drawn outlines, all the same thickness. Hair and dark clothes are solid pure-black shapes; a few flat light-grey areas for shadows. Characters: oversized round head on a small stubby body, huge round white eyes with small black dot pupils, expressive eyebrows, tiny simple mouth, scruffy spiky hair, floppy noodle arms, mitten hands, pink blush marks on the cheeks. Exaggerated body language, small sweat drops and motion lines. White background left almost empty: one floor or desk line and one or two simple props. Flat colours only, one small accent colour at most.",
-  "style_with_ref": "Draw it in exactly the same drawing style as image 0: same marker line weight, same solid black fills, same huge round eyes and oversized heads, same nearly empty white background. Do not copy the characters or the scene of image 0.",
+  "style": "Simple webcomic doodle, drawn with a thick black felt marker on plain white paper. Slightly wobbly hand-drawn outlines, all the same thickness. Hair and dark clothes are solid pure-black shapes; a few flat light-grey areas for shadows. Characters: oversized round head on a small stubby body, huge round white eyes with small black dot pupils, expressive eyebrows, tiny simple mouth, scruffy spiky hair, floppy noodle arms, mitten hands. Small flat colour touches on the emotions: soft pink blush ovals on the cheeks, light-blue tears and light-blue sweat drops, a red flush on an angry or embarrassed face, small red hearts or yellow sparkles when happy. Exaggerated body language and motion lines. White background left almost empty: one floor or desk line and one or two simple props. Flat colours only, no gradients: mostly black and white with these small colour touches and one accent colour on clothes or props.",
+  "style_with_ref": "Draw it in the same drawing style as image 0: same marker line weight, same solid black fills, same huge round eyes and oversized heads, same nearly empty white background. Unlike image 0, add the small flat colour touches described below. Do not copy the characters or the scene of image 0.",
   "constraints": "One single full-bleed illustration, edge to edge, no panel borders. Wordless picture: no text, no lettering, no speech bubbles; any sign, board or screen is blank. The top quarter of the picture is empty white background.",
   "case_size": [
     512,
@@ -41,5 +41,6 @@
     "thicken": 1,
     "max_colour_share": 0.2
   },
-  "ink": null
+  "ink": null,
+  "colour_touches_since": "2026-11-07"
 }

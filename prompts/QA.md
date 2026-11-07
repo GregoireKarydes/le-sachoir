@@ -9,7 +9,7 @@
    - **aucune lettre, aucun mot, aucun logo** dessiné ;
    - le haut de l'image assez calme pour les bulles ;
    - mains, visages et objets corrects ; cohérence avec la case précédente ;
-   - style respecté : gros trait noir, aplats noirs, décor presque vide, surtout noir et blanc avec une ou deux touches de couleur et les joues roses (pas de dégradés, pas de décor chargé).
+   - style respecté : gros trait noir, aplats noirs, décor presque vide, surtout noir et blanc avec de petites touches de couleur sur les émotions (joues roses, larmes et gouttes de sueur bleues, rougeur, cœurs) et une couleur d'accent au plus sur les vêtements ou objets (pas de dégradés, pas de décor chargé).
 3. Image correcte → ajouter `"qa": "ok"`. Image ratée → corriger `prompt` si utile, mettre `"status": "retry"` (le pipeline refait l'image, 3 essais max).
 4. Une image `failed` après 3 essais dans l'Actu : réécrire la case pour une scène plus simple, ou retirer le sujet (la case fait + la case réaction) et renuméroter.
 5. Commit « Contrôle qualité <date> », `git push`.
