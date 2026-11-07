@@ -1,0 +1,92 @@
+{
+ "updated_at": "2026-11-07T15:26:24.637724+01:00",
+ "today": "2026-11-07",
+ "problems": [],
+ "days": [
+  {
+   "date": "2026-11-07",
+   "status": "published",
+   "formats": {
+    "cultureg": "9 image(s) à faire",
+    "insolite": "8 image(s) à faire",
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-08",
+   "status": "draft",
+   "formats": {
+    "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-09",
+   "status": "draft",
+   "formats": {
+    "dossier": "4 image(s) à faire",
+    "cultureg": "11 image(s) à faire",
+    "insolite": "9 image(s) à faire",
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-10",
+   "status": "draft",
+   "formats": {
+    "cultureg": "11 image(s) à faire",
+    "insolite": "8 image(s) à faire",
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-11",
+   "status": "draft",
+   "formats": {
+    "cultureg": "9 image(s) à faire",
+    "insolite": "8 image(s) à faire",
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-12",
+   "status": "draft",
+   "formats": {
+    "cultureg": "9 image(s) à faire",
+    "insolite": "8 image(s) à faire",
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-13",
+   "status": "draft",
+   "formats": {
+    "cultureg": "9 image(s) à faire",
+    "insolite": "8 image(s) à faire",
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "status": "draft",
+   "formats": {
+    "cultureg": "9 image(s) à faire",
+    "insolite": "8 image(s) à faire",
+    "quiz": "prêt"
+   }
+  }
+ ],
+ "today_published": true,
+ "today_stories": [],
+ "last_published": "2026-11-07",
+ "days_ahead_drawn": 1,
+ "days_ahead_written": 7,
+ "quota": {
+  "day": "2026-11-07",
+  "count": 80,
+  "exhausted": false,
+  "neurons": 14400
+ }
+}
