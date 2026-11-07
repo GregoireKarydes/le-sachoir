@@ -26,7 +26,7 @@ Ces formats comptent dans la limite de 6 par passage ; continuer ensuite normale
 4. **Écrire** selon la charte : personnages humains (ou animaux réels), jamais d'objets ou de cellules qui parlent ; personnage lucide seulement s'il est utile ; au moins deux leviers ; titre drôle ; la durée de lecture compte plus que le nombre de cases.
    - Culture G : un concept expliqué et vulgarisé, avec une touche d'humour (1 à 2 min).
    - Insolite : un fait ahurissant ou une idée reçue démontée (1 min).
-   - Grand Dossier : 30 à 45 cases (4 à 6 min), découpées en chapitres adaptés au sujet (pas forcément « conséquences modernes » à la fin), compréhension d'abord, humour dosé, cliffhanger en case 4. Cases « pause » permises quand c'est utile (chiffre clé, frise, carte), le contenu dans le récitatif.
+   - Grand Dossier : **30 cases au plus** (environ 4 min), quota d'images oblige, découpées en chapitres adaptés au sujet (pas forcément « conséquences modernes » à la fin), compréhension d'abord, humour dosé, cliffhanger en case 4. Cases « pause » permises quand c'est utile (chiffre clé, frise, carte), le contenu dans le récitatif.
 5. **Fact-check** en seconde passe. Retirer tout ce qui n'est pas sourcé.
 6. Écrire dans `editions/<date>/edition.json` (créer avec `"status": "draft"` si besoin, sans toucher aux autres formats). Valider le JSON.
 7. Commit « Stock <date> : <format> », `git pull --rebase`, `git push origin main` (un commit par date, poussé aussitôt : si la tâche s'arrête en route, le travail déjà fait est gardé).

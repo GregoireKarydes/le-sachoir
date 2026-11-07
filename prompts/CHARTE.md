@@ -43,10 +43,10 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 
 | Format | Durée visée | Cases (repère) | Humour |
 |---|---|---|---|
-| Actu du jour (`actu`) | 1 à 2 min | 1 à 2 cases par sujet, 3 à 5 sujets | L'actu racontée de façon détournée et drôle, sans case « réaction » obligatoire |
+| Actu du jour (`actu`) | 1 à 2 min | 1 à 2 cases par sujet, 3 à 5 sujets, 8 cases au plus | L'actu racontée de façon détournée et drôle, sans case « réaction » obligatoire |
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé, avec une touche d'humour |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, gag à chaque étape |
-| Grand Dossier (`dossier`) | 4 à 6 min | 30 à 45 | Humour dosé : la compréhension d'abord |
+| Grand Dossier (`dossier`) | environ 4 min | 30 au plus (quota d'images) | Humour dosé : la compréhension d'abord |
 | Jeu du jour (`quiz`), Quiz culture G | 1 à 2 min | 5 questions, sans image | Mauvaises réponses drôles mais plausibles, explication courte et drôle |
 | Jeu du jour (`quiz`), Quiz géo | 1 min | 3 questions : où c'est (carte), capitales, joker | Pièges crédibles, explication courte et drôle |
 | Jeu du jour (`quiz`) : Frise, Dico menteur, Plus ou moins, Swipe, Chiffre, Qui a dit ça ? | 1 à 2 min | voir `prompts/SCHEMA.md` | Un jeu par jour, en rotation sur 8 jours |

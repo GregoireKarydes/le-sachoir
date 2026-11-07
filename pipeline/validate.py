@@ -22,6 +22,7 @@ IMAGE_STATUS = {None, "pending", "retry", "done", "failed"}
 CAST_STATUS = {None, "pending", "done", "skipped", "failed"}
 THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
 CAPTION_MAX, BUBBLE_MAX = 15, 12  # mots, d'après prompts/CHARTE.md
+MAX_CASES = {"actu": 8, "dossier": 30}  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 
 def words(t: str) -> int:
@@ -59,6 +60,8 @@ def check_story(fmt: dict, d: Path, err, warn):
     if not isinstance(cases, list) or not cases:
         err("aucune case")
         return
+    if len(cases) > MAX_CASES.get(fid, 99):
+        warn(f"{len(cases)} cases, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
     cast_ids = set()
     for c in fmt.get("cast", []) or []:
         if not c.get("id") or not c.get("file"):
