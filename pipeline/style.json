@@ -29,6 +29,11 @@
     "thicken": 1,
     "max_colour_share": 0.2
   },
-  "daily_budget": 80,
-  "actu_reserve": 15
+  "neuron_budget": 9000,
+  "neuron_cost": {
+    "case": 200,
+    "cover": 200,
+    "cast": 80
+  },
+  "actu_reserve_neurons": 2600
 }

@@ -40,4 +40,5 @@ jobs:
           git config user.email "sachoir-bot@users.noreply.github.com"
           git add editions data/images-last-run.json data/images-quota.json
           git diff --cached --quiet || git commit -m "Images générées"
-          git pull --rebase && git push
+          for i in 1 2 3; do git pull --rebase && git push && ok=1 && break; sleep $((i * 15)); done
+          [ -n "$ok" ] || { echo "::error::Push impossible après 3 essais"; exit 1; }

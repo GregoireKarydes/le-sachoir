@@ -42,9 +42,12 @@ class BudgetReserved(Exception):
 
 
 # Compteur du quota Cloudflare, remis à zéro chaque jour à 00:00 UTC (1 h ou 2 h à Paris).
+# Le quota gratuit se compte en neurones (10 000 par jour). Mesure du 7 novembre 2026 : 80 appels = 14,3k neurones,
+# soit environ 180 par appel en moyenne : le budget est donc tenu en neurones estimés, avec une marge sous 10 000.
 QUOTA_FILE = ROOT / "data" / "images-quota.json"
-DAILY_BUDGET = STYLE.get("daily_budget", 80)   # images par jour à peu près permises par le quota gratuit
-ACTU_RESERVE = STYLE.get("actu_reserve", 15)   # images gardées pour la prochaine Actu tant qu'elle n'est pas dessinée
+NEURON_BUDGET = STYLE.get("neuron_budget", 9000)          # neurones estimés permis par jour (marge sous 10 000)
+NEURON_COST = STYLE.get("neuron_cost", {"case": 200, "cover": 200, "cast": 80})  # coût estimé d'un appel, par type
+ACTU_RESERVE = STYLE.get("actu_reserve_neurons", 2600)    # gardés pour la prochaine Actu tant qu'elle n'est pas dessinée
 
 
 def quota_state() -> dict:
@@ -54,7 +57,8 @@ def quota_state() -> dict:
     except Exception:
         q = {}
     if q.get("day") != day:
-        q = {"day": day, "count": 0, "exhausted": False}
+        q = {"day": day, "count": 0, "neurons": 0, "exhausted": False}
+    q.setdefault("neurons", q.get("count", 0) * 180)  # ancien fichier sans neurones : estimation moyenne
     return q
 
 
@@ -72,7 +76,7 @@ def ref_bytes(path: Path) -> bytes:
     return buf.getvalue()
 
 
-def generate(prompt: str, size, refs: list[Path]) -> Image.Image:
+def generate(prompt: str, size, refs: list[Path], kind: str = "case") -> Image.Image:
     files = {}
     for i, ref in enumerate([r for r in refs if r.exists()][:4]):
         files[f"input_image_{i}"] = (f"ref{i}.png", ref_bytes(ref), "image/png")
@@ -100,13 +104,18 @@ def generate(prompt: str, size, refs: list[Path]) -> Image.Image:
         q["exhausted"] = False
         save_quota(q)
     r = requests.post(URL, headers={"Authorization": f"Bearer {TOKEN}"}, data=data, files=files, timeout=180)
+    cost = NEURON_COST.get(kind, 200)
     q["count"] += 1  # un appel refusé ou raté peut aussi consommer : on compte tout
+    q["neurons"] += cost
+    q.setdefault("by_kind", {})[kind] = q.get("by_kind", {}).get(kind, 0) + 1
     save_quota(q)
     if r.status_code >= 400:
         # Ne chercher « quota » que dans un message d'erreur : une image base64 peut contenir ces lettres par hasard.
         low = r.text[:2000].lower()
         if r.status_code == 429 or "allocation" in low or "quota" in low or "neuron" in low:
             q["count"] -= 1
+            q["neurons"] -= cost
+            q["by_kind"][kind] -= 1
             q["exhausted"] = True
             q["exhausted_at"] = datetime.now(ZoneInfo("UTC")).isoformat()
             save_quota(q)
@@ -206,7 +215,10 @@ def editions_to_process():
             return bool(json.loads((d / "edition.json").read_text()).get("demo"))
         except Exception:
             return False
-    for d in sorted(dirs, key=lambda d: (demo(d), d.name)):
+    def past(d):
+        return d.name < today.isoformat()
+    # Ordre : aujourd'hui et le stock à venir, puis les 2 derniers jours (images ratées à refaire), puis la démo.
+    for d in sorted(dirs, key=lambda d: (demo(d), past(d), d.name)):
         f = d / "edition.json"
         if not f.exists():
             continue
@@ -215,8 +227,9 @@ def editions_to_process():
         except ValueError:
             continue
         ed = json.loads(f.read_text())
-        # On traite l'édition du jour (Actu tardive, régénérations) et le stock à venir.
-        if day < today and not ed.get("demo"):
+        # On traite l'édition du jour (Actu tardive, régénérations), le stock à venir
+        # et les deux jours précédents, pour que leurs formats incomplets finissent par paraître.
+        if day < today - timedelta(days=2) and not ed.get("demo"):
             continue
         yield d, f, ed
 
@@ -240,13 +253,31 @@ def next_actu_drawn() -> bool:
     return False
 
 
-def check_budget(fmt: dict):
-    """L'Actu passe toujours ; le stock s'arrête avant la réserve tant que la prochaine Actu n'est pas dessinée."""
+class BudgetReached(QuotaExhausted):
+    """Plafond quotidien de neurones atteint : on s'arrête avant que Cloudflare ne refuse (ou ne facture)."""
+
+
+def check_budget(fmt: dict, kind: str = "case"):
+    """Plafond strict pour tout le monde ; le stock s'arrête en plus avant la réserve de l'Actu."""
+    q = quota_state()
+    cost = NEURON_COST.get(kind, 200)
+    if q["neurons"] + cost > NEURON_BUDGET:
+        raise BudgetReached(f"{q['neurons']} neurones estimés aujourd'hui (plafond {NEURON_BUDGET})")
     if fmt.get("id") == "actu":
         return
     reserve = 0 if next_actu_drawn() else ACTU_RESERVE
-    if quota_state()["count"] >= DAILY_BUDGET - reserve:
-        raise BudgetReserved(f"{quota_state()['count']} images aujourd'hui, {reserve} gardées pour l'Actu")
+    if q["neurons"] + cost > NEURON_BUDGET - reserve:
+        raise BudgetReserved(f"{q['neurons']} neurones estimés aujourd'hui, {reserve} gardés pour l'Actu")
+
+
+def uses(fmt: dict) -> dict:
+    """Nombre d'images (cases + couverture) où apparaît chaque personnage du casting."""
+    n = {}
+    imgs = [c["image"] for c in fmt.get("cases", []) if c.get("image")] + ([fmt["cover"]] if fmt.get("cover") else [])
+    for img in imgs:
+        for cid in img.get("cast", []):
+            n[cid] = n.get(cid, 0) + 1
+    return n
 
 
 def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
@@ -262,17 +293,23 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
         looks = {c["id"]: c.get("look", c["id"]) for c in fmt.get("cast", [])}
         sheets = {c["id"]: d / c["file"] for c in fmt.get("cast", [])}
 
-        # 1. Fiches casting
+        # 1. Fiches casting (sautées pour un personnage qui n'apparaît qu'une fois : la description suffit)
+        used = uses(fmt)
         for c in fmt.get("cast", []):
             if c.get("status") == "done" and (d / c["file"]).exists():
+                continue
+            if used.get(c["id"], 0) <= 1:
+                if c.get("status") != "skipped":
+                    c["status"] = "skipped"
+                    persist()
                 continue
             head = STYLE["style_with_ref"] + " " if STYLE_REF.exists() else ""
             prompt = (f"Character reference portrait: one single character, head and upper body, facing the viewer, "
                       f"plain white background, of {c.get('look', c['id'])}. {head}{STYLE['style']} "
                       f"One image only, no panel borders. Wordless picture: no text, no lettering.")
-            check_budget(fmt)
+            check_budget(fmt, "cast")
             try:
-                im = generate(prompt, STYLE["cast_size"], [STYLE_REF])
+                im = generate(prompt, STYLE["cast_size"], [STYLE_REF], "cast")
                 im = ink(im)
             except QuotaExhausted:
                 raise
@@ -293,9 +330,9 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
         # 2. Couverture puis 3. cases
         jobs = []
         if fmt.get("cover"):
-            jobs.append((fmt["cover"], STYLE["cover_size"]))
-        jobs += [(case["image"], STYLE["case_size"]) for case in fmt.get("cases", []) if case.get("image")]
-        for img, size in jobs:
+            jobs.append((fmt["cover"], STYLE["cover_size"], "cover"))
+        jobs += [(case["image"], STYLE["case_size"], "case") for case in fmt.get("cases", []) if case.get("image")]
+        for img, size, kind in jobs:
             if img.get("status") not in ("pending", "retry", None):
                 continue
             if img.get("attempts", 0) >= max_att:
@@ -304,10 +341,10 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
                 continue
             cast = img.get("cast", [])
             prompt, refs = build(img["prompt"], [(looks[c], sheets.get(c)) for c in cast if c in looks])
-            check_budget(fmt)
+            check_budget(fmt, kind)
             img["attempts"] = img.get("attempts", 0) + 1
             try:
-                im = generate(prompt, size, refs)
+                im = generate(prompt, size, refs, kind)
             except QuotaExhausted:
                 img["attempts"] -= 1
                 persist()

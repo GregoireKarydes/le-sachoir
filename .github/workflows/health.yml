@@ -1,0 +1,79 @@
+name: Santé de l'édition
+
+# Vérifie le site EN LIGNE après 5 h (heure de Paris). Si l'édition du jour manque :
+# relance Images puis Publication, revérifie, et ouvre une issue « alerte » (mail + appli GitHub).
+# Quand tout va bien, referme l'alerte. Prévient aussi quand l'avance dessinée tombe sous 2 jours.
+on:
+  schedule:
+    - cron: "32 3 * * *"   # 5 h 32 à Paris l'été (4 h 32 l'hiver : ignoré, trop tôt)
+    - cron: "32 4 * * *"   # 5 h 32 l'hiver
+    - cron: "47 6 * * *"   # second contrôle en matinée
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+  issues: write
+
+concurrency:
+  group: health
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - id: h1
+        run: python pipeline/health_check.py
+
+      - name: Relancer la chaîne
+        id: fix
+        if: steps.h1.outputs.status == 'fail'
+        run: |
+          gh workflow run images.yml || true
+          sleep 420   # le temps de dessiner un peu puis de publier (Publication suit Images)
+          gh workflow run publish.yml || true
+          sleep 180
+
+      - id: h2
+        if: steps.h1.outputs.status == 'fail'
+        run: python pipeline/health_check.py
+
+      - name: Alerte
+        if: steps.h1.outputs.status == 'fail' && steps.h2.outputs.status == 'fail'
+        run: |
+          gh label create alerte --color B60205 --description "Édition du jour absente" 2>/dev/null || true
+          body="$(cat health-report.md)
+
+          Relance automatique faite, sans succès. [Journal](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+          n=$(gh issue list --label alerte --state open --json number -q '.[0].number')
+          if [ -n "$n" ]; then gh issue comment "$n" --body "$body"
+          else gh issue create --title "🚨 Édition du $(TZ=Europe/Paris date +%d/%m) non publiée" --label alerte --body "$body"; fi
+          exit 1
+
+      - name: Fin d'alerte
+        if: steps.h1.outputs.status == 'ok' || steps.h2.outputs.status == 'ok'
+        run: |
+          for n in $(gh issue list --label alerte --state open --json number -q '.[].number'); do
+            gh issue close "$n" --comment "Résolu : $(head -1 health-report.md)"
+          done
+
+      - name: Avance
+        if: always() && steps.h1.outputs.status != 'early'
+        run: |
+          gh label create avance --color FBCA04 --description "Moins de 2 jours d'images d'avance" 2>/dev/null || true
+          n=$(gh issue list --label avance --state open --json number -q '.[0].number')
+          ahead="${{ steps.h1.outputs.ahead }}"
+          if [ "${ahead:-0}" -lt 2 ]; then
+            [ -z "$n" ] && gh issue create --title "⚠️ Avance d'images faible (${ahead:-0} jour)" --label avance \
+              --body "$(cat health-report.md)" || true
+          elif [ -n "$n" ]; then
+            gh issue close "$n" --comment "Avance revenue à ${ahead} jours."
+          fi
