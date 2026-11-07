@@ -3,6 +3,594 @@
   "status": "draft",
   "formats": [
     {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Tout ça pour un pain : Les Misérables en entier",
+      "tagline": "Le roman-fleuve de Victor Hugo, du bagne de Toulon à la barricade de 1832, sans lire les 1 400 pages",
+      "minutes": 5,
+      "theme": "Littérature",
+      "cast": [
+        {
+          "id": "hugo",
+          "look": "Victor, a French writer in his late fifties, short white hair and a short white beard, bushy white eyebrows, black frock coat, white shirt, a red scarf as the only colour",
+          "file": "cast/dossier-hugo.png",
+          "status": "pending"
+        },
+        {
+          "id": "valjean",
+          "look": "Jean, a huge broad-shouldered man in his forties, shaved head with grey stubble, heavy square jaw, thick dark eyebrows, plain grey worker's jacket, black trousers, big hands",
+          "file": "cast/dossier-valjean.png",
+          "status": "pending"
+        },
+        {
+          "id": "javert",
+          "look": "Javert, a very tall rigid police inspector, long thin face, grey sideburns, permanent frown, black greatcoat buttoned up to the neck, black top hat, a short black cane",
+          "file": "cast/dossier-javert.png",
+          "status": "pending"
+        },
+        {
+          "id": "myriel",
+          "look": "Myriel, a small kind old bishop, bald head with a white fringe, round smiling face, plain black cassock, a small purple skullcap as the only colour",
+          "file": "cast/dossier-myriel.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare grey street with one huge loaf of bread lying in the middle. Jean (in the middle) hugging the loaf, guilty, light-blue sweat drop; Javert (on the right) pointing at him with his cane, red angry flush; Victor (on the left) sitting on an enormous pile of manuscript pages, writing happily, yellow sparkles around him. wide shot",
+        "cast": ["hugo", "valjean", "javert"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Un roman en exil",
+          "caption": "Les Misérables, de Victor Hugo : plus de 1 400 pages. Comment un pain volé peut-il en remplir autant ?",
+          "bubbles": [
+            { "text": "Moi, je voulais juste un pain.", "side": "l" },
+            { "text": "Et moi, j’avais beaucoup de choses à dire.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bare room with one desk. Jean (on the left) holding a small round loaf of bread, shoulders dropped, embarrassed, pink blush on the cheeks; Victor (on the right) sitting behind a towering stack of manuscript pages taller than him, proudly patting the pile, yellow sparkles. medium shot",
+            "cast": ["valjean", "hugo"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "1845",
+          "caption": "Hugo commence en 1845 un roman sur la pauvreté. Son premier titre : « Les Misères ».",
+          "bubbles": [
+            { "text": "Titre provisoire. Un peu déprimant, je l’avoue.", "side": "r" },
+            { "text": "Pour l’instant, je n’existe qu’à moitié.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Victor (on the right) at a small desk with a quill, frowning at a blank page, chin in hand; Jean (on the left) drawn only as a half-finished pencil sketch of himself, missing his legs, floating next to the desk, worried, light-blue sweat drop. plain background. medium shot",
+            "cast": ["hugo", "valjean"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "title": "Pourquoi Hugo finit son roman sur une île",
+          "steps": [
+            "1848 : une révolution interrompt l’écriture",
+            "2 décembre 1851 : Louis-Napoléon Bonaparte fait un coup d’État, Hugo s’y oppose",
+            "11 décembre 1851 : il fuit à Bruxelles, puis à Jersey",
+            "1855 : il s’installe à Guernesey, île anglo-normande",
+            "1860-1861 : il reprend enfin son roman"
+          ],
+          "joke": "Son exil durera dix-neuf ans. Comme le bagne de son héros."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le héros",
+          "caption": "Son héros, Jean Valjean, sort de dix-neuf ans de bagne. Son crime ? Avoir volé un pain.",
+          "bubbles": [
+            { "text": "Dix-neuf ans. Pour un pain.", "side": "r" },
+            { "text": "Et ce n’est que le début de mes ennuis.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "close-up of Jean (on the left) staring straight at the reader, deadpan, holding a tiny crumb of bread between two fingers, one light-blue sweat drop; Victor (on the right edge) leaning in, eyes wide, holding his quill in mid-air, shocked. plain background. close-up",
+            "cast": ["valjean", "hugo"],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Le forçat et l’évêque",
+          "caption": "Jean Valjean, ouvrier sans travail, vole un pain pour nourrir les enfants affamés de sa sœur.",
+          "bubbles": [
+            { "text": "La loi est la loi.", "side": "r" },
+            { "text": "Même quand les petits ont faim ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a bakery window with a broken pane. Jean (on the left) holding a loaf of bread against his chest, pleading eyes, light-blue tears; Javert (on the right) gripping his shoulder, stiff, cold stare. behind Jean, three tiny thin children peeking from a doorway. medium shot",
+            "cast": ["valjean", "javert"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "",
+          "caption": "Condamné à cinq ans de bagne, il tente plusieurs fois de s’évader. Chaque essai rallonge sa peine.",
+          "bubbles": [
+            { "text": "Je voulais juste sortir plus tôt.", "side": "l" },
+            { "text": "Raté : quatorze ans de plus, au total.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a plain grey prison wall. Jean (on the left) stuck halfway over the top of the wall, legs dangling, frozen, big light-blue sweat drop; Javert (on the right) standing below, calmly holding Jean's ankle with one hand, unimpressed, one eyebrow raised. medium shot",
+            "cast": ["valjean", "javert"],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "title": "Le bagne, c’est quoi ?",
+          "text": "Une prison de travaux forcés, installée dans un port comme Toulon. Les forçats, enchaînés, y font les travaux les plus durs. Hugo visite le bagne de Toulon en 1839 et prend des notes pour son futur roman.",
+          "joke": "Le repérage le plus sinistre de toute la littérature."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "1815",
+          "caption": "1815 : enfin libre. Mais ses papiers d’ancien forçat le trahissent, et aucune auberge ne veut de lui.",
+          "bubbles": [
+            { "text": "J’ai de quoi payer !", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small inn door at night. Jean (on the left) holding out a few coins, hopeful, then crushed; a grumpy innkeeper in a white apron (on the right) slamming the door in his face, a small cloud of dust. Jean's shoulders drop, light-blue tear. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "Digne",
+          "caption": "À Digne, l’évêque Myriel lui ouvre sa porte, le nourrit et le loge.",
+          "bubbles": [
+            { "text": "Asseyez-vous. Et sortez les couverts en argent !", "side": "r" },
+            { "text": "Il sait que je sors du bagne ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a simple dining table with a white cloth, shiny silver cutlery and two silver candlesticks. Myriel (on the right) pulling out a chair with a warm smile, pink blush on the cheeks; Jean (on the left) standing stiff in the doorway, holding his cap, confused, light-blue sweat drop. medium shot",
+            "cast": ["myriel", "valjean"],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "",
+          "caption": "La nuit, Valjean vole l’argenterie et s’enfuit. Au matin, des gendarmes le ramènent chez l’évêque.",
+          "bubbles": [
+            { "text": "Je vous les avais donnés. Et les chandeliers, vous les oubliez ?", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bare doorway in the morning. Jean (on the left) held by two tiny stern gendarmes in black bicorne hats, a sack of silver cutlery at his feet, jaw dropped; Myriel (on the right) cheerfully handing him two silver candlesticks, smiling, yellow sparkles. medium shot",
+            "cast": ["valjean", "myriel"],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "react",
+          "tag": "Le tournant",
+          "caption": "L’évêque a menti pour le sauver. Ce pardon bouleverse Valjean, qui décide de devenir honnête.",
+          "bubbles": [],
+          "image": {
+            "prompt": "close-up of Jean (in the foreground) holding the two silver candlesticks against his chest, eyes shut, big light-blue tears streaming down, lips trembling; Myriel (small, on the right in the background) walking away calmly with his hands behind his back. plain background. close-up",
+            "cast": ["valjean", "myriel"],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Monsieur le maire",
+          "caption": "Sous un faux nom, M. Madeleine, il fait fortune avec une usine et devient maire de Montreuil-sur-Mer.",
+          "bubbles": [
+            { "text": "Ancien forçat, puis maire. Le CV le plus étrange de France.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small town hall balcony. Jean (in the middle) wearing a black top hat and a mayor's red sash over his grey jacket, waving shyly to a tiny crowd below, pink blush on the cheeks, small proud smile; a simple factory chimney behind him. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "",
+          "tag": "",
+          "caption": "Arrive Javert, inspecteur de police, ancien gardien au bagne de Toulon. Ce maire lui rappelle quelqu’un.",
+          "bubbles": [
+            { "text": "Votre démarche, monsieur le maire… je la connais.", "side": "r" },
+            { "text": "Tout le monde marche pareil.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a bare town square. Javert (on the right) bending down very close to Jean, squinting suspiciously, studying him like a detective; Jean (on the left) in his top hat, walking stiffly like a robot, fake smile, big light-blue sweat drops. medium shot",
+            "cast": ["javert", "valjean"],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "",
+          "tag": "Fantine",
+          "caption": "Fantine, ouvrière à l’usine, a confié sa petite fille Cosette à des aubergistes, les Thénardier.",
+          "bubbles": [
+            { "text": "Ils me demandent toujours plus d’argent pour elle.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a young thin woman with long blond hair in a plain black dress (on the left), holding an open empty purse, worried, light-blue tears; on the right, a fat smirking innkeeper couple in grey clothes holding out their hands for money, greedy grins. plain background. medium shot",
+            "cast": [],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 15,
+          "kind": "explain",
+          "title": "Comment Fantine tombe dans la misère",
+          "text": "Hugo montre comment la pauvreté s’enchaîne :",
+          "steps": [
+            "À l’usine, on découvre qu’elle a une fille sans être mariée : elle est renvoyée",
+            "Les Thénardier, qui maltraitent Cosette, réclament toujours plus d’argent",
+            "Pour payer, Fantine vend ses cheveux, puis ses dents",
+            "Elle finit à la rue, malade"
+          ]
+        },
+        {
+          "n": 16,
+          "kind": "",
+          "tag": "L’affaire Champmathieu",
+          "caption": "Un vagabond, Champmathieu, est pris pour Valjean. Si le maire se tait, un innocent ira au bagne.",
+          "bubbles": [
+            { "text": "Me taire et rester maire… ou parler.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a bare room at night with a single candle. Jean (in the middle) sitting on the edge of a bed, head in his hands, torn, big light-blue sweat drops; on the floor in front of him, his black top hat on one side and an old grey prison cap on the other side. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "fact",
+          "tag": "Arras",
+          "caption": "Au tribunal d’Arras, Valjean se dénonce devant tout le monde. Le maire était bien l’ancien forçat.",
+          "bubbles": [
+            { "text": "Celui que vous cherchez, c’est moi.", "side": "l" },
+            { "text": "Je le savais. Je le savais !", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a simple courtroom with a wooden bench. Jean (on the left) standing tall, hand on his chest, calm and sad; Javert (on the right) jumping with both fists clenched in triumph, red excited flush, yellow sparkles; a tiny shabby vagabond in the middle looking relieved. wide shot",
+            "cast": ["valjean", "javert"],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 18,
+          "kind": "react",
+          "tag": "",
+          "caption": "Fantine meurt sans avoir revu sa fille. Valjean lui avait promis de sauver Cosette.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a bare hospital room with an empty white bed. Jean (in the middle) standing next to the bed, holding his cap against his chest, head bowed, one light-blue tear. a single small window with grey light. quiet and calm. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 19,
+          "kind": "",
+          "tag": "Noël 1823",
+          "caption": "Repris, puis de nouveau évadé, il trouve Cosette à Montfermeil, petite servante des Thénardier, et la rachète.",
+          "bubbles": [
+            { "text": "Cette enfant nous coûte une fortune !", "side": "r" },
+            { "text": "Combien ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a snowy dark forest path at night. a tiny girl in rags (in the middle) carrying a heavy water bucket, exhausted; Jean (on the left) gently taking the bucket from her hands, kind smile, pink blush; a fat greedy innkeeper (on the right) rubbing his hands, yellow sparkles of greed in his eyes. wide shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 20,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Le détour par Waterloo",
+          "caption": "Pause : en plein roman, Hugo consacre 19 chapitres à la bataille de Waterloo (1815).",
+          "bubbles": [
+            { "text": "Et Cosette, on la laisse où ?", "side": "l" },
+            { "text": "Elle attendra. Napoléon d’abord.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Victor (on the right) unrolling an enormous blank battle map that covers the whole floor, kneeling on it with toy soldiers, ecstatic, yellow sparkles; Jean (on the left) holding a little girl's hand, both tapping their feet, bored, arms crossed, slumped shoulders. plain background. wide shot",
+            "cast": ["hugo", "valjean"],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 21,
+          "kind": "explain",
+          "title": "Pourquoi c’est si long",
+          "text": "Cinq tomes : Fantine, Cosette, Marius, L’Idylle rue Plumet et l’Épopée rue Saint-Denis, Jean Valjean. Soit 48 livres et 365 chapitres. Hugo s’arrête souvent pour raconter autre chose : Waterloo, l’argot, les égouts de Paris.",
+          "joke": "365 chapitres : un par jour, et vous tenez un an."
+        },
+        {
+          "n": 22,
+          "kind": "chap",
+          "tag": "Chapitre 5 · La barricade",
+          "caption": "Valjean et Cosette se cachent à Paris. Cosette grandit et rencontre Marius, un étudiant, au jardin du Luxembourg.",
+          "bubbles": [
+            { "text": "Un étudiant ? Républicain, en plus ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a park bench under a single tree. a young woman in a white dress and a young man with curly hair in a black coat (on the right) gazing at each other, small red hearts floating; Jean (on the left) peeking from behind the tree trunk, jealous, red angry flush. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 23,
+          "kind": "fact",
+          "tag": "Juin 1832 · Vraie émeute",
+          "caption": "Après la mort du général Lamarque, très populaire, des républicains se soulèvent à Paris contre le roi.",
+          "bubbles": [
+            { "text": "On monte une barricade, rue de la Chanvrerie !", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a narrow street being blocked by a pile of furniture, carts and paving stones. the curly-haired young man in a black coat (on the right) climbing the pile, raising a fist, determined; tiny figures carrying chairs and a wardrobe around him. Jean (on the left) watching, worried, light-blue sweat drop. wide shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 24,
+          "kind": "react",
+          "tag": "Gavroche",
+          "caption": "Gavroche, un gamin des rues, ramasse des cartouches sous les balles pour la barricade. Il y est tué.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a small street boy seen from behind (in the middle) with an oversized grey cap, a red scarf and baggy trousers, holding a small basket, walking alone towards a cloud of grey smoke beyond a pile of paving stones. empty street, quiet and sober, no violence shown. wide shot",
+            "cast": [],
+            "file": "images/dossier-20.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 25,
+          "kind": "",
+          "tag": "",
+          "caption": "Javert, venu espionner, est démasqué. Valjean est chargé de l’exécuter, mais tire en l’air et le libère.",
+          "bubbles": [
+            { "text": "Un forçat qui épargne un policier ? Ce n’est pas dans le règlement.", "side": "r" },
+            { "text": "Partez.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a narrow back alley. Jean (on the left) pointing an old pistol at the sky, a small puff of smoke, calm face; Javert (on the right) with his hands untied, frozen, eyes huge, jaw dropped, light-blue sweat drops, completely lost. medium shot",
+            "cast": ["valjean", "javert"],
+            "file": "images/dossier-21.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 26,
+          "kind": "",
+          "tag": "Sous Paris",
+          "caption": "La barricade tombe. Valjean porte Marius, blessé et évanoui, à travers les égouts de Paris.",
+          "bubbles": [
+            { "text": "Mon futur gendre. Il pèse son poids.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a dark round sewer tunnel with dirty water up to the knees. Jean (in the middle) carrying the unconscious curly-haired young man on his back, bent forward, exhausted, big light-blue sweat drops, grumpy face. a few small rats watching from a ledge. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-22.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 27,
+          "kind": "",
+          "tag": "",
+          "caption": "À la sortie des égouts, Javert l’attend. Et pour la première fois, il le laisse partir.",
+          "bubbles": [
+            { "text": "Allez. Avant que je change d’avis.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a sewer exit opening onto a river bank at dusk. Jean (on the left) still carrying the young man, stopped, surprised; Javert (on the right) turning his back to them, looking away stiffly, arms crossed, troubled frown, small light-blue sweat drop. medium shot",
+            "cast": ["valjean", "javert"],
+            "file": "images/dossier-23.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 28,
+          "kind": "react",
+          "tag": "",
+          "caption": "Déchiré entre la loi et la pitié, Javert ne s’en remet pas : il se jette dans la Seine.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a quiet stone bridge at night over a dark river, a few grey street lamps. Javert (in the middle) seen from behind, standing alone at the parapet, top hat in his hand, head bowed, shoulders slumped. empty and calm, sober mood, nobody else around. wide shot",
+            "cast": ["javert"],
+            "file": "images/dossier-24.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 29,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Les chandeliers",
+          "caption": "Marius épouse Cosette. Valjean lui avoue son passé de forçat, et Marius l’éloigne de la maison.",
+          "bubbles": [
+            { "text": "Je préférais vous le dire moi-même.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a simple living room. the curly-haired young man in a black coat (on the right) stepping back, shocked, hand raised; Jean (on the left), older with white stubble, holding his cap, head low, shoulders dropped, one light-blue tear. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-25.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 30,
+          "kind": "react",
+          "tag": "",
+          "caption": "Marius apprend trop tard qui l’a sauvé. Valjean meurt en paix, éclairé par les chandeliers de l’évêque.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a bare room with an armchair. Jean (in the middle), old with white hair, resting in the armchair with a peaceful smile, eyes closed; two silver candlesticks on a small table beside him, small yellow glow; a young couple kneeling at his side holding his hands. calm and sober. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-26.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 31,
+          "kind": "chap",
+          "tag": "Chapitre 7 · 3 avril 1862",
+          "caption": "Les deux premiers tomes paraissent à Paris, quelques jours après Bruxelles. Les critiques grincent, les lecteurs s’arrachent le livre.",
+          "bubbles": [
+            { "text": "Les critiques détestent.", "side": "r" },
+            { "text": "Les lecteurs, eux, font la queue.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a bookshop with a long queue of tiny readers stretching out of the door. Victor (on the right) reading a newspaper with a sour face, red angry flush; Jean (on the left) pointing proudly at the queue, big grin, yellow sparkles. wide shot",
+            "cast": ["hugo", "valjean"],
+            "file": "images/dossier-27.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 32,
+          "kind": "",
+          "tag": "Légende",
+          "caption": "On raconte que Hugo écrivit « ? » à son éditeur, qui répondit « ! ». Ce récit n’apparaît qu’en 1892.",
+          "bubbles": [
+            { "text": "?", "side": "r" },
+            { "text": "Trente ans plus tard. Jolie histoire, aucune preuve.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a bare writing desk by a window with a grey sea outside. Victor (on the right) holding up a small blank card towards the reader with a smug face, eyebrows raised, pink blush of pride; Jean (on the left) arms crossed, deadpan, half-closed eyes, completely unimpressed. medium shot",
+            "cast": ["hugo", "valjean"],
+            "file": "images/dossier-28.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 33,
+          "kind": "",
+          "tag": "1980",
+          "caption": "Le roman devient une comédie musicale, créée à Paris en 1980, puis triomphe à Londres dès 1985.",
+          "bubbles": [
+            { "text": "Dix-neuf ans de bagne, et maintenant je chante.", "side": "l" },
+            { "text": "Et elle revient à Paris, au Châtelet, ce mois-ci.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bare theatre stage with a single spotlight. Jean (in the middle) singing with arms wide open, eyes closed, dramatic, light-blue tears of emotion, yellow sparkles; Victor (on the right, in the front row seat) applauding wildly, pink blush on the cheeks. wide shot",
+            "cast": ["valjean", "hugo"],
+            "file": "images/dossier-29.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 34,
+          "kind": "explain",
+          "tag": "En clair",
+          "title": "Alors, tout ça pour un pain ?",
+          "text": "Le pain volé n’est que le point de départ. À travers Valjean, Hugo raconte toute la misère de son temps : une justice impitoyable, l’usine, l’enfance maltraitée, l’émeute. Et il pose une question : un homme peut-il changer ?",
+          "joke": "Réponse : oui, mais il faut 1 400 pages."
+        },
+        {
+          "n": 35,
+          "kind": "",
+          "tag": "Moralité",
+          "caption": "Et Valjean, dans tout ça ? Il a retenu la leçon.",
+          "bubbles": [
+            { "text": "Une baguette, s’il vous plaît. Et je garde le ticket.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a modern bakery counter with a few loaves. Jean (on the left) paying with exaggerated care, holding a long receipt up to the light with both hands, suspicious glance at the reader, tiny light-blue sweat drop; a cheerful baker in a white apron (on the right) handing him a baguette. medium shot",
+            "cast": ["valjean"],
+            "file": "images/dossier-30.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Dans Les Misérables (1862), Valjean prend cinq ans de bagne pour un pain, dix-neuf avec ses évasions. Hugo l’a achevé en exil.",
+        "source": "Wikipedia — Les Misérables ; Maisons de Victor Hugo"
+      },
+      "story": "Victor Hugo commence en 1845 un roman sur la pauvreté, d’abord appelé « Les Misères ». La révolution de 1848 l’interrompt, puis le coup d’État de Louis-Napoléon Bonaparte, le 2 décembre 1851, le pousse à l’exil : Bruxelles, Jersey, puis Guernesey en 1855. Il y reprend le livre en 1860-1861. Les premiers tomes paraissent à Bruxelles fin mars 1862, puis à Paris le 3 avril : la critique grince, le public adore.\nLe héros, Jean Valjean, a volé un pain pour les enfants de sa sœur. Condamné à cinq ans de bagne, il en fait dix-neuf, parce que chaque tentative d’évasion rallonge sa peine. Libéré en 1815, rejeté partout, il est accueilli par Myriel, évêque de Digne inspiré du vrai Mgr de Miollis. Il le vole ; l’évêque le couvre et lui donne ses chandeliers. Ce pardon le transforme.\nDevenu M. Madeleine, industriel et maire de Montreuil-sur-Mer, il se dénonce pour sauver un innocent, promet à Fantine mourante de sauver sa fille Cosette et l’arrache aux Thénardier. À Paris, pendant l’insurrection de juin 1832, il épargne l’inspecteur Javert, puis porte Marius, l’amoureux de Cosette, à travers les égouts. Javert, incapable de choisir entre la loi et la pitié, se jette dans la Seine ; Valjean meurt en paix. Le livre a même donné un mot à la langue : « un gavroche ».",
+      "sources": [
+        { "title": "Hérodote — 3 avril 1862, Les Misérables en librairie", "url": "https://www.herodote.net/3_avril_1862-evenement-18620403.php" },
+        { "title": "Wikipedia — Les Misérables", "url": "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables" },
+        { "title": "Maisons de Victor Hugo — Questions sur la vie de Victor Hugo", "url": "https://maisonsvictorhugo.paris.fr/en/paris/museum/find-out-more-about-victor-hugo/des-questions-sur-la-vie-de-victor-hugo" },
+        { "title": "Cours et fiches — Les Misérables, résumé", "url": "https://cours-et-fiches.com/livres/les-miserables-hugo/" },
+        { "title": "Quote Investigator — Victor Hugo, « ? » et « ! »", "url": "https://quoteinvestigator.com/2014/06/14/exclamation/." },
+        { "title": "Paris ZigZag — Les Misérables : la comédie musicale revient à Paris", "url": "https://www.pariszigzag.fr/paris-au-quotidien/les-miserables-revient-a-paris/" },
+        { "title": "Word Histories — Gavroche : meaning and origin", "url": "https://wordhistories.net/2021/05/09/gavroche/" }
+      ]
+    },
+    {
       "id": "actu",
       "label": "L’Actu du jour",
       "title": "Le train de 2024 est arrivé (en 2026)",
