@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T17:18:31.537337+01:00",
+ "updated_at": "2026-11-07T17:23:13.525534+01:00",
  "today": "2026-11-07",
  "problems": [],
  "days": [
@@ -7,7 +7,7 @@
    "date": "2026-11-07",
    "status": "published",
    "formats": {
-    "cultureg": "prêt",
+    "cultureg": "1 image(s) à faire",
     "insolite": "prêt",
     "quiz": "prêt"
    }
@@ -80,7 +80,6 @@
  ],
  "today_published": true,
  "today_stories": [
-  "cultureg",
   "insolite"
  ],
  "last_published": "2026-11-07",
