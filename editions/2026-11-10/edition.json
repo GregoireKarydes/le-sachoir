@@ -3,6 +3,532 @@
   "status": "draft",
   "formats": [
     {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Qui commande en France ? La Ve République, mode d’emploi",
+      "tagline": "De Gaulle, le 49.3, la cohabitation : la Constitution de 1958 démontée pièce par pièce",
+      "minutes": 5,
+      "theme": "Politique française",
+      "cast": [
+        {
+          "id": "gaulle",
+          "look": "Charles, an extremely tall thin French general in his late sixties, big long nose, small grey moustache, slicked-back grey hair, long black general's coat, round black kepi, a small red ribbon on the chest as the only colour",
+          "file": "cast/dossier-gaulle.png",
+          "status": "pending"
+        },
+        {
+          "id": "lucie",
+          "look": "Lucie, a curious young woman in her twenties, very messy curly brown hair in a big loose bun, round glasses, oversized black sweater, white sneakers, a yellow pencil behind her ear as the only colour",
+          "file": "cast/dossier-lucie.png",
+          "status": "pending"
+        },
+        {
+          "id": "prof",
+          "look": "Bernard, a dry old constitutional law professor, bald with white tufts above the ears, half-moon glasses on the tip of his nose, grey three-piece suit, a thick black book under his arm, a green bow tie as the only colour",
+          "file": "cast/dossier-prof.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare stage with one big empty armchair in the middle. Charles (on the left) sitting very tall on the armchair, chin up, proud, yellow sparkles; Lucie (in the middle) looking up at him with a raised hand, curious, pink blush; Bernard (on the right) holding open a thick black book, pointing at it, deadpan. wide shot",
+        "cast": ["gaulle", "lucie", "prof"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Pourquoi une nouvelle République ?",
+          "caption": "Président, Premier ministre, députés : en France, qui commande vraiment ? La réponse est dans la Constitution de 1958.",
+          "bubbles": [
+            { "text": "J’ai toujours cru que c’était le président.", "side": "l" },
+            { "text": "Ça dépend des années. Et des élections.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bare classroom with a single blackboard drawn with three empty boxes connected by arrows. Lucie (on the left) raising her hand, puzzled, head tilted, light-blue sweat drop; Bernard (on the right) tapping the blackboard with a pointer, half-moon glasses, smug little smile. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1946-1958",
+          "caption": "Avant elle, sous la IVe République, les gouvernements tombent sans arrêt : 24 en douze ans.",
+          "bubbles": [
+            { "text": "Un gouvernement tous les six mois ?", "side": "l" },
+            { "text": "Le temps de trouver la machine à café.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a long line of tiny identical ministers in black suits falling one after another like dominoes across a bare floor. Lucie (on the left) watching with her jaw dropped, eyes huge; Bernard (on the right) calmly checking his pocket watch, bored, one eyebrow raised. wide shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "",
+          "caption": "Parce que la IVe est très parlementaire : les partis se querellent, et chaque brouille peut faire tomber le gouvernement.",
+          "bubbles": [
+            { "text": "Donc personne ne décide rien ?", "side": "l" },
+            { "text": "Si. La date de la prochaine crise.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bare assembly room with a small crowd of tiny deputies in grey suits pulling a single chair in every direction, red angry flush on their faces. Lucie (on the left) covering her eyes with one hand, despairing; Bernard (on the right) sipping tea, unbothered. wide shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "13 mai 1958",
+          "caption": "En pleine guerre d’Algérie, une émeute à Alger fait trembler Paris. On rappelle un général retiré de la politique.",
+          "bubbles": [
+            { "text": "Un général ? Pour écrire une constitution ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "an open doorway with bright light behind it. the huge black silhouette of a very tall man in a kepi (Charles) filling the whole doorway, seen from inside; Lucie (in the foreground, on the left) turning around, frozen, mouth open, big light-blue sweat drop. low angle, medium shot",
+            "cast": ["gaulle", "lucie"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · La Constitution du Général",
+          "caption": "1er juin 1958 : les députés investissent de Gaulle à la tête du gouvernement. Sa mission : une nouvelle constitution.",
+          "bubbles": [
+            { "text": "Il me faut une constitution à ma taille.", "side": "r" },
+            { "text": "Vu sa taille, ça promet.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Charles (on the right) standing extremely tall, ducking his head under a low ceiling, hands behind his back, proud and serious; Lucie (on the left) looking up at him, craning her neck all the way back, tiny next to him, pink blush. plain background. medium shot",
+            "cast": ["gaulle", "lucie"],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Été 1958",
+          "caption": "Il la fait écrire par une petite équipe autour de Michel Debré, ministre de la Justice, et non par une assemblée.",
+          "bubbles": [
+            { "text": "En 1875 et en 1946, c’étaient des assemblées qui écrivaient.", "side": "r" },
+            { "text": "Moins de monde, moins de disputes.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small office with one table and a single lamp. three tiny serious men in black suits writing furiously on sheets of paper; Charles (in the background) looming over them, arms crossed, watching. Bernard (on the right) explaining with a raised finger; Lucie (on the left) nodding, taking notes. medium shot",
+            "cast": ["gaulle", "prof", "lucie"],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "title": "Les pièces de la machine",
+          "steps": [
+            "Le président de la République nomme le Premier ministre et peut dissoudre l’Assemblée nationale",
+            "Le gouvernement, dirigé par le Premier ministre, conduit la politique du pays",
+            "Le Parlement (Assemblée nationale et Sénat) vote les lois et contrôle le gouvernement",
+            "Le Conseil constitutionnel vérifie que les lois respectent la Constitution"
+          ],
+          "joke": "Les juristes disent « semi-présidentiel ». Traduction : chacun croit être le chef."
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "28 septembre 1958",
+          "caption": "Référendum : environ 80 % des votants disent oui. La Constitution est promulguée le 4 octobre 1958.",
+          "bubbles": [
+            { "text": "80 % de Français d’accord ? Sur un même sujet ?", "side": "l" },
+            { "text": "Notez la date. Ça ne se reproduira pas souvent.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a simple ballot box on a table with a huge pile of white ballots overflowing from it. Lucie (on the left) staring at the pile in disbelief, eyes wide, yellow sparkles; Bernard (on the right) solemnly writing the date in a tiny notebook, very serious. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "1958",
+          "caption": "Le premier président n’est pas élu par le peuple, mais par un collège de parlementaires et d’élus locaux.",
+          "bubbles": [
+            { "text": "Élu par les maires. C’est charmant, mais un peu petit.", "side": "r" },
+            { "text": "Il vise plus grand.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small village hall with a row of tiny mayors in plain black suits clapping politely. Charles (on the right) standing on a little stage, looking down at them, slightly disappointed, one eyebrow raised; Lucie (on the left) whispering behind her hand, amused, pink blush. medium shot",
+            "cast": ["gaulle", "lucie"],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Le président élu par tous",
+          "caption": "1962 : de Gaulle veut que le président soit élu directement par tous les Français. Il passe par un référendum.",
+          "bubbles": [
+            { "text": "Sans passer par le Parlement. Les juristes s’étranglent.", "side": "r" },
+            { "text": "Vous aussi, on dirait.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Bernard (on the right) choking on his tea, red flush, glasses flying off his nose, thick black book falling; Lucie (on the left) patting his back, worried but amused, light-blue sweat drop. in the background, Charles calmly pinning a big blank poster on a wall. medium shot",
+            "cast": ["prof", "lucie", "gaulle"],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "fact",
+          "tag": "4 octobre 1962",
+          "caption": "Furieux, les députés votent une motion de censure et renversent le gouvernement de Georges Pompidou.",
+          "bubbles": [
+            { "text": "Ils censurent ? Je dissous.", "side": "r" },
+            { "text": "Du ping-pong constitutionnel.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a ping-pong table in a bare room. Charles (on the right) smashing the ball hard with a paddle, determined, red flush; on the other side a crowd of tiny deputies in grey suits ducking in panic. Lucie (on the left, near the net) following the ball with her eyes, fascinated. wide shot",
+            "cast": ["gaulle", "lucie"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "explain",
+          "title": "Censure contre dissolution",
+          "steps": [
+            "Les députés peuvent renverser le gouvernement : c’est la motion de censure, votée à la majorité absolue",
+            "Le président peut renvoyer les députés devant les électeurs : c’est la dissolution",
+            "En 1962, de Gaulle dissout, de nouveaux députés sont élus, et il renomme Pompidou"
+          ],
+          "joke": "Chacun a les clés de la maison de l’autre."
+        },
+        {
+          "n": 13,
+          "kind": "",
+          "tag": "28 octobre 1962",
+          "caption": "Référendum : 62 % de oui. Le président sera désormais élu au suffrage universel direct, par tous les électeurs.",
+          "bubbles": [
+            { "text": "Donc c’est moi qui choisis le président ?", "side": "l" },
+            { "text": "Vous. Et vos voisins. Même celui qui tond le dimanche.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a voting booth with a small grey curtain. Lucie (on the left) coming out of the booth holding an envelope proudly, chest out, yellow sparkles; Bernard (on the right) pointing over his shoulder at a tiny grumpy neighbour pushing a lawnmower in the background. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "",
+          "tag": "Décembre 1965",
+          "caption": "Première élection directe : avec 44,7 % au premier tour, de Gaulle est obligé d’aller au second tour.",
+          "bubbles": [
+            { "text": "Un second tour ? Moi ?", "side": "r" },
+            { "text": "Il gagne quand même, avec 55 %.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "close-up of Charles (on the right) staring down at a small sheet of results, deeply offended, nostrils flared, red angry flush, kepi tilted; Lucie (on the left) peeking at the sheet over his elbow, trying not to laugh, cheeks puffed, pink blush. plain background. close-up",
+            "cast": ["gaulle", "lucie"],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 15,
+          "kind": "react",
+          "tag": "",
+          "caption": "Élu par tout le pays, le président devient la pièce maîtresse de la Ve République.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a giant simple chessboard on the floor. Charles (in the middle) standing on it like the king piece, much taller than all the tiny grey pieces around him, hands behind his back, satisfied, yellow sparkles; Bernard (on the right edge) staring straight at the reader, deadpan. wide shot",
+            "cast": ["gaulle", "prof"],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 16,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Le 49.3",
+          "caption": "Le gouvernement a aussi son arme : l’article 49, alinéa 3, de la Constitution. On dit « le 49.3 ».",
+          "bubbles": [
+            { "text": "Ça sonne comme un code de cadenas.", "side": "l" },
+            { "text": "C’en est un. Pour faire passer une loi.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bare room with a small pedestal holding one big round red button under a glass cover. Bernard (on the right) lifting the glass cover very carefully, solemn; Lucie (on the left) leaning in, fascinated, hands clasped, tiny yellow sparkles in her eyes. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "explain",
+          "title": "Le 49.3, pas à pas",
+          "steps": [
+            "Le Premier ministre engage la responsabilité du gouvernement sur un texte",
+            "Le débat s’arrête : le texte est considéré comme adopté, sans vote",
+            "Sauf si des députés déposent une motion de censure dans les 24 heures",
+            "Si la majorité des députés la vote, le texte tombe, et le gouvernement aussi"
+          ],
+          "joke": "Traduction : « Votez contre moi… si vous l’osez. »"
+        },
+        {
+          "n": 18,
+          "kind": "",
+          "tag": "1988-1991",
+          "caption": "Premier ministre de 1988 à 1991, Michel Rocard utilise le 49.3 à 28 reprises : un record.",
+          "bubbles": [
+            { "text": "Vingt-huit fois ?", "side": "l" },
+            { "text": "À ce stade, c’est un abonnement.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the big red button on its pedestal, worn out and dented from use, with a small tally of scratch marks on the pedestal. Lucie (on the left) counting on her fingers, overwhelmed, light-blue sweat drop; Bernard (on the right) holding a long receipt that unrolls to the floor, deadpan. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 19,
+          "kind": "",
+          "tag": "Depuis 2008",
+          "caption": "Depuis 2008, en dehors du budget, il ne peut servir que pour un seul texte par session parlementaire.",
+          "bubbles": [
+            { "text": "On a rationné le bouton.", "side": "l" },
+            { "text": "Sauf pour le budget. Là, c’est à volonté.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the big red button now locked inside a small cage with a padlock. Lucie (on the left) holding the single small key between two fingers, amused, pink blush; Bernard (on the right) shrugging with both palms up, resigned. plain background. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 20,
+          "kind": "chap",
+          "tag": "Chapitre 5 · La cohabitation",
+          "caption": "1986 : la droite gagne les législatives. Le président socialiste, Mitterrand, nomme Jacques Chirac Premier ministre.",
+          "bubbles": [
+            { "text": "Le président et son Premier ministre sont adversaires ?", "side": "l" },
+            { "text": "Bienvenue dans la cohabitation.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bare hallway with two doors. an older man in a dark suit with a red rose in his buttonhole (on the left) shaking hands stiffly with a tall man with slicked black hair in a navy suit (on the right), both forcing huge fake smiles, light-blue sweat drops. Lucie (in the foreground) watching, eyebrows raised. medium shot",
+            "cast": ["lucie"],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 21,
+          "kind": "explain",
+          "title": "La cohabitation, c’est quoi ?",
+          "text": "Le président est d’un camp, la majorité des députés de l’autre. Comme ils peuvent renverser le gouvernement, il doit nommer un Premier ministre de leur camp. La Constitution ne l’avait pas prévu.",
+          "steps": [
+            "1986-1988 : Mitterrand et Chirac",
+            "1993-1995 : Mitterrand et Balladur",
+            "1997-2002 : Chirac et Jospin"
+          ]
+        },
+        {
+          "n": 22,
+          "kind": "react",
+          "tag": "Ambiance",
+          "caption": "Chaque semaine, ils se retrouvent au Conseil des ministres, la réunion du gouvernement présidée par le président.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a very long empty meeting table. two men in dark suits sitting at opposite ends, as far apart as possible, both staring at the ceiling in heavy silence, tiny light-blue sweat drops; Lucie (in the middle, sitting between them) slowly sinking into her chair, melting with awkwardness, pink blush. wide shot",
+            "cast": ["lucie"],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 23,
+          "kind": "",
+          "tag": "21 avril 1997",
+          "caption": "Le président Chirac dissout l’Assemblée un an avant la date prévue. Les électeurs élisent une majorité de gauche.",
+          "bubbles": [
+            { "text": "Il voulait ça ?", "side": "l" },
+            { "text": "Pas du tout. C’est le pari raté le plus célèbre de la Ve.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a casino table in a bare room. a tall man with slicked black hair in a navy suit (in the middle) having just pushed all his chips forward, now frozen as they slide away to the other side, mouth open, big light-blue sweat drop. Lucie (on the left) and Bernard (on the right) wincing together. wide shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 24,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Une Constitution qui bouge",
+          "caption": "24 septembre 2000 : référendum sur le quinquennat. Le mandat du président passe de sept à cinq ans.",
+          "bubbles": [
+            { "text": "73 % de oui !", "side": "l" },
+            { "text": "Avec près de 70 % d’abstention.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a polling station with a ballot box and a long row of empty chairs. Lucie (on the left) cheering with both arms up, yellow sparkles; Bernard (on the right) gesturing at the empty chairs with one hand, flat expression, one tiny light-blue sweat drop. wide shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-20.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 25,
+          "kind": "",
+          "tag": "",
+          "caption": "Le but : élire les députés juste après le président, pour qu’ils soient du même camp. Moins de risques de cohabitation.",
+          "bubbles": [
+            { "text": "Et ça marche ?", "side": "l" },
+            { "text": "Sur le papier, oui.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a simple wall calendar with two days circled close together. Bernard (on the right) tapping the two circled days with his pointer, satisfied; Lucie (on the left) squinting at the calendar, skeptical, arms crossed, light-blue sweat drop. plain background. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-21.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 26,
+          "kind": "",
+          "tag": "2008",
+          "caption": "Grande réforme de 2008 : un président ne peut plus faire plus de deux mandats de suite.",
+          "bubbles": [
+            { "text": "Dix ans à l’Élysée, puis on laisse la place.", "side": "r" },
+            { "text": "Au moins pour un mandat.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a palace door with a simple turnstile in front of it. Bernard (on the right) pointing at the turnstile like a stern guide; Lucie (on the left) holding up two fingers, curious, pink blush. behind them a tiny man in a dark suit carrying a cardboard box out of the door, sad, light-blue tear. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-22.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 27,
+          "kind": "",
+          "tag": "4 mars 2024",
+          "caption": "Réunis en Congrès à Versailles, députés et sénateurs inscrivent la liberté de recourir à l’avortement dans la Constitution.",
+          "bubbles": [
+            { "text": "780 voix contre 72. Il en fallait trois cinquièmes.", "side": "r" },
+            { "text": "Changer la Constitution demande une très large majorité.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a vast palace hall with a huge half-circle of tiny seated parliamentarians. Bernard (on the right) holding up a small tally board, focused; Lucie (on the left) writing in her notebook, serious and attentive, small yellow sparkles. calm, neutral mood. wide shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-23.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 28,
+          "kind": "",
+          "tag": "Décembre 2024",
+          "caption": "Pour la première fois depuis 1962, une motion de censure renverse un gouvernement.",
+          "bubbles": [
+            { "text": "Soixante-deux ans sans censure réussie.", "side": "r" },
+            { "text": "La IVe aurait appelé ça un mardi.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a single tiny minister's chair tipped over on a bare floor. Bernard (on the right) staring at it, glasses slipping down his nose, stunned, light-blue sweat drop; Lucie (on the left) shrugging with a half smile, unimpressed. plain background. medium shot",
+            "cast": ["lucie", "prof"],
+            "file": "images/dossier-24.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 29,
+          "kind": "explain",
+          "tag": "En clair",
+          "title": "Alors, qui commande ?",
+          "text": "Tout dépend des députés. S’ils soutiennent le président, il domine tout. S’ils sont contre lui, c’est le Premier ministre qui gouverne. Et sans majorité claire, chaque loi se négocie, ou passe au 49.3.",
+          "joke": "Le vrai chef, c’est donc l’électeur. Deux fois."
+        },
+        {
+          "n": 30,
+          "kind": "",
+          "tag": "Le record",
+          "caption": "Si elle tient jusqu’en août 2028, la Ve battra le record de la IIIe République : 69 ans et 10 mois.",
+          "bubbles": [
+            { "text": "Je vous l’avais dit : une constitution à ma taille.", "side": "r" },
+            { "text": "Grande, et qui dure.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a simple measuring height chart on a wall. Charles (on the right) standing very straight against it, taller than the top of the chart, chin up, proud, yellow sparkles; Lucie (on the left) on tiptoe, marking his height with her yellow pencil, laughing, pink blush. medium shot",
+            "cast": ["gaulle", "lucie"],
+            "file": "images/dossier-25.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Constitution du 4 octobre 1958 ; président élu au suffrage universel direct depuis 1962, pour cinq ans depuis le référendum de 2000.",
+        "source": "info.gouv.fr ; Wikipedia — référendums de 1962 et 2000"
+      },
+      "story": "Sous la IVe République (1946-1958), régime très parlementaire, les querelles de partis font tomber 24 gouvernements en douze ans. En mai 1958, la guerre d’Algérie provoque une crise : le 1er juin, les députés investissent le général de Gaulle, chargé d’écrire une nouvelle constitution. Préparée par une petite équipe autour de Michel Debré, elle est approuvée par environ 80 % des votants le 28 septembre et promulguée le 4 octobre 1958.\nLe système mêle deux logiques. Le président nomme le Premier ministre et peut dissoudre l’Assemblée ; les députés, eux, peuvent renverser le gouvernement par une motion de censure. En 1962, de Gaulle fait adopter par référendum (62 % de oui) l’élection du président au suffrage universel direct, ce qui en fait la pièce maîtresse du régime. Le gouvernement dispose aussi du 49.3 : un texte est adopté sans vote, sauf si une motion de censure passe.\nMais si les électeurs envoient à l’Assemblée une majorité opposée au président, celui-ci doit nommer un Premier ministre du camp adverse : c’est la cohabitation (1986, 1993, 1997). Pour l’éviter, le quinquennat est adopté en 2000. La Constitution a depuis été révisée à de nombreuses reprises, en 2008 (deux mandats consécutifs au plus) comme en 2024. Si elle dure jusqu’en août 2028, la Ve République battra le record de longévité de la IIIe.",
+      "sources": [
+        { "title": "info.gouv.fr — La petite histoire de la Constitution du 4 octobre 1958", "url": "https://www.info.gouv.fr/actualite/la-petite-histoire-de-la-constitution-du-4-octobre-1958" },
+        { "title": "Larousse — Ve République", "url": "https://www.larousse.fr/encyclopedie/divers/V_e_République/140715" },
+        { "title": "Wikipedia — 1962 French presidential election referendum", "url": "https://en.wikipedia.org/wiki/1962_French_presidential_election_referendum" },
+        { "title": "Wikipedia — 1965 French presidential election", "url": "https://en.wikipedia.org/wiki/1965_French_presidential_election" },
+        { "title": "Vie publique — Le recours à l’article 49.3 de la Constitution", "url": "https://www.vie-publique.fr/fiches/19494-le-recours-larticle-493-de-la-constitution" },
+        { "title": "Public Sénat — Qu’est-ce qu’une cohabitation ?", "url": "https://www.publicsenat.fr/actualites/politique/quest-ce-quune-cohabitation" },
+        { "title": "Wikipedia — 2000 French constitutional referendum", "url": "https://en.wikipedia.org/wiki/2000_French_constitutional_referendum" },
+        { "title": "Le Petit Juriste — La réforme constitutionnelle du 23 juillet 2008", "url": "https://www.lepetitjuriste.fr/la-reforme-constitutionnelle-du-23-juillet-2008/" },
+        { "title": "LCP — La France inscrit l’IVG dans sa Constitution", "url": "https://lcp.fr/actualites/apres-le-vote-du-congres-la-france-devient-le-premier-pays-au-monde-a-inscrire-l-ivg" },
+        { "title": "Public Sénat — À 60 ans, la Ve République est encore à près de dix ans du record de longévité", "url": "https://www.publicsenat.fr/actualites/politique/a-60-ans-la-ve-republique-est-encore-a-pres-de-dix-ans-du-record-de-longevite" }
+      ]
+    },
+    {
       "id": "cultureg",
       "label": "La Pilule de Culture G",
       "title": "Le mètre est trop court, et c’est la faute d’un perfectionniste",
