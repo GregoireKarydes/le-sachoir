@@ -1,0 +1,20 @@
+{
+  "request": {
+    "note": "Validation de la référence de style pipeline/style_ref.png (case de Greg, 6 novembre 2026). Personnages inventés, variés.",
+    "styles": [
+      {
+        "id": "scribble",
+        "name": "Gribouillage (style.json)"
+      }
+    ],
+    "scenes": [
+      "a tired office worker with short curly blond hair and a white shirt slumped over a desk next to a laptop, one tiny sweat drop, a red coffee mug as the only colour",
+      "a Roman senator with a bald head and a white toga proudly pointing at a sundial, smug eyebrows",
+      "two friends side by side: a tall one with a black beanie gasping with a big round mouth, a short one with a bun shrugging, arms limp",
+      "an old scientist with wild white hair and a white lab coat holding a tiny green test tube, eyes wide, melting into a puddle of despair",
+      "a child-sized knight in grey armour with a black plume, tripping over his own sword, motion lines",
+      "a woman with a black ponytail and a black turtleneck reading a huge book, eyebrows raised in disbelief, a yellow lamp as the only colour"
+    ]
+  },
+  "results": []
+}
