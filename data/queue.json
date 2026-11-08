@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T19:39+01:00",
+ "updated_at": "2026-11-08T20:26+01:00",
  "stock": {
   "cultureg": [
    {
@@ -34,7 +34,7 @@
     "images_done": 11,
     "images_total": 11,
     "failed": 0,
-    "redo": 0
+    "redo": 2
    },
    {
     "path": "stock/cultureg/20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
@@ -259,7 +259,7 @@
     "images_done": 36,
     "images_total": 36,
     "failed": 0,
-    "redo": 1
+    "redo": 3
    },
    {
     "path": "stock/dossier/20261110-0100-qui-commande-en-france-la-ve-republique",
