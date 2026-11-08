@@ -12,6 +12,7 @@
       "cast": [
         {
           "id": "delambre",
+          "name": "Jean-Baptiste Delambre",
           "look": "Jean-Baptiste, a 1790s French astronomer in his forties, bald on top with grey tufts on the sides, big round nose, calm patient face, black coat, carrying a round brass measuring instrument",
           "file": "cast/cultureg-delambre.png",
           "status": "done",
@@ -19,6 +20,7 @@
         },
         {
           "id": "mechain",
+          "name": "Pierre Méchain",
           "look": "Pierre, a thin anxious 1790s French astronomer, tall messy powdered wig, deep dark circles under the eyes, bony fingers, black coat, a small notebook always clutched to his chest, a blue scarf as the only colour",
           "file": "cast/cultureg-mechain.png",
           "status": "done",
@@ -26,6 +28,7 @@
         },
         {
           "id": "milicien",
+          "name": "Un milicien",
           "look": "a short stocky suspicious 1790s village militiaman, bushy black moustache, narrowed eyes, white shirt, black waistcoat, a red phrygian cap as the only colour, holding a pike",
           "file": "cast/cultureg-milicien.png",
           "status": "done",
@@ -51,10 +54,12 @@
           "bubbles": [
             {
               "text": "Le mètre : un dix-millionième de la distance du pôle Nord à l’équateur.",
+              "who": "delambre",
               "side": "l"
             },
             {
               "text": "Pour tous les peuples, pour tous les temps !",
+              "who": "mechain",
               "side": "r"
             }
           ],
@@ -77,10 +82,12 @@
           "bubbles": [
             {
               "text": "On marche jusqu’au pôle Nord ?",
+              "who": "mechain",
               "side": "r"
             },
             {
               "text": "Non. On mesure une ligne nord-sud, le méridien, et on calcule.",
+              "who": "delambre",
               "side": "l"
             }
           ],
@@ -103,10 +110,12 @@
           "bubbles": [
             {
               "text": "Je fais le nord, vous le sud. Rendez-vous à Rodez.",
+              "who": "delambre",
               "side": "l"
             },
             {
               "text": "Ça va durer plus de six ans.",
+              "who": "mechain",
               "side": "r"
             }
           ],
@@ -141,10 +150,12 @@
           "bubbles": [
             {
               "text": "Vous espionnez qui, là-haut ?",
+              "who": "milicien",
               "side": "r"
             },
             {
               "text": "La Terre. Pour la République.",
+              "who": "delambre",
               "side": "l"
             }
           ],
@@ -167,10 +178,12 @@
           "bubbles": [
             {
               "text": "C’est quoi, ces cercles en cuivre ?",
+              "who": "milicien",
               "side": "r"
             },
             {
               "text": "De la science. Très patriote, la science.",
+              "who": "mechain",
               "side": "l"
             }
           ],
@@ -193,6 +206,7 @@
           "bubbles": [
             {
               "text": "Trois secondes d’arc d’écart… Personne ne doit savoir.",
+              "who": "mechain",
               "side": "l"
             }
           ],
@@ -214,6 +228,7 @@
           "bubbles": [
             {
               "text": "Personne ne relit les carnets. Hein ? Personne ?",
+              "who": "mechain",
               "side": "l"
             }
           ],
@@ -236,6 +251,7 @@
           "bubbles": [
             {
               "text": "Pour le bien du mètre, on n’en parle pas.",
+              "who": "delambre",
               "side": "l"
             }
           ],
@@ -257,10 +273,12 @@
           "bubbles": [
             {
               "text": "Et seize mètres en marbre dans Paris, pour que chacun s’habitue.",
+              "who": "delambre",
               "side": "l"
             },
             {
               "text": "Deux encore visibles : Vaugirard et Vendôme.",
+              "who": "mechain",
               "side": "r"
             }
           ],
@@ -283,10 +301,12 @@
           "bubbles": [
             {
               "text": "Ce n’est pas ma faute !",
+              "who": "mechain",
               "side": "r"
             },
             {
               "text": "Pas seulement.",
+              "who": "mechain",
               "side": "r"
             }
           ],
