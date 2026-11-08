@@ -12,6 +12,7 @@
       "cast": [
         {
           "id": "law",
+          "name": "John Law",
           "look": "John, a tall elegant Scottish gambler of the 1710s, long curly brown wig, sly confident smile, black frock coat, a red waistcoat as the only colour, playing cards peeking out of his pocket",
           "file": "cast/cultureg-law.png",
           "status": "done",
@@ -19,6 +20,7 @@
         },
         {
           "id": "regent",
+          "name": "Le Régent",
           "look": "Philippe, the Regent of France in the 1710s, plump middle-aged man, huge black curly wig, heavy sleepy eyelids, black coat with a big white lace jabot",
           "file": "cast/cultureg-regent.png",
           "status": "done",
@@ -26,6 +28,7 @@
         },
         {
           "id": "spec",
+          "name": "Un spéculateur",
           "look": "Gaspard, a frantic thin Parisian speculator of 1720, crooked white wig, wide crazy eyes, grey coat with bulging pockets stuffed with papers, a quill behind his ear",
           "file": "cast/cultureg-spec.png",
           "status": "done",
@@ -33,6 +36,7 @@
         },
         {
           "id": "bossu",
+          "name": "Le bossu",
           "look": "an old hunchbacked Parisian man of 1720, bald head with white tufts, big hump on his back, patched grey coat, sly toothless grin",
           "file": "cast/cultureg-bossu.png",
           "status": "done",
@@ -61,10 +65,12 @@
           "bubbles": [
             {
               "text": "Il me faudrait de l’argent. Beaucoup. Tout de suite.",
+              "who": "regent",
               "side": "l"
             },
             {
               "text": "J’ai une idée. Je suis joueur professionnel.",
+              "who": "law",
               "side": "r"
             }
           ],
@@ -89,10 +95,12 @@
           "bubbles": [
             {
               "text": "Et votre plan ?",
+              "who": "regent",
               "side": "l"
             },
             {
               "text": "Payer avec du papier au lieu de pièces d’or.",
+              "who": "law",
               "side": "r"
             }
           ],
@@ -117,10 +125,12 @@
           "bubbles": [
             {
               "text": "Pourquoi prendre un papier plutôt que de l’or ?",
+              "who": "regent",
               "side": "l"
             },
             {
               "text": "Il est plus léger. Et tant qu’on peut l’échanger, il en vaut autant.",
+              "who": "law",
               "side": "r"
             }
           ],
@@ -144,14 +154,17 @@
           "bubbles": [
             {
               "text": "La Louisiane : un Eldorado !",
+              "who": "law",
               "side": "l"
             },
             {
               "text": "Vous y êtes allé ?",
+              "who": "spec",
               "side": "r"
             },
             {
               "text": "Non.",
+              "who": "law",
               "side": "l"
             }
           ],
@@ -182,6 +195,7 @@
           "bubbles": [
             {
               "text": "J’achète ! J’achète tout ! Je ne sais pas quoi !",
+              "who": "spec",
               "side": "r"
             }
           ],
@@ -205,10 +219,12 @@
           "bubbles": [
             {
               "text": "Signature rapide, tarif rapide.",
+              "who": "bossu",
               "side": "l"
             },
             {
               "text": "Je signe sur votre dos ? Génial !",
+              "who": "spec",
               "side": "r"
             }
           ],
@@ -235,10 +251,12 @@
           "bubbles": [
             {
               "text": "Je suis millionnaire !",
+              "who": "spec",
               "side": "r"
             },
             {
               "text": "En papier.",
+              "who": "bossu",
               "side": "l"
             }
           ],
@@ -263,10 +281,12 @@
           "bubbles": [
             {
               "text": "Mon or, s’il vous plaît.",
+              "who": "spec",
               "side": "r"
             },
             {
               "text": "Aujourd’hui ? Genre… maintenant ?",
+              "who": "law",
               "side": "l"
             }
           ],
@@ -302,10 +322,12 @@
           "bubbles": [
             {
               "text": "Il est où, l’Écossais ?",
+              "who": "regent",
               "side": "l"
             },
             {
               "text": "Parti. Ses billets, eux, sont restés.",
+              "who": "spec",
               "side": "r"
             }
           ],
@@ -330,6 +352,7 @@
           "bubbles": [
             {
               "text": "J’avais raison. Juste un peu trop vite.",
+              "who": "law",
               "side": "l"
             }
           ],
