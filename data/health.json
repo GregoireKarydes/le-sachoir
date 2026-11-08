@@ -1,11 +1,11 @@
 {
- "updated_at": "2026-11-08T05:00:39.130640+01:00",
+ "updated_at": "2026-11-08T05:13:30.430730+01:00",
  "today": "2026-11-08",
  "problems": [],
  "days": [
   {
    "date": "2026-11-08",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -72,21 +72,27 @@
    "waiting": 5,
    "blocked": 0,
    "images_left": 47,
-   "focus": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute (11 image(s) à faire)"
+   "focus": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute (11 image(s) à faire)",
+   "next": "20261109-0100-lecossais-qui-a-invente-le-billet-et-la",
+   "next_redo": 4
   },
   "insolite": {
    "ready": 1,
    "waiting": 5,
    "blocked": 0,
    "images_left": 40,
-   "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (8 image(s) à faire)"
+   "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (8 image(s) à faire)",
+   "next": "20261109-0100-la-joconde-est-devenue-une-star-en-dispa",
+   "next_redo": 5
   },
   "dossier": {
    "ready": 1,
    "waiting": 1,
    "blocked": 0,
    "images_left": 26,
-   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (26 image(s) à faire)"
+   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (26 image(s) à faire)",
+   "next": "20261109-0100-1789-1799-dix-ans-un-roi-en-moins-un-gen",
+   "next_redo": 9
   }
  },
  "days_ahead_drawn": 1,
