@@ -30,9 +30,23 @@ L'adresse du site se règle dans `pipeline/site.json` (`base_url`), avec le code
 - `prompts/` : la charte de l'humour et les consignes des tâches Claude.
 - `data/rss/` : titres collectés (3 derniers jours).
 
+## Comptes, newsletter et écran admin (API `worker/`)
+Une petite API sur Cloudflare (Worker + base D1, offre gratuite), déployée par `.github/workflows/api.yml` :
+- **Comptes** facultatifs, sans mot de passe : un code à 6 chiffres et un lien magique par e-mail. Les données du téléphone (série, dossiers, lectures, favoris, jeu) sont fusionnées avec le compte et synchronisées entre appareils.
+- **Newsletter** quotidienne envoyée par Brevo (300 e-mails/jour gratuits) dès que l'édition du jour est publiée (vérification toutes les 30 min de 5 h à 11 h). Abonnement avec ou sans compte, désinscription en un clic, ouvertures et clics mesurés.
+- **Premium** : champ par compte, donné à la main dans l'écran admin en attendant Stripe. Les verrous (Grand Dossier après la case 4, archives, Découvrir, favoris) ne s'activent que si `"paywall": true` dans `pipeline/site.json`.
+- **Mesure d'audience** anonyme : un identifiant tiré au hasard par appareil, ni cookie ni IP, « Do Not Track » respecté.
+- **Écran admin** : `admin.html` (lien dans Profil › Mon compte pour les adresses de `ADMIN_EMAILS`) : chaîne de publication, audience, rétention, lecture par format, BD les plus lues, jeu, comptes, séries, newsletter (aperçu, test, envoi), gestion du Premium.
+
+Réglages dans `worker/wrangler.toml` (`ADMIN_EMAILS`, `SENDER_EMAIL`, `MAIL_DAILY_LIMIT`). L'adresse de l'API est écrite toute seule dans `pipeline/site.json` (`api_url`) au premier déploiement ; tant qu'elle est vide, l'appli fonctionne comme avant.
+
+Tester en local : `cd worker && npm i && npx wrangler d1 migrations apply sachoir --local && npm run dev` (avec un fichier `.dev.vars` contenant `DEV=1`, `API_URL`, `APP_URL`, `APP_ORIGINS` ; sans clé Brevo, les e-mails s'affichent dans la console et le code est renvoyé par l'API). Tests : `npm test`.
+
 ## Secrets nécessaires (Settings › Secrets and variables › Actions)
 - `CF_ACCOUNT_ID` : identifiant du compte Cloudflare.
 - `CF_API_TOKEN` : jeton Cloudflare avec le modèle « Workers AI ».
+- `CF_DEPLOY_TOKEN` : jeton Cloudflare pour déployer l'API (modèle « Edit Cloudflare Workers » + permission « D1 : Edit »).
+- `BREVO_API_KEY` : clé API Brevo (SMTP & API › Clés API), pour les e-mails de connexion et la newsletter.
 
 ## Lancer à la main
 - Régénérer les images : onglet *Actions* › *Images* › *Run workflow*.

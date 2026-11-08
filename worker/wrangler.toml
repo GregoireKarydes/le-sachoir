@@ -1,0 +1,25 @@
+# API du Sachoir : comptes, synchro, newsletter, mesures d'audience et indicateurs admin.
+# Déployée automatiquement par .github/workflows/api.yml (la base D1 est créée au premier passage).
+name = "le-sachoir-api"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[vars]
+APP_URL = "https://gregoirekarydes.github.io/le-sachoir/"
+APP_ORIGINS = "https://gregoirekarydes.github.io"
+ADMIN_EMAILS = "gregoire.karydes@gmail.com"
+SENDER_NAME = "Le Sachoir"
+SENDER_EMAIL = "gregoire.karydes@gmail.com"
+MAIL_DAILY_LIMIT = "290"   # offre gratuite Brevo : 300 e-mails par jour, on garde une marge
+# API_URL est ajoutée par le workflow (adresse workers.dev connue après le premier déploiement).
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sachoir"
+database_id = "__D1_ID__"
+migrations_dir = "migrations"
+
+[triggers]
+# Toutes les 30 min entre 5 h et 11 h (heure de Paris en hiver) : la newsletter part dès que l'édition est publiée.
+crons = ["*/30 3-9 * * *"]

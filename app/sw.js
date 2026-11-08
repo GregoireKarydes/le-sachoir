@@ -1,5 +1,5 @@
 // Service worker du Sachoir (v1.0) : appli disponible hors ligne, éditions mises à jour dès que possible.
-const VERSION = "sachoir-v16";
+const VERSION = "sachoir-v17";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "assets/logo.png", "assets/icon-192.png", "assets/icon-512.png", "assets/books.png"];
 
 self.addEventListener("install", e => {
@@ -11,6 +11,9 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET") return;
+  // API du Sachoir et autres services : jamais de cache (données de compte, mesures).
+  if (url.origin !== location.origin && !url.hostname.endsWith("gstatic.com") && !url.hostname.endsWith("googleapis.com")) return;
+  if (url.pathname.endsWith("/admin.html")) return;
   // Index et éditions : réseau d'abord, cache en secours (lecture hors ligne).
   if (url.pathname.endsWith(".json") || e.request.mode === "navigate") {
     e.respondWith(fetch(e.request).then(r => { const copy = r.clone(); caches.open(VERSION).then(c => c.put(e.request, copy)); return r; })

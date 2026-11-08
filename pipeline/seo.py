@@ -281,4 +281,9 @@ def build(site: Path, index: list):
     app = site / "index.html"
     links = "".join(f'<a href="{e(s["url_abs"])}">{e(s["title"])} — {e(s["label"])}</a>' for s in public[:30])
     app.write_text(app.read_text().replace("__BASE__", BASE).replace("<!--SEO_LINKS-->", links))
+    # Adresse de l'API (comptes, newsletter, mesures) et verrous Premium : réglés dans site.json
+    api, paywall = SITE_CFG.get("api_url", "").rstrip("/"), "on" if SITE_CFG.get("paywall") else "off"
+    for page in (app, site / "admin.html"):
+        if page.exists():
+            page.write_text(page.read_text().replace("__API__", api).replace("__PAYWALL__", paywall))
     print(f"SEO : {len(stories)} page(s) d’histoire, {len(themes)} thème(s), sitemap de {len(urls)} URL.")

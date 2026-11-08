@@ -1,0 +1,90 @@
+name: API
+
+# Déploie l'API du Sachoir (Cloudflare Worker + base D1) : comptes, synchro, newsletter, mesures, admin.
+# Au premier passage : crée la base D1, applique le schéma, déploie, puis écrit l'adresse de l'API
+# dans pipeline/site.json et relance la Publication pour que l'appli s'y branche.
+# Secrets : CF_ACCOUNT_ID (déjà là), CF_DEPLOY_TOKEN (jeton Workers + D1), BREVO_API_KEY.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "worker/**"
+      - ".github/workflows/api.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: api
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worker
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CF_DEPLOY_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: worker/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - name: Tests
+        run: npm test
+      - name: Vérifier les secrets
+        run: |
+          [ -n "$CLOUDFLARE_API_TOKEN" ] || { echo "::error::Secret CF_DEPLOY_TOKEN manquant (jeton Cloudflare avec Workers Scripts : Edit et D1 : Edit)."; exit 1; }
+          [ -n "${{ secrets.BREVO_API_KEY }}" ] || echo "::warning::Secret BREVO_API_KEY manquant : aucun e-mail ne partira (connexion et newsletter)."
+      - name: Base D1 (créée si besoin)
+        run: |
+          id=$(npx wrangler d1 list --json | node -e 'const l=JSON.parse(require("fs").readFileSync(0));const d=l.find(x=>x.name==="sachoir");process.stdout.write(d?d.uuid:"")')
+          if [ -z "$id" ]; then
+            npx wrangler d1 create sachoir
+            id=$(npx wrangler d1 list --json | node -e 'const l=JSON.parse(require("fs").readFileSync(0));process.stdout.write(l.find(x=>x.name==="sachoir").uuid)')
+          fi
+          sed -i "s/__D1_ID__/$id/" wrangler.toml
+          npx wrangler d1 migrations apply sachoir --remote
+      - name: Adresse de l'API
+        id: url
+        run: |
+          sub=$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain" | node -e 'process.stdout.write(JSON.parse(require("fs").readFileSync(0)).result?.subdomain||"")')
+          [ -n "$sub" ] || { echo "::error::Pas de sous-domaine workers.dev : ouvrez une fois Workers & Pages dans le tableau de bord Cloudflare pour le créer."; exit 1; }
+          echo "api=https://le-sachoir-api.$sub.workers.dev" >> "$GITHUB_OUTPUT"
+      - name: Déployer
+        run: npx wrangler deploy --var "API_URL:${{ steps.url.outputs.api }}"
+      - name: Clé Brevo
+        env:
+          BREVO: ${{ secrets.BREVO_API_KEY }}
+        run: if [ -n "$BREVO" ]; then printf '%s' "$BREVO" | npx wrangler secret put BREVO_API_KEY; fi
+      - name: Brancher l'appli sur l'API
+        working-directory: .
+        env:
+          GH_TOKEN: ${{ github.token }}
+          API: ${{ steps.url.outputs.api }}
+        run: |
+          curl -fsS "$API/" > /dev/null || echo "::warning::L'API ne répond pas encore (propagation workers.dev)."
+          python3 - <<'EOF'
+          import json, os
+          p = "pipeline/site.json"; c = json.load(open(p))
+          if c.get("api_url") != os.environ["API"]:
+              c["api_url"] = os.environ["API"]
+              open(p, "w").write(json.dumps(c, ensure_ascii=False, indent=2) + "\n")
+          EOF
+          if ! git diff --quiet pipeline/site.json; then
+            git config user.name "sachoir-bot"
+            git config user.email "sachoir-bot@users.noreply.github.com"
+            git commit -am "API : adresse de l'API dans site.json"
+            for i in 1 2 3; do git pull --rebase && git push && ok=1 && break; sleep $((i * 15)); done
+            [ -n "$ok" ] || { echo "::error::Push impossible"; exit 1; }
+            gh workflow run publish.yml --ref main
+          fi
