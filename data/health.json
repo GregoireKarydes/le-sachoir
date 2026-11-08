@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T03:23:15.581536+01:00",
+ "updated_at": "2026-11-08T03:26:49.775872+01:00",
  "today": "2026-11-08",
  "problems": [],
  "days": [
@@ -18,9 +18,9 @@
    "date": "2026-11-09",
    "status": "draft",
    "formats": {
-    "dossier": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
+    "dossier": "9 image(s) à faire",
+    "cultureg": "4 image(s) à faire",
+    "insolite": "5 image(s) à faire",
     "quiz": "prêt"
    }
   },
@@ -74,7 +74,7 @@
  "today_published": false,
  "today_stories": [],
  "last_published": "2026-11-07",
- "days_ahead_drawn": 1,
+ "days_ahead_drawn": 0,
  "days_ahead_written": 6,
  "quota": {
   "day": "2026-11-08",
