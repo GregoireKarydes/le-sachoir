@@ -17,7 +17,7 @@ MAIL_DAILY_LIMIT = "290"   # offre gratuite Brevo : 300 e-mails par jour, on gar
 [[d1_databases]]
 binding = "DB"
 database_name = "sachoir"
-database_id = "__D1_ID__"
+database_id = "73ecc443-6109-4a5f-8cc9-7c5dee3db0b2"
 migrations_dir = "migrations"
 
 [triggers]

@@ -3,6 +3,6 @@
   "name": "Le Sachoir",
   "tagline": "L'actu et la culture G en BD, chaque jour",
   "google_site_verification": "",
-  "api_url": "",
+  "api_url": "https://le-sachoir-api.combienvautmonlogement.workers.dev",
   "paywall": "auto"
 }
