@@ -1,10 +1,21 @@
 {
- "updated_at": "2026-11-08T03:26:49.775872+01:00",
+ "updated_at": "2026-11-08T04:54:17.144330+01:00",
  "editions": [
   {
    "date": "2026-11-07",
    "demo": false,
    "formats": [
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "L’immeuble haussmannien, ou l’ascenseur social à l’envers",
+     "kind": "",
+     "url": "histoires/2026-11-07-l-immeuble-haussmannien-ou-l-ascenseur-social-a-l-envers/",
+     "theme": "Architecture",
+     "minutes": 2,
+     "tagline": "Pourquoi les balcons sont au 2e et au 5e (et pourquoi la bonne avait la plus belle vue)",
+     "cover": "images/cultureg-cover.webp"
+    },
     {
      "id": "insolite",
      "label": "L’Insolite Historique",
