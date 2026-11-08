@@ -91,10 +91,7 @@
             "file": "images/insolite-02.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal",
-            "redo": true,
-            "redo_attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (b918ec4e-de37-4af6-bbea-c22d647e538c)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "via": "fal"
           }
         },
         {

@@ -32,7 +32,8 @@
           "look": "Chloé, a small modern Parisian office worker in 2013, high messy ponytail, black trousers, white shirt, a yellow scarf as the only colour, a coffee cup in hand",
           "file": "cast/insolite-chloe.png",
           "status": "pending",
-          "role": "a modern office worker amazed that the rule lasted until 2013; small, wide-eyed, holding her coffee"
+          "role": "a modern office worker amazed that the rule lasted until 2013; small, wide-eyed, holding her coffee",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (f28ccbc0-edcc-4f00-8ad4-0efe2afb9e3c)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "cover": {
@@ -42,8 +43,8 @@
           "chloe"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {

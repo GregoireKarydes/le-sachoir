@@ -34,7 +34,7 @@
           "look": "Bastien, an ordinary man in his thirties, average build, very messy black hair sticking up, big oversized grey hoodie, black jeans, white sneakers, tired eyes",
           "role": "the everyday reader who discovers the news; curious, slightly slouched, eyebrows always raised",
           "file": "cast/actu-lambda.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "espagnol",
@@ -42,7 +42,7 @@
           "look": "a young athletic tennis champion, medium height and muscular, thick dark brown curly hair held by a white headband, white polo shirt, black shorts, red wristband as the only colour, racket in hand",
           "role": "the tennis winner, relaxed and cheeky, big confident grin, always holding something up",
           "file": "cast/actu-espagnol.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "huissier",
@@ -63,10 +63,13 @@
       ],
       "cover": {
         "prompt": "A plain bookshop corner. lambda (messy black hair, grey hoodie) on the left, sitting on a small stool, nose buried in the thick book, eyebrows raised in disbelief. espagnol (curly hair, white headband, red wristband) on the right, standing tall, lifting the trophy high above his head with a huge grin, tiny yellow sparkles of pride. Wide shot, calm empty space above.",
-        "cast": ["lambda", "espagnol"],
+        "cast": [
+          "lambda",
+          "espagnol"
+        ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -75,14 +78,20 @@
           "tag": "Économie",
           "caption": "Ce lundi, le Premier ministre réunit syndicats et patronat à Matignon. Smic actuel : 1 477 € net. Le ministre du Travail veut dépasser 1 500 €, la CFDT réclame 100 € de plus.",
           "bubbles": [
-            { "who": "huissier", "text": "J’ai prévu un grand tableau. Surtout pour la place des ratures.", "side": "r" }
+            {
+              "who": "huissier",
+              "text": "J’ai prévu un grand tableau. Surtout pour la place des ratures.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "A formal meeting room with one long empty table and a few chairs. huissier (tiny, hunched, bald with white tufts, yellow bow tie) on the right, pushing the whiteboard into the room with great effort, deadpan face, a big box of erasers balanced on top. On the left, a row of empty chairs. Medium shot, calm empty space above.",
-            "cast": ["huissier"],
+            "cast": [
+              "huissier"
+            ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -98,14 +107,20 @@
           "tag": "Politique",
           "caption": "Samedi au Bourget, le leader insoumis a présenté son programme pour 2027 : 1 069 propositions, réunies dans un livre vendu 4,90 € en librairie.",
           "bubbles": [
-            { "who": "lambda", "text": "Moins d’un demi-centime la proposition. Même les soldes ne font pas ça.", "side": "l" }
+            {
+              "who": "lambda",
+              "text": "Moins d’un demi-centime la proposition. Même les soldes ne font pas ça.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "A small bookshop counter with a cash register. lambda (messy black hair, grey hoodie) on the left, holding the thick book in one hand and a tiny coin in the other, squinting at the coin, then at the book, mental arithmetic face, one eyebrow very high. Behind the counter, an empty stool. Close-up medium shot, calm space above.",
-            "cast": ["lambda"],
+            "cast": [
+              "lambda"
+            ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -121,14 +136,20 @@
           "tag": "Monde",
           "caption": "En Israël, le président a chargé dimanche le chef de l’opposition, un ancien général, de former un gouvernement. 67 députés l’ont recommandé, mais son camp n’a que 48 sièges.",
           "bubbles": [
-            { "who": "general", "text": "67 soutiens, 48 chaises, 61 places à remplir. Je reprends le plan de table.", "side": "l" }
+            {
+              "who": "general",
+              "text": "67 soutiens, 48 chaises, 61 places à remplir. Je reprends le plan de table.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "A bare office with the seatingplan board on the wall. general (tall, broad-shouldered, grey crew cut, blue folder) on the left, standing very upright, pointing a marker at the empty circles like a battle map, lips pressed, a single light-blue sweat drop. On the floor in front of him, a small pile of folding chairs, clearly too few. Medium shot, calm space above.",
-            "cast": ["general"],
+            "cast": [
+              "general"
+            ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -144,14 +165,20 @@
           "tag": "Sport",
           "caption": "Au Masters de Paris, le champion espagnol bat l’Américain en finale, 7-6, 7-5. Une semaine plus tôt, l’Américain annonçait avoir recruté pour 2027 l’ancien entraîneur de l’Espagnol.",
           "bubbles": [
-            { "who": "espagnol", "text": "Garde-le bien. Il connaît tous mes défauts : c’est lui qui me les a corrigés.", "side": "l" }
+            {
+              "who": "espagnol",
+              "text": "Garde-le bien. Il connaît tous mes défauts : c’est lui qui me les a corrigés.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "An indoor tennis court, by the net. espagnol (curly hair, white headband, red wristband) on the left, hugging the trophy under one arm, patting the net with his other hand, cheeky wide grin, eyes half closed. On the right, beyond the net, only an empty player bench with a towel. Medium shot, low angle, calm empty space above.",
-            "cast": ["espagnol"],
+            "cast": [
+              "espagnol"
+            ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -167,18 +194,54 @@
         "source": "PBS NewsHour / Breitbart"
       },
       "sources": [
-        { "title": "LCP — Salaires, pouvoir d’achat : que peut-on attendre de la conférence sociale du lundi 9 novembre ?", "url": "https://lcp.fr/actualites/salaires-pouvoir-d-achat-que-peut-on-attendre-de-la-conference-sociale-du-lundi-9" },
-        { "title": "Sud Radio — Conférence sociale à Matignon : qu’est-ce qui s’y joue, et avec qui ?", "url": "https://www.sudradio.fr/sud-radio/conference-sociale-a-matignon-quest-ce-qui-sy-joue-et-avec-qui" },
-        { "title": "LCP — Présidentielle 2027 : ce qui change dans le nouveau programme", "url": "https://lcp.fr/actualites/presidentielle-2027-ce-qui-change-dans-le-nouveau-programme-de-jean-luc-melenchon-444841" },
-        { "title": "AFP via Bourse Direct — Pour 2027, LFI présente un programme fidèle à sa volonté de rupture", "url": "https://www.boursedirect.fr/fr/actualites/categorie/politique/pour-2027-lfi-presente-un-programme-fidele-a-sa-volonte-de-rupture-afp-756b72dfa87a534448dbb17b657b6ba86a839fda" },
-        { "title": "Sud Radio — Présidentielle 2027 : LFI à contre-courant avec la sortie de son livre-programme", "url": "https://www.sudradio.fr/politique/presidentielle-2027-melenchon-et-lfi-a-contre-courant-avec-la-sortie-de-leur-livre-programme" },
-        { "title": "PBS NewsHour — Israel’s president formally gives Eisenkot the first chance to form the next government", "url": "https://www.pbs.org/newshour/world/israels-president-formally-gives-eisenkot-the-first-chance-to-form-the-next-government" },
-        { "title": "Breitbart — Israeli president Herzog tasks Eisenkot with forming government", "url": "https://www.breitbart.com/politics/2026/11/07/israeli-president-herzog-tasks-eisenkot-with-forming-government-in-setback-for-netanyahu/" },
-        { "title": "CNN — Netanyahu rival tasked with forming next Israeli government", "url": "https://www.cnn.com/2026/11/07/middleeast/eisenkot-israel-government-latam-intl" },
-        { "title": "ATP Tour — Alcaraz defeats Shelton to win first Paris title", "url": "https://www.atptour.com/en/news/alcaraz-shelton-paris-2026-final-sunday" },
-        { "title": "ABC News (AP) — Alcaraz beats Shelton in Paris Masters final for his fifth title this year", "url": "https://abcnews.com/Sports/wireStory/alcaraz-beats-shelton-paris-masters-final-title-year-137956352" },
-        { "title": "Tennis Majors — Irresistible Alcaraz finally conquers Paris", "url": "https://www.tennismajors.com/atp/rolex-paris-masters-1000-atp/irresistible-alcaraz-finally-conquers-paris-and-gets-his-us-open-revenge-on-shelton-866412.html" },
-        { "title": "NY1 (AP) — Ben Shelton adds Juan Carlos Ferrero to his coaching staff for 2027", "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/11/02/ben-shelton-adds-juan-carlos-ferrero-to-his-coaching-staff-for-2027" }
+        {
+          "title": "LCP — Salaires, pouvoir d’achat : que peut-on attendre de la conférence sociale du lundi 9 novembre ?",
+          "url": "https://lcp.fr/actualites/salaires-pouvoir-d-achat-que-peut-on-attendre-de-la-conference-sociale-du-lundi-9"
+        },
+        {
+          "title": "Sud Radio — Conférence sociale à Matignon : qu’est-ce qui s’y joue, et avec qui ?",
+          "url": "https://www.sudradio.fr/sud-radio/conference-sociale-a-matignon-quest-ce-qui-sy-joue-et-avec-qui"
+        },
+        {
+          "title": "LCP — Présidentielle 2027 : ce qui change dans le nouveau programme",
+          "url": "https://lcp.fr/actualites/presidentielle-2027-ce-qui-change-dans-le-nouveau-programme-de-jean-luc-melenchon-444841"
+        },
+        {
+          "title": "AFP via Bourse Direct — Pour 2027, LFI présente un programme fidèle à sa volonté de rupture",
+          "url": "https://www.boursedirect.fr/fr/actualites/categorie/politique/pour-2027-lfi-presente-un-programme-fidele-a-sa-volonte-de-rupture-afp-756b72dfa87a534448dbb17b657b6ba86a839fda"
+        },
+        {
+          "title": "Sud Radio — Présidentielle 2027 : LFI à contre-courant avec la sortie de son livre-programme",
+          "url": "https://www.sudradio.fr/politique/presidentielle-2027-melenchon-et-lfi-a-contre-courant-avec-la-sortie-de-leur-livre-programme"
+        },
+        {
+          "title": "PBS NewsHour — Israel’s president formally gives Eisenkot the first chance to form the next government",
+          "url": "https://www.pbs.org/newshour/world/israels-president-formally-gives-eisenkot-the-first-chance-to-form-the-next-government"
+        },
+        {
+          "title": "Breitbart — Israeli president Herzog tasks Eisenkot with forming government",
+          "url": "https://www.breitbart.com/politics/2026/11/07/israeli-president-herzog-tasks-eisenkot-with-forming-government-in-setback-for-netanyahu/"
+        },
+        {
+          "title": "CNN — Netanyahu rival tasked with forming next Israeli government",
+          "url": "https://www.cnn.com/2026/11/07/middleeast/eisenkot-israel-government-latam-intl"
+        },
+        {
+          "title": "ATP Tour — Alcaraz defeats Shelton to win first Paris title",
+          "url": "https://www.atptour.com/en/news/alcaraz-shelton-paris-2026-final-sunday"
+        },
+        {
+          "title": "ABC News (AP) — Alcaraz beats Shelton in Paris Masters final for his fifth title this year",
+          "url": "https://abcnews.com/Sports/wireStory/alcaraz-beats-shelton-paris-masters-final-title-year-137956352"
+        },
+        {
+          "title": "Tennis Majors — Irresistible Alcaraz finally conquers Paris",
+          "url": "https://www.tennismajors.com/atp/rolex-paris-masters-1000-atp/irresistible-alcaraz-finally-conquers-paris-and-gets-his-us-open-revenge-on-shelton-866412.html"
+        },
+        {
+          "title": "NY1 (AP) — Ben Shelton adds Juan Carlos Ferrero to his coaching staff for 2027",
+          "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/11/02/ben-shelton-adds-juan-carlos-ferrero-to-his-coaching-staff-for-2027"
+        }
       ]
     },
     {
