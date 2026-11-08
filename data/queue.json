@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T21:27+01:00",
+ "updated_at": "2026-11-09T00:49+01:00",
  "stock": {
   "cultureg": [
    {
@@ -17,7 +17,7 @@
     "images_done": 11,
     "images_total": 11,
     "failed": 0,
-    "redo": 1
+    "redo": 0
    },
    {
     "path": "stock/cultureg/20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
@@ -121,7 +121,7 @@
     "images_done": 9,
     "images_total": 9,
     "failed": 0,
-    "redo": 1
+    "redo": 0
    },
    {
     "path": "stock/insolite/20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
@@ -135,7 +135,7 @@
     "minutes": 1,
     "cases": 8,
     "photos": 0,
-    "images_done": 0,
+    "images_done": 1,
     "images_total": 8,
     "failed": 0,
     "redo": 0
@@ -259,7 +259,7 @@
     "images_done": 36,
     "images_total": 36,
     "failed": 0,
-    "redo": 3
+    "redo": 0
    },
    {
     "path": "stock/dossier/20261110-0100-qui-commande-en-france-la-ve-republique",
@@ -282,86 +282,26 @@
  },
  "editions": [
   {
-   "date": "2026-11-08",
-   "path": "editions/2026-11-08",
-   "status": "published",
-   "newsletter": false,
+   "date": "2026-11-09",
+   "path": "editions/2026-11-09",
+   "status": "draft",
+   "newsletter": true,
    "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Tout ça pour un pain : Les Misérables en entier",
-     "theme": "Littérature",
-     "tagline": "Le roman-fleuve de Victor Hugo, du bagne de Toulon à la barricade de 1832, sans lire les 1 400 pages",
-     "minutes": 5,
-     "cases": 35,
-     "photos": 0,
-     "images_done": 31,
-     "images_total": 31,
-     "failed": 0,
-     "redo": 12
-    },
     {
      "id": "actu",
      "label": "L’Actu du jour",
      "kind": "",
-     "title": "La COP en colocation (et autres records)",
+     "title": "Plan de table pour tout le monde",
      "theme": "",
-     "tagline": "Des chiffres qui ne tombent jamais d’accord, un marin qui ne traîne pas et un sommet du climat à deux pays.",
+     "tagline": "Matignon cherche le bon chiffre, Israël cherche des chaises et Paris trouve enfin son champion.",
      "minutes": 2,
-     "cases": 6,
-     "photos": 0,
-     "images_done": 7,
-     "images_total": 7,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Tirer sur la corde ou tirer au flanc ?",
-     "theme": "Psychologie",
-     "tagline": "Pourquoi huit personnes tirent comme quatre (et votre réunion d’équipe aussi)",
-     "minutes": 2,
-     "cases": 10,
-     "photos": 0,
-     "images_done": 10,
-     "images_total": 10,
-     "failed": 0,
-     "redo": 2
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "kind": "",
-     "title": "Le Tour de France gagné par le cinquième",
-     "theme": "Sports",
-     "tagline": "En 1904, trains, voitures et clous : les quatre premiers ont tous été déclassés.",
-     "minutes": 1,
      "cases": 8,
      "photos": 0,
-     "images_done": 8,
-     "images_total": 8,
+     "images_done": 5,
+     "images_total": 5,
      "failed": 0,
-     "redo": 2
+     "redo": 0
     },
-    {
-     "id": "quiz",
-     "label": "Le Quiz géo",
-     "kind": "geo",
-     "title": "Trois questions, zéro GPS",
-     "questions": 3
-    }
-   ]
-  },
-  {
-   "date": "2026-11-09",
-   "path": "editions/2026-11-09",
-   "status": "draft",
-   "newsletter": false,
-   "formats": [
     {
      "id": "quiz",
      "label": "La Frise",

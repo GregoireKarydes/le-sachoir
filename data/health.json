@@ -1,23 +1,13 @@
 {
- "updated_at": "2026-11-08T21:27:58.155867+01:00",
- "today": "2026-11-08",
+ "updated_at": "2026-11-09T00:49:18.807805+01:00",
+ "today": "2026-11-09",
  "problems": [],
  "days": [
-  {
-   "date": "2026-11-08",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-09",
    "status": "draft",
    "formats": {
+    "actu": "prêt",
     "quiz": "prêt"
    }
   },
@@ -70,13 +60,8 @@
   "2026-11-06|cultureg",
   "2026-11-06|insolite"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-08",
  "stock": {
   "cultureg": {
@@ -86,16 +71,16 @@
    "images_left": 36,
    "focus": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro (9 image(s) à faire)",
    "next": "20261109-0100-lecossais-qui-a-invente-le-billet-et-la",
-   "next_redo": 1
+   "next_redo": 0
   },
   "insolite": {
    "ready": 1,
    "waiting": 5,
    "blocked": 0,
-   "images_left": 40,
-   "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (8 image(s) à faire)",
+   "images_left": 39,
+   "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (7 image(s) à faire)",
    "next": "20261109-0100-la-joconde-est-devenue-une-star-en-dispa",
-   "next_redo": 1
+   "next_redo": 0
   },
   "dossier": {
    "ready": 1,
@@ -104,21 +89,21 @@
    "images_left": 67,
    "focus": "20261108-1924-impressionnisme-refuses (20 image(s) à faire)",
    "next": "20261109-0100-1789-1799-dix-ans-un-roi-en-moins-un-gen",
-   "next_redo": 3
+   "next_redo": 0
   }
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-08",
-  "count": 35,
-  "neurons": 6400,
+  "count": 49,
+  "neurons": 8840,
   "exhausted": false,
   "by_kind": {
-   "cover": 1,
-   "case": 29,
-   "cast": 5
+   "cover": 3,
+   "case": 38,
+   "cast": 8
   },
   "exhausted_at": "2026-11-08T13:29:11.135070+00:00"
  },
@@ -126,7 +111,7 @@
   "month": "2026-11",
   "spent_usd": 0.78798,
   "images": 100,
-  "today_usd": 0.39455,
+  "today_usd": 0,
   "blocked": null
  }
 }
