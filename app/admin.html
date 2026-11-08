@@ -222,9 +222,13 @@ function draw() {
     <div class="row"><button class="btn ghost" id="nlPrev">Aperçu</button><button class="btn ghost" id="nlTest">M’envoyer un test</button><button class="btn" id="nlSend">Envoyer maintenant</button></div>
     <div id="nlBox"></div></div>
 
-  <h2>Premium et dossiers offerts</h2><p class="note">${K.revenue.stripe ? "Paiement Stripe actif (paiement unique : 1 mois ou 1 an)." : "Stripe pas encore branché : ajoutez le secret STRIPE_SECRET_KEY pour ouvrir le paiement et le paywall."}</p>
+  <h2>Premium et dossiers offerts</h2><p class="note">${K.revenue.stripe ? "Abonnements Stripe actifs (mensuel ou annuel, sans engagement)." : "Stripe pas encore branché : ajoutez le secret STRIPE_SECRET_KEY pour ouvrir le paiement et le paywall."}</p>
   <div class="grid">
-    ${tile(euro(K.revenue.byPlan.reduce((t, x) => t + x.cents, 0)), "Revenus sur la période", K.revenue.byPlan.map(x => `${nf(x.n)} × ${x.plan === "year" ? "1 an" : "1 mois"}`).join(" · ") || "aucun paiement")}
+    ${tile(nf(K.subscriptions.byPlan.reduce((t, x) => t + x.n, 0)), "Abonnés payants", K.subscriptions.byPlan.map(x => `${nf(x.n)} ${x.plan === "year" ? "annuel(s)" : "mensuel(s)"}`).join(" · ") || "aucun pour l'instant")}
+    ${tile(euro(K.subscriptions.mrrCents), "Revenu mensuel récurrent", "annuels comptés au douzième")}
+    ${tile(nf(K.subscriptions.byPlan.reduce((t, x) => t + (x.ending || 0), 0)), "Résiliations programmées", `${nf(K.subscriptions.churned)} abonnement(s) terminé(s) sur la période`)}
+    ${tile(nf(K.subscriptions.byPlan.reduce((t, x) => t + (x.late || 0), 0)), "Paiements en échec", "Stripe relance la carte", K.subscriptions.byPlan.some(x => x.late) ? "alert" : "")}
+    ${tile(euro(K.revenue.byPlan.reduce((t, x) => t + x.cents, 0)), "Encaissé sur la période", K.revenue.byPlan.map(x => `${nf(x.n)} × ${x.plan === "year" ? "1 an" : "1 mois"}`).join(" · ") || "aucun paiement")}
     ${tile(euro(K.revenue.totalCents), "Revenus depuis le début", nf(K.revenue.totalCount) + " paiement(s)")}
     ${tile(nf((K.credits.grants.find(g => g.reason === "newsletter") || {}).n || 0), "Dossiers offerts (newsletter)", `sur ${DAYS} jours`)}
     ${tile(nf((K.credits.grants.find(g => g.reason === "referral") || {}).n || 0), "Dossiers offerts (parrainage)", `sur ${DAYS} jours`)}
@@ -255,7 +259,7 @@ async function users(q) {
     $("#users").innerHTML = `<table><thead><tr><th>Compte</th><th>Inscrit</th><th>Vu</th><th>Newsletter</th><th>Premium</th></tr></thead><tbody>
       ${d.users.length ? d.users.map((u, i) => `<tr><td><b>${esc(u.email)}</b>${u.name ? `<br><span class="note">${esc(u.name)}</span>` : ""}</td><td>${esc(dShort(u.created_at.slice(0, 10)))}</td><td>${u.last_seen ? esc(dShort(u.last_seen.slice(0, 10))) : "—"}</td>
         <td>${u.nl === "active" ? `<span class="pill ok">Abonné</span>` : u.nl === "unsub" ? `<span class="pill">Désinscrit</span>` : "—"}</td>
-        <td><div class="row"><label class="row" style="gap:5px;cursor:pointer"><input type="checkbox" data-u="${i}" ${u.premium ? "checked" : ""}>${u.premium_on ? `<span class="pill ok">Actif</span>` : u.premium ? `<span class="pill ko">Expiré</span>` : ""}</label>
+        <td>${u.sub_plan && u.sub_status !== "canceled" ? `<span class="pill ${u.sub_status === "past_due" ? "ko" : "ok"}">${u.sub_plan === "year" ? "Annuel" : "Mensuel"}${u.sub_cancel_at_end ? " · résilié" : ""}</span> ` : ""}<div class="row"><label class="row" style="gap:5px;cursor:pointer"><input type="checkbox" data-u="${i}" ${u.premium ? "checked" : ""}>${u.premium_on ? `<span class="pill ok">Actif</span>` : u.premium ? `<span class="pill ko">Expiré</span>` : ""}</label>
           <input type="date" data-until="${i}" value="${esc(u.premium_until || "")}" title="Date de fin (vide = sans fin)" aria-label="Fin du Premium"></div></td></tr>`).join("") : `<tr><td colspan="5" class="note">Aucun compte${q ? " ne correspond" : " pour l’instant"}.</td></tr>`}</tbody></table>`;
     const set = async i => {
       const u = d.users[i], premium = $(`[data-u="${i}"]`).checked, until = $(`[data-until="${i}"]`).value;

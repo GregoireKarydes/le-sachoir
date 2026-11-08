@@ -1987,7 +1987,7 @@ function payHTML(ed, f) {
   if (WALLET.credits > 0) opts.push(`<button class="gold" data-pay="unlock">🎁 Débloquer ce dossier<small>Il vous reste ${WALLET.credits} dossier${WALLET.credits > 1 ? "s" : ""} offert${WALLET.credits > 1 ? "s" : ""}</small></button>`);
   if (MAIL() && !WALLET.newsletterGift && !ME.nl) opts.push(`<button data-pay="newsletter">✉️ Recevoir la newsletter<small>Gratuit, et ce dossier vous est offert</small></button>`);
   if (MAIL()) opts.push(`<button data-pay="invite">👋 Inviter un ami<small>Un dossier offert à chaque ami inscrit</small></button>`);
-  if (STRIPE()) opts.push(`<button data-pay="premium">⭐ Tous les dossiers<small>Premium dès ${euros(CFG.prices?.month || 299)}, sans abonnement</small></button>`);
+  if (STRIPE()) opts.push(`<button data-pay="premium">⭐ Tous les dossiers<small>Premium dès ${euros(CFG.prices?.month || 299)} par mois, sans engagement</small></button>`);
   return `<div class="slide">${cover ? `<img class="bg" src="${cover}" alt="">` : ""}<div class="blurveil"></div><div class="paybox"><h3>Débloquez les ${f.locked} cases suivantes</h3><p>La suite du Grand Dossier vous attend. Choisissez votre clé :</p><div class="opt">${opts.join("")}</div><button class="later" data-later>Plus tard (le suspense me plaît)</button></div></div>`;
 }
 function wirePay(tr, ed, f) {
@@ -2011,13 +2011,13 @@ function openPremium(reason) {
   ev("paywall", "", reason || "");
   const P = CFG.prices || { month: 299, year: 1999 };
   const perks = `<ul class="perks"><li>📚 Tous les Grands Dossiers en entier</li><li>🗓️ Toutes les éditions passées</li><li>🧭 Les 32 thématiques et la recherche</li><li>♥ Vos favoris, sur tous vos appareils</li></ul>`;
-  if (isPremium()) return openSheet(`<h3>Vous êtes Premium ⭐</h3>${perks}<p class="sub">${ACC.user.premium_until ? "Jusqu’au " + new Date(ACC.user.premium_until + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) + ". " : ""}Votre cerveau vous salue.</p>`);
+  if (isPremium()) { openSheet(`<h3>Vous êtes Premium ⭐</h3>${perks}<p class="sub">${subLine(ACC.user)} Votre cerveau vous salue.</p><button class="btn ghost" id="pmAcc2">Gérer mon abonnement</button>`); $("#pmAcc2").onclick = openMyAccount; return; }
   if (!STRIPE()) return openSheet(`<h3>Le Sachoir Premium</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "Pour les esprits qui en veulent plus.")}</p>${perks}<p class="sub">Le paiement en ligne arrive très bientôt.</p>${MAIL() && WALLET.credits === 0 ? `<button class="cta" id="pmInv">En attendant : un ami inscrit = un dossier offert</button>` : ""}`), $("#pmInv") && ($("#pmInv").onclick = openInvite);
   openSheet(`<h3>Le savoir à prix sachant</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "")} ${euros(P.month)} par mois : moins cher qu’un expresso en terrasse, et ça réveille plus longtemps.</p>
-   <div class="plans"><button class="plan" data-plan="month"><span>1 mois</span><b>${euros(P.month)}</b><span>Le temps de briller à 30 dîners</span></button>
-     <button class="plan best" data-plan="year"><em>${Math.round(100 - P.year / (P.month * 12) * 100)} % d’économie</em><span>1 an</span><b>${euros(P.year)}</b><span>Soit ${euros(Math.round(P.year / 12))} par mois. Une affaire, un savoir.</span></button></div>
+   <div class="plans"><button class="plan" data-plan="month"><span>Au mois</span><b>${euros(P.month)}</b><span>par mois. Le temps de briller à 30 dîners</span></button>
+     <button class="plan best" data-plan="year"><em>${Math.round(100 - P.year / (P.month * 12) * 100)} % d’économie</em><span>À l’année</span><b>${euros(P.year)}</b><span>par an, soit ${euros(Math.round(P.year / 12))} par mois. Une affaire, un savoir.</span></button></div>
    ${perks}
-   <p class="sub">Paiement unique et sécurisé par Stripe, <b>sans abonnement</b> : vous payez, vous lisez, on ne vous prélève rien en douce.${ACC ? "" : " Un compte (gratuit) est nécessaire pour retrouver votre Premium sur tous vos appareils."}</p>`);
+   <p class="sub">Abonnement <b>sans engagement</b>, paiement sécurisé par Stripe : résiliez en deux touches depuis votre compte, quand vous voulez, et gardez l’accès jusqu’à la fin de la période payée.${ACC ? "" : " Un compte (gratuit) est nécessaire pour retrouver votre Premium sur tous vos appareils."}</p>`);
   $("#sheet").querySelectorAll("[data-plan]").forEach(b => b.onclick = async () => {
     if (!ACC) { sessionStorage.setItem("sachoir.plan", b.dataset.plan); return openAccount(); }
     b.disabled = true;
@@ -2027,7 +2027,7 @@ function openPremium(reason) {
 }
 async function paidReturn(id) {
   if (id === "cancel") return toast("Paiement annulé. Votre culture G ne vous en veut pas.");
-  try { const d = await api("/pay/confirm", { body: { session_id: id } }); ACC.user = d.user; accSave(); render(); toast(d.user.premium ? "Bienvenue en Premium ⭐ Tous les dossiers sont à vous." : "Paiement en cours de validation. Ça arrive dans un instant."); }
+  try { const d = await api("/pay/confirm", { body: { session_id: id } }); ACC.user = d.user; accSave(); render(); toast(d.user.premium ? "Bienvenue en Premium ⭐ Tous les dossiers sont à vous. Sans engagement, promis." : "Paiement en cours de validation. Ça arrive dans un instant."); }
   catch (e) { toast(e.message); }
 }
 
@@ -2094,14 +2094,26 @@ async function finishLogin(d) {
   if (plan && !d.user.premium) { sessionStorage.removeItem("sachoir.plan"); setTimeout(() => openPremium("dossier"), 600); }
   toast(d.created ? "Compte créé. Votre série est à l’abri." : `Re-bonjour${d.user.name ? ", " + d.user.name : ""} ! Données synchronisées.`);
 }
+const fmtD = iso => new Date(iso + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+function subLine(u) {
+  const s = u.subscription;
+  if (!s) return u.premium_until ? `Premium jusqu’au ${fmtD(u.premium_until)}.` : "";
+  const plan = s.plan === "year" ? "annuel" : "mensuel";
+  if (s.cancel_at_end) return `Abonnement ${plan} résilié : Premium jusqu’au ${fmtD(s.period_end)}, aucun autre prélèvement.`;
+  if (s.status === "past_due") return `Abonnement ${plan} : le dernier paiement a échoué, mettez à jour votre carte.`;
+  return `Abonnement ${plan}, sans engagement. Prochain prélèvement le ${fmtD(s.period_end)}.`;
+}
 function openMyAccount() {
   const u = ACC.user || {};
-  const prem = u.premium ? `<span class="badge gold">⭐ Premium${u.premium_until ? " jusqu’au " + new Date(u.premium_until + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : ""}</span>` : `<span class="badge">Formule gratuite</span>`;
+  const prem = u.premium ? `<span class="badge gold">⭐ Premium${u.premium_until && !u.subscription ? " jusqu’au " + new Date(u.premium_until + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : ""}</span>` : `<span class="badge">Formule gratuite</span>`;
   openSheet(`<h3>Mon compte</h3>
    <div class="acc-card"><b>${esc(u.email || "")}</b><span>Membre depuis le ${u.since ? new Date(u.since + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : "—"}</span>${prem}
      <span>${ACC.synced ? "Synchronisé " + new Date(ACC.synced).toLocaleString("fr-FR", { hour: "2-digit", minute: "2-digit", day: "numeric", month: "short" }) : "Pas encore synchronisé"}</span></div>
    <label class="chk"><input type="checkbox" id="myNl" ${u.newsletter ? "checked" : ""}><span>Newsletter quotidienne : l’édition du jour dans votre boîte, chaque matin.</span></label>
    <button class="btn ghost" id="mySync">Synchroniser maintenant</button>
+   ${u.subscription ? `<div class="acc-card"><b>⭐ Premium</b><span>${esc(subLine(u))}</span></div>
+     ${u.subscription.cancel_at_end ? `<button class="btn" id="mySubOn">Reprendre mon abonnement</button>` : `<button class="btn ghost" id="mySubOff">Résilier mon abonnement</button>`}
+     <button class="btn ghost" id="myCard">Ma carte et mes factures</button>` : ""}
    ${u.premium ? "" : `<button class="btn ghost" id="myPrem">Découvrir Premium</button>`}
    ${u.admin ? `<a class="btn" href="admin.html" style="text-decoration:none;color:inherit">📊 Écran admin</a>` : ""}
    <button class="btn ghost" id="myOut">Se déconnecter</button>
@@ -2113,6 +2125,14 @@ function openMyAccount() {
   };
   $("#mySync").onclick = async () => { await syncNow(); toast(ACC ? "Synchronisé ✓" : "Session expirée"); if (ACC) openMyAccount(); render(); };
   const pb = $("#myPrem"); if (pb) pb.onclick = () => openPremium();
+  const subCall = async (path, msg) => { try { const d = await api(path, { body: {} }); ACC.user = d.user; accSave(); toast(msg); openMyAccount(); render(); } catch (e) { toast(e.message); } };
+  let offArmed = false;
+  if ($("#mySubOff")) $("#mySubOff").onclick = e => {
+    if (!offArmed) { offArmed = true; e.target.textContent = `Confirmer : Premium jusqu’au ${fmtD(u.subscription.period_end)}, puis plus rien`; return; }
+    subCall("/pay/cancel", "Abonnement résilié. Vous gardez Premium jusqu’à la fin de la période.");
+  };
+  if ($("#mySubOn")) $("#mySubOn").onclick = () => subCall("/pay/resume", "Abonnement repris. Votre culture G vous remercie.");
+  if ($("#myCard")) $("#myCard").onclick = async () => { try { location.href = (await api("/pay/portal", { body: {} })).url; } catch (e) { toast(e.message); } };
   $("#myOut").onclick = async () => { try { await syncNow(); await api("/auth/logout", { body: {} }); } catch (e) {} ACC = null; accSave(); closeSheet(); render(); toast("Déconnecté. Vos données restent sur ce téléphone."); };
   let armed = false;
   $("#myDel").onclick = async e => {

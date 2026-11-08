@@ -4,7 +4,7 @@
 import { nowIso, parisDay, parisHour, shiftDay, addSeconds, randomToken, randomCode, sha256, EMAIL_RE, normEmail, mergeState, streakOf, esc } from "./util.js";
 import { brevoSend, loginMail, welcomeMail, confirmMail, newsletterMail, loadEdition, page, btn, h1, mailLimit } from "./mail.js";
 import { ownerOf, wallet, grant, grantNewsletter, rewardReferral, mergeOwners, unlock, premiumDossier, premiumImg, refCode, DEVICE_RE } from "./credits.js";
-import { PLANS, stripeOn, checkout, confirm as payConfirm, checkPending, webhook } from "./pay.js";
+import { PLANS, stripeOn, checkout, confirm as payConfirm, checkPending, webhook, setCancel, portal, cancelNow } from "./pay.js";
 
 const SESSION_DAYS = 365;
 const EVENT_TYPES = new Set(["open", "read", "done", "depth", "game", "share", "fav", "install", "paywall"]);
@@ -35,7 +35,9 @@ async function currentUser(req, env) {
 }
 async function publicUser(env, u) {
   const sub = await env.DB.prepare("SELECT status FROM subscribers WHERE email = ?").bind(u.email).first();
-  return { email: u.email, name: u.name, premium: premiumOn(u), premium_until: u.premium_until || null, newsletter: sub?.status === "active", admin: isAdminEmail(env, u.email), since: u.created_at.slice(0, 10) };
+  const subscription = u.stripe_sub && u.sub_status !== "canceled"
+    ? { plan: u.sub_plan, status: u.sub_status, cancel_at_end: !!u.sub_cancel_at_end, period_end: u.sub_period_end } : null;
+  return { email: u.email, name: u.name, premium: premiumOn(u), premium_until: u.premium_until || null, subscription, newsletter: sub?.status === "active", admin: isAdminEmail(env, u.email), since: u.created_at.slice(0, 10) };
 }
 async function mailsToday(env) {
   return (await env.DB.prepare("SELECT COUNT(*) AS n FROM mails WHERE day = ?").bind(parisDay()).first()).n;
@@ -203,7 +205,7 @@ async function track(req, env) {
 async function kpi(env, days) {
   const today = parisDay(), from = shiftDay(today, -(days - 1)), d7 = shiftDay(today, -6), d30 = shiftDay(today, -29);
   const q = (sql, ...a) => env.DB.prepare(sql).bind(...a);
-  const [daily, newDev, wau, mau, devMix, ret, evDay, byFmt, top, users, usersDay, nlSubs, nlDay, runs, mailsDay, states, payPlan, payDay, payAll, grantsR, unlocksN, pendingN] = await env.DB.batch([
+  const [daily, newDev, wau, mau, devMix, ret, evDay, byFmt, top, users, usersDay, nlSubs, nlDay, runs, mailsDay, states, payPlan, payDay, payAll, grantsR, unlocksN, pendingN, subsR, churnN] = await env.DB.batch([
     q("SELECT day, COUNT(*) AS n FROM device_days WHERE day >= ? GROUP BY day", from),
     q("SELECT first_day AS day, COUNT(*) AS n FROM devices WHERE first_day >= ? GROUP BY first_day", from),
     q("SELECT COUNT(DISTINCT device) AS n FROM device_days WHERE day >= ?", d7),
@@ -235,6 +237,8 @@ async function kpi(env, days) {
     q("SELECT reason, COUNT(*) AS n FROM grants WHERE created_at >= ? GROUP BY reason", from),
     q("SELECT COUNT(*) AS n FROM unlocks WHERE created_at >= ?", from),
     q("SELECT COUNT(*) AS n FROM subscribers WHERE status = 'pending'"),
+    q("SELECT sub_plan AS plan, COUNT(*) AS n, SUM(sub_cancel_at_end) AS ending, SUM(sub_status = 'past_due') AS late FROM users WHERE stripe_sub IS NOT NULL AND sub_status IN ('active', 'trialing', 'past_due') GROUP BY sub_plan"),
+    q("SELECT COUNT(*) AS n FROM users WHERE sub_status = 'canceled' AND sub_period_end >= ?", from),
   ]);
   const R = x => x.results, F = x => x.results[0] || {};
   // Séries et érudition des comptes (calculées ici, l'appli garde la même règle).
@@ -255,6 +259,8 @@ async function kpi(env, days) {
       erudition: dist(eru, [[0, 0, "0"], [1, 9, "1-9"], [10, 24, "10-24"], [25, 49, "25-49"], [50, 99, "50-99"], [100, 1e9, "100+"]]),
       bestStreak: Math.max(0, ...streaks) },
     newsletter: { ...F(nlSubs), pending: F(pendingN).n || 0, daily: R(nlDay), runs: R(runs) },
+    subscriptions: { byPlan: R(subsR), churned: F(churnN).n || 0,
+      mrrCents: R(subsR).reduce((t, x) => t + (x.plan === "year" ? Math.round(x.n * PLANS.year.amount / 12) : x.n * PLANS.month.amount), 0) },
     revenue: { stripe: stripeOn(env), byPlan: R(payPlan), daily: R(payDay), totalCents: F(payAll).cents || 0, totalCount: F(payAll).n || 0 },
     credits: { grants: R(grantsR), unlocks: F(unlocksN).n || 0 },
     mails: { today: R(mailsDay), limit: mailLimit(env) },
@@ -263,7 +269,7 @@ async function kpi(env, days) {
 
 async function adminUsers(env, url) {
   const q = `%${(url.searchParams.get("q") || "").trim().toLowerCase()}%`;
-  const rows = (await env.DB.prepare(`SELECT u.email, u.name, u.created_at, u.last_seen, u.premium, u.premium_until, s.status AS nl
+  const rows = (await env.DB.prepare(`SELECT u.email, u.name, u.created_at, u.last_seen, u.premium, u.premium_until, u.sub_plan, u.sub_status, u.sub_cancel_at_end, s.status AS nl
      FROM users u LEFT JOIN subscribers s ON s.email = u.email WHERE u.email LIKE ? OR lower(u.name) LIKE ? ORDER BY u.created_at DESC LIMIT 100`).bind(q, q).all()).results;
   return json({ users: rows.map(r => ({ ...r, premium_on: premiumOn(r) })) });
 }
@@ -352,6 +358,16 @@ async function route(req, env, url, ctx) {
     const r = await checkout(env, u, (await body(req)).plan);
     return r.error ? err(r.error) : json(r);
   }
+  if ((p === "/pay/cancel" || p === "/pay/resume") && M === "POST") {
+    if (!stripeOn(env)) return err("Le paiement n'est pas encore ouvert.", 503);
+    const r = await setCancel(env, u, p === "/pay/cancel");
+    return r.error ? err(r.error) : json({ ok: true, user: await publicUser(env, await env.DB.prepare("SELECT * FROM users WHERE id = ?").bind(u.id).first()) });
+  }
+  if (p === "/pay/portal" && M === "POST") {
+    if (!stripeOn(env)) return err("Le paiement n'est pas encore ouvert.", 503);
+    const r = await portal(env, u);
+    return r.error ? err(r.error) : json(r);
+  }
   if (p === "/pay/confirm" && M === "POST") {
     if (!stripeOn(env)) return err("Le paiement n'est pas encore ouvert.", 503);
     const ok = await payConfirm(env, String((await body(req)).session_id || ""));
@@ -359,7 +375,7 @@ async function route(req, env, url, ctx) {
   }
   if (p === "/auth/logout" && M === "POST") { await env.DB.prepare("DELETE FROM sessions WHERE token_hash = ?").bind(u.sid).run(); return json({ ok: true }); }
   if (p === "/me" && M === "GET") {
-    await checkPending(env, u.id);
+    await checkPending(env, u);
     const fresh = await env.DB.prepare("SELECT * FROM users WHERE id = ?").bind(u.id).first();
     const row = await env.DB.prepare("SELECT state FROM user_state WHERE user_id = ?").bind(u.id).first();
     return json({ user: await publicUser(env, fresh), state: row ? JSON.parse(row.state) : {}, wallet: await wallet(env, fresh, url.searchParams.get("d")) });
@@ -378,6 +394,7 @@ async function route(req, env, url, ctx) {
     return json({ state, user: await publicUser(env, u) });
   }
   if (p === "/me" && M === "DELETE") {
+    await cancelNow(env, u);
     await env.DB.batch([
       env.DB.prepare("DELETE FROM sessions WHERE user_id = ?").bind(u.id),
       env.DB.prepare("DELETE FROM user_state WHERE user_id = ?").bind(u.id),
