@@ -12,6 +12,7 @@
       "cast": [
         {
           "id": "leverrier",
+          "name": "Urbain Le Verrier",
           "look": "Urbain, a tall stiff 1840s French mathematician in his thirties, long sideburns, slicked-back dark hair, frowning eyebrows, black frock coat, a quill pen always in hand, a red waistcoat as the only colour",
           "file": "cast/cultureg-leverrier.png",
           "status": "pending",
@@ -19,6 +20,7 @@
         },
         {
           "id": "arago",
+          "name": "François Arago",
           "look": "François, a jovial 1840s observatory director in his late fifties, wild curly grey hair, big bushy eyebrows, round belly, black coat, a blue scarf as the only colour",
           "file": "cast/cultureg-arago.png",
           "status": "pending",
@@ -26,6 +28,7 @@
         },
         {
           "id": "galle",
+          "name": "Johann Galle",
           "look": "Johann, a lanky 1840s German astronomer in his thirties, neat blond side parting, small round glasses, long grey coat, very straight posture",
           "file": "cast/cultureg-galle.png",
           "status": "pending",
@@ -33,6 +36,7 @@
         },
         {
           "id": "galilee",
+          "name": "Galilée",
           "look": "Galileo, a 1610s Italian scholar in his late forties, big bushy reddish beard, receding hair, long black scholar's robe, a small handheld telescope",
           "file": "cast/cultureg-galilee.png",
           "status": "pending",
@@ -58,10 +62,12 @@
           "bubbles": [
             {
               "text": "Uranus fait n’importe quoi.",
+              "who": "arago",
               "side": "l"
             },
             {
               "text": "Ou quelqu’un la tire par la manche.",
+              "who": "leverrier",
               "side": "r"
             }
           ],
@@ -84,10 +90,12 @@
           "bubbles": [
             {
               "text": "Trouvez ce qui dérange Uranus.",
+              "who": "arago",
               "side": "l"
             },
             {
               "text": "Je prends un crayon. Pas un télescope.",
+              "who": "leverrier",
               "side": "r"
             }
           ],
@@ -110,10 +118,12 @@
           "bubbles": [
             {
               "text": "Des mois de calculs. Je n’ai pas vu le soleil.",
+              "who": "leverrier",
               "side": "r"
             },
             {
               "text": "Ni les étoiles, du coup.",
+              "who": "arago",
               "side": "l"
             }
           ],
@@ -148,6 +158,7 @@
           "bubbles": [
             {
               "text": "Cher collègue, regardez là. Merci de ne pas discuter.",
+              "who": "leverrier",
               "side": "l"
             }
           ],
@@ -169,6 +180,7 @@
           "bubbles": [
             {
               "text": "Elle est là. Exactement là. C’est vexant.",
+              "who": "galle",
               "side": "r"
             }
           ],
@@ -190,6 +202,7 @@
           "bubbles": [
             {
               "text": "Évidemment.",
+              "who": "leverrier",
               "side": "l"
             }
           ],
@@ -211,6 +224,7 @@
           "bubbles": [
             {
               "text": "Le premier astronome en télétravail.",
+              "who": "arago",
               "side": "l"
             }
           ],
@@ -233,6 +247,7 @@
           "bubbles": [
             {
               "text": "Je l’ai vue le premier. Je ne l’ai juste pas remarquée.",
+              "who": "galilee",
               "side": "l"
             }
           ],
