@@ -126,7 +126,7 @@ const POOLS = {
     "P.-S. Si cette newsletter atterrit dans vos promotions, glissez-la dans la boîte principale. Elle le vivra très bien.",
     "P.-S. Vous connaissez quelqu'un qui dit « en fait, techniquement » à chaque phrase ? Transférez-lui ce mail. Il a besoin de munitions.",
     "P.-S. Une erreur dans une BD ? Répondez à ce mail. Un humain lit tout, généralement avant son deuxième café.",
-    "P.-S. Aucune IA n'a été maltraitée pendant la fabrication de cette édition. Quelques crayons, peut-être.",
+    "P.-S. Aucun crayon n'a été maltraité pendant la fabrication de cette édition. Enfin, presque aucun.",
     "P.-S. Demain, même heure, même endroit. On apporte les anecdotes, vous apportez le café.",
     "P.-S. Si vous avez lu jusqu'ici, vous méritez une médaille. On n'en a pas. Voici un dossier à la place.",
   ],
