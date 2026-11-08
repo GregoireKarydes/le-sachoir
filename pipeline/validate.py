@@ -165,6 +165,10 @@ def check_story(fmt: dict, d: Path, err, warn):
             if not (isinstance(nxt, dict) and nxt.get("kind") == "explain"):
                 warn(f"case {i} : Actu, il manque la case « Ce qui se passe vraiment » juste après")
         for b in case.get("bubbles", []) or []:
+            if not b.get("who"):
+                warn(f"case {i} : bulle sans « who » (nom de la personne qui parle)")
+            elif b["who"] in cast_ids and not next((x.get("name") for x in fmt.get("cast", []) if x.get("id") == b["who"]), ""):
+                warn(f"case {i} : le personnage {b['who']!r} n'a pas de « name » (nom affiché au-dessus de ses bulles)")
             if words(b.get("text")) > BUBBLE_MAX:
                 warn(f"case {i} : bulle de {words(b.get('text'))} mots (max {BUBBLE_MAX})")
         if not case.get("image"):
