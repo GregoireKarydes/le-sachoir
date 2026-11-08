@@ -271,6 +271,15 @@ button{cursor:pointer}
 .perks li{background:#fff;border-radius:12px;padding:9px 12px;font-size:14.5px}
 .lockcard{background:#fff;border-radius:20px;padding:20px 18px;display:flex;flex-direction:column;gap:10px;text-align:center;align-items:center;margin-top:10px}
 .lockcard .big{font-size:38px}
+.dbadge{display:inline-block;align-self:flex-start;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:700;margin-top:4px;background:#fff;color:var(--ink)}
+.card .dbadge{margin:6px 0 0}
+.dbadge.lock{background:var(--grey)}.dbadge.gift{background:#fff4d6}.dbadge.prem{background:var(--yellow)}
+.giftlist{display:flex;flex-direction:column;gap:8px}
+.gitem{display:flex;gap:10px;align-items:center;background:#fff;border-radius:14px;padding:8px;border:0;text-align:left;width:100%}
+.gitem img,.gitem .ph0{width:56px;height:72px;object-fit:cover;object-position:top;border-radius:10px;background:var(--grey);flex:0 0 auto}
+.gitem .t{flex:1;min-width:0;font-size:14.5px;font-weight:700;line-height:1.2}.gitem .t small{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:2px}
+.gitem .go{flex:0 0 auto;font-size:13px;font-weight:700;border-radius:999px;padding:7px 11px;background:var(--grey)}
+.gitem .go.y{background:var(--yellow)}
 .lockcard h2{font-family:var(--f-serif);font-weight:800;font-size:22px;margin:0}
 .slide.photo .exbox{padding:12px 12px 14px;gap:8px}
 .exbox .ph-img{width:100%;max-height:46vh;object-fit:contain;border-radius:12px;background:var(--grey);display:block}
@@ -883,6 +892,15 @@ async function loadWallet() {
   try { WALLET = await api(`/wallet?d=${DEVICE}`); } catch (e) {}
 }
 const entitled = date => isPremium() || WALLET.unlocked.includes(date);
+// Tout partage porte le code de parrainage : un ami qui s'inscrit par ce lien rapporte un Grand Dossier.
+const withRef = url => { if (!WALLET.ref || !MAIL()) return url; const u = new URL(url); u.searchParams.set("ref", WALLET.ref); return u.href; };
+// Badge d'un Grand Dossier quand le paywall est actif.
+function dossierBadge(date) {
+  if (!PW()) return "";
+  if (isPremium()) return `<span class="dbadge prem">⭐ Premium</span>`;
+  if (WALLET.unlocked.includes(date)) return `<span class="dbadge gift">🎁 Débloqué</span>`;
+  return `<span class="dbadge lock">🔒 4 cases offertes</span>`;
+}
 const ACC_KEY = "sachoir.acc";
 let ACC = (() => { try { return JSON.parse(localStorage.getItem(ACC_KEY) || "null"); } catch (e) { return null; } })();
 const accSave = () => { try { ACC ? localStorage.setItem(ACC_KEY, JSON.stringify(ACC)) : localStorage.removeItem(ACC_KEY); } catch (e) {} };
@@ -1028,7 +1046,7 @@ function renderHome() {
   const hello = ME.name ? `Salut, ${esc(ME.name)}` : "Salut !";
   const isToday = ed.date === TODAY;
   const card = {
-    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 3} min) →</span><p class="tagline">${esc(f.tagline || "")}</p></button>`; },
+    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span>${dossierBadge(ed.date)}<h3>${esc(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 3} min) →</span><p class="tagline">${esc(f.tagline || "")}</p></button>`; },
     small: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} small" data-f="${f.id}"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><div class="mid"><span class="dur">${ICON.clock}${f.minutes || 2} min</span>${c ? `<img class="thumb" src="${c}" alt="" loading="lazy">` : ""}</div><span class="tl">${readState(ed, f) || esc(f.tagline || "")}</span></button>`; },
     wide: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} wide" data-f="${f.id}"><div class="txt"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || esc(f.tagline || "")}</span></div>${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}</button>`; }
   };
@@ -1158,7 +1176,7 @@ function finalHTML(ed, f) {
 }
 async function openReader(ed, fid, startAt = 0) {
   let full = ed.formats.find(x => x.id === fid); if (!full) return;
-  if (!canOpenDate(ed.date)) return openPremium("archives");
+  if (!canOpenDate(ed.date) && !(fid === "dossier" && (WALLET.unlocked.includes(ed.date) || WALLET.credits > 0))) return openPremium("archives");
   // Paywall : le site publié ne contient que le début du Grand Dossier (champ « locked » = cases restantes).
   // Abonné Premium ou dossier débloqué : la suite est demandée à l'API.
   if (full.locked && entitled(ed.date)) {
@@ -1224,7 +1242,7 @@ $("#rPrev").onclick = () => go(-1); $("#rNext").onclick = () => go(1);
 $("#rClose").onclick = () => history.back();
 window.addEventListener("popstate", () => { if ($("#scrim").classList.contains("on")) closeSheet(); else if ($("#quiz").classList.contains("on")) closeQuiz(); else if ($("#reader").classList.contains("on")) closeReader(); });
 $("#rShare").onclick = async () => {
-  const f = R.f, url = new URL(f.url || `./?d=${R.ed.date}&f=${f.id}`, location.href).href;
+  const f = R.f, url = withRef(new URL(f.url || `./?d=${R.ed.date}&f=${f.id}`, location.href).href);
   const data = { title: `${f.title} — Le Sachoir`, text: `${f.title} : à lire en BD sur Le Sachoir.`, url };
   ev("share", R.ed.date, f.id);
   if (navigator.share) { try { await navigator.share(data); return; } catch (e) { if (e.name === "AbortError") return; } }
@@ -1699,7 +1717,7 @@ function quizResult() {
   $("#qzBack").onclick = () => history.back();
   $("#qzRev").onclick = () => { const l = $("#qzRevList"); l.hidden = !l.hidden; if (!l.hidden) l.scrollIntoView({ behavior: "smooth", block: "start" }); };
   $("#qzShare").onclick = async () => {
-    const url = new URL(`./?d=${Q.ed.date}&f=quiz`, location.href).href;
+    const url = withRef(new URL(`./?d=${Q.ed.date}&f=quiz`, location.href).href);
     const d = new Date(Q.ed.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
     const text = `Le Sachoir · ${name} · ${d}\n${quizGrid()} ${fmtScore(s)}/${n}${hasMap ? `\n📍 ${fmtKm(kmTot)} d’écart` : ""}\n${verdict}`;
     if (navigator.share) { try { await navigator.share({ title: `${name} · Le Sachoir`, text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
@@ -2042,6 +2060,40 @@ async function paidReturn(id) {
   catch (e) { toast(e.message); }
 }
 
+/* ---------- Mes dossiers offerts : choisir quel Grand Dossier débloquer, archives comprises ---------- */
+function allDossiers() { return INDEX.flatMap(e => e.formats.filter(f => f.id === "dossier").map(f => ({ ...f, date: e.date }))).filter(f => !INDEX.find(e => e.date === f.date)?.demo); }
+function openGifts() {
+  const list = allDossiers(), n = WALLET.credits || 0;
+  openSheet(`<h3>Mes dossiers offerts</h3><p class="sub">${n ? `Vous avez <b>${n} Grand${n > 1 ? "s" : ""} Dossier${n > 1 ? "s" : ""}</b> à débloquer. Choisissez : il reste à vous pour toujours.` : "Plus de dossier à débloquer pour l’instant. Un ami inscrit avec votre lien = un dossier de plus."}</p>
+   <div class="giftlist">${list.map(f => { const done = isPremium() || WALLET.unlocked.includes(f.date), cover = f.cover ? `editions/${f.date}/${f.cover}` : "";
+     return `<button class="gitem" data-d="${f.date}" data-act="${done ? "read" : n ? "unlock" : "peek"}">${cover ? `<img src="${cover}" alt="" loading="lazy">` : `<span class="ph0"></span>`}<span class="t">${esc(f.title)}<small>${esc(f.theme || "")} · ${new Date(f.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</small></span><span class="go ${done || n ? "y" : ""}">${done ? "Lire" : n ? "🎁 Débloquer" : "4 cases"}</span></button>`; }).join("") || `<p class="sub">Les premiers Grands Dossiers arrivent.</p>`}</div>
+   <button class="btn ghost" id="gfInv">Inviter un ami pour en gagner un</button>`);
+  $("#gfInv").onclick = openInvite;
+  $("#sheet").querySelectorAll("[data-d]").forEach(b => b.onclick = async () => {
+    const date = b.dataset.d, act = b.dataset.act;
+    let ed; try { ed = await loadEdition(date); } catch (e) { return toast("Indisponible hors ligne"); }
+    if (act === "unlock") {
+      b.disabled = true;
+      try { const d = await api("/unlock", { body: { d: DEVICE, ed: date } }); WALLET.credits = d.credits; if (!WALLET.unlocked.includes(date)) WALLET.unlocked.push(date); toast("Dossier débloqué. Bonne lecture !"); }
+      catch (e) { b.disabled = false; return toast(e.message); }
+    }
+    closeSheet(); setTimeout(() => openReader(ed, "dossier"), 200);
+  });
+}
+/* Prévenir quand un dossier est gagné (ami inscrit, newsletter confirmée), à l'ouverture de l'appli. */
+function giftNotice() {
+  if (!MAIL() || !PW()) return;
+  let seen = null; try { seen = JSON.parse(localStorage.getItem("sachoir.gifts") || "null"); } catch (e) {}
+  const now = { earned: (WALLET.credits || 0) + (WALLET.unlocked || []).length, refs: WALLET.referrals || 0, nl: !!WALLET.newsletterGift };
+  try { localStorage.setItem("sachoir.gifts", JSON.stringify(now)); } catch (e) {}
+  const gained = seen ? now.earned - seen.earned : now.earned;
+  if (gained <= 0 || !WALLET.credits || isPremium() || $("#scrim").classList.contains("on") || $("#reader").classList.contains("on")) return;
+  const why = seen && now.refs > seen.refs ? (now.refs - seen.refs > 1 ? `${now.refs - seen.refs} amis se sont inscrits grâce à vous` : "Un ami s’est inscrit grâce à vous")
+    : seen && now.nl && !seen.nl ? "Abonnement à la newsletter confirmé" : "Vous avez des dossiers offerts";
+  openSheet(`<h3>🎉 ${esc(why)}</h3><p class="sub">${gained > 1 ? `+${gained} Grands Dossiers offerts` : "+1 Grand Dossier offert"}, à lire en entier. Choisissez celui qui vous fait envie, même un ancien.</p><button class="cta" id="gnGo">Choisir mon dossier</button><button class="linkbtn" id="gnLater">Plus tard</button>`);
+  $("#gnGo").onclick = openGifts; $("#gnLater").onclick = closeSheet;
+}
+
 /* ---------- Parrainage : un ami inscrit = un Grand Dossier offert ---------- */
 const refLink = () => WALLET.ref ? `${location.origin}${location.pathname}?ref=${WALLET.ref}` : location.origin + location.pathname;
 async function openInvite() {
@@ -2050,7 +2102,9 @@ async function openInvite() {
   openSheet(`<h3>Un ami, un dossier</h3><p class="sub">Partagez votre lien. Chaque ami qui s’inscrit avec (newsletter ou compte) vous offre un Grand Dossier en entier.</p>
    ${MAIL() ? `<div class="stats2"><div><b>${WALLET.referrals || 0}</b><span>ami${(WALLET.referrals || 0) > 1 ? "s" : ""} inscrit${(WALLET.referrals || 0) > 1 ? "s" : ""}</span></div><div><b>${WALLET.credits || 0}</b><span>dossier${(WALLET.credits || 0) > 1 ? "s" : ""} à débloquer</span></div></div><div class="reflink">${esc(link)}</div>` : ""}
    <button class="cta" id="ivShare">Partager mon lien</button>
+   ${PW() && !isPremium() && (WALLET.credits || WALLET.unlocked.length) ? `<button class="btn ghost" id="ivGifts">${WALLET.credits ? `🎁 Choisir mes ${WALLET.credits} dossier${WALLET.credits > 1 ? "s" : ""} offert${WALLET.credits > 1 ? "s" : ""}` : "Mes dossiers débloqués"}</button>` : ""}
    <p class="sub">Vos amis deviennent plus cultivés, vous aussi. C’est la seule pyramide qu’on recommande (après Khéops).</p>`);
+  if ($("#ivGifts")) $("#ivGifts").onclick = openGifts;
   $("#ivShare").onclick = async () => {
     const data = { title: "Le Sachoir", text: "Chaque jour, l’actu et la culture G en BD. Inscris-toi avec mon lien, ça m’offre un Grand Dossier 😇", url: link };
     ev("share", "", "invite");
@@ -2206,7 +2260,7 @@ function renderExplore() {
    ${EX.search ? `<label class="search" for="exQ"><input id="exQ" type="search" placeholder="Napoléon, krach, quantique…" value="${esc(EX.q)}" aria-label="Rechercher"></label>` : ""}
    ${poles.length + (other ? 1 : 0) > 1 || EX.pole ? `<div class="chips" role="group" aria-label="Filtrer par pôle"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tout ${n(byQ.length)}</button>${poles.map(({ p, n: k }) => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name} ${n(k)}</button>`).join("")}${other ? `<button class="chip c-all" data-p="other" aria-pressed="${EX.pole === "other"}">Autres ${n(other)}</button>` : ""}</div>` : ""}
    ${themes.length > 1 ? `<div class="chips sub" role="group" aria-label="Filtrer par thématique"><button class="chip c-${cur.id}" data-t="" aria-pressed="${!EX.theme}">Toutes</button>${themes.map(({ th, n: k }) => `<button class="chip c-${cur.id}" data-t="${esc(th)}" aria-pressed="${EX.theme === th}">${esc(th)} ${n(k)}</button>`).join("")}</div>` : ""}
-   <div class="alist">${res.map(s => `<button class="aitem" data-d="${s.date}" data-f="${s.id}"><i style="background:${poleOf(s.theme)?.color || COLOR[s.id]}"></i><span class="tt">${esc(s.title)}<span class="th">${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""} · ${s.minutes || 2} min</span></span><span class="d">${new Date(s.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</span></button>`).join("")}</div>
+   <div class="alist">${res.map(s => `<button class="aitem" data-d="${s.date}" data-f="${s.id}"><i style="background:${poleOf(s.theme)?.color || COLOR[s.id]}"></i><span class="tt">${esc(s.title)}<span class="th">${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""} · ${s.minutes || 2} min</span>${s.id === "dossier" ? dossierBadge(s.date) : ""}</span><span class="d">${new Date(s.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</span></button>`).join("")}</div>
    ${res.length ? "" : `<p class="empty">Aucune histoire ne correspond. Les archives grandissent chaque jour.</p>`}`;
   $("#exS").onclick = () => { EX.search = !EX.search; renderExplore(); const i = $("#exQ"); if (i) i.focus(); };
   v.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { EX.pole = b.dataset.p || null; EX.theme = null; renderExplore(); });
@@ -2220,7 +2274,7 @@ function renderFavs() {
   const v = $("#v-favs");
   if (!canFav()) { v.innerHTML = `<h1 class="h1">Favoris</h1><div class="lockcard"><span class="big">⭐</span><h2>Réservé aux abonnés Premium</h2><p class="sub">Gardez vos histoires préférées et retrouvez-les sur tous vos appareils.</p><button class="cta" id="lkGo">Découvrir Premium</button></div>`; $("#lkGo").onclick = () => openPremium("favs"); return; }
   v.innerHTML = `<h1 class="h1">Favoris</h1><p class="lead">Vos histoires préférées, toujours sous la main.</p>
-   ${ME.favs.length ? `<div class="alist">${ME.favs.slice().reverse().map(x => `<button class="aitem" data-d="${x.date}" data-f="${x.fid}" data-t="${x.type}"><i style="background:${COLOR[x.fid] || "#1f8f5f"}"></i><span class="tt">${esc(x.title)}<span class="th">${esc(x.label)}</span></span></button>`).join("")}</div>`
+   ${ME.favs.length ? `<div class="alist">${ME.favs.slice().reverse().map(x => `<button class="aitem" data-d="${x.date}" data-f="${x.fid}" data-t="${x.type}"><i style="background:${COLOR[x.fid] || "#1f8f5f"}"></i><span class="tt">${esc(x.title)}<span class="th">${esc(x.label)}</span>${x.fid === "dossier" ? dossierBadge(x.date) : ""}</span></button>`).join("")}</div>`
     : `<p class="empty">Touchez ♡ en bas de l’écran pendant une lecture pour garder une histoire.</p>`}`;
   v.querySelectorAll("[data-d]").forEach(b => b.onclick = async () => {
     try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); }
@@ -2241,6 +2295,7 @@ function renderProfile() {
    <div class="menu">
      ${MAIL() ? `<button id="m0">${I("#fff4d6", "#9a6a00", '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/>')}<span class="t">${ACC ? "Mon compte" : "Créer mon compte"}<small>${ACC ? esc(ACC.user?.email || "") + (isPremium() ? " · ⭐ Premium" : "") : "Votre série et vos favoris sur tous vos appareils"}</small></span>${ICON.chev}</button>` : ""}
      <button id="m1">${I("#dff0e6", "#14704a", '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')}<span class="t">Mon Bilan de Culture G<small>Vos thèmes forts, Histoire ou Sciences</small></span>${ICON.chev}</button>
+     ${MAIL() && PW() && !isPremium() && (WALLET.credits || WALLET.unlocked.length) ? `<button id="mGift">${I("#fff4d6", "#9a6a00", '<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/>')}<span class="t">Mes dossiers offerts<small>${WALLET.credits ? `${WALLET.credits} à débloquer` : `${WALLET.unlocked.length} débloqué${WALLET.unlocked.length > 1 ? "s" : ""}`}</small></span>${ICON.chev}</button>` : ""}
      <button id="m2">${I("#e1e8f7", "#2f4fa2", '<path d="M6 3h12v18l-6-4-6 4z"/>')}<span class="t">Dossiers Enregistrés</span>${ICON.chev}</button>
      <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter quotidienne<small>${!MAIL() ? "Bientôt disponible" : (ACC ? ACC.user?.newsletter : ME.nl) ? "Abonné ✓ L’édition chaque matin" : WALLET.newsletterGift ? "L’édition du jour, chaque matin" : "Un Grand Dossier offert à l’inscription"}</small></span>${ICON.chev}</button>
      <button id="m5">${I("#ece2f6", "#8a55b8", '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M18 8v6M15 11h6"/>')}<span class="t">Inviter des amis <em>(à devenir moins bêtes)</em>${MAIL() ? `<small>Un dossier offert par ami inscrit${WALLET.credits ? ` · ${WALLET.credits} à débloquer` : ""}</small>` : ""}</span>${ICON.chev}</button>
@@ -2249,7 +2304,7 @@ function renderProfile() {
   $("#prName").onclick = openName;
   $("#tS").onclick = () => openTiers("serie"); $("#tE").onclick = () => openTiers("eru");
   $("#m1").onclick = openBilan; $("#m2").onclick = () => setTab("favs"); $("#m3").onclick = openNewsletter; if ($("#m0")) $("#m0").onclick = openAccount;
-  $("#m5").onclick = openInvite; $("#m6").onclick = openInstall;
+  $("#m5").onclick = openInvite; if ($("#mGift")) $("#mGift").onclick = openGifts; $("#m6").onclick = openInstall;
 }
 
 /* ---------- Démarrage ---------- */
@@ -2264,7 +2319,7 @@ async function startAccount() {
   await loadConfig();
   applyHidden();
   if (CUR) render();
-  loadWallet().then(() => { if (TAB === "profile") render(); });
+  loadWallet().then(() => { if (CUR) render(); setTimeout(giftNotice, 900); });
   if (paid && ACC) paidReturn(paid);
   if (tok) {
     qs.delete("login"); history.replaceState(null, "", location.pathname + (qs.toString() ? "?" + qs : "") + location.hash);
