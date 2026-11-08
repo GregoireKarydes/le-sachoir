@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T15:49:37.413195+01:00",
+ "updated_at": "2026-11-08T16:06:24.171983+01:00",
  "today": "2026-11-08",
  "problems": [],
  "days": [
@@ -59,6 +59,7 @@
  ],
  "stock_moves": [],
  "paywall": true,
+ "hidden": [],
  "today_published": true,
  "today_stories": [
   "dossier",
