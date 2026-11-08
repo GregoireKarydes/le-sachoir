@@ -1,7 +1,7 @@
 {
- "at": "2026-11-08T07:06:35.678367+01:00",
+ "at": "2026-11-08T14:29:11.136271+01:00",
  "generated": 0,
  "log": [
-  "quota: quota du jour déjà épuisé (data/images-quota.json) ; 9999-12-31 trop lointaine pour le renfort payant"
+  "quota: {\"errors\":[{\"message\":\"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (bf115644-633e-49e6-8c0d-675a01eb2630)\",\"code\":4006}],\"success\":false,\"result\":{},\"messages\":[]} ; 9999-12-31 trop lointaine pour le renfort payant"
  ]
 }
