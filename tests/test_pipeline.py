@@ -312,18 +312,15 @@ def test_refaire_d_abord_la_prochaine_bd(site, monkeypatch):
     assert "redo" not in img and img["status"] == "done" and calls
 
 
-def test_prompt_porte_le_cadre_les_roles_et_la_continuite(tmp_path):
-    prev = tmp_path / "images" / "x-01.webp"
-    prev.parent.mkdir()
-    from PIL import Image
-    Image.new("RGB", (8, 8)).save(prev, "WEBP")
+def test_prompt_porte_le_cadre_les_roles_sans_case_precedente(tmp_path):
     fmt = {"art": {"subject": "how paper money was born", "setting": "a palace room", "era": "1710s France",
                    "props": {"chest": "a small wooden chest with iron bands"}}}
     p, refs = images.build("Law opens the chest", [("Law, a tall gambler", None, "the smooth salesman")],
-                           fmt=fmt, prev=prev, panel=(2, 8))
+                           fmt=fmt, panel=(2, 8))
     assert p.startswith("Panel 2 of 8")
-    for bout in ("how paper money was born", "1710s France", "the smooth salesman", "small wooden chest", "previous panel"):
+    for bout in ("how paper money was born", "1710s France", "the smooth salesman", "small wooden chest"):
         assert bout in p
-    assert refs[-1] == prev
+    # la case précédente n'est plus une référence : le modèle la recopiait
+    assert "previous panel" not in p and all("x-01" not in str(r) for r in refs)
     # les consignes impératives passent avant le style
     assert p.index("no lettering") < p.index("webcomic doodle")

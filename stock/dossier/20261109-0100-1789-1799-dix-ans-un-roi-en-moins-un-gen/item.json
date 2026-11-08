@@ -362,7 +362,8 @@
             ],
             "file": "images/dossier-12.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -903,7 +904,8 @@
             "file": "images/dossier-34.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {

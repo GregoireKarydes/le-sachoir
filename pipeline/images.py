@@ -348,10 +348,13 @@ def props_for(fmt: dict, scene: str) -> str:
     return (" Recurring objects, drawn exactly the same in every panel: " + "; ".join(used) + ".") if used else ""
 
 
-def build(scene: str, cast: list[tuple], fmt: dict | None = None, prev: Path | None = None,
+def build(scene: str, cast: list[tuple], fmt: dict | None = None,
           panel: tuple[int, int] | None = None) -> tuple[str, list[Path]]:
-    """Prompt et références. La référence de style est toujours l'image 0, puis une fiche par personnage,
-    puis, s'il reste une place, la case précédente de la même BD (continuité : mêmes personnages, même lieu).
+    """Prompt et références. La référence de style est toujours l'image 0, puis une fiche par personnage.
+
+    8 novembre 2026 : on ne donne plus la case précédente en référence. FLUX.2 klein la traitait comme
+    une image à retoucher et la recopiait presque à l'identique (deux cases pareilles à la suite, avec les
+    mauvais personnages). La continuité passe par les fiches, `art` (lieu, époque, objets) et le texte.
 
     `cast` : (look, fiche) ou (look, fiche, rôle). `panel` : (numéro de la case, nombre de cases dessinées)."""
     fmt = fmt or {}
@@ -377,14 +380,9 @@ def build(scene: str, cast: list[tuple], fmt: dict | None = None, prev: Path | N
     else:
         chars = ""
     where = f"Panel {panel[0]} of {panel[1]} of the same comic strip. " if panel else ""
-    cont = ""
-    if prev is not None and prev.exists() and len(refs) < 4:
-        cont = (f" Image {len(refs)} is the previous panel: keep the same character designs and, if the place is the same, "
-                f"the same room and props, but draw the new moment with a new pose and framing; do not copy image {len(refs)}.")
-        refs.append(prev)
     logic = " Everything must make sense for this moment of the story: right people, right objects, right place, nothing random."
     # Les consignes impératives (pas de texte, haut libre) passent avant le style : jamais coupées si le prompt est long.
-    return (f"{where}Scene: {_clean(scene)}.{story_context(fmt)}{chars}{props_for(fmt, scene)}{cont}{logic} "
+    return (f"{where}Scene: {_clean(scene)}.{story_context(fmt)}{chars}{props_for(fmt, scene)}{logic} "
             f"{STYLE['constraints']} {head}{STYLE['style']}"), refs
 
 
@@ -574,18 +572,12 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
 
 
 def context_for(d: Path, fmt: dict, img: dict, drawn: list, looks: dict, sheets: dict, roles: dict) -> dict:
-    """Tout ce que le modèle doit savoir pour une image : personnages (fiche, rôle), cadre de la BD,
-    numéro de la case et case précédente (continuité, sauf `"same_place": false` ou aucun personnage commun)."""
+    """Tout ce que le modèle doit savoir pour une image : personnages (fiche, rôle), cadre de la BD
+    et numéro de la case. Jamais la case précédente (voir `build`)."""
     cast = [(looks[c], sheets.get(c), roles.get(c)) for c in img.get("cast", []) if c in looks]
     ctx = {"cast": cast, "fmt": fmt}
     if img in drawn:
-        i = drawn.index(img)
-        ctx["panel"] = (i + 1, len(drawn))
-        if i > 0 and img.get("same_place") is not False:
-            p = drawn[i - 1]
-            shared = set(p.get("cast", [])) & set(img.get("cast", []))
-            if p.get("status") == "done" and p.get("file") and (shared or img.get("same_place")):
-                ctx["prev"] = d / p["file"]
+        ctx["panel"] = (drawn.index(img) + 1, len(drawn))
     return ctx
 
 
