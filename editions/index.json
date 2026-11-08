@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T16:10:03.498339+01:00",
+ "updated_at": "2026-11-08T19:34:17.136520+01:00",
  "editions": [
   {
    "date": "2026-11-08",
@@ -105,28 +105,6 @@
    "date": "2026-11-06",
    "demo": false,
    "formats": [
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "title": "Le Chat de Schrödinger expliqué à mon chat",
-     "kind": "",
-     "url": "histoires/2026-11-06-le-chat-de-schrodinger-explique-a-mon-chat/",
-     "theme": "Sciences physiques",
-     "minutes": 2,
-     "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
-     "cover": "images/cultureg-cover.webp"
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "title": "L’homme qui a vendu la tour Eiffel (deux fois)",
-     "kind": "",
-     "url": "histoires/2026-11-06-l-homme-qui-a-vendu-la-tour-eiffel-deux-fois/",
-     "theme": "Grandes personnalités",
-     "minutes": 2,
-     "tagline": "Le roi de l’arnaque avait le sens du recyclage.",
-     "cover": "images/insolite-cover.webp"
-    },
     {
      "id": "quiz",
      "label": "Le Quiz du jour",

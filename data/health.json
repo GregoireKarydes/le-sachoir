@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T16:10:03.498339+01:00",
+ "updated_at": "2026-11-08T19:34:17.136520+01:00",
  "today": "2026-11-08",
  "problems": [],
  "days": [
@@ -59,7 +59,10 @@
  ],
  "stock_moves": [],
  "paywall": true,
- "hidden": [],
+ "hidden": [
+  "2026-11-06|cultureg",
+  "2026-11-06|insolite"
+ ],
  "today_published": true,
  "today_stories": [
   "dossier",
@@ -70,13 +73,13 @@
  "last_published": "2026-11-08",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 47,
-   "focus": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute (11 image(s) à faire)",
+   "images_left": 36,
+   "focus": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro (9 image(s) à faire)",
    "next": "20261109-0100-lecossais-qui-a-invente-le-billet-et-la",
-   "next_redo": 4
+   "next_redo": 1
   },
   "insolite": {
    "ready": 1,
@@ -85,29 +88,30 @@
    "images_left": 40,
    "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (8 image(s) à faire)",
    "next": "20261109-0100-la-joconde-est-devenue-une-star-en-dispa",
-   "next_redo": 5
+   "next_redo": 1
   },
   "dossier": {
    "ready": 1,
-   "waiting": 1,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 26,
-   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (26 image(s) à faire)",
+   "images_left": 67,
+   "focus": "20261108-1924-impressionnisme-refuses (20 image(s) à faire)",
    "next": "20261109-0100-1789-1799-dix-ans-un-roi-en-moins-un-gen",
-   "next_redo": 9
+   "next_redo": 1
   }
  },
  "days_ahead_drawn": 1,
- "days_ahead_written": 2,
+ "days_ahead_written": 4,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-08",
-  "count": 0,
-  "neurons": 0,
-  "exhausted": true,
+  "count": 35,
+  "neurons": 6400,
+  "exhausted": false,
   "by_kind": {
-   "cover": 0,
-   "case": 0
+   "cover": 1,
+   "case": 29,
+   "cast": 5
   },
   "exhausted_at": "2026-11-08T13:29:11.135070+00:00"
  },
