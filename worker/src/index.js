@@ -2,7 +2,9 @@
    Comptes par lien magique ou code à 6 chiffres, synchro des données de l'appli, Premium donné à la main,
    newsletter quotidienne (Brevo), mesure d'audience anonyme et indicateurs de l'écran admin. */
 import { nowIso, parisDay, parisHour, shiftDay, addSeconds, randomToken, randomCode, sha256, EMAIL_RE, normEmail, mergeState, streakOf, esc } from "./util.js";
-import { brevoSend, loginMail, welcomeMail, newsletterMail, loadEdition, page, btn, h1, mailLimit } from "./mail.js";
+import { brevoSend, loginMail, welcomeMail, confirmMail, newsletterMail, loadEdition, page, btn, h1, mailLimit } from "./mail.js";
+import { ownerOf, wallet, grant, grantNewsletter, rewardReferral, mergeOwners, unlock, premiumDossier, premiumImg, refCode, DEVICE_RE } from "./credits.js";
+import { PLANS, stripeOn, checkout, confirm as payConfirm, checkPending, webhook } from "./pay.js";
 
 const SESSION_DAYS = 365;
 const EVENT_TYPES = new Set(["open", "read", "done", "depth", "game", "share", "fav", "install", "paywall"]);
@@ -82,7 +84,10 @@ async function authVerify(req, env) {
     u = { id: crypto.randomUUID(), email: login.email, name: String(b.name || "").slice(0, 24), created_at: nowIso(), premium: 0, premium_until: null };
     await env.DB.prepare("INSERT INTO users (id, email, name, created_at, last_seen, source) VALUES (?, ?, ?, ?, ?, ?)").bind(u.id, u.email, u.name, u.created_at, u.created_at, String(b.source || "app").slice(0, 20)).run();
   }
-  if (login.newsletter) await subscribe(env, login.email, "compte", false);
+  const device = DEVICE_RE.test(String(b.device || "")) ? String(b.device) : "";
+  await mergeOwners(env, u, device);
+  if (login.newsletter) await subscribe(env, login.email, "compte", { confirmed: true, owner: `u:${u.id}`, welcome: false });
+  if (isNew && b.ref) await rewardReferral(env, b.ref, login.email, [`u:${u.id}`, device && `d:${device}`].filter(Boolean));
   const session = randomToken();
   await env.DB.prepare("INSERT INTO sessions (token_hash, user_id, created_at, expires_at) VALUES (?, ?, ?, ?)").bind(await sha256(session), u.id, nowIso(), addSeconds(SESSION_DAYS * 86400)).run();
   // Données : on fusionne celles du téléphone avec celles du compte.
@@ -90,8 +95,8 @@ async function authVerify(req, env) {
   const state = mergeState(row ? JSON.parse(row.state) : {}, b.state || {});
   if (!u.name && state.name) { u.name = state.name; await env.DB.prepare("UPDATE users SET name = ? WHERE id = ?").bind(u.name, u.id).run(); }
   await saveState(env, u.id, state);
-  if (b.device) await env.DB.prepare("UPDATE devices SET user_id = ? WHERE device = ?").bind(u.id, String(b.device).slice(0, 40)).run();
-  return json({ session, user: await publicUser(env, u), state, created: isNew });
+  if (device) await env.DB.prepare("INSERT INTO devices (device, first_day, last_day, user_id) VALUES (?, ?, ?, ?) ON CONFLICT(device) DO UPDATE SET user_id = excluded.user_id").bind(device, parisDay(), parisDay(), u.id).run();
+  return json({ session, user: await publicUser(env, u), state, created: isNew, wallet: await wallet(env, u, device) });
 }
 
 async function saveState(env, uid, state) {
@@ -101,18 +106,34 @@ async function saveState(env, uid, state) {
 }
 
 /* ---------- Newsletter : abonnement ---------- */
-async function subscribe(env, email, source, welcome = true) {
+/* Abonnement. Sans compte : double validation (e-mail de confirmation), qui offre un Grand Dossier.
+   Avec un compte (adresse déjà vérifiée par le code) : actif tout de suite, dossier offert aussi. */
+async function subscribe(env, email, source, { confirmed = false, owner = null, ref = null, welcome = true } = {}) {
   const row = await env.DB.prepare("SELECT * FROM subscribers WHERE email = ?").bind(email).first();
-  if (row?.status === "active") return { already: true };
+  if (row?.status === "active") { if (confirmed && owner) await grantNewsletter(env, email, owner); return { already: true }; }
   const token = row?.token || randomToken(18);
-  if (row) await env.DB.prepare("UPDATE subscribers SET status = 'active', unsub_at = NULL, source = ? WHERE email = ?").bind(source, email).run();
-  else await env.DB.prepare("INSERT INTO subscribers (email, status, token, source, created_at) VALUES (?, 'active', ?, ?, ?)").bind(email, token, source, nowIso()).run();
-  if (welcome && await mailsToday(env) < mailLimit(env)) {
-    const m = welcomeMail(env, { unsubUrl: `${env.API_URL}/nl/unsub?t=${token}` });
-    const sent = await brevoSend(env, { to: email, ...m, tag: "welcome" });
-    if (sent.ok) await env.DB.prepare("INSERT INTO mails (kind, day, email, sent_at) VALUES ('welcome', ?, ?, ?)").bind(parisDay(), email, nowIso()).run();
+  if (confirmed) {
+    if (row) await env.DB.prepare("UPDATE subscribers SET status = 'active', unsub_at = NULL, source = ?, owner = COALESCE(?, owner), confirmed_at = ? WHERE email = ?").bind(source, owner, nowIso(), email).run();
+    else await env.DB.prepare("INSERT INTO subscribers (email, status, token, source, created_at, owner, confirmed_at) VALUES (?, 'active', ?, ?, ?, ?, ?)").bind(email, token, source, nowIso(), owner, nowIso()).run();
+    const gift = await grantNewsletter(env, email, owner || `e:${email}`);
+    if (welcome) await sendWelcome(env, email, token);
+    return { ok: true, active: true, gift };
   }
-  return { ok: true };
+  if (await mailsToday(env) >= mailLimit(env)) return { error: "Le facteur est débordé aujourd'hui. Réessayez demain." };
+  const ct = randomToken(18);
+  if (row) await env.DB.prepare("UPDATE subscribers SET status = 'pending', source = ?, owner = COALESCE(?, owner), ref = COALESCE(?, ref), confirm_token = ? WHERE email = ?").bind(source, owner, ref, ct, email).run();
+  else await env.DB.prepare("INSERT INTO subscribers (email, status, token, source, created_at, owner, ref, confirm_token) VALUES (?, 'pending', ?, ?, ?, ?, ?, ?)").bind(email, token, source, nowIso(), owner, ref, ct).run();
+  const m = confirmMail(env, { url: `${env.API_URL}/nl/confirm?t=${ct}` });
+  const sent = await brevoSend(env, { to: email, ...m, tag: "confirm" });
+  if (!sent.ok) return { error: "L'e-mail n'a pas pu partir. Réessayez dans un instant." };
+  await env.DB.prepare("INSERT INTO mails (kind, day, email, sent_at) VALUES ('confirm', ?, ?, ?)").bind(parisDay(), email, nowIso()).run();
+  return { ok: true, pending: true, ...(env.DEV === "1" ? { dev_confirm: ct } : {}) };
+}
+async function sendWelcome(env, email, token) {
+  if (await mailsToday(env) >= mailLimit(env)) return;
+  const m = welcomeMail(env, { unsubUrl: `${env.API_URL}/nl/unsub?t=${token}` });
+  const sent = await brevoSend(env, { to: email, ...m, tag: "welcome" });
+  if (sent.ok) await env.DB.prepare("INSERT INTO mails (kind, day, email, sent_at) VALUES ('welcome', ?, ?, ?)").bind(parisDay(), email, nowIso()).run();
 }
 const unsubscribe = (env, email) => env.DB.prepare("UPDATE subscribers SET status = 'unsub', unsub_at = ? WHERE email = ? AND status = 'active'").bind(nowIso(), email).run();
 
@@ -126,19 +147,27 @@ async function sendNewsletter(env, { day = parisDay(), force = false, testTo = n
     const t = randomToken(12);
     await env.DB.prepare("INSERT INTO mails (kind, day, email, token, sent_at) VALUES ('test', ?, ?, ?, ?)").bind(day, testTo, t, nowIso()).run();
     const sub = await env.DB.prepare("SELECT token FROM subscribers WHERE email = ?").bind(testTo).first();
-    const r = await brevoSend(env, { versions: [{ email: testTo, params: { t, u: sub?.token || "test" } }], subject: "[Test] " + m.subject, html: m.html, text: m.text, tag: "newsletter-test" });
+    const r = await brevoSend(env, { versions: [{ email: testTo, params: { t, u: sub?.token || "test", r: "test" } }], subject: "[Test] " + m.subject, html: m.html, text: m.text, tag: "newsletter-test" });
     return r.ok ? { ok: true, test: testTo } : { error: r.error };
   }
   const lock = await env.DB.prepare("INSERT OR IGNORE INTO nl_runs (day, status, started_at) VALUES (?, 'sending', ?)").bind(day, nowIso()).run();
   if (!lock.meta.changes) return { skipped: "déjà envoyée" };
   try {
-    const subs = (await env.DB.prepare("SELECT email, token FROM subscribers WHERE status = 'active' ORDER BY created_at").all()).results;
+    const subs = (await env.DB.prepare("SELECT email, token, owner FROM subscribers WHERE status = 'active' ORDER BY created_at").all()).results;
     const room = Math.max(0, mailLimit(env) - await mailsToday(env));
     const list = subs.slice(0, room);
-    const versions = list.map(s => ({ email: s.email, params: { t: randomToken(12), u: s.token } }));
-    for (let i = 0; i < versions.length; i += 50) {
-      const chunk = versions.slice(i, i + 50);
-      await env.DB.batch(chunk.map(v => env.DB.prepare("INSERT INTO mails (kind, day, email, token, sent_at) VALUES ('newsletter', ?, ?, ?, ?)").bind(day, v.email, v.params.t, nowIso())));
+    // Lien de parrainage de chaque abonné (créé si besoin), en quelques requêtes groupées.
+    const codes = Object.fromEntries((await env.DB.prepare("SELECT owner, MIN(code) AS code FROM refcodes GROUP BY owner").all()).results.map(r => [r.owner, r.code]));
+    const fresh = [];
+    for (const sub of list) { const o = sub.owner || `e:${sub.email}`; if (!codes[o]) { codes[o] = randomToken(6).replace(/[-_]/g, "x").slice(0, 8).toLowerCase(); fresh.push([codes[o], o]); } }
+    for (let i = 0; i < fresh.length; i += 30) {
+      const ch = fresh.slice(i, i + 30);
+      await env.DB.prepare(`INSERT OR IGNORE INTO refcodes (code, owner, created_at) VALUES ${ch.map(() => "(?, ?, ?)").join(",")}`).bind(...ch.flatMap(([c, o]) => [c, o, nowIso()])).run();
+    }
+    const versions = list.map(s => ({ email: s.email, params: { t: randomToken(12), u: s.token, r: codes[s.owner || `e:${s.email}`] } }));
+    for (let i = 0; i < versions.length; i += 24) {
+      const ch = versions.slice(i, i + 24), ts = nowIso();
+      await env.DB.prepare(`INSERT INTO mails (kind, day, email, token, sent_at) VALUES ${ch.map(() => "('newsletter', ?, ?, ?, ?)").join(",")}`).bind(...ch.flatMap(v => [day, v.email, v.params.t, ts])).run();
     }
     for (let i = 0; i < versions.length; i += 100) {
       const r = await brevoSend(env, { versions: versions.slice(i, i + 100), subject: m.subject, html: m.html, text: m.text, tag: "newsletter" });
@@ -174,7 +203,7 @@ async function track(req, env) {
 async function kpi(env, days) {
   const today = parisDay(), from = shiftDay(today, -(days - 1)), d7 = shiftDay(today, -6), d30 = shiftDay(today, -29);
   const q = (sql, ...a) => env.DB.prepare(sql).bind(...a);
-  const [daily, newDev, wau, mau, devMix, ret, evDay, byFmt, top, users, usersDay, nlSubs, nlDay, runs, mailsDay, states] = await env.DB.batch([
+  const [daily, newDev, wau, mau, devMix, ret, evDay, byFmt, top, users, usersDay, nlSubs, nlDay, runs, mailsDay, states, payPlan, payDay, payAll, grantsR, unlocksN, pendingN] = await env.DB.batch([
     q("SELECT day, COUNT(*) AS n FROM device_days WHERE day >= ? GROUP BY day", from),
     q("SELECT first_day AS day, COUNT(*) AS n FROM devices WHERE first_day >= ? GROUP BY first_day", from),
     q("SELECT COUNT(DISTINCT device) AS n FROM device_days WHERE day >= ?", d7),
@@ -200,6 +229,12 @@ async function kpi(env, days) {
        FROM nl_runs r LEFT JOIN mails m ON m.day = r.day AND m.kind = 'newsletter' GROUP BY r.day ORDER BY r.day DESC LIMIT 21`),
     q("SELECT kind, COUNT(*) AS n FROM mails WHERE day = ? GROUP BY kind", today),
     q("SELECT state FROM user_state"),
+    q("SELECT plan, COUNT(*) AS n, SUM(amount) AS cents FROM payments WHERE status = 'paid' AND paid_at >= ? GROUP BY plan", from),
+    q("SELECT substr(paid_at, 1, 10) AS day, SUM(amount) AS n FROM payments WHERE status = 'paid' AND paid_at >= ? GROUP BY day", from),
+    q("SELECT SUM(amount) AS cents, COUNT(*) AS n FROM payments WHERE status = 'paid'"),
+    q("SELECT reason, COUNT(*) AS n FROM grants WHERE created_at >= ? GROUP BY reason", from),
+    q("SELECT COUNT(*) AS n FROM unlocks WHERE created_at >= ?", from),
+    q("SELECT COUNT(*) AS n FROM subscribers WHERE status = 'pending'"),
   ]);
   const R = x => x.results, F = x => x.results[0] || {};
   // Séries et érudition des comptes (calculées ici, l'appli garde la même règle).
@@ -219,7 +254,9 @@ async function kpi(env, days) {
       streaks: dist(streaks, [[0, 0, "0"], [1, 2, "1-2"], [3, 6, "3-6"], [7, 13, "7-13"], [14, 29, "14-29"], [30, 99, "30-99"], [100, 1e9, "100+"]]),
       erudition: dist(eru, [[0, 0, "0"], [1, 9, "1-9"], [10, 24, "10-24"], [25, 49, "25-49"], [50, 99, "50-99"], [100, 1e9, "100+"]]),
       bestStreak: Math.max(0, ...streaks) },
-    newsletter: { ...F(nlSubs), daily: R(nlDay), runs: R(runs) },
+    newsletter: { ...F(nlSubs), pending: F(pendingN).n || 0, daily: R(nlDay), runs: R(runs) },
+    revenue: { stripe: stripeOn(env), byPlan: R(payPlan), daily: R(payDay), totalCents: F(payAll).cents || 0, totalCount: F(payAll).n || 0 },
+    credits: { grants: R(grantsR), unlocks: F(unlocksN).n || 0 },
     mails: { today: R(mailsDay), limit: mailLimit(env) },
   };
 }
@@ -238,9 +275,17 @@ async function adminSetPremium(req, env) {
 }
 
 /* ---------- Routeur ---------- */
-async function route(req, env, url) {
+async function route(req, env, url, ctx) {
   const p = url.pathname.replace(/\/+$/, "") || "/", M = req.method;
-  if (p === "/" ) return json({ name: "Le Sachoir API", ok: true });
+  if (p === "/") return json({ name: "Le Sachoir API", ok: true });
+  // Ce qui est branché : l'appli et la publication s'adaptent (rien ne s'active sans sa clé).
+  if (p === "/config") return json({
+    mail: !!env.BREVO_API_KEY || env.DEV === "1", stripe: stripeOn(env),
+    paywall: stripeOn(env) && env.PAYWALL !== "off",
+    prices: { month: PLANS.month.amount, year: PLANS.year.amount },
+  });
+  if (p === "/pay/webhook" && M === "POST") return webhook(req, env);
+  if (p === "/premium/img") return premiumImg(env, url, ctx);
   if (p === "/auth/request" && M === "POST") return authRequest(req, env);
   if (p === "/auth/verify" && M === "POST") return authVerify(req, env);
   if (p === "/ev" && M === "POST") return track(req, env);
@@ -248,13 +293,27 @@ async function route(req, env, url) {
   if (p === "/nl/subscribe" && M === "POST") {
     const b = await body(req), email = normEmail(b.email);
     if (!EMAIL_RE.test(email)) return err("Adresse e-mail invalide.");
-    return json(await subscribe(env, email, String(b.source || "appli").slice(0, 20)));
+    const u0 = await currentUser(req, env);
+    // Un appareil déjà lié à un compte : le dossier offert va au compte (une seule fois).
+    const linked = !u0 && DEVICE_RE.test(String(b.d || "")) && await env.DB.prepare("SELECT user_id FROM devices WHERE device = ? AND user_id IS NOT NULL").bind(String(b.d)).first();
+    const r = await subscribe(env, email, String(b.source || "appli").slice(0, 20), { owner: (linked ? `u:${linked.user_id}` : ownerOf(u0, b.d)) || `e:${email}`, ref: b.ref ? String(b.ref).slice(0, 16) : null });
+    return r.error ? err(r.error, 503) : json(r);
+  }
+  if (p === "/nl/confirm") {
+    const t = url.searchParams.get("t") || "";
+    const sub = t && await env.DB.prepare("SELECT * FROM subscribers WHERE confirm_token = ?").bind(t).first();
+    if (!sub) return page(env, "Lien inconnu", h1("Lien expiré ou déjà utilisé") + `<p>Votre abonnement est peut-être déjà confirmé. Sinon, réinscrivez-vous depuis l'appli.</p>${btn(env.APP_URL, "Ouvrir l'appli")}`);
+    await env.DB.prepare("UPDATE subscribers SET status = 'active', confirmed_at = ?, confirm_token = NULL, unsub_at = NULL WHERE email = ?").bind(nowIso(), sub.email).run();
+    const gift = await grantNewsletter(env, sub.email, sub.owner || `e:${sub.email}`);
+    if (sub.ref) await rewardReferral(env, sub.ref, sub.email, [sub.owner].filter(Boolean));
+    await sendWelcome(env, sub.email, sub.token);
+    return page(env, "Abonnement confirmé", h1("C'est confirmé !") + `<p style="font-size:16px;line-height:1.5">La première édition arrive demain matin.${gift ? " <b>Et un Grand Dossier vous est offert</b> : ouvrez celui de votre choix dans l'appli, la suite se débloque d'un toucher." : ""}</p>${btn(env.APP_URL, gift ? "Choisir mon dossier offert" : "Ouvrir l'appli")}`);
   }
   if (p === "/nl/unsub") {
     const t = url.searchParams.get("t") || "";
     const s = await env.DB.prepare("SELECT email, status FROM subscribers WHERE token = ?").bind(t).first();
     if (!s) return page(env, "Lien inconnu", h1("Lien inconnu") + `<p>Ce lien de désinscription ne correspond à personne. Vous êtes peut-être déjà libre.</p>`);
-    if (url.searchParams.get("re") === "1") { await subscribe(env, s.email, "retour", false); return page(env, "Réabonné", h1("Re-bienvenue !") + `<p>On savait que vous reviendriez. La prochaine édition arrive demain matin.</p>${btn(env.APP_URL, "Ouvrir l'appli")}`); }
+    if (url.searchParams.get("re") === "1") { await subscribe(env, s.email, "retour", { confirmed: true, welcome: false }); return page(env, "Réabonné", h1("Re-bienvenue !") + `<p>On savait que vous reviendriez. La prochaine édition arrive demain matin.</p>${btn(env.APP_URL, "Ouvrir l'appli")}`); }
     if (M === "POST" || url.searchParams.get("ok") === "1") {
       await unsubscribe(env, s.email);
       return page(env, "Désinscrit", h1("C'est fait.") + `<p style="font-size:16px;line-height:1.5">Vous ne recevrez plus la newsletter. Votre culture G, elle, reste en libre-service dans l'appli.</p><p style="font-size:14px;color:#5f5a52">Un clic malheureux ? <a href="?t=${esc(t)}&re=1">Se réabonner</a>.</p>`);
@@ -284,16 +343,31 @@ async function route(req, env, url) {
 
   // Routes avec session
   const u = await currentUser(req, env);
-  if (p.startsWith("/me") || p === "/auth/logout" || p.startsWith("/admin")) { if (!u) return err("Session expirée. Reconnectez-vous.", 401); }
+  if (p === "/wallet") return json(await wallet(env, u, url.searchParams.get("d")));
+  if (p === "/unlock" && M === "POST") { const b = await body(req); const r = await unlock(env, u, b.d, b.ed); return r.error ? json(r, r.code === "no_credit" ? 402 : 400) : json(r); }
+  if (p === "/premium/dossier") { const r = await premiumDossier(env, u, url.searchParams.get("d"), url.searchParams.get("ed")); return json(r.body, r.status); }
+  if (p.startsWith("/me") || p === "/auth/logout" || p.startsWith("/admin") || p.startsWith("/pay/")) { if (!u) return err("Session expirée. Reconnectez-vous.", 401); }
+  if (p === "/pay/checkout" && M === "POST") {
+    if (!stripeOn(env)) return err("Le paiement n'est pas encore ouvert.", 503);
+    const r = await checkout(env, u, (await body(req)).plan);
+    return r.error ? err(r.error) : json(r);
+  }
+  if (p === "/pay/confirm" && M === "POST") {
+    if (!stripeOn(env)) return err("Le paiement n'est pas encore ouvert.", 503);
+    const ok = await payConfirm(env, String((await body(req)).session_id || ""));
+    return json({ ok, user: await publicUser(env, await env.DB.prepare("SELECT * FROM users WHERE id = ?").bind(u.id).first()) });
+  }
   if (p === "/auth/logout" && M === "POST") { await env.DB.prepare("DELETE FROM sessions WHERE token_hash = ?").bind(u.sid).run(); return json({ ok: true }); }
   if (p === "/me" && M === "GET") {
+    await checkPending(env, u.id);
+    const fresh = await env.DB.prepare("SELECT * FROM users WHERE id = ?").bind(u.id).first();
     const row = await env.DB.prepare("SELECT state FROM user_state WHERE user_id = ?").bind(u.id).first();
-    return json({ user: await publicUser(env, u), state: row ? JSON.parse(row.state) : {} });
+    return json({ user: await publicUser(env, fresh), state: row ? JSON.parse(row.state) : {}, wallet: await wallet(env, fresh, url.searchParams.get("d")) });
   }
   if (p === "/me" && M === "PUT") {
     const b = await body(req);
     if (typeof b.name === "string") await env.DB.prepare("UPDATE users SET name = ? WHERE id = ?").bind(b.name.trim().slice(0, 24), u.id).run();
-    if (typeof b.newsletter === "boolean") { if (b.newsletter) await subscribe(env, u.email, "compte"); else await unsubscribe(env, u.email); }
+    if (typeof b.newsletter === "boolean") { if (b.newsletter) await subscribe(env, u.email, "compte", { confirmed: true, owner: `u:${u.id}` }); else await unsubscribe(env, u.email); }
     return json({ user: await publicUser(env, await env.DB.prepare("SELECT * FROM users WHERE id = ?").bind(u.id).first()) });
   }
   if (p === "/me/sync" && M === "POST") {
@@ -311,6 +385,8 @@ async function route(req, env, url) {
       env.DB.prepare("UPDATE devices SET user_id = NULL WHERE user_id = ?").bind(u.id),
       env.DB.prepare("UPDATE mails SET email = 'supprime' WHERE email = ?").bind(u.email),
       env.DB.prepare("DELETE FROM logins WHERE email = ?").bind(u.email),
+      env.DB.prepare("DELETE FROM grants WHERE owner = ?").bind(`u:${u.id}`),
+      env.DB.prepare("DELETE FROM unlocks WHERE owner = ?").bind(`u:${u.id}`),
       env.DB.prepare("DELETE FROM users WHERE id = ?").bind(u.id),
     ]);
     return json({ ok: true });
@@ -324,7 +400,7 @@ async function route(req, env, url) {
       const ed = await loadEdition(env, url.searchParams.get("day") || parisDay());
       if (!ed) return err("Pas d'édition publiée ce jour-là.", 404);
       const mm = newsletterMail(env, ed);
-      return json({ subject: mm.subject, html: mm.html.replaceAll("{{params.t}}", "apercu").replaceAll("{{params.u}}", "apercu") });
+      return json({ subject: mm.subject, html: mm.html.replaceAll("{{params.t}}", "apercu").replaceAll("{{params.u}}", "apercu").replaceAll("{{params.r}}", "apercu") });
     }
     if (p === "/admin/newsletter" && M === "POST") {
       const b = await body(req);
@@ -351,11 +427,11 @@ async function cron(env) {
 }
 
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     const url = new URL(req.url), h = cors(req, env);
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
     let res;
-    try { res = await route(req, env, url); }
+    try { res = await route(req, env, url, ctx); }
     catch (e) { console.error(e.stack || e); res = err("Erreur du serveur. On a déjà blâmé un stagiaire.", 500); }
     const out = new Response(res.body, res);
     for (const [k, v] of Object.entries(h)) out.headers.set(k, v);

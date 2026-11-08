@@ -81,6 +81,7 @@ let ACC = null; try { ACC = JSON.parse(localStorage.getItem("sachoir.acc") || "n
 let DAYS = 30, K = null, TITLES = {}, STATUS = null;
 const esc = t => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const nf = n => (+n || 0).toLocaleString("fr-FR");
+const euro = c => ((+c || 0) / 100).toLocaleString("fr-FR", { style: "currency", currency: "EUR" });
 const pct = (a, b) => b ? Math.round(100 * a / b) + " %" : "—";
 const shift = (iso, n) => { const d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const dShort = iso => new Date(iso + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
@@ -220,6 +221,17 @@ function draw() {
   <div class="card" style="margin-top:12px"><h3>Newsletter du jour</h3><p class="note">Elle part toute seule dès que l’édition est publiée (vérification toutes les 30 min, de 5 h à 11 h). Ces boutons servent à vérifier ou à rattraper un envoi.</p>
     <div class="row"><button class="btn ghost" id="nlPrev">Aperçu</button><button class="btn ghost" id="nlTest">M’envoyer un test</button><button class="btn" id="nlSend">Envoyer maintenant</button></div>
     <div id="nlBox"></div></div>
+
+  <h2>Premium et dossiers offerts</h2><p class="note">${K.revenue.stripe ? "Paiement Stripe actif (paiement unique : 1 mois ou 1 an)." : "Stripe pas encore branché : ajoutez le secret STRIPE_SECRET_KEY pour ouvrir le paiement et le paywall."}</p>
+  <div class="grid">
+    ${tile(euro(K.revenue.byPlan.reduce((t, x) => t + x.cents, 0)), "Revenus sur la période", K.revenue.byPlan.map(x => `${nf(x.n)} × ${x.plan === "year" ? "1 an" : "1 mois"}`).join(" · ") || "aucun paiement")}
+    ${tile(euro(K.revenue.totalCents), "Revenus depuis le début", nf(K.revenue.totalCount) + " paiement(s)")}
+    ${tile(nf((K.credits.grants.find(g => g.reason === "newsletter") || {}).n || 0), "Dossiers offerts (newsletter)", `sur ${DAYS} jours`)}
+    ${tile(nf((K.credits.grants.find(g => g.reason === "referral") || {}).n || 0), "Dossiers offerts (parrainage)", `sur ${DAYS} jours`)}
+    ${tile(nf(K.credits.unlocks), "Dossiers débloqués", `sur ${DAYS} jours`)}
+    ${tile(nf(K.newsletter.pending), "Abonnés à confirmer", "e-mail de confirmation pas encore cliqué")}
+  </div>
+  <div class="cards">${card("Revenus par jour", "En euros, paiements validés.", bars(series(K.revenue.daily).map(d => ({ ...d, v: Math.round(d.v / 100) })), { color: "#1f8f5f", unit: " €" }))}</div>
 
   <h2>Utilisateurs et Premium</h2><p class="note">En attendant Stripe, le Premium se donne ici à la main, avec ou sans date de fin.</p>
   <div class="card"><div class="row" style="margin-bottom:8px"><input type="search" id="uq" placeholder="Rechercher un e-mail ou un prénom" style="flex:1;min-width:200px"></div><div class="scroll" id="users"><p class="note">Chargement…</p></div></div>
