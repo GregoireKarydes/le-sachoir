@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T00:49:46.428865+01:00",
+ "updated_at": "2026-11-08T03:23:15.581536+01:00",
  "today": "2026-11-08",
  "problems": [],
  "days": [
@@ -7,10 +7,10 @@
    "date": "2026-11-08",
    "status": "draft",
    "formats": {
-    "dossier": "prêt",
+    "dossier": "12 image(s) à faire",
     "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
+    "cultureg": "2 image(s) à faire",
+    "insolite": "2 image(s) à faire",
     "quiz": "prêt"
    }
   },
@@ -77,10 +77,14 @@
  "days_ahead_drawn": 1,
  "days_ahead_written": 6,
  "quota": {
-  "day": "2026-11-07",
-  "count": 80,
-  "exhausted": false,
-  "neurons": 14400
+  "day": "2026-11-08",
+  "count": 0,
+  "neurons": 0,
+  "exhausted": true,
+  "by_kind": {
+   "cover": 0
+  },
+  "exhausted_at": "2026-11-08T02:23:02.443089+00:00"
  },
  "fal": {
   "month": "2026-11",
