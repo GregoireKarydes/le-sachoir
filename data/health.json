@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T04:54:17.144330+01:00",
+ "updated_at": "2026-11-08T05:00:39.130640+01:00",
  "today": "2026-11-08",
  "problems": [],
  "days": [
@@ -18,9 +18,6 @@
    "date": "2026-11-09",
    "status": "draft",
    "formats": {
-    "dossier": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
     "quiz": "prêt"
    }
   },
@@ -28,9 +25,6 @@
    "date": "2026-11-10",
    "status": "draft",
    "formats": {
-    "dossier": "26 image(s) à faire",
-    "cultureg": "11 image(s) à faire",
-    "insolite": "8 image(s) à faire",
     "quiz": "prêt"
    }
   },
@@ -38,8 +32,6 @@
    "date": "2026-11-11",
    "status": "draft",
    "formats": {
-    "cultureg": "9 image(s) à faire",
-    "insolite": "8 image(s) à faire",
     "quiz": "prêt"
    }
   },
@@ -47,8 +39,6 @@
    "date": "2026-11-12",
    "status": "draft",
    "formats": {
-    "cultureg": "9 image(s) à faire",
-    "insolite": "8 image(s) à faire",
     "quiz": "prêt"
    }
   },
@@ -56,8 +46,6 @@
    "date": "2026-11-13",
    "status": "draft",
    "formats": {
-    "cultureg": "9 image(s) à faire",
-    "insolite": "8 image(s) à faire",
     "quiz": "prêt"
    }
   },
@@ -65,17 +53,45 @@
    "date": "2026-11-14",
    "status": "draft",
    "formats": {
-    "cultureg": "9 image(s) à faire",
-    "insolite": "8 image(s) à faire",
     "quiz": "prêt"
    }
   }
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-07",
+ "stock_moves": [],
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite"
+ ],
+ "last_published": "2026-11-08",
+ "stock": {
+  "cultureg": {
+   "ready": 1,
+   "waiting": 5,
+   "blocked": 0,
+   "images_left": 47,
+   "focus": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute (11 image(s) à faire)"
+  },
+  "insolite": {
+   "ready": 1,
+   "waiting": 5,
+   "blocked": 0,
+   "images_left": 40,
+   "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (8 image(s) à faire)"
+  },
+  "dossier": {
+   "ready": 1,
+   "waiting": 1,
+   "blocked": 0,
+   "images_left": 26,
+   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (26 image(s) à faire)"
+  }
+ },
  "days_ahead_drawn": 1,
- "days_ahead_written": 6,
+ "days_ahead_written": 2,
+ "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-08",
   "count": 0,
@@ -88,9 +104,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 0.78505,
-  "images": 99,
-  "today_usd": 0.39162,
+  "spent_usd": 0.78798,
+  "images": 100,
+  "today_usd": 0.39455,
   "blocked": null
  }
 }

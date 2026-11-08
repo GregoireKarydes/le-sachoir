@@ -1,6 +1,6 @@
 {
   "date": "2026-11-08",
-  "status": "draft",
+  "status": "published",
   "formats": [
     {
       "id": "dossier",
@@ -1791,5 +1791,6 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-08T05:00:39.130640+01:00"
 }

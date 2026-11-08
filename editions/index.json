@@ -1,6 +1,67 @@
 {
- "updated_at": "2026-11-08T04:54:17.144330+01:00",
+ "updated_at": "2026-11-08T05:00:39.130640+01:00",
  "editions": [
+  {
+   "date": "2026-11-08",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Tout ça pour un pain : Les Misérables en entier",
+     "kind": "",
+     "url": "histoires/2026-11-08-tout-ca-pour-un-pain-les-miserables-en-entier/",
+     "theme": "Littérature",
+     "minutes": 5,
+     "tagline": "Le roman-fleuve de Victor Hugo, du bagne de Toulon à la barricade de 1832, sans lire les 1 400 pages",
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "La COP en colocation (et autres records)",
+     "kind": "",
+     "url": "histoires/2026-11-08-la-cop-en-colocation-et-autres-records/",
+     "theme": "",
+     "minutes": 2,
+     "tagline": "Des chiffres qui ne tombent jamais d’accord, un marin qui ne traîne pas et un sommet du climat à deux pays.",
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Tirer sur la corde ou tirer au flanc ?",
+     "kind": "",
+     "url": "histoires/2026-11-08-tirer-sur-la-corde-ou-tirer-au-flanc/",
+     "theme": "Psychologie",
+     "minutes": 2,
+     "tagline": "Pourquoi huit personnes tirent comme quatre (et votre réunion d’équipe aussi)",
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "Le Tour de France gagné par le cinquième",
+     "kind": "",
+     "url": "histoires/2026-11-08-le-tour-de-france-gagne-par-le-cinquieme/",
+     "theme": "Sports",
+     "minutes": 1,
+     "tagline": "En 1904, trains, voitures et clous : les quatre premiers ont tous été déclassés.",
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Quiz géo",
+     "title": "Trois questions, zéro GPS",
+     "kind": "geo",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-07",
    "demo": false,
