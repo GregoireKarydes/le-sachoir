@@ -81,6 +81,10 @@ h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,48px);line-
 .panel.explain ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .panel.explain .ex-tag{align-self:flex-start;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:2px 9px;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
 .panel.explain .ex-joke{font-family:var(--letter);border-top:2px dashed var(--line);padding-top:8px}
+.panel.photo{flex-direction:column}.panel.photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#efebe3}
+.panel.photo .credit{font-size:12px;color:#5f5a52}.panel.photo .credit a{color:inherit}
+.locked{background:#fff;border-radius:18px;padding:16px 18px;margin:18px 0;display:flex;flex-direction:column;gap:10px}
+.locked p{margin:0}.locked .outline{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
 .story{max-width:72ch}.story p{font-size:17px;line-height:1.6;margin:0 0 12px}
 .brille{background:var(--cream);border:3px solid var(--ink);border-radius:20px;overflow:hidden;max-width:720px;margin:30px 0;box-shadow:6px 6px 0 var(--ink)}
 .brille h2{margin:0;background:var(--yellow);border-bottom:3px solid var(--ink);padding:10px 16px;font-size:14px;letter-spacing:.5px;text-transform:uppercase}
@@ -149,8 +153,28 @@ def card(s):
     return f'<a class="card" href="{e(s["url_abs"])}">{img}<div><strong>{e(s["title"])}</strong><span>{e(s["label"])}{" · " + e(s["theme"]) if s["theme"] else ""} · {date_fr(s["date"])}</span></div></a>'
 
 
-def story_page(s, ed_dir: Path, related):
+FREE_CASES = 4  # même règle que publish.py
+
+
+def photo_figure(c, img_base):
+    """Case photo réelle (Wikimedia Commons) : image, titre, explication et source."""
+    ph = c.get("photo") or {}
+    if ph.get("status") != "done" or not ph.get("file"):
+        return ""
+    credit = " · ".join(x for x in (ph.get("credit"), ph.get("license")) if x)
+    src = f'<a href="{e(ph.get("source"))}" rel="nofollow noopener">Wikimedia Commons</a>' if ph.get("source") else "Wikimedia Commons"
+    return (f'<figure class="panel explain photo"><img src="{e(img_base + ph["file"])}" alt="{e(c.get("title", ""))}" loading="lazy" decoding="async">'
+            f'<figcaption><b class="ex-tag">{e(c.get("tag") or "En vrai")}</b><strong>{e(c.get("title", ""))}</strong><p>{e(c.get("text", ""))}</p>'
+            f'<small class="credit">Photo : {e(credit)} · {src}</small></figcaption></figure>')
+
+
+def story_page(s, ed_dir: Path, related, gate=False):
     f, date = s["fmt"], s["date"]
+    # Paywall actif : la page publique du Grand Dossier montre le début de la BD, le plan et le résumé, pas la suite.
+    locked = gate and f["id"] == "dossier" and len(f.get("cases", [])) > FREE_CASES
+    rest = f.get("cases", [])[FREE_CASES:] if locked else []
+    if locked:
+        f = {**f, "cases": f["cases"][:FREE_CASES]}
     img_base = f"{BASE}editions/{date}/"
     desc = clip(f.get("final", {}).get("text") or f.get("tagline") or f["title"])
     title = f'{f["title"]} — {f.get("label", "")} en BD | Le Sachoir'
@@ -159,6 +183,11 @@ def story_page(s, ed_dir: Path, related):
     theme = f.get("theme", "")
     panels = []
     for c in f.get("cases", []):
+        if c.get("kind") == "photo":
+            fig = photo_figure(c, img_base)
+            if fig:
+                panels.append(fig)
+            continue
         if c.get("kind") == "explain":
             paras = "".join(f"<p>{e(t)}</p>" for t in str(c.get("text") or "").split("\n") if t.strip())
             steps = ("<ol>" + "".join(f"<li>{e(t)}</li>" for t in c.get("steps") or []) + "</ol>") if c.get("steps") else ""
@@ -184,7 +213,7 @@ def story_page(s, ed_dir: Path, related):
         "@graph": [
             {"@type": "Article", "headline": f["title"][:110], "description": desc, "image": [image],
              "datePublished": published, "dateModified": published, "inLanguage": "fr",
-             "articleSection": theme or f.get("label", ""), "isAccessibleForFree": True,
+             "articleSection": theme or f.get("label", ""), "isAccessibleForFree": not locked,
              "author": {"@type": "Organization", "name": "Le Sachoir", "url": BASE},
              "publisher": {"@type": "Organization", "name": "Le Sachoir", "logo": {"@type": "ImageObject", "url": f"{BASE}assets/icon-512.png"}},
              "mainEntityOfPage": canonical},
@@ -205,6 +234,7 @@ def story_page(s, ed_dir: Path, related):
 <a class="cta" href="{BASE}?d={date}&amp;f={f['id']}">Lire en BD dans l’appli</a></div>
 {('<div class="cover"><img src="' + e(s['cover_abs']) + '" alt="' + e(f['title']) + '" width="1792" height="1024" fetchpriority="high"></div>') if s['cover_abs'] else ''}</div>
 <section class="strip" aria-label="La bande dessinée, case par case">{''.join(panels)}</section>
+{locked_block(f, date, rest) if locked else ''}
 {('<section class="story"><h2 class="sec">L’histoire complète</h2>' + ''.join('<p>' + e(t) + '</p>' for t in str(f.get('story')).split(chr(10)) if t.strip()) + '</section>') if f.get('story') else ''}
 <aside class="brille"><h2>Pour briller en société</h2><p>{e(f.get('final', {}).get('text', ''))}</p></aside>
 {('<h2 class="sec">Sources</h2><ul class="sources">' + sources + '</ul>') if sources else ('<p class="meta">Source : ' + e(final_src) + '</p>' if final_src else '')}
@@ -214,13 +244,21 @@ def story_page(s, ed_dir: Path, related):
     return head(title, desc, canonical, image, noindex=s["demo"], extra=extra, og_type="article", image_alt=f["title"]) + body + FOOT
 
 
+def locked_block(f, date, rest):
+    outline = [c.get("tag") for c in rest if c.get("kind") == "chap" and c.get("tag")]
+    plan = ("<ol class='outline'>" + "".join(f"<li>{e(t)}</li>" for t in outline) + "</ol>") if outline else ""
+    return (f'<section class="locked"><h2 class="sec">La suite du dossier : {len(rest)} cases</h2>{plan}'
+            f'<p>La suite se lit dans l’appli : abonnez-vous à la newsletter (gratuit) ou invitez un ami pour débloquer ce dossier, ou passez Premium pour tous les débloquer.</p>'
+            f'<a class="cta" href="{BASE}?d={date}&amp;f={f["id"]}">Lire la suite dans l’appli</a></section>')
+
+
 def list_page(title, h1, intro, stories, canonical):
     body = f"""<main class="wrap"><nav class="crumbs"><a href="{BASE}">Le Sachoir</a> › <span>{e(h1)}</span></nav>
 <h1>{e(h1)}</h1><p class="lead">{e(intro)}</p><div class="cards">{''.join(card(s) for s in stories)}</div></main>"""
     return head(title, clip(intro), canonical, f"{BASE}assets/og.png") + body + FOOT
 
 
-def build(site: Path, index: list):
+def build(site: Path, index: list, gate: bool = False):
     now = datetime.now().astimezone().isoformat(timespec="seconds")
     stories = []
     for entry in index:
@@ -247,7 +285,7 @@ def build(site: Path, index: list):
         related = (same + recent)[:6]
         out = site / "histoires" / s["slug"]
         out.mkdir(parents=True, exist_ok=True)
-        (out / "index.html").write_text(story_page(s, ROOT / "editions" / s["date"], related))
+        (out / "index.html").write_text(story_page(s, ROOT / "editions" / s["date"], related, gate))
     # Thèmes
     themes = {}
     for s in public:
@@ -281,4 +319,9 @@ def build(site: Path, index: list):
     app = site / "index.html"
     links = "".join(f'<a href="{e(s["url_abs"])}">{e(s["title"])} — {e(s["label"])}</a>' for s in public[:30])
     app.write_text(app.read_text().replace("__BASE__", BASE).replace("<!--SEO_LINKS-->", links))
+    # Adresse de l'API (comptes, newsletter, mesures) et verrous Premium : réglés dans site.json
+    api, paywall = SITE_CFG.get("api_url", "").rstrip("/"), "on" if SITE_CFG.get("paywall") else "off"
+    for page in (app, site / "admin.html"):
+        if page.exists():
+            page.write_text(page.read_text().replace("__API__", api).replace("__PAYWALL__", paywall))
     print(f"SEO : {len(stories)} page(s) d’histoire, {len(themes)} thème(s), sitemap de {len(urls)} URL.")

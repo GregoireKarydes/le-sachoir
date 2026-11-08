@@ -30,6 +30,8 @@ jobs:
           cache: pip
           cache-dependency-path: pipeline/requirements.txt
       - run: pip install -r pipeline/requirements.txt
+      - name: Photos réelles (Wikimedia Commons)
+        run: python pipeline/photos.py || echo "::warning::Photos non récupérées, nouvel essai au prochain passage"
       - name: Générer les images manquantes
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}

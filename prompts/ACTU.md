@@ -20,8 +20,9 @@ Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
    Personnalités vivantes jamais nommées en entier, reconnaissables par leur fonction.
 6. Écrire le casting (2 à 6 fiches pour tout le format ; fiche `skipped` d'office pour un personnage qui n'apparaît que dans une case), les prompts d'images en anglais, la couverture, la carte `final` (le fait le plus marquant du jour, 25 mots max) et `sources` (une URL par sujet au moins).
 7. **Seconde passe de fact-check** : relire chaque récitatif et chaque case « Ce qui se passe vraiment » contre les sources. Corriger ou retirer.
-8. Ajouter le format au fichier `editions/<date>/edition.json` (le créer avec `"status": "draft"` s'il n'existe pas ; remplacer un `actu` existant). Valider le JSON (`python -m json.tool`).
-9. `git add`, commit « Actu du <date> », `git push`. Le push déclenche la génération des images.
+8. **Écrire le bloc `newsletter`** de l'édition (objet, mot d'accueil, phrase du jeu, P.-S.), drôle et différent de tous les jours précédents, selon la section « Newsletter » de `prompts/SCHEMA.md`, et le `teaser` du format `actu`. Ajouter aussi un `teaser` aux BD de l'édition du jour qui n'en ont pas.
+9. Ajouter le format au fichier `editions/<date>/edition.json` (le créer avec `"status": "draft"` s'il n'existe pas ; remplacer un `actu` existant). Valider le JSON (`python -m json.tool`).
+10. `git add`, commit « Actu du <date> », `git push`. Le push déclenche la génération des images.
 
 ## Contrôle qualité (à 3 h 30, même tâche relancée ou suite de celle-ci)
 Voir `prompts/QA.md`.

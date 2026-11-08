@@ -13,6 +13,7 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
       "label": "La Pilule de Culture G",
       "title": "Le Chat de Schrödinger expliqué à mon chat",
       "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
+      "teaser": "Accroche drôle pour la newsletter, 25 mots max (voir « Newsletter »).",
       "minutes": 2,
       "theme": "Sciences physiques",  // OBLIGATOIRE pour cultureg, insolite et dossier : une des 32 thématiques, écrite exactement comme dans prompts/STOCK.md ; vide pour actu
       "cast": [
@@ -66,6 +67,38 @@ Une case de texte glissée dans la BD, entre deux cases dessinées, là où le l
 - Combien : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, jamais en case 1 ni deux de suite. **Actu : une après chaque case dessinée**, avec `"tag": "Ce qui se passe vraiment"` et `text` en trois lignes « Quoi : … \n Pourquoi ça compte : … \n Et maintenant : … » (50 mots max, sans `joke`) ; un libellé court suivi de « : » en début de ligne est affiché en gras. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
 - La numérotation `n` suit l’ordre de lecture (les cases dessinées et les cases texte se suivent : 1, 2, 3…).
 - Même ton que le Sachoir : simple, concret, une touche d’humour, mais la clarté d’abord.
+
+## Case photo : une vraie image (`"kind": "photo"`)
+Quand c'est pertinent, une vraie photo ou un document d'époque aide à comprendre ou rend l'histoire tangible : le vrai visage du personnage, le lieu réel, l'objet, une carte ancienne, une affiche, un tableau célèbre dont on parle. Même place qu'un « Pour mieux comprendre » : entre deux cases dessinées. Elle ne coûte aucune image générée.
+
+```json
+{
+  "n": 6,
+  "kind": "photo",
+  "tag": "En vrai",                        // facultatif : « En vrai » par défaut ; ou « Le vrai lieu », « Document d'époque »…
+  "title": "Le vrai Victor Hugo en 1876",  // 10 mots max
+  "text": "Une ou deux phrases qui expliquent ce qu'on voit et pourquoi ça compte.",   // 45 mots max
+  "photo": { "commons": "File:Victor Hugo by Étienne Carjat 1876 - full.jpg" }
+}
+```
+- **Uniquement des fichiers de Wikimedia Commons** : `photo.commons` = le nom exact du fichier, qui commence par « File: » (le titre de sa page Commons, trouvée par recherche web). Vérifier sur la page que la licence est libre (domaine public, CC0, CC BY, CC BY-SA). Le workflow Images télécharge l'image, lit l'auteur et la licence sur Commons et les affiche sous la photo avec le lien vers la source ; une licence non libre est refusée et la case est sautée.
+- Combien : 0 ou 1 par Culture G ou Insolite, 1 à 3 par Grand Dossier, seulement si elle apporte vraiment quelque chose ; jamais en case 1 ni deux cases sans dessin de suite. Dans un Grand Dossier, au moins une dans les cases 1 à 4 si un bon document existe (c'est la partie gratuite et visible sur la page publique).
+- **Jamais** de photo d'une personne vivante dans l'Actu (les personnalités y restent parodiées), ni de photo choquante (victimes, violence), ni de personne privée.
+- La `n` suit l'ordre de lecture comme les autres cases.
+
+## Newsletter (texte qui change chaque jour)
+La newsletter du matin met le Grand Dossier en avant, puis montre l'Actu, la Culture G, l'Insolite et le jeu. Pour qu'elle soit drôle et jamais identique :
+- chaque BD a un **`teaser`** (25 mots max) : une accroche qui donne envie de lire, drôle, différente du `tagline`, sans dévoiler la chute ni la phrase « Pour briller ». Écrit en même temps que la BD.
+- l'édition du jour a un bloc **`newsletter`**, écrit par la tâche Actu de la nuit :
+```json
+"newsletter": {
+  "subject": "Objet de l'e-mail, 70 caractères max, drôle, qui donne envie d'ouvrir (une emoji au plus)",
+  "intro": "Le mot d'accueil du jour, 2 phrases, 40 mots max, inspiré de l'actu ou de la date (saison, fête, jour de la semaine)",
+  "game": "Une phrase pour donner envie de jouer au jeu du jour, 20 mots max",
+  "ps": "Un P.-S. drôle, 30 mots max"
+}
+```
+- Ton des newsletters de PostHog : complice, autodérision, jamais racoleur. Ne jamais réutiliser un texte d'une édition précédente (regarder les 7 dernières dans `editions/`). Sans ce bloc, la newsletter pioche dans des réserves de phrases toutes faites.
 
 ## « L’histoire complète » (champ `story` du format)
 Un texte continu, affiché replié après la carte « Pour briller » et en clair sur la page publique de l’histoire (référencement).

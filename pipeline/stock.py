@@ -32,7 +32,7 @@ def pole(theme: str | None) -> str | None:
 
 def images_of(fmt: dict) -> list[dict]:
     """Images à dessiner : couverture et cases (hors « Pour mieux comprendre »)."""
-    imgs = [c["image"] for c in fmt.get("cases", []) if isinstance(c, dict) and c.get("image") and c.get("kind") != "explain"]
+    imgs = [c["image"] for c in fmt.get("cases", []) if isinstance(c, dict) and c.get("image") and c.get("kind") not in ("explain", "photo")]
     return ([fmt["cover"]] if fmt.get("cover") else []) + imgs
 
 

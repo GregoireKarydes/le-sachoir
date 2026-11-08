@@ -31,17 +31,72 @@ QUEUE_SINCE = date(2026, 11, 8)  # mise en place de la file d'attente stock/
 FALLBACK_HOUR = 10  # si aucune BD n'est prête, on publie quand même le jeu à partir de cette heure
 
 
+TEXT_KINDS = ("explain", "photo")  # cases sans dessin : « Pour mieux comprendre » et photo réelle (Wikimedia Commons)
+FREE_CASES = 4  # Grand Dossier : cases lisibles par tous quand le paywall est actif
+
+
 def format_ready(fmt: dict) -> bool:
     if fmt.get("id") == "quiz":  # le quiz n'a pas d'image : prêt dès qu'il a ses questions
         return len(fmt.get("questions", [])) >= 1  # Plus ou moins et Swipe tiennent en une seule « question »
     cases = fmt.get("cases", [])
-    drawn = [c for c in cases if c.get("kind") != "explain"]  # « Pour mieux comprendre » : texte seul, rien à dessiner
+    drawn = [c for c in cases if c.get("kind") not in TEXT_KINDS]  # texte ou photo : rien à dessiner
     return bool(drawn) and all(c.get("image", {}).get("status") == "done" for c in drawn)
 
 
 def pending_images(fmt: dict) -> int:
-    imgs = [c.get("image") or {} for c in fmt.get("cases", []) if c.get("kind") != "explain"] + ([fmt["cover"]] if fmt.get("cover") else [])
+    imgs = [c.get("image") or {} for c in fmt.get("cases", []) if c.get("kind") not in TEXT_KINDS] + ([fmt["cover"]] if fmt.get("cover") else [])
     return sum(1 for i in imgs if i.get("status") != "done")
+
+
+def paywall_on() -> bool:
+    """Paywall du Grand Dossier sur le site publié. « auto » (défaut) : actif quand l'API le dit (clé Stripe en place).
+    API injoignable : on garde l'état de la dernière publication, pour ne jamais exposer la suite par accident."""
+    cfg = json.loads((Path(__file__).resolve().parent / "site.json").read_text())
+    mode, api = cfg.get("paywall", "auto"), (cfg.get("api_url") or "").rstrip("/")
+    if isinstance(mode, bool):
+        return mode
+    if not api:
+        return False
+    try:
+        import requests
+        return bool(requests.get(f"{api}/config", timeout=10).json().get("paywall"))
+    except Exception as ex:  # noqa: BLE001
+        print(f"! API injoignable ({ex}) : paywall comme à la dernière publication")
+        try:
+            return bool(json.loads((ROOT / "data" / "health.json").read_text()).get("paywall"))
+        except Exception:  # noqa: BLE001
+            return False
+
+
+def lock_format(fmt: dict) -> tuple[dict, set]:
+    """Version publique d'un Grand Dossier : les FREE_CASES premières cases, la suite servie par l'API aux ayants droit.
+    Renvoie le format allégé et les fichiers d'images à retirer du site."""
+    cases = fmt.get("cases", [])
+    if fmt.get("id") != "dossier" or len(cases) <= FREE_CASES:
+        return fmt, set()
+    keep, rest = cases[:FREE_CASES], cases[FREE_CASES:]
+    def files(cs):
+        out = set()
+        for c in cs:
+            for k in ("image", "photo"):
+                if (c.get(k) or {}).get("file"):
+                    out.add(c[k]["file"])
+        return out
+    hidden = files(rest) - files(keep) - ({fmt["cover"]["file"]} if (fmt.get("cover") or {}).get("file") else set())
+    outline = [c.get("tag") for c in rest if c.get("kind") == "chap" and c.get("tag")]
+    return {**fmt, "cases": keep, "locked": len(rest), "outline": outline}, hidden
+
+
+def lock_site_edition(dst: Path):
+    f = dst / "edition.json"
+    ed = json.loads(f.read_text())
+    gone = set()
+    for i, fmt in enumerate(ed.get("formats", [])):
+        ed["formats"][i], hidden = lock_format(fmt)
+        gone |= hidden
+    for name in gone:
+        (dst / name).unlink(missing_ok=True)
+    f.write_text(json.dumps(ed, ensure_ascii=False))
 
 
 def fill_from_stock(now: datetime) -> list[str]:
@@ -106,6 +161,8 @@ def main(now: datetime | None = None):
     moves = fill_from_stock(now)
     index = []
     health = {"updated_at": now.isoformat(), "today": today.isoformat(), "problems": [], "days": [], "stock_moves": moves}
+    gate = paywall_on()
+    health["paywall"] = gate
     for d in sorted(EDITIONS.iterdir()):
         f = d / "edition.json"
         if not f.exists():
@@ -175,9 +232,11 @@ def main(now: datetime | None = None):
         src = EDITIONS / e["date"]
         dst = SITE / "editions" / e["date"]
         shutil.copytree(src, dst, ignore=shutil.ignore_patterns("cast", "*.md"))
+        if gate:
+            lock_site_edition(dst)
     (SITE / ".nojekyll").write_text("")
     shutil.copy(ROOT / "data" / "health.json", SITE / "status.json")
-    seo.build(SITE, index)
+    seo.build(SITE, index, gate=gate)
     print("Site construit dans _site/")
 
 

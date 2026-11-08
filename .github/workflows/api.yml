@@ -1,0 +1,117 @@
+name: API
+
+# Déploie l'API du Sachoir (Cloudflare Worker + base D1) : comptes, synchro, newsletter, mesures, admin.
+# Au premier passage : crée la base D1, applique le schéma, déploie, puis écrit l'adresse de l'API
+# dans pipeline/site.json et relance la Publication pour que l'appli s'y branche.
+# Tout est facultatif et s'active quand le secret est là : sans CF_DEPLOY_TOKEN, rien n'est déployé (et rien ne casse) ;
+# le passage quotidien déploie tout seul dès que le jeton est ajouté.
+# Secrets : CF_ACCOUNT_ID (déjà là), CF_DEPLOY_TOKEN (jeton Workers + D1), BREVO_API_KEY (e-mails),
+# STRIPE_SECRET_KEY (paiement + paywall), STRIPE_WEBHOOK_SECRET (facultatif), CONTENT_TOKEN (si le dépôt devient privé).
+on:
+  schedule:
+    - cron: "23 2 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "worker/**"
+      - ".github/workflows/api.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: api
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worker
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CF_DEPLOY_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: worker/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - name: Tests
+        run: npm test
+      - name: Vérifier les secrets
+        id: gate
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::CF_DEPLOY_TOKEN pas encore ajouté : l'API n'est pas déployée, l'appli reste comme avant. Ce workflow réessaie chaque nuit."
+            echo "go=no" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "go=yes" >> "$GITHUB_OUTPUT"
+          [ -n "${{ secrets.BREVO_API_KEY }}" ] || echo "::notice::BREVO_API_KEY absent : comptes et newsletter restent masqués dans l'appli."
+          [ -n "${{ secrets.STRIPE_SECRET_KEY }}" ] || echo "::notice::STRIPE_SECRET_KEY absent : paiement et paywall inactifs."
+      - name: Base D1 (créée si besoin)
+        if: steps.gate.outputs.go == 'yes'
+        run: |
+          id=$(npx wrangler d1 list --json | node -e 'const l=JSON.parse(require("fs").readFileSync(0));const d=l.find(x=>x.name==="sachoir");process.stdout.write(d?d.uuid:"")')
+          if [ -z "$id" ]; then
+            npx wrangler d1 create sachoir
+            id=$(npx wrangler d1 list --json | node -e 'const l=JSON.parse(require("fs").readFileSync(0));process.stdout.write(l.find(x=>x.name==="sachoir").uuid)')
+          fi
+          sed -i "s/__D1_ID__/$id/" wrangler.toml
+          npx wrangler d1 migrations apply sachoir --remote
+      - name: Adresse de l'API
+        if: steps.gate.outputs.go == 'yes'
+        id: url
+        run: |
+          sub=$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain" | node -e 'process.stdout.write(JSON.parse(require("fs").readFileSync(0)).result?.subdomain||"")')
+          [ -n "$sub" ] || { echo "::error::Pas de sous-domaine workers.dev : ouvrez une fois Workers & Pages dans le tableau de bord Cloudflare pour le créer."; exit 1; }
+          echo "api=https://le-sachoir-api.$sub.workers.dev" >> "$GITHUB_OUTPUT"
+      - name: Déployer
+        if: steps.gate.outputs.go == 'yes'
+        run: npx wrangler deploy --var "API_URL:${{ steps.url.outputs.api }}"
+      - name: Secrets de l'API (seulement ceux qui existent)
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.CONTENT_TOKEN }}
+        run: |
+          have=$(npx wrangler secret list 2>/dev/null | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{process.stdout.write(JSON.parse(s).map(x=>x.name).join(" "))}catch(e){}})')
+          for k in BREVO_API_KEY STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET GITHUB_TOKEN; do
+            v="${!k}"
+            if [ -n "$v" ]; then printf '%s' "$v" | npx wrangler secret put "$k" > /dev/null && echo "$k : en place"
+            elif echo " $have " | grep -q " $k "; then npx wrangler secret delete "$k" --force > /dev/null 2>&1 && echo "$k : retiré (secret GitHub supprimé)"; fi
+          done
+          # Clé de signature des images Premium : tirée au hasard une fois pour toutes.
+          echo " $have " | grep -q " SIGNING_KEY " || { openssl rand -hex 32 | npx wrangler secret put SIGNING_KEY > /dev/null && echo "SIGNING_KEY : créée"; }
+      - name: Brancher l'appli sur l'API
+        if: steps.gate.outputs.go == 'yes'
+        working-directory: .
+        env:
+          GH_TOKEN: ${{ github.token }}
+          API: ${{ steps.url.outputs.api }}
+        run: |
+          curl -fsS "$API/" > /dev/null || echo "::warning::L'API ne répond pas encore (propagation workers.dev)."
+          python3 - <<'EOF'
+          import json, os
+          p = "pipeline/site.json"; c = json.load(open(p))
+          if c.get("api_url") != os.environ["API"]:
+              c["api_url"] = os.environ["API"]
+              open(p, "w").write(json.dumps(c, ensure_ascii=False, indent=2) + "\n")
+          EOF
+          if ! git diff --quiet pipeline/site.json; then
+            git config user.name "sachoir-bot"
+            git config user.email "sachoir-bot@users.noreply.github.com"
+            git commit -am "API : adresse de l'API dans site.json"
+            for i in 1 2 3; do git pull --rebase && git push && ok=1 && break; sleep $((i * 15)); done
+            [ -n "$ok" ] || { echo "::error::Push impossible"; exit 1; }
+            gh workflow run publish.yml --ref main
+          fi

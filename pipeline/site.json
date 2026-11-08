@@ -2,5 +2,7 @@
   "base_url": "https://gregoirekarydes.github.io/le-sachoir/",
   "name": "Le Sachoir",
   "tagline": "L'actu et la culture G en BD, chaque jour",
-  "google_site_verification": ""
+  "google_site_verification": "",
+  "api_url": "",
+  "paywall": "auto"
 }

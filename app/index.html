@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#faf6ee">
+<meta name="sachoir-api" content="__API__">
 <meta name="description" content="Chaque jour, l’actualité et la culture générale racontées en BD courtes, drôles et vérifiées. Gratuit, sans compte : 5 minutes pour briller en société (ou au moins faire semblant).">
 <title>Le Sachoir — L’actu et la culture générale en BD, chaque jour</title>
 <link rel="canonical" href="__BASE__">
@@ -254,6 +255,42 @@ button{cursor:pointer}
 .paybox h3{font-family:var(--f-serif);font-weight:800;font-size:23px;line-height:1.08;margin:0;text-wrap:balance}
 .paybox p{margin:0;font-size:14px;opacity:.92}
 .paybox .later{background:none;border:0;color:#fff;text-decoration:underline;font-size:14px;padding:4px}
+/* Compte, newsletter et Premium */
+.acc-card{background:#fff;border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.acc-card b{font-size:16px;word-break:break-all}
+.acc-card span{font-size:13.5px;color:var(--muted)}
+.badge{display:inline-block;align-self:flex-start;border-radius:999px;padding:3px 10px;font-weight:700;font-size:12.5px;background:var(--grey);color:var(--ink)}
+.badge.gold{background:var(--yellow)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.35;cursor:pointer}
+.chk input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--green);flex:0 0 auto}
+.codein{font-family:var(--f-serif);font-size:30px !important;font-weight:800;letter-spacing:10px;text-align:center}
+.linkbtn{background:none;border:0;padding:4px;color:var(--muted);text-decoration:underline;font-size:14px;align-self:center}
+.danger{color:var(--red) !important}
+.perks{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+.perks li{background:#fff;border-radius:12px;padding:9px 12px;font-size:14.5px}
+.lockcard{background:#fff;border-radius:20px;padding:20px 18px;display:flex;flex-direction:column;gap:10px;text-align:center;align-items:center;margin-top:10px}
+.lockcard .big{font-size:38px}
+.lockcard h2{font-family:var(--f-serif);font-weight:800;font-size:22px;margin:0}
+.slide.photo .exbox{padding:12px 12px 14px;gap:8px}
+.exbox .ph-img{width:100%;max-height:46vh;object-fit:contain;border-radius:12px;background:var(--grey);display:block}
+.exbox .ph-credit{font-size:11.5px;color:var(--muted);line-height:1.3}
+.exbox .ph-credit a{color:inherit}
+.paybox .opt{display:flex;flex-direction:column;gap:8px}
+.paybox .opt button{border:0;border-radius:14px;padding:10px 13px;font-weight:700;font-size:15.5px;text-align:left;background:#fff;color:var(--ink);display:flex;flex-direction:column;gap:2px;align-items:flex-start}
+.paybox .opt button small{font-weight:400;font-size:12.5px;color:var(--muted);display:block}
+.paybox .opt button.gold{background:var(--yellow)}
+.paybox .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.plan{background:#fff;border:3px solid var(--line);border-radius:18px;padding:14px 12px;display:flex;flex-direction:column;gap:4px;text-align:left}
+.plan b{font-family:var(--f-serif);font-size:26px;font-weight:800}
+.plan span{font-size:13px;color:var(--muted)}
+.plan.best{border-color:var(--green)}
+.plan em{font-style:normal;align-self:flex-start;background:var(--green);color:#fff;border-radius:999px;font-size:11.5px;font-weight:700;padding:2px 8px}
+.reflink{background:#fff;border-radius:14px;padding:12px;font-weight:700;word-break:break-all;font-size:14.5px}
+.stats2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stats2 div{background:#fff;border-radius:14px;padding:10px 12px}
+.stats2 b{font-family:var(--f-serif);font-size:26px;display:block}
+.stats2 span{font-size:13px;color:var(--muted)}
 .final{display:flex;align-items:center;justify-content:center;padding:70px 20px 24px;background:var(--fc,#1f8f5f)}
 .final .ccard{max-height:100%;overflow-y:auto;overscroll-behavior:contain}
 /* « Pour mieux comprendre » : case de texte entre deux cases dessinées (aucune image) */
@@ -818,10 +855,65 @@ const themeName = th => { for (const p of POLES) { const x = p.themes.find(x => 
 
 /* ---------- Stockage local ---------- */
 const KEY = "sachoir.v1";
-const DEF = { visited: [], dossiers: [], reads: [], favs: [], quiz: {}, name: "", installDone: false };
+const DEF = { visited: [], dossiers: [], reads: [], favs: [], favsOff: {}, quiz: {}, name: "", installDone: false };
 let ME = (() => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { return { ...DEF }; } })();
 ME.favs = (ME.favs || []).filter(x => x.type !== "card"); delete ME.storyColor; delete ME.storyWm;
-const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ME)); } catch (e) {} };
+const saveLocal = () => { try { localStorage.setItem(KEY, JSON.stringify(ME)); } catch (e) {} };
+const save = () => { saveLocal(); syncSoon(); };
+
+/* ---------- Compte, synchro et mesure d'audience (API Cloudflare, facultative) ----------
+   Sans adresse d'API (meta sachoir-api), l'appli fonctionne comme avant, tout reste sur le téléphone.
+   Avec un compte : les données du téléphone sont fusionnées avec celles du compte (série, dossiers, favoris, jeu).
+   Mesure d'audience : un identifiant tiré au hasard par téléphone, ni cookie ni adresse IP ; respecte « Do Not Track ». */
+const metaC = n => document.querySelector(`meta[name="${n}"]`)?.content || "";
+const API = /^https?:\/\//.test(metaC("sachoir-api")) ? metaC("sachoir-api").replace(/\/+$/, "") : "";
+// Ce qui est branché côté serveur (newsletter, paiement, paywall) : rien ne s'active sans sa clé.
+let CFG = (() => { try { return JSON.parse(localStorage.getItem("sachoir.cfg") || "{}"); } catch (e) { return {}; } })();
+const PW = () => !!CFG.paywall, MAIL = () => !!API && !!CFG.mail, STRIPE = () => !!CFG.stripe;
+let WALLET = { credits: 0, unlocked: [], ref: null, referrals: 0 };
+const PREM = {}; // suite des Grands Dossiers débloqués, par date
+const REF = (() => { try { const q = new URLSearchParams(location.search).get("ref"); if (q && !localStorage.getItem("sachoir.ref")) localStorage.setItem("sachoir.ref", q.slice(0, 16)); return localStorage.getItem("sachoir.ref") || ""; } catch (e) { return ""; } })();
+async function loadConfig() {
+  if (!API) return;
+  try { CFG = await api("/config", { anon: true }); localStorage.setItem("sachoir.cfg", JSON.stringify(CFG)); } catch (e) {}
+}
+async function loadWallet() {
+  if (!API || !DEVICE) return;
+  try { WALLET = await api(`/wallet?d=${DEVICE}`); } catch (e) {}
+}
+const entitled = date => isPremium() || WALLET.unlocked.includes(date);
+const ACC_KEY = "sachoir.acc";
+let ACC = (() => { try { return JSON.parse(localStorage.getItem(ACC_KEY) || "null"); } catch (e) { return null; } })();
+const accSave = () => { try { ACC ? localStorage.setItem(ACC_KEY, JSON.stringify(ACC)) : localStorage.removeItem(ACC_KEY); } catch (e) {} };
+const isPremium = () => !!ACC?.user?.premium;
+async function api(path, { body, method, anon } = {}) {
+  const r = await fetch(API + path, { method: method || (body ? "POST" : "GET"), headers: { "content-type": "application/json", ...(ACC?.session && !anon ? { authorization: "Bearer " + ACC.session } : {}) }, body: body ? JSON.stringify(body) : undefined });
+  const d = r.status === 204 ? {} : await r.json().catch(() => ({}));
+  if (r.status === 401 && ACC && !anon) { ACC = null; accSave(); toast("Session expirée : reconnectez-vous"); render(); }
+  if (!r.ok) throw new Error(d.error || "Le serveur ne répond pas. Réessayez plus tard.");
+  return d;
+}
+function applyState(s) { ME = Object.assign({}, DEF, ME, s || {}); saveLocal(); }
+let syncT = null, syncing = false;
+function syncSoon(ms = 2500) { if (!API || !ACC) return; clearTimeout(syncT); syncT = setTimeout(syncNow, ms); }
+async function syncNow() {
+  if (!API || !ACC || syncing || !navigator.onLine) return;
+  syncing = true;
+  try { const d = await api("/me/sync", { body: { state: ME } }); applyState(d.state); ACC.user = d.user; ACC.synced = Date.now(); accSave(); }
+  catch (e) {} finally { syncing = false; }
+}
+const DEVICE = (() => { try { let d = localStorage.getItem("sachoir.dev"); if (!d) { d = Array.from(crypto.getRandomValues(new Uint8Array(12)), b => (b % 36).toString(36)).join(""); localStorage.setItem("sachoir.dev", d); } return d; } catch (e) { return ""; } })();
+const TRACK = !!API && !!DEVICE && navigator.doNotTrack !== "1" && window.doNotTrack !== "1";
+let EVQ = [];
+function ev(t, ed = "", f = "", v = 0) { if (!TRACK) return; EVQ.push({ t, ed, f, v }); if (EVQ.length >= 20) flushEv(); }
+function flushEv() {
+  if (!TRACK || !EVQ.length) return;
+  const payload = JSON.stringify({ d: DEVICE, s: matchMedia("(display-mode: standalone)").matches || navigator.standalone ? 1 : 0, k: matchMedia("(min-width: 900px)").matches ? 1 : 0, e: EVQ.splice(0, 40) });
+  try { if (!navigator.sendBeacon || !navigator.sendBeacon(API + "/ev", new Blob([payload], { type: "text/plain" }))) fetch(API + "/ev", { method: "POST", body: payload, keepalive: true }).catch(() => {}); } catch (e) {}
+}
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") { flushEv(); if (syncT) { clearTimeout(syncT); syncNow(); } } });
+setInterval(flushEv, 15000);
+window.addEventListener("appinstalled", () => ev("install"));
 
 /* ---------- Utilitaires ---------- */
 const $ = s => document.querySelector(s);
@@ -959,6 +1051,7 @@ function renderHome() {
 }
 
 async function selectDate(date) {
+  if (!canOpenDate(date)) return openPremium("archives");
   try { CUR = await loadEdition(date); } catch (e) { toast("Édition indisponible hors ligne"); return; }
   closeSheet(); setTab("home");
 }
@@ -1032,14 +1125,20 @@ function explainHTML(c) {
   const steps = (c.steps || []).length ? `<ol>${c.steps.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : "";
   return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${esc(c.title)}</h3>` : ""}${paras}${steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}</div>`;
 }
+function photoHTML(ed, c) {
+  const ph = c.photo || {};
+  const credit = [ph.credit, ph.license].filter(Boolean).map(esc).join(" · ");
+  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "En vrai")}</span><img class="ph-img" src="${ph.src || imgUrl(ed, ph.file)}" alt="${esc(c.title || "")}" decoding="async">${c.title ? `<h3>${esc(c.title)}</h3>` : ""}<p>${esc(c.text || "")}</p><span class="ph-credit">Photo : ${credit}${ph.source ? ` · <a href="${esc(ph.source)}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a>` : ""}</span></div>`;
+}
 function caseHTML(ed, c) {
   if (c.kind === "explain") return explainHTML(c);
+  if (c.kind === "photo") return photoHTML(ed, c);
   let cap = "";
   if (c.caption || c.kind === "conf") {
     const tag = c.tag || (c.kind === "fact" ? "Les faits" : c.kind === "react" ? "La réaction" : "");
     cap = `<div class="caption ${c.kind || ""}">${tag ? `<span class="ctag">${esc(tag)}</span>` : ""}${esc(c.caption || "")}</div>`;
   }
-  const art = c.image?.status === "done" ? `<img class="panel" src="${imgUrl(ed, c.image.file)}" alt="" decoding="async">` : `<div class="wip">Dessin en cours…</div>`;
+  const art = c.image?.status === "done" ? `<img class="panel" src="${c.image.src || imgUrl(ed, c.image.file)}" alt="" decoding="async">` : `<div class="wip">Dessin en cours…</div>`;
   return `${art}<div class="stack">${cap}${(c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${esc(b.text)}</div>`).join("")}</div><div class="panel-frame"></div>`;
 }
 function finalHTML(ed, f) {
@@ -1047,12 +1146,27 @@ function finalHTML(ed, f) {
   return `<div class="ccard"><div class="hd"><span>Pour briller en société</span><em>${fmtLong(ed.date).split(" ").slice(1).join(" ")}</em></div><div class="ph">${esc(f.final?.text || "")}</div><div class="src">${esc(f.label)} · ${esc(f.final?.source || "")}</div>${f.story ? `<details class="story"><summary>L’histoire complète</summary>${String(f.story).split(/\n+/).filter(Boolean).map(t => `<p>${esc(t)}</p>`).join("")}</details>` : ""}${srcs.length ? `<details class="srcs"><summary>Sources (${srcs.length})</summary><ul>${srcs.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.title || s.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a></li>`).join("")}</ul></details>` : ""}
   <div class="ft"><button class="btn" data-act="back">Retour à l’édition</button></div></div>`;
 }
-function openReader(ed, fid) {
-  const f = ed.formats.find(x => x.id === fid); if (!f) return;
-  R = { ed, f, idx: 0, n: f.cases.length + 1 };
+async function openReader(ed, fid, startAt = 0) {
+  let full = ed.formats.find(x => x.id === fid); if (!full) return;
+  if (!canOpenDate(ed.date)) return openPremium("archives");
+  // Paywall : le site publié ne contient que le début du Grand Dossier (champ « locked » = cases restantes).
+  // Abonné Premium ou dossier débloqué : la suite est demandée à l'API.
+  if (full.locked && entitled(ed.date)) {
+    if (!PREM[ed.date]) {
+      toast("Chargement de la suite…");
+      try { PREM[ed.date] = await api(`/premium/dossier?ed=${ed.date}&d=${DEVICE}`); }
+      catch (e) { toast(navigator.onLine ? e.message : "La suite se charge en ligne"); }
+    }
+    if (PREM[ed.date]) full = { ...full, cases: full.cases.concat(PREM[ed.date].cases), locked: 0 };
+  }
+  const locked = !!full.locked;
+  const f = { ...full, cases: full.cases.filter(c => c.kind !== "photo" || c.photo?.status === "done") };
+  R = { ed, f, idx: 0, n: f.cases.length + 1, top: 0, doneSent: false };
+  ev("read", ed.date, f.id, full.cases.length);
   const tr = $("#track");
-  tr.innerHTML = f.cases.map(c => `<div class="slide${c.kind === "explain" ? " explain" : ""}">${caseHTML(ed, c)}</div>`).join("") + `<div class="slide final" style="--fc:${COLOR[f.id] || "#1f8f5f"}">${finalHTML(ed, f)}</div>`;
+  tr.innerHTML = f.cases.map(c => `<div class="slide${c.kind === "explain" ? " explain" : c.kind === "photo" ? " explain photo" : ""}">${caseHTML(ed, c)}</div>`).join("") + (locked ? payHTML(ed, f) : `<div class="slide final" style="--fc:${COLOR[f.id] || "#1f8f5f"}">${finalHTML(ed, f)}</div>`);
   tr.querySelectorAll("[data-act]").forEach(b => b.onclick = onAct);
+  if (locked) wirePay(tr, ed, f);
   const desk = DESK.matches;
   $("#reader").classList.toggle("desk", desk);
   $("#reader").classList.add("on"); tr.scrollLeft = 0; tr.scrollTop = 0; updateReader(0, true);
@@ -1065,13 +1179,14 @@ function openReader(ed, fid) {
     }), { root: tr, threshold: 0.6 });
     [...tr.children].forEach(el => R.io.observe(el));
   }
+  if (startAt) setTimeout(() => { const t = $("#track"); t.scrollTo({ left: startAt * t.clientWidth, behavior: "auto" }); updateReader(startAt, true); }, 60);
   history.pushState({ reader: true }, "");
 }
 function updateReader(i, init) {
   const { ed, f } = R, total = f.cases.length; R.idx = i;
   let seg = ""; for (let k = 0; k <= total; k++) seg += `<i class="${k <= i ? "on" : ""}"></i>`;
   $("#segs").innerHTML = seg;
-  $("#rCount").textContent = DESK.matches ? `${esc(f.label)} · ${total} cases` : (i >= total ? "Pour briller" : `${i + 1} / ${total}`);
+  $("#rCount").textContent = DESK.matches ? `${esc(f.label)} · ${total} cases` : (i >= total ? (f.locked ? "🔒 La suite" : "Pour briller") : `${i + 1} / ${total}`);
   const fav = ME.favs.some(x => x.date === ed.date && x.fid === f.id && x.type === "bd");
   $("#rFav").classList.toggle("on", fav); $("#rFav").setAttribute("aria-pressed", fav);
   $("#rPrev").hidden = i === 0; $("#rNext").hidden = i === total;
@@ -1083,11 +1198,14 @@ function updateReader(i, init) {
   // série : lire l'édition du jour (2e case atteinte)
   if (ed.date === TODAY && i >= 1 && !ME.visited.includes(TODAY)) { ME.visited.push(TODAY); { const k = streak(); toast(`🔥 Série : ${k} jour${k > 1 ? "s" : ""}`); }; }
   // érudition : un Grand Dossier compte dès la case 5
-  if (f.id === "dossier" && i >= 4 && !ME.dossiers.includes(ed.date)) { ME.dossiers.push(ed.date); toast(`📚 Dossier dévoré : ${ME.dossiers.length}`); }
+  R.top = Math.max(R.top || 0, i);
+  if (f.locked && i === total) ev("paywall", ed.date, f.id);
+  else if (i === total && !R.doneSent) { R.doneSent = true; ev("done", ed.date, f.id); }
+  if (f.id === "dossier" && i >= 4 && !f.locked && !ME.dossiers.includes(ed.date)) { ME.dossiers.push(ed.date); toast(`📚 Dossier dévoré : ${ME.dossiers.length}`); }
   save();
-  if (i === total && !DESK.matches && !ME.installDone && !sessionStorage.getItem("installAsked") && !matchMedia("(display-mode: standalone)").matches) { sessionStorage.setItem("installAsked", "1"); setTimeout(openInstall, 900); }
+  if (i === total && !f.locked && !DESK.matches && !ME.installDone && !sessionStorage.getItem("installAsked") && !matchMedia("(display-mode: standalone)").matches) { sessionStorage.setItem("installAsked", "1"); setTimeout(openInstall, 900); }
 }
-function closeReader() { $("#reader").classList.remove("on"); if (R.io) R.io.disconnect(); render(); }
+function closeReader() { if (R.f) ev("depth", R.ed.date, R.f.id, Math.round(100 * Math.min(R.top + 1, R.f.cases.length) / (R.f.cases.length + (R.f.locked || 0)))); $("#reader").classList.remove("on"); if (R.io) R.io.disconnect(); render(); }
 let scT;
 $("#track").addEventListener("scroll", () => { if (DESK.matches) return; clearTimeout(scT); scT = setTimeout(() => { const tr = $("#track"), i = Math.round(tr.scrollLeft / tr.clientWidth); if (i !== R.idx) updateReader(i); }, 60); });
 function go(d) { const tr = $("#track"), i = Math.max(0, Math.min(R.n - 1, R.idx + d)); tr.scrollTo({ left: i * tr.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }
@@ -1097,10 +1215,11 @@ window.addEventListener("popstate", () => { if ($("#scrim").classList.contains("
 $("#rShare").onclick = async () => {
   const f = R.f, url = new URL(f.url || `./?d=${R.ed.date}&f=${f.id}`, location.href).href;
   const data = { title: `${f.title} — Le Sachoir`, text: `${f.title} : à lire en BD sur Le Sachoir.`, url };
+  ev("share", R.ed.date, f.id);
   if (navigator.share) { try { await navigator.share(data); return; } catch (e) { if (e.name === "AbortError") return; } }
   try { await navigator.clipboard.writeText(url); toast("Lien copié, il n’y a plus qu’à coller"); } catch (e) { toast(url); }
 };
-$("#rFav").onclick = () => { const was = isFav(); toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true); if (!was) popHeart(); };
+$("#rFav").onclick = () => { if (!canFav()) return openPremium("favs"); const was = isFav(); toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true); if (!was) popHeart(); };
 document.addEventListener("keydown", e => {
   if ($("#scrim").classList.contains("on")) { if (e.key === "Escape") closeSheet(); return; }
   if (!$("#reader").classList.contains("on")) return;
@@ -1108,8 +1227,9 @@ document.addEventListener("keydown", e => {
 });
 function toggleFav(ed, f, type, silent) {
   const i = ME.favs.findIndex(x => x.date === ed.date && x.fid === f.id && x.type === type);
-  if (i >= 0) { ME.favs.splice(i, 1); if (!silent) toast("Retiré des favoris"); }
-  else { ME.favs.push({ date: ed.date, fid: f.id, type, title: f.title, label: f.label }); if (!silent) toast("Ajouté aux favoris ♥"); }
+  ME.favsOff = ME.favsOff || {};
+  if (i >= 0) { ME.favs.splice(i, 1); ME.favsOff[`${ed.date}|${f.id}|${type}`] = Date.now(); if (!silent) toast("Retiré des favoris"); }
+  else { ME.favs.push({ date: ed.date, fid: f.id, type, title: f.title, label: f.label, t: Date.now() }); ev("fav", ed.date, f.id); if (!silent) toast("Ajouté aux favoris ♥"); }
   save();
 }
 const isFav = () => ME.favs.some(x => x.date === R.ed.date && x.fid === R.f.id && x.type === "bd");
@@ -1125,6 +1245,7 @@ function bigHeart(slide, off) {
   slide.appendChild(h); setTimeout(() => h.remove(), 950);
 }
 function likeByTap(slide) {
+  if (!canFav()) return openPremium("favs");
   const was = isFav();
   bigHeart(slide, was);
   toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true);
@@ -1534,6 +1655,7 @@ function quizFinish() {
   const s = qzScore();
   ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, s, done: true };
   if (Q.ed.date === TODAY && !ME.visited.includes(TODAY)) { ME.visited.push(TODAY); const k = streak(); toast(`🔥 Série : ${k} jour${k > 1 ? "s" : ""}`); }
+  ev("game", Q.ed.date, "quiz", Math.round(s * 10));
   save(); Q.done = true; quizResult();
 }
 function quizGrid() { return Q.f.questions.map((q, k) => qzPts(q, Q.a[k]).cells.join("")).join(""); }
@@ -1841,8 +1963,8 @@ function openTiers(type) {
    <div class="tierlist">${list.map(t => `<div class="${t === cur ? "cur" : t.min > n ? "off" : ""}"><b>${t.name}</b><span>${t.max === Infinity ? `${t.min} et +` : `${t.min} à ${t.max}`} ${type === "serie" ? "jours" : "dossiers"}</span>${t === cur ? `<em>« ${esc(t.items[0])} »</em>` : ""}</div>`).join("")}</div>`);
 }
 function openName() {
-  openSheet(`<h3>Comment vous appelle-t-on ?</h3><form id="nmF" class="field"><label for="nmI">Prénom ou surnom</label><input type="text" id="nmI" maxlength="24" value="${esc(ME.name)}" autocomplete="given-name"></form><button class="cta" id="nmOk">Enregistrer</button><p class="sub">Il reste sur ce téléphone. Aucun compte n’est nécessaire.</p>`);
-  const ok = () => { ME.name = $("#nmI").value.trim(); save(); closeSheet(); render(); };
+  openSheet(`<h3>Comment vous appelle-t-on ?</h3><form id="nmF" class="field"><label for="nmI">Prénom ou surnom</label><input type="text" id="nmI" maxlength="24" value="${esc(ME.name)}" autocomplete="given-name"></form><button class="cta" id="nmOk">Enregistrer</button><p class="sub">${ACC ? "Il suit votre compte sur tous vos appareils." : "Il reste sur ce téléphone. Aucun compte n’est nécessaire."}</p>`);
+  const ok = () => { ME.name = $("#nmI").value.trim(); save(); if (ACC) api("/me", { method: "PUT", body: { name: ME.name } }).catch(() => {}); closeSheet(); render(); };
   $("#nmOk").onclick = ok; $("#nmF").onsubmit = e => { e.preventDefault(); ok(); };
 }
 function openBilan() {
@@ -1852,14 +1974,180 @@ function openBilan() {
    ${counts.map(({ p, n }) => `<div class="barrow"><div class="lbl"><span>${p.em} ${p.name}</span><span>${n}</span></div><div class="bar"><i style="width:${Math.round(n / max * 100)}%;background:${p.color}"></i></div></div>`).join("")}
    <p class="sub">${top.n ? `Votre point fort : ${top.p.name}. Vos amis le savaient déjà.` : "Lisez quelques histoires pour voir apparaître vos points forts."}</p>`);
 }
-async function invite() {
-  const data = { title: "Le Sachoir", text: "Chaque jour, l’actu et la culture G en BD. Pour briller en société.", url: location.origin + location.pathname };
-  if (navigator.share) { try { await navigator.share(data); } catch (e) {} }
-  else { try { await navigator.clipboard.writeText(data.url); toast("Lien copié"); } catch (e) { toast(data.url); } }
+
+/* ---------- Premium (verrous actifs seulement si sachoir-paywall = "on") ---------- */
+// En gratuit : l'édition du jour (ou la dernière publiée si celle du jour n'est pas prête).
+const latestDate = () => INDEX.map(e => e.date).filter(d => d <= TODAY).sort().pop() || TODAY;
+const canOpenDate = d => !PW() || isPremium() || d === TODAY || d === latestDate();
+const canFav = () => !PW() || isPremium();
+const euros = c => (c / 100).toFixed(2).replace(".", ",") + " €";
+function payHTML(ed, f) {
+  const cover = coverOf(ed, f);
+  const opts = [];
+  if (WALLET.credits > 0) opts.push(`<button class="gold" data-pay="unlock">🎁 Débloquer ce dossier<small>Il vous reste ${WALLET.credits} dossier${WALLET.credits > 1 ? "s" : ""} offert${WALLET.credits > 1 ? "s" : ""}</small></button>`);
+  if (MAIL() && !WALLET.newsletterGift && !ME.nl) opts.push(`<button data-pay="newsletter">✉️ Recevoir la newsletter<small>Gratuit, et ce dossier vous est offert</small></button>`);
+  if (MAIL()) opts.push(`<button data-pay="invite">👋 Inviter un ami<small>Un dossier offert à chaque ami inscrit</small></button>`);
+  if (STRIPE()) opts.push(`<button data-pay="premium">⭐ Tous les dossiers<small>Premium dès ${euros(CFG.prices?.month || 299)}, sans abonnement</small></button>`);
+  return `<div class="slide">${cover ? `<img class="bg" src="${cover}" alt="">` : ""}<div class="blurveil"></div><div class="paybox"><h3>Débloquez les ${f.locked} cases suivantes</h3><p>La suite du Grand Dossier vous attend. Choisissez votre clé :</p><div class="opt">${opts.join("")}</div><button class="later" data-later>Plus tard (le suspense me plaît)</button></div></div>`;
+}
+function wirePay(tr, ed, f) {
+  tr.querySelectorAll("[data-later]").forEach(b => b.onclick = () => history.back());
+  tr.querySelectorAll("[data-pay]").forEach(b => b.onclick = async () => {
+    const a = b.dataset.pay;
+    if (a === "newsletter") return openNewsletter(true);
+    if (a === "invite") return openInvite();
+    if (a === "premium") return openPremium("dossier");
+    b.disabled = true;
+    try {
+      const d = await api("/unlock", { body: { d: DEVICE, ed: ed.date } });
+      WALLET.credits = d.credits; if (!WALLET.unlocked.includes(ed.date)) WALLET.unlocked.push(ed.date);
+      toast("Dossier débloqué. Bonne lecture !");
+      history.back(); setTimeout(() => openReader(ed, f.id, f.cases.length), 250);
+    } catch (e) { toast(e.message); b.disabled = false; }
+  });
+}
+const PREMIUM_WHY = { dossier: "La suite de ce dossier vous attend, et tous les autres avec.", archives: "Les éditions passées sont réservées aux abonnés.", explore: "Explorer les 32 thématiques et chercher dans les archives, c’est Premium.", favs: "Garder vos histoires préférées, c’est Premium." };
+function openPremium(reason) {
+  ev("paywall", "", reason || "");
+  const P = CFG.prices || { month: 299, year: 1999 };
+  const perks = `<ul class="perks"><li>📚 Tous les Grands Dossiers en entier</li><li>🗓️ Toutes les éditions passées</li><li>🧭 Les 32 thématiques et la recherche</li><li>♥ Vos favoris, sur tous vos appareils</li></ul>`;
+  if (isPremium()) return openSheet(`<h3>Vous êtes Premium ⭐</h3>${perks}<p class="sub">${ACC.user.premium_until ? "Jusqu’au " + new Date(ACC.user.premium_until + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) + ". " : ""}Votre cerveau vous salue.</p>`);
+  if (!STRIPE()) return openSheet(`<h3>Le Sachoir Premium</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "Pour les esprits qui en veulent plus.")}</p>${perks}<p class="sub">Le paiement en ligne arrive très bientôt.</p>${MAIL() && WALLET.credits === 0 ? `<button class="cta" id="pmInv">En attendant : un ami inscrit = un dossier offert</button>` : ""}`), $("#pmInv") && ($("#pmInv").onclick = openInvite);
+  openSheet(`<h3>Le savoir à prix sachant</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "")} ${euros(P.month)} par mois : moins cher qu’un expresso en terrasse, et ça réveille plus longtemps.</p>
+   <div class="plans"><button class="plan" data-plan="month"><span>1 mois</span><b>${euros(P.month)}</b><span>Le temps de briller à 30 dîners</span></button>
+     <button class="plan best" data-plan="year"><em>${Math.round(100 - P.year / (P.month * 12) * 100)} % d’économie</em><span>1 an</span><b>${euros(P.year)}</b><span>Soit ${euros(Math.round(P.year / 12))} par mois. Une affaire, un savoir.</span></button></div>
+   ${perks}
+   <p class="sub">Paiement unique et sécurisé par Stripe, <b>sans abonnement</b> : vous payez, vous lisez, on ne vous prélève rien en douce.${ACC ? "" : " Un compte (gratuit) est nécessaire pour retrouver votre Premium sur tous vos appareils."}</p>`);
+  $("#sheet").querySelectorAll("[data-plan]").forEach(b => b.onclick = async () => {
+    if (!ACC) { sessionStorage.setItem("sachoir.plan", b.dataset.plan); return openAccount(); }
+    b.disabled = true;
+    try { const d = await api("/pay/checkout", { body: { plan: b.dataset.plan } }); location.href = d.url; }
+    catch (e) { toast(e.message); b.disabled = false; }
+  });
+}
+async function paidReturn(id) {
+  if (id === "cancel") return toast("Paiement annulé. Votre culture G ne vous en veut pas.");
+  try { const d = await api("/pay/confirm", { body: { session_id: id } }); ACC.user = d.user; accSave(); render(); toast(d.user.premium ? "Bienvenue en Premium ⭐ Tous les dossiers sont à vous." : "Paiement en cours de validation. Ça arrive dans un instant."); }
+  catch (e) { toast(e.message); }
+}
+
+/* ---------- Parrainage : un ami inscrit = un Grand Dossier offert ---------- */
+const refLink = () => WALLET.ref ? `${location.origin}${location.pathname}?ref=${WALLET.ref}` : location.origin + location.pathname;
+async function openInvite() {
+  if (MAIL() && !WALLET.ref) await loadWallet();
+  const link = refLink();
+  openSheet(`<h3>Un ami, un dossier</h3><p class="sub">Partagez votre lien. Chaque ami qui s’inscrit avec (newsletter ou compte) vous offre un Grand Dossier en entier.</p>
+   ${MAIL() ? `<div class="stats2"><div><b>${WALLET.referrals || 0}</b><span>ami${(WALLET.referrals || 0) > 1 ? "s" : ""} inscrit${(WALLET.referrals || 0) > 1 ? "s" : ""}</span></div><div><b>${WALLET.credits || 0}</b><span>dossier${(WALLET.credits || 0) > 1 ? "s" : ""} à débloquer</span></div></div><div class="reflink">${esc(link)}</div>` : ""}
+   <button class="cta" id="ivShare">Partager mon lien</button>
+   <p class="sub">Vos amis deviennent plus cultivés, vous aussi. C’est la seule pyramide qu’on recommande (après Khéops).</p>`);
+  $("#ivShare").onclick = async () => {
+    const data = { title: "Le Sachoir", text: "Chaque jour, l’actu et la culture G en BD. Inscris-toi avec mon lien, ça m’offre un Grand Dossier 😇", url: link };
+    ev("share", "", "invite");
+    if (navigator.share) { try { await navigator.share(data); return; } catch (e) { if (e.name === "AbortError") return; } }
+    try { await navigator.clipboard.writeText(link); toast("Lien copié"); } catch (e) { toast(link); }
+  };
+}
+
+/* ---------- Compte (lien magique ou code reçu par e-mail) ---------- */
+function openAccount() {
+  if (!MAIL()) return toast("Les comptes arrivent bientôt");
+  if (ACC) return openMyAccount();
+  let email = "";
+  const step1 = () => {
+    openSheet(`<h3>Votre compte Le Sachoir</h3><p class="sub">Gardez votre série, vos dossiers et vos favoris sur tous vos appareils. Pas de mot de passe : on vous envoie un code.</p>
+     <form id="acF" class="field"><label for="acE">Adresse e-mail</label><input type="email" id="acE" autocomplete="email" inputmode="email" required value="${esc(email)}" placeholder="vous@exemple.fr"></form>
+     <label class="chk"><input type="checkbox" id="acNl" ${ME.nl ? "checked" : ""}><span>Recevoir aussi la newsletter : l’édition du jour, chaque matin.</span></label>
+     <button class="cta" id="acGo">Recevoir mon code</button>
+     <p class="sub">Votre adresse sert seulement à vous connecter (et à la newsletter si vous la cochez). Jamais revendue, même pour un empire.</p>`);
+    const go = async () => {
+      email = $("#acE").value.trim(); if (!email) return $("#acE").focus();
+      const b = $("#acGo"); b.disabled = true; b.textContent = "Envoi…";
+      try { const d = await api("/auth/request", { body: { email, newsletter: $("#acNl").checked }, anon: true }); step2(d.dev_code); }
+      catch (e) { toast(e.message); b.disabled = false; b.textContent = "Recevoir mon code"; }
+    };
+    $("#acGo").onclick = go; $("#acF").onsubmit = e => { e.preventDefault(); go(); };
+    setTimeout(() => $("#acE")?.focus(), 250);
+  };
+  const step2 = devCode => {
+    openSheet(`<h3>Code envoyé !</h3><p class="sub">Regardez votre boîte <b>${esc(email)}</b> (et les spams, on ne juge pas). Tapez le code ou touchez le lien de l’e-mail.</p>
+     <form id="cdF" class="field"><label for="cdI">Code à 6 chiffres</label><input id="cdI" class="codein" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]*" value="${devCode || ""}"></form>
+     <button class="cta" id="cdGo">Valider</button><button class="linkbtn" id="cdBack">Changer d’adresse ou renvoyer un code</button>`);
+    const go = async () => {
+      const code = $("#cdI").value.replace(/\D/g, ""); if (code.length !== 6) return $("#cdI").focus();
+      $("#cdGo").disabled = true;
+      try { await finishLogin(await api("/auth/verify", { body: { email, code, state: ME, device: DEVICE, ref: REF }, anon: true })); }
+      catch (e) { toast(e.message); $("#cdGo").disabled = false; }
+    };
+    $("#cdGo").onclick = go; $("#cdF").onsubmit = e => { e.preventDefault(); go(); };
+    $("#cdI").oninput = e => { if (e.target.value.replace(/\D/g, "").length === 6) go(); };
+    $("#cdBack").onclick = step1;
+    setTimeout(() => $("#cdI")?.focus(), 250);
+  };
+  step1();
+}
+async function finishLogin(d) {
+  ACC = { session: d.session, user: d.user, synced: Date.now() }; accSave();
+  applyState(d.state); if (d.user.newsletter) { ME.nl = true; saveLocal(); }
+  if (d.wallet) WALLET = d.wallet;
+  closeSheet(); render();
+  const plan = sessionStorage.getItem("sachoir.plan");
+  if (plan && !d.user.premium) { sessionStorage.removeItem("sachoir.plan"); setTimeout(() => openPremium("dossier"), 600); }
+  toast(d.created ? "Compte créé. Votre série est à l’abri." : `Re-bonjour${d.user.name ? ", " + d.user.name : ""} ! Données synchronisées.`);
+}
+function openMyAccount() {
+  const u = ACC.user || {};
+  const prem = u.premium ? `<span class="badge gold">⭐ Premium${u.premium_until ? " jusqu’au " + new Date(u.premium_until + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : ""}</span>` : `<span class="badge">Formule gratuite</span>`;
+  openSheet(`<h3>Mon compte</h3>
+   <div class="acc-card"><b>${esc(u.email || "")}</b><span>Membre depuis le ${u.since ? new Date(u.since + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : "—"}</span>${prem}
+     <span>${ACC.synced ? "Synchronisé " + new Date(ACC.synced).toLocaleString("fr-FR", { hour: "2-digit", minute: "2-digit", day: "numeric", month: "short" }) : "Pas encore synchronisé"}</span></div>
+   <label class="chk"><input type="checkbox" id="myNl" ${u.newsletter ? "checked" : ""}><span>Newsletter quotidienne : l’édition du jour dans votre boîte, chaque matin.</span></label>
+   <button class="btn ghost" id="mySync">Synchroniser maintenant</button>
+   ${u.premium ? "" : `<button class="btn ghost" id="myPrem">Découvrir Premium</button>`}
+   ${u.admin ? `<a class="btn" href="admin.html" style="text-decoration:none;color:inherit">📊 Écran admin</a>` : ""}
+   <button class="btn ghost" id="myOut">Se déconnecter</button>
+   <button class="linkbtn danger" id="myDel">Supprimer mon compte</button>
+   <p class="sub">Déconnecté, vos données restent sur ce téléphone. Supprimé, le compte et ses données disparaissent du serveur.</p>`);
+  $("#myNl").onchange = async e => {
+    try { const d = await api("/me", { method: "PUT", body: { newsletter: e.target.checked } }); ACC.user = d.user; accSave(); ME.nl = d.user.newsletter; saveLocal(); toast(d.user.newsletter ? "Abonné. Rendez-vous demain matin." : "Désabonné. On reste amis ?"); render(); }
+    catch (er) { e.target.checked = !e.target.checked; toast(er.message); }
+  };
+  $("#mySync").onclick = async () => { await syncNow(); toast(ACC ? "Synchronisé ✓" : "Session expirée"); if (ACC) openMyAccount(); render(); };
+  const pb = $("#myPrem"); if (pb) pb.onclick = () => openPremium();
+  $("#myOut").onclick = async () => { try { await syncNow(); await api("/auth/logout", { body: {} }); } catch (e) {} ACC = null; accSave(); closeSheet(); render(); toast("Déconnecté. Vos données restent sur ce téléphone."); };
+  let armed = false;
+  $("#myDel").onclick = async e => {
+    if (!armed) { armed = true; e.target.textContent = "Toucher encore pour confirmer la suppression"; return; }
+    try { await api("/me", { method: "DELETE" }); ACC = null; accSave(); ME.nl = false; saveLocal(); closeSheet(); render(); toast("Compte supprimé. Sans rancune."); }
+    catch (er) { toast(er.message); }
+  };
+}
+
+/* ---------- Newsletter ---------- */
+function openNewsletter(gift) {
+  if (!MAIL()) return toast("La newsletter arrive bientôt");
+  if (ACC) return openMyAccount();
+  const offer = !WALLET.newsletterGift;
+  openSheet(`<h3>${gift && offer ? "Ce dossier vous est offert" : "La newsletter du Sachoir"}</h3><p class="sub">Chaque matin : le Grand Dossier, l’actu, une pilule de culture G, une histoire insolite et le jeu du jour. Une minute pour survoler, cinq pour briller.${offer ? " <b>En cadeau : un Grand Dossier en entier, celui de votre choix.</b>" : ""}</p>
+   ${ME.nl ? `<p class="sub"><b>Vous êtes déjà abonné ✓</b> Pour vous désinscrire, utilisez le lien en bas de chaque e-mail.</p>` : ""}
+   <form id="nlF" class="field"><label for="nlE">Adresse e-mail</label><input type="email" id="nlE" autocomplete="email" inputmode="email" required placeholder="vous@exemple.fr"></form>
+   <button class="cta" id="nlGo">${offer ? "M’abonner et recevoir mon dossier" : "M’abonner"}</button>
+   <button class="linkbtn" id="nlAcc">Ou créer un compte (série et favoris sur tous vos appareils)</button>
+   <p class="sub">Un e-mail de confirmation arrive aussitôt : un clic, et c’est validé. Désinscription en un clic, sans questionnaire de départ.</p>`);
+  const go = async () => {
+    const email = $("#nlE").value.trim(); if (!email) return $("#nlE").focus();
+    $("#nlGo").disabled = true;
+    try {
+      const d = await api("/nl/subscribe", { body: { email, source: gift ? "paywall" : "appli", d: DEVICE, ref: REF } });
+      ME.nl = true; saveLocal(); closeSheet(); render();
+      toast(d.already ? "Vous êtes déjà abonné. Fidèle, on aime ça." : "Presque fini : confirmez dans l’e-mail reçu" + (offer ? " pour débloquer votre dossier." : "."));
+    } catch (e) { toast(e.message); $("#nlGo").disabled = false; }
+  };
+  $("#nlGo").onclick = go; $("#nlF").onsubmit = e => { e.preventDefault(); go(); };
+  $("#nlAcc").onclick = openAccount;
 }
 
 /* ---------- Découvrir ---------- */
-let EX = { pole: null, theme: null, q: "", search: false };
+let EX ={ pole: null, theme: null, q: "", search: false };
 function allStories() {
   const out = [];
   INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu" && f.id !== "quiz") out.push({ ...f, theme: themeName(f.theme), date: e.date, demo: e.demo }); }));
@@ -1869,6 +2157,7 @@ function allStories() {
    n'apparaît que s'il a au moins une histoire, avec son nombre d'histoires. */
 function renderExplore() {
   const v = $("#v-explore"), q = EX.q.toLowerCase();
+  if (!canFav()) { v.innerHTML = `<h1 class="h1">Découvrir</h1><div class="lockcard"><span class="big">⭐</span><h2>Réservé aux abonnés Premium</h2><p class="sub">Les 32 thématiques et la recherche dans toutes les archives.</p><button class="cta" id="lkGo">Découvrir Premium</button></div>`; $("#lkGo").onclick = () => openPremium("explore"); return; }
   const all = allStories();
   const byQ = all.filter(s => !q || (s.title + " " + s.theme + " " + (s.tagline || "")).toLowerCase().includes(q));
   const poles = POLES.map(p => ({ p, n: byQ.filter(s => poleOf(s.theme) === p).length })).filter(x => x.n);
@@ -1898,6 +2187,7 @@ function renderExplore() {
 /* ---------- Favoris ---------- */
 function renderFavs() {
   const v = $("#v-favs");
+  if (!canFav()) { v.innerHTML = `<h1 class="h1">Favoris</h1><div class="lockcard"><span class="big">⭐</span><h2>Réservé aux abonnés Premium</h2><p class="sub">Gardez vos histoires préférées et retrouvez-les sur tous vos appareils.</p><button class="cta" id="lkGo">Découvrir Premium</button></div>`; $("#lkGo").onclick = () => openPremium("favs"); return; }
   v.innerHTML = `<h1 class="h1">Favoris</h1><p class="lead">Vos histoires préférées, toujours sous la main.</p>
    ${ME.favs.length ? `<div class="alist">${ME.favs.slice().reverse().map(x => `<button class="aitem" data-d="${x.date}" data-f="${x.fid}" data-t="${x.type}"><i style="background:${COLOR[x.fid] || "#1f8f5f"}"></i><span class="tt">${esc(x.title)}<span class="th">${esc(x.label)}</span></span></button>`).join("")}</div>`
     : `<p class="empty">Touchez ♡ en bas de l’écran pendant une lecture pour garder une histoire.</p>`}`;
@@ -1918,16 +2208,17 @@ function renderProfile() {
    <div class="tiles"><button class="tile s" id="tS"><b>🔥 ${s} Jour${s > 1 ? "s" : ""}</b><span>De présence consécutive</span><small>${st.name}</small></button>
      <button class="tile e" id="tE"><b>📚 ${ME.dossiers.length}</b><span>Dossiers</span><small>Dévorés avec succès</small><img src="assets/books.png" alt=""></button></div>
    <div class="menu">
+     ${MAIL() ? `<button id="m0">${I("#fff4d6", "#9a6a00", '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/>')}<span class="t">${ACC ? "Mon compte" : "Créer mon compte"}<small>${ACC ? esc(ACC.user?.email || "") + (isPremium() ? " · ⭐ Premium" : "") : "Votre série et vos favoris sur tous vos appareils"}</small></span>${ICON.chev}</button>` : ""}
      <button id="m1">${I("#dff0e6", "#14704a", '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')}<span class="t">Mon Bilan de Culture G<small>Vos thèmes forts, Histoire ou Sciences</small></span>${ICON.chev}</button>
      <button id="m2">${I("#e1e8f7", "#2f4fa2", '<path d="M6 3h12v18l-6-4-6 4z"/>')}<span class="t">Dossiers Enregistrés</span>${ICON.chev}</button>
-     <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter quotidienne<small>Bientôt disponible</small></span>${ICON.chev}</button>
-     <button id="m5">${I("#ece2f6", "#8a55b8", '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M18 8v6M15 11h6"/>')}<span class="t">Inviter des amis <em>(à devenir moins bêtes)</em></span>${ICON.chev}</button>
+     <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter quotidienne<small>${!MAIL() ? "Bientôt disponible" : (ACC ? ACC.user?.newsletter : ME.nl) ? "Abonné ✓ L’édition chaque matin" : WALLET.newsletterGift ? "L’édition du jour, chaque matin" : "Un Grand Dossier offert à l’inscription"}</small></span>${ICON.chev}</button>
+     <button id="m5">${I("#ece2f6", "#8a55b8", '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M18 8v6M15 11h6"/>')}<span class="t">Inviter des amis <em>(à devenir moins bêtes)</em>${MAIL() ? `<small>Un dossier offert par ami inscrit${WALLET.credits ? ` · ${WALLET.credits} à débloquer` : ""}</small>` : ""}</span>${ICON.chev}</button>
      <button id="m6">${I("#efebe3", "#17140f", '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v6M9.5 11.5L12 14l2.5-2.5"/>')}<span class="t">Installer l’application</span>${ICON.chev}</button>
    </div>`;
   $("#prName").onclick = openName;
   $("#tS").onclick = () => openTiers("serie"); $("#tE").onclick = () => openTiers("eru");
-  $("#m1").onclick = openBilan; $("#m2").onclick = () => setTab("favs"); $("#m3").onclick = () => toast("La newsletter arrive bientôt");
-  $("#m5").onclick = invite; $("#m6").onclick = openInstall;
+  $("#m1").onclick = openBilan; $("#m2").onclick = () => setTab("favs"); $("#m3").onclick = openNewsletter; if ($("#m0")) $("#m0").onclick = openAccount;
+  $("#m5").onclick = openInvite; $("#m6").onclick = openInstall;
 }
 
 /* ---------- Démarrage ---------- */
@@ -1935,7 +2226,23 @@ $("#streakMini").onclick = () => openTiers("serie");
 window.addEventListener("online", () => $("#offline").classList.remove("on"));
 window.addEventListener("offline", () => $("#offline").classList.add("on"));
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+async function startAccount() {
+  if (!API) return;
+  const qs = new URLSearchParams(location.search), tok = qs.get("login"), paid = qs.get("paid");
+  if (qs.has("ref") || paid) { qs.delete("ref"); qs.delete("paid"); history.replaceState(null, "", location.pathname + (qs.toString() ? "?" + qs : "") + location.hash); }
+  await loadConfig();
+  if (CUR) render();
+  loadWallet().then(() => { if (TAB === "profile") render(); });
+  if (paid && ACC) paidReturn(paid);
+  if (tok) {
+    qs.delete("login"); history.replaceState(null, "", location.pathname + (qs.toString() ? "?" + qs : "") + location.hash);
+    try { await finishLogin(await api("/auth/verify", { body: { token: tok, state: ME, device: DEVICE, ref: REF }, anon: true })); }
+    catch (e) { toast(e.message); }
+  } else if (ACC) { try { const d = await api(`/me?d=${DEVICE}`); ACC.user = d.user; accSave(); if (d.wallet) WALLET = d.wallet; } catch (e) {} syncNow().then(() => render()); }
+}
+ev("open");
 (async () => {
+  startAccount();
   try {
     await loadIndex();
     const wanted = new URLSearchParams(location.search).get("d");
