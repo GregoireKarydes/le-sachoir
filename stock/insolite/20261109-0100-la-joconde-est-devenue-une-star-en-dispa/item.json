@@ -12,6 +12,7 @@
       "cast": [
         {
           "id": "peruggia",
+          "name": "Vincenzo Peruggia",
           "look": "Vincenzo, an Italian glazier of 1911, short and stocky, thick black moustache, flat grey cap, long white workman's smock",
           "file": "cast/insolite-peruggia.png",
           "status": "done",
@@ -19,6 +20,7 @@
         },
         {
           "id": "beroud",
+          "name": "Louis Béroud",
           "look": "Louis, a Parisian painter of 1911, pointy grey beard, black beret, black jacket, a red scarf as the only colour, carrying an easel",
           "file": "cast/insolite-beroud.png",
           "status": "done",
@@ -26,6 +28,7 @@
         },
         {
           "id": "apo",
+          "name": "Guillaume Apollinaire",
           "look": "Guillaume, a stocky poet of 1911, big round face, slicked-back dark hair, small moustache, black suit, white bow tie, a notebook in hand",
           "file": "cast/insolite-apo.png",
           "status": "done",
@@ -53,6 +56,7 @@
           "bubbles": [
             {
               "text": "Personne ne regarde jamais les ouvriers.",
+              "who": "peruggia",
               "side": "r"
             }
           ],
@@ -75,6 +79,7 @@
           "bubbles": [
             {
               "text": "Bonne journée ! Rien à signaler !",
+              "who": "peruggia",
               "side": "r"
             }
           ],
@@ -100,10 +105,12 @@
           "bubbles": [
             {
               "text": "Elle est chez le photographe, sans doute.",
+              "who": "beroud",
               "side": "l"
             },
             {
               "text": "Sans doute.",
+              "who": "beroud",
               "side": "l"
             }
           ],
@@ -126,10 +133,12 @@
           "bubbles": [
             {
               "text": "Je suis poète, pas cambrioleur !",
+              "who": "apo",
               "side": "l"
             },
             {
               "text": "Dites ça en alexandrins, ça passera mieux.",
+              "who": "beroud",
               "side": "r"
             }
           ],
@@ -153,6 +162,7 @@
           "bubbles": [
             {
               "text": "Pablo, pardon. J’ai paniqué.",
+              "who": "apo",
               "side": "l"
             }
           ],
@@ -175,6 +185,7 @@
           "bubbles": [
             {
               "text": "On fait la queue pour quatre clous.",
+              "who": "beroud",
               "side": "l"
             }
           ],
@@ -210,10 +221,12 @@
           "bubbles": [
             {
               "text": "Je voulais la rendre à l’Italie !",
+              "who": "peruggia",
               "side": "r"
             },
             {
               "text": "Et le prix, c’était pour l’Italie aussi ?",
+              "who": "beroud",
               "side": "l"
             }
           ],
@@ -238,6 +251,7 @@
           "bubbles": [
             {
               "text": "Son meilleur agent ? Un voleur.",
+              "who": "beroud",
               "side": "l"
             }
           ],
