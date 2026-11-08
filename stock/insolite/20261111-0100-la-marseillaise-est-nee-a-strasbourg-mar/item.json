@@ -12,7 +12,7 @@
       "cast": [
         {
           "id": "rouget",
-          "look": "Claude-Joseph, a young 1790s army engineer captain, curly powdered hair tied back, eager face, black uniform coat with a red collar as the only colour, holding a violin",
+          "look": "Claude-Joseph, a slim young 1790s army engineer captain, curly powdered hair tied back, eager face, a blue uniform coat as the only colour, holding a violin",
           "file": "cast/insolite-rouget.png",
           "status": "pending"
         },

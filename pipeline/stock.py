@@ -82,7 +82,8 @@ def summary() -> dict:
     """Par type : BD finies, en cours, bloquées, images restantes."""
     out = {}
     for kind in TYPES:
-        s = {"ready": 0, "waiting": 0, "blocked": 0, "images_left": 0, "focus": None}
+        s = {"ready": 0, "waiting": 0, "blocked": 0, "images_left": 0, "focus": None, "next": None,
+             "next_redo": 0}
         for p in items(kind):
             it = load(p)
             if not it:
@@ -92,6 +93,9 @@ def summary() -> dict:
             normalize(fmt, p)
             if is_ready(fmt, p):
                 s["ready"] += 1
+                if s["next"] is None and not it.get("blocked"):
+                    s["next"] = p.name  # prochaine BD de ce type à sortir (à relire en priorité)
+                    s["next_redo"] = sum(1 for i in images_of(fmt) if i.get("redo"))
             elif it.get("blocked"):
                 s["blocked"] += 1
             else:
@@ -101,6 +105,11 @@ def summary() -> dict:
                     s["focus"] = f"{p.name} ({left(fmt)} image(s) à faire)"
         out[kind] = s
     return out
+
+
+def next_out(kind: str) -> Path | None:
+    """Prochaine BD de ce type qui sortira : la plus ancienne finie (la publication peut en sauter une pour le pôle)."""
+    return pick(kind, set())
 
 
 def pick(kind: str, avoid: set) -> Path | None:

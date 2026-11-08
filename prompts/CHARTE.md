@@ -27,7 +27,7 @@ Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The O
 - **Personnage lucide** pince-sans-rire qui dégonfle les légendes : seulement quand il est pertinent pour le sujet, pas systématique.
 - Figures historiques : sûres d'elles, décalées ; leurs répliques inventées sont visiblement des blagues ; une vraie citation est signalée dans le récitatif.
 - Personnes vivantes : voir « Garde-fous ».
-- Fiche casting obligatoire : `id`, `look` (description visuelle précise en anglais, constante), utilisée comme référence pour toutes les images de l'histoire.
+- Fiche casting obligatoire : `id`, `look` (description visuelle précise en anglais, constante), utilisée comme référence pour toutes les images de l'histoire. Les personnages d'une même BD ne doivent jamais se ressembler : silhouette, coiffure, couleur d'accent et accessoire différents (règles dans `prompts/SCHEMA.md`).
 
 ## Les leviers de l'humour (un ou deux par BD, toujours au service de l'explication)
 1. **Anachronisme** : le monde moderne dans le passé (SMS, LinkedIn, jargon de bureau). César envoie « Veni, vidi, vici » par SMS : « le premier tweet de l'histoire ».

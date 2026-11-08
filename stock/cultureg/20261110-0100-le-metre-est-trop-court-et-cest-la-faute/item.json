@@ -18,13 +18,13 @@
         },
         {
           "id": "mechain",
-          "look": "Pierre, a thin anxious 1790s French astronomer, tall messy powdered wig, deep dark circles under the eyes, bony fingers, black coat, a small notebook always clutched to his chest, a red cockade as the only colour",
+          "look": "Pierre, a thin anxious 1790s French astronomer, tall messy powdered wig, deep dark circles under the eyes, bony fingers, black coat, a small notebook always clutched to his chest, a blue scarf as the only colour",
           "file": "cast/cultureg-mechain.png",
           "status": "pending"
         },
         {
           "id": "milicien",
-          "look": "a suspicious 1790s village militiaman, bushy black moustache, narrowed eyes, white shirt, black waistcoat, a red phrygian cap as the only colour, holding a pike",
+          "look": "a short stocky suspicious 1790s village militiaman, bushy black moustache, narrowed eyes, white shirt, black waistcoat, a red phrygian cap as the only colour, holding a pike",
           "file": "cast/cultureg-milicien.png",
           "status": "pending"
         }

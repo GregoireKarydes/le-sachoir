@@ -5,6 +5,7 @@ Ordre de travail (8 novembre 2026 : finir une BD avant d'en commencer une autre)
   2. les BD encore incomplètes des éditions du jour et des deux jours précédents ;
   3. la file d'attente `stock/` (voir stock.py) : on prend le type qui a le moins de BD finies et, dans ce type,
      la plus ancienne BD pas finie, qu'on termine à 100 % avant de passer à la suivante ;
+  (1 bis : les images à refaire de l'édition à venir et de la prochaine BD finie de chaque type passent juste après l'Actu)
   4. quand chaque type a assez de BD finies d'avance (`stock_target` dans style.json), les images que le contrôle
      qualité veut refaire (`"redo": true`) : l'ancienne image reste publiée tant que la nouvelle n'est pas faite ;
   5. puis on continue de remplir la file.
@@ -334,7 +335,14 @@ def build(scene: str, cast: list[tuple[str, Path]]) -> tuple[str, list[Path]]:
         else:
             who.append(look)
     head = STYLE["style_with_ref"] + " " if STYLE_REF.exists() else ""
-    chars = (" Characters, same faces, hair and clothes as their reference: " + "; ".join(who) + ".") if who else ""
+    if len(who) >= 2:
+        # 8 novembre 2026 : des personnages d'une même BD se ressemblaient ; on insiste sur ce qui les distingue.
+        chars = (f" {len(who)} clearly different characters, never drawn alike or mixed up, each with their own height, "
+                 "body shape, hairstyle and clothes, matching their reference: " + "; ".join(who) + ".")
+    elif who:
+        chars = " Character, same face, hair and clothes as the reference: " + who[0] + "."
+    else:
+        chars = ""
     return f"Scene: {scene}.{chars} {head}{STYLE['style']} {STYLE['constraints']}", refs
 
 
@@ -439,8 +447,8 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
         # 1. Fiches casting (sautées pour un personnage qui n'apparaît qu'une fois : la description suffit)
         used = uses(fmt)
         for c in fmt.get("cast", []):
-            if c.get("status") == "done" and (d / c["file"]).exists():
-                continue
+            if redo or (c.get("status") == "done" and (d / c["file"]).exists()):
+                continue  # en mode « refaire », on ne dessine rien d'autre que les images marquées
             if used.get(c["id"], 0) <= 1:
                 if c.get("status") != "skipped":
                     c["status"] = "skipped"
@@ -590,6 +598,18 @@ def main():
         # 1. L'Actu d'abord (écrite au dernier moment, elle ne doit jamais manquer de quota),
         for d, f, ed in editions_to_process():
             total += process(d, f, ed, only_actu=True)
+        # 1 bis. les images à refaire des prochaines BD à sortir : l'édition à venir et la prochaine BD finie de
+        #        chaque type (le contrôle qualité se concentre sur elles ; au plus 6 par passage).
+        nxt = EDITIONS / next_actu_date().isoformat() / "edition.json"
+        if nxt.exists():
+            ed_next = json.loads(nxt.read_text())
+            total += process(nxt.parent, nxt, ed_next, only_actu=True, redo=True)
+            total += process(nxt.parent, nxt, ed_next, redo=True)
+        for kind in stock.TYPES:
+            p = stock.next_out(kind)
+            it = stock.load(p) if p else None
+            if it:
+                total += process(p, p / "item.json", it, redo=True)
         # 2. les BD incomplètes des éditions récentes (ancien système, ou image ratée),
         for d, f, ed in editions_to_process():
             print(f"Édition {d.name}")

@@ -4,14 +4,21 @@
 
 **Règle d'or (8 novembre 2026) : le contrôle qualité ne retire jamais une image.** Une image ratée reste publiée telle quelle jusqu'à ce que sa nouvelle version soit prête. On la signale seulement avec `"redo": true` ; son `status` reste `"done"`. Les images à refaire passent **après** les BD à finir : mieux vaut une BD finie avec une case moyenne qu'une BD à 90 % qui ne sort pas.
 
-1. `git pull`. Ordre : l'édition du jour (`editions/<date>/`), puis les BD finies de la file d'attente (`stock/<type>/<nom>/item.json`, dont toutes les images sont `done`), la plus ancienne d'abord. Ouvrir les images `status: "done"` qui n'ont ni `"qa": "ok"` ni `"redo": true`.
+1. `git pull`. **Se concentrer sur ce qui sort ensuite**, dans cet ordre, et s'arrêter là :
+   1. l'édition du jour (`editions/<date de Paris>/`), surtout l'Actu, publiée à 5 h ;
+   2. pour chaque type, **la prochaine BD à sortir** : son nom est dans `data/health.json`, rubrique `stock.<type>.next` (la plus ancienne BD finie de `stock/<type>/`) ;
+   3. s'il reste du temps, la BD finie suivante de chaque type.
+   Ne pas relire les BD encore en cours de dessin ni le stock lointain : elles seront relues quand elles arriveront en tête. Ouvrir les images `status: "done"` qui n'ont ni `"qa": "ok"` ni `"redo": true`.
 2. Regarder chaque image et vérifier :
    - les bons personnages, reconnaissables d'une case à l'autre (comparer aux fiches `cast/…png`) ;
    - le bon nombre de personnages et les bonnes positions (gauche / droite comme les bulles) ;
    - **aucune lettre, aucun mot, aucun logo** dessiné ;
    - le haut de l'image assez calme pour les bulles ;
    - mains, visages et objets corrects ; cohérence avec la case précédente ;
-   - style respecté : gros trait noir, aplats noirs, décor presque vide, surtout noir et blanc avec de petites touches de couleur sur les émotions (joues roses, larmes et gouttes de sueur bleues, rougeur, cœurs) et une couleur d'accent au plus sur les vêtements ou objets (pas de dégradés, pas de décor chargé).
-3. Image correcte → ajouter `"qa": "ok"`. Image ratée → corriger `prompt` si utile et ajouter `"redo": true` **sans toucher à `status`** (ne jamais mettre `"retry"` ni `"pending"` sur une image déjà faite). Réserver `redo` aux vrais défauts (texte dessiné, mauvais personnage, visage ou mains ratés, case incompréhensible) ; un détail de style ne suffit pas. Au plus **6** `redo` par passage, l'édition du jour d'abord.
+   - **les personnages se distinguent** : on ne confond pas deux personnages de la même BD (silhouette, coiffure, couleur d'accent) ; si deux se ressemblent, c'est un vrai défaut ;
+   - pas de touches d'émotion hors de propos : cœurs, sueur, larmes, joues roses ou étincelles seulement si la case raconte cette émotion (sinon défaut, retirer la touche du prompt) ;
+   - style respecté : gros trait noir, aplats noirs, décor presque vide, surtout noir et blanc avec une couleur d'accent au plus sur les vêtements ou objets (pas de dégradés, pas de décor chargé).
+3. Image correcte → ajouter `"qa": "ok"`. Image ratée → corriger `prompt` si utile et ajouter `"redo": true` **sans toucher à `status`** (ne jamais mettre `"retry"` ni `"pending"` sur une image déjà faite). Réserver `redo` aux vrais défauts (texte dessiné, mauvais personnage ou personnages qu'on confond, visage ou mains ratés, touche d'émotion hors de propos et voyante, case incompréhensible) ; un petit détail de style ne suffit pas. Au plus **6** `redo` par passage, l'édition du jour d'abord. Ces images sont refaites en priorité (juste après l'Actu) ; l'ancienne reste publiée si la nouvelle n'est pas prête.
+   Si deux personnages se ressemblent dans toute la BD, corriger aussi leurs fiches `look` dans le même fichier (silhouette, coiffure, couleur d'accent différentes) pour les BD pas encore dessinées.
 4. Une image `failed` (jamais réussie) dans l'Actu : réécrire la case pour une scène plus simple et remettre `"status": "pending"`, `"attempts": 0`, ou retirer le sujet et renuméroter. Dans la file : la débloquer comme dit dans `prompts/STOCK.md`.
 5. Ne modifier que `editions/` et `stock/`. Commit « Contrôle qualité <date> », `git push`.

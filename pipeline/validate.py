@@ -28,6 +28,47 @@ EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
 STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 
+SILHOUETTE = {"tall", "short", "thin", "skinny", "plump", "round", "chubby", "broad", "huge", "small", "tiny", "lanky",
+              "stocky", "wiry", "hunched", "hunchbacked", "big", "giant", "fat", "slim", "bony", "child", "kid", "teenage",
+              "old", "elderly", "little", "massive", "petite", "stout", "rigid", "belly"}
+LOOK_STOP = set("a an the of and with in on his her their as only colour color black white grey gray shirt coat "
+                "trousers man woman in his her its".split())
+COLOURS = ("red", "blue", "green", "yellow", "orange", "purple", "pink", "gold", "golden", "brown", "teal", "violet", "turquoise")
+
+
+def _look_words(look: str) -> set:
+    import re
+    return {w for w in re.findall(r"[a-z]+", (look or "").lower()) if w not in LOOK_STOP and len(w) > 2}
+
+
+def _accent(look: str) -> str | None:
+    low = (look or "").lower()
+    i = low.find("as the only colo")
+    if i < 0:
+        return None
+    clause = low[max(0, low.rfind(",", 0, i)):i]
+    return next((c for c in COLOURS if c in clause.split()), None)
+
+
+def check_cast_distinct(cast: list, warn):
+    """8 novembre 2026 : des personnages d'une même BD se ressemblaient. Avertissements seulement."""
+    seen = {}
+    for c in cast:
+        look = c.get("look", "")
+        if not _look_words(look) & SILHOUETTE:
+            warn(f"fiche {c.get('id')} : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »")
+        col = _accent(look)
+        if col and col in seen:
+            warn(f"fiches {seen[col]} et {c.get('id')} : même couleur d'accent ({col}), à différencier")
+        if col:
+            seen[col] = c.get("id")
+    for i, a in enumerate(cast):
+        for b in cast[i + 1:]:
+            wa, wb = _look_words(a.get("look")), _look_words(b.get("look"))
+            if wa and wb and len(wa & wb) / len(wa | wb) > 0.25:
+                warn(f"fiches {a.get('id')} et {b.get('id')} trop proches ({', '.join(sorted(wa & wb)[:6])})")
+
+
 def words(t: str) -> int:
     """Mots réels : la ponctuation française espacée (« : ; ? ! ») ne compte pas."""
     return sum(1 for w in str(t or "").split() if any(ch.isalnum() for ch in w))
@@ -67,6 +108,7 @@ def check_story(fmt: dict, d: Path, err, warn):
     drawn = [c for c in cases if isinstance(c, dict) and c.get("kind") != "explain"]
     if len(drawn) > MAX_CASES.get(fid, 99):
         warn(f"{len(drawn)} cases dessinées, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
+    check_cast_distinct([c for c in fmt.get("cast", []) or [] if isinstance(c, dict)], warn)
     cast_ids = set()
     for c in fmt.get("cast", []) or []:
         if not c.get("id") or not c.get("file"):

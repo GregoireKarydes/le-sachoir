@@ -12,7 +12,7 @@
       "cast": [
         {
           "id": "broussais",
-          "look": "François, a stern French doctor of the 1820s, thick grey sideburns, bald forehead, fierce eyebrows, black frock coat, white cravat, holding a glass jar",
+          "look": "François, a tall bony stern French doctor of the 1820s, thick grey sideburns, bald forehead, fierce eyebrows, black frock coat, white cravat, holding a glass jar",
           "file": "cast/insolite-broussais.png",
           "status": "pending"
         },

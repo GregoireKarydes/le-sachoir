@@ -276,3 +276,37 @@ def test_case_explicative_ne_bloque_pas(site):
     assert published(site) == ["2026-11-07"]
     r = validate.check_edition(site / "editions" / "2026-11-07")
     assert r["ok"], r["errors"]
+
+
+def test_style_sans_touches_d_emotion_imposees():
+    s = images.STYLE["style"] + images.STYLE["style_with_ref"]
+    for mot in ("blush", "sweat", "hearts", "sparkles", "tears", "spiky"):
+        assert mot not in s
+
+
+def test_personnages_trop_proches_signales(tmp_path):
+    f = story(cast=("a", "b"))
+    f["cast"][0]["look"] = "Maurice, a 1904 French racing cyclist, wool jersey, knee-length shorts, a red scarf as the only colour"
+    f["cast"][1]["look"] = "Lucien, a 1904 French racing cyclist, wool jersey, knee-length shorts, a red cap as the only colour"
+    d = write(tmp_path, "2026-11-07", [f])
+    w = " ".join(validate.check_edition(d)["warnings"])
+    assert "trop proches" in w and "même couleur" in w and "silhouette" in w
+
+
+def test_refaire_d_abord_la_prochaine_bd(site, monkeypatch):
+    from PIL import Image
+    monkeypatch.setattr(images, "EDITIONS", site / "editions")
+    (site / "editions").mkdir(exist_ok=True)
+    s = story("insolite")
+    s["cases"][0]["image"]["redo"] = True
+    a = queue(site, "20261107-0900-a", s)
+    calls = []
+
+    def fake(fmt, day, prompt, size, refs, kind):
+        calls.append(day)
+        return Image.new("RGB", (8, 8), "white"), "cloudflare"
+    monkeypatch.setattr(images, "draw", fake)
+    assert stock.next_out("insolite") == a
+    images.process(a, a / "item.json", stock.load(a), redo=True)
+    img = stock.load(a)["formats"][0]["cases"][0]["image"]
+    assert "redo" not in img and img["status"] == "done" and calls
