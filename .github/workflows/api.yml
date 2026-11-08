@@ -73,9 +73,25 @@ jobs:
           sub=$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain" | node -e 'process.stdout.write(JSON.parse(require("fs").readFileSync(0)).result?.subdomain||"")')
           [ -n "$sub" ] || { echo "::error::Pas de sous-domaine workers.dev : ouvrez une fois Workers & Pages dans le tableau de bord Cloudflare pour le créer."; exit 1; }
           echo "api=https://le-sachoir-api.$sub.workers.dev" >> "$GITHUB_OUTPUT"
+      - name: Portail client Stripe (carte et factures)
+        id: portal
+        if: steps.gate.outputs.go == 'yes'
+        env:
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+        run: |
+          [ -n "$STRIPE_SECRET_KEY" ] || exit 0
+          id=$(curl -fsS -u "$STRIPE_SECRET_KEY:" "https://api.stripe.com/v1/billing_portal/configurations?limit=100&active=true" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const c=JSON.parse(s).data.find(x=>x.metadata&&x.metadata.app==="sachoir");process.stdout.write(c?c.id:"")})')
+          if [ -z "$id" ]; then
+            id=$(curl -fsS -u "$STRIPE_SECRET_KEY:" https://api.stripe.com/v1/billing_portal/configurations \
+              -d "metadata[app]=sachoir" -d "business_profile[headline]=Le Sachoir : votre abonnement Premium" \
+              -d "features[payment_method_update][enabled]=true" -d "features[invoice_history][enabled]=true" \
+              -d "features[subscription_cancel][enabled]=true" -d "features[subscription_cancel][mode]=at_period_end" \
+              | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>process.stdout.write(JSON.parse(s).id||""))') || id=""
+          fi
+          echo "config=$id" >> "$GITHUB_OUTPUT"
       - name: Déployer
         if: steps.gate.outputs.go == 'yes'
-        run: npx wrangler deploy --var "API_URL:${{ steps.url.outputs.api }}"
+        run: npx wrangler deploy --var "API_URL:${{ steps.url.outputs.api }}" ${{ steps.portal.outputs.config && format('--var STRIPE_PORTAL_CONFIG:{0}', steps.portal.outputs.config) || '' }}
       - name: Secrets de l'API (seulement ceux qui existent)
         if: steps.gate.outputs.go == 'yes'
         env:
@@ -83,15 +99,36 @@ jobs:
           STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
           STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
           GITHUB_TOKEN: ${{ secrets.CONTENT_TOKEN }}
+          API: ${{ steps.url.outputs.api }}
         run: |
           have=$(npx wrangler secret list 2>/dev/null | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{process.stdout.write(JSON.parse(s).map(x=>x.name).join(" "))}catch(e){}})')
-          for k in BREVO_API_KEY STRIPE_SECRET_KEY STRIPE_WEBHOOK_SECRET GITHUB_TOKEN; do
+          for k in BREVO_API_KEY STRIPE_SECRET_KEY GITHUB_TOKEN; do
             v="${!k}"
             if [ -n "$v" ]; then printf '%s' "$v" | npx wrangler secret put "$k" > /dev/null && echo "$k : en place"
             elif echo " $have " | grep -q " $k "; then npx wrangler secret delete "$k" --force > /dev/null 2>&1 && echo "$k : retiré (secret GitHub supprimé)"; fi
           done
           # Clé de signature des images Premium : tirée au hasard une fois pour toutes.
           echo " $have " | grep -q " SIGNING_KEY " || { openssl rand -hex 32 | npx wrangler secret put SIGNING_KEY > /dev/null && echo "SIGNING_KEY : créée"; }
+          # Abonnements : le webhook Stripe est indispensable (renouvellements, échecs, résiliations). Créé ici automatiquement.
+          if [ -n "$STRIPE_SECRET_KEY" ]; then
+            hook="$API/pay/webhook"
+            events="checkout.session.completed invoice.paid invoice.payment_failed customer.subscription.updated customer.subscription.deleted"
+            ev_args=""; for e in $events; do ev_args="$ev_args -d enabled_events[]=$e"; done
+            if [ -n "$STRIPE_WEBHOOK_SECRET" ]; then
+              printf '%s' "$STRIPE_WEBHOOK_SECRET" | npx wrangler secret put STRIPE_WEBHOOK_SECRET > /dev/null && echo "Webhook Stripe : secret fourni utilisé"
+            else
+              id=$(curl -fsS -u "$STRIPE_SECRET_KEY:" "https://api.stripe.com/v1/webhook_endpoints?limit=100" | HOOK="$hook" node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const e=JSON.parse(s).data.find(x=>x.url===process.env.HOOK);process.stdout.write(e?e.id:"")})')
+              if [ -n "$id" ] && echo " $have " | grep -q " STRIPE_WEBHOOK_SECRET "; then
+                curl -fsS -u "$STRIPE_SECRET_KEY:" "https://api.stripe.com/v1/webhook_endpoints/$id" $ev_args > /dev/null && echo "Webhook Stripe : déjà en place"
+              else
+                [ -n "$id" ] && curl -fsS -u "$STRIPE_SECRET_KEY:" -X DELETE "https://api.stripe.com/v1/webhook_endpoints/$id" > /dev/null
+                secret=$(curl -fsS -u "$STRIPE_SECRET_KEY:" https://api.stripe.com/v1/webhook_endpoints -d url="$hook" -d description="Le Sachoir : abonnements Premium" $ev_args | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>process.stdout.write(JSON.parse(s).secret||""))')
+                [ -n "$secret" ] && printf '%s' "$secret" | npx wrangler secret put STRIPE_WEBHOOK_SECRET > /dev/null && echo "Webhook Stripe : créé"
+              fi
+            fi
+          elif echo " $have " | grep -q " STRIPE_WEBHOOK_SECRET "; then
+            npx wrangler secret delete STRIPE_WEBHOOK_SECRET --force > /dev/null 2>&1 || true
+          fi
       - name: Brancher l'appli sur l'API
         if: steps.gate.outputs.go == 'yes'
         working-directory: .

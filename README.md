@@ -35,7 +35,7 @@ Une petite API sur Cloudflare (Worker + base D1, offre gratuite), déployée par
 - **Comptes** facultatifs, sans mot de passe (code à 6 chiffres ou lien magique). Données du téléphone fusionnées avec le compte et synchronisées.
 - **Newsletter** Brevo, dès que l'édition du jour est publiée : Grand Dossier en vedette, puis l'Actu, la Culture G, l'Insolite, le jeu. Textes du jour écrits par la tâche Actu (`newsletter` dans `edition.json`, `teaser` par BD), sinon tirés de réserves tournantes. Abonnement confirmé par e-mail.
 - **Dossiers offerts** : un Grand Dossier offert à la confirmation de la newsletter, et un à chaque ami inscrit avec votre lien de parrainage (`?ref=`), 30 au plus par mois.
-- **Premium** : paiement unique Stripe Checkout, sans abonnement : 2,99 € (1 mois) ou 19,99 € (1 an). Le paiement est vérifié au retour, à l'ouverture de l'appli, et par webhook si `STRIPE_WEBHOOK_SECRET` est en place (événement `checkout.session.completed` vers `<API>/pay/webhook`). Premium aussi donnable à la main dans l'écran admin.
+- **Premium** : abonnement Stripe **sans engagement**, 2,99 € par mois ou 19,99 € par an, résiliable en deux touches dans Mon compte (accès gardé jusqu'à la fin de la période payée), carte et factures via le portail client Stripe. Le webhook (renouvellements, échecs, résiliations) et la configuration du portail sont **créés automatiquement** par le workflow API dès que `STRIPE_SECRET_KEY` existe. Premium aussi donnable à la main dans l'écran admin.
 - **Paywall** (actif quand `STRIPE_SECRET_KEY` est là ; `"paywall"` dans `site.json` : `"auto"`, `true` ou `false`) : le site publié ne contient que les 4 premières cases du Grand Dossier (JSON et images) ; la suite est servie par l'API aux abonnés et aux dossiers débloqués, avec des liens d'images signés. La page publique (SEO) garde le début de la BD, le plan des chapitres, le résumé « L'histoire complète », la carte « Pour briller » et les sources, avec `isAccessibleForFree: false`. **Limite** : tant que ce dépôt GitHub est public, ses fichiers restent lisibles par qui les cherche ; le rendre privé ferme cette porte (secret `CONTENT_TOKEN` = jeton GitHub en lecture pour que l'API lise le contenu).
 - **Cases photo** (`kind: "photo"`) : vraie image Wikimedia Commons (licence libre seulement), téléchargée par `pipeline/photos.py` dans le workflow Images, auteur, licence et lien affichés.
 - **Mesure d'audience** anonyme (identifiant tiré au hasard par appareil, ni cookie ni IP, Do Not Track respecté) et **écran admin** `admin.html` (audience, lecture, jeu, comptes, newsletter, revenus, dossiers offerts, Premium).
@@ -49,8 +49,7 @@ Tester en local : `cd worker && npm i && npx wrangler d1 migrations apply sachoi
 - `CF_API_TOKEN` : jeton Cloudflare avec le modèle « Workers AI ».
 - `CF_DEPLOY_TOKEN` : jeton Cloudflare pour déployer l'API (modèle « Edit Cloudflare Workers » + permission « D1 : Edit »).
 - `BREVO_API_KEY` : clé API Brevo (SMTP & API › Clés API), pour les e-mails de connexion et la newsletter.
-- `STRIPE_SECRET_KEY` : clé secrète Stripe (`sk_live_…` ou `sk_test_…`) : ouvre le paiement et active le paywall.
-- `STRIPE_WEBHOOK_SECRET` (facultatif) : secret du webhook Stripe (`whsec_…`).
+- `STRIPE_SECRET_KEY` : clé secrète Stripe (`sk_live_…` ou `sk_test_…`) : ouvre l'abonnement et active le paywall ; le webhook et le portail client sont créés tout seuls.
 - `CONTENT_TOKEN` (facultatif, si le dépôt devient privé) : jeton GitHub en lecture seule sur ce dépôt.
 
 ## Lancer à la main
