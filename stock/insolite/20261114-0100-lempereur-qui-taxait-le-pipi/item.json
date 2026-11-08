@@ -1,0 +1,244 @@
+{
+  "added": "20261114-0100",
+  "from_edition": "2026-11-14",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "L’empereur qui taxait le pipi",
+      "tagline": "Vespasien a fait payer l’urine des Romains. Paris l’en a remercié en donnant son nom à ses urinoirs.",
+      "minutes": 1,
+      "theme": "Histoire ancienne",
+      "cast": [
+        {
+          "id": "vespasien",
+          "look": "Vespasian, a stocky Roman emperor in his sixties, bald round head, deep forehead wrinkles, permanent strained squint, white toga, a purple sash as the only colour",
+          "file": "cast/insolite-vespasien.png",
+          "status": "pending"
+        },
+        {
+          "id": "titus",
+          "look": "Titus, a handsome elegant Roman prince around thirty, short curly black hair, pointed nose always wrinkled in disgust, spotless white toga",
+          "file": "cast/insolite-titus.png",
+          "status": "pending"
+        },
+        {
+          "id": "foulon",
+          "look": "Marcus, a cheerful skinny Roman laundry worker, shaved head, big gap-toothed grin, short grey tunic rolled up to the knees, bare feet",
+          "file": "cast/insolite-foulon.png",
+          "status": "pending"
+        },
+        {
+          "id": "rambuteau",
+          "look": "Rambuteau, an 1830s Paris prefect in his fifties, tall curly grey hair, long sideburns, black frock coat with a high white collar, a tricolour sash as the only colour",
+          "file": "cast/insolite-rambuteau.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a plain Roman street with one big clay jar. Vespasian (on the left) proudly holding up a single gold coin, beaming; Titus (on the right) pinching his nose, leaning back in horror, eyes squeezed shut. wide shot",
+        "cast": [
+          "vespasien",
+          "titus"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Rome, Ier siècle",
+          "caption": "Pourquoi les urinoirs s’appelaient-ils des « vespasiennes » ? Rome, Ier siècle : l’empereur Vespasien cherche de l’argent pour l’État.",
+          "bubbles": [
+            {
+              "text": "Que produisent les Romains chaque jour, gratuitement ?",
+              "side": "l"
+            },
+            {
+              "text": "Je sens que je ne vais pas aimer.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare palace room with one marble column. Vespasian (on the left) stroking his chin, eyes narrowed with a scheming grin; Titus (on the right) slowly backing away, shoulders hunched, worried sweat drop. medium shot",
+            "cast": [
+              "vespasien",
+              "titus"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "À l’époque, l’urine vaut de l’argent : son ammoniaque aide les blanchisseurs à nettoyer et détacher les tissus.",
+          "bubbles": [
+            {
+              "text": "Rien de tel pour une toge bien blanche.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a big round wooden tub. Marcus (on the right) standing in the tub up to his calves, happily stomping on a white sheet of cloth like treading grapes, arms out, huge gap-toothed grin. medium shot",
+            "cast": [
+              "foulon"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "title": "Pourquoi l’urine valait de l’argent",
+          "text": "En vieillissant, l’urine dégage de l’ammoniaque, un puissant nettoyant. Les foulons, les blanchisseurs de Rome, s’en servaient pour dégraisser et blanchir la laine et les toges. Ils achetaient donc celle des toilettes publiques.",
+          "joke": "Le recyclage, version romaine. Le parfum en moins."
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Vespasien taxe donc l’urine récoltée dans les toilettes publiques et revendue aux ateliers.",
+          "bubbles": [
+            {
+              "text": "Un impôt sur le revenu. Le revenu liquide.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a plain wall with a row of simple stone public seats. Vespasian (on the left) proudly nailing a blank wooden sign to the wall with a little hammer, chest puffed out, very satisfied. medium shot",
+            "cast": [
+              "vespasien"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "Son fils Titus trouve la mesure indigne d’un empereur.",
+          "bubbles": [
+            {
+              "text": "Père, on va se moquer de nous jusqu’en Gaule.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare palace room. Titus (on the right) dramatically draped over a couch, one hand on his forehead, despairing; Vespasian (on the left) calmly counting coins on a small table, not even looking up. medium shot",
+            "cast": [
+              "titus",
+              "vespasien"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "Selon Suétone",
+          "caption": "Vespasien met sous le nez de Titus une pièce issue de la taxe.",
+          "bubbles": [
+            {
+              "text": "Elle sent mauvais ?",
+              "side": "l"
+            },
+            {
+              "text": "Non.",
+              "side": "r"
+            },
+            {
+              "text": "Pourtant, c’est l’urine.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "close-up of two faces. Vespasian (on the left) holding a single gold coin right under Titus's nose with a triumphant grin; Titus (on the right) cross-eyed, staring at the coin, sniffing cautiously, deeply suspicious. close-up",
+            "cast": [
+              "vespasien",
+              "titus"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "",
+          "caption": "D’où « l’argent n’a pas d’odeur », formule qu’il n’a pas prononcée telle quelle.",
+          "bubbles": [
+            {
+              "text": "Je dis une phrase, on en retient une autre.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "plain background. Vespasian (on the left) sitting slumped on a marble bench, chin in his hand, bored and resigned, half-lidded eyes, the gold coin balanced on his knee. medium shot",
+            "cast": [
+              "vespasien"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "conf",
+          "tag": "Paris, 1834",
+          "caption": "Bilan : en 1834, le préfet Rambuteau installe à Paris des urinoirs publics, baptisés « vespasiennes » en souvenir de cette taxe.",
+          "bubbles": [
+            {
+              "text": "Je voulais honorer un empereur. Les Parisiens ont dit « colonnes Rambuteau ».",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "plain empty background with one simple round street urinal column behind. Rambuteau (in the centre) sitting on a wooden stool facing the viewer like in an interview, shoulders slumped, deadpan stare, cheeks tiny pink with embarrassment. medium shot",
+            "cast": [
+              "rambuteau"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Les vespasiennes, urinoirs installés à Paris dès 1834, doivent leur nom à Vespasien, l’empereur romain qui taxait l’urine.",
+        "source": "Paris ZigZag — La dernière vespasienne de Paris"
+      },
+      "sources": [
+        {
+          "title": "Suétone, Vie de Vespasien, 23.3 (trad. J. C. Rolfe)",
+          "url": "https://lexundria.com/suet_ves/23.3/r"
+        },
+        {
+          "title": "Imperium Romanum — Emperor Vespasian’s urinary tax",
+          "url": "https://imperiumromanum.pl/en/curiosities/emperor-vespasians-urinary-tax/"
+        },
+        {
+          "title": "Hérodote — 20 décembre 69, Vespasien empereur",
+          "url": "https://www.herodote.net/20_decembre_69-evenement-691220.php"
+        },
+        {
+          "title": "Paris ZigZag — La dernière vespasienne de Paris",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/vespasienne-derniere/"
+        }
+      ],
+      "story": "Au Ier siècle, l’empereur Vespasien prend la tête d’un empire aux finances fragiles. Il cherche donc de nouvelles recettes.\nÀ Rome, l’urine a de la valeur. En vieillissant, elle dégage de l’ammoniaque, et les foulons, ces artisans qui nettoient et blanchissent les tissus, l’utilisent pour dégraisser la laine et les toges. Ils récupèrent celle des toilettes publiques. Vespasien a l’idée de taxer ce commerce.\nSelon l’historien Suétone, son fils Titus trouve la mesure indigne. Vespasien lui met alors sous le nez une pièce tirée de cette taxe et lui demande si elle sent mauvais. Titus répond que non. Et pourtant, elle vient de l’urine, réplique l’empereur. De cet échange est née l’expression « l’argent n’a pas d’odeur », même si Vespasien ne l’a pas prononcée telle quelle.\nDix-huit siècles plus tard, en 1834, le préfet Rambuteau installe à Paris des urinoirs publics en forme de colonnes. On les surnomme « vespasiennes », en souvenir de l’empereur qui taxait l’urine. Les Parisiens les ont aussi appelées « colonnes Rambuteau »."
+    }
+  ]
+}

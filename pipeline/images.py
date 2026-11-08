@@ -1,9 +1,14 @@
 """Génère les images manquantes des éditions avec Cloudflare Workers AI (FLUX.2 klein 4B).
 
-Pour chaque édition non publiée (et celle du jour) :
-  1. les fiches casting (portraits 512x512) servent ensuite de références ;
-  2. la couverture de chaque format ;
-  3. les cases dont l'image est "pending" ou "retry".
+Ordre de travail (8 novembre 2026 : finir une BD avant d'en commencer une autre) :
+  1. l'Actu de la prochaine édition ;
+  2. les BD encore incomplètes des éditions du jour et des deux jours précédents ;
+  3. la file d'attente `stock/` (voir stock.py) : on prend le type qui a le moins de BD finies et, dans ce type,
+     la plus ancienne BD pas finie, qu'on termine à 100 % avant de passer à la suivante ;
+  4. quand chaque type a assez de BD finies d'avance (`stock_target` dans style.json), les images que le contrôle
+     qualité veut refaire (`"redo": true`) : l'ancienne image reste publiée tant que la nouvelle n'est pas faite ;
+  5. puis on continue de remplir la file.
+Dans chaque BD : fiches casting (références), couverture, puis les cases "pending".
 
 Le script s'arrête proprement quand le quota quotidien est épuisé :
 les images restantes restent "pending" et seront faites au prochain passage.
@@ -25,6 +30,9 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import stock  # noqa: E402
 from PIL import Image, ImageChops, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -404,13 +412,18 @@ def uses(fmt: dict) -> dict:
     return n
 
 
-def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
+def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | None = None, redo: bool = False) -> int:
+    """Dessine ce qui manque. `day` : date qui décide du renfort payant (date.max = jamais).
+    `redo` : refait seulement les images marquées « redo » par le contrôle qualité (l'ancienne reste en ligne)."""
     done = 0
     max_att = STYLE["max_attempts"]
-    try:
-        day = date.fromisoformat(d.name)
-    except ValueError:
-        day = date.max  # démo : jamais de renfort payant
+    if day is None:
+        try:
+            day = date.fromisoformat(d.name)
+        except ValueError:
+            day = date.max  # démo : jamais de renfort payant
+    if redo:
+        day = date.max  # jamais de dépense payante pour refaire une image déjà publiable
 
     def persist():
         f.write_text(json.dumps(ed, ensure_ascii=False, indent=2))
@@ -418,6 +431,8 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
     for fmt in ed.get("formats", []):
         if (fmt.get("id") == "actu") != only_actu:
             continue
+        if stock.normalize(fmt, d):
+            persist()
         looks = {c["id"]: c.get("look", c["id"]) for c in fmt.get("cast", [])}
         sheets = {c["id"]: d / c["file"] for c in fmt.get("cast", [])}
 
@@ -462,6 +477,10 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
             jobs.append((fmt["cover"], STYLE["cover_size"], "cover"))
         jobs += [(case["image"], STYLE["case_size"], "case") for case in fmt.get("cases", []) if case.get("image")]
         for img, size, kind in jobs:
+            if redo:
+                if img.get("status") == "done" and img.get("redo"):
+                    done += redo_one(d, img, size, kind, fmt, day, looks, sheets, persist)
+                continue
             if img.get("status") not in ("pending", "retry", None):
                 continue
             if img.get("attempts", 0) >= max_att:
@@ -496,6 +515,72 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False) -> int:
     return done
 
 
+def redo_one(d, img, size, kind, fmt, day, looks, sheets, persist) -> int:
+    """Nouvelle version d'une image déjà publiée ; en cas d'échec l'ancienne reste (2 essais au plus)."""
+    prompt, refs = build(img["prompt"], [(looks[c], sheets.get(c)) for c in img.get("cast", []) if c in looks])
+    try:
+        im, via = draw(fmt, day, prompt, size, refs, kind)
+    except (QuotaExhausted, BudgetReserved):
+        raise
+    except Exception as e:
+        img["redo_attempts"] = img.get("redo_attempts", 0) + 1
+        img["error"] = str(e)[:300]
+        if img["redo_attempts"] >= 2:
+            img.pop("redo", None)  # on garde l'ancienne image
+        persist()
+        return 0
+    save_webp(im, d / img["file"])
+    for k in ("redo", "redo_attempts", "qa", "error"):
+        img.pop(k, None)
+    if via != "cloudflare":
+        img["via"] = via
+    persist()
+    print(f"  refaite {img['file']} ({via})")
+    return 1
+
+
+def stock_target(kind: str) -> int:
+    return (STYLE.get("stock_target") or {}).get(kind, 2)
+
+
+def process_stock(phase: str) -> int:
+    """phase "fill" : jusqu'à `stock_target` BD finies par type ; "more" : au-delà. Une BD à la fois par type."""
+    total = 0
+    stuck = set()  # types dont la BD en cours n'a pas pu avancer pendant ce passage (erreur d'image)
+    while True:
+        summ = stock.summary()
+        todo = []
+        for kind in stock.TYPES:
+            if kind in stuck or (phase == "fill" and summ[kind]["ready"] >= stock_target(kind)):
+                continue
+            # BD en cours : la plus ancienne pas finie et pas bloquée
+            cur = None
+            for p in stock.items(kind):
+                it = stock.load(p)
+                if it and not it.get("blocked") and not stock.is_ready(it["formats"][0], p):
+                    cur = (p, it)
+                    break
+            if cur:
+                todo.append((summ[kind]["ready"], stock.TYPES.index(kind), kind, cur))
+        if not todo:
+            return total
+        todo.sort(key=lambda x: x[:2])  # le type le plus en retard d'abord ; à égalité Culture G, Insolite, Dossier
+        ready, _, kind, (p, it) = todo[0]
+        f = p / "item.json"
+        # Renfort payant seulement si ce type n'a plus aucune BD finie pour la prochaine publication.
+        day = next_actu_date() if ready == 0 else date.max
+        print(f"File {kind} : {p.name} ({stock.left(it['formats'][0])} image(s) à faire)")
+        before = stock.left(it["formats"][0])
+        total += process(p, f, it, day=day)
+        fmt = it["formats"][0]
+        if any(i.get("status") == "failed" for i in stock.images_of(fmt)):
+            it["blocked"] = "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
+            f.write_text(json.dumps(it, ensure_ascii=False, indent=2))
+            print(f"  ! {p.name} bloquée : {it['blocked']}")
+        elif stock.left(fmt) >= before:
+            stuck.add(kind)  # pas d'avancée (erreurs passagères) : on réessaiera au prochain passage
+
+
 def main():
     if not ACCOUNT or not TOKEN:
         sys.exit("CF_ACCOUNT_ID et CF_API_TOKEN sont requis (secrets GitHub).")
@@ -505,10 +590,22 @@ def main():
         # 1. L'Actu d'abord (écrite au dernier moment, elle ne doit jamais manquer de quota),
         for d, f, ed in editions_to_process():
             total += process(d, f, ed, only_actu=True)
-        # 2. puis le stock, du plus proche au plus lointain, sans entamer la réserve de l'Actu.
+        # 2. les BD incomplètes des éditions récentes (ancien système, ou image ratée),
         for d, f, ed in editions_to_process():
             print(f"Édition {d.name}")
             total += process(d, f, ed)
+        # 3. la file d'attente : une BD finie à la fois, jusqu'à l'avance voulue,
+        total += process_stock("fill")
+        # 4. les images à refaire (l'ancienne reste en ligne), éditions récentes puis file,
+        for d, f, ed in editions_to_process():
+            total += process(d, f, ed, redo=True)
+        for kind in stock.TYPES:
+            for p in stock.items(kind):
+                it = stock.load(p)
+                if it:
+                    total += process(p, p / "item.json", it, redo=True)
+        # 5. puis on continue de remplir la file.
+        total += process_stock("more")
     except BudgetReserved as e:
         print(f"Stock en pause : {e}.")
         log.append(f"réserve: {e}")

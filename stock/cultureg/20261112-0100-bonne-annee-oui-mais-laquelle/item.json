@@ -1,0 +1,270 @@
+{
+  "added": "20261112-0100",
+  "from_edition": "2026-11-12",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Bonne année ! Oui, mais laquelle ?",
+      "tagline": "Avant 1564, la France fêtait le Nouvel An à Noël, en mars ou à Pâques, selon la ville",
+      "minutes": 2,
+      "theme": "Histoire moderne",
+      "cast": [
+        {
+          "id": "charles",
+          "look": "Charles, a teenage king of the 1560s, thin pale face, short dark hair, small white ruff collar, black doublet, a tiny gold crown as the only colour",
+          "file": "cast/cultureg-charles.png",
+          "status": "pending"
+        },
+        {
+          "id": "catherine",
+          "look": "Catherine, the queen mother of the 1560s, round face, sharp knowing eyes, black widow's dress, small black veiled cap, white ruff collar",
+          "file": "cast/cultureg-catherine.png",
+          "status": "pending"
+        },
+        {
+          "id": "lhospital",
+          "look": "Michel, an old chancellor of the 1560s, very long white beard down to his belt, bushy eyebrows, black robe, black square cap, holding a scroll",
+          "file": "cast/cultureg-lhospital.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare room with three wall calendars, each showing a different blank page. Charles (in the middle) holding a party horn, totally lost, turning his head from one calendar to another; Catherine (on the right) arms crossed, unimpressed. medium shot",
+        "cast": [
+          "charles",
+          "catherine"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1564",
+          "caption": "Pourquoi l’année commence-t-elle le 1er janvier ? En 1564, le jeune Charles IX et sa mère font le tour du royaume.",
+          "bubbles": [
+            {
+              "text": "On va découvrir la France, mon fils.",
+              "side": "r"
+            },
+            {
+              "text": "Et ses fromages ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple country road with a royal carriage. Charles (on the left) leaning out of the carriage window, excited like a child on holiday; Catherine (on the right) sitting stiffly inside, reading a list, sharp eyes. medium shot",
+            "cast": [
+              "charles",
+              "catherine"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Surprise : d’un diocèse (une région de l’Église) à l’autre, l’année ne commence pas le même jour.",
+          "bubbles": [
+            {
+              "text": "On est en quelle année, ici ?",
+              "side": "l"
+            },
+            {
+              "text": "Ça dépend du diocèse, Sire.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a village square with a single signpost. Charles (on the left) scratching his head under his crown, confused; Michel (on the right) unrolling a long scroll, deadpan, eyebrows raised. medium shot",
+            "cast": [
+              "charles",
+              "lhospital"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "",
+          "caption": "À Lyon, l’année commence à Noël. À Reims, Vienne ou Limoges, le 25 mars.",
+          "bubbles": [
+            {
+              "text": "Bonne année !",
+              "side": "l"
+            },
+            {
+              "text": "Pas ici. Ici, c’est encore l’an dernier.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Charles (on the left) blowing a party horn and throwing confetti, delighted; Catherine (on the right) gently lowering his arm, shaking her head, confetti falling on her black veil. plain background. medium shot",
+            "cast": [
+              "charles",
+              "catherine"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "",
+          "caption": "En Artois, c’est à Pâques : une fête qui change de date chaque année.",
+          "bubbles": [
+            {
+              "text": "Donc le Nouvel An… bouge ?",
+              "side": "l"
+            },
+            {
+              "text": "Il bouge, Sire. Comme le reste.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Charles (on the left) sitting on the floor, holding his head with both hands, crown sliding off, completely overwhelmed; Michel (on the right) calmly stroking his very long beard. plain background. medium shot",
+            "cast": [
+              "charles",
+              "lhospital"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "title": "Pourquoi tant de dates différentes ?",
+          "text": "Chaque région suivait sa tradition religieuse : Noël, le 25 mars (fête de l’Annonciation) ou Pâques. Résultat : un même jour pouvait appartenir à deux années différentes selon la ville où l’on se trouvait.",
+          "joke": "Pratique pour rajeunir d’un an en changeant de ville. Moins pour dater un contrat."
+        },
+        {
+          "n": 6,
+          "kind": "chap",
+          "tag": "9 août 1564",
+          "caption": "Pour mettre de l’ordre, le 9 août 1564 à Roussillon, le roi signe un édit du chancelier Michel de L’Hospital.",
+          "bubbles": [
+            {
+              "text": "L’année commencera le 1er janvier. Partout.",
+              "side": "r"
+            },
+            {
+              "text": "Même à Lyon ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare castle room with one table. Michel (on the right) presenting a parchment and a quill with great ceremony; Charles (on the left) about to sign, tongue sticking out in concentration. medium shot",
+            "cast": [
+              "charles",
+              "lhospital"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Article 39",
+          "caption": "Elle tient en un article, le 39e, perdu parmi des articles sur la justice.",
+          "bubbles": [
+            {
+              "text": "On l’a caché entre deux procès ?",
+              "side": "l"
+            },
+            {
+              "text": "Personne ne lit jusqu’à l’article 39.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Michel (on the right) unrolling an extremely long scroll that rolls all the way across the floor; Charles (on the left) on his knees with a magnifying glass, searching for a tiny line near the bottom. wide shot",
+            "cast": [
+              "charles",
+              "lhospital"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "1567",
+          "caption": "La règle s’applique dès le 1er janvier 1567. En 1622, le pape l’étend à tout le monde catholique.",
+          "bubbles": [
+            {
+              "text": "La France d’abord, Rome ensuite. Je dis ça…",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Catherine (in the middle) sitting very straight, sipping from a small cup with a smug little smile, looking sideways. plain background. medium shot",
+            "cast": [
+              "catherine"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "Mythbuster",
+          "caption": "On dit que le poisson d’avril viendrait de ce changement. Explication répandue, mais discutée.",
+          "bubbles": [
+            {
+              "text": "Donc on me doit une blague par an. Minimum.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Charles (in the middle) in a confession-style close-up, looking straight at the reader, holding a small paper fish with a mischievous grin. plain background",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Signé par Charles IX le 9 août 1564, l’édit de Roussillon fixe le début de l’année au 1er janvier dans tout le royaume.",
+        "source": "Hérodote.net, Wikipédia"
+      },
+      "sources": [
+        {
+          "title": "Hérodote — 9 août 1564, l’année commence au 1er janvier",
+          "url": "https://www.herodote.net/9_aout_1564-evenement-15640809.php"
+        },
+        {
+          "title": "Wikipedia — Edict of Roussillon",
+          "url": "https://en.wikipedia.org/wiki/Edict_of_Roussillon"
+        },
+        {
+          "title": "Actu-Juridique — Qui a volé le premier de l’an ?",
+          "url": "https://www.actu-juridique.fr/culture/conte-autour-de-charles-ix-qui-a-vole-le-premier-de-lan-ii/"
+        }
+      ],
+      "story": "Au XVIe siècle, le royaume de France ne commence pas l’année le même jour partout. Selon les diocèses, on change d’année à Noël, comme à Lyon, le 25 mars, comme à Reims, Vienne ou Limoges, ou encore à Pâques, comme en Artois. Or Pâques change de date chaque année : le Nouvel An bougeait donc aussi.\nEn 1564, le jeune roi Charles IX et sa mère, Catherine de Médicis, entreprennent un long tour du royaume. Pour mettre de l’ordre, le roi signe le 9 août 1564, à Roussillon, un édit préparé par le chancelier Michel de L’Hospital. Son article 39 fixe le début de l’année au 1er janvier, partout dans le royaume. Glissée parmi des articles sur la justice, la mesure s’applique à partir du 1er janvier 1567.\nEn 1622, le pape étend ce choix à tout le monde catholique.\nOn raconte souvent que le poisson d’avril serait né de ce changement, en souvenir de l’ancien Nouvel An de printemps. L’explication est répandue, mais les historiens la discutent."
+    }
+  ]
+}

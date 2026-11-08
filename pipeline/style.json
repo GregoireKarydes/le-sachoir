@@ -42,5 +42,11 @@
     "max_colour_share": 0.2
   },
   "ink": null,
-  "colour_touches_since": "2026-11-07"
+  "colour_touches_since": "2026-11-07",
+  "stock_target": {
+    "cultureg": 3,
+    "insolite": 3,
+    "dossier": 2
+  },
+  "stock_target_note": "BD finies d'avance par type (file stock/) avant de refaire les images demandées par le contrôle qualité"
 }

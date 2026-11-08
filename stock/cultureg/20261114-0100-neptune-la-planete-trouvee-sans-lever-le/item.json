@@ -1,0 +1,267 @@
+{
+  "added": "20261114-0100",
+  "from_edition": "2026-11-14",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Neptune, la planète trouvée sans lever les yeux",
+      "tagline": "En 1846, un Français découvre une planète avec un crayon. Un Allemand n’a plus qu’à regarder.",
+      "minutes": 2,
+      "theme": "L’univers",
+      "cast": [
+        {
+          "id": "leverrier",
+          "look": "Urbain, a stiff 1840s French mathematician in his thirties, long sideburns, slicked-back dark hair, frowning eyebrows, black frock coat, a quill pen always in hand, a red waistcoat as the only colour",
+          "file": "cast/cultureg-leverrier.png",
+          "status": "pending"
+        },
+        {
+          "id": "arago",
+          "look": "François, a jovial 1840s observatory director in his late fifties, wild curly grey hair, big bushy eyebrows, round belly, black coat, a blue scarf as the only colour",
+          "file": "cast/cultureg-arago.png",
+          "status": "pending"
+        },
+        {
+          "id": "galle",
+          "look": "Johann, a lanky 1840s German astronomer in his thirties, neat blond side parting, small round glasses, long grey coat, very straight posture",
+          "file": "cast/cultureg-galle.png",
+          "status": "pending"
+        },
+        {
+          "id": "galilee",
+          "look": "Galileo, a 1610s Italian scholar in his late forties, big bushy reddish beard, receding hair, long black scholar's robe, a small handheld telescope",
+          "file": "cast/cultureg-galilee.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a dark night sky with one small round planet. Urbain (on the left) at a desk buried under paper, pointing his quill straight up at the planet without looking, smug; Johann (on the right) at a big telescope, jaw dropped. wide shot",
+        "cast": [
+          "leverrier",
+          "galle"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Années 1840",
+          "caption": "Comment trouver une planète sans la voir ? Années 1840 : Uranus ne suit pas le chemin prévu par les calculs.",
+          "bubbles": [
+            {
+              "text": "Uranus fait n’importe quoi.",
+              "side": "l"
+            },
+            {
+              "text": "Ou quelqu’un la tire par la manche.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare observatory room with one big telescope pointing at a small planet through a window. François (on the left) tearing at his wild hair, eyes bulging; Urbain (on the right) arms crossed, calm, one eyebrow raised, unimpressed. medium shot",
+            "cast": [
+              "arago",
+              "leverrier"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "",
+          "caption": "Arago, à la tête de l’Observatoire de Paris, confie l’énigme à Le Verrier.",
+          "bubbles": [
+            {
+              "text": "Trouvez ce qui dérange Uranus.",
+              "side": "l"
+            },
+            {
+              "text": "Je prends un crayon. Pas un télescope.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare office. François (on the left) handing over a huge pile of blank papers, beaming, wobbling under the weight; Urbain (on the right) pushing the telescope away with one finger, holding up his quill like a sword. medium shot",
+            "cast": [
+              "arago",
+              "leverrier"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "L’idée",
+          "caption": "Son idée : une planète inconnue, plus lointaine, dévie Uranus par sa gravité. En mesurant cette déviation, on peut la situer.",
+          "bubbles": [
+            {
+              "text": "Des mois de calculs. Je n’ai pas vu le soleil.",
+              "side": "r"
+            },
+            {
+              "text": "Ni les étoiles, du coup.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a tiny desk under a mountain of paper reaching the ceiling. Urbain (on the right) hunched over it, dark circles under his eyes, hair sticking up, quill still scribbling; François (on the left) peeking from behind the paper pile, worried. medium shot",
+            "cast": [
+              "leverrier",
+              "arago"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "title": "Trouver une planète par le calcul",
+          "steps": [
+            "Les lois de Newton prédisent la trajectoire d’Uranus",
+            "Uranus s’en écarte un peu : quelque chose la tire",
+            "Le Verrier calcule où devrait se trouver ce « quelque chose »",
+            "Il ne reste plus qu’à pointer un télescope au bon endroit"
+          ],
+          "joke": "Le premier GPS de l’histoire. Il fallait quand même quelqu’un pour regarder."
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "31 août 1846",
+          "caption": "31 août 1846 : Le Verrier publie l’endroit du ciel où chercher, puis écrit à l’observatoire de Berlin.",
+          "bubbles": [
+            {
+              "text": "Cher collègue, regardez là. Merci de ne pas discuter.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare desk with one candle. Urbain (on the left) writing a short blank letter with his quill, chin high, extremely confident, the other hand pointing firmly at the ceiling. close-up",
+            "cast": [
+              "leverrier"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "23 septembre 1846",
+          "caption": "Johann Galle reçoit la lettre. Il trouve la planète en moins d’une heure.",
+          "bubbles": [
+            {
+              "text": "Elle est là. Exactement là. C’est vexant.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a night observatory with a big telescope. Johann (on the right) leaning away from the eyepiece, the opened letter in one hand, staring at it then at the sky, frozen, tiny sweat drop, mouth a small o. medium shot",
+            "cast": [
+              "galle"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "react",
+          "tag": "",
+          "caption": "Écart avec la prédiction : moins d’un degré, à peine deux fois la largeur de la Lune. On la baptise Neptune.",
+          "bubbles": [
+            {
+              "text": "Évidemment.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "plain background. Urbain (in the centre) extreme close-up, eyes half closed, a tiny smug smile, nose high in the air, calmly blowing on the tip of his quill like a gunslinger. close-up",
+            "cast": [
+              "leverrier"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Vraie citation",
+          "caption": "Arago résume : Le Verrier a trouvé le nouvel astre « au bout de sa plume », par le seul calcul.",
+          "bubbles": [
+            {
+              "text": "Le premier astronome en télétravail.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare lecture hall with a small podium. François (on the left) at the podium, arms wide open, beaming with pride, tiny tears of joy; Urbain (on the right) sitting on a chair, arms crossed, pretending not to care, tiny pink blush marks. wide shot",
+            "cast": [
+              "arago",
+              "leverrier"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "Épilogue",
+          "caption": "Galilée l’avait observée dès 1612… et prise pour une étoile.",
+          "bubbles": [
+            {
+              "text": "Je l’ai vue le premier. Je ne l’ai juste pas remarquée.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "plain empty background. Galileo (in the centre) sitting on a wooden stool facing the viewer like in an interview, small telescope on his knees, forced awkward smile, shoulders up to his ears, big sweat drop. medium shot",
+            "cast": [
+              "galilee"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Neptune est la première planète trouvée par le calcul : en 1846, Le Verrier a prédit sa position à moins d’un degré près.",
+        "source": "Wikipedia — Discovery of Neptune"
+      },
+      "sources": [
+        {
+          "title": "Observatoire de Paris — Les 170 ans de la découverte de Neptune",
+          "url": "https://observatoiredeparis.psl.eu/les-170-ans-de-la-decouverte.html"
+        },
+        {
+          "title": "IMCCE — La découverte de Neptune",
+          "url": "https://promenade.imcce.fr/fr/pages2/293.html"
+        },
+        {
+          "title": "Wikipedia — Discovery of Neptune",
+          "url": "https://en.wikipedia.org/wiki/Discovery_of_Neptune"
+        }
+      ],
+      "story": "Au début des années 1840, les astronomes ont un problème : Uranus, la planète la plus lointaine connue alors, ne suit pas exactement la trajectoire prévue par les lois de la gravitation. Soit ces lois sont fausses, soit une planète inconnue, plus lointaine, attire Uranus et la dévie.\nFrançois Arago, directeur de l’Observatoire de Paris, confie l’énigme au mathématicien Urbain Le Verrier. Pendant des mois, celui-ci calcule à l’envers : à partir des écarts d’Uranus, il déduit la position que devrait avoir la planète mystère.\nLe 31 août 1846, il publie ses résultats, puis écrit à l’astronome Johann Galle, à l’observatoire de Berlin. Le 23 septembre, Galle reçoit la lettre et trouve la planète en moins d’une heure, à moins d’un degré de l’endroit prédit. On la baptise Neptune.\nC’est la première planète découverte par le calcul avant d’être observée. Arago résume : Le Verrier a trouvé le nouvel astre « au bout de sa plume ». Ironie de l’histoire : Galilée l’avait aperçue dès 1612, mais l’avait prise pour une étoile."
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
 import images  # noqa: E402
 import publish  # noqa: E402
+import stock  # noqa: E402
 import validate  # noqa: E402
 
 PARIS = ZoneInfo("Europe/Paris")
@@ -49,6 +50,7 @@ def site(tmp_path, monkeypatch):
     monkeypatch.setattr(publish, "EDITIONS", tmp_path / "editions")
     monkeypatch.setattr(publish, "SITE", tmp_path / "_site")
     monkeypatch.setattr(publish.seo, "build", lambda *a, **k: None)
+    monkeypatch.setattr(stock, "STOCK", tmp_path / "stock")
     return tmp_path
 
 
@@ -89,12 +91,84 @@ def test_format_en_erreur_ecarte(site):
     assert "insolite" not in ids and "cultureg" in ids
 
 
+def queue(root: Path, name: str, fmt: dict, files=True):
+    d = root / "stock" / fmt["id"] / name
+    (d / "images").mkdir(parents=True)
+    for c in fmt.get("cases", []):
+        if files and c.get("image", {}).get("status") == "done":
+            (d / c["image"]["file"]).write_bytes(b"x")
+    (d / "item.json").write_text(json.dumps({"formats": [fmt]}))
+    return d
+
+
 def test_jours_d_avance(site):
     write(site, "2026-11-07", [story(), QUIZ])
-    write(site, "2026-11-08", [story(), QUIZ])
-    write(site, "2026-11-09", [story(status="pending"), QUIZ])
+    queue(site, "20261107-0900-a", story("cultureg"))
+    queue(site, "20261107-0901-b", story("insolite"))
+    queue(site, "20261107-0902-c", story("dossier", status="pending"))
     publish.main(datetime(2026, 11, 7, 6, 0, tzinfo=PARIS))
-    assert json.loads((site / "data" / "health.json").read_text())["days_ahead_drawn"] == 1
+    h = json.loads((site / "data" / "health.json").read_text())
+    assert h["days_ahead_drawn"] == 0 and h["days_ahead_written"] == 1
+    assert h["stock"]["dossier"]["waiting"] == 1 and h["stock"]["cultureg"]["ready"] == 1
+
+
+def test_edition_pioche_une_bd_finie_dans_la_file(site, monkeypatch):
+    monkeypatch.setattr(publish, "QUEUE_SINCE", datetime(2026, 1, 1).date())
+    write(site, "2026-11-09", [QUIZ])
+    queue(site, "20261107-0900-pas-finie", story("cultureg", status="pending"))
+    old = queue(site, "20261107-0901-finie", story("cultureg"))
+    queue(site, "20261107-0902-finie-aussi", story("cultureg"))
+    publish.main(datetime(2026, 11, 9, 4, 0, tzinfo=PARIS))   # avant 5 h : on ne touche à rien
+    assert old.exists()
+    publish.main(datetime(2026, 11, 9, 5, 2, tzinfo=PARIS))
+    ed = json.loads((site / "editions" / "2026-11-09" / "edition.json").read_text())
+    assert [f["id"] for f in ed["formats"]] == ["cultureg", "quiz"]
+    assert ed["formats"][0]["from_stock"] == "20261107-0901-finie" and not old.exists()
+    assert (site / "editions" / "2026-11-09" / "images" / "cultureg-1.webp").exists()
+    assert published(site) == ["2026-11-09"]
+    assert len(stock.items("cultureg")) == 2
+
+
+def test_bd_pas_finie_retourne_en_file(site, monkeypatch):
+    monkeypatch.setattr(publish, "QUEUE_SINCE", datetime(2026, 1, 1).date())
+    s = story("insolite")
+    s["cases"][1]["image"]["status"] = "pending"
+    write(site, "2026-11-09", [s, QUIZ])
+    publish.main(datetime(2026, 11, 9, 5, 2, tzinfo=PARIS))
+    ed = json.loads((site / "editions" / "2026-11-09" / "edition.json").read_text())
+    assert [f["id"] for f in ed["formats"]] == ["quiz"]
+    [back] = stock.items("insolite")
+    assert back.name.startswith("20261109-0000") and (back / "images" / "insolite-1.webp").exists()
+
+
+def test_image_a_refaire_reste_publiee(site):
+    s = story()
+    s["cases"][0]["image"]["status"] = "retry"   # le contrôle qualité veut la refaire, l'ancienne est là
+    d = write(site, "2026-11-07", [s, QUIZ])
+    (d / "images" / "cultureg-1.webp").write_bytes(b"x")
+    publish.main(datetime(2026, 11, 7, 6, 0, tzinfo=PARIS))
+    ids = [f["id"] for f in json.loads((site / "editions" / "index.json").read_text())["editions"][0]["formats"]]
+    assert "cultureg" in ids
+
+
+def test_images_finissent_une_bd_avant_la_suivante(site, monkeypatch):
+    from PIL import Image
+    monkeypatch.setattr(images, "EDITIONS", site / "editions")
+    (site / "editions").mkdir(exist_ok=True)
+    a = queue(site, "20261107-0900-a", story("cultureg", status="pending", n=3))
+    b = queue(site, "20261107-0901-b", story("cultureg", status="pending", n=3))
+    calls = []
+
+    def fake(fmt, day, prompt, size, refs, kind):
+        if len(calls) >= 4:  # 1 fiche casting + 3 cases
+            raise images.QuotaExhausted("fini")
+        calls.append(kind)
+        return Image.new("RGB", (8, 8), "white"), "cloudflare"
+    monkeypatch.setattr(images, "draw", fake)
+    with pytest.raises(images.QuotaExhausted):
+        images.process_stock("fill")
+    assert stock.is_ready(stock.load(a)["formats"][0], a)
+    assert stock.left(stock.load(b)["formats"][0]) == 3
 
 
 def test_validation(tmp_path):

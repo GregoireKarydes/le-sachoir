@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "sachoir-bot"
           git config user.email "sachoir-bot@users.noreply.github.com"
-          git add editions data/health.json
+          git add -A editions stock data/health.json
           git diff --cached --quiet || git commit -m "Publication"
           for i in 1 2 3; do git pull --rebase && git push && ok=1 && break; sleep $((i * 15)); done
           [ -n "$ok" ] || echo "::warning::Push impossible après 3 essais ; le site est quand même déployé."

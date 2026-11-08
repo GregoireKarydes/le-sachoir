@@ -1,0 +1,251 @@
+{
+  "added": "20261110-0100",
+  "from_edition": "2026-11-10",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
+      "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
+      "minutes": 1,
+      "theme": "Droit",
+      "cast": [
+        {
+          "id": "dubois",
+          "look": "Louis Nicolas, the Paris police prefect in 1800, stiff and pompous, big grey sideburns, black bicorne hat, black high-collared uniform coat, a red sash as the only colour",
+          "file": "cast/insolite-dubois.png",
+          "status": "pending"
+        },
+        {
+          "id": "rosa",
+          "look": "Rosa, a French woman painter of the 1850s, short cropped curly dark hair, confident grin, white loose smock, black trousers, a paintbrush in hand",
+          "file": "cast/insolite-rosa.png",
+          "status": "pending"
+        },
+        {
+          "id": "chloe",
+          "look": "Chloé, a modern Parisian office worker in 2013, messy ponytail, black trousers, white shirt, a red scarf as the only colour, a coffee cup in hand",
+          "file": "cast/insolite-chloe.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare office with a big rubber stamp on a desk. Louis Nicolas (on the left) behind the desk, holding up his stamp over a form, very strict; Chloé (on the right) in trousers, coffee in hand, staring at him in total disbelief. medium shot",
+        "cast": [
+          "dubois",
+          "chloe"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "7 novembre 1800",
+          "caption": "Pourquoi une loi interdisait-elle le pantalon aux Parisiennes ? Le 7 novembre 1800, le préfet de police Dubois signe une ordonnance.",
+          "bubbles": [
+            {
+              "text": "Une femme en pantalon ? Il lui faut un papier.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare office with one desk. Louis Nicolas (on the left) signing a document with a huge feather quill, chin up, extremely proud of himself, chest puffed out. medium shot",
+            "cast": [
+              "dubois"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Le texte : pour s’habiller « en homme », une Parisienne doit demander une permission à la police, avec un motif.",
+          "bubbles": [
+            {
+              "text": "Motif ?",
+              "side": "l"
+            },
+            {
+              "text": "J’ai froid aux jambes.",
+              "side": "r"
+            },
+            {
+              "text": "Refusé.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office counter. Louis Nicolas (on the left) behind the counter stamping a form with a big red rubber stamp, bored; Rosa (on the right) in front of the counter, arms crossed, rolling her eyes. medium shot",
+            "cast": [
+              "dubois",
+              "rosa"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Années 1850",
+          "caption": "Accordée surtout pour raison de santé ou de métier : la peintre Rosa Bonheur l’obtient, à renouveler tous les six mois.",
+          "bubbles": [
+            {
+              "text": "Je peins des chevaux dans les foires. En robe, c’est sportif.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a muddy fairground with one horse. Rosa (on the right) in trousers sitting on a stool sketching the horse, relaxed and happy; a small folded paper permit sticking out of her pocket. medium shot",
+            "cast": [
+              "rosa"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "",
+          "caption": "Mais son costume n’est pas admis aux spectacles, aux bals ni aux réunions publiques.",
+          "bubbles": [
+            {
+              "text": "La foire aux chevaux, oui. Le bal, non ?",
+              "side": "r"
+            },
+            {
+              "text": "Exactement. C’est d’une logique imparable.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the doorway of a ballroom. Louis Nicolas (on the left) blocking the door with his arms spread wide, very serious; Rosa (on the right) in trousers, hands on hips, mouth open in outrage. medium shot",
+            "cast": [
+              "dubois",
+              "rosa"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "1909",
+          "caption": "Plus tard, des circulaires assouplissent la règle : le pantalon est toléré… si on tient un guidon ou des rênes.",
+          "bubbles": [
+            {
+              "text": "Autorisé, si vous tenez un guidon.",
+              "side": "l"
+            },
+            {
+              "text": "Et quand je descends du vélo ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Chloé (on the right) frozen mid-step next to a bicycle, one hand still on the handlebar, in trousers; Louis Nicolas (on the left) bending down to watch her hand with a magnifying glass, extremely serious. plain background. medium shot",
+            "cast": [
+              "dubois",
+              "chloe"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "title": "Comment un texte peut durer 213 ans",
+          "text": "Une règle ne disparaît pas toute seule : il faut la supprimer officiellement. Celle-ci, plus personne ne l’appliquait, mais personne ne l’a abrogée. Elle a donc continué d’exister, sur le papier, pendant des générations.",
+          "joke": "Comme un vieux mot de passe que personne n’a pensé à changer."
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "31 janvier 2013",
+          "caption": "Jamais supprimé, le texte était juste oublié. En 2013, le ministère des Droits des femmes le déclare « implicitement abrogé ».",
+          "bubbles": [
+            {
+              "text": "Donc j’étais hors-la-loi tous les matins ?",
+              "side": "r"
+            },
+            {
+              "text": "Techniquement.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a modern office with one desk and one laptop. Chloé (on the right) spitting out her coffee in shock, reading a newspaper; Louis Nicolas (on the left) standing behind her like an old ghost, nodding solemnly. medium shot",
+            "cast": [
+              "dubois",
+              "chloe"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "La raison : il est contraire à l’égalité entre femmes et hommes, inscrite dans la Constitution. Il aura fallu 213 ans.",
+          "bubbles": [
+            {
+              "text": "Je vais fêter ça. En jupe, par principe.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Chloé (in the middle) in a confession-style close-up, looking straight at the reader with a sly little smile, raising her coffee cup as a toast. plain background",
+            "cast": [
+              "chloe"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Une ordonnance parisienne du 7 novembre 1800 obligeait les femmes à demander une permission pour porter le pantalon ; elle a été déclarée abrogée en 2013.",
+        "source": "La Vie des idées, Paris ZigZag"
+      },
+      "sources": [
+        {
+          "title": "La Vie des idées — Le droit au pantalon",
+          "url": "https://laviedesidees.fr/Le-droit-au-pantalon"
+        },
+        {
+          "title": "Paris ZigZag — Du temps où les Parisiennes en pantalon étaient illégalement « travesties »",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/du-temps-ou-les-parisiennes-en-pantalon-etaient-illegalement-travesties/"
+        },
+        {
+          "title": "JSTOR Daily — Rosa Bonheur’s permission to wear pants",
+          "url": "https://daily.jstor.org/rosa-bonheurs-permission-to-wear-pants/"
+        },
+        {
+          "title": "Vermont Public (NPR) — Parisian women now officially allowed to wear pants",
+          "url": "https://www.vermontpublic.org/2013-02-04/parisian-women-now-officially-allowed-to-wear-pants"
+        },
+        {
+          "title": "The Connexion — Women’s trouser ban is annulled",
+          "url": "https://www.connexionfrance.com/news/womens-trouser-ban-is-annulled/611805"
+        }
+      ],
+      "story": "Le 7 novembre 1800, le préfet de police de Paris, Louis Nicolas Dubois, signe une ordonnance sur le « travestissement des femmes ». Toute Parisienne qui veut s’habiller « en homme », donc porter le pantalon, doit en demander l’autorisation à la préfecture, avec un motif.\nCes permissions sont rares et accordées surtout pour raison de santé ou de métier. La peintre Rosa Bonheur, qui travaille dans les foires aux chevaux, en obtient une, à renouveler tous les six mois. Même avec ce papier, le costume masculin reste interdit aux spectacles, aux bals et aux réunions publiques.\nAvec le temps, des circulaires assouplissent la règle : selon des textes cités au Sénat, le pantalon est toléré si la femme tient un guidon de vélo ou les rênes d’un cheval. Puis la règle tombe dans l’oubli : plus personne ne l’applique, mais personne ne l’abroge non plus.\nIl faut attendre le 31 janvier 2013 pour que le ministère des Droits des femmes la déclare « implicitement abrogée », car contraire à l’égalité entre les femmes et les hommes garantie par la Constitution. L’ordonnance aura survécu 213 ans, sur le papier seulement."
+    }
+  ]
+}

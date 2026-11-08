@@ -1,5 +1,10 @@
 """Publie l'édition du jour à partir de 5 h (heure de Paris) et reconstruit editions/index.json.
 
+File d'attente (8 novembre 2026) : dès 5 h, pour chaque type (Culture G, Insolite, Grand Dossier) qui manque
+à l'édition du jour ou n'y est pas fini, on pioche la BD finie à 100 % la plus ancienne de `stock/` (en évitant
+le pôle de la veille et ceux des autres BD du jour). Une BD pas finie d'une édition du jour ou passée retourne
+en tête de file avec ses images : rien n'est perdu.
+
 Une édition est publiable dès 5 h si au moins une BD (hors jeu) a toutes ses cases dessinées ;
 à partir de 10 h, le jeu seul suffit (mieux que rien). Les formats incomplets ou en erreur sont retirés
 de l'index public jusqu'à ce qu'ils soient prêts. Une édition illisible est ignorée sans bloquer le site.
@@ -15,12 +20,14 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import seo  # noqa: E402
+import stock  # noqa: E402
 from validate import check_edition  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 EDITIONS = ROOT / "editions"
 SITE = ROOT / "_site"
 PUBLISH_HOUR = 5
+QUEUE_SINCE = date(2026, 11, 8)  # mise en place de la file d'attente stock/
 FALLBACK_HOUR = 10  # si aucune BD n'est prête, on publie quand même le jeu à partir de cette heure
 
 
@@ -37,11 +44,68 @@ def pending_images(fmt: dict) -> int:
     return sum(1 for i in imgs if i.get("status") != "done")
 
 
+def fill_from_stock(now: datetime) -> list[str]:
+    """Range les BD : celles pas finies des éditions passées ou du jour retournent en file, l'édition du jour pioche."""
+    today = now.date()
+    notes = []
+    for d in sorted(EDITIONS.iterdir()):
+        try:
+            day = date.fromisoformat(d.name)
+        except ValueError:
+            continue
+        f = d / "edition.json"
+        # Seulement les éditions récentes, depuis l'arrivée de la file (les plus anciennes restent telles quelles).
+        if day > today or day < max(QUEUE_SINCE, today - timedelta(days=2)) or not f.exists() \
+                or (day == today and now.hour < PUBLISH_HOUR):
+            continue
+        try:
+            ed = json.loads(f.read_text())
+        except Exception:
+            continue
+        if ed.get("demo"):
+            continue
+        changed = False
+        for fmt in list(ed.get("formats", [])):
+            if fmt.get("id") in stock.TYPES:
+                changed |= stock.normalize(fmt, d)
+                if not stock.is_ready(fmt, d):
+                    dst = stock.back_to_stock(d, ed, fmt, day.strftime("%Y%m%d") + "-0000")
+                    notes.append(f"{d.name}/{fmt['id']} pas finie : remise en file ({dst.name})")
+                    changed = True
+        if day == today:
+            yesterday = EDITIONS / (today - timedelta(days=1)).isoformat() / "edition.json"
+            try:
+                prev = {x.get("id"): stock.pole(x.get("theme")) for x in json.loads(yesterday.read_text()).get("formats", [])}
+            except Exception:
+                prev = {}
+            for kind in stock.TYPES:
+                if any(x.get("id") == kind for x in ed.get("formats", [])):
+                    continue
+                taken = {stock.pole(x.get("theme")) for x in ed.get("formats", []) if x.get("id") in stock.TYPES}
+                item = stock.pick(kind, taken | {prev.get(kind)})
+                if item:
+                    fmt = stock.into_edition(item, d, ed)
+                    notes.append(f"{d.name}/{kind} : « {fmt.get('title', '')} » prise dans la file ({item.name})")
+                    changed = True
+        if changed:
+            f.write_text(json.dumps(ed, ensure_ascii=False, indent=2))
+    # Édition du jour absente : on la crée dès qu'une BD finie attend dans la file.
+    f = EDITIONS / today.isoformat() / "edition.json"
+    if now.hour >= PUBLISH_HOUR and not f.exists() and any(stock.pick(k, set()) for k in stock.TYPES):
+        f.parent.mkdir(parents=True, exist_ok=True)
+        f.write_text(json.dumps({"date": today.isoformat(), "status": "draft", "formats": []}, ensure_ascii=False, indent=2))
+        notes += fill_from_stock(now)
+    for n in notes:
+        print(n)
+    return notes
+
+
 def main(now: datetime | None = None):
     now = now or datetime.now(ZoneInfo("Europe/Paris"))
     today = now.date()
+    moves = fill_from_stock(now)
     index = []
-    health = {"updated_at": now.isoformat(), "today": today.isoformat(), "problems": [], "days": []}
+    health = {"updated_at": now.isoformat(), "today": today.isoformat(), "problems": [], "days": [], "stock_moves": moves}
     for d in sorted(EDITIONS.iterdir()):
         f = d / "edition.json"
         if not f.exists():
@@ -72,7 +136,8 @@ def main(now: datetime | None = None):
                 "formats": {x.get("id"): ("prêt" if ok(x) else "erreur" if x.get("id") in bad else f"{pending_images(x)} image(s) à faire")
                             for x in ed.get("formats", [])},
             })
-        changed = False
+        # Une image que le contrôle qualité veut refaire reste en ligne tant que la nouvelle n'est pas prête.
+        changed = any([stock.normalize(x, d) for x in ed.get("formats", []) if x.get("id") != "quiz"])
         if ed.get("status") != "published" and (day < today or (day == today and now.hour >= PUBLISH_HOUR)):
             stories = any(ok(x) for x in ed.get("formats", []) if x.get("id") != "quiz")
             late = day < today or now.hour >= FALLBACK_HOUR
@@ -122,17 +187,16 @@ def write_health(health: dict, index: list, today: date):
     health["today_published"] = bool(pub)
     health["today_stories"] = [x["id"] for x in pub["formats"] if x["id"] != "quiz"] if pub else []
     health["last_published"] = index[0]["date"] if index else None
-    # Jours d'avance : jours consécutifs à partir de demain dont toutes les BD du stock sont dessinées (l'Actu se fait la nuit).
-    ahead = 0
-    days = {x["date"]: x for x in health["days"]}
-    for i in range(1, 15):
-        x = days.get((today + timedelta(days=i)).isoformat())
-        stock = {k: v for k, v in (x or {}).get("formats", {}).items() if k not in ("actu", "quiz")}
-        if not stock or any(v != "prêt" for v in stock.values()):
-            break
-        ahead += 1
+    # File d'attente : BD finies (dessinées à 100 %) et écrites, par type. Les jours d'avance sont ceux du type le plus juste.
+    summ = stock.summary()
+    health["stock"] = summ
+    ahead = min(s["ready"] for s in summ.values())
     health["days_ahead_drawn"] = ahead
-    health["days_ahead_written"] = sum(1 for x in health["days"] if x["date"] > today.isoformat())
+    health["days_ahead_written"] = min(s["ready"] + s["waiting"] for s in summ.values())
+    health["quiz_days_ahead"] = sum(1 for x in health["days"] if x["date"] > today.isoformat() and x["formats"].get("quiz") == "prêt")
+    for kind, s in summ.items():
+        if s["blocked"]:
+            health["problems"].append(f"file {kind} : {s['blocked']} BD bloquée(s) (image en échec), à corriger par la tâche Stock")
     try:
         health["quota"] = json.loads((ROOT / "data" / "images-quota.json").read_text())
     except Exception:
@@ -145,7 +209,8 @@ def write_health(health: dict, index: list, today: date):
         health["fal"] = None
     (ROOT / "data").mkdir(exist_ok=True)
     (ROOT / "data" / "health.json").write_text(json.dumps(health, ensure_ascii=False, indent=1))
-    print(f"Santé : édition du jour {'en ligne' if pub else 'ABSENTE'}, {ahead} jour(s) d'avance dessinés, "
+    print(f"Santé : édition du jour {'en ligne' if pub else 'ABSENTE'}, file : "
+          + ", ".join(f"{k} {s['ready']} finie(s) + {s['waiting']} en cours" for k, s in summ.items()) + f", {ahead} jour(s) d'avance dessinés, "
           f"{len(health['problems'])} problème(s).")
 
 

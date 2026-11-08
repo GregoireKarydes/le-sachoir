@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "editions/**/edition.json"
+      - "stock/**/item.json"
       - "pipeline/style.json"
       - "pipeline/style_ref.png"
   schedule:
@@ -39,7 +40,7 @@ jobs:
         run: |
           git config user.name "sachoir-bot"
           git config user.email "sachoir-bot@users.noreply.github.com"
-          git add editions data/images-last-run.json data/images-quota.json
+          git add -A editions stock data/images-last-run.json data/images-quota.json
           [ -f data/images-fal.json ] && git add data/images-fal.json || true
           git diff --cached --quiet || git commit -m "Images générées"
           for i in 1 2 3; do git pull --rebase && git push && ok=1 && break; sleep $((i * 15)); done

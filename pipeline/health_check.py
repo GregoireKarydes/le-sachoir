@@ -65,6 +65,10 @@ def main():
         out["ahead"] = str(h.get("days_ahead_drawn", 0))
         q = h.get("quota") or {}
         lines.append(f"📦 Avance dessinée : {h.get('days_ahead_drawn', 0)} jour(s) ; écrite : {h.get('days_ahead_written', 0)} jour(s).")
+        for kind, s in (h.get("stock") or {}).items():
+            lines.append(f"🗂️ File {kind} : {s.get('ready', 0)} finie(s), {s.get('waiting', 0)} en cours"
+                         + (f", {s['blocked']} bloquée(s)" if s.get("blocked") else "")
+                         + (f" — en cours : {s['focus']}" if s.get("focus") else ""))
         lines.append(f"🎨 Quota du jour (UTC {q.get('day', '?')}) : {q.get('count', '?')} appels, ~{q.get('neurons', '?')} neurones estimés.")
         fal = h.get("fal") or {}
         if fal:

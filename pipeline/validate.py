@@ -1,6 +1,7 @@
 """Contrôle des éditions : repère ce qui casserait l'appli ou la publication avant que ça arrive.
 
-Usage : python pipeline/validate.py [editions/AAAA-MM-JJ ...]   (sans argument : toutes les éditions)
+Usage : python pipeline/validate.py [editions/AAAA-MM-JJ | stock/<type>/<nom> ...]
+(sans argument : toutes les éditions et toute la file d'attente stock/)
 Code de sortie 1 s'il y a au moins une erreur ; les avertissements ne bloquent pas.
 
 Utilisé aussi par publish.py : une édition illisible est ignorée, un format en erreur n'est pas publié,
@@ -128,7 +129,7 @@ def check_story(fmt: dict, d: Path, err, warn):
 def check_edition(d: Path) -> dict:
     """Renvoie {"ok": bool, "errors": [...], "warnings": [...], "bad_formats": {id: [...]}, "data": edition | None}."""
     res = {"ok": True, "errors": [], "warnings": [], "bad_formats": {}, "data": None}
-    f = d / "edition.json"
+    f = d / "item.json" if (d / "item.json").exists() else d / "edition.json"  # BD de la file stock/ ou édition
     try:
         ed = json.loads(f.read_text())
     except Exception as e:
@@ -170,14 +171,21 @@ def check_edition(d: Path) -> dict:
 
 
 def main(argv):
-    dirs = [Path(a) for a in argv] or sorted(p for p in EDITIONS.iterdir() if (p / "edition.json").exists())
+    dirs = [Path(a) for a in argv] or (sorted(p for p in EDITIONS.iterdir() if (p / "edition.json").exists())
+                                       + sorted(p.parent for p in (ROOT / "stock").glob("*/*/item.json")))
     n_err = 0
     for d in dirs:
         r = check_edition(d)
+        f = d / ("item.json" if (d / "item.json").exists() else "edition.json")
+        if (d / "item.json").exists() and r["data"] is not None:
+            fmts = r["data"].get("formats", [])
+            if len(fmts) != 1 or fmts[0].get("id") != d.parent.name:
+                r["errors"].append(f"une file {d.parent.name} doit contenir exactement une BD {d.parent.name}")
+                r["ok"] = False
         for m in r["errors"]:
-            print(f"::error file={d / 'edition.json'}::{d.name} — {m}")
+            print(f"::error file={f}::{d.name} — {m}")
         for m in r["warnings"]:
-            print(f"::warning file={d / 'edition.json'}::{d.name} — {m}")
+            print(f"::warning file={f}::{d.name} — {m}")
         n_err += len(r["errors"])
         print(f"{d.name} : {'OK' if r['ok'] else str(len(r['errors'])) + ' erreur(s)'}, {len(r['warnings'])} avertissement(s)")
     return 1 if n_err else 0

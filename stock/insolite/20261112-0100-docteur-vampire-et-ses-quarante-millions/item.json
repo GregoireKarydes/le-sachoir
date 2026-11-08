@@ -1,0 +1,240 @@
+{
+  "added": "20261112-0100",
+  "from_edition": "2026-11-12",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Docteur Vampire et ses quarante millions de sangsues",
+      "tagline": "Dans les années 1830, la France a tellement saigné ses malades qu’elle a vidé ses mares",
+      "minutes": 1,
+      "theme": "Médecine et santé",
+      "cast": [
+        {
+          "id": "broussais",
+          "look": "François, a stern French doctor of the 1820s, thick grey sideburns, bald forehead, fierce eyebrows, black frock coat, white cravat, holding a glass jar",
+          "file": "cast/insolite-broussais.png",
+          "status": "pending"
+        },
+        {
+          "id": "hippolyte",
+          "look": "Hippolyte, a skinny 1830s Parisian patient, long white nightshirt, droopy white nightcap, pale face, huge terrified eyes",
+          "file": "cast/insolite-hippolyte.png",
+          "status": "pending"
+        },
+        {
+          "id": "marthe",
+          "look": "Marthe, a sturdy 1830s woman leech applier, rolled sleeves, plain grey dress, white apron, a red headscarf as the only colour, carrying a big glass jar",
+          "file": "cast/insolite-marthe.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare bedroom with one bed. Hippolyte (on the right) sitting up in bed, frozen in horror, staring at a huge glass jar; François (on the left) holding the jar up proudly like a gift, beaming. medium shot",
+        "cast": [
+          "broussais",
+          "hippolyte"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Années 1820",
+          "caption": "Pourquoi la France a-t-elle manqué de sangsues ? Pour le célèbre docteur Broussais, presque toute maladie vient d’un intestin enflammé.",
+          "bubbles": [
+            {
+              "text": "Mal à la tête ? C’est l’intestin.",
+              "side": "l"
+            },
+            {
+              "text": "Et mon pied ?",
+              "side": "r"
+            },
+            {
+              "text": "L’intestin.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare consulting room. François (on the left) pointing firmly at Hippolyte's belly with one finger, absolutely certain; Hippolyte (on the right) holding his own foot up, confused, nightcap drooping. medium shot",
+            "cast": [
+              "broussais",
+              "hippolyte"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Son idée : pour calmer une inflammation, il faut retirer du sang. Les sangsues, posées sur le ventre, s’en chargent.",
+          "bubbles": [
+            {
+              "text": "Combien ?",
+              "side": "r"
+            },
+            {
+              "text": "Une petite quarantaine.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Hippolyte (on the right) lying in bed, sheet pulled up to his nose, only his terrified eyes showing; François (on the left) unscrewing the lid of a big glass jar with a gentle smile. medium shot",
+            "cast": [
+              "broussais",
+              "hippolyte"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "title": "Pourquoi saigner un malade ?",
+          "text": "Depuis l’Antiquité, on pense qu’une maladie vient souvent d’un excès de sang ou d’« humeurs ». Retirer du sang paraît donc logique. Broussais pousse l’idée à l’extrême : tout vient d’une inflammation, et une inflammation se calme en saignant.",
+          "joke": "Spoiler : la médecine a changé d’avis depuis."
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Vrai",
+          "caption": "Il en pose de 40 à 200 à la fois. Surnom : « le vampire de la médecine ».",
+          "bubbles": [
+            {
+              "text": "Vampire ? Ils sont jaloux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "François (in the middle) standing tall with his arms crossed, chin up, offended, his black frock coat making him look like a bat; Hippolyte (on the right) in the background, pale as a ghost, slowly fainting. medium shot",
+            "cast": [
+              "broussais",
+              "hippolyte"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "La demande explose : poser des sangsues devient presque un métier, souvent exercé à domicile par des femmes.",
+          "bubbles": [
+            {
+              "text": "Sangsues fraîches ! Pose à domicile !",
+              "side": "l"
+            },
+            {
+              "text": "Je ne suis pas là.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple house door ajar. Marthe (on the left) on the doorstep raising her glass jar cheerfully like a street vendor; Hippolyte (on the right) peeking through the gap in the door, trying to close it slowly, sweating. medium shot",
+            "cast": [
+              "marthe",
+              "hippolyte"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "1833",
+          "caption": "Rien qu’en 1833, la France utilise entre 30 et 40 millions de sangsues : environ une par habitant.",
+          "bubbles": [
+            {
+              "text": "Quarante millions. Et pas un merci.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Marthe (in the middle) slumped on a stool next to a towering stack of glass jars reaching the top of the frame, exhausted, wiping her forehead. plain background. wide shot",
+            "cast": [
+              "marthe"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "",
+          "caption": "Résultat : les étangs français sont vidés. Il faut importer des sangsues de Pologne et de Hongrie.",
+          "bubbles": [
+            {
+              "text": "Plus une seule. Elles ont émigré.",
+              "side": "l"
+            },
+            {
+              "text": "Commandez en Hongrie !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "an empty pond with cracked dry mud. Marthe (on the left) standing in it with her skirt rolled up, holding an empty jar upside down, deadpan; François (on the right) on the bank, waving an order letter with urgency. wide shot",
+            "cast": [
+              "marthe",
+              "broussais"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "Broussais meurt en 1838. Sa mode des sangsues aura saigné la France pendant deux décennies.",
+          "bubbles": [
+            {
+              "text": "J’ai survécu. Je ne sais pas si c’est grâce à elles.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Hippolyte (in the middle) in a confession-style close-up, looking straight at the reader, very pale, tiny bandages all over his belly, giving a weak thumbs up. plain background",
+            "cast": [
+              "hippolyte"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "En 1833, sous l’influence du docteur Broussais, la France a utilisé entre 30 et 40 millions de sangsues.",
+        "source": "Hirudotherapy Society"
+      },
+      "sources": [
+        {
+          "title": "Hirudotherapy Society — François-Joseph-Victor Broussais",
+          "url": "https://www.hirudotherapysociety.org/en/biography/francois-broussais"
+        },
+        {
+          "title": "Revue médicale de Bruxelles (AMUB) — Histoire des sangsues en médecine",
+          "url": "https://amub-ulb.be/system/files/rmb/old/581"
+        }
+      ],
+      "story": "Au début du XIXe siècle, le médecin François Broussais est l’une des grandes figures de la médecine parisienne. Sa théorie : presque toutes les maladies viennent d’une inflammation, en particulier de l’intestin. Pour la calmer, il faut retirer du sang au malade.\nSon outil préféré : la sangsue, un petit ver qui se fixe sur la peau et aspire le sang. Broussais en pose de 40 à 200 à la fois, ce qui lui vaut le surnom de « vampire de la médecine ».\nSa méthode devient une mode. Poser des sangsues devient presque un métier, exercé à domicile, souvent par des femmes. En 1833, la France en utilise entre 30 et 40 millions, environ une par habitant. Les étangs français se vident, et il faut en importer de Pologne et de Hongrie.\nAprès la mort de Broussais, en 1838, la mode décline peu à peu : les médecins comprennent que saigner les malades les affaiblit plus qu’il ne les soigne. La sangsue n’a pourtant pas disparu : on l’utilise encore dans quelques cas précis, en chirurgie réparatrice, pour aider le sang à circuler."
+    }
+  ]
+}

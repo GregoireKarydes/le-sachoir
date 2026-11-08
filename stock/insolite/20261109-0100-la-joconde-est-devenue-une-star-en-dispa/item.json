@@ -1,0 +1,284 @@
+{
+  "added": "20261109-0100",
+  "from_edition": "2026-11-09",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "La Joconde est devenue une star en disparaissant",
+      "tagline": "En 1911, un vitrier la décroche du Louvre. Et le monde entier vient admirer… le mur vide.",
+      "minutes": 1,
+      "theme": "Histoire de l’art",
+      "cast": [
+        {
+          "id": "peruggia",
+          "look": "Vincenzo, an Italian glazier of 1911, short and stocky, thick black moustache, flat grey cap, long white workman's smock",
+          "file": "cast/insolite-peruggia.png",
+          "status": "done",
+          "via": "fal"
+        },
+        {
+          "id": "beroud",
+          "look": "Louis, a Parisian painter of 1911, pointy grey beard, black beret, black jacket, a red scarf as the only colour, carrying an easel",
+          "file": "cast/insolite-beroud.png",
+          "status": "done",
+          "via": "fal"
+        },
+        {
+          "id": "apo",
+          "look": "Guillaume, a stocky poet of 1911, big round face, slicked-back dark hair, small moustache, black suit, white bow tie, a notebook in hand",
+          "file": "cast/insolite-apo.png",
+          "status": "done",
+          "via": "fal"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare museum wall with four small hooks and an empty rectangle. Louis (on the left) pointing at the empty space, shocked, beret flying off; Vincenzo (on the right) tiptoeing away with a large flat rectangle hidden under his white smock, innocent whistle. wide shot",
+        "cast": [
+          "beroud",
+          "peruggia"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "done",
+        "qa": "ok",
+        "attempts": 1,
+        "via": "fal"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "21 août 1911",
+          "caption": "Comment la Joconde est-elle devenue si célèbre ? 21 août 1911 : un vitrier qui a travaillé au Louvre la décroche.",
+          "bubbles": [
+            {
+              "text": "Personne ne regarde jamais les ouvriers.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare museum wall with an empty frame on the floor. Vincenzo (on the right) holding a small painting turned backwards, glancing left and right, tiny sweat drop, pretending to be calm. medium shot",
+            "cast": [
+              "peruggia"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "",
+          "caption": "Vincenzo Peruggia ressort tranquillement, musée fermé, le tableau caché sous sa blouse de travail.",
+          "bubbles": [
+            {
+              "text": "Bonne journée ! Rien à signaler !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a museum exit door. Vincenzo (on the right) walking out stiffly like a robot, his white smock perfectly flat and rectangular on his chest, big fake smile, waving. medium shot",
+            "cast": [
+              "peruggia"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "22 août",
+          "caption": "Le lendemain, le peintre Louis Béroud vient la copier. À sa place : quatre crochets vides.",
+          "bubbles": [
+            {
+              "text": "Elle est chez le photographe, sans doute.",
+              "side": "l"
+            },
+            {
+              "text": "Sans doute.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Louis (on the left) setting up his easel in front of a bare wall with four small hooks, smiling at first, then frozen with his brush in the air, eyes slowly widening. plain background. medium shot",
+            "cast": [
+              "beroud"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Septembre 1911",
+          "caption": "L’enquête s’emballe : soixante inspecteurs fouillent le musée, et le poète Apollinaire, soupçonné, passe six jours en prison.",
+          "bubbles": [
+            {
+              "text": "Je suis poète, pas cambrioleur !",
+              "side": "l"
+            },
+            {
+              "text": "Dites ça en alexandrins, ça passera mieux.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare prison cell with one stool. Guillaume (on the left) gripping the bars, outraged, notebook in hand; Louis (on the right) visiting outside the bars, shrugging with a sorry smile. medium shot",
+            "cast": [
+              "apo",
+              "beroud"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "Interrogé, il cite son ami Picasso. Tous deux sont finalement mis hors de cause.",
+          "bubbles": [
+            {
+              "text": "Pablo, pardon. J’ai paniqué.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Guillaume (on the left) sitting on a chair in a bare interrogation room, a small lamp on a low table beside him, shrinking, tiny pink blush marks, nervously chewing his notebook. plain background, empty space above. medium close-up",
+            "cast": [
+              "apo"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "",
+          "caption": "Les journaux du monde entier racontent le vol. Résultat : la foule vient au Louvre voir… le mur vide.",
+          "bubbles": [
+            {
+              "text": "On fait la queue pour quatre clous.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a long queue of tiny grey visitors in front of a bare wall with four hooks, a few flowers on the floor below. Louis (on the left, in the foreground) standing in the queue, arms crossed, deadpan, staring at the reader. wide shot",
+            "cast": [
+              "beroud"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "title": "Pourquoi le vol l’a rendue célèbre",
+          "steps": [
+            "Avant 1911 : un chef-d’œuvre connu surtout des amateurs d’art",
+            "Le vol fait la une des journaux du monde entier",
+            "Son visage est reproduit partout, pendant deux ans",
+            "1914 : elle revient en star mondiale"
+          ],
+          "joke": "Meilleure campagne de publicité de l’histoire de l’art. Budget : zéro."
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "1913",
+          "caption": "Deux ans plus tard, Peruggia tente de vendre le tableau à un marchand de Florence. Il est arrêté.",
+          "bubbles": [
+            {
+              "text": "Je voulais la rendre à l’Italie !",
+              "side": "r"
+            },
+            {
+              "text": "Et le prix, c’était pour l’Italie aussi ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small hotel room with a bed and an open suitcase. Vincenzo (on the right) clutching a small painting turned backwards against his chest, protesting, chest puffed out; Louis (on the left) leaning in the doorway, unconvinced. medium shot",
+            "cast": [
+              "peruggia",
+              "beroud"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "Elle revient au Louvre le 4 janvier 1914. Deux ans à la une des journaux en ont fait une star.",
+          "bubbles": [
+            {
+              "text": "Son meilleur agent ? Un voleur.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Louis (in the middle) in a confession-style close-up, looking straight at the reader with a tired half smile, holding a stack of postcards with blank fronts. plain background",
+            "cast": [
+              "beroud"
+            ],
+            "file": "images/insolite-08.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1,
+            "via": "fal"
+          }
+        }
+      ],
+      "final": {
+        "text": "La Joconde a été volée au Louvre le 21 août 1911 par le vitrier Vincenzo Peruggia ; elle n’y est revenue que le 4 janvier 1914.",
+        "source": "Paris ZigZag"
+      },
+      "sources": [
+        {
+          "title": "Paris ZigZag — L’incroyable histoire du vol de la Joconde",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/vol-joconde-louvre/"
+        },
+        {
+          "title": "La Libre — La folle histoire du vol de la Joconde",
+          "url": "https://www.lalibre.be/culture/arts/2018/12/29/la-folle-histoire-du-vol-de-la-joconde-le-tableau-le-plus-connu-du-monde-il-y-a-plus-dun-siecle-IOABR5GS6JFPHLGL5MPQAZLSZI/"
+        },
+        {
+          "title": "Numéro — Guillaume Apollinaire et le vol du Louvre",
+          "url": "https://numero.com/art/art-art/guillaume-apollinaire-vol-musee-louvre/"
+        },
+        {
+          "title": "My Modern Met — How the Mona Lisa’s theft transformed it into an icon",
+          "url": "https://mymodernmet.com/mona-lisa-theft-1911/"
+        }
+      ],
+      "story": "Le 21 août 1911, un lundi, le Louvre est fermé. Vincenzo Peruggia, un vitrier italien qui a travaillé au musée, décroche la Joconde et repart avec le tableau caché sous sa blouse. Personne ne remarque rien avant le lendemain, quand le peintre Louis Béroud vient la copier et ne trouve que quatre crochets.\nL’enquête s’emballe : une soixantaine d’inspecteurs fouillent le musée, et le poète Guillaume Apollinaire, soupçonné, passe six jours en prison. Interrogé, il cite son ami Picasso ; tous deux sont finalement mis hors de cause.\nPendant ce temps, l’affaire fait la une des journaux du monde entier. Le visage de la Joconde est reproduit partout, et la foule se presse au Louvre pour voir… l’emplacement vide.\nEn 1913, Peruggia, qui a gardé le tableau chez lui, tente de le vendre à un marchand de Florence. Il est arrêté et affirme avoir voulu rendre l’œuvre à l’Italie. La Joconde revient au Louvre le 4 janvier 1914.\nAvant le vol, c’était un chef-d’œuvre connu des amateurs d’art. Après deux ans de feuilleton, elle est devenue le tableau le plus célèbre du monde."
+    }
+  ]
+}

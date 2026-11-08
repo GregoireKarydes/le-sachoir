@@ -1,0 +1,239 @@
+{
+  "added": "20261113-0100",
+  "from_edition": "2026-11-13",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "La plus longue frontière de la France ? Avec le Brésil",
+      "tagline": "Plus de 730 km de frontière, et pas un seul Pyrénéen à l’horizon",
+      "minutes": 1,
+      "theme": "Géographie",
+      "cast": [
+        {
+          "id": "patrick",
+          "look": "Patrick, a smooth TV quiz show host, shiny swept-back grey hair, huge white smile, black tuxedo, a red bow tie as the only colour, holding question cards",
+          "file": "cast/insolite-patrick.png",
+          "status": "pending"
+        },
+        {
+          "id": "bernard",
+          "look": "Bernard, a modern quiz show contestant in his fifties, bald and round, thick black glasses, grey cardigan over a white shirt, very sweaty forehead",
+          "file": "cast/insolite-bernard.png",
+          "status": "pending"
+        },
+        {
+          "id": "helene",
+          "look": "Hélène, a French geography teacher, short grey bob, big round black glasses, black turtleneck, holding a rolled-up map",
+          "file": "cast/insolite-helene.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a simple TV quiz stage with two lecterns. Bernard (on the right) behind his lectern, sweating, pointing at a blank map of Europe with confidence; Patrick (on the left) holding a card, smiling very slowly and suspiciously. medium shot",
+        "cast": [
+          "patrick",
+          "bernard"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Question à 1 000 euros",
+          "caption": "Avec quel pays la France partage-t-elle sa plus longue frontière terrestre ?",
+          "bubbles": [
+            {
+              "text": "L’Espagne ! 623 km de Pyrénées !",
+              "side": "r"
+            },
+            {
+              "text": "C’est votre dernier mot ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple TV quiz stage. Bernard (on the right) slamming his buzzer with both hands, triumphant, glasses flying; Patrick (on the left) leaning on his lectern, smiling very slowly, eyebrows raised. medium shot",
+            "cast": [
+              "patrick",
+              "bernard"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Raté. La plus longue frontière terrestre française fait plus de 730 km : avec le Brésil.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Bernard (in the middle) frozen behind his lectern, face draining white, one tiny sweat drop, glasses crooked, a long silent stare at the reader. plain background. close-up",
+            "cast": [
+              "bernard"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Pourquoi le Brésil ? Grâce à la Guyane, région française d’Amérique du Sud, voisine du Brésil.",
+          "bubbles": [
+            {
+              "text": "La France ne s’arrête pas à Brest, Bernard.",
+              "side": "l"
+            },
+            {
+              "text": "Depuis quand ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Hélène (on the left) unrolling a big blank world map and tapping a spot in South America with her finger, patient but firm; Bernard (on the right) squinting at the map, holding his glasses up to his nose. plain background. medium shot",
+            "cast": [
+              "helene",
+              "bernard"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "title": "Pourquoi la Guyane est française",
+          "text": "La Guyane est française depuis le XVIIe siècle, et département depuis 1946 : aussi française que la Bretagne, mais en Amérique du Sud. Ses frontières sont donc celles de la France : le Suriname à l’ouest, le Brésil à l’est et au sud.",
+          "joke": "Pas besoin de passeport pour Cayenne. Prévoyez quand même un peu plus qu’un ticket de métro."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "1900",
+          "caption": "Cette frontière suit surtout le fleuve Oyapock. Son tracé est fixé en 1900 par un arbitre suisse, après un litige.",
+          "bubbles": [
+            {
+              "text": "Les Suisses, toujours neutres.",
+              "side": "r"
+            },
+            {
+              "text": "Et très précis.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a calm wide river drawn with a few lines, thick jungle on both banks. Hélène (on the left) standing on one bank pointing at the river with her map; Patrick (on the right) on the other bank, waving across, smiling for the camera. wide shot",
+            "cast": [
+              "helene",
+              "patrick"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "2011-2017",
+          "caption": "Un pont franco-brésilien est achevé en 2011. Il n’ouvre qu’en 2017.",
+          "bubbles": [
+            {
+              "text": "Six ans pour ouvrir un pont ?",
+              "side": "r"
+            },
+            {
+              "text": "Il fallait trouver les clés.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a long modern bridge over a river, completely empty, with a small closed barrier in the middle. Bernard (on the right) sitting on the barrier, bored, chin in hand; Hélène (on the left) checking her watch, deadpan. wide shot",
+            "cast": [
+              "helene",
+              "bernard"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "",
+          "caption": "Aujourd’hui encore, il reste peu emprunté : beaucoup d’habitants préfèrent traverser en bateau.",
+          "bubbles": [
+            {
+              "text": "Un pont tout neuf, et tout le monde prend le bateau.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the same empty bridge in the background. in the foreground a small wooden boat full of tiny cheerful passengers crossing the river; Bernard (on the right) standing alone on the bridge, arms dangling, abandoned. wide shot",
+            "cast": [
+              "bernard"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "En Europe, la plus longue frontière française est avec la Belgique, de peu devant l’Espagne.",
+          "bubbles": [
+            {
+              "text": "Donc j’avais faux deux fois.",
+              "side": "r"
+            },
+            {
+              "text": "Un record.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Bernard (on the right) in a confession-style shot, looking straight at the reader, slumped on his lectern, melting in despair; Patrick (on the left) giving a big thumbs up to the camera with his huge white smile. plain background",
+            "cast": [
+              "patrick",
+              "bernard"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "La plus longue frontière terrestre de la France est celle qu’elle partage avec le Brésil, en Guyane : plus de 730 km.",
+        "source": "Sénat"
+      },
+      "sources": [
+        {
+          "title": "Sénat — Rapport d’information n° 846 (2022-2023), coopération transfrontalière franco-brésilienne",
+          "url": "https://www.senat.fr/rap/r22-846/r22-84621.html"
+        },
+        {
+          "title": "Flytrippers — Avec quel pays la France partage sa plus longue frontière ?",
+          "url": "https://flytrippers.com/fr/avec-quel-pays-la-france-partage-sa-plus-longue-frontiere/"
+        },
+        {
+          "title": "Le Petit Journal — Découvrir la frontière franco-espagnole",
+          "url": "https://lepetitjournal.com/vivre-a-madrid/decouvrir-frontiere-franco-espagnole-269106"
+        }
+      ],
+      "story": "Avec quel pays la France partage-t-elle sa plus longue frontière terrestre ? On pense spontanément à l’Espagne ou à la Belgique. La bonne réponse est le Brésil, avec plus de 730 km de frontière.\nL’explication tient en un mot : la Guyane. Cette région d’Amérique du Sud est française depuis le XVIIe siècle, et département depuis 1946. Ses frontières sont donc des frontières de la France : le Suriname à l’ouest, le Brésil à l’est et au sud.\nLa frontière franco-brésilienne suit en grande partie le fleuve Oyapock. Son tracé a longtemps été disputé entre les deux pays, jusqu’à un arbitrage suisse qui le fixe en 1900.\nAu XXIe siècle, un pont est construit sur l’Oyapock pour relier les deux pays. Achevé en 2011, il n’ouvre à la circulation qu’en 2017 et reste peu emprunté : beaucoup d’habitants continuent de traverser le fleuve en bateau.\nEt en Europe ? La plus longue frontière française est celle avec la Belgique, de peu devant l’Espagne."
+    }
+  ]
+}
