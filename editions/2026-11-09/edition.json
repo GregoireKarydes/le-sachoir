@@ -1,7 +1,186 @@
 {
   "date": "2026-11-09",
   "status": "draft",
+  "newsletter": {
+    "subject": "Smic, plan de table et revers gagnant : lundi est servi 🎾",
+    "intro": "Lundi 9 novembre : Matignon sort les calculettes, Israël cherche des chaises et Paris tient enfin son champion. On a tout dessiné pendant que vous dormiez.",
+    "game": "La Frise du jour : remettez l’Histoire dans l’ordre, elle a l’habitude qu’on la bouscule.",
+    "ps": "P.-S. Si vous lisez ceci au bureau, appelez ça de la veille stratégique. C’est presque vrai, et personne ne vérifiera."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Plan de table pour tout le monde",
+      "tagline": "Matignon cherche le bon chiffre, Israël cherche des chaises et Paris trouve enfin son champion.",
+      "teaser": "Un huissier qui prévoit des ratures, un programme au prix du demi-centime et un plan de table à 61 places : le lundi démarre fort.",
+      "minutes": 2,
+      "theme": "",
+      "art": {
+        "subject": "four news stories of the day, each told in one gag panel",
+        "setting": "a formal government meeting room with a long table, a small bookshop counter, a bare office with a big seating-plan board, an indoor tennis court",
+        "era": "present day, November 2026",
+        "props": {
+          "whiteboard": "a tall rolling whiteboard, completely blank",
+          "book": "a thick white paperback book with a plain red cover and no writing",
+          "seatingplan": "a large white board covered with small empty circles drawn like seats, no writing",
+          "trophy": "a big shiny silver tennis trophy cup"
+        }
+      },
+      "cast": [
+        {
+          "id": "lambda",
+          "name": "Un lecteur",
+          "look": "Bastien, an ordinary man in his thirties, average build, very messy black hair sticking up, big oversized grey hoodie, black jeans, white sneakers, tired eyes",
+          "role": "the everyday reader who discovers the news; curious, slightly slouched, eyebrows always raised",
+          "file": "cast/actu-lambda.png",
+          "status": "pending"
+        },
+        {
+          "id": "espagnol",
+          "name": "Le champion espagnol",
+          "look": "a young athletic tennis champion, medium height and muscular, thick dark brown curly hair held by a white headband, white polo shirt, black shorts, red wristband as the only colour, racket in hand",
+          "role": "the tennis winner, relaxed and cheeky, big confident grin, always holding something up",
+          "file": "cast/actu-espagnol.png",
+          "status": "pending"
+        },
+        {
+          "id": "huissier",
+          "name": "Un huissier de Matignon",
+          "look": "a very old, short and hunched government usher, completely bald with two white side tufts, black tailcoat, white shirt, silver chain around the neck, round gold-rimmed glasses, yellow bow tie as the only colour",
+          "role": "the solemn usher who has seen every negotiation; deadpan, tiny weary smile",
+          "file": "cast/actu-huissier.png",
+          "status": "skipped"
+        },
+        {
+          "id": "general",
+          "name": "Le chef de l’opposition israélienne",
+          "look": "a cartoon former army chief turned politician, tall and broad-shouldered, very short grey crew cut, plain dark grey suit without tie, white open-collar shirt, blue folder as the only colour",
+          "role": "the methodical ex-general planning a coalition like a military operation; upright, pointing with a marker",
+          "file": "cast/actu-general.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "A plain bookshop corner. lambda (messy black hair, grey hoodie) on the left, sitting on a small stool, nose buried in the thick book, eyebrows raised in disbelief. espagnol (curly hair, white headband, red wristband) on the right, standing tall, lifting the trophy high above his head with a huge grin, tiny yellow sparkles of pride. Wide shot, calm empty space above.",
+        "cast": ["lambda", "espagnol"],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Économie",
+          "caption": "Ce lundi, le Premier ministre réunit syndicats et patronat à Matignon. Smic actuel : 1 477 € net. Le ministre du Travail veut dépasser 1 500 €, la CFDT réclame 100 € de plus.",
+          "bubbles": [
+            { "who": "huissier", "text": "J’ai prévu un grand tableau. Surtout pour la place des ratures.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "A formal meeting room with one long empty table and a few chairs. huissier (tiny, hunched, bald with white tufts, yellow bow tie) on the right, pushing the whiteboard into the room with great effort, deadpan face, a big box of erasers balanced on top. On the left, a row of empty chairs. Medium shot, calm empty space above.",
+            "cast": ["huissier"],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Salaires : ce qui se joue à Matignon",
+          "text": "Quoi : le gouvernement réunit syndicats et patronat sur les salaires et le pouvoir d’achat.\nPourquoi ça compte : la conférence suit des semaines de manifestations contre la vie chère ; le patronat redoute le coût des hausses.\nEt maintenant : l’intersyndicale se réunit juste après pour décider de la suite du mouvement."
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Politique",
+          "caption": "Samedi au Bourget, le leader insoumis a présenté son programme pour 2027 : 1 069 propositions, réunies dans un livre vendu 4,90 € en librairie.",
+          "bubbles": [
+            { "who": "lambda", "text": "Moins d’un demi-centime la proposition. Même les soldes ne font pas ça.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "A small bookshop counter with a cash register. lambda (messy black hair, grey hoodie) on the left, holding the thick book in one hand and a tiny coin in the other, squinting at the coin, then at the book, mental arithmetic face, one eyebrow very high. Behind the counter, an empty stool. Close-up medium shot, calm space above.",
+            "cast": ["lambda"],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Un programme présidentiel déjà en librairie",
+          "text": "Quoi : La France insoumise publie la nouvelle version de son programme pour 2027, dont 238 mesures nouvelles.\nPourquoi ça compte : l’écologie y devient la priorité affichée ; parmi les mesures, la retraite à 60 ans et la sortie de l’OTAN.\nEt maintenant : ce livre sert de feuille de route au mouvement pour la campagne présidentielle."
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Monde",
+          "caption": "En Israël, le président a chargé dimanche le chef de l’opposition, un ancien général, de former un gouvernement. 67 députés l’ont recommandé, mais son camp n’a que 48 sièges.",
+          "bubbles": [
+            { "who": "general", "text": "67 soutiens, 48 chaises, 61 places à remplir. Je reprends le plan de table.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "A bare office with the seatingplan board on the wall. general (tall, broad-shouldered, grey crew cut, blue folder) on the left, standing very upright, pointing a marker at the empty circles like a battle map, lips pressed, a single light-blue sweat drop. On the floor in front of him, a small pile of folding chairs, clearly too few. Medium shot, calm space above.",
+            "cast": ["general"],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Israël : six semaines pour trouver une majorité",
+          "text": "Quoi : le président confie au chef de l’opposition la première tentative de former un gouvernement.\nPourquoi ça compte : aucun camp n’a les 61 sièges nécessaires sur 120 ; le Premier ministre sortant reste en poste.\nEt maintenant : il a 28 jours, plus 14 possibles ; sinon, un autre député peut être désigné."
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Sport",
+          "caption": "Au Masters de Paris, le champion espagnol bat l’Américain en finale, 7-6, 7-5. Une semaine plus tôt, l’Américain annonçait avoir recruté pour 2027 l’ancien entraîneur de l’Espagnol.",
+          "bubbles": [
+            { "who": "espagnol", "text": "Garde-le bien. Il connaît tous mes défauts : c’est lui qui me les a corrigés.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "An indoor tennis court, by the net. espagnol (curly hair, white headband, red wristband) on the left, hugging the trophy under one arm, patting the net with his other hand, cheeky wide grin, eyes half closed. On the right, beyond the net, only an empty player bench with a towel. Medium shot, low angle, calm empty space above.",
+            "cast": ["espagnol"],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Un premier titre à Paris pour le champion espagnol",
+          "text": "Quoi : il remporte pour la première fois le Masters 1000 de Paris, son neuvième titre de cette catégorie.\nPourquoi ça compte : revenu fin août d’une blessure au poignet, il prend sa revanche sur l’Américain, qui l’avait battu à l’US Open.\nEt maintenant : l’Américain travaillera en 2027 avec l’ancien entraîneur de l’Espagnol."
+        }
+      ],
+      "final": {
+        "text": "En Israël, un gouvernement doit réunir au moins 61 députés sur 120 : le candidat désigné a 28 jours, prolongeables de 14, pour y parvenir.",
+        "source": "PBS NewsHour / Breitbart"
+      },
+      "sources": [
+        { "title": "LCP — Salaires, pouvoir d’achat : que peut-on attendre de la conférence sociale du lundi 9 novembre ?", "url": "https://lcp.fr/actualites/salaires-pouvoir-d-achat-que-peut-on-attendre-de-la-conference-sociale-du-lundi-9" },
+        { "title": "Sud Radio — Conférence sociale à Matignon : qu’est-ce qui s’y joue, et avec qui ?", "url": "https://www.sudradio.fr/sud-radio/conference-sociale-a-matignon-quest-ce-qui-sy-joue-et-avec-qui" },
+        { "title": "LCP — Présidentielle 2027 : ce qui change dans le nouveau programme", "url": "https://lcp.fr/actualites/presidentielle-2027-ce-qui-change-dans-le-nouveau-programme-de-jean-luc-melenchon-444841" },
+        { "title": "AFP via Bourse Direct — Pour 2027, LFI présente un programme fidèle à sa volonté de rupture", "url": "https://www.boursedirect.fr/fr/actualites/categorie/politique/pour-2027-lfi-presente-un-programme-fidele-a-sa-volonte-de-rupture-afp-756b72dfa87a534448dbb17b657b6ba86a839fda" },
+        { "title": "Sud Radio — Présidentielle 2027 : LFI à contre-courant avec la sortie de son livre-programme", "url": "https://www.sudradio.fr/politique/presidentielle-2027-melenchon-et-lfi-a-contre-courant-avec-la-sortie-de-leur-livre-programme" },
+        { "title": "PBS NewsHour — Israel’s president formally gives Eisenkot the first chance to form the next government", "url": "https://www.pbs.org/newshour/world/israels-president-formally-gives-eisenkot-the-first-chance-to-form-the-next-government" },
+        { "title": "Breitbart — Israeli president Herzog tasks Eisenkot with forming government", "url": "https://www.breitbart.com/politics/2026/11/07/israeli-president-herzog-tasks-eisenkot-with-forming-government-in-setback-for-netanyahu/" },
+        { "title": "CNN — Netanyahu rival tasked with forming next Israeli government", "url": "https://www.cnn.com/2026/11/07/middleeast/eisenkot-israel-government-latam-intl" },
+        { "title": "ATP Tour — Alcaraz defeats Shelton to win first Paris title", "url": "https://www.atptour.com/en/news/alcaraz-shelton-paris-2026-final-sunday" },
+        { "title": "ABC News (AP) — Alcaraz beats Shelton in Paris Masters final for his fifth title this year", "url": "https://abcnews.com/Sports/wireStory/alcaraz-beats-shelton-paris-masters-final-title-year-137956352" },
+        { "title": "Tennis Majors — Irresistible Alcaraz finally conquers Paris", "url": "https://www.tennismajors.com/atp/rolex-paris-masters-1000-atp/irresistible-alcaraz-finally-conquers-paris-and-gets-his-us-open-revenge-on-shelton-866412.html" },
+        { "title": "NY1 (AP) — Ben Shelton adds Juan Carlos Ferrero to his coaching staff for 2027", "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/11/02/ben-shelton-adds-juan-carlos-ferrero-to-his-coaching-staff-for-2027" }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "frise",
