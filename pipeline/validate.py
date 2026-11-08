@@ -109,6 +109,14 @@ def check_story(fmt: dict, d: Path, err, warn):
     if len(drawn) > MAX_CASES.get(fid, 99):
         warn(f"{len(drawn)} cases dessinées, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
     check_cast_distinct([c for c in fmt.get("cast", []) or [] if isinstance(c, dict)], warn)
+    if fid != "actu":
+        art = fmt.get("art") or {}
+        missing = [k for k in ("subject", "setting", "era") if not art.get(k)]
+        if missing:
+            warn(f"cadre visuel « art » incomplet ({', '.join(missing)}) : les cases risquent d'être incohérentes")
+    no_role = [c.get("id") for c in fmt.get("cast", []) or [] if isinstance(c, dict) and not c.get("role")]
+    if no_role and fid != "actu":
+        warn(f"fiches sans « role » : {', '.join(map(str, no_role))}")
     cast_ids = set()
     for c in fmt.get("cast", []) or []:
         if not c.get("id") or not c.get("file"):

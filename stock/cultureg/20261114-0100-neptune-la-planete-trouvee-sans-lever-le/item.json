@@ -14,25 +14,29 @@
           "id": "leverrier",
           "look": "Urbain, a tall stiff 1840s French mathematician in his thirties, long sideburns, slicked-back dark hair, frowning eyebrows, black frock coat, a quill pen always in hand, a red waistcoat as the only colour",
           "file": "cast/cultureg-leverrier.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the proud mathematician who finds a planet with a pen; tall, stiff, frowning, never looks at the sky"
         },
         {
           "id": "arago",
           "look": "François, a jovial 1840s observatory director in his late fifties, wild curly grey hair, big bushy eyebrows, round belly, black coat, a blue scarf as the only colour",
           "file": "cast/cultureg-arago.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the jovial observatory director who pushes him; round, warm, arms wide"
         },
         {
           "id": "galle",
           "look": "Johann, a lanky 1840s German astronomer in his thirties, neat blond side parting, small round glasses, long grey coat, very straight posture",
           "file": "cast/cultureg-galle.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the German astronomer who looks through the telescope and finds it; lanky, precise, very straight"
         },
         {
           "id": "galilee",
           "look": "Galileo, a 1610s Italian scholar in his late forties, big bushy reddish beard, receding hair, long black scholar's robe, a small handheld telescope",
           "file": "cast/cultureg-galilee.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "Galileo, who saw Neptune in 1612 without knowing it; bearded, distracted, shrugging"
         }
       ],
       "cover": {
@@ -261,7 +265,16 @@
           "url": "https://en.wikipedia.org/wiki/Discovery_of_Neptune"
         }
       ],
-      "story": "Au début des années 1840, les astronomes ont un problème : Uranus, la planète la plus lointaine connue alors, ne suit pas exactement la trajectoire prévue par les lois de la gravitation. Soit ces lois sont fausses, soit une planète inconnue, plus lointaine, attire Uranus et la dévie.\nFrançois Arago, directeur de l’Observatoire de Paris, confie l’énigme au mathématicien Urbain Le Verrier. Pendant des mois, celui-ci calcule à l’envers : à partir des écarts d’Uranus, il déduit la position que devrait avoir la planète mystère.\nLe 31 août 1846, il publie ses résultats, puis écrit à l’astronome Johann Galle, à l’observatoire de Berlin. Le 23 septembre, Galle reçoit la lettre et trouve la planète en moins d’une heure, à moins d’un degré de l’endroit prédit. On la baptise Neptune.\nC’est la première planète découverte par le calcul avant d’être observée. Arago résume : Le Verrier a trouvé le nouvel astre « au bout de sa plume ». Ironie de l’histoire : Galilée l’avait aperçue dès 1612, mais l’avait prise pour une étoile."
+      "story": "Au début des années 1840, les astronomes ont un problème : Uranus, la planète la plus lointaine connue alors, ne suit pas exactement la trajectoire prévue par les lois de la gravitation. Soit ces lois sont fausses, soit une planète inconnue, plus lointaine, attire Uranus et la dévie.\nFrançois Arago, directeur de l’Observatoire de Paris, confie l’énigme au mathématicien Urbain Le Verrier. Pendant des mois, celui-ci calcule à l’envers : à partir des écarts d’Uranus, il déduit la position que devrait avoir la planète mystère.\nLe 31 août 1846, il publie ses résultats, puis écrit à l’astronome Johann Galle, à l’observatoire de Berlin. Le 23 septembre, Galle reçoit la lettre et trouve la planète en moins d’une heure, à moins d’un degré de l’endroit prédit. On la baptise Neptune.\nC’est la première planète découverte par le calcul avant d’être observée. Arago résume : Le Verrier a trouvé le nouvel astre « au bout de sa plume ». Ironie de l’histoire : Galilée l’avait aperçue dès 1612, mais l’avait prise pour une étoile.",
+      "art": {
+        "subject": "how Le Verrier found Neptune in 1846 by calculation alone, and Galle only had to point a telescope where he said",
+        "setting": "a Paris study covered with paper and equations, the Paris Observatory, the Berlin observatory dome at night",
+        "era": "1840s Europe, with one flashback to Galileo in the 1610s",
+        "props": {
+          "telescope": "a long brass telescope on a wooden stand",
+          "calculations": "a tall messy pile of paper sheets"
+        }
+      }
     }
   ]
 }

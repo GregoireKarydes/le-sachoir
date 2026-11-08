@@ -14,19 +14,22 @@
           "id": "charles",
           "look": "Charles, a teenage king of the 1560s, thin pale face, short dark hair, small white ruff collar, black doublet, a tiny gold crown as the only colour",
           "file": "cast/cultureg-charles.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the teenage king touring his kingdom, excited and a bit lost; leans out, wide-eyed"
         },
         {
           "id": "catherine",
           "look": "Catherine, the queen mother of the 1560s, short and stout, round face, sharp knowing eyes, black widow's dress, small black veiled cap, white ruff collar",
           "file": "cast/cultureg-catherine.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the queen mother who really runs things; stiff, sharp-eyed, reading lists"
         },
         {
           "id": "lhospital",
           "look": "Michel, an old chancellor of the 1560s, very long white beard down to his belt, bushy eyebrows, black robe, black square cap, holding a scroll",
           "file": "cast/cultureg-lhospital.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the wise old chancellor who writes the edict; calm, deadpan, unrolling scrolls"
         }
       ],
       "cover": {
@@ -264,7 +267,16 @@
           "url": "https://www.actu-juridique.fr/culture/conte-autour-de-charles-ix-qui-a-vole-le-premier-de-lan-ii/"
         }
       ],
-      "story": "Au XVIe siècle, le royaume de France ne commence pas l’année le même jour partout. Selon les diocèses, on change d’année à Noël, comme à Lyon, le 25 mars, comme à Reims, Vienne ou Limoges, ou encore à Pâques, comme en Artois. Or Pâques change de date chaque année : le Nouvel An bougeait donc aussi.\nEn 1564, le jeune roi Charles IX et sa mère, Catherine de Médicis, entreprennent un long tour du royaume. Pour mettre de l’ordre, le roi signe le 9 août 1564, à Roussillon, un édit préparé par le chancelier Michel de L’Hospital. Son article 39 fixe le début de l’année au 1er janvier, partout dans le royaume. Glissée parmi des articles sur la justice, la mesure s’applique à partir du 1er janvier 1567.\nEn 1622, le pape étend ce choix à tout le monde catholique.\nOn raconte souvent que le poisson d’avril serait né de ce changement, en souvenir de l’ancien Nouvel An de printemps. L’explication est répandue, mais les historiens la discutent."
+      "story": "Au XVIe siècle, le royaume de France ne commence pas l’année le même jour partout. Selon les diocèses, on change d’année à Noël, comme à Lyon, le 25 mars, comme à Reims, Vienne ou Limoges, ou encore à Pâques, comme en Artois. Or Pâques change de date chaque année : le Nouvel An bougeait donc aussi.\nEn 1564, le jeune roi Charles IX et sa mère, Catherine de Médicis, entreprennent un long tour du royaume. Pour mettre de l’ordre, le roi signe le 9 août 1564, à Roussillon, un édit préparé par le chancelier Michel de L’Hospital. Son article 39 fixe le début de l’année au 1er janvier, partout dans le royaume. Glissée parmi des articles sur la justice, la mesure s’applique à partir du 1er janvier 1567.\nEn 1622, le pape étend ce choix à tout le monde catholique.\nOn raconte souvent que le poisson d’avril serait né de ce changement, en souvenir de l’ancien Nouvel An de printemps. L’explication est répandue, mais les historiens la discutent.",
+      "art": {
+        "subject": "how, before 1564, French towns celebrated New Year on different days, until the young king fixed it to 1 January",
+        "setting": "a royal carriage on a country road, village squares, a royal council room",
+        "era": "1560s France, Renaissance court",
+        "props": {
+          "edict": "a long parchment scroll with a red wax seal",
+          "carriage": "a black royal carriage with gold trim"
+        }
+      }
     }
   ]
 }

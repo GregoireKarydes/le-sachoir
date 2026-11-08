@@ -14,25 +14,29 @@
           "id": "andre",
           "look": "André, a French industrialist around 1900, round bald head, bushy white moustache, black three-piece suit, a gold watch chain as the only colour",
           "file": "cast/cultureg-andre.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the elder brother, the salesman with the big ideas; round, beaming, always pointing at the map"
         },
         {
           "id": "edouard",
           "look": "Édouard, his younger brother around 1900, thin, neat dark goatee, slicked hair, black suit, always holding a small rubber tyre under his arm",
           "file": "cast/cultureg-edouard.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the younger brother, the engineer obsessed with tyres; thin, serious, never without his tyre"
         },
         {
           "id": "firmin",
           "look": "Firmin, a short stocky 1910s tyre dealer and mechanic, grease-stained grey overalls, flat black cap, bushy black moustache, a spanner in his back pocket",
           "file": "cast/cultureg-firmin.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "a garage owner who sells the tyres and hands out the guide; short, stocky, greasy hands, practical"
         },
         {
           "id": "inspecteur",
           "look": "a 1930s anonymous restaurant inspector, black hat pulled low over the eyes, black coat with the collar up, thin moustache, a tiny notebook hidden in his palm",
           "file": "cast/cultureg-inspecteur.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the secret restaurant inspector of the 1930s; mysterious, hat low, scribbling in hiding"
         }
       ],
       "cover": {
@@ -275,7 +279,16 @@
           "url": "https://www.herodote.net/En_route_vers_les_etoiles-synthese-2517.php"
         }
       ],
-      "story": "En 1900, les frères André et Édouard Michelin fabriquent des pneus. Les automobiles sont encore rares, et leur calcul est simple : plus les gens roulent, plus ils usent de pneus. Il faut donc leur donner envie de partir.\nIls publient un guide gratuit de 400 pages, tiré à 35 000 exemplaires et offert aux automobilistes : adresses de garages et de médecins, plans de villes, et bien sûr la méthode pour changer un pneu.\nSelon la légende maison, André découvre un jour un vendeur de pneus qui cale son établi avec des guides. Gratuit, le livre n’a aucune valeur aux yeux des clients. En 1920, il devient payant, et la publicité disparaît.\nÀ partir de 1926, le guide classe les restaurants et attribue une étoile aux bonnes tables. En 1931, l’échelle passe à trois étoiles ; la troisième signifie que la table « vaut le voyage ». Le calcul reste le même : pour aller dîner loin, il faut rouler.\nPour être crédible, Michelin emploie des inspecteurs anonymes, salariés du guide, qui jugent en toute indépendance. Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie."
+      "story": "En 1900, les frères André et Édouard Michelin fabriquent des pneus. Les automobiles sont encore rares, et leur calcul est simple : plus les gens roulent, plus ils usent de pneus. Il faut donc leur donner envie de partir.\nIls publient un guide gratuit de 400 pages, tiré à 35 000 exemplaires et offert aux automobilistes : adresses de garages et de médecins, plans de villes, et bien sûr la méthode pour changer un pneu.\nSelon la légende maison, André découvre un jour un vendeur de pneus qui cale son établi avec des guides. Gratuit, le livre n’a aucune valeur aux yeux des clients. En 1920, il devient payant, et la publicité disparaît.\nÀ partir de 1926, le guide classe les restaurants et attribue une étoile aux bonnes tables. En 1931, l’échelle passe à trois étoiles ; la troisième signifie que la table « vaut le voyage ». Le calcul reste le même : pour aller dîner loin, il faut rouler.\nPour être crédible, Michelin emploie des inspecteurs anonymes, salariés du guide, qui jugent en toute indépendance. Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie.",
+      "art": {
+        "subject": "how the Michelin brothers created a free guide to make people drive more and wear out their tyres, before it rated restaurants",
+        "setting": "an office with a map of France around 1900, a dusty country road with an early car, a garage, a 1930s restaurant dining room",
+        "era": "1900 to 1930s France",
+        "props": {
+          "guide": "a small thick red book",
+          "tyre": "a small black rubber tyre"
+        }
+      }
     }
   ]
 }

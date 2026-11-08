@@ -14,25 +14,29 @@
           "id": "vespasien",
           "look": "Vespasian, a stocky Roman emperor in his sixties, bald round head, deep forehead wrinkles, permanent strained squint, white toga, a purple sash as the only colour",
           "file": "cast/insolite-vespasien.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the thrifty emperor who taxes everything; stocky, squinting, counting coins"
         },
         {
           "id": "titus",
           "look": "Titus, a handsome elegant Roman prince around thirty, short curly black hair, pointed nose always wrinkled in disgust, spotless white toga",
           "file": "cast/insolite-titus.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "his disgusted son; elegant, nose wrinkled, holding his toga away"
         },
         {
           "id": "foulon",
           "look": "Marcus, a cheerful skinny Roman laundry worker, shaved head, big gap-toothed grin, short grey tunic rolled up to the knees, bare feet",
           "file": "cast/insolite-foulon.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "a cheerful laundry worker who uses the urine; skinny, barefoot, grinning"
         },
         {
           "id": "rambuteau",
           "look": "Rambuteau, an 1830s Paris prefect in his fifties, tall curly grey hair, long sideburns, black frock coat with a high white collar, a tricolour sash as the only colour",
           "file": "cast/insolite-rambuteau.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the Paris prefect who installs public urinals; tall, proud, presenting with a sweeping arm"
         }
       ],
       "cover": {
@@ -238,7 +242,16 @@
           "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/vespasienne-derniere/"
         }
       ],
-      "story": "Au Ier siècle, l’empereur Vespasien prend la tête d’un empire aux finances fragiles. Il cherche donc de nouvelles recettes.\nÀ Rome, l’urine a de la valeur. En vieillissant, elle dégage de l’ammoniaque, et les foulons, ces artisans qui nettoient et blanchissent les tissus, l’utilisent pour dégraisser la laine et les toges. Ils récupèrent celle des toilettes publiques. Vespasien a l’idée de taxer ce commerce.\nSelon l’historien Suétone, son fils Titus trouve la mesure indigne. Vespasien lui met alors sous le nez une pièce tirée de cette taxe et lui demande si elle sent mauvais. Titus répond que non. Et pourtant, elle vient de l’urine, réplique l’empereur. De cet échange est née l’expression « l’argent n’a pas d’odeur », même si Vespasien ne l’a pas prononcée telle quelle.\nDix-huit siècles plus tard, en 1834, le préfet Rambuteau installe à Paris des urinoirs publics en forme de colonnes. On les surnomme « vespasiennes », en souvenir de l’empereur qui taxait l’urine. Les Parisiens les ont aussi appelées « colonnes Rambuteau »."
+      "story": "Au Ier siècle, l’empereur Vespasien prend la tête d’un empire aux finances fragiles. Il cherche donc de nouvelles recettes.\nÀ Rome, l’urine a de la valeur. En vieillissant, elle dégage de l’ammoniaque, et les foulons, ces artisans qui nettoient et blanchissent les tissus, l’utilisent pour dégraisser la laine et les toges. Ils récupèrent celle des toilettes publiques. Vespasien a l’idée de taxer ce commerce.\nSelon l’historien Suétone, son fils Titus trouve la mesure indigne. Vespasien lui met alors sous le nez une pièce tirée de cette taxe et lui demande si elle sent mauvais. Titus répond que non. Et pourtant, elle vient de l’urine, réplique l’empereur. De cet échange est née l’expression « l’argent n’a pas d’odeur », même si Vespasien ne l’a pas prononcée telle quelle.\nDix-huit siècles plus tard, en 1834, le préfet Rambuteau installe à Paris des urinoirs publics en forme de colonnes. On les surnomme « vespasiennes », en souvenir de l’empereur qui taxait l’urine. Les Parisiens les ont aussi appelées « colonnes Rambuteau ».",
+      "art": {
+        "subject": "how emperor Vespasian taxed urine collected for Roman laundries, and why Paris urinals were named after him",
+        "setting": "a Roman palace room, a Roman laundry with big vats, a Paris street in the 1830s",
+        "era": "mixed on purpose: ancient Rome in the 70s AD and Paris in the 1830s",
+        "props": {
+          "coin": "a small gold Roman coin",
+          "vat": "a big round stone vat"
+        }
+      }
     }
   ]
 }

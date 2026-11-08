@@ -14,19 +14,22 @@
           "id": "delambre",
           "look": "Jean-Baptiste, a 1790s French astronomer in his forties, bald on top with grey tufts on the sides, big round nose, calm patient face, black coat, carrying a round brass measuring instrument",
           "file": "cast/cultureg-delambre.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the calm, patient astronomer who measures the north half; steady, upright, explains things gently"
         },
         {
           "id": "mechain",
           "look": "Pierre, a thin anxious 1790s French astronomer, tall messy powdered wig, deep dark circles under the eyes, bony fingers, black coat, a small notebook always clutched to his chest, a blue scarf as the only colour",
           "file": "cast/cultureg-mechain.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the anxious perfectionist who measures the south and hides an error; hunched, biting his nails, hugging his notebook"
         },
         {
           "id": "milicien",
           "look": "a short stocky suspicious 1790s village militiaman, bushy black moustache, narrowed eyes, white shirt, black waistcoat, a red phrygian cap as the only colour, holding a pike",
           "file": "cast/cultureg-milicien.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "a suspicious village militiaman who takes the astronomers for spies; arms crossed, squinting, blocking the way"
         }
       ],
       "cover": {
@@ -324,7 +327,16 @@
           "url": "https://www.simonandschuster.ca/books/The-Measure-of-All-Things/Ken-Alder/9780743216760"
         }
       ],
-      "story": "En 1791, la France révolutionnaire veut en finir avec la jungle des mesures locales. Elle choisit une unité universelle tirée de la Terre elle-même : le mètre sera le dix-millionième de la distance entre le pôle Nord et l’équateur.\nImpossible, bien sûr, de mesurer jusqu’au pôle. Les astronomes Delambre et Méchain mesurent donc un morceau de méridien, de Dunkerque à Barcelone, puis calculent le reste. Leur méthode, la triangulation, consiste à viser d’un point haut à l’autre, souvent des clochers, et à mesurer des angles : la géométrie donne les distances.\nPartis en 1792, ils travaillent en pleine Révolution. Delambre est arrêté par une milice qui le prend pour un espion ; Méchain est retenu deux mois. Le chantier dure plus de six ans.\nÀ Barcelone, Méchain découvre que deux mesures de sa latitude ne concordent pas : un écart de trois secondes d’arc, environ 100 mètres sur le terrain. Il cache cette erreur et en restera hanté jusqu’à sa mort, en 1804.\nLe 22 juin 1799, une barre de platine, le « mètre des Archives », devient l’étalon officiel. On sait aujourd’hui que ce mètre est environ 0,2 mm plus court que sa définition."
+      "story": "En 1791, la France révolutionnaire veut en finir avec la jungle des mesures locales. Elle choisit une unité universelle tirée de la Terre elle-même : le mètre sera le dix-millionième de la distance entre le pôle Nord et l’équateur.\nImpossible, bien sûr, de mesurer jusqu’au pôle. Les astronomes Delambre et Méchain mesurent donc un morceau de méridien, de Dunkerque à Barcelone, puis calculent le reste. Leur méthode, la triangulation, consiste à viser d’un point haut à l’autre, souvent des clochers, et à mesurer des angles : la géométrie donne les distances.\nPartis en 1792, ils travaillent en pleine Révolution. Delambre est arrêté par une milice qui le prend pour un espion ; Méchain est retenu deux mois. Le chantier dure plus de six ans.\nÀ Barcelone, Méchain découvre que deux mesures de sa latitude ne concordent pas : un écart de trois secondes d’arc, environ 100 mètres sur le terrain. Il cache cette erreur et en restera hanté jusqu’à sa mort, en 1804.\nLe 22 juin 1799, une barre de platine, le « mètre des Archives », devient l’étalon officiel. On sait aujourd’hui que ce mètre est environ 0,2 mm plus court que sa définition.",
+      "art": {
+        "subject": "how two astronomers spent seven years measuring France to define the metre, and how one hid a tiny error (1792-1799)",
+        "setting": "revolutionary France: a Paris study with a globe, country roads, church towers used as survey points, a village square",
+        "era": "1790s revolutionary France",
+        "props": {
+          "instrument": "a round brass repeating circle on a wooden tripod",
+          "notebook": "a small black notebook full of numbers"
+        }
+      }
     }
   ]
 }

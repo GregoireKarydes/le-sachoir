@@ -310,3 +310,20 @@ def test_refaire_d_abord_la_prochaine_bd(site, monkeypatch):
     images.process(a, a / "item.json", stock.load(a), redo=True)
     img = stock.load(a)["formats"][0]["cases"][0]["image"]
     assert "redo" not in img and img["status"] == "done" and calls
+
+
+def test_prompt_porte_le_cadre_les_roles_et_la_continuite(tmp_path):
+    prev = tmp_path / "images" / "x-01.webp"
+    prev.parent.mkdir()
+    from PIL import Image
+    Image.new("RGB", (8, 8)).save(prev, "WEBP")
+    fmt = {"art": {"subject": "how paper money was born", "setting": "a palace room", "era": "1710s France",
+                   "props": {"chest": "a small wooden chest with iron bands"}}}
+    p, refs = images.build("Law opens the chest", [("Law, a tall gambler", None, "the smooth salesman")],
+                           fmt=fmt, prev=prev, panel=(2, 8))
+    assert p.startswith("Panel 2 of 8")
+    for bout in ("how paper money was born", "1710s France", "the smooth salesman", "small wooden chest", "previous panel"):
+        assert bout in p
+    assert refs[-1] == prev
+    # les consignes impératives passent avant le style
+    assert p.index("no lettering") < p.index("webcomic doodle")

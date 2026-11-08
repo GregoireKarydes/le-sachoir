@@ -14,19 +14,22 @@
           "id": "rouget",
           "look": "Claude-Joseph, a slim young 1790s army engineer captain, curly powdered hair tied back, eager face, a blue uniform coat as the only colour, holding a violin",
           "file": "cast/insolite-rouget.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the young officer who writes the song overnight; slim, eager, inspired, violin under his chin"
         },
         {
           "id": "dietrich",
           "look": "Philippe-Frédéric, the mayor of Strasbourg in 1792, plump and jovial, white powdered wig, rosy cheeks, black coat, a wide black sash",
           "file": "cast/insolite-dietrich.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the jovial mayor who asks for a song; plump, rosy, glass raised"
         },
         {
           "id": "federe",
           "look": "a 1792 volunteer from Marseille, sunburnt, big black moustache, broad grin, white shirt, black trousers, a red bonnet as the only colour, a musket on his shoulder",
           "file": "cast/insolite-federe.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "a volunteer from Marseille who sings it all the way to Paris; broad, grinning, marching"
         }
       ],
       "cover": {
@@ -229,7 +232,16 @@
           "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/pourquoi-la-marseillaise-sappelle-t-elle-ainsi/"
         }
       ],
-      "story": "Le 25 avril 1792, la France vient de déclarer la guerre. À Strasbourg, chez le maire Philippe-Frédéric de Dietrich, on regrette qu’il n’existe pas de chant pour encourager les soldats. Un jeune capitaine du génie, Claude-Joseph Rouget de Lisle, compose paroles et musique dans la nuit. Son titre : « Chant de guerre pour l’armée du Rhin ».\nLe chant circule vite et arrive jusqu’à Marseille. En juillet 1792, des volontaires marseillais l’adoptent et le chantent tout au long de leur marche vers Paris. Le 30 juillet, ils entrent dans la capitale en le chantant ; les Parisiens l’appellent aussitôt l’hymne des Marseillais. Le nom est resté.\nLe 14 juillet 1795, la Marseillaise devient chant national. Jugée trop révolutionnaire, elle est ensuite interdite sous l’Empire et la Restauration. Il faut attendre 1879 et la IIIe République pour qu’elle devienne l’hymne national.\nAinsi, l’hymne de la France porte le nom d’une ville où il n’a pas été écrit : il doit son nom à ceux qui l’ont rendu célèbre, pas à celui qui l’a composé."
+      "story": "Le 25 avril 1792, la France vient de déclarer la guerre. À Strasbourg, chez le maire Philippe-Frédéric de Dietrich, on regrette qu’il n’existe pas de chant pour encourager les soldats. Un jeune capitaine du génie, Claude-Joseph Rouget de Lisle, compose paroles et musique dans la nuit. Son titre : « Chant de guerre pour l’armée du Rhin ».\nLe chant circule vite et arrive jusqu’à Marseille. En juillet 1792, des volontaires marseillais l’adoptent et le chantent tout au long de leur marche vers Paris. Le 30 juillet, ils entrent dans la capitale en le chantant ; les Parisiens l’appellent aussitôt l’hymne des Marseillais. Le nom est resté.\nLe 14 juillet 1795, la Marseillaise devient chant national. Jugée trop révolutionnaire, elle est ensuite interdite sous l’Empire et la Restauration. Il faut attendre 1879 et la IIIe République pour qu’elle devienne l’hymne national.\nAinsi, l’hymne de la France porte le nom d’une ville où il n’a pas été écrit : il doit son nom à ceux qui l’ont rendu célèbre, pas à celui qui l’a composé.",
+      "art": {
+        "subject": "how La Marseillaise was written in one night in Strasbourg in 1792 and got its name from volunteers from Marseille",
+        "setting": "the Strasbourg mayor's salon with a harpsichord, a bare room at night, a dusty road to Paris",
+        "era": "1792 revolutionary France",
+        "props": {
+          "violin": "a small brown violin",
+          "score": "a few sheets of handwritten music"
+        }
+      }
     }
   ]
 }

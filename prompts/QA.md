@@ -14,7 +14,7 @@
    - le bon nombre de personnages et les bonnes positions (gauche / droite comme les bulles) ;
    - **aucune lettre, aucun mot, aucun logo** dessiné ;
    - le haut de l'image assez calme pour les bulles ;
-   - mains, visages et objets corrects ; cohérence avec la case précédente ;
+   - mains, visages et objets corrects ; **cohérence avec la case précédente** (mêmes personnages, même décor et mêmes objets si on est au même endroit) et **logique avec le texte de la case** (celui qui parle est là, le bon objet dans les bonnes mains, le bon lieu, l'époque de `art.era`) ;
    - **les personnages se distinguent** : on ne confond pas deux personnages de la même BD (silhouette, coiffure, couleur d'accent) ; si deux se ressemblent, c'est un vrai défaut ;
    - pas de touches d'émotion hors de propos : cœurs, sueur, larmes, joues roses ou étincelles seulement si la case raconte cette émotion (sinon défaut, retirer la touche du prompt) ;
    - style respecté : gros trait noir, aplats noirs, décor presque vide, surtout noir et blanc avec une couleur d'accent au plus sur les vêtements ou objets (pas de dégradés, pas de décor chargé).

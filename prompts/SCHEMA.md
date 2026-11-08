@@ -180,6 +180,23 @@ Affirmations de 12 mots maximum, environ moitié vraies, beaucoup d'idées reçu
 
 **Qui a dit ça ?** (`"kind": "citation"`, 4 questions `"type": "choice"`) : une citation célèbre et 4 auteurs possibles, ou une citation à attribuer à « Personne de connu » quand elle est apocryphe (« Qu'ils mangent de la brioche »). Citations exactes et sourcées ; aucune citation inventée présentée comme vraie.
 
+## Cohérence visuelle d'une BD (8 novembre 2026)
+Le pipeline envoie au modèle, pour chaque case : le numéro de la case, la scène, **le cadre de toute l'histoire** (`art`), chaque personnage avec sa fiche **et son rôle**, les objets récurrents montrés dans la case, et la **case précédente** en image de référence quand elle partage un personnage (continuité). À fournir dans chaque BD :
+```json
+"art": {
+  "subject": "how a Scottish gambler invented paper money in France and ruined it (1716-1720)",   // en anglais, une ligne : ce que raconte la BD
+  "setting": "Regency Paris: a gilded palace room, the narrow rue Quincampoix, a bank counter",  // les lieux, en anglais
+  "era": "1710s France",                                                                         // l'époque : costumes, objets et lieux de cette époque
+  "props": { "chest": "a small wooden money chest with iron bands", "banknote": "a large blank paper banknote with a red wax seal" }  // objets qui reviennent, décrits une fois
+},
+"cast": [ { "id": "law", "look": "…", "role": "the smooth-talking inventor who sells the idea; always confident, leaning in", "file": "…" } ]
+```
+- `role` (anglais, une ligne) : qui est le personnage **dans l'histoire** et comment son caractère se voit dans le corps (posture, geste habituel). Il donne au modèle un personnage singulier plutôt qu'un bonhomme générique.
+- **Choisir le style de chaque personnage comme un caricaturiste** : son look raconte son métier, son époque et son caractère d'un coup d'œil (le banquier rond et satisfait, le perfectionniste maigre et cerné, le soldat raide comme un piquet). Un trait exagéré et mémorable par personnage, toujours le même d'une case à l'autre.
+- **Objets récurrents** : un objet qui revient (le coffre, l'instrument, le billet) est décrit une seule fois dans `art.props`, et nommé par son mot-clé (« the chest ») dans les prompts des cases : il est alors dessiné pareil partout.
+- **Continuité** : la case précédente sert de référence quand les deux cases ont un personnage en commun. Mettre `"same_place": false` sur l'image d'une case qui change de lieu ou d'époque (pour ne pas garder l'ancien décor), `"same_place": true` pour forcer la continuité même sans personnage commun.
+- **Logique** : chaque prompt de case colle au texte de la case. Celui qui parle est bien dans l'image, à la position de sa bulle ; l'objet dont parle la case est dans les mains de la bonne personne ; le lieu est celui de l'histoire à ce moment-là ; rien d'ajouté au hasard. Une case qui suit la précédente dans le même lieu garde le même décor et les mêmes objets.
+
 ## Règles pour les prompts d'images (champ `image.prompt`)
 - En **anglais**, 40 à 90 mots. Décrire : le décor, chaque personnage par son nom de fiche + position (on the left / on the right / in the foreground), expression, geste, accessoires, cadrage (wide shot, medium shot, close-up, low angle…).
 - Le style et l'interdiction de texte sont ajoutés automatiquement par `pipeline/style.json` : ne pas les répéter.

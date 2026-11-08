@@ -323,27 +323,69 @@ def save_webp(im: Image.Image, dest: Path):
     im.save(dest, "WEBP", quality=STYLE["webp_quality"], method=6)
 
 
-def build(scene: str, cast: list[tuple[str, Path]]) -> tuple[str, list[Path]]:
-    """Prompt et références. La référence de style est toujours l'image 0, puis une fiche par personnage."""
+def _clean(t) -> str:
+    return " ".join(str(t or "").split()).rstrip(". ")
+
+
+def story_context(fmt: dict) -> str:
+    """Le cadre commun à toutes les images d'une BD (champ `art`), pour des cases cohérentes entre elles."""
+    art = fmt.get("art") or {}
+    bits = []
+    if art.get("subject"):
+        bits.append(f"The strip tells {_clean(art['subject'])}")
+    if art.get("setting"):
+        bits.append(f"setting: {_clean(art['setting'])}")
+    if art.get("era"):
+        bits.append(f"period: {_clean(art['era'])}, with clothes, objects and places of that period unless a joke says otherwise")
+    return (" " + "; ".join(bits) + ".") if bits else ""
+
+
+def props_for(fmt: dict, scene: str) -> str:
+    """Objets récurrents décrits une fois pour toutes (`art.props`), rappelés quand la case les montre."""
+    props = (fmt.get("art") or {}).get("props") or {}
+    low = (scene or "").lower()
+    used = [f"the {k} is {_clean(v)}" for k, v in props.items() if k and k.lower() in low]
+    return (" Recurring objects, drawn exactly the same in every panel: " + "; ".join(used) + ".") if used else ""
+
+
+def build(scene: str, cast: list[tuple], fmt: dict | None = None, prev: Path | None = None,
+          panel: tuple[int, int] | None = None) -> tuple[str, list[Path]]:
+    """Prompt et références. La référence de style est toujours l'image 0, puis une fiche par personnage,
+    puis, s'il reste une place, la case précédente de la même BD (continuité : mêmes personnages, même lieu).
+
+    `cast` : (look, fiche) ou (look, fiche, rôle). `panel` : (numéro de la case, nombre de cases dessinées)."""
+    fmt = fmt or {}
     refs, who = [], []
     if STYLE_REF.exists():
         refs.append(STYLE_REF)
-    for look, sheet in cast:
+    for entry in cast:
+        look, sheet = entry[0], entry[1]
+        role = _clean(entry[2]) if len(entry) > 2 and entry[2] else ""
+        desc = _clean(look) + (f" ({role})" if role else "")
         if sheet and sheet.exists() and len(refs) < 4:
-            who.append(f"image {len(refs)} shows {look}")
+            who.append(f"image {len(refs)} shows {desc}")
             refs.append(sheet)
         else:
-            who.append(look)
+            who.append(desc)
     head = STYLE["style_with_ref"] + " " if STYLE_REF.exists() else ""
     if len(who) >= 2:
         # 8 novembre 2026 : des personnages d'une même BD se ressemblaient ; on insiste sur ce qui les distingue.
-        chars = (f" {len(who)} clearly different characters, never drawn alike or mixed up, each with their own height, "
-                 "body shape, hairstyle and clothes, matching their reference: " + "; ".join(who) + ".")
+        chars = (f" {len(who)} clearly different characters, never alike, each with their own height, body shape, "
+                 "hairstyle, clothes and accessory: " + "; ".join(who) + ".")
     elif who:
-        chars = " Character, same face, hair and clothes as the reference: " + who[0] + "."
+        chars = " Character, as in the reference: " + who[0] + "."
     else:
         chars = ""
-    return f"Scene: {scene}.{chars} {head}{STYLE['style']} {STYLE['constraints']}", refs
+    where = f"Panel {panel[0]} of {panel[1]} of the same comic strip. " if panel else ""
+    cont = ""
+    if prev is not None and prev.exists() and len(refs) < 4:
+        cont = (f" Image {len(refs)} is the previous panel: keep the same character designs and, if the place is the same, "
+                f"the same room and props, but draw the new moment with a new pose and framing; do not copy image {len(refs)}.")
+        refs.append(prev)
+    logic = " Everything must make sense for this moment of the story: right people, right objects, right place, nothing random."
+    # Les consignes impératives (pas de texte, haut libre) passent avant le style : jamais coupées si le prompt est long.
+    return (f"{where}Scene: {_clean(scene)}.{story_context(fmt)}{chars}{props_for(fmt, scene)}{cont}{logic} "
+            f"{STYLE['constraints']} {head}{STYLE['style']}"), refs
 
 
 def editions_to_process():
@@ -442,6 +484,7 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
         if stock.normalize(fmt, d):
             persist()
         looks = {c["id"]: c.get("look", c["id"]) for c in fmt.get("cast", [])}
+        roles = {c["id"]: c.get("role", "") for c in fmt.get("cast", [])}
         sheets = {c["id"]: d / c["file"] for c in fmt.get("cast", [])}
 
         # 1. Fiches casting (sautées pour un personnage qui n'apparaît qu'une fois : la description suffit)
@@ -455,9 +498,15 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
                     persist()
                 continue
             head = STYLE["style_with_ref"] + " " if STYLE_REF.exists() else ""
-            prompt = (f"Character reference portrait: one single character, head and upper body, facing the viewer, "
-                      f"plain white background, of {c.get('look', c['id'])}. {head}{STYLE['style']} "
-                      f"One image only, no panel borders. Wordless picture: no text, no lettering.")
+            role = f" Role in the story: {_clean(c['role'])}." if c.get("role") else ""
+            others = [_clean(o.get("look", "")) for o in fmt.get("cast", []) if o is not c][:3]
+            unlike = (" This character must look clearly different from the other characters of the strip ("
+                      + "; ".join(others) + ").") if others else ""
+            prompt = (f"Character design sheet: one single character, full body, standing, facing the viewer, "
+                      f"plain white background, of {_clean(c.get('look', c['id']))}.{role}{story_context(fmt)} "
+                      "A singular, memorable caricature: exaggerated silhouette, signature hairstyle and accessory, "
+                      f"body language that tells who this person is.{unlike} One image only, no panel borders. "
+                      f"Wordless picture: no text, no lettering. {head}{STYLE['style']}")
             try:
                 im, via = draw(fmt, day, prompt, STYLE["cast_size"], [STYLE_REF], "cast")
                 im = ink(im)
@@ -483,11 +532,13 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
         jobs = []
         if fmt.get("cover"):
             jobs.append((fmt["cover"], STYLE["cover_size"], "cover"))
-        jobs += [(case["image"], STYLE["case_size"], "case") for case in fmt.get("cases", []) if case.get("image")]
+        drawn = [case["image"] for case in fmt.get("cases", []) if case.get("image") and case.get("kind") != "explain"]
+        jobs += [(img, STYLE["case_size"], "case") for img in drawn]
         for img, size, kind in jobs:
+            ctx = context_for(d, fmt, img, drawn, looks, sheets, roles)
             if redo:
                 if img.get("status") == "done" and img.get("redo"):
-                    done += redo_one(d, img, size, kind, fmt, day, looks, sheets, persist)
+                    done += redo_one(d, img, size, kind, fmt, day, ctx, persist)
                 continue
             if img.get("status") not in ("pending", "retry", None):
                 continue
@@ -495,8 +546,7 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
                 img["status"] = "failed"
                 persist()
                 continue
-            cast = img.get("cast", [])
-            prompt, refs = build(img["prompt"], [(looks[c], sheets.get(c)) for c in cast if c in looks])
+            prompt, refs = build(img["prompt"], **ctx)
             img["attempts"] = img.get("attempts", 0) + 1
             try:
                 im, via = draw(fmt, day, prompt, size, refs, kind)
@@ -523,9 +573,25 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
     return done
 
 
-def redo_one(d, img, size, kind, fmt, day, looks, sheets, persist) -> int:
+def context_for(d: Path, fmt: dict, img: dict, drawn: list, looks: dict, sheets: dict, roles: dict) -> dict:
+    """Tout ce que le modèle doit savoir pour une image : personnages (fiche, rôle), cadre de la BD,
+    numéro de la case et case précédente (continuité, sauf `"same_place": false` ou aucun personnage commun)."""
+    cast = [(looks[c], sheets.get(c), roles.get(c)) for c in img.get("cast", []) if c in looks]
+    ctx = {"cast": cast, "fmt": fmt}
+    if img in drawn:
+        i = drawn.index(img)
+        ctx["panel"] = (i + 1, len(drawn))
+        if i > 0 and img.get("same_place") is not False:
+            p = drawn[i - 1]
+            shared = set(p.get("cast", [])) & set(img.get("cast", []))
+            if p.get("status") == "done" and p.get("file") and (shared or img.get("same_place")):
+                ctx["prev"] = d / p["file"]
+    return ctx
+
+
+def redo_one(d, img, size, kind, fmt, day, ctx, persist) -> int:
     """Nouvelle version d'une image déjà publiée ; en cas d'échec l'ancienne reste (2 essais au plus)."""
-    prompt, refs = build(img["prompt"], [(looks[c], sheets.get(c)) for c in img.get("cast", []) if c in looks])
+    prompt, refs = build(img["prompt"], **ctx)
     try:
         im, via = draw(fmt, day, prompt, size, refs, kind)
     except (QuotaExhausted, BudgetReserved):

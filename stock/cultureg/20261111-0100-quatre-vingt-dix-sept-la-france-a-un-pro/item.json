@@ -14,25 +14,29 @@
           "id": "sofie",
           "look": "Sofie, a modern Belgian tourist in her thirties, short blond bob, black raincoat, a red umbrella as the only colour",
           "file": "cast/cultureg-sofie.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the Belgian tourist puzzled by French numbers; curious, raised eyebrow, pen in hand"
         },
         {
           "id": "marc",
           "look": "Marc, a modern Parisian café waiter, tall and lanky, slicked black hair, thin moustache, white shirt, black waistcoat, long white apron",
           "file": "cast/cultureg-marc.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the Parisian waiter who counts the French way and guides the trip through time; tall, polite, slightly smug"
         },
         {
           "id": "gautier",
           "look": "Gautier, a 13th-century Parisian cloth merchant, round belly, bowl haircut, grey tunic with a black belt, a small purse at his waist, counting on his fingers",
           "file": "cast/cultureg-gautier.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "a medieval merchant who counts in twenties on his fingers; cheerful, round, proud of his method"
         },
         {
           "id": "vaugelas",
           "look": "Claude, a pompous 17th-century grammarian, enormous curly black wig, pointy little moustache, black coat with a huge white lace collar, nose in the air, holding a thick book",
           "file": "cast/cultureg-vaugelas.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the pompous grammarian who declares the 'right' way to count; nose in the air, finger raised"
         }
       ],
       "cover": {
@@ -283,7 +287,15 @@
           "url": "https://www.techno-science.net/fr/definitions/hopital-des-quinze-vingts"
         }
       ],
-      "story": "En France, 97 se dit « quatre-vingt-dix-sept » : littéralement quatre fois vingt, plus dix-sept. C’est le reste d’une vieille habitude. Au Moyen Âge, on comptait souvent par vingtaines : on disait « deux-vingts » pour 40, « trois-vingts » pour 60, et ainsi de suite.\nUne trace de ce système existe encore à Paris : vers 1260, Saint Louis fonde l’hospice des Quinze-Vingts, prévu pour 300 lits, soit quinze fois vingt. L’établissement porte toujours ce nom.\nD’où vient ce comptage ? Les hypothèses varient, héritage celte ou influence normande, et les spécialistes n’ont pas tranché.\nPeu à peu, le comptage par dizaines l’emporte : trente, quarante, cinquante et soixante remplacent les vingtaines. Mais pour 70, 80 et 90, les deux façons coexistent longtemps. Au XVIIe siècle, sous l’influence du grammairien Vaugelas, l’Académie retient soixante-dix, quatre-vingts et quatre-vingt-dix.\nLa Belgique et la Suisse, elles, ont gardé septante et nonante, et une partie de la Suisse dit même huitante. En France, ces mots ne sont pas interdits : le dictionnaire les dit simplement vieillis ou régionaux."
+      "story": "En France, 97 se dit « quatre-vingt-dix-sept » : littéralement quatre fois vingt, plus dix-sept. C’est le reste d’une vieille habitude. Au Moyen Âge, on comptait souvent par vingtaines : on disait « deux-vingts » pour 40, « trois-vingts » pour 60, et ainsi de suite.\nUne trace de ce système existe encore à Paris : vers 1260, Saint Louis fonde l’hospice des Quinze-Vingts, prévu pour 300 lits, soit quinze fois vingt. L’établissement porte toujours ce nom.\nD’où vient ce comptage ? Les hypothèses varient, héritage celte ou influence normande, et les spécialistes n’ont pas tranché.\nPeu à peu, le comptage par dizaines l’emporte : trente, quarante, cinquante et soixante remplacent les vingtaines. Mais pour 70, 80 et 90, les deux façons coexistent longtemps. Au XVIIe siècle, sous l’influence du grammairien Vaugelas, l’Académie retient soixante-dix, quatre-vingts et quatre-vingt-dix.\nLa Belgique et la Suisse, elles, ont gardé septante et nonante, et une partie de la Suisse dit même huitante. En France, ces mots ne sont pas interdits : le dictionnaire les dit simplement vieillis ou régionaux.",
+      "art": {
+        "subject": "why the French say 'four twenties' for eighty while Belgians say 'nonante', told through a café bill and a trip back in time",
+        "setting": "a modern Paris café table, a 13th-century market stall, a 17th-century study full of books",
+        "era": "mixed on purpose: modern Paris, the Middle Ages and the 1600s, each character in the clothes of their own time",
+        "props": {
+          "bill": "a small white café bill on a saucer"
+        }
+      }
     }
   ]
 }

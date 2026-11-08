@@ -14,19 +14,22 @@
           "id": "dubois",
           "look": "Louis Nicolas, the Paris police prefect in 1800, stiff and pompous, big grey sideburns, black bicorne hat, black high-collared uniform coat, a red sash as the only colour",
           "file": "cast/insolite-dubois.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the pompous police prefect who signs the ban; stiff, chin up, finger wagging"
         },
         {
           "id": "rosa",
           "look": "Rosa, a French woman painter of the 1850s, short cropped curly dark hair, confident grin, white loose smock, black trousers, a paintbrush in hand",
           "file": "cast/insolite-rosa.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the painter who wears trousers with a permit to work at horse fairs; confident, grinning, hands on hips"
         },
         {
           "id": "chloe",
           "look": "Chloé, a small modern Parisian office worker in 2013, high messy ponytail, black trousers, white shirt, a yellow scarf as the only colour, a coffee cup in hand",
           "file": "cast/insolite-chloe.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "a modern office worker amazed that the rule lasted until 2013; small, wide-eyed, holding her coffee"
         }
       ],
       "cover": {
@@ -245,7 +248,15 @@
           "url": "https://www.connexionfrance.com/news/womens-trouser-ban-is-annulled/611805"
         }
       ],
-      "story": "Le 7 novembre 1800, le préfet de police de Paris, Louis Nicolas Dubois, signe une ordonnance sur le « travestissement des femmes ». Toute Parisienne qui veut s’habiller « en homme », donc porter le pantalon, doit en demander l’autorisation à la préfecture, avec un motif.\nCes permissions sont rares et accordées surtout pour raison de santé ou de métier. La peintre Rosa Bonheur, qui travaille dans les foires aux chevaux, en obtient une, à renouveler tous les six mois. Même avec ce papier, le costume masculin reste interdit aux spectacles, aux bals et aux réunions publiques.\nAvec le temps, des circulaires assouplissent la règle : selon des textes cités au Sénat, le pantalon est toléré si la femme tient un guidon de vélo ou les rênes d’un cheval. Puis la règle tombe dans l’oubli : plus personne ne l’applique, mais personne ne l’abroge non plus.\nIl faut attendre le 31 janvier 2013 pour que le ministère des Droits des femmes la déclare « implicitement abrogée », car contraire à l’égalité entre les femmes et les hommes garantie par la Constitution. L’ordonnance aura survécu 213 ans, sur le papier seulement."
+      "story": "Le 7 novembre 1800, le préfet de police de Paris, Louis Nicolas Dubois, signe une ordonnance sur le « travestissement des femmes ». Toute Parisienne qui veut s’habiller « en homme », donc porter le pantalon, doit en demander l’autorisation à la préfecture, avec un motif.\nCes permissions sont rares et accordées surtout pour raison de santé ou de métier. La peintre Rosa Bonheur, qui travaille dans les foires aux chevaux, en obtient une, à renouveler tous les six mois. Même avec ce papier, le costume masculin reste interdit aux spectacles, aux bals et aux réunions publiques.\nAvec le temps, des circulaires assouplissent la règle : selon des textes cités au Sénat, le pantalon est toléré si la femme tient un guidon de vélo ou les rênes d’un cheval. Puis la règle tombe dans l’oubli : plus personne ne l’applique, mais personne ne l’abroge non plus.\nIl faut attendre le 31 janvier 2013 pour que le ministère des Droits des femmes la déclare « implicitement abrogée », car contraire à l’égalité entre les femmes et les hommes garantie par la Constitution. L’ordonnance aura survécu 213 ans, sur le papier seulement.",
+      "art": {
+        "subject": "how a Paris police order required women to get a permit to wear trousers from 1800 until it was formally abolished in 2013",
+        "setting": "a Paris police office in 1800, an 1850s painter's studio, a modern Paris office",
+        "era": "mixed on purpose: 1800, the 1850s and 2013, each character in the clothes of their own time",
+        "props": {
+          "permit": "a small official paper permit with a stamp"
+        }
+      }
     }
   ]
 }

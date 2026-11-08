@@ -14,19 +14,22 @@
           "id": "patrick",
           "look": "Patrick, a smooth TV quiz show host, shiny swept-back grey hair, huge white smile, black tuxedo, a red bow tie as the only colour, holding question cards",
           "file": "cast/insolite-patrick.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the smooth quiz host who asks the trick question; slick, smiling, holding cards"
         },
         {
           "id": "bernard",
           "look": "Bernard, a modern quiz show contestant in his fifties, bald and round, thick black glasses, grey cardigan over a white shirt, very sweaty forehead",
           "file": "cast/insolite-bernard.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the contestant sure the answer is Spain; round, sweaty, panicking"
         },
         {
           "id": "helene",
           "look": "Hélène, a French geography teacher, short grey bob, big round black glasses, black turtleneck, holding a rolled-up map",
           "file": "cast/insolite-helene.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the geography teacher who explains; calm, precise, pointing at the map"
         }
       ],
       "cover": {
@@ -233,7 +236,15 @@
           "url": "https://lepetitjournal.com/vivre-a-madrid/decouvrir-frontiere-franco-espagnole-269106"
         }
       ],
-      "story": "Avec quel pays la France partage-t-elle sa plus longue frontière terrestre ? On pense spontanément à l’Espagne ou à la Belgique. La bonne réponse est le Brésil, avec plus de 730 km de frontière.\nL’explication tient en un mot : la Guyane. Cette région d’Amérique du Sud est française depuis le XVIIe siècle, et département depuis 1946. Ses frontières sont donc des frontières de la France : le Suriname à l’ouest, le Brésil à l’est et au sud.\nLa frontière franco-brésilienne suit en grande partie le fleuve Oyapock. Son tracé a longtemps été disputé entre les deux pays, jusqu’à un arbitrage suisse qui le fixe en 1900.\nAu XXIe siècle, un pont est construit sur l’Oyapock pour relier les deux pays. Achevé en 2011, il n’ouvre à la circulation qu’en 2017 et reste peu emprunté : beaucoup d’habitants continuent de traverser le fleuve en bateau.\nEt en Europe ? La plus longue frontière française est celle avec la Belgique, de peu devant l’Espagne."
+      "story": "Avec quel pays la France partage-t-elle sa plus longue frontière terrestre ? On pense spontanément à l’Espagne ou à la Belgique. La bonne réponse est le Brésil, avec plus de 730 km de frontière.\nL’explication tient en un mot : la Guyane. Cette région d’Amérique du Sud est française depuis le XVIIe siècle, et département depuis 1946. Ses frontières sont donc des frontières de la France : le Suriname à l’ouest, le Brésil à l’est et au sud.\nLa frontière franco-brésilienne suit en grande partie le fleuve Oyapock. Son tracé a longtemps été disputé entre les deux pays, jusqu’à un arbitrage suisse qui le fixe en 1900.\nAu XXIe siècle, un pont est construit sur l’Oyapock pour relier les deux pays. Achevé en 2011, il n’ouvre à la circulation qu’en 2017 et reste peu emprunté : beaucoup d’habitants continuent de traverser le fleuve en bateau.\nEt en Europe ? La plus longue frontière française est celle avec la Belgique, de peu devant l’Espagne.",
+      "art": {
+        "subject": "why France's longest land border is with Brazil, through French Guiana",
+        "setting": "a TV quiz show set with two desks, a map of South America on a board",
+        "era": "today",
+        "props": {
+          "map": "a large plain map of South America on an easel, French Guiana in blue"
+        }
+      }
     }
   ]
 }

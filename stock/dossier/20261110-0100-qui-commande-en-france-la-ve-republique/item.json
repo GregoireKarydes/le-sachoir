@@ -14,19 +14,22 @@
           "id": "gaulle",
           "look": "Charles, an extremely tall thin French general in his late sixties, big long nose, small grey moustache, slicked-back grey hair, long black general's coat, round black kepi, a small red ribbon on the chest as the only colour",
           "file": "cast/dossier-gaulle.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the very tall general who designed the system; towering, solemn, arms raised"
         },
         {
           "id": "lucie",
           "look": "Lucie, a curious young woman in her twenties, very messy curly brown hair in a big loose bun, round glasses, oversized black sweater, white sneakers, a yellow pencil behind her ear as the only colour",
           "file": "cast/dossier-lucie.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the curious student who asks the reader's questions; small, lively, leaning forward with her pencil"
         },
         {
           "id": "prof",
           "look": "Bernard, a dry old constitutional law professor, bald with white tufts above the ears, half-moon glasses on the tip of his nose, grey three-piece suit, a thick black book under his arm, a green bow tie as the only colour",
           "file": "cast/dossier-prof.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the dry old law professor who explains; bald, peering over half-moon glasses, tapping his book"
         }
       ],
       "cover": {
@@ -770,7 +773,16 @@
           "title": "Public Sénat — À 60 ans, la Ve République est encore à près de dix ans du record de longévité",
           "url": "https://www.publicsenat.fr/actualites/politique/a-60-ans-la-ve-republique-est-encore-a-pres-de-dix-ans-du-record-de-longevite"
         }
-      ]
+      ],
+      "art": {
+        "subject": "how the French Constitution of 1958 shares power between the president, the government and parliament",
+        "setting": "a simple lecture room with a blackboard, the Élysée office, the National Assembly benches",
+        "era": "from 1958 to today",
+        "props": {
+          "constitution": "a thin black booklet",
+          "blackboard": "a plain black blackboard"
+        }
+      }
     }
   ]
 }

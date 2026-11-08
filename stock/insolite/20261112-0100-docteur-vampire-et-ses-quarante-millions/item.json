@@ -14,19 +14,22 @@
           "id": "broussais",
           "look": "François, a tall bony stern French doctor of the 1820s, thick grey sideburns, bald forehead, fierce eyebrows, black frock coat, white cravat, holding a glass jar",
           "file": "cast/insolite-broussais.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the stern doctor who prescribes leeches for everything; tall, bony, fierce eyebrows, pointing"
         },
         {
           "id": "hippolyte",
           "look": "Hippolyte, a skinny 1830s Parisian patient, long white nightshirt, droopy white nightcap, pale face, huge terrified eyes",
           "file": "cast/insolite-hippolyte.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the frightened patient covered in leeches; skinny, pale, trembling in his nightshirt"
         },
         {
           "id": "marthe",
           "look": "Marthe, a sturdy 1830s woman leech applier, rolled sleeves, plain grey dress, white apron, a red headscarf as the only colour, carrying a big glass jar",
           "file": "cast/insolite-marthe.png",
-          "status": "pending"
+          "status": "pending",
+          "role": "the sturdy woman who applies the leeches; strong, matter-of-fact, sleeves rolled up"
         }
       ],
       "cover": {
@@ -234,7 +237,15 @@
           "url": "https://amub-ulb.be/system/files/rmb/old/581"
         }
       ],
-      "story": "Au début du XIXe siècle, le médecin François Broussais est l’une des grandes figures de la médecine parisienne. Sa théorie : presque toutes les maladies viennent d’une inflammation, en particulier de l’intestin. Pour la calmer, il faut retirer du sang au malade.\nSon outil préféré : la sangsue, un petit ver qui se fixe sur la peau et aspire le sang. Broussais en pose de 40 à 200 à la fois, ce qui lui vaut le surnom de « vampire de la médecine ».\nSa méthode devient une mode. Poser des sangsues devient presque un métier, exercé à domicile, souvent par des femmes. En 1833, la France en utilise entre 30 et 40 millions, environ une par habitant. Les étangs français se vident, et il faut en importer de Pologne et de Hongrie.\nAprès la mort de Broussais, en 1838, la mode décline peu à peu : les médecins comprennent que saigner les malades les affaiblit plus qu’il ne les soigne. La sangsue n’a pourtant pas disparu : on l’utilise encore dans quelques cas précis, en chirurgie réparatrice, pour aider le sang à circuler."
+      "story": "Au début du XIXe siècle, le médecin François Broussais est l’une des grandes figures de la médecine parisienne. Sa théorie : presque toutes les maladies viennent d’une inflammation, en particulier de l’intestin. Pour la calmer, il faut retirer du sang au malade.\nSon outil préféré : la sangsue, un petit ver qui se fixe sur la peau et aspire le sang. Broussais en pose de 40 à 200 à la fois, ce qui lui vaut le surnom de « vampire de la médecine ».\nSa méthode devient une mode. Poser des sangsues devient presque un métier, exercé à domicile, souvent par des femmes. En 1833, la France en utilise entre 30 et 40 millions, environ une par habitant. Les étangs français se vident, et il faut en importer de Pologne et de Hongrie.\nAprès la mort de Broussais, en 1838, la mode décline peu à peu : les médecins comprennent que saigner les malades les affaiblit plus qu’il ne les soigne. La sangsue n’a pourtant pas disparu : on l’utilise encore dans quelques cas précis, en chirurgie réparatrice, pour aider le sang à circuler.",
+      "art": {
+        "subject": "how, in the 1830s, doctor Broussais's fashion for bloodletting made France import tens of millions of leeches",
+        "setting": "a bare Paris hospital room with one bed, a pond in the countryside, a pharmacy counter with glass jars",
+        "era": "1820s-1830s France",
+        "props": {
+          "jar": "a big glass jar full of small black leeches"
+        }
+      }
     }
   ]
 }
