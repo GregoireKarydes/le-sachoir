@@ -688,6 +688,7 @@ body{overscroll-behavior-y:none}
 /* ---------- Météo (Open-Meteo) ---------- */
 .wx{display:flex;align-items:center;gap:8px;border:0;background:none;padding:0;margin:-6px 0 0;text-align:left;color:var(--muted);font-size:13px;line-height:1.25;width:100%;min-height:26px}
 .wx[hidden]{display:none}
+.wx.wait{visibility:hidden;pointer-events:none}
 .wx svg{flex:0 0 26px;width:26px;height:26px}
 .wx b{color:var(--ink);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
 .wx i{font-style:normal;flex:1;min-width:0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
@@ -953,6 +954,10 @@ window.addEventListener("appinstalled", () => ev("install"));
 
 /* ---------- Utilitaires ---------- */
 const $ = s => document.querySelector(s);
+// Réécrit un bloc seulement si son contenu change : au démarrage, render() est appelé 3 à 6 fois
+// (édition, config, porte-monnaie, compte) ; tout reconstruire faisait clignoter l'accueil et ses images.
+const LAST_HTML = new WeakMap();
+function setHTML(el, html) { if (LAST_HTML.get(el) === html) return false; LAST_HTML.set(el, html); el.innerHTML = html; return true; }
 const esc = t => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 const tierOf = (l, z, n) => n <= 0 ? z : l.find(t => n >= t.min && n <= t.max);
 const nextTier = (l, n) => l.find(t => t.min > n);
@@ -1014,8 +1019,8 @@ function renderNav() {
     ["profile", "Profil", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/></svg>`]];
   const btn = t => `<button data-tab="${t[0]}" ${TAB === t[0] ? 'aria-current="page"' : ""}>${t[2]}${t[1]}</button>`;
   const about = ["about", "Le concept", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>`];
-  $("#nav").innerHTML = tabs.map(btn).join("");
-  $("#navTop").innerHTML = [about, ...tabs].map(btn).join("");
+  setHTML($("#nav"), tabs.map(btn).join(""));
+  setHTML($("#navTop"), [about, ...tabs].map(btn).join(""));
   ["#nav", "#navTop"].forEach(id => $(id).querySelectorAll("button").forEach(b => b.onclick = () => setTab(b.dataset.tab)));
   const s = streak();
   const canInstall = !ME.installDone && !matchMedia("(display-mode: standalone)").matches;
@@ -1055,7 +1060,7 @@ function readState(ed, f) {
 function renderHome() {
   const v = $("#v-home");
   if (!CUR) {
-    v.innerHTML = `<div class="empty-state"><h2>La première édition arrive</h2><p class="lead">Rendez-vous demain. Le crayon chauffe.</p></div>`;
+    setHTML(v, `<div class="empty-state"><h2>La première édition arrive</h2><p class="lead">Rendez-vous demain. Le crayon chauffe.</p></div>`);
     return;
   }
   const ed = CUR, F = Object.fromEntries(ed.formats.map(f => [f.id, f]));
@@ -1077,15 +1082,16 @@ function renderHome() {
     : `${F.dossier ? card.dossier(F.dossier) : ""}
    ${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
    ${F.insolite ? card.wide(F.insolite) : ""}`;
-  v.innerHTML = `
+  const fresh = setHTML(v, `
    <div><h1 class="h1 hello">${hello}</h1><p class="lead">Prêt à briller en société (ou au moins à faire semblant) ?</p></div>
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
-   ${isToday ? `<button class="wx" id="wxLine" hidden></button>` : ""}
+   ${isToday ? `<button class="wx wait" id="wxLine"></button>` : ""}
    ${ed.empty
       ? `<div class="empty-state"><h2>${isToday ? "L’édition du jour est encore sous le crayon" : "Pas d’édition ce jour-là"}</h2><p class="lead">${isToday ? "Le dessinateur taille ses mines. Revenez un peu plus tard." : "Le Sachoir dormait. Ça arrive aux meilleurs."}</p>${last ? `<button class="btn ghost sm" id="hLast">Lire la dernière édition (${fmtLong(last)})</button>` : ""}</div>`
       : cardsHTML}
    ${F.quiz ? quizCard(ed, F.quiz) : ""}
-   <p class="daily">Chaque jour, une nouvelle édition. Votre culture G, elle, ne prend pas de congés.</p>`;
+   <p class="daily">Chaque jour, une nouvelle édition. Votre culture G, elle, ne prend pas de congés.</p>`);
+  if (!fresh) return; // rien n'a changé : on ne touche à rien (ni images ni météo)
   v.querySelectorAll("[data-f]").forEach(b => b.onclick = () => openReader(ed, b.dataset.f));
   v.querySelectorAll("[data-quiz]").forEach(b => b.onclick = () => openQuiz(ed));
   $("#hHist").onclick = openHistory;
@@ -1846,16 +1852,20 @@ function wxQuip(d) {
 }
 
 /* La ligne sous la date */
+// La ligne météo garde sa place dès le premier affichage (pas de saut de la page quand elle arrive),
+// et reprend aussitôt la dernière météo connue quand l'accueil est redessiné.
+let WX_LAST = null;
+function wxShow(el, w) { el.innerHTML = w.html; el.setAttribute("aria-label", w.label); el.classList.remove("wait"); el.hidden = false; el.onclick = () => openWeather(); }
 async function wxPaint() {
   const el = $("#wxLine"); if (!el) return;
+  if (WX_LAST) wxShow(el, WX_LAST);
   try {
     const d = await wxCityData(), c = d.current;
-    if (!$("#wxLine")) return;
-    el.innerHTML = `${wxIcon(c.weather_code, c.is_day)}<b>${esc(wxCity().name)} · ${wxT(c.temperature_2m)}</b><i>${esc(wxQuip(d))}</i>`;
-    el.setAttribute("aria-label", `Météo à ${wxCity().name} : ${WX_LABEL[wxKind(c.weather_code, c.is_day)]}, ${wxT(c.temperature_2m)}. Voir le détail`);
-    el.hidden = false;
-    el.onclick = () => openWeather();
-  } catch (e) { el.hidden = true; }
+    if (!el.isConnected) return;
+    WX_LAST = { html: `${wxIcon(c.weather_code, c.is_day)}<b>${esc(wxCity().name)} · ${wxT(c.temperature_2m)}</b><i>${esc(wxQuip(d))}</i>`,
+                label: `Météo à ${wxCity().name} : ${WX_LABEL[wxKind(c.weather_code, c.is_day)]}, ${wxT(c.temperature_2m)}. Voir le détail` };
+    if (el.innerHTML !== WX_LAST.html) wxShow(el, WX_LAST);
+  } catch (e) { if (!WX_LAST) el.hidden = true; }
 }
 
 /* La feuille météo */
