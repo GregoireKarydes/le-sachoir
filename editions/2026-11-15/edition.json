@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-15",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "culture",
+      "label": "Le Quiz du jour",
+      "title": "Cinq questions, un seul tabouret",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "theme": "Sciences du vivant",
+          "q": "Combien de cœurs battent dans une pieuvre ?",
+          "choices": ["Un seul, comme tout le monde", "Deux", "Trois", "Huit, un par bras"],
+          "answer": 2,
+          "explain": "Deux cœurs envoient le sang vers les branchies, un troisième vers le reste du corps. Son sang est bleu, grâce à l’hémocyanine, à base de cuivre. Une vraie romantique, version plomberie.",
+          "source": { "title": "Greenpeace — 10 faits incroyables sur les pieuvres", "url": "https://www.greenpeace.org/luxembourg/fr/actualites/18587/10-faits-incroyables-sur-les-pieuvres/" }
+        },
+        {
+          "theme": "Entreprises et marques",
+          "q": "Que veulent dire les lettres LU des biscuits nantais ?",
+          "choices": ["Lefèvre-Utile, un couple de pâtissiers", "Loire Unie", "Les Usines", "Luxe Universel"],
+          "answer": 0,
+          "explain": "Jean-Romain Lefèvre et son épouse Pauline-Isabelle Utile accolent leurs deux noms. Leur fils Louis crée à Nantes le Petit Beurre en 1886. Un mariage qui a très bien tourné : en biscuit.",
+          "source": { "title": "Connexion France — The form of France’s LU biscuits has a hidden message", "url": "https://www.connexionfrance.com/magazine/did-you-know-the-form-of-frances-lu-biscuits-has-a-hidden-message/158295" }
+        },
+        {
+          "theme": "Expression française",
+          "q": "Être « sur la sellette », à l’origine, c’était être assis où ?",
+          "choices": ["Sur la selle d’un cheval de course", "Sur le petit tabouret bas de l’accusé", "Sur le banc des ministres", "Sur le siège du cordonnier"],
+          "answer": 1,
+          "explain": "Dès le XIIIe siècle, l’accusé subissait son dernier interrogatoire sur ce siège bas, en contrebas des juges. La Révolution l’a remplacé par le banc des accusés. Mal assis, et mal parti.",
+          "source": { "title": "La langue française — Sur la sellette", "url": "https://www.lalanguefrancaise.com/expressions/sur-la-sellette" }
+        },
+        {
+          "theme": "Sports",
+          "q": "Avant d’être un stade de tennis, Roland Garros était…",
+          "choices": ["Un champion de tennis des années 1920", "Le maire de Paris", "Un aviateur", "Un marchand de terre battue"],
+          "answer": 2,
+          "explain": "Le 23 septembre 1913, il relie sans escale Fréjus à Bizerte, en Tunisie : presque huit heures au-dessus de la Méditerranée. Le stade, ouvert en 1928, honore sa mémoire. Belle trajectoire, comme un lob.",
+          "source": { "title": "Wikipedia — Roland Garros (aviator)", "url": "https://en.wikipedia.org/wiki/Roland_Garros_(aviator)" }
+        },
+        {
+          "theme": "Architecture",
+          "q": "Quelle est la particularité du grand escalier de Chambord ?",
+          "choices": ["Deux personnes peuvent monter sans jamais se croiser", "Il n’a aucune marche, c’est une rampe", "Il compte exactement 365 marches", "Il est entièrement en bois"],
+          "answer": 0,
+          "explain": "Ses deux volées s’enroulent en double hélice : on monte ensemble sans jamais se croiser. L’architecte est inconnu ; on y voit souvent l’influence de Léonard de Vinci, mort six mois avant le chantier.",
+          "source": { "title": "France.fr — Chambord ou le génie de ses prouesses architecturales", "url": "https://www.france.fr/fr/article/chambord-ou-le-genie-de-ses-prouesses-architecturales/" }
+        }
+      ],
+      "sources": [
+        { "title": "Greenpeace — 10 faits incroyables sur les pieuvres", "url": "https://www.greenpeace.org/luxembourg/fr/actualites/18587/10-faits-incroyables-sur-les-pieuvres/" },
+        { "title": "Connexion France — The form of France’s LU biscuits has a hidden message", "url": "https://www.connexionfrance.com/magazine/did-you-know-the-form-of-frances-lu-biscuits-has-a-hidden-message/158295" },
+        { "title": "La langue française — Sur la sellette", "url": "https://www.lalanguefrancaise.com/expressions/sur-la-sellette" },
+        { "title": "Wikipedia — Roland Garros (aviator)", "url": "https://en.wikipedia.org/wiki/Roland_Garros_(aviator)" },
+        { "title": "France.fr — Chambord ou le génie de ses prouesses architecturales", "url": "https://www.france.fr/fr/article/chambord-ou-le-genie-de-ses-prouesses-architecturales/" }
+      ]
+    }
+  ]
+}
