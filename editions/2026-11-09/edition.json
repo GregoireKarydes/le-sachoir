@@ -44,6 +44,7 @@
         ],
         "file": "images/dossier-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1
       },
       "cases": [
@@ -70,6 +71,7 @@
             ],
             "file": "images/dossier-01.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 2,
             "via": "fal"
           }
@@ -97,6 +99,7 @@
             ],
             "file": "images/dossier-02.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -116,13 +119,13 @@
             }
           ],
           "image": {
-            "prompt": "a simple stage split in three blocks of tiny identical deputies: a small block in black robes, a small block with feathered hats, and a big block twice as large in plain grey coats. Louis (on the left) pointing at the small blocks with a smug smile; Jeanne (on the right) standing in front of the big block, hopeful. wide shot",
+            "prompt": "a bare hall with three separate groups of tiny identical deputies standing side by side: on the left a small group of five in black priest robes, in the middle a small group of five with feathered hats, on the right a big crowd of fifteen in plain grey coats. Louis (on the left edge, powdered wig, crown) pointing at the two small groups with a smug smile; Jeanne (on the right edge, dark bun, white apron) standing in front of the big grey crowd, hopeful. only one Jeanne. wide shot",
             "cast": [
               "louis",
               "jeanne"
             ],
             "file": "images/dossier-03.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -156,6 +159,7 @@
             ],
             "file": "images/dossier-04.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -182,6 +186,7 @@
             ],
             "file": "images/dossier-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -207,6 +212,7 @@
             ],
             "file": "images/dossier-06.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -222,12 +228,12 @@
             }
           ],
           "image": {
-            "prompt": "a small study with a single candle. Louis (in the foreground) writing in a tiny notebook with a quill, sighing, bored; through the window behind him, small grey smoke clouds rise over a distant city. medium shot",
+            "prompt": "a small study with a single candle on a desk. Louis (in the foreground, chubby, tall powdered white wig, small crown askew, black velvet coat with white lace jabot) writing in a tiny notebook with a quill, sighing, bored; through a small low window beside him, small grey smoke clouds rise over a distant city. empty wall above. medium shot",
             "cast": [
               "louis"
             ],
             "file": "images/dossier-07.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -254,6 +260,7 @@
             ],
             "file": "images/dossier-08.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -273,13 +280,13 @@
             }
           ],
           "image": {
-            "prompt": "Jeanne (on the right) holding up a big blank parchment scroll with both hands like a trophy, beaming; Louis (on the left) reading over her shoulder, nervous, pulling at his collar, tiny sweat drops. plain background. medium shot",
+            "prompt": "Jeanne (standing on the right side of the image, dark bun, white apron) holding up a big blank parchment scroll with both hands like a trophy, beaming; Louis (standing on the left side of the image, powdered wig, crown) leaning in to read it, nervous, pulling at his collar, tiny sweat drops. plain background. medium shot",
             "cast": [
               "louis",
               "jeanne"
             ],
             "file": "images/dossier-09.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -306,6 +313,7 @@
             ],
             "file": "images/dossier-10.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -332,6 +340,7 @@
             ],
             "file": "images/dossier-11.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -347,12 +356,12 @@
             }
           ],
           "image": {
-            "prompt": "a narrow village street blocked by an overturned cart. the big black carriage stopped in front of it. Louis (in the foreground) melting down against the carriage door, arms dangling, defeated; tiny villagers with lanterns surrounding the carriage. medium shot",
+            "prompt": "a narrow village street blocked by an overturned wooden cart. a horse-drawn black carriage stopped on the left. Louis (in the foreground, full body, chubby, powdered wig, black velvet coat) standing next to the carriage, slumped against its wheel, arms dangling, defeated; tiny villagers with lanterns surrounding him. medium shot",
             "cast": [
               "louis"
             ],
             "file": "images/dossier-12.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -369,6 +378,7 @@
             ],
             "file": "images/dossier-13.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -395,6 +405,7 @@
             ],
             "file": "images/dossier-14.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -423,6 +434,7 @@
             ],
             "file": "images/dossier-15.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -437,6 +449,7 @@
             "cast": [],
             "file": "images/dossier-16.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -462,6 +475,7 @@
             ],
             "file": "images/dossier-17.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -487,6 +501,7 @@
             ],
             "file": "images/dossier-18.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -506,13 +521,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare office. Maximilien (on the left) proudly unrolling his long sheet of paper showing a grid of ten empty columns; Jeanne (on the right) slumped against the wall, exhausted just looking at it, dark circles under her eyes. medium shot",
+            "prompt": "a bare office with only two people. Maximilien (on the left, small powdered wig, round tinted spectacles, black tailcoat, tall white cravat) proudly unrolling his long sheet of paper showing a grid of ten empty columns; Jeanne (on the right) slumped against the wall, exhausted just looking at it, dark circles under her eyes. medium shot",
             "cast": [
               "robes",
               "jeanne"
             ],
             "file": "images/dossier-19.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -532,13 +547,13 @@
             }
           ],
           "image": {
-            "prompt": "Jeanne (on the right) handing Maximilien (on the left) a single knobbly root vegetable with a fake smile like a birthday gift; Maximilien holding it at arm's length, deeply serious, pinched lips. plain background. medium shot",
+            "prompt": "Maximilien (standing on the left side of the image, small powdered wig, round tinted spectacles, black tailcoat, tall white cravat) holding a single knobbly root vegetable at arm's length, deeply serious, pinched lips; Jeanne (standing on the right side of the image, dark bun, white apron) who just handed it to him with a fake smile like a birthday gift. plain background. medium shot",
             "cast": [
               "robes",
               "jeanne"
             ],
             "file": "images/dossier-20.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -555,6 +570,7 @@
             ],
             "file": "images/dossier-21.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -581,6 +597,7 @@
             ],
             "file": "images/dossier-22.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 2,
             "via": "fal"
           }
@@ -608,6 +625,7 @@
             ],
             "file": "images/dossier-23.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -628,6 +646,7 @@
             "cast": [],
             "file": "images/dossier-24.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -649,6 +668,7 @@
             ],
             "file": "images/dossier-25.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -670,6 +690,7 @@
             ],
             "file": "images/dossier-26.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -689,13 +710,13 @@
             }
           ],
           "image": {
-            "prompt": "five tiny identical men in feathered hats all pulling a small steering wheel in different directions. Jeanne (on the right) facepalming; Napoleon (on the left) leaning casually against the wall, arms crossed, watching with a little smile. wide shot",
+            "prompt": "in the middle, five tiny identical men in feathered hats all pulling a small ship's steering wheel in different directions. Jeanne (on the right, dark bun, white apron) facepalming; Napoleon (on the left, thin young general, long straight dark hair, black bicorne hat, black uniform, red sash) leaning casually against the wall, arms crossed, watching with a little smile. wide shot",
             "cast": [
               "bonap",
               "jeanne"
             ],
             "file": "images/dossier-27.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -732,6 +753,7 @@
             ],
             "file": "images/dossier-28.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -758,6 +780,7 @@
             ],
             "file": "images/dossier-29.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -779,6 +802,7 @@
             ],
             "file": "images/dossier-30.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -805,6 +829,7 @@
             ],
             "file": "images/dossier-31.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -831,6 +856,7 @@
             ],
             "file": "images/dossier-32.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -846,12 +872,12 @@
             }
           ],
           "image": {
-            "prompt": "Jeanne (in the middle) in a confession-style close-up, looking straight at the reader, deadpan, holding a tiny blue flower between two fingers. plain background",
+            "prompt": "Jeanne (in the middle, seen from the chest up, placed in the lower half of the image) in a confession-style medium close-up, looking straight at the reader, deadpan, holding a tiny blue flower between two fingers. plain background, large empty space above her head",
             "cast": [
               "jeanne"
             ],
             "file": "images/dossier-33.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -872,7 +898,7 @@
               "jeanne"
             ],
             "file": "images/dossier-34.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -896,6 +922,7 @@
             ],
             "file": "images/dossier-35.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1007,6 +1034,7 @@
         ],
         "file": "images/cultureg-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1,
         "via": "fal"
       },
@@ -1034,6 +1062,7 @@
             ],
             "file": "images/cultureg-01.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1061,6 +1090,7 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1087,7 +1117,7 @@
               "law"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1118,7 +1148,7 @@
               "spec"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1148,6 +1178,7 @@
             ],
             "file": "images/cultureg-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1168,13 +1199,13 @@
             }
           ],
           "image": {
-            "prompt": "the old hunchbacked man (on the left) bent forward proudly, offering his hump as a desk, open palm out for coins; Gaspard (on the right) signing a paper on the hump with his quill, delighted. plain background. medium shot",
+            "prompt": "the old hunchbacked man (on the left, bald with white tufts, big visible hump on his back, patched grey coat) bent forward proudly, offering his hump as a desk, open palm out for coins; Gaspard (on the right) signing a paper on the hump with his quill, delighted. plain background. medium shot",
             "cast": [
               "bossu",
               "spec"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1202,6 +1233,7 @@
             ],
             "file": "images/cultureg-07.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1228,7 +1260,7 @@
               "spec"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1268,6 +1300,7 @@
             ],
             "file": "images/cultureg-09.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1290,6 +1323,7 @@
             ],
             "file": "images/cultureg-10.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1357,6 +1391,7 @@
         ],
         "file": "images/insolite-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1,
         "via": "fal"
       },
@@ -1378,7 +1413,7 @@
               "peruggia"
             ],
             "file": "images/insolite-01.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1400,7 +1435,7 @@
               "peruggia"
             ],
             "file": "images/insolite-02.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1426,7 +1461,7 @@
               "beroud"
             ],
             "file": "images/insolite-03.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1453,7 +1488,7 @@
               "beroud"
             ],
             "file": "images/insolite-04.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1470,12 +1505,12 @@
             }
           ],
           "image": {
-            "prompt": "Guillaume (on the left) sitting on a chair under a single hanging lamp, shrinking, tiny pink blush marks, nervously chewing his notebook. plain dark background. close-up",
+            "prompt": "Guillaume (on the left) sitting on a chair in a bare interrogation room, a small lamp on a low table beside him, shrinking, tiny pink blush marks, nervously chewing his notebook. plain background, empty space above. medium close-up",
             "cast": [
               "apo"
             ],
             "file": "images/insolite-05.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -1498,6 +1533,7 @@
             ],
             "file": "images/insolite-06.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1537,6 +1573,7 @@
             ],
             "file": "images/insolite-07.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1559,6 +1596,7 @@
             ],
             "file": "images/insolite-08.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
