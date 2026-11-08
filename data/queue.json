@@ -1,0 +1,416 @@
+{
+ "updated_at": "2026-11-08T15:49+01:00",
+ "stock": {
+  "cultureg": [
+   {
+    "path": "stock/cultureg/20261109-0100-lecossais-qui-a-invente-le-billet-et-la",
+    "name": "20261109-0100-lecossais-qui-a-invente-le-billet-et-la",
+    "added": "20261109-0100",
+    "status": "ready",
+    "next": true,
+    "title": "L’Écossais qui a inventé le billet (et la faillite qui va avec)",
+    "theme": "Économie",
+    "tagline": "Comment la France de 1720 a découvert le papier-monnaie, la bulle spéculative et le mot « millionnaire »",
+    "minutes": 2,
+    "cases": 12,
+    "photos": 0,
+    "images_done": 11,
+    "images_total": 11,
+    "failed": 0,
+    "redo": 4
+   },
+   {
+    "path": "stock/cultureg/20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
+    "name": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
+    "added": "20261110-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "Le mètre est trop court, et c’est la faute d’un perfectionniste",
+    "theme": "Grandes découvertes",
+    "tagline": "Sept ans à mesurer la France en pleine Révolution, pour une erreur que personne ne devait voir",
+    "minutes": 2,
+    "cases": 11,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 11,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
+    "name": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
+    "added": "20261111-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
+    "theme": "Expression française",
+    "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 9,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261112-0100-bonne-annee-oui-mais-laquelle",
+    "name": "20261112-0100-bonne-annee-oui-mais-laquelle",
+    "added": "20261112-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "Bonne année ! Oui, mais laquelle ?",
+    "theme": "Histoire moderne",
+    "tagline": "Avant 1564, la France fêtait le Nouvel An à Noël, en mars ou à Pâques, selon la ville",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 9,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261113-0100-le-guide-michelin-ou-comment-vendre-des",
+    "name": "20261113-0100-le-guide-michelin-ou-comment-vendre-des",
+    "added": "20261113-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "Le guide Michelin, ou comment vendre des pneus avec un bon dîner",
+    "theme": "Entreprises et marques",
+    "tagline": "Avant de distribuer des étoiles, le guide rouge était une pub gratuite pour automobilistes",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 9,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261114-0100-neptune-la-planete-trouvee-sans-lever-le",
+    "name": "20261114-0100-neptune-la-planete-trouvee-sans-lever-le",
+    "added": "20261114-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "Neptune, la planète trouvée sans lever les yeux",
+    "theme": "L’univers",
+    "tagline": "En 1846, un Français découvre une planète avec un crayon. Un Allemand n’a plus qu’à regarder.",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 9,
+    "failed": 0,
+    "redo": 0
+   }
+  ],
+  "insolite": [
+   {
+    "path": "stock/insolite/20261109-0100-la-joconde-est-devenue-une-star-en-dispa",
+    "name": "20261109-0100-la-joconde-est-devenue-une-star-en-dispa",
+    "added": "20261109-0100",
+    "status": "ready",
+    "next": true,
+    "title": "La Joconde est devenue une star en disparaissant",
+    "theme": "Histoire de l’art",
+    "tagline": "En 1911, un vitrier la décroche du Louvre. Et le monde entier vient admirer… le mur vide.",
+    "minutes": 1,
+    "cases": 9,
+    "photos": 0,
+    "images_done": 9,
+    "images_total": 9,
+    "failed": 0,
+    "redo": 5
+   },
+   {
+    "path": "stock/insolite/20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
+    "name": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
+    "added": "20261110-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
+    "theme": "Droit",
+    "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
+    "minutes": 1,
+    "cases": 8,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar",
+    "name": "20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar",
+    "added": "20261111-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter)",
+    "theme": "Musique",
+    "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
+    "minutes": 1,
+    "cases": 8,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261112-0100-docteur-vampire-et-ses-quarante-millions",
+    "name": "20261112-0100-docteur-vampire-et-ses-quarante-millions",
+    "added": "20261112-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "Docteur Vampire et ses quarante millions de sangsues",
+    "theme": "Médecine et santé",
+    "tagline": "Dans les années 1830, la France a tellement saigné ses malades qu’elle a vidé ses mares",
+    "minutes": 1,
+    "cases": 8,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261113-0100-la-plus-longue-frontiere-de-la-france-av",
+    "name": "20261113-0100-la-plus-longue-frontiere-de-la-france-av",
+    "added": "20261113-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "La plus longue frontière de la France ? Avec le Brésil",
+    "theme": "Géographie",
+    "tagline": "Plus de 730 km de frontière, et pas un seul Pyrénéen à l’horizon",
+    "minutes": 1,
+    "cases": 8,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261114-0100-lempereur-qui-taxait-le-pipi",
+    "name": "20261114-0100-lempereur-qui-taxait-le-pipi",
+    "added": "20261114-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "L’empereur qui taxait le pipi",
+    "theme": "Histoire ancienne",
+    "tagline": "Vespasien a fait payer l’urine des Romains. Paris l’en a remercié en donnant son nom à ses urinoirs.",
+    "minutes": 1,
+    "cases": 8,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   }
+  ],
+  "dossier": [
+   {
+    "path": "stock/dossier/20261109-0100-1789-1799-dix-ans-un-roi-en-moins-un-gen",
+    "name": "20261109-0100-1789-1799-dix-ans-un-roi-en-moins-un-gen",
+    "added": "20261109-0100",
+    "status": "ready",
+    "next": true,
+    "title": "1789-1799 : dix ans, un roi en moins, un général en plus",
+    "theme": "Histoire de France",
+    "tagline": "La Révolution française en entier, de la salle de jeu de paume au coup d’État de Saint-Cloud",
+    "minutes": 5,
+    "cases": 39,
+    "photos": 0,
+    "images_done": 36,
+    "images_total": 36,
+    "failed": 0,
+    "redo": 9
+   },
+   {
+    "path": "stock/dossier/20261110-0100-qui-commande-en-france-la-ve-republique",
+    "name": "20261110-0100-qui-commande-en-france-la-ve-republique",
+    "added": "20261110-0100",
+    "status": "waiting",
+    "next": false,
+    "title": "Qui commande en France ? La Ve République, mode d’emploi",
+    "theme": "Politique française",
+    "tagline": "De Gaulle, le 49.3, la cohabitation : la Constitution de 1958 démontée pièce par pièce",
+    "minutes": 5,
+    "cases": 30,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 26,
+    "failed": 0,
+    "redo": 0
+   }
+  ]
+ },
+ "editions": [
+  {
+   "date": "2026-11-08",
+   "path": "editions/2026-11-08",
+   "status": "published",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "kind": "",
+     "title": "Tout ça pour un pain : Les Misérables en entier",
+     "theme": "Littérature",
+     "tagline": "Le roman-fleuve de Victor Hugo, du bagne de Toulon à la barricade de 1832, sans lire les 1 400 pages",
+     "minutes": 5,
+     "cases": 35,
+     "photos": 0,
+     "images_done": 31,
+     "images_total": 31,
+     "failed": 0,
+     "redo": 12
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "La COP en colocation (et autres records)",
+     "theme": "",
+     "tagline": "Des chiffres qui ne tombent jamais d’accord, un marin qui ne traîne pas et un sommet du climat à deux pays.",
+     "minutes": 2,
+     "cases": 6,
+     "photos": 0,
+     "images_done": 7,
+     "images_total": 7,
+     "failed": 0,
+     "redo": 1
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "kind": "",
+     "title": "Tirer sur la corde ou tirer au flanc ?",
+     "theme": "Psychologie",
+     "tagline": "Pourquoi huit personnes tirent comme quatre (et votre réunion d’équipe aussi)",
+     "minutes": 2,
+     "cases": 10,
+     "photos": 0,
+     "images_done": 10,
+     "images_total": 10,
+     "failed": 0,
+     "redo": 2
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "kind": "",
+     "title": "Le Tour de France gagné par le cinquième",
+     "theme": "Sports",
+     "tagline": "En 1904, trains, voitures et clous : les quatre premiers ont tous été déclassés.",
+     "minutes": 1,
+     "cases": 8,
+     "photos": 0,
+     "images_done": 8,
+     "images_total": 8,
+     "failed": 0,
+     "redo": 2
+    },
+    {
+     "id": "quiz",
+     "label": "Le Quiz géo",
+     "kind": "geo",
+     "title": "Trois questions, zéro GPS",
+     "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "path": "editions/2026-11-09",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "La Frise",
+     "kind": "frise",
+     "title": "Quatre dates, zéro machine à remonter le temps",
+     "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-10",
+   "path": "editions/2026-11-10",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Dico menteur",
+     "kind": "dico",
+     "title": "Le dictionnaire a menti (trois fois sur quatre)",
+     "questions": 4
+    }
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "path": "editions/2026-11-11",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Plus ou moins",
+     "kind": "plusmoins",
+     "title": "Plus haut que vous ne le pensez",
+     "questions": 1
+    }
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "path": "editions/2026-11-12",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Swipe",
+     "kind": "swipe",
+     "title": "Vrai ou faux, et que ça saute",
+     "questions": 1
+    }
+   ]
+  },
+  {
+   "date": "2026-11-13",
+   "path": "editions/2026-11-13",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Chiffre",
+     "kind": "chiffre",
+     "title": "Sortez vos doigts, on compte",
+     "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-14",
+   "path": "editions/2026-11-14",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Qui a dit ça ?",
+     "kind": "citation",
+     "title": "Ils l’ont dit (ou pas)",
+     "questions": 4
+    }
+   ]
+  }
+ ]
+}
