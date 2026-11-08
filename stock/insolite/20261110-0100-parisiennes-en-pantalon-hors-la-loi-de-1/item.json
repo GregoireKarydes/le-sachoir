@@ -12,6 +12,7 @@
       "cast": [
         {
           "id": "dubois",
+          "name": "Le préfet Dubois",
           "look": "Louis Nicolas, the Paris police prefect in 1800, stiff and pompous, big grey sideburns, black bicorne hat, black high-collared uniform coat, a red sash as the only colour",
           "file": "cast/insolite-dubois.png",
           "status": "done",
@@ -19,6 +20,7 @@
         },
         {
           "id": "rosa",
+          "name": "Rosa Bonheur",
           "look": "Rosa, a French woman painter of the 1850s, short cropped curly dark hair, confident grin, white loose smock, black trousers, a paintbrush in hand",
           "file": "cast/insolite-rosa.png",
           "status": "done",
@@ -26,6 +28,7 @@
         },
         {
           "id": "chloe",
+          "name": "Une Parisienne",
           "look": "Chloé, a small modern Parisian office worker in 2013, high messy ponytail, black trousers, white shirt, a yellow scarf as the only colour, a coffee cup in hand",
           "file": "cast/insolite-chloe.png",
           "status": "pending",
@@ -51,6 +54,7 @@
           "bubbles": [
             {
               "text": "Une femme en pantalon ? Il lui faut un papier.",
+              "who": "dubois",
               "side": "l"
             }
           ],
@@ -72,14 +76,17 @@
           "bubbles": [
             {
               "text": "Motif ?",
+              "who": "dubois",
               "side": "l"
             },
             {
               "text": "J’ai froid aux jambes.",
+              "who": "rosa",
               "side": "r"
             },
             {
               "text": "Refusé.",
+              "who": "dubois",
               "side": "l"
             }
           ],
@@ -102,6 +109,7 @@
           "bubbles": [
             {
               "text": "Je peins des chevaux dans les foires. En robe, c’est sportif.",
+              "who": "rosa",
               "side": "r"
             }
           ],
@@ -123,10 +131,12 @@
           "bubbles": [
             {
               "text": "La foire aux chevaux, oui. Le bal, non ?",
+              "who": "rosa",
               "side": "r"
             },
             {
               "text": "Exactement. C’est d’une logique imparable.",
+              "who": "dubois",
               "side": "l"
             }
           ],
@@ -149,10 +159,12 @@
           "bubbles": [
             {
               "text": "Autorisé, si vous tenez un guidon.",
+              "who": "dubois",
               "side": "l"
             },
             {
               "text": "Et quand je descends du vélo ?",
+              "who": "chloe",
               "side": "r"
             }
           ],
@@ -182,10 +194,12 @@
           "bubbles": [
             {
               "text": "Donc j’étais hors-la-loi tous les matins ?",
+              "who": "chloe",
               "side": "r"
             },
             {
               "text": "Techniquement.",
+              "who": "dubois",
               "side": "l"
             }
           ],
@@ -208,6 +222,7 @@
           "bubbles": [
             {
               "text": "Je vais fêter ça. En jupe, par principe.",
+              "who": "chloe",
               "side": "r"
             }
           ],
