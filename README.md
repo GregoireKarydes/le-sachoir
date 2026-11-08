@@ -38,6 +38,7 @@ Une petite API sur Cloudflare (Worker + base D1, offre gratuite), déployée par
 - **Premium** : abonnement Stripe **sans engagement**, 2,99 € par mois ou 19,99 € par an, résiliable en deux touches dans Mon compte (accès gardé jusqu'à la fin de la période payée), carte et factures via le portail client Stripe. Le webhook (renouvellements, échecs, résiliations) et la configuration du portail sont **créés automatiquement** par le workflow API dès que `STRIPE_SECRET_KEY` existe. Premium aussi donnable à la main dans l'écran admin.
 - **Paywall** (actif quand `STRIPE_SECRET_KEY` est là ; `"paywall"` dans `site.json` : `"auto"`, `true` ou `false`) : le site publié ne contient que les 4 premières cases du Grand Dossier (JSON et images) ; la suite est servie par l'API aux abonnés et aux dossiers débloqués, avec des liens d'images signés. La page publique (SEO) garde le début de la BD, le plan des chapitres, le résumé « L'histoire complète », la carte « Pour briller » et les sources, avec `isAccessibleForFree: false`. **Limite** : tant que ce dépôt GitHub est public, ses fichiers restent lisibles par qui les cherche ; le rendre privé ferme cette porte (secret `CONTENT_TOKEN` = jeton GitHub en lecture pour que l'API lise le contenu).
 - **Cases photo** (`kind: "photo"`) : vraie image Wikimedia Commons (licence libre seulement), téléchargée par `pipeline/photos.py` dans le workflow Images, auteur, licence et lien affichés.
+- **BD publiées** (écran admin) : les éditions date par date, lecture de chaque BD, « Masquer » / « Remettre ». Une BD masquée disparaît aussitôt de l'appli et de la newsletter, et du site public (index, pages, fichiers) à la publication suivante.
 - **Mesure d'audience** anonyme (identifiant tiré au hasard par appareil, ni cookie ni IP, Do Not Track respecté) et **écran admin** `admin.html` (audience, lecture, jeu, comptes, newsletter, revenus, dossiers offerts, Premium).
 
 Réglages dans `worker/wrangler.toml` (`ADMIN_EMAILS`, `SENDER_EMAIL`, `MAIL_DAILY_LIMIT`). L'adresse de l'API est écrite toute seule dans `pipeline/site.json` (`api_url`) au premier déploiement.
@@ -51,6 +52,7 @@ Tester en local : `cd worker && npm i && npx wrangler d1 migrations apply sachoi
 - `BREVO_API_KEY` : clé API Brevo (SMTP & API › Clés API), pour les e-mails de connexion et la newsletter.
 - `STRIPE_SECRET_KEY` : clé secrète Stripe (`sk_live_…` ou `sk_test_…`) : ouvre l'abonnement et active le paywall ; le webhook et le portail client sont créés tout seuls.
 - `CONTENT_TOKEN` (facultatif, si le dépôt devient privé) : jeton GitHub en lecture seule sur ce dépôt.
+- `DISPATCH_TOKEN` (facultatif) : jeton GitHub (fine-grained, ce dépôt, permission « Actions : Read and write ») pour que masquer une BD dans l'écran admin mette le site public à jour dans la minute ; sans lui, il suit à la prochaine publication.
 
 ## Lancer à la main
 - Régénérer les images : onglet *Actions* › *Images* › *Run workflow*.

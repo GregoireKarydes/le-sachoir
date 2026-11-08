@@ -99,10 +99,11 @@ jobs:
           STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
           STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
           GITHUB_TOKEN: ${{ secrets.CONTENT_TOKEN }}
+          GH_DISPATCH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
           API: ${{ steps.url.outputs.api }}
         run: |
           have=$(npx wrangler secret list 2>/dev/null | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{process.stdout.write(JSON.parse(s).map(x=>x.name).join(" "))}catch(e){}})')
-          for k in BREVO_API_KEY STRIPE_SECRET_KEY GITHUB_TOKEN; do
+          for k in BREVO_API_KEY STRIPE_SECRET_KEY GITHUB_TOKEN GH_DISPATCH_TOKEN; do
             v="${!k}"
             if [ -n "$v" ]; then printf '%s' "$v" | npx wrangler secret put "$k" > /dev/null && echo "$k : en place"
             elif echo " $have " | grep -q " $k "; then npx wrangler secret delete "$k" --force > /dev/null 2>&1 && echo "$k : retiré (secret GitHub supprimé)"; fi

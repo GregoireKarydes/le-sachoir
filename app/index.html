@@ -944,6 +944,13 @@ const editionCache = {};
 async function loadIndex() {
   const r = await fetch("editions/index.json", { cache: "no-cache" });
   INDEX = (await r.json()).editions || [];
+  applyHidden();
+}
+// BD masquées par l'admin : retirées tout de suite de l'appli, avant même la prochaine publication du site.
+function applyHidden() {
+  const H = new Set(CFG.hidden || []); if (!H.size) return;
+  INDEX.forEach(e => { e.formats = e.formats.filter(f => !H.has(`${e.date}|${f.id}`)); });
+  Object.values(editionCache).concat(CUR ? [CUR] : []).forEach(ed => { if (ed.formats) ed.formats = ed.formats.filter(f => !H.has(`${ed.date}|${f.id}`)); });
 }
 const emptyEdition = date => ({ date, formats: [], base: `editions/${date}/`, empty: true });
 async function loadEdition(date) {
@@ -2251,6 +2258,7 @@ async function startAccount() {
   const qs = new URLSearchParams(location.search), tok = qs.get("login"), paid = qs.get("paid");
   if (qs.has("ref") || paid) { qs.delete("ref"); qs.delete("paid"); history.replaceState(null, "", location.pathname + (qs.toString() ? "?" + qs : "") + location.hash); }
   await loadConfig();
+  applyHidden();
   if (CUR) render();
   loadWallet().then(() => { if (TAB === "profile") render(); });
   if (paid && ACC) paidReturn(paid);

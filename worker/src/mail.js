@@ -145,7 +145,8 @@ export async function loadEdition(env, day) {
   if (!r2.ok) return null;
   const ed = await r2.json();
   const full = Object.fromEntries((ed.formats || []).map(f => [f.id, f]));
-  const formats = entry.formats.map(f => ({ ...f, final: full[f.id]?.final, kind: full[f.id]?.kind || f.kind, teaser: full[f.id]?.teaser || "" }));
+  const hidden = new Set(env.DB ? (await env.DB.prepare("SELECT fid FROM hidden WHERE ed = ?").bind(day).all()).results.map(r => r.fid) : []);
+  const formats = entry.formats.filter(f => !hidden.has(f.id)).map(f => ({ ...f, final: full[f.id]?.final, kind: full[f.id]?.kind || f.kind, teaser: full[f.id]?.teaser || "" }));
   return { day, formats, stories: formats.filter(f => f.id !== "quiz"), nl: ed.newsletter || {} };
 }
 
