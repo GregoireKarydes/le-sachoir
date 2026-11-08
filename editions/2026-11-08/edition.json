@@ -48,6 +48,7 @@
         ],
         "file": "images/dossier-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1,
         "via": "fal"
       },
@@ -75,6 +76,7 @@
             ],
             "file": "images/dossier-01.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -95,13 +97,13 @@
             }
           ],
           "image": {
-            "prompt": "Victor (on the right) at a small desk with a quill, frowning at a blank page, chin in hand; Jean (on the left) drawn only as a half-finished pencil sketch of himself, missing his legs, floating next to the desk, worried, light-blue sweat drop. plain background. medium shot",
+            "prompt": "Victor (on the right, short white hair, short white beard, bushy white eyebrows, black frock coat, red scarf) at a small desk with a quill, frowning at a blank page, chin in hand; Jean (on the left, bald, grey worker's jacket) drawn as an unfinished pale sketch of himself, his legs fading into faint lines, worried, light-blue sweat drop. plain background. medium shot",
             "cast": [
               "hugo",
               "valjean"
             ],
             "file": "images/dossier-02.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -142,6 +144,7 @@
             ],
             "file": "images/dossier-03.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -169,6 +172,7 @@
             ],
             "file": "images/dossier-04.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -196,6 +200,7 @@
             ],
             "file": "images/dossier-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -219,12 +224,12 @@
             }
           ],
           "image": {
-            "prompt": "a small inn door at night. Jean (on the left) holding out a few coins, hopeful, then crushed; a grumpy innkeeper in a white apron (on the right) slamming the door in his face, a small cloud of dust. Jean's shoulders drop, light-blue tear. medium shot",
+            "prompt": "a small inn door at night. Jean (on the left) holding out a few coins, crushed, shoulders dropped, light-blue tear; a skinny grumpy innkeeper with messy black hair and a big black moustache, white apron (on the right), slamming the door in Jean's face, a small cloud of dust. medium shot",
             "cast": [
               "valjean"
             ],
             "file": "images/dossier-06.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -252,6 +257,7 @@
             ],
             "file": "images/dossier-07.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -275,6 +281,7 @@
             ],
             "file": "images/dossier-08.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -293,6 +300,7 @@
             ],
             "file": "images/dossier-09.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -315,6 +323,7 @@
             ],
             "file": "images/dossier-10.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -335,13 +344,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare town square. Javert (on the right) bending down very close to Jean, squinting suspiciously, studying him like a detective; Jean (on the left) in his top hat, walking stiffly like a robot, fake smile, big light-blue sweat drops. medium shot",
+            "prompt": "a bare town square. Javert (on the right side of the image, tall, black top hat, black greatcoat, cane) bending down very close to Jean, squinting suspiciously, studying him like a detective; Jean (on the left side of the image, wearing a black top hat over his grey jacket) walking stiffly like a robot, fake smile, big light-blue sweat drops. medium shot",
             "cast": [
               "javert",
               "valjean"
             ],
             "file": "images/dossier-11.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -358,10 +367,10 @@
             }
           ],
           "image": {
-            "prompt": "a young thin woman with long blond hair in a plain black dress (on the left), holding an open empty purse, worried, light-blue tears; on the right, a fat smirking innkeeper couple in grey clothes holding out their hands for money, greedy grins. plain background. medium shot",
+            "prompt": "a young thin woman with long blond hair in a plain black dress (on the left), holding an open empty purse upside down, worried, light-blue tears; on the right, a skinny innkeeper with long greasy black hair and a black moustache next to his plump wife with a big black hair bun, both holding out open palms for money, greedy grins, yellow sparkles in their eyes. plain background. medium shot",
             "cast": [],
             "file": "images/dossier-12.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -396,6 +405,7 @@
             ],
             "file": "images/dossier-13.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -423,6 +433,7 @@
             ],
             "file": "images/dossier-14.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -440,6 +451,7 @@
             ],
             "file": "images/dossier-15.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -460,12 +472,12 @@
             }
           ],
           "image": {
-            "prompt": "a snowy dark forest path at night. a tiny girl in rags (in the middle) carrying a heavy water bucket, exhausted; Jean (on the left) gently taking the bucket from her hands, kind smile, pink blush; a fat greedy innkeeper (on the right) rubbing his hands, yellow sparkles of greed in his eyes. wide shot",
+            "prompt": "a snowy dark forest path at night. a tiny girl in rags (in the middle) carrying a heavy water bucket, exhausted; Jean (on the left) gently taking the bucket from her hands, kind smile, pink blush; a skinny greedy innkeeper with long greasy black hair and a black moustache (on the right) rubbing his hands, yellow sparkles of greed in his eyes. wide shot",
             "cast": [
               "valjean"
             ],
             "file": "images/dossier-16.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -486,13 +498,13 @@
             }
           ],
           "image": {
-            "prompt": "Victor (on the right) unrolling an enormous blank battle map that covers the whole floor, kneeling on it with toy soldiers, ecstatic, yellow sparkles; Jean (on the left) holding a little girl's hand, both tapping their feet, bored, arms crossed, slumped shoulders. plain background. wide shot",
+            "prompt": "Victor (on the right, short white hair, white beard, black frock coat, red scarf) kneeling on an enormous blank battle map that covers the whole floor, placing tiny toy soldiers, ecstatic, yellow sparkles; Jean (on the left, bald, grey worker's jacket) standing and holding the hand of a little girl in a grey dress, both bored, slumped shoulders, tapping their feet. plain background. wide shot",
             "cast": [
               "hugo",
               "valjean"
             ],
             "file": "images/dossier-17.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -516,12 +528,12 @@
             }
           ],
           "image": {
-            "prompt": "a park bench under a single tree. a young woman in a white dress and a young man with curly hair in a black coat (on the right) gazing at each other, small red hearts floating; Jean (on the left) peeking from behind the tree trunk, jealous, red angry flush. medium shot",
+            "prompt": "a park bench under a single tree. on the right, a young woman in a white dress and a young man with curly black hair in a black coat sitting together on the bench, gazing at each other, small red hearts floating; Jean (on the left) hiding behind the tree trunk, only his bald head and one eye peeking out, jealous, red angry flush. medium shot",
             "cast": [
               "valjean"
             ],
             "file": "images/dossier-18.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -544,6 +556,7 @@
             ],
             "file": "images/dossier-19.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -555,10 +568,10 @@
           "caption": "Gavroche, un gamin des rues, ramasse des cartouches sous les balles pour la barricade. Il y est tué.",
           "bubbles": [],
           "image": {
-            "prompt": "a small street boy seen from behind (in the middle) with an oversized grey cap, a red scarf and baggy trousers, holding a small basket, walking alone towards a cloud of grey smoke beyond a pile of paving stones. empty street, quiet and sober, no violence shown. wide shot",
+            "prompt": "a small 1830s street boy seen from behind (in the middle) wearing an oversized old-fashioned grey flat cap, a red scarf, a patched jacket and baggy trousers, holding a small wicker basket, walking alone towards a cloud of grey smoke beyond a pile of paving stones. empty street, quiet and sober mood, no hearts, no sparkles, no violence shown. wide shot",
             "cast": [],
             "file": "images/dossier-20.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -586,6 +599,7 @@
             ],
             "file": "images/dossier-21.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -608,6 +622,7 @@
             ],
             "file": "images/dossier-22.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -624,13 +639,13 @@
             }
           ],
           "image": {
-            "prompt": "a sewer exit opening onto a river bank at dusk. Jean (on the left) still carrying the young man, stopped, surprised; Javert (on the right) turning his back to them, looking away stiffly, arms crossed, troubled frown, small light-blue sweat drop. medium shot",
+            "prompt": "a sewer exit opening onto a grey river bank at dusk. Jean (on the left) carrying an unconscious adult young man with curly black hair and a black coat over his shoulder, stopped, surprised; Javert (on the right) turning his back to them, looking away stiffly, arms crossed, troubled frown, small light-blue sweat drop. medium shot",
             "cast": [
               "valjean",
               "javert"
             ],
             "file": "images/dossier-23.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -642,12 +657,12 @@
           "caption": "Déchiré entre la loi et la pitié, Javert ne s’en remet pas : il se jette dans la Seine.",
           "bubbles": [],
           "image": {
-            "prompt": "a quiet stone bridge at night over a dark river, a few grey street lamps. Javert (in the middle) seen from behind, standing alone at the parapet, top hat in his hand, head bowed, shoulders slumped. empty and calm, sober mood, nobody else around. wide shot",
+            "prompt": "a quiet stone bridge at night over a dark river, a few grey street lamps. Javert (in the middle) seen from behind, standing alone at the parapet, top hat in his hand, head bowed, shoulders slumped. empty and calm, sober mood, nobody else around, no hearts, no sparkles, no furniture. wide shot",
             "cast": [
               "javert"
             ],
             "file": "images/dossier-24.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -670,6 +685,7 @@
             ],
             "file": "images/dossier-25.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -681,12 +697,12 @@
           "caption": "Marius apprend trop tard qui l’a sauvé. Valjean meurt en paix, éclairé par les chandeliers de l’évêque.",
           "bubbles": [],
           "image": {
-            "prompt": "a bare room with an armchair. Jean (in the middle), old with white hair, resting in the armchair with a peaceful smile, eyes closed; two silver candlesticks on a small table beside him, small yellow glow; a young couple kneeling at his side holding his hands. calm and sober. medium shot",
+            "prompt": "a bare room with an armchair. Jean (in the middle), old with white stubble, resting in the armchair, eyes peacefully closed, gentle smile, calm relaxed face; two silver candlesticks with lit candles on a small table beside him, soft yellow glow; a young woman in a white dress and a young man with curly black hair kneeling at his sides, holding his hands, light-blue tears. calm and sober, no hearts. medium shot",
             "cast": [
               "valjean"
             ],
             "file": "images/dossier-26.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -714,6 +730,7 @@
             ],
             "file": "images/dossier-27.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -734,13 +751,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare writing desk by a window with a grey sea outside. Victor (on the right) holding up a small blank card towards the reader with a smug face, eyebrows raised, pink blush of pride; Jean (on the left) arms crossed, deadpan, half-closed eyes, completely unimpressed. medium shot",
+            "prompt": "a bare writing desk by a window with a grey sea outside. Victor (on the right side of the image, short white hair, white beard, black frock coat, red scarf) holding up a small blank card towards the reader with a smug face, eyebrows raised, pink blush of pride; Jean (on the left side of the image, bald, grey worker's jacket) arms crossed, deadpan, half-closed eyes, completely unimpressed. medium shot",
             "cast": [
               "hugo",
               "valjean"
             ],
             "file": "images/dossier-28.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1,
             "via": "fal"
           }
@@ -768,6 +785,7 @@
             ],
             "file": "images/dossier-29.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -798,6 +816,7 @@
             ],
             "file": "images/dossier-30.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -881,14 +900,14 @@
         }
       ],
       "cover": {
-        "prompt": "A small wooden pier by the sea. skipper in the centre, standing on the bow of a giant three-hulled racing sailboat, fist raised in triumph, light-blue sweat drops. lambda on the left on the pier, holding a blank protest sign, jaw dropped. hote on the right, arms wide open in welcome, tiny pink blush on his cheeks. Wide shot, calm empty sky above.",
+        "prompt": "A small wooden pier by the sea. skipper (sandy hair, red sailing jacket) in the centre, standing on the bow of a giant three-hulled racing sailboat, fist raised in triumph, light-blue sweat drops. lambda (messy black hair, grey hoodie) on the left on the pier, holding a completely plain white protest sign with nothing on it, jaw dropped. hote on the right, arms wide open in welcome, tiny pink blush on his cheeks. Wide shot, calm empty sky above.",
         "cast": [
           "skipper",
           "lambda",
           "hote"
         ],
         "file": "images/actu-cover.webp",
-        "status": "done",
+        "status": "retry",
         "attempts": 1,
         "via": "fal"
       },
@@ -916,6 +935,7 @@
             ],
             "file": "images/actu-01.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -943,6 +963,7 @@
             ],
             "file": "images/actu-02.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -970,6 +991,7 @@
             ],
             "file": "images/actu-03.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -997,6 +1019,7 @@
             ],
             "file": "images/actu-04.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1024,6 +1047,7 @@
             ],
             "file": "images/actu-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1051,6 +1075,7 @@
             ],
             "file": "images/actu-06.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -1166,6 +1191,7 @@
         ],
         "file": "images/cultureg-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1
       },
       "cases": [
@@ -1192,6 +1218,7 @@
             ],
             "file": "images/cultureg-01.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1218,6 +1245,7 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1244,6 +1272,7 @@
             ],
             "file": "images/cultureg-03.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1267,6 +1296,7 @@
             ],
             "file": "images/cultureg-04.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1288,6 +1318,7 @@
             ],
             "file": "images/cultureg-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1307,13 +1338,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare farmyard with a single wooden post, a thick rope tied to a round dial gauge. Max (on the left) counting on his raised fingers like an orchestra conductor; Gaston (on the right) holding the rope, frozen mid-pull, confused, one eyebrow raised. medium shot",
+            "prompt": "a bare farmyard with a single wooden post, a thick rope tied to a round dial gauge. Max (on the left, black frock coat, big black moustache, round glasses) holding up three fingers like an orchestra conductor counting; Gaston (on the right, white shirt with rolled sleeves, black braces, grey trousers) gripping the rope with both hands, frozen mid-pull, confused, one eyebrow raised, light-blue sweat drop. medium shot",
             "cast": [
               "ringel",
               "gaston"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -1344,13 +1375,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare grey laboratory with one rope attached to a gauge on the wall. the student (on the right) blindfolded, pulling the rope, nobody behind him; the researcher (on the left) holding a clipboard, nodding with a fake reassuring smile. medium shot",
+            "prompt": "a bare grey laboratory with one rope attached to a gauge on the wall. the student (on the right, shaggy long hair, white t-shirt, flared jeans, black blindfold over his eyes) pulling the rope with both hands, leaning back, nobody behind him; the researcher (on the left, curly hair, black-rimmed glasses, white lab coat) holding a clipboard, nodding with a fake reassuring smile, tiny light-blue sweat drop. no animals. medium shot",
             "cast": [
               "psy",
               "cobaye"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -1367,6 +1398,7 @@
             ],
             "file": "images/cultureg-08.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1393,6 +1425,7 @@
             ],
             "file": "images/cultureg-09.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         }
@@ -1468,6 +1501,7 @@
         ],
         "file": "images/insolite-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1
       },
       "cases": [
@@ -1494,6 +1528,7 @@
             ],
             "file": "images/insolite-01.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1515,6 +1550,7 @@
             ],
             "file": "images/insolite-02.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1536,6 +1572,7 @@
             ],
             "file": "images/insolite-03.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1564,6 +1601,7 @@
             ],
             "file": "images/insolite-04.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1590,6 +1628,7 @@
             ],
             "file": "images/insolite-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -1605,12 +1644,12 @@
             }
           ],
           "image": {
-            "prompt": "a tiny bare kitchen with one chair. Cornet (in the centre) holding an opened letter, frozen, huge eyes, tiny sweat drop, mouth a small o, looking straight at the viewer. close-up",
+            "prompt": "a tiny bare kitchen with one chair. Cornet (in the centre, boyish face, unruly black curls, oversized white wool jersey) holding an opened blank letter in both hands, frozen, huge eyes, tiny light-blue sweat drop, pink blush, mouth a small o, looking straight at the viewer. bold black lines. close-up",
             "cast": [
               "cornet"
             ],
             "file": "images/insolite-06.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         },
@@ -1626,12 +1665,12 @@
             }
           ],
           "image": {
-            "prompt": "plain empty background. Cornet (in the centre) sitting on a wooden stool facing the viewer like in an interview, holding a small trophy cup, smug relaxed smile, one eyebrow raised. medium shot",
+            "prompt": "plain empty background. Cornet (in the centre, unruly black curls, oversized white wool jersey, black shorts) sitting on a wooden stool facing the viewer like in an interview, holding up a small shiny metal trophy cup with two handles, smug relaxed smile, one eyebrow raised, yellow sparkles around the cup. no animals. medium shot",
             "cast": [
               "cornet"
             ],
             "file": "images/insolite-07.webp",
-            "status": "done",
+            "status": "retry",
             "attempts": 1
           }
         }
