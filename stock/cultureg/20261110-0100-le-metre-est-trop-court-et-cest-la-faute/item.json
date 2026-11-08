@@ -14,21 +14,21 @@
           "id": "delambre",
           "look": "Jean-Baptiste, a 1790s French astronomer in his forties, bald on top with grey tufts on the sides, big round nose, calm patient face, black coat, carrying a round brass measuring instrument",
           "file": "cast/cultureg-delambre.png",
-          "status": "pending",
+          "status": "done",
           "role": "the calm, patient astronomer who measures the north half; steady, upright, explains things gently"
         },
         {
           "id": "mechain",
           "look": "Pierre, a thin anxious 1790s French astronomer, tall messy powdered wig, deep dark circles under the eyes, bony fingers, black coat, a small notebook always clutched to his chest, a blue scarf as the only colour",
           "file": "cast/cultureg-mechain.png",
-          "status": "pending",
+          "status": "done",
           "role": "the anxious perfectionist who measures the south and hides an error; hunched, biting his nails, hugging his notebook"
         },
         {
           "id": "milicien",
           "look": "a short stocky suspicious 1790s village militiaman, bushy black moustache, narrowed eyes, white shirt, black waistcoat, a red phrygian cap as the only colour, holding a pike",
           "file": "cast/cultureg-milicien.png",
-          "status": "pending",
+          "status": "done",
           "role": "a suspicious village militiaman who takes the astronomers for spies; arms crossed, squinting, blocking the way"
         }
       ],
@@ -39,8 +39,8 @@
           "mechain"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -65,8 +65,8 @@
               "mechain"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -91,8 +91,8 @@
               "mechain"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -117,8 +117,8 @@
               "mechain"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -155,8 +155,8 @@
               "milicien"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -181,8 +181,8 @@
               "milicien"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -202,8 +202,8 @@
               "mechain"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -223,8 +223,8 @@
               "mechain"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -244,8 +244,8 @@
               "delambre"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -270,8 +270,8 @@
               "mechain"
             ],
             "file": "images/cultureg-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -296,8 +296,8 @@
               "mechain"
             ],
             "file": "images/cultureg-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

@@ -133,8 +133,7 @@
             "file": "images/cultureg-03.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal",
-            "redo": true
+            "via": "fal"
           }
         },
         {
@@ -165,8 +164,7 @@
             "file": "images/cultureg-04.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal",
-            "redo": true
+            "via": "fal"
           }
         },
         {
@@ -224,7 +222,9 @@
             "status": "done",
             "attempts": 1,
             "via": "fal",
-            "redo": true
+            "redo": true,
+            "redo_attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (8f282ee8-45b3-440e-a73a-d0652f6a1171)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -279,8 +279,7 @@
             "file": "images/cultureg-08.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal",
-            "redo": true
+            "via": "fal"
           }
         },
         {

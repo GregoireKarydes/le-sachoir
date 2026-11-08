@@ -163,8 +163,9 @@
               "sov"
             ],
             "file": "images/dossier-05.webp",
-            "status": "retry",
-            "attempts": 0
+            "status": "pending",
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (61c7822b-4c71-49a4-a4bf-42bd95ca5f5b)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {

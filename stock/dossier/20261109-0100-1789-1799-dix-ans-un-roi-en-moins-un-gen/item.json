@@ -126,8 +126,7 @@
             ],
             "file": "images/dossier-03.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -235,8 +234,7 @@
             ],
             "file": "images/dossier-07.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -289,8 +287,7 @@
             ],
             "file": "images/dossier-09.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -365,8 +362,7 @@
             ],
             "file": "images/dossier-12.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -532,8 +528,7 @@
             ],
             "file": "images/dossier-19.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -560,7 +555,9 @@
             "file": "images/dossier-20.webp",
             "status": "done",
             "attempts": 1,
-            "redo": true
+            "redo": true,
+            "redo_attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (a35bcb7c-0799-4e38-8df4-0c6954b8a4be)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -723,8 +720,7 @@
             ],
             "file": "images/dossier-27.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -885,8 +881,7 @@
             ],
             "file": "images/dossier-33.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -908,8 +903,7 @@
             "file": "images/dossier-34.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal",
-            "redo": true
+            "via": "fal"
           }
         },
         {

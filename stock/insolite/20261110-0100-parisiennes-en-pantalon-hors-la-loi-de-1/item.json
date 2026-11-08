@@ -14,14 +14,14 @@
           "id": "dubois",
           "look": "Louis Nicolas, the Paris police prefect in 1800, stiff and pompous, big grey sideburns, black bicorne hat, black high-collared uniform coat, a red sash as the only colour",
           "file": "cast/insolite-dubois.png",
-          "status": "pending",
+          "status": "done",
           "role": "the pompous police prefect who signs the ban; stiff, chin up, finger wagging"
         },
         {
           "id": "rosa",
           "look": "Rosa, a French woman painter of the 1850s, short cropped curly dark hair, confident grin, white loose smock, black trousers, a paintbrush in hand",
           "file": "cast/insolite-rosa.png",
-          "status": "pending",
+          "status": "done",
           "role": "the painter who wears trousers with a permit to work at horse fairs; confident, grinning, hands on hips"
         },
         {

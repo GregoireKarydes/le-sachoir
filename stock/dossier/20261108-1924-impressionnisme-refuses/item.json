@@ -57,7 +57,11 @@
       ],
       "cover": {
         "prompt": "a bare riverbank with the easel in the middle. Claude (stocky, bushy black beard) painting fast at the easel, squinting at the sky, delighted; the juror (very tall, thin, white sideburns) behind him, raising the stamp, outraged; Zoé (small, yellow beanie) on the right, peeking at the canvas with a cheeky grin. wide shot",
-        "cast": ["monet", "jure", "zoe"],
+        "cast": [
+          "monet",
+          "jure",
+          "zoe"
+        ],
         "file": "images/dossier-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -69,12 +73,23 @@
           "tag": "Chapitre 1 · La guerre du Salon",
           "caption": "Aujourd’hui, on les adore. Alors pourquoi les impressionnistes ont-ils d’abord été traités de bâcleurs ?",
           "bubbles": [
-            { "who": "zoe", "text": "Les tableaux de Monet ? Ils sont sur tous les tote bags !", "side": "l" },
-            { "who": "jure", "text": "À leurs débuts, on ne les voulait sur aucun mur officiel.", "side": "r" }
+            {
+              "who": "zoe",
+              "text": "Les tableaux de Monet ? Ils sont sur tous les tote bags !",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "À leurs débuts, on ne les voulait sur aucun mur officiel.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare white museum wall with one empty golden frame. Zoé (small, yellow beanie) on the left proudly holding up her tote bag, grinning; the juror (very tall, thin, white sideburns, monocle) on the right, looking down at the bag through his monocle, deeply disgusted, nose in the air. medium shot",
-            "cast": ["zoe", "jure"],
+            "cast": [
+              "zoe",
+              "jure"
+            ],
             "file": "images/dossier-01.webp",
             "status": "pending",
             "attempts": 0
@@ -86,13 +101,28 @@
           "tag": "Paris, années 1860",
           "caption": "À l’époque, un peintre se fait connaître au Salon, la grande exposition officielle. Mais un jury trie les tableaux.",
           "bubbles": [
-            { "who": "jure", "text": "Héros antiques, fini lisse, aucune trace de pinceau. Sinon : refusé.", "side": "r" },
-            { "who": "monet", "text": "Vous n’avez même pas regardé le mien !", "side": "l" },
-            { "who": "jure", "text": "Gain de temps.", "side": "r" }
+            {
+              "who": "jure",
+              "text": "Héros antiques, fini lisse, aucune trace de pinceau. Sinon : refusé.",
+              "side": "r"
+            },
+            {
+              "who": "monet",
+              "text": "Vous n’avez même pas regardé le mien !",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "Gain de temps.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a long bare jury table in a grand empty hall. the juror (very tall, thin, white sideburns) on the right slamming the stamp down on a canvas without looking at it, eyes closed, smug; Claude (stocky, bushy black beard) on the left holding out his canvas with both arms, outraged, red angry flush. medium shot",
-            "cast": ["jure", "monet"],
+            "cast": [
+              "jure",
+              "monet"
+            ],
             "file": "images/dossier-02.webp",
             "status": "pending",
             "attempts": 0,
@@ -105,7 +135,15 @@
           "tag": "Document d’époque",
           "title": "Le tableau qui a fait scandale en 1863",
           "text": "Cette année-là, le jury refuse 3 000 œuvres sur 5 000. Napoléon III les fait exposer à part : c’est le « Salon des refusés ». Ce tableau de Manet y choque : une femme nue dans un pique-nique de son temps.",
-          "photo": { "commons": "File:Edouard Manet - Luncheon on the Grass - Google Art Project.jpg" }
+          "photo": {
+            "commons": "File:Edouard Manet - Luncheon on the Grass - Google Art Project.jpg",
+            "credit": "Édouard Manet",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg",
+            "file": "images/photo-3-edouard-manet-luncheon-on-the-grass.webp",
+            "status": "done"
+          }
         },
         {
           "n": 4,
@@ -113,12 +151,23 @@
           "tag": "1874",
           "caption": "Dix ans plus tard, fatigués d’être refusés, Monet et ses amis ont une idée folle : exposer eux-mêmes, sans jury.",
           "bubbles": [
-            { "who": "monet", "text": "On loue une salle, on accroche, on vend !", "side": "l" },
-            { "who": "leroy", "text": "Formidable. J’apporte mon carnet.", "side": "r" }
+            {
+              "who": "monet",
+              "text": "On loue une salle, on accroche, on vend !",
+              "side": "l"
+            },
+            {
+              "who": "leroy",
+              "text": "Formidable. J’apporte mon carnet.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare room with a few canvases leaning against the wall. Claude (stocky, bushy black beard) on the left, arms wide open, beaming with excitement, yellow sparkles; in a doorway on the right, Louis (short, round, top hat, red carnation) peeking in, holding his tiny notebook and pencil, with a sly menacing smirk. medium shot",
-            "cast": ["monet", "leroy"],
+            "cast": [
+              "monet",
+              "leroy"
+            ],
             "file": "images/dossier-03.webp",
             "status": "pending",
             "attempts": 0,
@@ -131,12 +180,23 @@
           "tag": "Chapitre 2 · Peindre vite, peindre dehors",
           "caption": "Mais qu’ont-ils de si choquant ? Ils peignent la vie de tous les jours, et on voit leurs coups de pinceau.",
           "bubbles": [
-            { "who": "zoe", "text": "On voit le pinceau… c’est grave ?", "side": "l" },
-            { "who": "jure", "text": "C’est comme montrer les coulisses au théâtre. Indécent.", "side": "r" }
+            {
+              "who": "zoe",
+              "text": "On voit le pinceau… c’est grave ?",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "C’est comme montrer les coulisses au théâtre. Indécent.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a plain background with the easel holding a canvas covered in big visible brushstrokes. Zoé (small, yellow beanie) on the left leaning close to the canvas, curious, head tilted; the juror (very tall, thin, white sideburns) on the right covering his monocle with one hand, scandalised. medium shot",
-            "cast": ["zoe", "jure"],
+            "cast": [
+              "zoe",
+              "jure"
+            ],
             "file": "images/dossier-04.webp",
             "status": "pending",
             "attempts": 0,
@@ -149,12 +209,23 @@
           "tag": "En plein air",
           "caption": "Ils peignent dehors, « en plein air », pour attraper la lumière du moment, parce qu’elle change sans cesse.",
           "bubbles": [
-            { "who": "monet", "text": "Vite, vite, le nuage arrive !", "side": "l" },
-            { "who": "zoe", "text": "Il te reste trois minutes de soleil.", "side": "r" }
+            {
+              "who": "monet",
+              "text": "Vite, vite, le nuage arrive !",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Il te reste trois minutes de soleil.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare riverbank with one small cloud about to cover the sun. Claude (stocky, bushy black beard) on the left painting frantically at the easel, brush blurred with speed, light-blue sweat drop; Zoé (small, yellow beanie) on the right holding up a phone like a stopwatch, calm and amused. wide shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-05.webp",
             "status": "pending",
             "attempts": 0,
@@ -167,12 +238,23 @@
           "tag": "1841",
           "caption": "Sortir son chevalet devient facile grâce au tube de peinture en métal, breveté en 1841 par l’Américain John Goffe Rand.",
           "bubbles": [
-            { "who": "zoe", "text": "Et avant, la peinture voyageait comment ?", "side": "r" },
-            { "who": "monet", "text": "Dans des vessies de cochon ficelées. Très chic en pique-nique.", "side": "l" }
+            {
+              "who": "zoe",
+              "text": "Et avant, la peinture voyageait comment ?",
+              "side": "r"
+            },
+            {
+              "who": "monet",
+              "text": "Dans des vessies de cochon ficelées. Très chic en pique-nique.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "same riverbank, close on the easel. Claude (stocky, bushy black beard) on the left proudly holding up the tube between two fingers like a jewel; Zoé (small, yellow beanie) on the right pinching her nose and grimacing at a small tied-up pig bladder lying on the grass. medium shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-06.webp",
             "status": "pending",
             "attempts": 0
@@ -197,12 +279,23 @@
           "tag": "",
           "caption": "Renoir, l’un d’eux, le dira plus tard : sans les couleurs en tubes, il n’y aurait eu ni Monet, ni Cézanne, ni impressionnisme.",
           "bubbles": [
-            { "who": "monet", "text": "Je dois toute ma carrière à un tube.", "side": "l" },
-            { "who": "zoe", "text": "Comme pas mal de chanteurs.", "side": "r" }
+            {
+              "who": "monet",
+              "text": "Je dois toute ma carrière à un tube.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Comme pas mal de chanteurs.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "same riverbank. Claude (stocky, bushy black beard) on the left hugging the tube to his chest with closed eyes, emotional, tiny red hearts; Zoé (small, yellow beanie) on the right with one eyebrow raised, deadpan, arms crossed. medium shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-07.webp",
             "status": "pending",
             "attempts": 0
@@ -214,12 +307,23 @@
           "tag": "Chapitre 3 · Avril 1874",
           "caption": "Le 15 avril 1874, ils ouvrent leur exposition dans l’ancien atelier du photographe Nadar, boulevard des Capucines, à Paris.",
           "bubbles": [
-            { "who": "monet", "text": "Renoir, Degas, Cézanne, Pissarro, Sisley… et moi.", "side": "l" },
-            { "who": "zoe", "text": "Le futur musée d’Orsay, en colocation.", "side": "r" }
+            {
+              "who": "monet",
+              "text": "Renoir, Degas, Cézanne, Pissarro, Sisley… et moi.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Le futur musée d’Orsay, en colocation.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare gallery room with many small frames hung close together on a plain wall. Claude (stocky, bushy black beard) on the left hammering a nail to hang a frame, proud; Zoé (small, yellow beanie) on the right reading a list of names on a sheet of paper, impressed, mouth open. wide shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-08.webp",
             "status": "pending",
             "attempts": 0,
@@ -245,12 +349,23 @@
           "tag": "Le chiffre",
           "caption": "Une trentaine d’artistes, environ 175 œuvres, entrée à un franc. Le premier jour, 175 visiteurs viennent voir.",
           "bubbles": [
-            { "who": "monet", "text": "175 visiteurs pour 175 tableaux.", "side": "l" },
-            { "who": "zoe", "text": "Un fan chacun. C’est équitable.", "side": "r" }
+            {
+              "who": "monet",
+              "text": "175 visiteurs pour 175 tableaux.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Un fan chacun. C’est équitable.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "same gallery room, a small table at the entrance with the cashbox. Claude (stocky, bushy black beard) on the left sitting behind the table counting a few coins with great care, hopeful; Zoé (small, yellow beanie) on the right pointing at the frames one by one as if counting them, amused. medium shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-09.webp",
             "status": "pending",
             "attempts": 0
@@ -262,12 +377,23 @@
           "tag": "",
           "caption": "Monet expose un port du Havre au petit matin, peint en 1872. Pour le catalogue, il faut lui trouver un titre.",
           "bubbles": [
-            { "who": "monet", "text": "Mettez « Impression, soleil levant ».", "side": "l" },
-            { "who": "zoe", "text": "On dirait un titre de brouillon.", "side": "r" }
+            {
+              "who": "monet",
+              "text": "Mettez « Impression, soleil levant ».",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "On dirait un titre de brouillon.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "same gallery room. Claude (stocky, bushy black beard) on the left holding up the sunrise canvas with both hands, inspired, looking at it lovingly; Zoé (small, yellow beanie) on the right writing in a small catalogue booklet, pencil paused, doubtful frown. medium shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-10.webp",
             "status": "pending",
             "attempts": 0
@@ -279,7 +405,15 @@
           "tag": "En vrai",
           "title": "Le vrai « Impression, soleil levant »",
           "text": "Le tableau de 1872, aujourd’hui au musée Marmottan Monet, à Paris. Quelques touches de bleu, un soleil orange : le port du Havre à l’aube, peint vite pour saisir l’instant.",
-          "photo": { "commons": "File:Claude Monet, Impression, soleil levant.jpg" }
+          "photo": {
+            "commons": "File:Claude Monet, Impression, soleil levant.jpg",
+            "credit": "Claude Monet",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant.jpg",
+            "file": "images/photo-14-claude-monet-impression-soleil-leva.webp",
+            "status": "done"
+          }
         },
         {
           "n": 15,
@@ -287,12 +421,23 @@
           "tag": "",
           "caption": "Le critique Louis Leroy visite l’exposition. Il se moque du titre : « Impression, impression, j’en étais sûr. »",
           "bubbles": [
-            { "who": "leroy", "text": "C’est flou. Et ça se dit terminé ?", "side": "l" },
-            { "who": "zoe", "text": "Recule de trois pas, Louis.", "side": "r" }
+            {
+              "who": "leroy",
+              "text": "C’est flou. Et ça se dit terminé ?",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Recule de trois pas, Louis.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "same gallery room, the sunrise canvas hanging on the wall. Louis (short, round, top hat, red carnation) on the left with his nose almost touching the canvas, squinting through his pince-nez, smirking; Zoé (small, yellow beanie) on the right pulling him back by the coat tail, exasperated. medium shot",
-            "cast": ["leroy", "zoe"],
+            "cast": [
+              "leroy",
+              "zoe"
+            ],
             "file": "images/dossier-11.webp",
             "status": "pending",
             "attempts": 0
@@ -304,12 +449,23 @@
           "tag": "",
           "caption": "Son article, dans le journal satirique Le Charivari, s’intitule « L’exposition des impressionnistes ». Une moquerie… qui va rester.",
           "bubbles": [
-            { "who": "monet", "text": "Il nous traite d’« impressionnistes » !", "side": "l" },
-            { "who": "zoe", "text": "Garde-le. Ça sonne bien.", "side": "r" }
+            {
+              "who": "monet",
+              "text": "Il nous traite d’« impressionnistes » !",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Garde-le. Ça sonne bien.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "same gallery room. Claude (stocky, bushy black beard) on the left holding a crumpled blank newspaper wide open, furious, red angry flush; Zoé (small, yellow beanie) on the right reading over his shoulder, thumb up, delighted. medium shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-12.webp",
             "status": "pending",
             "attempts": 0
@@ -321,12 +477,23 @@
           "tag": "Mai 1874",
           "caption": "Bilan : environ 4 000 visiteurs en un mois. Mais les recettes ne couvrent même pas les frais.",
           "bubbles": [
-            { "who": "monet", "text": "On a gagné un nom.", "side": "l" },
-            { "who": "zoe", "text": "Et perdu de l’argent.", "side": "r" }
+            {
+              "who": "monet",
+              "text": "On a gagné un nom.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Et perdu de l’argent.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "same gallery room, now empty. Claude (stocky, bushy black beard) on the left slumped over the open empty cashbox on the table, melting with despair; Zoé (small, yellow beanie) on the right patting his back, sympathetic little smile. medium shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-13.webp",
             "status": "pending",
             "attempts": 0
@@ -338,12 +505,22 @@
           "tag": "Chapitre 4 · Du rire au triomphe",
           "caption": "Un marchand de tableaux croit en eux : Paul Durand-Ruel. Il achète leurs toiles et les expose dans sa galerie.",
           "bubbles": [
-            { "who": "Paul Durand-Ruel", "text": "Je prends celle-ci. Et celle-là. Et celle-là aussi.", "side": "r" },
-            { "who": "monet", "text": "Vous avez vu qu’elles sont floues ?", "side": "l" }
+            {
+              "who": "Paul Durand-Ruel",
+              "text": "Je prends celle-ci. Et celle-là. Et celle-là aussi.",
+              "side": "r"
+            },
+            {
+              "who": "monet",
+              "text": "Vous avez vu qu’elles sont floues ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a bare art gallery with a few canvases on the wall. Claude (stocky, bushy black beard) on the left, stunned, holding a stack of canvases; on the right a calm middle-aged art dealer with neat grey hair and a plain dark coat pointing at the canvases one after the other, very decided. medium shot",
-            "cast": ["monet"],
+            "cast": [
+              "monet"
+            ],
             "file": "images/dossier-14.webp",
             "status": "pending",
             "attempts": 0,
@@ -356,12 +533,22 @@
           "tag": "1886",
           "caption": "En 1886, il montre plus de 300 tableaux impressionnistes à New York. Le public américain s’enthousiasme.",
           "bubbles": [
-            { "who": "Un collectionneur américain", "text": "Je prends le flou. Et le flou d’à côté.", "side": "l" },
-            { "who": "zoe", "text": "Il suffisait de traverser l’océan.", "side": "r" }
+            {
+              "who": "Un collectionneur américain",
+              "text": "Je prends le flou. Et le flou d’à côté.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Il suffisait de traverser l’océan.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare exhibition hall with frames on the wall and a small crowd of tiny visitors. on the left a big enthusiastic collector with a top hat and a thick moustache waving a blank cheque at the frames; Zoé (small, yellow beanie) on the right, arms crossed, smug, yellow sparkles. wide shot",
-            "cast": ["zoe"],
+            "cast": [
+              "zoe"
+            ],
             "file": "images/dossier-15.webp",
             "status": "pending",
             "attempts": 0,
@@ -374,12 +561,23 @@
           "tag": "1892-1893",
           "caption": "Monet pousse l’idée au bout : il peint plus de trente fois la cathédrale de Rouen, à différentes heures du jour.",
           "bubbles": [
-            { "who": "zoe", "text": "Trente fois la même église ?", "side": "r" },
-            { "who": "monet", "text": "Jamais la même lumière.", "side": "l" }
+            {
+              "who": "zoe",
+              "text": "Trente fois la même église ?",
+              "side": "r"
+            },
+            {
+              "who": "monet",
+              "text": "Jamais la même lumière.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a small room with a window looking onto a tall gothic cathedral facade. Claude (stocky, bushy black beard) on the left painting at the easel by the window, surrounded by dozens of canvases of the same facade stacked everywhere, focused; Zoé (small, yellow beanie) on the right buried up to her waist in canvases, baffled, light-blue sweat drop. wide shot",
-            "cast": ["monet", "zoe"],
+            "cast": [
+              "monet",
+              "zoe"
+            ],
             "file": "images/dossier-16.webp",
             "status": "pending",
             "attempts": 0,
@@ -405,12 +603,23 @@
           "tag": "Chapitre 5 · Le dernier mot",
           "caption": "12 novembre 1918, lendemain de l’armistice : Monet écrit à Clemenceau. Il offre à l’État des tableaux de nymphéas.",
           "bubbles": [
-            { "who": "zoe", "text": "Le peintre refusé offre ses toiles à l’État !", "side": "l" },
-            { "who": "jure", "text": "J’ai besoin de m’asseoir.", "side": "r" }
+            {
+              "who": "zoe",
+              "text": "Le peintre refusé offre ses toiles à l’État !",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "J’ai besoin de m’asseoir.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a plain background. Zoé (small, yellow beanie) on the left waving an open letter in the air, triumphant; the juror (very tall, thin, white sideburns) on the right sagging onto a small stool, the stamp dropping from his hand, monocle popping out, light-blue sweat drop. medium shot",
-            "cast": ["zoe", "jure"],
+            "cast": [
+              "zoe",
+              "jure"
+            ],
             "file": "images/dossier-17.webp",
             "status": "pending",
             "attempts": 0,
@@ -423,12 +632,23 @@
           "tag": "1927",
           "caption": "Quelques mois après la mort de Monet, ses Nymphéas sont installés au musée de l’Orangerie, à Paris, comme il le voulait.",
           "bubbles": [
-            { "who": "zoe", "text": "On est dedans ! Comme au bord de l’étang !", "side": "l" },
-            { "who": "jure", "text": "Je retire tout ce que j’ai dit.", "side": "r" }
+            {
+              "who": "zoe",
+              "text": "On est dedans ! Comme au bord de l’étang !",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "Je retire tout ce que j’ai dit.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare oval white room with one long curved panel of soft water lilies wrapping around the wall. Zoé (small, yellow beanie) on the left spinning with her arms wide open, amazed; the juror (very tall, thin, white sideburns) on the right sitting small and humble on the central bench, hat-in-hand posture, defeated. wide shot",
-            "cast": ["zoe", "jure"],
+            "cast": [
+              "zoe",
+              "jure"
+            ],
             "file": "images/dossier-18.webp",
             "status": "pending",
             "attempts": 0,
@@ -441,12 +661,23 @@
           "tag": "En résumé",
           "caption": "Refusés par le jury, ils ont exposé seuls, gardé l’insulte comme nom et fini par conquérir le public.",
           "bubbles": [
-            { "who": "jure", "text": "Et le jury, alors ? On se souvient de nous ?", "side": "r" },
-            { "who": "zoe", "text": "Pas vraiment. Mais on a gardé votre tampon.", "side": "l" }
+            {
+              "who": "jure",
+              "text": "Et le jury, alors ? On se souvient de nous ?",
+              "side": "r"
+            },
+            {
+              "who": "zoe",
+              "text": "Pas vraiment. Mais on a gardé votre tampon.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "same oval room. Zoé (small, yellow beanie) on the left looking straight at the viewer, holding up the stamp like a souvenir, cheeky grin; the juror (very tall, thin, white sideburns) on the right staring at the viewer in mute despair, slumped shoulders. medium shot",
-            "cast": ["zoe", "jure"],
+            "cast": [
+              "zoe",
+              "jure"
+            ],
             "file": "images/dossier-19.webp",
             "status": "pending",
             "attempts": 0
@@ -459,15 +690,42 @@
       },
       "story": "Dans les années 1860, un peintre français se fait connaître au Salon, l’exposition officielle de Paris. Son jury aime les grands sujets (histoire, mythologie) et le fini lisse, sans trace de pinceau. En 1863, il refuse 3 000 œuvres sur 5 000 ; Napoléon III les fait exposer à part, au « Salon des refusés », où Le Déjeuner sur l’herbe de Manet fait scandale.\nUne génération de jeunes peintres veut autre chose : peindre la vie moderne et, dehors, « en plein air », la lumière d’un instant. Comme elle change vite, ils peignent vite, en touches visibles. Le tube de peinture en métal, breveté en 1841 par l’Américain John Goffe Rand, leur permet d’emporter leurs couleurs ; Renoir dira que sans lui, il n’y aurait pas eu d’impressionnisme.\nLassés d’être refusés, Monet, Renoir, Degas, Cézanne, Pissarro, Sisley et d’autres fondent fin 1873 une société coopérative et exposent eux-mêmes, sans jury, à partir du 15 avril 1874, dans l’ancien atelier du photographe Nadar. On y voit Impression, soleil levant, un port du Havre peint par Monet en 1872. Dans Le Charivari, le critique Louis Leroy s’en moque et parle des « impressionnistes » : le nom reste. L’exposition attire environ 4 000 visiteurs mais perd de l’argent.\nHuit expositions suivent jusqu’en 1886. Le marchand Paul Durand-Ruel les soutient et, en 1886, montre plus de 300 de leurs tableaux à New York, avec succès. En 1918, Monet offre ses Nymphéas à l’État ; ils sont installés à l’Orangerie en 1927, après sa mort.",
       "sources": [
-        { "title": "Hérodote — 15 avril 1874, la première exposition impressionniste", "url": "https://www.herodote.net/15_avril_1874-evenement-18740415.php?resume=1" },
-        { "title": "World History Encyclopedia — Expositions impressionnistes de Paris, 1874-86", "url": "https://www.worldhistory.org/trans/fr/2-2000/expositions-impressionnistes-de-paris-1874-86/" },
-        { "title": "Paris ZigZag — Le Salon des refusés, ou l’inauguration d’une rébellion moderne", "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-salon-des-refuses-ou-linauguration-dune-rebellion-moderne/" },
-        { "title": "Britannica — Salon des Refusés", "url": "https://www.britannica.com/print/article/519629" },
-        { "title": "History Today — John Goffe Rand Invents Paint Tubes", "url": "https://www.historytoday.com/archive/months-past/john-goffe-rand-invents-paint-tubes" },
-        { "title": "Time Out — Impression, soleil levant (musée Marmottan Monet)", "url": "https://www.timeout.fr/paris/musee/marmottan-monet/impression-soleil-levant" },
-        { "title": "Philadelphia Museum of Art — Discovering the Impressionists: Paul Durand-Ruel", "url": "https://www.philamuseum.org/exhibitions/discovering-the-impressionists-paul-durand-ruel-and-the-new-painting" },
-        { "title": "Wikipedia — Rouen Cathedral (Monet series)", "url": "https://en.wikipedia.org/wiki/Rouen_Cathedral_(Monet_series)" },
-        { "title": "Musée de l’Orangerie — History of the Water Lilies cycle", "url": "https://www.musee-orangerie.fr/en/node/33" }
+        {
+          "title": "Hérodote — 15 avril 1874, la première exposition impressionniste",
+          "url": "https://www.herodote.net/15_avril_1874-evenement-18740415.php?resume=1"
+        },
+        {
+          "title": "World History Encyclopedia — Expositions impressionnistes de Paris, 1874-86",
+          "url": "https://www.worldhistory.org/trans/fr/2-2000/expositions-impressionnistes-de-paris-1874-86/"
+        },
+        {
+          "title": "Paris ZigZag — Le Salon des refusés, ou l’inauguration d’une rébellion moderne",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-salon-des-refuses-ou-linauguration-dune-rebellion-moderne/"
+        },
+        {
+          "title": "Britannica — Salon des Refusés",
+          "url": "https://www.britannica.com/print/article/519629"
+        },
+        {
+          "title": "History Today — John Goffe Rand Invents Paint Tubes",
+          "url": "https://www.historytoday.com/archive/months-past/john-goffe-rand-invents-paint-tubes"
+        },
+        {
+          "title": "Time Out — Impression, soleil levant (musée Marmottan Monet)",
+          "url": "https://www.timeout.fr/paris/musee/marmottan-monet/impression-soleil-levant"
+        },
+        {
+          "title": "Philadelphia Museum of Art — Discovering the Impressionists: Paul Durand-Ruel",
+          "url": "https://www.philamuseum.org/exhibitions/discovering-the-impressionists-paul-durand-ruel-and-the-new-painting"
+        },
+        {
+          "title": "Wikipedia — Rouen Cathedral (Monet series)",
+          "url": "https://en.wikipedia.org/wiki/Rouen_Cathedral_(Monet_series)"
+        },
+        {
+          "title": "Musée de l’Orangerie — History of the Water Lilies cycle",
+          "url": "https://www.musee-orangerie.fr/en/node/33"
+        }
       ]
     }
   ]

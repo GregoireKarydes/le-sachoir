@@ -1,7 +1,7 @@
 {
- "at": "2026-11-08T16:09:49.145743+01:00",
- "generated": 0,
+ "at": "2026-11-08T19:34:00.355891+01:00",
+ "generated": 15,
  "log": [
-  "quota: quota du jour déjà épuisé (data/images-quota.json) ; 9999-12-31 trop lointaine pour le renfort payant"
+  "réserve: 6400 neurones estimés aujourd'hui, 2600 gardés pour l'Actu"
  ]
 }
