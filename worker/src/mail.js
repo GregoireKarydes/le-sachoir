@@ -126,7 +126,7 @@ const POOLS = {
     "P.-S. Si cette newsletter atterrit dans vos promotions, glissez-la dans la boîte principale. Elle le vivra très bien.",
     "P.-S. Vous connaissez quelqu'un qui dit « en fait, techniquement » à chaque phrase ? Transférez-lui ce mail. Il a besoin de munitions.",
     "P.-S. Une erreur dans une BD ? Répondez à ce mail. Un humain lit tout, généralement avant son deuxième café.",
-    "P.-S. Aucune IA n'a été maltraitée pendant la fabrication de cette édition. Quelques crayons, peut-être.",
+    "P.-S. Aucun crayon n'a été maltraité pendant la fabrication de cette édition. Enfin, presque aucun.",
     "P.-S. Demain, même heure, même endroit. On apporte les anecdotes, vous apportez le café.",
     "P.-S. Si vous avez lu jusqu'ici, vous méritez une médaille. On n'en a pas. Voici un dossier à la place.",
   ],
@@ -145,7 +145,8 @@ export async function loadEdition(env, day) {
   if (!r2.ok) return null;
   const ed = await r2.json();
   const full = Object.fromEntries((ed.formats || []).map(f => [f.id, f]));
-  const formats = entry.formats.map(f => ({ ...f, final: full[f.id]?.final, kind: full[f.id]?.kind || f.kind, teaser: full[f.id]?.teaser || "" }));
+  const hidden = new Set(env.DB ? (await env.DB.prepare("SELECT fid FROM hidden WHERE ed = ?").bind(day).all()).results.map(r => r.fid) : []);
+  const formats = entry.formats.filter(f => !hidden.has(f.id)).map(f => ({ ...f, final: full[f.id]?.final, kind: full[f.id]?.kind || f.kind, teaser: full[f.id]?.teaser || "" }));
   return { day, formats, stories: formats.filter(f => f.id !== "quiz"), nl: ed.newsletter || {} };
 }
 

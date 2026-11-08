@@ -17,7 +17,8 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
       "minutes": 2,
       "theme": "Sciences physiques",  // OBLIGATOIRE pour cultureg, insolite et dossier : une des 32 thématiques, écrite exactement comme dans prompts/STOCK.md ; vide pour actu
       "cast": [
-        { "id": "schro", "look": "Erwin, a 1930s physicist, slick dark hair, round glasses, grey three-piece suit, dark red tie",
+        { "id": "schro", "name": "Erwin Schrödinger",   // nom affiché au-dessus de ses bulles (voir « Qui parle ? »)
+          "look": "Erwin, a 1930s physicist, slick dark hair, round glasses, grey three-piece suit, dark red tie",
           "file": "cast/cultureg-schro.png", "status": "pending" }
       ],
       "cover": { "prompt": "<scène de couverture, en anglais>", "cast": ["schro","cat"],
@@ -29,8 +30,8 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
           "tag": "1935",             // étiquette du récitatif (facultatif)
           "caption": "Erwin Schrödinger veut montrer qu’une idée de la physique quantique est absurde.",
           "bubbles": [
-            { "text": "Il me faut un exemple qui parle à tout le monde.", "side": "l" },
-            { "text": "Évitez les chats.", "side": "r" }
+            { "who": "schro", "text": "Il me faut un exemple qui parle à tout le monde.", "side": "l" },
+            { "who": "Un collègue", "text": "Évitez les chats.", "side": "r" }
           ],
           "image": {
             "prompt": "<description de la scène en anglais : décor, qui est où (left/right), expressions, gestes, accessoires>",
@@ -67,6 +68,13 @@ Une case de texte glissée dans la BD, entre deux cases dessinées, là où le l
 - Combien : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, jamais en case 1 ni deux de suite. **Actu : une après chaque case dessinée**, avec `"tag": "Ce qui se passe vraiment"` et `text` en trois lignes « Quoi : … \n Pourquoi ça compte : … \n Et maintenant : … » (50 mots max, sans `joke`) ; un libellé court suivi de « : » en début de ligne est affiché en gras. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
 - La numérotation `n` suit l’ordre de lecture (les cases dessinées et les cases texte se suivent : 1, 2, 3…).
 - Même ton que le Sachoir : simple, concret, une touche d’humour, mais la clarté d’abord.
+
+## Qui parle ? (champ `who` de chaque bulle)
+Le nom de la personne qui parle s'affiche en petit au-dessus de chaque bulle, pour qu'on sache toujours qui dit quoi.
+- Chaque personnage du casting a un **`name`** : le nom affiché, court et clair en français (« Louis XIV », « Marie Curie », « Un étudiant », « La voisine », « Le dynamomètre » est interdit : seuls des humains ou des animaux réels parlent).
+- Chaque bulle a un **`who`** : l'`id` d'un personnage du casting (on affiche alors son `name`), ou directement un nom en clair pour un figurant sans fiche (« Un passant », « La foule »).
+- **Actu** : jamais le nom complet d'une personnalité vivante ; `name` = la fonction (« Le Premier ministre », « Une députée », « Le patron d'une grande banque »).
+- Une bulle de pensée (`"thought": true`) garde son `who`.
 
 ## Case photo : une vraie image (`"kind": "photo"`)
 Quand c'est pertinent, une vraie photo ou un document d'époque aide à comprendre ou rend l'histoire tangible : le vrai visage du personnage, le lieu réel, l'objet, une carte ancienne, une affiche, un tableau célèbre dont on parle. Même place qu'un « Pour mieux comprendre » : entre deux cases dessinées. Elle ne coûte aucune image générée.

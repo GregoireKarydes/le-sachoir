@@ -48,28 +48,72 @@ def pending_images(fmt: dict) -> int:
     return sum(1 for i in imgs if i.get("status") != "done")
 
 
+_CFG = None
+
+
+def api_config() -> dict | None:
+    """Réponse de <api>/config (paywall, BD masquées), lue une fois par publication. None si pas d'API ou injoignable."""
+    global _CFG
+    if _CFG is not None:
+        return _CFG or None
+    cfg = json.loads((Path(__file__).resolve().parent / "site.json").read_text())
+    api = (cfg.get("api_url") or "").rstrip("/")
+    _CFG = {}
+    if api:
+        try:
+            # Bibliothèque standard seulement : le workflow Publication n'installe aucun paquet.
+            from urllib.request import Request, urlopen
+            with urlopen(Request(f"{api}/config", headers={"User-Agent": "LeSachoirPublication/1.0"}), timeout=10) as r:
+                _CFG = json.loads(r.read().decode())
+        except Exception as ex:  # noqa: BLE001
+            print(f"! API injoignable ({ex}) : réglages de la dernière publication")
+    return _CFG or None
+
+
+def _last_health(key, default):
+    try:
+        return json.loads((ROOT / "data" / "health.json").read_text()).get(key, default)
+    except Exception:  # noqa: BLE001
+        return default
+
+
 def paywall_on() -> bool:
     """Paywall du Grand Dossier sur le site publié. « auto » (défaut) : actif quand l'API le dit (clé Stripe en place).
     API injoignable : on garde l'état de la dernière publication, pour ne jamais exposer la suite par accident."""
-    cfg = json.loads((Path(__file__).resolve().parent / "site.json").read_text())
-    mode, api = cfg.get("paywall", "auto"), (cfg.get("api_url") or "").rstrip("/")
+    mode = json.loads((Path(__file__).resolve().parent / "site.json").read_text()).get("paywall", "auto")
     if isinstance(mode, bool):
         return mode
-    if not api:
-        return False
-    try:
-        # Bibliothèque standard seulement : le workflow Publication n'installe aucun paquet.
-        from urllib.request import Request, urlopen
-        with urlopen(Request(f"{api}/config", headers={"User-Agent": "LeSachoirPublication/1.0"}), timeout=10) as r:
-            on = bool(json.loads(r.read().decode()).get("paywall"))
-        print(f"Paywall du Grand Dossier : {'actif' if on else 'inactif'} (API)")
-        return on
-    except Exception as ex:  # noqa: BLE001
-        print(f"! API injoignable ({ex}) : paywall comme à la dernière publication")
-        try:
-            return bool(json.loads((ROOT / "data" / "health.json").read_text()).get("paywall"))
-        except Exception:  # noqa: BLE001
-            return False
+    cfg = api_config()
+    if cfg is None:
+        return bool(_last_health("paywall", False))
+    on = bool(cfg.get("paywall"))
+    print(f"Paywall du Grand Dossier : {'actif' if on else 'inactif'} (API)")
+    return on
+
+
+def hidden_set() -> set:
+    """BD masquées par l'admin (« date|format ») : absentes de l'index, du site et des pages publiques."""
+    cfg = api_config()
+    return set(cfg.get("hidden") or []) if cfg is not None else set(_last_health("hidden", []))
+
+
+def strip_hidden(dst: Path, keys: set):
+    """Retire du site publié les BD masquées d'une édition (texte et images propres à ces BD)."""
+    f = dst / "edition.json"
+    ed = json.loads(f.read_text())
+    gone = [x for x in ed.get("formats", []) if f"{dst.name}|{x.get('id')}" in keys]
+    if not gone:
+        return
+    ed["formats"] = [x for x in ed["formats"] if x not in gone]
+    keep = {x.get("cover", {}).get("file") for x in ed["formats"]}
+    for x in ed["formats"]:
+        for c in x.get("cases", []):
+            keep |= {(c.get(k) or {}).get("file") for k in ("image", "photo")}
+    for x in gone:
+        for o in [x.get("cover") or {}] + [(c.get(k) or {}) for c in x.get("cases", []) for k in ("image", "photo")]:
+            if o.get("file") and o["file"] not in keep:
+                (dst / o["file"]).unlink(missing_ok=True)
+    f.write_text(json.dumps(ed, ensure_ascii=False))
 
 
 def lock_format(fmt: dict) -> tuple[dict, set]:
@@ -167,6 +211,8 @@ def main(now: datetime | None = None):
     health = {"updated_at": now.isoformat(), "today": today.isoformat(), "problems": [], "days": [], "stock_moves": moves}
     gate = paywall_on()
     health["paywall"] = gate
+    hidden = hidden_set()
+    health["hidden"] = sorted(hidden)
     for d in sorted(EDITIONS.iterdir()):
         f = d / "edition.json"
         if not f.exists():
@@ -210,7 +256,7 @@ def main(now: datetime | None = None):
         if changed:
             f.write_text(json.dumps(ed, ensure_ascii=False, indent=2))
         if ed.get("status") == "published":
-            ready = [x for x in ed.get("formats", []) if ok(x)]
+            ready = [x for x in ed.get("formats", []) if ok(x) and f"{d.name}|{x.get('id')}" not in hidden]
             index.append({
                 "date": d.name,
                 "demo": bool(ed.get("demo")),
@@ -236,6 +282,7 @@ def main(now: datetime | None = None):
         src = EDITIONS / e["date"]
         dst = SITE / "editions" / e["date"]
         shutil.copytree(src, dst, ignore=shutil.ignore_patterns("cast", "*.md"))
+        strip_hidden(dst, hidden)
         if gate:
             lock_site_edition(dst)
     (SITE / ".nojekyll").write_text("")

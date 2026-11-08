@@ -281,12 +281,47 @@ async function adminSetPremium(req, env) {
   return r.meta.changes ? json({ ok: true }) : err("Compte introuvable.", 404);
 }
 
+/* ---------- BD masquées par l'admin ---------- */
+async function hiddenList(env) {
+  return (await env.DB.prepare("SELECT ed, fid FROM hidden ORDER BY ed").all()).results.map(r => `${r.ed}|${r.fid}`);
+}
+/* Relance la publication tout de suite si un jeton GitHub (Actions : écriture) est fourni ; sinon elle passe dans l'heure. */
+async function rebuildSite(env) {
+  if (!env.GH_DISPATCH_TOKEN) return false;
+  const r = await fetch("https://api.github.com/repos/GregoireKarydes/le-sachoir/actions/workflows/publish.yml/dispatches", {
+    method: "POST", body: JSON.stringify({ ref: "main" }),
+    headers: { authorization: `Bearer ${env.GH_DISPATCH_TOKEN}`, accept: "application/vnd.github+json", "user-agent": "le-sachoir-api" },
+  });
+  return r.status === 204;
+}
+async function adminPublished(env) {
+  const r = await fetch(`${env.APP_URL}editions/index.json?t=${Date.now()}`);
+  const editions = r.ok ? ((await r.json()).editions || []) : [];
+  const since = shiftDay(parisDay(), -120);
+  const [hid, reads] = await env.DB.batch([
+    env.DB.prepare("SELECT ed, fid, created_at, by_email FROM hidden"),
+    env.DB.prepare("SELECT ed, fid, COUNT(DISTINCT device) AS readers, COUNT(DISTINCT CASE WHEN type = 'done' THEN device END) AS done FROM events WHERE day >= ? AND type IN ('read', 'done', 'game') AND ed != '' GROUP BY ed, fid").bind(since),
+  ]);
+  const H = Object.fromEntries(hid.results.map(x => [`${x.ed}|${x.fid}`, x]));
+  const RD = Object.fromEntries(reads.results.map(x => [`${x.ed}|${x.fid}`, x]));
+  // Les BD masquées restent listées ici (l'index publié ne les contient plus) : on les reprend depuis la table.
+  const out = editions.map(e => ({ date: e.date, demo: !!e.demo, formats: e.formats.map(f => ({ ...f, hidden: !!H[`${e.date}|${f.id}`], readers: RD[`${e.date}|${f.id}`]?.readers || 0, done: RD[`${e.date}|${f.id}`]?.done || 0 })) }));
+  for (const h of hid.results) {
+    let e = out.find(x => x.date === h.ed);
+    if (!e) { e = { date: h.ed, formats: [] }; out.push(e); }
+    if (!e.formats.some(f => f.id === h.fid)) e.formats.push({ id: h.fid, title: "", hidden: true, missing: true, readers: RD[`${h.ed}|${h.fid}`]?.readers || 0 });
+  }
+  out.sort((a, b) => b.date.localeCompare(a.date));
+  return { editions: out, instant: !!env.GH_DISPATCH_TOKEN };
+}
+
 /* ---------- Routeur ---------- */
 async function route(req, env, url, ctx) {
   const p = url.pathname.replace(/\/+$/, "") || "/", M = req.method;
   if (p === "/") return json({ name: "Le Sachoir API", ok: true });
   // Ce qui est branché : l'appli et la publication s'adaptent (rien ne s'active sans sa clé).
   if (p === "/config") return json({
+    hidden: await hiddenList(env),
     mail: !!env.BREVO_API_KEY || env.DEV === "1", stripe: stripeOn(env),
     paywall: stripeOn(env) && env.PAYWALL !== "off",
     prices: { month: PLANS.month.amount, year: PLANS.year.amount },
@@ -413,6 +448,15 @@ async function route(req, env, url, ctx) {
     if (!isAdminEmail(env, u.email)) return err("Réservé à l'administration.", 403);
     if (p === "/admin/kpi") return json(await kpi(env, Math.max(7, Math.min(120, +url.searchParams.get("days") || 30))));
     if (p === "/admin/users" && M === "GET") return adminUsers(env, url);
+    if (p === "/admin/published") return json(await adminPublished(env));
+    if (p === "/admin/hide" && M === "POST") {
+      const b = await body(req);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(b.ed || "") || !/^(dossier|actu|cultureg|insolite|quiz)$/.test(b.fid || "")) return err("BD inconnue.");
+      if (b.hidden) await env.DB.prepare("INSERT OR IGNORE INTO hidden (ed, fid, created_at, by_email) VALUES (?, ?, ?, ?)").bind(b.ed, b.fid, nowIso(), u.email).run();
+      else await env.DB.prepare("DELETE FROM hidden WHERE ed = ? AND fid = ?").bind(b.ed, b.fid).run();
+      const rebuilt = await rebuildSite(env);
+      return json({ ok: true, hidden: await hiddenList(env), rebuilt });
+    }
     if (p === "/admin/queue") { const q = await adminQueue(env); return q.error ? err(q.error, 404) : json(q); }
     if (p === "/admin/item") { const it = await adminItem(env, url.searchParams.get("dir")); return it.error ? err(it.error, 404) : json(it); }
     if (p === "/admin/users" && M === "POST") return adminSetPremium(req, env);

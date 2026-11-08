@@ -82,4 +82,19 @@ def test_paywall_lu_sur_l_api_sans_paquet(monkeypatch, tmp_path):
     monkeypatch.setattr(urllib.request, "urlopen", lambda req, timeout=10: io.BytesIO(b'{"paywall": true}'))
     real = json.loads
     monkeypatch.setattr(publish.json, "loads", lambda t, *a, **k: {"api_url": "https://api.test", "paywall": "auto"} if isinstance(t, str) and '"base_url"' in t else real(t, *a, **k))
+    publish._CFG = None
     assert publish.paywall_on() is True
+    publish._CFG = None
+
+
+def test_bd_masquee_retiree_du_site(tmp_path):
+    d = tmp_path / "2026-11-08"; (d / "images").mkdir(parents=True)
+    ed = {"formats": [dossier(), {**dossier(), "id": "cultureg", "cover": {"file": "images/c.webp", "status": "done"},
+                                  "cases": [{"n": 1, "image": {"file": "images/cg-1.webp", "status": "done"}}]}]}
+    for n in ("images/c.webp", "images/cg-1.webp", "images/dossier-1.webp"):
+        (d / n).write_text("x")
+    (d / "edition.json").write_text(json.dumps(ed))
+    publish.strip_hidden(d, {"2026-11-08|cultureg"})
+    out = json.loads((d / "edition.json").read_text())
+    assert [f["id"] for f in out["formats"]] == ["dossier"]
+    assert not (d / "images/cg-1.webp").exists() and (d / "images/dossier-1.webp").exists()

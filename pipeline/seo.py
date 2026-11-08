@@ -155,6 +155,13 @@ def card(s):
 
 FREE_CASES = 4  # même règle que publish.py
 
+# Lien partagé avec un code de parrainage (?ref=) : le code est gardé et suit les liens vers l'appli,
+# pour qu'un ami qui s'inscrit rapporte bien un Grand Dossier à celui qui a partagé.
+REF_JS = """<script>document.addEventListener("DOMContentLoaded",function(){var r=new URLSearchParams(location.search).get("ref");if(!r)return;r=r.slice(0,16);
+try{if(!localStorage.getItem("sachoir.ref"))localStorage.setItem("sachoir.ref",r)}catch(e){}
+document.querySelectorAll("a[href]").forEach(function(a){var u;try{u=new URL(a.href)}catch(e){return}
+if(u.origin!==location.origin||/\/(histoires|themes|archives)\//.test(u.pathname))return;u.searchParams.set("ref",r);a.href=u.href})})</script>"""
+
 
 def photo_figure(c, img_base):
     """Case photo réelle (Wikimedia Commons) : image, titre, explication et source."""
@@ -182,6 +189,7 @@ def story_page(s, ed_dir: Path, related, gate=False):
     image = s["cover_abs"] or f"{BASE}assets/og.png"
     theme = f.get("theme", "")
     panels = []
+    names = {x.get("id"): x.get("name") for x in f.get("cast", []) or [] if x.get("name")}
     for c in f.get("cases", []):
         if c.get("kind") == "photo":
             fig = photo_figure(c, img_base)
@@ -202,7 +210,7 @@ def story_page(s, ed_dir: Path, related, gate=False):
         if c.get("caption"):
             tag = c.get("tag") or {"fact": "Les faits", "react": "La réaction"}.get(c.get("kind", ""), "")
             cap = f'<p class="cap">{"<b>" + e(tag) + "</b>" if tag else ""}{e(c["caption"])}</p>'
-        bubs = "".join(f'<p class="bub{" r" if b.get("side") == "r" else ""}">{e(b.get("text"))}</p>' for b in c.get("bubbles", []))
+        bubs = "".join(f'<p class="bub{" r" if b.get("side") == "r" else ""}">{("<b>" + e(names.get(b["who"], b["who"])) + " :</b> ") if b.get("who") else ""}{e(b.get("text"))}</p>' for b in c.get("bubbles", []))
         pic = f'<img src="{e(src)}" alt="{e(alt)}" loading="lazy" decoding="async" width="1024" height="1792">' if src else ""
         panels.append(f'<figure class="panel">{pic}<figcaption>{cap}{bubs}</figcaption></figure>')
     sources = "".join(f'<li><a href="{e(x.get("url"))}" rel="nofollow noopener">{e(x.get("title") or x.get("url"))}</a></li>' for x in f.get("sources", []) if x.get("url"))
@@ -223,7 +231,8 @@ def story_page(s, ed_dir: Path, related, gate=False):
                 {"@type": "ListItem", "position": 3, "name": f["title"], "item": canonical}]}]}
     extra = (f'<meta property="article:published_time" content="{published}">'
              + (f'<meta property="article:section" content="{e(theme)}">' if theme else "")
-             + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>')
+             + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+             + REF_JS)
     crumb_theme = f'<a href="{BASE}themes/{slugify(theme)}/">{e(theme)}</a> ›' if theme else ""
     body = f"""<main class="wrap" style="--fc:{COLOR.get(f['id'], '#1f8f5f')}">
 <nav class="crumbs" aria-label="Fil d’Ariane"><a href="{BASE}">Le Sachoir</a> › {crumb_theme} <span>{e(f['title'])}</span></nav>

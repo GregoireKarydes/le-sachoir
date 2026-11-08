@@ -86,13 +86,16 @@ iframe{width:100%;height:760px;border:0;border-radius:12px;background:var(--crea
 .vcase .bub{background:var(--cream);border-radius:12px;padding:6px 10px}.vcase .bub.r{align-self:flex-end}
 .vcase details{font-size:12.5px;color:var(--muted)}.vcase details summary{cursor:pointer}
 .cast{display:flex;gap:8px;overflow-x:auto;padding:4px 0}.cast figure{margin:0;flex:0 0 96px;text-align:center;font-size:11.5px;color:var(--muted)}.cast img{width:96px;height:96px;object-fit:cover;border-radius:12px;background:var(--grey)}
+.prow{display:flex;gap:10px;align-items:center;padding:8px 4px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.prow:last-child{border-bottom:0}.prow.off .tt{opacity:.45}.prow .tt{flex:1;min-width:200px}.prow .tt b{display:block;font-size:14.5px}.prow .tt span{font-size:12.5px;color:var(--muted)}
+.prow .btn{padding:7px 12px;font-size:13.5px}
 .qz li{margin:6px 0}.qz .ok{font-weight:700;color:var(--green)}
 @media (max-width:600px){.cards{grid-template-columns:1fr}.tile b{font-size:26px}}
 </style>
 </head>
 <body>
 <header><div class="bar"><a href="./"><img src="assets/logo.png" alt="Le Sachoir"></a><h1 id="ttl">Tableau de bord</h1>
-  <div class="seg" id="views" role="group" aria-label="Page"><button data-v="" aria-pressed="true">Indicateurs</button><button data-v="bd">BD à venir</button></div>
+  <div class="seg" id="views" role="group" aria-label="Page"><button data-v="" aria-pressed="true">Indicateurs</button><button data-v="bd">BD à venir</button><button data-v="pub">BD publiées</button></div>
   <div class="seg" id="range" role="group" aria-label="Période"><button data-d="7">7 jours</button><button data-d="30" aria-pressed="true">30 jours</button><button data-d="90">90 jours</button></div>
   <button class="btn ghost" id="refresh">Actualiser</button></div></header>
 <main id="main"><p class="note">Chargement…</p></main>
@@ -325,14 +328,16 @@ function caseView(c) {
   if (c.kind === "photo") { const ph = c.photo || {}; return `<div class="vcase">${ph.src ? `<img src="${esc(ph.src)}" alt="" loading="lazy">` : `<div class="ph0">Photo ${esc(ph.status || "à récupérer")} : ${esc(ph.commons || "")}</div>`}<div class="txt"><span class="tag">${esc(c.tag || "En vrai")}</span><b>${esc(c.title || "")}</b><p style="margin:0">${esc(c.text || "")}</p><small>${esc([ph.credit, ph.license].filter(Boolean).join(" · "))}${ph.error ? " · " + esc(ph.error) : ""}</small></div></div>`; }
   const img = c.image || {};
   return `<div class="vcase">${img.src ? `<img src="${esc(img.src)}" alt="" loading="lazy">` : `<div class="ph0">${img.status === "failed" ? "Image en échec" : "Dessin en cours"}</div>`}<div class="txt">
-    <span class="tag">${esc(`Case ${c.n || ""}${c.tag ? " · " + c.tag : ""}`)}</span>${c.caption ? `<p style="margin:0">${esc(c.caption)}</p>` : ""}${(c.bubbles || []).map(b => `<span class="bub ${b.side === "r" ? "r" : ""}">${esc(b.text)}</span>`).join("")}
+    <span class="tag">${esc(`Case ${c.n || ""}${c.tag ? " · " + c.tag : ""}`)}</span>${c.caption ? `<p style="margin:0">${esc(c.caption)}</p>` : ""}${(c.bubbles || []).map(b => `<span class="bub ${b.side === "r" ? "r" : ""}">${b.who ? `<b>${esc(NAMES[b.who] || b.who)} :</b> ` : `<b style="color:var(--red)">? </b>`}${esc(b.text)}</span>`).join("")}
     ${img.prompt ? `<details><summary>Prompt de l'image${img.redo ? " · à refaire" : ""}</summary>${esc(img.prompt)}</details>` : ""}</div></div>`;
 }
+let NAMES = {};
 function formatView(f) {
+  NAMES = Object.fromEntries((f.cast || []).filter(x => x.name).map(x => [x.id, x.name]));
   if (f.id === "quiz") return `<h2>${esc(f.title || "Le jeu du jour")}</h2><p class="note">${esc(f.kind || "")}</p><ol class="qz">${(f.questions || []).map(q => `<li><b>${esc(q.q || q.prompt || q.type || "")}</b>${(q.choices || []).length ? `<ul>${q.choices.map((ch, i) => `<li class="${i === q.answer ? "ok" : ""}">${esc(ch)}</li>`).join("")}</ul>` : ""}${(q.items || []).length ? `<ul>${q.items.map(it => `<li>${esc(it.text || it.name || it.word || JSON.stringify(it))}</li>`).join("")}</ul>` : ""}${q.explain ? `<p class="note">${esc(q.explain)}</p>` : ""}</li>`).join("")}</ol>`;
   return `<p class="note">${esc(LBL[f.id] || f.label || f.id)}${f.theme ? " · " + esc(f.theme) : ""} · ${f.minutes || "?"} min</p><h2>${esc(f.title || "")}</h2><p>${esc(f.tagline || "")}</p>
     ${f.teaser ? `<p class="note"><b>Accroche newsletter :</b> ${esc(f.teaser)}</p>` : ""}
-    ${(f.cast || []).length ? `<div class="cast">${f.cast.map(c => `<figure>${c.src ? `<img src="${esc(c.src)}" alt="">` : `<div class="ph0" style="width:96px;height:96px;border-radius:12px"></div>`}<figcaption>${esc(c.id)}</figcaption></figure>`).join("")}</div>` : ""}
+    ${(f.cast || []).length ? `<div class="cast">${f.cast.map(c => `<figure>${c.src ? `<img src="${esc(c.src)}" alt="">` : `<div class="ph0" style="width:96px;height:96px;border-radius:12px"></div>`}<figcaption>${esc(c.name || c.id)}</figcaption></figure>`).join("")}</div>` : ""}
     ${f.cover?.src ? `<div class="vcase"><img src="${esc(f.cover.src)}" alt=""><div class="txt"><span class="tag">Couverture</span></div></div>` : ""}
     ${(f.cases || []).map(caseView).join("")}
     ${f.final ? `<div class="vcase"><div class="txt"><span class="tag">Pour briller en société</span><b>${esc(f.final.text || "")}</b><small>${esc(f.final.source || "")}</small></div></div>` : ""}
@@ -348,11 +353,37 @@ async function openItem(dir) {
       + (d.formats || []).map(formatView).join(`<hr style="border:0;border-top:2px dashed var(--line);margin:22px 0">`);
   } catch (e) { $("#vbody").innerHTML = `<p class="note">${esc(e.message)}</p>`; }
 }
+/* ---------- BD publiées : par date, lecture, masquer / remettre ---------- */
+async function loadPublished() {
+  $("#main").classList.add("loading");
+  try {
+    const d = await api("/admin/published");
+    const n = d.editions.reduce((t, e) => t + e.formats.filter(f => f.hidden).length, 0);
+    $("#main").innerHTML = `<h2>Les BD publiées</h2><p class="note">Masquer une BD la retire aussitôt de l'appli et de la prochaine newsletter${d.instant ? ", et du site public dans la minute" : " ; le site public (pages référencées) suit à la prochaine publication, dans l'heure"}. Rien n'est supprimé : « Remettre » la fait revenir.${n ? ` <b>${n} BD masquée(s).</b>` : ""}</p>
+    ${d.editions.map(e => card(dLong(e.date) + (e.demo ? " · démo" : ""), "", e.formats.map(f => `<div class="prow ${f.hidden ? "off" : ""}">
+        <span class="pill ${f.hidden ? "ko" : "ok"}">${f.hidden ? "Masquée" : "En ligne"}</span>
+        <div class="tt"><b>${esc(f.title || (f.missing ? "(plus dans l'index publié)" : ""))}</b><span>${esc(LBL[f.id] || f.id)}${f.theme ? " · " + esc(f.theme) : ""} · ${nf(f.readers)} lecteur(s)${f.id !== "quiz" && f.readers ? ` · ${pct(f.done, f.readers)} au bout` : ""}</span></div>
+        <button class="btn ghost" data-view="${e.date}">Voir</button>
+        ${f.url && !f.hidden ? `<a class="btn ghost" href="${esc(f.url)}" target="_blank" rel="noopener">Page</a>` : ""}
+        <button class="btn ${f.hidden ? "" : "ghost"}" data-hide="${e.date}|${f.id}" data-on="${f.hidden ? 0 : 1}">${f.hidden ? "Remettre" : "Masquer"}</button></div>`).join("") || `<p class="note">Aucune BD.</p>`)).join("")}`;
+    $("#main").querySelectorAll("[data-view]").forEach(b => b.onclick = () => openItem(`editions/${b.dataset.view}`));
+    $("#main").querySelectorAll("[data-hide]").forEach(b => b.onclick = async () => {
+      const [ed, fid] = b.dataset.hide.split("|"), on = b.dataset.on === "1";
+      if (on && !b.dataset.armed) { b.dataset.armed = "1"; b.textContent = "Confirmer le masquage"; return; }
+      b.disabled = true;
+      try { const r = await api("/admin/hide", { body: { ed, fid, hidden: on } }); toast(on ? "BD masquée" + (r.rebuilt ? " ; le site se met à jour" : "") : "BD remise en ligne"); loadPublished(); }
+      catch (er) { toast(er.message); b.disabled = false; }
+    });
+  } catch (e) {
+    if (e.status === 401) return gate("Session expirée", "Reconnectez-vous dans l’appli, puis revenez ici.");
+    $("#main").innerHTML = `<p class="note">${esc(e.message)}</p>`;
+  } finally { $("#main").classList.remove("loading"); }
+}
 function route() {
-  const bd = location.hash === "#bd";
-  $("#views").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", (b.dataset.v === "bd") === bd));
-  $("#range").hidden = bd; $("#ttl").textContent = bd ? "BD à venir" : "Tableau de bord";
-  bd ? loadQueue() : load();
+  const v = location.hash.slice(1);
+  $("#views").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+  $("#range").hidden = !!v; $("#ttl").textContent = v === "bd" ? "BD à venir" : v === "pub" ? "BD publiées" : "Tableau de bord";
+  v === "bd" ? loadQueue() : v === "pub" ? loadPublished() : load();
 }
 $("#views").querySelectorAll("button").forEach(b => b.onclick = () => { location.hash = b.dataset.v; });
 window.addEventListener("hashchange", route);

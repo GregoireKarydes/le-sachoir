@@ -12,6 +12,9 @@ Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 ## Rattrapage du jour (lancement par l'orchestrateur)
 Si le message de lancement commence par « Rattrapage <date> » : écrire d'abord le `quiz` de **cette date-là** (même si c'est aujourd'hui) dans `editions/<date>/edition.json`, commit et push aussitôt ; puis continuer normalement (la publication pioche dans la file dès qu'une BD est finie).
 
+## Rattrapage : noms au-dessus des bulles (à faire tant qu'il en reste)
+Avant d'écrire de nouvelles BD, pour chaque BD de la file (`stock/*/*/item.json`) et chaque édition à venir (`editions/<date ≥ aujourd'hui>/edition.json`) dont des bulles n'ont pas de `who` : ajouter le `name` de chaque personnage du casting et le `who` de chaque bulle, en relisant le texte pour attribuer chaque réplique à la bonne personne (`side` et prompt de l'image aident). Ne rien changer d'autre. Commit « Noms des bulles : <titre> », un par BD, poussé aussitôt. `python3 pipeline/validate.py` signale les bulles sans `who`.
+
 ## Étapes
 1. `git pull`. Compter les BD en file : `ls stock/cultureg stock/insolite stock/dossier`. Lire `data/health.json`, rubrique `stock` (BD finies `ready`, en cours `waiting`, bloquées `blocked`).
    - **Objectif : 6 BD en file** pour `cultureg` et pour `insolite` (finies et en cours comptées ensemble). Écrire celles qui manquent, **au plus 4 par passage**, en alternant les types (le type qui en a le moins d'abord).
@@ -32,6 +35,7 @@ Si le message de lancement commence par « Rattrapage <date> » : écrire d'abor
    - **Ajouter** 1 ou 2 cases « Pour mieux comprendre » (`kind: "explain"`, texte seul, aucune image) et le champ `story` « L’histoire complète » (150 à 250 mots), voir `prompts/SCHEMA.md`.
    - **Case photo** (`kind: "photo"`) quand une vraie image aide : le vrai personnage, le vrai lieu, l'objet, un document d'époque. Fichier Wikimedia Commons sous licence libre uniquement (`photo.commons` = « File:… »), voir `prompts/SCHEMA.md`.
    - **`teaser`** : une accroche drôle de 25 mots max pour la newsletter (voir `prompts/SCHEMA.md`, « Newsletter »).
+   - **Qui parle ?** Un `name` pour chaque personnage du casting et un `who` sur chaque bulle (voir `prompts/SCHEMA.md`, « Qui parle ? »).
    - Culture G : un concept expliqué et vulgarisé par un duo (un curieux qui pose les questions du lecteur, un personnage qui sait et répond simplement), avec une touche d'humour (1 à 2 min).
    - Insolite : un fait ahurissant ou une idée reçue démontée, raconté pas à pas pour qu'on comprenne comment c'est arrivé (1 min).
    - Grand Dossier : **24 cases dessinées au plus** (environ 3 min, depuis le 8 novembre 2026 ; avant 30), quota d'images oblige, découpées en chapitres adaptés au sujet (pas forcément « conséquences modernes » à la fin), compréhension d'abord, humour dosé, cliffhanger en case 4. Cases « pause » permises quand c'est utile (chiffre clé, frise, carte), le contenu dans le récitatif.
