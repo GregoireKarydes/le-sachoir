@@ -58,8 +58,12 @@ def paywall_on() -> bool:
     if not api:
         return False
     try:
-        import requests
-        return bool(requests.get(f"{api}/config", timeout=10).json().get("paywall"))
+        # Bibliothèque standard seulement : le workflow Publication n'installe aucun paquet.
+        from urllib.request import Request, urlopen
+        with urlopen(Request(f"{api}/config", headers={"User-Agent": "LeSachoirPublication/1.0"}), timeout=10) as r:
+            on = bool(json.loads(r.read().decode()).get("paywall"))
+        print(f"Paywall du Grand Dossier : {'actif' if on else 'inactif'} (API)")
+        return on
     except Exception as ex:  # noqa: BLE001
         print(f"! API injoignable ({ex}) : paywall comme à la dernière publication")
         try:
