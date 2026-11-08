@@ -125,8 +125,9 @@
               "jeanne"
             ],
             "file": "images/dossier-03.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -233,8 +234,9 @@
               "louis"
             ],
             "file": "images/dossier-07.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -286,8 +288,9 @@
               "jeanne"
             ],
             "file": "images/dossier-09.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -361,8 +364,9 @@
               "louis"
             ],
             "file": "images/dossier-12.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -527,8 +531,9 @@
               "jeanne"
             ],
             "file": "images/dossier-19.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -553,8 +558,9 @@
               "jeanne"
             ],
             "file": "images/dossier-20.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -716,8 +722,9 @@
               "jeanne"
             ],
             "file": "images/dossier-27.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -877,8 +884,9 @@
               "jeanne"
             ],
             "file": "images/dossier-33.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -898,9 +906,10 @@
               "jeanne"
             ],
             "file": "images/dossier-34.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1117,9 +1126,10 @@
               "law"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1148,9 +1158,10 @@
               "spec"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1205,9 +1216,10 @@
               "spec"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1260,9 +1272,10 @@
               "spec"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1413,9 +1426,10 @@
               "peruggia"
             ],
             "file": "images/insolite-01.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1435,9 +1449,10 @@
               "peruggia"
             ],
             "file": "images/insolite-02.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1461,9 +1476,10 @@
               "beroud"
             ],
             "file": "images/insolite-03.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1488,9 +1504,10 @@
               "beroud"
             ],
             "file": "images/insolite-04.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1510,9 +1527,10 @@
               "apo"
             ],
             "file": "images/insolite-05.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {

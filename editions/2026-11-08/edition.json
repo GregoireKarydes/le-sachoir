@@ -103,9 +103,10 @@
               "valjean"
             ],
             "file": "images/dossier-02.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -229,9 +230,10 @@
               "valjean"
             ],
             "file": "images/dossier-06.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -350,9 +352,10 @@
               "valjean"
             ],
             "file": "images/dossier-11.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -370,9 +373,10 @@
             "prompt": "a young thin woman with long blond hair in a plain black dress (on the left), holding an open empty purse upside down, worried, light-blue tears; on the right, a skinny innkeeper with long greasy black hair and a black moustache next to his plump wife with a big black hair bun, both holding out open palms for money, greedy grins, yellow sparkles in their eyes. plain background. medium shot",
             "cast": [],
             "file": "images/dossier-12.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -477,9 +481,10 @@
               "valjean"
             ],
             "file": "images/dossier-16.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -504,9 +509,10 @@
               "valjean"
             ],
             "file": "images/dossier-17.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -533,9 +539,10 @@
               "valjean"
             ],
             "file": "images/dossier-18.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -571,9 +578,10 @@
             "prompt": "a small 1830s street boy seen from behind (in the middle) wearing an oversized old-fashioned grey flat cap, a red scarf, a patched jacket and baggy trousers, holding a small wicker basket, walking alone towards a cloud of grey smoke beyond a pile of paving stones. empty street, quiet and sober mood, no hearts, no sparkles, no violence shown. wide shot",
             "cast": [],
             "file": "images/dossier-20.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -645,9 +653,10 @@
               "javert"
             ],
             "file": "images/dossier-23.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -662,9 +671,10 @@
               "javert"
             ],
             "file": "images/dossier-24.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -702,9 +712,10 @@
               "valjean"
             ],
             "file": "images/dossier-26.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -757,9 +768,10 @@
               "valjean"
             ],
             "file": "images/dossier-28.webp",
-            "status": "retry",
+            "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -907,9 +919,10 @@
           "hote"
         ],
         "file": "images/actu-cover.webp",
-        "status": "retry",
+        "status": "done",
         "attempts": 1,
-        "via": "fal"
+        "via": "fal",
+        "redo": true
       },
       "cases": [
         {
@@ -1344,8 +1357,9 @@
               "gaston"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -1381,8 +1395,9 @@
               "cobaye"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -1649,8 +1664,9 @@
               "cornet"
             ],
             "file": "images/insolite-06.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -1670,8 +1686,9 @@
               "cornet"
             ],
             "file": "images/insolite-07.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         }
       ],

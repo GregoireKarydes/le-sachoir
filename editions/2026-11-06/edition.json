@@ -37,8 +37,9 @@
           "sov"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "retry",
-        "attempts": 1
+        "status": "done",
+        "attempts": 1,
+        "redo": true
       },
       "cases": [
         {
@@ -63,8 +64,9 @@
               "sov"
             ],
             "file": "images/dossier-01.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -89,8 +91,9 @@
               "sov"
             ],
             "file": "images/dossier-02.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -115,8 +118,9 @@
               "sov"
             ],
             "file": "images/dossier-03.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -137,8 +141,9 @@
               "sov"
             ],
             "file": "images/dossier-04.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -184,8 +189,9 @@
               "boss"
             ],
             "file": "images/dossier-06.webp",
-            "status": "retry",
-            "attempts": 2
+            "status": "done",
+            "attempts": 2,
+            "redo": true
           }
         },
         {
@@ -227,8 +233,9 @@
               "boss"
             ],
             "file": "images/dossier-08.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -248,8 +255,9 @@
               "boss"
             ],
             "file": "images/dossier-09.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -270,8 +278,9 @@
               "sov"
             ],
             "file": "images/dossier-10.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -296,8 +305,9 @@
               "sov"
             ],
             "file": "images/dossier-11.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -317,8 +327,9 @@
               "boss"
             ],
             "file": "images/dossier-12.webp",
-            "status": "retry",
-            "attempts": 1
+            "status": "done",
+            "attempts": 1,
+            "redo": true
           }
         }
       ],
