@@ -14,6 +14,7 @@
 :root{--cream:#faf6ee;--ink:#17140f;--muted:#5f5a52;--green:#1f8f5f;--yellow:#f5b62a;--navy:#2f4fa2;--red:#d9473a;--line:#e7e1d4;--grey:#efebe3;
   --f-serif:"Source Serif 4",Georgia,serif;--f-sans:Roboto,system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f-sans);font-size:15px;-webkit-font-smoothing:antialiased}
 header{position:sticky;top:0;z-index:5;background:rgba(250,246,238,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
@@ -65,15 +66,38 @@ iframe{width:100%;height:760px;border:0;border-radius:12px;background:var(--crea
 .issues{margin:0;padding-left:18px}
 .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:999px;padding:10px 18px;opacity:0;transition:opacity .2s;z-index:9}
 .toast.on{opacity:1}
+/* BD à venir */
+.qrow{display:flex;gap:12px;align-items:center;padding:10px 4px;border-bottom:1px solid var(--line);cursor:pointer;border-radius:10px}
+.qrow:hover{background:var(--cream)}
+.qrow:last-child{border-bottom:0}
+.qrow .pill{flex:0 0 auto}.qrow .tt{flex:1;min-width:0}.qrow .tt b{display:block;font-size:15px}.qrow .tt span{font-size:12.5px;color:var(--muted)}
+.prog{width:110px;flex:0 0 auto}.prog i{display:block;height:6px;border-radius:3px;background:var(--grey);overflow:hidden}.prog i b{display:block;height:100%;background:var(--green)}
+.prog span{font-size:11.5px;color:var(--muted)}
+.viewer{position:fixed;inset:0;z-index:20;background:rgba(23,20,15,.55);display:none;overflow:auto;padding:24px 12px}
+.viewer.on{display:block}
+.vin{max-width:640px;margin:0 auto;background:var(--cream);border-radius:22px;padding:18px 16px 30px;position:relative}
+.vin .x{position:sticky;top:0;float:right;border:0;background:var(--grey);width:38px;height:38px;border-radius:50%;font-size:20px;cursor:pointer;z-index:2}
+.vin h2{margin:4px 0 6px}
+.vcase{background:#fff;border-radius:16px;margin:12px 0;overflow:hidden}
+.vcase img{display:block;width:100%;height:auto;background:var(--grey)}
+.vcase .ph0{aspect-ratio:9/16;max-height:340px;background:repeating-linear-gradient(45deg,#efebe3,#efebe3 10px,#f6f2ea 10px,#f6f2ea 20px);display:grid;place-items:center;color:var(--muted);font-size:14px}
+.vcase .txt{padding:10px 14px 12px;display:flex;flex-direction:column;gap:6px;font-size:14.5px;line-height:1.4}
+.vcase .tag{align-self:flex-start;background:var(--yellow);border-radius:999px;padding:2px 9px;font-size:11px;font-weight:700;text-transform:uppercase}
+.vcase .bub{background:var(--cream);border-radius:12px;padding:6px 10px}.vcase .bub.r{align-self:flex-end}
+.vcase details{font-size:12.5px;color:var(--muted)}.vcase details summary{cursor:pointer}
+.cast{display:flex;gap:8px;overflow-x:auto;padding:4px 0}.cast figure{margin:0;flex:0 0 96px;text-align:center;font-size:11.5px;color:var(--muted)}.cast img{width:96px;height:96px;object-fit:cover;border-radius:12px;background:var(--grey)}
+.qz li{margin:6px 0}.qz .ok{font-weight:700;color:var(--green)}
 @media (max-width:600px){.cards{grid-template-columns:1fr}.tile b{font-size:26px}}
 </style>
 </head>
 <body>
-<header><div class="bar"><a href="./"><img src="assets/logo.png" alt="Le Sachoir"></a><h1>Tableau de bord</h1>
+<header><div class="bar"><a href="./"><img src="assets/logo.png" alt="Le Sachoir"></a><h1 id="ttl">Tableau de bord</h1>
+  <div class="seg" id="views" role="group" aria-label="Page"><button data-v="" aria-pressed="true">Indicateurs</button><button data-v="bd">BD à venir</button></div>
   <div class="seg" id="range" role="group" aria-label="Période"><button data-d="7">7 jours</button><button data-d="30" aria-pressed="true">30 jours</button><button data-d="90">90 jours</button></div>
   <button class="btn ghost" id="refresh">Actualiser</button></div></header>
 <main id="main"><p class="note">Chargement…</p></main>
 <div class="toast" id="toast"></div>
+<div class="viewer" id="viewer" onclick="if(event.target===this)this.classList.remove('on')"><div class="vin"><button class="x" onclick="document.getElementById('viewer').classList.remove('on')" aria-label="Fermer">×</button><div id="vbody"></div></div></div>
 <script>
 const $ = s => document.querySelector(s);
 const API = (document.querySelector('meta[name="sachoir-api"]').content || "").replace(/\/+$/, "");
@@ -271,11 +295,73 @@ async function users(q) {
   } catch (e) { $("#users").innerHTML = `<p class="note">${esc(e.message)}</p>`; }
 }
 
+/* ---------- BD à venir ---------- */
+const TYPES = { dossier: "Grands Dossiers", cultureg: "Culture G", insolite: "Insolites" };
+const QSTATUS = { ready: ["ok", "Prête"], waiting: ["wait", "En dessin"], blocked: ["ko", "Bloquée"] };
+const prog = r => `<div class="prog"><i><b style="width:${r.images_total ? Math.round(100 * r.images_done / r.images_total) : 0}%"></b></i><span>${nf(r.images_done)} / ${nf(r.images_total)} images${r.redo ? ` · ${r.redo} à refaire` : ""}${r.failed ? ` · ${r.failed} en échec` : ""}</span></div>`;
+async function loadQueue() {
+  $("#main").classList.add("loading");
+  try {
+    const q = await api("/admin/queue");
+    const kinds = ["dossier", "cultureg", "insolite"];
+    $("#main").innerHTML = `
+    <h2>La file d'attente</h2><p class="note">Index mis à jour à chaque publication (${esc(new Date(q.updated_at).toLocaleString("fr-FR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }))}). Les BD sortent dans l'ordre, une de chaque type par jour, dès qu'elles sont dessinées à 100 %.</p>
+    <div class="grid">${kinds.map(k => { const l = q.stock[k] || []; const rd = l.filter(r => r.status === "ready").length; return tile(`${nf(rd)} / ${nf(l.length)}`, TYPES[k] + " prêtes", `${nf(l.filter(r => r.status === "waiting").length)} en dessin · ${nf(l.filter(r => r.status === "blocked").length)} bloquée(s) · ${nf(l.reduce((t, r) => t + ((r.images_total || 0) - (r.images_done || 0)), 0))} image(s) à faire`, rd < 1 ? "alert" : ""); }).join("")}</div>
+    <div class="cards">${kinds.map(k => card(TYPES[k], "", (q.stock[k] || []).length ? (q.stock[k]).map(r => `<div class="qrow" data-dir="${esc(r.path)}" tabindex="0">
+        <span class="pill ${QSTATUS[r.status][0]}">${r.next ? "Sort en prochain" : QSTATUS[r.status][1]}</span>
+        <div class="tt"><b>${esc(r.title)}</b><span>${esc(r.theme || "")}${r.minutes ? ` · ${r.minutes} min` : ""}${r.cases ? ` · ${r.cases} cases` : ""}${r.photos ? ` · ${r.photos} photo(s)` : ""}${r.error ? " · " + esc(r.error) : ""}</span></div>${r.images_total ? prog(r) : ""}</div>`).join("") : `<p class="note">File vide.</p>`)).join("")}</div>
+    <h2>Les prochaines éditions</h2><p class="note">L'Actu et le jeu sont écrits par date ; les autres BD rejoignent l'édition le matin même, depuis la file.</p>
+    <div class="card">${q.editions.map(e => `<div class="qrow" data-dir="${esc(e.path)}" tabindex="0"><span class="pill ${e.status === "published" ? "ok" : ""}">${e.status === "published" ? "En ligne" : "Brouillon"}</span>
+      <div class="tt"><b>${esc(dLong(e.date))}</b><span>${e.formats.map(f => esc(f.id === "quiz" ? `Jeu : ${f.title || f.kind}` : (LBL[f.id] || f.id) + (f.images_total && f.images_done < f.images_total ? ` (${f.images_done}/${f.images_total})` : ""))).join(" · ") || "rien encore"}${e.newsletter ? " · textes newsletter ✓" : ""}</span></div></div>`).join("")}</div>`;
+    $("#main").querySelectorAll("[data-dir]").forEach(r => { r.onclick = () => openItem(r.dataset.dir); r.onkeydown = e => { if (e.key === "Enter") openItem(r.dataset.dir); }; });
+  } catch (e) {
+    if (e.status === 401) return gate("Session expirée", "Reconnectez-vous dans l’appli, puis revenez ici.");
+    $("#main").innerHTML = `<p class="note">${esc(e.message)}</p>`;
+  } finally { $("#main").classList.remove("loading"); }
+}
+function caseView(c) {
+  const t = [];
+  if (c.kind === "explain") return `<div class="vcase"><div class="txt"><span class="tag">${esc(c.tag || "Pour mieux comprendre")}</span><b>${esc(c.title || "")}</b>${String(c.text || "").split("\n").map(x => `<p style="margin:0">${esc(x)}</p>`).join("")}${(c.steps || []).length ? `<ol>${c.steps.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}${c.joke ? `<i>${esc(c.joke)}</i>` : ""}</div></div>`;
+  if (c.kind === "photo") { const ph = c.photo || {}; return `<div class="vcase">${ph.src ? `<img src="${esc(ph.src)}" alt="" loading="lazy">` : `<div class="ph0">Photo ${esc(ph.status || "à récupérer")} : ${esc(ph.commons || "")}</div>`}<div class="txt"><span class="tag">${esc(c.tag || "En vrai")}</span><b>${esc(c.title || "")}</b><p style="margin:0">${esc(c.text || "")}</p><small>${esc([ph.credit, ph.license].filter(Boolean).join(" · "))}${ph.error ? " · " + esc(ph.error) : ""}</small></div></div>`; }
+  const img = c.image || {};
+  return `<div class="vcase">${img.src ? `<img src="${esc(img.src)}" alt="" loading="lazy">` : `<div class="ph0">${img.status === "failed" ? "Image en échec" : "Dessin en cours"}</div>`}<div class="txt">
+    <span class="tag">${esc(`Case ${c.n || ""}${c.tag ? " · " + c.tag : ""}`)}</span>${c.caption ? `<p style="margin:0">${esc(c.caption)}</p>` : ""}${(c.bubbles || []).map(b => `<span class="bub ${b.side === "r" ? "r" : ""}">${esc(b.text)}</span>`).join("")}
+    ${img.prompt ? `<details><summary>Prompt de l'image${img.redo ? " · à refaire" : ""}</summary>${esc(img.prompt)}</details>` : ""}</div></div>`;
+}
+function formatView(f) {
+  if (f.id === "quiz") return `<h2>${esc(f.title || "Le jeu du jour")}</h2><p class="note">${esc(f.kind || "")}</p><ol class="qz">${(f.questions || []).map(q => `<li><b>${esc(q.q || q.prompt || q.type || "")}</b>${(q.choices || []).length ? `<ul>${q.choices.map((ch, i) => `<li class="${i === q.answer ? "ok" : ""}">${esc(ch)}</li>`).join("")}</ul>` : ""}${(q.items || []).length ? `<ul>${q.items.map(it => `<li>${esc(it.text || it.name || it.word || JSON.stringify(it))}</li>`).join("")}</ul>` : ""}${q.explain ? `<p class="note">${esc(q.explain)}</p>` : ""}</li>`).join("")}</ol>`;
+  return `<p class="note">${esc(LBL[f.id] || f.label || f.id)}${f.theme ? " · " + esc(f.theme) : ""} · ${f.minutes || "?"} min</p><h2>${esc(f.title || "")}</h2><p>${esc(f.tagline || "")}</p>
+    ${f.teaser ? `<p class="note"><b>Accroche newsletter :</b> ${esc(f.teaser)}</p>` : ""}
+    ${(f.cast || []).length ? `<div class="cast">${f.cast.map(c => `<figure>${c.src ? `<img src="${esc(c.src)}" alt="">` : `<div class="ph0" style="width:96px;height:96px;border-radius:12px"></div>`}<figcaption>${esc(c.id)}</figcaption></figure>`).join("")}</div>` : ""}
+    ${f.cover?.src ? `<div class="vcase"><img src="${esc(f.cover.src)}" alt=""><div class="txt"><span class="tag">Couverture</span></div></div>` : ""}
+    ${(f.cases || []).map(caseView).join("")}
+    ${f.final ? `<div class="vcase"><div class="txt"><span class="tag">Pour briller en société</span><b>${esc(f.final.text || "")}</b><small>${esc(f.final.source || "")}</small></div></div>` : ""}
+    ${f.story ? `<div class="vcase"><div class="txt"><span class="tag">L'histoire complète</span>${String(f.story).split("\n").map(x => `<p style="margin:0">${esc(x)}</p>`).join("")}</div></div>` : ""}
+    ${(f.sources || []).length ? `<p class="note">Sources : ${f.sources.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title || x.url)}</a>`).join(" · ")}</p>` : ""}`;
+}
+async function openItem(dir) {
+  const v = $("#viewer"); v.classList.add("on"); $("#vbody").innerHTML = `<p class="note">Chargement…</p>`;
+  try {
+    const d = await api(`/admin/item?dir=${encodeURIComponent(dir)}`);
+    const nl = d.newsletter ? `<div class="vcase"><div class="txt"><span class="tag">Textes de la newsletter</span><b>${esc(d.newsletter.subject || "")}</b><p style="margin:0">${esc(d.newsletter.intro || "")}</p><small>${esc(d.newsletter.game || "")} · ${esc(d.newsletter.ps || "")}</small></div></div>` : "";
+    $("#vbody").innerHTML = (d.date ? `<p class="note">Édition du ${esc(dLong(d.date))} · ${esc(d.status || "")}</p>${nl}` : `<p class="note">${esc(dir)}${d.blocked ? " · bloquée" : ""}</p>`)
+      + (d.formats || []).map(formatView).join(`<hr style="border:0;border-top:2px dashed var(--line);margin:22px 0">`);
+  } catch (e) { $("#vbody").innerHTML = `<p class="note">${esc(e.message)}</p>`; }
+}
+function route() {
+  const bd = location.hash === "#bd";
+  $("#views").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", (b.dataset.v === "bd") === bd));
+  $("#range").hidden = bd; $("#ttl").textContent = bd ? "BD à venir" : "Tableau de bord";
+  bd ? loadQueue() : load();
+}
+$("#views").querySelectorAll("button").forEach(b => b.onclick = () => { location.hash = b.dataset.v; });
+window.addEventListener("hashchange", route);
+document.addEventListener("keydown", e => { if (e.key === "Escape") $("#viewer").classList.remove("on"); });
 $("#range").querySelectorAll("button").forEach(b => b.onclick = () => { DAYS = +b.dataset.d; $("#range").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); load(); });
-$("#refresh").onclick = load;
+$("#refresh").onclick = route;
 if (!/^https?:\/\//.test(API)) gate("API pas encore branchée", "L’adresse de l’API n’est pas encore réglée (<code>api_url</code> dans <code>pipeline/site.json</code>). Elle s’ajoute toute seule au premier déploiement de l’API.");
 else if (!ACC?.session) gate("Connectez-vous d’abord", "Ouvrez l’appli, Profil › Créer mon compte, avec votre adresse d’administrateur. Puis revenez ici.");
-else load();
+else route();
 </script>
 </body>
 </html>

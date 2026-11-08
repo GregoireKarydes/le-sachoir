@@ -97,11 +97,14 @@ async function hmac(env, text) {
   const sig = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(text));
   return btoa(String.fromCharCode(...new Uint8Array(sig))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "").slice(0, 32);
 }
-const contentBase = env => (env.CONTENT_URL || "https://raw.githubusercontent.com/GregoireKarydes/le-sachoir/main/").replace(/\/?$/, "/");
-const ghHeaders = env => env.GITHUB_TOKEN ? { authorization: `token ${env.GITHUB_TOKEN}`, accept: "application/vnd.github.raw" } : {};
+const IMG_PATH = /^(editions\/\d{4}-\d{2}-\d{2}|stock\/(cultureg|insolite|dossier)\/[\w.-]+)\/(images|cast)\/[\w.-]+\.(webp|png|jpe?g)$/;
+export const DIR_PATH = /^(editions\/\d{4}-\d{2}-\d{2}|stock\/(cultureg|insolite|dossier)\/[\w.-]+)$/;
+export const contentBase = env => (env.CONTENT_URL || "https://raw.githubusercontent.com/GregoireKarydes/le-sachoir/main/").replace(/\/?$/, "/");
+export const ghHeaders = env => env.GITHUB_TOKEN ? { authorization: `token ${env.GITHUB_TOKEN}`, accept: "application/vnd.github.raw" } : {};
 
-async function signedImg(env, ed, file) {
-  const p = `${ed}/${file}`, e = Math.floor(Date.now() / 1000) + 86400;
+// `dir` : dossier du dépôt (editions/AAAA-MM-JJ ou stock/<type>/<nom>), `file` : chemin relatif (images/…, cast/…).
+export async function signedImg(env, dir, file) {
+  const p = `${dir}/${file}`, e = Math.floor(Date.now() / 1000) + 86400;
   return `${env.API_URL}/premium/img?p=${encodeURIComponent(p)}&e=${e}&s=${await hmac(env, `${p}|${e}`)}`;
 }
 
@@ -115,8 +118,8 @@ export async function premiumDossier(env, user, device, ed) {
   if (!f) return { status: 404, body: { error: "Dossier introuvable." } };
   const rest = (f.cases || []).slice(FREE_CASES);
   for (const c of rest) {
-    if (c.image?.file && c.image.status === "done") c.image.src = await signedImg(env, ed, c.image.file);
-    if (c.photo?.file && c.photo.status === "done") c.photo.src = await signedImg(env, ed, c.photo.file);
+    if (c.image?.file && c.image.status === "done") c.image.src = await signedImg(env, `editions/${ed}`, c.image.file);
+    if (c.photo?.file && c.photo.status === "done") c.photo.src = await signedImg(env, `editions/${ed}`, c.photo.file);
     if (c.image) delete c.image.prompt;
   }
   return { status: 200, body: { ed, cases: rest, total: (f.cases || []).length } };
@@ -124,12 +127,12 @@ export async function premiumDossier(env, user, device, ed) {
 
 export async function premiumImg(env, url, ctx) {
   const p = url.searchParams.get("p") || "", e = +url.searchParams.get("e") || 0, s = url.searchParams.get("s") || "";
-  if (!/^\d{4}-\d{2}-\d{2}\/images\/[\w.-]+\.(webp|png|jpe?g)$/.test(p) || e < Date.now() / 1000 || s !== await hmac(env, `${p}|${e}`))
+  if (!IMG_PATH.test(p) || e < Date.now() / 1000 || s !== await hmac(env, `${p}|${e}`))
     return new Response("Lien expiré", { status: 403 });
   const cache = caches.default, key = new Request(`https://sachoir-cache/${p}`);
   let res = await cache.match(key);
   if (!res) {
-    const r = await fetch(`${contentBase(env)}editions/${p}`, { headers: ghHeaders(env) });
+    const r = await fetch(`${contentBase(env)}${p}`, { headers: ghHeaders(env) });
     if (!r.ok) return new Response("Introuvable", { status: 404 });
     res = new Response(r.body, { headers: { "content-type": p.endsWith(".webp") ? "image/webp" : p.endsWith(".png") ? "image/png" : "image/jpeg", "cache-control": "public, max-age=604800" } });
     ctx?.waitUntil(cache.put(key, res.clone()));
@@ -137,4 +140,24 @@ export async function premiumImg(env, url, ctx) {
   const out = new Response(res.body, res);
   out.headers.set("cache-control", "private, max-age=86400");
   return out;
+}
+
+/* ---------- Écran admin : BD à venir (file d'attente et prochaines éditions), lues dans le dépôt ---------- */
+export async function adminQueue(env) {
+  const r = await fetch(`${contentBase(env)}data/queue.json`, { headers: ghHeaders(env), cf: { cacheTtl: 60 } });
+  return r.ok ? r.json() : { error: "Index des BD à venir pas encore publié (il apparaît à la prochaine publication)." };
+}
+export async function adminItem(env, dir) {
+  if (!DIR_PATH.test(dir || "")) return { error: "Chemin invalide." };
+  const file = dir.startsWith("stock/") ? "item.json" : "edition.json";
+  const r = await fetch(`${contentBase(env)}${dir}/${file}?t=${Date.now()}`, { headers: ghHeaders(env) });
+  if (!r.ok) return { error: "BD introuvable (déjà publiée ?)." };
+  const data = await r.json();
+  for (const f of data.formats || []) {
+    const sign = async o => { if (o?.file && o.status === "done") o.src = await signedImg(env, dir, o.file); };
+    await sign(f.cover);
+    for (const c of f.cast || []) await sign(c);
+    for (const c of f.cases || []) { await sign(c.image); await sign(c.photo); }
+  }
+  return { dir, ...data };
 }
