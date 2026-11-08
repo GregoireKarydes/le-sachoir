@@ -630,6 +630,49 @@ body{overscroll-behavior-y:none}
   .sheet{max-width:560px;max-height:86vh;border-radius:24px}
   .toast{bottom:32px}
 }
+/* ---------- Météo (Open-Meteo) ---------- */
+.wx{display:flex;align-items:center;gap:8px;border:0;background:none;padding:0;margin:-6px 0 0;text-align:left;color:var(--muted);font-size:13px;line-height:1.25;width:100%;min-height:26px}
+.wx[hidden]{display:none}
+.wx svg{flex:0 0 26px;width:26px;height:26px}
+.wx b{color:var(--ink);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.wx i{font-style:normal;flex:1;min-width:0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.wx-hd{display:flex;align-items:center;gap:12px}
+.wx-hd svg{flex:0 0 64px;width:64px;height:64px}
+.wx-hd .t{font-family:var(--f-serif);font-weight:800;font-size:44px;line-height:1;font-variant-numeric:tabular-nums}
+.wx-hd .c{font-family:var(--f-serif);font-weight:800;font-size:22px;line-height:1.05}
+.wx-q{font-family:var(--f-letter);font-size:18px;line-height:1.25;background:#fff;border:3px solid var(--ink);border-radius:18px;padding:9px 13px;box-shadow:3px 3px 0 var(--ink)}
+.wx-h{display:flex;gap:7px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:none}
+.wx-h::-webkit-scrollbar{display:none}
+.wx-h div{flex:0 0 56px;background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0 7px;font-variant-numeric:tabular-nums}
+.wx-h div.now{background:var(--yellow)}
+.wx-h small{font-size:11.5px;font-weight:700;color:var(--muted)}
+.wx-h svg{width:32px;height:32px}
+.wx-h b{font-size:16px}
+.wx-h em{font-style:normal;font-size:11px;font-weight:700;color:#2f7fc0;min-height:13px}
+.wx-d{display:flex;flex-direction:column;background:#fff;border-radius:16px;padding:2px 12px}
+.wx-d div{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.wx-d div:last-child{border-bottom:0}
+.wx-d span{flex:1;font-weight:700}
+.wx-d svg{width:30px;height:30px}
+.wx-d em{font-style:normal;font-size:12.5px;color:#2f7fc0;font-weight:700;min-width:38px;text-align:right}
+.wx-d b{min-width:70px;text-align:right}
+.wx-d b small{color:var(--muted);font-weight:500}
+.wx-mom{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.wx-mom button{flex:0 0 auto;border:2px solid var(--ink);background:#fff;border-radius:999px;padding:5px 11px;font-weight:700;font-size:13px;color:var(--ink)}
+.wx-mom button[aria-pressed=true]{background:var(--ink);color:#fff}
+.wx-map{border:3px solid var(--ink);border-radius:18px;overflow:hidden;background:#dbe9f3;box-shadow:4px 4px 0 rgba(23,20,15,.25)}
+.wx-map svg{display:block;width:100%;height:auto;aspect-ratio:1/1}
+.wx-map .land path{fill:var(--cream);stroke:#8a8274;stroke-width:.5;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.wx-map text{font-family:var(--f-sans);font-weight:900;font-size:34px;fill:var(--ink);paint-order:stroke;stroke:var(--cream);stroke-width:7px;stroke-linejoin:round;text-anchor:middle}
+.wx-map text.n{font-weight:500;font-size:22px;fill:var(--muted)}
+.wx-map g.me text{fill:var(--navy-d)}
+.wx-res{display:flex;flex-direction:column;background:#fff;border-radius:16px;padding:0 12px}
+.wx-res button{border:0;background:none;text-align:left;padding:11px 0;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--ink)}
+.wx-res button:last-child{border-bottom:0}
+.wx-res small{display:block;color:var(--muted);font-size:12.5px}
+.wx-src{font-size:11.5px!important;text-align:center}
+.wx-src a{color:var(--muted)}
+.wx-wait{min-height:120px;display:grid;place-items:center;color:var(--muted);font-weight:700;text-align:center}
 </style>
 </head>
 <body>
@@ -902,6 +945,7 @@ function renderHome() {
   v.innerHTML = `
    <div><h1 class="h1 hello">${hello}</h1><p class="lead">Prêt à briller en société (ou au moins à faire semblant) ?</p></div>
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
+   ${isToday ? `<button class="wx" id="wxLine" hidden></button>` : ""}
    ${ed.empty
       ? `<div class="empty-state"><h2>${isToday ? "L’édition du jour est encore sous le crayon" : "Pas d’édition ce jour-là"}</h2><p class="lead">${isToday ? "Le dessinateur taille ses mines. Revenez un peu plus tard." : "Le Sachoir dormait. Ça arrive aux meilleurs."}</p>${last ? `<button class="btn ghost sm" id="hLast">Lire la dernière édition (${fmtLong(last)})</button>` : ""}</div>`
       : cardsHTML}
@@ -911,6 +955,7 @@ function renderHome() {
   v.querySelectorAll("[data-quiz]").forEach(b => b.onclick = () => openQuiz(ed));
   $("#hHist").onclick = openHistory;
   if ($("#hLast")) $("#hLast").onclick = () => selectDate(last);
+  if (isToday) wxPaint();
 }
 
 async function selectDate(date) {
@@ -1527,6 +1572,234 @@ function quizResult() {
     if (navigator.share) { try { await navigator.share({ title: `${name} · Le Sachoir`, text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
     try { await navigator.clipboard.writeText(`${text}\n${url}`); toast("Score copié, à vous de frimer"); } catch (e) { toast(text); }
   };
+}
+
+/* ---------- Météo (Open-Meteo, données CC BY 4.0) ----------
+   Une ligne discrète sous la date du jour ; un toucher ouvre la feuille météo
+   (heure par heure, 3 jours, carte de France, choix de la ville).
+   Tout est facultatif : si l'API ne répond pas, la ligne ne s'affiche pas. */
+const WX_KEY = "sachoir.wx";
+const WX_TTL = 30 * 60 * 1000;
+const WX_PARIS = { name: "Paris", lat: 48.8566, lon: 2.3522 };
+const WX_CITIES = [["Lille", 50.63, 3.06], ["Brest", 48.39, -4.49], ["Caen", 49.18, -0.37], ["Paris", 48.86, 2.35], ["Strasbourg", 48.57, 7.75],
+  ["Nantes", 47.22, -1.55], ["Dijon", 47.32, 5.04], ["Limoges", 45.83, 1.26], ["Lyon", 45.76, 4.84], ["Bordeaux", 44.84, -0.58],
+  ["Toulouse", 43.60, 1.44], ["Montpellier", 43.61, 3.88], ["Marseille", 43.30, 5.37], ["Nice", 43.70, 7.27], ["Ajaccio", 41.93, 8.74]];
+let WX = (() => { try { return JSON.parse(localStorage.getItem(WX_KEY) || "{}"); } catch (e) { return {}; } })();
+const wxSave = () => { try { localStorage.setItem(WX_KEY, JSON.stringify(WX)); } catch (e) {} };
+const wxCity = () => (WX.place && typeof WX.place.lat === "number") ? WX.place : WX_PARIS;
+
+async function wxGet(url, slot) {
+  const hit = WX[slot];
+  if (hit && hit.url === url && Date.now() - hit.t < WX_TTL) return hit.data;
+  const ac = new AbortController(), to = setTimeout(() => ac.abort(), 7000);
+  try {
+    const r = await fetch(url, { signal: ac.signal });
+    if (!r.ok) throw new Error(r.status);
+    const data = await r.json();
+    WX[slot] = { url, t: Date.now(), data }; wxSave();
+    return data;
+  } catch (e) {
+    if (hit && hit.url === url && Date.now() - hit.t < 6 * 3600 * 1000) return hit.data; // hors ligne : dernière météo connue (6 h max)
+    throw e;
+  } finally { clearTimeout(to); }
+}
+const wxCityData = () => {
+  const c = wxCity();
+  return wxGet(`https://api.open-meteo.com/v1/forecast?latitude=${c.lat.toFixed(3)}&longitude=${c.lon.toFixed(3)}`
+    + "&current=temperature_2m,apparent_temperature,weather_code,is_day,wind_speed_10m"
+    + "&hourly=temperature_2m,weather_code,precipitation_probability,is_day"
+    + "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max"
+    + "&timezone=auto&forecast_days=3", "c_city");
+};
+const wxMapData = () => wxGet("https://api.open-meteo.com/v1/forecast?latitude=" + WX_CITIES.map(c => c[1]).join(",")
+  + "&longitude=" + WX_CITIES.map(c => c[2]).join(",") + "&hourly=temperature_2m,weather_code,is_day&timezone=Europe%2FParis&forecast_days=2", "c_map");
+
+/* Codes météo OMM → famille d'icône et libellé */
+function wxKind(code, day = 1) {
+  if (code === 0) return day ? "sun" : "moon";
+  if (code <= 2) return day ? "part" : "partn";
+  if (code === 3) return "cloud";
+  if (code <= 48) return "fog";
+  if (code <= 57) return "drizzle";
+  if (code <= 67 || (code >= 80 && code <= 82)) return "rain";
+  if (code <= 77 || code === 85 || code === 86) return "snow";
+  return "storm";
+}
+const WX_LABEL = { sun: "Grand soleil", moon: "Nuit claire", part: "Éclaircies", partn: "Quelques nuages", cloud: "Couvert", fog: "Brouillard", drizzle: "Bruine", rain: "Pluie", snow: "Neige", storm: "Orage" };
+
+/* Pictos faits main : trait noir rond, une seule couleur d'accent, comme les BD */
+const WX_INK = `stroke="#17140f" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"`;
+const wxCloudP = `M9.5 24c-3.1 0-5.5-2.2-5.5-5 0-2.6 2.1-4.7 4.8-4.9C9.6 10.9 12.4 8.6 15.8 8.6c3.3 0 6 2.1 6.8 5.1 3.1-.2 5.4 2.1 5.4 5.1 0 2.9-2.3 5.2-5.3 5.2z`;
+function wxSun(cx, cy, r, ray) {
+  let s = "";
+  for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4 + .2, c = Math.cos(a), n = Math.sin(a); s += `M${(cx + c * (r + 2.6)).toFixed(1)} ${(cy + n * (r + 2.6)).toFixed(1)}L${(cx + c * (r + 2.6 + ray)).toFixed(1)} ${(cy + n * (r + 2.6 + ray)).toFixed(1)}`; }
+  return `<path d="${s}" ${WX_INK}/><circle cx="${cx}" cy="${cy}" r="${r}" fill="#f5b62a" ${WX_INK}/>`;
+}
+const wxMoon = (t = "") => `<path d="M19.5 5.5a10.5 10.5 0 1 0 7 15.6 8.4 8.4 0 0 1-7-15.6z" fill="#fde7a6" ${WX_INK} ${t}/>`;
+const wxCloud = (t = "", fill = "#fff") => `<path d="${wxCloudP}" fill="${fill}" ${WX_INK} ${t}/>`;
+const WX_ART = {
+  sun: () => wxSun(16, 16, 6, 3.6),
+  moon: () => wxMoon(),
+  part: () => wxSun(11.5, 11, 4.6, 2.4) + wxCloud(`transform="translate(4 3.5) scale(.86)"`),
+  partn: () => wxMoon(`transform="translate(-1 -2) scale(.7)"`) + wxCloud(`transform="translate(4 3.5) scale(.86)"`),
+  cloud: () => wxCloud(`transform="translate(-3 -3.5) scale(.75)"`, "#e7e1d4") + wxCloud(`transform="translate(2 1)"`),
+  fog: () => wxCloud(`transform="translate(0 -4)"`) + `<path d="M6 25c2-1.2 4-1.2 6 0s4 1.2 6 0 4-1.2 6 0M9 29c2-1.2 4-1.2 6 0s4 1.2 6 0" fill="none" ${WX_INK}/>`,
+  drizzle: () => wxCloud(`transform="translate(0 -4)"`) + `<path d="M11 25v.1M16 27v.1M21 25v.1" fill="none" stroke="#2f7fc0" stroke-width="3" stroke-linecap="round"/>`,
+  rain: () => wxCloud(`transform="translate(0 -4)"`) + `<path d="M11 23.5l-1.6 4.5M16.5 23.5l-1.6 4.5M22 23.5l-1.6 4.5" fill="none" stroke="#2f7fc0" stroke-width="2.4" stroke-linecap="round"/>`,
+  snow: () => wxCloud(`transform="translate(0 -4)"`) + `<path d="M11 24v4M9.3 25l3.4 2M9.3 27l3.4-2M21 24v4M19.3 25l3.4 2M19.3 27l3.4-2" fill="none" stroke="#2f7fc0" stroke-width="1.7" stroke-linecap="round"/>`,
+  storm: () => wxCloud(`transform="translate(0 -4)"`) + `<path d="M17 20.5l-3.6 5.3h3.4l-2 5.2 5.6-7h-3.5l2.2-3.5z" fill="#f5b62a" ${WX_INK}/>`
+};
+const wxIcon = (code, day) => `<svg viewBox="0 0 32 32" aria-hidden="true">${WX_ART[wxKind(code, day)]()}</svg>`;
+const wxT = v => `${Math.round(v)}°`.replace("-0°", "0°");
+
+/* La phrase du jour : même phrase toute la journée pour une ville donnée */
+const WX_QUIPS = {
+  storm: ["Orage en vue. Benjamin Franklin sortirait son cerf-volant. Pas vous.", "Ça gronde dehors. Zeus a encore raté sa réunion du lundi.", "Orages annoncés : restez au sec, la culture G se lit très bien à l’abri."],
+  snow: ["Neige au programme : le Sachoir se lit très bien sous un plaid.", "Il neige. Chaque flocon est unique, comme votre culture G (bientôt).", "Neige annoncée : Napoléon en Russie aurait adoré cette application."],
+  rain: ["Pluie au programme : temps idéal pour un Grand Dossier.", "Il pleut. Même les pigeons cherchent un abri et de la lecture.", "Parapluie conseillé. Culture G recommandée.", "Temps de chien. L’expression n’a rien de gentil pour les chiens."],
+  drizzle: ["Bruine : la pluie qui n’ose pas vraiment. Soyez plus courageux qu’elle.", "Petite bruine. Ni vraiment mouillé, ni vraiment sec : comme un débat à 23 h."],
+  fog: ["Brouillard : on n’y voit rien, mais vous, vous saurez tout.", "Purée de pois dehors. Lumière à l’intérieur (celle de l’ampoule du Sachoir)."],
+  hot: ["Chaleur : même Napoléon aurait tombé la redingote.", "Il fait chaud. Les Romains auraient déjà fui en villa.", "Canicule de culture : hydratez-vous, puis instruisez-vous."],
+  cold: ["Il caille. Votre cerveau, lui, peut rester bouillant.", "Froid de canard : sortez couvert, rentrez cultivé.", "Bonnet obligatoire. Le savoir, lui, tient chaud gratuitement."],
+  wind: ["Ça souffle fort. Tenez bien votre chapeau et vos certitudes.", "Grand vent : idéal pour faire voler les idées reçues."],
+  sun: ["Grand soleil : Louis XIV valide.", "Soleil au rendez-vous. Briller en société, c’est déjà commencé.", "Beau temps : lisez dehors, et lisez bien."],
+  moon: ["Nuit claire : parfait pour impressionner quelqu’un avec Orion.", "Ciel dégagé. Les étoiles brillent, à vous de faire pareil demain."],
+  part: ["Éclaircies : le soleil fait des apparitions, comme un stagiaire le vendredi.", "Mi-soleil, mi-nuages. Comme une réunion qui aurait pu être un e-mail."],
+  partn: ["Quelques nuages ce soir. Rien qui empêche de briller.", "Ciel moucheté. Bonne nuit de culture."],
+  cloud: ["Ciel gris, esprit clair.", "Gris comme un lundi. Le Sachoir, lui, est en couleur.", "Couvert : parfait pour lever la tête et réviser ses cumulus."]
+};
+function wxQuip(d) {
+  const c = d.current, k = wxKind(c.weather_code, c.is_day);
+  const tmax = d.daily ? d.daily.temperature_2m_max[0] : c.temperature_2m;
+  const cat = ["storm", "snow", "rain", "drizzle", "fog"].includes(k) ? k
+    : tmax >= 28 ? "hot" : c.temperature_2m <= 3 ? "cold" : c.wind_speed_10m >= 45 ? "wind" : k;
+  const l = WX_QUIPS[cat] || WX_QUIPS.cloud, seed = [...(TODAY + wxCity().name + cat)].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) >>> 0, 7);
+  return l[seed % l.length];
+}
+
+/* La ligne sous la date */
+async function wxPaint() {
+  const el = $("#wxLine"); if (!el) return;
+  try {
+    const d = await wxCityData(), c = d.current;
+    if (!$("#wxLine")) return;
+    el.innerHTML = `${wxIcon(c.weather_code, c.is_day)}<b>${esc(wxCity().name)} · ${wxT(c.temperature_2m)}</b><i>${esc(wxQuip(d))}</i>`;
+    el.setAttribute("aria-label", `Météo à ${wxCity().name} : ${WX_LABEL[wxKind(c.weather_code, c.is_day)]}, ${wxT(c.temperature_2m)}. Voir le détail`);
+    el.hidden = false;
+    el.onclick = () => openWeather();
+  } catch (e) { el.hidden = true; }
+}
+
+/* La feuille météo */
+let WX_TAB = "h";
+function openWeather(tab) {
+  WX_TAB = tab || WX_TAB;
+  openSheet(`<div id="wxTop" class="wx-wait">La météo arrive…</div>
+    <div class="seg" role="tablist"><button data-wt="h">Par heure</button><button data-wt="m">Carte de France</button></div>
+    <div id="wxBody"></div>
+    <button class="btn ghost" id="wxCityB">📍 Changer de ville</button>
+    <p class="sub wx-src">Prévisions <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0), d’après Météo-France et d’autres services météo.</p>`);
+  $("#sheet").querySelectorAll("[data-wt]").forEach(b => b.onclick = () => { WX_TAB = b.dataset.wt; wxTab(); });
+  $("#wxCityB").onclick = openWeatherCity;
+  wxCityData().then(d => {
+    const c = d.current, k = wxKind(c.weather_code, c.is_day), dl = d.daily;
+    $("#wxTop").className = "";
+    $("#wxTop").innerHTML = `<h3>Météo à ${esc(wxCity().name)}</h3>
+      <div class="wx-hd" style="margin-top:12px">${wxIcon(c.weather_code, c.is_day)}<span class="t">${wxT(c.temperature_2m)}</span>
+      <span><span class="c">${WX_LABEL[k]}</span><span class="sub" style="display:block;margin-top:3px">Ressenti ${wxT(c.apparent_temperature)} · ${wxT(dl.temperature_2m_min[0])} / ${wxT(dl.temperature_2m_max[0])}</span></span></div>
+      <p class="wx-q" style="margin-top:12px">${esc(wxQuip(d))}</p>`;
+  }).catch(() => { $("#wxTop").textContent = "La météo fait la grasse matinée. Réessayez un peu plus tard."; });
+  wxTab();
+}
+function wxTab() {
+  $("#sheet").querySelectorAll("[data-wt]").forEach(b => b.setAttribute("aria-pressed", b.dataset.wt === WX_TAB));
+  (WX_TAB === "m" ? wxMap : wxHours)();
+}
+function wxHours() {
+  const body = $("#wxBody"); body.innerHTML = `<div class="wx-wait">…</div>`;
+  wxCityData().then(d => {
+    if (WX_TAB !== "h" || !$("#wxBody")) return;
+    const h = d.hourly, now = d.current.time.slice(0, 13);
+    let i0 = h.time.findIndex(t => t.slice(0, 13) === now); if (i0 < 0) i0 = 0;
+    let cells = "";
+    for (let i = i0; i < Math.min(i0 + 25, h.time.length); i++) {
+      const p = h.precipitation_probability[i];
+      cells += `<div class="${i === i0 ? "now" : ""}"><small>${i === i0 ? "Maint." : +h.time[i].slice(11, 13) + " h"}</small>${wxIcon(h.weather_code[i], h.is_day[i])}<b>${wxT(h.temperature_2m[i])}</b><em>${p >= 20 ? p + " %" : ""}</em></div>`;
+    }
+    const dl = d.daily, names = dl.time.map((t, j) => j === 0 ? "Aujourd’hui" : j === 1 ? "Demain" : cap1(new Date(t + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", timeZone: "UTC" })));
+    body.innerHTML = `<div class="wx-h" aria-label="Heure par heure">${cells}</div>
+      <div class="wx-d">${dl.time.map((t, j) => `<div><span>${names[j]}</span>${wxIcon(dl.weather_code[j], 1)}<em>${dl.precipitation_probability_max[j] >= 20 ? "💧" + dl.precipitation_probability_max[j] + " %" : ""}</em><b>${wxT(dl.temperature_2m_max[j])} <small>/ ${wxT(dl.temperature_2m_min[j])}</small></b></div>`).join("")}</div>`;
+  }).catch(() => { if ($("#wxBody")) $("#wxBody").innerHTML = `<p class="sub">Prévisions indisponibles pour l’instant.</p>`; });
+}
+
+let WX_MOM = 0;
+function wxMoments(times) {
+  const parisNow = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", hourCycle: "h23" }).format(new Date()).replace(" ", "T").slice(0, 13);
+  const today = parisNow.slice(0, 10), tmw = shift(today, 1), H = +parisNow.slice(11, 13), m = [["Maintenant", parisNow]];
+  if (H < 14) m.push(["Cet après-midi", today + "T15"]);
+  if (H < 20) m.push(["Ce soir", today + "T21"]);
+  m.push(["Demain matin", tmw + "T08"], ["Demain après-midi", tmw + "T15"]);
+  return m.map(([l, k]) => [l, times.findIndex(t => t.slice(0, 13) === k)]).filter(x => x[1] >= 0);
+}
+function wxMap() {
+  const body = $("#wxBody"); body.innerHTML = `<div class="wx-wait">On déplie la carte…</div>`;
+  Promise.all([wxMapData(), loadGeo()]).then(([list, geo]) => {
+    if (WX_TAB !== "m" || !$("#wxBody")) return;
+    list = Array.isArray(list) ? list : [list];
+    const F = geo.france, p = (lon, lat) => [(lon - F.lon0) * F.k * F.S, (F.lat0 - lat) * F.S];
+    const moms = wxMoments(list[0].hourly.time); if (WX_MOM >= moms.length) WX_MOM = 0;
+    const draw = () => {
+      const i = moms[WX_MOM][1], me = wxCity().name;
+      const pins = WX_CITIES.map(([n, la, lo], j) => {
+        const h = list[j] && list[j].hourly; if (!h) return "";
+        const [x, y] = p(lo, la);
+        return `<g class="${n === me ? "me" : ""}" transform="translate(${x.toFixed(0)} ${y.toFixed(0)})"><svg x="-36" y="-62" width="72" height="72" viewBox="0 0 32 32">${WX_ART[wxKind(h.weather_code[i], h.is_day[i])]()}</svg><text y="34">${wxT(h.temperature_2m[i])}</text><text class="n" y="58">${esc(n)}</text></g>`;
+      }).join("");
+      $("#wxMapBox").innerHTML = `<svg viewBox="${F.box.join(" ")}" role="img" aria-label="Carte météo de la France, ${esc(moms[WX_MOM][0].toLowerCase())}"><g class="land">${Object.values(F.shapes).map(s => `<path d="${s.d}"/>`).join("")}</g>${pins}</svg>`;
+      body.querySelectorAll("[data-m]").forEach(b => b.setAttribute("aria-pressed", +b.dataset.m === WX_MOM));
+    };
+    body.innerHTML = `<div class="wx-mom">${moms.map((m, j) => `<button data-m="${j}">${m[0]}</button>`).join("")}</div><div class="wx-map" id="wxMapBox"></div>`;
+    body.querySelectorAll("[data-m]").forEach(b => b.onclick = () => { WX_MOM = +b.dataset.m; draw(); });
+    draw();
+  }).catch(() => { if ($("#wxBody")) $("#wxBody").innerHTML = `<p class="sub">La carte est restée au vestiaire. Réessayez plus tard.</p>`; });
+}
+
+/* Choix de la ville */
+function openWeatherCity() {
+  const cur = wxCity().name;
+  openSheet(`<h3>Votre ville</h3>
+    <form class="field" id="wxF" onsubmit="return false"><label for="wxI">Ville ou village</label><input type="text" id="wxI" placeholder="Ex. : Marseille, Brest, Montréal…" autocomplete="address-level2" enterkeyhint="search"></form>
+    <div class="wx-res" id="wxRes" hidden></div>
+    <div class="row" style="flex-wrap:wrap"><button class="btn ghost" id="wxHere">🧭 Autour de moi</button>${cur !== "Paris" ? `<button class="btn ghost" id="wxReset">Revenir à Paris</button>` : ""}</div>
+    <p class="sub">Actuellement : ${esc(cur)}. Votre choix reste sur ce téléphone.</p>`);
+  const set = c => { WX.place = c; wxSave(); wxPaint(); openWeather(); };
+  const inp = $("#wxI"), res = $("#wxRes");
+  let t = null, seq = 0;
+  inp.focus();
+  inp.oninput = () => {
+    clearTimeout(t);
+    const q = inp.value.trim();
+    if (q.length < 2) { res.hidden = true; return; }
+    t = setTimeout(async () => {
+      const my = ++seq;
+      try {
+        const r = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=6&language=fr&format=json`);
+        const j = await r.json(); if (my !== seq) return;
+        const L = (j.results || []);
+        res.innerHTML = L.length ? L.map((c, k) => `<button data-k="${k}">${esc(c.name)}<small>${esc([c.admin2 && c.admin2 !== c.name ? c.admin2 : "", c.admin1, c.country].filter(Boolean).join(", "))}</small></button>`).join("")
+          : `<p class="sub" style="padding:11px 0">Aucune ville trouvée. Vérifiez l’orthographe (ou inventez moins).</p>`;
+        res.hidden = false;
+        res.querySelectorAll("[data-k]").forEach(b => b.onclick = () => { const c = L[+b.dataset.k]; set({ name: c.name, lat: c.latitude, lon: c.longitude }); });
+      } catch (e) { res.innerHTML = `<p class="sub" style="padding:11px 0">Recherche indisponible pour l’instant.</p>`; res.hidden = false; }
+    }, 300);
+  };
+  $("#wxHere").onclick = () => {
+    if (!navigator.geolocation) return toast("Localisation indisponible sur cet appareil");
+    navigator.geolocation.getCurrentPosition(
+      pos => set({ name: "Autour de moi", lat: pos.coords.latitude, lon: pos.coords.longitude }),
+      () => toast("Localisation refusée. Tapez plutôt le nom de votre ville."), { timeout: 8000, maximumAge: 3600000 });
+  };
+  if ($("#wxReset")) $("#wxReset").onclick = () => { delete WX.place; wxSave(); wxPaint(); openWeather(); };
 }
 
 /* ---------- Feuilles ---------- */
