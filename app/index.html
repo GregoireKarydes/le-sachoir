@@ -267,6 +267,7 @@ button{cursor:pointer}
 .exbox ol li::before{content:counter(list-item);position:absolute;left:9px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;font-size:12.5px;display:grid;place-items:center}
 .exbox ol li + li{margin-top:14px}
 .exbox ol li + li::after{content:"↓";position:absolute;left:16px;top:-15px;font-weight:900;font-size:13px;line-height:1}
+.exbox .ex-lbl{font-weight:900;color:var(--navy)}
 .exbox .ex-joke{font-family:var(--f-letter);font-size:17px;line-height:1.25;border-top:2px dashed var(--line,#ddd);padding-top:9px}
 .ccard .story{border-top:2px solid var(--ink);padding:0 16px}
 .ccard .story summary{cursor:pointer;font-weight:800;padding:12px 0;font-size:15px}
@@ -982,7 +983,7 @@ function openInstallQR() {
 /* ---------- Lecteur ---------- */
 let R = { ed: null, f: null, idx: 0, n: 0 };
 function explainHTML(c) {
-  const paras = String(c.text || "").split(/\n+/).filter(Boolean).map(t => `<p>${esc(t)}</p>`).join("");
+  const paras = String(c.text || "").split(/\n+/).map(t => t.trim()).filter(Boolean).map(t => { const m = t.match(/^([^:]{2,28}) : (.+)$/); return m ? `<p><b class="ex-lbl">${esc(m[1])} :</b> ${esc(m[2])}</p>` : `<p>${esc(t)}</p>`; }).join("");
   const steps = (c.steps || []).length ? `<ol>${c.steps.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : "";
   return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${esc(c.title)}</h3>` : ""}${paras}${steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}</div>`;
 }

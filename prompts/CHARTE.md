@@ -20,6 +20,13 @@ On apprend en riant. Chaque BD explique et vulgarise un sujet exact, avec une vr
 - **Un mécanisme se raconte maillon par maillon** (une arnaque, une invention, un phénomène) : qui fait quoi, comment l'information ou l'objet passe d'une étape à la suivante, pourquoi personne ne s'en aperçoit. Aucun maillon sauté : si le lecteur doit deviner une étape, elle manque. Exemple raté (7 novembre) : le piratage des frères Blanc sans dire comment l'employé de Tours connaissait les cours de Paris.
 Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The Office**, **Kaamelott**, et pour l'image et le jeu d'acteur **le strip minimaliste façon Sarah's Scribbles**.
 
+## L'Actu : une case drôle, une case vraie (8 novembre 2026, retour de Greg)
+Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'info pour comprendre. Désormais l'humour et l'explication sont séparés.
+- **Case dessinée** : le récitatif est bien rempli (30 mots max) et donne tout ce qu'il faut pour comprendre la blague : qui (par sa fonction), quoi, où, et le détail précis que le gag détourne. **Une seule bulle** : la blague. L'image sert le gag.
+- **Case « Ce qui se passe vraiment »** juste après (texte seul, sans image) : « Quoi : », « Pourquoi ça compte : », « Et maintenant : ». 50 mots max, neutre, sans blague.
+- Une seule image par sujet : on peut traiter 4 à 6 sujets sans dessiner plus.
+- Exemple de forme (sujet inventé, ne jamais le reprendre) : récitatif « La mairie de Lyon interdit les trottinettes en libre-service dans le centre dès lundi, après 300 plaintes de piétons en un an. » ; bulle d'un livreur à trottinette, figé sur la ligne : « Techniquement, ma roue avant est encore dans le 7e. » ; puis la case Quoi / Pourquoi ça compte / Et maintenant.
+
 ## Le casting : adapté à l'histoire
 - Les personnages sont **des humains** (figures historiques, témoins, scientifiques, gens ordinaires de l'époque) et, quand le sujet s'y prête vraiment, des animaux réels de l'histoire.
 - **Pas d'objets, de cellules, de molécules ni de billets qui parlent.** Pour expliquer un phénomène invisible, on le fait expliquer par un humain (un scientifique, un prof, un témoin), avec un objet ou un schéma dessiné à côté si besoin.
@@ -56,7 +63,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 
 | Format | Durée visée | Cases (repère) | Humour |
 |---|---|---|---|
-| Actu du jour (`actu`) | 1 à 2 min | 1 à 2 cases par sujet, 3 à 5 sujets | L'actu racontée de façon détournée et drôle, sans case « réaction » obligatoire |
+| Actu du jour (`actu`) | environ 2 min | 4 à 6 sujets ; par sujet 1 case dessinée + 1 case « Ce qui se passe vraiment » | Le gag dans la case dessinée, l'explication neutre dans la case texte (voir plus bas) |
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par un duo curieux / qui sait ; un gag toutes les 2 ou 3 cases |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, raconté clairement ; un gag toutes les 2 ou 3 cases |
 | Grand Dossier (`dossier`) | environ 3 min | 24 au plus (8 novembre 2026, avant 30) | Humour dosé : la compréhension d'abord |
@@ -68,7 +75,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - Le récitatif (`caption`) porte les faits. Toute énormité qui ressemble à un fait est démentie dans la même case ou la suivante. Les anachronismes sont des blagues évidentes.
 - Grand Dossier : des **cases « pause »** sont permises quand c'est utile (chiffre clé, frise, carte du monde) ; le contenu est dans le récitatif, l'image reste un dessin sans texte (ex. un personnage qui déroule une longue frise vierge).
 - Chaque chiffre et chaque date ont une source dans `sources` (affichées en fin d'histoire dans l'appli).
-- Récitatif : 20 mots max (phrases complètes, avec le « parce que »). Bulle : 15 mots max. 2 bulles par case (3 si la dernière fait 3 mots ou moins). 3 personnages max par case. Une bulle ne répète pas le récitatif mais peut le compléter (le pourquoi, un exemple).
+- Récitatif : 20 mots max (30 dans l'Actu), phrases complètes, avec le « parce que ». Bulle : 15 mots max. 2 bulles par case (3 si la dernière fait 3 mots ou moins) ; **une seule dans l'Actu**. 3 personnages max par case. Une bulle ne répète pas le récitatif mais peut le compléter (le pourquoi, un exemple).
 
 ## Garde-fous
 - Humour bienveillant : on se moque des légendes, des situations et de ce que font les personnalités publiques, jamais des gens pour ce qu'ils sont.

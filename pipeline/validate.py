@@ -25,6 +25,7 @@ THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
 CAPTION_MAX, BUBBLE_MAX = 20, 15  # mots, d'après prompts/CHARTE.md (7 novembre 2026 : plus de place pour expliquer)
 MAX_CASES = {"dossier": 24}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30)
 EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
+ACTU_CAPTION_MAX, ACTU_EXPLAIN_MAX = 30, 50  # 8 novembre 2026 : Actu = 1 case dessinée (récitatif chargé, 1 bulle) + 1 case « Ce qui se passe vraiment »
 STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 
@@ -134,13 +135,21 @@ def check_story(fmt: dict, d: Path, err, warn):
             if not case.get("title") or not (case.get("text") or case.get("steps")):
                 err(f"case {i} (Pour mieux comprendre) : « title » et « text » ou « steps » obligatoires")
             n = words(case.get("text")) + sum(words(x) for x in case.get("steps") or []) + words(case.get("joke"))
-            if n > EXPLAIN_MAX:
-                warn(f"case {i} (Pour mieux comprendre) : {n} mots (max {EXPLAIN_MAX})")
+            emax = ACTU_EXPLAIN_MAX if fid == "actu" else EXPLAIN_MAX
+            if n > emax:
+                warn(f"case {i} (Pour mieux comprendre) : {n} mots (max {emax})")
             if case.get("image"):
                 err(f"case {i} (Pour mieux comprendre) : pas d’image pour ce type de case")
             continue
-        if words(case.get("caption")) > CAPTION_MAX:
-            warn(f"case {i} : récitatif de {words(case.get('caption'))} mots (max {CAPTION_MAX})")
+        cmax = ACTU_CAPTION_MAX if fid == "actu" else CAPTION_MAX
+        if words(case.get("caption")) > cmax:
+            warn(f"case {i} : récitatif de {words(case.get('caption'))} mots (max {cmax})")
+        if fid == "actu":
+            if len(case.get("bubbles") or []) > 1:
+                warn(f"case {i} : Actu, une seule bulle (la blague) ; l'info va dans le récitatif")
+            nxt = cases[i] if i < len(cases) else None
+            if not (isinstance(nxt, dict) and nxt.get("kind") == "explain"):
+                warn(f"case {i} : Actu, il manque la case « Ce qui se passe vraiment » juste après")
         for b in case.get("bubbles", []) or []:
             if words(b.get("text")) > BUBBLE_MAX:
                 warn(f"case {i} : bulle de {words(b.get('text'))} mots (max {BUBBLE_MAX})")

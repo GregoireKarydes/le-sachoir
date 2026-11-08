@@ -63,7 +63,7 @@ Une case de texte glissée dans la BD, entre deux cases dessinées, là où le l
 }
 ```
 - **Pas d’image** (pas de champ `image`), pas de bulles. 70 mots au plus en tout (`text` + `steps` + `joke`).
-- Combien : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, jamais en case 1 ni deux de suite. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
+- Combien : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, jamais en case 1 ni deux de suite. **Actu : une après chaque case dessinée**, avec `"tag": "Ce qui se passe vraiment"` et `text` en trois lignes « Quoi : … \n Pourquoi ça compte : … \n Et maintenant : … » (50 mots max, sans `joke`) ; un libellé court suivi de « : » en début de ligne est affiché en gras. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
 - La numérotation `n` suit l’ordre de lecture (les cases dessinées et les cases texte se suivent : 1, 2, 3…).
 - Même ton que le Sachoir : simple, concret, une touche d’humour, mais la clarté d’abord.
 
