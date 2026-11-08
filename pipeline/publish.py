@@ -244,6 +244,49 @@ def main(now: datetime | None = None):
     print("Site construit dans _site/")
 
 
+def queue_index(today: date) -> dict:
+    """Index des BD à venir pour l'écran admin (data/queue.json) : file d'attente par type et prochaines éditions.
+    Le contenu complet est lu à la demande par l'API (route admin), jamais publié sur le site."""
+    def brief(fmt):
+        imgs = stock.images_of(fmt)
+        return {"title": fmt.get("title", ""), "theme": fmt.get("theme", ""), "tagline": fmt.get("tagline", ""),
+                "minutes": fmt.get("minutes", 0), "cases": len(fmt.get("cases", [])),
+                "photos": sum(1 for c in fmt.get("cases", []) if c.get("kind") == "photo"),
+                "images_done": sum(1 for i in imgs if i.get("status") == "done"), "images_total": len(imgs),
+                "failed": sum(1 for i in imgs if i.get("status") == "failed"),
+                "redo": sum(1 for i in imgs if i.get("redo"))}
+    out = {"updated_at": datetime.now(ZoneInfo("Europe/Paris")).isoformat(timespec="minutes"), "stock": {}, "editions": []}
+    for kind in stock.TYPES:
+        nxt = stock.next_out(kind)
+        rows = []
+        for p in stock.items(kind):
+            it = stock.load(p)
+            if not it:
+                rows.append({"path": f"stock/{kind}/{p.name}", "name": p.name, "status": "blocked", "title": p.name, "error": "item.json illisible"})
+                continue
+            fmt = it["formats"][0]
+            status = "ready" if stock.is_ready(fmt, p) and not it.get("blocked") else "blocked" if it.get("blocked") else "waiting"
+            rows.append({"path": f"stock/{kind}/{p.name}", "name": p.name, "added": it.get("added", ""), "status": status,
+                         "next": nxt is not None and p == nxt, **brief(fmt)})
+        out["stock"][kind] = rows
+    for d in sorted(EDITIONS.iterdir()):
+        try:
+            day = date.fromisoformat(d.name)
+            ed = json.loads((d / "edition.json").read_text())
+        except (ValueError, OSError):
+            continue
+        if day < today:
+            continue
+        fmts = []
+        for x in ed.get("formats", []):
+            row = {"id": x.get("id"), "label": x.get("label", ""), "kind": x.get("kind", "")}
+            row.update({"title": x.get("title", ""), "questions": len(x.get("questions", []))} if x.get("id") == "quiz" else brief(x))
+            fmts.append(row)
+        out["editions"].append({"date": d.name, "path": f"editions/{d.name}", "status": ed.get("status", "draft"),
+                                "newsletter": bool(ed.get("newsletter")), "formats": fmts})
+    return out
+
+
 def write_health(health: dict, index: list, today: date):
     """Résumé lisible par une machine : l'édition du jour est-elle en ligne, combien de jours d'avance ?"""
     pub = next((e for e in index if e["date"] == today.isoformat()), None)
@@ -251,6 +294,10 @@ def write_health(health: dict, index: list, today: date):
     health["today_stories"] = [x["id"] for x in pub["formats"] if x["id"] != "quiz"] if pub else []
     health["last_published"] = index[0]["date"] if index else None
     # File d'attente : BD finies (dessinées à 100 %) et écrites, par type. Les jours d'avance sont ceux du type le plus juste.
+    try:
+        (ROOT / "data" / "queue.json").write_text(json.dumps(queue_index(today), ensure_ascii=False, indent=1))
+    except Exception as ex:  # noqa: BLE001 — l'index admin ne doit jamais bloquer la publication
+        print(f"! queue.json : {ex}")
     summ = stock.summary()
     health["stock"] = summ
     ahead = min(s["ready"] for s in summ.values())

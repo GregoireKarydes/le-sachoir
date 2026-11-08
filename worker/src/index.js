@@ -3,6 +3,7 @@
    newsletter quotidienne (Brevo), mesure d'audience anonyme et indicateurs de l'écran admin. */
 import { nowIso, parisDay, parisHour, shiftDay, addSeconds, randomToken, randomCode, sha256, EMAIL_RE, normEmail, mergeState, streakOf, esc } from "./util.js";
 import { brevoSend, loginMail, welcomeMail, confirmMail, newsletterMail, loadEdition, page, btn, h1, mailLimit } from "./mail.js";
+import { adminQueue, adminItem } from "./credits.js";
 import { ownerOf, wallet, grant, grantNewsletter, rewardReferral, mergeOwners, unlock, premiumDossier, premiumImg, refCode, DEVICE_RE } from "./credits.js";
 import { PLANS, stripeOn, checkout, confirm as payConfirm, checkPending, webhook, setCancel, portal, cancelNow } from "./pay.js";
 
@@ -412,6 +413,8 @@ async function route(req, env, url, ctx) {
     if (!isAdminEmail(env, u.email)) return err("Réservé à l'administration.", 403);
     if (p === "/admin/kpi") return json(await kpi(env, Math.max(7, Math.min(120, +url.searchParams.get("days") || 30))));
     if (p === "/admin/users" && M === "GET") return adminUsers(env, url);
+    if (p === "/admin/queue") { const q = await adminQueue(env); return q.error ? err(q.error, 404) : json(q); }
+    if (p === "/admin/item") { const it = await adminItem(env, url.searchParams.get("dir")); return it.error ? err(it.error, 404) : json(it); }
     if (p === "/admin/users" && M === "POST") return adminSetPremium(req, env);
     if (p === "/admin/newsletter/preview") {
       const ed = await loadEdition(env, url.searchParams.get("day") || parisDay());
