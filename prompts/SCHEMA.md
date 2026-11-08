@@ -102,12 +102,13 @@ La newsletter du matin met le Grand Dossier en avant, puis montre l'Actu, la Cul
 ```json
 "newsletter": {
   "subject": "Objet de l'e-mail, 70 caractères max, drôle, qui donne envie d'ouvrir (une emoji au plus)",
-  "intro": "Le mot d'accueil du jour, 2 phrases, 40 mots max, inspiré de l'actu ou de la date (saison, fête, jour de la semaine)",
+  "intro": "Le mot d'accueil du jour, 1 ou 2 phrases, 30 mots max, inspiré de l'actu ou de la date (saison, fête, jour de la semaine)",
   "game": "Une phrase pour donner envie de jouer au jeu du jour, 20 mots max",
   "ps": "Un P.-S. drôle, 30 mots max"
 }
 ```
-- Ton des newsletters de PostHog : complice, autodérision, jamais racoleur. Ne jamais réutiliser un texte d'une édition précédente (regarder les 7 dernières dans `editions/`). Sans ce bloc, la newsletter pioche dans des réserves de phrases toutes faites.
+- La newsletter est **courte** (un seul écran de téléphone) : pas de liens vers les BD, un seul bouton vers l'édition du jour. Le `teaser` de chaque BD est donc la seule ligne qui donne envie : 20 mots max.
+- Ton des newsletters de PostHog : phrases courtes, complice, autodérision, un brin d'absurde, jamais racoleur, zéro jargon marketing. Ne jamais réutiliser un texte d'une édition précédente (regarder les 7 dernières dans `editions/`). Sans ce bloc, la newsletter pioche dans des réserves de phrases toutes faites.
 
 ## « L’histoire complète » (champ `story` du format)
 Un texte continu, affiché replié après la carte « Pour briller » et en clair sur la page publique de l’histoire (référencement).

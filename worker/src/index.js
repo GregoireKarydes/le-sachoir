@@ -380,7 +380,7 @@ async function route(req, env, url, ctx) {
     const lead = ed.formats.find(f => f.id === "dossier") || ed.stories[0];
     return page(env, "Pour briller en société", `<p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#5f5a52;margin:0 0 6px">Pour briller en société</p>
       <p style="font-family:Georgia,serif;font-size:24px;font-weight:800;line-height:1.2;margin:0 0 14px">${esc(lead?.final?.text || "")}</p>
-      <p style="font-size:14px;color:#5f5a52;margin:0 0 18px">À ressortir au prochain apéro. Effet garanti (ou presque).</p>${btn(`${env.APP_URL}?d=${ed.day}&f=${lead.id}`, `Lire « ${lead.title} »`)}`);
+      <p style="font-size:14px;color:#5f5a52;margin:0 0 18px">À ressortir au prochain apéro. Effet garanti (ou presque).</p>${btn(`${env.APP_URL}?d=${ed.day}`, "Lire l'édition du jour")}`);
   }
 
   // Routes avec session
