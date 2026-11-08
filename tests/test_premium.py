@@ -74,3 +74,12 @@ def test_photo_licence_libre_acceptee(monkeypatch):
     monkeypatch.setattr(photos.requests, "get", lambda *a, **k: R())
     meta = photos.resolve("File:Y.jpg")
     assert meta["credit"] == "Jean Dupont" and meta["license"] == "CC BY-SA 4.0" and meta["url"] == "t"
+
+
+def test_paywall_lu_sur_l_api_sans_paquet(monkeypatch, tmp_path):
+    import io
+    import urllib.request
+    monkeypatch.setattr(urllib.request, "urlopen", lambda req, timeout=10: io.BytesIO(b'{"paywall": true}'))
+    real = json.loads
+    monkeypatch.setattr(publish.json, "loads", lambda t, *a, **k: {"api_url": "https://api.test", "paywall": "auto"} if isinstance(t, str) and '"base_url"' in t else real(t, *a, **k))
+    assert publish.paywall_on() is True
