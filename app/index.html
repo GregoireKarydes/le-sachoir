@@ -236,6 +236,7 @@ button{cursor:pointer}
 .caption.conf{background:var(--ink);color:#fff;border-color:var(--ink);align-self:flex-start;padding:6px 11px}
 .caption.conf .ctag{color:var(--yellow);margin:0}
 .bubble{position:relative;max-width:78%;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:8px 13px;font-family:var(--f-letter);font-size:18px;line-height:1.2}
+.bubble .who{display:block;font-family:var(--f-sans);font-size:10.5px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin:-1px 0 2px}
 .bubble.l{align-self:flex-start}
 .bubble.r{align-self:flex-end}
 .bubble::before,.bubble::after{content:"";position:absolute;bottom:-17px;width:0;height:0;border-style:solid}
@@ -1130,6 +1131,8 @@ function photoHTML(ed, c) {
   const credit = [ph.credit, ph.license].filter(Boolean).map(esc).join(" · ");
   return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "En vrai")}</span><img class="ph-img" src="${ph.src || imgUrl(ed, ph.file)}" alt="${esc(c.title || "")}" decoding="async">${c.title ? `<h3>${esc(c.title)}</h3>` : ""}<p>${esc(c.text || "")}</p><span class="ph-credit">Photo : ${credit}${ph.source ? ` · <a href="${esc(ph.source)}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a>` : ""}</span></div>`;
 }
+// Nom affiché au-dessus des bulles : « who » = id d'un personnage du casting (son « name ») ou un nom écrit en clair.
+let SPEAKERS = {};
 function caseHTML(ed, c) {
   if (c.kind === "explain") return explainHTML(c);
   if (c.kind === "photo") return photoHTML(ed, c);
@@ -1139,7 +1142,7 @@ function caseHTML(ed, c) {
     cap = `<div class="caption ${c.kind || ""}">${tag ? `<span class="ctag">${esc(tag)}</span>` : ""}${esc(c.caption || "")}</div>`;
   }
   const art = c.image?.status === "done" ? `<img class="panel" src="${c.image.src || imgUrl(ed, c.image.file)}" alt="" decoding="async">` : `<div class="wip">Dessin en cours…</div>`;
-  return `${art}<div class="stack">${cap}${(c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${esc(b.text)}</div>`).join("")}</div><div class="panel-frame"></div>`;
+  return `${art}<div class="stack">${cap}${(c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${b.who ? `<span class="who">${esc(SPEAKERS[b.who] || b.who)}</span>` : ""}${esc(b.text)}</div>`).join("")}</div><div class="panel-frame"></div>`;
 }
 function finalHTML(ed, f) {
   const srcs = (f.sources || []).filter(s => s && /^https?:\/\//.test(s.url || ""));
@@ -1159,6 +1162,7 @@ async function openReader(ed, fid, startAt = 0) {
     }
     if (PREM[ed.date]) full = { ...full, cases: full.cases.concat(PREM[ed.date].cases), locked: 0 };
   }
+  SPEAKERS = Object.fromEntries((full.cast || []).filter(x => x.name).map(x => [x.id, x.name]));
   const locked = !!full.locked;
   const f = { ...full, cases: full.cases.filter(c => c.kind !== "photo" || c.photo?.status === "done") };
   R = { ed, f, idx: 0, n: f.cases.length + 1, top: 0, doneSent: false };

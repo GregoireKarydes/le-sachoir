@@ -182,6 +182,7 @@ def story_page(s, ed_dir: Path, related, gate=False):
     image = s["cover_abs"] or f"{BASE}assets/og.png"
     theme = f.get("theme", "")
     panels = []
+    names = {x.get("id"): x.get("name") for x in f.get("cast", []) or [] if x.get("name")}
     for c in f.get("cases", []):
         if c.get("kind") == "photo":
             fig = photo_figure(c, img_base)
@@ -202,7 +203,7 @@ def story_page(s, ed_dir: Path, related, gate=False):
         if c.get("caption"):
             tag = c.get("tag") or {"fact": "Les faits", "react": "La réaction"}.get(c.get("kind", ""), "")
             cap = f'<p class="cap">{"<b>" + e(tag) + "</b>" if tag else ""}{e(c["caption"])}</p>'
-        bubs = "".join(f'<p class="bub{" r" if b.get("side") == "r" else ""}">{e(b.get("text"))}</p>' for b in c.get("bubbles", []))
+        bubs = "".join(f'<p class="bub{" r" if b.get("side") == "r" else ""}">{("<b>" + e(names.get(b["who"], b["who"])) + " :</b> ") if b.get("who") else ""}{e(b.get("text"))}</p>' for b in c.get("bubbles", []))
         pic = f'<img src="{e(src)}" alt="{e(alt)}" loading="lazy" decoding="async" width="1024" height="1792">' if src else ""
         panels.append(f'<figure class="panel">{pic}<figcaption>{cap}{bubs}</figcaption></figure>')
     sources = "".join(f'<li><a href="{e(x.get("url"))}" rel="nofollow noopener">{e(x.get("title") or x.get("url"))}</a></li>' for x in f.get("sources", []) if x.get("url"))

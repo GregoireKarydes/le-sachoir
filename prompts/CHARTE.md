@@ -103,3 +103,4 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - [ ] Lu à voix haute : une blague qu'il faut expliquer est coupée.
 - [ ] Case photo (si elle apporte vraiment quelque chose) : fichier Wikimedia Commons sous licence libre, jamais une personne vivante dans l'Actu ni une image choquante.
 - [ ] `teaser` pour la newsletter : drôle, 25 mots max, sans dévoiler la chute.
+- [ ] Chaque bulle a un `who`, chaque personnage un `name` : on sait toujours qui parle.

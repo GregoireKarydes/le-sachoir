@@ -325,14 +325,16 @@ function caseView(c) {
   if (c.kind === "photo") { const ph = c.photo || {}; return `<div class="vcase">${ph.src ? `<img src="${esc(ph.src)}" alt="" loading="lazy">` : `<div class="ph0">Photo ${esc(ph.status || "à récupérer")} : ${esc(ph.commons || "")}</div>`}<div class="txt"><span class="tag">${esc(c.tag || "En vrai")}</span><b>${esc(c.title || "")}</b><p style="margin:0">${esc(c.text || "")}</p><small>${esc([ph.credit, ph.license].filter(Boolean).join(" · "))}${ph.error ? " · " + esc(ph.error) : ""}</small></div></div>`; }
   const img = c.image || {};
   return `<div class="vcase">${img.src ? `<img src="${esc(img.src)}" alt="" loading="lazy">` : `<div class="ph0">${img.status === "failed" ? "Image en échec" : "Dessin en cours"}</div>`}<div class="txt">
-    <span class="tag">${esc(`Case ${c.n || ""}${c.tag ? " · " + c.tag : ""}`)}</span>${c.caption ? `<p style="margin:0">${esc(c.caption)}</p>` : ""}${(c.bubbles || []).map(b => `<span class="bub ${b.side === "r" ? "r" : ""}">${esc(b.text)}</span>`).join("")}
+    <span class="tag">${esc(`Case ${c.n || ""}${c.tag ? " · " + c.tag : ""}`)}</span>${c.caption ? `<p style="margin:0">${esc(c.caption)}</p>` : ""}${(c.bubbles || []).map(b => `<span class="bub ${b.side === "r" ? "r" : ""}">${b.who ? `<b>${esc(NAMES[b.who] || b.who)} :</b> ` : `<b style="color:var(--red)">? </b>`}${esc(b.text)}</span>`).join("")}
     ${img.prompt ? `<details><summary>Prompt de l'image${img.redo ? " · à refaire" : ""}</summary>${esc(img.prompt)}</details>` : ""}</div></div>`;
 }
+let NAMES = {};
 function formatView(f) {
+  NAMES = Object.fromEntries((f.cast || []).filter(x => x.name).map(x => [x.id, x.name]));
   if (f.id === "quiz") return `<h2>${esc(f.title || "Le jeu du jour")}</h2><p class="note">${esc(f.kind || "")}</p><ol class="qz">${(f.questions || []).map(q => `<li><b>${esc(q.q || q.prompt || q.type || "")}</b>${(q.choices || []).length ? `<ul>${q.choices.map((ch, i) => `<li class="${i === q.answer ? "ok" : ""}">${esc(ch)}</li>`).join("")}</ul>` : ""}${(q.items || []).length ? `<ul>${q.items.map(it => `<li>${esc(it.text || it.name || it.word || JSON.stringify(it))}</li>`).join("")}</ul>` : ""}${q.explain ? `<p class="note">${esc(q.explain)}</p>` : ""}</li>`).join("")}</ol>`;
   return `<p class="note">${esc(LBL[f.id] || f.label || f.id)}${f.theme ? " · " + esc(f.theme) : ""} · ${f.minutes || "?"} min</p><h2>${esc(f.title || "")}</h2><p>${esc(f.tagline || "")}</p>
     ${f.teaser ? `<p class="note"><b>Accroche newsletter :</b> ${esc(f.teaser)}</p>` : ""}
-    ${(f.cast || []).length ? `<div class="cast">${f.cast.map(c => `<figure>${c.src ? `<img src="${esc(c.src)}" alt="">` : `<div class="ph0" style="width:96px;height:96px;border-radius:12px"></div>`}<figcaption>${esc(c.id)}</figcaption></figure>`).join("")}</div>` : ""}
+    ${(f.cast || []).length ? `<div class="cast">${f.cast.map(c => `<figure>${c.src ? `<img src="${esc(c.src)}" alt="">` : `<div class="ph0" style="width:96px;height:96px;border-radius:12px"></div>`}<figcaption>${esc(c.name || c.id)}</figcaption></figure>`).join("")}</div>` : ""}
     ${f.cover?.src ? `<div class="vcase"><img src="${esc(f.cover.src)}" alt=""><div class="txt"><span class="tag">Couverture</span></div></div>` : ""}
     ${(f.cases || []).map(caseView).join("")}
     ${f.final ? `<div class="vcase"><div class="txt"><span class="tag">Pour briller en société</span><b>${esc(f.final.text || "")}</b><small>${esc(f.final.source || "")}</small></div></div>` : ""}
