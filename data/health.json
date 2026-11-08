@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T20:30:50.822099+01:00",
+ "updated_at": "2026-11-08T20:41:49.924573+01:00",
  "today": "2026-11-08",
  "problems": [],
  "days": [
@@ -55,6 +55,13 @@
    "formats": {
     "quiz": "prêt"
    }
+  },
+  {
+   "date": "2026-11-15",
+   "status": "draft",
+   "formats": {
+    "quiz": "prêt"
+   }
   }
  ],
  "stock_moves": [],
@@ -102,7 +109,7 @@
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 6,
+ "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-08",
   "count": 35,

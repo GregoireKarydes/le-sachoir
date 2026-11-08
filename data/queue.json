@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T20:30+01:00",
+ "updated_at": "2026-11-08T20:41+01:00",
  "stock": {
   "cultureg": [
    {
@@ -443,6 +443,21 @@
      "kind": "citation",
      "title": "Ils l’ont dit (ou pas)",
      "questions": 4
+    }
+   ]
+  },
+  {
+   "date": "2026-11-15",
+   "path": "editions/2026-11-15",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Quiz du jour",
+     "kind": "culture",
+     "title": "Cinq questions, un seul tabouret",
+     "questions": 5
     }
    ]
   }
