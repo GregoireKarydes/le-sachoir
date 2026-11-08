@@ -32,7 +32,7 @@ Si le message de lancement commence par « Rattrapage <date> » : écrire d'abor
    - **Ajouter** 1 ou 2 cases « Pour mieux comprendre » (`kind: "explain"`, texte seul, aucune image) et le champ `story` « L’histoire complète » (150 à 250 mots), voir `prompts/SCHEMA.md`.
    - Culture G : un concept expliqué et vulgarisé par un duo (un curieux qui pose les questions du lecteur, un personnage qui sait et répond simplement), avec une touche d'humour (1 à 2 min).
    - Insolite : un fait ahurissant ou une idée reçue démontée, raconté pas à pas pour qu'on comprenne comment c'est arrivé (1 min).
-   - Grand Dossier : **30 cases au plus** (environ 4 min), quota d'images oblige, découpées en chapitres adaptés au sujet (pas forcément « conséquences modernes » à la fin), compréhension d'abord, humour dosé, cliffhanger en case 4. Cases « pause » permises quand c'est utile (chiffre clé, frise, carte), le contenu dans le récitatif.
+   - Grand Dossier : **24 cases dessinées au plus** (environ 3 min, depuis le 8 novembre 2026 ; avant 30), quota d'images oblige, découpées en chapitres adaptés au sujet (pas forcément « conséquences modernes » à la fin), compréhension d'abord, humour dosé, cliffhanger en case 4. Cases « pause » permises quand c'est utile (chiffre clé, frise, carte), le contenu dans le récitatif.
 5. **Fact-check** en seconde passe. Retirer tout ce qui n'est pas sourcé.
 6. Écrire `stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` (voir « Où écrire »). Valider le JSON (`python3 -m json.tool`).
 7. Commit « File <type> : <titre> », `git pull --rebase`, `git push origin main` (un commit par BD, poussé aussitôt : si la tâche s'arrête en route, le travail déjà fait est gardé).

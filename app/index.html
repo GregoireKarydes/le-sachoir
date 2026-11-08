@@ -653,7 +653,6 @@ body{overscroll-behavior-y:none}
           </div>
           <div class="ab-visual" id="abCovers" aria-hidden="true">
             <div class="ab-fan"><div class="ab-c c1 green"><div class="tx"><b>Le Grand Dossier</b><span>La guerre froide, racontée à ceux qui dormaient en cours</span></div></div><div class="ab-c c2 orange"><div class="tx"><b>Culture G</b><span>Le chat de Schrödinger expliqué à mon chat</span></div></div><div class="ab-c c3 red"><div class="tx"><b>Insolite</b><span>L’homme qui a vendu la tour Eiffel (deux fois)</span></div></div></div>
-            <span class="ab-stamp">Histoire vraie<br>mais absurde</span>
           </div>
         </div>
 
@@ -885,7 +884,7 @@ function renderHome() {
   const hello = ME.name ? `Salut, ${esc(ME.name)}` : "Salut !";
   const isToday = ed.date === TODAY;
   const card = {
-    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span><span class="stamp">HISTOIRE VRAIE<br>MAIS ABSURDE</span><h3>${esc(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 4} min) →</span><p class="tagline">${esc(f.tagline || "")}</p></button>`; },
+    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 3} min) →</span><p class="tagline">${esc(f.tagline || "")}</p></button>`; },
     small: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} small" data-f="${f.id}"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><div class="mid"><span class="dur">${ICON.clock}${f.minutes || 2} min</span>${c ? `<img class="thumb" src="${c}" alt="" loading="lazy">` : ""}</div><span class="tl">${readState(ed, f) || esc(f.tagline || "")}</span></button>`; },
     wide: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} wide" data-f="${f.id}"><div class="txt"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || esc(f.tagline || "")}</span></div>${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}</button>`; }
   };

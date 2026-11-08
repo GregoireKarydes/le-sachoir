@@ -14,7 +14,7 @@ On apprend en riant. Chaque BD explique et vulgarise un sujet exact, avec une vr
 - **Le duo qui explique** (Culture G surtout) : un personnage curieux pose les questions naïves que se pose le lecteur, un autre répond simplement. Le lecteur s'identifie au curieux.
 - **Les bulles peuvent expliquer.** Le récitatif donne le fait, la bulle peut donner le pourquoi ou un exemple concret ; les gags viennent en plus, pas à la place.
 - **Dosage : un vrai gag toutes les 2 ou 3 cases**, pas à chaque case. Les autres cases sont des cases d'explication, vivantes (expressions, petites réactions) mais sans chute forcée.
-- **Cases « Pour mieux comprendre »** (texte seul, sans image, voir `prompts/SCHEMA.md`) : 1 ou 2 par Culture G ou Insolite, 3 à 5 par Grand Dossier, là où un mécanisme ou une notion ne tient pas dans une case dessinée. Souvent une chaîne d’étapes. Elles ne coûtent aucune image : ne pas hésiter.
+- **Cases « Pour mieux comprendre »** (texte seul, sans image, voir `prompts/SCHEMA.md`) : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, là où un mécanisme ou une notion ne tient pas dans une case dessinée. Souvent une chaîne d’étapes. Elles ne coûtent aucune image : ne pas hésiter.
 - **« L’histoire complète »** (champ `story`, 150 à 250 mots) : l’explication continue, en fin d’histoire, pour qui veut tout comprendre. Elle doit se suffire à elle-même.
 - **Une idée par case.** Si une case contient deux faits, la couper ou en garder un.
 - **Un mécanisme se raconte maillon par maillon** (une arnaque, une invention, un phénomène) : qui fait quoi, comment l'information ou l'objet passe d'une étape à la suivante, pourquoi personne ne s'en aperçoit. Aucun maillon sauté : si le lecteur doit deviner une étape, elle manque. Exemple raté (7 novembre) : le piratage des frères Blanc sans dire comment l'employé de Tours connaissait les cours de Paris.
@@ -59,7 +59,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 | Actu du jour (`actu`) | 1 à 2 min | 1 à 2 cases par sujet, 3 à 5 sujets | L'actu racontée de façon détournée et drôle, sans case « réaction » obligatoire |
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par un duo curieux / qui sait ; un gag toutes les 2 ou 3 cases |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, raconté clairement ; un gag toutes les 2 ou 3 cases |
-| Grand Dossier (`dossier`) | environ 4 min | 30 au plus (quota d'images) | Humour dosé : la compréhension d'abord |
+| Grand Dossier (`dossier`) | environ 3 min | 24 au plus (8 novembre 2026, avant 30) | Humour dosé : la compréhension d'abord |
 | Jeu du jour (`quiz`), Quiz culture G | 1 à 2 min | 5 questions, sans image | Mauvaises réponses drôles mais plausibles, explication courte et drôle |
 | Jeu du jour (`quiz`), Quiz géo | 1 min | 3 questions : où c'est (carte), capitales, joker | Pièges crédibles, explication courte et drôle |
 | Jeu du jour (`quiz`) : Frise, Dico menteur, Plus ou moins, Swipe, Chiffre, Qui a dit ça ? | 1 à 2 min | voir `prompts/SCHEMA.md` | Un jeu par jour, en rotation sur 8 jours |
@@ -84,7 +84,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - [ ] Test du néophyte : quelqu'un qui ne connaît rien au sujet peut répondre à la question du titre à la fin.
 - [ ] Case 1 = la question ; un lien logique d'une case à l'autre ; résumé à la fin.
 - [ ] Chaque fait a son pourquoi ; aucun mot technique sans explication.
-- [ ] 1 ou 2 cases « Pour mieux comprendre » (3 à 5 en Grand Dossier) et « L’histoire complète » (150 à 250 mots, faits sourcés).
+- [ ] 1 ou 2 cases « Pour mieux comprendre » (2 à 4 en Grand Dossier) et « L’histoire complète » (150 à 250 mots, faits sourcés).
 - [ ] Un gag toutes les 2 ou 3 cases, chaque gag sert un fait.
 - [ ] Titre drôle.
 - [ ] Durée de lecture dans la cible du format.
