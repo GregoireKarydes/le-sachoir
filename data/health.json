@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T02:49:05.019729+01:00",
+ "updated_at": "2026-11-09T03:21:32.128401+01:00",
  "today": "2026-11-09",
  "problems": [],
  "days": [
@@ -71,7 +71,7 @@
    "images_left": 27,
    "focus": "20261112-0100-bonne-annee-oui-mais-laquelle (9 image(s) à faire)",
    "next": "20261109-0100-lecossais-qui-a-invente-le-billet-et-la",
-   "next_redo": 0
+   "next_redo": 3
   },
   "insolite": {
    "ready": 1,
@@ -80,7 +80,7 @@
    "images_left": 34,
    "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (2 image(s) à faire)",
    "next": "20261109-0100-la-joconde-est-devenue-une-star-en-dispa",
-   "next_redo": 0
+   "next_redo": 1
   },
   "dossier": {
    "ready": 2,

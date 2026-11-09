@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T02:49+01:00",
+ "updated_at": "2026-11-09T03:21+01:00",
  "stock": {
   "cultureg": [
    {
@@ -17,7 +17,7 @@
     "images_done": 11,
     "images_total": 11,
     "failed": 0,
-    "redo": 0
+    "redo": 3
    },
    {
     "path": "stock/cultureg/20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
@@ -121,7 +121,7 @@
     "images_done": 9,
     "images_total": 9,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/insolite/20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
@@ -300,7 +300,7 @@
      "images_done": 5,
      "images_total": 5,
      "failed": 0,
-     "redo": 0
+     "redo": 1
     },
     {
      "id": "quiz",
