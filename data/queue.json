@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T00:49+01:00",
+ "updated_at": "2026-11-09T02:49+01:00",
  "stock": {
   "cultureg": [
    {
@@ -40,7 +40,7 @@
     "path": "stock/cultureg/20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
     "name": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
     "added": "20261111-0100",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
     "theme": "Expression française",
@@ -48,7 +48,7 @@
     "minutes": 2,
     "cases": 9,
     "photos": 0,
-    "images_done": 0,
+    "images_done": 9,
     "images_total": 9,
     "failed": 0,
     "redo": 0
@@ -135,7 +135,7 @@
     "minutes": 1,
     "cases": 8,
     "photos": 0,
-    "images_done": 1,
+    "images_done": 6,
     "images_total": 8,
     "failed": 0,
     "redo": 0
@@ -214,15 +214,15 @@
     "path": "stock/dossier/20261108-1924-impressionnisme-refuses",
     "name": "20261108-1924-impressionnisme-refuses",
     "added": "20261108-1924",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "Impressionnisme : la peinture qui a raté son examen (et gagné quand même)",
     "theme": "Histoire de l’art",
     "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
     "minutes": 3,
     "cases": 24,
     "photos": 2,
-    "images_done": 0,
+    "images_done": 20,
     "images_total": 20,
     "failed": 0,
     "redo": 0
@@ -249,7 +249,7 @@
     "name": "20261109-0100-1789-1799-dix-ans-un-roi-en-moins-un-gen",
     "added": "20261109-0100",
     "status": "ready",
-    "next": true,
+    "next": false,
     "title": "1789-1799 : dix ans, un roi en moins, un général en plus",
     "theme": "Histoire de France",
     "tagline": "La Révolution française en entier, de la salle de jeu de paume au coup d’État de Saint-Cloud",
