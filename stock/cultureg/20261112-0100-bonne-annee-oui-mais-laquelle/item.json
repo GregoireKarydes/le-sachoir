@@ -71,6 +71,22 @@
         },
         {
           "n": 2,
+          "kind": "photo",
+          "tag": "Le vrai roi",
+          "title": "Charles IX, peint par François Clouet",
+          "text": "Le roi a 14 ans quand il signe l’édit qui fait commencer l’année le 1er janvier. Ce portrait en pied est conservé au Kunsthistorisches Museum de Vienne.",
+          "photo": {
+            "commons": "File:François Clouet 004.jpg",
+            "credit": "François Clouet",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Clouet_-_Portrait_of_King_Charles_IX_of_France,_full_portrait.jpg",
+            "file": "images/photo-2-fran-ois-clouet-004-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 3,
           "kind": "fact",
           "tag": "",
           "caption": "Surprise : d’un diocèse (une région de l’Église) à l’autre, l’année ne commence pas le même jour.",
@@ -96,7 +112,7 @@
           }
         },
         {
-          "n": 3,
+          "n": 4,
           "kind": "fact",
           "tag": "",
           "caption": "À Lyon, l’année commence à Noël. À Reims, Vienne ou Limoges, le 25 mars.",
@@ -122,7 +138,7 @@
           }
         },
         {
-          "n": 4,
+          "n": 5,
           "kind": "",
           "tag": "",
           "caption": "En Artois, c’est à Pâques : une fête qui change de date chaque année.",
@@ -148,14 +164,14 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "explain",
           "title": "Pourquoi tant de dates différentes ?",
           "text": "Chaque région suivait sa tradition religieuse : Noël, le 25 mars (fête de l’Annonciation) ou Pâques. Résultat : un même jour pouvait appartenir à deux années différentes selon la ville où l’on se trouvait.",
           "joke": "Pratique pour rajeunir d’un an en changeant de ville. Moins pour dater un contrat."
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "chap",
           "tag": "9 août 1564",
           "caption": "Pour mettre de l’ordre, le 9 août 1564 à Roussillon, le roi signe un édit du chancelier Michel de L’Hospital.",
@@ -181,7 +197,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "fact",
           "tag": "Article 39",
           "caption": "Elle tient en un article, le 39e, perdu parmi des articles sur la justice.",
@@ -207,7 +223,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "",
           "tag": "1567",
           "caption": "La règle s’applique dès le 1er janvier 1567. En 1622, le pape l’étend à tout le monde catholique.",
@@ -228,7 +244,7 @@
           }
         },
         {
-          "n": 9,
+          "n": 10,
           "kind": "conf",
           "tag": "Mythbuster",
           "caption": "On dit que le poisson d’avril viendrait de ce changement. Explication répandue, mais discutée.",

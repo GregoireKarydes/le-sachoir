@@ -172,6 +172,22 @@
         },
         {
           "n": 7,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "Le pont de l’Oyapock, vu côté français",
+          "text": "378 mètres entre Saint-Georges-de-l’Oyapock, en Guyane, et Oiapoque, au Brésil. Achevé en 2011, il n’a ouvert à la circulation qu’en mars 2017.",
+          "photo": {
+            "commons": "File:Pont SGO.jpg",
+            "credit": "Loljules",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Pont_SGO.jpg",
+            "file": "images/photo-7-pont-sgo-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 8,
           "kind": "",
           "tag": "",
           "caption": "Aujourd’hui encore, il reste peu emprunté : beaucoup d’habitants préfèrent traverser en bateau.",
@@ -192,7 +208,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "En Europe, la plus longue frontière française est avec la Belgique, de peu devant l’Espagne.",

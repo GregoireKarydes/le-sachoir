@@ -1353,6 +1353,22 @@
         },
         {
           "n": 3,
+          "kind": "photo",
+          "tag": "Le vrai John Law",
+          "title": "John Law, le joueur devenu ministre",
+          "text": "Portrait attribué à Alexis Simon Belle, vers 1715-1720, conservé à Londres. En janvier 1720, ce joueur écossais devient contrôleur général des Finances du royaume.",
+          "photo": {
+            "commons": "File:John Law by Alexis Simon Belle.jpg",
+            "credit": "Attributed to Alexis Simon Belle",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:John_Law_by_Alexis_Simon_Belle.jpg",
+            "file": "images/photo-3-john-law-by-alexis-simon-belle-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 4,
           "kind": "fact",
           "tag": "1716",
           "caption": "1716 : Law ouvre une banque. Ses billets sont des promesses : on peut les échanger à la banque contre des pièces.",
@@ -1382,7 +1398,7 @@
           }
         },
         {
-          "n": 4,
+          "n": 5,
           "kind": "",
           "tag": "1717",
           "caption": "1717 : il crée une compagnie pour exploiter la Louisiane, et vend des actions, c’est-à-dire des parts de ses futurs profits.",
@@ -1417,14 +1433,14 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "explain",
           "title": "Une action, c’est quoi ?",
           "text": "Une action est une petite part d’une entreprise. Si l’entreprise gagne de l’argent, la part rapporte et se revend plus cher. Mais si tout le monde en veut, son prix monte… même sans aucun profit réel.",
           "joke": "La Louisiane n’avait encore rien rapporté. Le prix, lui, grimpait déjà."
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "fact",
           "tag": "Rue Quincampoix",
           "caption": "Rue Quincampoix, à Paris, on s’arrache les actions : leur prix grimpe jusqu’à 10 000 livres en janvier 1720.",
@@ -1448,7 +1464,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "",
           "tag": "Vrai",
           "caption": "La cohue est telle qu’un vieux bossu loue sa bosse comme pupitre aux acheteurs pressés.",
@@ -1478,7 +1494,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "fact",
           "tag": "",
           "caption": "Certains deviennent riches en quelques semaines… sur le papier. C’est là que se répand un mot nouveau : « millionnaire ».",
@@ -1508,7 +1524,7 @@
           }
         },
         {
-          "n": 9,
+          "n": 10,
           "kind": "chap",
           "tag": "1720",
           "caption": "1720 : inquiets, les clients réclament de l’or contre leurs billets. Mais Law a imprimé bien plus de billets que d’or.",
@@ -1538,7 +1554,7 @@
           }
         },
         {
-          "n": 10,
+          "n": 11,
           "kind": "explain",
           "title": "Pourquoi la banque ne peut pas payer",
           "steps": [
@@ -1550,7 +1566,7 @@
           "joke": "Un billet, c’est une promesse. Et une promesse, ça ne pèse rien."
         },
         {
-          "n": 11,
+          "n": 12,
           "kind": "fact",
           "tag": "Décembre 1720",
           "caption": "La confiance s’effondre : l’action retombe à 1 000 livres. Ruiné et détesté, Law s’enfuit de France.",
@@ -1580,7 +1596,7 @@
           }
         },
         {
-          "n": 12,
+          "n": 13,
           "kind": "conf",
           "tag": "La leçon",
           "caption": "La leçon : un billet ne vaut que la confiance qu’on lui fait. Law, lui, meurt à Venise en 1729.",
@@ -1874,6 +1890,22 @@
         },
         {
           "n": 9,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La vraie Joconde, de retour au Louvre",
+          "text": "Le portrait peint par Léonard de Vinci au début du XVIe siècle mesure à peine 77 cm sur 53. Après le vol, il devient le tableau le plus célèbre du monde.",
+          "photo": {
+            "commons": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
+            "credit": "Leonardo da Vinci",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+            "file": "images/photo-9-mona-lisa-by-leonardo-da-vinci-from.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 10,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "Elle revient au Louvre le 4 janvier 1914. Deux ans à la une des journaux en ont fait une star.",

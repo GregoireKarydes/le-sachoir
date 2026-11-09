@@ -113,6 +113,11 @@ def check_story(fmt: dict, d: Path, err, warn):
     if len(drawn) > MAX_CASES.get(fid, 99):
         warn(f"{len(drawn)} cases dessinées, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
     check_cast_distinct([c for c in fmt.get("cast", []) or [] if isinstance(c, dict)], warn)
+    # 9 novembre 2026 (Greg) : des vraies images souvent, ça rend l'histoire réelle. Signalé pour que la tâche Stock en ajoute.
+    n_photo = sum(1 for c in cases if isinstance(c, dict) and c.get("kind") == "photo")
+    want = {"cultureg": 1, "insolite": 1, "dossier": 2}.get(fid, 0)
+    if n_photo < want:
+        warn(f"{n_photo} vraie(s) photo(s) (« kind »: « photo »), il en faut au moins {want} si un document libre existe")
     if fid != "actu":
         art = fmt.get("art") or {}
         missing = [k for k in ("subject", "setting", "era") if not art.get(k)]

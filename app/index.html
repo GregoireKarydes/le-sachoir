@@ -2276,8 +2276,9 @@ function signupGate(v, page) {
   v.innerHTML = `<h1 class="h1">${page === "profile" ? "Mon Profil" : page === "favs" ? "Favoris" : "Découvrir"}</h1><div class="lockcard"><span class="big">${page === "profile" ? "🔥" : page === "favs" ? "♥" : "🧭"}</span><h2>${esc(t)}</h2><p class="sub">${esc(sub)}</p>
     <ul class="perks" style="text-align:left;align-self:stretch"><li>✉️ Pas de mot de passe : un code par e-mail</li><li>🎁 Un Grand Dossier offert avec la newsletter</li><li>📱 Vos données sur tous vos appareils</li></ul>
     <button class="cta" id="gtGo">Créer mon compte gratuit</button><button class="btn ghost" id="gtIn" style="align-self:stretch">J’ai déjà un compte</button><button class="linkbtn" id="gtSkip">Continuer sans compte</button></div>`;
-  $("#gtGo").onclick = openAccount; $("#gtIn").onclick = openAccount;
-  $("#gtSkip").onclick = () => { try { sessionStorage.setItem("sachoir.skip." + page, "1"); } catch (e) {} render(); };
+  // Les boutons sont cherchés dans cette page : la même carte peut rester dans un autre onglet caché, avec les mêmes id.
+  v.querySelector("#gtGo").onclick = () => openAccount(); v.querySelector("#gtIn").onclick = () => openAccount();
+  v.querySelector("#gtSkip").onclick = () => { try { sessionStorage.setItem("sachoir.skip." + page, "1"); } catch (e) {} render(); };
   return true;
 }
 

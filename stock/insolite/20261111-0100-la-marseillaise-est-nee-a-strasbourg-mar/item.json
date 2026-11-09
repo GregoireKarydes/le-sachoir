@@ -92,6 +92,22 @@
         },
         {
           "n": 3,
+          "kind": "photo",
+          "tag": "Tableau",
+          "title": "Rouget de Lisle chante pour la première fois",
+          "text": "Isidore Pils a peint la scène en 1849 : chez Dietrich, le maire de Strasbourg, en avril 1792. Le tableau est aujourd’hui au Musée historique de Strasbourg.",
+          "photo": {
+            "commons": "File:Pils - Rouget de Lisle chantant la Marseillaise.jpg",
+            "credit": "Isidore Pils",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Pils_-_Rouget_de_Lisle_chantant_la_Marseillaise.jpg",
+            "file": "images/photo-3-pils-rouget-de-lisle-chantant-la-ma.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 4,
           "kind": "fact",
           "tag": "",
           "caption": "Son titre : « Chant de guerre pour l’armée du Rhin ». Pas un mot sur Marseille.",
@@ -117,7 +133,7 @@
           }
         },
         {
-          "n": 4,
+          "n": 5,
           "kind": "",
           "tag": "Juillet 1792",
           "caption": "Le chant circule vite et arrive jusqu’à Marseille. Des volontaires marseillais l’adoptent et l’emportent en marchant vers Paris.",
@@ -138,7 +154,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "fact",
           "tag": "30 juillet 1792",
           "caption": "Ils entrent dans Paris en le chantant. Les Parisiens l’appellent l’hymne des Marseillais.",
@@ -164,7 +180,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "explain",
           "title": "Du Rhin à Marseille, le trajet d’un tube",
           "steps": [
@@ -176,7 +192,7 @@
           "joke": "Morale : ce n’est pas l’auteur qui baptise un tube, c’est le public."
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "",
           "tag": "14 juillet 1795",
           "caption": "1795 : il devient chant national. Puis l’Empire et la Restauration l’interdisent : trop révolutionnaire.",
@@ -197,7 +213,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "1879",
           "caption": "La IIIe République en fait l’hymne national. Et le nom de Marseille est resté.",

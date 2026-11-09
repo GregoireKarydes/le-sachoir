@@ -78,6 +78,22 @@
         },
         {
           "n": 2,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Bibendum, né sur une affiche de 1898",
+          "text": "Deux ans avant le guide, les frères Michelin font déjà leur pub : le dessinateur O’Galop invente ce bonhomme en pneus qui « boit l’obstacle ».",
+          "photo": {
+            "commons": "File:Michelin Poster 1898.jpg",
+            "credit": "O'Galop",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Michelin_Poster_1898.jpg",
+            "file": "images/photo-2-michelin-poster-1898-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 3,
           "kind": "fact",
           "tag": "",
           "caption": "Leur idée : un guide gratuit de 400 pages, offert aux automobilistes, avec garages, médecins et plans de villes.",
@@ -103,7 +119,7 @@
           }
         },
         {
-          "n": 3,
+          "n": 4,
           "kind": "fact",
           "tag": "La légende maison",
           "caption": "Version officielle : André surprend un vendeur de pneus calant son établi avec des guides.",
@@ -125,7 +141,7 @@
           }
         },
         {
-          "n": 4,
+          "n": 5,
           "kind": "",
           "tag": "1920",
           "caption": "Le guide devient payant en 1920 (7 francs en 1921), et la publicité en disparaît.",
@@ -151,7 +167,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "fact",
           "tag": "1926",
           "caption": "1926 : le guide se met à classer les restaurants. Une étoile récompense une bonne table.",
@@ -177,7 +193,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "",
           "tag": "1931",
           "caption": "1931 : on passe à trois étoiles. La troisième veut dire « vaut le voyage » : on prend la route exprès.",
@@ -203,7 +219,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "explain",
           "title": "Les étoiles, mode d’emploi",
           "steps": [
@@ -214,7 +230,7 @@
           "joke": "Traduction Michelin : plus d’étoiles, plus de kilomètres, plus de pneus."
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "fact",
           "tag": "1933",
           "caption": "Pour rester crédible, Michelin crée en 1933 des inspecteurs anonymes, payés par le guide, qui jugent en toute indépendance.",
@@ -235,7 +251,7 @@
           }
         },
         {
-          "n": 9,
+          "n": 10,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie.",
