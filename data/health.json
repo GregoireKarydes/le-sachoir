@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T20:49:59.613887+01:00",
+ "updated_at": "2026-11-09T20:51:33.245285+01:00",
  "today": "2026-11-09",
  "problems": [],
  "days": [
@@ -83,10 +83,10 @@
   },
   "insolite": {
    "ready": 0,
-   "waiting": 5,
+   "waiting": 6,
    "blocked": 0,
-   "images_left": 34,
-   "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (2 image(s) à faire)",
+   "images_left": 42,
+   "focus": "20261109-2048-votre-huitre-de-noel-est-japonaise (8 image(s) à faire)",
    "next": null,
    "next_redo": 0
   },
