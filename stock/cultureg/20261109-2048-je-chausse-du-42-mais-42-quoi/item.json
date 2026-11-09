@@ -1,0 +1,198 @@
+{
+  "added": "20261109-2048",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Je chausse du 42. Mais 42 quoi, au juste ?",
+      "tagline": "Votre pointure n’est ni en centimètres ni en pieds : elle est en points de Paris.",
+      "teaser": "Aucun pied ne mesure 42 centimètres. Alors d’où sort ce chiffre ? Indice : un cordonnier de 1800 et un moule en bois.",
+      "minutes": 2,
+      "theme": "Mode et luxe",
+      "art": {
+        "subject": "why French shoe sizes are counted in Paris points (two thirds of a centimetre) measured on the wooden shoe last, not on the foot",
+        "setting": "a small modern French cobbler's shop with a wooden counter and one shelf of wooden lasts; one flashback to a bare medieval English workshop",
+        "era": "today in France, with one flashback to medieval England",
+        "props": {
+          "last": "a pale wooden shoe last, a foot-shaped wooden mould with a small metal hinge on top",
+          "stick": "a long yellow wooden shoemaker's measuring stick with a sliding block",
+          "barley": "a small open brown sack of golden barley grains"
+        }
+      },
+      "cast": [
+        {
+          "id": "client",
+          "name": "Le client",
+          "look": "a tall lanky man in his thirties, very thin and long-limbed, messy ginger hair, pale skin with freckles, a bright green hoodie as main colour, beige trousers, mismatched socks (one red, one blue), holding one sneaker",
+          "role": "the curious customer who asks the reader's naive questions; gangly, head tilted, always perplexed",
+          "file": "cast/cultureg-client.png",
+          "status": "pending"
+        },
+        {
+          "id": "cordo",
+          "name": "La cordonnière",
+          "look": "a short sturdy woman in her sixties, square shoulders, white hair in a tight bun, light brown skin, half-moon glasses on a chain, a mustard-yellow shirt as main colour under a dark brown leather apron, a small cobbler's hammer in her apron pocket",
+          "role": "the shoemaker who knows and explains simply; compact, calm, dry humour, peers over her glasses",
+          "file": "cast/cultureg-cordo.png",
+          "status": "pending"
+        },
+        {
+          "id": "anglais",
+          "name": "Un cordonnier anglais",
+          "look": "a short very round medieval English cobbler in his fifties, bald head with a white fringe of hair, rosy pale skin, a bright red tunic as main colour, brown hose, a leather cord belt, holding the barley sack",
+          "role": "the proud medieval cobbler who measures in barley grains; plump, chest puffed out, very pompous",
+          "file": "cast/cultureg-anglais.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a small cobbler's shop on a pale yellow background. The client (tall lanky, green hoodie) on the left holding up a giant blank card with both hands, looking at his own foot in total confusion; the cordonnière (short, white bun, mustard shirt) on the right holding the last, peering over her half-moon glasses, smug. wide shot",
+        "cast": ["client", "cordo"],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "La question",
+          "caption": "Pourquoi dit-on « je chausse du 42 », alors qu’aucun pied ne mesure 42 centimètres ?",
+          "bubbles": [
+            { "who": "client", "text": "42 centimètres ? J’ai des palmes ?", "side": "l" },
+            { "who": "cordo", "text": "Non. Vous avez 42 points.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a small cobbler's shop with a wooden counter. The client (tall lanky, bright green hoodie, messy ginger hair) on the left, sitting on a stool, holding his bare foot up next to his face, staring at it in horror; the cordonnière (short sturdy, white bun, mustard shirt) on the right behind the counter, arms crossed, unimpressed. medium shot",
+            "cast": ["client", "cordo"],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Vers 1800",
+          "caption": "Ce 42 se compte en « points de Paris », une unité inventée par les cordonniers français vers 1800.",
+          "bubbles": [
+            { "who": "client", "text": "Un point, ça fait combien ?", "side": "l" },
+            { "who": "cordo", "text": "Deux tiers de centimètre. Environ 6,7 millimètres.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "same cobbler's shop, now a close view of the counter. The cordonnière (short sturdy, white bun, half-moon glasses) on the right pinching her thumb and finger almost closed to show a tiny distance, very serious; the client (tall lanky, green hoodie) on the left bending way down, squinting at the tiny gap. medium close-up",
+            "cast": ["cordo", "client"],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "title": "D’où vient ce drôle de point ?",
+          "text": "Avant le mètre, on mesurait en pouces. L’explication la plus probable : deux tiers de centimètre, c’est presque un quart de pouce, le petit pas que les cordonniers utilisaient déjà pour leurs formes.",
+          "joke": "Le mètre est arrivé, les cordonniers ont surtout changé l’étiquette."
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Le secret",
+          "caption": "Mais on ne mesure pas le pied : on mesure la forme, le moule en bois sur lequel on monte la chaussure.",
+          "bubbles": [
+            { "who": "cordo", "text": "Voici votre pied. Version bois.", "side": "r" },
+            { "who": "client", "text": "Il est plus beau que l’original.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the cobbler's shop, one shelf of wooden lasts behind. The cordonnière (short sturdy, white bun, mustard shirt, brown leather apron) on the right presenting the last on her open palms like a precious jewel; the client (tall lanky, green hoodie, ginger hair) on the left leaning in, moved, tiny yellow sparkles around the last. medium shot",
+            "cast": ["cordo", "client"],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Des formes de cordonnier en bois",
+          "text": "Des formes en bois, à l’Opéra Semper de Dresde. Le cuir est tendu et cloué dessus pour fabriquer la chaussure : c’est leur longueur que donne la pointure.",
+          "photo": { "commons": "File:Lasts at the Semperoper Dresden.jpg" }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "Le pourquoi",
+          "caption": "Parce que la forme est plus longue que le pied, d’environ 1,5 cm : les orteils doivent bouger en marchant.",
+          "bubbles": [
+            { "who": "client", "text": "Donc mon 42, c’est…", "side": "l" },
+            { "who": "cordo", "text": "28 centimètres de chaussure, pour environ 26,5 de pied.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the cobbler's counter seen from above. The cordonnière (short sturdy, white bun, half-moon glasses) on the right laying the stick along the last, pointing at the tip; the client (tall lanky, green hoodie) on the left wiggling his bare toes in the air, curious. high angle shot",
+            "cast": ["cordo", "client"],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "title": "Calculer sa pointure en trois étapes",
+          "steps": [
+            "Mesurer son pied, du talon au bout du plus long orteil : 26,5 cm",
+            "Ajouter environ 1,5 cm d’aisance : 28 cm",
+            "Multiplier par 1,5, car un point vaut 2/3 de cm : 42"
+          ],
+          "joke": "Votre pointure était un problème de maths. Vous l’aviez résolu sans le savoir."
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Pendant ce temps, en Angleterre",
+          "caption": "Les Anglais, eux, comptent leurs pointures en tiers de pouce : au Moyen Âge, un pouce valait « trois grains d’orge ».",
+          "bubbles": [
+            { "who": "anglais", "text": "Trois grains d’orge, un pouce. C’est scientifique.", "side": "l" },
+            { "who": "Un apprenti", "text": "Et quand l’orge est petite cette année ?", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bare medieval English workshop with one wooden bench, pale beige background. The cordonnier anglais (short very round, bald with white fringe, bright red tunic) on the left proudly lining up three barley grains on the bench, chest puffed out, holding the barley sack; on the right a skinny young apprentice in a grey tunic raising one finger, doubtful. medium shot",
+            "cast": ["anglais"],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "En résumé",
+          "caption": "En résumé : votre pointure, c’est la longueur de la chaussure, comptée en points de deux tiers de centimètre.",
+          "bubbles": [
+            { "who": "client", "text": "Donc je chausse du 28 centimètres.", "side": "l" },
+            { "who": "cordo", "text": "Dites 42. Ça fait moins palmes.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "back in the cobbler's shop, plain light background. The client (tall lanky, green hoodie, ginger hair) on the left proudly wearing new shoes, striking a model pose; the cordonnière (short sturdy, white bun, mustard shirt) on the right facing the viewer like in an interview, deadpan, one eyebrow raised over her half-moon glasses. medium shot",
+            "cast": ["client", "cordo"],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Une pointure française se compte en points de Paris (2/3 cm) sur la forme : un 42 mesure environ 28 cm.",
+        "source": "Wikipedia — Paris point"
+      },
+      "story": "Quand on dit « je chausse du 42 », le chiffre n’est pas en centimètres : aucun pied ne mesure 42 cm. Il est en « points de Paris », une unité inventée par les cordonniers français au début du XIXe siècle. Un point vaut deux tiers de centimètre, soit environ 6,7 mm. L’explication la plus probable de ce drôle de pas : avant le système métrique, on mesurait en pouces, et deux tiers de centimètre, c’est presque un quart de pouce.\nSurtout, la pointure ne mesure pas le pied mais la forme, le moule en bois (ou en plastique) sur lequel le cordonnier tend le cuir pour fabriquer la chaussure. Cette forme est un peu plus longue que le pied, d’environ 1,5 cm, parce que les orteils doivent avoir de la place pour bouger quand on marche. Pour estimer sa pointure, on mesure donc son pied, on ajoute environ 1,5 cm, puis on multiplie par 1,5 : un pied de 26,5 cm donne une chaussure de 28 cm, soit du 42.\nLes Anglais, eux, ont gardé un autre système : leurs pointures avancent par tiers de pouce, hérités d’une règle médiévale selon laquelle « trois grains d’orge » font un pouce. Voilà pourquoi un même pied a plusieurs pointures selon le pays.",
+      "sources": [
+        { "title": "Wikipedia — Paris point", "url": "https://en.wikipedia.org/wiki/Paris_point" },
+        { "title": "J. L. Chaverot (CTC) — Spécificités chaussure : le pied en chaussure", "url": "https://www.uphf.fr/congres/RFIS2005/abstract/Jean%20Luc%20Chaverot.pdf" },
+        { "title": "Haflinger — Calculer sa pointure avec le point de Paris", "url": "https://haflinger.com/en/blogs/news/schuhgroessee-berechnen-mit-dem-pariser-stich" },
+        { "title": "SATRA — A short history of shoe sizing", "url": "https://satra.com/bulletin/article.php?id=3230" }
+      ]
+    }
+  ]
+}
