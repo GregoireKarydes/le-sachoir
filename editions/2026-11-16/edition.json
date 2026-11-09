@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-16",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "geo",
+      "label": "Le Quiz géo",
+      "title": "Trois questions, une boussole et un fromage",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "map",
+          "map": "france",
+          "q": "Où se trouve Besançon ?",
+          "target": { "lat": 47.245, "lon": 6.026 },
+          "name": "Besançon",
+          "explain": "Lovée dans une boucle du Doubs, gardée par la citadelle de Vauban, classée à l’Unesco. Son horloge astronomique de 1860 compte environ 30 000 pièces. Pour arriver à l’heure, aucune excuse.",
+          "source": { "title": "France This Way — Besançon", "url": "https://www.francethisway.com/places/besancon.php" }
+        },
+        {
+          "type": "choice",
+          "q": "Ouagadougou est la capitale de quel pays ?",
+          "choices": ["Le Mali", "Le Niger", "Le Burkina Faso", "Le Ghana"],
+          "answer": 2,
+          "explain": "Le Burkina Faso, qui s’appelait Haute-Volta jusqu’en 1984. Son nom veut dire « pays des hommes intègres ». Bamako, c’est le Mali ; Niamey, le Niger.",
+          "source": { "title": "Larousse — Burkina", "url": "https://www.larousse.fr/dictionnaires/college/Burkina/5794" }
+        },
+        {
+          "type": "map",
+          "map": "france",
+          "q": "Le fromage perdu : où mûrit le roquefort ?",
+          "target": { "lat": 43.975, "lon": 2.992 },
+          "name": "Roquefort-sur-Soulzon (Aveyron)",
+          "explain": "Dans les caves du rocher du Combalou, à Roquefort-sur-Soulzon. Le 26 juillet 1925, il devient la toute première appellation d’origine fromagère française. Lait de brebis obligatoire, vaches priées de patienter.",
+          "source": { "title": "INAO — 100 ans de l’AOP Roquefort", "url": "https://www.inao.gouv.fr/en/odg-100-ans-aop-roquefort" }
+        }
+      ],
+      "sources": [
+        { "title": "France This Way — Besançon", "url": "https://www.francethisway.com/places/besancon.php" },
+        { "title": "Cartes France — Besançon, coordonnées", "url": "https://www.cartesfrance.fr/carte-france-ville/25056_Besançon.html" },
+        { "title": "Larousse — Burkina", "url": "https://www.larousse.fr/dictionnaires/college/Burkina/5794" },
+        { "title": "INAO — 100 ans de l’AOP Roquefort", "url": "https://www.inao.gouv.fr/en/odg-100-ans-aop-roquefort" },
+        { "title": "Wikipedia — Roquefort-sur-Soulzon", "url": "https://en.wikipedia.org/wiki/Roquefort-sur-Soulzon" }
+      ]
+    }
+  ]
+}
