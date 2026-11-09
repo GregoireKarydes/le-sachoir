@@ -1,11 +1,11 @@
 {
- "updated_at": "2026-11-09T07:33:53.426510+01:00",
+ "updated_at": "2026-11-09T07:38:58.568572+01:00",
  "today": "2026-11-09",
  "problems": [],
  "days": [
   {
    "date": "2026-11-09",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -57,11 +57,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-09/cultureg : « L’Écossais qui a inventé le billet (et la faillite qui va avec) » prise dans la file (20261109-0100-lecossais-qui-a-invente-le-billet-et-la)",
-  "2026-11-09/insolite : « La Joconde est devenue une star en disparaissant » prise dans la file (20261109-0100-la-joconde-est-devenue-une-star-en-dispa)",
-  "2026-11-09/dossier : « 1789-1799 : dix ans, un roi en moins, un général en plus » prise dans la file (20261109-0100-1789-1799-dix-ans-un-roi-en-moins-un-gen)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
