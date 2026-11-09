@@ -1216,7 +1216,7 @@ async function openReader(ed, fid, startAt = 0) {
   }
   SPEAKERS = Object.fromEntries((full.cast || []).filter(x => x.name).map(x => [x.id, x.name]));
   const locked = !!full.locked;
-  const f = { ...full, cases: full.cases.filter(c => c.kind !== "photo" || c.photo?.status === "done") };
+  const f = { ...full, cases: full.cases.filter(c => c.kind !== "photo" || (c.photo?.status === "done" && (!c.photo.review || c.photo.qa === "ok"))) };
   R = { ed, f, idx: 0, n: f.cases.length + 1, top: 0, doneSent: false };
   ev("read", ed.date, f.id, full.cases.length);
   const tr = $("#track");

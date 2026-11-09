@@ -55,25 +55,89 @@ def test_page_seo_verrouillee_sans_la_suite():
 
 
 def test_photo_licence_non_libre_refusee(monkeypatch):
-    class R:
-        def raise_for_status(self): pass
-        def json(self):
-            return {"query": {"pages": {"1": {"imageinfo": [{"url": "u", "descriptionurl": "d", "extmetadata": {"LicenseShortName": {"value": "Fair use"}}}]}}}}
-    monkeypatch.setattr(photos.requests, "get", lambda *a, **k: R())
+    monkeypatch.setattr(photos.requests, "get", lambda *a, **k: _R({"query": {"pages": {"1": {"imageinfo": [{"url": "u", "descriptionurl": "d", "extmetadata": {"LicenseShortName": {"value": "Fair use"}}}]}}}}))
     case = {"n": 3, "kind": "photo", "photo": {"commons": "File:Y.jpg"}}
     assert photos.fetch(case, Path("/tmp"))
     assert case["photo"]["attempts"] == 1 and "licence" in case["photo"]["error"]
 
 
+class _R:
+    def __init__(self, d): self.d = d
+    def raise_for_status(self): pass
+    def json(self): return self.d
+
+
+def commons(monkeypatch, *, restrictions="", cats=(), depicts=(), people=None):
+    """Simule Commons et Wikidata pour les garde-fous des photos."""
+    page = {"pageid": 7, "categories": [{"title": f"Category:{c}"} for c in cats],
+            "imageinfo": [{"url": "u", "thumburl": "t", "descriptionurl": "https://commons.wikimedia.org/wiki/File:Y.jpg",
+                           "extmetadata": {"LicenseShortName": {"value": "CC BY-SA 4.0"}, "Artist": {"value": "<a href='x'>Jean Dupont</a>"},
+                                           "Restrictions": {"value": restrictions}}}]}
+    def get(url, params=None, **k):
+        if params.get("action") == "wbgetentities" and "commons" in url:
+            return _R({"entities": {"M7": {"statements": {"P180": [{"mainsnak": {"datavalue": {"value": {"id": q}}}} for q in depicts]}}}})
+        if params.get("action") == "wbgetentities":
+            return _R({"entities": people or {}})
+        return _R({"query": {"pages": {"7": page}}})
+    monkeypatch.setattr(photos.requests, "get", get)
+
+
+def human(name, dead=False):
+    cl = {"P31": [{"mainsnak": {"datavalue": {"value": {"id": "Q5"}}}}]}
+    if dead:
+        cl["P570"] = [{}]
+    return {"claims": cl, "labels": {"fr": {"value": name}}}
+
+
 def test_photo_licence_libre_acceptee(monkeypatch):
-    class R:
-        def raise_for_status(self): pass
-        def json(self):
-            return {"query": {"pages": {"1": {"imageinfo": [{"url": "u", "thumburl": "t", "descriptionurl": "https://commons.wikimedia.org/wiki/File:Y.jpg",
-                    "extmetadata": {"LicenseShortName": {"value": "CC BY-SA 4.0"}, "Artist": {"value": "<a href='x'>Jean Dupont</a>"}}}]}}}}
-    monkeypatch.setattr(photos.requests, "get", lambda *a, **k: R())
+    commons(monkeypatch, depicts=["Q90"], people={"Q90": {"claims": {"P31": [{"mainsnak": {"datavalue": {"value": {"id": "Q515"}}}}]}}})
     meta = photos.resolve("File:Y.jpg")
-    assert meta["credit"] == "Jean Dupont" and meta["license"] == "CC BY-SA 4.0" and meta["url"] == "t"
+    assert meta["credit"] == "Jean Dupont" and meta["license"] == "CC BY-SA 4.0" and meta["url"] == "t" and meta["review"] is False
+
+
+def test_photo_sans_donnees_depicts_a_relire(monkeypatch):
+    commons(monkeypatch)
+    assert photos.resolve("File:Y.jpg")["review"] is True
+
+
+def test_photo_droit_a_l_image_refusee(monkeypatch):
+    commons(monkeypatch, restrictions="personality")
+    case = {"n": 2, "kind": "photo", "photo": {"commons": "File:Y.jpg"}}
+    photos.fetch(case, Path("/tmp"), "cultureg")
+    assert case["photo"]["status"] == "rejected" and "droit à l'image" in case["photo"]["reason"]
+
+
+def test_photo_personne_vivante_refusee(monkeypatch):
+    commons(monkeypatch, depicts=["Q1"], people={"Q1": human("Une ministre")})
+    case = {"n": 2, "kind": "photo", "photo": {"commons": "File:Y.jpg"}}
+    photos.fetch(case, Path("/tmp"), "dossier")
+    assert case["photo"]["status"] == "rejected" and "vivante" in case["photo"]["reason"]
+
+
+def test_photo_personnage_historique_accepte_hors_actu(monkeypatch):
+    commons(monkeypatch, depicts=["Q2"], people={"Q2": human("Victor Hugo", dead=True)})
+    assert photos.resolve("File:Y.jpg", "dossier")["review"] is False
+    try:
+        photos.resolve("File:Y.jpg", "actu")
+        raise AssertionError("une personne dans l'Actu doit être refusée")
+    except photos.Refused:
+        pass
+
+
+def test_photo_sensible_refusee(monkeypatch):
+    commons(monkeypatch, cats=["Corpses in Paris"])
+    case = {"n": 2, "kind": "photo", "photo": {"commons": "File:Y.jpg"}}
+    photos.fetch(case, Path("/tmp"), "insolite")
+    assert case["photo"]["status"] == "rejected"
+
+
+def test_actu_portrait_refuse(monkeypatch):
+    commons(monkeypatch, cats=["Portraits of politicians of France"], depicts=["Q90"], people={})
+    try:
+        photos.resolve("File:Y.jpg", "actu")
+        raise AssertionError("portrait refusé dans l'Actu")
+    except photos.Refused:
+        pass
 
 
 def test_paywall_lu_sur_l_api_sans_paquet(monkeypatch, tmp_path):
@@ -98,3 +162,10 @@ def test_bd_masquee_retiree_du_site(tmp_path):
     out = json.loads((d / "edition.json").read_text())
     assert [f["id"] for f in out["formats"]] == ["dossier"]
     assert not (d / "images/cg-1.webp").exists() and (d / "images/dossier-1.webp").exists()
+
+
+def test_photo_deja_telechargee_repassee_aux_filtres(monkeypatch):
+    commons(monkeypatch, depicts=["Q1"], people={"Q1": human("Un député")})
+    case = {"n": 3, "kind": "photo", "photo": {"commons": "File:Y.jpg", "status": "done", "file": "images/p.webp"}}
+    assert photos.fetch(case, Path("/tmp"), "dossier")
+    assert case["photo"]["status"] == "rejected" and case["photo"]["guard"] == 1
