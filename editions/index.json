@@ -1,6 +1,67 @@
 {
- "updated_at": "2026-11-09T03:21:32.128401+01:00",
+ "updated_at": "2026-11-09T07:33:53.426510+01:00",
  "editions": [
+  {
+   "date": "2026-11-09",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "1789-1799 : dix ans, un roi en moins, un général en plus",
+     "kind": "",
+     "url": "histoires/2026-11-09-1789-1799-dix-ans-un-roi-en-moins-un-general-en-plus/",
+     "theme": "Histoire de France",
+     "minutes": 5,
+     "tagline": "La Révolution française en entier, de la salle de jeu de paume au coup d’État de Saint-Cloud",
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Plan de table pour tout le monde",
+     "kind": "",
+     "url": "histoires/2026-11-09-plan-de-table-pour-tout-le-monde/",
+     "theme": "",
+     "minutes": 2,
+     "tagline": "Matignon cherche le bon chiffre, Israël cherche des chaises et Paris trouve enfin son champion.",
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "L’Écossais qui a inventé le billet (et la faillite qui va avec)",
+     "kind": "",
+     "url": "histoires/2026-11-09-l-ecossais-qui-a-invente-le-billet-et-la-faillite-qui-va-avec/",
+     "theme": "Économie",
+     "minutes": 2,
+     "tagline": "Comment la France de 1720 a découvert le papier-monnaie, la bulle spéculative et le mot « millionnaire »",
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "La Joconde est devenue une star en disparaissant",
+     "kind": "",
+     "url": "histoires/2026-11-09-la-joconde-est-devenue-une-star-en-disparaissant/",
+     "theme": "Histoire de l’art",
+     "minutes": 1,
+     "tagline": "En 1911, un vitrier la décroche du Louvre. Et le monde entier vient admirer… le mur vide.",
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "La Frise",
+     "title": "Quatre dates, zéro machine à remonter le temps",
+     "kind": "frise",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-08",
    "demo": false,

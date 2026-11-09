@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T03:21:32.128401+01:00",
+ "updated_at": "2026-11-09T07:33:53.426510+01:00",
  "today": "2026-11-09",
  "problems": [],
  "days": [
@@ -7,7 +7,10 @@
    "date": "2026-11-09",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
     "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
     "quiz": "prêt"
    }
   },
@@ -54,36 +57,45 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-09/cultureg : « L’Écossais qui a inventé le billet (et la faillite qui va avec) » prise dans la file (20261109-0100-lecossais-qui-a-invente-le-billet-et-la)",
+  "2026-11-09/insolite : « La Joconde est devenue une star en disparaissant » prise dans la file (20261109-0100-la-joconde-est-devenue-une-star-en-dispa)",
+  "2026-11-09/dossier : « 1789-1799 : dix ans, un roi en moins, un général en plus » prise dans la file (20261109-0100-1789-1799-dix-ans-un-roi-en-moins-un-gen)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-08",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite"
+ ],
+ "last_published": "2026-11-09",
  "stock": {
   "cultureg": {
-   "ready": 3,
+   "ready": 2,
    "waiting": 3,
    "blocked": 0,
    "images_left": 27,
    "focus": "20261112-0100-bonne-annee-oui-mais-laquelle (9 image(s) à faire)",
-   "next": "20261109-0100-lecossais-qui-a-invente-le-billet-et-la",
-   "next_redo": 3
+   "next": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
+   "next_redo": 2
   },
   "insolite": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 5,
    "blocked": 0,
    "images_left": 34,
    "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (2 image(s) à faire)",
-   "next": "20261109-0100-la-joconde-est-devenue-une-star-en-dispa",
-   "next_redo": 1
+   "next": null,
+   "next_redo": 0
   },
   "dossier": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 2,
    "blocked": 0,
    "images_left": 47,
@@ -92,8 +104,8 @@
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 4,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-09",
