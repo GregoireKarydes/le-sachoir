@@ -45,7 +45,9 @@ def _look_words(look: str) -> set:
 
 def _accent(look: str) -> str | None:
     low = (look or "").lower()
-    i = low.find("as the only colo")
+    i = low.find("as main colo")  # 9 novembre 2026 : images en couleur, une couleur dominante par personnage
+    if i < 0:
+        i = low.find("as the only colo")  # anciennes fiches noir et blanc
     if i < 0:
         return None
     clause = low[max(0, low.rfind(",", 0, i)):i]
@@ -61,7 +63,7 @@ def check_cast_distinct(cast: list, warn):
             warn(f"fiche {c.get('id')} : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »")
         col = _accent(look)
         if col and col in seen:
-            warn(f"fiches {seen[col]} et {c.get('id')} : même couleur d'accent ({col}), à différencier")
+            warn(f"fiches {seen[col]} et {c.get('id')} : même couleur dominante ({col}), à différencier")
         if col:
             seen[col] = c.get("id")
     for i, a in enumerate(cast):

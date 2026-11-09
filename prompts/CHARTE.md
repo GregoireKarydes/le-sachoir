@@ -22,7 +22,7 @@ Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The O
 
 ## L'Actu : une case drôle, une case vraie (8 novembre 2026, retour de Greg)
 Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'info pour comprendre. Désormais l'humour et l'explication sont séparés.
-- **Case dessinée** : le récitatif est bien rempli (30 mots max) et donne tout ce qu'il faut pour comprendre la blague : qui (par sa fonction), quoi, où, et le détail précis que le gag détourne. **Une seule bulle** : la blague. L'image sert le gag.
+- **Case dessinée** : le récitatif est bien rempli (30 mots max) et donne tout ce qu'il faut pour comprendre la blague : qui (son nom et sa fonction), quoi, où, et le détail précis que le gag détourne. **Une seule bulle** : la blague. L'image sert le gag.
 - **Case « Ce qui se passe vraiment »** juste après (texte seul, sans image) : « Quoi : », « Pourquoi ça compte : », « Et maintenant : ». 50 mots max, neutre, sans blague.
 - Une seule image par sujet : on peut traiter 4 à 6 sujets sans dessiner plus.
 - Exemple de forme (sujet inventé, ne jamais le reprendre) : récitatif « La mairie de Lyon interdit les trottinettes en libre-service dans le centre dès lundi, après 300 plaintes de piétons en un an. » ; bulle d'un livreur à trottinette, figé sur la ligne : « Techniquement, ma roue avant est encore dans le 7e. » ; puis la case Quoi / Pourquoi ça compte / Et maintenant.
@@ -34,7 +34,7 @@ Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'i
 - **Personnage lucide** pince-sans-rire qui dégonfle les légendes : seulement quand il est pertinent pour le sujet, pas systématique.
 - Figures historiques : sûres d'elles, décalées ; leurs répliques inventées sont visiblement des blagues ; une vraie citation est signalée dans le récitatif.
 - Personnes vivantes : voir « Garde-fous ».
-- Cadre visuel obligatoire (`art` : sujet, lieux, époque, objets récurrents) et fiche casting obligatoire : `id`, `look` (description visuelle précise en anglais, constante), `role` (son rôle dans l'histoire et comment son caractère se voit), utilisée comme référence pour toutes les images de l'histoire. Les personnages d'une même BD ne doivent jamais se ressembler : silhouette, coiffure, couleur d'accent et accessoire différents (règles dans `prompts/SCHEMA.md`).
+- Cadre visuel obligatoire (`art` : sujet, lieux, époque, objets récurrents) et fiche casting obligatoire : `id`, `look` (description visuelle précise en anglais, constante), `role` (son rôle dans l'histoire et comment son caractère se voit), utilisée comme référence pour toutes les images de l'histoire. Les personnages d'une même BD ne doivent jamais se ressembler : silhouette, coiffure, couleur dominante et accessoire différents ; images tout en couleur depuis le 9 novembre 2026 (règles dans `prompts/SCHEMA.md`).
 
 ## Les leviers de l'humour (un ou deux par BD, toujours au service de l'explication)
 1. **Anachronisme** : le monde moderne dans le passé (SMS, LinkedIn, jargon de bureau). César envoie « Veni, vidi, vici » par SMS : « le premier tweet de l'histoire ».
@@ -80,7 +80,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 ## Garde-fous
 - Humour bienveillant : on se moque des légendes, des situations et de ce que font les personnalités publiques, jamais des gens pour ce qu'ils sont.
 - **Personnalités vivantes** :
-  - Actu : parodiées dans leur rôle public, jamais nommées en entier, reconnaissables par leur fonction et une caricature de presse ; même traitement pour tous les camps.
+  - Actu (9 novembre 2026, demande de Greg) : **appelées par leur vrai nom**, avec leur fonction à la première mention, et parodiées dans leur rôle public. Répliques inventées visiblement parodiques (jamais une fausse citation crédible ; une vraie citation est signalée dans le récitatif), rien sur la vie privée, rien qui puisse passer pour une accusation. À l'image, une caricature cartoon, pas un portrait ressemblant. Même traitement pour tous les camps.
   - Autres formats (patrons, sportifs, artistes, scientifiques) : **autorisées** pour des faits publics vérifiés et sourcés. Répliques inventées visiblement parodiques, jamais de fausse citation crédible, rien sur la vie privée, rien qui puisse passer pour une accusation. À l'image, une caricature cartoon, pas un portrait ressemblant.
 - Aucune politique partisane. Aucun contenu blessant (origine, religion, handicap, physique au-delà de la caricature de presse, vulgarité sexuelle, moquerie de victimes réelles).
 - **Sujets graves** (guerres, épidémies, catastrophes, génocides) : exclus de l'Actu ; possibles dans les **Grands Dossiers**, avec un humour qui vise les puissants, l'absurdité des décisions ou les légendes, **jamais les victimes ni la souffrance**. Les cases sur les morts et les victimes restent sobres, sans gag.
