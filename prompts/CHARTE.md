@@ -24,7 +24,8 @@ Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The O
 Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'info pour comprendre. Désormais l'humour et l'explication sont séparés.
 - **Case dessinée** : le récitatif est bien rempli (30 mots max) et donne tout ce qu'il faut pour comprendre la blague : qui (son nom et sa fonction), quoi, où, et le détail précis que le gag détourne. **Une seule bulle** : la blague. L'image sert le gag.
 - **Case « Ce qui se passe vraiment »** juste après (texte seul, sans image) : « Quoi : », « Pourquoi ça compte : », « Et maintenant : ». 50 mots max, neutre, sans blague.
-- Une seule image par sujet : on peut traiter 4 à 6 sujets sans dessiner plus.
+- **Photo réelle** entre les deux (9 novembre 2026) : le vrai lieu, l'institution, l'objet ou la carte du sujet (Wikimedia Commons, jamais une personne vivante). Ordre : dessin → photo → « Ce qui se passe vraiment ».
+- Une seule image dessinée par sujet : on peut traiter 4 à 6 sujets sans dessiner plus (les photos ne coûtent rien).
 - Exemple de forme (sujet inventé, ne jamais le reprendre) : récitatif « La mairie de Lyon interdit les trottinettes en libre-service dans le centre dès lundi, après 300 plaintes de piétons en un an. » ; bulle d'un livreur à trottinette, figé sur la ligne : « Techniquement, ma roue avant est encore dans le 7e. » ; puis la case Quoi / Pourquoi ça compte / Et maintenant.
 
 ## Le casting : adapté à l'histoire
@@ -101,6 +102,6 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - [ ] Personnalités vivantes : règles ci-dessus respectées ; pas de politique partisane ; rien de blessant.
 - [ ] Carte « Pour briller » exacte, 25 mots max.
 - [ ] Lu à voix haute : une blague qu'il faut expliquer est coupée.
-- [ ] Case photo (si elle apporte vraiment quelque chose) : fichier Wikimedia Commons sous licence libre, jamais une personne vivante dans l'Actu ni une image choquante.
+- [ ] Vraies images (9 novembre 2026) : au moins une case photo dès qu'un document pertinent existe (1 ou 2 en Culture G et Insolite, 2 à 4 en Grand Dossier, une par sujet dans l'Actu) ; fichier Wikimedia Commons sous licence libre ; jamais de personne vivante ni d'image choquante.
 - [ ] `teaser` pour la newsletter : drôle, 25 mots max, sans dévoiler la chute.
 - [ ] Chaque bulle a un `who`, chaque personnage un `name` : on sait toujours qui parle.

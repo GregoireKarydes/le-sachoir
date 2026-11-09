@@ -163,9 +163,15 @@ def check_story(fmt: dict, d: Path, err, warn):
         if fid == "actu":
             if len(case.get("bubbles") or []) > 1:
                 warn(f"case {i} : Actu, une seule bulle (la blague) ; l'info va dans le récitatif")
+            # 9 novembre 2026 : par sujet, case dessinée → photo réelle (« En vrai ») → « Ce qui se passe vraiment ».
             nxt = cases[i] if i < len(cases) else None
+            has_photo = isinstance(nxt, dict) and nxt.get("kind") == "photo"
+            if has_photo:
+                nxt = cases[i + 1] if i + 1 < len(cases) else None
+            else:
+                warn(f"case {i} : Actu, pas de photo réelle (« kind »: « photo ») juste après la case dessinée")
             if not (isinstance(nxt, dict) and nxt.get("kind") == "explain"):
-                warn(f"case {i} : Actu, il manque la case « Ce qui se passe vraiment » juste après")
+                warn(f"case {i} : Actu, il manque la case « Ce qui se passe vraiment » après la case dessinée (et sa photo)")
         for b in case.get("bubbles", []) or []:
             if not b.get("who"):
                 warn(f"case {i} : bulle sans « who » (nom de la personne qui parle)")

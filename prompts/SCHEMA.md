@@ -65,7 +65,7 @@ Une case de texte glissée dans la BD, entre deux cases dessinées, là où le l
 }
 ```
 - **Pas d’image** (pas de champ `image`), pas de bulles. 70 mots au plus en tout (`text` + `steps` + `joke`).
-- Combien : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, jamais en case 1 ni deux de suite. **Actu : une après chaque case dessinée**, avec `"tag": "Ce qui se passe vraiment"` et `text` en trois lignes « Quoi : … \n Pourquoi ça compte : … \n Et maintenant : … » (50 mots max, sans `joke`) ; un libellé court suivi de « : » en début de ligne est affiché en gras. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
+- Combien : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, jamais en case 1 ni deux de suite. **Actu : une par sujet, après la case dessinée et sa photo réelle**, avec `"tag": "Ce qui se passe vraiment"` et `text` en trois lignes « Quoi : … \n Pourquoi ça compte : … \n Et maintenant : … » (50 mots max, sans `joke`) ; un libellé court suivi de « : » en début de ligne est affiché en gras. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
 - La numérotation `n` suit l’ordre de lecture (les cases dessinées et les cases texte se suivent : 1, 2, 3…).
 - Même ton que le Sachoir : simple, concret, une touche d’humour, mais la clarté d’abord.
 
@@ -90,8 +90,9 @@ Quand c'est pertinent, une vraie photo ou un document d'époque aide à comprend
 }
 ```
 - **Uniquement des fichiers de Wikimedia Commons** : `photo.commons` = le nom exact du fichier, qui commence par « File: » (le titre de sa page Commons, trouvée par recherche web). Vérifier sur la page que la licence est libre (domaine public, CC0, CC BY, CC BY-SA). Le workflow Images télécharge l'image, lit l'auteur et la licence sur Commons et les affiche sous la photo avec le lien vers la source ; une licence non libre est refusée et la case est sautée.
-- Combien : 0 ou 1 par Culture G ou Insolite, 1 à 3 par Grand Dossier, seulement si elle apporte vraiment quelque chose ; jamais en case 1 ni deux cases sans dessin de suite. Dans un Grand Dossier, au moins une dans les cases 1 à 4 si un bon document existe (c'est la partie gratuite et visible sur la page publique).
-- **Jamais** de photo d'une personne vivante dans l'Actu (les personnalités y sont nommées mais dessinées en caricature), ni de photo choquante (victimes, violence), ni de personne privée.
+- Combien (9 novembre 2026, demande de Greg : **des vraies images dans chaque BD dès qu'elles sont pertinentes**) : chercher systématiquement sur Commons ce qui rend l'histoire tangible (le vrai lieu, l'objet, le document, le tableau, la carte, le portrait d'époque). 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier ; ne s'en passer que si rien de pertinent et libre n'existe. Jamais en case 1 ni deux cases sans dessin de suite (sauf dans l'Actu, voir plus bas). Dans un Grand Dossier, au moins une dans les cases 1 à 4 si un bon document existe (c'est la partie gratuite et visible sur la page publique).
+- **Actu : une photo réelle par sujet**, juste après sa case dessinée et avant « Ce qui se passe vraiment » (ordre : dessin → photo → explication). Elle montre le vrai lieu, le bâtiment, l'institution, l'objet, l'événement ou une carte (« Le vrai Hôtel de Matignon », « La Knesset, à Jérusalem », « L'Accor Arena à Paris ») ; `"tag": "En vrai"`, `text` de 25 mots max qui dit ce qu'on voit, sans répéter l'explication. Si aucun fichier libre et pertinent n'existe, le sujet s'en passe.
+- **Pas de photo de personnes vivantes** (personnalités comprises : dans l'Actu elles sont nommées mais dessinées en caricature ; on montre le lieu ou l'institution, pas la personne), ni de photo choquante (victimes, violence, catastrophe), ni de personne privée reconnaissable. Les portraits de personnages historiques morts restent permis.
 - La `n` suit l'ordre de lecture comme les autres cases.
 
 ## Newsletter (texte qui change chaque jour)
