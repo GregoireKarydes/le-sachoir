@@ -295,6 +295,16 @@
         },
         {
           "n": 11,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "Un mètre de 1796, toujours rue de Vaugirard",
+          "text": "Seize mètres en marbre ont été posés dans Paris pour apprendre la nouvelle mesure aux passants. Celui du 36, rue de Vaugirard est le seul resté à sa place d’origine.",
+          "photo": {
+            "commons": "File:Mètre-étalon Paris.JPG"
+          }
+        },
+        {
+          "n": 12,
           "kind": "react",
           "tag": "Le verdict",
           "caption": "Verdict : le mètre officiel est environ 0,2 mm trop court, l’épaisseur de deux feuilles de papier.",

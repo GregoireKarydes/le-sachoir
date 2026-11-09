@@ -130,6 +130,16 @@
         },
         {
           "n": 5,
+          "kind": "photo",
+          "tag": "Le vrai docteur",
+          "title": "François Broussais, le « vampire de la médecine »",
+          "text": "Le médecin vers 1817, quand ses cours attirent des foules d’étudiants. Pour lui, presque toute maladie est une inflammation… à calmer en retirant du sang.",
+          "photo": {
+            "commons": "File:François-Joseph-Victor Broussais.jpg"
+          }
+        },
+        {
+          "n": 6,
           "kind": "",
           "tag": "",
           "caption": "La demande explose : poser des sangsues devient presque un métier, souvent exercé à domicile par des femmes.",
@@ -155,7 +165,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "fact",
           "tag": "1833",
           "caption": "Rien qu’en 1833, la France utilise entre 30 et 40 millions de sangsues : environ une par habitant.",
@@ -176,7 +186,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "",
           "tag": "",
           "caption": "Résultat : les étangs français sont vidés. Il faut importer des sangsues de Pologne et de Hongrie.",
@@ -202,7 +212,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "Broussais meurt en 1838. Sa mode des sangsues aura saigné la France pendant deux décennies.",

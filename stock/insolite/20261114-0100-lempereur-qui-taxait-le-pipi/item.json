@@ -78,6 +78,16 @@
         },
         {
           "n": 2,
+          "kind": "photo",
+          "tag": "Le vrai empereur",
+          "title": "Vespasien, empereur de 69 à 79",
+          "text": "Un buste antique de l’empereur, au musée archéologique national de Venise. Il arrive au pouvoir après une guerre civile qui a vidé les caisses : il cherche de l’argent partout.",
+          "photo": {
+            "commons": "File:(Venice) Bust of Vespasianus - Venice National Archaeological Museum.jpg"
+          }
+        },
+        {
+          "n": 3,
           "kind": "fact",
           "tag": "",
           "caption": "À l’époque, l’urine vaut de l’argent : son ammoniaque aide les blanchisseurs à nettoyer et détacher les tissus.",
@@ -98,14 +108,14 @@
           }
         },
         {
-          "n": 3,
+          "n": 4,
           "kind": "explain",
           "title": "Pourquoi l’urine valait de l’argent",
           "text": "En vieillissant, l’urine dégage de l’ammoniaque, un puissant nettoyant. Les foulons, les blanchisseurs de Rome, s’en servaient pour dégraisser et blanchir la laine et les toges. Ils achetaient donc celle des toilettes publiques.",
           "joke": "Le recyclage, version romaine. Le parfum en moins."
         },
         {
-          "n": 4,
+          "n": 5,
           "kind": "fact",
           "tag": "",
           "caption": "Vespasien taxe donc l’urine récoltée dans les toilettes publiques et revendue aux ateliers.",
@@ -126,7 +136,7 @@
           }
         },
         {
-          "n": 5,
+          "n": 6,
           "kind": "",
           "tag": "",
           "caption": "Son fils Titus trouve la mesure indigne d’un empereur.",
@@ -148,7 +158,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "react",
           "tag": "Selon Suétone",
           "caption": "Vespasien met sous le nez de Titus une pièce issue de la taxe.",
@@ -178,7 +188,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "fact",
           "tag": "",
           "caption": "D’où « l’argent n’a pas d’odeur », formule qu’il n’a pas prononcée telle quelle.",
@@ -199,7 +209,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "conf",
           "tag": "Paris, 1834",
           "caption": "Bilan : en 1834, le préfet Rambuteau installe à Paris des urinoirs publics, baptisés « vespasiennes » en souvenir de cette taxe.",

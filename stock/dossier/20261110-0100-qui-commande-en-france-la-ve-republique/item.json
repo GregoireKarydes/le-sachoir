@@ -237,6 +237,16 @@
         },
         {
           "n": 9,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "Le palais de l’Élysée, chez le président",
+          "text": "Résidence officielle du président de la République depuis la IIIe République. C’est ici que se réunit chaque semaine le Conseil des ministres.",
+          "photo": {
+            "commons": "File:Elysée Palace, Paris 2005.jpg"
+          }
+        },
+        {
+          "n": 10,
           "kind": "",
           "tag": "1958",
           "caption": "Le premier président n’est pas élu par le peuple, mais par un collège de parlementaires et d’élus locaux.",
@@ -262,7 +272,7 @@
           }
         },
         {
-          "n": 10,
+          "n": 11,
           "kind": "chap",
           "tag": "Chapitre 3 · Le président élu par tous",
           "caption": "1962 : de Gaulle veut que le président soit élu directement par tous les Français. Il passe par un référendum.",
@@ -289,7 +299,7 @@
           }
         },
         {
-          "n": 11,
+          "n": 12,
           "kind": "fact",
           "tag": "4 octobre 1962",
           "caption": "Furieux, les députés votent une motion de censure et renversent le gouvernement de Georges Pompidou.",
@@ -315,7 +325,7 @@
           }
         },
         {
-          "n": 12,
+          "n": 13,
           "kind": "explain",
           "title": "Censure contre dissolution",
           "steps": [
@@ -326,7 +336,7 @@
           "joke": "Chacun a les clés de la maison de l’autre."
         },
         {
-          "n": 13,
+          "n": 14,
           "kind": "",
           "tag": "28 octobre 1962",
           "caption": "Référendum : 62 % de oui. Le président sera désormais élu au suffrage universel direct, par tous les électeurs.",
@@ -352,7 +362,7 @@
           }
         },
         {
-          "n": 14,
+          "n": 15,
           "kind": "",
           "tag": "Décembre 1965",
           "caption": "Première élection directe : avec 44,7 % au premier tour, de Gaulle est obligé d’aller au second tour.",
@@ -378,7 +388,7 @@
           }
         },
         {
-          "n": 15,
+          "n": 16,
           "kind": "react",
           "tag": "",
           "caption": "Élu par tout le pays, le président devient la pièce maîtresse de la Ve République.",
@@ -395,7 +405,7 @@
           }
         },
         {
-          "n": 16,
+          "n": 17,
           "kind": "chap",
           "tag": "Chapitre 4 · Le 49.3",
           "caption": "Le gouvernement a aussi son arme : l’article 49, alinéa 3, de la Constitution. On dit « le 49.3 ».",
@@ -421,7 +431,7 @@
           }
         },
         {
-          "n": 17,
+          "n": 18,
           "kind": "explain",
           "title": "Le 49.3, pas à pas",
           "steps": [
@@ -433,7 +443,7 @@
           "joke": "Traduction : « Votez contre moi… si vous l’osez. »"
         },
         {
-          "n": 18,
+          "n": 19,
           "kind": "",
           "tag": "1988-1991",
           "caption": "Premier ministre de 1988 à 1991, Michel Rocard utilise le 49.3 à 28 reprises : un record.",
@@ -459,7 +469,17 @@
           }
         },
         {
-          "n": 19,
+          "n": 20,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "L’hémicycle de l’Assemblée nationale",
+          "text": "Les 577 députés y siègent, au Palais Bourbon. On y vote les lois, on y dépose les motions de censure… et le Premier ministre vient y annoncer un 49.3.",
+          "photo": {
+            "commons": "File:Hémicycle 2 Palais Bourbon.jpg"
+          }
+        },
+        {
+          "n": 21,
           "kind": "",
           "tag": "Depuis 2008",
           "caption": "Depuis 2008, en dehors du budget, il ne peut servir que pour un seul texte par session parlementaire.",
@@ -485,7 +505,7 @@
           }
         },
         {
-          "n": 20,
+          "n": 22,
           "kind": "chap",
           "tag": "Chapitre 5 · La cohabitation",
           "caption": "1986 : la droite gagne les législatives. Le président socialiste, Mitterrand, nomme Jacques Chirac Premier ministre.",
@@ -510,7 +530,7 @@
           }
         },
         {
-          "n": 21,
+          "n": 23,
           "kind": "explain",
           "title": "La cohabitation, c’est quoi ?",
           "text": "Le président est d’un camp, la majorité des députés de l’autre. Comme ils peuvent renverser le gouvernement, il doit nommer un Premier ministre de leur camp. La Constitution ne l’avait pas prévu.",
@@ -521,7 +541,7 @@
           ]
         },
         {
-          "n": 22,
+          "n": 24,
           "kind": "react",
           "tag": "Ambiance",
           "caption": "Chaque semaine, ils se retrouvent au Conseil des ministres, la réunion du gouvernement présidée par le président.",
@@ -537,7 +557,7 @@
           }
         },
         {
-          "n": 23,
+          "n": 25,
           "kind": "",
           "tag": "21 avril 1997",
           "caption": "Le président Chirac dissout l’Assemblée un an avant la date prévue. Les électeurs élisent une majorité de gauche.",
@@ -563,7 +583,7 @@
           }
         },
         {
-          "n": 24,
+          "n": 26,
           "kind": "chap",
           "tag": "Chapitre 6 · Une Constitution qui bouge",
           "caption": "24 septembre 2000 : référendum sur le quinquennat. Le mandat du président passe de sept à cinq ans.",
@@ -589,7 +609,7 @@
           }
         },
         {
-          "n": 25,
+          "n": 27,
           "kind": "",
           "tag": "",
           "caption": "Le but : élire les députés juste après le président, pour qu’ils soient du même camp. Moins de risques de cohabitation.",
@@ -615,7 +635,7 @@
           }
         },
         {
-          "n": 26,
+          "n": 28,
           "kind": "",
           "tag": "2008",
           "caption": "Grande réforme de 2008 : un président ne peut plus faire plus de deux mandats de suite.",
@@ -641,7 +661,7 @@
           }
         },
         {
-          "n": 27,
+          "n": 29,
           "kind": "",
           "tag": "4 mars 2024",
           "caption": "Réunis en Congrès à Versailles, députés et sénateurs inscrivent la liberté de recourir à l’avortement dans la Constitution.",
@@ -667,7 +687,7 @@
           }
         },
         {
-          "n": 28,
+          "n": 30,
           "kind": "",
           "tag": "Décembre 2024",
           "caption": "Pour la première fois depuis 1962, une motion de censure renverse un gouvernement.",
@@ -693,7 +713,7 @@
           }
         },
         {
-          "n": 29,
+          "n": 31,
           "kind": "explain",
           "tag": "En clair",
           "title": "Alors, qui commande ?",
@@ -701,7 +721,7 @@
           "joke": "Le vrai chef, c’est donc l’électeur. Deux fois."
         },
         {
-          "n": 30,
+          "n": 32,
           "kind": "",
           "tag": "Le record",
           "caption": "Si elle tient jusqu’en août 2028, la Ve battra le record de la IIIe République : 69 ans et 10 mois.",

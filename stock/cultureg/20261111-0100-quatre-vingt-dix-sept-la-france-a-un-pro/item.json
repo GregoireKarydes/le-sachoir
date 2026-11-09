@@ -147,6 +147,16 @@
         },
         {
           "n": 5,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Un aveugle des Quinze-Vingts, gravure ancienne",
+          "text": "L’hospice de Saint Louis accueillait les aveugles de Paris. Son nom compte « à l’ancienne » : quinze fois vingt, soit 300 lits. Il existe toujours, devenu un grand hôpital des yeux.",
+          "photo": {
+            "commons": "File:FOURNEL(1887) p053 Fig.28.jpg"
+          }
+        },
+        {
+          "n": 6,
           "kind": "",
           "tag": "",
           "caption": "Pourquoi compter par vingt ? Peut-être un héritage celte, peut-être normand. Les historiens n’en sont pas sûrs.",
@@ -176,7 +186,7 @@
           }
         },
         {
-          "n": 6,
+          "n": 7,
           "kind": "",
           "tag": "Fin du Moyen Âge",
           "caption": "Peu à peu, le comptage par dix l’emporte : trente, quarante, cinquante et soixante remplacent les vingtaines.",
@@ -197,7 +207,7 @@
           }
         },
         {
-          "n": 7,
+          "n": 8,
           "kind": "chap",
           "tag": "XVIIe siècle",
           "caption": "Pour 70, 80 et 90, deux façons coexistent. Au XVIIe siècle, le grammairien Vaugelas fait pencher l’Académie pour les vingtaines.",
@@ -227,7 +237,7 @@
           }
         },
         {
-          "n": 8,
+          "n": 9,
           "kind": "fact",
           "tag": "",
           "caption": "La Belgique et la Suisse ont gardé les dizaines : septante, nonante, et même huitante dans une partie de la Suisse.",
@@ -253,7 +263,7 @@
           }
         },
         {
-          "n": 9,
+          "n": 10,
           "kind": "conf",
           "tag": "Le fin mot",
           "caption": "Bilan : « quatre-vingts » est un reste du comptage par vingt. Septante existe toujours en France, juste « vieilli ».",

@@ -218,6 +218,16 @@
         },
         {
           "n": 8,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Neptune, photographiée par la sonde Voyager 2",
+          "text": "Il a fallu attendre août 1989 pour voir de près la planète trouvée par le calcul en 1846. Sa couleur bleue vient du méthane de son atmosphère.",
+          "photo": {
+            "commons": "File:Neptune Full.jpg"
+          }
+        },
+        {
+          "n": 9,
           "kind": "fact",
           "tag": "Vraie citation",
           "caption": "Arago résume : Le Verrier a trouvé le nouvel astre « au bout de sa plume », par le seul calcul.",
@@ -240,7 +250,7 @@
           }
         },
         {
-          "n": 9,
+          "n": 10,
           "kind": "conf",
           "tag": "Épilogue",
           "caption": "Galilée l’avait observée dès 1612… et prise pour une étoile.",
