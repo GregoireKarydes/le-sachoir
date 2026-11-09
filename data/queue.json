@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T20:51+01:00",
+ "updated_at": "2026-11-09T20:53+01:00",
  "stock": {
   "cultureg": [
    {
@@ -443,6 +443,21 @@
      "kind": "culture",
      "title": "Cinq questions, un seul tabouret",
      "questions": 5
+    }
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "path": "editions/2026-11-16",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Quiz géo",
+     "kind": "geo",
+     "title": "Trois questions, une boussole et un fromage",
+     "questions": 3
     }
    ]
   }
