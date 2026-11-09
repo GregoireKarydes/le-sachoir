@@ -912,6 +912,10 @@ async function loadWallet() {
 const entitled = date => isPremium() || WALLET.unlocked.includes(date);
 // Tout partage porte le code de parrainage : un ami qui s'inscrit par ce lien rapporte un Grand Dossier.
 const withRef = url => { if (!WALLET.ref || !MAIL()) return url; const u = new URL(url); u.searchParams.set("ref", WALLET.ref); return u.href; };
+// Badge d'une histoire dans Découvrir : réservée (⭐ Premium) ou, pour un Grand Dossier, son état.
+const storyBadge = s => !PW() || isPremium() ? (s.id === "dossier" ? dossierBadge(s.date) : "")
+  : canOpenDate(s.date) || WALLET.unlocked.includes(s.date) ? (s.id === "dossier" ? dossierBadge(s.date) : "")
+  : `<span class="dbadge prem">⭐ Premium</span>`;
 // Badge d'un Grand Dossier quand le paywall est actif.
 function dossierBadge(date) {
   if (!PW()) return "";
@@ -2062,7 +2066,7 @@ function wirePay(tr, ed, f) {
     } catch (e) { toast(e.message); b.disabled = false; }
   });
 }
-const PREMIUM_WHY = { dossier: "La suite de ce dossier vous attend, et tous les autres avec.", archives: "Les éditions passées sont réservées aux abonnés.", explore: "Explorer toutes les histoires par thème et chercher dans les archives, c’est Premium.", favs: "Garder vos histoires préférées, c’est Premium." };
+const PREMIUM_WHY = { dossier: "La suite de ce dossier vous attend, et tous les autres avec.", archives: "Cette histoire fait partie des archives Premium : toutes les éditions passées, en entier, sans limite.", explore: "Explorer toutes les histoires par thème et chercher dans les archives, c’est Premium.", favs: "Garder vos histoires préférées, c’est Premium." };
 function openPremium(reason) {
   ev("paywall", "", reason || "");
   const P = CFG.prices || { month: 299, year: 1999 };
@@ -2289,7 +2293,7 @@ function allStories() {
 function renderExplore() {
   const v = $("#v-explore"), q = EX.q.toLowerCase();
   if (signupGate(v, "explore")) return;
-  if (!canFav()) { v.innerHTML = `<h1 class="h1">Découvrir</h1><div class="lockcard"><span class="big">⭐</span><h2>Réservé aux abonnés Premium</h2><p class="sub">Toutes les histoires classées par thème, et la recherche dans les archives.</p><button class="cta" id="lkGo">Découvrir Premium</button></div>`; $("#lkGo").onclick = () => openPremium("explore"); return; }
+  // Découvrir est ouvert à tous : le catalogue complet donne envie ; une histoire réservée ouvre l’offre Premium au toucher.
   const all = allStories();
   const byQ = all.filter(s => !q || (s.title + " " + s.theme + " " + (s.tagline || "")).toLowerCase().includes(q));
   const poles = POLES.map(p => ({ p, n: byQ.filter(s => poleOf(s.theme) === p).length })).filter(x => x.n);
@@ -2307,7 +2311,7 @@ function renderExplore() {
    ${EX.search ? `<label class="search" for="exQ"><input id="exQ" type="search" placeholder="Napoléon, krach, quantique…" value="${esc(EX.q)}" aria-label="Rechercher"></label>` : ""}
    ${poles.length + (other ? 1 : 0) > 1 || EX.pole ? `<div class="chips" role="group" aria-label="Filtrer par pôle"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tout ${n(byQ.length)}</button>${poles.map(({ p, n: k }) => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name} ${n(k)}</button>`).join("")}${other ? `<button class="chip c-all" data-p="other" aria-pressed="${EX.pole === "other"}">Autres ${n(other)}</button>` : ""}</div>` : ""}
    ${themes.length > 1 ? `<div class="chips sub" role="group" aria-label="Filtrer par thématique"><button class="chip c-${cur.id}" data-t="" aria-pressed="${!EX.theme}">Toutes</button>${themes.map(({ th, n: k }) => `<button class="chip c-${cur.id}" data-t="${esc(th)}" aria-pressed="${EX.theme === th}">${esc(th)} ${n(k)}</button>`).join("")}</div>` : ""}
-   <div class="alist">${res.map(s => `<button class="aitem" data-d="${s.date}" data-f="${s.id}"><i style="background:${poleOf(s.theme)?.color || COLOR[s.id]}"></i><span class="tt">${esc(s.title)}<span class="th">${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""} · ${s.minutes || 2} min</span>${s.id === "dossier" ? dossierBadge(s.date) : ""}</span><span class="d">${new Date(s.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</span></button>`).join("")}</div>
+   <div class="alist">${res.map(s => `<button class="aitem" data-d="${s.date}" data-f="${s.id}"><i style="background:${poleOf(s.theme)?.color || COLOR[s.id]}"></i><span class="tt">${esc(s.title)}<span class="th">${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""} · ${s.minutes || 2} min</span>${storyBadge(s)}</span><span class="d">${new Date(s.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</span></button>`).join("")}</div>
    ${res.length ? "" : `<p class="empty">Aucune histoire ne correspond. Les archives grandissent chaque jour.</p>`}`;
   $("#exS").onclick = () => { EX.search = !EX.search; renderExplore(); const i = $("#exQ"); if (i) i.focus(); };
   v.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { EX.pole = b.dataset.p || null; EX.theme = null; renderExplore(); });
