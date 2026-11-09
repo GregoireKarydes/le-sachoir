@@ -130,7 +130,13 @@
           "title": "La vraie permission de Rosa Bonheur, 1857",
           "text": "Signée par la préfecture de police, elle l’autorise à s’habiller en homme « pour raison de santé », mais ni aux spectacles ni aux bals.",
           "photo": {
-            "commons": "File:Permission de travestissement Rosa Bonheur.jpg"
+            "commons": "File:Permission de travestissement Rosa Bonheur.jpg",
+            "credit": "Préfecture de police de Paris",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Permission_de_travestissement_Rosa_Bonheur.jpg",
+            "file": "images/photo-4-permission-de-travestissement-rosa.webp",
+            "status": "done"
           }
         },
         {

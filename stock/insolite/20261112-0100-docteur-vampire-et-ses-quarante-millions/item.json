@@ -135,7 +135,13 @@
           "title": "François Broussais, le « vampire de la médecine »",
           "text": "Le médecin vers 1817, quand ses cours attirent des foules d’étudiants. Pour lui, presque toute maladie est une inflammation… à calmer en retirant du sang.",
           "photo": {
-            "commons": "File:François-Joseph-Victor Broussais.jpg"
+            "commons": "File:François-Joseph-Victor Broussais.jpg",
+            "credit": "Unknown authorUnknown author",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois-Joseph-Victor_Broussais.jpg",
+            "file": "images/photo-5-fran-ois-joseph-victor-broussais-jp.webp",
+            "status": "done"
           }
         },
         {

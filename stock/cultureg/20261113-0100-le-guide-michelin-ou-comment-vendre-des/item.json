@@ -83,7 +83,13 @@
           "title": "Bibendum, né sur une affiche de 1898",
           "text": "Deux ans avant le guide, les frères Michelin font déjà leur pub : le dessinateur O’Galop invente ce bonhomme en pneus qui « boit l’obstacle ».",
           "photo": {
-            "commons": "File:Michelin Poster 1898.jpg"
+            "commons": "File:Michelin Poster 1898.jpg",
+            "credit": "O'Galop",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Michelin_Poster_1898.jpg",
+            "file": "images/photo-2-michelin-poster-1898-jpg.webp",
+            "status": "done"
           }
         },
         {

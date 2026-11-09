@@ -152,7 +152,13 @@
           "title": "Un aveugle des Quinze-Vingts, gravure ancienne",
           "text": "L’hospice de Saint Louis accueillait les aveugles de Paris. Son nom compte « à l’ancienne » : quinze fois vingt, soit 300 lits. Il existe toujours, devenu un grand hôpital des yeux.",
           "photo": {
-            "commons": "File:FOURNEL(1887) p053 Fig.28.jpg"
+            "commons": "File:FOURNEL(1887) p053 Fig.28.jpg",
+            "credit": "After Edme Bouchardon",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:FOURNEL(1887)_p053_Fig.28.jpg",
+            "file": "images/photo-5-fournel-1887-p053-fig-28-jpg.webp",
+            "status": "done"
           }
         },
         {

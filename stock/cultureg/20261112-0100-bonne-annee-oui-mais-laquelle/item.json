@@ -76,7 +76,13 @@
           "title": "Charles IX, peint par François Clouet",
           "text": "Le roi a 14 ans quand il signe l’édit qui fait commencer l’année le 1er janvier. Ce portrait en pied est conservé au Kunsthistorisches Museum de Vienne.",
           "photo": {
-            "commons": "File:François Clouet 004.jpg"
+            "commons": "File:François Clouet 004.jpg",
+            "credit": "François Clouet",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Clouet_-_Portrait_of_King_Charles_IX_of_France,_full_portrait.jpg",
+            "file": "images/photo-2-fran-ois-clouet-004-jpg.webp",
+            "status": "done"
           }
         },
         {

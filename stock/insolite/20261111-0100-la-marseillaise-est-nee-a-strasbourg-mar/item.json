@@ -97,7 +97,13 @@
           "title": "Rouget de Lisle chante pour la première fois",
           "text": "Isidore Pils a peint la scène en 1849 : chez Dietrich, le maire de Strasbourg, en avril 1792. Le tableau est aujourd’hui au Musée historique de Strasbourg.",
           "photo": {
-            "commons": "File:Pils - Rouget de Lisle chantant la Marseillaise.jpg"
+            "commons": "File:Pils - Rouget de Lisle chantant la Marseillaise.jpg",
+            "credit": "Isidore Pils",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Pils_-_Rouget_de_Lisle_chantant_la_Marseillaise.jpg",
+            "file": "images/photo-3-pils-rouget-de-lisle-chantant-la-ma.webp",
+            "status": "done"
           }
         },
         {

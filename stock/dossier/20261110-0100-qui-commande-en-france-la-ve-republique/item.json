@@ -242,7 +242,13 @@
           "title": "Le palais de l’Élysée, chez le président",
           "text": "Résidence officielle du président de la République depuis la IIIe République. C’est ici que se réunit chaque semaine le Conseil des ministres.",
           "photo": {
-            "commons": "File:Elysée Palace, Paris 2005.jpg"
+            "commons": "File:Elysée Palace, Paris 2005.jpg",
+            "credit": "Eric Pouhier",
+            "license": "CC BY-SA 2.5",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+            "source": "https://commons.wikimedia.org/wiki/File:Elys%C3%A9e_Palace,_Paris_2005.jpg",
+            "file": "images/photo-9-elys-e-palace-paris-2005-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -475,7 +481,13 @@
           "title": "L’hémicycle de l’Assemblée nationale",
           "text": "Les 577 députés y siègent, au Palais Bourbon. On y vote les lois, on y dépose les motions de censure… et le Premier ministre vient y annoncer un 49.3.",
           "photo": {
-            "commons": "File:Hémicycle 2 Palais Bourbon.jpg"
+            "commons": "File:Hémicycle 2 Palais Bourbon.jpg",
+            "credit": "Chatsam",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:H%C3%A9micycle_2_Palais_Bourbon.jpg",
+            "file": "images/photo-20-h-micycle-2-palais-bourbon-jpg.webp",
+            "status": "done"
           }
         },
         {

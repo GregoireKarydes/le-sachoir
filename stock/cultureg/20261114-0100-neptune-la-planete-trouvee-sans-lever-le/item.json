@@ -223,7 +223,13 @@
           "title": "Neptune, photographiée par la sonde Voyager 2",
           "text": "Il a fallu attendre août 1989 pour voir de près la planète trouvée par le calcul en 1846. Sa couleur bleue vient du méthane de son atmosphère.",
           "photo": {
-            "commons": "File:Neptune Full.jpg"
+            "commons": "File:Neptune Full.jpg",
+            "credit": "NASA",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Neptune_Full.jpg",
+            "file": "images/photo-8-neptune-full-jpg.webp",
+            "status": "done"
           }
         },
         {

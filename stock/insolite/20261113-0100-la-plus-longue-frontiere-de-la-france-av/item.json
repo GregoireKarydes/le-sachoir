@@ -177,7 +177,13 @@
           "title": "Le pont de l’Oyapock, vu côté français",
           "text": "378 mètres entre Saint-Georges-de-l’Oyapock, en Guyane, et Oiapoque, au Brésil. Achevé en 2011, il n’a ouvert à la circulation qu’en mars 2017.",
           "photo": {
-            "commons": "File:Pont SGO.jpg"
+            "commons": "File:Pont SGO.jpg",
+            "credit": "Loljules",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Pont_SGO.jpg",
+            "file": "images/photo-7-pont-sgo-jpg.webp",
+            "status": "done"
           }
         },
         {

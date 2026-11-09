@@ -83,7 +83,13 @@
           "title": "Vespasien, empereur de 69 à 79",
           "text": "Un buste antique de l’empereur, au musée archéologique national de Venise. Il arrive au pouvoir après une guerre civile qui a vidé les caisses : il cherche de l’argent partout.",
           "photo": {
-            "commons": "File:(Venice) Bust of Vespasianus - Venice National Archaeological Museum.jpg"
+            "commons": "File:(Venice) Bust of Vespasianus - Venice National Archaeological Museum.jpg",
+            "credit": "Didier Descouens",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:(Venice)_Bust_of_Vespasianus_-_Venice_National_Archaeological_Museum.jpg",
+            "file": "images/photo-2-venice-bust-of-vespasianus-venice-n.webp",
+            "status": "done"
           }
         },
         {

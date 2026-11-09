@@ -1358,7 +1358,13 @@
           "title": "John Law, le joueur devenu ministre",
           "text": "Portrait attribué à Alexis Simon Belle, vers 1715-1720, conservé à Londres. En janvier 1720, ce joueur écossais devient contrôleur général des Finances du royaume.",
           "photo": {
-            "commons": "File:John Law by Alexis Simon Belle.jpg"
+            "commons": "File:John Law by Alexis Simon Belle.jpg",
+            "credit": "Attributed to Alexis Simon Belle",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:John_Law_by_Alexis_Simon_Belle.jpg",
+            "file": "images/photo-3-john-law-by-alexis-simon-belle-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -1889,7 +1895,13 @@
           "title": "La vraie Joconde, de retour au Louvre",
           "text": "Le portrait peint par Léonard de Vinci au début du XVIe siècle mesure à peine 77 cm sur 53. Après le vol, il devient le tableau le plus célèbre du monde.",
           "photo": {
-            "commons": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg"
+            "commons": "File:Mona Lisa, by Leonardo da Vinci, from C2RMF retouched.jpg",
+            "credit": "Leonardo da Vinci",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg",
+            "file": "images/photo-9-mona-lisa-by-leonardo-da-vinci-from.webp",
+            "status": "done"
           }
         },
         {
