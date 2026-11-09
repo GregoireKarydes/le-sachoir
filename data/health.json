@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T19:45:18.397657+01:00",
+ "updated_at": "2026-11-09T20:49:59.613887+01:00",
  "today": "2026-11-09",
  "problems": [],
  "days": [
@@ -74,10 +74,10 @@
  "stock": {
   "cultureg": {
    "ready": 2,
-   "waiting": 3,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 27,
-   "focus": "20261112-0100-bonne-annee-oui-mais-laquelle (9 image(s) à faire)",
+   "images_left": 34,
+   "focus": "20261109-2048-je-chausse-du-42-mais-42-quoi (7 image(s) à faire)",
    "next": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
    "next_redo": 2
   },

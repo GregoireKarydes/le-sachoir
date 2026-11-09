@@ -1,7 +1,24 @@
 {
- "updated_at": "2026-11-09T19:45+01:00",
+ "updated_at": "2026-11-09T20:49+01:00",
  "stock": {
   "cultureg": [
+   {
+    "path": "stock/cultureg/20261109-2048-je-chausse-du-42-mais-42-quoi",
+    "name": "20261109-2048-je-chausse-du-42-mais-42-quoi",
+    "added": "20261109-2048",
+    "status": "waiting",
+    "next": false,
+    "title": "Je chausse du 42. Mais 42 quoi, au juste ?",
+    "theme": "Mode et luxe",
+    "tagline": "Votre pointure n’est ni en centimètres ni en pieds : elle est en points de Paris.",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 7,
+    "failed": 0,
+    "redo": 0
+   },
    {
     "path": "stock/cultureg/20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
     "name": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
