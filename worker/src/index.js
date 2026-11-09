@@ -478,9 +478,11 @@ async function route(req, env, url, ctx) {
 
 /* ---------- Tâche planifiée : newsletter et ménage ---------- */
 async function cron(env) {
+  const h = parisHour();
+  // Les crons GitHub sont souvent en retard ou sautés : la Publication de 5 h est lancée d'ici (5 h 00 et 5 h 30, sans risque : publish.py ne fait rien deux fois).
+  if (h === 5) console.log("publication", await rebuildSite(env) ? "lancée" : "non lancée (DISPATCH_TOKEN manquant ou refusé)");
   const out = await sendNewsletter(env);
   console.log("newsletter", JSON.stringify(out));
-  const h = parisHour();
   if (h === 10) {
     await env.DB.batch([
       env.DB.prepare("DELETE FROM logins WHERE created_at < ?").bind(new Date(Date.now() - 2 * 86400e3).toISOString()),
