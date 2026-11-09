@@ -15,27 +15,28 @@
           "look": "Sofie, a modern Belgian tourist in her thirties, short blond bob, black raincoat, a red umbrella as the only colour",
           "file": "cast/cultureg-sofie.png",
           "status": "pending",
-          "role": "the Belgian tourist puzzled by French numbers; curious, raised eyebrow, pen in hand"
+          "role": "the Belgian tourist puzzled by French numbers; curious, raised eyebrow, pen in hand",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (c0123216-aa1c-40ad-94eb-93a265a224d4)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         },
         {
           "id": "marc",
           "look": "Marc, a modern Parisian café waiter, tall and lanky, slicked black hair, thin moustache, white shirt, black waistcoat, long white apron",
           "file": "cast/cultureg-marc.png",
-          "status": "pending",
+          "status": "done",
           "role": "the Parisian waiter who counts the French way and guides the trip through time; tall, polite, slightly smug"
         },
         {
           "id": "gautier",
           "look": "Gautier, a 13th-century Parisian cloth merchant, round belly, bowl haircut, grey tunic with a black belt, a small purse at his waist, counting on his fingers",
           "file": "cast/cultureg-gautier.png",
-          "status": "pending",
+          "status": "done",
           "role": "a medieval merchant who counts in twenties on his fingers; cheerful, round, proud of his method"
         },
         {
           "id": "vaugelas",
           "look": "Claude, a pompous 17th-century grammarian, enormous curly black wig, pointy little moustache, black coat with a huge white lace collar, nose in the air, holding a thick book",
           "file": "cast/cultureg-vaugelas.png",
-          "status": "pending",
+          "status": "done",
           "role": "the pompous grammarian who declares the 'right' way to count; nose in the air, finger raised"
         }
       ],
@@ -46,8 +47,8 @@
           "marc"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -72,8 +73,8 @@
               "marc"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -102,8 +103,8 @@
               "marc"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -140,8 +141,8 @@
               "marc"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -170,8 +171,8 @@
               "marc"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -191,8 +192,8 @@
               "gautier"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -221,8 +222,8 @@
               "marc"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -247,8 +248,8 @@
               "vaugelas"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -268,8 +269,8 @@
               "sofie"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

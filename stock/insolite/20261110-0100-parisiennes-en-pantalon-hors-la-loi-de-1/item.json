@@ -31,9 +31,8 @@
           "name": "Une Parisienne",
           "look": "Chloé, a small modern Parisian office worker in 2013, high messy ponytail, black trousers, white shirt, a yellow scarf as the only colour, a coffee cup in hand",
           "file": "cast/insolite-chloe.png",
-          "status": "pending",
-          "role": "a modern office worker amazed that the rule lasted until 2013; small, wide-eyed, holding her coffee",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (f28ccbc0-edcc-4f00-8ad4-0efe2afb9e3c)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done",
+          "role": "a modern office worker amazed that the rule lasted until 2013; small, wide-eyed, holding her coffee"
         }
       ],
       "cover": {
@@ -65,8 +64,8 @@
               "dubois"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -98,8 +97,8 @@
               "rosa"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -120,8 +119,8 @@
               "rosa"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -148,8 +147,8 @@
               "rosa"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -177,7 +176,8 @@
             ],
             "file": "images/insolite-05.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 2,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (c1e1d72b-b45f-4231-a93a-ea7807822b80)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -212,7 +212,8 @@
             ],
             "file": "images/insolite-06.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 2,
+            "error": "HTTP 500 : {\"errors\":[{\"message\":\"AiError: AiError: Internal server error (182f1a46-0939-415d-b9b4-db16e774e1d6)\",\"code\":3043}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -233,8 +234,8 @@
               "chloe"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

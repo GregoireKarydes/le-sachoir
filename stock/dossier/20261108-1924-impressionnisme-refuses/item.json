@@ -28,7 +28,7 @@
           "look": "Claude, a stocky broad-shouldered French painter in his thirties, thick black hair and a huge bushy black beard, loose grey painter's smock, a paintbrush always in hand, a light-blue neckerchief as the only colour",
           "role": "the stubborn young painter who wants to catch the light outdoors; always in a hurry, brush raised, squinting at the sky",
           "file": "cast/dossier-monet.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "jure",
@@ -36,7 +36,7 @@
           "look": "a very tall and very thin elderly academic juror, bald head with huge white mutton-chop sideburns, a monocle, long black frock coat, holding the stamp, a dark-green embroidered collar as the only colour",
           "role": "the snobbish official juror who rejects anything new; stiff as a poker, nose in the air, slowly deflates as the painters win",
           "file": "cast/dossier-jure.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "leroy",
@@ -44,7 +44,7 @@
           "look": "Louis, a short round 1870s newspaper critic, tall black top hat, pince-nez glasses, curled moustache, grey checked suit, a tiny notebook and pencil, a red carnation in the buttonhole as the only colour",
           "role": "the mocking critic who invents the word as an insult; waddles, peers far too close at paintings, smirks behind his notebook",
           "file": "cast/dossier-leroy.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "zoe",
@@ -52,7 +52,7 @@
           "look": "Zoé, a small lively young woman of today, short spiky white-blond hair, big black hoop earrings, oversized white t-shirt under black dungarees, a canvas tote bag on the shoulder, a mustard-yellow beanie as the only colour",
           "role": "the curious visitor from today who asks the reader's questions; leans forward, hands on hips, cheeky grin",
           "file": "cast/dossier-zoe.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -63,8 +63,8 @@
           "zoe"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -91,8 +91,8 @@
               "jure"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -124,8 +124,8 @@
               "monet"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -169,8 +169,8 @@
               "leroy"
             ],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -198,8 +198,8 @@
               "jure"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -227,8 +227,8 @@
               "zoe"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -256,8 +256,8 @@
               "zoe"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -297,8 +297,8 @@
               "zoe"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -325,8 +325,8 @@
               "zoe"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 2,
             "same_place": false
           }
         },
@@ -367,8 +367,8 @@
               "zoe"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -395,8 +395,8 @@
               "zoe"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -439,8 +439,8 @@
               "zoe"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -467,8 +467,8 @@
               "zoe"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -495,8 +495,8 @@
               "zoe"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -522,8 +522,8 @@
               "monet"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -550,8 +550,8 @@
               "zoe"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -579,8 +579,8 @@
               "zoe"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -621,8 +621,8 @@
               "jure"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -650,8 +650,8 @@
               "jure"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -679,8 +679,8 @@
               "jure"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         }
       ],
