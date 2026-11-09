@@ -166,8 +166,8 @@ if(u.origin!==location.origin||/\/(histoires|themes|archives)\//.test(u.pathname
 def photo_figure(c, img_base):
     """Case photo réelle (Wikimedia Commons) : image, titre, explication et source."""
     ph = c.get("photo") or {}
-    if ph.get("status") != "done" or not ph.get("file"):
-        return ""
+    if ph.get("status") != "done" or not ph.get("file") or (ph.get("review") and ph.get("qa") != "ok"):
+        return ""  # refusée, pas encore là, ou à relire : jamais publiée avant le feu vert
     credit = " · ".join(x for x in (ph.get("credit"), ph.get("license")) if x)
     src = f'<a href="{e(ph.get("source"))}" rel="nofollow noopener">Wikimedia Commons</a>' if ph.get("source") else "Wikimedia Commons"
     return (f'<figure class="panel explain photo"><img src="{e(img_base + ph["file"])}" alt="{e(c.get("title", ""))}" loading="lazy" decoding="async">'
