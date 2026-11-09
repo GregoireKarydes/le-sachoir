@@ -69,7 +69,8 @@
         ],
         "file": "images/actu-cover.webp",
         "status": "done",
-        "attempts": 1
+        "attempts": 1,
+        "qa": "ok"
       },
       "cases": [
         {
@@ -91,7 +92,8 @@
             ],
             "file": "images/actu-01.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -120,7 +122,8 @@
             ],
             "file": "images/actu-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -143,13 +146,14 @@
             }
           ],
           "image": {
-            "prompt": "A bare office with the seatingplan board on the wall. general (tall, broad-shouldered, grey crew cut, blue folder) on the left, standing very upright, pointing a marker at the empty circles like a battle map, lips pressed, a single light-blue sweat drop. On the floor in front of him, a small pile of folding chairs, clearly too few. Medium shot, calm space above.",
+            "prompt": "A bare office with the seatingplan board on the wall, showing only rows of small empty circles and nothing else, no heading, no lines. general (tall, broad-shouldered, grey crew cut, blue folder) on the left, standing very upright, pointing a marker at the empty circles like a battle map, lips pressed, focused frown, dry eyes. On the floor in front of him, a small pile of folding chairs, clearly too few. Medium shot, calm space above.",
             "cast": [
               "general"
             ],
             "file": "images/actu-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -178,7 +182,8 @@
             ],
             "file": "images/actu-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {

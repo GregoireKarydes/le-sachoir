@@ -61,12 +61,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare museum wall with an empty frame on the floor. Vincenzo (on the right) holding a small painting turned backwards, glancing left and right, tiny sweat drop, pretending to be calm. medium shot",
+            "prompt": "a bare museum wall with four small empty hooks and an empty wooden frame lying on the floor. Vincenzo (short and stocky, thick black moustache, flat grey cap, long white smock) on the right, holding with both hands a flat wooden board, a small painting seen from the back, glancing sideways, pretending to be calm. No animals. medium shot",
             "cast": [
               "peruggia"
             ],
             "file": "images/insolite-01.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1,
             "via": "fal"
           }
@@ -90,6 +91,7 @@
             ],
             "file": "images/insolite-02.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -118,6 +120,7 @@
             ],
             "file": "images/insolite-03.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -147,6 +150,7 @@
             ],
             "file": "images/insolite-04.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -170,6 +174,7 @@
             ],
             "file": "images/insolite-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }

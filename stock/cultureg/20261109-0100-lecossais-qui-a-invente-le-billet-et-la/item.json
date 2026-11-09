@@ -142,6 +142,7 @@
             ],
             "file": "images/cultureg-03.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "via": "fal"
           }
@@ -169,13 +170,14 @@
             }
           ],
           "image": {
-            "prompt": "John (on the left) pointing with a stick at a big map drawn with a simple coastline and a huge sun, enthusiastic; Gaspard (on the right) holding his wallet, hypnotized, drooling a little. plain background. medium shot",
+            "prompt": "John (tall and slim, long brown curly wig, red waistcoat, no lace jabot) on the left, pointing with a stick at a big map drawn with a simple coastline and a huge sun, enthusiastic salesman grin; Gaspard (thin, crooked white wig, plain grey coat with no waistcoat, quill behind the ear) on the right, clutching his purse, hypnotized, mouth open. plain background. medium shot",
             "cast": [
               "law",
               "spec"
             ],
             "file": "images/cultureg-04.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1,
             "via": "fal"
           }
@@ -229,13 +231,14 @@
             }
           ],
           "image": {
-            "prompt": "the old hunchbacked man (on the left, bald with white tufts, big visible hump on his back, patched grey coat) bent forward proudly, offering his hump as a desk, open palm out for coins; Gaspard (on the right) signing a paper on the hump with his quill, delighted. plain background. medium shot",
+            "prompt": "Two men, no furniture at all. On the left, the old hunchbacked man (short, bald with white tufts, big round hump on his back, patched grey coat) bent forward at the waist, his back flat like a desk, grinning, one open palm held out for coins. On the right, Gaspard (thin, crooked white wig, plain grey coat, quill) leaning over him, pressing a blank sheet of paper onto the old man's hump and signing it with his quill, delighted. plain background. medium shot",
             "cast": [
               "bossu",
               "spec"
             ],
             "file": "images/cultureg-06.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1,
             "via": "fal"
           }
@@ -288,13 +291,14 @@
             }
           ],
           "image": {
-            "prompt": "the bank counter again. Gaspard (on the right) holding out a blank paper note, insistent; John (on the left) behind the counter, sweating buckets, slowly hiding an almost empty little chest behind his back. medium shot",
+            "prompt": "the bank counter again. On the left, John (tall, long brown curly wig, red waistcoat) behind the counter, nervous forced smile, a light-blue sweat drop, slowly hiding an almost empty little chest behind his back. On the right, in front of the counter, Gaspard (thin, crooked white wig, plain grey coat with no waistcoat, quill behind the ear) holding out a blank paper note with a stern, insistent face. medium shot",
             "cast": [
               "law",
               "spec"
             ],
             "file": "images/cultureg-08.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1,
             "via": "fal"
           }
