@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T13:38:25.932588+01:00",
+ "updated_at": "2026-11-09T19:31:50.277547+01:00",
  "today": "2026-11-09",
  "problems": [],
  "days": [
@@ -92,16 +92,16 @@
   },
   "dossier": {
    "ready": 1,
-   "waiting": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 47,
+   "images_left": 71,
    "focus": "20261108-1929-darwin-on-ne-descend-pas-du-singe (21 image(s) à faire)",
    "next": "20261108-1924-impressionnisme-refuses",
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 3,
+ "days_ahead_written": 4,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-09",

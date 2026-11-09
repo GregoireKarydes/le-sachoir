@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T13:38+01:00",
+ "updated_at": "2026-11-09T19:31+01:00",
  "stock": {
   "cultureg": [
    {
@@ -207,6 +207,23 @@
     "photos": 2,
     "images_done": 0,
     "images_total": 21,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261109-1928-vercingetorix-contre-cesar",
+    "name": "20261109-1928-vercingetorix-contre-cesar",
+    "added": "20261109-1928",
+    "status": "waiting",
+    "next": false,
+    "title": "Vercingétorix contre César : la guerre des Gaules sans potion magique",
+    "theme": "Histoire ancienne",
+    "tagline": "Soixante peuples divisés, un général pressé, un siège en double anneau : comment la Gaule est devenue romaine",
+    "minutes": 3,
+    "cases": 29,
+    "photos": 3,
+    "images_done": 0,
+    "images_total": 24,
     "failed": 0,
     "redo": 0
    },
