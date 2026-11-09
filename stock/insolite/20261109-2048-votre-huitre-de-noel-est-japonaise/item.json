@@ -1,0 +1,215 @@
+{
+  "added": "20261109-2048",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Votre huître de Noël est japonaise (et sa grand-mère, portugaise)",
+      "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
+      "teaser": "Sur votre table de fête, une huître « bien de chez nous ». Enfin, presque : elle a pris l’avion, et sa grand-mère a fait naufrage.",
+      "minutes": 1,
+      "theme": "Sciences du vivant",
+      "art": {
+        "subject": "how Portuguese oysters dumped in the Gironde estuary around 1868 colonised the French Atlantic coast, died out around 1970, and were replaced by oysters brought from Japan",
+        "setting": "a modern French Christmas dinner table; the deck of a small 1860s steamship in a stormy estuary; a muddy oyster farm at low tide",
+        "era": "today in France, with flashbacks to the 1860s",
+        "props": {
+          "oyster": "a big rough grey-green cupped oyster, open, on a plate of ice",
+          "crates": "stacked wooden crates full of grey oysters",
+          "knife": "a short oyster knife with a red wooden handle"
+        }
+      },
+      "cast": [
+        {
+          "id": "convive",
+          "name": "Le convive",
+          "look": "a very round plump man in his sixties, bald head, huge bushy grey moustache, rosy pale skin, a deep burgundy Christmas sweater as main colour, a white napkin tucked into his collar, holding the oyster",
+          "role": "the proud Christmas guest who thinks his oyster is 100% French; round, beaming, easily shocked",
+          "file": "cast/insolite-convive.png",
+          "status": "pending"
+        },
+        {
+          "id": "ostr",
+          "name": "L’ostréicultrice",
+          "look": "a tall strong woman in her forties, broad shoulders, short spiky black hair, tanned skin, a bright yellow oilskin jacket as main colour, green rubber boots, the knife in hand",
+          "role": "the oyster farmer who knows the real story and tells it bluntly; tall, relaxed, leaning on things, deadpan",
+          "file": "cast/insolite-ostr.png",
+          "status": "pending"
+        },
+        {
+          "id": "capitaine",
+          "name": "Le capitaine",
+          "look": "a huge broad-chested 1860s sea captain in his fifties, thick wild grey beard, weathered pink skin, a navy blue pea coat with brass buttons as main colour, a black captain's cap, a short pipe in his mouth",
+          "role": "the captain of the steamship Le Morlaisien, in a hurry and fed up; massive, stomping, chewing his pipe",
+          "file": "cast/insolite-capitaine.png",
+          "status": "pending"
+        },
+        {
+          "id": "fonct",
+          "name": "Un fonctionnaire du port",
+          "look": "a short skinny 1860s port official, very thin and stiff, black hair slicked with a centre parting, thin pencil moustache, a bright purple frock coat as main colour, a tall black top hat, a white handkerchief pressed to his nose",
+          "role": "the fussy official who orders the smelly cargo thrown away; tiny, stiff as a stick, disgusted",
+          "file": "cast/insolite-fonct.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a festive table on a pale blue background. The convive (very round, huge grey moustache, burgundy sweater) on the left lifting the oyster proudly; behind him a tiny ghostly sailing steamship on a wave and, on the right, the ostréicultrice (tall, spiky black hair, yellow oilskin) leaning on the table, deadpan, holding the knife. wide shot",
+        "cast": ["convive", "ostr"],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "À Noël",
+          "caption": "À Noël, l’huître creuse trône sur les tables françaises. Mais d’où vient-elle vraiment ?",
+          "bubbles": [
+            { "who": "convive", "text": "Une bonne huître, bien de chez nous !", "side": "l" },
+            { "who": "ostr", "text": "Japonaise. Et sa grand-mère était portugaise.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a Christmas dinner table with a plate of oysters on ice. The convive (very round, bald, huge grey moustache, burgundy sweater) on the left raising the oyster high like a trophy, eyes closed with pride; the ostréicultrice (tall, spiky black hair, yellow oilskin) on the right leaning on the back of a chair, flat expression. medium shot",
+            "cast": ["convive", "ostr"],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "XIXe siècle",
+          "caption": "Au départ, la France a l’huître plate, d’ici. Au XIXe siècle, la surpêche vide ses bancs, ces colonies sauvages.",
+          "bubbles": [
+            { "who": "convive", "text": "On les a toutes mangées ?", "side": "l" },
+            { "who": "ostr", "text": "On a raclé le fond de la mer. Littéralement.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "plain pale background, the same table now empty. The convive (very round, huge grey moustache, burgundy sweater) on the left staring at a tiny pile of empty flat round shells, guilty, tiny pink blush marks; the ostréicultrice (tall, spiky black hair, yellow oilskin) on the right miming scraping the ground with a rake gesture. medium shot",
+            "cast": ["convive", "ostr"],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Vers 1868",
+          "caption": "Donc Arcachon fait venir des huîtres creuses du Portugal. Le navire Le Morlaisien en transporte une cargaison.",
+          "bubbles": [
+            { "who": "capitaine", "text": "Quelques jours de mer. Elles tiendront.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the deck of a small 1860s steamship on calm sea, stacked crates of oysters. The capitaine (huge, wild grey beard, navy pea coat, black cap, pipe) on the left sitting on the crates, legs apart, puffing his pipe, very confident, one hand patting the crates. low angle medium shot",
+            "cast": ["capitaine"],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "La tempête",
+          "caption": "Une tempête le force à s’abriter dans l’estuaire de la Gironde. Le voyage traîne : la cargaison est jugée perdue, et jetée.",
+          "bubbles": [
+            { "who": "fonct", "text": "Ça sent la marée basse. Jetez tout.", "side": "r" },
+            { "who": "capitaine", "text": "Ce sont des huîtres.", "side": "l" },
+            { "who": "fonct", "text": "Raison de plus.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the steamship deck in a grey rainy estuary, the crates on deck. The fonctionnaire du port (short skinny, purple frock coat, top hat) on the right pinching his nose with the handkerchief, pointing stiffly overboard; the capitaine (huge, wild grey beard, navy pea coat) on the left holding a crate, glaring down at him, pipe drooping. medium shot",
+            "cast": ["fonct", "capitaine"],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "title": "Comment une poubelle devient un élevage",
+          "steps": [
+            "Les huîtres jetées sont encore vivantes",
+            "L’estuaire, mélange d’eau douce et salée, leur convient",
+            "Elles se reproduisent et colonisent la côte : de la Gironde à la Vendée vers 1878",
+            "Avant 1960, la France en produit environ 85 000 tonnes par an"
+          ],
+          "joke": "Le dépôt sauvage le plus rentable de l’histoire de France."
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "1966-1973",
+          "caption": "Puis une maladie des branchies, l’organe qui respire et filtre l’eau, et des épidémies : vers 1973, la portugaise a disparu.",
+          "bubbles": [
+            { "who": "convive", "text": "Plus d’huîtres à Noël ?!", "side": "l" },
+            { "who": "ostr", "text": "Pas de panique. On a appelé le Japon.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a muddy oyster farm at low tide with empty wooden tables. The convive (very round, huge grey moustache, burgundy sweater, napkin in collar) on the left clutching his face in panic, frozen, a light-blue sweat drop; the ostréicultrice (tall, spiky black hair, yellow oilskin, green boots) on the right calmly holding an old phone receiver to her ear. medium shot",
+            "cast": ["convive", "ostr"],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Des parcs à huîtres sur le bassin d’Arcachon",
+          "text": "Des parcs à huîtres au village de L’Herbe, sur le bassin d’Arcachon. Aujourd’hui, presque tout ce qui y pousse descend d’huîtres venues du Pacifique.",
+          "photo": { "commons": "File:PARCS A HUITRES DU VILLAGE DE L'HERBE.jpg" }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Fin des années 1960",
+          "caption": "Les ostréiculteurs importent du naissain, des bébés huîtres, venu du Japon, puis du Canada en 1972 : l’huître creuse du Pacifique.",
+          "bubbles": [
+            { "who": "ostr", "text": "Des bébés huîtres, livrés par avion.", "side": "r" },
+            { "who": "convive", "text": "En première classe, j’espère.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "an oyster farm on a pale yellow background, a small cartoon propeller plane in the sky. The ostréicultrice (tall, spiky black hair, yellow oilskin) on the right holding up a small wooden crate of tiny baby oysters like newborns, proud; the convive (very round, huge grey moustache, burgundy sweater) on the left bowing respectfully to the crate. medium shot",
+            "cast": ["ostr", "convive"],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "En résumé",
+          "caption": "En résumé : la plate a été trop pêchée, la portugaise s’est installée par accident, la japonaise l’a remplacée.",
+          "bubbles": [
+            { "who": "convive", "text": "Bon. Je vais l’appeler Sakura.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "back at the Christmas table, plain background. The convive (very round, bald, huge grey moustache, burgundy sweater, napkin in collar) in the centre facing the viewer like in an interview, holding the oyster tenderly in both hands, gazing at it, tiny small red hearts above it. close-up",
+            "cast": ["convive"],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Presque toutes les huîtres creuses françaises descendent d’huîtres du Pacifique importées vers 1970, pour remplacer la portugaise, disparue.",
+        "source": "Encyclopédie de l’environnement — Les huîtres, une leçon d’histoire"
+      },
+      "story": "Pendant des siècles, la France n’a qu’une huître : la plate, ronde, qui vit sur ses côtes. Mais au XIXe siècle, on drague tellement les fonds pour la pêcher que ses bancs sauvages s’épuisent. Pour continuer à remplir les assiettes, les ostréiculteurs d’Arcachon importent dès 1860 des huîtres creuses du Portugal, pêchées dans le Tage.\nVers 1868 (1867 selon certaines sources), le navire Le Morlaisien, chargé de ces huîtres portugaises, est pris dans une tempête et se réfugie dans l’estuaire de la Gironde. Le voyage s’éternise, la cargaison est jugée perdue et jetée à l’eau. Mais les huîtres sont vivantes, l’estuaire leur plaît, et elles se reproduisent. Vers 1878, on en trouve de la Gironde jusqu’au sud de la Vendée. La « portugaise » devient l’huître des Français : avant 1960, l’Atlantique en produit environ 85 000 tonnes par an.\nÀ partir de 1966, une maladie des branchies, puis de grandes épidémies entre 1970 et 1973, la font disparaître des côtes françaises. Les ostréiculteurs importent alors du naissain, des bébés huîtres, du Japon puis, en 1972, du Canada : c’est l’huître creuse du Pacifique. Elle fait aujourd’hui la quasi-totalité de la production française ; l’huître plate ne pèse plus qu’environ 2 000 tonnes par an.",
+      "sources": [
+        { "title": "Encyclopédie de l’environnement — Les huîtres, une leçon d’histoire", "url": "https://encyclopedie-environnement.org/?p=15176" },
+        { "title": "FAO (M. Héral) — Oyster culture in France: history and production", "url": "https://fao.org/4/af043e/AF043E04.htm" },
+        { "title": "Evous — Japonaises, les huîtres ?", "url": "https://www.evous.fr/terres-et-saveurs/en-mer/huitres/Japonaises-les-huitres,1180420/" }
+      ]
+    }
+  ]
+}
