@@ -1,7 +1,274 @@
 {
   "date": "2026-11-10",
   "status": "draft",
+  "newsletter": {
+    "subject": "Un pouce dépoussiéré, une classe vide et une cape à remplir 📝",
+    "intro": "Mardi 10 novembre : le Smic gagne 24 €, les classes se vident et Superman change de patron. On a tout dessiné, café compris.",
+    "game": "Le Dico menteur : quatre mots rares, trois définitions bidon. Votre flair contre notre mauvaise foi.",
+    "ps": "P.-S. Demain, c’est férié. Relisez l’édition deux fois : à la seconde, vous rirez avant la blague."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Un coup de pouce et beaucoup d’absents",
+      "tagline": "Le Smic retrouve son pouce, les classes se vident, Harry Kane manque à l’appel et Superman change de patron.",
+      "teaser": "Un pouce qui n’avait pas servi depuis 2012, une prof absente de son propre cours et un réalisateur noyé sous la paperasse.",
+      "minutes": 2,
+      "theme": "",
+      "art": {
+        "subject": "four news stories of the day, each told in one gag panel",
+        "setting": "a gilded government salon, an empty classroom, a football locker room, a bare film studio office",
+        "era": "present day, November 2026",
+        "props": {
+          "thumb": "a giant bright blue foam thumbs-up hand, covered in grey dust",
+          "register": "a small green attendance register booklet with blank pages",
+          "ballotbox": "a small transparent ballot box half full of blank folded papers",
+          "form": "a very long blank white paper form that unrolls from the desk to the floor",
+          "cape": "a long bright red superhero cape on a wooden hanger, with no emblem"
+        }
+      },
+      "cast": [
+        {
+          "id": "huissier",
+          "name": "Un huissier de Matignon",
+          "look": "a very old, short and hunched government usher, light pink skin, completely bald with two white side tufts, black tailcoat over a bright yellow waistcoat as main colour, yellow bow tie, white shirt, silver chain around the neck, round gold-rimmed glasses",
+          "role": "the solemn usher who has seen every negotiation since forever; deadpan, tiny weary smile, moves very slowly",
+          "file": "cast/actu-huissier.png",
+          "status": "pending"
+        },
+        {
+          "id": "prof",
+          "name": "Une prof",
+          "look": "a tall, very thin high-school teacher in her fifties, light olive skin, grey hair in a high chignon held by a pencil, bright teal cardigan as main colour over a white blouse, brown trousers, big round red glasses, a canvas tote bag full of papers",
+          "role": "the dry, ironic teacher who takes the roll call even on strike day; arms crossed, one eyebrow raised",
+          "file": "cast/actu-prof.png",
+          "status": "pending"
+        },
+        {
+          "id": "defenseur",
+          "name": "Un défenseur",
+          "look": "a short, very stocky professional football defender, dark brown skin, shaved head, thick neck, bright orange football jersey as main colour with no number and no logo, white shorts, orange socks, white bandage around one knee",
+          "role": "the proud, stubborn defender who has been beaten by the same striker all season; chin up, arms crossed",
+          "file": "cast/actu-defenseur.png",
+          "status": "skipped"
+        },
+        {
+          "id": "gunn",
+          "name": "James Gunn",
+          "look": "a cartoon Hollywood film director, slim and lanky, light skin, spiky salt-and-pepper hair, short neat grey beard, bright red hoodie as main colour, dark blue jeans, black sneakers, a small black megaphone hanging from his wrist",
+          "role": "the film director who used to be the big boss and now fills in paperwork; slumped, sighing, still enthusiastic about capes",
+          "file": "cast/actu-gunn.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "A plain hallway with a pale yellow background. huissier (tiny, hunched, bald with white tufts, yellow waistcoat and bow tie) on the left, proudly holding up the thumb like a trophy, tiny yellow sparkles of pride. prof (tall, thin, grey chignon, teal cardigan, red glasses) on the right, coat over her arm, walking away with her tote bag, one eyebrow raised at the giant thumb. Wide shot, calm empty space above.",
+        "cast": [
+          "huissier",
+          "prof"
+        ],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Économie",
+          "caption": "Lundi à Matignon, le Premier ministre, Sébastien Lecornu, accorde au Smic environ 24 € net de plus au 1er décembre, soit 1 502 €. Premier « coup de pouce » depuis 2012.",
+          "bubbles": [
+            {
+              "who": "huissier",
+              "text": "Le dernier date de 2012. On a dû dépoussiérer le pouce.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "A formal gilded government salon with one tall window and a single empty chair, pale cream background. huissier (tiny, hunched, bald with white side tufts, yellow waistcoat and yellow bow tie) on the right, standing on tiptoe, hugging the thumb with both arms and blowing a big cloud of grey dust off it, cheeks puffed, deadpan eyes half closed. Medium shot, calm empty space above.",
+            "cast": [
+              "huissier"
+            ],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "L’hôtel de Matignon, côté jardin",
+          "text": "La façade côté jardin de l’hôtel de Matignon, rue de Varenne à Paris : la résidence du Premier ministre, où se tenait la conférence sociale.",
+          "photo": {
+            "commons": "File:Facade @ Jardin de l'Hôtel Matignon @ Paris (34261927513).jpg"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Smic : 1,6 % de hausse dès décembre",
+          "text": "Quoi : le Smic augmente de 1,6 % dès le 1er décembre, dont 0,6 % de coup de pouce en plus de la hausse automatique.\nPourquoi ça compte : les syndicats la jugent trop faible : la CFDT réclamait 100 €, la CGT environ 150 €.\nEt maintenant : la CFDT donne quinze jours pour des hausses de salaires dans les branches."
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Éducation",
+          "caption": "Ce mardi, lycéens, étudiants et enseignants sont appelés ensemble à la grève par neuf organisations. Les personnels dénoncent leur exclusion de la conférence sociale de lundi sur les salaires.",
+          "bubbles": [
+            {
+              "who": "prof",
+              "text": "Bon. Tout le monde est absent. Moi aussi, techniquement.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "An empty classroom with rows of empty desks and a blank green chalkboard. prof (tall, thin, grey chignon held by a pencil, teal cardigan, red glasses) on the right, standing behind the teacher's desk with her coat already on, holding the register open, pointing her pen at herself with a resigned little shrug, lips pressed. Wide shot, calm empty space above.",
+            "cast": [
+              "prof"
+            ],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le ministère de l’Éducation nationale, à Paris",
+          "text": "L’hôtel de Rochechouart, au 110 rue de Grenelle à Paris : c’est le siège du ministère de l’Éducation nationale.",
+          "photo": {
+            "commons": "File:Hôtel de Rochechouart, 110 rue de Grenelle, Paris 7e.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Grève dans l’éducation et à l’université",
+          "text": "Quoi : neuf organisations appellent l’éducation et l’université à la grève.\nPourquoi ça compte : le mouvement lycéen, mobilisé depuis plusieurs semaines, juge insuffisantes les réponses sur les postes et les moyens.\nEt maintenant : syndicats de fonctionnaires reçus vendredi à Matignon, grève de la fonction publique le 17 novembre."
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Sport",
+          "caption": "Lundi, la FIFPRO, le syndicat mondial des footballeurs, dévoile son équipe type 2026, votée par les joueurs eux-mêmes. Absent : l’Anglais Harry Kane, buteur du Bayern et Ballon d’Or.",
+          "bubbles": [
+            {
+              "who": "defenseur",
+              "text": "Voter pour celui qui nous marque des buts toute l’année ? Jamais de la vie.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "A football locker room with a wooden bench and a row of plain lockers, pale blue background. defenseur (short, very stocky, shaved head, bright orange jersey, knee bandage) on the left, sitting on the bench, chin up, eyes closed, stubborn proud pout, holding a folded paper high above the ballotbox and clearly refusing to drop it in. Medium shot, calm empty space above.",
+            "cast": [
+              "defenseur"
+            ],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un vrai Ballon d’Or, au musée du Real Madrid",
+          "text": "Le Ballon d’Or 1998 de Zinédine Zidane, exposé au musée du stade Santiago-Bernabéu, à Madrid. Le trophée a été créé par le magazine France Football.",
+          "photo": {
+            "commons": "File:Zinedine Zidane's 1998 Ballon d'Or trophy, Real Madrid Museum, Santiago Bernabéu, Madrid, Spain (Ank Kumar, Infosys Limited) 04.jpg"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "L’équipe de l’année, choisie par les joueurs",
+          "text": "Quoi : trois joueurs du PSG et un seul Français, Kylian Mbappé, figurent dans l’équipe.\nPourquoi ça compte : ce sont les joueurs pros de plus de 70 pays qui votent.\nEt maintenant : Lionel Messi, 39 ans, signe sa 18e sélection, un record ; Lamine Yamal, 19 ans, sa deuxième."
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "Cinéma",
+          "caption": "Lundi, Skydance, qui a racheté Warner Bros, remplace au 1er décembre les patrons de DC Studios, le réalisateur James Gunn et Peter Safran. Gunn garde la réalisation du prochain Superman.",
+          "bubbles": [
+            {
+              "who": "gunn",
+              "text": "Avant, je choisissais la couleur de la cape. Maintenant, je remplis un formulaire.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "A bare film studio office with one small desk, pale grey background. gunn (slim, spiky salt-and-pepper hair, short grey beard, bright red hoodie) on the left, slumped in his chair, filling in the form with a tiny pen, the paper unrolling down to the floor, defeated sigh, droopy shoulders. On the right, the cape hanging on a coat stand, out of reach. Medium shot, calm empty space above.",
+            "cast": [
+              "gunn"
+            ],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le château d’eau des studios Warner Bros",
+          "text": "Le château d’eau des studios Warner Bros, à Burbank, près de Los Angeles. DC Studios est une branche de Warner Bros depuis sa création, en 2022.",
+          "photo": {
+            "commons": "File:Warner Bros studios Burbank -water tower.jpg"
+          }
+        },
+        {
+          "n": 12,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Changement de patron chez les super-héros DC",
+          "text": "Quoi : Jeremy Latcham, ancien de Marvel, prend la tête de DC Studios le 1er décembre.\nPourquoi ça compte : il suit l’échec de « Supergirl » et le rachat de Warner Bros Discovery par Skydance.\nEt maintenant : Gunn termine « Man of Tomorrow », la suite de « Superman », qu’il réalise."
+        }
+      ],
+      "final": {
+        "text": "Au 1er décembre, le Smic augmente de 1,6 %, dont 0,6 % de « coup de pouce » : le premier depuis 2012.",
+        "source": "AFP (Boursorama) / NVO"
+      },
+      "sources": [
+        {
+          "title": "AFP via Boursorama — Lecornu donne un coup de pouce au Smic, la colère ne retombe pas",
+          "url": "https://boursorama.com/actualite-economique/actualites/lecornu-donne-un-coup-de-pouce-au-smic-la-colere-ne-retombe-pas-af8819f6d438d3e1c5dbaa0c90d8b89c"
+        },
+        {
+          "title": "NVO — +1,6 % pour le Smic : une conférence sociale, des « miettes »… et un appel de la CGT à la grève le 17 novembre",
+          "url": "https://nvo.fr/16pour-le-smic-une-conference-sociale-des-miettes-et-un-appel-de-la-cgt-a-la-greve-le-17-novembre/"
+        },
+        {
+          "title": "CNews — Conférence sociale : le Smic « passe la barre des 1 500 euros net »",
+          "url": "https://www.cnews.fr/france/2026-11-09/conference-sociale-le-smic-passe-la-barre-des-1500-euros-net-grace-une"
+        },
+        {
+          "title": "Brut — Nouvel appel à la grève mardi dans l’éducation et l’enseignement supérieur",
+          "url": "https://www.brut.media/fr/articles/nouvel-appel-a-la-greve-mardi-dans-l-education-et-l-enseignement-superieur"
+        },
+        {
+          "title": "Reuters via SRN News — Messi returns to FIFPRO World 11, Ballon d’Or winner Kane misses out",
+          "url": "https://srnnews.com/soccer-messi-returns-to-fifpro-world-11-ballon-dor-winner-kane-misses-out/"
+        },
+        {
+          "title": "Khel Now — FIFPRO World 11 2026 revealed ft. Messi & Mbappe; Kane left out",
+          "url": "https://khelnow.com/football/fifpro-world-11-revealed-202611"
+        },
+        {
+          "title": "AP via CP24 — DC Studios announces major shakeup as James Gunn, Peter Safran step down",
+          "url": "https://www.cp24.com/news/entertainment/2026/11/09/in-another-shake-up-at-dc-studios-gunn-and-safran-are-out-as-skydance-appoints-marvel-vet-latcham/"
+        },
+        {
+          "title": "Yahoo Entertainment — James Gunn releases a statement after stepping down from the DC Studios leadership",
+          "url": "https://www.yahoo.com/entertainment/movies/articles/james-gunn-releases-statement-stepping-181003227.html"
+        }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "dico",
