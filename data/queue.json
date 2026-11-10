@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T20:53+01:00",
+ "updated_at": "2026-11-10T03:28+01:00",
  "stock": {
   "cultureg": [
    {
@@ -34,7 +34,7 @@
     "images_done": 11,
     "images_total": 11,
     "failed": 0,
-    "redo": 2
+    "redo": 0
    },
    {
     "path": "stock/cultureg/20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
@@ -110,15 +110,15 @@
     "path": "stock/insolite/20261109-2048-votre-huitre-de-noel-est-japonaise",
     "name": "20261109-2048-votre-huitre-de-noel-est-japonaise",
     "added": "20261109-2048",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "Votre huître de Noël est japonaise (et sa grand-mère, portugaise)",
     "theme": "Sciences du vivant",
     "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
     "minutes": 1,
     "cases": 9,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 8,
     "images_total": 8,
     "failed": 0,
     "redo": 0
@@ -127,7 +127,7 @@
     "path": "stock/insolite/20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
     "name": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
     "added": "20261110-0100",
-    "status": "waiting",
+    "status": "blocked",
     "next": false,
     "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
     "theme": "Droit",
@@ -135,16 +135,16 @@
     "minutes": 1,
     "cases": 9,
     "photos": 1,
-    "images_done": 6,
+    "images_done": 7,
     "images_total": 8,
-    "failed": 0,
+    "failed": 1,
     "redo": 0
    },
    {
     "path": "stock/insolite/20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar",
     "name": "20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar",
     "added": "20261111-0100",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter)",
     "theme": "Musique",
@@ -152,7 +152,7 @@
     "minutes": 1,
     "cases": 9,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 8,
     "images_total": 8,
     "failed": 0,
     "redo": 0
@@ -225,7 +225,7 @@
     "images_done": 20,
     "images_total": 20,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/dossier/20261108-1929-darwin-on-ne-descend-pas-du-singe",
@@ -239,7 +239,7 @@
     "minutes": 3,
     "cases": 24,
     "photos": 2,
-    "images_done": 0,
+    "images_done": 2,
     "images_total": 21,
     "failed": 0,
     "redo": 0
@@ -281,81 +281,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-09",
-   "path": "editions/2026-11-09",
-   "status": "published",
-   "newsletter": true,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "1789-1799 : dix ans, un roi en moins, un général en plus",
-     "theme": "Histoire de France",
-     "tagline": "La Révolution française en entier, de la salle de jeu de paume au coup d’État de Saint-Cloud",
-     "minutes": 5,
-     "cases": 39,
-     "photos": 0,
-     "images_done": 36,
-     "images_total": 36,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "actu",
-     "label": "L’Actu du jour",
-     "kind": "",
-     "title": "Plan de table pour tout le monde",
-     "theme": "",
-     "tagline": "Matignon cherche le bon chiffre, Israël cherche des chaises et Paris trouve enfin son champion.",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 0,
-     "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "L’Écossais qui a inventé le billet (et la faillite qui va avec)",
-     "theme": "Économie",
-     "tagline": "Comment la France de 1720 a découvert le papier-monnaie, la bulle spéculative et le mot « millionnaire »",
-     "minutes": 2,
-     "cases": 13,
-     "photos": 1,
-     "images_done": 11,
-     "images_total": 11,
-     "failed": 0,
-     "redo": 3
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "kind": "",
-     "title": "La Joconde est devenue une star en disparaissant",
-     "theme": "Histoire de l’art",
-     "tagline": "En 1911, un vitrier la décroche du Louvre. Et le monde entier vient admirer… le mur vide.",
-     "minutes": 1,
-     "cases": 10,
-     "photos": 1,
-     "images_done": 9,
-     "images_total": 9,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "quiz",
-     "label": "La Frise",
-     "kind": "frise",
-     "title": "Quatre dates, zéro machine à remonter le temps",
-     "questions": 3
-    }
-   ]
-  },
   {
    "date": "2026-11-10",
    "path": "editions/2026-11-10",

@@ -1,19 +1,10 @@
 {
- "updated_at": "2026-11-09T20:53:11.953690+01:00",
- "today": "2026-11-09",
- "problems": [],
+ "updated_at": "2026-11-10T03:28:16.430508+01:00",
+ "today": "2026-11-10",
+ "problems": [
+  "file insolite : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
+ ],
  "days": [
-  {
-   "date": "2026-11-09",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-10",
    "status": "draft",
@@ -70,13 +61,8 @@
   "2026-11-06|cultureg",
   "2026-11-06|insolite"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-09",
  "stock": {
   "cultureg": {
@@ -86,39 +72,39 @@
    "images_left": 34,
    "focus": "20261109-2048-je-chausse-du-42-mais-42-quoi (7 image(s) à faire)",
    "next": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
-   "next_redo": 2
+   "next_redo": 0
   },
   "insolite": {
-   "ready": 0,
-   "waiting": 6,
-   "blocked": 0,
-   "images_left": 42,
-   "focus": "20261109-2048-votre-huitre-de-noel-est-japonaise (8 image(s) à faire)",
-   "next": null,
+   "ready": 2,
+   "waiting": 3,
+   "blocked": 1,
+   "images_left": 24,
+   "focus": "20261112-0100-docteur-vampire-et-ses-quarante-millions (8 image(s) à faire)",
+   "next": "20261109-2048-votre-huitre-de-noel-est-japonaise",
    "next_redo": 0
   },
   "dossier": {
    "ready": 1,
    "waiting": 3,
    "blocked": 0,
-   "images_left": 71,
-   "focus": "20261108-1929-darwin-on-ne-descend-pas-du-singe (21 image(s) à faire)",
+   "images_left": 69,
+   "focus": "20261108-1929-darwin-on-ne-descend-pas-du-singe (19 image(s) à faire)",
    "next": "20261108-1924-impressionnisme-refuses",
-   "next_redo": 0
+   "next_redo": 1
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-09",
-  "count": 50,
-  "neurons": 8920,
+  "day": "2026-11-10",
+  "count": 36,
+  "neurons": 6240,
   "exhausted": false,
   "by_kind": {
-   "cast": 9,
-   "case": 39,
-   "cover": 2
+   "case": 25,
+   "cast": 8,
+   "cover": 3
   }
  },
  "fal": {
