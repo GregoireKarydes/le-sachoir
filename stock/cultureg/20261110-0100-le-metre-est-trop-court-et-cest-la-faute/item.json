@@ -43,6 +43,7 @@
         ],
         "file": "images/cultureg-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1
       },
       "cases": [
@@ -71,6 +72,7 @@
             ],
             "file": "images/cultureg-01.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -92,14 +94,15 @@
             }
           ],
           "image": {
-            "prompt": "Pierre (on the right) already wearing a huge fur hat and scarf, holding skis, ready to leave; Jean-Baptiste (on the left) gently pulling the fur hat off his head, patient, pointing at a small map of France. plain background. medium shot",
+            "prompt": "Pierre (thin, messy black wig, blue scarf) on the right, eager, holding a pair of long wooden skis and a walking stick, ready to leave for the pole; Jean-Baptiste (round bald head, grey side tufts, no hat) on the left, calm and patient, holding up a small map of France and tapping it with one finger. Pierre wears no hat. pale yellow background. medium shot",
             "cast": [
               "delambre",
               "mechain"
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -127,6 +130,7 @@
             ],
             "file": "images/cultureg-03.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -167,6 +171,7 @@
             ],
             "file": "images/cultureg-04.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -195,6 +200,7 @@
             ],
             "file": "images/cultureg-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -211,13 +217,14 @@
             }
           ],
           "image": {
-            "prompt": "a dark room lit by one candle. Pierre (in the foreground) staring at his open notebook, face pale, eyes huge, hair standing up, frozen in horror. close-up",
+            "prompt": "Pierre (thin, messy black wig, blue scarf) alone at a bare wooden table, a single candle beside him, staring at his open notebook, face pale, eyes huge, wig standing on end, frozen in horror. nobody else in the room, no window, no coins, no machines. plain dark blue background. close-up",
             "cast": [
               "mechain"
             ],
             "file": "images/cultureg-06.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -262,6 +269,7 @@
             ],
             "file": "images/cultureg-08.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -283,14 +291,15 @@
             }
           ],
           "image": {
-            "prompt": "a plain grey stone wall with a long marble bar fixed on it. Jean-Baptiste (on the left) presenting the bar proudly with both hands like a museum guide; Pierre (on the right) measuring his own arm against it, worried. medium shot",
+            "prompt": "a plain grey stone wall with a long white marble bar fixed on it, nothing else on the wall. Jean-Baptiste (round bald head, grey side tufts) on the left presenting the bar proudly with both hands like a museum guide; Pierre (thin and tall, huge messy black wig, blue scarf) on the right measuring his own arm against it, worried. medium shot",
             "cast": [
               "delambre",
               "mechain"
             ],
             "file": "images/cultureg-09.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {

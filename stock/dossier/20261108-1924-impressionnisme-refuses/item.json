@@ -56,7 +56,7 @@
         }
       ],
       "cover": {
-        "prompt": "a bare riverbank with the easel in the middle. Claude (stocky, bushy black beard) painting fast at the easel, squinting at the sky, delighted; the juror (very tall, thin, white sideburns) behind him, raising the stamp, outraged; Zoé (small, yellow beanie) on the right, peeking at the canvas with a cheeky grin. wide shot",
+        "prompt": "a bare riverbank with the easel in the middle. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) painting fast at the easel, squinting at the sky, delighted; the juror (very tall, thin, white sideburns) behind him, raising the stamp, outraged; Zoé (small, yellow beanie) on the right, peeking at the canvas with a cheeky grin. wide shot",
         "cast": [
           "monet",
           "jure",
@@ -64,6 +64,7 @@
         ],
         "file": "images/dossier-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1
       },
       "cases": [
@@ -85,14 +86,15 @@
             }
           ],
           "image": {
-            "prompt": "a bare white museum wall with one empty golden frame. Zoé (small, yellow beanie) on the left proudly holding up her tote bag, grinning; the juror (very tall, thin, white sideburns, monocle) on the right, looking down at the bag through his monocle, deeply disgusted, nose in the air. medium shot",
+            "prompt": "a bare white museum wall with one empty golden frame. Zoé (small, yellow beanie) on the left proudly holding up her tote bag, grinning; the juror (very tall, thin, white sideburns, monocle) on the right, looking down at the bag through his monocle, deeply disgusted, nose in the air, empty hands. no animal anywhere. medium shot",
             "cast": [
               "zoe",
               "jure"
             ],
             "file": "images/dossier-01.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -118,7 +120,7 @@
             }
           ],
           "image": {
-            "prompt": "a long bare jury table in a grand empty hall. the juror (very tall, thin, white sideburns) on the right slamming the stamp down on a canvas without looking at it, eyes closed, smug; Claude (stocky, bushy black beard) on the left holding out his canvas with both arms, outraged, red angry flush. medium shot",
+            "prompt": "a long bare jury table in a grand empty hall. the juror (very tall, thin, white sideburns) on the right slamming the stamp down on a canvas without looking at it, eyes closed, smug; Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left holding out his canvas with both arms, outraged, red angry flush. both are human men, no animal anywhere. medium shot",
             "cast": [
               "jure",
               "monet"
@@ -126,6 +128,7 @@
             "file": "images/dossier-02.webp",
             "status": "done",
             "attempts": 1,
+            "redo": true,
             "same_place": false
           }
         },
@@ -163,7 +166,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare room with a few canvases leaning against the wall. Claude (stocky, bushy black beard) on the left, arms wide open, beaming with excitement, yellow sparkles; in a doorway on the right, Louis (short, round, top hat, red carnation) peeking in, holding his tiny notebook and pencil, with a sly menacing smirk. medium shot",
+            "prompt": "a bare room with a few canvases leaning against the wall. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left, arms wide open, beaming with excitement, yellow sparkles; in a doorway on the right, Louis (short, round, top hat, red carnation) peeking in, holding his tiny notebook and pencil, with a sly menacing smirk. medium shot",
             "cast": [
               "monet",
               "leroy"
@@ -221,7 +224,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare riverbank with one small cloud about to cover the sun. Claude (stocky, bushy black beard) on the left painting frantically at the easel, brush blurred with speed, light-blue sweat drop; Zoé (small, yellow beanie) on the right holding up a phone like a stopwatch, calm and amused. wide shot",
+            "prompt": "a bare riverbank with one small cloud about to cover the sun. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left painting frantically at the easel, brush blurred with speed, light-blue sweat drop; Zoé (small, yellow beanie) on the right holding up a phone like a stopwatch, calm and amused. wide shot",
             "cast": [
               "monet",
               "zoe"
@@ -250,13 +253,14 @@
             }
           ],
           "image": {
-            "prompt": "same riverbank, close on the easel. Claude (stocky, bushy black beard) on the left proudly holding up the tube between two fingers like a jewel; Zoé (small, yellow beanie) on the right pinching her nose and grimacing at a small tied-up pig bladder lying on the grass. medium shot",
+            "prompt": "same riverbank, close on the easel. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left proudly holding up the tube between two fingers like a jewel; Zoé (small, yellow beanie) on the right pinching her nose and grimacing at a small tied-up pig bladder lying on the grass. medium shot",
             "cast": [
               "monet",
               "zoe"
             ],
             "file": "images/dossier-06.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -291,7 +295,7 @@
             }
           ],
           "image": {
-            "prompt": "same riverbank. Claude (stocky, bushy black beard) on the left hugging the tube to his chest with closed eyes, emotional, tiny red hearts; Zoé (small, yellow beanie) on the right with one eyebrow raised, deadpan, arms crossed. medium shot",
+            "prompt": "same riverbank. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left hugging the tube to his chest with closed eyes, emotional, tiny red hearts; Zoé (small, yellow beanie) on the right with one eyebrow raised, deadpan, arms crossed. medium shot",
             "cast": [
               "monet",
               "zoe"
@@ -319,13 +323,14 @@
             }
           ],
           "image": {
-            "prompt": "a bare gallery room with many small frames hung close together on a plain wall. Claude (stocky, bushy black beard) on the left hammering a nail to hang a frame, proud; Zoé (small, yellow beanie) on the right reading a list of names on a sheet of paper, impressed, mouth open. wide shot",
+            "prompt": "a bare gallery room with many small frames hung close together on a plain wall. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left hammering a nail to hang a frame, proud; Zoé (small, yellow beanie) on the right reading a list of names on a sheet of paper, impressed, mouth open. wide shot",
             "cast": [
               "monet",
               "zoe"
             ],
             "file": "images/dossier-08.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 2,
             "same_place": false
           }
@@ -361,7 +366,7 @@
             }
           ],
           "image": {
-            "prompt": "same gallery room, a small table at the entrance with the cashbox. Claude (stocky, bushy black beard) on the left sitting behind the table counting a few coins with great care, hopeful; Zoé (small, yellow beanie) on the right pointing at the frames one by one as if counting them, amused. medium shot",
+            "prompt": "same gallery room, a small table at the entrance with the cashbox. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left sitting behind the table counting a few coins with great care, hopeful; Zoé (small, yellow beanie) on the right pointing at the frames one by one as if counting them, amused. medium shot",
             "cast": [
               "monet",
               "zoe"
@@ -389,7 +394,7 @@
             }
           ],
           "image": {
-            "prompt": "same gallery room. Claude (stocky, bushy black beard) on the left holding up the sunrise canvas with both hands, inspired, looking at it lovingly; Zoé (small, yellow beanie) on the right writing in a small catalogue booklet, pencil paused, doubtful frown. medium shot",
+            "prompt": "same gallery room. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left holding up the sunrise canvas with both hands, inspired, looking at it lovingly; Zoé (small, yellow beanie) on the right writing in a small catalogue booklet, pencil paused, doubtful frown. medium shot",
             "cast": [
               "monet",
               "zoe"
@@ -433,13 +438,14 @@
             }
           ],
           "image": {
-            "prompt": "same gallery room, the sunrise canvas hanging on the wall. Louis (short, round, top hat, red carnation) on the left with his nose almost touching the canvas, squinting through his pince-nez, smirking; Zoé (small, yellow beanie) on the right pulling him back by the coat tail, exasperated. medium shot",
+            "prompt": "same gallery room, the sunrise canvas hanging on the wall. Louis (short round man, tall black top hat, curled moustache, grey checked suit, red carnation) on the left with his nose almost touching the canvas, squinting through his pince-nez, smirking; Zoé (small young woman, spiky white-blond hair, mustard-yellow beanie, black dungarees) on the right pulling him back by the coat tail, exasperated. two separate people, no animal. medium shot",
             "cast": [
               "leroy",
               "zoe"
             ],
             "file": "images/dossier-11.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1
           }
         },
@@ -461,13 +467,14 @@
             }
           ],
           "image": {
-            "prompt": "same gallery room. Claude (stocky, bushy black beard) on the left holding a crumpled blank newspaper wide open, furious, red angry flush; Zoé (small, yellow beanie) on the right reading over his shoulder, thumb up, delighted. medium shot",
+            "prompt": "same gallery room. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left holding a crumpled blank newspaper wide open, furious, red angry flush; Zoé (small, yellow beanie) on the right reading over his shoulder, thumb up, delighted. medium shot",
             "cast": [
               "monet",
               "zoe"
             ],
             "file": "images/dossier-12.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -489,13 +496,14 @@
             }
           ],
           "image": {
-            "prompt": "same gallery room, now empty. Claude (stocky, bushy black beard) on the left slumped over the open empty cashbox on the table, melting with despair; Zoé (small, yellow beanie) on the right patting his back, sympathetic little smile. medium shot",
+            "prompt": "same gallery room, now empty. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left slumped over the open empty cashbox on the table, melting with despair; Zoé (small, yellow beanie) on the right patting his back, sympathetic little smile. medium shot",
             "cast": [
               "monet",
               "zoe"
             ],
             "file": "images/dossier-13.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -517,12 +525,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare art gallery with a few canvases on the wall. Claude (stocky, bushy black beard) on the left, stunned, holding a stack of canvases; on the right a calm middle-aged art dealer with neat grey hair and a plain dark coat pointing at the canvases one after the other, very decided. medium shot",
+            "prompt": "a bare art gallery with a few canvases on the wall. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left, stunned, holding a stack of canvases; on the right a calm middle-aged art dealer with neat grey hair and a plain dark coat pointing at the canvases one after the other, very decided. medium shot",
             "cast": [
               "monet"
             ],
             "file": "images/dossier-14.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "same_place": false
           }
@@ -551,6 +560,7 @@
             ],
             "file": "images/dossier-15.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "same_place": false
           }
@@ -573,7 +583,7 @@
             }
           ],
           "image": {
-            "prompt": "a small room with a window looking onto a tall gothic cathedral facade. Claude (stocky, bushy black beard) on the left painting at the easel by the window, surrounded by dozens of canvases of the same facade stacked everywhere, focused; Zoé (small, yellow beanie) on the right buried up to her waist in canvases, baffled, light-blue sweat drop. wide shot",
+            "prompt": "a small room with a window looking onto a tall gothic cathedral facade. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left painting at the easel by the window, surrounded by dozens of canvases of the same facade stacked everywhere, focused; Zoé (small, yellow beanie) on the right buried up to her waist in canvases, baffled, light-blue sweat drop. wide shot",
             "cast": [
               "monet",
               "zoe"
@@ -622,6 +632,7 @@
             ],
             "file": "images/dossier-17.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "same_place": false
           }
@@ -651,6 +662,7 @@
             ],
             "file": "images/dossier-18.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1,
             "same_place": false
           }
@@ -680,6 +692,7 @@
             ],
             "file": "images/dossier-19.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 2
           }
         }
