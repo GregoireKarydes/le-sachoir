@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T03:45+01:00",
+ "updated_at": "2026-11-10T03:47+01:00",
  "stock": {
   "cultureg": [
    {
@@ -382,6 +382,21 @@
      "label": "Le Quiz géo",
      "kind": "geo",
      "title": "Trois questions, une boussole et un fromage",
+     "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-17",
+   "path": "editions/2026-11-17",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "La Frise",
+     "kind": "frise",
+     "title": "Douze dates, un calendrier qui a le tournis",
      "questions": 3
     }
    ]
