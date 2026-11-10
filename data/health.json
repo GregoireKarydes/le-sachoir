@@ -1,19 +1,8 @@
 {
- "updated_at": "2026-11-10T17:25:23.817654+01:00",
- "today": "2026-11-10",
+ "updated_at": "2026-11-11T00:16:55.127056+01:00",
+ "today": "2026-11-11",
  "problems": [],
  "days": [
-  {
-   "date": "2026-11-10",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-11",
    "status": "draft",
@@ -70,13 +59,8 @@
   "2026-11-06|cultureg",
   "2026-11-06|insolite"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-10",
  "stock": {
   "cultureg": {
@@ -109,7 +93,7 @@
  },
  "days_ahead_drawn": 0,
  "days_ahead_written": 3,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-10",
   "count": 43,

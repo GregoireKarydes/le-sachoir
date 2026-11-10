@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T17:25+01:00",
+ "updated_at": "2026-11-11T00:16+01:00",
  "stock": {
   "cultureg": [
    {
@@ -230,81 +230,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-10",
-   "path": "editions/2026-11-10",
-   "status": "published",
-   "newsletter": true,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Impressionnisme : la peinture qui a raté son examen (et gagné quand même)",
-     "theme": "Histoire de l’art",
-     "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
-     "minutes": 3,
-     "cases": 24,
-     "photos": 2,
-     "images_done": 20,
-     "images_total": 20,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "actu",
-     "label": "L’Actu du jour",
-     "kind": "",
-     "title": "Un coup de pouce et beaucoup d’absents",
-     "theme": "",
-     "tagline": "Le Smic retrouve son pouce, les classes se vident, Harry Kane manque à l’appel et Superman change de patron.",
-     "minutes": 2,
-     "cases": 12,
-     "photos": 4,
-     "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Le mètre est trop court, et c’est la faute d’un perfectionniste",
-     "theme": "Grandes découvertes",
-     "tagline": "Sept ans à mesurer la France en pleine Révolution, pour une erreur que personne ne devait voir",
-     "minutes": 2,
-     "cases": 12,
-     "photos": 1,
-     "images_done": 11,
-     "images_total": 11,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "kind": "",
-     "title": "La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter)",
-     "theme": "Musique",
-     "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
-     "minutes": 1,
-     "cases": 9,
-     "photos": 1,
-     "images_done": 8,
-     "images_total": 8,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "quiz",
-     "label": "Le Dico menteur",
-     "kind": "dico",
-     "title": "Le dictionnaire a menti (trois fois sur quatre)",
-     "questions": 4
-    }
-   ]
-  },
   {
    "date": "2026-11-11",
    "path": "editions/2026-11-11",
