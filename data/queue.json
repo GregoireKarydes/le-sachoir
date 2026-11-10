@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T03:43+01:00",
+ "updated_at": "2026-11-10T03:45+01:00",
  "stock": {
   "cultureg": [
    {
@@ -127,7 +127,7 @@
     "path": "stock/insolite/20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
     "name": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
     "added": "20261110-0100",
-    "status": "blocked",
+    "status": "waiting",
     "next": false,
     "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
     "theme": "Droit",
@@ -137,7 +137,7 @@
     "photos": 1,
     "images_done": 7,
     "images_total": 8,
-    "failed": 1,
+    "failed": 0,
     "redo": 0
    },
    {

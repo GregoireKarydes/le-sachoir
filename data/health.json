@@ -1,9 +1,7 @@
 {
- "updated_at": "2026-11-10T03:43:46.770397+01:00",
+ "updated_at": "2026-11-10T03:45:55.094891+01:00",
  "today": "2026-11-10",
- "problems": [
-  "file insolite : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
- ],
+ "problems": [],
  "days": [
   {
    "date": "2026-11-10",
@@ -76,10 +74,10 @@
   },
   "insolite": {
    "ready": 2,
-   "waiting": 3,
-   "blocked": 1,
-   "images_left": 24,
-   "focus": "20261112-0100-docteur-vampire-et-ses-quarante-millions (8 image(s) à faire)",
+   "waiting": 4,
+   "blocked": 0,
+   "images_left": 25,
+   "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (1 image(s) à faire)",
    "next": "20261109-2048-votre-huitre-de-noel-est-japonaise",
    "next_redo": 0
   },
