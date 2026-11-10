@@ -26,7 +26,7 @@
           "look": "a very round plump man in his sixties, bald head, huge bushy grey moustache, rosy pale skin, a deep burgundy Christmas sweater as main colour, a white napkin tucked into his collar, holding the oyster",
           "role": "the proud Christmas guest who thinks his oyster is 100% French; round, beaming, easily shocked",
           "file": "cast/insolite-convive.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "ostr",
@@ -34,7 +34,7 @@
           "look": "a tall strong woman in her forties, broad shoulders, short spiky black hair, tanned skin, a bright yellow oilskin jacket as main colour, green rubber boots, the knife in hand",
           "role": "the oyster farmer who knows the real story and tells it bluntly; tall, relaxed, leaning on things, deadpan",
           "file": "cast/insolite-ostr.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "capitaine",
@@ -42,7 +42,7 @@
           "look": "a huge broad-chested 1860s sea captain in his fifties, thick wild grey beard, weathered pink skin, a navy blue pea coat with brass buttons as main colour, a black captain's cap, a short pipe in his mouth",
           "role": "the captain of the steamship Le Morlaisien, in a hurry and fed up; massive, stomping, chewing his pipe",
           "file": "cast/insolite-capitaine.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "fonct",
@@ -50,7 +50,7 @@
           "look": "a short skinny 1860s port official, very thin and stiff, black hair slicked with a centre parting, thin pencil moustache, a bright purple frock coat as main colour, a tall black top hat, a white handkerchief pressed to his nose",
           "role": "the fussy official who orders the smelly cargo thrown away; tiny, stiff as a stick, disgusted",
           "file": "cast/insolite-fonct.png",
-          "status": "pending"
+          "status": "skipped"
         }
       ],
       "cover": {
@@ -60,8 +60,8 @@
           "ostr"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -88,8 +88,8 @@
               "ostr"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -116,8 +116,8 @@
               "ostr"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -138,8 +138,8 @@
               "capitaine"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -171,8 +171,8 @@
               "capitaine"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -211,8 +211,8 @@
               "ostr"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -255,8 +255,8 @@
               "convive"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -277,8 +277,8 @@
               "convive"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

@@ -14,21 +14,21 @@
           "id": "rouget",
           "look": "Claude-Joseph, a slim young 1790s army engineer captain, curly powdered hair tied back, eager face, a blue uniform coat as the only colour, holding a violin",
           "file": "cast/insolite-rouget.png",
-          "status": "pending",
+          "status": "done",
           "role": "the young officer who writes the song overnight; slim, eager, inspired, violin under his chin"
         },
         {
           "id": "dietrich",
           "look": "Philippe-Frédéric, the mayor of Strasbourg in 1792, plump and jovial, white powdered wig, rosy cheeks, black coat, a wide black sash",
           "file": "cast/insolite-dietrich.png",
-          "status": "pending",
+          "status": "done",
           "role": "the jovial mayor who asks for a song; plump, rosy, glass raised"
         },
         {
           "id": "federe",
           "look": "a 1792 volunteer from Marseille, sunburnt, big black moustache, broad grin, white shirt, black trousers, a red bonnet as the only colour, a musket on his shoulder",
           "file": "cast/insolite-federe.png",
-          "status": "pending",
+          "status": "done",
           "role": "a volunteer from Marseille who sings it all the way to Paris; broad, grinning, marching"
         }
       ],
@@ -39,8 +39,8 @@
           "federe"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -65,8 +65,8 @@
               "dietrich"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -86,8 +86,8 @@
               "rouget"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -128,8 +128,8 @@
               "dietrich"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -149,8 +149,8 @@
               "federe"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -175,8 +175,8 @@
               "federe"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -208,8 +208,8 @@
               "rouget"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -229,8 +229,8 @@
               "rouget"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

@@ -94,7 +94,9 @@
             "file": "images/dossier-01.webp",
             "status": "done",
             "attempts": 1,
-            "redo": true
+            "redo": true,
+            "redo_attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (f99bd47c-81b0-473b-8173-f5c84f84b015)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -128,7 +130,6 @@
             "file": "images/dossier-02.webp",
             "status": "done",
             "attempts": 1,
-            "redo": true,
             "same_place": false
           }
         },
@@ -445,7 +446,6 @@
             ],
             "file": "images/dossier-11.webp",
             "status": "done",
-            "redo": true,
             "attempts": 1
           }
         },

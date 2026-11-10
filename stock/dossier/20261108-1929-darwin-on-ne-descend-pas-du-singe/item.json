@@ -29,7 +29,7 @@
           "look": "Charles, a large heavy-set stooped English naturalist, round bald dome with brown hair on the sides, enormous bushy brown sideburns, thick eyebrows, long dark-grey frock coat, the notebook always in hand, a dark-blue cravat as the only colour",
           "role": "the shy, patient naturalist who collects everything and doubts for twenty years; stooped, notebook open, worried frown that turns into quiet wonder",
           "file": "cast/dossier-darwin.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "lamarck",
@@ -37,7 +37,7 @@
           "look": "Jean-Baptiste, a small very thin elderly French scholar of 1809, powdered white wig tied in a short ponytail, long pale grey tailcoat, a little wooden giraffe figurine in his hand, a green waistcoat as the only colour",
           "role": "the proud French pioneer who was right that species change but wrong about how; small and thin, finger always raised, very sure of himself",
           "file": "cast/dossier-lamarck.png",
-          "status": "pending"
+          "status": "skipped"
         },
         {
           "id": "lea",
@@ -45,7 +45,7 @@
           "look": "Léa, a tall lanky young woman of today, long black hair in a high ponytail, big headphones around her neck, loose white hoodie, jeans, an orange backpack as the only colour",
           "role": "the curious student from today who asks the reader's questions; lanky and eager, leans in, over-reacts with her whole body",
           "file": "cast/dossier-lea.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "eveque",
@@ -53,7 +53,7 @@
           "look": "a short plump Victorian bishop, glossy black hair with a smooth side parting, round smiling face, black clerical gown with white bands and big puffy white sleeves, a purple sash as the only colour",
           "role": "the witty bishop who mocks the theory in public; short and round, chin up, smug little smile, hands folded on his belly",
           "file": "cast/dossier-eveque.png",
-          "status": "pending"
+          "status": "skipped"
         }
       ],
       "cover": {
@@ -63,8 +63,8 @@
           "lea"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -91,8 +91,8 @@
               "darwin"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {

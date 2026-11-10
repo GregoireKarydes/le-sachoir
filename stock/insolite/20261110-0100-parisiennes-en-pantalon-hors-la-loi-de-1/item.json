@@ -191,9 +191,8 @@
               "chloe"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 2,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (c1e1d72b-b45f-4231-a93a-ea7807822b80)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 3
           }
         },
         {
@@ -227,9 +226,9 @@
               "chloe"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 2,
-            "error": "HTTP 500 : {\"errors\":[{\"message\":\"AiError: AiError: Internal server error (182f1a46-0939-415d-b9b4-db16e774e1d6)\",\"code\":3043}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "failed",
+            "attempts": 3,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (3c3dbfe9-9f53-4548-86bf-7b959170eb86)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -291,5 +290,6 @@
         }
       }
     }
-  ]
+  ],
+  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
 }

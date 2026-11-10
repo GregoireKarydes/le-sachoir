@@ -101,8 +101,7 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -223,8 +222,7 @@
             ],
             "file": "images/cultureg-06.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -246,8 +244,7 @@
             ],
             "file": "images/cultureg-07.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -298,8 +295,7 @@
             ],
             "file": "images/cultureg-09.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -343,8 +339,7 @@
             ],
             "file": "images/cultureg-10.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         }
       ],
