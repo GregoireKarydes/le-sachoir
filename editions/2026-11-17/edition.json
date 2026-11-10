@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-17",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "frise",
+      "label": "La Frise",
+      "title": "Douze dates, un calendrier qui a le tournis",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "items": [
+            {
+              "name": "Dernière exécution à la guillotine en France",
+              "year": 1977
+            },
+            {
+              "name": "Création de la Sécurité sociale",
+              "year": 1945
+            },
+            {
+              "name": "Premier vol du Concorde, à Toulouse",
+              "year": 1969
+            },
+            {
+              "name": "Première apparition d’Astérix dans le journal Pilote",
+              "year": 1959
+            }
+          ],
+          "explain": "Le 10 septembre 1977, la France guillotine encore un condamné à Marseille, huit ans après le premier vol du Concorde. Un avion supersonique et une machine de 1792 ont donc cohabité.",
+          "source": {
+            "title": "La Libre — 10 septembre 1977, la dernière fois que la France a guillotiné un homme",
+            "url": "https://www.lalibre.be/lifestyle/magazine/2015/05/07/10-septembre-1977-la-derniere-fois-que-la-france-a-guillotine-un-homme-R7UMHIQVZJAKBGR56SAUHEG22A/"
+          }
+        },
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "items": [
+            {
+              "name": "Invention de l’écriture à Sumer",
+              "year": -3300,
+              "label": "vers 3300 av. J.-C."
+            },
+            {
+              "name": "Peintures de la grotte de Lascaux",
+              "year": -17000,
+              "label": "vers 17 000 ans avant nous"
+            },
+            {
+              "name": "Construction du Parthénon d’Athènes",
+              "year": -447,
+              "label": "à partir de 447 av. J.-C."
+            },
+            {
+              "name": "Premiers mégalithes de Carnac",
+              "year": -4500,
+              "label": "vers 4500 av. J.-C."
+            }
+          ],
+          "explain": "Les Bretons dressaient leurs menhirs bien avant que Sumer invente l’écriture : Carnac compte parmi les plus vieux mégalithes d’Europe. Résultat, aucun mode d’emploi n’a été laissé.",
+          "source": {
+            "title": "Discover Magazine — Ancient Stone Alignments in France Confirmed as Europe’s Earliest Megalithic Region",
+            "url": "https://www.discovermagazine.com/ancient-stone-alignments-in-france-confirmed-as-europes-earliest-megalithic-47740"
+          }
+        },
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "items": [
+            {
+              "name": "Premier Tour de France",
+              "year": 1903
+            },
+            {
+              "name": "Fondation de Nintendo à Kyoto",
+              "year": 1889
+            },
+            {
+              "name": "Chute du Second Empire de Napoléon III",
+              "year": 1870
+            },
+            {
+              "name": "Première séance publique du cinématographe Lumière",
+              "year": 1895
+            }
+          ],
+          "explain": "Nintendo est né en 1889, avant le cinéma et le Tour de France. À l’époque, il fabriquait des cartes à jouer japonaises, les hanafuda. Mario attendra presque un siècle.",
+          "source": {
+            "title": "MoneyWeek — 23 September 1889: Nintendo starts making playing cards",
+            "url": "https://moneyweek.com/349214/23-september-1889-nintendo-starts-making-playing-cards"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "La Libre — 10 septembre 1977, la dernière fois que la France a guillotiné un homme",
+          "url": "https://www.lalibre.be/lifestyle/magazine/2015/05/07/10-septembre-1977-la-derniere-fois-que-la-france-a-guillotine-un-homme-R7UMHIQVZJAKBGR56SAUHEG22A/"
+        },
+        {
+          "title": "Hérodote — 2 mars 1969, premier vol du Concorde",
+          "url": "https://www.herodote.net/2_mars_1969-evenement-19690302.php"
+        },
+        {
+          "title": "Hérodote — 4-19 octobre 1945, création de la Sécurité sociale",
+          "url": "https://www.herodote.net/4_19_octobre_1945-evenement-19451004.php"
+        },
+        {
+          "title": "Lambiek Comiclopedia — Pilote",
+          "url": "https://www.lambiek.net/magazines/pilote.htm"
+        },
+        {
+          "title": "Discover Magazine — Ancient Stone Alignments in France Confirmed as Europe’s Earliest Megalithic Region",
+          "url": "https://www.discovermagazine.com/ancient-stone-alignments-in-france-confirmed-as-europes-earliest-megalithic-47740"
+        },
+        {
+          "title": "Hérodote — 3300 av. J.-C., naissance de l’écriture",
+          "url": "https://www.herodote.net/3300_av_J_C-synthese-167.php"
+        },
+        {
+          "title": "Futura — L’incroyable histoire de Lascaux, trésor vieux de 17 000 ans",
+          "url": "https://www.futura-sciences.com/sciences/actualites/prehistoire-il-suivi-son-chien-trou-decouvert-tresor-vieux-17-000-ans-voici-incroyable-histoire-lascaux-k2m6-135992/"
+        },
+        {
+          "title": "World History Encyclopedia — Parthénon",
+          "url": "https://www.worldhistory.org/trans/fr/1-343/parthenon/"
+        },
+        {
+          "title": "MoneyWeek — 23 September 1889: Nintendo starts making playing cards",
+          "url": "https://moneyweek.com/349214/23-september-1889-nintendo-starts-making-playing-cards"
+        },
+        {
+          "title": "Hérodote — 28 décembre 1895, première séance du cinématographe",
+          "url": "https://www.herodote.net/28_decembre_1895-evenement-18951228.php"
+        },
+        {
+          "title": "Universalis — 1903, 1er Tour de France",
+          "url": "https://www.universalis.fr/encyclopedie/1903-1er-tour-de-france/9-la-course/"
+        },
+        {
+          "title": "Vie publique — Que célèbre-t-on le 4 septembre ?",
+          "url": "https://www.vie-publique.fr/questions-reponses/276022-que-celebre-t-le-4-septembre"
+        }
+      ]
+    }
+  ]
+}
