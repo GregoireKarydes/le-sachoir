@@ -50,6 +50,11 @@ def resolve(name: str) -> dict:
 
 def fetch(case: dict, folder: Path) -> bool:
     ph = case.setdefault("photo", {})
+    if ph.get("status") == "done" and ph.get("file") and not (folder / ph["file"]).exists():
+        # Fichier perdu (ex. BD passée de la file à l'édition sans sa photo) : on le retélécharge.
+        print(f"  photo manquante, nouveau téléchargement : {ph.get('commons')}")
+        ph["status"] = "pending"
+        ph.pop("attempts", None)
     if ph.get("status") in ("done", "failed") or not ph.get("commons"):
         return False
     try:

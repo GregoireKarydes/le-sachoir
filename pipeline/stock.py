@@ -126,7 +126,11 @@ def pick(kind: str, avoid: set) -> Path | None:
 
 
 def _files(fmt: dict) -> list[str]:
-    return [i["file"] for i in images_of(fmt) if i.get("file")] + [c["file"] for c in fmt.get("cast", []) if c.get("file")]
+    """Fichiers d'une BD à déplacer avec elle : dessins, fiches casting et photos réelles (oubliées avant le 10 novembre 2026)."""
+    photos = [c["photo"]["file"] for c in fmt.get("cases", []) or []
+              if isinstance(c, dict) and c.get("kind") == "photo" and (c.get("photo") or {}).get("file")]
+    return ([i["file"] for i in images_of(fmt) if i.get("file")] + [c["file"] for c in fmt.get("cast", []) if c.get("file")]
+            + photos)
 
 
 def _copy(src: Path, dst: Path, rels: list[str]):

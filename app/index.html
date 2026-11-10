@@ -1181,7 +1181,7 @@ function explainHTML(c) {
 function photoHTML(ed, c) {
   const ph = c.photo || {};
   const credit = [ph.credit, ph.license].filter(Boolean).map(esc).join(" · ");
-  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "En vrai")}</span><img class="ph-img" src="${ph.src || imgUrl(ed, ph.file)}" alt="${esc(c.title || "")}" decoding="async">${c.title ? `<h3>${esc(c.title)}</h3>` : ""}<p>${esc(c.text || "")}</p><span class="ph-credit">Photo : ${credit}${ph.source ? ` · <a href="${esc(ph.source)}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a>` : ""}</span></div>`;
+  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "En vrai")}</span><img class="ph-img" src="${ph.src || imgUrl(ed, ph.file)}" alt="${esc(c.title || "")}" decoding="async" onerror="this.remove()">${c.title ? `<h3>${esc(c.title)}</h3>` : ""}<p>${esc(c.text || "")}</p><span class="ph-credit">Photo : ${credit}${ph.source ? ` · <a href="${esc(ph.source)}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a>` : ""}</span></div>`;
 }
 // Nom affiché au-dessus des bulles : « who » = id d'un personnage du casting (son « name ») ou un nom écrit en clair.
 let SPEAKERS = {};
