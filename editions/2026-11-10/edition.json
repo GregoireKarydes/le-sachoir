@@ -1,6 +1,6 @@
 {
   "date": "2026-11-10",
-  "status": "draft",
+  "status": "published",
   "newsletter": {
     "subject": "Un pouce dépoussiéré, une classe vide et une cape à remplir 📝",
     "intro": "Mardi 10 novembre : le Smic gagne 24 €, les classes se vident et Superman change de patron. On a tout dessiné, café compris.",
@@ -8,6 +8,747 @@
     "ps": "P.-S. Demain, c’est férié. Relisez l’édition deux fois : à la seconde, vous rirez avant la blague."
   },
   "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Impressionnisme : la peinture qui a raté son examen (et gagné quand même)",
+      "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
+      "teaser": "Ils peignaient trop vite, trop flou, trop dehors. Un critique les a insultés. Ils ont gardé l’insulte, et fini sur tous les tote bags.",
+      "minutes": 3,
+      "theme": "Histoire de l’art",
+      "art": {
+        "subject": "how a group of rejected young painters invented Impressionism in Paris and turned an insult into a world-famous name (1863-1927)",
+        "setting": "the official Salon hall in Paris with a jury table, a riverbank outdoors, the former studio of the photographer Nadar on a Paris boulevard, an art dealer's gallery, a window facing Rouen cathedral, the oval rooms of the Orangerie museum",
+        "era": "1860s to 1920s France, with one visitor from today",
+        "props": {
+          "easel": "a simple light wooden easel on three legs",
+          "tube": "a small squeezed metal paint tube",
+          "sunrise": "a small framed canvas of a misty harbour made of quick blue strokes with a tiny orange sun",
+          "stamp": "a big wooden rubber stamp",
+          "cashbox": "a small black metal cash box"
+        }
+      },
+      "cast": [
+        {
+          "id": "monet",
+          "name": "Claude Monet",
+          "look": "Claude, a stocky broad-shouldered French painter in his thirties, thick black hair and a huge bushy black beard, loose grey painter's smock, a paintbrush always in hand, a light-blue neckerchief as the only colour",
+          "role": "the stubborn young painter who wants to catch the light outdoors; always in a hurry, brush raised, squinting at the sky",
+          "file": "cast/dossier-monet.png",
+          "status": "done"
+        },
+        {
+          "id": "jure",
+          "name": "Le juré du Salon",
+          "look": "a very tall and very thin elderly academic juror, bald head with huge white mutton-chop sideburns, a monocle, long black frock coat, holding the stamp, a dark-green embroidered collar as the only colour",
+          "role": "the snobbish official juror who rejects anything new; stiff as a poker, nose in the air, slowly deflates as the painters win",
+          "file": "cast/dossier-jure.png",
+          "status": "done"
+        },
+        {
+          "id": "leroy",
+          "name": "Louis Leroy",
+          "look": "Louis, a short round 1870s newspaper critic, tall black top hat, pince-nez glasses, curled moustache, grey checked suit, a tiny notebook and pencil, a red carnation in the buttonhole as the only colour",
+          "role": "the mocking critic who invents the word as an insult; waddles, peers far too close at paintings, smirks behind his notebook",
+          "file": "cast/dossier-leroy.png",
+          "status": "done"
+        },
+        {
+          "id": "zoe",
+          "name": "Zoé",
+          "look": "Zoé, a small lively young woman of today, short spiky white-blond hair, big black hoop earrings, oversized white t-shirt under black dungarees, a canvas tote bag on the shoulder, a mustard-yellow beanie as the only colour",
+          "role": "the curious visitor from today who asks the reader's questions; leans forward, hands on hips, cheeky grin",
+          "file": "cast/dossier-zoe.png",
+          "status": "done"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare riverbank with the easel in the middle. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) painting fast at the easel, squinting at the sky, delighted; the juror (very tall, thin, white sideburns) behind him, raising the stamp, outraged; Zoé (small, yellow beanie) on the right, peeking at the canvas with a cheeky grin. wide shot",
+        "cast": [
+          "monet",
+          "jure",
+          "zoe"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "done",
+        "qa": "ok",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · La guerre du Salon",
+          "caption": "Aujourd’hui, on les adore. Alors pourquoi les impressionnistes ont-ils d’abord été traités de bâcleurs ?",
+          "bubbles": [
+            {
+              "who": "zoe",
+              "text": "Les tableaux de Monet ? Ils sont sur tous les tote bags !",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "À leurs débuts, on ne les voulait sur aucun mur officiel.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare white museum wall with one empty golden frame. Zoé (small, yellow beanie) on the left proudly holding up her tote bag, grinning; the juror (very tall, thin, white sideburns, monocle) on the right, looking down at the bag through his monocle, deeply disgusted, nose in the air, empty hands. no animal anywhere. medium shot",
+            "cast": [
+              "zoe",
+              "jure"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "redo": true,
+            "redo_attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (f99bd47c-81b0-473b-8173-f5c84f84b015)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Paris, années 1860",
+          "caption": "À l’époque, un peintre se fait connaître au Salon, la grande exposition officielle. Mais un jury trie les tableaux.",
+          "bubbles": [
+            {
+              "who": "jure",
+              "text": "Héros antiques, fini lisse, aucune trace de pinceau. Sinon : refusé.",
+              "side": "r"
+            },
+            {
+              "who": "monet",
+              "text": "Vous n’avez même pas regardé le mien !",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "Gain de temps.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a long bare jury table in a grand empty hall. the juror (very tall, thin, white sideburns) on the right slamming the stamp down on a canvas without looking at it, eyes closed, smug; Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left holding out his canvas with both arms, outraged, red angry flush. both are human men, no animal anywhere. medium shot",
+            "cast": [
+              "jure",
+              "monet"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Le tableau qui a fait scandale en 1863",
+          "text": "Cette année-là, le jury refuse 3 000 œuvres sur 5 000. Napoléon III les fait exposer à part : c’est le « Salon des refusés ». Ce tableau de Manet y choque : une femme nue dans un pique-nique de son temps.",
+          "photo": {
+            "commons": "File:Edouard Manet - Luncheon on the Grass - Google Art Project.jpg",
+            "credit": "Édouard Manet",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg",
+            "file": "images/photo-3-edouard-manet-luncheon-on-the-grass.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1874",
+          "caption": "Dix ans plus tard, fatigués d’être refusés, Monet et ses amis ont une idée folle : exposer eux-mêmes, sans jury.",
+          "bubbles": [
+            {
+              "who": "monet",
+              "text": "On loue une salle, on accroche, on vend !",
+              "side": "l"
+            },
+            {
+              "who": "leroy",
+              "text": "Formidable. J’apporte mon carnet.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room with a few canvases leaning against the wall. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left, arms wide open, beaming with excitement, yellow sparkles; in a doorway on the right, Louis (short, round, top hat, red carnation) peeking in, holding his tiny notebook and pencil, with a sly menacing smirk. medium shot",
+            "cast": [
+              "monet",
+              "leroy"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Peindre vite, peindre dehors",
+          "caption": "Mais qu’ont-ils de si choquant ? Ils peignent la vie de tous les jours, et on voit leurs coups de pinceau.",
+          "bubbles": [
+            {
+              "who": "zoe",
+              "text": "On voit le pinceau… c’est grave ?",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "C’est comme montrer les coulisses au théâtre. Indécent.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a plain background with the easel holding a canvas covered in big visible brushstrokes. Zoé (small, yellow beanie) on the left leaning close to the canvas, curious, head tilted; the juror (very tall, thin, white sideburns) on the right covering his monocle with one hand, scandalised. medium shot",
+            "cast": [
+              "zoe",
+              "jure"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "En plein air",
+          "caption": "Ils peignent dehors, « en plein air », pour attraper la lumière du moment, parce qu’elle change sans cesse.",
+          "bubbles": [
+            {
+              "who": "monet",
+              "text": "Vite, vite, le nuage arrive !",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Il te reste trois minutes de soleil.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare riverbank with one small cloud about to cover the sun. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left painting frantically at the easel, brush blurred with speed, light-blue sweat drop; Zoé (small, yellow beanie) on the right holding up a phone like a stopwatch, calm and amused. wide shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "1841",
+          "caption": "Sortir son chevalet devient facile grâce au tube de peinture en métal, breveté en 1841 par l’Américain John Goffe Rand.",
+          "bubbles": [
+            {
+              "who": "zoe",
+              "text": "Et avant, la peinture voyageait comment ?",
+              "side": "r"
+            },
+            {
+              "who": "monet",
+              "text": "Dans des vessies de cochon ficelées. Très chic en pique-nique.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "same riverbank, close on the easel. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left proudly holding up the tube between two fingers like a jewel; Zoé (small, yellow beanie) on the right pinching her nose and grimacing at a small tied-up pig bladder lying on the grass. medium shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi leurs tableaux ont l’air « pas finis »",
+          "steps": [
+            "Dehors, la lumière change en quelques minutes",
+            "Le peintre doit donc aller vite : touches courtes, bien visibles",
+            "Il ne lisse pas : il peint l’effet d’ensemble, pas chaque détail",
+            "De près, des taches. De loin, l’œil voit un paysage qui vibre"
+          ],
+          "joke": "Le premier tableau avec option zoom : approchez, reculez."
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "",
+          "caption": "Renoir, l’un d’eux, le dira plus tard : sans les couleurs en tubes, il n’y aurait eu ni Monet, ni Cézanne, ni impressionnisme.",
+          "bubbles": [
+            {
+              "who": "monet",
+              "text": "Je dois toute ma carrière à un tube.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Comme pas mal de chanteurs.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same riverbank. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left hugging the tube to his chest with closed eyes, emotional, tiny red hearts; Zoé (small, yellow beanie) on the right with one eyebrow raised, deadpan, arms crossed. medium shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 10,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Avril 1874",
+          "caption": "Le 15 avril 1874, ils ouvrent leur exposition dans l’ancien atelier du photographe Nadar, boulevard des Capucines, à Paris.",
+          "bubbles": [
+            {
+              "who": "monet",
+              "text": "Renoir, Degas, Cézanne, Pissarro, Sisley… et moi.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Le futur musée d’Orsay, en colocation.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare gallery room with many small frames hung close together on a plain wall. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left hammering a nail to hang a frame, proud; Zoé (small, yellow beanie) on the right reading a list of names on a sheet of paper, impressed, mouth open. wide shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 2,
+            "same_place": false
+          }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Une exposition sans jury, comment ça marche ?",
+          "steps": [
+            "Décembre 1873 : ils fondent une société coopérative d’artistes",
+            "Chaque membre participe aux frais",
+            "Pas de jury ni de médaille : on montre ce qu’on veut",
+            "Les entrées et les ventes doivent payer la salle"
+          ],
+          "joke": "Le premier festival « off » de la peinture. Sans subvention, avec beaucoup de réunions."
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "Le chiffre",
+          "caption": "Une trentaine d’artistes, environ 175 œuvres, entrée à un franc. Le premier jour, 175 visiteurs viennent voir.",
+          "bubbles": [
+            {
+              "who": "monet",
+              "text": "175 visiteurs pour 175 tableaux.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Un fan chacun. C’est équitable.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same gallery room, a small table at the entrance with the cashbox. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left sitting behind the table counting a few coins with great care, hopeful; Zoé (small, yellow beanie) on the right pointing at the frames one by one as if counting them, amused. medium shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 13,
+          "kind": "",
+          "tag": "",
+          "caption": "Monet expose un port du Havre au petit matin, peint en 1872. Pour le catalogue, il faut lui trouver un titre.",
+          "bubbles": [
+            {
+              "who": "monet",
+              "text": "Mettez « Impression, soleil levant ».",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "On dirait un titre de brouillon.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same gallery room. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left holding up the sunrise canvas with both hands, inspired, looking at it lovingly; Zoé (small, yellow beanie) on the right writing in a small catalogue booklet, pencil paused, doubtful frown. medium shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-10.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 14,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai « Impression, soleil levant »",
+          "text": "Le tableau de 1872, aujourd’hui au musée Marmottan Monet, à Paris. Quelques touches de bleu, un soleil orange : le port du Havre à l’aube, peint vite pour saisir l’instant.",
+          "photo": {
+            "commons": "File:Claude Monet, Impression, soleil levant.jpg",
+            "credit": "Claude Monet",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant.jpg",
+            "file": "images/photo-14-claude-monet-impression-soleil-leva.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 15,
+          "kind": "",
+          "tag": "",
+          "caption": "Le critique Louis Leroy visite l’exposition. Il se moque du titre : « Impression, impression, j’en étais sûr. »",
+          "bubbles": [
+            {
+              "who": "leroy",
+              "text": "C’est flou. Et ça se dit terminé ?",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Recule de trois pas, Louis.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same gallery room, the sunrise canvas hanging on the wall. Louis (short round man, tall black top hat, curled moustache, grey checked suit, red carnation) on the left with his nose almost touching the canvas, squinting through his pince-nez, smirking; Zoé (small young woman, spiky white-blond hair, mustard-yellow beanie, black dungarees) on the right pulling him back by the coat tail, exasperated. two separate people, no animal. medium shot",
+            "cast": [
+              "leroy",
+              "zoe"
+            ],
+            "file": "images/dossier-11.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 16,
+          "kind": "",
+          "tag": "",
+          "caption": "Son article, dans le journal satirique Le Charivari, s’intitule « L’exposition des impressionnistes ». Une moquerie… qui va rester.",
+          "bubbles": [
+            {
+              "who": "monet",
+              "text": "Il nous traite d’« impressionnistes » !",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Garde-le. Ça sonne bien.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same gallery room. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left holding a crumpled blank newspaper wide open, furious, red angry flush; Zoé (small, yellow beanie) on the right reading over his shoulder, thumb up, delighted. medium shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-12.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 17,
+          "kind": "",
+          "tag": "Mai 1874",
+          "caption": "Bilan : environ 4 000 visiteurs en un mois. Mais les recettes ne couvrent même pas les frais.",
+          "bubbles": [
+            {
+              "who": "monet",
+              "text": "On a gagné un nom.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Et perdu de l’argent.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same gallery room, now empty. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left slumped over the open empty cashbox on the table, melting with despair; Zoé (small, yellow beanie) on the right patting his back, sympathetic little smile. medium shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 18,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Du rire au triomphe",
+          "caption": "Un marchand de tableaux croit en eux : Paul Durand-Ruel. Il achète leurs toiles et les expose dans sa galerie.",
+          "bubbles": [
+            {
+              "who": "Paul Durand-Ruel",
+              "text": "Je prends celle-ci. Et celle-là. Et celle-là aussi.",
+              "side": "r"
+            },
+            {
+              "who": "monet",
+              "text": "Vous avez vu qu’elles sont floues ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare art gallery with a few canvases on the wall. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left, stunned, holding a stack of canvases; on the right a calm middle-aged art dealer with neat grey hair and a plain dark coat pointing at the canvases one after the other, very decided. medium shot",
+            "cast": [
+              "monet"
+            ],
+            "file": "images/dossier-14.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 19,
+          "kind": "fact",
+          "tag": "1886",
+          "caption": "En 1886, il montre plus de 300 tableaux impressionnistes à New York. Le public américain s’enthousiasme.",
+          "bubbles": [
+            {
+              "who": "Un collectionneur américain",
+              "text": "Je prends le flou. Et le flou d’à côté.",
+              "side": "l"
+            },
+            {
+              "who": "zoe",
+              "text": "Il suffisait de traverser l’océan.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare exhibition hall with frames on the wall and a small crowd of tiny visitors. on the left a big enthusiastic collector with a top hat and a thick moustache waving a blank cheque at the frames; Zoé (small, yellow beanie) on the right, arms crossed, smug, yellow sparkles. wide shot",
+            "cast": [
+              "zoe"
+            ],
+            "file": "images/dossier-15.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 20,
+          "kind": "",
+          "tag": "1892-1893",
+          "caption": "Monet pousse l’idée au bout : il peint plus de trente fois la cathédrale de Rouen, à différentes heures du jour.",
+          "bubbles": [
+            {
+              "who": "zoe",
+              "text": "Trente fois la même église ?",
+              "side": "r"
+            },
+            {
+              "who": "monet",
+              "text": "Jamais la même lumière.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small room with a window looking onto a tall gothic cathedral facade. Claude (a human man, stocky, huge bushy black beard, grey smock, light-blue neckerchief) on the left painting at the easel by the window, surrounded by dozens of canvases of the same facade stacked everywhere, focused; Zoé (small, yellow beanie) on the right buried up to her waist in canvases, baffled, light-blue sweat drop. wide shot",
+            "cast": [
+              "monet",
+              "zoe"
+            ],
+            "file": "images/dossier-16.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 21,
+          "kind": "explain",
+          "tag": "En clair",
+          "title": "Ce que l’impressionnisme a changé",
+          "steps": [
+            "Les sujets : la vie moderne, plus seulement les héros antiques",
+            "La technique : la touche du pinceau se voit",
+            "Le but : peindre une sensation, un instant",
+            "Le métier : des expositions sans jury et des marchands privés"
+          ],
+          "joke": "Depuis, on a le droit de peindre une gare. Merci qui ?"
+        },
+        {
+          "n": 22,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Le dernier mot",
+          "caption": "12 novembre 1918, lendemain de l’armistice : Monet écrit à Clemenceau. Il offre à l’État des tableaux de nymphéas.",
+          "bubbles": [
+            {
+              "who": "zoe",
+              "text": "Le peintre refusé offre ses toiles à l’État !",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "J’ai besoin de m’asseoir.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a plain background. Zoé (small, yellow beanie) on the left waving an open letter in the air, triumphant; the juror (very tall, thin, white sideburns) on the right sagging onto a small stool, the stamp dropping from his hand, monocle popping out, light-blue sweat drop. medium shot",
+            "cast": [
+              "zoe",
+              "jure"
+            ],
+            "file": "images/dossier-17.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 23,
+          "kind": "",
+          "tag": "1927",
+          "caption": "Quelques mois après la mort de Monet, ses Nymphéas sont installés au musée de l’Orangerie, à Paris, comme il le voulait.",
+          "bubbles": [
+            {
+              "who": "zoe",
+              "text": "On est dedans ! Comme au bord de l’étang !",
+              "side": "l"
+            },
+            {
+              "who": "jure",
+              "text": "Je retire tout ce que j’ai dit.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare oval white room with one long curved panel of soft water lilies wrapping around the wall. Zoé (small, yellow beanie) on the left spinning with her arms wide open, amazed; the juror (very tall, thin, white sideburns) on the right sitting small and humble on the central bench, hat-in-hand posture, defeated. wide shot",
+            "cast": [
+              "zoe",
+              "jure"
+            ],
+            "file": "images/dossier-18.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 24,
+          "kind": "conf",
+          "tag": "En résumé",
+          "caption": "Refusés par le jury, ils ont exposé seuls, gardé l’insulte comme nom et fini par conquérir le public.",
+          "bubbles": [
+            {
+              "who": "jure",
+              "text": "Et le jury, alors ? On se souvient de nous ?",
+              "side": "r"
+            },
+            {
+              "who": "zoe",
+              "text": "Pas vraiment. Mais on a gardé votre tampon.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "same oval room. Zoé (small, yellow beanie) on the left looking straight at the viewer, holding up the stamp like a souvenir, cheeky grin; the juror (very tall, thin, white sideburns) on the right staring at the viewer in mute despair, slumped shoulders. medium shot",
+            "cast": [
+              "zoe",
+              "jure"
+            ],
+            "file": "images/dossier-19.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 2
+          }
+        }
+      ],
+      "final": {
+        "text": "Le mot « impressionnisme » vient d’une moquerie du critique Louis Leroy en 1874, inspirée du tableau de Monet « Impression, soleil levant ».",
+        "source": "Hérodote — 15 avril 1874"
+      },
+      "story": "Dans les années 1860, un peintre français se fait connaître au Salon, l’exposition officielle de Paris. Son jury aime les grands sujets (histoire, mythologie) et le fini lisse, sans trace de pinceau. En 1863, il refuse 3 000 œuvres sur 5 000 ; Napoléon III les fait exposer à part, au « Salon des refusés », où Le Déjeuner sur l’herbe de Manet fait scandale.\nUne génération de jeunes peintres veut autre chose : peindre la vie moderne et, dehors, « en plein air », la lumière d’un instant. Comme elle change vite, ils peignent vite, en touches visibles. Le tube de peinture en métal, breveté en 1841 par l’Américain John Goffe Rand, leur permet d’emporter leurs couleurs ; Renoir dira que sans lui, il n’y aurait pas eu d’impressionnisme.\nLassés d’être refusés, Monet, Renoir, Degas, Cézanne, Pissarro, Sisley et d’autres fondent fin 1873 une société coopérative et exposent eux-mêmes, sans jury, à partir du 15 avril 1874, dans l’ancien atelier du photographe Nadar. On y voit Impression, soleil levant, un port du Havre peint par Monet en 1872. Dans Le Charivari, le critique Louis Leroy s’en moque et parle des « impressionnistes » : le nom reste. L’exposition attire environ 4 000 visiteurs mais perd de l’argent.\nHuit expositions suivent jusqu’en 1886. Le marchand Paul Durand-Ruel les soutient et, en 1886, montre plus de 300 de leurs tableaux à New York, avec succès. En 1918, Monet offre ses Nymphéas à l’État ; ils sont installés à l’Orangerie en 1927, après sa mort.",
+      "sources": [
+        {
+          "title": "Hérodote — 15 avril 1874, la première exposition impressionniste",
+          "url": "https://www.herodote.net/15_avril_1874-evenement-18740415.php?resume=1"
+        },
+        {
+          "title": "World History Encyclopedia — Expositions impressionnistes de Paris, 1874-86",
+          "url": "https://www.worldhistory.org/trans/fr/2-2000/expositions-impressionnistes-de-paris-1874-86/"
+        },
+        {
+          "title": "Paris ZigZag — Le Salon des refusés, ou l’inauguration d’une rébellion moderne",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-salon-des-refuses-ou-linauguration-dune-rebellion-moderne/"
+        },
+        {
+          "title": "Britannica — Salon des Refusés",
+          "url": "https://www.britannica.com/print/article/519629"
+        },
+        {
+          "title": "History Today — John Goffe Rand Invents Paint Tubes",
+          "url": "https://www.historytoday.com/archive/months-past/john-goffe-rand-invents-paint-tubes"
+        },
+        {
+          "title": "Time Out — Impression, soleil levant (musée Marmottan Monet)",
+          "url": "https://www.timeout.fr/paris/musee/marmottan-monet/impression-soleil-levant"
+        },
+        {
+          "title": "Philadelphia Museum of Art — Discovering the Impressionists: Paul Durand-Ruel",
+          "url": "https://www.philamuseum.org/exhibitions/discovering-the-impressionists-paul-durand-ruel-and-the-new-painting"
+        },
+        {
+          "title": "Wikipedia — Rouen Cathedral (Monet series)",
+          "url": "https://en.wikipedia.org/wiki/Rouen_Cathedral_(Monet_series)"
+        },
+        {
+          "title": "Musée de l’Orangerie — History of the Water Lilies cycle",
+          "url": "https://www.musee-orangerie.fr/en/node/33"
+        }
+      ],
+      "from_stock": "20261108-1924-impressionnisme-refuses"
+    },
     {
       "id": "actu",
       "label": "L’Actu du jour",
@@ -294,6 +1035,643 @@
       ]
     },
     {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le mètre est trop court, et c’est la faute d’un perfectionniste",
+      "tagline": "Sept ans à mesurer la France en pleine Révolution, pour une erreur que personne ne devait voir",
+      "minutes": 2,
+      "theme": "Grandes découvertes",
+      "cast": [
+        {
+          "id": "delambre",
+          "name": "Jean-Baptiste Delambre",
+          "look": "Jean-Baptiste, a 1790s French astronomer in his forties, bald on top with grey tufts on the sides, big round nose, calm patient face, black coat, carrying a round brass measuring instrument",
+          "file": "cast/cultureg-delambre.png",
+          "status": "done",
+          "role": "the calm, patient astronomer who measures the north half; steady, upright, explains things gently"
+        },
+        {
+          "id": "mechain",
+          "name": "Pierre Méchain",
+          "look": "Pierre, a thin anxious 1790s French astronomer, tall messy powdered wig, deep dark circles under the eyes, bony fingers, black coat, a small notebook always clutched to his chest, a blue scarf as the only colour",
+          "file": "cast/cultureg-mechain.png",
+          "status": "done",
+          "role": "the anxious perfectionist who measures the south and hides an error; hunched, biting his nails, hugging his notebook"
+        },
+        {
+          "id": "milicien",
+          "name": "Un milicien",
+          "look": "a short stocky suspicious 1790s village militiaman, bushy black moustache, narrowed eyes, white shirt, black waistcoat, a red phrygian cap as the only colour, holding a pike",
+          "file": "cast/cultureg-milicien.png",
+          "status": "done",
+          "role": "a suspicious village militiaman who takes the astronomers for spies; arms crossed, squinting, blocking the way"
+        }
+      ],
+      "cover": {
+        "prompt": "a long straight line drawn on the ground across an empty landscape. Jean-Baptiste (on the left) walking north along it with his brass instrument, calm; Pierre (on the right) walking south, looking back over his shoulder, sweating, clutching his notebook. wide shot",
+        "cast": [
+          "delambre",
+          "mechain"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "done",
+        "qa": "ok",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Mars 1791",
+          "caption": "D’où vient le mètre ? En 1791, la France veut une mesure valable partout, tirée de la taille de la Terre.",
+          "bubbles": [
+            {
+              "text": "Le mètre : un dix-millionième de la distance du pôle Nord à l’équateur.",
+              "who": "delambre",
+              "side": "l"
+            },
+            {
+              "text": "Pour tous les peuples, pour tous les temps !",
+              "who": "mechain",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare study with a big globe on a stand. Jean-Baptiste (on the left) tracing a line on the globe with one finger, very serious; Pierre (on the right) raising a fist to the sky, eyes shining with emotion. medium shot",
+            "cast": [
+              "delambre",
+              "mechain"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Impossible d’aller au pôle : on mesure un morceau seulement, de Dunkerque à Barcelone, et on calcule le reste.",
+          "bubbles": [
+            {
+              "text": "On marche jusqu’au pôle Nord ?",
+              "who": "mechain",
+              "side": "r"
+            },
+            {
+              "text": "Non. On mesure une ligne nord-sud, le méridien, et on calcule.",
+              "who": "delambre",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Pierre (thin, messy black wig, blue scarf) on the right, eager, holding a pair of long wooden skis and a walking stick, ready to leave for the pole; Jean-Baptiste (round bald head, grey side tufts, no hat) on the left, calm and patient, holding up a small map of France and tapping it with one finger. Pierre wears no hat. pale yellow background. medium shot",
+            "cast": [
+              "delambre",
+              "mechain"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Juin 1792",
+          "caption": "La méthode : viser d’un clocher à l’autre, mesurer les angles, et la géométrie donne les distances.",
+          "bubbles": [
+            {
+              "text": "Je fais le nord, vous le sud. Rendez-vous à Rodez.",
+              "who": "delambre",
+              "side": "l"
+            },
+            {
+              "text": "Ça va durer plus de six ans.",
+              "who": "mechain",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a crossroads with a single signpost with blank arrows. Jean-Baptiste (on the left) walking off confidently with his instrument under his arm; Pierre (on the right) already looking exhausted, dragging a huge crate behind him. wide shot",
+            "cast": [
+              "delambre",
+              "mechain"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "title": "Mesurer un pays avec des triangles",
+          "steps": [
+            "On mesure une seule longueur au sol, très précisément",
+            "D’un clocher, on vise deux autres points et on mesure les angles",
+            "La géométrie donne les côtés du triangle",
+            "On enchaîne les triangles de Dunkerque à Barcelone"
+          ],
+          "joke": "Pas besoin de 1 000 km de mètre ruban. Heureusement : le mètre n’existait pas encore."
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Septembre 1792",
+          "caption": "1792, en pleine Révolution : un homme qui observe du haut des clochers avec un instrument a tout d’un espion.",
+          "bubbles": [
+            {
+              "text": "Vous espionnez qui, là-haut ?",
+              "who": "milicien",
+              "side": "r"
+            },
+            {
+              "text": "La Terre. Pour la République.",
+              "who": "delambre",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the top of a simple church bell tower. Jean-Baptiste (on the left) peeking through his brass instrument, then caught; the militiaman (on the right) climbing up the ladder, pointing his pike at him, eyes narrowed. medium shot",
+            "cast": [
+              "delambre",
+              "milicien"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "",
+          "caption": "Méchain, lui, est retenu deux mois : ses caisses d’instruments inquiètent les patriotes.",
+          "bubbles": [
+            {
+              "text": "C’est quoi, ces cercles en cuivre ?",
+              "who": "milicien",
+              "side": "r"
+            },
+            {
+              "text": "De la science. Très patriote, la science.",
+              "who": "mechain",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare village square with an open wooden crate full of brass circles. the militiaman (on the right) holding up a brass circle like a suspicious weapon; Pierre (on the left) smiling far too widely, tiny sweat drops, hugging his notebook. medium shot",
+            "cast": [
+              "mechain",
+              "milicien"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Barcelone, 1794",
+          "caption": "À Barcelone, Méchain mesure deux fois sa position nord-sud. Les deux résultats diffèrent d’environ 100 mètres sur le terrain.",
+          "bubbles": [
+            {
+              "text": "Trois secondes d’arc d’écart… Personne ne doit savoir.",
+              "who": "mechain",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Pierre (thin, messy black wig, blue scarf) alone at a bare wooden table, a single candle beside him, staring at his open notebook, face pale, eyes huge, wig standing on end, frozen in horror. nobody else in the room, no window, no coins, no machines. plain dark blue background. close-up",
+            "cast": [
+              "mechain"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "conf",
+          "tag": "",
+          "caption": "Il cache l’écart et retouche ses relevés. Ce secret le hantera jusqu’à sa mort, en 1804.",
+          "bubbles": [
+            {
+              "text": "Personne ne relit les carnets. Hein ? Personne ?",
+              "who": "mechain",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Pierre (in the middle) in a confession-style close-up, looking straight at the reader with a forced smile, one eye twitching, hiding his notebook behind his back. plain background",
+            "cast": [
+              "mechain"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "chap",
+          "tag": "1798-1799",
+          "caption": "Delambre découvre le secret, publie quand même et scelle les lettres aux archives.",
+          "bubbles": [
+            {
+              "text": "Pour le bien du mètre, on n’en parle pas.",
+              "who": "delambre",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a tall archive shelf. Jean-Baptiste (on the left) on a small ladder, sliding a bundle of letters tied with a ribbon into a box at the very top, glancing around discreetly, finger on his lips. medium shot",
+            "cast": [
+              "delambre"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "done",
+            "qa": "ok",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "22 juin 1799",
+          "caption": "22 juin 1799 : une barre de platine, le « mètre des Archives », devient la référence officielle de tous les mètres.",
+          "bubbles": [
+            {
+              "text": "Et seize mètres en marbre dans Paris, pour que chacun s’habitue.",
+              "who": "delambre",
+              "side": "l"
+            },
+            {
+              "text": "Deux encore visibles : Vaugirard et Vendôme.",
+              "who": "mechain",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a plain grey stone wall with a long white marble bar fixed on it, nothing else on the wall. Jean-Baptiste (round bald head, grey side tufts) on the left presenting the bar proudly with both hands like a museum guide; Pierre (thin and tall, huge messy black wig, blue scarf) on the right measuring his own arm against it, worried. medium shot",
+            "cast": [
+              "delambre",
+              "mechain"
+            ],
+            "file": "images/cultureg-09.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 11,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "Un mètre de 1796, toujours rue de Vaugirard",
+          "text": "Seize mètres en marbre ont été posés dans Paris pour apprendre la nouvelle mesure aux passants. Celui du 36, rue de Vaugirard est le seul resté à sa place d’origine.",
+          "photo": {
+            "commons": "File:Mètre-étalon Paris.JPG",
+            "credit": "LPLT",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:M%C3%A8tre-%C3%A9talon_Paris.JPG",
+            "file": "images/photo-11-m-tre-talon-paris-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 12,
+          "kind": "react",
+          "tag": "Le verdict",
+          "caption": "Verdict : le mètre officiel est environ 0,2 mm trop court, l’épaisseur de deux feuilles de papier.",
+          "bubbles": [
+            {
+              "text": "Ce n’est pas ma faute !",
+              "who": "mechain",
+              "side": "r"
+            },
+            {
+              "text": "Pas seulement.",
+              "who": "mechain",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Jean-Baptiste (on the left) holding up a tiny magnifying glass over the end of a long bar, deadpan; Pierre (on the right) throwing his arms up in protest, then shrinking into his coat with pink blush marks. medium shot",
+            "cast": [
+              "delambre",
+              "mechain"
+            ],
+            "file": "images/cultureg-10.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Le mètre est né d’une mesure du méridien de Dunkerque à Barcelone (1792-1798) ; l’étalon en platine fut déposé aux Archives le 22 juin 1799.",
+        "source": "ScienceBlog, Wikiwand"
+      },
+      "sources": [
+        {
+          "title": "ScienceBlog — How two French astronomers from Dunkirk to Barcelona defined the metre",
+          "url": "https://scienceblog.com/d-french-astronomers-dunkirk-barcelona-defined-metre/"
+        },
+        {
+          "title": "Wikiwand — Meridian arc of Delambre and Méchain",
+          "url": "https://www.wikiwand.com/en/articles/Meridian_arc_of_Delambre_and_M%C3%A9chain"
+        },
+        {
+          "title": "Book of Proofs — Pierre Méchain",
+          "url": "https://bookofproofs.github.io/history/18th-century/mechain.html"
+        },
+        {
+          "title": "Ministère de la Justice — Le mètre étalon de la place Vendôme restauré",
+          "url": "https://www.justice.gouv.fr/actualites/actualite/metre-etalon-place-vendome-restaure-reinstalle"
+        },
+        {
+          "title": "Simon & Schuster — Ken Alder, The Measure of All Things",
+          "url": "https://www.simonandschuster.ca/books/The-Measure-of-All-Things/Ken-Alder/9780743216760"
+        }
+      ],
+      "story": "En 1791, la France révolutionnaire veut en finir avec la jungle des mesures locales. Elle choisit une unité universelle tirée de la Terre elle-même : le mètre sera le dix-millionième de la distance entre le pôle Nord et l’équateur.\nImpossible, bien sûr, de mesurer jusqu’au pôle. Les astronomes Delambre et Méchain mesurent donc un morceau de méridien, de Dunkerque à Barcelone, puis calculent le reste. Leur méthode, la triangulation, consiste à viser d’un point haut à l’autre, souvent des clochers, et à mesurer des angles : la géométrie donne les distances.\nPartis en 1792, ils travaillent en pleine Révolution. Delambre est arrêté par une milice qui le prend pour un espion ; Méchain est retenu deux mois. Le chantier dure plus de six ans.\nÀ Barcelone, Méchain découvre que deux mesures de sa latitude ne concordent pas : un écart de trois secondes d’arc, environ 100 mètres sur le terrain. Il cache cette erreur et en restera hanté jusqu’à sa mort, en 1804.\nLe 22 juin 1799, une barre de platine, le « mètre des Archives », devient l’étalon officiel. On sait aujourd’hui que ce mètre est environ 0,2 mm plus court que sa définition.",
+      "art": {
+        "subject": "how two astronomers spent seven years measuring France to define the metre, and how one hid a tiny error (1792-1799)",
+        "setting": "revolutionary France: a Paris study with a globe, country roads, church towers used as survey points, a village square",
+        "era": "1790s revolutionary France",
+        "props": {
+          "instrument": "a round brass repeating circle on a wooden tripod",
+          "notebook": "a small black notebook full of numbers"
+        }
+      },
+      "from_stock": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter)",
+      "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
+      "minutes": 1,
+      "theme": "Musique",
+      "cast": [
+        {
+          "id": "rouget",
+          "look": "Claude-Joseph, a slim young 1790s army engineer captain, curly powdered hair tied back, eager face, a blue uniform coat as the only colour, holding a violin",
+          "file": "cast/insolite-rouget.png",
+          "status": "done",
+          "role": "the young officer who writes the song overnight; slim, eager, inspired, violin under his chin"
+        },
+        {
+          "id": "dietrich",
+          "look": "Philippe-Frédéric, the mayor of Strasbourg in 1792, plump and jovial, white powdered wig, rosy cheeks, black coat, a wide black sash",
+          "file": "cast/insolite-dietrich.png",
+          "status": "done",
+          "role": "the jovial mayor who asks for a song; plump, rosy, glass raised"
+        },
+        {
+          "id": "federe",
+          "look": "a 1792 volunteer from Marseille, sunburnt, big black moustache, broad grin, white shirt, black trousers, a red bonnet as the only colour, a musket on his shoulder",
+          "file": "cast/insolite-federe.png",
+          "status": "done",
+          "role": "a volunteer from Marseille who sings it all the way to Paris; broad, grinning, marching"
+        }
+      ],
+      "cover": {
+        "prompt": "a long road. a column of singing volunteers marching in the background. the volunteer (on the right, in front) singing at full lungs, chest out; Claude-Joseph (on the left) running after them waving his violin, shouting, sweating. wide shot",
+        "cast": [
+          "rouget",
+          "federe"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "25 avril 1792",
+          "caption": "Pourquoi notre hymne s’appelle-t-il la Marseillaise ? Avril 1792, à Strasbourg : la France vient d’entrer en guerre.",
+          "bubbles": [
+            {
+              "text": "Il nous faudrait un chant pour l’armée !",
+              "side": "r"
+            },
+            {
+              "text": "Je suis ingénieur. Mais j’ai un violon.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare dining room with one table and a candelabra. Philippe-Frédéric (on the right) raising a glass enthusiastically; Claude-Joseph (on the left) shyly lifting his violin from under the table, blushing. medium shot",
+            "cast": [
+              "rouget",
+              "dietrich"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Le capitaine Rouget de Lisle écrit paroles et musique en une nuit, du 25 au 26 avril.",
+          "bubbles": [
+            {
+              "text": "Allons enfants… de la… de la quoi, déjà ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small room at night lit by one candle. Claude-Joseph (in the middle) sitting at a desk covered in crumpled papers, hair standing up, violin under his chin, writing with a quill at the same time, wild inspired eyes. medium shot",
+            "cast": [
+              "rouget"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "Tableau",
+          "title": "Rouget de Lisle chante pour la première fois",
+          "text": "Isidore Pils a peint la scène en 1849 : chez Dietrich, le maire de Strasbourg, en avril 1792. Le tableau est aujourd’hui au Musée historique de Strasbourg.",
+          "photo": {
+            "commons": "File:Pils - Rouget de Lisle chantant la Marseillaise.jpg",
+            "credit": "Isidore Pils",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Pils_-_Rouget_de_Lisle_chantant_la_Marseillaise.jpg",
+            "file": "images/photo-3-pils-rouget-de-lisle-chantant-la-ma.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Son titre : « Chant de guerre pour l’armée du Rhin ». Pas un mot sur Marseille.",
+          "bubbles": [
+            {
+              "text": "Superbe. Strasbourg tient son hymne !",
+              "side": "r"
+            },
+            {
+              "text": "Pour l’instant.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Philippe-Frédéric (on the right) holding up a sheet of music with both hands like a trophy, tearful with pride; Claude-Joseph (on the left) exhausted, dark circles, slumped against the wall, giving a weak thumbs up. plain background. medium shot",
+            "cast": [
+              "rouget",
+              "dietrich"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "Juillet 1792",
+          "caption": "Le chant circule vite et arrive jusqu’à Marseille. Des volontaires marseillais l’adoptent et l’emportent en marchant vers Paris.",
+          "bubbles": [
+            {
+              "text": "Ça se chante super bien en marchant, ce truc !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "an empty sunny road with a single milestone. the volunteer (on the right) marching with a huge grin, singing with his mouth wide open, musket on his shoulder, a crumpled music sheet sticking out of his pocket. tiny marching silhouettes behind him. wide shot",
+            "cast": [
+              "federe"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "30 juillet 1792",
+          "caption": "Ils entrent dans Paris en le chantant. Les Parisiens l’appellent l’hymne des Marseillais.",
+          "bubbles": [
+            {
+              "text": "Euh… c’est moi qui l’ai écrite.",
+              "side": "l"
+            },
+            {
+              "text": "Qui ça ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Paris street full of tiny cheering silhouettes throwing hats in the air. the volunteer (on the right) waving to the crowd like a star; Claude-Joseph (on the left) squeezed in the corner, raising a small finger, totally ignored. wide shot",
+            "cast": [
+              "rouget",
+              "federe"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "title": "Du Rhin à Marseille, le trajet d’un tube",
+          "steps": [
+            "Avril 1792 : écrit à Strasbourg pour l’armée du Rhin",
+            "Le chant circule et arrive jusqu’à Marseille",
+            "Juillet 1792 : des volontaires marseillais montent à Paris en le chantant",
+            "Les Parisiens le baptisent « l’hymne des Marseillais »"
+          ],
+          "joke": "Morale : ce n’est pas l’auteur qui baptise un tube, c’est le public."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "14 juillet 1795",
+          "caption": "1795 : il devient chant national. Puis l’Empire et la Restauration l’interdisent : trop révolutionnaire.",
+          "bubbles": [
+            {
+              "text": "Interdite ? Mon tube ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Claude-Joseph (in the middle) holding his violin with a big black cross painted over a music sheet pinned on the wall behind him, jaw dropped, melting in despair, arms dangling. plain background. medium shot",
+            "cast": [
+              "rouget"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "1879",
+          "caption": "La IIIe République en fait l’hymne national. Et le nom de Marseille est resté.",
+          "bubbles": [
+            {
+              "text": "Écrite à Strasbourg. Mais d’accord. Pas de souci.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Claude-Joseph (in the middle) in a confession-style close-up, looking straight at the reader with a very forced smile and one twitching eye, clutching his violin. plain background",
+            "cast": [
+              "rouget"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "La Marseillaise est née à Strasbourg, sous la plume de Rouget de Lisle, en avril 1792 ; elle est hymne national depuis 1879.",
+        "source": "Élysée, Paris ZigZag"
+      },
+      "sources": [
+        {
+          "title": "Élysée — La Marseillaise de Rouget de Lisle",
+          "url": "https://www.elysee.fr/la-presidence/la-marseillaise-de-rouget-de-lisle"
+        },
+        {
+          "title": "Paris ZigZag — Pourquoi la Marseillaise s’appelle-t-elle ainsi ?",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/pourquoi-la-marseillaise-sappelle-t-elle-ainsi/"
+        }
+      ],
+      "story": "Le 25 avril 1792, la France vient de déclarer la guerre. À Strasbourg, chez le maire Philippe-Frédéric de Dietrich, on regrette qu’il n’existe pas de chant pour encourager les soldats. Un jeune capitaine du génie, Claude-Joseph Rouget de Lisle, compose paroles et musique dans la nuit. Son titre : « Chant de guerre pour l’armée du Rhin ».\nLe chant circule vite et arrive jusqu’à Marseille. En juillet 1792, des volontaires marseillais l’adoptent et le chantent tout au long de leur marche vers Paris. Le 30 juillet, ils entrent dans la capitale en le chantant ; les Parisiens l’appellent aussitôt l’hymne des Marseillais. Le nom est resté.\nLe 14 juillet 1795, la Marseillaise devient chant national. Jugée trop révolutionnaire, elle est ensuite interdite sous l’Empire et la Restauration. Il faut attendre 1879 et la IIIe République pour qu’elle devienne l’hymne national.\nAinsi, l’hymne de la France porte le nom d’une ville où il n’a pas été écrit : il doit son nom à ceux qui l’ont rendu célèbre, pas à celui qui l’a composé.",
+      "art": {
+        "subject": "how La Marseillaise was written in one night in Strasbourg in 1792 and got its name from volunteers from Marseille",
+        "setting": "the Strasbourg mayor's salon with a harpsichord, a bare room at night, a dusty road to Paris",
+        "era": "1792 revolutionary France",
+        "props": {
+          "violin": "a small brown violin",
+          "score": "a few sheets of handwritten music"
+        }
+      },
+      "from_stock": "20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar"
+    },
+    {
       "id": "quiz",
       "kind": "dico",
       "label": "Le Dico menteur",
@@ -385,5 +1763,6 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-10T08:02:26.607203+01:00"
 }

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T03:47:37.050108+01:00",
+ "updated_at": "2026-11-10T08:02:26.607203+01:00",
  "today": "2026-11-10",
  "problems": [],
  "days": [
@@ -7,6 +7,10 @@
    "date": "2026-11-10",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
+    "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
     "quiz": "prêt"
    }
   },
@@ -60,27 +64,36 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-10/cultureg : « Le mètre est trop court, et c’est la faute d’un perfectionniste » prise dans la file (20261110-0100-le-metre-est-trop-court-et-cest-la-faute)",
+  "2026-11-10/insolite : « La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter) » prise dans la file (20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar)",
+  "2026-11-10/dossier : « Impressionnisme : la peinture qui a raté son examen (et gagné quand même) » prise dans la file (20261108-1924-impressionnisme-refuses)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-09",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite"
+ ],
+ "last_published": "2026-11-10",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 34,
    "focus": "20261109-2048-je-chausse-du-42-mais-42-quoi (7 image(s) à faire)",
-   "next": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
+   "next": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 25,
@@ -89,27 +102,27 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 3,
    "blocked": 0,
    "images_left": 69,
    "focus": "20261108-1929-darwin-on-ne-descend-pas-du-singe (19 image(s) à faire)",
-   "next": "20261108-1924-impressionnisme-refuses",
-   "next_redo": 1
+   "next": null,
+   "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 4,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-10",
-  "count": 36,
-  "neurons": 6240,
+  "count": 43,
+  "neurons": 7400,
   "exhausted": false,
   "by_kind": {
-   "case": 25,
-   "cast": 8,
-   "cover": 3
+   "case": 29,
+   "cast": 10,
+   "cover": 4
   }
  },
  "fal": {

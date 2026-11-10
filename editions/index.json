@@ -1,6 +1,67 @@
 {
- "updated_at": "2026-11-10T03:47:37.050108+01:00",
+ "updated_at": "2026-11-10T08:02:26.607203+01:00",
  "editions": [
+  {
+   "date": "2026-11-10",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Impressionnisme : la peinture qui a raté son examen (et gagné quand même)",
+     "kind": "",
+     "url": "histoires/2026-11-10-impressionnisme-la-peinture-qui-a-rate-son-examen-et-gagne-quand-meme/",
+     "theme": "Histoire de l’art",
+     "minutes": 3,
+     "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un coup de pouce et beaucoup d’absents",
+     "kind": "",
+     "url": "histoires/2026-11-10-un-coup-de-pouce-et-beaucoup-d-absents/",
+     "theme": "",
+     "minutes": 2,
+     "tagline": "Le Smic retrouve son pouce, les classes se vident, Harry Kane manque à l’appel et Superman change de patron.",
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Le mètre est trop court, et c’est la faute d’un perfectionniste",
+     "kind": "",
+     "url": "histoires/2026-11-10-le-metre-est-trop-court-et-c-est-la-faute-d-un-perfectionniste/",
+     "theme": "Grandes découvertes",
+     "minutes": 2,
+     "tagline": "Sept ans à mesurer la France en pleine Révolution, pour une erreur que personne ne devait voir",
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter)",
+     "kind": "",
+     "url": "histoires/2026-11-10-la-marseillaise-est-nee-a-strasbourg-marseille-n-a-fait-que-chanter/",
+     "theme": "Musique",
+     "minutes": 1,
+     "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Dico menteur",
+     "title": "Le dictionnaire a menti (trois fois sur quatre)",
+     "kind": "dico",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-09",
    "demo": false,

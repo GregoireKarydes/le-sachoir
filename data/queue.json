@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T03:47+01:00",
+ "updated_at": "2026-11-10T08:02+01:00",
  "stock": {
   "cultureg": [
    {
@@ -20,28 +20,11 @@
     "redo": 0
    },
    {
-    "path": "stock/cultureg/20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
-    "name": "20261110-0100-le-metre-est-trop-court-et-cest-la-faute",
-    "added": "20261110-0100",
-    "status": "ready",
-    "next": true,
-    "title": "Le mètre est trop court, et c’est la faute d’un perfectionniste",
-    "theme": "Grandes découvertes",
-    "tagline": "Sept ans à mesurer la France en pleine Révolution, pour une erreur que personne ne devait voir",
-    "minutes": 2,
-    "cases": 12,
-    "photos": 1,
-    "images_done": 11,
-    "images_total": 11,
-    "failed": 0,
-    "redo": 0
-   },
-   {
     "path": "stock/cultureg/20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
     "name": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
     "added": "20261111-0100",
     "status": "ready",
-    "next": false,
+    "next": true,
     "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
     "theme": "Expression française",
     "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
@@ -141,23 +124,6 @@
     "redo": 0
    },
    {
-    "path": "stock/insolite/20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar",
-    "name": "20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar",
-    "added": "20261111-0100",
-    "status": "ready",
-    "next": false,
-    "title": "La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter)",
-    "theme": "Musique",
-    "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
-    "minutes": 1,
-    "cases": 9,
-    "photos": 1,
-    "images_done": 8,
-    "images_total": 8,
-    "failed": 0,
-    "redo": 0
-   },
-   {
     "path": "stock/insolite/20261112-0100-docteur-vampire-et-ses-quarante-millions",
     "name": "20261112-0100-docteur-vampire-et-ses-quarante-millions",
     "added": "20261112-0100",
@@ -210,23 +176,6 @@
    }
   ],
   "dossier": [
-   {
-    "path": "stock/dossier/20261108-1924-impressionnisme-refuses",
-    "name": "20261108-1924-impressionnisme-refuses",
-    "added": "20261108-1924",
-    "status": "ready",
-    "next": true,
-    "title": "Impressionnisme : la peinture qui a raté son examen (et gagné quand même)",
-    "theme": "Histoire de l’art",
-    "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
-    "minutes": 3,
-    "cases": 24,
-    "photos": 2,
-    "images_done": 20,
-    "images_total": 20,
-    "failed": 0,
-    "redo": 1
-   },
    {
     "path": "stock/dossier/20261108-1929-darwin-on-ne-descend-pas-du-singe",
     "name": "20261108-1929-darwin-on-ne-descend-pas-du-singe",
@@ -284,9 +233,69 @@
   {
    "date": "2026-11-10",
    "path": "editions/2026-11-10",
-   "status": "draft",
-   "newsletter": false,
+   "status": "published",
+   "newsletter": true,
    "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "kind": "",
+     "title": "Impressionnisme : la peinture qui a raté son examen (et gagné quand même)",
+     "theme": "Histoire de l’art",
+     "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
+     "minutes": 3,
+     "cases": 24,
+     "photos": 2,
+     "images_done": 20,
+     "images_total": 20,
+     "failed": 0,
+     "redo": 1
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Un coup de pouce et beaucoup d’absents",
+     "theme": "",
+     "tagline": "Le Smic retrouve son pouce, les classes se vident, Harry Kane manque à l’appel et Superman change de patron.",
+     "minutes": 2,
+     "cases": 12,
+     "photos": 4,
+     "images_done": 5,
+     "images_total": 5,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "kind": "",
+     "title": "Le mètre est trop court, et c’est la faute d’un perfectionniste",
+     "theme": "Grandes découvertes",
+     "tagline": "Sept ans à mesurer la France en pleine Révolution, pour une erreur que personne ne devait voir",
+     "minutes": 2,
+     "cases": 12,
+     "photos": 1,
+     "images_done": 11,
+     "images_total": 11,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "kind": "",
+     "title": "La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter)",
+     "theme": "Musique",
+     "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
+     "minutes": 1,
+     "cases": 9,
+     "photos": 1,
+     "images_done": 8,
+     "images_total": 8,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "Le Dico menteur",
