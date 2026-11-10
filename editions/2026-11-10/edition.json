@@ -35,7 +35,7 @@
           "look": "a very old, short and hunched government usher, light pink skin, completely bald with two white side tufts, black tailcoat over a bright yellow waistcoat as main colour, yellow bow tie, white shirt, silver chain around the neck, round gold-rimmed glasses",
           "role": "the solemn usher who has seen every negotiation since forever; deadpan, tiny weary smile, moves very slowly",
           "file": "cast/actu-huissier.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "prof",
@@ -43,7 +43,7 @@
           "look": "a tall, very thin high-school teacher in her fifties, light olive skin, grey hair in a high chignon held by a pencil, bright teal cardigan as main colour over a white blouse, brown trousers, big round red glasses, a canvas tote bag full of papers",
           "role": "the dry, ironic teacher who takes the roll call even on strike day; arms crossed, one eyebrow raised",
           "file": "cast/actu-prof.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "defenseur",
@@ -69,8 +69,8 @@
           "prof"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -91,8 +91,8 @@
               "huissier"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -102,7 +102,13 @@
           "title": "L’hôtel de Matignon, côté jardin",
           "text": "La façade côté jardin de l’hôtel de Matignon, rue de Varenne à Paris : la résidence du Premier ministre, où se tenait la conférence sociale.",
           "photo": {
-            "commons": "File:Facade @ Jardin de l'Hôtel Matignon @ Paris (34261927513).jpg"
+            "commons": "File:Facade @ Jardin de l'Hôtel Matignon @ Paris (34261927513).jpg",
+            "credit": "Guilhem Vellut from Paris, France",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Facade_@_Jardin_de_l%27H%C3%B4tel_Matignon_@_Paris_(34261927513).jpg",
+            "file": "images/photo-2-facade-jardin-de-l-h-tel-matignon-p.webp",
+            "status": "done"
           }
         },
         {
@@ -130,8 +136,8 @@
               "prof"
             ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,7 +147,13 @@
           "title": "Le ministère de l’Éducation nationale, à Paris",
           "text": "L’hôtel de Rochechouart, au 110 rue de Grenelle à Paris : c’est le siège du ministère de l’Éducation nationale.",
           "photo": {
-            "commons": "File:Hôtel de Rochechouart, 110 rue de Grenelle, Paris 7e.jpg"
+            "commons": "File:Hôtel de Rochechouart, 110 rue de Grenelle, Paris 7e.jpg",
+            "credit": "Celette",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_de_Rochechouart,_110_rue_de_Grenelle,_Paris_7e.jpg",
+            "file": "images/photo-5-h-tel-de-rochechouart-110-rue-de-gr.webp",
+            "status": "done"
           }
         },
         {
@@ -169,8 +181,8 @@
               "defenseur"
             ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -180,7 +192,13 @@
           "title": "Un vrai Ballon d’Or, au musée du Real Madrid",
           "text": "Le Ballon d’Or 1998 de Zinédine Zidane, exposé au musée du stade Santiago-Bernabéu, à Madrid. Le trophée a été créé par le magazine France Football.",
           "photo": {
-            "commons": "File:Zinedine Zidane's 1998 Ballon d'Or trophy, Real Madrid Museum, Santiago Bernabéu, Madrid, Spain (Ank Kumar, Infosys Limited) 04.jpg"
+            "commons": "File:Zinedine Zidane's 1998 Ballon d'Or trophy, Real Madrid Museum, Santiago Bernabéu, Madrid, Spain (Ank Kumar, Infosys Limited) 04.jpg",
+            "credit": "Ank Kumar",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Zinedine_Zidane%27s_1998_Ballon_d%27Or_trophy,_Real_Madrid_Museum,_Santiago_Bernab%C3%A9u,_Madrid,_Spain_(Ank_Kumar,_Infosys_Limited)_04.jpg",
+            "file": "images/photo-8-zinedine-zidane-s-1998-ballon-d-or.webp",
+            "status": "done"
           }
         },
         {
@@ -208,8 +226,8 @@
               "gunn"
             ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -219,7 +237,13 @@
           "title": "Le château d’eau des studios Warner Bros",
           "text": "Le château d’eau des studios Warner Bros, à Burbank, près de Los Angeles. DC Studios est une branche de Warner Bros depuis sa création, en 2022.",
           "photo": {
-            "commons": "File:Warner Bros studios Burbank -water tower.jpg"
+            "commons": "File:Warner Bros studios Burbank -water tower.jpg",
+            "credit": "Headsillroll",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Warner_Bros_studios_Burbank_-water_tower.jpg",
+            "file": "images/photo-11-warner-bros-studios-burbank-water-t.webp",
+            "status": "done"
           }
         },
         {
