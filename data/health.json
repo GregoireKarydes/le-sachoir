@@ -1,11 +1,11 @@
 {
- "updated_at": "2026-11-10T08:02:26.607203+01:00",
+ "updated_at": "2026-11-10T08:12:00.314164+01:00",
  "today": "2026-11-10",
  "problems": [],
  "days": [
   {
    "date": "2026-11-10",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -64,11 +64,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-10/cultureg : « Le mètre est trop court, et c’est la faute d’un perfectionniste » prise dans la file (20261110-0100-le-metre-est-trop-court-et-cest-la-faute)",
-  "2026-11-10/insolite : « La Marseillaise est née à Strasbourg (Marseille n’a fait que chanter) » prise dans la file (20261111-0100-la-marseillaise-est-nee-a-strasbourg-mar)",
-  "2026-11-10/dossier : « Impressionnisme : la peinture qui a raté son examen (et gagné quand même) » prise dans la file (20261108-1924-impressionnisme-refuses)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
