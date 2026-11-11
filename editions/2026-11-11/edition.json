@@ -1,7 +1,622 @@
 {
   "date": "2026-11-11",
-  "status": "draft",
+  "status": "published",
   "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
+      "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
+      "minutes": 2,
+      "theme": "Expression française",
+      "cast": [
+        {
+          "id": "sofie",
+          "look": "Sofie, a modern Belgian tourist in her thirties, short blond bob, black raincoat, a red umbrella as the only colour",
+          "file": "cast/cultureg-sofie.png",
+          "status": "pending",
+          "role": "the Belgian tourist puzzled by French numbers; curious, raised eyebrow, pen in hand",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (c0123216-aa1c-40ad-94eb-93a265a224d4)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+        },
+        {
+          "id": "marc",
+          "look": "Marc, a modern Parisian café waiter, tall and lanky, slicked black hair, thin moustache, white shirt, black waistcoat, long white apron",
+          "file": "cast/cultureg-marc.png",
+          "status": "done",
+          "role": "the Parisian waiter who counts the French way and guides the trip through time; tall, polite, slightly smug"
+        },
+        {
+          "id": "gautier",
+          "look": "Gautier, a 13th-century Parisian cloth merchant, round belly, bowl haircut, grey tunic with a black belt, a small purse at his waist, counting on his fingers",
+          "file": "cast/cultureg-gautier.png",
+          "status": "done",
+          "role": "a medieval merchant who counts in twenties on his fingers; cheerful, round, proud of his method"
+        },
+        {
+          "id": "vaugelas",
+          "look": "Claude, a pompous 17th-century grammarian, enormous curly black wig, pointy little moustache, black coat with a huge white lace collar, nose in the air, holding a thick book",
+          "file": "cast/cultureg-vaugelas.png",
+          "status": "done",
+          "role": "the pompous grammarian who declares the 'right' way to count; nose in the air, finger raised"
+        }
+      ],
+      "cover": {
+        "prompt": "a small café table. Sofie (on the left) holding a restaurant bill, counting desperately on all ten fingers, eyes crossed; Marc (on the right) standing with a tray, smiling politely, waiting. medium shot",
+        "cast": [
+          "sofie",
+          "marc"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "Pourquoi les Français disent-ils « quatre-vingt-dix-sept », soit quatre fois vingt plus dix-sept ? Il faut remonter au Moyen Âge.",
+          "bubbles": [
+            {
+              "text": "Ça fera quatre-vingt-dix-sept euros.",
+              "side": "r"
+            },
+            {
+              "text": "Nonante-sept, donc. Pourquoi faire compliqué ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare café with one small round table. Marc (on the right) handing over a bill with a polite smile; Sofie (on the left) sitting, staring at the bill, one eyebrow very high, pen frozen in the air. medium shot",
+            "cast": [
+              "sofie",
+              "marc"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Moyen Âge",
+          "caption": "Au Moyen Âge, on compte souvent par paquets de vingt : « deux-vingts » pour 40, « trois-vingts » pour 60.",
+          "bubbles": [
+            {
+              "text": "Ce drap vaut trois-vingts deniers.",
+              "side": "l"
+            },
+            {
+              "text": "Soixante ? Dites soixante !",
+              "side": "r"
+            },
+            {
+              "text": "Soixante quoi ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple medieval market stall with one roll of grey cloth. Gautier (on the left) counting proudly on his fingers in groups; Marc (on the right), out of place in his waiter apron, pulling his own hair in frustration. medium shot",
+            "cast": [
+              "gautier",
+              "marc"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "title": "Compter par vingt, comment ça marche ?",
+          "steps": [
+            "On compte jusqu’à vingt, puis par paquets de vingt",
+            "40 = deux-vingts, 60 = trois-vingts",
+            "120 = six-vingts, 300 = quinze-vingts",
+            "Il nous en reste quatre-vingts et quatre-vingt-dix"
+          ],
+          "joke": "Le français a gardé deux souvenirs de ce système. Comme deux vieilles photos dans un tiroir."
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Vers 1260",
+          "caption": "Une trace existe encore : vers 1260, Saint Louis fonde à Paris l’hospice des Quinze-Vingts. 300 lits, soit quinze fois vingt.",
+          "bubbles": [
+            {
+              "text": "Combien de lits ? Quinze-vingts.",
+              "side": "l"
+            },
+            {
+              "text": "Le nom est resté : l’hôpital existe toujours.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a long bare hall with many identical small beds in a row disappearing into the distance. Gautier (on the left) proudly pointing down the row; Marc (on the right) trying to count the beds one by one with his finger, dizzy. wide shot",
+            "cast": [
+              "gautier",
+              "marc"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Un aveugle des Quinze-Vingts, gravure ancienne",
+          "text": "L’hospice de Saint Louis accueillait les aveugles de Paris. Son nom compte « à l’ancienne » : quinze fois vingt, soit 300 lits. Il existe toujours, devenu un grand hôpital des yeux.",
+          "photo": {
+            "commons": "File:FOURNEL(1887) p053 Fig.28.jpg",
+            "credit": "After Edme Bouchardon",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:FOURNEL(1887)_p053_Fig.28.jpg",
+            "file": "images/photo-5-fournel-1887-p053-fig-28-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "",
+          "caption": "Pourquoi compter par vingt ? Peut-être un héritage celte, peut-être normand. Les historiens n’en sont pas sûrs.",
+          "bubbles": [
+            {
+              "text": "Mon grand-père comptait comme ça. Et le sien.",
+              "side": "l"
+            },
+            {
+              "text": "Et le premier ?",
+              "side": "r"
+            },
+            {
+              "text": "Mystère.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Gautier (on the left) shrugging with both palms up, totally unbothered; Marc (on the right) leaning forward with a notebook, eager, then deflating. plain background. medium shot",
+            "cast": [
+              "gautier",
+              "marc"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Fin du Moyen Âge",
+          "caption": "Peu à peu, le comptage par dix l’emporte : trente, quarante, cinquante et soixante remplacent les vingtaines.",
+          "bubbles": [
+            {
+              "text": "Adieu, « trois-vingts ». Tu étais si joli.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Gautier (in the middle) sitting alone on his market stool, slumped, a single tear rolling down, holding his ten fingers up sadly. plain background. close-up",
+            "cast": [
+              "gautier"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "chap",
+          "tag": "XVIIe siècle",
+          "caption": "Pour 70, 80 et 90, deux façons coexistent. Au XVIIe siècle, le grammairien Vaugelas fait pencher l’Académie pour les vingtaines.",
+          "bubbles": [
+            {
+              "text": "Septante ? Quelle horreur. Dites soixante-dix.",
+              "side": "l"
+            },
+            {
+              "text": "C’est plus long.",
+              "side": "r"
+            },
+            {
+              "text": "C’est plus chic.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare salon with one gilded chair. Claude (on the left) nose in the air, waving a lace handkerchief in disgust; Marc (on the right) holding his notepad, mouth open in disbelief. medium shot",
+            "cast": [
+              "vaugelas",
+              "marc"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "",
+          "caption": "La Belgique et la Suisse ont gardé les dizaines : septante, nonante, et même huitante dans une partie de la Suisse.",
+          "bubbles": [
+            {
+              "text": "Nous, on compte par dizaines. Comme pour soixante.",
+              "side": "l"
+            },
+            {
+              "text": "Huitante ? Je vais défaillir.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Sofie (on the left) calmly counting on her fingers in neat groups, relaxed smile, red umbrella under her arm; Claude (on the right) fainting backwards dramatically, wig sliding off, the back of his hand on his forehead. plain background. medium shot",
+            "cast": [
+              "sofie",
+              "vaugelas"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 10,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "Bilan : « quatre-vingts » est un reste du comptage par vingt. Septante existe toujours en France, juste « vieilli ».",
+          "bubbles": [
+            {
+              "text": "Vieilli ? Comme « trois-vingts », alors.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Sofie (in the middle) in a confession-style close-up, looking straight at the reader with a satisfied little smile, holding up seven fingers. plain background",
+            "cast": [
+              "sofie"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "« Quatre-vingts » est un vestige du comptage par vingt du Moyen Âge ; l’hospice parisien des Quinze-Vingts comptait 300 lits.",
+        "source": "Académie française, Techno-Science"
+      },
+      "sources": [
+        {
+          "title": "Académie française — Questions de langue : soixante-dix, quatre-vingts, quatre-vingt-dix",
+          "url": "https://dictionnaire-academie.fr/article/QDL078"
+        },
+        {
+          "title": "Techno-Science — Hôpital des Quinze-Vingts",
+          "url": "https://www.techno-science.net/fr/definitions/hopital-des-quinze-vingts"
+        }
+      ],
+      "story": "En France, 97 se dit « quatre-vingt-dix-sept » : littéralement quatre fois vingt, plus dix-sept. C’est le reste d’une vieille habitude. Au Moyen Âge, on comptait souvent par vingtaines : on disait « deux-vingts » pour 40, « trois-vingts » pour 60, et ainsi de suite.\nUne trace de ce système existe encore à Paris : vers 1260, Saint Louis fonde l’hospice des Quinze-Vingts, prévu pour 300 lits, soit quinze fois vingt. L’établissement porte toujours ce nom.\nD’où vient ce comptage ? Les hypothèses varient, héritage celte ou influence normande, et les spécialistes n’ont pas tranché.\nPeu à peu, le comptage par dizaines l’emporte : trente, quarante, cinquante et soixante remplacent les vingtaines. Mais pour 70, 80 et 90, les deux façons coexistent longtemps. Au XVIIe siècle, sous l’influence du grammairien Vaugelas, l’Académie retient soixante-dix, quatre-vingts et quatre-vingt-dix.\nLa Belgique et la Suisse, elles, ont gardé septante et nonante, et une partie de la Suisse dit même huitante. En France, ces mots ne sont pas interdits : le dictionnaire les dit simplement vieillis ou régionaux.",
+      "art": {
+        "subject": "why the French say 'four twenties' for eighty while Belgians say 'nonante', told through a café bill and a trip back in time",
+        "setting": "a modern Paris café table, a 13th-century market stall, a 17th-century study full of books",
+        "era": "mixed on purpose: modern Paris, the Middle Ages and the 1600s, each character in the clothes of their own time",
+        "props": {
+          "bill": "a small white café bill on a saucer"
+        }
+      },
+      "from_stock": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Votre huître de Noël est japonaise (et sa grand-mère, portugaise)",
+      "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
+      "teaser": "Sur votre table de fête, une huître « bien de chez nous ». Enfin, presque : elle a pris l’avion, et sa grand-mère a fait naufrage.",
+      "minutes": 1,
+      "theme": "Sciences du vivant",
+      "art": {
+        "subject": "how Portuguese oysters dumped in the Gironde estuary around 1868 colonised the French Atlantic coast, died out around 1970, and were replaced by oysters brought from Japan",
+        "setting": "a modern French Christmas dinner table; the deck of a small 1860s steamship in a stormy estuary; a muddy oyster farm at low tide",
+        "era": "today in France, with flashbacks to the 1860s",
+        "props": {
+          "oyster": "a big rough grey-green cupped oyster, open, on a plate of ice",
+          "crates": "stacked wooden crates full of grey oysters",
+          "knife": "a short oyster knife with a red wooden handle"
+        }
+      },
+      "cast": [
+        {
+          "id": "convive",
+          "name": "Le convive",
+          "look": "a very round plump man in his sixties, bald head, huge bushy grey moustache, rosy pale skin, a deep burgundy Christmas sweater as main colour, a white napkin tucked into his collar, holding the oyster",
+          "role": "the proud Christmas guest who thinks his oyster is 100% French; round, beaming, easily shocked",
+          "file": "cast/insolite-convive.png",
+          "status": "done"
+        },
+        {
+          "id": "ostr",
+          "name": "L’ostréicultrice",
+          "look": "a tall strong woman in her forties, broad shoulders, short spiky black hair, tanned skin, a bright yellow oilskin jacket as main colour, green rubber boots, the knife in hand",
+          "role": "the oyster farmer who knows the real story and tells it bluntly; tall, relaxed, leaning on things, deadpan",
+          "file": "cast/insolite-ostr.png",
+          "status": "done"
+        },
+        {
+          "id": "capitaine",
+          "name": "Le capitaine",
+          "look": "a huge broad-chested 1860s sea captain in his fifties, thick wild grey beard, weathered pink skin, a navy blue pea coat with brass buttons as main colour, a black captain's cap, a short pipe in his mouth",
+          "role": "the captain of the steamship Le Morlaisien, in a hurry and fed up; massive, stomping, chewing his pipe",
+          "file": "cast/insolite-capitaine.png",
+          "status": "done"
+        },
+        {
+          "id": "fonct",
+          "name": "Un fonctionnaire du port",
+          "look": "a short skinny 1860s port official, very thin and stiff, black hair slicked with a centre parting, thin pencil moustache, a bright purple frock coat as main colour, a tall black top hat, a white handkerchief pressed to his nose",
+          "role": "the fussy official who orders the smelly cargo thrown away; tiny, stiff as a stick, disgusted",
+          "file": "cast/insolite-fonct.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "a festive table on a pale blue background. The convive (very round, huge grey moustache, burgundy sweater) on the left lifting the oyster proudly; behind him a tiny ghostly sailing steamship on a wave and, on the right, the ostréicultrice (tall, spiky black hair, yellow oilskin) leaning on the table, deadpan, holding the knife. wide shot",
+        "cast": [
+          "convive",
+          "ostr"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "À Noël",
+          "caption": "À Noël, l’huître creuse trône sur les tables françaises. Mais d’où vient-elle vraiment ?",
+          "bubbles": [
+            {
+              "who": "convive",
+              "text": "Une bonne huître, bien de chez nous !",
+              "side": "l"
+            },
+            {
+              "who": "ostr",
+              "text": "Japonaise. Et sa grand-mère était portugaise.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Christmas dinner table with a plate of oysters on ice. The convive (very round, bald, huge grey moustache, burgundy sweater) on the left raising the oyster high like a trophy, eyes closed with pride; the ostréicultrice (tall, spiky black hair, yellow oilskin) on the right leaning on the back of a chair, flat expression. medium shot",
+            "cast": [
+              "convive",
+              "ostr"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "XIXe siècle",
+          "caption": "Au départ, la France a l’huître plate, d’ici. Au XIXe siècle, la surpêche vide ses bancs, ces colonies sauvages.",
+          "bubbles": [
+            {
+              "who": "convive",
+              "text": "On les a toutes mangées ?",
+              "side": "l"
+            },
+            {
+              "who": "ostr",
+              "text": "On a raclé le fond de la mer. Littéralement.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "plain pale background, the same table now empty. The convive (very round, huge grey moustache, burgundy sweater) on the left staring at a tiny pile of empty flat round shells, guilty, tiny pink blush marks; the ostréicultrice (tall, spiky black hair, yellow oilskin) on the right miming scraping the ground with a rake gesture. medium shot",
+            "cast": [
+              "convive",
+              "ostr"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Vers 1868",
+          "caption": "Donc Arcachon fait venir des huîtres creuses du Portugal. Le navire Le Morlaisien en transporte une cargaison.",
+          "bubbles": [
+            {
+              "who": "capitaine",
+              "text": "Quelques jours de mer. Elles tiendront.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the deck of a small 1860s steamship on calm sea, stacked crates of oysters. The capitaine (huge, wild grey beard, navy pea coat, black cap, pipe) on the left sitting on the crates, legs apart, puffing his pipe, very confident, one hand patting the crates. low angle medium shot",
+            "cast": [
+              "capitaine"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "La tempête",
+          "caption": "Une tempête le force à s’abriter dans l’estuaire de la Gironde. Le voyage traîne : la cargaison est jugée perdue, et jetée.",
+          "bubbles": [
+            {
+              "who": "fonct",
+              "text": "Ça sent la marée basse. Jetez tout.",
+              "side": "r"
+            },
+            {
+              "who": "capitaine",
+              "text": "Ce sont des huîtres.",
+              "side": "l"
+            },
+            {
+              "who": "fonct",
+              "text": "Raison de plus.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the steamship deck in a grey rainy estuary, the crates on deck. The fonctionnaire du port (short skinny, purple frock coat, top hat) on the right pinching his nose with the handkerchief, pointing stiffly overboard; the capitaine (huge, wild grey beard, navy pea coat) on the left holding a crate, glaring down at him, pipe drooping. medium shot",
+            "cast": [
+              "fonct",
+              "capitaine"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "title": "Comment une poubelle devient un élevage",
+          "steps": [
+            "Les huîtres jetées sont encore vivantes",
+            "L’estuaire, mélange d’eau douce et salée, leur convient",
+            "Elles se reproduisent et colonisent la côte : de la Gironde à la Vendée vers 1878",
+            "Avant 1960, la France en produit environ 85 000 tonnes par an"
+          ],
+          "joke": "Le dépôt sauvage le plus rentable de l’histoire de France."
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "1966-1973",
+          "caption": "Puis une maladie des branchies, l’organe qui respire et filtre l’eau, et des épidémies : vers 1973, la portugaise a disparu.",
+          "bubbles": [
+            {
+              "who": "convive",
+              "text": "Plus d’huîtres à Noël ?!",
+              "side": "l"
+            },
+            {
+              "who": "ostr",
+              "text": "Pas de panique. On a appelé le Japon.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a muddy oyster farm at low tide with empty wooden tables. The convive (very round, huge grey moustache, burgundy sweater, napkin in collar) on the left clutching his face in panic, frozen, a light-blue sweat drop; the ostréicultrice (tall, spiky black hair, yellow oilskin, green boots) on the right calmly holding an old phone receiver to her ear. medium shot",
+            "cast": [
+              "convive",
+              "ostr"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Des parcs à huîtres sur le bassin d’Arcachon",
+          "text": "Des parcs à huîtres au village de L’Herbe, sur le bassin d’Arcachon. Aujourd’hui, presque tout ce qui y pousse descend d’huîtres venues du Pacifique.",
+          "photo": {
+            "commons": "File:PARCS A HUITRES DU VILLAGE DE L'HERBE.jpg",
+            "credit": "ISALARO",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:PARCS_A_HUITRES_DU_VILLAGE_DE_L%27HERBE.jpg",
+            "file": "images/photo-7-parcs-a-huitres-du-village-de-l-her.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Fin des années 1960",
+          "caption": "Les ostréiculteurs importent du naissain, des bébés huîtres, venu du Japon, puis du Canada en 1972 : l’huître creuse du Pacifique.",
+          "bubbles": [
+            {
+              "who": "ostr",
+              "text": "Des bébés huîtres, livrés par avion.",
+              "side": "r"
+            },
+            {
+              "who": "convive",
+              "text": "En première classe, j’espère.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "an oyster farm on a pale yellow background, a small cartoon propeller plane in the sky. The ostréicultrice (tall, spiky black hair, yellow oilskin) on the right holding up a small wooden crate of tiny baby oysters like newborns, proud; the convive (very round, huge grey moustache, burgundy sweater) on the left bowing respectfully to the crate. medium shot",
+            "cast": [
+              "ostr",
+              "convive"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "En résumé",
+          "caption": "En résumé : la plate a été trop pêchée, la portugaise s’est installée par accident, la japonaise l’a remplacée.",
+          "bubbles": [
+            {
+              "who": "convive",
+              "text": "Bon. Je vais l’appeler Sakura.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "back at the Christmas table, plain background. The convive (very round, bald, huge grey moustache, burgundy sweater, napkin in collar) in the centre facing the viewer like in an interview, holding the oyster tenderly in both hands, gazing at it, tiny small red hearts above it. close-up",
+            "cast": [
+              "convive"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Presque toutes les huîtres creuses françaises descendent d’huîtres du Pacifique importées vers 1970, pour remplacer la portugaise, disparue.",
+        "source": "Encyclopédie de l’environnement — Les huîtres, une leçon d’histoire"
+      },
+      "story": "Pendant des siècles, la France n’a qu’une huître : la plate, ronde, qui vit sur ses côtes. Mais au XIXe siècle, on drague tellement les fonds pour la pêcher que ses bancs sauvages s’épuisent. Pour continuer à remplir les assiettes, les ostréiculteurs d’Arcachon importent dès 1860 des huîtres creuses du Portugal, pêchées dans le Tage.\nVers 1868 (1867 selon certaines sources), le navire Le Morlaisien, chargé de ces huîtres portugaises, est pris dans une tempête et se réfugie dans l’estuaire de la Gironde. Le voyage s’éternise, la cargaison est jugée perdue et jetée à l’eau. Mais les huîtres sont vivantes, l’estuaire leur plaît, et elles se reproduisent. Vers 1878, on en trouve de la Gironde jusqu’au sud de la Vendée. La « portugaise » devient l’huître des Français : avant 1960, l’Atlantique en produit environ 85 000 tonnes par an.\nÀ partir de 1966, une maladie des branchies, puis de grandes épidémies entre 1970 et 1973, la font disparaître des côtes françaises. Les ostréiculteurs importent alors du naissain, des bébés huîtres, du Japon puis, en 1972, du Canada : c’est l’huître creuse du Pacifique. Elle fait aujourd’hui la quasi-totalité de la production française ; l’huître plate ne pèse plus qu’environ 2 000 tonnes par an.",
+      "sources": [
+        {
+          "title": "Encyclopédie de l’environnement — Les huîtres, une leçon d’histoire",
+          "url": "https://encyclopedie-environnement.org/?p=15176"
+        },
+        {
+          "title": "FAO (M. Héral) — Oyster culture in France: history and production",
+          "url": "https://fao.org/4/af043e/AF043E04.htm"
+        },
+        {
+          "title": "Evous — Japonaises, les huîtres ?",
+          "url": "https://www.evous.fr/terres-et-saveurs/en-mer/huitres/Japonaises-les-huitres,1180420/"
+        }
+      ],
+      "from_stock": "20261109-2048-votre-huitre-de-noel-est-japonaise"
+    },
     {
       "id": "quiz",
       "kind": "plusmoins",
@@ -82,5 +697,6 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-11T07:33:02.961420+01:00"
 }

@@ -1,6 +1,45 @@
 {
- "updated_at": "2026-11-11T00:16:55.127056+01:00",
+ "updated_at": "2026-11-11T07:33:02.961420+01:00",
  "editions": [
+  {
+   "date": "2026-11-11",
+   "demo": false,
+   "formats": [
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
+     "kind": "",
+     "url": "histoires/2026-11-11-quatre-vingt-dix-sept-la-france-a-un-probleme-de-calcul/",
+     "theme": "Expression française",
+     "minutes": 2,
+     "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "Votre huître de Noël est japonaise (et sa grand-mère, portugaise)",
+     "kind": "",
+     "url": "histoires/2026-11-11-votre-huitre-de-noel-est-japonaise-et-sa-grand-mere-portugaise/",
+     "theme": "Sciences du vivant",
+     "minutes": 1,
+     "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Plus ou moins",
+     "title": "Plus haut que vous ne le pensez",
+     "kind": "plusmoins",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-10",
    "demo": false,

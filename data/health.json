@@ -1,12 +1,16 @@
 {
- "updated_at": "2026-11-11T00:16:55.127056+01:00",
+ "updated_at": "2026-11-11T07:33:02.961420+01:00",
  "today": "2026-11-11",
- "problems": [],
+ "problems": [
+  "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
+ ],
  "days": [
   {
    "date": "2026-11-11",
    "status": "draft",
    "formats": {
+    "cultureg": "prêt",
+    "insolite": "prêt",
     "quiz": "prêt"
    }
   },
@@ -53,56 +57,62 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-11/cultureg : « Quatre-vingt-dix-sept : la France a un problème de calcul » prise dans la file (20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro)",
+  "2026-11-11/insolite : « Votre huître de Noël est japonaise (et sa grand-mère, portugaise) » prise dans la file (20261109-2048-votre-huitre-de-noel-est-japonaise)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-10",
+ "today_published": true,
+ "today_stories": [
+  "cultureg",
+  "insolite"
+ ],
+ "last_published": "2026-11-11",
  "stock": {
   "cultureg": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 4,
    "blocked": 0,
    "images_left": 34,
    "focus": "20261109-2048-je-chausse-du-42-mais-42-quoi (7 image(s) à faire)",
-   "next": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
+   "next": null,
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 4,
    "blocked": 0,
    "images_left": 25,
    "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (1 image(s) à faire)",
-   "next": "20261109-2048-votre-huitre-de-noel-est-japonaise",
+   "next": null,
    "next_redo": 0
   },
   "dossier": {
    "ready": 0,
-   "waiting": 3,
-   "blocked": 0,
-   "images_left": 69,
-   "focus": "20261108-1929-darwin-on-ne-descend-pas-du-singe (19 image(s) à faire)",
+   "waiting": 2,
+   "blocked": 1,
+   "images_left": 46,
+   "focus": "20261109-1928-vercingetorix-contre-cesar (20 image(s) à faire)",
    "next": null,
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 3,
+ "days_ahead_written": 2,
  "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-10",
-  "count": 43,
-  "neurons": 7400,
+  "day": "2026-11-11",
+  "count": 34,
+  "neurons": 6320,
   "exhausted": false,
   "by_kind": {
    "case": 29,
-   "cast": 10,
-   "cover": 4
+   "cast": 4,
+   "cover": 1
   }
  },
  "fal": {

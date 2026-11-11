@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-11T00:16+01:00",
+ "updated_at": "2026-11-11T07:33+01:00",
  "stock": {
   "cultureg": [
    {
@@ -16,23 +16,6 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 7,
-    "failed": 0,
-    "redo": 0
-   },
-   {
-    "path": "stock/cultureg/20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
-    "name": "20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro",
-    "added": "20261111-0100",
-    "status": "ready",
-    "next": true,
-    "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
-    "theme": "Expression française",
-    "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
-    "minutes": 2,
-    "cases": 10,
-    "photos": 1,
-    "images_done": 9,
-    "images_total": 9,
     "failed": 0,
     "redo": 0
    },
@@ -89,23 +72,6 @@
    }
   ],
   "insolite": [
-   {
-    "path": "stock/insolite/20261109-2048-votre-huitre-de-noel-est-japonaise",
-    "name": "20261109-2048-votre-huitre-de-noel-est-japonaise",
-    "added": "20261109-2048",
-    "status": "ready",
-    "next": true,
-    "title": "Votre huître de Noël est japonaise (et sa grand-mère, portugaise)",
-    "theme": "Sciences du vivant",
-    "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
-    "minutes": 1,
-    "cases": 9,
-    "photos": 1,
-    "images_done": 8,
-    "images_total": 8,
-    "failed": 0,
-    "redo": 0
-   },
    {
     "path": "stock/insolite/20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
     "name": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
@@ -180,7 +146,7 @@
     "path": "stock/dossier/20261108-1929-darwin-on-ne-descend-pas-du-singe",
     "name": "20261108-1929-darwin-on-ne-descend-pas-du-singe",
     "added": "20261108-1929",
-    "status": "waiting",
+    "status": "blocked",
     "next": false,
     "title": "On descend du singe ? Non, on est cousins (et c’est la faute à Darwin)",
     "theme": "Sciences du vivant",
@@ -188,9 +154,9 @@
     "minutes": 3,
     "cases": 24,
     "photos": 2,
-    "images_done": 2,
+    "images_done": 20,
     "images_total": 21,
-    "failed": 0,
+    "failed": 1,
     "redo": 0
    },
    {
@@ -205,7 +171,7 @@
     "minutes": 3,
     "cases": 29,
     "photos": 3,
-    "images_done": 0,
+    "images_done": 4,
     "images_total": 24,
     "failed": 0,
     "redo": 0
@@ -233,9 +199,39 @@
   {
    "date": "2026-11-11",
    "path": "editions/2026-11-11",
-   "status": "draft",
+   "status": "published",
    "newsletter": false,
    "formats": [
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "kind": "",
+     "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
+     "theme": "Expression française",
+     "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
+     "minutes": 2,
+     "cases": 10,
+     "photos": 1,
+     "images_done": 9,
+     "images_total": 9,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "kind": "",
+     "title": "Votre huître de Noël est japonaise (et sa grand-mère, portugaise)",
+     "theme": "Sciences du vivant",
+     "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
+     "minutes": 1,
+     "cases": 9,
+     "photos": 1,
+     "images_done": 8,
+     "images_total": 8,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "Plus ou moins",
