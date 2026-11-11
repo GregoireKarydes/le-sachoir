@@ -14,9 +14,8 @@
           "id": "sofie",
           "look": "Sofie, a modern Belgian tourist in her thirties, short blond bob, black raincoat, a red umbrella as the only colour",
           "file": "cast/cultureg-sofie.png",
-          "status": "pending",
-          "role": "the Belgian tourist puzzled by French numbers; curious, raised eyebrow, pen in hand",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (c0123216-aa1c-40ad-94eb-93a265a224d4)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done",
+          "role": "the Belgian tourist puzzled by French numbers; curious, raised eyebrow, pen in hand"
         },
         {
           "id": "marc",
