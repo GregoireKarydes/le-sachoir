@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-11T12:44:49.986108+01:00",
+ "updated_at": "2026-11-11T17:09:09.424673+01:00",
  "today": "2026-11-11",
  "problems": [
   "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
@@ -103,12 +103,12 @@
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-11",
-  "count": 34,
-  "neurons": 6320,
+  "count": 35,
+  "neurons": 6400,
   "exhausted": false,
   "by_kind": {
    "case": 29,
-   "cast": 4,
+   "cast": 5,
    "cover": 1
   }
  },
