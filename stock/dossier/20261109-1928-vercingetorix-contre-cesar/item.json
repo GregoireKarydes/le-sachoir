@@ -28,7 +28,7 @@
           "look": "Inès, a short round-cheeked young woman of today in her twenties, thick black curly hair in a big puff on top of her head, brown skin, a bright yellow raincoat as main colour, blue jeans, red sneakers, a small spiral notebook in hand",
           "role": "the curious student who asks the reader's questions; short and lively, bounces on her toes, skeptical eyebrow ready",
           "file": "cast/dossier-ines.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "sylvie",
@@ -36,7 +36,7 @@
           "look": "Sylvie, a very tall very thin archaeologist in her sixties, white hair in a tight bun, small round glasses, wide-brimmed beige canvas hat, a purple fleece jacket as main colour, khaki trousers with dusty knee pads, the trowel always in hand",
           "role": "the calm archaeologist who explains and deflates legends; tall and bony, leans on one hip, points with her trowel, dry smile",
           "file": "cast/dossier-sylvie.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "cesar",
@@ -44,7 +44,7 @@
           "look": "Julius, a Roman general in his forties of medium height, narrow shoulders and a small paunch, thin dark hair combed forward over a balding head, golden laurel wreath, long pointed nose, white tunic under a bright red cloak as main colour, bronze breastplate, the tablet always in hand",
           "role": "the vain, ambitious general who conquers Gaul and writes his own legend; chin up, admires his own writing, smug half smile",
           "file": "cast/dossier-cesar.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "verci",
@@ -52,7 +52,7 @@
           "look": "Vercingetorix, a broad-shouldered stocky Gallic chief around thirty, long wild reddish-brown hair to the shoulders, short reddish beard, fair skin, a big green checked wool cloak as main colour, brown trousers, a twisted golden torc around the neck, the sword at his belt",
           "role": "the young Arvernian chief who unites the Gauls too late; stands square and proud, fists on hips, big gestures",
           "file": "cast/dossier-verci.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -63,8 +63,8 @@
           "ines"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -91,8 +91,8 @@
               "sylvie"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -119,8 +119,8 @@
               "sylvie"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -163,8 +163,8 @@
               "ines"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {

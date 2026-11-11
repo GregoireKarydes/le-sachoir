@@ -140,8 +140,8 @@
               "lea"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -169,8 +169,8 @@
               "lea"
             ],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -198,8 +198,8 @@
               "lea"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -227,8 +227,8 @@
               "lea"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -256,8 +256,8 @@
               "lea"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -300,8 +300,8 @@
               "lea"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 2,
             "same_place": false
           }
         },
@@ -334,8 +334,8 @@
               "lea"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -375,8 +375,8 @@
               "lea"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -403,8 +403,8 @@
               "lea"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -432,8 +432,8 @@
               "lea"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -461,9 +461,10 @@
               "darwin"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "failed",
+            "attempts": 3,
+            "same_place": false,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (2f1aa5a3-806e-4f43-adff-98bfc30691e3)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -490,8 +491,8 @@
               "lea"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -519,8 +520,8 @@
               "lea"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 3,
             "same_place": false
           }
         },
@@ -548,8 +549,8 @@
               "darwin"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -576,8 +577,8 @@
               "lea"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -613,8 +614,8 @@
               "lea"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -636,8 +637,8 @@
               "lea"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -665,8 +666,8 @@
               "darwin"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -693,8 +694,8 @@
               "darwin"
             ],
             "file": "images/dossier-20.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
@@ -758,5 +759,6 @@
         }
       ]
     }
-  ]
+  ],
+  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
 }
