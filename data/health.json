@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-11T07:33:02.961420+01:00",
+ "updated_at": "2026-11-11T11:41:03.850374+01:00",
  "today": "2026-11-11",
  "problems": [
   "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-11",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "cultureg": "prêt",
     "insolite": "prêt",
@@ -57,10 +57,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-11/cultureg : « Quatre-vingt-dix-sept : la France a un problème de calcul » prise dans la file (20261111-0100-quatre-vingt-dix-sept-la-france-a-un-pro)",
-  "2026-11-11/insolite : « Votre huître de Noël est japonaise (et sa grand-mère, portugaise) » prise dans la file (20261109-2048-votre-huitre-de-noel-est-japonaise)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
