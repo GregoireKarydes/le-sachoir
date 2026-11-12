@@ -1,24 +1,7 @@
 {
- "updated_at": "2026-11-11T23:41+01:00",
+ "updated_at": "2026-11-12T08:20+01:00",
  "stock": {
   "cultureg": [
-   {
-    "path": "stock/cultureg/20261109-2048-je-chausse-du-42-mais-42-quoi",
-    "name": "20261109-2048-je-chausse-du-42-mais-42-quoi",
-    "added": "20261109-2048",
-    "status": "waiting",
-    "next": false,
-    "title": "Je chausse du 42. Mais 42 quoi, au juste ?",
-    "theme": "Mode et luxe",
-    "tagline": "Votre pointure n’est ni en centimètres ni en pieds : elle est en points de Paris.",
-    "minutes": 2,
-    "cases": 9,
-    "photos": 1,
-    "images_done": 0,
-    "images_total": 7,
-    "failed": 0,
-    "redo": 0
-   },
    {
     "path": "stock/cultureg/20261112-0100-bonne-annee-oui-mais-laquelle",
     "name": "20261112-0100-bonne-annee-oui-mais-laquelle",
@@ -31,7 +14,7 @@
     "minutes": 2,
     "cases": 10,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 2,
     "images_total": 9,
     "failed": 0,
     "redo": 0
@@ -160,23 +143,6 @@
     "redo": 0
    },
    {
-    "path": "stock/dossier/20261109-1928-vercingetorix-contre-cesar",
-    "name": "20261109-1928-vercingetorix-contre-cesar",
-    "added": "20261109-1928",
-    "status": "waiting",
-    "next": false,
-    "title": "Vercingétorix contre César : la guerre des Gaules sans potion magique",
-    "theme": "Histoire ancienne",
-    "tagline": "Soixante peuples divisés, un général pressé, un siège en double anneau : comment la Gaule est devenue romaine",
-    "minutes": 3,
-    "cases": 29,
-    "photos": 3,
-    "images_done": 4,
-    "images_total": 24,
-    "failed": 0,
-    "redo": 0
-   },
-   {
     "path": "stock/dossier/20261110-0100-qui-commande-en-france-la-ve-republique",
     "name": "20261110-0100-qui-commande-en-france-la-ve-republique",
     "added": "20261110-0100",
@@ -197,56 +163,41 @@
  },
  "editions": [
   {
-   "date": "2026-11-11",
-   "path": "editions/2026-11-11",
+   "date": "2026-11-12",
+   "path": "editions/2026-11-12",
    "status": "published",
    "newsletter": false,
    "formats": [
     {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "kind": "",
+     "title": "Vercingétorix contre César : la guerre des Gaules sans potion magique",
+     "theme": "Histoire ancienne",
+     "tagline": "Soixante peuples divisés, un général pressé, un siège en double anneau : comment la Gaule est devenue romaine",
+     "minutes": 3,
+     "cases": 29,
+     "photos": 3,
+     "images_done": 24,
+     "images_total": 24,
+     "failed": 0,
+     "redo": 0
+    },
+    {
      "id": "cultureg",
      "label": "La Pilule de Culture G",
      "kind": "",
-     "title": "Quatre-vingt-dix-sept : la France a un problème de calcul",
-     "theme": "Expression française",
-     "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
+     "title": "Je chausse du 42. Mais 42 quoi, au juste ?",
+     "theme": "Mode et luxe",
+     "tagline": "Votre pointure n’est ni en centimètres ni en pieds : elle est en points de Paris.",
      "minutes": 2,
-     "cases": 10,
-     "photos": 1,
-     "images_done": 9,
-     "images_total": 9,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "kind": "",
-     "title": "Votre huître de Noël est japonaise (et sa grand-mère, portugaise)",
-     "theme": "Sciences du vivant",
-     "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
-     "minutes": 1,
      "cases": 9,
      "photos": 1,
-     "images_done": 8,
-     "images_total": 8,
+     "images_done": 7,
+     "images_total": 7,
      "failed": 0,
      "redo": 0
     },
-    {
-     "id": "quiz",
-     "label": "Plus ou moins",
-     "kind": "plusmoins",
-     "title": "Plus haut que vous ne le pensez",
-     "questions": 1
-    }
-   ]
-  },
-  {
-   "date": "2026-11-12",
-   "path": "editions/2026-11-12",
-   "status": "draft",
-   "newsletter": false,
-   "formats": [
     {
      "id": "quiz",
      "label": "Le Swipe",

@@ -1,23 +1,16 @@
 {
- "updated_at": "2026-11-11T23:41:26.330013+01:00",
- "today": "2026-11-11",
+ "updated_at": "2026-11-12T08:20:18.824849+01:00",
+ "today": "2026-11-12",
  "problems": [
   "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
  ],
  "days": [
   {
-   "date": "2026-11-11",
-   "status": "published",
-   "formats": {
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "quiz": "prêt"
-   }
-  },
-  {
    "date": "2026-11-12",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
+    "cultureg": "prêt",
     "quiz": "prêt"
    }
   },
@@ -57,7 +50,10 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-12/cultureg : « Je chausse du 42. Mais 42 quoi, au juste ? » prise dans la file (20261109-2048-je-chausse-du-42-mais-42-quoi)",
+  "2026-11-12/dossier : « Vercingétorix contre César : la guerre des Gaules sans potion magique » prise dans la file (20261109-1928-vercingetorix-contre-cesar)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -65,17 +61,17 @@
  ],
  "today_published": true,
  "today_stories": [
-  "cultureg",
-  "insolite"
+  "dossier",
+  "cultureg"
  ],
- "last_published": "2026-11-11",
+ "last_published": "2026-11-12",
  "stock": {
   "cultureg": {
    "ready": 0,
-   "waiting": 4,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 34,
-   "focus": "20261109-2048-je-chausse-du-42-mais-42-quoi (7 image(s) à faire)",
+   "images_left": 25,
+   "focus": "20261112-0100-bonne-annee-oui-mais-laquelle (7 image(s) à faire)",
    "next": null,
    "next_redo": 0
   },
@@ -90,26 +86,26 @@
   },
   "dossier": {
    "ready": 0,
-   "waiting": 2,
+   "waiting": 1,
    "blocked": 1,
-   "images_left": 46,
-   "focus": "20261109-1928-vercingetorix-contre-cesar (20 image(s) à faire)",
+   "images_left": 26,
+   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (26 image(s) à faire)",
    "next": null,
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 2,
- "quiz_days_ahead": 6,
+ "days_ahead_written": 1,
+ "quiz_days_ahead": 5,
  "quota": {
-  "day": "2026-11-11",
+  "day": "2026-11-12",
   "count": 35,
   "neurons": 6400,
   "exhausted": false,
   "by_kind": {
-   "case": 29,
    "cast": 5,
-   "cover": 1
+   "cover": 2,
+   "case": 28
   }
  },
  "fal": {

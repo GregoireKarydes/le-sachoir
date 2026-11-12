@@ -1,6 +1,45 @@
 {
- "updated_at": "2026-11-11T23:41:26.330013+01:00",
+ "updated_at": "2026-11-12T08:20:18.824849+01:00",
  "editions": [
+  {
+   "date": "2026-11-12",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Vercingétorix contre César : la guerre des Gaules sans potion magique",
+     "kind": "",
+     "url": "histoires/2026-11-12-vercingetorix-contre-cesar-la-guerre-des-gaules-sans-potion-magique/",
+     "theme": "Histoire ancienne",
+     "minutes": 3,
+     "tagline": "Soixante peuples divisés, un général pressé, un siège en double anneau : comment la Gaule est devenue romaine",
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Je chausse du 42. Mais 42 quoi, au juste ?",
+     "kind": "",
+     "url": "histoires/2026-11-12-je-chausse-du-42-mais-42-quoi-au-juste/",
+     "theme": "Mode et luxe",
+     "minutes": 2,
+     "tagline": "Votre pointure n’est ni en centimètres ni en pieds : elle est en points de Paris.",
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Swipe",
+     "title": "Vrai ou faux, et que ça saute",
+     "kind": "swipe",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-11",
    "demo": false,
