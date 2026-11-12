@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T08:20:18.824849+01:00",
+ "updated_at": "2026-11-12T11:52:31.225377+01:00",
  "today": "2026-11-12",
  "problems": [
   "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-12",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "cultureg": "prêt",
@@ -50,10 +50,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-12/cultureg : « Je chausse du 42. Mais 42 quoi, au juste ? » prise dans la file (20261109-2048-je-chausse-du-42-mais-42-quoi)",
-  "2026-11-12/dossier : « Vercingétorix contre César : la guerre des Gaules sans potion magique » prise dans la file (20261109-1928-vercingetorix-contre-cesar)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
