@@ -1,19 +1,10 @@
 {
- "updated_at": "2026-11-12T17:47:58.804260+01:00",
- "today": "2026-11-12",
+ "updated_at": "2026-11-13T00:36:19.156862+01:00",
+ "today": "2026-11-13",
  "problems": [
   "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
  ],
  "days": [
-  {
-   "date": "2026-11-12",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "cultureg": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-13",
    "status": "draft",
@@ -56,11 +47,8 @@
   "2026-11-06|cultureg",
   "2026-11-06|insolite"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "cultureg"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-12",
  "stock": {
   "cultureg": {
@@ -93,7 +81,7 @@
  },
  "days_ahead_drawn": 0,
  "days_ahead_written": 1,
- "quiz_days_ahead": 5,
+ "quiz_days_ahead": 4,
  "quota": {
   "day": "2026-11-12",
   "count": 35,
