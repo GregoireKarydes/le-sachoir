@@ -227,7 +227,8 @@
             ],
             "file": "images/insolite-06.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (79ac517e-99c2-48db-bcaf-803629dd8f85)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {

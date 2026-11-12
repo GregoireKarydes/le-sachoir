@@ -14,21 +14,21 @@
           "id": "charles",
           "look": "Charles, a teenage king of the 1560s, thin pale face, short dark hair, small white ruff collar, black doublet, a tiny gold crown as the only colour",
           "file": "cast/cultureg-charles.png",
-          "status": "pending",
+          "status": "done",
           "role": "the teenage king touring his kingdom, excited and a bit lost; leans out, wide-eyed"
         },
         {
           "id": "catherine",
           "look": "Catherine, the queen mother of the 1560s, short and stout, round face, sharp knowing eyes, black widow's dress, small black veiled cap, white ruff collar",
           "file": "cast/cultureg-catherine.png",
-          "status": "pending",
+          "status": "done",
           "role": "the queen mother who really runs things; stiff, sharp-eyed, reading lists"
         },
         {
           "id": "lhospital",
           "look": "Michel, an old chancellor of the 1560s, very long white beard down to his belt, bushy eyebrows, black robe, black square cap, holding a scroll",
           "file": "cast/cultureg-lhospital.png",
-          "status": "pending",
+          "status": "done",
           "role": "the wise old chancellor who writes the edict; calm, deadpan, unrolling scrolls"
         }
       ],
@@ -39,8 +39,8 @@
           "catherine"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -65,8 +65,8 @@
               "catherine"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {

@@ -191,8 +191,8 @@
               "ines"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -219,8 +219,8 @@
               "sylvie"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -258,8 +258,8 @@
               "ines"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -286,8 +286,8 @@
               "sylvie"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -314,8 +314,8 @@
               "cesar"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -342,8 +342,8 @@
               "cesar"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -371,8 +371,8 @@
               "verci"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -399,8 +399,8 @@
               "ines"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -429,8 +429,8 @@
               "ines"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -457,8 +457,8 @@
               "sylvie"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -485,8 +485,8 @@
               "cesar"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -502,8 +502,8 @@
               "verci"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -541,8 +541,8 @@
               "ines"
             ],
             "file": "images/dossier-20.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -569,8 +569,8 @@
               "ines"
             ],
             "file": "images/dossier-21.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -597,8 +597,8 @@
               "ines"
             ],
             "file": "images/dossier-22.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -636,8 +636,8 @@
               "ines"
             ],
             "file": "images/dossier-24.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -664,8 +664,8 @@
               "ines"
             ],
             "file": "images/dossier-25.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -708,8 +708,8 @@
               "sylvie"
             ],
             "file": "images/dossier-27.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -736,8 +736,8 @@
               "sylvie"
             ],
             "file": "images/dossier-28.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -765,8 +765,8 @@
               "ines"
             ],
             "file": "images/dossier-29.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

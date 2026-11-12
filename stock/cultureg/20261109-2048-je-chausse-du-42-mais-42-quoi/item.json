@@ -26,7 +26,7 @@
           "look": "a tall lanky man in his thirties, very thin and long-limbed, messy ginger hair, pale skin with freckles, a bright green hoodie as main colour, beige trousers, mismatched socks (one red, one blue), holding one sneaker",
           "role": "the curious customer who asks the reader's naive questions; gangly, head tilted, always perplexed",
           "file": "cast/cultureg-client.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "cordo",
@@ -34,7 +34,7 @@
           "look": "a short sturdy woman in her sixties, square shoulders, white hair in a tight bun, light brown skin, half-moon glasses on a chain, a mustard-yellow shirt as main colour under a dark brown leather apron, a small cobbler's hammer in her apron pocket",
           "role": "the shoemaker who knows and explains simply; compact, calm, dry humour, peers over her glasses",
           "file": "cast/cultureg-cordo.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "anglais",
@@ -42,7 +42,7 @@
           "look": "a short very round medieval English cobbler in his fifties, bald head with a white fringe of hair, rosy pale skin, a bright red tunic as main colour, brown hose, a leather cord belt, holding the barley sack",
           "role": "the proud medieval cobbler who measures in barley grains; plump, chest puffed out, very pompous",
           "file": "cast/cultureg-anglais.png",
-          "status": "pending"
+          "status": "skipped"
         }
       ],
       "cover": {
@@ -52,8 +52,8 @@
           "cordo"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -80,8 +80,8 @@
               "cordo"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -108,8 +108,8 @@
               "client"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -143,8 +143,8 @@
               "client"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -187,8 +187,8 @@
               "client"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -225,8 +225,8 @@
               "anglais"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -253,8 +253,8 @@
               "cordo"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
