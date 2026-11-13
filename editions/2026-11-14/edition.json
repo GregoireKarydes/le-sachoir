@@ -1,12 +1,354 @@
 {
   "date": "2026-11-14",
   "status": "draft",
+  "newsletter": {
+    "subject": "Un point au congélateur, une chaise à Dublin et un sabre à 4,8 M$ 🧊",
+    "intro": "Samedi 14 novembre : un point d’indice gelé, un diplomate qui apporte sa chaise et un César pour Nicole Kidman. Le café, lui, est encore chaud.",
+    "game": "Qui a dit ça ? Quatre citations célèbres, quatre suspects, et une brioche qui n’a rien à faire là.",
+    "ps": "P.-S. GTA VI sort jeudi. Si un collègue tousse beaucoup mercredi soir, pas de panique : c’est saisonnier."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Un point gelé, une chaise pliante et seize minutes de bonheur",
+      "tagline": "Les fonctionnaires attendent le dégel, l’Europe réserve sa place, les Bleus tombent à Milan et Nicole Kidman reçoit un César.",
+      "teaser": "Un bloc de glace à Matignon, un diplomate qui ne fait plus confiance aux chaises des autres et un supporter optimiste.",
+      "minutes": 3,
+      "theme": "",
+      "art": {
+        "subject": "four news stories of the week, each told in one gag panel",
+        "setting": "a grand government meeting room, a modern glass conference hall, a night-time football stadium stand, a theatre backstage room",
+        "era": "present day, November 2026",
+        "props": {
+          "iceblock": "a big transparent block of ice with a tiny round bright blue dot frozen in its centre",
+          "foldchair": "a small light wooden folding chair",
+          "statuette": "a small golden abstract statuette on a square black base",
+          "shelf": "a narrow wooden trophy shelf crowded with small golden trophies, with one small empty gap"
+        }
+      },
+      "cast": [
+        {
+          "id": "syndicaliste",
+          "name": "Une syndicaliste",
+          "look": "a short, round union delegate in her forties, light peach skin, big curly bright red hair, bright green sleeveless vest with no text as main colour over a grey sweater, dark blue jeans, thick white knitted gloves, a small silver whistle on a cord around her neck",
+          "role": "the stubborn union delegate who has heard every promise before; arms crossed, one eyebrow raised, unimpressed",
+          "file": "cast/actu-syndicaliste.png",
+          "status": "pending"
+        },
+        {
+          "id": "diplomate",
+          "name": "Un diplomate européen",
+          "look": "a very tall, very thin European diplomat in his sixties, medium tan skin, completely bald shiny head, navy blue pinstripe suit as main colour, bright purple tie, small round gold glasses, polished black shoes",
+          "role": "the smug, over-prepared diplomat who never again wants to be left without a seat; chin high, satisfied little smile",
+          "file": "cast/actu-diplomate.png",
+          "status": "pending"
+        },
+        {
+          "id": "supporter",
+          "name": "Un supporter des Bleus",
+          "look": "a lanky young football fan in his twenties, warm brown skin, messy black curly hair, oversized royal blue football jersey with no number and no logo as main colour, long blue, white and red striped scarf, white sneakers",
+          "role": "the eternal optimist fan who only remembers the good minutes; dreamy, eyes closed, blissful smile",
+          "file": "cast/actu-supporter.png",
+          "status": "skipped"
+        },
+        {
+          "id": "accessoiriste",
+          "name": "L’accessoiriste des César",
+          "look": "a plump, short theatre prop master in his fifties, light pink skin, bald on top with grey side hair and a big grey moustache, bright orange apron as main colour over a white shirt, a yellow tape measure clipped to the apron, a small pencil behind his ear",
+          "role": "the meticulous backstage prop master who checks everything twice; very concentrated, tongue slightly out",
+          "file": "cast/actu-accessoiriste.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "A plain conference hallway with a pale yellow background. syndicaliste (short, round, curly bright red hair, bright green vest) on the left, hugging the iceblock with both arms, shivering, tiny blue dot frozen inside it, deadpan stare. diplomate (very tall, thin, bald, navy pinstripe suit, purple tie) on the right, striding past with the foldchair tucked under his arm, chin high, smug smile. Wide shot, calm empty space above.",
+        "cast": [
+          "syndicaliste",
+          "diplomate"
+        ],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Société",
+          "caption": "Vendredi, le Premier ministre, Sébastien Lecornu, ouvre un mois de discussions avec les syndicats de fonctionnaires sur les bas salaires. Le point d’indice, base de leur paie, reste gelé.",
+          "bubbles": [
+            {
+              "who": "syndicaliste",
+              "text": "Cinq chantiers, un mois… et notre point d’indice toujours au congélateur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "A grand government meeting room with one tall window and a long empty polished table, pale blue background. syndicaliste (short and round, curly bright red hair, bright green vest, white knitted gloves) in the foreground on the right, holding up the iceblock in both arms like evidence, the tiny blue dot frozen in its middle, frost on her gloves, one eyebrow raised, unimpressed. Medium shot, calm empty space above.",
+            "cast": [
+              "syndicaliste"
+            ],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le jardin de l’hôtel de Matignon",
+          "text": "Le jardin de l’hôtel de Matignon, rue de Varenne à Paris : la résidence du Premier ministre, où les syndicats étaient reçus vendredi.",
+          "photo": {
+            "commons": "File:Jardin de l'Hôtel Matignon @ Paris (34908683952).jpg"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Fonctionnaires : un mois pour parler salaires",
+          "text": "Quoi : Sébastien Lecornu ouvre un mois de discussions sur cinq chantiers, dont les bas salaires et les grilles de paie.\nPourquoi ça compte : la CGT et la CFDT jugent l’offre insuffisante ; la CGT réclame le dégel du point d’indice.\nEt maintenant : grève mardi 17 novembre, nouvelle réunion le 11 décembre."
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Europe",
+          "caption": "Jeudi à Dublin, 39 pays européens signent une charte voulue par la France : toute question touchant la sécurité de l’Europe doit être décidée avec les Européens.",
+          "bubbles": [
+            {
+              "who": "diplomate",
+              "text": "Cette fois, pour être sûr d’avoir une place à la table, j’apporte ma chaise.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "A modern glass conference hall with a big round table, every chair already taken by small figures seen from behind, pale lilac background. diplomate (very tall, very thin, bald, navy pinstripe suit, bright purple tie, round gold glasses) on the left, marching in with the foldchair tucked under his arm, chin high, smug satisfied smile, one finger raised as if he had thought of everything. Medium wide shot, calm empty space above.",
+            "cast": [
+              "diplomate"
+            ],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le centre des congrès de Dublin",
+          "text": "Le Convention Centre Dublin, au bord de la Liffey, et sa façade de verre penchée : c’est là que se tenait le sommet de jeudi.",
+          "photo": {
+            "commons": "File:The Convention Centre Dublin (CCD) in the Dublin Docklands (8281161175).jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Une charte de sécurité signée à Dublin",
+          "text": "Quoi : 39 des 47 pays de la Communauté politique européenne adoptent cette charte.\nPourquoi ça compte : elle vise aussi cyberattaques et ingérences, et veut une place pour l’Europe dans la paix en Ukraine.\nEt maintenant : les Vingt-Sept doivent encore choisir qui parlera pour l’UE dans ces négociations."
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Sport",
+          "caption": "Jeudi à Milan, Michael Olise ouvre le score, puis l’Italie marque trois fois : 3-1. Première défaite des Bleus depuis l’arrivée de Zinédine Zidane comme sélectionneur.",
+          "bubbles": [
+            {
+              "who": "supporter",
+              "text": "Moi, je retiens qu’on a mené. Seize minutes. C’était magnifique.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "A huge stadium stand at night, rows of empty blue seats, pale green background. supporter (lanky, messy black curly hair, oversized royal blue jersey, blue white and red striped scarf) on the right, sitting alone, eyes closed, blissful dreamy smile, hugging his scarf to his chest, while far in the background tiny cartoon figures in light blue shirts jump and celebrate. Medium shot, calm empty space above.",
+            "cast": [
+              "supporter"
+            ],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le stade San Siro, à Milan",
+          "text": "Le stade Giuseppe-Meazza, surnommé San Siro, à Milan : le stade de l’Inter et de l’AC Milan, où les Bleus ont perdu jeudi soir.",
+          "photo": {
+            "commons": "File:Stadio San Siro - Giuseppe Meazza, Milano.jpg"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Les Bleus doivent gagner dimanche",
+          "text": "Quoi : l’Italie gagne 3-1 et rejoint la France en tête du groupe de Ligue des nations, à 10 points.\nPourquoi ça compte : une victoire assurerait aux Bleus une place en quarts de finale.\nEt maintenant : France-Turquie, dimanche 15 novembre à Bordeaux."
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "Cinéma",
+          "caption": "Jeudi, l’Académie des César annonce un César d’honneur pour l’actrice australienne oscarisée Nicole Kidman, le 25 février à l’Olympia. L’an dernier, il était allé à Jim Carrey.",
+          "bubbles": [
+            {
+              "who": "accessoiriste",
+              "text": "Un Oscar, déjà. J’ai mesuré son étagère : le César rentre.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "A theatre backstage room with a red velvet curtain on one side, pale pink background. accessoiriste (plump, short, bald on top with grey side hair, big grey moustache, bright orange apron) on the left, on tiptoe on a small stool, measuring the small empty gap on the shelf with his yellow tape measure, holding the statuette in his other hand, very concentrated, tongue slightly out. Medium shot, calm empty space above.",
+            "cast": [
+              "accessoiriste"
+            ],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "L’Olympia, boulevard des Capucines",
+          "text": "La salle de l’Olympia, boulevard des Capucines à Paris : elle accueillera la 52e cérémonie des César.",
+          "photo": {
+            "commons": "File:Olympia Music Hall, Boulevard des Capucines, Paris.jpg"
+          }
+        },
+        {
+          "n": 12,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Nicole Kidman, César d’honneur 2027",
+          "text": "Quoi : l’Académie des César remettra un César d’honneur à Nicole Kidman lors de la 52e cérémonie.\nPourquoi ça compte : il salue une carrière avec Kubrick ou Jane Campion, et un Oscar pour « The Hours ».\nEt maintenant : cérémonie jeudi 25 février 2027 à l’Olympia, en direct sur Canal+."
+        },
+        {
+          "n": 13,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Ton collègue de bureau",
+          "handle": "@TonCollegue",
+          "ago": "il y a 2 h",
+          "trend": "GTA VI",
+          "text": "Jeudi 19 novembre, je suis en réunion. Avec moi-même. Et une manette. Pendant 80 heures.",
+          "why": "GTA VI sort le jeudi 19 novembre sur consoles. Au Royaume-Uni, 83 000 jours de congé ont été demandés pour ce jour-là, selon BrightHR.",
+          "likes": "31 k",
+          "shares": "4 k",
+          "source": {
+            "title": "Watson — Contrats de couple et arrêts maladie : GTA 6 rend déjà les fans fous",
+            "url": "https://www.watson.ch/fr/divertissement/jeux-video/789569397-contrats-conjugaux-et-absenteisme-les-consequences-de-gta-6"
+          }
+        },
+        {
+          "n": 14,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Un fan des sixties",
+          "handle": "@FanDesSixties",
+          "ago": "il y a 5 h",
+          "trend": "McCartney",
+          "text": "Paul McCartney est milliardaire. L’argent n’achète pas l’amour, il l’a chanté. Mais visiblement, l’amour achète beaucoup de disques.",
+          "why": "Selon Forbes, Paul McCartney pèse environ 1,4 milliard de dollars : troisième musicien le plus riche du monde, derrière Jay-Z et Taylor Swift.",
+          "likes": "12 k",
+          "shares": "2 k",
+          "source": {
+            "title": "Euronews — Paul McCartney devient le troisième musicien le plus riche du monde",
+            "url": "https://fr.euronews.com/2026/11/10/paul-mccartney-devient-le-troisieme-musicien-le-plus-riche-du-monde"
+          }
+        },
+        {
+          "n": 15,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Un Jedi à la retraite",
+          "handle": "@MaitreDuCanape",
+          "ago": "il y a 1 h",
+          "trend": "Dark Vador",
+          "text": "Toute une vie à vouloir dominer la galaxie. Et finalement, c’est son sabre qui décroche le record.",
+          "why": "Jeudi 12 novembre, chez Heritage Auctions, un sabre laser de Dark Vador des années 1980 est parti à 4,875 millions de dollars, record pour un objet Star Wars.",
+          "likes": "48 k",
+          "shares": "7 k",
+          "source": {
+            "title": "Konbini — Le sabre laser de Dark Vador s’est vendu près de 5 millions de dollars aux enchères",
+            "url": "https://www.konbini.com/popculture/le-sabre-laser-de-dark-vador-sest-vendu-pres-de-5-millions-de-dollars-aux-encheres/"
+          }
+        }
+      ],
+      "final": {
+        "text": "À Dublin, 39 pays européens ont signé une charte : toute question touchant la sécurité de l’Europe doit être décidée avec les Européens.",
+        "source": "L’essentiel / Quartz"
+      },
+      "sources": [
+        {
+          "title": "Echos Plus — Fonction publique : Lecornu ouvre des négociations sur les bas salaires avant la grève du 17 novembre",
+          "url": "https://echosplus.com/2026/11/13/fonction-publique-lecornu-ouvre-des-negociations-sur-les-bas-salaires-avant-la-greve-du-17-novembre/"
+        },
+        {
+          "title": "La Croix via Titrespresse — Fonction publique : Lecornu « en complet décalage » avec les demandes",
+          "url": "https://www.titrespresse.com/28986762603/fonction-lecornu-reunis"
+        },
+        {
+          "title": "Franceinfo — Sébastien Lecornu ouvre une discussion d’un mois avec les syndicats de fonctionnaires",
+          "url": "https://www.franceinfo.fr/economie/syndicats/sebastien-lecornu-ouvre-une-discussion-d-un-mois-avec-les-syndicats-de-fonctionnaires-portant-notamment-sur-une-revalorisation-des-bas-salaires_8281073.html"
+        },
+        {
+          "title": "L’essentiel — Communauté politique européenne : 39 pays adoptent une charte de sécurité commune",
+          "url": "https://www.lessentiel.lu/fr/story/europe-quarante-pays-definissent-leurs-principes-cles-de-securite-103666555"
+        },
+        {
+          "title": "Quartz — Des États européens adoptent une charte de sécurité à Dublin",
+          "url": "https://fr.qz.com/etats-europeens-adoptent-charte-securite-dublin-cpe-111226"
+        },
+        {
+          "title": "Le Temps — UE et pourparlers sur l’Ukraine, un message brouillé à Dublin",
+          "url": "https://www.letemps.ch/monde/europe/ue-et-pourparlers-sur-l-ukraine-un-message-brouille-a-dublin"
+        },
+        {
+          "title": "FFF — Piège à l’italienne",
+          "url": "https://www.fff.fr/article/17757-piege-a-l-italienne.html"
+        },
+        {
+          "title": "Maxifoot — Première défaite pour Zidane (Italie 3-1 France)",
+          "url": "https://m.maxifoot.fr/football/article-66551.htm"
+        },
+        {
+          "title": "AlloCiné — Nicole Kidman recevra un César d’honneur à la cérémonie des César 2027",
+          "url": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000231941.html"
+        },
+        {
+          "title": "Euronews — Nicole Kidman to receive honorary César Award from French film academy",
+          "url": "https://www.euronews.com/2026/11/13/nicole-kidman-to-receive-honorary-cesar-award-from-french-film-academy"
+        },
+        {
+          "title": "Watson — GTA 6 rend déjà les fans fous",
+          "url": "https://www.watson.ch/fr/divertissement/jeux-video/789569397-contrats-conjugaux-et-absenteisme-les-consequences-de-gta-6"
+        },
+        {
+          "title": "Euronews — Paul McCartney devient le troisième musicien le plus riche du monde",
+          "url": "https://fr.euronews.com/2026/11/10/paul-mccartney-devient-le-troisieme-musicien-le-plus-riche-du-monde"
+        },
+        {
+          "title": "Konbini — Le sabre laser de Dark Vador vendu près de 5 millions de dollars",
+          "url": "https://www.konbini.com/popculture/le-sabre-laser-de-dark-vador-sest-vendu-pres-de-5-millions-de-dollars-aux-encheres/"
+        },
+        {
+          "title": "La DH — Enfin une victoire pour Dark Vador : son sabre laser bat des records aux enchères",
+          "url": "https://www.dhnet.be/medias/cinema/2026/11/13/enfin-une-victoire-pour-dark-vador-son-sabre-laser-bat-des-records-aux-encheres-Q5Q634Q6RRDZDIKC3XKRBTDLGI/"
+        }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "citation",
       "label": "Qui a dit ça ?",
       "title": "Ils l’ont dit (ou pas)",
+      "teaser": "Quatre phrases célèbres, quatre suspects. L’une d’elles n’a jamais été prononcée par la personne à qui tout le monde pense.",
       "minutes": 1,
       "theme": "",
       "questions": [
