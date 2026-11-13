@@ -14,6 +14,7 @@
           "type": "map",
           "map": "france",
           "q": "Où se trouve Besançon ?",
+          "hint": "Capitale du Doubs, pas loin de la Suisse.",
           "target": { "lat": 47.245, "lon": 6.026 },
           "name": "Besançon",
           "explain": "Lovée dans une boucle du Doubs, gardée par la citadelle de Vauban, classée à l’Unesco. Son horloge astronomique de 1860 compte environ 30 000 pièces. Pour arriver à l’heure, aucune excuse.",
@@ -22,6 +23,7 @@
         {
           "type": "choice",
           "q": "Ouagadougou est la capitale de quel pays ?",
+          "hint": "Ce pays a changé de nom en 1984.",
           "choices": ["Le Mali", "Le Niger", "Le Burkina Faso", "Le Ghana"],
           "answer": 2,
           "explain": "Le Burkina Faso, qui s’appelait Haute-Volta jusqu’en 1984. Son nom veut dire « pays des hommes intègres ». Bamako, c’est le Mali ; Niamey, le Niger.",
@@ -31,6 +33,7 @@
           "type": "map",
           "map": "france",
           "q": "Le fromage perdu : où mûrit le roquefort ?",
+          "hint": "Pays des brebis, au sud du Massif central.",
           "target": { "lat": 43.975, "lon": 2.992 },
           "name": "Roquefort-sur-Soulzon (Aveyron)",
           "explain": "Dans les caves du rocher du Combalou, à Roquefort-sur-Soulzon. Le 26 juillet 1925, il devient la toute première appellation d’origine fromagère française. Lait de brebis obligatoire, vaches priées de patienter.",

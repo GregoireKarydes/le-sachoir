@@ -380,23 +380,8 @@
       "questions": [
         {
           "type": "choice",
-          "q": "« Qu’ils mangent de la brioche ! »",
-          "choices": [
-            "Marie-Antoinette",
-            "Louis XVI",
-            "Personne de connu",
-            "Madame de Pompadour"
-          ],
-          "answer": 2,
-          "explain": "Rousseau prête la phrase à « une grande princesse » dans ses Confessions, écrites quand Marie-Antoinette était encore une enfant en Autriche. Une brioche qui a beaucoup voyagé.",
-          "source": {
-            "title": "Britannica — Did Marie-Antoinette really say “Let them eat cake”?",
-            "url": "https://www.britannica.com/story/did-marie-antoinette-really-say-let-them-eat-cake"
-          }
-        },
-        {
-          "type": "choice",
           "q": "« Le cœur a ses raisons que la raison ne connaît point. »",
+          "hint": "Un mathématicien croyant du XVIIe siècle, auteur des Pensées.",
           "choices": [
             "Molière",
             "Blaise Pascal",
@@ -413,6 +398,7 @@
         {
           "type": "choice",
           "q": "« L’enfer, c’est les autres. »",
+          "hint": "Un philosophe existentialiste, auteur de la pièce Huis clos.",
           "choices": [
             "Albert Camus",
             "Simone de Beauvoir",
@@ -429,6 +415,7 @@
         {
           "type": "choice",
           "q": "« C’est un petit pas pour l’homme, un bond de géant pour l’humanité. »",
+          "hint": "Dit en posant le pied quelque part pour la première fois.",
           "choices": [
             "Neil Armstrong",
             "Buzz Aldrin",
@@ -440,6 +427,23 @@
           "source": {
             "title": "Space.com — Neil Armstrong, first man on the moon",
             "url": "https://www.space.com/15519-neil-armstrong-man-moon.html"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "« Qu’ils mangent de la brioche ! »",
+          "hint": "La phrase circulait avant que la suspecte habituelle arrive en France.",
+          "choices": [
+            "Marie-Antoinette",
+            "Louis XVI",
+            "Personne de connu",
+            "Madame de Pompadour"
+          ],
+          "answer": 2,
+          "explain": "Rousseau prête la phrase à « une grande princesse » dans ses Confessions, écrites quand Marie-Antoinette était encore une enfant en Autriche. Une brioche qui a beaucoup voyagé.",
+          "source": {
+            "title": "Britannica — Did Marie-Antoinette really say “Let them eat cake”?",
+            "url": "https://www.britannica.com/story/did-marie-antoinette-really-say-let-them-eat-cake"
           }
         }
       ],

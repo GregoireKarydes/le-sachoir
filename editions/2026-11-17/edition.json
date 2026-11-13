@@ -14,6 +14,7 @@
           "type": "order",
           "by": "chrono",
           "q": "Du plus ancien au plus récent",
+          "hint": "La guillotine a servi bien plus tard qu’on ne croit.",
           "items": [
             {
               "name": "Dernière exécution à la guillotine en France",
@@ -42,6 +43,7 @@
           "type": "order",
           "by": "chrono",
           "q": "Du plus ancien au plus récent",
+          "hint": "Les peintures des grottes battent tout le monde, de loin.",
           "items": [
             {
               "name": "Invention de l’écriture à Sumer",
@@ -74,6 +76,7 @@
           "type": "order",
           "by": "chrono",
           "q": "Du plus ancien au plus récent",
+          "hint": "Nintendo a commencé bien avant les jeux vidéo.",
           "items": [
             {
               "name": "Premier Tour de France",
