@@ -130,7 +130,13 @@
           "title": "Le vrai Voltaire, vers 30 ans",
           "text": "François-Marie Arouet, dit Voltaire (1694-1778), peint par Nicolas de Largillière vers 1724. Il deviendra l’écrivain le plus célèbre d’Europe… et l’un des plus surveillés.",
           "photo": {
-            "commons": "File:Nicolas de Largillière, François-Marie Arouet dit Voltaire (vers 1724-1725) -001.jpg"
+            "commons": "File:Nicolas de Largillière, François-Marie Arouet dit Voltaire (vers 1724-1725) -001.jpg",
+            "credit": "Nicolas de Largillière",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Nicolas_de_Largilli%C3%A8re,_Fran%C3%A7ois-Marie_Arouet_dit_Voltaire_(vers_1724-1725)_-001.jpg",
+            "file": "images/photo-3-nicolas-de-largilli-re-fran-ois-mar.webp",
+            "status": "done"
           }
         },
         {
@@ -296,7 +302,13 @@
           "title": "Une lecture chez Madame Geoffrin",
           "text": "Peint en 1812 par Anicet Lemonnier, ce tableau imagine une lecture d’une pièce de Voltaire en 1755. Dans ces salons parisiens, on débat des idées nouvelles.",
           "photo": {
-            "commons": "File:A Reading in the Salon of Mme Geoffrin.jpg"
+            "commons": "File:A Reading in the Salon of Mme Geoffrin.jpg",
+            "credit": "Anicet Charles Gabriel Lemonnier",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:A_Reading_in_the_Salon_of_Mme_Geoffrin.jpg",
+            "file": "images/photo-10-a-reading-in-the-salon-of-mme-geoff.webp",
+            "status": "done"
           }
         },
         {
@@ -363,7 +375,13 @@
           "title": "La première page de l’Encyclopédie",
           "text": "Le titre complet : « Encyclopédie, ou Dictionnaire raisonné des sciences, des arts et des métiers ». Le premier volume paraît le 1er juillet 1751.",
           "photo": {
-            "commons": "File:Encyclopedie de D'Alembert et Diderot - Premiere Page - ENC 1-NA5.jpg"
+            "commons": "File:Encyclopedie de D'Alembert et Diderot - Premiere Page - ENC 1-NA5.jpg",
+            "credit": "Long List of Contributors to the Encyclopédie",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Encyclopedie_de_D%27Alembert_et_Diderot_-_Premiere_Page_-_ENC_1-NA5.jpg",
+            "file": "images/photo-13-encyclopedie-de-d-alembert-et-dider.webp",
+            "status": "done"
           }
         },
         {
