@@ -438,6 +438,84 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .notif .nh{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:1px}
 .notif b{display:block}
 .sheet .notif{margin:2px 0}
+/* ---------- Listes d'histoires (Découvrir, Favoris) ---------- */
+.blk{display:flex;flex-direction:column;gap:10px}
+.bh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.bh h2{font-family:var(--f-serif);font-weight:800;font-size:21px;line-height:1.1;margin:0}
+.bh .linkbtn{font-weight:700;color:var(--ink);font-size:14px;align-self:baseline}
+.search .clr{border:0;background:var(--grey);border-radius:50%;width:26px;height:26px;font-size:12px;display:grid;place-items:center;padding:0}
+.hscroll{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 18px;margin:0 -18px;padding:2px 18px 10px;scrollbar-width:none}
+.hscroll::-webkit-scrollbar{display:none}
+.scard{flex:0 0 152px;scroll-snap-align:start;border:0;background:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:5px}
+.scard .cv,.fcard .cv{position:relative;display:block;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:2.5px solid var(--ink);box-shadow:3px 3px 0 var(--ink);background:#fff}
+.scard .cv img,.fcard .cv img,.srow .th img{width:100%;height:100%;object-fit:cover;display:block}
+.cv .ph,.srow .th .ph{width:100%;height:100%;display:grid;place-items:center;font-size:34px}
+.scard b,.fcard b{font-family:var(--f-serif);font-weight:800;font-size:15.5px;line-height:1.15;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.scard small,.fcard small{color:var(--muted);font-size:12.5px}
+.scard .done{position:absolute;left:6px;bottom:6px;background:#fff;border-radius:999px;padding:2px 8px;font-size:11.5px;font-weight:800;color:var(--green-d)}
+.fm{align-self:flex-start;border-radius:6px;padding:2px 7px;font-size:11px;font-weight:800;letter-spacing:.3px;text-transform:uppercase;background:var(--grey)}
+.fm.f-dossier{background:#dff0e6;color:var(--green-d)}.fm.f-cultureg{background:#fdebd2;color:#8a4a06}.fm.f-insolite{background:#fbe2df;color:#a8322a}.fm.f-actu{background:#e1e8f7;color:var(--navy)}
+.unis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.uni{border:0;border-radius:18px;padding:13px 14px;text-align:left;display:flex;flex-direction:column;gap:1px;background:#fff;box-shadow:inset 0 0 0 2px var(--c),0 3px 0 var(--c);position:relative;overflow:hidden}
+.uni::after{content:"";position:absolute;right:-22px;bottom:-22px;width:70px;height:70px;border-radius:50%;background:var(--c);opacity:.14}
+.uni .em{font-size:26px;line-height:1.2}
+.uni b{font-size:15.5px;line-height:1.15}
+.uni small{color:var(--muted);font-size:12.5px}
+.uni:active{transform:translateY(2px)}
+.fbar{display:flex;flex-direction:column;gap:8px}
+.chips.row1{flex-wrap:nowrap;overflow-x:auto;margin:0 -18px;padding:2px 18px 4px;scrollbar-width:none}
+.chips.row1::-webkit-scrollbar{display:none}
+.chips.row1 .chip{flex:0 0 auto;white-space:nowrap}
+.chips.sub.row1{margin-top:0}
+.chip.c-flt2{--c:var(--ink);font-size:14px;padding:5px 12px;border-width:1.5px;border-color:var(--line)}
+.chip.c-flt2[aria-pressed=true]{border-color:var(--ink)}
+.chip.c-all{--c:var(--ink)}
+.count{margin:0;font-size:13px;color:var(--muted);font-weight:500}
+.slist{display:flex;flex-direction:column;gap:10px}
+.srow{display:flex;gap:12px;align-items:stretch;border:0;border-radius:16px;background:#fff;padding:9px;text-align:left;width:100%;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.srow .th{flex:0 0 74px;height:96px;border-radius:11px;overflow:hidden;position:relative;background:var(--grey)}
+.srow .prog{position:absolute;left:6px;right:6px;bottom:6px;height:5px;border-radius:3px;background:rgba(255,255,255,.75);overflow:hidden}
+.srow .prog i{display:block;height:100%;background:var(--green)}
+.srow .bd{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;padding:2px 2px 2px 0}
+.srow .kick{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.srow .pl{font-size:12px;font-weight:700}
+.srow .tt{font-family:var(--f-serif);font-weight:800;font-size:16.5px;line-height:1.18;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.srow .mt{font-size:12.5px;color:var(--muted);margin-top:auto}
+.srow .mt b{color:var(--ink)}.srow .mt b.ok{color:var(--green-d)}
+.srow .dbadge{margin-top:0}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px}
+.fcard{position:relative}
+.fcard .go{border:0;background:none;padding:0;text-align:left;display:flex;flex-direction:column;gap:5px;width:100%}
+.fcard .unfav{position:absolute;top:8px;right:8px;width:36px;height:36px;border-radius:50%;border:0;background:#fff;display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.18);padding:0}
+.fcard .unfav svg{width:19px;height:19px;fill:var(--red)}
+.bigheart0{font-size:54px;line-height:1;color:var(--red)}
+.toast.act{pointer-events:auto}
+.toast .undo{border:0;background:var(--yellow);color:var(--ink);border-radius:999px;padding:3px 10px;font-weight:800;font-size:13px;margin-left:6px}
+/* ---------- Carte « compte » (remplace le mur d'inscription) ---------- */
+.nudge{display:flex;gap:10px;align-items:flex-start;background:#fff4d6;border:1.5px solid #f3d27a;border-radius:16px;padding:10px 10px 10px 12px;position:relative}
+.nudge .em{font-size:22px;line-height:1.1}
+.nudge .tx{flex:1;display:flex;flex-direction:column;gap:3px;padding-right:22px}
+.nudge b{font-size:14.5px;line-height:1.2}
+.nudge small{font-size:12.5px;color:#5f4a1a;line-height:1.3}
+.nudge .bt{display:flex;gap:6px;align-items:center;margin-top:5px;flex-wrap:wrap}
+.nudge .btn.sm{padding:6px 12px;font-size:13.5px}
+.nudge .linkbtn{color:#5f4a1a;font-size:13px}
+.nudge .nx{position:absolute;top:8px;right:8px;width:28px;height:28px;border:0;border-radius:50%;background:rgba(0,0,0,.06);display:grid;place-items:center;color:#5f4a1a;padding:0}
+/* ---------- Profil ---------- */
+.pbox{background:#fff;border-radius:20px;padding:14px 16px 16px;box-shadow:0 4px 14px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:10px}
+.pbox .bh h2{font-size:19px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.week span{display:flex;flex-direction:column;align-items:center;gap:3px;background:var(--grey);border-radius:12px;padding:6px 0 7px}
+.week small{font-size:11.5px;font-weight:700;color:var(--muted)}
+.week b{font-size:18px;line-height:1.2;min-height:22px;color:#b5ad9f}
+.week .on{background:#fff1cf}.week .today{box-shadow:inset 0 0 0 2px var(--ink)}.week .fut{opacity:.45}
+.nextlvl{display:flex;flex-direction:column;gap:5px}
+.nextlvl .bar{height:8px;border-radius:4px;background:rgba(0,0,0,.2);overflow:hidden}
+.nextlvl .bar i{display:block;height:100%;background:var(--yellow);border-radius:4px}
+.nextlvl small{font-size:12.5px;opacity:.9}
+.linkbtn.light{color:#fff;font-family:var(--f-sans);font-size:18px;padding:0}
+.pmenus{display:flex;flex-direction:column;gap:8px}
+.mh{margin:6px 4px 0;font-size:12px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
 .sheet .pask h2,.sheet .pask p{text-align:left}
 .sheet .pask .onb-art{font-size:58px;text-align:left}
 
@@ -643,7 +721,45 @@ body{overscroll-behavior-y:none}
 .ab-foot{padding:24px 0 8px;color:var(--muted);font-size:14px}
 .ab-foot a{color:inherit}
 @media (max-width:1100px){.ab-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:899px){#v-about{display:none!important}}
+/* « Le concept » sur téléphone : une colonne, tailles réduites */
+.ab-mob{display:none}
+.ab-today{position:sticky;top:0;z-index:4;display:flex;align-items:center;gap:12px;width:100%;border:0;text-align:left;background:var(--ink);color:#fff;border-radius:16px;padding:11px 14px;box-shadow:0 8px 20px rgba(23,20,15,.18);margin-top:4px}
+.ab-today .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.ab-today b{font-size:15px;line-height:1.2}
+.ab-today small{font-size:12.5px;opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ab-today .go{background:var(--yellow);color:var(--ink);border-radius:999px;padding:7px 13px;font-weight:800;font-size:14px;white-space:nowrap}
+.ab-dot{flex:0 0 10px;height:10px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.25);animation:abp 1.8s ease-in-out infinite}
+@keyframes abp{50%{box-shadow:0 0 0 8px rgba(74,222,128,0)}}
+@media (max-width:899px){
+  #v-about{gap:0;padding-top:4px}
+  .ab-mob{display:block}.ab-desk{display:none!important}
+  .ab-hero{grid-template-columns:1fr;gap:18px;padding:20px 0 30px}
+  .ab-hero h1{font-size:31px!important;line-height:1.08}
+  .ab-lead{font-size:16.5px;margin:14px 0 18px}
+  .ab-ctas{flex-direction:column}.ab-ctas .ab-btn{width:100%}
+  .ab-eyebrow{margin-bottom:12px}.ab-eyebrow span{font-size:12px;padding:4px 10px}
+  .ab-visual{height:300px;margin:0 6px}
+  .ab-c{height:96px;width:88%;border-width:2.5px;box-shadow:5px 5px 0 var(--ink)}
+  .ab-c span{font-size:16px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.ab-c b{font-size:10px}.ab-c .tx{padding:10px 12px;gap:5px}
+  .ab-c img{flex-basis:96px;width:96px}
+  .ab-c.c2{top:104px;left:10%}.ab-c.c3{top:202px}
+  .ab-stamp{font-size:19px;right:0;top:-10px}
+  .ab-sec{padding:28px 0}
+  .ab-sec h2{font-size:27px}
+  .ab-sub{font-size:15.5px;margin-bottom:16px}
+  .ab-menu,.ab-why,.ab-plans,.ab-faq{grid-template-columns:1fr;gap:12px}
+  .ab-f{padding:16px}.ab-f h3{font-size:21px}
+  .ab-why{gap:18px}.ab-why h3{font-size:20px}
+  .ab-latest{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 18px;gap:12px;margin:0 -18px;padding:2px 18px 10px;scrollbar-width:none}
+  .ab-latest::-webkit-scrollbar{display:none}
+  .ab-story{flex:0 0 78%;scroll-snap-align:start}
+  .ab-pocket{flex-direction:column;align-items:stretch;gap:12px}
+  .ab-pocket .ab-btn{width:100%}
+  .ab-plan .ab-btn{align-self:stretch}
+  .ab-end{padding:30px 20px;border-radius:22px}.ab-end p{font-size:25px}.ab-end .ab-btn{width:100%}
+  .ab-brille .ccard{transform:none}
+}
+@media (min-width:900px){.ab-today{max-width:720px;margin:0 auto 8px;top:8px}}
 /* ---------- Expérience PC (≥ 900 px) ---------- */
 @media (min-width:900px){
   .phone{max-width:none;box-shadow:none}
@@ -689,12 +805,21 @@ body{overscroll-behavior-y:none}
   .card{transition:transform .15s,box-shadow .15s}
   .card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(23,20,15,.18)}
   .card.small{min-height:150px}
-  #v-explore .alist,#v-favs .alist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  #v-explore .slist,#v-favs .slist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .hscroll{margin:0;padding:2px 2px 12px}
+  .scard{flex-basis:178px}
+  .unis{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .chips.row1{flex-wrap:wrap;margin:0;padding:0}
+  .fgrid{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px 16px}
+  .srow:hover,.uni:hover{box-shadow:0 6px 16px rgba(0,0,0,.1)}
+  .scard:hover .cv,.fcard .go:hover .cv{transform:translateY(-3px)}
+  .cv{transition:transform .15s}
+  .nudge{max-width:760px}
   .aitem:hover{box-shadow:0 6px 16px rgba(0,0,0,.1)}
   #v-profile.on{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
   #v-profile > .row{grid-column:1/-1}
-  #v-profile > .pcard,#v-profile > .tiles{grid-column:1}
-  #v-profile > .menu{grid-column:2;grid-row:2 / span 2}
+  #v-profile > .nudge,#v-profile > .pcard,#v-profile > .tiles,#v-profile > .pbox{grid-column:1}
+  #v-profile > .pmenus{grid-column:2;grid-row:2 / span 6}
   .banner{max-width:640px}
   /* Lecteur : la BD en planche */
   .reader{background:#1d1915}
@@ -774,6 +899,7 @@ body{overscroll-behavior-y:none}
     <div class="main" id="main">
       <div class="logo"><button class="installmini" id="installMini" hidden aria-label="Installer Le Sachoir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/></svg>Installer</button><img src="assets/logo.png" alt="Le Sachoir"><button class="streakmini" id="streakMini"></button></div>
       <section class="view" id="v-about" aria-labelledby="abH1">
+        <button class="ab-today" id="abToday" data-go="home"><span class="ab-dot"></span><span class="tx"><b id="abTodayT">L’édition du jour est servie</b><small id="abTodayS">Actu, Culture G, Insolite, Grand Dossier et le jeu</small></span><span class="go">Lire →</span></button>
         <div class="ab-hero">
           <div class="ab-copy">
             <p class="ab-eyebrow"><span>Gratuit chaque jour</span><span>Sans pub</span><span>Newsletter du matin</span></p>
@@ -824,9 +950,10 @@ body{overscroll-behavior-y:none}
 
         <div class="ab-sec ab-pocket">
           <div><h2>Le Sachoir se lit dans la poche</h2>
-            <p class="ab-sub">Visez ce code avec l’appareil photo de votre téléphone, ouvrez le lien, ajoutez Le Sachoir à l’écran d’accueil. Trois gestes, pas de store, pas de mot de passe à oublier.</p>
+            <p class="ab-sub ab-mob">Ajoutez Le Sachoir à l’écran d’accueil : il s’ouvre comme une appli, hors ligne compris. Trois gestes, pas de store, pas de mot de passe à oublier.</p>
+            <p class="ab-sub ab-desk">Visez ce code avec l’appareil photo de votre téléphone, ouvrez le lien, ajoutez Le Sachoir à l’écran d’accueil. Trois gestes, pas de store, pas de mot de passe à oublier.</p>
             <button class="ab-btn ghost" data-go="install">Voir les 3 gestes</button></div>
-          <img src="assets/qr-install.png" alt="QR code pour ouvrir Le Sachoir sur votre téléphone" width="190" height="190" loading="lazy">
+          <img class="ab-desk" src="assets/qr-install.png" alt="QR code pour ouvrir Le Sachoir sur votre téléphone" width="190" height="190" loading="lazy">
         </div>
 
         <div class="ab-sec">
@@ -1055,21 +1182,31 @@ function renderNav() {
     ["profile", "Profil", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/></svg>`]];
   const btn = t => `<button data-tab="${t[0]}" ${TAB === t[0] ? 'aria-current="page"' : ""}>${t[2]}${t[1]}</button>`;
   const about = ["about", "Le concept", `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>`];
-  setHTML($("#nav"), tabs.map(btn).join(""));
-  setHTML($("#navTop"), [about, ...tabs].map(btn).join(""));
+  const mob = ["about", "Concept", about[2]];
+  setHTML($("#nav"), (SHOW_ABOUT() ? [mob, ...tabs] : tabs).map(btn).join(""));
+  setHTML($("#navTop"), (SHOW_ABOUT() ? [about, ...tabs] : tabs).map(btn).join(""));
   ["#nav", "#navTop"].forEach(id => $(id).querySelectorAll("button").forEach(b => b.onclick = () => setTab(b.dataset.tab)));
   const s = streak();
   const canInstall = !ME.installDone && !matchMedia("(display-mode: standalone)").matches;
   ["#installMini", "#installTop"].forEach(id => { const b = $(id); b.hidden = !canInstall; b.onclick = openInstall; });
   ["#streakMini", "#streakTop"].forEach(id => { $(id).innerHTML = `<span class="fl">🔥</span>${s}`; $(id).setAttribute("aria-label", `Série de ${s} jours`); });
 }
-function setTab(t) { if (t === "about" && !DESK.matches) t = "home"; TAB = t; document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + t)); $("#main").scrollTop = 0; render(); }
-function render() { if (TAB === "about" && !DESK.matches) return setTab("home"); renderNav(); ({ about: renderAbout, home: renderHome, explore: renderExplore, favs: renderFavs, profile: renderProfile })[TAB](); }
+// La page « Le concept » explique l'objectif aux visiteurs sans compte ; une fois connecté, elle disparaît.
+const SHOW_ABOUT = () => !ACC;
+function setTab(t) { if (t === "about" && !SHOW_ABOUT()) t = "home"; TAB = t; document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + t)); $("#main").scrollTop = 0; render(); }
+function render() { if (TAB === "about" && !SHOW_ABOUT()) return setTab("home"); renderNav(); ({ about: renderAbout, home: renderHome, explore: renderExplore, favs: renderFavs, profile: renderProfile })[TAB](); }
 DESK.addEventListener("change", () => { if (!DESK.matches && TAB === "about") setTab("home"); else render(); });
 
 /* ---------- Le concept (page de présentation, PC) ---------- */
 function renderAbout() {
   const v = $("#v-about");
+  // Bandeau du haut : l'édition du jour (ou la dernière publiée), à un toucher.
+  const e = INDEX.find(x => x.date === TODAY) || INDEX.find(x => x.date <= TODAY);
+  if (e) {
+    const titles = e.formats.filter(f => f.id !== "quiz").map(f => f.title).filter(Boolean);
+    $("#abTodayT").textContent = e.date === TODAY ? `L’édition du ${new Date(TODAY + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" })} est servie` : "La dernière édition vous attend";
+    $("#abTodayS").textContent = titles.length ? `Au menu : ${titles.slice(0, 2).join(" · ")}${titles.length > 2 ? "…" : ""}` : "Actu, Culture G, Insolite, Grand Dossier et le jeu";
+  }
   v.querySelectorAll("[data-go]").forEach(b => b.onclick = () => { const g = b.dataset.go; if (g === "install") openInstall(); else if (g === "newsletter") openNewsletter(); else if (g === "premium") openPremium(); else setTab(g); });
   const stories = [];
   INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu" && f.id !== "quiz") stories.push({ ...f, date: e.date }); }));
@@ -2218,7 +2355,7 @@ async function finishLogin(d) {
   applyState(d.state); if (d.user.newsletter) { ME.nl = true; saveLocal(); }
   if (d.wallet) WALLET = d.wallet;
   pushRefresh(true);
-  closeSheet(); render();
+  closeSheet(); if (TAB === "about") TAB = "home"; setTab(TAB);
   const plan = sessionStorage.getItem("sachoir.plan");
   if (plan && !d.user.premium) { sessionStorage.removeItem("sachoir.plan"); setTimeout(() => openPremium("dossier"), 600); }
   toast(d.created ? "Compte créé. Votre série est à l’abri." : `Re-bonjour${d.user.name ? ", " + d.user.name : ""} ! Données synchronisées.`);
@@ -2297,105 +2434,178 @@ function openNewsletter(gift) {
 
 /* ---------- Inscription d'abord (Profil, Favoris, Découvrir) ----------
    Sans compte, ces pages proposent d'abord de s'inscrire (gratuit, sans mot de passe) ; « Continuer sans compte » reste possible. */
-const GATE = {
-  profile: ["Votre profil vous attend", "Créez votre compte gratuit pour garder votre série, vos dossiers dévorés et vos paliers, même si vous changez de téléphone."],
-  favs: ["Gardez vos histoires préférées", "Avec un compte gratuit, vos favoris vous suivent sur tous vos appareils. Fini les captures d’écran oubliées."],
-  explore: ["Toutes les histoires, par thème", "Créez votre compte gratuit pour explorer, retrouver ce que vous avez lu et débloquer des Grands Dossiers offerts."],
+/* ---------- Compte : encouragé, jamais imposé ----------
+   Plus de mur « créez un compte » devant Découvrir, Favoris et Profil : une carte en tête de page,
+   qu'on peut fermer (elle revient à la session suivante). */
+const NUDGE = {
+  profile: ["🔥", "Votre série tient à un fil (de téléphone)", "Un compte gratuit la garde à l’abri, avec vos dossiers et vos paliers, sur tous vos appareils."],
+  favs: ["❤️", "Vos favoris méritent un coffre-fort", "Avec un compte gratuit, ils vous suivent partout. Fini les captures d’écran perdues dans la galerie."],
+  explore: ["🎁", "Un Grand Dossier offert vous attend", "Créez votre compte gratuit et abonnez-vous à la newsletter : le dossier de votre choix, en entier."],
 };
-function signupGate(v, page) {
-  if (ACC || !MAIL()) return false;
-  try { if (sessionStorage.getItem("sachoir.skip." + page)) return false; } catch (e) {}
-  const [t, sub] = GATE[page];
-  v.innerHTML = `<h1 class="h1">${page === "profile" ? "Mon Profil" : page === "favs" ? "Favoris" : "Découvrir"}</h1><div class="lockcard"><span class="big">${page === "profile" ? "🔥" : page === "favs" ? "♥" : "🧭"}</span><h2>${esc(t)}</h2><p class="sub">${esc(sub)}</p>
-    <ul class="perks" style="text-align:left;align-self:stretch"><li>✉️ Pas de mot de passe : un code par e-mail</li><li>🎁 Un Grand Dossier offert avec la newsletter</li><li>📱 Vos données sur tous vos appareils</li></ul>
-    <button class="cta" id="gtGo">Créer mon compte gratuit</button><button class="btn ghost" id="gtIn" style="align-self:stretch">J’ai déjà un compte</button><button class="linkbtn" id="gtSkip">Continuer sans compte</button></div>`;
-  // Les boutons sont cherchés dans cette page : la même carte peut rester dans un autre onglet caché, avec les mêmes id.
-  v.querySelector("#gtGo").onclick = () => openAccount(); v.querySelector("#gtIn").onclick = () => openAccount();
-  v.querySelector("#gtSkip").onclick = () => { try { sessionStorage.setItem("sachoir.skip." + page, "1"); } catch (e) {} render(); };
-  return true;
+function nudgeHTML(page) {
+  if (ACC || !MAIL()) return "";
+  try { if (sessionStorage.getItem("sachoir.nudge." + page)) return ""; } catch (e) {}
+  const [em, t, sub] = NUDGE[page];
+  return `<div class="nudge" data-nudge="${page}"><span class="em">${em}</span><div class="tx"><b>${esc(t)}</b><small>${esc(sub)}</small><div class="bt"><button class="btn sm" data-acc>Créer mon compte</button><button class="linkbtn" data-acc>J’ai déjà un compte</button></div></div><button class="nx" data-nx aria-label="Masquer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>`;
+}
+function wireNudge(v) {
+  v.querySelectorAll("[data-acc]").forEach(b => b.onclick = () => openAccount());
+  v.querySelectorAll("[data-nx]").forEach(b => b.onclick = () => { const k = b.closest(".nudge").dataset.nudge; try { sessionStorage.setItem("sachoir.nudge." + k, "1"); } catch (e) {} b.closest(".nudge").remove(); });
 }
 
-/* ---------- Découvrir ---------- */
-let EX ={ pole: null, theme: null, q: "", search: false };
+/* ---------- Histoires : données communes aux listes ---------- */
 function allStories() {
   const out = [];
   INDEX.forEach(e => e.formats.forEach(f => { if (f.id !== "actu" && f.id !== "quiz") out.push({ ...f, theme: themeName(f.theme), date: e.date, demo: e.demo }); }));
   return out;
 }
-/* Les filtres sont construits à partir des histoires publiées : un pôle ou une thématique
-   n'apparaît que s'il a au moins une histoire, avec son nombre d'histoires. */
-function renderExplore() {
-  const v = $("#v-explore"), q = EX.q.toLowerCase();
-  if (signupGate(v, "explore")) return;
-  // Découvrir est ouvert à tous : le catalogue complet donne envie ; une histoire réservée ouvre l’offre Premium au toucher.
-  const all = allStories();
-  const byQ = all.filter(s => !q || (s.title + " " + s.theme + " " + (s.tagline || "")).toLowerCase().includes(q));
-  const poles = POLES.map(p => ({ p, n: byQ.filter(s => poleOf(s.theme) === p).length })).filter(x => x.n);
-  const other = byQ.filter(s => !poleOf(s.theme)).length;
-  if (EX.pole && EX.pole !== "other" && !poles.some(x => x.p.id === EX.pole)) { EX.pole = null; EX.theme = null; }
-  if (EX.pole === "other" && !other) EX.pole = null;
-  const cur = POLES.find(p => p.id === EX.pole);
-  const themes = cur ? cur.themes.map(th => ({ th, n: byQ.filter(s => s.theme === th).length })).filter(x => x.n) : [];
-  if (EX.theme && !themes.some(x => x.th === EX.theme)) EX.theme = null;
-  const res = byQ.filter(s => !EX.pole || (EX.pole === "other" ? !poleOf(s.theme) : poleOf(s.theme)?.id === EX.pole))
-                 .filter(s => !EX.theme || s.theme === EX.theme);
-  const n = k => `<span class="cnt">${k}</span>`;
-  v.innerHTML = `<div class="row" style="align-items:flex-start"><div><h1 class="h1">Découvrir</h1><p class="lead">Explorez nos dossiers (pour briller en société sans trop d’efforts)</p></div>
-     <button class="iconbtn" id="exS" aria-label="Rechercher"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg></button></div>
-   ${EX.search ? `<label class="search" for="exQ"><input id="exQ" type="search" placeholder="Napoléon, krach, quantique…" value="${esc(EX.q)}" aria-label="Rechercher"></label>` : ""}
-   ${poles.length + (other ? 1 : 0) > 1 || EX.pole ? `<div class="chips" role="group" aria-label="Filtrer par pôle"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tout ${n(byQ.length)}</button>${poles.map(({ p, n: k }) => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name} ${n(k)}</button>`).join("")}${other ? `<button class="chip c-all" data-p="other" aria-pressed="${EX.pole === "other"}">Autres ${n(other)}</button>` : ""}</div>` : ""}
-   ${themes.length > 1 ? `<div class="chips sub" role="group" aria-label="Filtrer par thématique"><button class="chip c-${cur.id}" data-t="" aria-pressed="${!EX.theme}">Toutes</button>${themes.map(({ th, n: k }) => `<button class="chip c-${cur.id}" data-t="${esc(th)}" aria-pressed="${EX.theme === th}">${esc(th)} ${n(k)}</button>`).join("")}</div>` : ""}
-   <div class="alist">${res.map(s => `<button class="aitem" data-d="${s.date}" data-f="${s.id}"><i style="background:${poleOf(s.theme)?.color || COLOR[s.id]}"></i><span class="tt">${esc(s.title)}<span class="th">${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""} · ${s.minutes || 2} min</span>${storyBadge(s)}</span><span class="d">${new Date(s.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</span></button>`).join("")}</div>
-   ${res.length ? "" : `<p class="empty">Aucune histoire ne correspond. Les archives grandissent chaque jour.</p>`}`;
-  $("#exS").onclick = () => { EX.search = !EX.search; renderExplore(); const i = $("#exQ"); if (i) i.focus(); };
-  v.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { EX.pole = b.dataset.p || null; EX.theme = null; renderExplore(); });
-  v.querySelectorAll("[data-t]").forEach(b => b.onclick = () => { EX.theme = b.dataset.t || null; renderExplore(); });
-  v.querySelectorAll("[data-d]").forEach(b => b.onclick = async () => { try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); } catch (e) { toast("Indisponible hors ligne"); } });
-  const inp = $("#exQ"); if (inp) inp.oninput = () => { EX.q = inp.value; const p = inp.selectionStart; renderExplore(); const n = $("#exQ"); n.focus(); n.setSelectionRange(p, p); };
+const storyOf = (date, fid) => { const e = INDEX.find(x => x.date === date), f = e?.formats.find(x => x.id === fid); return f ? { ...f, theme: themeName(f.theme), date } : null; };
+const coverSrc = s => s?.cover ? `editions/${s.date}/${s.cover}` : "";
+const FMT = { dossier: ["Grand Dossier", "📚"], cultureg: ["Culture G", "💊"], insolite: ["Insolite", "🤯"], actu: ["L’Actu", "📰"] };
+const dShort = d => new Date(d + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
+// État de lecture d'une histoire, d'après le nombre de cases publié dans l'index.
+function readInfo(s) {
+  const r = ME.reads.find(x => x.date === s.date && x.fid === s.id);
+  if (!r || r.max < 1) return null;
+  if (s.id === "dossier" && ME.dossiers.includes(s.date)) return { done: true, label: "Dévoré ✓" };
+  if (s.cases && r.max >= s.cases) return { done: true, label: "Lu ✓" };
+  return { done: false, label: s.cases ? `Case ${r.max} / ${s.cases}` : "Commencé", pct: s.cases ? Math.round(100 * r.max / s.cases) : 30 };
+}
+const thumb = s => coverSrc(s) ? `<img src="${coverSrc(s)}" alt="" loading="lazy">` : `<span class="ph" style="background:${COLOR[s.id] || "#1f8f5f"}">${FMT[s.id]?.[1] || "📖"}</span>`;
+function storyRow(s) {
+  const ri = readInfo(s), pole = poleOf(s.theme);
+  return `<button class="srow" data-d="${s.date}" data-f="${s.id}"><span class="th">${thumb(s)}${ri && !ri.done ? `<i class="prog"><i style="width:${ri.pct}%"></i></i>` : ""}</span>
+    <span class="bd"><span class="kick"><span class="fm f-${s.id}">${FMT[s.id]?.[0] || esc(s.label)}</span>${s.theme ? `<span class="pl" style="color:${pole?.color || "var(--muted)"}">${esc(s.theme)}</span>` : ""}</span>
+    <span class="tt">${esc(s.title)}</span>
+    <span class="mt">${s.minutes || 2} min · ${dShort(s.date)}${ri ? ` · <b class="${ri.done ? "ok" : ""}">${ri.label}</b>` : ""}</span>${storyBadge(s)}</span></button>`;
+}
+function storyCard(s) {
+  const ri = readInfo(s);
+  return `<button class="scard" data-d="${s.date}" data-f="${s.id}"><span class="cv">${thumb(s)}${ri?.done ? `<span class="done">${ri.label}</span>` : ""}</span><span class="fm f-${s.id}">${FMT[s.id]?.[0] || ""}</span><b>${esc(s.title)}</b><small>${s.minutes || 2} min${s.theme ? " · " + esc(s.theme) : ""}</small></button>`;
+}
+function wireStories(v) {
+  v.querySelectorAll("[data-d][data-f]").forEach(b => b.onclick = async () => { try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); } catch (e) { toast("Indisponible hors ligne"); } });
 }
 
-/* ---------- Favoris ---------- */
+/* ---------- Découvrir ----------
+   Recherche toujours visible ; sans filtre : les Grands Dossiers à la une et les six univers en tuiles ;
+   puis le format, l'univers et la thématique (filtres dynamiques : seuls ceux qui ont des histoires s'affichent). */
+let EX = { pole: null, theme: null, q: "", fmt: "", unread: false };
+function renderExplore() {
+  const v = $("#v-explore"), q = EX.q.trim().toLowerCase();
+  const all = allStories();
+  const byQ = all.filter(s => !q || (s.title + " " + s.theme + " " + (s.tagline || "") + " " + s.label).toLowerCase().includes(q));
+  const byF = byQ.filter(s => (!EX.fmt || s.id === EX.fmt) && (!EX.unread || !readInfo(s)?.done));
+  const poles = POLES.map(p => ({ p, n: byF.filter(s => poleOf(s.theme) === p).length })).filter(x => x.n);
+  if (EX.pole && EX.pole !== "other" && !poles.some(x => x.p.id === EX.pole)) { EX.pole = null; EX.theme = null; }
+  const cur = POLES.find(p => p.id === EX.pole);
+  const themes = cur ? cur.themes.map(th => ({ th, n: byF.filter(s => s.theme === th).length })).filter(x => x.n) : [];
+  if (EX.theme && !themes.some(x => x.th === EX.theme)) EX.theme = null;
+  const res = byF.filter(s => !EX.pole || (EX.pole === "other" ? !poleOf(s.theme) : poleOf(s.theme)?.id === EX.pole)).filter(s => !EX.theme || s.theme === EX.theme);
+  const browsing = !q && !EX.pole && !EX.fmt && !EX.unread;
+  const dossiers = all.filter(s => s.id === "dossier").slice(0, 10);
+  const fmts = [["", "Tout"], ["dossier", "📚 Grands Dossiers"], ["cultureg", "💊 Culture G"], ["insolite", "🤯 Insolite"]].filter(([id]) => !id || byQ.some(s => s.id === id));
+  const n = k => `<span class="cnt">${k}</span>`;
+  v.innerHTML = `<div><h1 class="h1">Découvrir</h1><p class="lead">${all.length} histoires pour briller en société sans trop d’efforts.</p></div>
+   <label class="search" for="exQ"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#5f5a52" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg><input id="exQ" type="search" placeholder="Napoléon, krach, quantique…" value="${esc(EX.q)}" aria-label="Rechercher une histoire" enterkeyhint="search">${EX.q ? `<button class="clr" id="exClr" aria-label="Effacer">✕</button>` : ""}</label>
+   ${browsing && dossiers.length ? `<section class="blk"><div class="bh"><h2>À la une : les Grands Dossiers</h2><button class="linkbtn" data-fmt="dossier">Tout voir</button></div><div class="hscroll">${dossiers.map(storyCard).join("")}</div></section>` : ""}
+   ${browsing && poles.length > 1 ? `<section class="blk"><div class="bh"><h2>Par univers</h2></div><div class="unis">${poles.map(({ p, n: k }) => `<button class="uni" data-p="${p.id}" style="--c:${p.color}"><span class="em">${p.em}</span><b>${p.name}</b><small>${k} histoire${k > 1 ? "s" : ""}</small></button>`).join("")}</div></section>` : ""}
+   ${browsing ? nudgeHTML("explore") : ""}
+   <section class="blk"><div class="bh"><h2>${browsing ? "Toutes les histoires" : q ? `Résultats pour « ${esc(EX.q.trim())} »` : "Votre sélection"}</h2>${!browsing ? `<button class="linkbtn" id="exReset">Tout effacer</button>` : ""}</div>
+   <div class="fbar"><div class="chips row1" role="group" aria-label="Format">${fmts.map(([id, l]) => `<button class="chip c-flt2" data-fmt="${id}" aria-pressed="${EX.fmt === id}">${l}</button>`).join("")}<button class="chip c-flt2" id="exUnread" aria-pressed="${EX.unread}">👀 Pas encore lu</button></div>
+   ${!browsing && (poles.length > 1 || EX.pole) ? `<div class="chips row1" role="group" aria-label="Univers"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tous ${n(byF.length)}</button>${poles.map(({ p, n: k }) => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name} ${n(k)}</button>`).join("")}</div>` : ""}
+   ${themes.length > 1 ? `<div class="chips row1 sub" role="group" aria-label="Thématique"><button class="chip c-${cur.id}" data-t="" aria-pressed="${!EX.theme}">Toutes</button>${themes.map(({ th, n: k }) => `<button class="chip c-${cur.id}" data-t="${esc(th)}" aria-pressed="${EX.theme === th}">${esc(th)} ${n(k)}</button>`).join("")}</div>` : ""}</div>
+   <p class="count">${res.length} histoire${res.length > 1 ? "s" : ""}</p>
+   <div class="slist">${res.map(storyRow).join("")}</div>
+   ${res.length ? "" : `<div class="empty-state"><span style="font-size:42px">🔍</span><h2>Rien trouvé</h2><p class="sub">${EX.unread ? "Vous avez tout lu dans cette sélection. Respect." : "Même Wikipédia sèche parfois. Essayez un autre mot."}</p></div>`}</section>`;
+  const inp = $("#exQ");
+  inp.oninput = () => { EX.q = inp.value; const p = inp.selectionStart; renderExplore(); const n2 = $("#exQ"); n2.focus(); n2.setSelectionRange(p, p); };
+  if ($("#exClr")) $("#exClr").onclick = e => { e.preventDefault(); EX.q = ""; renderExplore(); };
+  if ($("#exReset")) $("#exReset").onclick = () => { EX = { pole: null, theme: null, q: "", fmt: "", unread: false }; renderExplore(); };
+  v.querySelectorAll("[data-fmt]").forEach(b => b.onclick = () => { EX.fmt = b.dataset.fmt; renderExplore(); });
+  $("#exUnread").onclick = () => { EX.unread = !EX.unread; renderExplore(); };
+  v.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { EX.pole = b.dataset.p || null; EX.theme = null; renderExplore(); if (b.classList.contains("uni")) v.querySelector(".fbar")?.scrollIntoView({ block: "start", behavior: "smooth" }); });
+  v.querySelectorAll("[data-t]").forEach(b => b.onclick = () => { EX.theme = b.dataset.t || null; renderExplore(); });
+  wireStories(v); wireNudge(v);
+}
+
+/* ---------- Favoris ----------
+   Les favoris en cartes (couverture, format, date), un cœur pour retirer avec « Annuler », puis l'historique :
+   ce qu'on a commencé sans finir d'abord, ensuite ce qu'on a déjà lu. */
 function renderFavs() {
   const v = $("#v-favs");
-  if (signupGate(v, "favs")) return;
   if (!canFav()) { v.innerHTML = `<h1 class="h1">Favoris</h1><div class="lockcard"><span class="big">⭐</span><h2>Réservé aux abonnés Premium</h2><p class="sub">Gardez vos histoires préférées et retrouvez-les sur tous vos appareils.</p><button class="cta" id="lkGo">Découvrir Premium</button></div>`; $("#lkGo").onclick = () => openPremium("favs"); return; }
-  v.innerHTML = `<h1 class="h1">Favoris</h1><p class="lead">Vos histoires préférées, toujours sous la main.</p>
-   ${ME.favs.length ? `<div class="alist">${ME.favs.slice().reverse().map(x => `<button class="aitem" data-d="${x.date}" data-f="${x.fid}" data-t="${x.type}"><i style="background:${COLOR[x.fid] || "#1f8f5f"}"></i><span class="tt">${esc(x.title)}<span class="th">${esc(x.label)}</span>${x.fid === "dossier" ? dossierBadge(x.date) : ""}</span></button>`).join("")}</div>`
-    : `<p class="empty">Touchez ♡ en bas de l’écran pendant une lecture pour garder une histoire.</p>`}`;
-  v.querySelectorAll("[data-d]").forEach(b => b.onclick = async () => {
-    try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); }
-    catch (e) { toast("Indisponible hors ligne"); }
+  const favs = ME.favs.slice().reverse().map(x => ({ x, s: storyOf(x.date, x.fid) || { id: x.fid, date: x.date, title: x.title, label: x.label } }));
+  const seen = new Set(), hist = [];
+  for (const r of ME.reads.slice().reverse()) { const k = r.date + "|" + r.fid; if (seen.has(k) || r.fid === "quiz") continue; seen.add(k); const s = storyOf(r.date, r.fid); if (s) hist.push(s); }
+  const doing = hist.filter(s => !readInfo(s)?.done).slice(0, 10), done = hist.filter(s => readInfo(s)?.done).slice(0, 12);
+  v.innerHTML = `<div><h1 class="h1">Favoris</h1><p class="lead">${favs.length ? `${favs.length} histoire${favs.length > 1 ? "s" : ""} gardée${favs.length > 1 ? "s" : ""} précieusement.` : "Vos histoires préférées, toujours sous la main."}</p></div>
+   ${nudgeHTML("favs")}
+   ${favs.length ? `<div class="fgrid">${favs.map(({ x, s }) => `<div class="fcard"><button class="go" data-d="${x.date}" data-f="${x.fid}"><span class="cv">${thumb(s)}</span><span class="fm f-${x.fid}">${FMT[x.fid]?.[0] || esc(x.label)}</span><b>${esc(s.title || x.title)}</b><small>${dShort(x.date)}${s.minutes ? ` · ${s.minutes} min` : ""}</small></button><button class="unfav" data-un="${x.date}|${x.fid}|${x.type}" aria-label="Retirer des favoris"><svg viewBox="0 0 24 24"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg></button></div>`).join("")}</div>`
+    : `<div class="empty-state"><span class="bigheart0">♡</span><h2>Aucun favori, pour l’instant</h2><p class="sub">Pendant une lecture, touchez ♥ ou double-touchez une case. L’histoire atterrit ici, au chaud.</p><button class="btn" id="fvGo">Trouver une histoire à aimer</button></div>`}
+   ${doing.length ? `<section class="blk"><div class="bh"><h2>À reprendre</h2></div><div class="slist">${doing.map(storyRow).join("")}</div></section>` : ""}
+   ${done.length ? `<section class="blk"><div class="bh"><h2>Déjà lu</h2><small class="sub">${done.length > 11 ? "Les 12 derniers" : ""}</small></div><div class="hscroll">${done.map(storyCard).join("")}</div></section>` : ""}`;
+  if ($("#fvGo")) $("#fvGo").onclick = () => setTab("explore");
+  v.querySelectorAll("[data-un]").forEach(b => b.onclick = () => {
+    const [date, fid, type] = b.dataset.un.split("|"), i = ME.favs.findIndex(x => x.date === date && x.fid === fid && x.type === type);
+    if (i < 0) return;
+    const [gone] = ME.favs.splice(i, 1); ME.favsOff = ME.favsOff || {}; ME.favsOff[b.dataset.un] = Date.now(); save(); renderFavs();
+    undoToast("Retiré des favoris. Il ne vous en voudra pas.", () => { delete ME.favsOff[b.dataset.un]; gone.t = Date.now(); ME.favs.push(gone); save(); renderFavs(); });
   });
+  wireStories(v); wireNudge(v);
+}
+// Toast avec bouton « Annuler » (5 s).
+function undoToast(msg, undo) {
+  const t = $("#toast"); t.innerHTML = `${esc(msg)} <button class="undo">Annuler</button>`; t.classList.add("on", "act");
+  t.querySelector(".undo").onclick = () => { t.classList.remove("on", "act"); undo(); };
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("on", "act"), 5000);
 }
 
 /* ---------- Profil ---------- */
 function phraseOf(type) { const t = type === "serie" ? tierOf(SERIE, SERIE_ZERO, streak()) : tierOf(ERUDITION, ERU_ZERO, ME.dossiers.length); return t.items[PICK[type] % t.items.length]; }
 function renderProfile() {
-  if (signupGate($("#v-profile"), "profile")) return;
-  const v = $("#v-profile"), s = streak(), st = tierOf(SERIE, SERIE_ZERO, s), et = tierOf(ERUDITION, ERU_ZERO, ME.dossiers.length);
+  const v = $("#v-profile"), s = streak(), st = tierOf(SERIE, SERIE_ZERO, s), et = tierOf(ERUDITION, ERU_ZERO, ME.dossiers.length), nt = nextTier(ERUDITION, ME.dossiers.length);
   const I = (bg, fg, path) => `<span class="ico" style="background:${bg};color:${fg}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${path}</svg></span>`;
+  // Semaine en cours (lundi → dimanche) : un 🔥 par jour de lecture.
+  const dow = (new Date(TODAY + "T12:00:00Z").getUTCDay() + 6) % 7, week = [...Array(7)].map((_, k) => shift(TODAY, k - dow));
+  const vis = new Set(ME.visited), read = new Set(ME.reads.filter(r => r.max >= 1).map(r => r.date + r.fid)).size;
+  const games = Object.values(ME.quiz || {}).filter(x => x && (x.done ?? ("s" in x))).length;
+  const counts = POLES.map(p => ({ p, n: ME.reads.filter(r => r.max >= 1 && poleOf(r.theme) === p).length })).sort((a, b) => b.n - a.n), top = counts.filter(c => c.n).slice(0, 3), mx = Math.max(1, counts[0]?.n || 0);
+  const nlOn = ACC ? ACC.user?.newsletter : ME.nl;
   v.innerHTML = `<div class="row"><h1 class="h1">Mon Profil</h1><button class="iconbtn" id="prName" aria-label="Changer de prénom"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></button></div>
-   <div class="pcard"><div class="top"><div class="who"><span class="nm">${ME.name ? esc(ME.name) : "Lecteur"}</span><span class="lvl">📚 ${esc(et.name)}</span><span class="tiers">${esc(phraseOf("eru"))}</span></div></div>
+   ${nudgeHTML("profile")}
+   <div class="pcard"><div class="top"><div class="who"><span class="nm">${ME.name ? esc(ME.name) : `<button class="linkbtn light" id="prName2">Choisir un prénom</button>`}</span><span class="lvl">📚 ${esc(et.name)}${ACC && isPremium() ? " · ⭐ Premium" : ""}</span><span class="tiers">${esc(phraseOf("eru"))}</span></div></div>
+     ${nt ? `<div class="nextlvl"><div class="bar"><i style="width:${Math.round(100 * ME.dossiers.length / nt.min)}%"></i></div><small>Encore ${nt.min - ME.dossiers.length} dossier${nt.min - ME.dossiers.length > 1 ? "s" : ""} avant « ${esc(nt.name)} »</small></div>` : ""}
      <p class="quote">${esc(phraseOf("serie"))}</p></div>
-   <div class="tiles"><button class="tile s" id="tS"><b>🔥 ${s} Jour${s > 1 ? "s" : ""}</b><span>De présence consécutive</span><small>${st.name}</small></button>
-     <button class="tile e" id="tE"><b>📚 ${ME.dossiers.length}</b><span>Dossiers</span><small>Dévorés avec succès</small><img src="assets/books.png" alt=""></button></div>
-   <div class="menu">
+   <div class="tiles"><button class="tile s" id="tS"><b>🔥 ${s} jour${s > 1 ? "s" : ""}</b><span>De série</span><small>${st.name}</small></button>
+     <button class="tile e" id="tE"><b>📚 ${ME.dossiers.length}</b><span>Dossier${ME.dossiers.length > 1 ? "s" : ""} dévoré${ME.dossiers.length > 1 ? "s" : ""}</span><small>${esc(et.name)}</small><img src="assets/books.png" alt=""></button></div>
+   <div class="pbox"><div class="bh"><h2>Cette semaine</h2><small class="sub">${read} histoire${read > 1 ? "s" : ""} lue${read > 1 ? "s" : ""} · ${games} jeu${games > 1 ? "x" : ""}</small></div>
+     <div class="week">${week.map((d, k) => `<span class="${vis.has(d) ? "on" : ""} ${d === TODAY ? "today" : ""} ${d > TODAY ? "fut" : ""}"><small>${"LMMJVSD"[k]}</small><b>${vis.has(d) ? "🔥" : d > TODAY ? "" : "·"}</b></span>`).join("")}</div>
+     <p class="sub">${vis.has(TODAY) ? "Série du jour validée. Le canapé est déçu." : "Lisez l’édition du jour pour allumer la flamme d’aujourd’hui."}</p></div>
+   <div class="pbox"><div class="bh"><h2>Vos points forts</h2><button class="linkbtn" id="prBilan">Bilan complet</button></div>
+     ${top.length ? top.map(({ p, n }) => `<div class="barrow"><div class="lbl"><span>${p.em} ${p.name}</span><span>${n}</span></div><div class="bar"><i style="width:${Math.round(n / mx * 100)}%;background:${p.color}"></i></div></div>`).join("") : `<p class="sub">Lisez quelques histoires : vos points forts apparaîtront ici. Pour l’instant, vous êtes fort partout (et nulle part).</p>`}</div>
+   <div class="pmenus">
+   <p class="mh">Mon compte</p><div class="menu">
      ${MAIL() ? `<button id="m0">${I("#fff4d6", "#9a6a00", '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/>')}<span class="t">${ACC ? "Mon compte" : "Créer mon compte"}<small>${ACC ? esc(ACC.user?.email || "") + (isPremium() ? " · ⭐ Premium" : "") : "Votre série et vos favoris sur tous vos appareils"}</small></span>${ICON.chev}</button>` : ""}
-     <button id="m1">${I("#dff0e6", "#14704a", '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')}<span class="t">Mon Bilan de Culture G<small>Vos thèmes forts, Histoire ou Sciences</small></span>${ICON.chev}</button>
+     <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter du matin<small>${!MAIL() ? "Bientôt disponible" : nlOn ? "Abonné ✓ L’édition chaque matin" : WALLET.newsletterGift ? "L’édition du jour, chaque matin" : "Un Grand Dossier offert à l’inscription"}</small></span>${ICON.chev}</button>
      ${MAIL() && PW() && !isPremium() && (WALLET.credits || WALLET.unlocked.length) ? `<button id="mGift">${I("#fff4d6", "#9a6a00", '<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/>')}<span class="t">Mes dossiers offerts<small>${WALLET.credits ? `${WALLET.credits} à débloquer` : `${WALLET.unlocked.length} débloqué${WALLET.unlocked.length > 1 ? "s" : ""}`}</small></span>${ICON.chev}</button>` : ""}
-     <button id="m2">${I("#e1e8f7", "#2f4fa2", '<path d="M6 3h12v18l-6-4-6 4z"/>')}<span class="t">Dossiers Enregistrés</span>${ICON.chev}</button>
-     <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter quotidienne<small>${!MAIL() ? "Bientôt disponible" : (ACC ? ACC.user?.newsletter : ME.nl) ? "Abonné ✓ L’édition chaque matin" : WALLET.newsletterGift ? "L’édition du jour, chaque matin" : "Un Grand Dossier offert à l’inscription"}</small></span>${ICON.chev}</button>
-     <button id="m5">${I("#ece2f6", "#8a55b8", '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M18 8v6M15 11h6"/>')}<span class="t">Inviter des amis <em>(à devenir moins bêtes)</em>${MAIL() ? `<small>Un dossier offert par ami inscrit${WALLET.credits ? ` · ${WALLET.credits} à débloquer` : ""}</small>` : ""}</span>${ICON.chev}</button>
+     ${PW() && !isPremium() ? `<button id="mPrem">${I("#fff1cf", "#9a6a00", '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>')}<span class="t">Passer Premium<small>Tous les Grands Dossiers et les archives, sans engagement</small></span>${ICON.chev}</button>` : ""}
+   </div>
+   <p class="mh">L’appli</p><div class="menu">
      ${pushState() !== "none" ? `<button id="mPush">${I("#ffe9e4", "#c0392b", '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/>')}<span class="t">Notifications<small>${PUSH_LABEL[pushState()]}</small></span>${ICON.chev}</button>` : ""}
-     <button id="m6">${I("#efebe3", "#17140f", '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v6M9.5 11.5L12 14l2.5-2.5"/>')}<span class="t">Installer l’application</span>${ICON.chev}</button>
-   </div>`;
-  $("#prName").onclick = openName;
-  $("#tS").onclick = () => openTiers("serie"); $("#tE").onclick = () => openTiers("eru");
-  $("#m1").onclick = openBilan; $("#m2").onclick = () => setTab("favs"); $("#m3").onclick = openNewsletter; if ($("#m0")) $("#m0").onclick = openAccount;
-  $("#m5").onclick = openInvite; if ($("#mGift")) $("#mGift").onclick = openGifts; $("#m6").onclick = openInstall;
-  if ($("#mPush")) $("#mPush").onclick = openPush;
+     <button id="m2">${I("#e1e8f7", "#2f4fa2", '<path d="M6 3h12v18l-6-4-6 4z"/>')}<span class="t">Favoris et historique<small>${ME.favs.length} favori${ME.favs.length > 1 ? "s" : ""} · ${read} histoire${read > 1 ? "s" : ""} ouverte${read > 1 ? "s" : ""}</small></span>${ICON.chev}</button>
+     ${STANDALONE() ? "" : `<button id="m6">${I("#efebe3", "#17140f", '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v6M9.5 11.5L12 14l2.5-2.5"/>')}<span class="t">Installer l’application<small>Trois gestes, pas de store</small></span>${ICON.chev}</button>`}
+   </div>
+   <p class="mh">Partager</p><div class="menu">
+     <button id="m5">${I("#ece2f6", "#8a55b8", '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M18 8v6M15 11h6"/>')}<span class="t">Inviter des amis <em>(à devenir moins bêtes)</em>${MAIL() ? `<small>Un dossier offert par ami inscrit${WALLET.credits ? ` · ${WALLET.credits} à débloquer` : ""}</small>` : ""}</span>${ICON.chev}</button>
+   </div></div>`;
+  $("#prName").onclick = openName; if ($("#prName2")) $("#prName2").onclick = openName;
+  $("#tS").onclick = () => openTiers("serie"); $("#tE").onclick = () => openTiers("eru"); $("#prBilan").onclick = openBilan;
+  $("#m2").onclick = () => setTab("favs"); $("#m3").onclick = openNewsletter; if ($("#m0")) $("#m0").onclick = openAccount;
+  $("#m5").onclick = openInvite; if ($("#mGift")) $("#mGift").onclick = openGifts; if ($("#m6")) $("#m6").onclick = openInstall;
+  if ($("#mPush")) $("#mPush").onclick = openPush; if ($("#mPrem")) $("#mPrem").onclick = () => openPremium();
+  wireNudge(v);
 }
-
 /* ---------- Notifications push (même appli fermée) ----------
    Une notification par jour, quand l'édition sort (envoyée par l'API, jamais avant 7 h 30).
    État propre à chaque appareil (pas synchronisé) : "on", "off" (refusé dans l'appli), "later" (iPhone pas encore installé).
@@ -2597,7 +2807,8 @@ if (new URLSearchParams(location.search).get("from") === "push") {
     if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); if (fid === "quiz") openQuiz(CUR); else openReader(CUR, fid); return; }
   } catch (e) { if (!navigator.onLine) $("#offline").classList.add("on"); }
   const q = new URLSearchParams(location.search);
-  if (DESK.matches && !q.has("d") && !q.has("f") && (q.has("concept") || !ME.reads.length)) return setTab("about");
+  // PC : un nouveau visiteur sans compte arrive sur « Le concept » (un clic pour passer à l'édition du jour). ?concept la force partout.
+  if (SHOW_ABOUT() && !q.has("d") && !q.has("f") && (q.has("concept") || (DESK.matches && !ME.reads.length))) return setTab("about");
   render();
 })();
 
