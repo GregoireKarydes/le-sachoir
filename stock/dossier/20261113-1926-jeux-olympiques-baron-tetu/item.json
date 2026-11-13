@@ -102,7 +102,13 @@
           "title": "Le vrai Pierre de Coubertin",
           "text": "Né à Paris en 1863, mort à Genève en 1937, ce baron français a consacré sa vie à un projet : faire renaître les Jeux olympiques.",
           "photo": {
-            "commons": "File:Baron Pierre de Coubertin.jpg"
+            "commons": "File:Baron Pierre de Coubertin.jpg",
+            "credit": "Photograph from Bain News Service.",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Baron_Pierre_de_Coubertin.jpg",
+            "file": "images/photo-2-baron-pierre-de-coubertin-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -337,7 +343,13 @@
           "title": "L’ouverture des Jeux, le 6 avril 1896",
           "text": "La cérémonie d’ouverture des premiers Jeux olympiques modernes, dans le stade panathénaïque d’Athènes, en forme de fer à cheval.",
           "photo": {
-            "commons": "File:1896 Olympic opening ceremony.jpg"
+            "commons": "File:1896 Olympic opening ceremony.jpg",
+            "credit": "Unknown authorUnknown author",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:1906_Intercalated_Olympic_Games_Opening_Ceremony.jpg",
+            "file": "images/photo-12-1896-olympic-opening-ceremony-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -433,7 +445,13 @@
           "title": "Le vrai Spyridon Louis",
           "text": "Le vainqueur du premier marathon olympique, en 1896. Il l’emporte avec plus de sept minutes d’avance devant environ 100 000 spectateurs, puis ne court plus jamais en compétition.",
           "photo": {
-            "commons": "File:Spyridon Louis 1896.jpg"
+            "commons": "File:Spyridon Louis 1896.jpg",
+            "credit": "Unknown authorUnknown author",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Spyridon_Louis_1896.jpg",
+            "file": "images/photo-16-spyridon-louis-1896-jpg.webp",
+            "status": "done"
           }
         },
         {
