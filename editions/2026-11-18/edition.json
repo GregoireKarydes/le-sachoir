@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-18",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "dico",
+      "label": "Le Dico menteur",
+      "title": "Quatre mots, douze mensonges",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "choice",
+          "q": "Être en bisbille avec quelqu’un, c’est…",
+          "hint": "Le mot vient d’un murmure italien qui tourne mal.",
+          "choices": [
+            "Lui devoir deux fois la même somme",
+            "Être brouillé avec lui pour une broutille",
+            "Partager avec lui une bouteille de vin",
+            "Lui ressembler comme deux gouttes d’eau"
+          ],
+          "answer": 1,
+          "explain": "Une petite querelle, souvent pour un rien. Le mot vient de l’italien bisbiglio, un chuchotement : deux personnes qui murmurent dans un coin, et voilà la brouille.",
+          "source": { "title": "Expressio — Être en bisbille avec quelqu’un", "url": "https://www.expressio.fr/expressions/etre-en-bisbille-avec-quelqu-un" }
+        },
+        {
+          "type": "choice",
+          "q": "Emberlificoter quelqu’un, c’est…",
+          "hint": "Pensez à « embrouiller », en plus tortueux.",
+          "choices": [
+            "Le couvrir de plumes pour une fête",
+            "Lui faire une coiffure en chignon",
+            "L’embrouiller dans des complications",
+            "Le chatouiller jusqu’aux larmes"
+          ],
+          "answer": 2,
+          "explain": "Le prendre dans un sac de nœuds, l’entortiller. Un mot de fantaisie, sans doute une déformation d’« emberlucoquer ». Rien que le prononcer, c’est déjà s’emberlificoter.",
+          "source": { "title": "La langue française — Emberlificoter", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/emberlificoter" }
+        },
+        {
+          "type": "choice",
+          "q": "Une coquecigrue, c’est…",
+          "hint": "Rabelais l’a fait entrer dans la langue. Méfiance.",
+          "choices": [
+            "Une absurdité, une histoire à dormir debout",
+            "Un oiseau des marais du Poitou",
+            "Une coquille d’œuf peinte pour Pâques",
+            "Une grue de chantier du Moyen Âge"
+          ],
+          "answer": 0,
+          "explain": "Un animal imaginaire, puis une baliverne. Le mot apparaît chez Rabelais. « À la venue des coquecigrues » veut dire… jamais. Comme une augmentation sans réunion.",
+          "source": { "title": "La langue française — Coquecigrue", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/coquecigrue" }
+        },
+        {
+          "type": "choice",
+          "q": "Un nycthémère, c’est…",
+          "hint": "En grec, nux veut dire « nuit ».",
+          "choices": [
+            "Un papillon qui ne vole que la nuit",
+            "Une durée de 24 heures, un jour plus une nuit",
+            "Un cauchemar qui revient chaque nuit",
+            "Une lampe de chevet de l’Antiquité"
+          ],
+          "answer": 1,
+          "explain": "Du grec nux (nuit) et hêmera (jour) : un cycle de 24 heures, avec une période de veille et une de sommeil. Votre nycthémère idéal compte sans doute plus de sommeil.",
+          "source": { "title": "Dictionnaire de l’Académie française — Nycthémère", "url": "https://www.dictionnaire-academie.fr/article/A9N0856" }
+        }
+      ],
+      "sources": [
+        { "title": "Expressio — Être en bisbille avec quelqu’un", "url": "https://www.expressio.fr/expressions/etre-en-bisbille-avec-quelqu-un" },
+        { "title": "La langue française — Emberlificoter", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/emberlificoter" },
+        { "title": "La langue française — Coquecigrue", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/coquecigrue" },
+        { "title": "Dictionnaire de l’Académie française — Nycthémère", "url": "https://www.dictionnaire-academie.fr/article/A9N0856" }
+      ]
+    }
+  ]
+}
