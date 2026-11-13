@@ -249,6 +249,16 @@ function draw() {
     <div class="row"><button class="btn ghost" id="nlPrev">Aperçu</button><button class="btn ghost" id="nlTest">M’envoyer un test</button><button class="btn" id="nlSend">Envoyer maintenant</button></div>
     <div id="nlBox"></div></div>
 
+  <h2>Notifications push</h2><p class="note">Une par jour, dès que l’édition est publiée, jamais avant 7 h 30. Elles arrivent même appli fermée (sur iPhone : appli installée sur l’écran d’accueil seulement).</p>
+  <div class="grid">
+    ${tile(nf(K.push?.n || 0), "Appareils abonnés", `${nf(K.push?.accounts || 0)} reliés à un compte`)}
+    ${tile(K.push?.runs?.[0]?.day === K.today ? nf(K.push.runs[0].sent) : "Pas encore", "Notifications du jour", K.push?.runs?.[0]?.day === K.today ? `${nf(K.push.runs[0].failed)} échec(s), ${nf(K.push.runs[0].gone)} appareil(s) désabonné(s)` : "partent dès que l’édition est publiée")}
+    ${tile(nf(K.push?.failing || 0), "Appareils en difficulté", "échec récent, nouvel essai au prochain passage", K.push?.failing ? "alert" : "")}
+  </div>
+  <div class="card" style="margin-top:12px"><h3>Tester</h3><p class="note">Envoie la notification du jour aux appareils de votre compte (activez d’abord les notifications dans l’appli en étant connecté).</p>
+    <div class="row"><button class="btn ghost" id="puTest">M’envoyer la notification du jour</button></div>
+    ${(K.push?.runs || []).length ? `<div class="scroll" style="margin-top:10px"><table><thead><tr><th>Jour</th><th>Titre</th><th class="n">Envoyées</th><th class="n">Échecs</th></tr></thead><tbody>${K.push.runs.map(r => `<tr><td>${esc(dShort(r.day))}</td><td>${esc(r.title || "")}</td><td class="n">${nf(r.sent)}</td><td class="n">${nf(r.failed)}</td></tr>`).join("")}</tbody></table></div>` : ""}</div>
+
   <h2>Premium et dossiers offerts</h2><p class="note">${K.revenue.stripe ? "Abonnements Stripe actifs (mensuel ou annuel, sans engagement)." : "Stripe pas encore branché : ajoutez le secret STRIPE_SECRET_KEY pour ouvrir le paiement et le paywall."}</p>
   <div class="grid">
     ${tile(nf(K.subscriptions.byPlan.reduce((t, x) => t + x.n, 0)), "Abonnés payants", K.subscriptions.byPlan.map(x => `${nf(x.n)} ${x.plan === "year" ? "annuel(s)" : "mensuel(s)"}`).join(" · ") || "aucun pour l'instant")}
@@ -270,6 +280,7 @@ function draw() {
 
   $("#nlPrev").onclick = async () => { try { const d = await api("/admin/newsletter/preview"); $("#nlBox").innerHTML = `<p class="note" style="margin:10px 0 6px"><b>Objet :</b> ${esc(d.subject)}</p><iframe sandbox title="Aperçu de la newsletter"></iframe>`; $("#nlBox iframe").srcdoc = d.html; } catch (e) { toast(e.message); } };
   $("#nlTest").onclick = async e => { e.target.disabled = true; try { const d = await api("/admin/newsletter", { body: { action: "test" } }); toast(d.ok ? "Test envoyé à " + d.test : d.error || d.skipped); } catch (er) { toast(er.message); } e.target.disabled = false; };
+  $("#puTest").onclick = async e => { e.target.disabled = true; try { const d = await api("/admin/push", { body: {} }); toast(d.sent ? `Envoyée sur ${d.sent} appareil(s)` : `Échec sur ${d.devices} appareil(s)`); } catch (er) { toast(er.message); } e.target.disabled = false; };
   let armed = false;
   $("#nlSend").onclick = async e => {
     if (!armed) { armed = true; e.target.textContent = `Confirmer l’envoi à ${nf(N.active)} abonné(s)`; return; }

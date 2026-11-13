@@ -1,5 +1,5 @@
 // Service worker du Sachoir (v1.0) : appli disponible hors ligne, éditions mises à jour dès que possible.
-const VERSION = "sachoir-v17";
+const VERSION = "sachoir-v18";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "assets/logo.png", "assets/icon-192.png", "assets/icon-512.png", "assets/books.png"];
 
 self.addEventListener("install", e => {
@@ -27,4 +27,27 @@ self.addEventListener("fetch", e => {
     }
     return r;
   })));
+});
+
+// Notifications push : elles arrivent même appli fermée (le téléphone réveille ce service worker).
+self.addEventListener("push", e => {
+  let d = {};
+  try { d = e.data ? e.data.json() : {}; } catch (err) { d = { body: e.data ? e.data.text() : "" }; }
+  e.waitUntil(self.registration.showNotification(d.title || "Le Sachoir", {
+    body: d.body || "L’édition du jour est servie.",
+    icon: "assets/icon-192.png",
+    tag: d.tag || "sachoir",
+    lang: "fr",
+    data: { url: d.url || "./" },
+  }));
+});
+// Toucher la notification : on rouvre l'appli (ou on la ramène au premier plan) sur l'édition annoncée.
+self.addEventListener("notificationclick", e => {
+  e.notification.close();
+  const url = new URL(e.notification.data?.url || "./", self.registration.scope).href;
+  e.waitUntil(clients.matchAll({ type: "window", includeUncontrolled: true }).then(list => {
+    const c = list.find(w => w.url.startsWith(self.registration.scope));
+    if (c) return c.focus().then(w => (w || c).navigate ? (w || c).navigate(url) : null).catch(() => clients.openWindow(url));
+    return clients.openWindow(url);
+  }));
 });
