@@ -14,21 +14,21 @@
           "id": "gaulle",
           "look": "Charles, an extremely tall thin French general in his late sixties, big long nose, small grey moustache, slicked-back grey hair, long black general's coat, round black kepi, a small red ribbon on the chest as the only colour",
           "file": "cast/dossier-gaulle.png",
-          "status": "pending",
+          "status": "done",
           "role": "the very tall general who designed the system; towering, solemn, arms raised"
         },
         {
           "id": "lucie",
           "look": "Lucie, a curious young woman in her twenties, very messy curly brown hair in a big loose bun, round glasses, oversized black sweater, white sneakers, a yellow pencil behind her ear as the only colour",
           "file": "cast/dossier-lucie.png",
-          "status": "pending",
+          "status": "done",
           "role": "the curious student who asks the reader's questions; small, lively, leaning forward with her pencil"
         },
         {
           "id": "prof",
           "look": "Bernard, a dry old constitutional law professor, bald with white tufts above the ears, half-moon glasses on the tip of his nose, grey three-piece suit, a thick black book under his arm, a green bow tie as the only colour",
           "file": "cast/dossier-prof.png",
-          "status": "pending",
+          "status": "done",
           "role": "the dry old law professor who explains; bald, peering over half-moon glasses, tapping his book"
         }
       ],
@@ -40,8 +40,8 @@
           "prof"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -66,8 +66,8 @@
               "prof"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -92,8 +92,8 @@
               "prof"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -118,8 +118,8 @@
               "prof"
             ],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -140,8 +140,8 @@
               "lucie"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -167,7 +167,8 @@
             ],
             "file": "images/dossier-05.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (8cca5ae9-f600-4efe-ba78-7c6044675095)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -193,8 +194,8 @@
               "lucie"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -231,8 +232,8 @@
               "prof"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -274,7 +275,8 @@
             ],
             "file": "images/dossier-08.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (59f0225b-04b5-4380-9880-d45ea75cf7c6)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -300,8 +302,8 @@
               "gaulle"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -326,8 +328,8 @@
               "lucie"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -363,8 +365,8 @@
               "prof"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -389,8 +391,8 @@
               "lucie"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -406,8 +408,8 @@
               "prof"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -432,8 +434,8 @@
               "prof"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -470,8 +472,8 @@
               "prof"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -512,8 +514,8 @@
               "prof"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -537,8 +539,8 @@
               "lucie"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -564,8 +566,8 @@
               "lucie"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -590,8 +592,8 @@
               "prof"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -616,8 +618,8 @@
               "prof"
             ],
             "file": "images/dossier-20.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -642,8 +644,8 @@
               "prof"
             ],
             "file": "images/dossier-21.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
