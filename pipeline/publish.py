@@ -32,6 +32,30 @@ FALLBACK_HOUR = 10  # si aucune BD n'est prête, on publie quand même le jeu à
 
 
 TEXT_KINDS = ("explain", "photo")  # cases sans dessin : « Pour mieux comprendre » et photo réelle (Wikimedia Commons)
+# Durée de lecture (13 novembre 2026, Greg : « un Grand Dossier prend plus que 3 min »).
+# Avant : un chiffre écrit par la tâche d'écriture (3 min pour un dossier de 900 mots). Désormais calculée :
+# lecture des textes à 180 mots par minute (bulles et récitatifs sur téléphone), 3 s pour regarder chaque
+# image, 10 s pour la carte « Pour briller ». « L'histoire complète », repliée et facultative, ne compte pas.
+READ_WPM = 180
+SECONDS_PER_PICTURE = 3
+
+
+def reading_minutes(fmt: dict) -> int:
+    words, pictures = 0, 0
+    for c in fmt.get("cases", []) or []:
+        if not isinstance(c, dict):
+            continue
+        for k in ("caption", "text"):
+            words += len(str(c.get(k) or "").split())
+        for b in c.get("bubbles", []) or []:
+            words += len(str((b or {}).get("text") or "").split())
+        if c.get("kind") != "explain":
+            pictures += 1
+    words += len(str((fmt.get("final") or {}).get("text") or "").split())
+    seconds = words / READ_WPM * 60 + pictures * SECONDS_PER_PICTURE + 10
+    return max(1, round(seconds / 60))
+
+
 FREE_CASES = 4  # Grand Dossier : cases lisibles par tous quand le paywall est actif
 
 
@@ -245,6 +269,11 @@ def main(now: datetime | None = None):
             })
         # Une image que le contrôle qualité veut refaire reste en ligne tant que la nouvelle n'est pas prête.
         changed = any([stock.normalize(x, d) for x in ed.get("formats", []) if x.get("id") != "quiz"])
+        # Durée de lecture recalculée d'après le contenu (jamais saisie à la main).
+        for x in ed.get("formats", []):
+            if x.get("id") != "quiz" and x.get("cases") and x.get("minutes") != reading_minutes(x):
+                x["minutes"] = reading_minutes(x)
+                changed = True
         if ed.get("status") != "published" and (day < today or (day == today and now.hour >= PUBLISH_HOUR)):
             stories = any(ok(x) for x in ed.get("formats", []) if x.get("id") != "quiz")
             late = day < today or now.hour >= FALLBACK_HOUR

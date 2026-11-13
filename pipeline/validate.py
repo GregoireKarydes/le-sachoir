@@ -98,6 +98,10 @@ def check_quiz(fmt: dict, err, warn):
                 err(f"question {i} : « answer » hors des réponses")
         if q.get("type") in ("order", "chain", "swipe") and not q.get("items"):
             err(f"question {i} : « items » manquant")
+    # 13 novembre 2026 : un indice par question (affiché à la demande) rend le jeu moins frustrant.
+    no_hint = [str(i) for i, q in enumerate(qs, 1) if isinstance(q, dict) and q.get("type") not in ("chain", "swipe") and not q.get("hint")]
+    if no_hint:
+        warn(f"question(s) sans indice « hint » : {', '.join(no_hint)}")
 
 
 def check_story(fmt: dict, d: Path, err, warn):

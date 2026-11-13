@@ -14,7 +14,7 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
       "title": "Le Chat de Schrödinger expliqué à mon chat",
       "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
       "teaser": "Accroche drôle pour la newsletter, 25 mots max (voir « Newsletter »).",
-      "minutes": 2,
+      "minutes": 2,  // recalculée à la publication d'après les textes et les images (pipeline/publish.py, reading_minutes) : inutile de la soigner
       "theme": "Sciences physiques",  // OBLIGATOIRE pour cultureg, insolite et dossier : une des 32 thématiques, écrite exactement comme dans prompts/STOCK.md ; vide pour actu
       "cast": [
         { "id": "schro", "name": "Erwin Schrödinger",   // nom affiché au-dessus de ses bulles (voir « Qui parle ? »)
@@ -123,6 +123,12 @@ Règle : prendre le jeu **suivant** celui de la veille dans cette liste (un jeu 
 Le `title` est drôle et différent chaque jour ; le `label` est le nom du jeu (« Le Quiz géo », « La Frise »…).
 Le lecteur ne joue qu'une fois par jour : ses réponses sont enregistrées aussitôt, il peut ensuite seulement les revoir.
 
+**Accessible avant tout (13 novembre 2026, Greg : « des jeux plus accessibles, moins complexes, pas frustrants »).** Le jeu du jour est une récompense après la lecture, pas un examen :
+- **Grand public d'abord** : 3 questions sur 5 qu'une personne curieuse sans diplôme particulier réussit (ou devine en réfléchissant), 1 moyenne, 1 plus pointue, **dans l'ordre croissant de difficulté** (on commence par une victoire). Pour les jeux à 3 ou 4 questions : 2 faciles d'abord.
+- **Des questions courtes et claires** (20 mots max), sans double négation ni piège de formulation ; les mauvaises réponses sont drôles, et on peut les écarter en réfléchissant (pas quatre réponses quasi identiques).
+- **Un indice par question** (champ `"hint"`, 15 mots max) qui met sur la voie sans donner la réponse (« Pensez à la forme de l'Italie », « C'est plus récent qu'on ne croit »). L'appli l'affiche à la demande, sans perte de points.
+- L'appli donne aussi un **joker 50/50 par partie** sur les questions à choix, compte les points même après une erreur (Plus ou moins) et laisse 90 s au Swipe avec pause : inutile de compenser par des questions plus dures.
+
 ### Quiz culture G (`"kind": "culture"`)
 5 questions de culture générale **indépendantes des BD du jour**, 1 à 2 minutes. Aucune image, aucun casting.
 
@@ -150,7 +156,7 @@ Le lecteur ne joue qu'une fois par jour : ses réponses sont enregistrées aussi
 
 Règles du quiz :
 - 5 questions, 5 thématiques différentes (idéalement 4 ou 5 pôles différents), environ 3 sur 4 liées à la France.
-- Difficulté : 2 faciles, 2 moyennes, 1 difficile. Ordre libre.
+- Difficulté : 3 faciles, 1 moyenne, 1 plus pointue, dans cet ordre.
 - Une seule bonne réponse, sans ambiguïté et sourcée. Les mauvaises réponses sont **drôles mais plausibles** (au moins une vraiment tentante par question).
 - Varier la position de la bonne réponse d'une question à l'autre.
 - L'explication apprend quelque chose de plus que la réponse, avec une touche d'humour ; si un fait est discuté, le dire (« l'explication la plus courante… »).
@@ -187,7 +193,7 @@ Les 3 questions :
    - ville ou lieu : `"target": { "lat": …, "lon": … }` (coordonnées vérifiées, 3 décimales) ;
    - département : `"target": { "dept": "29" }` (code officiel, `2A`/`2B` pour la Corse), carte `france` ;
    - pays : `"target": { "country": "PER" }` (code ISO 3166 alpha-3), carte `europe` pour un pays d'Europe, sinon `world`.
-   `name` = le nom affiché dans la correction (« le Finistère », « Carcassonne »). Points : dans la forme ou à moins de 35 km (France), 150 km (Europe), 400 km (monde) = juste ; jusqu'à 120 / 450 / 1 200 km = presque.
+   `name` = le nom affiché dans la correction (« le Finistère », « Carcassonne »). Points : dans la forme ou à moins de 60 km (France), 250 km (Europe), 700 km (monde) = juste ; jusqu'à 200 / 700 / 2 000 km = presque. Choisir des lieux connus (grandes villes, départements célèbres, pays reconnaissables) ; pas de commune de 2 000 habitants.
 2. **Capitales** (`"type": "choice"`) : un pays → sa capitale, ou une capitale → son pays, en alternant ; parfois un département → sa préfecture. 4 choix, des pièges crédibles (Sydney, Istanbul, Rio, Zurich).
 3. **Le joker**, qui tourne d'un Quiz géo à l'autre (ne pas reprendre le joker du Quiz géo précédent) :
    - **Silhouette** (`"type": "silhouette"`) : un pays (`"map": "world"`, code alpha-3) ou un département (`"map": "france"`, code) en ombre noire ; `rotate` 0, 90, 180 ou 270 pour corser ; le dire dans la question si c'est tourné. Choisir une forme reconnaissable (pas un petit pays carré).
@@ -201,11 +207,11 @@ Règles du Quiz géo : environ 2 questions sur 3 liées à la France ; une seule
 ### Les autres jeux
 Règles communes : faits vérifiés par recherche web et sourcés (`source` dans chaque question, liste `sources` du format) ; environ 3 sur 4 liés à la France ; explications de 40 mots maximum, drôles, qui apprennent quelque chose ; aucun fait déjà utilisé dans `editions/` ; rien sur les drames ; personne vivante seulement pour un fait public sourcé.
 
-**La Frise** (`"kind": "frise"`, 3 questions `"type": "order"`, `"by": "chrono"`) : 4 événements à remettre du plus ancien au plus récent. Chaque item : `{ "name": "Règne de Cléopâtre", "year": -51, "label": "51 av. J.-C." }` (`year` négatif avant J.-C. ; `label` facultatif, pour « vers 1096 » ou une période). Viser les surprises (Cléopâtre plus proche de l'iPhone que de Khéops, Oxford plus vieille que les Aztèques), au moins 5 ans d'écart entre deux événements.
+**La Frise** (`"kind": "frise"`, 3 questions `"type": "order"`, `"by": "chrono"`) : 4 événements à remettre du plus ancien au plus récent. Chaque item : `{ "name": "Règne de Cléopâtre", "year": -51, "label": "51 av. J.-C." }` (`year` négatif avant J.-C. ; `label` facultatif, pour « vers 1096 » ou une période). Viser les surprises (Cléopâtre plus proche de l'iPhone que de Khéops, Oxford plus vieille que les Aztèques), au moins 5 ans d'écart entre deux événements. Des événements connus et bien espacés (au moins 30 ans d'écart, sauf exception évidente) : on doit pouvoir trouver l'ordre en raisonnant. Un ordre « presque juste » (2 paires sur 3 dans le bon sens) rapporte déjà des points.
 
-**Le Dico menteur** (`"kind": "dico"`, 4 questions `"type": "choice"`) : un mot français rare, ancien ou régional (« Vergogne, c'est… ») et 4 définitions : une vraie, trois inventées, drôles mais crédibles. L'explication donne l'étymologie ou un exemple d'emploi.
+**Le Dico menteur** (`"kind": "dico"`, 4 questions `"type": "choice"`) : un mot français rare, ancien ou régional (« Vergogne, c'est… ») et 4 définitions : une vraie, trois inventées, drôles mais crédibles. L'explication donne l'étymologie ou un exemple d'emploi. Les trois fausses définitions doivent pouvoir s'écarter avec un peu de flair (étymologie, sonorité) : pas de piège impossible.
 
-**Plus ou moins** (`"kind": "plusmoins"`, 1 question `"type": "chain"`) : une suite de 8 à 10 éléments comparés deux à deux ; le joueur enchaîne les duels jusqu'à la première erreur.
+**Plus ou moins** (`"kind": "plusmoins"`, 1 question `"type": "chain"`) : une suite de 7 à 8 éléments comparés deux à deux ; le joueur joue **tous** les duels (une erreur ne l'arrête plus), chaque bonne réponse compte. Écarts nets entre voisins (au moins 20 % ou 30 ans) et éléments connus de tous.
 ```json
 { "type": "chain", "q": "Lequel est le plus ancien ?", "crit": "plus ancien", "pick": "min",   // "min" ou "max" (par défaut)
   "items": [ { "name": "Le Coca-Cola", "value": 1886, "label": "1886", "explain": "facultatif, 20 mots max" }, … ],
@@ -213,13 +219,13 @@ Règles communes : faits vérifiés par recherche web et sourcés (`source` dans
 ```
 Une seule grandeur par jeu (date, population, hauteur, distance…), pas d'égalité entre deux éléments voisins, des duels qui piègent (le bon sens doit souvent se tromper).
 
-**Le Swipe** (`"kind": "swipe"`, 1 question `"type": "swipe"`) : 10 affirmations vrai ou faux en 60 secondes.
-`{ "type": "swipe", "seconds": 60, "items": [ { "text": "Napoléon était petit.", "ok": false, "explain": "Environ 1,69 m, dans la moyenne de son époque." }, … ], "source": { … } }`
+**Le Swipe** (`"kind": "swipe"`, 1 question `"type": "swipe"`) : 8 affirmations vrai ou faux en 90 secondes (l'appli impose 90 s au moins, chrono en pause si on quitte).
+`{ "type": "swipe", "seconds": 90, "items": [ { "text": "Napoléon était petit.", "ok": false, "explain": "Environ 1,69 m, dans la moyenne de son époque." }, … ], "source": { … } }`
 Affirmations de 12 mots maximum, environ moitié vraies, beaucoup d'idées reçues.
 
 **Le Chiffre** (`"kind": "chiffre"`, 3 questions `"type": "estimate"`) : estimer un nombre avec un curseur.
 `{ "type": "estimate", "q": "Combien de marches jusqu'au sommet de la tour Eiffel ?", "answer": 1665, "unit": "marches", "min": 100, "max": 10000, "scale": "log" }`
-`scale` : `"log"` quand la bonne réponse peut varier d'un facteur 10 et plus, sinon `"lin"`. La réponse ne doit pas être au milieu exact du curseur. Juste à 10 % près, presque à 35 % (réglables avec `"ok"` et `"mid"`).
+`scale` : `"log"` quand la bonne réponse peut varier d'un facteur 10 et plus, sinon `"lin"`. La réponse ne doit pas être au milieu exact du curseur. Juste à 20 % près, presque à 50 % (l'appli n'accepte pas de marges plus serrées). Un ordre de grandeur que l'on peut raisonner (une hauteur, une durée, une population), pas un chiffre au hasard.
 
 **Qui a dit ça ?** (`"kind": "citation"`, 4 questions `"type": "choice"`) : une citation célèbre et 4 auteurs possibles, ou une citation à attribuer à « Personne de connu » quand elle est apocryphe (« Qu'ils mangent de la brioche »). Citations exactes et sourcées ; aucune citation inventée présentée comme vraie.
 
