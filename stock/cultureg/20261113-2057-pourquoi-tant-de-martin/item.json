@@ -1,0 +1,183 @@
+{
+  "added": "20261113-2057",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Pourquoi la France est pleine de Martin (merci le demi-manteau)",
+      "tagline": "Un saint, un manteau coupé en deux, et six Martin dans chaque village",
+      "teaser": "Il y a de fortes chances que vous connaissiez au moins trois Martin. Ce n’est pas un hasard : c’est la faute d’un évêque généreux.",
+      "minutes": 2,
+      "theme": "Société",
+      "art": {
+        "subject": "why Martin is the most common surname in France: saint Martin's popularity, and how medieval nicknames became family names",
+        "setting": "a muddy medieval French village square with one wooden table; a small stone church in the background",
+        "era": "12th-century France",
+        "props": {
+          "register": "a big leather-bound register book open on a wooden table",
+          "cloak": "a red woollen cloak cut cleanly in half"
+        }
+      },
+      "cast": [
+        {
+          "id": "scribe",
+          "name": "Le scribe",
+          "look": "a tall gaunt 12th-century village scribe, long grey beard, bald head under a small black skullcap, burgundy wine-red long robe as main colour, ink-stained fingers, a white goose quill",
+          "role": "the patient village scribe who knows everything about names and explains simply; tall, gaunt, one eyebrow always raised, writing in the register",
+          "file": "cast/cultureg-scribe.png",
+          "status": "pending"
+        },
+        {
+          "id": "martin",
+          "name": "Martin, paysan",
+          "look": "a short stocky young medieval peasant, round rosy face, thick brown bowl-cut hair, bright orange tunic as main colour, brown leggings, a straw hat held in his hands",
+          "role": "the curious peasant named Martin, like half his village, who asks the reader's questions; short, stocky, eager, always scratching his head",
+          "file": "cast/cultureg-martin.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a muddy medieval village square. the scribe (tall, gaunt, wine-red robe, grey beard) on the left behind a table with the register, quill raised, exhausted; Martin (short, stocky, orange tunic) on the right raising his hand eagerly, and behind him a long queue of small peasants seen from afar, every single one raising a hand too. wide shot",
+        "cast": ["scribe", "martin"],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Vers le XIIe siècle",
+          "caption": "Pourquoi Martin est-il le nom de famille le plus porté en France ? Direction un village du Moyen Âge.",
+          "bubbles": [
+            { "who": "scribe", "text": "Martin ! Avancez !", "side": "l" },
+            { "who": "martin", "text": "Lequel ? On est six.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a muddy medieval village square. the scribe (tall, gaunt, wine-red robe) on the left seated at a table with the register, calling out with a hand cupped to his mouth; Martin (short, stocky, orange tunic) on the right stepping forward, and right behind him five other peasants in grey and brown, seen from afar, stepping forward at exactly the same time. medium shot",
+            "cast": ["scribe", "martin"],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Au début, chacun n’a qu’un nom : le prénom reçu au baptême, souvent celui d’un saint. Donc beaucoup s’appellent pareil.",
+          "bubbles": [
+            { "who": "martin", "text": "Et pourquoi Martin, plus que les autres ?", "side": "r" },
+            { "who": "scribe", "text": "Parce que saint Martin, c’est la vedette de toute la Gaule.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "close-up at the table. the scribe (gaunt, grey beard, black skullcap) on the left tapping the open register with his quill, every line of the page filled with the same scribble; Martin (stocky, bowl-cut hair, orange tunic) on the right leaning over the book, scratching his head. medium shot",
+            "cast": ["scribe", "martin"],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "IVe siècle",
+          "caption": "Martin, évêque de Tours au IVe siècle, est célèbre pour avoir coupé son manteau en deux pour un mendiant gelé.",
+          "bubbles": [
+            { "who": "martin", "text": "Seulement la moitié ?", "side": "r" },
+            { "who": "scribe", "text": "Il avait froid aussi. Mais ça l’a rendu très populaire.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "plain background. the scribe (tall, gaunt, wine-red robe) on the left holding up the cloak cut cleanly in half, one half in each hand, like a tailor presenting a masterpiece; Martin (short, stocky, orange tunic) on the right staring at the two halves, then at his own tunic, protectively hugging it. medium shot",
+            "cast": ["scribe", "martin"],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "photo",
+          "tag": "Le vrai geste",
+          "title": "Saint Martin partage son manteau",
+          "text": "La scène, peinte par le Greco vers 1600. Ce geste, ses miracles et son tombeau de Tours font de saint Martin l’un des saints les plus vénérés de Gaule : on donne son prénom à des foules d’enfants.",
+          "photo": { "commons": "File:Saint Martin and the Beggar (c1597-1600) by El Greco - Chicago.jpg" }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "Pour distinguer tous ces homonymes, on ajoute un surnom : un métier, un lieu, un trait physique ou un prénom.",
+          "bubbles": [
+            { "who": "scribe", "text": "Toi, le forgeron, tu seras Lefèvre. Lui, près du bois : Dubois.", "side": "l" },
+            { "who": "martin", "text": "Et moi ? Je n’ai rien de spécial.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the village square. the scribe (tall, gaunt, wine-red robe) on the left pointing with his quill at two peasants seen from afar, one holding a hammer next to an anvil, the other standing next to a single tree; Martin (short, stocky, orange tunic) on the right looking down at himself, arms spread, searching for anything special about himself. wide shot",
+            "cast": ["scribe", "martin"],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "title": "Comment naît un nom de famille",
+          "steps": [
+            "Beaucoup de gens portent le même prénom, souvent celui d’un saint",
+            "Pour les distinguer, on ajoute un surnom : Lefèvre, Dubois, Petit…",
+            "Ou on garde un prénom de baptême, comme Martin",
+            "Le surnom passe aux enfants : il devient nom de famille"
+          ],
+          "joke": "Lefèvre veut dire « le forgeron ». Votre collègue Lefèvre a sûrement un ancêtre qui tapait fort."
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Ces noms se transmettent ensuite aux enfants. Du coup, un prénom très répandu devient un nom très répandu.",
+          "bubbles": [
+            { "who": "martin", "text": "Donc mes enfants s’appelleront Martin ?", "side": "r" },
+            { "who": "scribe", "text": "Et leurs enfants. Et ceux d’après. Pendant mille ans.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the scribe (tall, gaunt, wine-red robe) on the left writing in the register, the page now spilling off the table and unrolling far away across the ground into the distance; Martin (short, stocky, orange tunic) on the right holding a swaddled baby, jaw dropped, watching the endless page roll away. wide shot",
+            "cast": ["scribe", "martin"],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "En bref : saint Martin a rendu son prénom très populaire, et ce prénom est devenu le nom de famille n° 1 en France.",
+          "bubbles": [
+            { "who": "martin", "text": "Six Martin dans mon village. Plus de 200 000 nés depuis 1890.", "side": "r" },
+            { "who": "scribe", "text": "Et toujours pas de manteau.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "confession-style shot, plain background. Martin (short, stocky, orange tunic, bowl-cut hair) on the right facing the reader, proudly wearing half a red cloak over one shoulder only, shivering a little; the scribe (tall, gaunt, wine-red robe) on the left, arms crossed, deadpan, one eyebrow raised. medium shot",
+            "cast": ["martin", "scribe"],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Martin est le nom de famille le plus porté en France : un prénom de baptême rendu populaire par saint Martin de Tours.",
+        "source": "Filae — Nom de famille Martin"
+      },
+      "story": "Au Moyen Âge, chacun ne porte d’abord qu’un seul nom : son prénom de baptême, souvent celui d’un saint. Comme les mêmes prénoms reviennent sans cesse, il devient difficile de distinguer les gens. On leur ajoute donc un surnom : un métier (Lefèvre, le forgeron ; Meunier), un lieu (Dubois, Dupont), un trait physique ou moral (Petit, Leblond), ou un prénom de baptême comme Martin. La plupart des noms de famille français apparaissent ainsi entre le IXe et le XIIe siècle, puis se transmettent aux enfants.\nPourquoi Martin plus qu’un autre ? Parce que saint Martin, évêque de Tours au IVe siècle, devient l’un des saints les plus vénérés de Gaule. Ancien soldat, il est célèbre pour avoir coupé son manteau en deux pour couvrir un mendiant gelé, à Amiens. Ses miracles, son tombeau de Tours et le soutien des rois francs, de Clovis à Charlemagne, rendent son culte immense : de nombreuses églises lui sont dédiées, et environ 230 communes françaises portent aujourd’hui son nom. Le mot « chapelle » viendrait même de sa cape, conservée comme relique.\nUn prénom très porté donne un nom très porté : Martin est aujourd’hui le nom de famille le plus répandu en France, avec près de 230 000 naissances depuis 1890.",
+      "sources": [
+        { "title": "Filae — Nom de famille Martin", "url": "https://www.filae.com/nom-de-famille/MARTIN.html" },
+        { "title": "Vikidia — Origine des noms de famille français", "url": "https://fr.vikidia.org/wiki/Origine_des_noms_de_famille_fran%C3%A7ais" },
+        { "title": "Guichet du savoir — La popularité de saint Martin de Tours", "url": "https://www.guichetdusavoir.org/question/voir/138036" },
+        { "title": "Geneanet — Origine du prénom Martin", "url": "https://www.geneanet.org/prenom/Martin" }
+      ]
+    }
+  ]
+}
