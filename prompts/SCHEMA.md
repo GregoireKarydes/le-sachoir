@@ -239,8 +239,11 @@ Trois cases à la fin de l'Actu, à la suite, après le dernier sujet : « Penda
   "text": "Le post, drôle, qui résume ce que dit Internet (40 mots max).",
   "why": "Pourquoi ça buzze : le fait réel, neutre et vérifié (30 mots max).",
   "likes": "48,2 k", "shares": "6 k",                              // facultatifs, inventés et ronds
-  "source": { "title": "Le Parisien", "url": "https://…" } }      // article qui explique la tendance (trouvé par WebSearch)
+  "source": { "title": "Le Parisien", "url": "https://…" },       // article qui explique la tendance (trouvé par WebSearch)
+  "post": { "url": "https://x.com/<compte>/status/<numéro>" } }   // facultatif : le vrai post (X, Bluesky, TikTok), voir plus bas
 ```
+**Vrai post** (13 novembre 2026) : avec `post.url`, la publication va chercher le post par l'intégration officielle du réseau (oEmbed, gratuite) et l'enregistre dans `post.embed` (auteur, pseudo, texte, date ; vignette pour TikTok) avec `post.status` (`ok`, ou `gone` s'il a été supprimé ou rendu privé) ; il est revérifié au moment de la publication. L'appli l'affiche elle-même (aucun script ni traceur du réseau), avec « Voir sur X », puis `text` en « Le Sachoir : … ». Si le post est `gone`, la carte réécrite s'affiche. Ne jamais remplir `post.embed` à la main.
+
 Règles : 3 cases au plus, toutes à la fin ; on rit **avec** Internet, jamais d'un particulier ; pas de drame, de victime, de rumeur ni de politique partisane ; aucun post, tweet ou pseudo réel recopié ; `why` neutre et sourcé. `pipeline/validate.py` vérifie la place, les longueurs, le pseudo et la source.
 
 ## Cohérence visuelle d'une BD (8 novembre 2026)

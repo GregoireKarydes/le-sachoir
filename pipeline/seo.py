@@ -204,9 +204,17 @@ def story_page(s, ed_dir: Path, related, gate=False):
         if c.get("kind") == "buzz":
             src = c.get("source") or {}
             link = f' <a href="{e(src["url"])}" rel="nofollow noopener" target="_blank">{e(src.get("title") or "Source")}</a>' if str(src.get("url", "")).startswith("https://") else ""
+            post = c.get("post") or {}
+            emb = post.get("embed") if post.get("status") == "ok" else None
+            if emb:  # vrai post : citation avec l'auteur et le lien, comme l'intégration officielle
+                who = f'{e(emb.get("author", ""))} {e(emb.get("handle", ""))}'.strip()
+                top = (f'<blockquote><p>{e(emb.get("text", ""))}</p>&mdash; {who} '
+                        f'<a href="{e(emb["url"])}" rel="nofollow noopener" target="_blank">sur {e(emb.get("label", ""))}</a></blockquote>'
+                        f'<p><b>Le Sachoir :</b> {e(c.get("text", ""))}</p>')
+            else:
+                top = f'<strong>{e(c.get("name") or "Internet")} {e(c.get("handle") or "")}</strong><p>{e(c.get("text", ""))}</p>'
             panels.append(f'<figure class="panel explain"><figcaption><b class="ex-tag">{e(c.get("tag") or "Sur Internet")}</b>'
-                          f'<strong>{e(c.get("name") or "Internet")} {e(c.get("handle") or "")}</strong><p>{e(c.get("text", ""))}</p>'
-                          f'<p>{e(c.get("why", ""))}{link}</p></figcaption></figure>')
+                          f'{top}<p>{e(c.get("why", ""))}{link}</p></figcaption></figure>')
             continue
         if c.get("kind") == "explain":
             paras = "".join(f"<p>{e(t)}</p>" for t in str(c.get("text") or "").split("\n") if t.strip())
