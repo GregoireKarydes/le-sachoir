@@ -12,6 +12,7 @@
       "cast": [
         {
           "id": "broussais",
+          "name": "Le docteur Broussais",
           "look": "François, a tall bony stern French doctor of the 1820s, thick grey sideburns, bald forehead, fierce eyebrows, black frock coat, white cravat, holding a glass jar",
           "file": "cast/insolite-broussais.png",
           "status": "done",
@@ -19,6 +20,7 @@
         },
         {
           "id": "hippolyte",
+          "name": "Hippolyte, le patient",
           "look": "Hippolyte, a skinny 1830s Parisian patient, long white nightshirt, droopy white nightcap, pale face, huge terrified eyes",
           "file": "cast/insolite-hippolyte.png",
           "status": "done",
@@ -26,6 +28,7 @@
         },
         {
           "id": "marthe",
+          "name": "Marthe, poseuse de sangsues",
           "look": "Marthe, a sturdy 1830s woman leech applier, rolled sleeves, plain grey dress, white apron, a red headscarf as the only colour, carrying a big glass jar",
           "file": "cast/insolite-marthe.png",
           "status": "done",
@@ -52,14 +55,17 @@
           "caption": "Pourquoi la France a-t-elle manqué de sangsues ? Pour le célèbre docteur Broussais, presque toute maladie vient d’un intestin enflammé.",
           "bubbles": [
             {
+              "who": "broussais",
               "text": "Mal à la tête ? C’est l’intestin.",
               "side": "l"
             },
             {
+              "who": "hippolyte",
               "text": "Et mon pied ?",
               "side": "r"
             },
             {
+              "who": "broussais",
               "text": "L’intestin.",
               "side": "l"
             }
@@ -83,10 +89,12 @@
           "caption": "Son idée : pour calmer une inflammation, il faut retirer du sang. Les sangsues, posées sur le ventre, s’en chargent.",
           "bubbles": [
             {
+              "who": "hippolyte",
               "text": "Combien ?",
               "side": "r"
             },
             {
+              "who": "broussais",
               "text": "Une petite quarantaine.",
               "side": "l"
             }
@@ -117,6 +125,7 @@
           "caption": "Il en pose de 40 à 200 à la fois. Surnom : « le vampire de la médecine ».",
           "bubbles": [
             {
+              "who": "broussais",
               "text": "Vampire ? Ils sont jaloux.",
               "side": "l"
             }
@@ -156,10 +165,12 @@
           "caption": "La demande explose : poser des sangsues devient presque un métier, souvent exercé à domicile par des femmes.",
           "bubbles": [
             {
+              "who": "marthe",
               "text": "Sangsues fraîches ! Pose à domicile !",
               "side": "l"
             },
             {
+              "who": "hippolyte",
               "text": "Je ne suis pas là.",
               "side": "r"
             }
@@ -183,6 +194,7 @@
           "caption": "Rien qu’en 1833, la France utilise entre 30 et 40 millions de sangsues : environ une par habitant.",
           "bubbles": [
             {
+              "who": "marthe",
               "text": "Quarante millions. Et pas un merci.",
               "side": "l"
             }
@@ -205,10 +217,12 @@
           "caption": "Résultat : les étangs français sont vidés. Il faut importer des sangsues de Pologne et de Hongrie.",
           "bubbles": [
             {
+              "who": "marthe",
               "text": "Plus une seule. Elles ont émigré.",
               "side": "l"
             },
             {
+              "who": "broussais",
               "text": "Commandez en Hongrie !",
               "side": "r"
             }
@@ -232,6 +246,7 @@
           "caption": "Broussais meurt en 1838. Sa mode des sangsues aura saigné la France pendant deux décennies.",
           "bubbles": [
             {
+              "who": "hippolyte",
               "text": "J’ai survécu. Je ne sais pas si c’est grâce à elles.",
               "side": "r"
             }
