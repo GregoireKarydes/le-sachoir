@@ -6,7 +6,7 @@ Objectif : ajouter le format `actu` (4 à 6 sujets, chacun en **1 case dessinée
 Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 
 ## Étapes
-1. `git pull`. **Date de l'édition** = demain (heure de Paris : `TZ=Europe/Paris date -d tomorrow +%F`). Exception : lancée en rattrapage entre minuit et 5 h, c'est la date du jour (`TZ=Europe/Paris date +%F`). Le champ `date` du format et le dossier `editions/<date>/` utilisent cette date.
+1. `git pull`. **Date de l'édition** = demain (heure de Paris : `TZ=Europe/Paris date -d tomorrow +%F`). Exceptions, dans cet ordre : si le message de lancement nomme une date (rattrapage de l'orchestrateur), c'est cette date ; lancée entre minuit et 12 h sans date précisée, c'est la date du jour (`TZ=Europe/Paris date +%F`). Le champ `date` du format et le dossier `editions/<date>/` utilisent cette date.
 2. Lire le fichier le plus récent de `data/rss/` (`ls data/rss`, titres des dernières 30 h collectés vers 18 h 20 et 19 h 20, dont la dernière vidéo HugoDécrypte). S'il manque ou date de plus de 12 h, faire la veille directement par recherche web.
 3. **Choisir 4 à 6 sujets à partir de HugoDécrypte** (sélection de référence) :
    - prendre la dernière vidéo « Actus du jour » de moins de 30 h : les entrées `"role": "selection"` du fichier RSS (titre = liste des sujets, `summary` = description). Si le fichier ne l'a pas, la chercher sur le web (chaîne YouTube « HugoDécrypte - Actus du jour », podcast ou newsletter du même nom) ;
