@@ -31,7 +31,8 @@ Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'i
 ## Le casting : adapté à l'histoire
 - Les personnages sont **des humains** (figures historiques, témoins, scientifiques, gens ordinaires de l'époque) et, quand le sujet s'y prête vraiment, des animaux réels de l'histoire.
 - **Pas d'objets, de cellules, de molécules ni de billets qui parlent.** Pour expliquer un phénomène invisible, on le fait expliquer par un humain (un scientifique, un prof, un témoin), avec un objet ou un schéma dessiné à côté si besoin.
-- 2 à 4 personnages par BD, chacun résumé par un trait fort, reconnaissable dès sa première case.
+- **Peu de personnages (13 novembre 2026, décision de Greg)** : **2 au plus** pour la Culture G et l'Insolite, **4 au plus** pour un Grand Dossier (et 2 par case), chacun résumé par un trait fort et visible de loin (couronne, chapeau haut-de-forme, barbe blanche, blouse de labo), reconnaissable dès sa première case. Moins il y a de personnages, moins le dessin les confond. Un figurant sans fiche (« un passant ») reste possible, de dos ou de loin. L'Actu n'est pas concernée (un sujet = une case).
+- **Le gag se voit (13 novembre 2026)** : dans au moins une case sur trois, l'image porte une partie du gag sans les bulles (objet absurde ou anachronique, posture exagérée, réaction muette en gros plan). Le prompt de la case décrit ce détail visuel précisément.
 - **Personnage lucide** pince-sans-rire qui dégonfle les légendes : seulement quand il est pertinent pour le sujet, pas systématique.
 - Figures historiques : sûres d'elles, décalées ; leurs répliques inventées sont visiblement des blagues ; une vraie citation est signalée dans le récitatif.
 - Personnes vivantes : voir « Garde-fous ».
@@ -89,6 +90,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 
 ## Checklist avant de pousser une BD
 - [ ] Personnages humains (ou animaux réels), chacun avec une fiche casting ; aucun objet, cellule ou molécule qui parle.
+- [ ] 2 personnages au plus (Culture G, Insolite), 4 au plus (Grand Dossier) ; au moins une case sur trois avec un gag visuel décrit dans le prompt.
 - [ ] Test du néophyte : quelqu'un qui ne connaît rien au sujet peut répondre à la question du titre à la fin.
 - [ ] Case 1 = la question ; un lien logique d'une case à l'autre ; résumé à la fin.
 - [ ] Chaque fait a son pourquoi ; aucun mot technique sans explication.
