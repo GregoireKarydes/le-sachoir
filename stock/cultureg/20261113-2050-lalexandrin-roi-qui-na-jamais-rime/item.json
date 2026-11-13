@@ -38,7 +38,10 @@
       ],
       "cover": {
         "prompt": "a bare medieval scriptorium. Alexandre (short, plump, blue robe) on the left proudly unrolling the scroll across the whole floor; Léo (lanky, green hoodie, red curls) on the right counting on his ten fingers with a panicked face, his backpack sliding off one shoulder. the bust watches from a pedestal behind. medium shot",
-        "cast": ["alexandre", "leo"],
+        "cast": [
+          "alexandre",
+          "leo"
+        ],
         "file": "images/cultureg-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -50,12 +53,23 @@
           "tag": "Années 1180",
           "caption": "Pourquoi le vers de douze syllabes s’appelle-t-il « alexandrin » ? Léo, qui révise son bac, remonte au Moyen Âge.",
           "bubbles": [
-            { "who": "leo", "text": "Vous êtes Alexandre ? Celui de l’alexandrin ?", "side": "r" },
-            { "who": "alexandre", "text": "Oui. Et non. C’est compliqué.", "side": "l" }
+            {
+              "who": "leo",
+              "text": "Vous êtes Alexandre ? Celui de l’alexandrin ?",
+              "side": "r"
+            },
+            {
+              "who": "alexandre",
+              "text": "Oui. Et non. C’est compliqué.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a bare medieval scriptorium with one wooden desk and a candle. Léo (lanky, green hoodie, red curls) on the right, standing in the doorway holding up a glowing smartphone like a torch, completely out of place; Alexandre (short, plump, blue robe) on the left at his desk, quill frozen mid-air, staring at the phone with suspicion. medium shot",
-            "cast": ["leo", "alexandre"],
+            "cast": [
+              "leo",
+              "alexandre"
+            ],
             "file": "images/cultureg-01.webp",
             "status": "pending",
             "attempts": 0
@@ -67,12 +81,23 @@
           "tag": "",
           "caption": "Dans les années 1180, Alexandre de Paris réécrit un long poème sur Alexandre le Grand, roi conquérant de l’Antiquité.",
           "bubbles": [
-            { "who": "leo", "text": "Donc Alexandre écrit sur Alexandre.", "side": "r" },
-            { "who": "alexandre", "text": "Pure coïncidence. Mais ça simplifie la signature.", "side": "l" }
+            {
+              "who": "leo",
+              "text": "Donc Alexandre écrit sur Alexandre.",
+              "side": "r"
+            },
+            {
+              "who": "alexandre",
+              "text": "Pure coïncidence. Mais ça simplifie la signature.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the scriptorium. Alexandre (short, plump, blue robe) on the left standing next to the bust, mimicking its proud pose with his chin up and one hand on his chest; Léo (lanky, green hoodie) on the right looking from the bust to Alexandre and back, one eyebrow raised. wide shot",
-            "cast": ["alexandre", "leo"],
+            "cast": [
+              "alexandre",
+              "leo"
+            ],
             "file": "images/cultureg-02.webp",
             "status": "pending",
             "attempts": 0
@@ -84,12 +109,23 @@
           "tag": "",
           "caption": "Les versions plus anciennes de ce poème étaient en vers de dix syllabes. Lui passe tout le texte à douze.",
           "bubbles": [
-            { "who": "leo", "text": "Dix, c’était déjà beaucoup.", "side": "r" },
-            { "who": "alexandre", "text": "Pour un roi qui a conquis l’Asie ? C’est serré.", "side": "l" }
+            {
+              "who": "leo",
+              "text": "Dix, c’était déjà beaucoup.",
+              "side": "r"
+            },
+            {
+              "who": "alexandre",
+              "text": "Pour un roi qui a conquis l’Asie ? C’est serré.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "close-up on the desk. Alexandre (plump, blue robe, quill behind his ear) on the left adding two extra wavy lines to the scroll with great flourish; Léo (green hoodie, red curls) on the right holding up both hands, all ten fingers spread, then two more fingers drawn as a sad question. medium shot",
-            "cast": ["alexandre", "leo"],
+            "cast": [
+              "alexandre",
+              "leo"
+            ],
             "file": "images/cultureg-03.webp",
             "status": "pending",
             "attempts": 0
@@ -108,12 +144,23 @@
           "tag": "",
           "caption": "Ce Roman d’Alexandre triomphe dans l’Europe médiévale. Du coup, son vers prend le nom du poème : l’alexandrin.",
           "bubbles": [
-            { "who": "leo", "text": "Donc le vers porte le nom du héros. Pas le vôtre.", "side": "r" },
-            { "who": "alexandre", "text": "Je préfère ne pas en parler.", "side": "l" }
+            {
+              "who": "leo",
+              "text": "Donc le vers porte le nom du héros. Pas le vôtre.",
+              "side": "r"
+            },
+            {
+              "who": "alexandre",
+              "text": "Je préfère ne pas en parler.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the scriptorium. Alexandre (short, plump, blue robe) on the left sulking with crossed arms, back half turned, cheeks puffed; behind him the bust now wears a small golden crown that Alexandre clearly did not put there; Léo (lanky, green hoodie) on the right patting Alexandre's shoulder awkwardly. medium shot",
-            "cast": ["alexandre", "leo"],
+            "cast": [
+              "alexandre",
+              "leo"
+            ],
             "file": "images/cultureg-04.webp",
             "status": "pending",
             "attempts": 0
@@ -125,12 +172,23 @@
           "tag": "XVIe siècle",
           "caption": "Le succès ne vient pas tout de suite. Au XVIe siècle, Ronsard le juge encore trop proche de la prose.",
           "bubbles": [
-            { "who": "leo", "text": "Même Ronsard n’en voulait pas ?", "side": "r" },
-            { "who": "alexandre", "text": "Il en a écrit. Mais pas pour sa grande épopée.", "side": "l" }
+            {
+              "who": "leo",
+              "text": "Même Ronsard n’en voulait pas ?",
+              "side": "r"
+            },
+            {
+              "who": "alexandre",
+              "text": "Il en a écrit. Mais pas pour sa grande épopée.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "plain background. Alexandre (short, plump, blue robe) on the left reading a letter with a long face, shoulders drooping, the quill behind his ear drooping too; Léo (lanky, green hoodie) on the right reading over his shoulder, wincing. medium shot",
-            "cast": ["alexandre", "leo"],
+            "cast": [
+              "alexandre",
+              "leo"
+            ],
             "file": "images/cultureg-05.webp",
             "status": "pending",
             "attempts": 0
@@ -142,12 +200,23 @@
           "tag": "XVIIe siècle",
           "caption": "Au XVIIe siècle, il triomphe enfin : le théâtre classique de Corneille et de Racine s’écrit en alexandrins.",
           "bubbles": [
-            { "who": "leo", "text": "Et c’est pour ça qu’on l’apprend au bac ?", "side": "r" },
-            { "who": "alexandre", "text": "Huit siècles plus tard, je donne encore des devoirs.", "side": "l" }
+            {
+              "who": "leo",
+              "text": "Et c’est pour ça qu’on l’apprend au bac ?",
+              "side": "r"
+            },
+            {
+              "who": "alexandre",
+              "text": "Huit siècles plus tard, je donne encore des devoirs.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "an empty 17th-century theatre stage with red curtains. Alexandre (short, plump, blue robe) on the left centre stage, bowing triumphantly and holding a tall stack of modern school exam papers; Léo (lanky, green hoodie) on the right in the front row, sinking into his seat, melting in despair. wide shot",
-            "cast": ["alexandre", "leo"],
+            "cast": [
+              "alexandre",
+              "leo"
+            ],
             "file": "images/cultureg-06.webp",
             "status": "pending",
             "attempts": 0
@@ -159,7 +228,15 @@
           "tag": "En vrai",
           "title": "Jean Racine, champion de l’alexandrin",
           "text": "Le dramaturge (1639-1699) écrit ses tragédies, comme Phèdre, en alexandrins. Le vers inventé pour un roman de chevalerie est devenu celui de la grande littérature française.",
-          "photo": { "commons": "File:Jean Racine - Versailles MV 2926.jpg" }
+          "photo": {
+            "commons": "File:Jean Racine - Versailles MV 2926.jpg",
+            "credit": "After Jean-Baptiste Santerre",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Jean_Racine_-_Versailles_MV_2926.jpg",
+            "file": "images/photo-8-jean-racine-versailles-mv-2926-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 9,
@@ -167,12 +244,23 @@
           "tag": "Le fin mot",
           "caption": "En bref : l’alexandrin doit son nom au Roman d’Alexandre, poème médiéval à succès écrit en vers de douze syllabes.",
           "bubbles": [
-            { "who": "leo", "text": "Un roi, douze syllabes, et un auteur pas crédité.", "side": "r" },
-            { "who": "alexandre", "text": "Pas vexé. Juste… vexé.", "side": "l" }
+            {
+              "who": "leo",
+              "text": "Un roi, douze syllabes, et un auteur pas crédité.",
+              "side": "r"
+            },
+            {
+              "who": "alexandre",
+              "text": "Pas vexé. Juste… vexé.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "confession-style shot, plain background. Léo (lanky, green hoodie, red curls) on the right looking straight at the reader, counting the last syllable on his twelfth finger drawn as a tiny doodle; Alexandre (short, plump, blue robe) on the left with arms crossed, nose in the air, pretending not to care, pink blush on the cheeks. medium shot",
-            "cast": ["leo", "alexandre"],
+            "cast": [
+              "leo",
+              "alexandre"
+            ],
             "file": "images/cultureg-07.webp",
             "status": "pending",
             "attempts": 0
@@ -185,9 +273,18 @@
       },
       "story": "L’alexandrin est le vers de douze syllabes de la poésie française. Dans sa forme classique, une pause au milieu, la césure, le coupe en deux moitiés de six syllabes, les hémistiches.\nSon nom vient d’un poème médiéval : le Roman d’Alexandre, qui raconte la vie d’Alexandre le Grand, le roi conquérant de l’Antiquité. Les premières versions françaises de cette histoire étaient en vers de huit puis de dix syllabes. Dans les années 1180, un poète, Alexandre de Paris, réorganise ces textes en un seul grand poème, entièrement en vers de douze syllabes. Ce Roman d’Alexandre connaît un immense succès dans l’Europe médiévale, si bien que son vers finit par porter son nom. Le vers doit donc son nom au héros du poème, pas à son auteur.\nPourtant, au Moyen Âge, le vers le plus employé reste le décasyllabe, de dix syllabes. Au XVIe siècle, Ronsard utilise l’alexandrin dans ses poèmes, mais le juge trop proche de la prose pour son épopée, la Franciade.\nC’est au XVIIe siècle que l’alexandrin triomphe, d’abord au théâtre classique, avec les tragédies de Corneille et de Racine. Il reste le grand vers de la poésie française jusqu’à la fin du XIXe siècle, même si les romantiques commencent à le « disloquer » en affaiblissant la césure.",
       "sources": [
-        { "title": "Larousse — Alexandrin", "url": "https://www.larousse.fr/encyclopedie/litterature/alexandrin/170884" },
-        { "title": "Medieval Francophone Literary Culture — Alexandre: introduction", "url": "https://medievalfrancophone.ac.uk/textual-traditions-and-segments/alexandre/" },
-        { "title": "Vikidia — Alexandrin", "url": "https://fr.vikidia.org/wiki/Alexandrin" }
+        {
+          "title": "Larousse — Alexandrin",
+          "url": "https://www.larousse.fr/encyclopedie/litterature/alexandrin/170884"
+        },
+        {
+          "title": "Medieval Francophone Literary Culture — Alexandre: introduction",
+          "url": "https://medievalfrancophone.ac.uk/textual-traditions-and-segments/alexandre/"
+        },
+        {
+          "title": "Vikidia — Alexandrin",
+          "url": "https://fr.vikidia.org/wiki/Alexandrin"
+        }
       ]
     }
   ]
