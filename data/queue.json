@@ -1,24 +1,7 @@
 {
- "updated_at": "2026-11-13T00:36+01:00",
+ "updated_at": "2026-11-13T07:53+01:00",
  "stock": {
   "cultureg": [
-   {
-    "path": "stock/cultureg/20261112-0100-bonne-annee-oui-mais-laquelle",
-    "name": "20261112-0100-bonne-annee-oui-mais-laquelle",
-    "added": "20261112-0100",
-    "status": "waiting",
-    "next": false,
-    "title": "Bonne année ! Oui, mais laquelle ?",
-    "theme": "Histoire moderne",
-    "tagline": "Avant 1564, la France fêtait le Nouvel An à Noël, en mars ou à Pâques, selon la ville",
-    "minutes": 2,
-    "cases": 10,
-    "photos": 1,
-    "images_done": 2,
-    "images_total": 9,
-    "failed": 0,
-    "redo": 0
-   },
    {
     "path": "stock/cultureg/20261113-0100-le-guide-michelin-ou-comment-vendre-des",
     "name": "20261113-0100-le-guide-michelin-ou-comment-vendre-des",
@@ -55,23 +38,6 @@
    }
   ],
   "insolite": [
-   {
-    "path": "stock/insolite/20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
-    "name": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1",
-    "added": "20261110-0100",
-    "status": "waiting",
-    "next": false,
-    "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
-    "theme": "Droit",
-    "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
-    "minutes": 1,
-    "cases": 9,
-    "photos": 1,
-    "images_done": 7,
-    "images_total": 8,
-    "failed": 0,
-    "redo": 0
-   },
    {
     "path": "stock/insolite/20261112-0100-docteur-vampire-et-ses-quarante-millions",
     "name": "20261112-0100-docteur-vampire-et-ses-quarante-millions",
@@ -154,7 +120,7 @@
     "minutes": 5,
     "cases": 32,
     "photos": 2,
-    "images_done": 0,
+    "images_done": 20,
     "images_total": 26,
     "failed": 0,
     "redo": 0
@@ -165,9 +131,39 @@
   {
    "date": "2026-11-13",
    "path": "editions/2026-11-13",
-   "status": "draft",
+   "status": "published",
    "newsletter": false,
    "formats": [
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "kind": "",
+     "title": "Bonne année ! Oui, mais laquelle ?",
+     "theme": "Histoire moderne",
+     "tagline": "Avant 1564, la France fêtait le Nouvel An à Noël, en mars ou à Pâques, selon la ville",
+     "minutes": 2,
+     "cases": 10,
+     "photos": 1,
+     "images_done": 9,
+     "images_total": 9,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "kind": "",
+     "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
+     "theme": "Droit",
+     "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
+     "minutes": 1,
+     "cases": 9,
+     "photos": 1,
+     "images_done": 8,
+     "images_total": 8,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "Le Chiffre",

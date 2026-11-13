@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T00:36:19.156862+01:00",
+ "updated_at": "2026-11-13T07:53:27.296982+01:00",
  "today": "2026-11-13",
  "problems": [
   "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
@@ -9,6 +9,8 @@
    "date": "2026-11-13",
    "status": "draft",
    "formats": {
+    "cultureg": "prêt",
+    "insolite": "prêt",
     "quiz": "prêt"
    }
   },
@@ -41,31 +43,37 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-13/cultureg : « Bonne année ! Oui, mais laquelle ? » prise dans la file (20261112-0100-bonne-annee-oui-mais-laquelle)",
+  "2026-11-13/insolite : « Parisiennes en pantalon : hors-la-loi de 1800 à 2013 » prise dans la file (20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-12",
+ "today_published": true,
+ "today_stories": [
+  "cultureg",
+  "insolite"
+ ],
+ "last_published": "2026-11-13",
  "stock": {
   "cultureg": {
    "ready": 0,
-   "waiting": 3,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 25,
-   "focus": "20261112-0100-bonne-annee-oui-mais-laquelle (7 image(s) à faire)",
+   "images_left": 18,
+   "focus": "20261113-0100-le-guide-michelin-ou-comment-vendre-des (9 image(s) à faire)",
    "next": null,
    "next_redo": 0
   },
   "insolite": {
    "ready": 0,
-   "waiting": 4,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 25,
-   "focus": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1 (1 image(s) à faire)",
+   "images_left": 24,
+   "focus": "20261112-0100-docteur-vampire-et-ses-quarante-millions (8 image(s) à faire)",
    "next": null,
    "next_redo": 0
   },
@@ -73,8 +81,8 @@
    "ready": 0,
    "waiting": 1,
    "blocked": 1,
-   "images_left": 26,
-   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (26 image(s) à faire)",
+   "images_left": 6,
+   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (6 image(s) à faire)",
    "next": null,
    "next_redo": 0
   }
@@ -83,14 +91,14 @@
  "days_ahead_written": 1,
  "quiz_days_ahead": 4,
  "quota": {
-  "day": "2026-11-12",
-  "count": 35,
-  "neurons": 6400,
+  "day": "2026-11-13",
+  "count": 33,
+  "neurons": 6240,
   "exhausted": false,
   "by_kind": {
-   "cast": 5,
-   "cover": 2,
-   "case": 28
+   "case": 29,
+   "cast": 3,
+   "cover": 1
   }
  },
  "fal": {

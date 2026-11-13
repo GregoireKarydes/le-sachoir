@@ -1,6 +1,45 @@
 {
- "updated_at": "2026-11-13T00:36:19.156862+01:00",
+ "updated_at": "2026-11-13T07:53:27.296982+01:00",
  "editions": [
+  {
+   "date": "2026-11-13",
+   "demo": false,
+   "formats": [
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Bonne année ! Oui, mais laquelle ?",
+     "kind": "",
+     "url": "histoires/2026-11-13-bonne-annee-oui-mais-laquelle/",
+     "theme": "Histoire moderne",
+     "minutes": 2,
+     "tagline": "Avant 1564, la France fêtait le Nouvel An à Noël, en mars ou à Pâques, selon la ville",
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
+     "kind": "",
+     "url": "histoires/2026-11-13-parisiennes-en-pantalon-hors-la-loi-de-1800-a-2013/",
+     "theme": "Droit",
+     "minutes": 1,
+     "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Chiffre",
+     "title": "Sortez vos doigts, on compte",
+     "kind": "chiffre",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-12",
    "demo": false,

@@ -1,7 +1,588 @@
 {
   "date": "2026-11-13",
-  "status": "draft",
+  "status": "published",
   "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Bonne année ! Oui, mais laquelle ?",
+      "tagline": "Avant 1564, la France fêtait le Nouvel An à Noël, en mars ou à Pâques, selon la ville",
+      "minutes": 2,
+      "theme": "Histoire moderne",
+      "cast": [
+        {
+          "id": "charles",
+          "look": "Charles, a teenage king of the 1560s, thin pale face, short dark hair, small white ruff collar, black doublet, a tiny gold crown as the only colour",
+          "file": "cast/cultureg-charles.png",
+          "status": "done",
+          "role": "the teenage king touring his kingdom, excited and a bit lost; leans out, wide-eyed"
+        },
+        {
+          "id": "catherine",
+          "look": "Catherine, the queen mother of the 1560s, short and stout, round face, sharp knowing eyes, black widow's dress, small black veiled cap, white ruff collar",
+          "file": "cast/cultureg-catherine.png",
+          "status": "done",
+          "role": "the queen mother who really runs things; stiff, sharp-eyed, reading lists"
+        },
+        {
+          "id": "lhospital",
+          "look": "Michel, an old chancellor of the 1560s, very long white beard down to his belt, bushy eyebrows, black robe, black square cap, holding a scroll",
+          "file": "cast/cultureg-lhospital.png",
+          "status": "done",
+          "role": "the wise old chancellor who writes the edict; calm, deadpan, unrolling scrolls"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare room with three wall calendars, each showing a different blank page. Charles (in the middle) holding a party horn, totally lost, turning his head from one calendar to another; Catherine (on the right) arms crossed, unimpressed. medium shot",
+        "cast": [
+          "charles",
+          "catherine"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1564",
+          "caption": "Pourquoi l’année commence-t-elle le 1er janvier ? En 1564, le jeune Charles IX et sa mère font le tour du royaume.",
+          "bubbles": [
+            {
+              "text": "On va découvrir la France, mon fils.",
+              "side": "r"
+            },
+            {
+              "text": "Et ses fromages ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple country road with a royal carriage. Charles (on the left) leaning out of the carriage window, excited like a child on holiday; Catherine (on the right) sitting stiffly inside, reading a list, sharp eyes. medium shot",
+            "cast": [
+              "charles",
+              "catherine"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "Le vrai roi",
+          "title": "Charles IX, peint par François Clouet",
+          "text": "Le roi a 14 ans quand il signe l’édit qui fait commencer l’année le 1er janvier. Ce portrait en pied est conservé au Kunsthistorisches Museum de Vienne.",
+          "photo": {
+            "commons": "File:François Clouet 004.jpg",
+            "credit": "François Clouet",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Clouet_-_Portrait_of_King_Charles_IX_of_France,_full_portrait.jpg",
+            "file": "images/photo-2-fran-ois-clouet-004-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Surprise : d’un diocèse (une région de l’Église) à l’autre, l’année ne commence pas le même jour.",
+          "bubbles": [
+            {
+              "text": "On est en quelle année, ici ?",
+              "side": "l"
+            },
+            {
+              "text": "Ça dépend du diocèse, Sire.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a village square with a single signpost. Charles (on the left) scratching his head under his crown, confused; Michel (on the right) unrolling a long scroll, deadpan, eyebrows raised. medium shot",
+            "cast": [
+              "charles",
+              "lhospital"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "",
+          "caption": "À Lyon, l’année commence à Noël. À Reims, Vienne ou Limoges, le 25 mars.",
+          "bubbles": [
+            {
+              "text": "Bonne année !",
+              "side": "l"
+            },
+            {
+              "text": "Pas ici. Ici, c’est encore l’an dernier.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Charles (on the left) blowing a party horn and throwing confetti, delighted; Catherine (on the right) gently lowering his arm, shaking her head, confetti falling on her black veil. plain background. medium shot",
+            "cast": [
+              "charles",
+              "catherine"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "En Artois, c’est à Pâques : une fête qui change de date chaque année.",
+          "bubbles": [
+            {
+              "text": "Donc le Nouvel An… bouge ?",
+              "side": "l"
+            },
+            {
+              "text": "Il bouge, Sire. Comme le reste.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Charles (on the left) sitting on the floor, holding his head with both hands, crown sliding off, completely overwhelmed; Michel (on the right) calmly stroking his very long beard. plain background. medium shot",
+            "cast": [
+              "charles",
+              "lhospital"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "title": "Pourquoi tant de dates différentes ?",
+          "text": "Chaque région suivait sa tradition religieuse : Noël, le 25 mars (fête de l’Annonciation) ou Pâques. Résultat : un même jour pouvait appartenir à deux années différentes selon la ville où l’on se trouvait.",
+          "joke": "Pratique pour rajeunir d’un an en changeant de ville. Moins pour dater un contrat."
+        },
+        {
+          "n": 7,
+          "kind": "chap",
+          "tag": "9 août 1564",
+          "caption": "Pour mettre de l’ordre, le 9 août 1564 à Roussillon, le roi signe un édit du chancelier Michel de L’Hospital.",
+          "bubbles": [
+            {
+              "text": "L’année commencera le 1er janvier. Partout.",
+              "side": "r"
+            },
+            {
+              "text": "Même à Lyon ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare castle room with one table. Michel (on the right) presenting a parchment and a quill with great ceremony; Charles (on the left) about to sign, tongue sticking out in concentration. medium shot",
+            "cast": [
+              "charles",
+              "lhospital"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Article 39",
+          "caption": "Elle tient en un article, le 39e, perdu parmi des articles sur la justice.",
+          "bubbles": [
+            {
+              "text": "On l’a caché entre deux procès ?",
+              "side": "l"
+            },
+            {
+              "text": "Personne ne lit jusqu’à l’article 39.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Michel (on the right) unrolling an extremely long scroll that rolls all the way across the floor; Charles (on the left) on his knees with a magnifying glass, searching for a tiny line near the bottom. wide shot",
+            "cast": [
+              "charles",
+              "lhospital"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "1567",
+          "caption": "La règle s’applique dès le 1er janvier 1567. En 1622, le pape l’étend à tout le monde catholique.",
+          "bubbles": [
+            {
+              "text": "La France d’abord, Rome ensuite. Je dis ça…",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Catherine (in the middle) sitting very straight, sipping from a small cup with a smug little smile, looking sideways. plain background. medium shot",
+            "cast": [
+              "catherine"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 10,
+          "kind": "conf",
+          "tag": "Mythbuster",
+          "caption": "On dit que le poisson d’avril viendrait de ce changement. Explication répandue, mais discutée.",
+          "bubbles": [
+            {
+              "text": "Donc on me doit une blague par an. Minimum.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Charles (in the middle) in a confession-style close-up, looking straight at the reader, holding a small paper fish with a mischievous grin. plain background",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Signé par Charles IX le 9 août 1564, l’édit de Roussillon fixe le début de l’année au 1er janvier dans tout le royaume.",
+        "source": "Hérodote.net, Wikipédia"
+      },
+      "sources": [
+        {
+          "title": "Hérodote — 9 août 1564, l’année commence au 1er janvier",
+          "url": "https://www.herodote.net/9_aout_1564-evenement-15640809.php"
+        },
+        {
+          "title": "Wikipedia — Edict of Roussillon",
+          "url": "https://en.wikipedia.org/wiki/Edict_of_Roussillon"
+        },
+        {
+          "title": "Actu-Juridique — Qui a volé le premier de l’an ?",
+          "url": "https://www.actu-juridique.fr/culture/conte-autour-de-charles-ix-qui-a-vole-le-premier-de-lan-ii/"
+        }
+      ],
+      "story": "Au XVIe siècle, le royaume de France ne commence pas l’année le même jour partout. Selon les diocèses, on change d’année à Noël, comme à Lyon, le 25 mars, comme à Reims, Vienne ou Limoges, ou encore à Pâques, comme en Artois. Or Pâques change de date chaque année : le Nouvel An bougeait donc aussi.\nEn 1564, le jeune roi Charles IX et sa mère, Catherine de Médicis, entreprennent un long tour du royaume. Pour mettre de l’ordre, le roi signe le 9 août 1564, à Roussillon, un édit préparé par le chancelier Michel de L’Hospital. Son article 39 fixe le début de l’année au 1er janvier, partout dans le royaume. Glissée parmi des articles sur la justice, la mesure s’applique à partir du 1er janvier 1567.\nEn 1622, le pape étend ce choix à tout le monde catholique.\nOn raconte souvent que le poisson d’avril serait né de ce changement, en souvenir de l’ancien Nouvel An de printemps. L’explication est répandue, mais les historiens la discutent.",
+      "art": {
+        "subject": "how, before 1564, French towns celebrated New Year on different days, until the young king fixed it to 1 January",
+        "setting": "a royal carriage on a country road, village squares, a royal council room",
+        "era": "1560s France, Renaissance court",
+        "props": {
+          "edict": "a long parchment scroll with a red wax seal",
+          "carriage": "a black royal carriage with gold trim"
+        }
+      },
+      "from_stock": "20261112-0100-bonne-annee-oui-mais-laquelle"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
+      "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
+      "minutes": 1,
+      "theme": "Droit",
+      "cast": [
+        {
+          "id": "dubois",
+          "name": "Le préfet Dubois",
+          "look": "Louis Nicolas, the Paris police prefect in 1800, stiff and pompous, big grey sideburns, black bicorne hat, black high-collared uniform coat, a red sash as the only colour",
+          "file": "cast/insolite-dubois.png",
+          "status": "done",
+          "role": "the pompous police prefect who signs the ban; stiff, chin up, finger wagging"
+        },
+        {
+          "id": "rosa",
+          "name": "Rosa Bonheur",
+          "look": "Rosa, a French woman painter of the 1850s, short cropped curly dark hair, confident grin, white loose smock, black trousers, a paintbrush in hand",
+          "file": "cast/insolite-rosa.png",
+          "status": "done",
+          "role": "the painter who wears trousers with a permit to work at horse fairs; confident, grinning, hands on hips"
+        },
+        {
+          "id": "chloe",
+          "name": "Une Parisienne",
+          "look": "Chloé, a small modern Parisian office worker in 2013, high messy ponytail, black trousers, white shirt, a yellow scarf as the only colour, a coffee cup in hand",
+          "file": "cast/insolite-chloe.png",
+          "status": "done",
+          "role": "a modern office worker amazed that the rule lasted until 2013; small, wide-eyed, holding her coffee"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare office with a big rubber stamp on a desk. Louis Nicolas (on the left) behind the desk, holding up his stamp over a form, very strict; Chloé (on the right) in trousers, coffee in hand, staring at him in total disbelief. medium shot",
+        "cast": [
+          "dubois",
+          "chloe"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "7 novembre 1800",
+          "caption": "Pourquoi une loi interdisait-elle le pantalon aux Parisiennes ? Le 7 novembre 1800, le préfet de police Dubois signe une ordonnance.",
+          "bubbles": [
+            {
+              "text": "Une femme en pantalon ? Il lui faut un papier.",
+              "who": "dubois",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare office with one desk. Louis Nicolas (on the left) signing a document with a huge feather quill, chin up, extremely proud of himself, chest puffed out. medium shot",
+            "cast": [
+              "dubois"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Le texte : pour s’habiller « en homme », une Parisienne doit demander une permission à la police, avec un motif.",
+          "bubbles": [
+            {
+              "text": "Motif ?",
+              "who": "dubois",
+              "side": "l"
+            },
+            {
+              "text": "J’ai froid aux jambes.",
+              "who": "rosa",
+              "side": "r"
+            },
+            {
+              "text": "Refusé.",
+              "who": "dubois",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office counter. Louis Nicolas (on the left) behind the counter stamping a form with a big red rubber stamp, bored; Rosa (on the right) in front of the counter, arms crossed, rolling her eyes. medium shot",
+            "cast": [
+              "dubois",
+              "rosa"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Années 1850",
+          "caption": "Accordée surtout pour raison de santé ou de métier : la peintre Rosa Bonheur l’obtient, à renouveler tous les six mois.",
+          "bubbles": [
+            {
+              "text": "Je peins des chevaux dans les foires. En robe, c’est sportif.",
+              "who": "rosa",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a muddy fairground with one horse. Rosa (on the right) in trousers sitting on a stool sketching the horse, relaxed and happy; a small folded paper permit sticking out of her pocket. medium shot",
+            "cast": [
+              "rosa"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "La vraie permission de Rosa Bonheur, 1857",
+          "text": "Signée par la préfecture de police, elle l’autorise à s’habiller en homme « pour raison de santé », mais ni aux spectacles ni aux bals.",
+          "photo": {
+            "commons": "File:Permission de travestissement Rosa Bonheur.jpg",
+            "credit": "Préfecture de police de Paris",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Permission_de_travestissement_Rosa_Bonheur.jpg",
+            "file": "images/photo-4-permission-de-travestissement-rosa.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "",
+          "caption": "Mais son costume n’est pas admis aux spectacles, aux bals ni aux réunions publiques.",
+          "bubbles": [
+            {
+              "text": "La foire aux chevaux, oui. Le bal, non ?",
+              "who": "rosa",
+              "side": "r"
+            },
+            {
+              "text": "Exactement. C’est d’une logique imparable.",
+              "who": "dubois",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the doorway of a ballroom. Louis Nicolas (on the left) blocking the door with his arms spread wide, very serious; Rosa (on the right) in trousers, hands on hips, mouth open in outrage. medium shot",
+            "cast": [
+              "dubois",
+              "rosa"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "1909",
+          "caption": "Plus tard, des circulaires assouplissent la règle : le pantalon est toléré… si on tient un guidon ou des rênes.",
+          "bubbles": [
+            {
+              "text": "Autorisé, si vous tenez un guidon.",
+              "who": "dubois",
+              "side": "l"
+            },
+            {
+              "text": "Et quand je descends du vélo ?",
+              "who": "chloe",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Chloé (on the right) frozen mid-step next to a bicycle, one hand still on the handlebar, in trousers; Louis Nicolas (on the left) bending down to watch her hand with a magnifying glass, extremely serious. plain background. medium shot",
+            "cast": [
+              "dubois",
+              "chloe"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "done",
+            "attempts": 3
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "title": "Comment un texte peut durer 213 ans",
+          "text": "Une règle ne disparaît pas toute seule : il faut la supprimer officiellement. Celle-ci, plus personne ne l’appliquait, mais personne ne l’a abrogée. Elle a donc continué d’exister, sur le papier, pendant des générations.",
+          "joke": "Comme un vieux mot de passe que personne n’a pensé à changer."
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "31 janvier 2013",
+          "caption": "Jamais supprimé, le texte était juste oublié. En 2013, le ministère des Droits des femmes le déclare « implicitement abrogé ».",
+          "bubbles": [
+            {
+              "text": "Donc j’étais hors-la-loi tous les matins ?",
+              "who": "chloe",
+              "side": "r"
+            },
+            {
+              "text": "Techniquement.",
+              "who": "dubois",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bright modern office with one desk and one laptop. Chloé (on the right) sitting at the desk, eyebrows raised in surprise, holding a newspaper; Louis Nicolas (on the left) standing beside the desk, calmly nodding. medium shot",
+            "cast": [
+              "dubois",
+              "chloe"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "La raison : il est contraire à l’égalité entre femmes et hommes, inscrite dans la Constitution. Il aura fallu 213 ans.",
+          "bubbles": [
+            {
+              "text": "Je vais fêter ça. En jupe, par principe.",
+              "who": "chloe",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Chloé (in the middle) in a confession-style close-up, looking straight at the reader with a sly little smile, raising her coffee cup as a toast. plain background",
+            "cast": [
+              "chloe"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Une ordonnance parisienne du 7 novembre 1800 obligeait les femmes à demander une permission pour porter le pantalon ; elle a été déclarée abrogée en 2013.",
+        "source": "La Vie des idées, Paris ZigZag"
+      },
+      "sources": [
+        {
+          "title": "La Vie des idées — Le droit au pantalon",
+          "url": "https://laviedesidees.fr/Le-droit-au-pantalon"
+        },
+        {
+          "title": "Paris ZigZag — Du temps où les Parisiennes en pantalon étaient illégalement « travesties »",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/du-temps-ou-les-parisiennes-en-pantalon-etaient-illegalement-travesties/"
+        },
+        {
+          "title": "JSTOR Daily — Rosa Bonheur’s permission to wear pants",
+          "url": "https://daily.jstor.org/rosa-bonheurs-permission-to-wear-pants/"
+        },
+        {
+          "title": "Vermont Public (NPR) — Parisian women now officially allowed to wear pants",
+          "url": "https://www.vermontpublic.org/2013-02-04/parisian-women-now-officially-allowed-to-wear-pants"
+        },
+        {
+          "title": "The Connexion — Women’s trouser ban is annulled",
+          "url": "https://www.connexionfrance.com/news/womens-trouser-ban-is-annulled/611805"
+        }
+      ],
+      "story": "Le 7 novembre 1800, le préfet de police de Paris, Louis Nicolas Dubois, signe une ordonnance sur le « travestissement des femmes ». Toute Parisienne qui veut s’habiller « en homme », donc porter le pantalon, doit en demander l’autorisation à la préfecture, avec un motif.\nCes permissions sont rares et accordées surtout pour raison de santé ou de métier. La peintre Rosa Bonheur, qui travaille dans les foires aux chevaux, en obtient une, à renouveler tous les six mois. Même avec ce papier, le costume masculin reste interdit aux spectacles, aux bals et aux réunions publiques.\nAvec le temps, des circulaires assouplissent la règle : selon des textes cités au Sénat, le pantalon est toléré si la femme tient un guidon de vélo ou les rênes d’un cheval. Puis la règle tombe dans l’oubli : plus personne ne l’applique, mais personne ne l’abroge non plus.\nIl faut attendre le 31 janvier 2013 pour que le ministère des Droits des femmes la déclare « implicitement abrogée », car contraire à l’égalité entre les femmes et les hommes garantie par la Constitution. L’ordonnance aura survécu 213 ans, sur le papier seulement.",
+      "art": {
+        "subject": "how a Paris police order required women to get a permit to wear trousers from 1800 until it was formally abolished in 2013",
+        "setting": "a Paris police office in 1800, an 1850s painter's studio, a modern Paris office",
+        "era": "mixed on purpose: 1800, the 1850s and 2013, each character in the clothes of their own time",
+        "props": {
+          "permit": "a small official paper permit with a stamp"
+        }
+      },
+      "from_stock": "20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1"
+    },
     {
       "id": "quiz",
       "kind": "chiffre",
@@ -68,5 +649,6 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-13T07:53:27.296982+01:00"
 }
