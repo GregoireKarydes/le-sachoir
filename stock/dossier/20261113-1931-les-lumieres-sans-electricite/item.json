@@ -1,0 +1,719 @@
+{
+  "added": "20261113-1931",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Les Lumières : comment des philosophes ont rallumé la France (sans électricité)",
+      "tagline": "Voltaire, Diderot, Montesquieu, Rousseau : le XVIIIe siècle qui a appris à penser par soi-même, malgré la Bastille et les bûchers de livres",
+      "teaser": "Un dictionnaire interdit, un livre brûlé et une impératrice qui achète une bibliothèque sans l’emporter.",
+      "minutes": 3,
+      "theme": "Philosophie",
+      "art": {
+        "subject": "the French Enlightenment in the 18th century: Voltaire, Diderot's Encyclopédie, Montesquieu's separation of powers, and how these ideas led to the 1789 Declaration of the Rights of Man",
+        "setting": "a dark bare room lit by a candle, a stone prison cell in the Bastille, a foggy London quay, a Paris square, Voltaire's study at his château, Diderot's cluttered Paris workroom full of books, the stone tower of Vincennes, a dim censor's office, a sunny Paris balcony",
+        "era": "18th-century France (1717 to 1789), with one student from today",
+        "props": {
+          "candle": "a single white candle in a brass holder",
+          "quill": "a long white goose-feather quill",
+          "volume": "a thick leather-bound book with a plain brown cover",
+          "scale": "a small brass balance scale with two pans",
+          "phone": "a modern smartphone with a blank screen",
+          "bulb": "a modern light bulb"
+        }
+      },
+      "cast": [
+        {
+          "id": "voltaire",
+          "name": "Voltaire",
+          "look": "Voltaire, a small extremely thin and bony French writer, sharp pointed nose and chin, a huge curly powdered white wig, pale skin, a crimson red velvet coat as main colour with white lace cuffs, the quill always in hand",
+          "role": "the sarcastic, fearless writer who mocks power and keeps getting into trouble; tiny and bony, eyebrows raised, a sly sideways grin",
+          "file": "cast/dossier-voltaire.png",
+          "status": "pending"
+        },
+        {
+          "id": "diderot",
+          "name": "Denis Diderot",
+          "look": "Denis, a sturdy broad-shouldered French philosopher, his own untidy grey hair with no wig, ruddy cheeks, open white shirt, a long faded sky-blue dressing gown as main colour, always carrying an armful of books",
+          "role": "the tireless, warm-hearted editor of the Encyclopédie; sturdy and messy, always busy, carrying too many books, laughing loudly",
+          "file": "cast/dossier-diderot.png",
+          "status": "pending"
+        },
+        {
+          "id": "montesquieu",
+          "name": "Montesquieu",
+          "look": "Charles, a very tall stiff aristocratic magistrate, long grey curled judge's wig, long nose, pale skin, black magistrate's robe with a wide purple sash as main colour, holding the scale",
+          "role": "the calm, dignified judge who thinks in balances; very tall and stiff as a post, slow precise gestures",
+          "file": "cast/dossier-montesquieu.png",
+          "status": "pending"
+        },
+        {
+          "id": "mathis",
+          "name": "Mathis",
+          "look": "Mathis, a chubby young man of today of average height, short curly black hair, brown skin, big round black glasses, a bright yellow hoodie as main colour, jeans, the phone always in hand",
+          "role": "the curious student from today who asks the reader's questions; chubby and eager, reacts with his whole body, often checks his phone",
+          "file": "cast/dossier-mathis.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a dark bare room. Voltaire (tiny, bony, huge white wig, crimson coat) on the left holding up the candle, grinning slyly; Mathis (chubby, yellow hoodie, round glasses) on the right holding up the bulb with a hopeful face; between them the candle's light is much brighter than the bulb. wide shot",
+        "cast": [
+          "voltaire",
+          "mathis"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Allumer les esprits",
+          "caption": "On appelle « Lumières » un mouvement d’idées du XVIIIe siècle. Mais qui a allumé quoi, et contre quoi ?",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Les Lumières, c’est quand on a inventé l’ampoule ?",
+              "side": "r"
+            },
+            {
+              "who": "voltaire",
+              "text": "Non, jeune homme. C’est quand on a allumé les cerveaux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a dark bare room. Mathis (chubby, yellow hoodie, round glasses) on the right proudly holding up the bulb, which is not lit; Voltaire (tiny, bony, huge white wig, crimson coat) on the left holding the candle right next to his own head, which glows warmly, smirking at the viewer. visual gag: the unlit bulb. medium shot",
+            "cast": [
+              "mathis",
+              "voltaire"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "XVIIIe siècle",
+          "caption": "En France, le roi a tous les pouvoirs, l’Église catholique encadre les croyances et la censure surveille les livres.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Et si on n’est pas d’accord ?",
+              "side": "r"
+            },
+            {
+              "who": "voltaire",
+              "text": "On fait comme moi : on visite la Bastille.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room with a gilded royal throne on a small platform in the background, empty. Voltaire (tiny, bony, huge white wig, crimson coat) on the left pointing at the throne with his quill, mocking; Mathis (chubby, yellow hoodie, round glasses) on the right hiding his phone behind his back, nervous, light-blue sweat drop. medium shot",
+            "cast": [
+              "voltaire",
+              "mathis"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Voltaire, vers 30 ans",
+          "text": "François-Marie Arouet, dit Voltaire (1694-1778), peint par Nicolas de Largillière vers 1724. Il deviendra l’écrivain le plus célèbre d’Europe… et l’un des plus surveillés.",
+          "photo": {
+            "commons": "File:Nicolas de Largillière, François-Marie Arouet dit Voltaire (vers 1724-1725) -001.jpg"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1717",
+          "caption": "Voltaire en sait quelque chose : pour des vers moqueurs contre le Régent, il passe près d’un an à la Bastille.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Après ça, vous allez vous calmer, non ?",
+              "side": "l"
+            },
+            {
+              "who": "voltaire",
+              "text": "Me calmer ? J’y ai écrit une tragédie. Et je ne fais que commencer.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a stone prison cell with a tiny barred window and a straw bed. Voltaire (tiny, bony, huge white wig, crimson coat) on the right sitting cross-legged on the straw, writing furiously with the quill on a long sheet, mischievous grin; Mathis (chubby, yellow hoodie, round glasses) on the left peeking through the bars of the cell door, worried. medium shot",
+            "cast": [
+              "mathis",
+              "voltaire"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "title": "Les Lumières, en une phrase",
+          "text": "En 1784, le philosophe allemand Kant les définit comme « la sortie de l’homme hors de l’état de tutelle dont il est lui-même responsable ».",
+          "steps": [
+            "Penser par soi-même, pas parce qu’un roi ou un prêtre l’ordonne",
+            "Juger avec la raison et l’expérience",
+            "Défendre la tolérance, la liberté et le progrès"
+          ],
+          "joke": "Sa devise : « Sapere aude ». En clair : ose penser."
+        },
+        {
+          "n": 6,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Voltaire, l’insolent",
+          "caption": "1726 : après une nouvelle querelle, Voltaire part en Angleterre. Il y découvre un pays plus libre, qu’il admire.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Pourquoi l’Angleterre ? Pour la météo ?",
+              "side": "r"
+            },
+            {
+              "who": "voltaire",
+              "text": "Là-bas, on publie, on discute, on critique, sans finir en prison.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a foggy London quay with a few masts in the mist. Voltaire (tiny, bony, huge white wig, crimson coat) on the left, perfectly dry, sipping tea with his little finger raised, delighted; Mathis (chubby, yellow hoodie, round glasses) on the right under a small grey rain cloud that rains only on him, soaked and grumpy. medium shot",
+            "cast": [
+              "voltaire",
+              "mathis"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "1734",
+          "caption": "Il en tire les « Lettres philosophiques », éloge de la liberté anglaise. En France, le livre est brûlé.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Ils ont brûlé votre livre ?",
+              "side": "l"
+            },
+            {
+              "who": "voltaire",
+              "text": "La meilleure publicité de l’année. Mais je file en Lorraine.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Paris square with a small pile of burning books in the middle. Mathis (chubby, yellow hoodie, round glasses) on the left, horrified, both hands on his cheeks; Voltaire (tiny, bony, huge white wig, crimson coat) on the right warming his hands at the fire, smiling, a travel bag already packed at his feet. wide shot",
+            "cast": [
+              "mathis",
+              "voltaire"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "1762",
+          "caption": "À Toulouse, le protestant Jean Calas est exécuté, accusé d’avoir tué son fils pour l’empêcher de devenir catholique.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Et il était coupable ?",
+              "side": "l"
+            },
+            {
+              "who": "voltaire",
+              "text": "J’enquête. Pour moi, c’est le fanatisme qui l’a condamné.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet study in a château, a desk covered with letters and papers. Voltaire (tiny, bony, huge white wig, crimson coat) on the right reading a letter very seriously, frowning, quill in the other hand; Mathis (chubby, yellow hoodie, round glasses) on the left, standing still, serious, his phone lowered. calm, sober scene. medium shot",
+            "cast": [
+              "mathis",
+              "voltaire"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "1763-1765",
+          "caption": "Voltaire publie le « Traité sur la tolérance » et alerte l’opinion. En 1765, Calas est déclaré innocent.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Un livre qui fait rouvrir un procès ?",
+              "side": "l"
+            },
+            {
+              "who": "voltaire",
+              "text": "Quand l’opinion publique s’en mêle, même les juges finissent par écouter.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same château study, now with an open window. Voltaire (tiny, bony, huge white wig, crimson coat) on the right standing on his chair, slamming the volume on the desk, determined; dozens of folded letters fly out of the window like a flock of white birds. Mathis (chubby, yellow hoodie, round glasses) on the left watching the letters fly away, impressed. wide shot",
+            "cast": [
+              "mathis",
+              "voltaire"
+            ],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "photo",
+          "tag": "Tableau",
+          "title": "Une lecture chez Madame Geoffrin",
+          "text": "Peint en 1812 par Anicet Lemonnier, ce tableau imagine une lecture d’une pièce de Voltaire en 1755. Dans ces salons parisiens, on débat des idées nouvelles.",
+          "photo": {
+            "commons": "File:A Reading in the Salon of Mme Geoffrin.jpg"
+          }
+        },
+        {
+          "n": 11,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Le dictionnaire qui dérange",
+          "caption": "1751 : Denis Diderot et d’Alembert publient le premier volume d’un projet fou : rassembler tout le savoir.",
+          "bubbles": [
+            {
+              "who": "diderot",
+              "text": "Les sciences, les arts, et surtout les métiers !",
+              "side": "l"
+            },
+            {
+              "who": "mathis",
+              "text": "Bref, Wikipédia… en papier et sans wifi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a cluttered Paris workroom with piles of papers. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the left carrying a wobbling tower of books up to his chin, laughing; Mathis (chubby, yellow hoodie, round glasses) on the right holding up the phone next to the tower, smug. medium shot",
+            "cast": [
+              "diderot",
+              "mathis"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "1751-1772",
+          "caption": "Au total : 17 volumes de texte, 11 volumes de planches illustrées et près de 72 000 articles.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Et qui a écrit tout ça ?",
+              "side": "l"
+            },
+            {
+              "who": "diderot",
+              "text": "Plus de 140 auteurs. Le chevalier de Jaucourt, à lui seul, 17 000 articles !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the same cluttered workroom with a giant wall of identical thick brown books. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right high on a wooden ladder, adding one more book to the top shelf, cheerful; Mathis (chubby, yellow hoodie, round glasses) on the left buried up to his waist in loose sheets of paper, dazed. wide shot",
+            "cast": [
+              "mathis",
+              "diderot"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "La première page de l’Encyclopédie",
+          "text": "Le titre complet : « Encyclopédie, ou Dictionnaire raisonné des sciences, des arts et des métiers ». Le premier volume paraît le 1er juillet 1751.",
+          "photo": {
+            "commons": "File:Encyclopedie de D'Alembert et Diderot - Premiere Page - ENC 1-NA5.jpg"
+          }
+        },
+        {
+          "n": 14,
+          "kind": "",
+          "tag": "1749",
+          "caption": "Diderot connaît déjà la prison : en 1749, sa « Lettre sur les aveugles » l’envoie au donjon de Vincennes.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Vous aussi ? C’est un club, la prison ?",
+              "side": "l"
+            },
+            {
+              "who": "diderot",
+              "text": "Presque. Rousseau venait me voir, parfois tous les deux jours.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a round stone room at the top of a tower, one narrow window. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right sitting on a stool, reading calmly as if at home, a teacup beside him; Mathis (chubby, yellow hoodie, round glasses) on the left looking around the cell, eyebrows raised, sarcastic. medium shot",
+            "cast": [
+              "mathis",
+              "diderot"
+            ],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 15,
+          "kind": "explain",
+          "title": "Pourquoi l’Encyclopédie dérange",
+          "steps": [
+            "Elle met le savoir des artisans au niveau de celui des savants",
+            "Elle invite à juger par la raison, pas par l’autorité",
+            "Elle veut, dit Diderot, « changer la façon commune de penser »"
+          ],
+          "joke": "Un dictionnaire qui fait peur au pouvoir : la censure n’avait encore rien vu de tel."
+        },
+        {
+          "n": 16,
+          "kind": "",
+          "tag": "8 mars 1759",
+          "caption": "Le pouvoir interdit l’Encyclopédie. Mais Malesherbes, chef de la censure, aide discrètement Diderot.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Le chef de la censure aide le livre censuré ?",
+              "side": "l"
+            },
+            {
+              "who": "diderot",
+              "text": "C’est la France. Même les censeurs lisent ce qu’ils interdisent.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a dim office with a big desk. a gentleman in a grey wig, seen from behind, slides a thick stack of papers under the desk; Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right crouching to grab it, eyes wide; Mathis (chubby, yellow hoodie, round glasses) on the left with a finger on his lips, tiptoeing, conspiratorial. medium shot",
+            "cast": [
+              "mathis",
+              "diderot"
+            ],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 17,
+          "kind": "fact",
+          "tag": "1765",
+          "caption": "D’Alembert abandonne. Diderot, presque seul, fait paraître en 1765 les dix derniers volumes de texte.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Avec l’autorisation du roi ?",
+              "side": "l"
+            },
+            {
+              "who": "diderot",
+              "text": "Disons… sans trop la demander.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Paris street at night under a big moon. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right tiptoeing while pushing a wheelbarrow piled high with thick brown books; Mathis (chubby, yellow hoodie, round glasses) on the left lighting the way with his phone's flashlight, looking around nervously. wide shot",
+            "cast": [
+              "mathis",
+              "diderot"
+            ],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 18,
+          "kind": "",
+          "tag": "1765",
+          "caption": "Catherine II, impératrice de Russie, rachète sa bibliothèque, la lui laisse et le paie pour la garder.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Elle achète vos livres… et vous les laisse ?",
+              "side": "l"
+            },
+            {
+              "who": "diderot",
+              "text": "Me voilà bibliothécaire de ma propre bibliothèque. Et payé !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Diderot's cluttered workroom again. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right sitting in a worn armchair, hugging a big pile of books, beaming, yellow sparkles; Mathis (chubby, yellow hoodie, round glasses) on the left holding a small leather coin purse, scratching his head, baffled. medium shot",
+            "cast": [
+              "mathis",
+              "diderot"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 19,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Qui doit gouverner ?",
+          "caption": "Comment empêcher un seul homme d’avoir tous les pouvoirs ? En 1748, Montesquieu répond : « que le pouvoir arrête le pouvoir ».",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Concrètement, ça veut dire quoi ?",
+              "side": "r"
+            },
+            {
+              "who": "montesquieu",
+              "text": "Trois pouvoirs, dans trois mains différentes. Personne ne fait tout seul.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room with tall windows. Charles (very tall, stiff, grey judge's wig, black robe, purple sash) on the left holding the scale perfectly level at arm's length, solemn; Mathis (chubby, yellow hoodie, round glasses) on the right standing on tiptoe to see the two pans, curious. low angle, medium shot",
+            "cast": [
+              "montesquieu",
+              "mathis"
+            ],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 20,
+          "kind": "explain",
+          "title": "Les trois pouvoirs de Montesquieu",
+          "text": "Dans « De l’esprit des lois », chaque pouvoir est confié à des mains différentes, pour qu’aucun ne puisse abuser.",
+          "steps": [
+            "Le pouvoir législatif fait les lois",
+            "Le pouvoir exécutif les applique",
+            "Le pouvoir judiciaire tranche les conflits"
+          ],
+          "joke": "Le principe du « l’un coupe le gâteau, l’autre choisit sa part », version État."
+        },
+        {
+          "n": 21,
+          "kind": "fact",
+          "tag": "1762",
+          "caption": "Jean-Jacques Rousseau va plus loin : dans « Du contrat social », le pouvoir doit appartenir au peuple.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Et ça plaît, cette idée ?",
+              "side": "l"
+            },
+            {
+              "who": "voltaire",
+              "text": "Pas aux autorités : à Genève, son livre est brûlé. Il doit fuir.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a road outside a town, a small horse-drawn carriage racing away in a cloud of dust in the background. Voltaire (tiny, bony, huge white wig, crimson coat) on the right watching it go with a raised eyebrow, a thin book in his hand; Mathis (chubby, yellow hoodie, round glasses) on the left waving goodbye at the carriage, worried. wide shot",
+            "cast": [
+              "mathis",
+              "voltaire"
+            ],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 22,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Et après ?",
+          "caption": "Février 1778 : Voltaire revient à Paris après des années loin de la capitale. La foule l’acclame. Il meurt en mai.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Un philosophe acclamé comme une star ?",
+              "side": "l"
+            },
+            {
+              "who": "voltaire",
+              "text": "Enfin un public à ma hauteur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a sunny Paris balcony above a cheering crowd of tiny people throwing flowers. Voltaire (tiny, bony, huge white wig, crimson coat) on the right waving like a rock star, standing on a stool to be seen; Mathis (chubby, yellow hoodie, round glasses) on the left in the foreground, taking a selfie with him with the phone. medium shot",
+            "cast": [
+              "mathis",
+              "voltaire"
+            ],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 23,
+          "kind": "",
+          "tag": "Août 1789",
+          "caption": "Onze ans plus tard, la Révolution adopte la Déclaration des droits de l’homme, nourrie de l’esprit des Lumières.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Libres et égaux en droits : c’est l’article 1, non ?",
+              "side": "r"
+            },
+            {
+              "who": "montesquieu",
+              "text": "Et l’article 16 exige la séparation des pouvoirs. Je suis flatté.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room with a large blank parchment pinned on the wall. Charles (very tall, stiff, grey judge's wig, black robe, purple sash) on the left, chin up, a tiny proud smile, pink blush; Mathis (chubby, yellow hoodie, round glasses) on the right pointing at the parchment with excitement. medium shot",
+            "cast": [
+              "montesquieu",
+              "mathis"
+            ],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 24,
+          "kind": "",
+          "tag": "Aujourd’hui",
+          "caption": "Notre Constitution cite toujours cette Déclaration. Liberté, tolérance, séparation des pouvoirs : on vit encore avec les Lumières.",
+          "bubbles": [
+            {
+              "who": "mathis",
+              "text": "Donc les Lumières, c’est penser par soi-même… et oser l’écrire ?",
+              "side": "r"
+            },
+            {
+              "who": "voltaire",
+              "text": "Voilà. Et maintenant, rangez votre ampoule.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the dark bare room again, now lit warmly by the candle on a small table. Voltaire (tiny, bony, huge white wig, crimson coat) on the left, arms crossed, satisfied, a sly grin; Mathis (chubby, yellow hoodie, round glasses) on the right slipping the bulb into his hoodie pocket, a little sheepish. medium shot",
+            "cast": [
+              "voltaire",
+              "mathis"
+            ],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        }
+      ],
+      "final": {
+        "text": "L’article 16 de la Déclaration de 1789 reprend l’idée de Montesquieu : sans séparation des pouvoirs, une société n’a pas de Constitution.",
+        "source": "Élysée — La Déclaration des droits de l’homme et du citoyen"
+      },
+      "story": "Au XVIIIe siècle, en France, le roi gouverne seul, l’Église catholique encadre les croyances et la censure contrôle les livres. Les philosophes des Lumières veulent que chacun juge par la raison : en 1784, Kant résume l’idée par « Sapere aude », ose penser par toi-même.\nVoltaire en paie le prix. En 1717, des vers contre le Régent lui valent près d’un an de Bastille. En Angleterre, de 1726 à 1728, il admire une société plus libre ; ses « Lettres philosophiques » sont brûlées en 1734. En 1762, le protestant Jean Calas est exécuté à Toulouse ; Voltaire dénonce le fanatisme, publie le « Traité sur la tolérance » en 1763, et Calas est réhabilité en 1765.\nÀ partir de 1751, Diderot et d’Alembert publient l’Encyclopédie : 17 volumes de texte, 11 de planches, près de 72 000 articles, écrits par plus de 140 auteurs. Interdite en 1759, elle est achevée grâce à l’aide discrète de Malesherbes, le chef de la censure, et à l’obstination de Diderot. Catherine II de Russie lui achète sa bibliothèque en 1765 et la lui laisse.\nMontesquieu, en 1748, veut que « le pouvoir arrête le pouvoir » : séparer les pouvoirs législatif, exécutif et judiciaire. Rousseau, en 1762, veut confier le pouvoir au peuple. En 1789, la Déclaration des droits de l’homme reprend ces idées, et notre Constitution la cite toujours.",
+      "sources": [
+        {
+          "title": "Kant — Qu’est-ce que les Lumières ? (1784), texte",
+          "url": "https://lms.fun-mooc.fr/c4x/ulb/44003S02/asset/Kant-Lumieres.pdf"
+        },
+        {
+          "title": "SchoolMouv — L’Europe des Lumières",
+          "url": "https://www.schoolmouv.fr/cours/l-europe-des-lumieres-circulation-des-idees-despotisme-eclaire-et-contestation-de-l-absolutisme/"
+        },
+        {
+          "title": "Larousse — François Marie Arouet, dit Voltaire",
+          "url": "https://www.larousse.fr/encyclopedie/personnage/François_Marie_Arouet_dit_Voltaire/149270"
+        },
+        {
+          "title": "History.com — Voltaire is imprisoned in the Bastille",
+          "url": "https://www.history.com/this-day-in-history/may-16/voltaire-is-imprisoned-in-the-bastille"
+        },
+        {
+          "title": "Musée protestant — L’affaire Calas",
+          "url": "https://museeprotestant.org/en/notice/the-calas-affair/"
+        },
+        {
+          "title": "Britannica — The Encyclopédie",
+          "url": "https://www.britannica.com/topic/history-of-Europe/The-Encyclopedie"
+        },
+        {
+          "title": "V&A — The Encyclopédie",
+          "url": "https://www.vam.ac.uk/articles/the-encyclop%C3%A9die"
+        },
+        {
+          "title": "Hérodote — 1er juillet 1751, parution de l’Encyclopédie",
+          "url": "https://www.herodote.net/1er_juillet_1751-evenement-17510701.php"
+        },
+        {
+          "title": "ARTFL Encyclopédie (Université de Chicago) — Diderot à Vincennes",
+          "url": "https://encyclopedie.uchicago.edu/node/109"
+        },
+        {
+          "title": "Russia Beyond — How Voltaire and Diderot made money from a Russian empress",
+          "url": "https://www.gw2ru.com/history/235323-how-voltaire-and-diderot-made-money-from-a-russian-empress"
+        },
+        {
+          "title": "Larousse — Séparation des pouvoirs",
+          "url": "https://www.larousse.fr/encyclopedie/divers/séparation_des_pouvoirs/82044"
+        },
+        {
+          "title": "Britannica — Rousseau, years of seclusion and exile",
+          "url": "https://www.britannica.com/biography/Jean-Jacques-Rousseau/Years-of-seclusion-and-exile"
+        },
+        {
+          "title": "Hérodote — Des salons à la pointe du progrès",
+          "url": "https://www.herodote.net/Des_salons_a_la_pointe_du_progres-synthese-1758.php"
+        },
+        {
+          "title": "Élysée — La Déclaration des droits de l’homme et du citoyen",
+          "url": "https://www.elysee.fr/la-presidence/la-declaration-des-droits-de-l-homme-et-du-citoyen"
+        }
+      ]
+    }
+  ]
+}
