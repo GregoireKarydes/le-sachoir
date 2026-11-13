@@ -1593,7 +1593,7 @@ function cheerDone(ed) {
   if (ed.date !== TODAY || lsGet("sachoir.cheer") === TODAY || nextOf(ed, { id: "" }).kind === "story") return;
   lsSet("sachoir.cheer", TODAY); setTimeout(() => toast("🎉 Les BD du jour : toutes lues. Votre cerveau vous remercie."), 600);
 }
-function closeReader() { if (R.f) ev("depth", R.ed.date, R.f.id, Math.round(100 * Math.min(R.top + 1, R.f.cases.length) / (R.f.cases.length + (R.f.locked || 0)))); $("#reader").classList.remove("on"); if (R.io) R.io.disconnect(); render(); if (DESK.matches) setTimeout(maybeAskPush, 700); }
+function closeReader() { if (R.f) ev("depth", R.ed.date, R.f.id, Math.round(100 * Math.min(R.top + 1, R.f.cases.length) / (R.f.cases.length + (R.f.locked || 0)))); $("#reader").classList.remove("on"); if (R.io) R.io.disconnect(); render(); }
 let scT;
 $("#track").addEventListener("scroll", () => { if (DESK.matches) return; clearTimeout(scT); scT = setTimeout(() => { const tr = $("#track"), i = Math.round(tr.scrollLeft / tr.clientWidth); if (i !== R.idx) updateReader(i); }, 60); });
 function go(d) { const tr = $("#track"), i = Math.max(0, Math.min(R.n - 1, R.idx + d)); tr.scrollTo({ left: i * tr.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }
@@ -2906,11 +2906,6 @@ function openPushAsk() {
   openSheet(`<div class="onb-body pask" style="animation:none;gap:14px">${pushAskHTML(st)}</div>${pushAskFoot(st)}`);
   wirePushAsk(st, () => closeSheet());
 }
-function maybeAskPush() {
-  if (lsGet(PUSH_KEY) || sessionStorage.getItem("sachoir.pushasked") || $("#scrim").classList.contains("on") || $("#reader").classList.contains("on") || $("#onb").classList.contains("on")) return;
-  const st = pushState();
-  if (st === "ask") openPushAsk();
-}
 function openPush() {
   const st = pushState();
   if (st === "ask" || st === "ios") return openPushAsk();
@@ -2944,8 +2939,10 @@ function firstStory() {
   return pool.find(f => L.includes(poleOf(themeName(f.theme))?.id)) || pool[0] || null;
 }
 function openOnboarding() {
-  const withPush = ["ask", "ios"].includes(pushState());
-  const slides = ["hello", "likes", "name", ...(withPush ? ["push"] : []), "go"];
+  // 13 novembre 2026 (Greg) : ni notifications ni installation dans l'onboarding. Si la personne n'y arrive pas
+  // (iPhone, navigateur, réglages), c'est frustrant et bloquant dès la première minute. Elles sont proposées plus
+  // tard, sans rien bloquer : carte de fin de BD (dès la 2e lecture), « Bien démarrer » sur l'accueil, Profil.
+  const slides = ["hello", "likes", "name", "go"];
   let i = 0, picked = new Set(likes());
   const el = $("#onb");
   const finish = () => { lsSet(ONB_KEY, "1"); lsSet("sachoir.start", lsGet("sachoir.start") || TODAY); el.classList.remove("on"); render(); };
@@ -2989,21 +2986,20 @@ function openOnboarding() {
     };
     if ($("#obNext")) $("#obNext").onclick = () => { save1(); next(); };
     if ($("#obNameF")) { $("#obNameF").onsubmit = e => { e.preventDefault(); save1(); next(); }; }
-    if ($("#obSkip")) $("#obSkip").onclick = () => { save1(); i = slides.indexOf(withPush ? "push" : "go"); draw(); };
+    if ($("#obSkip")) $("#obSkip").onclick = () => { save1(); i = slides.indexOf("go"); draw(); };
     const go = () => { const f = firstStory(); finish(); if (f) setTimeout(() => openReader(CUR, f.id), 120); };
     if ($("#obGo")) $("#obGo").onclick = go; if ($("#obFirst")) $("#obFirst").onclick = go;
     if ($("#obEd")) $("#obEd").onclick = finish;
   };
   el.classList.add("on"); draw();
 }
-// Premier lancement : onboarding complet pour un nouveau lecteur sur téléphone ; sinon, la question des notifs seule, une fois.
+// Premier lancement : onboarding pour un nouveau lecteur sur téléphone. Aucune fenêtre ne s'ouvre d'office ensuite
+// (13 novembre 2026) : notifications et installation restent proposées dans la navigation, jamais imposées.
 function startOnboarding() {
   if (new URLSearchParams(location.search).has("f")) return; // lien direct vers une BD : on ne fait pas attendre
   if (!DESK.matches && !lsGet(ONB_KEY) && !ME.reads.length) return openOnboarding();
   lsSet(ONB_KEY, "1");
-  // Appli installée sur iPhone après un « plus tard » : c'est le moment de reposer la question.
-  if (!DESK.matches && (!lsGet(PUSH_KEY) || (lsGet(PUSH_KEY) === "later" && STANDALONE()))) { if (lsGet(PUSH_KEY) === "later") lsSet(PUSH_KEY, ""); setTimeout(maybeAskPush, 1500); }
-  else if (DESK.matches && ME.reads.length) setTimeout(maybeAskPush, 1500);
+  if (lsGet(PUSH_KEY) === "later" && STANDALONE()) lsSet(PUSH_KEY, ""); // iPhone installé : l'invitation reviendra en fin de BD
 }
 
 /* ---------- Démarrage ---------- */
