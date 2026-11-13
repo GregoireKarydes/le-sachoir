@@ -14,14 +14,14 @@
           "id": "andre",
           "look": "André, a French industrialist around 1900, round bald head, bushy white moustache, black three-piece suit, a gold watch chain as the only colour",
           "file": "cast/cultureg-andre.png",
-          "status": "pending",
+          "status": "done",
           "role": "the elder brother, the salesman with the big ideas; round, beaming, always pointing at the map"
         },
         {
           "id": "edouard",
           "look": "Édouard, his younger brother around 1900, thin, neat dark goatee, slicked hair, black suit, always holding a small rubber tyre under his arm",
           "file": "cast/cultureg-edouard.png",
-          "status": "pending",
+          "status": "done",
           "role": "the younger brother, the engineer obsessed with tyres; thin, serious, never without his tyre"
         },
         {
