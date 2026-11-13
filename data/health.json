@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T07:53:27.296982+01:00",
+ "updated_at": "2026-11-13T08:19:14.255263+01:00",
  "today": "2026-11-13",
  "problems": [
   "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-13",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "cultureg": "prêt",
     "insolite": "prêt",
@@ -43,10 +43,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-13/cultureg : « Bonne année ! Oui, mais laquelle ? » prise dans la file (20261112-0100-bonne-annee-oui-mais-laquelle)",
-  "2026-11-13/insolite : « Parisiennes en pantalon : hors-la-loi de 1800 à 2013 » prise dans la file (20261110-0100-parisiennes-en-pantalon-hors-la-loi-de-1)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
