@@ -38,7 +38,10 @@
       ],
       "cover": {
         "prompt": "a gilded palace office. the stagiaire (short, navy suit, red glasses) on the left holding up the envelope at arm's length, stunned; the comte (tall, yellow and red striped tunic, gold circlet) on the right leaning over her shoulder with a huge proud grin, pointing at the envelope as if it were his. medium shot",
-        "cast": ["stagiaire", "comte"],
+        "cast": [
+          "stagiaire",
+          "comte"
+        ],
         "file": "images/insolite-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -50,12 +53,23 @@
           "tag": "Élysée, aujourd’hui",
           "caption": "Pourquoi le président français est-il aussi prince d’un autre pays, l’Andorre ? Une stagiaire de l’Élysée trie le courrier.",
           "bubbles": [
-            { "who": "stagiaire", "text": "« Au coprince d’Andorre » ? On a un prince, ici ?", "side": "l" },
-            { "who": "comte", "text": "Techniquement, c’est moi qui ai commencé.", "side": "r" }
+            {
+              "who": "stagiaire",
+              "text": "« Au coprince d’Andorre » ? On a un prince, ici ?",
+              "side": "l"
+            },
+            {
+              "who": "comte",
+              "text": "Techniquement, c’est moi qui ai commencé.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a gilded palace office with one desk piled with mail. the stagiaire (short, navy suit, red glasses) on the left at the desk, holding the envelope, frozen mid-sort; the comte (tall, yellow and red striped tunic, gold circlet) on the right popping up from behind the pile of mail like a medieval jack-in-the-box, hand on his heart. medium shot",
-            "cast": ["stagiaire", "comte"],
+            "cast": [
+              "stagiaire",
+              "comte"
+            ],
             "file": "images/insolite-01.webp",
             "status": "pending",
             "attempts": 0
@@ -67,12 +81,22 @@
           "tag": "1278",
           "caption": "En 1278, l’évêque catalan d’Urgell et le comte de Foix se disputent les vallées d’Andorre. Ils signent un partage.",
           "bubbles": [
-            { "who": "stagiaire", "text": "Un partage de quoi, exactement ?", "side": "l" },
-            { "who": "comte", "text": "Du pouvoir. Une garde alternée, mais pour des montagnes.", "side": "r" }
+            {
+              "who": "stagiaire",
+              "text": "Un partage de quoi, exactement ?",
+              "side": "l"
+            },
+            {
+              "who": "comte",
+              "text": "Du pouvoir. Une garde alternée, mais pour des montagnes.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "green Pyrenees valleys in the background. the comte (tall, yellow and red striped tunic) on the right carefully cutting the valley model in two with a huge bread knife; on the left a bishop seen from behind, only his tall white mitre and purple robe visible, holding the other side. the stagiaire is not in this panel. medium shot",
-            "cast": ["comte"],
+            "cast": [
+              "comte"
+            ],
             "file": "images/insolite-02.webp",
             "status": "pending",
             "attempts": 0
@@ -91,12 +115,23 @@
           "tag": "1479",
           "caption": "Les droits du comte suivent l’héritage. En 1479, le comté de Foix est rattaché au royaume de Navarre.",
           "bubbles": [
-            { "who": "stagiaire", "text": "Et comment ça arrive jusqu’à Paris ?", "side": "l" },
-            { "who": "comte", "text": "Par un héritier béarnais. Vous connaissez : Henri.", "side": "r" }
+            {
+              "who": "stagiaire",
+              "text": "Et comment ça arrive jusqu’à Paris ?",
+              "side": "l"
+            },
+            {
+              "who": "comte",
+              "text": "Par un héritier béarnais. Vous connaissez : Henri.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "plain background. the comte (tall, yellow and red striped tunic, gold circlet) on the right handing the valley model over his shoulder like a family heirloom, eyes closed, solemn; the stagiaire (short, navy suit, red glasses) on the left frantically drawing a family tree in her folder, tongue out in concentration. medium shot",
-            "cast": ["stagiaire", "comte"],
+            "cast": [
+              "stagiaire",
+              "comte"
+            ],
             "file": "images/insolite-03.webp",
             "status": "pending",
             "attempts": 0
@@ -108,7 +143,15 @@
           "tag": "Le vrai héritier",
           "title": "Henri IV, roi de France et de Navarre",
           "text": "Héritier des comtes de Foix par la Navarre, il devient roi de France en 1589. Du coup, leurs droits sur l’Andorre passent à la couronne de France.",
-          "photo": { "commons": "File:Henri IV, roi de France - Frans Pourbus le Jeune.jpg" }
+          "photo": {
+            "commons": "File:Henri IV, roi de France - Frans Pourbus le Jeune.jpg",
+            "credit": "Frans Pourbus the Younger",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Henri_IV,_roi_de_France_-_Frans_Pourbus_le_Jeune.jpg",
+            "file": "images/photo-5-henri-iv-roi-de-france-frans-pourbu.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -116,12 +159,23 @@
           "tag": "Rois, Révolution, Napoléon",
           "caption": "Les rois de France deviennent donc coprinces. La Révolution renonce au titre, mais Napoléon le reprend en 1806.",
           "bubbles": [
-            { "who": "stagiaire", "text": "Et quand il n’y a plus de roi ?", "side": "l" },
-            { "who": "comte", "text": "Le titre reste. Seul le locataire change.", "side": "r" }
+            {
+              "who": "stagiaire",
+              "text": "Et quand il n’y a plus de roi ?",
+              "side": "l"
+            },
+            {
+              "who": "comte",
+              "text": "Le titre reste. Seul le locataire change.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the gilded palace office. the comte (tall, yellow and red striped tunic) on the right placing his own thin gold circlet on a coat rack that is already full of hats: a royal crown, a red revolutionary cap, a black bicorne hat; the stagiaire (short, navy suit, red glasses) on the left watching, mouth open. wide shot",
-            "cast": ["stagiaire", "comte"],
+            "cast": [
+              "stagiaire",
+              "comte"
+            ],
             "file": "images/insolite-04.webp",
             "status": "pending",
             "attempts": 0
@@ -133,12 +187,23 @@
           "tag": "Le fin mot",
           "caption": "Depuis la Constitution andorrane de 1993, le président français et l’évêque d’Urgell sont les deux chefs d’État de l’Andorre.",
           "bubbles": [
-            { "who": "stagiaire", "text": "Donc le Président a deux pays. Et moi, deux fois plus de courrier.", "side": "l" },
-            { "who": "comte", "text": "Et personne ne me remercie.", "side": "r" }
+            {
+              "who": "stagiaire",
+              "text": "Donc le Président a deux pays. Et moi, deux fois plus de courrier.",
+              "side": "l"
+            },
+            {
+              "who": "comte",
+              "text": "Et personne ne me remercie.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "confession-style shot, plain background. the stagiaire (short, navy suit, red glasses) on the left looking straight at the reader, deadpan, buried up to her chin in a pile of cream envelopes; the comte (tall, yellow and red striped tunic) on the right sulking with crossed arms, nose in the air, a light-blue sweat drop. medium shot",
-            "cast": ["stagiaire", "comte"],
+            "cast": [
+              "stagiaire",
+              "comte"
+            ],
             "file": "images/insolite-05.webp",
             "status": "pending",
             "attempts": 0
@@ -151,8 +216,14 @@
       },
       "story": "L’Andorre, petit pays de 465 km² niché dans les Pyrénées, a deux chefs d’État : l’évêque d’Urgell, en Catalogne, et le président de la République française. Cette situation unique remonte au Moyen Âge.\nAu XIIIe siècle, l’évêque d’Urgell et les comtes de Foix se disputent les vallées d’Andorre. En 1278, ils règlent leur conflit par un paréage : un accord par lequel deux seigneurs gouvernent ensemble le même territoire. Les droits de chacun se transmettent ensuite à ses successeurs.\nC’est là que l’héritage entre en jeu. En 1479, le comté de Foix est rattaché au royaume de Navarre. Le roi de Navarre Henri, héritier de ces droits, devient roi de France en 1589 sous le nom d’Henri IV, et ses droits sur l’Andorre passent à la couronne de France. Les rois de France deviennent donc coprinces.\nLa Révolution renonce à ce titre, mais Napoléon Ier le reprend en 1806, et les chefs de l’État français l’ont gardé depuis. La Constitution andorrane de 1993, qui fait de l’Andorre un État indépendant, confirme les deux coprinces comme chefs d’État, avec des fonctions surtout symboliques.",
       "sources": [
-        { "title": "Élysée — Les titres honorifiques du président de la République", "url": "https://www.elysee.fr/en/honorary-titles-of-the-president-of-the-republic" },
-        { "title": "Larousse — Principauté d’Andorre", "url": "https://www.larousse.fr/encyclopedie/pays/principauté_dAndorre/105392" }
+        {
+          "title": "Élysée — Les titres honorifiques du président de la République",
+          "url": "https://www.elysee.fr/en/honorary-titles-of-the-president-of-the-republic"
+        },
+        {
+          "title": "Larousse — Principauté d’Andorre",
+          "url": "https://www.larousse.fr/encyclopedie/pays/principauté_dAndorre/105392"
+        }
       ]
     }
   ]
