@@ -2,7 +2,8 @@ name: Collecte RSS
 
 on:
   schedule:
-    - cron: "5 23 * * *"   # 0 h 05 à Paris l'hiver (1 h 05 l'été)
+    # Avant l'Actu du soir (19 h 47, heure de Paris) : 18 h 20 et 19 h 20 l'hiver (19 h 20 et 20 h 20 l'été).
+    - cron: "20 17,18 * * *"
   workflow_dispatch:
 
 permissions:

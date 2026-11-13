@@ -5,7 +5,8 @@ import { nowIso, parisDay, parisHour, shiftDay, addSeconds, randomToken, randomC
 import { brevoSend, loginMail, welcomeMail, confirmMail, newsletterMail, loadEdition, page, btn, h1, mailLimit } from "./mail.js";
 import { adminQueue, adminItem } from "./credits.js";
 import { ownerOf, wallet, grant, grantNewsletter, rewardReferral, mergeOwners, unlock, premiumDossier, premiumImg, refCode, DEVICE_RE } from "./credits.js";
-import { vapid, pushSubscribe, pushUnsubscribe, pushDaily, pushBatch, pushTest, internalKey, editionPayload } from "./push.js";
+import { vapid, pushSubscribe, pushUnsubscribe, pushDaily, pushBatch, pushTest, internalKey, editionPayload, notifyAdmins } from "./push.js";
+import { contentBase, ghHeaders } from "./credits.js";
 import { PLANS, stripeOn, checkout, confirm as payConfirm, checkPending, webhook, setCancel, portal, cancelNow } from "./pay.js";
 
 const SESSION_DAYS = 365;
@@ -471,7 +472,8 @@ async function route(req, env, url, ctx) {
     if (p === "/admin/published") return json(await adminPublished(env));
     if (p === "/admin/hide" && M === "POST") {
       const b = await body(req);
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(b.ed || "") || !/^(dossier|actu|cultureg|insolite|quiz)$/.test(b.fid || "")) return err("BD inconnue.");
+      // « actu:N » : un seul sujet de l'Actu (N à partir de 1), retiré à la relecture du soir.
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(b.ed || "") || !/^(dossier|actu|cultureg|insolite|quiz|actu:\d{1,2})$/.test(b.fid || "")) return err("BD inconnue.");
       if (b.hidden) await env.DB.prepare("INSERT OR IGNORE INTO hidden (ed, fid, created_at, by_email) VALUES (?, ?, ?, ?)").bind(b.ed, b.fid, nowIso(), u.email).run();
       else await env.DB.prepare("DELETE FROM hidden WHERE ed = ? AND fid = ?").bind(b.ed, b.fid).run();
       const rebuilt = await rebuildSite(env);
@@ -502,9 +504,36 @@ async function route(req, env, url, ctx) {
   return err("Introuvable.", 404);
 }
 
+/* ---------- Le soir : l'Actu de demain est prête, Greg peut la relire ----------
+   L'Actu est écrite vers 20 h (heure de Paris) pour l'édition du lendemain. Dès que ses images sont faites,
+   les comptes admin reçoivent une notification (une fois) avec le lien de relecture ; à 23 h, si elle n'est
+   toujours pas prête, une alerte. */
+async function actuEvening(env, h) {
+  const day = shiftDay(parisDay(), 1), key = k => `actu_${k}_${day}`;
+  const seen = async k => !!(await env.DB.prepare("SELECT 1 FROM settings WHERE k = ?").bind(key(k)).first());
+  const mark = k => env.DB.prepare("INSERT OR IGNORE INTO settings (k, v) VALUES (?, ?)").bind(key(k), nowIso()).run();
+  if (await seen("ready")) return { skipped: "déjà prévenu" };
+  const r = await fetch(`${contentBase(env)}editions/${day}/edition.json?t=${Date.now()}`, { headers: ghHeaders(env) });
+  const actu = r.ok ? ((await r.json()).formats || []).find(f => f.id === "actu") : null;
+  const imgs = actu ? (actu.cases || []).filter(c => c.image).map(c => c.image).concat(actu.cover ? [actu.cover] : []) : [];
+  const done = imgs.filter(i => i.status === "done").length, ready = actu && imgs.length && done === imgs.length;
+  const link = `${env.APP_URL}admin.html#bd`;
+  if (ready) {
+    const n = (actu.cases || []).filter(c => c.kind === "fact").length;
+    await mark("ready");
+    return notifyAdmins(env, { title: "📰 L’Actu de demain est prête", body: `${n} sujet${n > 1 ? "s" : ""} dessiné${n > 1 ? "s" : ""}. Un œil avant 5 h ? Sinon elle part telle quelle.`, url: link, tag: "actu-review" });
+  }
+  if (h >= 23 && !(await seen("late"))) {
+    await mark("late");
+    return notifyAdmins(env, { title: "⏳ L’Actu de demain n’est pas prête", body: actu ? `Images : ${done} / ${imgs.length}. Le dessin continue cette nuit.` : "Pas encore écrite. L’orchestrateur va relancer la tâche.", url: link, tag: "actu-review" });
+  }
+  return { waiting: actu ? `${done}/${imgs.length}` : "pas écrite" };
+}
+
 /* ---------- Tâche planifiée : newsletter et ménage ---------- */
 async function cron(env) {
   const h = parisHour();
+  if (h >= 18) { try { console.log("actu du soir", JSON.stringify(await actuEvening(env, h))); } catch (e) { console.error("actu du soir", e.stack || e); } return; }
   // Les crons GitHub sont souvent en retard ou sautés : la Publication de 5 h est lancée d'ici (5 h 00 et 5 h 30, sans risque : publish.py ne fait rien deux fois).
   if (h === 5) console.log("publication", await rebuildSite(env) ? "lancée" : "non lancée (DISPATCH_TOKEN manquant ou refusé)");
   const out = await sendNewsletter(env);
