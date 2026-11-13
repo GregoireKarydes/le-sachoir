@@ -12,31 +12,19 @@
       "cast": [
         {
           "id": "vespasien",
-          "look": "Vespasian, a stocky Roman emperor in his sixties, bald round head, deep forehead wrinkles, permanent strained squint, white toga, a purple sash as the only colour",
+          "name": "Vespasien",
+          "look": "Vespasian, a short stocky Roman emperor in his sixties, bald round head, deep forehead wrinkles, permanent strained squint, deep purple toga as main colour, gold laurel wreath, tanned skin",
           "file": "cast/insolite-vespasien.png",
           "status": "pending",
-          "role": "the thrifty emperor who taxes everything; stocky, squinting, counting coins"
+          "role": "the thrifty emperor who taxes everything; stocky, squinting, always counting coins"
         },
         {
           "id": "titus",
-          "look": "Titus, a handsome elegant Roman prince around thirty, short curly black hair, pointed nose always wrinkled in disgust, spotless white toga",
+          "name": "Titus, son fils",
+          "look": "Titus, a tall slim elegant Roman prince around thirty, short curly black hair, pointed nose always wrinkled in disgust, spotless white tunic under a bright red cloak as main colour",
           "file": "cast/insolite-titus.png",
           "status": "pending",
-          "role": "his disgusted son; elegant, nose wrinkled, holding his toga away"
-        },
-        {
-          "id": "foulon",
-          "look": "Marcus, a cheerful skinny Roman laundry worker, shaved head, big gap-toothed grin, short grey tunic rolled up to the knees, bare feet",
-          "file": "cast/insolite-foulon.png",
-          "status": "pending",
-          "role": "a cheerful laundry worker who uses the urine; skinny, barefoot, grinning"
-        },
-        {
-          "id": "rambuteau",
-          "look": "Rambuteau, an 1830s Paris prefect in his fifties, tall curly grey hair, long sideburns, black frock coat with a high white collar, a tricolour sash as the only colour",
-          "file": "cast/insolite-rambuteau.png",
-          "status": "pending",
-          "role": "the Paris prefect who installs public urinals; tall, proud, presenting with a sweeping arm"
+          "role": "his disgusted son, the reader's voice; tall, elegant, nose wrinkled, holding his cloak away from everything"
         }
       ],
       "cover": {
@@ -57,10 +45,12 @@
           "caption": "Pourquoi les urinoirs s’appelaient-ils des « vespasiennes » ? Rome, Ier siècle : l’empereur Vespasien cherche de l’argent pour l’État.",
           "bubbles": [
             {
+              "who": "vespasien",
               "text": "Que produisent les Romains chaque jour, gratuitement ?",
               "side": "l"
             },
             {
+              "who": "titus",
               "text": "Je sens que je ne vais pas aimer.",
               "side": "r"
             }
@@ -99,14 +89,15 @@
           "caption": "À l’époque, l’urine vaut de l’argent : son ammoniaque aide les blanchisseurs à nettoyer et détacher les tissus.",
           "bubbles": [
             {
+              "who": "Un foulon",
               "text": "Rien de tel pour une toge bien blanche.",
               "side": "r"
             }
           ],
           "image": {
-            "prompt": "a big round wooden tub. Marcus (on the right) standing in the tub up to his calves, happily stomping on a white sheet of cloth like treading grapes, arms out, huge gap-toothed grin. medium shot",
+            "prompt": "a Roman laundry with the vat. on the right in the background, a small anonymous barefoot laundry worker seen from afar, happily stomping on white cloth in the vat like treading grapes; Vespasian (stocky, purple toga) in the foreground on the left, rubbing his hands, eyes shining at the vat as if it were full of gold. wide shot",
             "cast": [
-              "foulon"
+              "vespasien"
             ],
             "file": "images/insolite-02.webp",
             "status": "pending",
@@ -127,6 +118,7 @@
           "caption": "Vespasien taxe donc l’urine récoltée dans les toilettes publiques et revendue aux ateliers.",
           "bubbles": [
             {
+              "who": "vespasien",
               "text": "Un impôt sur le revenu. Le revenu liquide.",
               "side": "l"
             }
@@ -148,6 +140,7 @@
           "caption": "Son fils Titus trouve la mesure indigne d’un empereur.",
           "bubbles": [
             {
+              "who": "titus",
               "text": "Père, on va se moquer de nous jusqu’en Gaule.",
               "side": "r"
             }
@@ -170,14 +163,17 @@
           "caption": "Vespasien met sous le nez de Titus une pièce issue de la taxe.",
           "bubbles": [
             {
+              "who": "vespasien",
               "text": "Elle sent mauvais ?",
               "side": "l"
             },
             {
+              "who": "titus",
               "text": "Non.",
               "side": "r"
             },
             {
+              "who": "vespasien",
               "text": "Pourtant, c’est l’urine.",
               "side": "l"
             }
@@ -200,6 +196,7 @@
           "caption": "D’où « l’argent n’a pas d’odeur », formule qu’il n’a pas prononcée telle quelle.",
           "bubbles": [
             {
+              "who": "vespasien",
               "text": "Je dis une phrase, on en retient une autre.",
               "side": "l"
             }
@@ -221,14 +218,15 @@
           "caption": "Bilan : en 1834, le préfet Rambuteau installe à Paris des urinoirs publics, baptisés « vespasiennes » en souvenir de cette taxe.",
           "bubbles": [
             {
-              "text": "Je voulais honorer un empereur. Les Parisiens ont dit « colonnes Rambuteau ».",
+              "who": "titus",
+              "text": "Dix-huit siècles plus tard, notre nom sur des urinoirs. Je l’avais dit.",
               "side": "l"
             }
           ],
           "image": {
-            "prompt": "plain empty background with one simple round street urinal column behind. Rambuteau (in the centre) sitting on a wooden stool facing the viewer like in an interview, shoulders slumped, deadpan stare, cheeks tiny pink with embarrassment. medium shot",
+            "prompt": "an 1830s Paris street, almost empty, with one simple round green street urinal column. Titus (tall, red cloak) standing next to it in his Roman clothes, totally out of place, facing the viewer like in an interview, pinching his nose with one hand and pointing at the column with the other, deadpan stare. medium shot",
             "cast": [
-              "rambuteau"
+              "titus"
             ],
             "file": "images/insolite-07.webp",
             "status": "pending",
