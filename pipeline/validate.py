@@ -23,6 +23,7 @@ IMAGE_STATUS = {None, "pending", "retry", "done", "failed"}
 CAST_STATUS = {None, "pending", "done", "skipped", "failed"}
 THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
 CAPTION_MAX, BUBBLE_MAX = 20, 15  # mots, d'après prompts/CHARTE.md (7 novembre 2026 : plus de place pour expliquer)
+MAX_CAST = {"cultureg": 2, "insolite": 2, "dossier": 4}  # 13 novembre 2026 : moins de personnages, moins de confusions au dessin
 MAX_CASES = {"dossier": 24}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30)
 EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
 PHOTO_MAX = 45  # case photo : légende courte
@@ -113,6 +114,14 @@ def check_story(fmt: dict, d: Path, err, warn):
     if len(drawn) > MAX_CASES.get(fid, 99):
         warn(f"{len(drawn)} cases dessinées, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
     check_cast_distinct([c for c in fmt.get("cast", []) or [] if isinstance(c, dict)], warn)
+    n_cast = len([c for c in fmt.get("cast", []) or [] if isinstance(c, dict)])
+    # Seulement pour une BD pas encore entièrement dessinée : c'est là qu'on peut encore réduire le casting.
+    todo = any((c.get("image") or {}).get("status") != "done" for c in drawn)
+    if todo and n_cast > MAX_CAST.get(fid, 99):
+        warn(f"{n_cast} personnages au casting, {MAX_CAST[fid]} au plus pour ce format (le dessin les confond)")
+    for i, c in enumerate(drawn, 1):
+        if todo and (c.get("image") or {}).get("status") != "done" and len((c.get("image") or {}).get("cast", []) or []) > 2:
+            warn(f"case dessinée {i} : plus de 2 personnages avec fiche dans l'image")
     # 9 novembre 2026 (Greg) : des vraies images souvent, ça rend l'histoire réelle. Signalé pour que la tâche Stock en ajoute.
     n_photo = sum(1 for c in cases if isinstance(c, dict) and c.get("kind") == "photo")
     want = {"cultureg": 1, "insolite": 1, "dossier": 2}.get(fid, 0)

@@ -159,7 +159,7 @@ def test_images_finissent_une_bd_avant_la_suivante(site, monkeypatch):
     b = queue(site, "20261107-0901-b", story("cultureg", status="pending", n=3))
     calls = []
 
-    def fake(fmt, day, prompt, size, refs, kind):
+    def fake(fmt, day, prompt, size, refs, kind, premium=False):
         if len(calls) >= 4:  # 1 fiche casting + 3 cases
             raise images.QuotaExhausted("fini")
         calls.append(kind)
@@ -302,7 +302,7 @@ def test_refaire_d_abord_la_prochaine_bd(site, monkeypatch):
     a = queue(site, "20261107-0900-a", s)
     calls = []
 
-    def fake(fmt, day, prompt, size, refs, kind):
+    def fake(fmt, day, prompt, size, refs, kind, premium=False):
         calls.append(day)
         return Image.new("RGB", (8, 8), "white"), "cloudflare"
     monkeypatch.setattr(images, "draw", fake)

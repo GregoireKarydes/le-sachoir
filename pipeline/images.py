@@ -23,6 +23,7 @@ Variables d'environnement : CF_ACCOUNT_ID, CF_API_TOKEN, et facultatif FAL_KEY.
 import base64
 import io
 import json
+import math
 import os
 import sys
 import time
@@ -34,7 +35,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import stock  # noqa: E402
-from PIL import Image, ImageChops, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 EDITIONS = ROOT / "editions"
@@ -232,12 +233,81 @@ def fal_generate(prompt: str, size, refs: list[Path]) -> Image.Image:
     return Image.open(io.BytesIO(raw)).convert("RGB")
 
 
+PREMIUM = STYLE.get("premium") or {}
+
+
+def premium_cost(size, refs: list[Path]) -> float:
+    """FLUX.2 [pro] sur fal : 0,03 $ le premier mégapixel de sortie, 0,015 $ par mégapixel de plus
+    (entrées comprises), arrondi au mégapixel supérieur. Les références sont réduites à 448 px."""
+    mp = size[0] * size[1] / 1e6
+    for r in refs:
+        try:
+            w, h = Image.open(r).size
+            k = min(1.0, 448 / max(w, h))
+            mp += w * h * k * k / 1e6
+        except Exception:
+            mp += 0.2
+    extra = max(0, math.ceil(mp - 1 - 1e-9))
+    return round(PREMIUM.get("usd_first_mp", 0.03) + extra * PREMIUM.get("usd_extra_mp", 0.015), 5)
+
+
+def premium_generate(prompt: str, size, refs: list[Path]) -> Image.Image:
+    """Image soignée (couverture, première case) avec le modèle premium, dans ses plafonds.
+    FalUnavailable si ce n'est pas possible : on retombe alors sur le dessin habituel."""
+    if not (PREMIUM.get("enabled") and FAL_KEY):
+        raise FalUnavailable("modèle premium désactivé ou pas de clé FAL_KEY")
+    st = fal_state()
+    today = datetime.now(ZoneInfo("Europe/Paris")).date().isoformat()
+    if st.get("blocked") == today:
+        raise FalUnavailable("fal.ai a refusé plus tôt aujourd'hui")
+    pr = st.setdefault("premium", {"spent": 0.0, "images": 0, "days": {}})
+    cost = premium_cost(size, refs)
+    if pr["days"].get(today, 0.0) + cost > PREMIUM.get("daily_usd", 0.2):
+        raise FalUnavailable("plafond premium du jour atteint")
+    if pr["spent"] + cost > PREMIUM.get("monthly_usd", 5.0) or st["spent"] + cost > FAL_MONTHLY:
+        raise FalUnavailable("plafond premium du mois atteint")
+    urls = ["data:image/png;base64," + base64.b64encode(ref_bytes(r)).decode() for r in refs if r.exists()][:9]
+    if not urls:
+        raise FalUnavailable("aucune image de référence")
+    body = {"prompt": prompt, "image_urls": urls, "image_size": {"width": size[0], "height": size[1]},
+            "output_format": "png", "sync_mode": True, "safety_tolerance": str(PREMIUM.get("safety_tolerance", "2"))}
+    r = requests.post("https://fal.run/" + PREMIUM.get("model", "fal-ai/flux-2-pro/edit"),
+                      headers={"Authorization": f"Key {FAL_KEY}", "Content-Type": "application/json"}, json=body, timeout=240)
+    low = r.text[:500].lower() if r.status_code >= 400 else ""
+    if r.status_code in (401, 402, 403) or "balance" in low or "credit" in low:
+        st["blocked"] = today
+        save_fal(st)
+        raise FalUnavailable(f"fal.ai refuse ({r.status_code}) : {r.text[:200]}")
+    # Dépense comptée dès l'appel (dans le premium et dans le total fal du mois).
+    for box in (st, pr):
+        box["spent"] = round(box["spent"] + cost, 5)
+        box["images"] = box.get("images", 0) + 1
+    pr["days"][today] = round(pr["days"].get(today, 0.0) + cost, 5)
+    st["days"][today] = round(st["days"].get(today, 0.0) + cost, 5)
+    save_fal(st)
+    if r.status_code >= 400:
+        raise RuntimeError(f"fal premium HTTP {r.status_code} : {r.text[:250]}")
+    url = ((r.json().get("images") or [{}])[0]).get("url", "")
+    raw = base64.b64decode(url.split(",", 1)[1]) if url.startswith("data:") else requests.get(url, timeout=60).content if url else b""
+    if not raw:
+        raise RuntimeError(f"fal premium : réponse sans image {r.text[:200]}")
+    return Image.open(io.BytesIO(raw)).convert("RGB")
+
+
 CF_BLOCKED = None  # raison du blocage Cloudflare pour ce passage (budget gratuit atteint ou refus)
 
 
-def draw(fmt: dict, day: date, prompt: str, size, refs: list[Path], kind: str) -> tuple[Image.Image, str]:
-    """Cloudflare gratuit d'abord ; fal.ai en renfort pour les éditions proches. Renvoie (image, fournisseur)."""
+def draw(fmt: dict, day: date, prompt: str, size, refs: list[Path], kind: str, premium: bool = False) -> tuple[Image.Image, str]:
+    """Cloudflare gratuit d'abord ; fal.ai en renfort pour les éditions proches. Renvoie (image, fournisseur).
+    `premium` : couverture ou première case, essayée d'abord avec le meilleur modèle (dans ses plafonds)."""
     global CF_BLOCKED
+    if premium:
+        try:
+            return premium_generate(prompt, size, refs), "premium"
+        except FalUnavailable as e:
+            print(f"  premium indisponible ({e}) : modèle habituel")
+        except Exception as e:
+            print(f"  premium en échec ({e}) : modèle habituel")
     if not CF_BLOCKED:
         try:
             check_budget(fmt, kind)   # BudgetReserved remonte : le stock attend sans payer
@@ -310,7 +380,52 @@ def ink(im: Image.Image, cfg: dict | None = None) -> Image.Image:
     return out
 
 
-def save_webp(im: Image.Image, dest: Path):
+HARM = STYLE.get("harmonize") or {}
+
+
+def harmonize(im: Image.Image, fid: str | None) -> Image.Image:
+    """Fond uniforme dans toute une BD : la grande zone claire reliée au haut de l'image (le fond) prend la
+    teinte pastel du format. Les bords des traits sont recolorés dans la même proportion (pas de liseré).
+    Rien ne change si le fond n'est pas identifiable (moins de `min_border_share` du bord du haut)."""
+    if not HARM.get("enabled") or fid is None:
+        return im
+    im = im.convert("RGB")
+    w, h = im.size
+    new = tuple((HARM.get("bg") or {}).get(fid) or (HARM.get("bg") or {}).get("default") or (246, 241, 230))
+    # Couleur du fond : la plus fréquente sur le bord du haut et le haut des côtés.
+    px = im.load()
+    pts = [(x, 0) for x in range(0, w, 4)] + [(0, y) for y in range(0, int(h * .5), 4)] + [(w - 1, y) for y in range(0, int(h * .5), 4)]
+    # Le remplissage part de tout le pourtour : le fond sous la ligne du sol change aussi.
+    seeds = pts + [(x, h - 1) for x in range(0, w, 4)] + [(0, y) for y in range(int(h * .5), h, 4)] + [(w - 1, y) for y in range(int(h * .5), h, 4)]
+    counts = {}
+    for p in pts:
+        c = tuple(v // 8 for v in px[p])
+        counts[c] = counts.get(c, 0) + 1
+    key, n = max(counts.items(), key=lambda kv: kv[1])
+    if n / len(pts) < HARM.get("min_border_share", 0.35):
+        return im
+    old = tuple(min(255, v * 8 + 4) for v in key)
+    if sum(old) < 3 * 150:  # fond sombre : on n'y touche pas
+        return im
+    tol = HARM.get("tolerance", 30)
+    diff = ImageChops.difference(im, Image.new("RGB", im.size, old)).split()
+    near = ImageChops.lighter(ImageChops.lighter(diff[0], diff[1]), diff[2]).point(lambda v: 255 if v <= tol else 0)
+    # Seule la zone reliée au bord compte (les yeux blancs, une chemise claire au milieu restent intacts).
+    for p in seeds[::3]:
+        if near.getpixel(p) == 255:
+            ImageDraw.floodfill(near, p, 128, thresh=0)
+    bgm = near.point(lambda v: 255 if v == 128 else 0)
+    if bgm.histogram()[255] < w * h * 0.05:
+        return im
+    edge = bgm.filter(ImageFilter.MaxFilter(5))
+    # Recoloration proportionnelle : un pixel mi-trait mi-fond garde son trait et change de fond.
+    tinted = Image.merge("RGB", [ch.point(lambda v, a=a, b=b: min(255, round(v * b / max(a, 1)))) for ch, a, b in zip(im.split(), old, new)])
+    out = Image.composite(tinted, im, edge)
+    return Image.composite(Image.new("RGB", im.size, new), out, bgm)
+
+
+def save_webp(im: Image.Image, dest: Path, fid: str | None = None):
+    im = harmonize(im, fid)
     raw = im
     im = ink(im)
     k = STYLE["upscale"]
@@ -546,8 +661,9 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
                 continue
             prompt, refs = build(img["prompt"], **ctx)
             img["attempts"] = img.get("attempts", 0) + 1
+            first = kind == "cover" or (drawn and img is drawn[0])
             try:
-                im, via = draw(fmt, day, prompt, size, refs, kind)
+                im, via = draw(fmt, day, prompt, size, refs, kind, premium=first and img["attempts"] <= 2)
             except (QuotaExhausted, BudgetReserved):
                 img["attempts"] -= 1
                 persist()
@@ -558,7 +674,7 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
                 img["status"] = "pending" if img["attempts"] < max_att else "failed"
                 persist()
                 continue
-            save_webp(im, d / img["file"])
+            save_webp(im, d / img["file"], fmt.get("id"))
             img["status"] = "done"
             if via != "cloudflare":
                 img["via"] = via
@@ -595,7 +711,7 @@ def redo_one(d, img, size, kind, fmt, day, ctx, persist) -> int:
             img.pop("redo", None)  # on garde l'ancienne image
         persist()
         return 0
-    save_webp(im, d / img["file"])
+    save_webp(im, d / img["file"], fmt.get("id"))
     for k in ("redo", "redo_attempts", "qa", "error"):
         img.pop(k, None)
     if via != "cloudflare":

@@ -35,7 +35,7 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
           ],
           "image": {
             "prompt": "<description de la scène en anglais : décor, qui est où (left/right), expressions, gestes, accessoires>",
-            "cast": ["schro","cat"],  // ids de la fiche casting présents dans la case (3 max)
+            "cast": ["schro","cat"],  // ids de la fiche casting présents dans la case (2 max)
             "file": "images/cultureg-01.webp",
             "status": "pending",       // "pending" | "retry" | "done" | "failed"
             "attempts": 0
@@ -245,6 +245,10 @@ Le pipeline envoie au modèle, pour chaque case : le numéro de la case, la scè
 - Le style et l'interdiction de texte sont ajoutés automatiquement par `pipeline/style.json` : ne pas les répéter.
 - Jamais de texte, de lettres, de logos ou de marques à dessiner. Pas de nom de dessinateur ou de série existante.
 - Laisser le haut de l'image calme : les bulles s'y posent.
+- **Visages et mains toujours en couleur de peau (13 novembre 2026)** : jamais un visage rempli de noir ou de gris (un aplat noir sur un visage s'est vu dans l'Insolite du 13). Le noir est pour les cheveux, les chapeaux, les vêtements. La règle est aussi dans les consignes automatiques de `style.json`.
+- **Gag visuel** : quand la case porte le gag, décrire le détail qui fait rire dans l'image (« Napoleon proudly holds a tiny smartphone », « the clerk's stamp is the size of his head »).
+- **Fond** : inutile de choisir une teinte de fond, le pipeline donne au fond la teinte pastel du format (la même dans toutes les cases de la BD). Décrire seulement le décor utile.
+- **Couverture et case 1 soignées** : elles sont dessinées avec un meilleur modèle (FLUX.2 [pro]) quand le budget le permet ; c'est là qu'il faut le prompt le plus précis (personnages principaux bien visibles, gag ou question de l'histoire lisible d'un coup d'œil).
 - Penser en dessinateur de strip minimaliste : le jeu d'acteur fait le gag. Décor réduit à un ou deux objets utiles au sujet (un bureau, un canapé, un télescope), le reste vide. Exagérer les postures (dos voûté, épaules tombantes, bras ballants, personnage qui s'affale ou « fond » sur place), les sourcils et la bouche ; gouttes de sueur ou joues roses seulement quand le personnage est vraiment gêné ou en difficulté dans cette case. Rythme : cases calmes et assez statiques, puis explosion d'expression sur la chute (changement de posture radical ou gros plan sur la réaction). Varier quand même les cadrages (plan moyen, gros plan, plan large).
 - **Des personnages qu'on ne confond pas (8 novembre 2026).** Dans une même BD, chaque personnage se reconnaît au premier coup d'œil, même en petit et en noir et blanc. Dans sa fiche (`look`), il a :
   1. une **silhouette** à lui, écrite en toutes lettres : grand et maigre, petit et rond, costaud, voûté, enfant, très vieux… (jamais deux fois la même dans la BD) ;

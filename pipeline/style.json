@@ -4,7 +4,7 @@
   "style_with_ref": "Same line style as image 0 (marker line weight, huge round eyes, oversized heads, nearly empty background - Sarah's Sribbles inspiration), but not its characters or scene, and fully coloured: image 0 is only a line reference, ignore its black-and-white palette.",
   "colour_since": "2026-11-09",
   "colour_note": "9 novembre 2026, demande de Greg : images entièrement en couleur (aplats vifs, peau, cheveux et vêtements colorés, fond pastel). Les fiches casting déjà dessinées en noir et blanc restent valables jusqu'à leur remplacement.",
-  "constraints": "One single full-bleed illustration, edge to edge, no panel borders. Wordless picture: no text, no lettering, no speech bubbles; any sign, board or screen is blank. The top quarter of the picture is empty white background.",
+  "constraints": "One single full-bleed illustration, edge to edge, no panel borders. Wordless picture: no text, no lettering, no speech bubbles; any sign, board or screen is blank. The top quarter of the picture is empty white background. Every face and every hand is drawn in a skin colour (never filled in black, grey or a solid dark shape), with visible eyes and mouth.",
   "case_size": [
     512,
     896
@@ -51,5 +51,49 @@
     "dossier": 2
   },
   "stock_target_note": "BD finies d'avance par type (file stock/) avant de refaire les images demandées par le contrôle qualité",
-  "emotion_touches_note": "8 novembre 2026 : les touches d'émotion (joues roses, larmes, sueur, rougeur, cœurs, étincelles) ne sont plus dans le style global, qui les faisait dessiner partout ; seul le prompt de scène les demande, quand l'émotion est vraiment là. 'scruffy spiky hair' retiré aussi (tous les personnages se ressemblaient)."
+  "emotion_touches_note": "8 novembre 2026 : les touches d'émotion (joues roses, larmes, sueur, rougeur, cœurs, étincelles) ne sont plus dans le style global, qui les faisait dessiner partout ; seul le prompt de scène les demande, quand l'émotion est vraiment là. 'scruffy spiky hair' retiré aussi (tous les personnages se ressemblaient).",
+  "constraints_note_2026_11_13": "13 novembre 2026 : un visage peint entièrement en noir (insolite du 13) ; la peau est désormais imposée en couleur de peau, dans les consignes impératives.",
+  "harmonize": {
+    "enabled": true,
+    "tolerance": 30,
+    "min_border_share": 0.35,
+    "bg": {
+      "actu": [
+        226,
+        233,
+        248
+      ],
+      "cultureg": [
+        253,
+        236,
+        214
+      ],
+      "insolite": [
+        251,
+        226,
+        222
+      ],
+      "dossier": [
+        223,
+        241,
+        230
+      ],
+      "default": [
+        246,
+        241,
+        230
+      ]
+    },
+    "note": "13 novembre 2026 : le fond de chaque image (la zone claire reliée aux bords du haut) prend la teinte pastel du format de la BD, la même dans toutes ses cases ; les traits, les personnages et les objets ne sont pas touchés. Les fiches casting restent sur fond blanc."
+  },
+  "premium": {
+    "enabled": true,
+    "model": "fal-ai/flux-2-pro/edit",
+    "usd_first_mp": 0.03,
+    "usd_extra_mp": 0.015,
+    "daily_usd": 0.2,
+    "monthly_usd": 5.0,
+    "safety_tolerance": "2",
+    "note": "13 novembre 2026, décision de Greg : un meilleur modèle (FLUX.2 [pro], environ 0,045 $ l'image) pour la couverture et la première case de chaque BD, celles qui décident si on lit. Plafonds propres (0,20 $ par jour, 5 $ par mois) à l'intérieur du plafond fal.ai global (fal_monthly_usd) ; au-delà, retour au modèle habituel. Jamais pour les images à refaire."
+  }
 }
