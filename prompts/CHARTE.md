@@ -29,7 +29,7 @@ Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'i
 - Exemple de forme (sujet inventé, ne jamais le reprendre) : récitatif « La mairie de Lyon interdit les trottinettes en libre-service dans le centre dès lundi, après 300 plaintes de piétons en un an. » ; bulle d'un livreur à trottinette, figé sur la ligne : « Techniquement, ma roue avant est encore dans le 7e. » ; puis la case Quoi / Pourquoi ça compte / Et maintenant.
 
 ## « Pendant ce temps, sur Internet » (fin de l'Actu, 13 novembre 2026)
-- Trois tendances légères du jour, en cartes de post **réécrites par nous** : on montre ce qui amuse ou agite Internet, sans jamais recopier un vrai post.
+- Trois tendances légères du jour. Pour chacune, de préférence **le vrai post** qui la résume (intégration officielle du réseau, avec un lien vers l'original), suivi d'une vanne du Sachoir ; sinon une carte réécrite par nous, avec un pseudo inventé.
 - Le ton : celui d'un ami qui raconte le buzz du jour à la machine à café. Une chute par post. On rit avec Internet, pas d'une personne.
 - Interdits : particuliers (nom, pseudo, visage), drames et victimes, santé, politique partisane, rumeurs non vérifiées. Le « Pourquoi ça buzze » reste neutre et sourcé.
 

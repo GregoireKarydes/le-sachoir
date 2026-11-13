@@ -14,6 +14,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import embeds  # noqa: E402
 from seo import POLES  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -136,6 +137,11 @@ def check_story(fmt: dict, d: Path, err, warn):
                 warn(f"case {k} (Sur Internet) : « handle » inventé et générique attendu (« @Internet »)")
             if not str((c.get("source") or {}).get("url", "")).startswith("https://"):
                 warn(f"case {k} (Sur Internet) : source (article qui explique la tendance) manquante")
+            post = c.get("post")
+            if post is not None:
+                url = (post or {}).get("url", "") if isinstance(post, dict) else ""
+                if not embeds.provider(url):
+                    warn(f"case {k} (Sur Internet) : « post.url » doit être l'adresse d'un post X, Bluesky ou TikTok ({url!r})")
     if len(drawn) > MAX_CASES.get(fid, 99):
         warn(f"{len(drawn)} cases dessinées, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
     check_cast_distinct([c for c in fmt.get("cast", []) or [] if isinstance(c, dict)], warn)

@@ -20,6 +20,7 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import seo  # noqa: E402
+import embeds  # noqa: E402
 import stock  # noqa: E402
 from validate import check_edition  # noqa: E402
 
@@ -303,7 +304,14 @@ def main(now: datetime | None = None):
             if x.get("id") != "quiz" and x.get("cases") and x.get("minutes") != reading_minutes(x):
                 x["minutes"] = reading_minutes(x)
                 changed = True
-        if ed.get("status") != "published" and (day < today or (day == today and now.hour >= PUBLISH_HOUR)):
+        # Vrais posts de « Sur Internet » : récupérés par l'intégration officielle dès que l'Actu est écrite,
+        # puis revérifiés au moment de la publication (un post supprimé entre-temps n'est pas montré).
+        going_out = ed.get("status") != "published" and (day < today or (day == today and now.hour >= PUBLISH_HOUR))
+        if day >= today - timedelta(days=1):
+            for x in ed.get("formats", []):
+                if x.get("id") == "actu":
+                    changed = embeds.refresh(x, d, recheck=going_out) or changed
+        if going_out:
             stories = any(ok(x) for x in ed.get("formats", []) if x.get("id") != "quiz")
             late = day < today or now.hour >= FALLBACK_HOUR
             if stories or (late and any(ok(x) for x in ed.get("formats", []))):
