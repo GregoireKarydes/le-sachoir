@@ -34,7 +34,7 @@
           "look": "a short, round union delegate in her forties, light peach skin, big curly bright red hair, bright green sleeveless vest with no text as main colour over a grey sweater, dark blue jeans, thick white knitted gloves, a small silver whistle on a cord around her neck",
           "role": "the stubborn union delegate who has heard every promise before; arms crossed, one eyebrow raised, unimpressed",
           "file": "cast/actu-syndicaliste.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "diplomate",
@@ -42,7 +42,7 @@
           "look": "a very tall, very thin European diplomat in his sixties, medium tan skin, completely bald shiny head, navy blue pinstripe suit as main colour, bright purple tie, small round gold glasses, polished black shoes",
           "role": "the smug, over-prepared diplomat who never again wants to be left without a seat; chin high, satisfied little smile",
           "file": "cast/actu-diplomate.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "supporter",
@@ -68,8 +68,9 @@
           "diplomate"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -90,8 +91,9 @@
               "syndicaliste"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -101,7 +103,13 @@
           "title": "Le jardin de l’hôtel de Matignon",
           "text": "Le jardin de l’hôtel de Matignon, rue de Varenne à Paris : la résidence du Premier ministre, où les syndicats étaient reçus vendredi.",
           "photo": {
-            "commons": "File:Jardin de l'Hôtel Matignon @ Paris (34908683952).jpg"
+            "commons": "File:Jardin de l'Hôtel Matignon @ Paris (34908683952).jpg",
+            "credit": "Guilhem Vellut from Paris, France",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Jardin_de_l%27H%C3%B4tel_Matignon_@_Paris_(34908683952).jpg",
+            "file": "images/photo-2-jardin-de-l-h-tel-matignon-paris-34.webp",
+            "status": "done"
           }
         },
         {
@@ -129,8 +137,8 @@
               "diplomate"
             ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -140,7 +148,13 @@
           "title": "Le centre des congrès de Dublin",
           "text": "Le Convention Centre Dublin, au bord de la Liffey, et sa façade de verre penchée : c’est là que se tenait le sommet de jeudi.",
           "photo": {
-            "commons": "File:The Convention Centre Dublin (CCD) in the Dublin Docklands (8281161175).jpg"
+            "commons": "File:The Convention Centre Dublin (CCD) in the Dublin Docklands (8281161175).jpg",
+            "credit": "William Murphy from Dublin, Ireland",
+            "license": "CC BY-SA 2.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:The_Convention_Centre_Dublin_(CCD)_in_the_Dublin_Docklands_(8281161175).jpg",
+            "file": "images/photo-5-the-convention-centre-dublin-ccd-in.webp",
+            "status": "done"
           }
         },
         {
@@ -168,8 +182,8 @@
               "supporter"
             ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -179,7 +193,13 @@
           "title": "Le stade San Siro, à Milan",
           "text": "Le stade Giuseppe-Meazza, surnommé San Siro, à Milan : le stade de l’Inter et de l’AC Milan, où les Bleus ont perdu jeudi soir.",
           "photo": {
-            "commons": "File:Stadio San Siro - Giuseppe Meazza, Milano.jpg"
+            "commons": "File:Stadio San Siro - Giuseppe Meazza, Milano.jpg",
+            "credit": "Samoano~commonswiki",
+            "license": "CC BY-SA 3.0",
+            "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "source": "https://commons.wikimedia.org/wiki/File:Stadio_San_Siro_-_Giuseppe_Meazza,_Milano.jpg",
+            "file": "images/photo-8-stadio-san-siro-giuseppe-meazza-mil.webp",
+            "status": "done"
           }
         },
         {
@@ -207,8 +227,8 @@
               "accessoiriste"
             ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -218,7 +238,13 @@
           "title": "L’Olympia, boulevard des Capucines",
           "text": "La salle de l’Olympia, boulevard des Capucines à Paris : elle accueillera la 52e cérémonie des César.",
           "photo": {
-            "commons": "File:Olympia Music Hall, Boulevard des Capucines, Paris.jpg"
+            "commons": "File:Olympia Music Hall, Boulevard des Capucines, Paris.jpg",
+            "credit": "Britchi Mirela",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Olympia_Music_Hall,_Boulevard_des_Capucines,_Paris.jpg",
+            "file": "images/photo-11-olympia-music-hall-boulevard-des-ca.webp",
+            "status": "done"
           }
         },
         {

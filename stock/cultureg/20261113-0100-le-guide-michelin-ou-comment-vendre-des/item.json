@@ -28,14 +28,14 @@
           "id": "firmin",
           "look": "Firmin, a short stocky 1910s tyre dealer and mechanic, grease-stained grey overalls, flat black cap, bushy black moustache, a spanner in his back pocket",
           "file": "cast/cultureg-firmin.png",
-          "status": "pending",
+          "status": "done",
           "role": "a garage owner who sells the tyres and hands out the guide; short, stocky, greasy hands, practical"
         },
         {
           "id": "inspecteur",
           "look": "a 1930s anonymous restaurant inspector, black hat pulled low over the eyes, black coat with the collar up, thin moustache, a tiny notebook hidden in his palm",
           "file": "cast/cultureg-inspecteur.png",
-          "status": "pending",
+          "status": "skipped",
           "role": "the secret restaurant inspector of the 1930s; mysterious, hat low, scribbling in hiding"
         }
       ],
@@ -46,8 +46,9 @@
           "edouard"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,8 @@
               "edouard"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -114,8 +115,8 @@
               "edouard"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -136,8 +137,8 @@
               "firmin"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -162,8 +163,8 @@
               "firmin"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -188,8 +189,8 @@
               "edouard"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -214,8 +215,8 @@
               "edouard"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -246,8 +247,8 @@
               "inspecteur"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -272,8 +273,8 @@
               "edouard"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

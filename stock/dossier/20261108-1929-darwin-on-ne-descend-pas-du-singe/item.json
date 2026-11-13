@@ -461,9 +461,10 @@
               "darwin"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
