@@ -19,6 +19,17 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
+<!-- Écrans d'ouverture de l'appli installée sur iPhone (pipeline/splash.py) -->
+<link rel="apple-touch-startup-image" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/splash/splash-1320x2868.png">
+<link rel="apple-touch-startup-image" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/splash/splash-1206x2622.png">
+<link rel="apple-touch-startup-image" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/splash/splash-1290x2796.png">
+<link rel="apple-touch-startup-image" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/splash/splash-1179x2556.png">
+<link rel="apple-touch-startup-image" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/splash/splash-1284x2778.png">
+<link rel="apple-touch-startup-image" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/splash/splash-1170x2532.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/splash/splash-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/splash/splash-1242x2688.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/splash/splash-828x1792.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/splash/splash-750x1334.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +69,34 @@ button{cursor:pointer}
 .app{position:absolute;inset:0;display:flex;flex-direction:column}
 .logo{display:flex;justify-content:center;padding:18px 0 4px;position:relative}
 .streakmini{position:absolute;right:16px;top:50%;margin-top:-2px;transform:translateY(-50%);display:inline-flex;align-items:center;gap:3px;border:0;background:#fff1cf;border-radius:999px;padding:4px 10px 4px 7px;font-weight:900;font-size:15px;font-variant-numeric:tabular-nums;color:#a3580a}
-.streakmini .fl{font-size:16px;line-height:1}
+.streakmini .fl{font-size:16px;line-height:1;display:inline-flex}
+/* Chargement : formes grises qui ondulent à la place des cartes, et fond animé sous les images qui arrivent */
+.sk{background:linear-gradient(90deg,#ece6da 25%,#f6f1e7 50%,#ece6da 75%);background-size:200% 100%;animation:sk 1.3s ease-in-out infinite;border-radius:16px}
+@keyframes sk{from{background-position:150% 0}to{background-position:-50% 0}}
+.sk.t{height:14px;border-radius:7px}.sk.h{height:30px;border-radius:9px}
+.skwrap{display:flex;flex-direction:column;gap:14px}
+.skrow{display:flex;gap:12px}
+.card img,.thumb,.srow .th,.scard .cv,.fcard .cv,.slide .art,.slide img{background-color:#ece6da}
+/* Transitions douces entre les onglets */
+.view.enter{animation:viewIn .22s ease-out}
+@keyframes viewIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* Icônes au trait (famille unique, voir IC) */
+.ic{width:1.15em;height:1.15em;vertical-align:-.2em;flex:0 0 auto;display:inline-block}
+.ic.red{color:var(--red)}.ic.gold{color:#d99a00}
+.fl .ic,.week .on .ic,.tile.s .ic{color:#c4560a;fill:#ffc456}
+.dbadge .ic{width:1.05em;height:1.05em;vertical-align:-.17em}
+.bigic{display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:#fff;color:var(--muted);font-size:40px;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.bigic.red{color:var(--red)}.bigic.gold{color:#d99a00;background:#fff4d6}
+.uni .em{color:var(--c)}
+.ol span{color:var(--c);display:inline-flex}
+.onb-art .ic{width:84px;height:84px;color:var(--ink)}
+.onb-art.sm .ic{width:60px;height:60px}
+.onb-art .bell .ic{color:#d99a00;fill:#ffd66b}
+.onb-proof .ic{color:var(--green)}
+.cz b .ic{width:44px;height:44px;stroke-width:2.6}
+.alldone .ic{color:var(--green-d)}
+.convn .ic svg,.convn svg.ic{width:24px;height:24px}
+.nudge .em .ic{width:24px;height:24px;color:#9a6a00}
 .installmini{position:absolute;left:16px;top:50%;margin-top:-2px;transform:translateY(-50%);display:inline-flex;align-items:center;gap:4px;border:0;background:var(--yellow);border-radius:999px;padding:5px 10px 5px 8px;font-weight:700;font-size:13px;color:var(--ink)}
 .installmini svg{width:15px;height:15px}
 .installmini[hidden],.tb-install[hidden]{display:none}
@@ -419,7 +457,7 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .onb-skip{border:0;background:none;color:var(--muted);font-weight:700;font-size:14px;padding:6px 2px}
 .onb-body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px;animation:onbIn .35s ease-out}
 @keyframes onbIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
-.onb-art{font-size:76px;line-height:1;text-align:center;margin-bottom:4px}
+.onb-art{font-size:76px;line-height:1;text-align:center;margin-bottom:4px;display:flex;justify-content:center}
 .onb-art img{height:64px;width:auto}
 .onb h2,.pask h2{font-family:var(--f-serif);font-weight:800;font-size:30px;line-height:1.05;margin:0;text-wrap:balance;text-align:center}
 .onb p,.pask p{margin:0;font-size:16.5px;line-height:1.45;text-align:center;color:#3d3832;text-wrap:pretty}
@@ -524,7 +562,7 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .unis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .uni{border:0;border-radius:18px;padding:13px 14px;text-align:left;display:flex;flex-direction:column;gap:1px;background:#fff;box-shadow:inset 0 0 0 2px var(--c),0 3px 0 var(--c);position:relative;overflow:hidden}
 .uni::after{content:"";position:absolute;right:-22px;bottom:-22px;width:70px;height:70px;border-radius:50%;background:var(--c);opacity:.14}
-.uni .em{font-size:26px;line-height:1.2}
+.uni .em{font-size:26px;line-height:1.2;display:inline-flex}
 .uni b{font-size:15.5px;line-height:1.15}
 .uni small{color:var(--muted);font-size:12.5px}
 .uni:active{transform:translateY(2px)}
@@ -1040,7 +1078,7 @@ body{overscroll-behavior-y:none}
         </div>
         <footer class="ab-foot">Le Sachoir — l’actu et la culture G en BD, chaque jour. Les faits sont vérifiés et sourcés ; les personnages et les dialogues sont des parodies. · <a href="archives/">Toutes les histoires</a> · <a href="themes/">Thèmes</a></footer>
       </section>
-      <section class="view on" id="v-home" aria-label="Édition"></section>
+      <section class="view on" id="v-home" aria-label="Édition"><div class="skwrap" aria-busy="true"><div class="sk h" style="width:46%"></div><div class="sk t" style="width:78%"></div><div class="sk" style="height:330px;border-radius:22px;margin-top:30px"></div><div class="skrow"><div class="sk" style="flex:1;height:190px;border-radius:22px"></div><div class="sk" style="flex:1;height:190px;border-radius:22px"></div></div></div></section>
       <section class="view" id="v-explore" aria-label="Découvrir"></section>
       <section class="view" id="v-favs" aria-label="Favoris"></section>
       <section class="view" id="v-profile" aria-label="Profil"></section>
@@ -1101,13 +1139,58 @@ const ERUDITION = [
   {name:"La Légende", min:100, max:Infinity, items:["Divinité de l’Olympe. Sait tout sur tout, mais galère avec le micro-ondes.","Puits de science absolue. Corrige les fautes de Wikipédia le dimanche.","A fusionné spirituellement avec la bibliothèque d’Alexandrie.","Même les professeurs d’université prennent des notes quand il parle.","L’incarnation du Sachoir. Le boss final de la culture G."]}
 ];
 const ERU_ZERO = {name:"Page blanche", min:0, max:0, items:["Aucun dossier dévoré. Une page blanche, pleine de promesses."]};
+/* ---------- Icônes (13 novembre 2026) ----------
+   Une seule famille, au trait, dans le style de la barre de navigation (24 px, trait 2, bouts arrondis),
+   à la place des emojis de l'interface. Les emojis restent dans les messages (toasts) et la grille à partager. */
+const IC = {
+  flame: '<path d="M12 2.8c.6 3.3-2.7 4.9-2.7 8.6a2.7 2.7 0 0 0 5.4 0c0-1.1-.4-2.1-1.1-3 2.6 1.1 4.9 3.9 4.9 6.8a6.5 6.5 0 0 1-13 0C5.5 9.7 10.4 7 12 2.8z"/>',
+  book: '<path d="M3 5.5h6a3 3 0 0 1 3 3V20a2.5 2.5 0 0 0-2.5-2.5H3zM21 5.5h-6a3 3 0 0 0-3 3V20a2.5 2.5 0 0 1 2.5-2.5H21z"/>',
+  star: '<path d="M12 3.2l2.7 5.5 6 .9-4.4 4.2 1 6-5.3-2.8-5.4 2.8 1-6-4.3-4.2 6-.9z"/>',
+  gift: '<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12.5h18M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/>',
+  bell: '<path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/>',
+  party: '<path d="M4 20l4.5-12 7.5 7.5z"/><path d="M14 6.5c1-1.5 1-3 0-4M17.5 10c1.5-1 3-1 4.5 0M16.5 4.5h.01M20 7.5h.01M20 2.5h.01"/>',
+  check: '<path d="M4.5 12.5l4.8 4.8L19.5 7"/>',
+  checkc: '<circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.8 2.8L16.2 9.5"/>',
+  heart: '<path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/>',
+  pin: '<path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
+  compass: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  lock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>',
+  bulb: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
+  chart: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  hand: '<path d="M8 11.5V6a1.5 1.5 0 0 1 3 0v5M11 10.5V4.5a1.5 1.5 0 0 1 3 0v6M14 10.5V6a1.5 1.5 0 0 1 3 0v6.5M17 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.6a6.3 6.3 0 0 1-5.2-2.8l-2.9-4.4a1.6 1.6 0 0 1 2.6-1.8L8 13.6"/>',
+  pill: '<path d="M10.5 20.5a5 5 0 0 1-7-7l6-6a5 5 0 0 1 7 7z"/><path d="M8.5 8.5l7 7"/>',
+  zap: '<path d="M13 2.5L4.5 13.5H11l-1 8 8.5-11H12z"/>',
+  scroll: '<path d="M15 12h-5M15 8h-5M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>',
+  globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+  quest: '<circle cx="12" cy="12" r="9"/><path d="M9.3 9.4a2.8 2.8 0 1 1 3.9 2.6c-.8.4-1.2 1-1.2 1.8v.4M12 17.2h.01"/>',
+  flask: '<path d="M9.5 3h5M10.5 3v6l-5.3 9.3A1.8 1.8 0 0 0 6.8 21h10.4a1.8 1.8 0 0 0 1.6-2.7L13.5 9V3M7.6 15h8.8"/>',
+  palette: '<path d="M12 3a9 9 0 0 0 0 18c1 0 1.7-.8 1.7-1.7 0-.5-.2-.9-.5-1.2a1.7 1.7 0 0 1 1.2-2.9H16a5 5 0 0 0 5-5C21 6.2 17 3 12 3z"/><path d="M7.5 11.5h.01M10 7.5h.01M14.5 7.5h.01"/>',
+  game: '<rect x="2.5" y="7" width="19" height="11" rx="5"/><path d="M7.5 11v3M6 12.5h3M15 11.5h.01M17.5 13.5h.01"/>',
+  phone: '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v6M9.5 11.5L12 14l2.5-2.5"/>',
+  dice: '<rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><path d="M8.5 8.5h.01M15.5 15.5h.01M12 12h.01M15.5 8.5h.01M8.5 15.5h.01"/>',
+  left: '<path d="M15 5l-7 7 7 7"/>',
+  right: '<path d="M9 5l7 7-7 7"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+  cal: '<rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+  news: '<path d="M4 5h13v14a2 2 0 0 0 2 2H6a2 2 0 0 1-2-2zM17 9h3v10a2 2 0 0 1-2 2M7.5 9h6M7.5 13h6M7.5 17h4"/>',
+  eye: '<path d="M2.5 12S6 5 12 5s9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7z"/><circle cx="12" cy="12" r="3"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/>',
+  ban: '<circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/>',
+  play: '<circle cx="12" cy="12" r="9"/><path d="M10 8.5l5.5 3.5-5.5 3.5z"/>',
+  drop: '<path d="M12 3.5s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+  cards: '<rect x="3" y="6" width="11" height="15" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v13"/>',
+  user: '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/>',
+  sources: '<path d="M4 4h10l6 6v10H4z"/><path d="M14 4v6h6M8 13h8M8 17h5"/>',
+};
+const ic = (n, cls = "") => `<svg class="ic${cls ? " " + cls : ""}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[n] || ""}</svg>`;
+
 const POLES = [
-  {id:"hist", em:"📜", name:"Histoire", color:"#c9a45a", themes:["Histoire ancienne","Histoire moderne","Histoire de France","Grandes personnalités","Mythologies et religions"]},
-  {id:"geo", em:"🌍", name:"Géopolitique & éco", color:"#1f8f5f", themes:["Géopolitique","Économie","Politique française","Entreprises et marques"]},
-  {id:"soc", em:"🤔", name:"Société & idées", color:"#7a5fc4", themes:["Psychologie","Sociologie","Philosophie","Démographie","Société","Droit","Géographie"]},
-  {id:"sci", em:"🧪", name:"Sciences", color:"#2f4fa2", themes:["Sciences physiques","L’univers","Sciences du vivant","Médecine et santé","Grandes découvertes","Écologie et climat","Informatique et numérique"]},
-  {id:"art", em:"🎨", name:"Art & Culture", color:"#8a55b8", themes:["Histoire de l’art","Arts plastiques","Architecture","Littérature","Expression française"]},
-  {id:"pop", em:"🎮", name:"Culture pop", color:"#f2a33a", themes:["Musique","Mode et luxe","Sports","Jeux vidéo"]}
+  {id:"hist", em:ic("scroll"), name:"Histoire", color:"#c9a45a", themes:["Histoire ancienne","Histoire moderne","Histoire de France","Grandes personnalités","Mythologies et religions"]},
+  {id:"geo", em:ic("globe"), name:"Géopolitique & éco", color:"#1f8f5f", themes:["Géopolitique","Économie","Politique française","Entreprises et marques"]},
+  {id:"soc", em:ic("quest"), name:"Société & idées", color:"#7a5fc4", themes:["Psychologie","Sociologie","Philosophie","Démographie","Société","Droit","Géographie"]},
+  {id:"sci", em:ic("flask"), name:"Sciences", color:"#2f4fa2", themes:["Sciences physiques","L’univers","Sciences du vivant","Médecine et santé","Grandes découvertes","Écologie et climat","Informatique et numérique"]},
+  {id:"art", em:ic("palette"), name:"Art & Culture", color:"#8a55b8", themes:["Histoire de l’art","Arts plastiques","Architecture","Littérature","Expression française"]},
+  {id:"pop", em:ic("game"), name:"Culture pop", color:"#f2a33a", themes:["Musique","Mode et luxe","Sports","Jeux vidéo"]}
 ];
 const normTh = th => (th || "").replace(/['`]/g, "’").trim().toLowerCase();
 const poleOf = th => POLES.find(p => p.themes.some(x => normTh(x) === normTh(th)));
@@ -1147,13 +1230,13 @@ const withRef = url => { if (!WALLET.ref || !MAIL()) return url; const u = new U
 // Badge d'une histoire dans Découvrir : réservée (⭐ Premium) ou, pour un Grand Dossier, son état.
 const storyBadge = s => !PW() || isPremium() ? (s.id === "dossier" ? dossierBadge(s.date) : "")
   : canOpenDate(s.date) || WALLET.unlocked.includes(s.date) ? (s.id === "dossier" ? dossierBadge(s.date) : "")
-  : `<span class="dbadge prem">⭐ Premium</span>`;
+  : `<span class="dbadge prem">${ic("star")} Premium</span>`;
 // Badge d'un Grand Dossier quand le paywall est actif.
 function dossierBadge(date) {
   if (!PW()) return "";
-  if (isPremium()) return `<span class="dbadge prem">⭐ Premium</span>`;
-  if (WALLET.unlocked.includes(date)) return `<span class="dbadge gift">🎁 Débloqué</span>`;
-  return `<span class="dbadge lock">🔒 4 cases offertes</span>`;
+  if (isPremium()) return `<span class="dbadge prem">${ic("star")} Premium</span>`;
+  if (WALLET.unlocked.includes(date)) return `<span class="dbadge gift">${ic("gift")} Débloqué</span>`;
+  return `<span class="dbadge lock">${ic("lock")} 4 cases offertes</span>`;
 }
 const ACC_KEY = "sachoir.acc";
 let ACC = (() => { try { return JSON.parse(localStorage.getItem(ACC_KEY) || "null"); } catch (e) { return null; } })();
@@ -1262,11 +1345,11 @@ function renderNav() {
   const s = streak();
   const canInstall = !ME.installDone && !matchMedia("(display-mode: standalone)").matches;
   ["#installMini", "#installTop"].forEach(id => { const b = $(id); b.hidden = !canInstall; b.onclick = openInstall; });
-  ["#streakMini", "#streakTop"].forEach(id => { $(id).innerHTML = `<span class="fl">🔥</span>${s}`; $(id).setAttribute("aria-label", `Série de ${s} jours`); });
+  ["#streakMini", "#streakTop"].forEach(id => { $(id).innerHTML = `<span class="fl">${ic("flame")}</span>${s}`; $(id).setAttribute("aria-label", `Série de ${s} jours`); });
 }
 // La page « Le concept » explique l'objectif aux visiteurs sans compte ; une fois connecté, elle disparaît.
 const SHOW_ABOUT = () => !ACC;
-function setTab(t) { if (t === "about" && !SHOW_ABOUT()) t = "home"; TAB = t; document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + t)); $("#main").scrollTop = 0; render(); }
+function setTab(t) { if (t === "about" && !SHOW_ABOUT()) t = "home"; const same = TAB === t; TAB = t; document.querySelectorAll(".view").forEach(v => { v.classList.toggle("on", v.id === "v-" + t); if (v.id === "v-" + t && !same) { v.classList.remove("enter"); void v.offsetWidth; v.classList.add("enter"); } }); $("#main").scrollTop = 0; render(); }
 function render() { if (TAB === "about" && !SHOW_ABOUT()) return setTab("home"); renderNav(); ({ about: renderAbout, home: renderHome, explore: renderExplore, favs: renderFavs, profile: renderProfile })[TAB](); }
 DESK.addEventListener("change", () => { if (!DESK.matches && TAB === "about") setTab("home"); else render(); });
 
@@ -1303,10 +1386,19 @@ function readState(ed, f) {
   if (!r) return "";
   return r.max >= f.cases.length ? "Lu ✓" : `Case ${r.max} / ${f.cases.length}`;
 }
+// Squelettes de chargement (13 novembre 2026) : la forme de la page avant son contenu, jamais un écran vide.
+const SK_HOME = `<div class="skwrap" aria-busy="true" aria-label="Chargement de l’édition"><div class="sk h" style="width:46%"></div><div class="sk t" style="width:78%"></div>
+  <div class="skrow" style="justify-content:space-between;margin-top:6px"><div class="sk h" style="width:52%"></div><div class="sk h" style="width:30%;border-radius:999px"></div></div>
+  <div class="sk" style="height:${DESK.matches ? 380 : 330}px;border-radius:22px"></div>
+  <div class="skrow"><div class="sk" style="flex:1;height:190px;border-radius:22px"></div><div class="sk" style="flex:1;height:190px;border-radius:22px"></div></div>
+  <div class="sk" style="height:150px;border-radius:22px"></div></div>`;
+const SK_LIST = n => `<div class="skwrap" aria-busy="true" aria-label="Chargement"><div class="sk h" style="width:40%"></div><div class="sk" style="height:46px;border-radius:14px"></div>
+  ${Array.from({ length: n }, () => `<div class="skrow" style="background:#fff;border-radius:16px;padding:9px"><div class="sk" style="width:74px;height:96px;border-radius:11px"></div><div style="flex:1;display:flex;flex-direction:column;gap:9px;padding-top:4px"><div class="sk t" style="width:35%"></div><div class="sk t" style="width:90%;height:18px"></div><div class="sk t" style="width:60%"></div></div></div>`).join("")}</div>`;
+let BOOTING = true; // vrai jusqu'au premier chargement de l'édition (réussi ou non)
 function renderHome() {
   const v = $("#v-home");
   if (!CUR) {
-    setHTML(v, `<div class="empty-state"><h2>La première édition arrive</h2><p class="lead">Rendez-vous demain. Le crayon chauffe.</p></div>`);
+    setHTML(v, BOOTING ? SK_HOME : `<div class="empty-state"><h2>La première édition arrive</h2><p class="lead">Rendez-vous demain. Le crayon chauffe.</p></div>`);
     return;
   }
   const ed = CUR, F = Object.fromEntries(ed.formats.map(f => [f.id, f]));
@@ -1333,7 +1425,7 @@ function renderHome() {
    <div><h1 class="h1 hello">${hello}</h1><p class="lead">${prog && prog.done === prog.total ? "Édition bouclée. Vous pouvez briller en toute légalité." : prog && prog.done ? `Plus que ${prog.total - prog.done} à lire. Vous y êtes presque.` : "Prêt à briller en société (ou au moins à faire semblant) ?"}</p></div>
    ${startHTML()}
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
-   ${prog ? `<div class="tprog" aria-label="Progression du jour : ${prog.done} sur ${prog.total}"><div class="dots">${prog.items.map(x => `<i class="${x.done ? "on" : ""}" style="--c:${COLOR[x.id]}" title="${esc(x.label)}"></i>`).join("")}</div><span>${prog.done === prog.total ? "🎉 Tout lu aujourd’hui" : `${prog.done} / ${prog.total} aujourd’hui · ~${prog.left} min restantes`}</span></div>` : ""}
+   ${prog ? `<div class="tprog" aria-label="Progression du jour : ${prog.done} sur ${prog.total}"><div class="dots">${prog.items.map(x => `<i class="${x.done ? "on" : ""}" style="--c:${COLOR[x.id]}" title="${esc(x.label)}"></i>`).join("")}</div><span>${prog.done === prog.total ? `${ic("party")} Tout lu aujourd’hui` : `${prog.done} / ${prog.total} aujourd’hui · ~${prog.left} min restantes`}</span></div>` : ""}
    ${isToday ? `<button class="wx wait" id="wxLine"></button>` : ""}
    ${ed.empty
       ? `<div class="empty-state"><h2>${isToday ? "L’édition du jour est encore sous le crayon" : "Pas d’édition ce jour-là"}</h2><p class="lead">${isToday ? "Le dessinateur taille ses mines. Revenez un peu plus tard." : "Le Sachoir dormait. Ça arrive aux meilleurs."}</p>${last ? `<button class="btn ghost sm" id="hLast">Lire la dernière édition (${fmtLong(last)})</button>` : ""}</div>`
@@ -1391,7 +1483,9 @@ function wireStart(v) {
 
 async function selectDate(date) {
   if (!canOpenDate(date)) return openPremium("archives");
-  try { CUR = await loadEdition(date); } catch (e) { toast("Édition indisponible hors ligne"); return; }
+  const v = $("#v-home"), slow = setTimeout(() => { closeSheet(); if (TAB === "home") setHTML(v, SK_HOME); }, 150);
+  try { CUR = await loadEdition(date); } catch (e) { clearTimeout(slow); toast("Édition indisponible hors ligne"); render(); return; }
+  clearTimeout(slow);
   closeSheet(); setTab("home");
 }
 let HM = null; // mois affiché dans l'historique : [année, mois]
@@ -1499,11 +1593,11 @@ function nextOf(ed, f) {
 // Une seule invitation, la plus utile au bon moment (jamais en pleine lecture).
 function convNudge(f) {
   const s = streak();
-  if (MAIL() && !ACC && s >= 2) return { ic: "🔥", t: `${s} jours de série !`, d: "Ne la perdez pas en changeant de téléphone.", b: "Sauver ma série", act: "acc" };
-  if (pushState() === "ask" && ME.reads.length >= 2) return { ic: "🔔", t: "On vous prévient demain ?", d: "Une notif quand l’édition sort. Une seule.", b: "Oui, toquez-moi", act: "push" };
-  if (!DESK.matches && !STANDALONE() && !ME.installDone && ME.reads.length >= 2) return { ic: "📲", t: "Le Sachoir sur votre écran d’accueil", d: "Il s’ouvre comme une appli. Trois gestes, pas de store.", b: "L’installer", act: "install" };
-  if (MAIL() && !(ACC?.user?.newsletter || ME.nl) && !WALLET.newsletterGift) return { ic: "🎁", t: "Un Grand Dossier offert", d: "Avec la newsletter du matin, gratuite.", b: "Je le veux", act: "nl" };
-  if (PW() && STRIPE() && !isPremium() && f.id === "dossier") return { ic: "⭐", t: "Tous les Grands Dossiers", d: `Premium dès ${euros(CFG.prices?.month || 299)} par mois, sans engagement.`, b: "Voir Premium", act: "prem" };
+  if (MAIL() && !ACC && s >= 2) return { ic: ic("flame"), t: `${s} jours de série !`, d: "Ne la perdez pas en changeant de téléphone.", b: "Sauver ma série", act: "acc" };
+  if (pushState() === "ask" && ME.reads.length >= 2) return { ic: ic("bell"), t: "On vous prévient demain ?", d: "Une notif quand l’édition sort. Une seule.", b: "Oui, toquez-moi", act: "push" };
+  if (!DESK.matches && !STANDALONE() && !ME.installDone && ME.reads.length >= 2) return { ic: ic("phone"), t: "Le Sachoir sur votre écran d’accueil", d: "Il s’ouvre comme une appli. Trois gestes, pas de store.", b: "L’installer", act: "install" };
+  if (MAIL() && !(ACC?.user?.newsletter || ME.nl) && !WALLET.newsletterGift) return { ic: ic("gift"), t: "Un Grand Dossier offert", d: "Avec la newsletter du matin, gratuite.", b: "Je le veux", act: "nl" };
+  if (PW() && STRIPE() && !isPremium() && f.id === "dossier") return { ic: ic("star"), t: "Tous les Grands Dossiers", d: `Premium dès ${euros(CFG.prices?.month || 299)} par mois, sans engagement.`, b: "Voir Premium", act: "prem" };
   return null;
 }
 function afterHTML(ed, f) {
@@ -1511,8 +1605,8 @@ function afterHTML(ed, f) {
   if (ed.date === TODAY || ed.date === CUR?.date) {
     const n = nextOf(ed, f);
     if (n.kind === "story") out += `<button class="nextup" data-act="next" data-f="${n.f.id}" style="--c:${COLOR[n.f.id]}"><small>À suivre · ${n.f.minutes || 2} min</small><b>${esc(n.f.title)}</b><span>→</span></button>`;
-    else if (n.kind === "quiz") out += `<button class="nextup" data-act="quiz" style="--c:${COLOR.quiz}"><small>Pour finir en beauté</small><b>Le jeu du jour : ${esc(n.f.title)}</b><span>🎲</span></button>`;
-    else out += `<div class="alldone">🎉 <b>Édition bouclée !</b> Vous en savez plus que ce matin. Revenez demain, on remet ça.</div><button class="btn ghost" data-act="explore">Explorer d’autres histoires</button>`;
+    else if (n.kind === "quiz") out += `<button class="nextup" data-act="quiz" style="--c:${COLOR.quiz}"><small>Pour finir en beauté</small><b>Le jeu du jour : ${esc(n.f.title)}</b><span>${ic("dice")}</span></button>`;
+    else out += `<div class="alldone">${ic("party")} <b>Édition bouclée !</b> Vous en savez plus que ce matin. Revenez demain, on remet ça.</div><button class="btn ghost" data-act="explore">Explorer d’autres histoires</button>`;
   }
   const c = convNudge(f);
   if (c) out += `<div class="convn"><span class="ic">${c.ic}</span><span class="tx"><b>${esc(c.t)}</b><small>${esc(c.d)}</small></span><button class="btn sm" data-act="cv-${c.act}">${esc(c.b)}</button></div>`;
@@ -1560,8 +1654,8 @@ async function openReader(ed, fid, startAt = 0) {
 function showCoach() {
   lsSet("sachoir.coach", "1");
   const c = document.createElement("div"); c.className = "coach"; c.setAttribute("role", "dialog"); c.setAttribute("aria-label", "Comment lire");
-  c.innerHTML = `<div class="cz l"><b>👈</b><span>Case précédente</span></div><div class="cz r"><b>👉</b><span>Case suivante</span></div>
-    <div class="cm"><p><b>❤️ Double-touchez</b> une case pour aimer l’histoire.</p><p>Tout en bas, la barre montre où vous en êtes.</p><button class="cta" id="coOk">Compris, on lit !</button></div>`;
+  c.innerHTML = `<div class="cz l"><b>${ic("left")}</b><span>Case précédente</span></div><div class="cz r"><b>${ic("right")}</b><span>Case suivante</span></div>
+    <div class="cm"><p><b>${ic("heart", "red")} Double-touchez</b> une case pour aimer l’histoire.</p><p>Tout en bas, la barre montre où vous en êtes.</p><button class="cta" id="coOk">Compris, on lit !</button></div>`;
   $("#reader").appendChild(c);
   const off = () => c.remove(); c.querySelector("#coOk").onclick = off; setTimeout(() => c.classList.add("on"), 30);
 }
@@ -1569,7 +1663,7 @@ function updateReader(i, init) {
   const { ed, f } = R, total = f.cases.length; R.idx = i;
   let seg = ""; for (let k = 0; k <= total; k++) seg += `<i class="${k <= i ? "on" : ""}"></i>`;
   $("#segs").innerHTML = seg;
-  $("#rCount").textContent = DESK.matches ? `${esc(f.label)} · ${total} cases` : (i >= total ? (f.locked ? "🔒 La suite" : "Pour briller") : `${i + 1} / ${total}`);
+  $("#rCount").textContent = DESK.matches ? `${esc(f.label)} · ${total} cases` : (i >= total ? (f.locked ? "La suite" : "Pour briller") : `${i + 1} / ${total}`);
   const fav = ME.favs.some(x => x.date === ed.date && x.fid === f.id && x.type === "bd");
   $("#rFav").classList.toggle("on", fav); $("#rFav").setAttribute("aria-pressed", fav);
   $("#rPrev").hidden = i === 0; $("#rNext").hidden = i === total;
@@ -1659,7 +1753,7 @@ function onAct(e) {
   else if (a === "quiz") { history.back(); setTimeout(() => openQuiz(ed), 80); }
   else if (a === "explore") { history.back(); setTimeout(() => setTab("explore"), 80); }
   else if (a === "cv-acc") { ev("open", "", "cv-acc"); openAccount(); }
-  else if (a === "cv-push") pushEnable(b).then(ok => { if (ok) b.closest(".convn").innerHTML = `<span class="ic">✅</span><span class="tx"><b>C’est branché.</b><small>À demain matin !</small></span>`; });
+  else if (a === "cv-push") pushEnable(b).then(ok => { if (ok) b.closest(".convn").innerHTML = `<span class="ic">${ic("checkc")}</span><span class="tx"><b>C’est branché.</b><small>À demain matin !</small></span>`; });
   else if (a === "cv-install") openInstall();
   else if (a === "cv-nl") openNewsletter();
   else if (a === "cv-prem") openPremium("dossier");
@@ -1822,17 +1916,17 @@ function qzHelpers(q, t) {
   if (Q.a[Q.i] !== undefined && qzAnswered(Q.a[Q.i])) return;
   const can50 = (t === "choice" || t === "silhouette") && (q.choices || []).length >= 3;
   const bits = [];
-  if (q.hint) bits.push(`<button class="qz-help" id="qzHint1">💡 Un indice</button>`);
-  if (can50) bits.push(Q.j ? (Q.j === String(Q.i) ? "" : `<span class="qz-help off">🃏 Joker déjà utilisé</span>`) : `<button class="qz-help" id="qzJoker">🃏 Joker 50/50 <small>1 par partie</small></button>`);
+  if (q.hint) bits.push(`<button class="qz-help" id="qzHint1">${ic("bulb")} Un indice</button>`);
+  if (can50) bits.push(Q.j ? (Q.j === String(Q.i) ? "" : `<span class="qz-help off">${ic("cards")} Joker déjà utilisé</span>`) : `<button class="qz-help" id="qzJoker">${ic("cards")} Joker 50/50 <small>1 par partie</small></button>`);
   if (!bits.filter(Boolean).length) return;
   $("#qzEx").insertAdjacentHTML("beforebegin", `<div class="qz-helps" id="qzHelps">${bits.join("")}</div>`);
-  if ($("#qzHint1")) $("#qzHint1").onclick = e => { e.currentTarget.outerHTML = `<p class="qz-hintbox">💡 ${esc(q.hint)}</p>`; };
+  if ($("#qzHint1")) $("#qzHint1").onclick = e => { e.currentTarget.outerHTML = `<p class="qz-hintbox">${ic("bulb")} ${esc(q.hint)}</p>`; };
   if ($("#qzJoker")) $("#qzJoker").onclick = e => {
     const wrong = q.choices.map((_, k) => k).filter(k => k !== q.answer);
     const drop = wrong.sort(() => Math.random() - .5).slice(0, Math.floor(q.choices.length / 2));
     drop.forEach(k => { const b = $(`#qzIn [data-k="${k}"]`); if (b) { b.disabled = true; b.classList.add("dim", "gone"); } });
     Q.j = String(Q.i); qzSave(); vibrate(); // numéro de la question où le joker a servi (texte : « 0 » reste vrai)
-    e.currentTarget.outerHTML = `<span class="qz-help off">🃏 Joker utilisé</span>`;
+    e.currentTarget.outerHTML = `<span class="qz-help off">${ic("cards")} Joker utilisé</span>`;
   };
 }
 function qzExplain(q, g, extra = "") {
@@ -2109,7 +2203,7 @@ function quizResult() {
       <div class="qz-score">${fmtScore(s)}<small>/${n}</small></div>
       <p class="qz-verdict">${esc(verdict)}</p>
       <div class="qz-grid" aria-label="${fmtScore(s)} sur ${n}">${quizGrid()}</div>
-      ${hasMap ? `<p class="qz-km">📍 Écart total sur la carte : ${esc(fmtKm(kmTot))}</p>` : ""}
+      ${hasMap ? `<p class="qz-km">${ic("pin")} Écart total sur la carte : ${esc(fmtKm(kmTot))}</p>` : ""}
       <div class="qz-btns"><button class="cta" id="qzShare">Partager mon score</button><button class="btn ghost" id="qzRev">Revoir les réponses</button><button class="btn ghost" id="qzBack">Retour à l’édition</button></div>
       <div class="qz-rev" id="qzRevList" hidden>${Q.f.questions.map((q, k) => qzReview(q, Q.a[k])).join("")}</div></div>`;
   $("#qzX").onclick = () => history.back();
@@ -2251,7 +2345,7 @@ function openWeather(tab) {
   openSheet(`<div id="wxTop" class="wx-wait">La météo arrive…</div>
     <div class="seg" role="tablist"><button data-wt="h">Par heure</button><button data-wt="m">Carte de France</button></div>
     <div id="wxBody"></div>
-    <button class="btn ghost" id="wxCityB">📍 Changer de ville</button>
+    <button class="btn ghost" id="wxCityB">${ic("pin")} Changer de ville</button>
     <p class="sub wx-src">Prévisions <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0), d’après Météo-France et d’autres services météo.</p>`);
   $("#sheet").querySelectorAll("[data-wt]").forEach(b => b.onclick = () => { WX_TAB = b.dataset.wt; wxTab(); });
   $("#wxCityB").onclick = openWeatherCity;
@@ -2282,7 +2376,7 @@ function wxHours() {
     }
     const dl = d.daily, names = dl.time.map((t, j) => j === 0 ? "Aujourd’hui" : j === 1 ? "Demain" : cap1(new Date(t + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", timeZone: "UTC" })));
     body.innerHTML = `<div class="wx-h" aria-label="Heure par heure">${cells}</div>
-      <div class="wx-d">${dl.time.map((t, j) => `<div><span>${names[j]}</span>${wxIcon(dl.weather_code[j], 1)}<em>${dl.precipitation_probability_max[j] >= 20 ? "💧" + dl.precipitation_probability_max[j] + " %" : ""}</em><b>${wxT(dl.temperature_2m_max[j])} <small>/ ${wxT(dl.temperature_2m_min[j])}</small></b></div>`).join("")}</div>`;
+      <div class="wx-d">${dl.time.map((t, j) => `<div><span>${names[j]}</span>${wxIcon(dl.weather_code[j], 1)}<em>${dl.precipitation_probability_max[j] >= 20 ? ic("drop") + dl.precipitation_probability_max[j] + " %" : ""}</em><b>${wxT(dl.temperature_2m_max[j])} <small>/ ${wxT(dl.temperature_2m_min[j])}</small></b></div>`).join("")}</div>`;
   }).catch(() => { if ($("#wxBody")) $("#wxBody").innerHTML = `<p class="sub">Prévisions indisponibles pour l’instant.</p>`; });
 }
 
@@ -2324,7 +2418,7 @@ function openWeatherCity() {
   openSheet(`<h3>Votre ville</h3>
     <form class="field" id="wxF" onsubmit="return false"><label for="wxI">Ville ou village</label><input type="text" id="wxI" placeholder="Ex. : Marseille, Brest, Montréal…" autocomplete="address-level2" enterkeyhint="search"></form>
     <div class="wx-res" id="wxRes" hidden></div>
-    <div class="row" style="flex-wrap:wrap"><button class="btn ghost" id="wxHere">🧭 Autour de moi</button>${cur !== "Paris" ? `<button class="btn ghost" id="wxReset">Revenir à Paris</button>` : ""}</div>
+    <div class="row" style="flex-wrap:wrap"><button class="btn ghost" id="wxHere">${ic("compass")} Autour de moi</button>${cur !== "Paris" ? `<button class="btn ghost" id="wxReset">Revenir à Paris</button>` : ""}</div>
     <p class="sub">Actuellement : ${esc(cur)}. Votre choix reste sur ce téléphone.</p>`);
   const set = c => { WX.place = c; wxSave(); wxPaint(); openWeather(); };
   const inp = $("#wxI"), res = $("#wxRes");
@@ -2391,7 +2485,7 @@ function openInstall() {
 }
 function openTiers(type) {
   const list = type === "serie" ? SERIE : ERUDITION, n = type === "serie" ? streak() : ME.dossiers.length, cur = tierOf(list, {}, n);
-  openSheet(`<h3>${type === "serie" ? "🔥 Vos paliers de série" : "📚 Vos paliers d’érudition"}</h3><p class="sub">${type === "serie" ? `${n} jour(s) consécutif(s)` : `${n} dossier(s) dévoré(s)`}</p>
+  openSheet(`<h3>${type === "serie" ? ic("flame") + " Vos paliers de série" : ic("book") + " Vos paliers d’érudition"}</h3><p class="sub">${type === "serie" ? `${n} jour(s) consécutif(s)` : `${n} dossier(s) dévoré(s)`}</p>
    <div class="tierlist">${list.map(t => `<div class="${t === cur ? "cur" : t.min > n ? "off" : ""}"><b>${t.name}</b><span>${t.max === Infinity ? `${t.min} et +` : `${t.min} à ${t.max}`} ${type === "serie" ? "jours" : "dossiers"}</span>${t === cur ? `<em>« ${esc(t.items[0])} »</em>` : ""}</div>`).join("")}</div>`);
 }
 function openName() {
@@ -2402,7 +2496,7 @@ function openName() {
 function openBilan() {
   const counts = POLES.map(p => ({ p, n: ME.reads.filter(r => r.max >= 1 && poleOf(r.theme) === p).length }));
   const max = Math.max(1, ...counts.map(c => c.n)), top = counts.slice().sort((a, b) => b.n - a.n)[0];
-  openSheet(`<h3>📊 Mon Bilan de Culture G</h3><p class="sub">${ME.reads.length} histoire(s) ouverte(s), ${ME.dossiers.length} dossier(s) dévoré(s).</p>
+  openSheet(`<h3>${ic("chart")} Mon Bilan de Culture G</h3><p class="sub">${ME.reads.length} histoire(s) ouverte(s), ${ME.dossiers.length} dossier(s) dévoré(s).</p>
    ${counts.map(({ p, n }) => `<div class="barrow"><div class="lbl"><span>${p.em} ${p.name}</span><span>${n}</span></div><div class="bar"><i style="width:${Math.round(n / max * 100)}%;background:${p.color}"></i></div></div>`).join("")}
    <p class="sub">${top.n ? `Votre point fort : ${top.p.name}. Vos amis le savaient déjà.` : "Lisez quelques histoires pour voir apparaître vos points forts."}</p>`);
 }
@@ -2416,10 +2510,10 @@ const euros = c => (c / 100).toFixed(2).replace(".", ",") + " €";
 function payHTML(ed, f) {
   const cover = coverOf(ed, f);
   const opts = [];
-  if (WALLET.credits > 0) opts.push(`<button class="gold" data-pay="unlock">🎁 Débloquer ce dossier<small>Il vous reste ${WALLET.credits} dossier${WALLET.credits > 1 ? "s" : ""} offert${WALLET.credits > 1 ? "s" : ""}</small></button>`);
-  if (MAIL() && !WALLET.newsletterGift && !ME.nl) opts.push(`<button data-pay="newsletter">✉️ Recevoir la newsletter<small>Gratuit, et ce dossier vous est offert</small></button>`);
-  if (MAIL()) opts.push(`<button data-pay="invite">👋 Inviter un ami<small>Un dossier offert à chaque ami inscrit</small></button>`);
-  if (STRIPE()) opts.push(`<button data-pay="premium">⭐ Tous les dossiers<small>Premium dès ${euros(CFG.prices?.month || 299)} par mois, sans engagement</small></button>`);
+  if (WALLET.credits > 0) opts.push(`<button class="gold" data-pay="unlock">${ic("gift")} Débloquer ce dossier<small>Il vous reste ${WALLET.credits} dossier${WALLET.credits > 1 ? "s" : ""} offert${WALLET.credits > 1 ? "s" : ""}</small></button>`);
+  if (MAIL() && !WALLET.newsletterGift && !ME.nl) opts.push(`<button data-pay="newsletter">${ic("mail")} Recevoir la newsletter<small>Gratuit, et ce dossier vous est offert</small></button>`);
+  if (MAIL()) opts.push(`<button data-pay="invite">${ic("hand")} Inviter un ami<small>Un dossier offert à chaque ami inscrit</small></button>`);
+  if (STRIPE()) opts.push(`<button data-pay="premium">${ic("star")} Tous les dossiers<small>Premium dès ${euros(CFG.prices?.month || 299)} par mois, sans engagement</small></button>`);
   return `<div class="slide">${cover ? `<img class="bg" src="${cover}" alt="">` : ""}<div class="blurveil"></div><div class="paybox"><h3>Débloquez les ${f.locked} cases suivantes</h3><p>La suite du Grand Dossier vous attend. Choisissez votre clé :</p><div class="opt">${opts.join("")}</div><button class="later" data-later>Plus tard (le suspense me plaît)</button></div></div>`;
 }
 function wirePay(tr, ed, f) {
@@ -2442,8 +2536,8 @@ const PREMIUM_WHY = { dossier: "La suite de ce dossier vous attend, et tous les 
 function openPremium(reason) {
   ev("paywall", "", reason || "");
   const P = CFG.prices || { month: 299, year: 1999 };
-  const perks = `<ul class="perks"><li>📚 Tous les Grands Dossiers en entier</li><li>🗓️ Toutes les éditions passées</li><li>🧭 Toutes les histoires, par thème, avec la recherche</li><li>♥ Vos favoris, sur tous vos appareils</li></ul>`;
-  if (isPremium()) { openSheet(`<h3>Vous êtes Premium ⭐</h3>${perks}<p class="sub">${subLine(ACC.user)} Votre cerveau vous salue.</p><button class="btn ghost" id="pmAcc2">Gérer mon abonnement</button>`); $("#pmAcc2").onclick = openMyAccount; return; }
+  const perks = `<ul class="perks"><li>${ic("book")} Tous les Grands Dossiers en entier</li><li>${ic("cal")} Toutes les éditions passées</li><li>${ic("compass")} Toutes les histoires, par thème, avec la recherche</li><li>${ic("heart")} Vos favoris, sur tous vos appareils</li></ul>`;
+  if (isPremium()) { openSheet(`<h3>Vous êtes Premium ${ic("star", "gold")}</h3>${perks}<p class="sub">${subLine(ACC.user)} Votre cerveau vous salue.</p><button class="btn ghost" id="pmAcc2">Gérer mon abonnement</button>`); $("#pmAcc2").onclick = openMyAccount; return; }
   if (!STRIPE()) return openSheet(`<h3>Le Sachoir Premium</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "Pour les esprits qui en veulent plus.")}</p>${perks}<p class="sub">Le paiement en ligne arrive très bientôt.</p>${MAIL() && WALLET.credits === 0 ? `<button class="cta" id="pmInv">En attendant : un ami inscrit = un dossier offert</button>` : ""}`), $("#pmInv") && ($("#pmInv").onclick = openInvite);
   openSheet(`<h3>Le savoir à prix sachant</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "")} ${euros(P.month)} par mois : moins cher qu’un expresso en terrasse, et ça réveille plus longtemps.</p>
    <div class="plans"><button class="plan" data-plan="month"><span>Au mois</span><b>${euros(P.month)}</b><span>par mois. Le temps de briller à 30 dîners</span></button>
@@ -2469,7 +2563,7 @@ function openGifts() {
   const list = allDossiers(), n = WALLET.credits || 0;
   openSheet(`<h3>Mes dossiers offerts</h3><p class="sub">${n ? `Vous avez <b>${n} Grand${n > 1 ? "s" : ""} Dossier${n > 1 ? "s" : ""}</b> à débloquer. Choisissez : il reste à vous pour toujours.` : "Plus de dossier à débloquer pour l’instant. Un ami inscrit avec votre lien = un dossier de plus."}</p>
    <div class="giftlist">${list.map(f => { const done = isPremium() || WALLET.unlocked.includes(f.date), cover = f.cover ? `editions/${f.date}/${f.cover}` : "";
-     return `<button class="gitem" data-d="${f.date}" data-act="${done ? "read" : n ? "unlock" : "peek"}">${cover ? `<img src="${cover}" alt="" loading="lazy">` : `<span class="ph0"></span>`}<span class="t">${esc(f.title)}<small>${esc(f.theme || "")} · ${new Date(f.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</small></span><span class="go ${done || n ? "y" : ""}">${done ? "Lire" : n ? "🎁 Débloquer" : "4 cases"}</span></button>`; }).join("") || `<p class="sub">Les premiers Grands Dossiers arrivent.</p>`}</div>
+     return `<button class="gitem" data-d="${f.date}" data-act="${done ? "read" : n ? "unlock" : "peek"}">${cover ? `<img src="${cover}" alt="" loading="lazy">` : `<span class="ph0"></span>`}<span class="t">${esc(f.title)}<small>${esc(f.theme || "")} · ${new Date(f.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</small></span><span class="go ${done || n ? "y" : ""}">${done ? "Lire" : n ? `${ic("gift")} Débloquer` : "4 cases"}</span></button>`; }).join("") || `<p class="sub">Les premiers Grands Dossiers arrivent.</p>`}</div>
    <button class="btn ghost" id="gfInv">Inviter un ami pour en gagner un</button>`);
   $("#gfInv").onclick = openInvite;
   $("#sheet").querySelectorAll("[data-d]").forEach(b => b.onclick = async () => {
@@ -2493,7 +2587,7 @@ function giftNotice() {
   if (gained <= 0 || !WALLET.credits || isPremium() || $("#scrim").classList.contains("on") || $("#reader").classList.contains("on")) return;
   const why = seen && now.refs > seen.refs ? (now.refs - seen.refs > 1 ? `${now.refs - seen.refs} amis se sont inscrits grâce à vous` : "Un ami s’est inscrit grâce à vous")
     : seen && now.nl && !seen.nl ? "Abonnement à la newsletter confirmé" : "Vous avez des dossiers offerts";
-  openSheet(`<h3>🎉 ${esc(why)}</h3><p class="sub">${gained > 1 ? `+${gained} Grands Dossiers offerts` : "+1 Grand Dossier offert"}, à lire en entier. Choisissez celui qui vous fait envie, même un ancien.</p><button class="cta" id="gnGo">Choisir mon dossier</button><button class="linkbtn" id="gnLater">Plus tard</button>`);
+  openSheet(`<h3>${ic("party")} ${esc(why)}</h3><p class="sub">${gained > 1 ? `+${gained} Grands Dossiers offerts` : "+1 Grand Dossier offert"}, à lire en entier. Choisissez celui qui vous fait envie, même un ancien.</p><button class="cta" id="gnGo">Choisir mon dossier</button><button class="linkbtn" id="gnLater">Plus tard</button>`);
   $("#gnGo").onclick = openGifts; $("#gnLater").onclick = closeSheet;
 }
 
@@ -2505,7 +2599,7 @@ async function openInvite() {
   openSheet(`<h3>Un ami, un dossier</h3><p class="sub">Partagez votre lien. Chaque ami qui s’inscrit avec (newsletter ou compte) vous offre un Grand Dossier en entier.</p>
    ${MAIL() ? `<div class="stats2"><div><b>${WALLET.referrals || 0}</b><span>ami${(WALLET.referrals || 0) > 1 ? "s" : ""} inscrit${(WALLET.referrals || 0) > 1 ? "s" : ""}</span></div><div><b>${WALLET.credits || 0}</b><span>dossier${(WALLET.credits || 0) > 1 ? "s" : ""} à débloquer</span></div></div><div class="reflink">${esc(link)}</div>` : ""}
    <button class="cta" id="ivShare">Partager mon lien</button>
-   ${PW() && !isPremium() && (WALLET.credits || WALLET.unlocked.length) ? `<button class="btn ghost" id="ivGifts">${WALLET.credits ? `🎁 Choisir mes ${WALLET.credits} dossier${WALLET.credits > 1 ? "s" : ""} offert${WALLET.credits > 1 ? "s" : ""}` : "Mes dossiers débloqués"}</button>` : ""}
+   ${PW() && !isPremium() && (WALLET.credits || WALLET.unlocked.length) ? `<button class="btn ghost" id="ivGifts">${WALLET.credits ? `${ic("gift")} Choisir mes ${WALLET.credits} dossier${WALLET.credits > 1 ? "s" : ""} offert${WALLET.credits > 1 ? "s" : ""}` : "Mes dossiers débloqués"}</button>` : ""}
    <p class="sub">Vos amis deviennent plus cultivés, vous aussi. C’est la seule pyramide qu’on recommande (après Khéops).</p>`);
   if ($("#ivGifts")) $("#ivGifts").onclick = openGifts;
   $("#ivShare").onclick = async () => {
@@ -2574,17 +2668,17 @@ function subLine(u) {
 }
 function openMyAccount() {
   const u = ACC.user || {};
-  const prem = u.premium ? `<span class="badge gold">⭐ Premium${u.premium_until && !u.subscription ? " jusqu’au " + new Date(u.premium_until + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : ""}</span>` : `<span class="badge">Formule gratuite</span>`;
+  const prem = u.premium ? `<span class="badge gold">${ic("star")} Premium${u.premium_until && !u.subscription ? " jusqu’au " + new Date(u.premium_until + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : ""}</span>` : `<span class="badge">Formule gratuite</span>`;
   openSheet(`<h3>Mon compte</h3>
    <div class="acc-card"><b>${esc(u.email || "")}</b><span>Membre depuis le ${u.since ? new Date(u.since + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : "—"}</span>${prem}
      <span>${ACC.synced ? "Synchronisé " + new Date(ACC.synced).toLocaleString("fr-FR", { hour: "2-digit", minute: "2-digit", day: "numeric", month: "short" }) : "Pas encore synchronisé"}</span></div>
    <label class="chk"><input type="checkbox" id="myNl" ${u.newsletter ? "checked" : ""}><span>Newsletter quotidienne : l’édition du jour dans votre boîte, chaque matin.</span></label>
    <button class="btn ghost" id="mySync">Synchroniser maintenant</button>
-   ${u.subscription ? `<div class="acc-card"><b>⭐ Premium</b><span>${esc(subLine(u))}</span></div>
+   ${u.subscription ? `<div class="acc-card"><b>${ic("star")} Premium</b><span>${esc(subLine(u))}</span></div>
      ${u.subscription.cancel_at_end ? `<button class="btn" id="mySubOn">Reprendre mon abonnement</button>` : `<button class="btn ghost" id="mySubOff">Résilier mon abonnement</button>`}
      <button class="btn ghost" id="myCard">Ma carte et mes factures</button>` : ""}
    ${u.premium ? "" : `<button class="btn ghost" id="myPrem">Découvrir Premium</button>`}
-   ${u.admin ? `<a class="btn" href="admin.html" style="text-decoration:none;color:inherit">📊 Écran admin</a>` : ""}
+   ${u.admin ? `<a class="btn" href="admin.html" style="text-decoration:none;color:inherit">${ic("chart")} Écran admin</a>` : ""}
    <button class="btn ghost" id="myOut">Se déconnecter</button>
    <button class="linkbtn danger" id="myDel">Supprimer mon compte</button>
    <p class="sub">Déconnecté, vos données restent sur ce téléphone. Supprimé, le compte et ses données disparaissent du serveur.</p>`);
@@ -2641,9 +2735,9 @@ function openNewsletter(gift) {
    Plus de mur « créez un compte » devant Découvrir, Favoris et Profil : une carte en tête de page,
    qu'on peut fermer (elle revient à la session suivante). */
 const NUDGE = {
-  profile: ["🔥", "Votre série tient à un fil (de téléphone)", "Un compte gratuit la garde à l’abri, avec vos dossiers et vos paliers, sur tous vos appareils."],
-  favs: ["❤️", "Vos favoris méritent un coffre-fort", "Avec un compte gratuit, ils vous suivent partout. Fini les captures d’écran perdues dans la galerie."],
-  explore: ["🎁", "Un Grand Dossier offert vous attend", "Créez votre compte gratuit et abonnez-vous à la newsletter : le dossier de votre choix, en entier."],
+  profile: [ic("flame"), "Votre série tient à un fil (de téléphone)", "Un compte gratuit la garde à l’abri, avec vos dossiers et vos paliers, sur tous vos appareils."],
+  favs: [ic("heart"), "Vos favoris méritent un coffre-fort", "Avec un compte gratuit, ils vous suivent partout. Fini les captures d’écran perdues dans la galerie."],
+  explore: [ic("gift"), "Un Grand Dossier offert vous attend", "Créez votre compte gratuit et abonnez-vous à la newsletter : le dossier de votre choix, en entier."],
 };
 function nudgeHTML(page) {
   if (ACC || !MAIL()) return "";
@@ -2664,7 +2758,7 @@ function allStories() {
 }
 const storyOf = (date, fid) => { const e = INDEX.find(x => x.date === date), f = e?.formats.find(x => x.id === fid); return f ? { ...f, theme: themeName(f.theme), date } : null; };
 const coverSrc = s => s?.cover ? `editions/${s.date}/${s.cover}` : "";
-const FMT = { dossier: ["Grand Dossier", "📚"], cultureg: ["Culture G", "💊"], insolite: ["Insolite", "🤯"], actu: ["L’Actu", "📰"] };
+const FMT = { dossier: ["Grand Dossier", ic("book")], cultureg: ["Culture G", ic("pill")], insolite: ["Insolite", ic("zap")], actu: ["L’Actu", ic("news")] };
 const dShort = d => new Date(d + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
 // État de lecture d'une histoire, d'après le nombre de cases publié dans l'index.
 function readInfo(s) {
@@ -2674,7 +2768,7 @@ function readInfo(s) {
   if (s.cases && r.max >= s.cases) return { done: true, label: "Lu ✓" };
   return { done: false, label: s.cases ? `Case ${r.max} / ${s.cases}` : "Commencé", pct: s.cases ? Math.round(100 * r.max / s.cases) : 30 };
 }
-const thumb = s => coverSrc(s) ? `<img src="${coverSrc(s)}" alt="" loading="lazy">` : `<span class="ph" style="background:${COLOR[s.id] || "#1f8f5f"}">${FMT[s.id]?.[1] || "📖"}</span>`;
+const thumb = s => coverSrc(s) ? `<img src="${coverSrc(s)}" alt="" loading="lazy">` : `<span class="ph" style="background:${COLOR[s.id] || "#1f8f5f"}">${FMT[s.id]?.[1] || ic("book")}</span>`;
 function storyRow(s) {
   const ri = readInfo(s), pole = poleOf(s.theme);
   return `<button class="srow" data-d="${s.date}" data-f="${s.id}"><span class="th">${thumb(s)}${ri && !ri.done ? `<i class="prog"><i style="width:${ri.pct}%"></i></i>` : ""}</span>
@@ -2696,6 +2790,7 @@ function wireStories(v) {
 let EX = { pole: null, theme: null, q: "", fmt: "", unread: false };
 function renderExplore() {
   const v = $("#v-explore"), q = EX.q.trim().toLowerCase();
+  if (BOOTING && !INDEX.length) { v.innerHTML = SK_LIST(5); return; }
   const all = allStories();
   const byQ = all.filter(s => !q || (s.title + " " + s.theme + " " + (s.tagline || "") + " " + s.label).toLowerCase().includes(q));
   const byF = byQ.filter(s => (!EX.fmt || s.id === EX.fmt) && (!EX.unread || !readInfo(s)?.done));
@@ -2708,7 +2803,7 @@ function renderExplore() {
   const browsing = !q && !EX.pole && !EX.fmt && !EX.unread;
   const dossiers = all.filter(s => s.id === "dossier").slice(0, 10);
   const L = likes(), forYou = L.length ? all.filter(s => L.includes(poleOf(s.theme)?.id) && !readInfo(s)?.done).slice(0, 10) : [];
-  const fmts = [["", "Tout"], ["dossier", "📚 Grands Dossiers"], ["cultureg", "💊 Culture G"], ["insolite", "🤯 Insolite"]].filter(([id]) => !id || byQ.some(s => s.id === id));
+  const fmts = [["", "Tout"], ["dossier", ic("book") + " Grands Dossiers"], ["cultureg", ic("pill") + " Culture G"], ["insolite", ic("zap") + " Insolite"]].filter(([id]) => !id || byQ.some(s => s.id === id));
   const n = k => `<span class="cnt">${k}</span>`;
   v.innerHTML = `<div><h1 class="h1">Découvrir</h1><p class="lead">${all.length} histoires pour briller en société sans trop d’efforts.</p></div>
    <label class="search" for="exQ"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#5f5a52" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg><input id="exQ" type="search" placeholder="Napoléon, krach, quantique…" value="${esc(EX.q)}" aria-label="Rechercher une histoire" enterkeyhint="search">${EX.q ? `<button class="clr" id="exClr" aria-label="Effacer">✕</button>` : ""}</label>
@@ -2717,12 +2812,12 @@ function renderExplore() {
    ${browsing && poles.length > 1 ? `<section class="blk"><div class="bh"><h2>Par univers</h2></div><div class="unis">${poles.map(({ p, n: k }) => `<button class="uni" data-p="${p.id}" style="--c:${p.color}"><span class="em">${p.em}</span><b>${p.name}</b><small>${k} histoire${k > 1 ? "s" : ""}</small></button>`).join("")}</div></section>` : ""}
    ${browsing ? nudgeHTML("explore") : ""}
    <section class="blk"><div class="bh"><h2>${browsing ? "Toutes les histoires" : q ? `Résultats pour « ${esc(EX.q.trim())} »` : "Votre sélection"}</h2>${!browsing ? `<button class="linkbtn" id="exReset">Tout effacer</button>` : ""}</div>
-   <div class="fbar"><div class="chips row1" role="group" aria-label="Format">${fmts.map(([id, l]) => `<button class="chip c-flt2" data-fmt="${id}" aria-pressed="${EX.fmt === id}">${l}</button>`).join("")}<button class="chip c-flt2" id="exUnread" aria-pressed="${EX.unread}">👀 Pas encore lu</button></div>
+   <div class="fbar"><div class="chips row1" role="group" aria-label="Format">${fmts.map(([id, l]) => `<button class="chip c-flt2" data-fmt="${id}" aria-pressed="${EX.fmt === id}">${l}</button>`).join("")}<button class="chip c-flt2" id="exUnread" aria-pressed="${EX.unread}">${ic("eye")} Pas encore lu</button></div>
    ${!browsing && (poles.length > 1 || EX.pole) ? `<div class="chips row1" role="group" aria-label="Univers"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tous ${n(byF.length)}</button>${poles.map(({ p, n: k }) => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name} ${n(k)}</button>`).join("")}</div>` : ""}
    ${themes.length > 1 ? `<div class="chips row1 sub" role="group" aria-label="Thématique"><button class="chip c-${cur.id}" data-t="" aria-pressed="${!EX.theme}">Toutes</button>${themes.map(({ th, n: k }) => `<button class="chip c-${cur.id}" data-t="${esc(th)}" aria-pressed="${EX.theme === th}">${esc(th)} ${n(k)}</button>`).join("")}</div>` : ""}</div>
    <p class="count">${res.length} histoire${res.length > 1 ? "s" : ""}</p>
    <div class="slist">${res.map(storyRow).join("")}</div>
-   ${res.length ? "" : `<div class="empty-state"><span style="font-size:42px">🔍</span><h2>Rien trouvé</h2><p class="sub">${EX.unread ? "Vous avez tout lu dans cette sélection. Respect." : "Même Wikipédia sèche parfois. Essayez un autre mot."}</p></div>`}</section>`;
+   ${res.length ? "" : `<div class="empty-state"><span class="bigic">${ic("search")}</span><h2>Rien trouvé</h2><p class="sub">${EX.unread ? "Vous avez tout lu dans cette sélection. Respect." : "Même Wikipédia sèche parfois. Essayez un autre mot."}</p></div>`}</section>`;
   const inp = $("#exQ");
   inp.oninput = () => { EX.q = inp.value; const p = inp.selectionStart; renderExplore(); const n2 = $("#exQ"); n2.focus(); n2.setSelectionRange(p, p); };
   if ($("#exClr")) $("#exClr").onclick = e => { e.preventDefault(); EX.q = ""; renderExplore(); };
@@ -2739,7 +2834,8 @@ function renderExplore() {
    ce qu'on a commencé sans finir d'abord, ensuite ce qu'on a déjà lu. */
 function renderFavs() {
   const v = $("#v-favs");
-  if (!canFav()) { v.innerHTML = `<h1 class="h1">Favoris</h1><div class="lockcard"><span class="big">⭐</span><h2>Réservé aux abonnés Premium</h2><p class="sub">Gardez vos histoires préférées et retrouvez-les sur tous vos appareils.</p><button class="cta" id="lkGo">Découvrir Premium</button></div>`; $("#lkGo").onclick = () => openPremium("favs"); return; }
+  if (BOOTING && !INDEX.length && ME.favs.length) { v.innerHTML = SK_LIST(3); return; }
+  if (!canFav()) { v.innerHTML = `<h1 class="h1">Favoris</h1><div class="lockcard"><span class="bigic gold">${ic("star")}</span><h2>Réservé aux abonnés Premium</h2><p class="sub">Gardez vos histoires préférées et retrouvez-les sur tous vos appareils.</p><button class="cta" id="lkGo">Découvrir Premium</button></div>`; $("#lkGo").onclick = () => openPremium("favs"); return; }
   const favs = ME.favs.slice().reverse().map(x => ({ x, s: storyOf(x.date, x.fid) || { id: x.fid, date: x.date, title: x.title, label: x.label } }));
   const seen = new Set(), hist = [];
   for (const r of ME.reads.slice().reverse()) { const k = r.date + "|" + r.fid; if (seen.has(k) || r.fid === "quiz") continue; seen.add(k); const s = storyOf(r.date, r.fid); if (s) hist.push(s); }
@@ -2747,7 +2843,7 @@ function renderFavs() {
   v.innerHTML = `<div><h1 class="h1">Favoris</h1><p class="lead">${favs.length ? `${favs.length} histoire${favs.length > 1 ? "s" : ""} gardée${favs.length > 1 ? "s" : ""} précieusement.` : "Vos histoires préférées, toujours sous la main."}</p></div>
    ${nudgeHTML("favs")}
    ${favs.length ? `<div class="fgrid">${favs.map(({ x, s }) => `<div class="fcard"><button class="go" data-d="${x.date}" data-f="${x.fid}"><span class="cv">${thumb(s)}</span><span class="fm f-${x.fid}">${FMT[x.fid]?.[0] || esc(x.label)}</span><b>${esc(s.title || x.title)}</b><small>${dShort(x.date)}${s.minutes ? ` · ${s.minutes} min` : ""}</small></button><button class="unfav" data-un="${x.date}|${x.fid}|${x.type}" aria-label="Retirer des favoris"><svg viewBox="0 0 24 24"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg></button></div>`).join("")}</div>`
-    : `<div class="empty-state"><span class="bigheart0">♡</span><h2>Aucun favori, pour l’instant</h2><p class="sub">Pendant une lecture, touchez ♥ ou double-touchez une case. L’histoire atterrit ici, au chaud.</p><button class="btn" id="fvGo">Trouver une histoire à aimer</button></div>`}
+    : `<div class="empty-state"><span class="bigic red">${ic("heart")}</span><h2>Aucun favori, pour l’instant</h2><p class="sub">Pendant une lecture, touchez le cœur ou double-touchez une case. L’histoire atterrit ici, au chaud.</p><button class="btn" id="fvGo">Trouver une histoire à aimer</button></div>`}
    ${doing.length ? `<section class="blk"><div class="bh"><h2>À reprendre</h2></div><div class="slist">${doing.map(storyRow).join("")}</div></section>` : ""}
    ${done.length ? `<section class="blk"><div class="bh"><h2>Déjà lu</h2><small class="sub">${done.length > 11 ? "Les 12 derniers" : ""}</small></div><div class="hscroll">${done.map(storyCard).join("")}</div></section>` : ""}`;
   if ($("#fvGo")) $("#fvGo").onclick = () => setTab("explore");
@@ -2779,19 +2875,19 @@ function renderProfile() {
   const nlOn = ACC ? ACC.user?.newsletter : ME.nl;
   v.innerHTML = `<div class="row"><h1 class="h1">Mon Profil</h1><button class="iconbtn" id="prName" aria-label="Changer de prénom"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="2"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg></button></div>
    ${nudgeHTML("profile")}
-   <div class="pcard"><div class="top"><div class="who"><span class="nm">${ME.name ? esc(ME.name) : `<button class="linkbtn light" id="prName2">Choisir un prénom</button>`}</span><span class="lvl">📚 ${esc(et.name)}${ACC && isPremium() ? " · ⭐ Premium" : ""}</span><span class="tiers">${esc(phraseOf("eru"))}</span></div></div>
+   <div class="pcard"><div class="top"><div class="who"><span class="nm">${ME.name ? esc(ME.name) : `<button class="linkbtn light" id="prName2">Choisir un prénom</button>`}</span><span class="lvl">${ic("book")} ${esc(et.name)}${ACC && isPremium() ? ` · ${ic("star")} Premium` : ""}</span><span class="tiers">${esc(phraseOf("eru"))}</span></div></div>
      ${nt ? `<div class="nextlvl"><div class="bar"><i style="width:${Math.round(100 * ME.dossiers.length / nt.min)}%"></i></div><small>Encore ${nt.min - ME.dossiers.length} dossier${nt.min - ME.dossiers.length > 1 ? "s" : ""} avant « ${esc(nt.name)} »</small></div>` : ""}
      <p class="quote">${esc(phraseOf("serie"))}</p></div>
-   <div class="tiles"><button class="tile s" id="tS"><b>🔥 ${s} jour${s > 1 ? "s" : ""}</b><span>De série</span><small>${st.name}</small></button>
-     <button class="tile e" id="tE"><b>📚 ${ME.dossiers.length}</b><span>Dossier${ME.dossiers.length > 1 ? "s" : ""} dévoré${ME.dossiers.length > 1 ? "s" : ""}</span><small>${esc(et.name)}</small><img src="assets/books.png" alt=""></button></div>
+   <div class="tiles"><button class="tile s" id="tS"><b>${ic("flame")} ${s} jour${s > 1 ? "s" : ""}</b><span>De série</span><small>${st.name}</small></button>
+     <button class="tile e" id="tE"><b>${ic("book")} ${ME.dossiers.length}</b><span>Dossier${ME.dossiers.length > 1 ? "s" : ""} dévoré${ME.dossiers.length > 1 ? "s" : ""}</span><small>${esc(et.name)}</small><img src="assets/books.png" alt=""></button></div>
    <div class="pbox"><div class="bh"><h2>Cette semaine</h2><small class="sub">${read} histoire${read > 1 ? "s" : ""} lue${read > 1 ? "s" : ""} · ${games} jeu${games > 1 ? "x" : ""}</small></div>
-     <div class="week">${week.map((d, k) => `<span class="${vis.has(d) ? "on" : ""} ${d === TODAY ? "today" : ""} ${d > TODAY ? "fut" : ""}"><small>${"LMMJVSD"[k]}</small><b>${vis.has(d) ? "🔥" : d > TODAY ? "" : "·"}</b></span>`).join("")}</div>
+     <div class="week">${week.map((d, k) => `<span class="${vis.has(d) ? "on" : ""} ${d === TODAY ? "today" : ""} ${d > TODAY ? "fut" : ""}"><small>${"LMMJVSD"[k]}</small><b>${vis.has(d) ? ic("flame") : d > TODAY ? "" : "·"}</b></span>`).join("")}</div>
      <p class="sub">${vis.has(TODAY) ? "Série du jour validée. Le canapé est déçu." : "Lisez l’édition du jour pour allumer la flamme d’aujourd’hui."}</p></div>
    <div class="pbox"><div class="bh"><h2>Vos points forts</h2><button class="linkbtn" id="prBilan">Bilan complet</button></div>
      ${top.length ? top.map(({ p, n }) => `<div class="barrow"><div class="lbl"><span>${p.em} ${p.name}</span><span>${n}</span></div><div class="bar"><i style="width:${Math.round(n / mx * 100)}%;background:${p.color}"></i></div></div>`).join("") : `<p class="sub">Lisez quelques histoires : vos points forts apparaîtront ici. Pour l’instant, vous êtes fort partout (et nulle part).</p>`}</div>
    <div class="pmenus">
    <p class="mh">Mon compte</p><div class="menu">
-     ${MAIL() ? `<button id="m0">${I("#fff4d6", "#9a6a00", '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/>')}<span class="t">${ACC ? "Mon compte" : "Créer mon compte"}<small>${ACC ? esc(ACC.user?.email || "") + (isPremium() ? " · ⭐ Premium" : "") : "Votre série et vos favoris sur tous vos appareils"}</small></span>${ICON.chev}</button>` : ""}
+     ${MAIL() ? `<button id="m0">${I("#fff4d6", "#9a6a00", '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/>')}<span class="t">${ACC ? "Mon compte" : "Créer mon compte"}<small>${ACC ? esc(ACC.user?.email || "") + (isPremium() ? " · Premium" : "") : "Votre série et vos favoris sur tous vos appareils"}</small></span>${ICON.chev}</button>` : ""}
      <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter du matin<small>${!MAIL() ? "Bientôt disponible" : nlOn ? "Abonné ✓ L’édition chaque matin" : WALLET.newsletterGift ? "L’édition du jour, chaque matin" : "Un Grand Dossier offert à l’inscription"}</small></span>${ICON.chev}</button>
      ${MAIL() && PW() && !isPremium() && (WALLET.credits || WALLET.unlocked.length) ? `<button id="mGift">${I("#fff4d6", "#9a6a00", '<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/>')}<span class="t">Mes dossiers offerts<small>${WALLET.credits ? `${WALLET.credits} à débloquer` : `${WALLET.unlocked.length} débloqué${WALLET.unlocked.length > 1 ? "s" : ""}`}</small></span>${ICON.chev}</button>` : ""}
      ${PW() && !isPremium() ? `<button id="mPrem">${I("#fff1cf", "#9a6a00", '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>')}<span class="t">Passer Premium<small>Tous les Grands Dossiers et les archives, sans engagement</small></span>${ICON.chev}</button>` : ""}
@@ -2852,7 +2948,7 @@ async function pushEnable(btn) {
   let perm;
   try { perm = await Notification.requestPermission(); } catch (e) { perm = Notification.permission; }
   if (perm !== "granted") {
-    if (btn) { btn.disabled = false; btn.textContent = "Oui, toquez-moi 🔔"; }
+    if (btn) { btn.disabled = false; btn.textContent = "Oui, toquez-moi"; }
     if (perm === "denied") { toast("Le navigateur a dit non. Vous pourrez changer d’avis dans Profil."); return false; }
     toast("Pas de réponse ? On prend ça pour un « peut-être »."); return false;
   }
@@ -2875,17 +2971,17 @@ async function pushRefresh(force) {
 const NOTIF_DEMO = () => `<div class="notif" aria-hidden="true"><img src="assets/icon-192.png" alt=""><div class="nt"><div class="nh"><span>Le Sachoir</span><span>maintenant</span></div><b>☕ L’édition du jour est servie</b>Au menu : la guerre froide, des abeilles syndiquées et le jeu du jour.</div></div>`;
 // Contenu de la demande, selon l'appareil. done(accepté) est appelé quand c'est réglé, dans un sens ou dans l'autre.
 function pushAskHTML(st) {
-  if (st === "ios") return `<div class="onb-art"><span class="bell">🔔</span></div>
+  if (st === "ios") return `<div class="onb-art"><span class="bell">${ic("bell")}</span></div>
     <h2>Les notifs ? Apple a son mot à dire</h2>
     <p>Sur iPhone, seules les applis installées sur l’écran d’accueil ont le droit de sonner. Une histoire de protocole. Installez Le Sachoir (trois gestes, zéro store), et on vous repose la question là-bas.</p>${NOTIF_DEMO()}`;
-  return `<div class="onb-art"><span class="bell">🔔</span></div>
+  return `<div class="onb-art"><span class="bell">${ic("bell")}</span></div>
     <h2>On peut toquer à votre écran ?</h2>
     <p>Une seule notif par jour, quand l’édition sort. Pas de « Vous nous manquez 🥺 », pas de promo sur les chaussettes. Juste ça :</p>${NOTIF_DEMO()}
     <p style="font-size:13.5px;color:var(--muted)">Promis : jamais à 3 h du matin. Napoléon dormait 4 h par nuit, pas vous.</p>`;
 }
 function pushAskFoot(st) {
   return st === "ios" ? `<button class="cta" id="paYes">Installer l’appli</button><button class="onb-later" id="paNo">Plus tard, j’aime le suspense</button>`
-    : `<button class="cta" id="paYes">Oui, toquez-moi 🔔</button><button class="onb-later" id="paNo">Non merci, j’ai déjà un réveil</button>`;
+    : `<button class="cta" id="paYes">${ic("bell")} Oui, toquez-moi</button><button class="onb-later" id="paNo">Non merci, j’ai déjà un réveil</button>`;
 }
 function wirePushAsk(st, done) {
   $("#paYes").onclick = async e => {
@@ -2910,7 +3006,7 @@ function openPush() {
   const st = pushState();
   if (st === "ask" || st === "ios") return openPushAsk();
   if (st === "on") {
-    openSheet(`<h3>🔔 Notifications activées</h3><p>Une par jour, quand l’édition sort, jamais avant 7 h 30. Si elles n’arrivent pas, vérifiez que le mode « Ne pas déranger » ne fait pas de zèle.</p>${NOTIF_DEMO()}
+    openSheet(`<h3>${ic("bell")} Notifications activées</h3><p>Une par jour, quand l’édition sort, jamais avant 7 h 30. Si elles n’arrivent pas, vérifiez que le mode « Ne pas déranger » ne fait pas de zèle.</p>${NOTIF_DEMO()}
       <button class="btn ghost" id="puOff">Couper les notifications</button>`);
     $("#puOff").onclick = async () => { await pushDisable(); closeSheet(); render(); toast("Silence radio. Votre culture G, elle, reste ouverte."); };
     return;
@@ -2958,23 +3054,23 @@ function openOnboarding() {
     let body, foot;
     if (k === "hello") {
       body = `${covers()}<h2>L’actu et la culture G, en BD</h2><p>Chaque jour, quatre histoires courtes, drôles et vérifiées. <b>Deux minutes par BD</b>, et vous voilà la personne qui « sait des trucs » au dîner.</p>
-        <div class="onb-proof"><span>✅ Gratuit</span><span>🚫 Sans pub</span><span>📚 Sources citées</span></div>`;
+        <div class="onb-proof"><span>${ic("check")} Gratuit</span><span>${ic("ban")} Sans pub</span><span>${ic("sources")} Sources citées</span></div>`;
       foot = `<button class="cta" id="obNext">Je veux briller</button>`;
     } else if (k === "likes") {
-      body = `<div class="onb-art sm">🧭</div><h2>Qu’est-ce qui vous fait vibrer ?</h2><p>Choisissez vos univers. On vous les mettra en avant (sans jamais vous priver des autres).</p>
+      body = `<div class="onb-art sm">${ic("compass")}</div><h2>Qu’est-ce qui vous fait vibrer ?</h2><p>Choisissez vos univers. On vous les mettra en avant (sans jamais vous priver des autres).</p>
         <div class="onb-likes">${POLES.map(p => `<button class="ol" data-l="${p.id}" style="--c:${p.color}" aria-pressed="${picked.has(p.id)}"><span>${p.em}</span>${p.name}</button>`).join("")}</div>`;
       foot = `<button class="cta" id="obNext">${picked.size ? `C’est noté (${picked.size})` : "Un peu de tout, merci"}</button>`;
     } else if (k === "name") {
-      body = `<div class="onb-art sm">👋</div><h2>Et on vous appelle comment ?</h2><p>Pour vous saluer le matin. Un prénom, un surnom, « Majesté »… On ne juge pas.</p>
+      body = `<div class="onb-art sm">${ic("hand")}</div><h2>Et on vous appelle comment ?</h2><p>Pour vous saluer le matin. Un prénom, un surnom, « Majesté »… On ne juge pas.</p>
         <form id="obNameF" class="field"><input type="text" id="obName" maxlength="24" placeholder="Votre prénom" value="${esc(ME.name)}" autocomplete="given-name" enterkeyhint="next"></form>`;
       foot = `<button class="cta" id="obNext">Continuer</button>`;
     } else if (k === "push") {
       body = pushAskHTML(pushState()); foot = pushAskFoot(pushState());
     } else {
       const f = firstStory();
-      body = `<div class="onb-art">🎬</div><h2>${ME.name ? `C’est parti, ${esc(ME.name)} !` : "C’est parti !"}</h2>
+      body = `<div class="onb-art">${ic("play")}</div><h2>${ME.name ? `C’est parti, ${esc(ME.name)} !` : "C’est parti !"}</h2>
         ${f ? `<p>Votre première BD vous attend. ${f.minutes || 2} minute${(f.minutes || 2) > 1 ? "s" : ""}, montre en main.</p><button class="onb-first" id="obFirst" style="--c:${COLOR[f.id]}">${coverOf(CUR, f) ? `<img src="${coverOf(CUR, f)}" alt="">` : ""}<span><small>${esc(f.label)}</small><b>${esc(f.title)}</b><em>Lire maintenant →</em></span></button>` : `<p>L’édition du jour vous attend.</p>`}
-        <p class="onb-hint">Ensuite : le jeu du jour, et votre série 🔥 démarre.</p>`;
+        <p class="onb-hint">Ensuite : le jeu du jour, et votre série démarre.</p>`;
       foot = `${f ? `<button class="cta" id="obGo">Lire ma première BD</button>` : ""}<button class="onb-later" id="obEd">${f ? "Voir toute l’édition d’abord" : "Voir l’édition"}</button>`;
     }
     el.innerHTML = `${top}<div class="onb-body">${body}</div><div class="onb-foot">${foot}</div>`;
@@ -3040,7 +3136,7 @@ let edReady; const ED_READY = new Promise(r => edReady = r);
     const fid = new URLSearchParams(location.search).get("f");
     if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); if (fid === "quiz") openQuiz(CUR); else openReader(CUR, fid); return; }
   } catch (e) { if (!navigator.onLine) $("#offline").classList.add("on"); }
-  finally { edReady(); }
+  finally { BOOTING = false; edReady(); }
   const q = new URLSearchParams(location.search);
   // PC : un nouveau visiteur sans compte arrive sur « Le concept » (un clic pour passer à l'édition du jour). ?concept la force partout.
   if (SHOW_ABOUT() && !q.has("d") && !q.has("f") && (q.has("concept") || (DESK.matches && !ME.reads.length))) return setTab("about");

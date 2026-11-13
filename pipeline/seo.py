@@ -9,9 +9,13 @@ import json
 import re
 import unicodedata
 from datetime import datetime
+import shutil
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import share_card  # noqa: E402
 SITE_CFG = json.loads((Path(__file__).parent / "site.json").read_text())
 BASE = SITE_CFG["base_url"].rstrip("/") + "/"
 COLOR = {"dossier": "#1f8f5f", "actu": "#2f4fa2", "cultureg": "#f2a33a", "insolite": "#d9473a"}
@@ -123,6 +127,7 @@ def head(title, desc, canonical, image, noindex=False, extra="", og_type="websit
 <meta property="og:url" content="{e(canonical)}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:image" content="{e(image)}">
+{'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">' if "/share-" in image else ""}
 <meta property="og:image:alt" content="{e(image_alt or title)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{e(title)}">
@@ -186,7 +191,7 @@ def story_page(s, ed_dir: Path, related, gate=False):
     desc = clip(f.get("final", {}).get("text") or f.get("tagline") or f["title"])
     title = f'{f["title"]} — {f.get("label", "")} en BD | Le Sachoir'
     canonical = s["url_abs"]
-    image = s["cover_abs"] or f"{BASE}assets/og.png"
+    image = s.get("share_abs") or s["cover_abs"] or f"{BASE}assets/og.png"
     theme = f.get("theme", "")
     panels = []
     names = {x.get("id"): x.get("name") for x in f.get("cast", []) or [] if x.get("name")}
@@ -281,11 +286,22 @@ def build(site: Path, index: list, gate: bool = False):
                 continue
             slug = story_slug(date, fmt)
             cover = fmt.get("cover", {})
+            # Image de partage (titre, format, couverture), gardée avec l'édition et copiée dans le site.
+            share = ""
+            try:
+                name = share_card.ensure(fmt, ROOT / "editions" / date)
+                dst = site / "editions" / date / name
+                if dst.parent.exists() and not dst.exists():
+                    shutil.copy(ROOT / "editions" / date / name, dst)
+                share = f"{BASE}editions/{date}/{name}"
+            except Exception as ex:  # une image de partage ratée ne bloque jamais la publication
+                print(f"! image de partage {date}/{fmt['id']} : {ex}")
             stories.append({
                 "fmt": fmt, "date": date, "demo": bool(entry.get("demo")), "slug": slug, "published": published,
                 "title": fmt.get("title", ""), "label": fmt.get("label", ""), "theme": fmt.get("theme", ""),
                 "url_abs": f"{BASE}histoires/{slug}/",
                 "cover_abs": f"{BASE}editions/{date}/{cover['file']}" if cover.get("status") == "done" else "",
+                "share_abs": share,
             })
     public = [s for s in stories if not s["demo"]]
     for s in stories:
