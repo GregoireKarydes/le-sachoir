@@ -340,6 +340,7 @@ async function loadQueue() {
 }
 function caseView(c) {
   const t = [];
+  if (c.kind === "buzz") return `<div class="vcase"><div class="txt"><span class="tag">${esc(c.tag || "Sur Internet")}</span><b>${esc(c.name || "")} ${esc(c.handle || "")}${c.trend ? " · #" + esc(c.trend) : ""}</b><p style="margin:0">${esc(c.text || "")}</p><small>${esc(c.why || "")}${c.source?.url ? ` · <a href="${esc(c.source.url)}" target="_blank" rel="noopener">${esc(c.source.title || "source")}</a>` : ""}</small></div></div>`;
   if (c.kind === "explain") return `<div class="vcase"><div class="txt"><span class="tag">${esc(c.tag || "Pour mieux comprendre")}</span><b>${esc(c.title || "")}</b>${String(c.text || "").split("\n").map(x => `<p style="margin:0">${esc(x)}</p>`).join("")}${(c.steps || []).length ? `<ol>${c.steps.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}${c.joke ? `<i>${esc(c.joke)}</i>` : ""}</div></div>`;
   if (c.kind === "photo") { const ph = c.photo || {}; return `<div class="vcase">${ph.src ? `<img src="${esc(ph.src)}" alt="" loading="lazy">` : `<div class="ph0">Photo ${esc(ph.status || "à récupérer")} : ${esc(ph.commons || "")}</div>`}<div class="txt"><span class="tag">${esc(c.tag || "En vrai")}</span><b>${esc(c.title || "")}</b><p style="margin:0">${esc(c.text || "")}</p><small>${esc([ph.credit, ph.license].filter(Boolean).join(" · "))}${ph.error ? " · " + esc(ph.error) : ""}</small></div></div>`; }
   const img = c.image || {};
@@ -351,14 +352,14 @@ let NAMES = {};
 /* Relecture de l'Actu de demain (13 novembre 2026) : retirer un sujet ou toute l'Actu avant la publication de 5 h.
    Rien n'est effacé : la publication laisse de côté ce qui est retiré, « Remettre » le fait revenir. */
 const REVIEW = { date: null, hidden: new Set() };
-const TEXTK = new Set(["explain", "photo"]);
+const TEXTK = new Set(["explain", "photo", "buzz"]);
 function actuReview(f) {
-  const subs = []; (f.cases || []).forEach(c => { if (!TEXTK.has(c.kind) || !subs.length) subs.push([]); subs[subs.length - 1].push(c); });
+  const subs = []; (f.cases || []).forEach(c => { if (!TEXTK.has(c.kind) || c.kind === "buzz" || !subs.length) subs.push([]); subs[subs.length - 1].push(c); });
   const all = REVIEW.hidden.has(`${REVIEW.date}|actu`);
   return `<div class="card" style="margin:10px 0;background:#fff8e6"><b>Relecture de l’Actu</b><p class="note">Elle sort à 5 h telle quelle si vous ne faites rien. Retirer un sujet l’enlève de l’édition publiée (rien n’est effacé).</p>
     <button class="btn ${all ? "" : "ghost"}" data-rv="actu" data-on="${all ? 0 : 1}">${all ? "Remettre toute l’Actu" : "Retirer toute l’Actu de demain"}</button></div>`
     + subs.map((cs, k) => { const key = `actu:${k + 1}`, off = all || REVIEW.hidden.has(`${REVIEW.date}|${key}`);
-      return `<div class="rvsub ${off ? "off" : ""}"><div class="row" style="justify-content:space-between;margin:14px 0 4px"><b>Sujet ${k + 1}${cs[0].tag ? " · " + esc(cs[0].tag) : ""}</b>${all ? "" : `<button class="btn ${off ? "" : "ghost"}" data-rv="${key}" data-on="${off ? 0 : 1}">${off ? "Remettre" : "Retirer ce sujet"}</button>`}</div>${cs.map(caseView).join("")}</div>`; }).join("");
+      return `<div class="rvsub ${off ? "off" : ""}"><div class="row" style="justify-content:space-between;margin:14px 0 4px"><b>${cs[0].kind === "buzz" ? "Sur Internet" : "Sujet " + (k + 1)}${cs[0].tag && cs[0].kind !== "buzz" ? " · " + esc(cs[0].tag) : cs[0].trend ? " · " + esc(cs[0].trend) : ""}</b>${all ? "" : `<button class="btn ${off ? "" : "ghost"}" data-rv="${key}" data-on="${off ? 0 : 1}">${off ? "Remettre" : "Retirer ce sujet"}</button>`}</div>${cs.map(caseView).join("")}</div>`; }).join("");
 }
 async function reviewToggle(b) {
   const on = b.dataset.on === "1";

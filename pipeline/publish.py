@@ -31,7 +31,7 @@ QUEUE_SINCE = date(2026, 11, 8)  # mise en place de la file d'attente stock/
 FALLBACK_HOUR = 10  # si aucune BD n'est prête, on publie quand même le jeu à partir de cette heure
 
 
-TEXT_KINDS = ("explain", "photo")  # cases sans dessin : « Pour mieux comprendre » et photo réelle (Wikimedia Commons)
+TEXT_KINDS = ("explain", "photo", "buzz")  # cases sans dessin : « Pour mieux comprendre », photo réelle (Wikimedia Commons), « Sur Internet »
 # Durée de lecture (13 novembre 2026, Greg : « un Grand Dossier prend plus que 3 min »).
 # Avant : un chiffre écrit par la tâche d'écriture (3 min pour un dossier de 900 mots). Désormais calculée :
 # lecture des textes à 180 mots par minute (bulles et récitatifs sur téléphone), 3 s pour regarder chaque
@@ -49,8 +49,9 @@ def reading_minutes(fmt: dict) -> int:
             words += len(str(c.get(k) or "").split())
         for b in c.get("bubbles", []) or []:
             words += len(str((b or {}).get("text") or "").split())
-        if c.get("kind") != "explain":
+        if c.get("kind") not in ("explain", "buzz"):
             pictures += 1
+        words += len(str(c.get("why") or "").split())
     words += len(str((fmt.get("final") or {}).get("text") or "").split())
     seconds = words / READ_WPM * 60 + pictures * SECONDS_PER_PICTURE + 10
     return max(1, round(seconds / 60))
@@ -64,7 +65,8 @@ def actu_subjects(fmt: dict) -> list[list[int]]:
     (photo « En vrai », « Ce qui se passe vraiment ») lui appartiennent. Renvoie les index des cases par sujet."""
     out = []
     for i, c in enumerate(fmt.get("cases", []) or []):
-        if c.get("kind") not in TEXT_KINDS or not out:
+        # Une case « Sur Internet » est un sujet à elle seule : Greg peut la retirer seule.
+        if c.get("kind") not in TEXT_KINDS or c.get("kind") == "buzz" or not out:
             out.append([])
         out[-1].append(i)
     return out
