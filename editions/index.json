@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T09:20:48.909126+01:00",
+ "updated_at": "2026-11-13T09:29:08.405128+01:00",
  "editions": [
   {
    "date": "2026-11-13",
@@ -24,7 +24,7 @@
      "kind": "",
      "url": "histoires/2026-11-13-parisiennes-en-pantalon-hors-la-loi-de-1800-a-2013/",
      "theme": "Droit",
-     "minutes": 1,
+     "minutes": 2,
      "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
      "cases": 9,
      "cover": "images/insolite-cover.webp"
@@ -54,7 +54,7 @@
      "kind": "",
      "url": "histoires/2026-11-12-vercingetorix-contre-cesar-la-guerre-des-gaules-sans-potion-magique/",
      "theme": "Histoire ancienne",
-     "minutes": 3,
+     "minutes": 7,
      "tagline": "Soixante peuples divisés, un général pressé, un siège en double anneau : comment la Gaule est devenue romaine",
      "cases": 29,
      "cover": "images/dossier-cover.webp"
@@ -108,7 +108,7 @@
      "kind": "",
      "url": "histoires/2026-11-11-votre-huitre-de-noel-est-japonaise-et-sa-grand-mere-portugaise/",
      "theme": "Sciences du vivant",
-     "minutes": 1,
+     "minutes": 2,
      "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
      "cases": 9,
      "cover": "images/insolite-cover.webp"
@@ -138,7 +138,7 @@
      "kind": "",
      "url": "histoires/2026-11-10-impressionnisme-la-peinture-qui-a-rate-son-examen-et-gagne-quand-meme/",
      "theme": "Histoire de l’art",
-     "minutes": 3,
+     "minutes": 5,
      "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
      "cases": 24,
      "cover": "images/dossier-cover.webp"
@@ -150,7 +150,7 @@
      "kind": "",
      "url": "histoires/2026-11-10-un-coup-de-pouce-et-beaucoup-d-absents/",
      "theme": "",
-     "minutes": 2,
+     "minutes": 3,
      "tagline": "Le Smic retrouve son pouce, les classes se vident, Harry Kane manque à l’appel et Superman change de patron.",
      "cases": 12,
      "cover": "images/actu-cover.webp"
@@ -162,7 +162,7 @@
      "kind": "",
      "url": "histoires/2026-11-10-le-metre-est-trop-court-et-c-est-la-faute-d-un-perfectionniste/",
      "theme": "Grandes découvertes",
-     "minutes": 2,
+     "minutes": 3,
      "tagline": "Sept ans à mesurer la France en pleine Révolution, pour une erreur que personne ne devait voir",
      "cases": 12,
      "cover": "images/cultureg-cover.webp"
@@ -174,7 +174,7 @@
      "kind": "",
      "url": "histoires/2026-11-10-la-marseillaise-est-nee-a-strasbourg-marseille-n-a-fait-que-chanter/",
      "theme": "Musique",
-     "minutes": 1,
+     "minutes": 2,
      "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
      "cases": 9,
      "cover": "images/insolite-cover.webp"
@@ -204,7 +204,7 @@
      "kind": "",
      "url": "histoires/2026-11-09-1789-1799-dix-ans-un-roi-en-moins-un-general-en-plus/",
      "theme": "Histoire de France",
-     "minutes": 5,
+     "minutes": 7,
      "tagline": "La Révolution française en entier, de la salle de jeu de paume au coup d’État de Saint-Cloud",
      "cases": 39,
      "cover": "images/dossier-cover.webp"
@@ -216,7 +216,7 @@
      "kind": "",
      "url": "histoires/2026-11-09-plan-de-table-pour-tout-le-monde/",
      "theme": "",
-     "minutes": 2,
+     "minutes": 3,
      "tagline": "Matignon cherche le bon chiffre, Israël cherche des chaises et Paris trouve enfin son champion.",
      "cases": 8,
      "cover": "images/actu-cover.webp"
@@ -228,7 +228,7 @@
      "kind": "",
      "url": "histoires/2026-11-09-l-ecossais-qui-a-invente-le-billet-et-la-faillite-qui-va-avec/",
      "theme": "Économie",
-     "minutes": 2,
+     "minutes": 3,
      "tagline": "Comment la France de 1720 a découvert le papier-monnaie, la bulle spéculative et le mot « millionnaire »",
      "cases": 13,
      "cover": "images/cultureg-cover.webp"
@@ -240,7 +240,7 @@
      "kind": "",
      "url": "histoires/2026-11-09-la-joconde-est-devenue-une-star-en-disparaissant/",
      "theme": "Histoire de l’art",
-     "minutes": 1,
+     "minutes": 2,
      "tagline": "En 1911, un vitrier la décroche du Louvre. Et le monde entier vient admirer… le mur vide.",
      "cases": 10,
      "cover": "images/insolite-cover.webp"
@@ -270,7 +270,7 @@
      "kind": "",
      "url": "histoires/2026-11-08-tout-ca-pour-un-pain-les-miserables-en-entier/",
      "theme": "Littérature",
-     "minutes": 5,
+     "minutes": 7,
      "tagline": "Le roman-fleuve de Victor Hugo, du bagne de Toulon à la barricade de 1832, sans lire les 1 400 pages",
      "cases": 35,
      "cover": "images/dossier-cover.webp"
@@ -306,7 +306,7 @@
      "kind": "",
      "url": "histoires/2026-11-08-le-tour-de-france-gagne-par-le-cinquieme/",
      "theme": "Sports",
-     "minutes": 1,
+     "minutes": 2,
      "tagline": "En 1904, trains, voitures et clous : les quatre premiers ont tous été déclassés.",
      "cases": 8,
      "cover": "images/insolite-cover.webp"
@@ -348,7 +348,7 @@
      "kind": "",
      "url": "histoires/2026-11-07-le-premier-piratage-de-l-histoire-s-est-fait-a-la-longue-vue/",
      "theme": "Informatique et numérique",
-     "minutes": 1,
+     "minutes": 2,
      "tagline": "En 1834, deux jumeaux bordelais détournent le télégraphe de l’État pour battre la Bourse.",
      "cases": 8,
      "cover": "images/insolite-cover.webp"
