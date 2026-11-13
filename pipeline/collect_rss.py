@@ -12,6 +12,8 @@ from zoneinfo import ZoneInfo
 import feedparser
 import requests
 
+from hot import hot_topics
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "rss"
 FEEDS = json.loads((Path(__file__).parent / "feeds.json").read_text())
@@ -78,12 +80,20 @@ def main():
                     break
             if when and when < since:
                 continue
+            title, source = clean(e.get("title", ""), 300), feed["name"]
+            # Google Actualités (« À la une ») : le média est en fin de titre (« … - Le Parisien »).
+            # On le garde comme source, pour compter combien de médias différents reprennent un sujet.
+            if feed.get("split_source") and " - " in title:
+                title, pub = title.rsplit(" - ", 1)
+                source = pub.strip() or source
             items.append({
-                "source": feed["name"],
+                "source": source,
+                "feed": feed["name"],
                 "rubrique": feed.get("rubrique", ""),
-                "role": feed.get("role", "veille"),  # "selection" = liste de sujets de référence (HugoDécrypte)
-                "title": clean(e.get("title", ""), 300),
-                "summary": clean(e.get("summary", ""), 900 if feed.get("role") == "selection" else 280),
+                # "une" = classement « À la une » de Google Actualités ; "indice" = HugoDécrypte, un indice parmi d'autres
+                "role": feed.get("role", "veille"),
+                "title": title,
+                "summary": "" if feed.get("split_source") else clean(e.get("summary", ""), 900 if feed.get("role") == "indice" else 280),
                 "link": e.get("link", ""),
                 "published": when.isoformat() if when else None,
             })
@@ -91,7 +101,10 @@ def main():
         print(f"{feed['name']} : {n} titres")
     OUT.mkdir(parents=True, exist_ok=True)
     day = now.date().isoformat()
-    (OUT / f"{day}.json").write_text(json.dumps({"collected_at": now.isoformat(), "items": items, "trends": trends()}, ensure_ascii=False, indent=1))
+    hot = hot_topics([i for i in items if i["role"] != "indice"])
+    for g in hot[:5]:
+        print(f"À la une : {g['sources']} médias — {g['titles'][0]['title'][:80]}")
+    (OUT / f"{day}.json").write_text(json.dumps({"collected_at": now.isoformat(), "hot": hot, "items": items, "trends": trends()}, ensure_ascii=False, indent=1))
     for old in OUT.glob("*.json"):
         if old.stem < (now.date() - timedelta(days=3)).isoformat():
             old.unlink()

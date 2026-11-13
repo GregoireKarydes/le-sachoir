@@ -29,6 +29,7 @@ MAX_CAST = {"cultureg": 2, "insolite": 2, "dossier": 4}  # 13 novembre 2026 : mo
 MAX_CASES = {"dossier": 24}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30)
 EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
 PHOTO_MAX = 45  # case photo : légende courte
+ACTU_ZOOM_MAX = 90  # 13 novembre 2026 : « Comment ça se fait ? » (sujet du jour creusé, 3 à 5 maillons)
 ACTU_CAPTION_MAX, ACTU_EXPLAIN_MAX = 30, 50  # 8 novembre 2026 : Actu = 1 case dessinée (récitatif chargé, 1 bulle) + 1 case « Ce qui se passe vraiment »
 STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
@@ -179,11 +180,15 @@ def check_story(fmt: dict, d: Path, err, warn):
         if not isinstance(case, dict):
             err(f"case {i} n'est pas un objet")
             continue
+        if case.get("kind") == "buzz":  # « Sur Internet » : carte de post, aucune image (vérifiée plus haut)
+            continue
         if case.get("kind") == "explain":  # « Pour mieux comprendre » : texte seul, sans image
             if not case.get("title") or not (case.get("text") or case.get("steps")):
                 err(f"case {i} (Pour mieux comprendre) : « title » et « text » ou « steps » obligatoires")
             n = words(case.get("text")) + sum(words(x) for x in case.get("steps") or []) + words(case.get("joke"))
-            emax = ACTU_EXPLAIN_MAX if fid == "actu" else EXPLAIN_MAX
+            emax = (ACTU_ZOOM_MAX if case.get("zoom") else ACTU_EXPLAIN_MAX) if fid == "actu" else EXPLAIN_MAX
+            if fid == "actu" and case.get("zoom") and not 3 <= len(case.get("steps") or []) <= 5:
+                warn(f"case {i} (Comment ça se fait ?) : 3 à 5 maillons dans « steps »")
             if n > emax:
                 warn(f"case {i} (Pour mieux comprendre) : {n} mots (max {emax})")
             if case.get("image"):
@@ -208,15 +213,17 @@ def check_story(fmt: dict, d: Path, err, warn):
         if fid == "actu":
             if len(case.get("bubbles") or []) > 1:
                 warn(f"case {i} : Actu, une seule bulle (la blague) ; l'info va dans le récitatif")
-            # 9 novembre 2026 : par sujet, case dessinée → photo réelle (« En vrai ») → « Ce qui se passe vraiment ».
             nxt = cases[i] if i < len(cases) else None
-            has_photo = isinstance(nxt, dict) and nxt.get("kind") == "photo"
-            if has_photo:
-                nxt = cases[i + 1] if i + 1 < len(cases) else None
-            else:
-                warn(f"case {i} : Actu, pas de photo réelle (« kind »: « photo ») juste après la case dessinée")
-            if not (isinstance(nxt, dict) and nxt.get("kind") == "explain"):
-                warn(f"case {i} : Actu, il manque la case « Ce qui se passe vraiment » après la case dessinée (et sa photo)")
+            if case.get("zoom"):  # 13 novembre 2026 : « Comment ça se fait ? », dessin du mécanisme puis sa case texte
+                if not (isinstance(nxt, dict) and nxt.get("kind") == "explain" and nxt.get("zoom")):
+                    warn(f"case {i} : « Comment ça se fait ? » dessinée sans sa case texte (explain, zoom) juste après")
+            else:  # 9 novembre 2026 : par sujet, case dessinée → photo réelle (« En vrai ») → « Ce qui se passe vraiment ».
+                if isinstance(nxt, dict) and nxt.get("kind") == "photo":
+                    nxt = cases[i + 1] if i + 1 < len(cases) else None
+                else:
+                    warn(f"case {i} : Actu, pas de photo réelle (« kind »: « photo ») juste après la case dessinée")
+                if not (isinstance(nxt, dict) and nxt.get("kind") == "explain"):
+                    warn(f"case {i} : Actu, il manque la case « Ce qui se passe vraiment » après la case dessinée (et sa photo)")
         for b in case.get("bubbles", []) or []:
             if not b.get("who"):
                 warn(f"case {i} : bulle sans « who » (nom de la personne qui parle)")

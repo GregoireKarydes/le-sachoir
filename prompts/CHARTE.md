@@ -28,6 +28,11 @@ Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'i
 - Une seule image dessinée par sujet : on peut traiter 4 à 6 sujets sans dessiner plus (les photos ne coûtent rien).
 - Exemple de forme (sujet inventé, ne jamais le reprendre) : récitatif « La mairie de Lyon interdit les trottinettes en libre-service dans le centre dès lundi, après 300 plaintes de piétons en un an. » ; bulle d'un livreur à trottinette, figé sur la ligne : « Techniquement, ma roue avant est encore dans le 7e. » ; puis la case Quoi / Pourquoi ça compte / Et maintenant.
 
+## L'Actu : le sujet du jour creusé, « Comment ça se fait ? » (13 novembre 2026, demande de Greg)
+- Les sujets se choisissent selon leur poids réel dans la presse (nombre de médias qui les reprennent), pas d'après une seule source. Un sujet majeur (repris partout, ou qui touche des millions de gens) ne manque jamais.
+- Le plus important, **le sujet du jour**, est creusé juste après ses trois cases : une case dessinée qui montre le mécanisme comme une image simple, puis une case texte en **3 à 5 maillons** (cause → mécanisme → conséquence) qui répond à la question que tout le monde se pose (« Comment une seule panne bloque-t-elle des millions de boîtes mail ? »).
+- Rien d'inventé : ce qui n'est pas encore connu est dit comme tel ; ce qui est général (comment marche le service, ce qui se passe d'habitude) est présenté comme général.
+
 ## « Pendant ce temps, sur Internet » (fin de l'Actu, 13 novembre 2026)
 - Trois tendances légères du jour. Pour chacune, de préférence **le vrai post** qui la résume (intégration officielle du réseau, avec un lien vers l'original), suivi d'une vanne du Sachoir ; sinon une carte réécrite par nous, avec un pseudo inventé.
 - Le ton : celui d'un ami qui raconte le buzz du jour à la machine à café. Une chute par post. On rit avec Internet, pas d'une personne.
@@ -70,7 +75,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 
 | Format | Durée visée | Cases (repère) | Humour |
 |---|---|---|---|
-| Actu du jour (`actu`) | environ 2 min | 4 à 6 sujets ; par sujet 1 case dessinée + 1 case « Ce qui se passe vraiment » | Le gag dans la case dessinée, l'explication neutre dans la case texte (voir plus bas) |
+| Actu du jour (`actu`) | environ 2 min | 4 à 6 sujets ; par sujet 1 case dessinée + 1 photo + 1 case « Ce qui se passe vraiment » ; le sujet du jour en plus : « Comment ça se fait ? » (1 case dessinée + 1 case de 3 à 5 maillons) | Le gag dans la case dessinée, l'explication neutre dans la case texte (voir plus bas) |
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par un duo curieux / qui sait ; un gag toutes les 2 ou 3 cases |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, raconté clairement ; un gag toutes les 2 ou 3 cases |
 | Grand Dossier (`dossier`) | environ 3 min | 24 au plus (8 novembre 2026, avant 30) | Humour dosé : la compréhension d'abord |

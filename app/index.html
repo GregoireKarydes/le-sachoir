@@ -1577,7 +1577,7 @@ let R = { ed: null, f: null, idx: 0, n: 0 };
 function explainHTML(c) {
   const paras = String(c.text || "").split(/\n+/).map(t => t.trim()).filter(Boolean).map(t => { const m = t.match(/^([^:]{2,28}) : (.+)$/); return m ? `<p><b class="ex-lbl">${esc(m[1])} :</b> ${esc(m[2])}</p>` : `<p>${esc(t)}</p>`; }).join("");
   const steps = (c.steps || []).length ? `<ol>${c.steps.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : "";
-  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${esc(c.title)}</h3>` : ""}${paras}${steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}</div>`;
+  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${esc(c.title)}</h3>` : ""}${c.zoom ? steps + paras : paras + steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}</div>`;
 }
 /* « Pendant ce temps, sur Internet » (13 novembre 2026) : ce qui buzze, en carte de post, mais réécrit par nous.
    Pseudo inventé et générique, jamais un vrai compte de particulier ; « Pourquoi ça buzze » et la source en dessous. */

@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: repo-write
+  group: rss   # pas la file des images : GitHub y annule les lancements en attente (13 novembre 2026)
   cancel-in-progress: false
 
 jobs:
