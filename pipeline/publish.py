@@ -59,6 +59,33 @@ def reading_minutes(fmt: dict) -> int:
 FREE_CASES = 4  # Grand Dossier : cases lisibles par tous quand le paywall est actif
 
 
+def actu_subjects(fmt: dict) -> list[list[int]]:
+    """Les sujets de l'Actu : chaque case dessinée (« fact ») ouvre un sujet, les cases qui la suivent
+    (photo « En vrai », « Ce qui se passe vraiment ») lui appartiennent. Renvoie les index des cases par sujet."""
+    out = []
+    for i, c in enumerate(fmt.get("cases", []) or []):
+        if c.get("kind") not in TEXT_KINDS or not out:
+            out.append([])
+        out[-1].append(i)
+    return out
+
+
+def drop_subjects(fmt: dict, ed_date: str, hidden: set) -> dict:
+    """Actu relue par Greg (13 novembre 2026) : un sujet retiré dans l'écran admin (« date|actu:N », N à partir
+    de 1) disparaît de l'édition publiée, sans toucher au fichier source (« Remettre » le fait revenir)."""
+    if fmt.get("id") != "actu":
+        return fmt
+    gone = {int(k.split("actu:")[1]) for k in hidden if k.startswith(f"{ed_date}|actu:") and k.split("actu:")[1].isdigit()}
+    if not gone:
+        return fmt
+    keep = [i for n, idx in enumerate(actu_subjects(fmt), 1) if n not in gone for i in idx]
+    cases = [c for i, c in enumerate(fmt.get("cases", [])) if i in keep]
+    for n, c in enumerate(cases, 1):
+        c = dict(c)
+        cases[n - 1] = {**c, "n": n} if "n" in c else c
+    return {**fmt, "cases": cases}
+
+
 def format_ready(fmt: dict) -> bool:
     if fmt.get("id") == "quiz":  # le quiz n'a pas d'image : prêt dès qu'il a ses questions
         return len(fmt.get("questions", [])) >= 1  # Plus ou moins et Swipe tiennent en une seule « question »
@@ -259,7 +286,7 @@ def main(now: datetime | None = None):
             health["problems"].append(msg)
 
         def ok(x):
-            return x.get("id") not in bad and format_ready(x)
+            return x.get("id") not in bad and format_ready(drop_subjects(x, d.name, hidden))
 
         if day >= today:
             health["days"].append({
@@ -314,6 +341,11 @@ def main(now: datetime | None = None):
         dst = SITE / "editions" / e["date"]
         shutil.copytree(src, dst, ignore=shutil.ignore_patterns("cast", "*.md"))
         strip_hidden(dst, hidden)
+        if any(k.startswith(f"{e['date']}|actu:") for k in hidden):
+            f2 = dst / "edition.json"
+            ed2 = json.loads(f2.read_text())
+            ed2["formats"] = [drop_subjects(x, e["date"], hidden) for x in ed2.get("formats", [])]
+            f2.write_text(json.dumps(ed2, ensure_ascii=False, indent=2))
         if gate:
             lock_site_edition(dst)
     (SITE / ".nojekyll").write_text("")

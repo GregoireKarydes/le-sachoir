@@ -28,4 +28,5 @@ service = "le-sachoir-api"
 
 [triggers]
 # Toutes les 30 min entre 5 h et 11 h (heure de Paris en hiver) : la newsletter part dès que l'édition est publiée.
-crons = ["*/30 3-9 * * *"]
+# Et toutes les 30 min le soir (19 h - 23 h 30 l'hiver) : prévient Greg quand l'Actu de demain est prête à relire.
+crons = ["*/30 3-9 * * *", "*/30 18-22 * * *"]

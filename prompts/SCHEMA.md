@@ -1,6 +1,6 @@
 # Format d'une édition : `editions/AAAA-MM-JJ/edition.json`
 
-Une édition par jour : l'Actu de la nuit et le jeu du jour y sont écrits directement. Les Culture G, Insolites et Grands Dossiers sont écrits dans la **file d'attente** `stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` (`{"added": …, "formats": [une seule BD]}`, même format que ci-dessous) ; la publication du matin les place dans l'édition une fois finis à 100 % (voir `prompts/STOCK.md`).
+Une édition par jour : l'Actu (écrite la veille au soir) et le jeu du jour y sont écrits directement. Les Culture G, Insolites et Grands Dossiers sont écrits dans la **file d'attente** `stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` (`{"added": …, "formats": [une seule BD]}`, même format que ci-dessous) ; la publication du matin les place dans l'édition une fois finis à 100 % (voir `prompts/STOCK.md`).
 Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo`. Tout le reste est écrit par Claude. `"redo": true` sur une image faite = le contrôle qualité en veut une nouvelle version ; l'ancienne reste publiée en attendant.
 
 ```json
@@ -98,7 +98,7 @@ Quand c'est pertinent, une vraie photo ou un document d'époque aide à comprend
 ## Newsletter (texte qui change chaque jour)
 La newsletter du matin met le Grand Dossier en avant, puis montre l'Actu, la Culture G, l'Insolite et le jeu. Pour qu'elle soit drôle et jamais identique :
 - chaque BD a un **`teaser`** (25 mots max) : une accroche qui donne envie de lire, drôle, différente du `tagline`, sans dévoiler la chute ni la phrase « Pour briller ». Écrit en même temps que la BD.
-- l'édition du jour a un bloc **`newsletter`**, écrit par la tâche Actu de la nuit :
+- l'édition du jour a un bloc **`newsletter`**, écrit par la tâche Actu du soir :
 ```json
 "newsletter": {
   "subject": "Objet de l'e-mail, 70 caractères max, drôle, qui donne envie d'ouvrir (une emoji au plus)",

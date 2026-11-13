@@ -1,11 +1,13 @@
-# Tâche de nuit : l'Actu du jour
+# Tâche du soir : l'Actu de demain (vers 20 h)
 
-Objectif : ajouter le format `actu` (4 à 6 sujets, chacun en **1 case dessinée + 1 case « Ce qui se passe vraiment »**) à l'édition du jour, avant 3 h 30 (heure de Paris), puis pousser sur GitHub.
+Objectif : ajouter le format `actu` (4 à 6 sujets, chacun en **1 case dessinée + 1 case « Ce qui se passe vraiment »**) à **l'édition de demain**, le soir vers 20 h (heure de Paris), puis pousser sur GitHub.
+
+**Pourquoi le soir (13 novembre 2026, décision de Greg) :** il ne se passe presque rien la nuit ; écrite le soir, l'Actu est dessinée dans la soirée et Greg peut la relire avant la publication de 5 h (écran admin, « BD à venir » : retirer un sujet ou toute l'Actu). Elle raconte donc **l'actualité de la journée qui se termine**, lue le lendemain matin : pas de « aujourd'hui », « ce soir » ni « demain » ambigus ; écrire le jour quand il compte (« jeudi 13 novembre », « ce week-end »).
 Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 
 ## Étapes
-1. `git pull`. Date du jour = date de Paris (`TZ=Europe/Paris date +%F`).
-2. Lire `data/rss/<date>.json` (titres des dernières 30 h, collectés à minuit, dont la dernière vidéo HugoDécrypte). S'il manque, faire la veille directement par recherche web.
+1. `git pull`. **Date de l'édition** = demain (heure de Paris : `TZ=Europe/Paris date -d tomorrow +%F`). Exceptions, dans cet ordre : si le message de lancement nomme une date (rattrapage de l'orchestrateur), c'est cette date ; lancée entre minuit et 12 h sans date précisée, c'est la date du jour (`TZ=Europe/Paris date +%F`). Le champ `date` du format et le dossier `editions/<date>/` utilisent cette date.
+2. Lire le fichier le plus récent de `data/rss/` (`ls data/rss`, titres des dernières 30 h collectés vers 18 h 20 et 19 h 20, dont la dernière vidéo HugoDécrypte). S'il manque ou date de plus de 12 h, faire la veille directement par recherche web.
 3. **Choisir 4 à 6 sujets à partir de HugoDécrypte** (sélection de référence) :
    - prendre la dernière vidéo « Actus du jour » de moins de 30 h : les entrées `"role": "selection"` du fichier RSS (titre = liste des sujets, `summary` = description). Si le fichier ne l'a pas, la chercher sur le web (chaîne YouTube « HugoDécrypte - Actus du jour », podcast ou newsletter du même nom) ;
    - y choisir 4 à 6 sujets, en suivant en priorité son ordre d'importance, environ 3 sur 4 concernant la France ;
@@ -25,7 +27,7 @@ Lire d'abord : `prompts/CHARTE.md` et `prompts/SCHEMA.md`.
 9. Ajouter le format au fichier `editions/<date>/edition.json` (le créer avec `"status": "draft"` s'il n'existe pas ; remplacer un `actu` existant). Valider le JSON (`python -m json.tool`).
 10. `git add`, commit « Actu du <date> », `git push`. Le push déclenche la génération des images.
 
-## Contrôle qualité (à 3 h 30, même tâche relancée ou suite de celle-ci)
+## Contrôle qualité (à 3 h 17, avant la publication)
 Voir `prompts/QA.md`.
 
 ## Si quelque chose bloque

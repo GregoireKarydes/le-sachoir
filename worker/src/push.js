@@ -169,6 +169,15 @@ export async function pushBatch(env, day, ids, payload) {
   await env.DB.prepare("UPDATE push_runs SET sent = sent + ?, failed = failed + ?, gone = gone + ? WHERE day = ?").bind(out.sent, out.failed, out.gone, day).run();
   return out;
 }
+// Message aux comptes admin (ADMIN_EMAILS) sur tous leurs appareils abonnés : l'Actu de demain à relire.
+export async function notifyAdmins(env, payload) {
+  const emails = (env.ADMIN_EMAILS || "").split(",").map(x => x.trim().toLowerCase()).filter(Boolean);
+  if (!emails.length) return { devices: 0 };
+  const subs = (await env.DB.prepare(`SELECT p.id, p.endpoint, p.p256dh, p.auth, p.fails, p.last_day FROM push_subs p JOIN users u ON u.id = p.user_id WHERE lower(u.email) IN (${emails.map(() => "?").join(",")})`).bind(...emails).all()).results;
+  const v = await vapid(env), eph = await ephemeral(), jwts = {}, out = { sent: 0, failed: 0, gone: 0, devices: subs.length };
+  for (const s of subs) out[await settle(env, s, await sendOne(env, v, s, payload, eph, jwts), null)]++;
+  return out;
+}
 // Test depuis l'écran admin : envoie la notification du jour à tous les appareils d'un compte.
 export async function pushTest(env, user, payload) {
   const subs = (await env.DB.prepare("SELECT id, endpoint, p256dh, auth, fails, last_day FROM push_subs WHERE user_id = ?").bind(user.id).all()).results;
