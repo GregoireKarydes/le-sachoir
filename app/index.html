@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#faf6ee">
 <meta name="sachoir-api" content="__API__">
-<meta name="description" content="Chaque jour, l’actualité et la culture générale racontées en BD courtes, drôles et vérifiées. Gratuit, sans compte : 5 minutes pour briller en société (ou au moins faire semblant).">
+<meta name="description" content="Chaque jour, l’actualité et la culture générale racontées en BD courtes, drôles et vérifiées. Gratuit, sans compte : deux minutes par BD pour briller en société (ou au moins faire semblant).">
 <title>Le Sachoir — L’actu et la culture générale en BD, chaque jour</title>
 <link rel="canonical" href="__BASE__">
 <meta property="og:type" content="website">
@@ -635,6 +635,12 @@ body{overscroll-behavior-y:none}
 .qz-ch button.ko{background:#ffe0dd;border-color:#b3261e;animation:qzshake .35s}.qz-ch button.ko b{background:#b3261e;color:#fff}
 .qz-ch button:disabled{cursor:default}
 .qz-ch button.dim{opacity:.55}
+.qz-ch button.gone{opacity:.18;text-decoration:line-through;box-shadow:none}
+.qz-helps{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.qz-help{border:2px solid rgba(255,255,255,.75);background:transparent;color:#fff;border-radius:999px;padding:7px 13px;font-weight:700;font-size:14px}
+.qz-help small{font-weight:500;opacity:.75;margin-left:4px}
+.qz-help.off{opacity:.5;border-style:dashed}
+.qz-hintbox{margin:0;background:rgba(255,255,255,.14);border-radius:14px;padding:9px 12px;font-size:15px;flex-basis:100%}
 @keyframes qzshake{20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
 .qz-ex{background:#fff;color:var(--ink);border-radius:18px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;animation:qzin .25s ease-out}
 .qz-ex strong{font-family:var(--f-serif);font-weight:800;font-size:20px}
@@ -971,7 +977,7 @@ body{overscroll-behavior-y:none}
           <div class="ab-copy">
             <p class="ab-eyebrow"><span>Gratuit chaque jour</span><span>Sans pub</span><span>Newsletter du matin</span></p>
             <h1 id="abH1">L’actu et la culture G en BD.<br><em>Pour briller en société</em> (ou au moins faire semblant).</h1>
-            <p class="ab-lead">Chaque jour, Le Sachoir transforme l’actualité et la culture générale en bandes dessinées courtes, drôles et vérifiées. Cinq minutes de lecture, zéro effort apparent, et vous voilà la personne qui « sait des trucs » au dîner.</p>
+            <p class="ab-lead">Chaque jour, Le Sachoir transforme l’actualité et la culture générale en bandes dessinées courtes, drôles et vérifiées. Deux minutes par BD, zéro effort apparent, et vous voilà la personne qui « sait des trucs » au dîner.</p>
             <div class="ab-ctas"><button class="ab-btn" data-go="home">Lire l’édition du jour</button><button class="ab-btn ghost" data-go="install">L’avoir dans ma poche</button></div>
             <p class="ab-note">L’édition du jour est gratuite, sans carte bancaire. Aucune excuse.</p>
           </div>
@@ -984,10 +990,10 @@ body{overscroll-behavior-y:none}
           <h2>Au menu, chaque jour</h2>
           <p class="ab-sub">Quatre BD et un jeu, un seul objectif : que vous ayez l’air cultivé sans avoir eu l’air de réviser.</p>
           <div class="ab-menu">
-            <article class="ab-f navy"><span class="ab-t">1 à 2 min</span><h3>L’Actu du jour</h3><p>Les sujets qui font l’actualité, décodés et détournés. Les faits sont exacts, les dialogues beaucoup moins.</p></article>
+            <article class="ab-f navy"><span class="ab-t">2 à 3 min</span><h3>L’Actu du jour</h3><p>Les sujets qui font l’actualité, décodés et détournés. Les faits sont exacts, les dialogues beaucoup moins.</p></article>
             <article class="ab-f orange"><span class="ab-t">2 min</span><h3>La Pilule de Culture G</h3><p>Un concept expliqué simplement. Le genre de truc que tout le monde fait semblant de connaître depuis toujours.</p></article>
-            <article class="ab-f red"><span class="ab-t">1 min</span><h3>L’Insolite historique</h3><p>Une histoire vraie si absurde qu’on vérifie deux fois. Rassurez-vous : nous aussi, on a vérifié.</p></article>
-            <article class="ab-f green"><span class="ab-t">5 min</span><h3>Le Grand Dossier</h3><p>Un grand sujet raconté en entier : la guerre froide, les rois de France, les atomes. Des années de cours séchés, rattrapées en un café.</p></article>
+            <article class="ab-f red"><span class="ab-t">2 min</span><h3>L’Insolite historique</h3><p>Une histoire vraie si absurde qu’on vérifie deux fois. Rassurez-vous : nous aussi, on a vérifié.</p></article>
+            <article class="ab-f green"><span class="ab-t">6 à 8 min</span><h3>Le Grand Dossier</h3><p>Un grand sujet raconté en entier : la guerre froide, les rois de France, les atomes. Des années de cours séchés, rattrapées en un café.</p></article>
           </div>
           <div class="ab-brille"><div class="ccard"><div class="hd"><span>Pour briller en société</span><em>Exemple</em></div><div class="ph">En 1925, Victor Lustig a vendu la tour Eiffel à un ferrailleur. Puis il a essayé une deuxième fois.</div><div class="src">À la fin de chaque histoire : une phrase à ressortir au prochain apéro.</div></div></div>
         </div>
@@ -997,7 +1003,7 @@ body{overscroll-behavior-y:none}
           <div class="ab-why">
             <div><span class="ab-n">1</span><h3>On rit, donc on retient</h3><p>Chaque blague s’accroche à un fait. Vous riez, votre mémoire prend des notes. C’est de la pédagogie, mais elle porte un nez rouge.</p></div>
             <div><span class="ab-n">2</span><h3>Des faits vérifiés et sourcés</h3><p>Dates, chiffres et explications sont vérifiés dans plusieurs sources, affichées à la fin de chaque histoire. Les personnages exagèrent, les faits jamais.</p></div>
-            <div><span class="ab-n">3</span><h3>Cinq minutes, au pouce</h3><p>Une case par écran, on glisse et c’est lu. Parfait pour le métro, la file d’attente ou la réunion qui aurait pu être un e-mail.</p></div>
+            <div><span class="ab-n">3</span><h3>Deux minutes, au pouce</h3><p>Une case par écran, on glisse et c’est lu. Le Grand Dossier, lui, mérite un vrai café. Parfait pour le métro, la file d’attente ou la réunion qui aurait pu être un e-mail.</p></div>
           </div>
         </div>
 
@@ -1683,12 +1689,12 @@ const QZ_OK = ["Bien vu !", "Exact !", "Bravo, cerveau !", "Dans le mille !", "I
 const QZ_KO = ["Raté !", "Presque…", "Aïe.", "Pas cette fois.", "Joli piège, hein ?"];
 const QZ_MID = ["Pas loin !", "Dans le coin !", "Ça chauffe…", "À un détour près."];
 const QZ_KINDS = {
-  culture:   { name: "Quiz culture G",  ic: "?",  sub: "une seule partie, pas de triche" },
+  culture:   { name: "Quiz culture G",  ic: "?",  sub: "un joker 50/50 pour vous aider" },
   geo:       { name: "Quiz géo",        ic: "⌖",  sub: "cartes à l’appui" },
   frise:     { name: "La Frise",        ic: "⏳", sub: "remettez l’Histoire dans l’ordre" },
   dico:      { name: "Le Dico menteur", ic: "Aa", sub: "une vraie définition, trois mensonges" },
-  plusmoins: { name: "Plus ou moins",   ic: "⇅",  sub: "jusqu’à la première erreur" },
-  swipe:     { name: "Le Swipe",        ic: "⇆",  sub: "vrai ou faux, contre la montre" },
+  plusmoins: { name: "Plus ou moins",   ic: "⇅",  sub: "chaque bonne réponse compte" },
+  swipe:     { name: "Le Swipe",        ic: "⇆",  sub: "vrai ou faux, sans stress" },
   chiffre:   { name: "Le Chiffre",      ic: "#",  sub: "estimez, sans calculette" },
   citation:  { name: "Qui a dit ça ?",  ic: "❝",  sub: "vraies citations, faux témoins" },
 };
@@ -1696,7 +1702,7 @@ const qzKind = f => QZ_KINDS[f.kind] ? f.kind : "culture";
 let Q = null, GEO = null;
 const quizState = date => (ME.quiz || {})[date];
 const qzDone = st => !!st && (st.done ?? ("s" in st)); // anciens enregistrements : { a, s } = partie finie
-function qzSave() { ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, done: false }; save(); }
+function qzSave() { ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, done: false, ...(Q.j ? { j: Q.j } : {}) }; save(); }
 const isGeo = f => f.kind === "geo";
 const fmtNum = v => Math.abs(v) >= 100 ? Math.round(v).toLocaleString("fr-FR") : (+v.toPrecision(3)).toLocaleString("fr-FR");
 const fmtYear = y => y < 0 ? `${-y} av. J.-C.` : String(y);
@@ -1712,7 +1718,14 @@ function qzGrade(q, a) {
   if (!qzAnswered(a)) return 0;
   const t = qType(q);
   if (t === "map" || t === "estimate") return a.g;
-  if (t === "order") { const good = qzOrderTruth(q); const n = a.filter((v, i) => v === good[i]).length; return n === good.length ? 2 : n * 2 >= good.length ? 1 : 0; }
+  // La Frise : tout juste = 2 ; « presque » dès que l'ordre est en gros respecté (2 paires sur 3 dans le bon sens).
+  if (t === "order") {
+    const good = qzOrderTruth(q), n = a.filter((v, i) => v === good[i]).length;
+    if (n === good.length) return 2;
+    const pos = Object.fromEntries(good.map((v, i) => [v, i]));
+    let ok = 0, all = 0; for (let i = 0; i < a.length; i++) for (let k = i + 1; k < a.length; k++) { all++; if (pos[a[i]] < pos[a[k]]) ok++; }
+    return n * 2 >= good.length || (all && ok / all >= 2 / 3) ? 1 : 0;
+  }
   if (t === "chain" || t === "swipe") { const { p, max } = qzPts(q, a); return p === max ? 2 : p * 2 >= max ? 1 : 0; }
   return a === q.answer ? 2 : 0;
 }
@@ -1721,7 +1734,7 @@ function qzPts(q, a) {
   const t = qType(q), C = ["🟥", "🟨", "🟩"];
   if (t === "chain") {
     const picks = qzAnswered(a) || a ? (a?.picks || []) : [];
-    let p = 0; for (const b of picks) { if (!b) break; p++; }
+    const p = picks.filter(Boolean).length; // toutes les manches se jouent : chaque bonne réponse compte
     return { p, max: q.items.length - 1, cells: picks.map(b => b ? "🟩" : "🟥") };
   }
   if (t === "swipe") {
@@ -1740,8 +1753,8 @@ function quizCard(ed, f) {
   const st = quizState(ed.date), qs = f.questions || [], n = qs.length || 5, kind = qzKind(f), K = QZ_KINDS[kind], done = qzDone(st);
   const played = st ? st.a.filter(a => a !== undefined && a !== null).length : 0;
   const max = qs.reduce((t, q) => t + qzPts(q, undefined).max, 0) || n;
-  const size = qs.length === 1 && qType(qs[0]) === "swipe" ? `${qs[0].items.length} affirmations · ${qs[0].seconds || 60} s`
-    : qs.length === 1 && qType(qs[0]) === "chain" ? `${qs[0].items.length} manches max`
+  const size = qs.length === 1 && qType(qs[0]) === "swipe" ? `${qs[0].items.length} affirmations · ${swipeSecs(qs[0])} s`
+    : qs.length === 1 && qType(qs[0]) === "chain" ? `${qs[0].items.length - 1} manches`
     : `${n} question${n > 1 ? "s" : ""} · ${f.minutes || 1} min`;
   const status = done ? `Votre score : ${fmtScore(st.s ?? 0)}/${max} · revoir les réponses`
     : played ? `Partie en cours · une seule partie par jour`
@@ -1753,7 +1766,7 @@ async function openQuiz(ed) {
   const st = quizState(ed.date);
   const a = st ? st.a.slice() : [];
   let i = 0; while (i < f.questions.length && qzAnswered(a[i])) i++;
-  Q = { ed, f, i: Math.min(i, f.questions.length - 1), a, done: qzDone(st) || i >= f.questions.length };
+  Q = { ed, f, i: Math.min(i, f.questions.length - 1), a, done: qzDone(st) || i >= f.questions.length, j: st?.j || null };
   $("#quiz").classList.toggle("geo", isGeo(f));
   $("#quiz").classList.add("on"); history.pushState({ quiz: true }, "");
   const needsMap = f.questions.some(q => ["map", "silhouette"].includes(qType(q)));
@@ -1793,6 +1806,7 @@ function quizQuestion() {
     <div id="qzEx" aria-live="polite"></div>`;
   $("#qzX").onclick = () => history.back();
   if (t === "choice" || t === "silhouette") $("#qzIn").querySelectorAll("[data-k]").forEach(b => b.onclick = () => quizAnswer(+b.dataset.k));
+  qzHelpers(q, t);
   if (t === "silhouette") qzFitSilhouette();
   if (t === "map") qzMapAsk(q);
   if (t === "order") qzOrderAsk(q);
@@ -1800,6 +1814,26 @@ function quizQuestion() {
   if (t === "swipe") qzSwipe(q);
   if (t === "estimate") qzEstimateAsk(q);
   $("#quiz").scrollTop = 0;
+}
+/* Aides (13 novembre 2026, pour que le jeu reste un plaisir) :
+   - un joker 50/50 par partie sur une question à choix (il retire la moitié des mauvaises réponses, sans perte de points) ;
+   - un indice quand la question en a un (champ « hint »), gratuit. */
+function qzHelpers(q, t) {
+  if (Q.a[Q.i] !== undefined && qzAnswered(Q.a[Q.i])) return;
+  const can50 = (t === "choice" || t === "silhouette") && (q.choices || []).length >= 3;
+  const bits = [];
+  if (q.hint) bits.push(`<button class="qz-help" id="qzHint1">💡 Un indice</button>`);
+  if (can50) bits.push(Q.j ? (Q.j === String(Q.i) ? "" : `<span class="qz-help off">🃏 Joker déjà utilisé</span>`) : `<button class="qz-help" id="qzJoker">🃏 Joker 50/50 <small>1 par partie</small></button>`);
+  if (!bits.filter(Boolean).length) return;
+  $("#qzEx").insertAdjacentHTML("beforebegin", `<div class="qz-helps" id="qzHelps">${bits.join("")}</div>`);
+  if ($("#qzHint1")) $("#qzHint1").onclick = e => { e.currentTarget.outerHTML = `<p class="qz-hintbox">💡 ${esc(q.hint)}</p>`; };
+  if ($("#qzJoker")) $("#qzJoker").onclick = e => {
+    const wrong = q.choices.map((_, k) => k).filter(k => k !== q.answer);
+    const drop = wrong.sort(() => Math.random() - .5).slice(0, Math.floor(q.choices.length / 2));
+    drop.forEach(k => { const b = $(`#qzIn [data-k="${k}"]`); if (b) { b.disabled = true; b.classList.add("dim", "gone"); } });
+    Q.j = String(Q.i); qzSave(); vibrate(); // numéro de la question où le joker a servi (texte : « 0 » reste vrai)
+    e.currentTarget.outerHTML = `<span class="qz-help off">🃏 Joker utilisé</span>`;
+  };
 }
 function qzExplain(q, g, extra = "") {
   const src = q.source?.url && /^https?:\/\//.test(q.source.url) ? `<a href="${esc(q.source.url)}" target="_blank" rel="noopener nofollow">Source : ${esc(q.source.title || q.source.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a>` : "";
@@ -1813,7 +1847,7 @@ function qzExplain(q, g, extra = "") {
 function quizAnswer(k) {
   const q = Q.f.questions[Q.i];
   if (Q.a[Q.i] !== undefined) return;
-  Q.a[Q.i] = k; qzSave(); vibrate();
+  Q.a[Q.i] = k; qzSave(); vibrate(); $("#qzHelps")?.remove();
   $("#qzIn").querySelectorAll("[data-k]").forEach(b => { const j = +b.dataset.k; b.disabled = true; if (j === q.answer) b.classList.add("ok"); else if (j === k) b.classList.add("ko"); else b.classList.add("dim"); });
   qzExplain(q, qzGrade(q, k));
 }
@@ -1846,7 +1880,8 @@ function qzTarget(q, P) {
   const sh = id ? P.shapes[id] : null;
   return { id, sh, ll: sh ? sh.c : [t.lon, t.lat], name: q.name || (sh ? sh.n : "") };
 }
-function qzLimits(scope) { return scope === "france" ? [35, 120] : scope === "europe" ? [150, 450] : [400, 1200]; }
+// 13 novembre 2026 : marges élargies (avant 35/120, 150/450, 400/1 200 km), placer une ville au doigt reste approximatif.
+function qzLimits(scope) { return scope === "france" ? [60, 200] : scope === "europe" ? [250, 700] : [700, 2000]; }
 
 /* ----- Carte interactive : épingle, zoom, déplacement ----- */
 function qzMapAsk(q) {
@@ -1975,25 +2010,27 @@ function qzChain(q) {
     const btns = box.querySelectorAll("[data-c]");
     btns.forEach(b => { b.disabled = true; b.classList.add(+b.dataset.c === win ? "ok" : "ko"); });
     btns[1].querySelector("small").outerHTML = `<small>${lab(B)}</small>`;
-    const over = !ok || a.picks.length >= it.length - 1;
+    const over = a.picks.length >= it.length - 1;
     if (over) { a.end = true; qzSave(); const x = qzPts(q, a);
-      return qzExplain(q, qzGrade(q, a), `<p class="qz-km">${ok ? "Sans faute jusqu’au bout !" : `Perdu à la manche ${a.picks.length}.`} ${x.p} manche${x.p > 1 ? "s" : ""} gagnée${x.p > 1 ? "s" : ""}.</p>${B.explain ? `<p>${esc(B.explain)}</p>` : ""}`); }
+      return qzExplain(q, qzGrade(q, a), `<p class="qz-km">${x.p === x.max ? "Sans faute jusqu’au bout !" : `${x.p} manche${x.p > 1 ? "s" : ""} gagnée${x.p > 1 ? "s" : ""} sur ${x.max}.`}</p>${B.explain ? `<p>${esc(B.explain)}</p>` : ""}`); }
     qzSave();
-    box.insertAdjacentHTML("beforeend", `<p class="qz-km qz-flash">${pick(QZ_OK)} ${B.explain ? esc(B.explain) : ""}</p><button class="cta" id="qzGo">Manche suivante →</button>`);
+    box.insertAdjacentHTML("beforeend", `<p class="qz-km qz-flash">${ok ? pick(QZ_OK) : pick(QZ_KO) + " On continue, rien n’est perdu."} ${B.explain ? esc(B.explain) : ""}</p><button class="cta" id="qzGo">Manche suivante →</button>`);
     $("#qzGo").onclick = duel;
   }
-  if (a.picks.length && !a.picks[a.picks.length - 1]) { a.end = true; qzSave(); return qzExplain(q, qzGrade(q, a)); }
   duel();
 }
 
 /* ----- Le Swipe : vrai ou faux contre la montre (le chrono continue si on quitte) ----- */
+// 13 novembre 2026 : 90 s au moins (avant 60 s), et le chrono se met en pause quand on quitte le jeu.
+const swipeSecs = q => Math.max(q.seconds || 60, 90);
 function qzSwipe(q) {
-  const box = $("#qzSwipe"), secs = q.seconds || 60;
-  let a = Q.a[Q.i] && Q.a[Q.i].end === false ? Q.a[Q.i] : null, timer = null;
-  const left = () => Math.max(0, secs - (Date.now() - a.t0) / 1000);
+  const box = $("#qzSwipe"), secs = swipeSecs(q);
+  let a = Q.a[Q.i] && Q.a[Q.i].end === false ? Q.a[Q.i] : null, timer = null, ts = Date.now(), base = 0, lastSave = 0;
+  if (a) base = a.el ?? Math.min(secs, (Date.now() - (a.t0 || Date.now())) / 1000);
+  const left = () => Math.max(0, secs - base - (Date.now() - ts) / 1000);
   if (!a) {
-    box.innerHTML = `<div class="qz-ex"><strong>${q.items.length} affirmations, ${secs} secondes.</strong><p>Balayez vers la droite si c’est vrai, vers la gauche si c’est faux (ou utilisez les boutons). Une fois lancé, le chrono ne s’arrête plus, même si vous quittez.</p></div><button class="cta" id="qzStart">C’est parti</button>`;
-    $("#qzStart").onclick = () => { a = { r: [], t0: Date.now(), end: false }; Q.a[Q.i] = a; qzSave(); play(); };
+    box.innerHTML = `<div class="qz-ex"><strong>${q.items.length} affirmations, ${secs} secondes.</strong><p>Balayez vers la droite si c’est vrai, vers la gauche si c’est faux (ou utilisez les boutons). Pas de panique : le chrono se met en pause si vous quittez, et une réponse oubliée n’est pas comptée fausse.</p></div><button class="cta" id="qzStart">C’est parti</button>`;
+    $("#qzStart").onclick = () => { a = { r: [], el: 0, end: false }; ts = Date.now(); base = 0; Q.a[Q.i] = a; qzSave(); play(); };
     return;
   }
   play();
@@ -2009,7 +2046,7 @@ function qzSwipe(q) {
     box.innerHTML = `<div class="qz-timer"><i id="qzT"></i></div><p class="qz-hint">${k + 1} / ${q.items.length}</p>
       <div class="qz-card" id="qzCard">${esc(q.items[k].text)}</div>
       <div class="qz-tf"><button data-v="0">✗ Faux</button><button data-v="1">Vrai ✓</button></div>`;
-    const bar = $("#qzT"), tick = () => { const l = left(); bar.style.width = (l / secs * 100) + "%"; bar.classList.toggle("low", l < 10); if (l <= 0) finish(); };
+    const bar = $("#qzT"), tick = () => { const l = left(); a.el = secs - l; if (Date.now() - lastSave > 2000) { lastSave = Date.now(); qzSave(); } bar.style.width = (l / secs * 100) + "%"; bar.classList.toggle("low", l < 10); if (l <= 0) finish(); };
     clearInterval(timer); timer = setInterval(() => { if (!$("#qzT")) return clearInterval(timer); tick(); }, 200); tick();
     const answer = v => { if (a.end) return; a.r.push(v); qzSave(); vibrate(); const card = $("#qzCard"); card.classList.add(v === q.items[k].ok ? "ok" : "ko", v ? "goR" : "goL"); setTimeout(play, 260); };
     box.querySelectorAll("[data-v]").forEach(b => b.onclick = () => answer(b.dataset.v === "1"));
@@ -2034,7 +2071,8 @@ function qzEstimateAsk(q) {
   $("#qzEr").oninput = show; show();
   $("#qzOk").onclick = () => {
     const v = val(+$("#qzEr").value), err = Math.abs(v - q.answer) / Math.abs(q.answer);
-    const g = err <= (q.ok ?? 0.1) ? 2 : err <= (q.mid ?? 0.35) ? 1 : 0;
+    // 13 novembre 2026 : juste à 20 % près (avant 10 %), presque à 50 % (avant 35 %).
+    const g = err <= Math.max(q.ok ?? 0, 0.2) ? 2 : err <= Math.max(q.mid ?? 0, 0.5) ? 1 : 0;
     Q.a[Q.i] = { v, g }; qzSave(); vibrate();
     $("#qzEr").disabled = true; $("#qzOk").remove();
     qzExplain(q, g, `<p class="qz-km">Réponse : ${esc(fmtNum(q.answer))} ${esc(q.unit || "")}. Vous : ${esc(fmtNum(v))} (écart de ${Math.round(err * 100)} %).</p>`);
@@ -2043,7 +2081,7 @@ function qzEstimateAsk(q) {
 
 function quizFinish() {
   const s = qzScore();
-  ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, s, done: true };
+  ME.quiz = ME.quiz || {}; ME.quiz[Q.ed.date] = { a: Q.a, s, done: true, ...(Q.j ? { j: Q.j } : {}) };
   if (Q.ed.date === TODAY && !ME.visited.includes(TODAY)) { ME.visited.push(TODAY); const k = streak(); toast(`🔥 Série : ${k} jour${k > 1 ? "s" : ""}`); }
   ev("game", Q.ed.date, "quiz", Math.round(s * 10));
   save(); Q.done = true; quizResult();
@@ -2922,7 +2960,7 @@ function openOnboarding() {
     const top = `<div class="onb-top"><div class="onb-dots" aria-hidden="true">${slides.map((_, j) => `<i class="${j === step ? "on" : j < step ? "past" : ""}"></i>`).join("")}</div>${k === "go" || k === "push" ? "" : `<button class="onb-skip" id="obSkip">Passer</button>`}</div>`;
     let body, foot;
     if (k === "hello") {
-      body = `${covers()}<h2>L’actu et la culture G, en BD</h2><p>Chaque jour, quatre histoires courtes, drôles et vérifiées. <b>Cinq minutes</b>, et vous voilà la personne qui « sait des trucs » au dîner.</p>
+      body = `${covers()}<h2>L’actu et la culture G, en BD</h2><p>Chaque jour, quatre histoires courtes, drôles et vérifiées. <b>Deux minutes par BD</b>, et vous voilà la personne qui « sait des trucs » au dîner.</p>
         <div class="onb-proof"><span>✅ Gratuit</span><span>🚫 Sans pub</span><span>📚 Sources citées</span></div>`;
       foot = `<button class="cta" id="obNext">Je veux briller</button>`;
     } else if (k === "likes") {
