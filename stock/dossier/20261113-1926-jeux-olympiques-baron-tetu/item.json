@@ -1,0 +1,818 @@
+{
+  "added": "20261113-1926",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Jeux olympiques : 2 800 ans de sport et un baron très têtu",
+      "tagline": "D’Olympie à Paris 2024 : comment un Français a ressuscité les Jeux, et pourquoi il a fallu attendre 2024 pour la parité",
+      "teaser": "Une course de 192 mètres, un baron ignoré à la Sorbonne et un champion qui l’apprend douze ans après.",
+      "minutes": 3,
+      "theme": "Sports",
+      "art": {
+        "subject": "the history of the Olympic Games, from ancient Olympia to Paris 2024, and how the French baron Pierre de Coubertin revived them in 1894",
+        "setting": "a modern running track, the dusty ancient stadium of Olympia with grassy banks, a Paris lecture hall at the Sorbonne, a white marble horseshoe stadium in Athens, a dusty Greek country road, the crowded Paris world fair of 1900, a grass tennis court, olive trees and stone ruins at Olympia",
+        "era": "ancient Greece, then 1890s to 1930s, with one runner from today",
+        "props": {
+          "wreath": "a small wreath of wild olive leaves",
+          "crate": "a small wooden crate used as a step",
+          "lectern": "a plain wooden lectern",
+          "torch": "a simple wooden torch with a small orange flame",
+          "racket": "an old wooden tennis racket",
+          "jug": "a small round clay water jug"
+        }
+      },
+      "cast": [
+        {
+          "id": "coubertin",
+          "name": "Pierre de Coubertin",
+          "look": "Pierre, a short compact French baron of the 1890s, slicked-back dark brown hair with a neat side parting, an enormous bushy dark walrus moustache, pale skin, navy blue three-piece suit as main colour, high white collar, a gold watch chain on the waistcoat",
+          "role": "the stubborn idealist who revives the Games and is ignored at first; small but stands very straight, chest out, chin up, often a hand on his heart",
+          "file": "cast/dossier-coubertin.png",
+          "status": "pending"
+        },
+        {
+          "id": "ines",
+          "name": "Inès",
+          "look": "Inès, a tall athletic young woman of today, very short bleached blonde buzz cut, warm brown skin, bright orange running vest as main colour, black running shorts, white sneakers, a black stopwatch on a cord around her neck",
+          "role": "the curious runner from today who asks the reader's questions; bouncy, always stretching or jogging on the spot, huge expressive reactions",
+          "file": "cast/dossier-ines.png",
+          "status": "pending"
+        },
+        {
+          "id": "spyridon",
+          "name": "Spyridon Louis",
+          "look": "Spyridon, a lean wiry Greek villager of 1896, curly black hair, thick black moustache, olive skin, loose white shirt, white pleated knee-length kilt, a bright red embroidered sleeveless vest as main colour, the jug often in hand",
+          "role": "the humble water carrier who wins the first marathon; wiry and calm, runs with a serene little smile, never out of breath",
+          "file": "cast/dossier-spyridon.png",
+          "status": "pending"
+        },
+        {
+          "id": "charlotte",
+          "name": "Charlotte Cooper",
+          "look": "Charlotte, a slender upright Edwardian woman of medium height, dark hair piled in a big bun under a flat straw boater hat, fair skin, long ankle-length white tennis dress with long sleeves, a bright green belt and green hat ribbon as main colour, the racket on her shoulder",
+          "role": "the first woman Olympic champion; poised and calm, racket on her shoulder, amused and unimpressed by the baron",
+          "file": "cast/dossier-charlotte.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a dusty ancient stadium track with grassy banks. Inès (tall, orange running vest, blonde buzz cut) on the left in a sprint start, grinning at the viewer; Pierre (short, huge walrus moustache, navy suit) on the right standing on the crate, solemnly holding the wreath above her head like a crown, chest out. wide shot",
+        "cast": [
+          "ines",
+          "coubertin"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Une idée de 2 800 ans",
+          "caption": "Tous les quatre ans, des milliers d’athlètes du monde entier se retrouvent au même endroit. Pourquoi ? Et depuis quand ?",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Franchement, qui a eu l’idée de ce rendez-vous géant ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Les Grecs. Et moi, avec 2 600 ans de retard.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare modern running track with white lane lines. Inès (tall, orange running vest, blonde buzz cut) on the left stretching one leg, puzzled, looking at the viewer; Pierre (short, huge walrus moustache, navy suit) on the right standing on the crate to look as tall as her, hand on heart, very proud. visual gag: the tiny crate. medium shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Pierre de Coubertin",
+          "text": "Né à Paris en 1863, mort à Genève en 1937, ce baron français a consacré sa vie à un projet : faire renaître les Jeux olympiques.",
+          "photo": {
+            "commons": "File:Baron Pierre de Coubertin.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "776 av. J.-C.",
+          "caption": "Selon la tradition, les premiers Jeux ont lieu à Olympie, en Grèce, en 776 av. J.-C., pour honorer Zeus.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Et il y avait combien d’épreuves ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Au début, une seule : une course d’environ 192 mètres.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the dusty ancient stadium of Olympia, a long straight earth track between low grassy banks. Inès (tall, orange running vest, blonde buzz cut) on the left, already at the finish line after two steps, checking her stopwatch, disappointed; Pierre (short, huge walrus moustache, navy suit) on the right holding up the wreath like a judge, solemn. wide shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "25 novembre 1892",
+          "caption": "À la Sorbonne, Coubertin, 29 ans, propose de ressusciter ces Jeux disparus depuis 1 500 ans. Le public ne suit pas.",
+          "bubbles": [
+            {
+              "who": "coubertin",
+              "text": "Messieurs, rétablissons les Jeux olympiques !",
+              "side": "l"
+            },
+            {
+              "who": "Un auditeur",
+              "text": "Les… quoi ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a plain Paris lecture hall with wooden benches. Pierre (short, huge walrus moustache, navy suit) on the left behind the lectern, both arms raised in triumph, beaming; on the right, a few small listeners in grey suits on the benches stare blankly, one in the front row asleep with his head back. light-blue sweat drop on Pierre's forehead. medium shot",
+            "cast": [
+              "coubertin"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "title": "Les Jeux antiques, en bref",
+          "steps": [
+            "Tous les quatre ans, une fête en l’honneur de Zeus, à Olympie",
+            "Une trêve sacrée protège le voyage des athlètes et du public",
+            "Seuls les hommes grecs libres concourent ; les femmes ne peuvent ni concourir ni, en général, regarder",
+            "Le vainqueur reçoit une couronne d’olivier sauvage",
+            "En 393, l’empereur chrétien Théodose interdit les cultes païens : les Jeux s’éteignent"
+          ],
+          "joke": "Plus de mille ans de fête, puis 1 500 ans de silence."
+        },
+        {
+          "n": 6,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Le baron s’obstine",
+          "caption": "Pourquoi y tient-il autant ? Parce qu’il rêve de réformer l’école française, où le sport n’a presque aucune place.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Les JO, au départ, c’est un projet d’école ?",
+              "side": "r"
+            },
+            {
+              "who": "coubertin",
+              "text": "Exactement. Des élèves qui courent, pas qui somnolent.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare 1880s classroom with rows of small wooden desks where tiny pupils sleep on their arms. Pierre (short, huge walrus moustache, navy suit) on the left holding a leather rugby ball high above his head, enthusiastic; Inès (tall, orange running vest, blonde buzz cut) on the right squeezed onto a tiny school bench, knees up to her chin. medium shot",
+            "cast": [
+              "coubertin",
+              "ines"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Années 1880",
+          "caption": "Il admire les écoles anglaises, comme celle de Rugby, où le sport fait partie de l’éducation.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Rugby… comme le sport ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Le sport porte le nom de l’école. Les Anglais ne doutent de rien.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a green English school lawn, a red brick school building far away, tiny schoolboys in a muddy scrum in the background. Inès (tall, orange running vest, blonde buzz cut) on the left wincing at the scrum, hands on her cheeks; Pierre (short, huge walrus moustache, navy suit) on the right taking notes in a small notebook, delighted. wide shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Juin 1894",
+          "caption": "Il revient à la charge : un grand congrès à la Sorbonne, avec 78 délégués, dont 20 venus de l’étranger.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Et cette fois, personne ne s’endort ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Cette fois, j’ai prévu un hymne grec antique en ouverture.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a grand hall with a long table covered with a green cloth and many small delegates seated around it. Inès (tall, orange running vest, blonde buzz cut) on the left holding a folded programme, curious; Pierre (short, huge walrus moustache, navy suit) on the right conducting with both hands like an orchestra chief, eyes closed, while a tiny musician plays a lyre behind him. medium shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "23 juin 1894",
+          "caption": "Vote à l’unanimité : les Jeux renaîtront en 1896, à Athènes. On crée aussi le Comité international olympique.",
+          "bubbles": [
+            {
+              "who": "coubertin",
+              "text": "Deux ans pour tout organiser. Une formalité.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Vous dites toujours ça avant les ennuis ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same grand hall, now empty, chairs pushed back. Pierre (short, huge walrus moustache, navy suit) on the left leaping high in the air with joy, both fists up, yellow sparkles; Inès (tall, orange running vest, blonde buzz cut) on the right holding a giant blank wall calendar, raising one eyebrow, sceptical. medium shot",
+            "cast": [
+              "coubertin",
+              "ines"
+            ],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "explain",
+          "title": "À quoi sert le CIO ?",
+          "steps": [
+            "Le Comité international olympique choisit la ville hôte, des années à l’avance",
+            "Chaque pays a son comité olympique national, qui sélectionne et envoie ses athlètes",
+            "La ville hôte construit les sites et organise les épreuves"
+          ],
+          "joke": "Coubertin en devient président après Athènes, et le reste jusqu’en 1925. Têtu, et patient."
+        },
+        {
+          "n": 11,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Athènes, 1896",
+          "caption": "Du 6 au 15 avril 1896, à Athènes : 241 athlètes de 14 pays, tous des hommes, dans 43 épreuves.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "241 athlètes ? Il y a plus de monde dans mon club.",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Peut-être. Mais votre club n’a pas réveillé Olympie.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a white marble horseshoe-shaped stadium seen from the stands, a small group of tiny athletes in old-fashioned white sports outfits in the middle of the huge track. Inès (tall, orange running vest, blonde buzz cut) on the left looking through binoculars, unimpressed; Pierre (short, huge walrus moustache, navy suit) on the right beaming with pride, hand on heart. wide shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 12,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "L’ouverture des Jeux, le 6 avril 1896",
+          "text": "La cérémonie d’ouverture des premiers Jeux olympiques modernes, dans le stade panathénaïque d’Athènes, en forme de fer à cheval.",
+          "photo": {
+            "commons": "File:1896 Olympic opening ceremony.jpg"
+          }
+        },
+        {
+          "n": 13,
+          "kind": "fact",
+          "tag": "6 avril 1896",
+          "caption": "Premier champion olympique depuis plus de 1 500 ans : l’Américain James Connolly, au triple saut.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Et il gagne quoi ? Une médaille d’or ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "D’argent, avec un rameau d’olivier. L’or n’arrive qu’en 1904.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the white marble stadium track, a tiny jumper seen far away in mid-air above a sandpit. Inès (tall, orange running vest, blonde buzz cut) on the left holding a shiny silver medal up to her eye, squinting suspiciously; Pierre (short, huge walrus moustache, navy suit) on the right proudly holding out a small olive branch. medium shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "",
+          "tag": "1896",
+          "caption": "Une épreuve est inventée pour l’occasion : le marathon. L’idée vient d’un Français, le linguiste Michel Bréal.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Une course interminable, c’est l’idée d’un linguiste ?",
+              "side": "r"
+            },
+            {
+              "who": "coubertin",
+              "text": "Il pensait à la légende d’un messager grec, de Marathon à Athènes.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room. Pierre (short, huge walrus moustache, navy suit) on the left unrolling a paper scroll showing a long dotted road between two small hills; the scroll keeps unrolling across the whole floor. Inès (tall, orange running vest, blonde buzz cut) on the right following the endless scroll with her eyes, jaw dropped. wide shot",
+            "cast": [
+              "coubertin",
+              "ines"
+            ],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 15,
+          "kind": "",
+          "tag": "10 avril 1896",
+          "caption": "Le marathon est gagné par un Grec, Spyridon Louis, porteur d’eau de Maroussi, près d’Athènes. Tout le pays exulte.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "On raconte que vous avez bu un verre de vin en route ?",
+              "side": "l"
+            },
+            {
+              "who": "spyridon",
+              "text": "Il faut bien s’hydrater.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a dusty Greek country road with a few olive trees. Spyridon (wiry, curly black hair, red vest, white kilt) on the right jogging calmly with a serene smile, holding a small glass of red wine; Inès (tall, orange running vest, blonde buzz cut) on the left jogging beside him, exhausted, light-blue sweat drop, staring at the glass. medium shot",
+            "cast": [
+              "spyridon",
+              "ines"
+            ],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 16,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Spyridon Louis",
+          "text": "Le vainqueur du premier marathon olympique, en 1896. Il l’emporte avec plus de sept minutes d’avance devant environ 100 000 spectateurs, puis ne court plus jamais en compétition.",
+          "photo": {
+            "commons": "File:Spyridon Louis 1896.jpg"
+          }
+        },
+        {
+          "n": 17,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Paris 1900, le grand bazar",
+          "caption": "En 1900, les Jeux ont lieu à Paris, en même temps que l’Exposition universelle. Ils durent plus de cinq mois.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Cinq mois ? Ce ne sont plus des Jeux, c’est une saison !",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Noyés dans l’Exposition. Je les cherchais moi-même.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a crowded 1900 world fair with an ornate white pavilion and a striped hot-air balloon in the sky, tiny visitors everywhere. Inès (tall, orange running vest, blonde buzz cut) on the left holding a huge unfolded map upside down, lost; Pierre (short, huge walrus moustache, navy suit) on the right peering through a magnifying glass, searching. wide shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 18,
+          "kind": "fact",
+          "tag": "1900",
+          "caption": "Beaucoup ignorent qu’ils participent aux Jeux. Le vainqueur du marathon, Michel Théato, ne l’apprend qu’en 1912.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Douze ans pour apprendre qu’on est champion olympique ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Au moins, la surprise était intacte.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "close-up on a plain background. Pierre (short, huge walrus moustache, navy suit) on the right sheepishly handing over a small envelope covered in dust and cobwebs; Inès (tall, orange running vest, blonde buzz cut) on the left holding it with two fingers, deadpan, staring at the viewer. medium close-up",
+            "cast": [
+              "coubertin",
+              "ines"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 19,
+          "kind": "",
+          "tag": "1900",
+          "caption": "1900, c’est aussi une première : des femmes concourent. La Britannique Charlotte Cooper gagne le tennis en simple.",
+          "bubbles": [
+            {
+              "who": "charlotte",
+              "text": "Première championne olympique en individuel. Ça sonne bien, non ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Hum. Une exception.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a grass tennis court with a low net. Charlotte (slender, straw boater, long white dress, green belt) on the left, the racket on her shoulder, confident smile, yellow sparkles; Pierre (short, huge walrus moustache, navy suit) on the right with arms crossed, moustache drooping, looking away and sulking. medium shot",
+            "cast": [
+              "charlotte",
+              "coubertin"
+            ],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 20,
+          "kind": "",
+          "tag": "1912",
+          "caption": "Car Coubertin est contre : en 1912, il écrit qu’une Olympiade féminine serait « impratique, inintéressante, inesthétique ».",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Pardon ?!",
+              "side": "l"
+            },
+            {
+              "who": "charlotte",
+              "text": "Je fais comme si je n’avais rien entendu.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same grass tennis court. Inès (tall, orange running vest, blonde buzz cut) on the left, hands on hips, red angry flush, glaring at a small sheet of paper on the ground; Charlotte (slender, straw boater, long white dress, green belt) on the right calmly bouncing a tennis ball on the racket, not even looking. medium shot",
+            "cast": [
+              "ines",
+              "charlotte"
+            ],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 21,
+          "kind": "explain",
+          "title": "Les femmes aux Jeux : une longue course",
+          "steps": [
+            "1900 : 22 femmes, sur près de 1 000 athlètes",
+            "1924 : 135 femmes ; Coubertin laisse chaque ville organisatrice décider",
+            "1964 : 13 % des athlètes sont des femmes",
+            "Paris 2024 : 5 250 femmes et 5 250 hommes, la parité parfaite"
+          ],
+          "joke": "Le baron en aurait avalé sa moustache."
+        },
+        {
+          "n": 22,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Anneaux, devise et flamme",
+          "caption": "En 1913, Coubertin dessine cinq anneaux entrelacés : bleu, jaune, noir, vert et rouge, sur fond blanc.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Un anneau par continent, c’est ça ?",
+              "side": "r"
+            },
+            {
+              "who": "coubertin",
+              "text": "Et avec le blanc, ces six couleurs sont dans tous les drapeaux, disais-je.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a plain wooden desk with one blank white sheet of paper. Pierre (short, huge walrus moustache, navy suit) on the left concentrating hard, tongue out, gripping five coloured pencils in one fist (blue, yellow, black, green, red); Inès (tall, orange running vest, blonde buzz cut) on the right leaning over his shoulder, curious. medium shot",
+            "cast": [
+              "coubertin",
+              "ines"
+            ],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 23,
+          "kind": "fact",
+          "tag": "1894",
+          "caption": "La devise « Citius, altius, fortius » (plus vite, plus haut, plus fort) vient d’un prêtre, le père Henri Didon.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Vous l’avez empruntée à un prêtre ?",
+              "side": "r"
+            },
+            {
+              "who": "coubertin",
+              "text": "Il l’avait créée pour ses élèves. Je l’ai juste… adoptée.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a simple sports field with a high-jump bar. Pierre (short, huge walrus moustache, navy suit) on the left holding up a small blank blackboard and pointing at it proudly, a little guilty smile; Inès (tall, orange running vest, blonde buzz cut) on the right flying high over the bar in a perfect jump, looking back at him with suspicion. wide shot",
+            "cast": [
+              "coubertin",
+              "ines"
+            ],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 24,
+          "kind": "",
+          "tag": "1928 et 1936",
+          "caption": "La flamme olympique brûle pour la première fois à Amsterdam, en 1928. Le relais de la flamme naît en 1936.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Ce relais, c’est donc une tradition antique ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Pas du tout. Il a été inventé pour les Jeux de Berlin, sous les nazis.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare road. Inès (tall, orange running vest, blonde buzz cut) on the left running and holding the torch high, proud and solemn; Pierre (short, huge walrus moustache, navy suit) on the right raising one finger to correct her, serious face. medium shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 25,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Le cœur à Olympie",
+          "caption": "Coubertin quitte la présidence du CIO en 1925, après les Jeux de Paris 1924, qui inventent le village olympique.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Un village rien que pour les athlètes ?",
+              "side": "r"
+            },
+            {
+              "who": "coubertin",
+              "text": "Des maisons en bois, à Colombes. Mon cadeau de départ.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a row of small simple wooden huts on a lawn. Pierre (short, huge walrus moustache, navy suit) on the left solemnly handing a huge old-fashioned key to Inès (tall, orange running vest, blonde buzz cut) on the right, who holds it with both hands, amused by its size. medium shot",
+            "cast": [
+              "coubertin",
+              "ines"
+            ],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 26,
+          "kind": "",
+          "tag": "1937",
+          "caption": "Il meurt à Genève en 1937. À sa demande, son cœur est placé dans une stèle, à Olympie.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Son cœur… à Olympie ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Là où tout a commencé.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet grassy field with olive trees and low ancient stone ruins, a simple white stone column standing alone. Inès (tall, orange running vest, blonde buzz cut) on the left standing quietly in front of the column, hand on her heart; Pierre (short, huge walrus moustache, navy suit) on the right a little behind, calm, a soft smile. wide shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-20.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        },
+        {
+          "n": 27,
+          "kind": "",
+          "tag": "2024",
+          "caption": "En 2024, Paris accueille les Jeux pour la troisième fois. Une idée grecque, ressuscitée par un baron têtu.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Donc on se retrouve tous les quatre ans grâce à Zeus et à vous ?",
+              "side": "l"
+            },
+            {
+              "who": "coubertin",
+              "text": "Et au public qui a fini par m’écouter.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bare modern running track again, with white lane lines. Inès (tall, orange running vest, blonde buzz cut) carrying Pierre (short, huge walrus moustache, navy suit) on her shoulders like a champion, both laughing, Pierre waving the wreath in the air, the crate left empty on the ground. wide shot",
+            "cast": [
+              "ines",
+              "coubertin"
+            ],
+            "file": "images/dossier-21.webp",
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
+          }
+        }
+      ],
+      "final": {
+        "text": "Les Jeux olympiques modernes sont nés d’un vote à la Sorbonne, le 23 juin 1894, à l’initiative du Français Pierre de Coubertin.",
+        "source": "CIO — Paris 1894, Ier Congrès olympique"
+      },
+      "story": "Selon la tradition, les premiers Jeux olympiques ont lieu en 776 av. J.-C. à Olympie, en Grèce, tous les quatre ans, en l’honneur de Zeus. Au début, il n’y a qu’une course d’environ 192 mètres. Seuls les hommes grecs libres concourent, protégés par une trêve sacrée, et le vainqueur reçoit une couronne d’olivier. Après plus de mille ans, un décret de l’empereur chrétien Théodose contre les cultes païens, en 393, y met fin.\nPierre de Coubertin, né à Paris en 1863, veut réformer l’école française par le sport, sur le modèle des écoles anglaises. Le 25 novembre 1892, à la Sorbonne, il propose de rétablir les Jeux : le public ne suit pas. Il insiste et réunit en juin 1894 un congrès de 78 délégués. Le 23 juin, ils votent à l’unanimité la renaissance des Jeux et créent le Comité international olympique.\nAthènes accueille les premiers Jeux modernes en avril 1896 : 241 athlètes de 14 pays, tous des hommes. Le marathon, imaginé par le Français Michel Bréal, est gagné par Spyridon Louis. En 1900, à Paris, les Jeux se mêlent à l’Exposition universelle pendant plus de cinq mois, et des femmes concourent pour la première fois, malgré les réticences de Coubertin.\nCoubertin dessine les anneaux en 1913 et quitte le CIO en 1925. À sa mort en 1937, son cœur est placé à Olympie. En 2024, Paris organise ses troisièmes Jeux, les premiers avec autant d’athlètes femmes que d’hommes.",
+      "sources": [
+        {
+          "title": "CIO — Paris 1894, Ier Congrès olympique",
+          "url": "https://olympics.com/ioc/paris-1894-olympic-congress"
+        },
+        {
+          "title": "World History Encyclopedia — Jeux Olympiques antiques",
+          "url": "https://www.worldhistory.org/trans/fr/1-440/jeux-olympiques-antiques/"
+        },
+        {
+          "title": "CIO — La fin des Jeux Olympiques de l’Antiquité",
+          "url": "https://olympics.com/cio/jeux-olympiques-antiquite/la-fin-des-jeux-olympiques-de-l-antiquite"
+        },
+        {
+          "title": "CIO — Hommage à Pierre de Coubertin, le génie français du sport",
+          "url": "https://www.olympics.com/cio/news/hommage-a-pierre-de-coubertin-le-genie-francais-du-sport-a-l-origine-des-jeux-olympiques-modernes"
+        },
+        {
+          "title": "CNN — Pierre de Coubertin’s 1892 Olympic speech",
+          "url": "https://amp.cnn.com/cnn/2021/07/22/sport/de-coubertin-olympic-speech-1892-spc-intl/index.html"
+        },
+        {
+          "title": "Britannica — Pierre, baron de Coubertin",
+          "url": "https://www.britannica.com/biography/Pierre-Baron-de-Coubertin-Father-of-the-Modern-Olympics"
+        },
+        {
+          "title": "Olympics.com — Athens 1896",
+          "url": "https://olympics.com/en/olympic-games/athens-1896"
+        },
+        {
+          "title": "History.com — 10 things you may not know about the first Olympics",
+          "url": "https://www.history.com/articles/10-things-you-may-not-know-about-the-first-olympics"
+        },
+        {
+          "title": "Pappas Post — Spyridon Louis wins the first modern Olympic marathon",
+          "url": "https://www.pappaspost.com/april-10-1896-spyridon-louis-wins-first-modern-olympic-marathon/"
+        },
+        {
+          "title": "Connexion — Paris 1900, the record-breaking Olympics that few people knew about",
+          "url": "https://www.connexionfrance.com/magazine/paris-1900-the-record-breaking-olympics-that-few-people-knew-about/390210"
+        },
+        {
+          "title": "CIO — Pourquoi Pierre de Coubertin était-il opposé à la participation des femmes ?",
+          "url": "https://olympics.com/cio/pierre-de-coubertin/pourquoi-pierre-de-coubertin-etait-il-oppose-a-la-participation-des-femmes-aux-jeux-olympiques"
+        },
+        {
+          "title": "Olympics.com — Paris 2024, the first Games to achieve full gender parity",
+          "url": "https://olympics.com/en/news/paris-2024-first-games-to-achieve-full-gender-parity?os=avefgi"
+        },
+        {
+          "title": "CIO — En 1913, Pierre de Coubertin imagine l’un des symboles les plus connus au monde",
+          "url": "https://olympics.com/cio/news/en-1913-pierre-de-coubertin-imagine-l-un-des-symboles-les-plus-connus-au-monde"
+        },
+        {
+          "title": "Universalis — Les symboles olympiques : la devise",
+          "url": "https://www.universalis.fr/encyclopedie/jeux-olympiques-les-symboles-olympiques/3-la-devise-olympique/"
+        },
+        {
+          "title": "DutchNews — How a Dutch architect revived the Olympic flame",
+          "url": "https://dutchnews.nl/2024/04/bright-spark-how-a-dutch-architect-revived-the-olympic-flame"
+        },
+        {
+          "title": "The Open University — The Olympic torch: the truth",
+          "url": "https://www.open.edu/openlearn/history-the-arts/history/the-olympic-torch-the-truth"
+        },
+        {
+          "title": "Ville de Paris — Sur les traces des Jeux olympiques parisiens de 1900 et 1924",
+          "url": "https://www.paris.fr/pages/sur-les-traces-des-jeux-olympiques-parisiens-de-1900-et-1924-24239"
+        }
+      ]
+    }
+  ]
+}
