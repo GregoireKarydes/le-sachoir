@@ -12,24 +12,19 @@
       "cast": [
         {
           "id": "patrick",
-          "look": "Patrick, a smooth TV quiz show host, shiny swept-back grey hair, huge white smile, black tuxedo, a red bow tie as the only colour, holding question cards",
+          "name": "Patrick, l’animateur",
+          "look": "Patrick, a tall slim smooth TV quiz show host, shiny swept-back grey hair, huge white smile, glossy purple tuxedo as main colour, red bow tie, white shirt, holding question cards",
           "file": "cast/insolite-patrick.png",
           "status": "pending",
-          "role": "the smooth quiz host who asks the trick question; slick, smiling, holding cards"
+          "role": "the smooth quiz host who asks the trick question and then explains the answer with a map; slick, smiling, always in showman pose"
         },
         {
           "id": "bernard",
-          "look": "Bernard, a modern quiz show contestant in his fifties, bald and round, thick black glasses, grey cardigan over a white shirt, very sweaty forehead",
+          "name": "Bernard, le candidat",
+          "look": "Bernard, a short round quiz show contestant in his fifties, bald head, thick black glasses, mustard-yellow cardigan as main colour over a white shirt, brown trousers, very sweaty forehead",
           "file": "cast/insolite-bernard.png",
           "status": "pending",
-          "role": "the contestant sure the answer is Spain; round, sweaty, panicking"
-        },
-        {
-          "id": "helene",
-          "look": "Hélène, a French geography teacher, short grey bob, big round black glasses, black turtleneck, holding a rolled-up map",
-          "file": "cast/insolite-helene.png",
-          "status": "pending",
-          "role": "the geography teacher who explains; calm, precise, pointing at the map"
+          "role": "the contestant sure the answer is Spain; round, sweaty, panicking, the reader's naive voice"
         }
       ],
       "cover": {
@@ -50,10 +45,12 @@
           "caption": "Avec quel pays la France partage-t-elle sa plus longue frontière terrestre ?",
           "bubbles": [
             {
+              "who": "bernard",
               "text": "L’Espagne ! 623 km de Pyrénées !",
               "side": "r"
             },
             {
+              "who": "patrick",
               "text": "C’est votre dernier mot ?",
               "side": "l"
             }
@@ -92,18 +89,20 @@
           "caption": "Pourquoi le Brésil ? Grâce à la Guyane, région française d’Amérique du Sud, voisine du Brésil.",
           "bubbles": [
             {
+              "who": "patrick",
               "text": "La France ne s’arrête pas à Brest, Bernard.",
               "side": "l"
             },
             {
+              "who": "bernard",
               "text": "Depuis quand ?",
               "side": "r"
             }
           ],
           "image": {
-            "prompt": "Hélène (on the left) unrolling a big blank world map and tapping a spot in South America with her finger, patient but firm; Bernard (on the right) squinting at the map, holding his glasses up to his nose. plain background. medium shot",
+            "prompt": "on the quiz stage, Patrick (tall, purple tuxedo) on the left tapping a spot in South America on the map with a showman flourish; Bernard (round, mustard cardigan) on the right pressing his nose against the map, squinting through his thick glasses held up with one hand. medium shot",
             "cast": [
-              "helene",
+              "patrick",
               "bernard"
             ],
             "file": "images/insolite-03.webp",
@@ -125,19 +124,21 @@
           "caption": "Cette frontière suit surtout le fleuve Oyapock. Son tracé est fixé en 1900 par un arbitre suisse, après un litige.",
           "bubbles": [
             {
+              "who": "bernard",
               "text": "Les Suisses, toujours neutres.",
               "side": "r"
             },
             {
+              "who": "patrick",
               "text": "Et très précis.",
               "side": "l"
             }
           ],
           "image": {
-            "prompt": "a calm wide river drawn with a few lines, thick jungle on both banks. Hélène (on the left) standing on one bank pointing at the river with her map; Patrick (on the right) on the other bank, waving across, smiling for the camera. wide shot",
+            "prompt": "a calm wide river drawn with a few lines, thick jungle on both banks. Patrick (tall, purple tuxedo) on the left bank, still in his tuxedo in the jungle, holding a microphone toward the river like a host; Bernard (round, mustard cardigan) on the right bank, waving across, sweating under the sun. wide shot",
             "cast": [
-              "helene",
-              "patrick"
+              "patrick",
+              "bernard"
             ],
             "file": "images/insolite-04.webp",
             "status": "pending",
@@ -151,18 +152,20 @@
           "caption": "Un pont franco-brésilien est achevé en 2011. Il n’ouvre qu’en 2017.",
           "bubbles": [
             {
+              "who": "bernard",
               "text": "Six ans pour ouvrir un pont ?",
               "side": "r"
             },
             {
+              "who": "patrick",
               "text": "Il fallait trouver les clés.",
               "side": "l"
             }
           ],
           "image": {
-            "prompt": "a long modern bridge over a river, completely empty, with a small closed barrier in the middle. Bernard (on the right) sitting on the barrier, bored, chin in hand; Hélène (on the left) checking her watch, deadpan. wide shot",
+            "prompt": "a long modern bridge over a river, completely empty, with a small closed barrier in the middle. Bernard (round, mustard cardigan) on the right sitting on the barrier, bored, chin in hand, a cobweb hanging from his elbow; Patrick (tall, purple tuxedo) on the left holding up a comically huge old key, deadpan. wide shot",
             "cast": [
-              "helene",
+              "patrick",
               "bernard"
             ],
             "file": "images/insolite-05.webp",
@@ -193,6 +196,7 @@
           "caption": "Aujourd’hui encore, il reste peu emprunté : beaucoup d’habitants préfèrent traverser en bateau.",
           "bubbles": [
             {
+              "who": "bernard",
               "text": "Un pont tout neuf, et tout le monde prend le bateau.",
               "side": "r"
             }
@@ -214,10 +218,12 @@
           "caption": "En Europe, la plus longue frontière française est avec la Belgique, de peu devant l’Espagne.",
           "bubbles": [
             {
+              "who": "bernard",
               "text": "Donc j’avais faux deux fois.",
               "side": "r"
             },
             {
+              "who": "patrick",
               "text": "Un record.",
               "side": "l"
             }
