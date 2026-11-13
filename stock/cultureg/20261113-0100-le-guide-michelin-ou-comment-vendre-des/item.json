@@ -12,6 +12,7 @@
       "cast": [
         {
           "id": "andre",
+          "name": "André Michelin",
           "look": "André, a French industrialist around 1900, round bald head, bushy white moustache, black three-piece suit, a gold watch chain as the only colour",
           "file": "cast/cultureg-andre.png",
           "status": "done",
@@ -19,6 +20,7 @@
         },
         {
           "id": "edouard",
+          "name": "Édouard Michelin",
           "look": "Édouard, his younger brother around 1900, thin, neat dark goatee, slicked hair, black suit, always holding a small rubber tyre under his arm",
           "file": "cast/cultureg-edouard.png",
           "status": "done",
@@ -26,6 +28,7 @@
         },
         {
           "id": "firmin",
+          "name": "Le garagiste",
           "look": "Firmin, a short stocky 1910s tyre dealer and mechanic, grease-stained grey overalls, flat black cap, bushy black moustache, a spanner in his back pocket",
           "file": "cast/cultureg-firmin.png",
           "status": "done",
@@ -33,6 +36,7 @@
         },
         {
           "id": "inspecteur",
+          "name": "L’inspecteur",
           "look": "a 1930s anonymous restaurant inspector, black hat pulled low over the eyes, black coat with the collar up, thin moustache, a tiny notebook hidden in his palm",
           "file": "cast/cultureg-inspecteur.png",
           "status": "skipped",
@@ -58,10 +62,12 @@
           "caption": "Pourquoi un fabricant de pneus note-t-il des restaurants ? En 1900, les frères Michelin veulent que les Français roulent plus.",
           "bubbles": [
             {
+              "who": "edouard",
               "text": "Plus ils roulent, plus ils usent de pneus.",
               "side": "r"
             },
             {
+              "who": "andre",
               "text": "Donc il faut leur donner envie de partir.",
               "side": "l"
             }
@@ -100,10 +106,12 @@
           "caption": "Leur idée : un guide gratuit de 400 pages, offert aux automobilistes, avec garages, médecins et plans de villes.",
           "bubbles": [
             {
+              "who": "andre",
               "text": "35 000 exemplaires, offerts avec les pneus !",
               "side": "l"
             },
             {
+              "who": "edouard",
               "text": "Et comment changer un pneu. Évidemment.",
               "side": "r"
             }
@@ -126,6 +134,7 @@
           "caption": "Version officielle : André surprend un vendeur de pneus calant son établi avec des guides.",
           "bubbles": [
             {
+              "who": "firmin",
               "text": "Il est très utile, votre guide. Pile la bonne hauteur.",
               "side": "r"
             }
@@ -148,10 +157,12 @@
           "caption": "Le guide devient payant en 1920 (7 francs en 1921), et la publicité en disparaît.",
           "bubbles": [
             {
+              "who": "andre",
               "text": "Ce qu’on paie, on le respecte.",
               "side": "l"
             },
             {
+              "who": "firmin",
               "text": "Je calerai avec l’annuaire.",
               "side": "r"
             }
@@ -174,10 +185,12 @@
           "caption": "1926 : le guide se met à classer les restaurants. Une étoile récompense une bonne table.",
           "bubbles": [
             {
+              "who": "edouard",
               "text": "Une étoile pour un bon dîner ?",
               "side": "r"
             },
             {
+              "who": "andre",
               "text": "Et un client qui use ses pneus pour y aller.",
               "side": "l"
             }
@@ -200,10 +213,12 @@
           "caption": "1931 : on passe à trois étoiles. La troisième veut dire « vaut le voyage » : on prend la route exprès.",
           "bubbles": [
             {
+              "who": "edouard",
               "text": "Le voyage… en voiture ?",
               "side": "r"
             },
             {
+              "who": "andre",
               "text": "Avec nos pneus. C’est tout le principe.",
               "side": "l"
             }
@@ -237,6 +252,7 @@
           "caption": "Pour rester crédible, Michelin crée en 1933 des inspecteurs anonymes, payés par le guide, qui jugent en toute indépendance.",
           "bubbles": [
             {
+              "who": "inspecteur",
               "text": "Je suis un client parfaitement normal.",
               "side": "l"
             }
@@ -258,10 +274,12 @@
           "caption": "Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie.",
           "bubbles": [
             {
+              "who": "andre",
               "text": "Et plus personne ne pense aux pneus.",
               "side": "l"
             },
             {
+              "who": "edouard",
               "text": "Si. Nous.",
               "side": "r"
             }
