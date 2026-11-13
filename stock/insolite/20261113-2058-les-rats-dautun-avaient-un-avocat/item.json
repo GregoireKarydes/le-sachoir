@@ -38,7 +38,10 @@
       ],
       "cover": {
         "prompt": "a bare courtroom. Chasseneuz (tall, thin, scarlet robe, pointed black beard) on the left pleading passionately with one finger raised in front of the empty bench, on which sits one tiny brown rat wearing an equally tiny black lawyer's cap; the juge (short, fat, green robe) on the right behind his high bench, face in his hands. wide shot",
-        "cast": ["chasseneuz", "juge"],
+        "cast": [
+          "chasseneuz",
+          "juge"
+        ],
         "file": "images/insolite-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -50,12 +53,23 @@
           "tag": "Autun, vers 1520",
           "caption": "Comment des rats ont-ils échappé à un procès ? À Autun, en Bourgogne, on les accuse d’avoir dévoré les récoltes.",
           "bubbles": [
-            { "who": "juge", "text": "Les accusés sont… des rats. Bien. Très bien.", "side": "r" },
-            { "who": "chasseneuz", "text": "Et ils ont un avocat. Moi.", "side": "l" }
+            {
+              "who": "juge",
+              "text": "Les accusés sont… des rats. Bien. Très bien.",
+              "side": "r"
+            },
+            {
+              "who": "chasseneuz",
+              "text": "Et ils ont un avocat. Moi.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a bare 16th-century courtroom. the juge (short, fat, green robe, tiny spectacles) on the right behind his high bench, staring down at the empty bench where only a trail of tiny rat footprints and a few grains of barley remain; Chasseneuz (tall, thin, scarlet robe) on the left bowing deeply with a flourish of his parchment. medium shot",
-            "cast": ["chasseneuz", "juge"],
+            "cast": [
+              "chasseneuz",
+              "juge"
+            ],
             "file": "images/insolite-01.webp",
             "status": "pending",
             "attempts": 0
@@ -67,12 +81,23 @@
           "tag": "Vrai",
           "caption": "Ce n’est pas une blague : en France, on compte une soixantaine de procès d’animaux entre 1266 et 1586.",
           "bubbles": [
-            { "who": "juge", "text": "D’habitude, ce sont des cochons. Ils traînent partout en ville.", "side": "r" },
-            { "who": "chasseneuz", "text": "Mes clients, eux, sont discrets.", "side": "l" }
+            {
+              "who": "juge",
+              "text": "D’habitude, ce sont des cochons. Ils traînent partout en ville.",
+              "side": "r"
+            },
+            {
+              "who": "chasseneuz",
+              "text": "Mes clients, eux, sont discrets.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the juge (short, fat, green robe) on the right flipping through a thick case file with a weary sigh, a drawing of a pig visible on the cover; Chasseneuz (tall, thin, scarlet robe) on the left leaning on the empty bench, polishing his nails, smug. medium shot",
-            "cast": ["juge", "chasseneuz"],
+            "cast": [
+              "juge",
+              "chasseneuz"
+            ],
             "file": "images/insolite-02.webp",
             "status": "pending",
             "attempts": 0
@@ -91,12 +116,23 @@
           "tag": "",
           "caption": "Comme pour un humain, le tribunal convoque les accusés. Mais le jour du procès, aucun rat ne se présente.",
           "bubbles": [
-            { "who": "juge", "text": "Ils ne sont pas venus. Votre défense, maître ?", "side": "r" },
-            { "who": "chasseneuz", "text": "Ils avaient une excellente raison.", "side": "l" }
+            {
+              "who": "juge",
+              "text": "Ils ne sont pas venus. Votre défense, maître ?",
+              "side": "r"
+            },
+            {
+              "who": "chasseneuz",
+              "text": "Ils avaient une excellente raison.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a narrow cobbled street of Autun. Chasseneuz (tall, thin, scarlet robe) on the left nailing the long summons low on a wall, right at the height of a tiny rat hole, very seriously; the juge (short, fat, green robe) on the right watching with his arms crossed, unimpressed. medium shot",
-            "cast": ["chasseneuz", "juge"],
+            "cast": [
+              "chasseneuz",
+              "juge"
+            ],
             "file": "images/insolite-03.webp",
             "status": "pending",
             "attempts": 0
@@ -108,11 +144,18 @@
           "tag": "La plaidoirie",
           "caption": "Sa plaidoirie : la loi dispense un accusé de venir si le trajet est très dangereux. Or Autun grouille de chats.",
           "bubbles": [
-            { "who": "chasseneuz", "text": "Exiger qu’ils viennent, c’est les envoyer à la mort.", "side": "l" }
+            {
+              "who": "chasseneuz",
+              "text": "Exiger qu’ils viennent, c’est les envoyer à la mort.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the courtroom. Chasseneuz (tall, thin, scarlet robe) on the left pointing dramatically at the courtroom window, where a dozen cats of all colours sit lined up on the sill, staring in hungrily; the juge (short, fat, green robe) on the right slowly lowering his gavel, speechless. wide shot",
-            "cast": ["chasseneuz", "juge"],
+            "cast": [
+              "chasseneuz",
+              "juge"
+            ],
             "file": "images/insolite-04.webp",
             "status": "pending",
             "attempts": 0
@@ -124,7 +167,15 @@
           "tag": "Le vrai lieu",
           "title": "La cathédrale Saint-Lazare d’Autun",
           "text": "Autun, en Bourgogne, au temps de ce drôle de procès. Le jeune avocat qui y défend les rats deviendra l’un des grands juristes français de son siècle.",
-          "photo": { "commons": "File:Autun - Cathedrale St-Lazare 01.jpg" }
+          "photo": {
+            "commons": "File:Autun - Cathedrale St-Lazare 01.jpg",
+            "credit": "Selbymay",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Autun_-_Cathedrale_St-Lazare_01.jpg",
+            "file": "images/photo-6-autun-cathedrale-st-lazare-01-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 7,
@@ -132,12 +183,23 @@
           "tag": "Le fin mot",
           "caption": "Résultat : faute d’accusés, l’affaire tourne court. Les rats s’en tirent grâce à un argument de droit… et aux chats.",
           "bubbles": [
-            { "who": "chasseneuz", "text": "Zéro condamnation. Je prends aussi les souris.", "side": "l" },
-            { "who": "juge", "text": "Sortez.", "side": "r" }
+            {
+              "who": "chasseneuz",
+              "text": "Zéro condamnation. Je prends aussi les souris.",
+              "side": "l"
+            },
+            {
+              "who": "juge",
+              "text": "Sortez.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "confession-style shot, plain background. Chasseneuz (tall, thin, scarlet robe) on the left facing the reader with a triumphant grin, a tiny brown rat peeking out of his flat black cap; the juge (short, fat, green robe) on the right pointing at the exit without looking, eyes closed, exhausted. medium shot",
-            "cast": ["chasseneuz", "juge"],
+            "cast": [
+              "chasseneuz",
+              "juge"
+            ],
             "file": "images/insolite-05.webp",
             "status": "pending",
             "attempts": 0
@@ -150,9 +212,18 @@
       },
       "story": "Au Moyen Âge et à la Renaissance, les animaux peuvent être jugés. L’historien Michel Pastoureau a recensé une soixantaine de procès d’animaux en France entre 1266 et 1586. Les accusés sont surtout des cochons, qui errent librement dans les rues et causent des accidents ; ils passent devant les tribunaux ordinaires, comme des humains. Les nuisibles, comme les insectes qui ravagent les récoltes, relèvent plutôt de la justice de l’Église, qui peut les excommunier.\nVers 1520, à Autun, en Bourgogne, des rats sont accusés d’avoir dévoré les récoltes. Comme pour n’importe quel accusé, ils sont convoqués au tribunal. Ils ne viennent pas, évidemment. Leur défenseur, le juriste Barthélemy de Chasseneuz, plaide alors très sérieusement : la loi permet de ne pas répondre à une convocation si le trajet expose l’accusé à un grave danger. Or la ville est pleine de chats. Exiger que les rats se présentent, c’est les envoyer à la mort.\nL’affaire tourne court. Chasseneuz, lui, deviendra un grand juriste. Ces procès nous paraissent absurdes, mais ils avaient un sens pour leurs contemporains : selon Michel Pastoureau, ils servaient à mettre en scène une « bonne justice », qui s’applique à tous, même aux bêtes.",
       "sources": [
-        { "title": "Slate — À une époque, les animaux et les insectes aussi étaient traînés en justice", "url": "https://www.slate.fr/story/239866/moyen-age-animaux-insectes-justice-proces-tribunal-loi-europe" },
-        { "title": "RTBF — Les procès faits aux cochons", "url": "https://www.rtbf.be/article/les-proces-faits-aux-cochons-9989621" },
-        { "title": "Leiden Medievalists Blog — Homicidal Hogs: Murderous Pigs on Trial in Medieval France", "url": "https://leidenmedievalistsblog.nl/articles/homicidal-hogs" }
+        {
+          "title": "Slate — À une époque, les animaux et les insectes aussi étaient traînés en justice",
+          "url": "https://www.slate.fr/story/239866/moyen-age-animaux-insectes-justice-proces-tribunal-loi-europe"
+        },
+        {
+          "title": "RTBF — Les procès faits aux cochons",
+          "url": "https://www.rtbf.be/article/les-proces-faits-aux-cochons-9989621"
+        },
+        {
+          "title": "Leiden Medievalists Blog — Homicidal Hogs: Murderous Pigs on Trial in Medieval France",
+          "url": "https://leidenmedievalistsblog.nl/articles/homicidal-hogs"
+        }
       ]
     }
   ]
