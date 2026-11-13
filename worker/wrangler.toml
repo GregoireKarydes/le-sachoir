@@ -11,6 +11,7 @@ APP_ORIGINS = "https://gregoirekarydes.github.io"
 ADMIN_EMAILS = "gregoire.karydes@gmail.com"
 SENDER_NAME = "Le Sachoir"
 SENDER_EMAIL = "gregoire.karydes@gmail.com"
+PUSH_FROM = "07:30"       # notification push du jour : jamais avant cette heure (Paris), même si l'édition sort à 5 h
 MAIL_DAILY_LIMIT = "290"   # offre gratuite Brevo : 300 e-mails par jour, on garde une marge
 # API_URL est ajoutée par le workflow (adresse workers.dev connue après le premier déploiement).
 
@@ -19,6 +20,11 @@ binding = "DB"
 database_name = "sachoir"
 database_id = "73ecc443-6109-4a5f-8cc9-7c5dee3db0b2"
 migrations_dir = "migrations"
+
+# Le Worker s'appelle lui-même pour envoyer les notifications push par lots (un passage par lot, offre gratuite).
+[[services]]
+binding = "SELF"
+service = "le-sachoir-api"
 
 [triggers]
 # Toutes les 30 min entre 5 h et 11 h (heure de Paris en hiver) : la newsletter part dès que l'édition est publiée.

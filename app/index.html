@@ -409,6 +409,37 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .toast{position:absolute;left:50%;bottom:100px;transform:translateX(-50%) translateY(12px);z-index:90;background:var(--ink);color:#fff;padding:10px 15px;border-radius:14px;font-size:14px;font-weight:700;opacity:0;transition:.25s;pointer-events:none;width:max-content;max-width:86%;text-align:center}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ---------- Onboarding (premier lancement) et demande de notifications ---------- */
+.onb{position:absolute;inset:0;z-index:60;background:var(--cream);display:none;flex-direction:column;padding:max(14px,env(safe-area-inset-top)) 22px max(22px,env(safe-area-inset-bottom))}
+.onb.on{display:flex}
+.onb-top{display:flex;justify-content:space-between;align-items:center;min-height:36px}
+.onb-dots{display:flex;gap:6px}
+.onb-dots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:.25s}
+.onb-dots i.on{background:var(--ink);width:22px;border-radius:4px}
+.onb-skip{border:0;background:none;color:var(--muted);font-weight:700;font-size:14px;padding:6px 2px}
+.onb-body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px;animation:onbIn .35s ease-out}
+@keyframes onbIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.onb-art{font-size:76px;line-height:1;text-align:center;margin-bottom:4px}
+.onb-art img{height:64px;width:auto}
+.onb h2,.pask h2{font-family:var(--f-serif);font-weight:800;font-size:30px;line-height:1.05;margin:0;text-wrap:balance;text-align:center}
+.onb p,.pask p{margin:0;font-size:16.5px;line-height:1.45;text-align:center;color:#3d3832;text-wrap:pretty}
+.onb-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.onb-list li{display:flex;gap:12px;align-items:center;background:#fff;border-radius:16px;padding:11px 13px;font-size:15px}
+.onb-list b{font-size:22px;flex:0 0 30px;text-align:center}
+.onb-list small{display:block;color:var(--muted);font-size:13px}
+.onb-foot{display:flex;flex-direction:column;gap:8px}
+.onb-later{border:0;background:none;color:var(--muted);font-weight:700;font-size:15px;padding:10px}
+.bell{display:inline-block;transform-origin:50% 8%;animation:bell 2.4s ease-in-out infinite}
+@keyframes bell{0%,62%,100%{transform:rotate(0)}66%{transform:rotate(16deg)}72%{transform:rotate(-14deg)}78%{transform:rotate(10deg)}84%{transform:rotate(-6deg)}90%{transform:rotate(2deg)}}
+.notif{display:flex;gap:11px;align-items:flex-start;background:rgba(255,255,255,.92);border-radius:18px;padding:11px 13px;box-shadow:0 6px 22px rgba(23,20,15,.12),0 0 0 1px var(--line);text-align:left;animation:drop .6s cubic-bezier(.2,1.4,.4,1) .25s both}
+@keyframes drop{from{opacity:0;transform:translateY(-18px) scale(.96)}to{opacity:1;transform:none}}
+.notif img{width:38px;height:38px;border-radius:9px;flex:0 0 auto}
+.notif .nt{flex:1;min-width:0;font-size:14px;line-height:1.3}
+.notif .nh{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:1px}
+.notif b{display:block}
+.sheet .notif{margin:2px 0}
+.sheet .pask h2,.sheet .pask p{text-align:left}
+.sheet .pask .onb-art{font-size:58px;text-align:left}
 
 /* ---------- Production ---------- */
 html,body{background:var(--cream)}
@@ -836,6 +867,7 @@ body{overscroll-behavior-y:none}
 
   <div class="quiz" id="quiz" role="dialog" aria-modal="true" aria-label="Le jeu du jour"><div class="qz-in" id="qzIn"></div></div>
 
+  <div class="onb" id="onb" role="dialog" aria-modal="true" aria-label="Bienvenue au Sachoir"></div>
   <div class="scrim" id="scrim"><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div class="offline" id="offline">Hors ligne : édition enregistrée</div>
@@ -1261,7 +1293,7 @@ function updateReader(i, init) {
   save();
   if (i === total && !f.locked && !DESK.matches && !ME.installDone && !sessionStorage.getItem("installAsked") && !matchMedia("(display-mode: standalone)").matches) { sessionStorage.setItem("installAsked", "1"); setTimeout(openInstall, 900); }
 }
-function closeReader() { if (R.f) ev("depth", R.ed.date, R.f.id, Math.round(100 * Math.min(R.top + 1, R.f.cases.length) / (R.f.cases.length + (R.f.locked || 0)))); $("#reader").classList.remove("on"); if (R.io) R.io.disconnect(); render(); }
+function closeReader() { if (R.f) ev("depth", R.ed.date, R.f.id, Math.round(100 * Math.min(R.top + 1, R.f.cases.length) / (R.f.cases.length + (R.f.locked || 0)))); $("#reader").classList.remove("on"); if (R.io) R.io.disconnect(); render(); if (DESK.matches) setTimeout(maybeAskPush, 700); }
 let scT;
 $("#track").addEventListener("scroll", () => { if (DESK.matches) return; clearTimeout(scT); scT = setTimeout(() => { const tr = $("#track"), i = Math.round(tr.scrollLeft / tr.clientWidth); if (i !== R.idx) updateReader(i); }, 60); });
 function go(d) { const tr = $("#track"), i = Math.max(0, Math.min(R.n - 1, R.idx + d)); tr.scrollTo({ left: i * tr.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }
@@ -2185,6 +2217,7 @@ async function finishLogin(d) {
   ACC = { session: d.session, user: d.user, synced: Date.now() }; accSave();
   applyState(d.state); if (d.user.newsletter) { ME.nl = true; saveLocal(); }
   if (d.wallet) WALLET = d.wallet;
+  pushRefresh(true);
   closeSheet(); render();
   const plan = sessionStorage.getItem("sachoir.plan");
   if (plan && !d.user.premium) { sessionStorage.removeItem("sachoir.plan"); setTimeout(() => openPremium("dossier"), 600); }
@@ -2353,12 +2386,178 @@ function renderProfile() {
      <button id="m2">${I("#e1e8f7", "#2f4fa2", '<path d="M6 3h12v18l-6-4-6 4z"/>')}<span class="t">Dossiers Enregistrés</span>${ICON.chev}</button>
      <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter quotidienne<small>${!MAIL() ? "Bientôt disponible" : (ACC ? ACC.user?.newsletter : ME.nl) ? "Abonné ✓ L’édition chaque matin" : WALLET.newsletterGift ? "L’édition du jour, chaque matin" : "Un Grand Dossier offert à l’inscription"}</small></span>${ICON.chev}</button>
      <button id="m5">${I("#ece2f6", "#8a55b8", '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M18 8v6M15 11h6"/>')}<span class="t">Inviter des amis <em>(à devenir moins bêtes)</em>${MAIL() ? `<small>Un dossier offert par ami inscrit${WALLET.credits ? ` · ${WALLET.credits} à débloquer` : ""}</small>` : ""}</span>${ICON.chev}</button>
+     ${pushState() !== "none" ? `<button id="mPush">${I("#ffe9e4", "#c0392b", '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/>')}<span class="t">Notifications<small>${PUSH_LABEL[pushState()]}</small></span>${ICON.chev}</button>` : ""}
      <button id="m6">${I("#efebe3", "#17140f", '<rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 8v6M9.5 11.5L12 14l2.5-2.5"/>')}<span class="t">Installer l’application</span>${ICON.chev}</button>
    </div>`;
   $("#prName").onclick = openName;
   $("#tS").onclick = () => openTiers("serie"); $("#tE").onclick = () => openTiers("eru");
   $("#m1").onclick = openBilan; $("#m2").onclick = () => setTab("favs"); $("#m3").onclick = openNewsletter; if ($("#m0")) $("#m0").onclick = openAccount;
   $("#m5").onclick = openInvite; if ($("#mGift")) $("#mGift").onclick = openGifts; $("#m6").onclick = openInstall;
+  if ($("#mPush")) $("#mPush").onclick = openPush;
+}
+
+/* ---------- Notifications push (même appli fermée) ----------
+   Une notification par jour, quand l'édition sort (envoyée par l'API, jamais avant 7 h 30).
+   État propre à chaque appareil (pas synchronisé) : "on", "off" (refusé dans l'appli), "later" (iPhone pas encore installé).
+   iPhone : Apple ne les autorise que pour l'appli installée sur l'écran d'accueil (iOS 16.4 et plus). */
+const PUSH_KEY = "sachoir.push", ONB_KEY = "sachoir.onb";
+const IOS = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const STANDALONE = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+const lsGet = k => { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } };
+const lsSet = (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} };
+const pushCan = () => !!API && !!CFG.push && !!CFG.push_key && "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+// "on" | "off" | "denied" (bloqué dans le navigateur) | "ios" (à installer d'abord) | "ask" (jamais demandé) | "none" (impossible ici)
+function pushState() {
+  if (!API || !CFG.push) return "none";
+  if (IOS && !STANDALONE() && !("PushManager" in window)) return "ios";
+  if (!pushCan()) return "none";
+  if (Notification.permission === "denied") return "denied";
+  const st = lsGet(PUSH_KEY);
+  if (st === "on" && Notification.permission === "granted") return "on";
+  return st === "off" ? "off" : "ask";
+}
+const PUSH_LABEL = { on: "Activées ✓ Une par jour, quand l’édition sort", off: "Désactivées. On boude un peu.", denied: "Bloquées dans les réglages du navigateur", ios: "Installez d’abord l’appli (exigence d’Apple)", ask: "Être prévenu quand l’édition sort" };
+const keyBytes = k => { const s = k.replace(/-/g, "+").replace(/_/g, "/"); return Uint8Array.from(atob(s + "=".repeat((4 - s.length % 4) % 4)), c => c.charCodeAt(0)); };
+async function pushSubscribe(hello = true) {
+  const reg = await navigator.serviceWorker.ready;
+  let sub = await reg.pushManager.getSubscription();
+  // Clé du serveur changée : l'ancien abonnement ne marchera plus, on le refait.
+  if (sub && sub.options?.applicationServerKey) {
+    const a = new Uint8Array(sub.options.applicationServerKey), b = keyBytes(CFG.push_key);
+    if (a.length !== b.length || a.some((x, i) => x !== b[i])) { await sub.unsubscribe().catch(() => {}); sub = null; }
+  }
+  if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: keyBytes(CFG.push_key) });
+  await api("/push/subscribe", { body: { sub: sub.toJSON(), d: DEVICE, hello } });
+  lsSet(PUSH_KEY, "on"); lsSet("sachoir.pushday", TODAY);
+}
+// À appeler directement dans le toucher sur le bouton (le navigateur exige un geste de l'utilisateur).
+async function pushEnable(btn) {
+  if (!pushCan()) { toast("Votre navigateur ne sait pas recevoir de notifications. Il est un peu vintage."); return false; }
+  if (btn) { btn.disabled = true; btn.textContent = "Le navigateur réfléchit…"; }
+  let perm;
+  try { perm = await Notification.requestPermission(); } catch (e) { perm = Notification.permission; }
+  if (perm !== "granted") {
+    if (btn) { btn.disabled = false; btn.textContent = "Oui, toquez-moi 🔔"; }
+    if (perm === "denied") { toast("Le navigateur a dit non. Vous pourrez changer d’avis dans Profil."); return false; }
+    toast("Pas de réponse ? On prend ça pour un « peut-être »."); return false;
+  }
+  try { await pushSubscribe(true); ev("push", "", "on"); toast("C’est branché ! Une notif d’essai arrive pour prouver qu’on ne ment pas."); return true; }
+  catch (e) { if (btn) { btn.disabled = false; btn.textContent = "Réessayer"; } toast("Le facteur des notifs a trébuché. Réessayez dans un instant."); return false; }
+}
+async function pushDisable() {
+  try {
+    const sub = await (await navigator.serviceWorker.ready).pushManager.getSubscription();
+    if (sub) { api("/push/unsubscribe", { body: { endpoint: sub.endpoint }, anon: true }).catch(() => {}); await sub.unsubscribe(); }
+  } catch (e) {}
+  lsSet(PUSH_KEY, "off"); ev("push", "", "off");
+}
+// Au démarrage : l'abonnement peut avoir expiré (le navigateur le renouvelle parfois) ; on le renvoie une fois par jour.
+async function pushRefresh(force) {
+  if (pushState() !== "on") { if (lsGet(PUSH_KEY) === "on" && pushCan() && Notification.permission !== "granted") lsSet(PUSH_KEY, ""); return; }
+  if (!force && lsGet("sachoir.pushday") === TODAY) return;
+  try { await pushSubscribe(false); } catch (e) {}
+}
+const NOTIF_DEMO = () => `<div class="notif" aria-hidden="true"><img src="assets/icon-192.png" alt=""><div class="nt"><div class="nh"><span>Le Sachoir</span><span>maintenant</span></div><b>☕ L’édition du jour est servie</b>Au menu : la guerre froide, des abeilles syndiquées et le jeu du jour.</div></div>`;
+// Contenu de la demande, selon l'appareil. done(accepté) est appelé quand c'est réglé, dans un sens ou dans l'autre.
+function pushAskHTML(st) {
+  if (st === "ios") return `<div class="onb-art"><span class="bell">🔔</span></div>
+    <h2>Les notifs ? Apple a son mot à dire</h2>
+    <p>Sur iPhone, seules les applis installées sur l’écran d’accueil ont le droit de sonner. Une histoire de protocole. Installez Le Sachoir (trois gestes, zéro store), et on vous repose la question là-bas.</p>${NOTIF_DEMO()}`;
+  return `<div class="onb-art"><span class="bell">🔔</span></div>
+    <h2>On peut toquer à votre écran ?</h2>
+    <p>Une seule notif par jour, quand l’édition sort. Pas de « Vous nous manquez 🥺 », pas de promo sur les chaussettes. Juste ça :</p>${NOTIF_DEMO()}
+    <p style="font-size:13.5px;color:var(--muted)">Promis : jamais à 3 h du matin. Napoléon dormait 4 h par nuit, pas vous.</p>`;
+}
+function pushAskFoot(st) {
+  return st === "ios" ? `<button class="cta" id="paYes">Installer l’appli</button><button class="onb-later" id="paNo">Plus tard, j’aime le suspense</button>`
+    : `<button class="cta" id="paYes">Oui, toquez-moi 🔔</button><button class="onb-later" id="paNo">Non merci, j’ai déjà un réveil</button>`;
+}
+function wirePushAsk(st, done) {
+  $("#paYes").onclick = async e => {
+    if (st === "ios") { lsSet(PUSH_KEY, "later"); done(false); setTimeout(openInstall, 250); return; }
+    done(await pushEnable(e.currentTarget));
+  };
+  $("#paNo").onclick = () => {
+    lsSet(PUSH_KEY, st === "ios" ? "later" : "off"); ev("push", "", "no");
+    toast(st === "ios" ? "D’accord. On vous relancera une fois l’appli installée." : "Compris. Vous changerez d’avis dans Profil › Notifications.");
+    done(false);
+  };
+}
+// Demande seule (sans le reste de l'onboarding), dans une feuille : utilisateurs déjà là, PC, ou appli fraîchement installée.
+function openPushAsk() {
+  const st = pushState();
+  if (st !== "ask" && st !== "ios") return;
+  try { sessionStorage.setItem("sachoir.pushasked", "1"); } catch (e) {}
+  openSheet(`<div class="onb-body pask" style="animation:none;gap:14px">${pushAskHTML(st)}</div>${pushAskFoot(st)}`);
+  wirePushAsk(st, () => closeSheet());
+}
+function maybeAskPush() {
+  if (lsGet(PUSH_KEY) || sessionStorage.getItem("sachoir.pushasked") || $("#scrim").classList.contains("on") || $("#reader").classList.contains("on") || $("#onb").classList.contains("on")) return;
+  const st = pushState();
+  if (st === "ask") openPushAsk();
+}
+function openPush() {
+  const st = pushState();
+  if (st === "ask" || st === "ios") return openPushAsk();
+  if (st === "on") {
+    openSheet(`<h3>🔔 Notifications activées</h3><p>Une par jour, quand l’édition sort, jamais avant 7 h 30. Si elles n’arrivent pas, vérifiez que le mode « Ne pas déranger » ne fait pas de zèle.</p>${NOTIF_DEMO()}
+      <button class="btn ghost" id="puOff">Couper les notifications</button>`);
+    $("#puOff").onclick = async () => { await pushDisable(); closeSheet(); render(); toast("Silence radio. Votre culture G, elle, reste ouverte."); };
+    return;
+  }
+  if (st === "off") {
+    openSheet(`<h3>On se reparle ?</h3><p>Une notif par jour, quand l’édition sort. Rien d’autre, même pas pour votre anniversaire (on ne le connaît pas).</p>${NOTIF_DEMO()}<button class="cta" id="puOn">Réactiver les notifications</button>`);
+    $("#puOn").onclick = async e => { if (await pushEnable(e.currentTarget)) { closeSheet(); render(); } };
+    return;
+  }
+  if (st === "denied") openSheet(`<h3>Bloquées par le navigateur</h3><p>Vous (ou un doigt distrait) avez refusé les notifications. On ne peut pas les rallumer d’ici, c’est votre navigateur qui tient la clé.</p>
+    <ol class="steps"><li><span class="n">1</span><span><strong>${IOS ? "Réglages › Notifications › Le Sachoir" : "Touchez le cadenas à gauche de l’adresse (ou ⋮ › Infos sur le site)"}</strong><small>${IOS ? "Tout en bas de la liste, entre deux applis de météo." : "Sur une appli installée : appui long sur l’icône › Infos sur l’appli."}</small></span></li><li><span class="n">2</span><span><strong>Autorisez les notifications</strong><small>Puis revenez ici. On vous attend, la tasse à la main.</small></span></li></ol>`);
+}
+
+/* ---------- Onboarding : trois écrans au premier lancement (téléphone) ---------- */
+function openOnboarding() {
+  const withPush = ["ask", "ios"].includes(pushState());
+  const slides = ["hello", "how", ...(withPush ? ["push"] : [])];
+  let i = 0;
+  const el = $("#onb");
+  const finish = () => { lsSet(ONB_KEY, "1"); el.classList.remove("on"); render(); };
+  const draw = () => {
+    const k = slides[i], last = i === slides.length - 1;
+    const top = `<div class="onb-top"><div class="onb-dots" aria-hidden="true">${slides.map((_, j) => `<i class="${j === i ? "on" : ""}"></i>`).join("")}</div>${last ? "" : `<button class="onb-skip" id="obSkip">Passer</button>`}</div>`;
+    let body, foot;
+    if (k === "hello") {
+      body = `<div class="onb-art"><img src="assets/logo.png" alt="Le Sachoir" style="height:78px"></div>
+        <h2>Bienvenue au Sachoir</h2>
+        <p>Chaque jour, l’actu et la culture G en BD. Cinq minutes, et vous voilà capable de briller au dîner. Ou au moins de faire semblant avec aplomb.</p>`;
+      foot = `<button class="cta" id="obNext">Je veux briller</button>`;
+    } else if (k === "how") {
+      body = `<div class="onb-art">👆</div><h2>Ça se lit comme une story</h2>
+        <ul class="onb-list">
+          <li><b>👉</b><span>Touchez à droite<small>Case suivante. Le suspense est insoutenable.</small></span></li>
+          <li><b>👈</b><span>Touchez à gauche<small>On revient. Personne ne vous jugera.</small></span></li>
+          <li><b>❤️</b><span>Double toucher<small>Un j’aime. C’est gratuit et ça fait plaisir au dessinateur.</small></span></li>
+          <li><b>🎲</b><span>À la fin, le jeu du jour<small>Aucune interro surprise. Enfin, presque.</small></span></li>
+        </ul>`;
+      foot = `<button class="cta" id="obNext">${last ? "C’est parti" : "Compris, chef"}</button>`;
+    } else {
+      body = pushAskHTML(pushState());
+      foot = pushAskFoot(pushState());
+    }
+    el.innerHTML = `${top}<div class="onb-body">${body}</div><div class="onb-foot">${foot}</div>`;
+    if (k === "push") wirePushAsk(pushState(), finish);
+    else $("#obNext").onclick = () => { if (last) finish(); else { i++; draw(); } };
+    if ($("#obSkip")) $("#obSkip").onclick = () => { if (withPush && slides[i] !== "push") { i = slides.length - 1; draw(); } else finish(); };
+  };
+  el.classList.add("on"); draw();
+}
+// Premier lancement : onboarding complet pour un nouveau lecteur sur téléphone ; sinon, la question des notifs seule, une fois.
+function startOnboarding() {
+  if (new URLSearchParams(location.search).has("f")) return; // lien direct vers une BD : on ne fait pas attendre
+  if (!DESK.matches && !lsGet(ONB_KEY) && !ME.reads.length) return openOnboarding();
+  lsSet(ONB_KEY, "1");
+  // Appli installée sur iPhone après un « plus tard » : c'est le moment de reposer la question.
+  if (!DESK.matches && (!lsGet(PUSH_KEY) || (lsGet(PUSH_KEY) === "later" && STANDALONE()))) { if (lsGet(PUSH_KEY) === "later") lsSet(PUSH_KEY, ""); setTimeout(maybeAskPush, 1500); }
+  else if (DESK.matches && ME.reads.length) setTimeout(maybeAskPush, 1500);
 }
 
 /* ---------- Démarrage ---------- */
@@ -2382,8 +2581,13 @@ async function startAccount() {
   } else if (ACC) { try { const d = await api(`/me?d=${DEVICE}`); ACC.user = d.user; accSave(); if (d.wallet) WALLET = d.wallet; } catch (e) {} syncNow().then(() => render()); }
 }
 ev("open");
+if (new URLSearchParams(location.search).get("from") === "push") {
+  ev("push", "", "open");
+  const q = new URLSearchParams(location.search); q.delete("from");
+  history.replaceState(null, "", location.pathname + (q.toString() ? "?" + q : "") + location.hash);
+}
 (async () => {
-  startAccount();
+  startAccount().catch(() => {}).then(() => { pushRefresh(); startOnboarding(); });
   try {
     await loadIndex();
     const wanted = new URLSearchParams(location.search).get("d");

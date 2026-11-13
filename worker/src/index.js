@@ -5,10 +5,11 @@ import { nowIso, parisDay, parisHour, shiftDay, addSeconds, randomToken, randomC
 import { brevoSend, loginMail, welcomeMail, confirmMail, newsletterMail, loadEdition, page, btn, h1, mailLimit } from "./mail.js";
 import { adminQueue, adminItem } from "./credits.js";
 import { ownerOf, wallet, grant, grantNewsletter, rewardReferral, mergeOwners, unlock, premiumDossier, premiumImg, refCode, DEVICE_RE } from "./credits.js";
+import { vapid, pushSubscribe, pushUnsubscribe, pushDaily, pushBatch, pushTest, internalKey, editionPayload } from "./push.js";
 import { PLANS, stripeOn, checkout, confirm as payConfirm, checkPending, webhook, setCancel, portal, cancelNow } from "./pay.js";
 
 const SESSION_DAYS = 365;
-const EVENT_TYPES = new Set(["open", "read", "done", "depth", "game", "share", "fav", "install", "paywall"]);
+const EVENT_TYPES = new Set(["open", "read", "done", "depth", "game", "share", "fav", "install", "paywall", "push"]);
 const GIF = Uint8Array.from(atob("R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"), c => c.charCodeAt(0));
 
 /* ---------- Réponses et CORS ---------- */
@@ -265,7 +266,16 @@ async function kpi(env, days) {
     revenue: { stripe: stripeOn(env), byPlan: R(payPlan), daily: R(payDay), totalCents: F(payAll).cents || 0, totalCount: F(payAll).n || 0 },
     credits: { grants: R(grantsR), unlocks: F(unlocksN).n || 0 },
     mails: { today: R(mailsDay), limit: mailLimit(env) },
+    push: await pushStats(env),
   };
+}
+
+async function pushStats(env) {
+  const [n, runs] = await env.DB.batch([
+    env.DB.prepare("SELECT COUNT(*) AS n, SUM(user_id IS NOT NULL) AS accounts, SUM(fails > 0) AS failing FROM push_subs"),
+    env.DB.prepare("SELECT day, sent, failed, gone, title FROM push_runs ORDER BY day DESC LIMIT 14"),
+  ]);
+  return { ...(n.results[0] || {}), runs: runs.results };
 }
 
 async function adminUsers(env, url) {
@@ -325,7 +335,16 @@ async function route(req, env, url, ctx) {
     mail: !!env.BREVO_API_KEY || env.DEV === "1", stripe: stripeOn(env),
     paywall: stripeOn(env) && env.PAYWALL !== "off",
     prices: { month: PLANS.month.amount, year: PLANS.year.amount },
+    ...await vapid(env).then(v => ({ push: true, push_key: v.pub })).catch(() => ({ push: false })),
   });
+  // Notifications push : abonnement de l'appareil (avec ou sans compte), désabonnement, et lots envoyés par la tâche planifiée.
+  if (p === "/push/subscribe" && M === "POST") { const r = await pushSubscribe(env, await body(req), await currentUser(req, env), ctx); return r.error ? err(r.error) : json(r); }
+  if (p === "/push/unsubscribe" && M === "POST") return json(await pushUnsubscribe(env, await body(req)));
+  if (p === "/push/run" && M === "POST") {
+    const b = await body(req);
+    if (!env.SIGNING_KEY || req.headers.get("x-sachoir-key") !== await internalKey(env, String(b.day || ""))) return err("Interdit.", 403);
+    return json(await pushBatch(env, b.day, b.ids, b.payload));
+  }
   if (p === "/pay/webhook" && M === "POST") return webhook(req, env);
   if (p === "/premium/img") return premiumImg(env, url, ctx);
   if (p === "/auth/request" && M === "POST") return authRequest(req, env);
@@ -433,6 +452,7 @@ async function route(req, env, url, ctx) {
     await cancelNow(env, u);
     await env.DB.batch([
       env.DB.prepare("DELETE FROM sessions WHERE user_id = ?").bind(u.id),
+      env.DB.prepare("DELETE FROM push_subs WHERE user_id = ?").bind(u.id),
       env.DB.prepare("DELETE FROM user_state WHERE user_id = ?").bind(u.id),
       env.DB.prepare("DELETE FROM subscribers WHERE email = ?").bind(u.email),
       env.DB.prepare("UPDATE devices SET user_id = NULL WHERE user_id = ?").bind(u.id),
@@ -460,6 +480,12 @@ async function route(req, env, url, ctx) {
     if (p === "/admin/queue") { const q = await adminQueue(env); return q.error ? err(q.error, 404) : json(q); }
     if (p === "/admin/item") { const it = await adminItem(env, url.searchParams.get("dir")); return it.error ? err(it.error, 404) : json(it); }
     if (p === "/admin/users" && M === "POST") return adminSetPremium(req, env);
+    if (p === "/admin/push" && M === "POST") {
+      const ed = await loadEdition(env, parisDay()) || await loadEdition(env, shiftDay(parisDay(), -1));
+      if (!ed) return err("Pas d'édition récente à annoncer.", 404);
+      const r = await pushTest(env, u, editionPayload(env, ed));
+      return r.devices ? json(r) : err("Aucun appareil abonné sur ce compte : activez les notifications dans l'appli, connecté à ce compte.", 404);
+    }
     if (p === "/admin/newsletter/preview") {
       const ed = await loadEdition(env, url.searchParams.get("day") || parisDay());
       if (!ed) return err("Pas d'édition publiée ce jour-là.", 404);
@@ -483,6 +509,11 @@ async function cron(env) {
   if (h === 5) console.log("publication", await rebuildSite(env) ? "lancée" : "non lancée (DISPATCH_TOKEN manquant ou refusé)");
   const out = await sendNewsletter(env);
   console.log("newsletter", JSON.stringify(out));
+  // Notification push : même règle que la newsletter (3 BD avant 9 h), et pas avant PUSH_FROM.
+  try {
+    const ed = await loadEdition(env, parisDay());
+    if (ed && (ed.stories.length >= 3 || h >= 9)) console.log("push", JSON.stringify(await pushDaily(env, ed)));
+  } catch (e) { console.error("push", e.stack || e); }
   if (h === 10) {
     await env.DB.batch([
       env.DB.prepare("DELETE FROM logins WHERE created_at < ?").bind(new Date(Date.now() - 2 * 86400e3).toISOString()),
