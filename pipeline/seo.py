@@ -201,6 +201,13 @@ def story_page(s, ed_dir: Path, related, gate=False):
             if fig:
                 panels.append(fig)
             continue
+        if c.get("kind") == "buzz":
+            src = c.get("source") or {}
+            link = f' <a href="{e(src["url"])}" rel="nofollow noopener" target="_blank">{e(src.get("title") or "Source")}</a>' if str(src.get("url", "")).startswith("https://") else ""
+            panels.append(f'<figure class="panel explain"><figcaption><b class="ex-tag">{e(c.get("tag") or "Sur Internet")}</b>'
+                          f'<strong>{e(c.get("name") or "Internet")} {e(c.get("handle") or "")}</strong><p>{e(c.get("text", ""))}</p>'
+                          f'<p>{e(c.get("why", ""))}{link}</p></figcaption></figure>')
+            continue
         if c.get("kind") == "explain":
             paras = "".join(f"<p>{e(t)}</p>" for t in str(c.get("text") or "").split("\n") if t.strip())
             steps = ("<ol>" + "".join(f"<li>{e(t)}</li>" for t in c.get("steps") or []) + "</ol>") if c.get("steps") else ""

@@ -8,6 +8,7 @@ Utilisé aussi par publish.py : une édition illisible est ignorée, un format e
 mais le reste du site part quand même.
 """
 import json
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -114,7 +115,27 @@ def check_story(fmt: dict, d: Path, err, warn):
     if not isinstance(cases, list) or not cases:
         err("aucune case")
         return
-    drawn = [c for c in cases if isinstance(c, dict) and c.get("kind") not in ("explain", "photo")]
+    drawn = [c for c in cases if isinstance(c, dict) and c.get("kind") not in ("explain", "photo", "buzz")]
+    # « Pendant ce temps, sur Internet » (13 novembre 2026) : 3 cases à la fin de l'Actu, réécrites par nous.
+    buzz = [c for c in cases if isinstance(c, dict) and c.get("kind") == "buzz"]
+    if buzz and fid != "actu":
+        warn("cases « Sur Internet » (kind buzz) réservées à l'Actu")
+    if fid == "actu" and buzz:
+        if len(buzz) > 3:
+            warn(f"{len(buzz)} cases « Sur Internet », 3 au plus")
+        tail = cases[-len(buzz):]
+        if any(not (isinstance(c, dict) and c.get("kind") == "buzz") for c in tail):
+            warn("les cases « Sur Internet » vont toutes à la fin de l'Actu, à la suite")
+        for c in buzz:
+            k = c.get("n", "?")
+            if words(c.get("text")) > 40:
+                warn(f"case {k} (Sur Internet) : {words(c.get('text'))} mots (max 40)")
+            if words(c.get("why")) > 30:
+                warn(f"case {k} (Sur Internet) : « why » de {words(c.get('why'))} mots (max 30)")
+            if not re.match(r"^@[A-Za-zÀ-ÿ0-9_]{2,24}$", str(c.get("handle") or "")):
+                warn(f"case {k} (Sur Internet) : « handle » inventé et générique attendu (« @Internet »)")
+            if not str((c.get("source") or {}).get("url", "")).startswith("https://"):
+                warn(f"case {k} (Sur Internet) : source (article qui explique la tendance) manquante")
     if len(drawn) > MAX_CASES.get(fid, 99):
         warn(f"{len(drawn)} cases dessinées, au-delà du plafond de {MAX_CASES[fid]} (quota d'images)")
     check_cast_distinct([c for c in fmt.get("cast", []) or [] if isinstance(c, dict)], warn)

@@ -28,6 +28,11 @@ Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'i
 - Une seule image dessinée par sujet : on peut traiter 4 à 6 sujets sans dessiner plus (les photos ne coûtent rien).
 - Exemple de forme (sujet inventé, ne jamais le reprendre) : récitatif « La mairie de Lyon interdit les trottinettes en libre-service dans le centre dès lundi, après 300 plaintes de piétons en un an. » ; bulle d'un livreur à trottinette, figé sur la ligne : « Techniquement, ma roue avant est encore dans le 7e. » ; puis la case Quoi / Pourquoi ça compte / Et maintenant.
 
+## « Pendant ce temps, sur Internet » (fin de l'Actu, 13 novembre 2026)
+- Trois tendances légères du jour, en cartes de post **réécrites par nous** : on montre ce qui amuse ou agite Internet, sans jamais recopier un vrai post.
+- Le ton : celui d'un ami qui raconte le buzz du jour à la machine à café. Une chute par post. On rit avec Internet, pas d'une personne.
+- Interdits : particuliers (nom, pseudo, visage), drames et victimes, santé, politique partisane, rumeurs non vérifiées. Le « Pourquoi ça buzze » reste neutre et sourcé.
+
 ## Le casting : adapté à l'histoire
 - Les personnages sont **des humains** (figures historiques, témoins, scientifiques, gens ordinaires de l'époque) et, quand le sujet s'y prête vraiment, des animaux réels de l'histoire.
 - **Pas d'objets, de cellules, de molécules ni de billets qui parlent.** Pour expliquer un phénomène invisible, on le fait expliquer par un humain (un scientifique, un prof, un témoin), avec un objet ou un schéma dessiné à côté si besoin.
