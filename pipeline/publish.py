@@ -264,6 +264,8 @@ def main(now: datetime | None = None):
                               "url": "" if x["id"] == "quiz" else f"histoires/{seo.story_slug(d.name, x)}/",
                               "theme": x.get("theme", ""), "minutes": x.get("minutes", 0),
                               "tagline": x.get("tagline", ""),
+                              # Nombre de cases lisibles : l'appli affiche « Lu ✓ » ou « Case 3 / 10 » dans les listes.
+                              "cases": len([c for c in x.get("cases", []) if c.get("kind") != "photo" or (c.get("photo") or {}).get("status") == "done"]),
                               "cover": x.get("cover", {}).get("file") if x.get("cover", {}).get("status") == "done" else None}
                              for x in ready],
             })
