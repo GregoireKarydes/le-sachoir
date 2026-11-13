@@ -455,16 +455,15 @@
             }
           ],
           "image": {
-            "prompt": "a bare meeting room with rows of tiny grey gentlemen seated perfectly still, expressionless. Léa (tall, lanky, orange backpack) on the left standing among them, staring straight at the viewer, deadpan; Charles (heavy-set, bushy sideburns) on the right, sitting stiffly, looking at the viewer with a tiny shrug. medium shot",
+            "prompt": "a quiet lecture hall with empty wooden benches. Léa (tall, lanky, orange backpack) on the left, arms spread wide, amazed; Charles (heavy-set, bushy sideburns) on the right, sitting on a bench with the notebook on his knees, giving a small polite shrug. medium shot",
             "cast": [
               "lea",
               "darwin"
             ],
             "file": "images/dossier-12.webp",
-            "status": "failed",
-            "attempts": 3,
-            "same_place": false,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (2f1aa5a3-806e-4f43-adff-98bfc30691e3)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "pending",
+            "attempts": 0,
+            "same_place": false
           }
         },
         {
@@ -759,6 +758,5 @@
         }
       ]
     }
-  ],
-  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
+  ]
 }
