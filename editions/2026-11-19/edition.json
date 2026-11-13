@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-19",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "plusmoins",
+      "label": "Plus ou moins",
+      "title": "Vieilles pierres contre jeunes premières",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "chain",
+          "q": "Lequel est le plus ancien ?",
+          "hint": "Un monument parisien n’est pas forcément vieux.",
+          "crit": "plus ancien",
+          "pick": "min",
+          "items": [
+            { "name": "La tour Eiffel", "value": 1889, "label": "1889", "explain": "Construite pour l’Exposition universelle de 1889." },
+            { "name": "L’Arc de triomphe de l’Étoile", "value": 1836, "label": "1836", "explain": "Voulu par Napoléon en 1806, inauguré seulement en 1836." },
+            { "name": "Notre-Dame de Paris", "value": 1163, "label": "1163", "explain": "Le chantier commence vers 1163 et dure près de deux siècles." },
+            { "name": "Le pont du Gard", "value": 50, "label": "vers 50", "explain": "Un aqueduc romain bâti vers l’an 50 pour alimenter Nîmes." },
+            { "name": "La pyramide du Louvre", "value": 1989, "label": "1989", "explain": "Inaugurée le 29 mars 1989, œuvre de l’architecte Pei." },
+            { "name": "L’abbaye du Mont-Saint-Michel", "value": 966, "label": "966", "explain": "Fondée en 966 par le duc de Normandie, confiée aux bénédictins." },
+            { "name": "Le château de Chambord", "value": 1519, "label": "1519", "explain": "François Ier lance le chantier en 1519." },
+            { "name": "L’Opéra Garnier", "value": 1875, "label": "1875", "explain": "Inauguré en 1875, sous la IIIe République." }
+          ],
+          "explain": "Entre le pont du Gard et la pyramide du Louvre, presque deux mille ans d’écart. Et la tour Eiffel, qu’on croit éternelle, n’a « que » 137 ans.",
+          "source": { "title": "Larousse — Le Mont-Saint-Michel", "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946" }
+        }
+      ],
+      "sources": [
+        { "title": "Larousse — Le Mont-Saint-Michel", "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946" },
+        { "title": "France.fr — Le Pont du Gard, merveille de l’Antiquité", "url": "https://www.france.fr/fr/article/site-du-pont-du-gard/" },
+        { "title": "Ministère de la Culture — Musée du Louvre, les trente ans de la pyramide", "url": "https://www.culture.gouv.fr/actualites/Musee-du-Louvre-les-trente-ans-de-la-pyramide" },
+        { "title": "France.fr — The Opéra Garnier: an icon of Parisian architecture", "url": "https://www.france.fr/en/article/palais-garnier-opera-national-paris/" },
+        { "title": "Sortir à Paris — 15 août, première pierre de l’Arc de triomphe", "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/257448-ephemeride-du-15-aout-on-pose-la-premiere-pierre-de-l-arc-de-triomphe-a-paris" }
+      ]
+    }
+  ]
+}
