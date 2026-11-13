@@ -438,6 +438,72 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .notif .nh{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:1px}
 .notif b{display:block}
 .sheet .notif{margin:2px 0}
+/* ---------- Onboarding v2 ---------- */
+.onb-dots i.past{background:var(--ink);opacity:.35}
+.onb-art.sm{font-size:54px}
+.onb-fan{position:relative;height:230px;margin:0 auto 6px;width:100%;max-width:320px}
+.onb-fan .of{position:absolute;width:150px;aspect-ratio:3/4;border-radius:16px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);overflow:hidden;background:#fff;animation:ofIn .5s cubic-bezier(.2,1.3,.4,1) both}
+.onb-fan .of img{width:100%;height:100%;object-fit:cover}
+.onb-fan .of b{position:absolute;left:7px;bottom:7px;background:var(--c);color:#fff;border-radius:6px;padding:2px 7px;font-size:10.5px;text-transform:uppercase;letter-spacing:.4px}
+.onb-fan .of0{left:2%;top:26px;transform:rotate(-8deg);animation-delay:.05s}
+.onb-fan .of1{left:50%;margin-left:-75px;top:0;z-index:2;animation-delay:.15s}
+.onb-fan .of2{right:2%;top:30px;transform:rotate(7deg);animation-delay:.25s}
+@keyframes ofIn{from{opacity:0;translate:0 30px}}
+.onb-proof{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.onb-proof span{background:#fff;border-radius:999px;padding:5px 11px;font-size:13px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.onb-likes{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.ol{display:flex;align-items:center;gap:8px;border:2px solid var(--line);background:#fff;border-radius:14px;padding:12px 11px;font-weight:700;font-size:14.5px;text-align:left;transition:.15s}
+.ol span{font-size:22px}
+.ol[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,#fff);box-shadow:0 3px 0 var(--c);transform:translateY(-2px)}
+.onb .field input{font-size:20px;text-align:center;padding:14px;border-radius:16px}
+.onb-first{display:flex;gap:12px;align-items:center;width:100%;border:3px solid var(--ink);border-radius:18px;background:#fff;padding:8px;text-align:left;box-shadow:4px 4px 0 var(--ink)}
+.onb-first img{width:74px;height:96px;object-fit:cover;border-radius:10px;flex:0 0 auto}
+.onb-first span{display:flex;flex-direction:column;gap:3px}
+.onb-first small{font-size:11.5px;font-weight:800;text-transform:uppercase;color:var(--c)}
+.onb-first b{font-family:var(--f-serif);font-size:18px;line-height:1.15}
+.onb-first em{font-style:normal;font-weight:700;font-size:13.5px;color:var(--muted)}
+.onb-hint{font-size:14px!important;color:var(--muted)!important}
+/* ---------- Mode d'emploi sur la première BD ---------- */
+.coach{position:absolute;inset:0;z-index:40;display:grid;grid-template-columns:1fr 2fr;grid-template-rows:1fr auto;background:rgba(23,20,15,.55);opacity:0;transition:opacity .3s}
+.coach.on{opacity:1}
+.cz{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#fff;font-weight:700;font-size:15px;text-align:center}
+.cz b{font-size:40px;animation:tapx 1.4s ease-in-out infinite}
+.cz.l{border-right:2px dashed rgba(255,255,255,.6);background:rgba(255,255,255,.06)}
+@keyframes tapx{50%{transform:scale(.85)}}
+.cm{grid-column:1/-1;background:var(--cream);border-radius:22px 22px 0 0;padding:18px 18px max(18px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:8px;font-size:15.5px}
+.cm p{margin:0}
+/* ---------- Fin de BD : la suite et une invitation ---------- */
+.nextup{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;border:0;border-radius:16px;background:var(--c);color:#fff;padding:11px 44px 11px 14px;text-align:left;position:relative;box-shadow:0 3px 0 rgba(23,20,15,.25)}
+.nextup small{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;opacity:.9}
+.nextup b{font-family:var(--f-serif);font-size:17px;line-height:1.15}
+.nextup span{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:900}
+.alldone{background:#dff0e6;border-radius:14px;padding:10px 12px;font-size:14.5px;line-height:1.35}
+.convn{display:flex;gap:10px;align-items:center;background:#fff4d6;border-radius:14px;padding:9px 10px}
+.convn .ic{font-size:22px}
+.convn .tx{flex:1;display:flex;flex-direction:column;min-width:0}
+.convn b{font-size:14px;line-height:1.2}.convn small{font-size:12.5px;color:#5f4a1a;line-height:1.25}
+.convn .btn.sm{white-space:nowrap;padding:7px 11px;font-size:13px}
+/* ---------- Accueil : bien démarrer et progression du jour ---------- */
+.start{background:#fff;border-radius:20px;padding:13px 14px 8px;box-shadow:0 4px 14px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:8px;border:2px solid var(--yellow)}
+.start .sh{display:flex;align-items:center;gap:8px}
+.start .sh b{font-family:var(--f-serif);font-size:19px;flex:1}
+.start .sh span{font-weight:800;font-size:13px;background:var(--yellow);border-radius:999px;padding:2px 9px}
+.start .nx{border:0;background:var(--grey);border-radius:50%;width:26px;height:26px;font-size:11px;padding:0}
+.sbar{height:6px;border-radius:3px;background:var(--grey);overflow:hidden}.sbar i{display:block;height:100%;background:var(--green);border-radius:3px;transition:width .4s}
+.sl{display:flex;flex-direction:column}
+.si{display:flex;gap:11px;align-items:center;border:0;background:none;padding:9px 0;text-align:left;border-bottom:1px solid var(--line)}
+.si:last-child{border-bottom:0}
+.si .ck{flex:0 0 24px;height:24px;border-radius:50%;border:2px solid #cfc7b8;display:grid;place-items:center;font-size:13px;font-weight:900;color:#fff}
+.si.ok .ck{background:var(--green);border-color:var(--green)}
+.si.ok b{color:var(--muted);text-decoration:line-through;font-weight:500}
+.si.nx1 .ck{border-color:var(--ink);box-shadow:0 0 0 3px #fff1cf}
+.si .tx{flex:1;display:flex;flex-direction:column}
+.si b{font-size:15px;font-weight:700}.si small{font-size:12.5px;color:var(--muted)}
+.si .chev{width:16px;height:16px;color:#b5ad9f}
+.tprog{display:flex;align-items:center;gap:10px;margin-top:-8px;font-size:13px;color:var(--muted);font-weight:500}
+.tprog .dots{display:flex;gap:4px}
+.tprog i{width:18px;height:6px;border-radius:3px;background:var(--line)}
+.tprog i.on{background:var(--c)}
 /* ---------- Listes d'histoires (Découvrir, Favoris) ---------- */
 .blk{display:flex;flex-direction:column;gap:10px}
 .bh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
@@ -815,6 +881,7 @@ body{overscroll-behavior-y:none}
   .scard:hover .cv,.fcard .go:hover .cv{transform:translateY(-3px)}
   .cv{transition:transform .15s}
   .nudge{max-width:760px}
+  .start{max-width:640px}
   .aitem:hover{box-shadow:0 6px 16px rgba(0,0,0,.1)}
   #v-profile.on{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
   #v-profile > .row{grid-column:1/-1}
@@ -1255,9 +1322,12 @@ function renderHome() {
     : `${F.dossier ? card.dossier(F.dossier) : ""}
    ${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
    ${F.insolite ? card.wide(F.insolite) : ""}`;
+  const prog = isToday && !ed.empty ? todayProgress(ed) : null;
   const fresh = setHTML(v, `
-   <div><h1 class="h1 hello">${hello}</h1><p class="lead">Prêt à briller en société (ou au moins à faire semblant) ?</p></div>
+   <div><h1 class="h1 hello">${hello}</h1><p class="lead">${prog && prog.done === prog.total ? "Édition bouclée. Vous pouvez briller en toute légalité." : prog && prog.done ? `Plus que ${prog.total - prog.done} à lire. Vous y êtes presque.` : "Prêt à briller en société (ou au moins à faire semblant) ?"}</p></div>
+   ${startHTML()}
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
+   ${prog ? `<div class="tprog" aria-label="Progression du jour : ${prog.done} sur ${prog.total}"><div class="dots">${prog.items.map(x => `<i class="${x.done ? "on" : ""}" style="--c:${COLOR[x.id]}" title="${esc(x.label)}"></i>`).join("")}</div><span>${prog.done === prog.total ? "🎉 Tout lu aujourd’hui" : `${prog.done} / ${prog.total} aujourd’hui · ~${prog.left} min restantes`}</span></div>` : ""}
    ${isToday ? `<button class="wx wait" id="wxLine"></button>` : ""}
    ${ed.empty
       ? `<div class="empty-state"><h2>${isToday ? "L’édition du jour est encore sous le crayon" : "Pas d’édition ce jour-là"}</h2><p class="lead">${isToday ? "Le dessinateur taille ses mines. Revenez un peu plus tard." : "Le Sachoir dormait. Ça arrive aux meilleurs."}</p>${last ? `<button class="btn ghost sm" id="hLast">Lire la dernière édition (${fmtLong(last)})</button>` : ""}</div>`
@@ -1270,6 +1340,47 @@ function renderHome() {
   $("#hHist").onclick = openHistory;
   if ($("#hLast")) $("#hLast").onclick = () => selectDate(last);
   if (isToday) wxPaint();
+  wireStart(v);
+}
+// Progression de l'édition du jour : BD lues jusqu'au bout et jeu terminé.
+function todayProgress(ed) {
+  const items = ed.formats.map(f => {
+    const done = f.id === "quiz" ? !!ME.quiz?.[ed.date]?.done : (r => !!r && r.max >= f.cases.length)(ME.reads.find(x => x.date === ed.date && x.fid === f.id));
+    return { id: f.id, label: f.label, done, min: f.minutes || 2 };
+  });
+  return { items, total: items.length, done: items.filter(x => x.done).length, left: items.filter(x => !x.done).reduce((t, x) => t + x.min, 0) };
+}
+/* « Bien démarrer » : une liste de premiers pas pour les nouveaux lecteurs (14 jours au plus, masquable).
+   Chaque ligne fait l'action d'un toucher. */
+function startSteps() {
+  const st = [{ k: "read", t: "Lire une première BD", d: "Deux minutes, promis.", ok: ME.reads.some(r => r.max >= 2) },
+              { k: "game", t: "Jouer au jeu du jour", d: "Une partie par jour, pas de triche.", ok: Object.keys(ME.quiz || {}).length > 0 }];
+  if (["ask", "on", "ios"].includes(pushState())) st.push({ k: "push", t: "Être prévenu chaque matin", d: "Une notif quand l’édition sort.", ok: pushState() === "on" });
+  if (!DESK.matches) st.push({ k: "install", t: "Ajouter à l’écran d’accueil", d: "Comme une appli, sans store.", ok: STANDALONE() || ME.installDone });
+  if (MAIL()) st.push({ k: "acc", t: "Créer mon compte", d: "Série et favoris à l’abri.", ok: !!ACC });
+  return st;
+}
+function startHTML() {
+  const first = lsGet("sachoir.start");
+  if (!first) { if (ME.reads.length > 8) return ""; lsSet("sachoir.start", TODAY); }
+  if (lsGet("sachoir.startOff") || (first && shift(first, 14) < TODAY)) return "";
+  const st = startSteps(), done = st.filter(x => x.ok).length;
+  if (done === st.length) { if (!lsGet("sachoir.startDone")) { lsSet("sachoir.startDone", "1"); setTimeout(() => toast("🎓 Premiers pas terminés. Vous êtes chez vous ici."), 500); } return ""; }
+  const nextK = st.find(x => !x.ok)?.k;
+  return `<div class="start"><div class="sh"><b>Bien démarrer</b><span>${done} / ${st.length}</span><button class="nx" id="stOff" aria-label="Masquer">✕</button></div>
+    <div class="sbar"><i style="width:${Math.round(100 * done / st.length)}%"></i></div>
+    <div class="sl">${st.map(x => `<button class="si ${x.ok ? "ok" : ""} ${x.k === nextK ? "nx1" : ""}" data-st="${x.k}" ${x.ok ? "disabled" : ""}><span class="ck">${x.ok ? "✓" : ""}</span><span class="tx"><b>${x.t}</b>${x.ok ? "" : `<small>${x.d}</small>`}</span>${x.ok ? "" : ICON.chev}</button>`).join("")}</div></div>`;
+}
+function wireStart(v) {
+  const off = v.querySelector("#stOff"); if (off) off.onclick = () => { lsSet("sachoir.startOff", "1"); LAST_HTML.delete(v); renderHome(); toast("Masqué. Vous êtes du genre autonome."); };
+  v.querySelectorAll("[data-st]").forEach(b => b.onclick = e => {
+    const k = b.dataset.st;
+    if (k === "read") { const f = firstStory(); if (f) openReader(CUR, f.id); }
+    else if (k === "game") { if (CUR?.formats.some(f => f.id === "quiz")) openQuiz(CUR); else toast("Pas de jeu aujourd’hui. Le maître du jeu se repose."); }
+    else if (k === "push") openPush();
+    else if (k === "install") openInstall();
+    else if (k === "acc") openAccount();
+  });
 }
 
 async function selectDate(date) {
@@ -1368,7 +1479,38 @@ function caseHTML(ed, c) {
 function finalHTML(ed, f) {
   const srcs = (f.sources || []).filter(s => s && /^https?:\/\//.test(s.url || ""));
   return `<div class="ccard"><div class="hd"><span>Pour briller en société</span><em>${fmtLong(ed.date).split(" ").slice(1).join(" ")}</em></div><div class="ph">${esc(f.final?.text || "")}</div><div class="src">${esc(f.label)} · ${esc(f.final?.source || "")}</div>${f.story ? `<details class="story"><summary>L’histoire complète</summary>${String(f.story).split(/\n+/).filter(Boolean).map(t => `<p>${esc(t)}</p>`).join("")}</details>` : ""}${srcs.length ? `<details class="srcs"><summary>Sources (${srcs.length})</summary><ul>${srcs.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.title || s.url.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a></li>`).join("")}</ul></details>` : ""}
-  <div class="ft"><button class="btn" data-act="back">Retour à l’édition</button></div></div>`;
+  <div class="ft">${afterHTML(ed, f)}<button class="btn ${ed.date === TODAY ? "ghost" : ""}" data-act="back">Retour à l’édition</button></div></div>`;
+}
+// Ce qui suit une BD : la prochaine histoire non lue de l'édition (puis le jeu), sinon « édition bouclée ».
+function nextOf(ed, f) {
+  const order = ["actu", "cultureg", "insolite", "dossier"].map(id => ed.formats.find(x => x.id === id)).filter(x => x && x.id !== f.id);
+  const unread = order.find(x => { const r = ME.reads.find(y => y.date === ed.date && y.fid === x.id); return !r || r.max < (x.cases?.length || 99); });
+  if (unread) return { kind: "story", f: unread };
+  const q = ed.formats.find(x => x.id === "quiz");
+  if (q && !(ME.quiz?.[ed.date]?.done)) return { kind: "quiz", f: q };
+  return { kind: "done" };
+}
+// Une seule invitation, la plus utile au bon moment (jamais en pleine lecture).
+function convNudge(f) {
+  const s = streak();
+  if (MAIL() && !ACC && s >= 2) return { ic: "🔥", t: `${s} jours de série !`, d: "Ne la perdez pas en changeant de téléphone.", b: "Sauver ma série", act: "acc" };
+  if (pushState() === "ask" && ME.reads.length >= 2) return { ic: "🔔", t: "On vous prévient demain ?", d: "Une notif quand l’édition sort. Une seule.", b: "Oui, toquez-moi", act: "push" };
+  if (!DESK.matches && !STANDALONE() && !ME.installDone && ME.reads.length >= 2) return { ic: "📲", t: "Le Sachoir sur votre écran d’accueil", d: "Il s’ouvre comme une appli. Trois gestes, pas de store.", b: "L’installer", act: "install" };
+  if (MAIL() && !(ACC?.user?.newsletter || ME.nl) && !WALLET.newsletterGift) return { ic: "🎁", t: "Un Grand Dossier offert", d: "Avec la newsletter du matin, gratuite.", b: "Je le veux", act: "nl" };
+  if (PW() && STRIPE() && !isPremium() && f.id === "dossier") return { ic: "⭐", t: "Tous les Grands Dossiers", d: `Premium dès ${euros(CFG.prices?.month || 299)} par mois, sans engagement.`, b: "Voir Premium", act: "prem" };
+  return null;
+}
+function afterHTML(ed, f) {
+  let out = "";
+  if (ed.date === TODAY || ed.date === CUR?.date) {
+    const n = nextOf(ed, f);
+    if (n.kind === "story") out += `<button class="nextup" data-act="next" data-f="${n.f.id}" style="--c:${COLOR[n.f.id]}"><small>À suivre · ${n.f.minutes || 2} min</small><b>${esc(n.f.title)}</b><span>→</span></button>`;
+    else if (n.kind === "quiz") out += `<button class="nextup" data-act="quiz" style="--c:${COLOR.quiz}"><small>Pour finir en beauté</small><b>Le jeu du jour : ${esc(n.f.title)}</b><span>🎲</span></button>`;
+    else out += `<div class="alldone">🎉 <b>Édition bouclée !</b> Vous en savez plus que ce matin. Revenez demain, on remet ça.</div><button class="btn ghost" data-act="explore">Explorer d’autres histoires</button>`;
+  }
+  const c = convNudge(f);
+  if (c) out += `<div class="convn"><span class="ic">${c.ic}</span><span class="tx"><b>${esc(c.t)}</b><small>${esc(c.d)}</small></span><button class="btn sm" data-act="cv-${c.act}">${esc(c.b)}</button></div>`;
+  return out;
 }
 async function openReader(ed, fid, startAt = 0) {
   let full = ed.formats.find(x => x.id === fid); if (!full) return;
@@ -1406,6 +1548,16 @@ async function openReader(ed, fid, startAt = 0) {
   }
   if (startAt) setTimeout(() => { const t = $("#track"); t.scrollTo({ left: startAt * t.clientWidth, behavior: "auto" }); updateReader(startAt, true); }, 60);
   history.pushState({ reader: true }, "");
+  if (!desk && !lsGet("sachoir.coach")) showCoach();
+}
+// Première lecture sur téléphone : les zones de toucher, montrées sur la BD elle-même (une seule fois).
+function showCoach() {
+  lsSet("sachoir.coach", "1");
+  const c = document.createElement("div"); c.className = "coach"; c.setAttribute("role", "dialog"); c.setAttribute("aria-label", "Comment lire");
+  c.innerHTML = `<div class="cz l"><b>👈</b><span>Case précédente</span></div><div class="cz r"><b>👉</b><span>Case suivante</span></div>
+    <div class="cm"><p><b>❤️ Double-touchez</b> une case pour aimer l’histoire.</p><p>Tout en bas, la barre montre où vous en êtes.</p><button class="cta" id="coOk">Compris, on lit !</button></div>`;
+  $("#reader").appendChild(c);
+  const off = () => c.remove(); c.querySelector("#coOk").onclick = off; setTimeout(() => c.classList.add("on"), 30);
 }
 function updateReader(i, init) {
   const { ed, f } = R, total = f.cases.length; R.idx = i;
@@ -1428,7 +1580,12 @@ function updateReader(i, init) {
   else if (i === total && !R.doneSent) { R.doneSent = true; ev("done", ed.date, f.id); }
   if (f.id === "dossier" && i >= 4 && !f.locked && !ME.dossiers.includes(ed.date)) { ME.dossiers.push(ed.date); toast(`📚 Dossier dévoré : ${ME.dossiers.length}`); }
   save();
-  if (i === total && !f.locked && !DESK.matches && !ME.installDone && !sessionStorage.getItem("installAsked") && !matchMedia("(display-mode: standalone)").matches) { sessionStorage.setItem("installAsked", "1"); setTimeout(openInstall, 900); }
+  if (i === total && !f.locked && !R.cheered) { R.cheered = true; cheerDone(ed); }
+}
+// Toutes les BD du jour lues : on le fête (une fois par jour).
+function cheerDone(ed) {
+  if (ed.date !== TODAY || lsGet("sachoir.cheer") === TODAY || nextOf(ed, { id: "" }).kind === "story") return;
+  lsSet("sachoir.cheer", TODAY); setTimeout(() => toast("🎉 Les BD du jour : toutes lues. Votre cerveau vous remercie."), 600);
 }
 function closeReader() { if (R.f) ev("depth", R.ed.date, R.f.id, Math.round(100 * Math.min(R.top + 1, R.f.cases.length) / (R.f.cases.length + (R.f.locked || 0)))); $("#reader").classList.remove("on"); if (R.io) R.io.disconnect(); render(); if (DESK.matches) setTimeout(maybeAskPush, 700); }
 let scT;
@@ -1490,8 +1647,16 @@ $("#track").addEventListener("click", e => {
   tapT = setTimeout(() => go(left ? -1 : 1), 260);
 });
 function onAct(e) {
-  const a = e.currentTarget.dataset.act;
+  const b = e.currentTarget, a = b.dataset.act, ed = R.ed;
   if (a === "back") history.back();
+  else if (a === "next") { history.back(); setTimeout(() => openReader(ed, b.dataset.f), 80); }
+  else if (a === "quiz") { history.back(); setTimeout(() => openQuiz(ed), 80); }
+  else if (a === "explore") { history.back(); setTimeout(() => setTab("explore"), 80); }
+  else if (a === "cv-acc") { ev("open", "", "cv-acc"); openAccount(); }
+  else if (a === "cv-push") pushEnable(b).then(ok => { if (ok) b.closest(".convn").innerHTML = `<span class="ic">✅</span><span class="tx"><b>C’est branché.</b><small>À demain matin !</small></span>`; });
+  else if (a === "cv-install") openInstall();
+  else if (a === "cv-nl") openNewsletter();
+  else if (a === "cv-prem") openPremium("dossier");
 }
 
 
@@ -2504,10 +2669,12 @@ function renderExplore() {
   const res = byF.filter(s => !EX.pole || (EX.pole === "other" ? !poleOf(s.theme) : poleOf(s.theme)?.id === EX.pole)).filter(s => !EX.theme || s.theme === EX.theme);
   const browsing = !q && !EX.pole && !EX.fmt && !EX.unread;
   const dossiers = all.filter(s => s.id === "dossier").slice(0, 10);
+  const L = likes(), forYou = L.length ? all.filter(s => L.includes(poleOf(s.theme)?.id) && !readInfo(s)?.done).slice(0, 10) : [];
   const fmts = [["", "Tout"], ["dossier", "📚 Grands Dossiers"], ["cultureg", "💊 Culture G"], ["insolite", "🤯 Insolite"]].filter(([id]) => !id || byQ.some(s => s.id === id));
   const n = k => `<span class="cnt">${k}</span>`;
   v.innerHTML = `<div><h1 class="h1">Découvrir</h1><p class="lead">${all.length} histoires pour briller en société sans trop d’efforts.</p></div>
    <label class="search" for="exQ"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#5f5a52" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg><input id="exQ" type="search" placeholder="Napoléon, krach, quantique…" value="${esc(EX.q)}" aria-label="Rechercher une histoire" enterkeyhint="search">${EX.q ? `<button class="clr" id="exClr" aria-label="Effacer">✕</button>` : ""}</label>
+   ${browsing && forYou.length >= 2 ? `<section class="blk"><div class="bh"><h2>Pour vous</h2><small class="sub">${likes().map(id => POLES.find(p => p.id === id)?.em || "").join(" ")}</small></div><div class="hscroll">${forYou.map(storyCard).join("")}</div></section>` : ""}
    ${browsing && dossiers.length ? `<section class="blk"><div class="bh"><h2>À la une : les Grands Dossiers</h2><button class="linkbtn" data-fmt="dossier">Tout voir</button></div><div class="hscroll">${dossiers.map(storyCard).join("")}</div></section>` : ""}
    ${browsing && poles.length > 1 ? `<section class="blk"><div class="bh"><h2>Par univers</h2></div><div class="unis">${poles.map(({ p, n: k }) => `<button class="uni" data-p="${p.id}" style="--c:${p.color}"><span class="em">${p.em}</span><b>${p.name}</b><small>${k} histoire${k > 1 ? "s" : ""}</small></button>`).join("")}</div></section>` : ""}
    ${browsing ? nudgeHTML("explore") : ""}
@@ -2724,39 +2891,70 @@ function openPush() {
     <ol class="steps"><li><span class="n">1</span><span><strong>${IOS ? "Réglages › Notifications › Le Sachoir" : "Touchez le cadenas à gauche de l’adresse (ou ⋮ › Infos sur le site)"}</strong><small>${IOS ? "Tout en bas de la liste, entre deux applis de météo." : "Sur une appli installée : appui long sur l’icône › Infos sur l’appli."}</small></span></li><li><span class="n">2</span><span><strong>Autorisez les notifications</strong><small>Puis revenez ici. On vous attend, la tasse à la main.</small></span></li></ol>`);
 }
 
-/* ---------- Onboarding : trois écrans au premier lancement (téléphone) ---------- */
+/* ---------- Onboarding : premier lancement (téléphone) ----------
+   But : faire lire une première BD en moins d'une minute (le « déclic »), en récoltant au passage
+   ce qui personnalise l'appli (univers préférés, prénom) et l'accord pour les notifications.
+   1. La promesse, avec les vraies couvertures du jour  2. Vos univers  3. Votre prénom
+   4. Les notifications (si possible ici)  5. « Votre première BD vous attend » → elle s'ouvre directement.
+   Le mode d'emploi (toucher à droite/à gauche, double toucher) est montré dans la BD elle-même, à la première lecture. */
+const LIKES_KEY = "sachoir.likes";
+const likes = () => { try { return JSON.parse(lsGet(LIKES_KEY) || "[]"); } catch (e) { return []; } };
+// La BD du jour la plus courte qui parle d'un univers choisi (Culture G ou Insolite d'abord : 1 à 2 minutes).
+function firstStory() {
+  const ed = CUR && !CUR.empty ? CUR : null; if (!ed) return null;
+  const L = likes(), pool = ["cultureg", "insolite", "actu", "dossier"].map(id => ed.formats.find(f => f.id === id)).filter(Boolean);
+  return pool.find(f => L.includes(poleOf(themeName(f.theme))?.id)) || pool[0] || null;
+}
 function openOnboarding() {
   const withPush = ["ask", "ios"].includes(pushState());
-  const slides = ["hello", "how", ...(withPush ? ["push"] : [])];
-  let i = 0;
+  const slides = ["hello", "likes", "name", ...(withPush ? ["push"] : []), "go"];
+  let i = 0, picked = new Set(likes());
   const el = $("#onb");
-  const finish = () => { lsSet(ONB_KEY, "1"); el.classList.remove("on"); render(); };
+  const finish = () => { lsSet(ONB_KEY, "1"); lsSet("sachoir.start", lsGet("sachoir.start") || TODAY); el.classList.remove("on"); render(); };
+  const next = () => { i = Math.min(i + 1, slides.length - 1); draw(); };
+  const covers = () => {
+    const fs = (CUR?.formats || []).filter(f => f.id !== "quiz" && coverOf(CUR, f)).slice(0, 3);
+    if (!fs.length) return `<div class="onb-art"><img src="assets/logo.png" alt="Le Sachoir" style="height:78px"></div>`;
+    return `<div class="onb-fan">${fs.map((f, k) => `<div class="of of${fs.length === 2 ? [0, 2][k] : fs.length === 1 ? 1 : k}" style="--c:${COLOR[f.id]}"><img src="${coverOf(CUR, f)}" alt=""><b>${esc(FMT[f.id]?.[0] || f.label)}</b></div>`).join("")}</div>`;
+  };
   const draw = () => {
-    const k = slides[i], last = i === slides.length - 1;
-    const top = `<div class="onb-top"><div class="onb-dots" aria-hidden="true">${slides.map((_, j) => `<i class="${j === i ? "on" : ""}"></i>`).join("")}</div>${last ? "" : `<button class="onb-skip" id="obSkip">Passer</button>`}</div>`;
+    const k = slides[i], step = slides.indexOf(k);
+    const top = `<div class="onb-top"><div class="onb-dots" aria-hidden="true">${slides.map((_, j) => `<i class="${j === step ? "on" : j < step ? "past" : ""}"></i>`).join("")}</div>${k === "go" || k === "push" ? "" : `<button class="onb-skip" id="obSkip">Passer</button>`}</div>`;
     let body, foot;
     if (k === "hello") {
-      body = `<div class="onb-art"><img src="assets/logo.png" alt="Le Sachoir" style="height:78px"></div>
-        <h2>Bienvenue au Sachoir</h2>
-        <p>Chaque jour, l’actu et la culture G en BD. Cinq minutes, et vous voilà capable de briller au dîner. Ou au moins de faire semblant avec aplomb.</p>`;
+      body = `${covers()}<h2>L’actu et la culture G, en BD</h2><p>Chaque jour, quatre histoires courtes, drôles et vérifiées. <b>Cinq minutes</b>, et vous voilà la personne qui « sait des trucs » au dîner.</p>
+        <div class="onb-proof"><span>✅ Gratuit</span><span>🚫 Sans pub</span><span>📚 Sources citées</span></div>`;
       foot = `<button class="cta" id="obNext">Je veux briller</button>`;
-    } else if (k === "how") {
-      body = `<div class="onb-art">👆</div><h2>Ça se lit comme une story</h2>
-        <ul class="onb-list">
-          <li><b>👉</b><span>Touchez à droite<small>Case suivante. Le suspense est insoutenable.</small></span></li>
-          <li><b>👈</b><span>Touchez à gauche<small>On revient. Personne ne vous jugera.</small></span></li>
-          <li><b>❤️</b><span>Double toucher<small>Un j’aime. C’est gratuit et ça fait plaisir au dessinateur.</small></span></li>
-          <li><b>🎲</b><span>À la fin, le jeu du jour<small>Aucune interro surprise. Enfin, presque.</small></span></li>
-        </ul>`;
-      foot = `<button class="cta" id="obNext">${last ? "C’est parti" : "Compris, chef"}</button>`;
+    } else if (k === "likes") {
+      body = `<div class="onb-art sm">🧭</div><h2>Qu’est-ce qui vous fait vibrer ?</h2><p>Choisissez vos univers. On vous les mettra en avant (sans jamais vous priver des autres).</p>
+        <div class="onb-likes">${POLES.map(p => `<button class="ol" data-l="${p.id}" style="--c:${p.color}" aria-pressed="${picked.has(p.id)}"><span>${p.em}</span>${p.name}</button>`).join("")}</div>`;
+      foot = `<button class="cta" id="obNext">${picked.size ? `C’est noté (${picked.size})` : "Un peu de tout, merci"}</button>`;
+    } else if (k === "name") {
+      body = `<div class="onb-art sm">👋</div><h2>Et on vous appelle comment ?</h2><p>Pour vous saluer le matin. Un prénom, un surnom, « Majesté »… On ne juge pas.</p>
+        <form id="obNameF" class="field"><input type="text" id="obName" maxlength="24" placeholder="Votre prénom" value="${esc(ME.name)}" autocomplete="given-name" enterkeyhint="next"></form>`;
+      foot = `<button class="cta" id="obNext">Continuer</button>`;
+    } else if (k === "push") {
+      body = pushAskHTML(pushState()); foot = pushAskFoot(pushState());
     } else {
-      body = pushAskHTML(pushState());
-      foot = pushAskFoot(pushState());
+      const f = firstStory();
+      body = `<div class="onb-art">🎬</div><h2>${ME.name ? `C’est parti, ${esc(ME.name)} !` : "C’est parti !"}</h2>
+        ${f ? `<p>Votre première BD vous attend. ${f.minutes || 2} minute${(f.minutes || 2) > 1 ? "s" : ""}, montre en main.</p><button class="onb-first" id="obFirst" style="--c:${COLOR[f.id]}">${coverOf(CUR, f) ? `<img src="${coverOf(CUR, f)}" alt="">` : ""}<span><small>${esc(f.label)}</small><b>${esc(f.title)}</b><em>Lire maintenant →</em></span></button>` : `<p>L’édition du jour vous attend.</p>`}
+        <p class="onb-hint">Ensuite : le jeu du jour, et votre série 🔥 démarre.</p>`;
+      foot = `${f ? `<button class="cta" id="obGo">Lire ma première BD</button>` : ""}<button class="onb-later" id="obEd">${f ? "Voir toute l’édition d’abord" : "Voir l’édition"}</button>`;
     }
     el.innerHTML = `${top}<div class="onb-body">${body}</div><div class="onb-foot">${foot}</div>`;
-    if (k === "push") wirePushAsk(pushState(), finish);
-    else $("#obNext").onclick = () => { if (last) finish(); else { i++; draw(); } };
-    if ($("#obSkip")) $("#obSkip").onclick = () => { if (withPush && slides[i] !== "push") { i = slides.length - 1; draw(); } else finish(); };
+    if (k === "push") wirePushAsk(pushState(), next);
+    if (k === "likes") el.querySelectorAll("[data-l]").forEach(b => b.onclick = () => { picked.has(b.dataset.l) ? picked.delete(b.dataset.l) : picked.add(b.dataset.l); vibrate(); draw(); });
+    const save1 = () => {
+      if (k === "likes") { lsSet(LIKES_KEY, JSON.stringify([...picked])); ev("open", "", "likes" + picked.size); }
+      if (k === "name") { const v = $("#obName").value.trim(); if (v !== ME.name) { ME.name = v; save(); if (ACC) api("/me", { method: "PUT", body: { name: v } }).catch(() => {}); } }
+    };
+    if ($("#obNext")) $("#obNext").onclick = () => { save1(); next(); };
+    if ($("#obNameF")) { $("#obNameF").onsubmit = e => { e.preventDefault(); save1(); next(); }; }
+    if ($("#obSkip")) $("#obSkip").onclick = () => { save1(); i = slides.indexOf(withPush ? "push" : "go"); draw(); };
+    const go = () => { const f = firstStory(); finish(); if (f) setTimeout(() => openReader(CUR, f.id), 120); };
+    if ($("#obGo")) $("#obGo").onclick = go; if ($("#obFirst")) $("#obFirst").onclick = go;
+    if ($("#obEd")) $("#obEd").onclick = finish;
   };
   el.classList.add("on"); draw();
 }
@@ -2796,8 +2994,10 @@ if (new URLSearchParams(location.search).get("from") === "push") {
   const q = new URLSearchParams(location.search); q.delete("from");
   history.replaceState(null, "", location.pathname + (q.toString() ? "?" + q : "") + location.hash);
 }
+let edReady; const ED_READY = new Promise(r => edReady = r);
 (async () => {
-  startAccount().catch(() => {}).then(() => { pushRefresh(); startOnboarding(); });
+  // L'onboarding attend le compte (config, notifications) et l'édition (couvertures, première BD à proposer).
+  startAccount().catch(() => {}).then(() => ED_READY).then(() => { pushRefresh(); startOnboarding(); });
   try {
     await loadIndex();
     const wanted = new URLSearchParams(location.search).get("d");
@@ -2806,6 +3006,7 @@ if (new URLSearchParams(location.search).get("from") === "push") {
     const fid = new URLSearchParams(location.search).get("f");
     if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); if (fid === "quiz") openQuiz(CUR); else openReader(CUR, fid); return; }
   } catch (e) { if (!navigator.onLine) $("#offline").classList.add("on"); }
+  finally { edReady(); }
   const q = new URLSearchParams(location.search);
   // PC : un nouveau visiteur sans compte arrive sur « Le concept » (un clic pour passer à l'édition du jour). ?concept la force partout.
   if (SHOW_ABOUT() && !q.has("d") && !q.has("f") && (q.has("concept") || (DESK.matches && !ME.reads.length))) return setTab("about");
