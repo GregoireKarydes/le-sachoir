@@ -13,7 +13,7 @@
         {
           "id": "leverrier",
           "name": "Urbain Le Verrier",
-          "look": "Urbain, a tall stiff 1840s French mathematician in his thirties, long sideburns, slicked-back dark hair, frowning eyebrows, black frock coat, a quill pen always in hand, a red waistcoat as the only colour",
+          "look": "Urbain, a tall thin stiff 1840s French mathematician in his thirties, long sideburns, slicked-back dark hair, frowning eyebrows, bright red waistcoat as main colour under a black frock coat, a quill pen always in hand",
           "file": "cast/cultureg-leverrier.png",
           "status": "pending",
           "role": "the proud mathematician who finds a planet with a pen; tall, stiff, frowning, never looks at the sky"
@@ -21,33 +21,17 @@
         {
           "id": "arago",
           "name": "François Arago",
-          "look": "François, a jovial 1840s observatory director in his late fifties, wild curly grey hair, big bushy eyebrows, round belly, black coat, a blue scarf as the only colour",
+          "look": "François, a short round jovial 1840s observatory director in his late fifties, wild curly white hair, big bushy eyebrows, round belly, royal blue coat as main colour, long yellow scarf",
           "file": "cast/cultureg-arago.png",
           "status": "pending",
-          "role": "the jovial observatory director who pushes him; round, warm, arms wide"
-        },
-        {
-          "id": "galle",
-          "name": "Johann Galle",
-          "look": "Johann, a lanky 1840s German astronomer in his thirties, neat blond side parting, small round glasses, long grey coat, very straight posture",
-          "file": "cast/cultureg-galle.png",
-          "status": "pending",
-          "role": "the German astronomer who looks through the telescope and finds it; lanky, precise, very straight"
-        },
-        {
-          "id": "galilee",
-          "name": "Galilée",
-          "look": "Galileo, a 1610s Italian scholar in his late forties, big bushy reddish beard, receding hair, long black scholar's robe, a small handheld telescope",
-          "file": "cast/cultureg-galilee.png",
-          "status": "pending",
-          "role": "Galileo, who saw Neptune in 1612 without knowing it; bearded, distracted, shrugging"
+          "role": "the jovial observatory director who asks the questions and cheers him on; round, warm, arms wide"
         }
       ],
       "cover": {
-        "prompt": "a dark night sky with one small round planet. Urbain (on the left) at a desk buried under paper, pointing his quill straight up at the planet without looking, smug; Johann (on the right) at a big telescope, jaw dropped. wide shot",
+        "prompt": "a dark night sky with one small round blue planet. Urbain (tall, red waistcoat) on the left at a desk buried under the calculations, pointing his quill straight up at the planet without looking, smug; François (round, blue coat) on the right at the telescope, jaw dropped. wide shot",
         "cast": [
           "leverrier",
-          "galle"
+          "arago"
         ],
         "file": "images/cultureg-cover.webp",
         "status": "pending",
@@ -180,15 +164,13 @@
           "bubbles": [
             {
               "text": "Elle est là. Exactement là. C’est vexant.",
-              "who": "galle",
+              "who": "Johann Galle",
               "side": "r"
             }
           ],
           "image": {
-            "prompt": "a night observatory with a big telescope. Johann (on the right) leaning away from the eyepiece, the opened letter in one hand, staring at it then at the sky, frozen, tiny sweat drop, mouth a small o. medium shot",
-            "cast": [
-              "galle"
-            ],
+            "prompt": "the Berlin observatory dome at night, open to a starry sky. a lanky astronomer in a long grey coat seen from behind, small in the frame on the right, at the eyepiece of the telescope, one arm shooting up in shock, an opened letter flying out of his hand. wide shot",
+            "cast": [],
             "file": "images/cultureg-05.webp",
             "status": "pending",
             "attempts": 0
@@ -262,15 +244,15 @@
           "caption": "Galilée l’avait observée dès 1612… et prise pour une étoile.",
           "bubbles": [
             {
-              "text": "Je l’ai vue le premier. Je ne l’ai juste pas remarquée.",
-              "who": "galilee",
+              "text": "Il l’a vue le premier. Il ne l’a juste pas remarquée.",
+              "who": "arago",
               "side": "l"
             }
           ],
           "image": {
-            "prompt": "plain empty background. Galileo (in the centre) sitting on a wooden stool facing the viewer like in an interview, small telescope on his knees, forced awkward smile, shoulders up to his ears, big sweat drop. medium shot",
+            "prompt": "plain empty background. François (round, blue coat, wild white hair) sitting on a wooden stool facing the viewer like in an interview, holding a tiny old handheld telescope up to his eye the wrong way round, a forced awkward smile, shoulders shrugged up to his ears. medium shot",
             "cast": [
-              "galilee"
+              "arago"
             ],
             "file": "images/cultureg-08.webp",
             "status": "pending",
