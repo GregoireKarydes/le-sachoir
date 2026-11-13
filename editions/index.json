@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T08:19:14.255263+01:00",
+ "updated_at": "2026-11-13T08:54:32.119036+01:00",
  "editions": [
   {
    "date": "2026-11-13",
@@ -14,6 +14,7 @@
      "theme": "Histoire moderne",
      "minutes": 2,
      "tagline": "Avant 1564, la France fêtait le Nouvel An à Noël, en mars ou à Pâques, selon la ville",
+     "cases": 10,
      "cover": "images/cultureg-cover.webp"
     },
     {
@@ -25,6 +26,7 @@
      "theme": "Droit",
      "minutes": 1,
      "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
+     "cases": 9,
      "cover": "images/insolite-cover.webp"
     },
     {
@@ -36,6 +38,7 @@
      "theme": "",
      "minutes": 1,
      "tagline": "",
+     "cases": 0,
      "cover": null
     }
    ]
@@ -53,6 +56,7 @@
      "theme": "Histoire ancienne",
      "minutes": 3,
      "tagline": "Soixante peuples divisés, un général pressé, un siège en double anneau : comment la Gaule est devenue romaine",
+     "cases": 29,
      "cover": "images/dossier-cover.webp"
     },
     {
@@ -64,6 +68,7 @@
      "theme": "Mode et luxe",
      "minutes": 2,
      "tagline": "Votre pointure n’est ni en centimètres ni en pieds : elle est en points de Paris.",
+     "cases": 9,
      "cover": "images/cultureg-cover.webp"
     },
     {
@@ -75,6 +80,7 @@
      "theme": "",
      "minutes": 1,
      "tagline": "",
+     "cases": 0,
      "cover": null
     }
    ]
@@ -92,6 +98,7 @@
      "theme": "Expression française",
      "minutes": 2,
      "tagline": "Pourquoi on compte « quatre fois vingt » en France, et pas en Belgique",
+     "cases": 10,
      "cover": "images/cultureg-cover.webp"
     },
     {
@@ -103,6 +110,7 @@
      "theme": "Sciences du vivant",
      "minutes": 1,
      "tagline": "Comment une cargaison jetée à l’eau a nourri la France pendant un siècle.",
+     "cases": 9,
      "cover": "images/insolite-cover.webp"
     },
     {
@@ -114,6 +122,7 @@
      "theme": "",
      "minutes": 1,
      "tagline": "",
+     "cases": 0,
      "cover": null
     }
    ]
@@ -131,6 +140,7 @@
      "theme": "Histoire de l’art",
      "minutes": 3,
      "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
+     "cases": 24,
      "cover": "images/dossier-cover.webp"
     },
     {
@@ -142,6 +152,7 @@
      "theme": "",
      "minutes": 2,
      "tagline": "Le Smic retrouve son pouce, les classes se vident, Harry Kane manque à l’appel et Superman change de patron.",
+     "cases": 12,
      "cover": "images/actu-cover.webp"
     },
     {
@@ -153,6 +164,7 @@
      "theme": "Grandes découvertes",
      "minutes": 2,
      "tagline": "Sept ans à mesurer la France en pleine Révolution, pour une erreur que personne ne devait voir",
+     "cases": 12,
      "cover": "images/cultureg-cover.webp"
     },
     {
@@ -164,6 +176,7 @@
      "theme": "Musique",
      "minutes": 1,
      "tagline": "Écrite en une nuit pour l’armée du Rhin, elle doit son nom à des volontaires qui passaient par là",
+     "cases": 9,
      "cover": "images/insolite-cover.webp"
     },
     {
@@ -175,6 +188,7 @@
      "theme": "",
      "minutes": 1,
      "tagline": "",
+     "cases": 0,
      "cover": null
     }
    ]
@@ -192,6 +206,7 @@
      "theme": "Histoire de France",
      "minutes": 5,
      "tagline": "La Révolution française en entier, de la salle de jeu de paume au coup d’État de Saint-Cloud",
+     "cases": 39,
      "cover": "images/dossier-cover.webp"
     },
     {
@@ -203,6 +218,7 @@
      "theme": "",
      "minutes": 2,
      "tagline": "Matignon cherche le bon chiffre, Israël cherche des chaises et Paris trouve enfin son champion.",
+     "cases": 8,
      "cover": "images/actu-cover.webp"
     },
     {
@@ -214,6 +230,7 @@
      "theme": "Économie",
      "minutes": 2,
      "tagline": "Comment la France de 1720 a découvert le papier-monnaie, la bulle spéculative et le mot « millionnaire »",
+     "cases": 13,
      "cover": "images/cultureg-cover.webp"
     },
     {
@@ -225,6 +242,7 @@
      "theme": "Histoire de l’art",
      "minutes": 1,
      "tagline": "En 1911, un vitrier la décroche du Louvre. Et le monde entier vient admirer… le mur vide.",
+     "cases": 10,
      "cover": "images/insolite-cover.webp"
     },
     {
@@ -236,6 +254,7 @@
      "theme": "",
      "minutes": 1,
      "tagline": "",
+     "cases": 0,
      "cover": null
     }
    ]
@@ -253,6 +272,7 @@
      "theme": "Littérature",
      "minutes": 5,
      "tagline": "Le roman-fleuve de Victor Hugo, du bagne de Toulon à la barricade de 1832, sans lire les 1 400 pages",
+     "cases": 35,
      "cover": "images/dossier-cover.webp"
     },
     {
@@ -264,6 +284,7 @@
      "theme": "",
      "minutes": 2,
      "tagline": "Des chiffres qui ne tombent jamais d’accord, un marin qui ne traîne pas et un sommet du climat à deux pays.",
+     "cases": 6,
      "cover": "images/actu-cover.webp"
     },
     {
@@ -275,6 +296,7 @@
      "theme": "Psychologie",
      "minutes": 2,
      "tagline": "Pourquoi huit personnes tirent comme quatre (et votre réunion d’équipe aussi)",
+     "cases": 10,
      "cover": "images/cultureg-cover.webp"
     },
     {
@@ -286,6 +308,7 @@
      "theme": "Sports",
      "minutes": 1,
      "tagline": "En 1904, trains, voitures et clous : les quatre premiers ont tous été déclassés.",
+     "cases": 8,
      "cover": "images/insolite-cover.webp"
     },
     {
@@ -297,6 +320,7 @@
      "theme": "",
      "minutes": 1,
      "tagline": "",
+     "cases": 0,
      "cover": null
     }
    ]
@@ -314,6 +338,7 @@
      "theme": "Architecture",
      "minutes": 2,
      "tagline": "Pourquoi les balcons sont au 2e et au 5e (et pourquoi la bonne avait la plus belle vue)",
+     "cases": 9,
      "cover": "images/cultureg-cover.webp"
     },
     {
@@ -325,6 +350,7 @@
      "theme": "Informatique et numérique",
      "minutes": 1,
      "tagline": "En 1834, deux jumeaux bordelais détournent le télégraphe de l’État pour battre la Bourse.",
+     "cases": 8,
      "cover": "images/insolite-cover.webp"
     },
     {
@@ -336,6 +362,7 @@
      "theme": "",
      "minutes": 1,
      "tagline": "",
+     "cases": 0,
      "cover": null
     }
    ]
@@ -353,6 +380,7 @@
      "theme": "",
      "minutes": 1,
      "tagline": "",
+     "cases": 0,
      "cover": null
     }
    ]
