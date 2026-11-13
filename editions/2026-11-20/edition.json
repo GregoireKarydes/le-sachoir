@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-20",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "swipe",
+      "label": "Le Swipe",
+      "title": "Vrai, faux, ou légende de comptoir ?",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "swipe",
+          "seconds": 90,
+          "hint": "La moitié de ces phrases sont des idées reçues.",
+          "items": [
+            { "text": "La tour Eiffel grandit quand il fait chaud.", "ok": true, "explain": "Le fer se dilate : jusqu’à environ 20 cm de plus par forte chaleur." },
+            { "text": "Les taureaux détestent la couleur rouge.", "ok": false, "explain": "Ils la distinguent à peine. C’est le mouvement de la cape qui les fait charger." },
+            { "text": "Louis XIV a régné plus de 70 ans.", "ok": true, "explain": "72 ans et 110 jours, de 1643 à 1715 : record du monde selon le Guinness." },
+            { "text": "Le poisson rouge oublie tout en trois secondes.", "ok": false, "explain": "Des expériences montrent qu’il se souvient d’un parcours au moins un mois." },
+            { "text": "La France compte plus de fuseaux horaires que la Russie.", "ok": true, "explain": "12 grâce aux outre-mer, contre 11 pour la Russie et les États-Unis." },
+            { "text": "On voit la Grande Muraille de Chine depuis l’espace, à l’œil nu.", "ok": false, "explain": "Trop étroite et de la couleur du sol : les astronautes ne la distinguent pas." },
+            { "text": "La Corse est plus proche de l’Italie que du continent français.", "ok": true, "explain": "Environ 83 km jusqu’à la Toscane, contre 164 km au plus court vers la France." },
+            { "text": "Les Vikings portaient des casques à cornes.", "ok": false, "explain": "Aucun casque viking à cornes n’a jamais été retrouvé. Légende tenace." }
+          ],
+          "source": { "title": "Futura Sciences — Les taureaux n’aiment pas le rouge : vrai ou faux ?", "url": "https://www.futura-sciences.com/planete/questions-reponses/animaux-taureaux-naiment-pas-rouge-vrai-faux-18491/" }
+        }
+      ],
+      "sources": [
+        { "title": "Futura Sciences — La tour Eiffel change-t-elle de taille ?", "url": "https://www.futura-sciences.com/planete/questions-reponses/monuments-tour-eiffel-change-t-elle-taille-12124/" },
+        { "title": "Futura Sciences — Les taureaux n’aiment pas le rouge : vrai ou faux ?", "url": "https://www.futura-sciences.com/planete/questions-reponses/animaux-taureaux-naiment-pas-rouge-vrai-faux-18491/" },
+        { "title": "Guinness World Records — Longest ever reigns", "url": "https://www.guinnessworldrecords.com/world-records/longest-ever-reigns" },
+        { "title": "24matins — Les poissons rouges ont en fait bonne mémoire", "url": "https://www.24matins.fr/les-poissons-rouges-ont-en-fait-bonne-memoire-1341712" },
+        { "title": "timeanddate — Which Country Has the Most Time Zones?", "url": "https://www.timeanddate.com/time/country-with-the-most-time-zones.html" },
+        { "title": "Futura Sciences — La Grande Muraille de Chine est-elle visible depuis l’espace ?", "url": "https://www.futura-sciences.com/sciences/questions-reponses/espace-grande-muraille-chine-divisible-depuis-espace-vrai-faux-21652/" },
+        { "title": "TourMaG — Carte de la Corse, spécificités et géographie", "url": "https://www.tourmag.com/Carte-de-la-Corse-specificites-geographie_a113490.html" },
+        { "title": "Futura Sciences — Les Vikings n’ont jamais porté de casques à cornes", "url": "https://www.futura-sciences.com/sciences/questions-reponses/histoire-saviez-vous-vikings-nont-jamais-porte-casques-cornes-contrairement-legende-populaire-24958/" }
+      ]
+    }
+  ]
+}
