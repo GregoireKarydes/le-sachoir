@@ -13,6 +13,8 @@ SENDER_NAME = "Le Sachoir"
 SENDER_EMAIL = "gregoire.karydes@gmail.com"
 PUSH_FROM = "07:30"       # notification push du jour : jamais avant cette heure (Paris), même si l'édition sort à 5 h
 MAIL_DAILY_LIMIT = "290"   # offre gratuite Brevo : 300 e-mails par jour, on garde une marge
+MAIL_LOGIN_RESERVE = "40"  # e-mails gardés chaque jour pour les connexions et confirmations : la newsletter n'y touche pas
+NL_FREE_DAY = "0"          # newsletter gratuite : 0 = dimanche (… 6 = samedi) ; les Premium la reçoivent chaque matin. Penser aux textes de l'appli si on change.
 # API_URL est ajoutée par le workflow (adresse workers.dev connue après le premier déploiement).
 
 [[d1_databases]]

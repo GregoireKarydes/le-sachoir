@@ -1,4 +1,4 @@
-// E-mails du Sachoir : envoi par Brevo, lien de connexion, bienvenue et newsletter quotidienne.
+// E-mails du Sachoir : envoi par Brevo, lien de connexion, bienvenue et newsletter (chaque matin en Premium, une fois par semaine sinon).
 import { esc, parisDay } from "./util.js";
 
 const C = { cream: "#faf6ee", ink: "#17140f", muted: "#5f5a52", line: "#e7e1d4", yellow: "#f5b62a",
@@ -6,6 +6,21 @@ const C = { cream: "#faf6ee", ink: "#17140f", muted: "#5f5a52", line: "#e7e1d4",
 const SERIF = "Georgia,'Times New Roman',serif", SANS = "Roboto,Helvetica,Arial,sans-serif";
 
 export const mailLimit = env => +(env.MAIL_DAILY_LIMIT || 290);
+// E-mails gardés chaque jour pour les codes de connexion, confirmations et bienvenues : la newsletter n'y touche jamais.
+export const mailReserve = env => Math.max(0, +(env.MAIL_LOGIN_RESERVE ?? 40) || 0);
+// Jour de la newsletter gratuite (0 = dimanche … 6 = samedi). Les abonnés Premium la reçoivent chaque matin.
+const DAY_NAMES = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+export const nlFreeDay = env => { const n = parseInt(env.NL_FREE_DAY ?? "0", 10); return n >= 0 && n <= 6 ? n : 0; };
+export const nlFreeDayName = env => DAY_NAMES[nlFreeDay(env)];
+export const weekday = day => new Date(day + "T12:00:00Z").getUTCDay();
+
+/* Qui reçoit la newsletter ce jour-là : les Premium chaque jour, les autres seulement le jour gratuit.
+   Les Premium passent en premier si la place manque (room = e-mails encore disponibles pour la newsletter). */
+export function nlRecipients(subs, { day, freeDay, room }) {
+  const isFreeDay = weekday(day) === freeDay;
+  const wanted = [...subs.filter(s => s.premium), ...(isFreeDay ? subs.filter(s => !s.premium) : [])];
+  return { list: wanted.slice(0, Math.max(0, room)), wanted: wanted.length, isFreeDay };
+}
 
 /* Envoi Brevo. `versions` = [{ email, params }] pour un envoi groupé personnalisé ({{params.x}} dans le HTML).
    Sans clé Brevo (développement), l'e-mail est seulement écrit dans la console. */
@@ -56,17 +71,19 @@ export function loginMail(env, { link, code }) {
   };
 }
 
-export function welcomeMail(env, { unsubUrl }) {
+export function welcomeMail(env, { unsubUrl, premium = false }) {
+  const when = premium ? "Chaque matin" : `Chaque ${nlFreeDayName(env)} matin`;
   const inner = `<tr><td style="background:#fff;border-radius:18px;padding:22px 20px">
 <h1 style="font-family:${SERIF};font-size:26px;line-height:1.1;margin:0 0 10px">Bienvenue dans la newsletter</h1>
-<p style="margin:0 0 12px;font-size:16px;line-height:1.5">Chaque matin, l'édition du jour arrive ici : l'actu, une pilule de culture G, une histoire insolite, la Notice, le Grand Dossier et le jeu du jour. Une minute pour survoler, cinq pour briller.</p>
+<p style="margin:0 0 12px;font-size:16px;line-height:1.5">${when}, l'édition du jour arrive ici : l'actu, une pilule de culture G, une histoire insolite, la Notice, le Grand Dossier et le jeu du jour. Une minute pour survoler, cinq pour briller.${premium ? "" : " Et tous les autres matins, l'édition vous attend dans l'appli."}</p>
+${premium ? "" : `<p style="margin:0 0 12px;font-size:15px;line-height:1.5;color:${C.muted}">Envie de la recevoir chaque matin ? C'est inclus dans <a href="${env.APP_URL}?premium=1" style="color:${C.ink}">Premium</a>.</p>`}
 <p style="margin:0 0 16px;font-size:16px;line-height:1.5">Promis : pas de « Vous ne devinerez jamais… », pas de pub pour des matelas. Juste de quoi impressionner la machine à café.</p>
 <p style="margin:0;text-align:center"><a href="${env.APP_URL}" style="display:inline-block;background:${C.yellow};color:${C.ink};font-weight:700;font-size:17px;text-decoration:none;padding:13px 26px;border-radius:999px">Lire l'édition du jour</a></p>
 </td></tr>`;
   return {
     subject: "C'est noté. Votre cerveau vous remercie d'avance.",
     html: shell(env, inner, `Changé d'avis ? <a href="${unsubUrl}" style="color:${C.muted}">Se désinscrire</a> en un clic, sans questionnaire de départ.`),
-    text: `Bienvenue dans la newsletter du Sachoir. Chaque matin, l'édition du jour.\nLire : ${env.APP_URL}\nSe désinscrire : ${unsubUrl}`,
+    text: `Bienvenue dans la newsletter du Sachoir. ${when}, l'édition du jour.\nLire : ${env.APP_URL}\nSe désinscrire : ${unsubUrl}`,
   };
 }
 
@@ -140,7 +157,7 @@ const fmtDay = day => new Date(day + "T12:00:00Z").toLocaleDateString("fr-FR", {
 /* Newsletter façon PostHog : courte, une seule colonne, beaucoup de texte et peu de décor, un ton complice.
    Tous les liens mènent à l'édition du jour (jamais directement à une BD).
    {{params.t}} = jeton de suivi, {{params.u}} = désinscription, {{params.r}} = code de parrainage. */
-export function newsletterMail(env, ed) {
+export function newsletterMail(env, ed, { premium = true } = {}) {
   const app = env.APP_URL, api = env.API_URL, day = ed.day, nl = ed.nl || {};
   const edition = `${api}/nl/c/{{params.t}}?u=${encodeURIComponent(`${app}?d=${day}`)}`;
   const lead = ed.formats.find(f => f.id === "dossier") || ed.stories[0];
@@ -159,6 +176,7 @@ ${order.map(f => P(`${EMOJI[f.id] || "•"} <b>${esc(f.title)}</b>${blurb(f) ? `
 ${quiz ? P(`🎮 ${esc(nl.game || pick("game", day, 2))}`, "margin-bottom:18px") : ""}
 <p style="margin:0 0 20px"><a href="${edition}" style="display:inline-block;background:${C.yellow};color:${C.ink};font-weight:700;font-size:16px;text-decoration:none;padding:12px 22px;border-radius:999px">${esc(pick("cta", day, 3))} →</a></p>
 ${shine ? P(`<a href="${api}/nl/s/{{params.t}}" style="color:${C.ink};font-weight:700">${esc(pick("shine", day, 4))}</a>`) : ""}
+${premium ? "" : P(`📬 C'est la newsletter du ${nlFreeDayName(env)}. Les abonnés Premium la reçoivent <b>chaque matin</b>, avec tous les Grands Dossiers en entier et toutes les éditions passées. <a href="${app}?premium=1" style="color:${C.ink};font-weight:700">Passer Premium</a>`, `background:${C.cream};padding:12px 14px;border-radius:12px`)}
 ${P(`👋 ${esc(pick("ref", day, 5))} <a href="${app}?ref={{params.r}}" style="color:${C.ink}">Votre lien</a>.`)}
 ${P(esc(nl.ps || pick("ps", day, 6)), `color:${C.muted};font-size:14.5px`)}
 </td></tr>`;
@@ -166,7 +184,7 @@ ${P(esc(nl.ps || pick("ps", day, 6)), `color:${C.muted};font-size:14.5px`)}
 <a href="${api}/nl/unsub?t={{params.u}}" style="color:${C.muted}">Se désinscrire</a><img src="${api}/nl/o/{{params.t}}" width="1" height="1" alt="" style="display:block;border:0;width:1px;height:1px">`;
   const subject = (nl.subject || pick("subject", day, 7).replace("%s", lead?.title || "L'édition du jour")).slice(0, 120);
   const text = [`Le Sachoir · ${fmtDay(day)}`, "", nl.intro || pick("intro", day), "", pick("menu", day, 1), ...order.map(f => `- ${f.title}${blurb(f) ? " : " + blurb(f) : ""}`),
-    "", `Lire l'édition du jour : ${app}?d=${day}`, "", `Un ami, un dossier : ${app}?ref={{params.r}}`, "", nl.ps || pick("ps", day, 6), "", `Se désinscrire : ${api}/nl/unsub?t={{params.u}}`].join("\n");
+    "", `Lire l'édition du jour : ${app}?d=${day}`, "", ...(premium ? [] : [`C'est la newsletter du ${nlFreeDayName(env)}. Chaque matin avec Premium : ${app}?premium=1`, ""]), `Un ami, un dossier : ${app}?ref={{params.r}}`, "", nl.ps || pick("ps", day, 6), "", `Se désinscrire : ${api}/nl/unsub?t={{params.u}}`].join("\n");
   return { subject, html: shell(env, inner, footer), text, shine };
 }
 
