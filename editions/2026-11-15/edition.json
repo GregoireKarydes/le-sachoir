@@ -34,7 +34,8 @@
           "look": "a short, round ministry clerk in his fifties, light beige skin, neat grey hair with a side parting, thick black eyebrows, mustard yellow cardigan as main colour over a white shirt, brown trousers, small square black glasses",
           "role": "the scrupulous official who counts everything and wants to upset no one; very serious, clicking with total concentration",
           "file": "cast/actu-compteur.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "supportrice",
@@ -50,7 +51,8 @@
           "look": "a lanky, very thin air traffic controller in his forties, pale pink skin, spiky ginger hair, bright orange short-sleeve shirt as main colour, grey trousers, a big black headset hanging around his neck",
           "role": "the resourceful controller who keeps calm with whatever he has at hand; deadpan, very proud of his makeshift solution",
           "file": "cast/actu-controleur.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "interprete",
@@ -63,10 +65,14 @@
       ],
       "cover": {
         "prompt": "A plain empty hallway with a pale yellow background. compteur (short and round, grey side-parted hair, mustard yellow cardigan, square black glasses) on the left, clicking the clicker with intense concentration, tongue slightly out. controleur (lanky, very thin, spiky ginger hair, bright orange shirt) on the right, proudly holding one of the tincans to his ear, the string stretching out of frame, deadpan. Wide shot, calm empty space above.",
-        "cast": ["compteur", "controleur"],
+        "cast": [
+          "compteur",
+          "controleur"
+        ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -75,14 +81,21 @@
           "tag": "Société",
           "caption": "Samedi 14 novembre, cinquième samedi de mobilisation contre la vie chère : 106 000 manifestants selon le ministère de l’Intérieur, 200 000 selon les organisations de jeunesse.",
           "bubbles": [
-            { "who": "compteur", "text": "J’en compte 153 000. Pile au milieu. Comme ça, personne n’est content.", "side": "r" }
+            {
+              "who": "compteur",
+              "text": "J’en compte 153 000. Pile au milieu. Comme ça, personne n’est content.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "A wide Paris boulevard seen from a pavement, a long crowd of tiny simple marchers in the background holding blank signs, pale blue background. compteur (short and round, grey side-parted hair, mustard yellow cardigan, square black glasses) in the foreground on the right, standing on a small wooden crate, clicking the clicker with intense concentration, one eye squinting, tongue slightly out. Medium shot, calm empty space above.",
-            "cast": ["compteur"],
+            "cast": [
+              "compteur"
+            ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -91,7 +104,15 @@
           "tag": "En vrai",
           "title": "La place de la Nation, à Paris",
           "text": "Le Triomphe de la République, statue de Jules Dalou au centre de la place de la Nation, où le cortège parisien est arrivé samedi.",
-          "photo": { "commons": "File:Paris 11e - Place de la Nation - Le Triomphe de la République (Jules Dalou) 01.jpg" }
+          "photo": {
+            "commons": "File:Paris 11e - Place de la Nation - Le Triomphe de la République (Jules Dalou) 01.jpg",
+            "credit": "Jules Dalou",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Paris_11e_-_Place_de_la_Nation_-_Le_Triomphe_de_la_R%C3%A9publique_(Jules_Dalou)_01.jpg",
+            "file": "images/photo-2-paris-11e-place-de-la-nation-le-tri.webp",
+            "status": "done"
+          }
         },
         {
           "n": 3,
@@ -106,14 +127,21 @@
           "tag": "Sport",
           "caption": "Vendredi soir au Stade de France, le XV de France bat l’Afrique du Sud 21-19. Les Bleus avaient perdu neuf de leurs dix derniers matchs contre les Springboks.",
           "bubbles": [
-            { "who": "supportrice", "text": "Neuf défaites sur dix. Statistiquement, celle-là, on nous la devait.", "side": "l" }
+            {
+              "who": "supportrice",
+              "text": "Neuf défaites sur dix. Statistiquement, celle-là, on nous la devait.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "A rugby stadium stand at night, rows of empty blue seats, pale green background. supportrice (tall and sporty, big round afro puff hair, oversized bright blue rugby jersey, red and white stripe on one cheek) on the left, standing on her seat, triumphantly holding the calculator high above her head like a trophy, the other fist raised, huge proud grin, yellow sparkles around the calculator. Medium shot, calm empty space above.",
-            "cast": ["supportrice"],
+            "cast": [
+              "supportrice"
+            ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -122,7 +150,15 @@
           "tag": "En vrai",
           "title": "Le Stade de France, à Saint-Denis",
           "text": "Le Stade de France, à Saint-Denis, lors d’une finale de football en 2016 : environ 80 000 places, et la maison du XV de France.",
-          "photo": { "commons": "File:Le Stade de France lors de la finale de la Coupe de la Ligue 2015 - 2016.jpg" }
+          "photo": {
+            "commons": "File:Le Stade de France lors de la finale de la Coupe de la Ligue 2015 - 2016.jpg",
+            "credit": "Passion-tango",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Le_Stade_de_France_lors_de_la_finale_de_la_Coupe_de_la_Ligue_2015_-_2016.jpg",
+            "file": "images/photo-5-le-stade-de-france-lors-de-la-final.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -137,14 +173,21 @@
           "tag": "Monde",
           "caption": "Vendredi, l’agence américaine de l’aviation bloque tous les décollages aux États-Unis pendant plus de quatre heures : du matériel neuf a surchargé de vieux équipements de télécommunications.",
           "bubbles": [
-            { "who": "controleur", "text": "Système de secours activé. Portée : trois mètres.", "side": "r" }
+            {
+              "who": "controleur",
+              "text": "Système de secours activé. Portée : trois mètres.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "An air traffic control room with one big dark radar screen and a desk, pale lilac background. controleur (lanky, very thin, spiky ginger hair, bright orange shirt, black headset around his neck) on the right, sitting very straight, holding one of the tincans to his mouth, the taut string running across the room to a tiny colleague far away holding the other tin can to his ear, deadpan proud expression. Medium wide shot, calm empty space above.",
-            "cast": ["controleur"],
+            "cast": [
+              "controleur"
+            ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -153,7 +196,15 @@
           "tag": "En vrai",
           "title": "Un centre de contrôle aérien de la FAA",
           "text": "L’entrée du centre de contrôle d’approche de la FAA à Vint Hill, en Virginie, qui guide les avions autour de Washington.",
-          "photo": { "commons": "File:FAA Potomac Consolidated TRACON.jpg" }
+          "photo": {
+            "commons": "File:FAA Potomac Consolidated TRACON.jpg",
+            "credit": "Federal Aviation Administration",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:FAA_Potomac_Consolidated_TRACON.jpg",
+            "file": "images/photo-8-faa-potomac-consolidated-tracon-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 9,
@@ -168,14 +219,21 @@
           "tag": "Diplomatie",
           "caption": "La Maison-Blanche annonce une rencontre inédite à trois, dans les prochains jours à Shenzhen, en Chine : les présidents américain Donald Trump, chinois Xi Jinping et russe Vladimir Poutine.",
           "bubbles": [
-            { "who": "interprete", "text": "Anglais, chinois, russe : trois oreillettes, et toujours une seule paire d’oreilles.", "side": "l" }
+            {
+              "who": "interprete",
+              "text": "Anglais, chinois, russe : trois oreillettes, et toujours une seule paire d’oreilles.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "A small modern interpreter booth with a glass window and a desk with a microphone, pale pink background. interprete (very upright and slim, silver-white high bun, deep purple suit, thin gold glasses) on the left, wearing the headsets stacked on her head, one over the other, eyes wide, sitting perfectly straight, pen frozen above her notepad, a tiny light-blue sweat drop on her temple. Medium shot, calm empty space above.",
-            "cast": ["interprete"],
+            "cast": [
+              "interprete"
+            ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -184,7 +242,15 @@
           "tag": "En vrai",
           "title": "Shenzhen, la ville du sommet",
           "text": "Les tours de Shenzhen, dont le Ping An Finance Center : la métropole chinoise accueille cette année le sommet de l’APEC.",
-          "photo": { "commons": "File:Shenzhen Skyline Fuhua Road Ping An International Finance Center.jpg" }
+          "photo": {
+            "commons": "File:Shenzhen Skyline Fuhua Road Ping An International Finance Center.jpg",
+            "credit": "Shihu7",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Shenzhen_Skyline_Fuhua_Road_Ping_An_International_Finance_Center.jpg",
+            "file": "images/photo-11-shenzhen-skyline-fuhua-road-ping-an.webp",
+            "status": "done"
+          }
         },
         {
           "n": 12,
@@ -250,22 +316,70 @@
         "source": "Reuters / Boursorama"
       },
       "sources": [
-        { "title": "Le Monde via Titrespresse — Manifestations du 14 novembre : 106 000 personnes ont défilé samedi", "url": "https://www.titrespresse.com/29128572603/paris-manifestations-novembre" },
-        { "title": "CNews — Manifestations du 14 novembre : 106 000 manifestants en France, dont 24 000 à Paris", "url": "https://www.cnews.fr/france/2026-11-14/manifestations-du-14-novembre-106000-manifestants-en-france-dont-24000-paris-des" },
-        { "title": "ICI — Mobilisation du 14 novembre : 200 000 manifestants selon les syndicats, 106 000 selon le ministère", "url": "https://www.ici.fr/infos/societe/mobilisation-du-14-novembre-suivez-l-acte-v-des-manifestations-contre-la-vie-chere-et-pour-la-jeunesse-5378889" },
-        { "title": "Sortiraparis — Manifestations du 14 novembre à Paris : qui défile, où et quand", "url": "https://www.sortiraparis.com/actualites/a-paris/articles/358040-manifestations-du-14-novembre-a-paris-qui-defile-ou-et-quand-le-point" },
-        { "title": "Reuters via Boursorama — Le XV de France s’impose de justesse contre l’Afrique du Sud", "url": "https://www.boursorama.com/actualite-economique/actualites/rugby-le-xv-de-france-s-impose-de-justesse-contre-l-afrique-du-sud-391b83540073cd2ac426785c94670110" },
-        { "title": "Presse83 — France - Afrique du Sud : 21-19, le XV de France fait trembler le Stade de France", "url": "https://presse83.fr/2026/11/14/france-afrique-du-sud-21-19-le-xv-de-france-fait-trembler-le-stade-de-france/france-monde/nicolas-dupre/" },
-        { "title": "Al Jazeera — FAA ground stop lifted: why were US flights grounded, and what’s next?", "url": "https://www.aljazeera.com/news/2026/11/14/faa-ground-stop-lifted-why-were-us-flights-grounded-and-whats-next" },
-        { "title": "Fox Weather — Thousands of flights canceled as US air travel slowly recovers from nationwide ground stop", "url": "https://www.foxweather.com/weather-news/flights-canceled-delayed-us-ground-stop-november-2026" },
-        { "title": "Al Jazeera — Trump, Xi and Putin to hold first three-way summit in China", "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china" },
-        { "title": "US News (AP) — Trump, Xi and Putin plan an unprecedented joint meeting on the sidelines of APEC", "url": "https://www.usnews.com/news/politics/articles/2026-11-13/trump-xi-and-putin-plan-an-unprecedented-joint-meeting-on-the-sidelines-of-apec-officials-say" },
-        { "title": "Selectra — Panne de Microsoft 365 : Outlook, Teams et Copilot perturbés plus de 29 heures", "url": "https://selectra.info/telecom/actualites/marche/panne-microsoft-365-direct-13-novembre-outlook" },
-        { "title": "Franceinfo — Ce que l’on sait de la panne mondiale qui touche Microsoft", "url": "https://www.franceinfo.fr/internet/panne-informatique-mondiale/outlook-et-teams-perturbes-pas-de-cyberattaque-d-apres-microsoft-ce-que-l-on-sait-de-la-panne-mondiale-qui-touche-le-geant-americain-depuis-jeudi_8280671.html" },
-        { "title": "Ulysse — Les Galeries Lafayette bousculent les traditions avec leur décor de Noël 2026", "url": "https://ulysse.com/news/on-ne-dirait-meme-pas-un-sapin-de-noel-les-galeries-lafayette-bousculent-les-traditions-avec-leur-decor-de-noel-2026" },
-        { "title": "CNews — Le sapin de Noël des Galeries Lafayette divise les internautes", "url": "https://www.cnews.fr/france/2026-11-12/vilain-audacieux-etendoir-linge-le-sapin-de-noel-des-galeries-lafayette-paris" },
-        { "title": "ESPN — Ronaldinho at Ravenna: explaining comeback aged 46", "url": "https://www.espn.com/soccer/story/_/id/50459813/ronaldinho-ravenna-how-watch-uk" },
-        { "title": "Sky Sports — Ronaldinho returns: how to watch the Brazilian icon’s comeback", "url": "https://www.skysports.com/football/news/13610697/ronaldinho-returns-how-to-watch-brazilian-icons-comeback-live-on-sky-sports" }
+        {
+          "title": "Le Monde via Titrespresse — Manifestations du 14 novembre : 106 000 personnes ont défilé samedi",
+          "url": "https://www.titrespresse.com/29128572603/paris-manifestations-novembre"
+        },
+        {
+          "title": "CNews — Manifestations du 14 novembre : 106 000 manifestants en France, dont 24 000 à Paris",
+          "url": "https://www.cnews.fr/france/2026-11-14/manifestations-du-14-novembre-106000-manifestants-en-france-dont-24000-paris-des"
+        },
+        {
+          "title": "ICI — Mobilisation du 14 novembre : 200 000 manifestants selon les syndicats, 106 000 selon le ministère",
+          "url": "https://www.ici.fr/infos/societe/mobilisation-du-14-novembre-suivez-l-acte-v-des-manifestations-contre-la-vie-chere-et-pour-la-jeunesse-5378889"
+        },
+        {
+          "title": "Sortiraparis — Manifestations du 14 novembre à Paris : qui défile, où et quand",
+          "url": "https://www.sortiraparis.com/actualites/a-paris/articles/358040-manifestations-du-14-novembre-a-paris-qui-defile-ou-et-quand-le-point"
+        },
+        {
+          "title": "Reuters via Boursorama — Le XV de France s’impose de justesse contre l’Afrique du Sud",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/rugby-le-xv-de-france-s-impose-de-justesse-contre-l-afrique-du-sud-391b83540073cd2ac426785c94670110"
+        },
+        {
+          "title": "Presse83 — France - Afrique du Sud : 21-19, le XV de France fait trembler le Stade de France",
+          "url": "https://presse83.fr/2026/11/14/france-afrique-du-sud-21-19-le-xv-de-france-fait-trembler-le-stade-de-france/france-monde/nicolas-dupre/"
+        },
+        {
+          "title": "Al Jazeera — FAA ground stop lifted: why were US flights grounded, and what’s next?",
+          "url": "https://www.aljazeera.com/news/2026/11/14/faa-ground-stop-lifted-why-were-us-flights-grounded-and-whats-next"
+        },
+        {
+          "title": "Fox Weather — Thousands of flights canceled as US air travel slowly recovers from nationwide ground stop",
+          "url": "https://www.foxweather.com/weather-news/flights-canceled-delayed-us-ground-stop-november-2026"
+        },
+        {
+          "title": "Al Jazeera — Trump, Xi and Putin to hold first three-way summit in China",
+          "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china"
+        },
+        {
+          "title": "US News (AP) — Trump, Xi and Putin plan an unprecedented joint meeting on the sidelines of APEC",
+          "url": "https://www.usnews.com/news/politics/articles/2026-11-13/trump-xi-and-putin-plan-an-unprecedented-joint-meeting-on-the-sidelines-of-apec-officials-say"
+        },
+        {
+          "title": "Selectra — Panne de Microsoft 365 : Outlook, Teams et Copilot perturbés plus de 29 heures",
+          "url": "https://selectra.info/telecom/actualites/marche/panne-microsoft-365-direct-13-novembre-outlook"
+        },
+        {
+          "title": "Franceinfo — Ce que l’on sait de la panne mondiale qui touche Microsoft",
+          "url": "https://www.franceinfo.fr/internet/panne-informatique-mondiale/outlook-et-teams-perturbes-pas-de-cyberattaque-d-apres-microsoft-ce-que-l-on-sait-de-la-panne-mondiale-qui-touche-le-geant-americain-depuis-jeudi_8280671.html"
+        },
+        {
+          "title": "Ulysse — Les Galeries Lafayette bousculent les traditions avec leur décor de Noël 2026",
+          "url": "https://ulysse.com/news/on-ne-dirait-meme-pas-un-sapin-de-noel-les-galeries-lafayette-bousculent-les-traditions-avec-leur-decor-de-noel-2026"
+        },
+        {
+          "title": "CNews — Le sapin de Noël des Galeries Lafayette divise les internautes",
+          "url": "https://www.cnews.fr/france/2026-11-12/vilain-audacieux-etendoir-linge-le-sapin-de-noel-des-galeries-lafayette-paris"
+        },
+        {
+          "title": "ESPN — Ronaldinho at Ravenna: explaining comeback aged 46",
+          "url": "https://www.espn.com/soccer/story/_/id/50459813/ronaldinho-ravenna-how-watch-uk"
+        },
+        {
+          "title": "Sky Sports — Ronaldinho returns: how to watch the Brazilian icon’s comeback",
+          "url": "https://www.skysports.com/football/news/13610697/ronaldinho-returns-how-to-watch-brazilian-icons-comeback-live-on-sky-sports"
+        }
       ]
     },
     {
@@ -280,54 +394,109 @@
           "theme": "Sports",
           "q": "Avant d’être un stade de tennis, Roland Garros était…",
           "hint": "Pensez à quelqu’un qui jouait plutôt dans les nuages.",
-          "choices": ["Un champion de tennis des années 1920", "Le maire de Paris", "Un aviateur", "Un marchand de terre battue"],
+          "choices": [
+            "Un champion de tennis des années 1920",
+            "Le maire de Paris",
+            "Un aviateur",
+            "Un marchand de terre battue"
+          ],
           "answer": 2,
           "explain": "Le 23 septembre 1913, il relie sans escale Fréjus à Bizerte, en Tunisie : presque huit heures au-dessus de la Méditerranée. Le stade, ouvert en 1928, honore sa mémoire. Belle trajectoire, comme un lob.",
-          "source": { "title": "Wikipedia — Roland Garros (aviator)", "url": "https://en.wikipedia.org/wiki/Roland_Garros_(aviator)" }
+          "source": {
+            "title": "Wikipedia — Roland Garros (aviator)",
+            "url": "https://en.wikipedia.org/wiki/Roland_Garros_(aviator)"
+          }
         },
         {
           "theme": "Entreprises et marques",
           "q": "Que veulent dire les lettres LU des biscuits nantais ?",
           "hint": "Ce sont les initiales de deux noms de famille.",
-          "choices": ["Lefèvre-Utile, un couple de pâtissiers", "Loire Unie", "Les Usines", "Luxe Universel"],
+          "choices": [
+            "Lefèvre-Utile, un couple de pâtissiers",
+            "Loire Unie",
+            "Les Usines",
+            "Luxe Universel"
+          ],
           "answer": 0,
           "explain": "Jean-Romain Lefèvre et son épouse Pauline-Isabelle Utile accolent leurs deux noms. Leur fils Louis crée à Nantes le Petit Beurre en 1886. Un mariage qui a très bien tourné : en biscuit.",
-          "source": { "title": "Connexion France — The form of France’s LU biscuits has a hidden message", "url": "https://www.connexionfrance.com/magazine/did-you-know-the-form-of-frances-lu-biscuits-has-a-hidden-message/158295" }
+          "source": {
+            "title": "Connexion France — The form of France’s LU biscuits has a hidden message",
+            "url": "https://www.connexionfrance.com/magazine/did-you-know-the-form-of-frances-lu-biscuits-has-a-hidden-message/158295"
+          }
         },
         {
           "theme": "Architecture",
           "q": "Quelle est la particularité du grand escalier de Chambord ?",
           "hint": "On peut y jouer à cache-cache sans jamais se croiser.",
-          "choices": ["Deux personnes peuvent monter sans jamais se croiser", "Il n’a aucune marche, c’est une rampe", "Il compte exactement 365 marches", "Il est entièrement en bois"],
+          "choices": [
+            "Deux personnes peuvent monter sans jamais se croiser",
+            "Il n’a aucune marche, c’est une rampe",
+            "Il compte exactement 365 marches",
+            "Il est entièrement en bois"
+          ],
           "answer": 0,
           "explain": "Ses deux volées s’enroulent en double hélice : on monte ensemble sans jamais se croiser. L’architecte est inconnu ; on y voit souvent l’influence de Léonard de Vinci, mort six mois avant le chantier.",
-          "source": { "title": "France.fr — Chambord ou le génie de ses prouesses architecturales", "url": "https://www.france.fr/fr/article/chambord-ou-le-genie-de-ses-prouesses-architecturales/" }
+          "source": {
+            "title": "France.fr — Chambord ou le génie de ses prouesses architecturales",
+            "url": "https://www.france.fr/fr/article/chambord-ou-le-genie-de-ses-prouesses-architecturales/"
+          }
         },
         {
           "theme": "Sciences du vivant",
           "q": "Combien de cœurs battent dans une pieuvre ?",
           "hint": "Plus d’un, mais bien moins que de bras.",
-          "choices": ["Un seul, comme tout le monde", "Deux", "Trois", "Huit, un par bras"],
+          "choices": [
+            "Un seul, comme tout le monde",
+            "Deux",
+            "Trois",
+            "Huit, un par bras"
+          ],
           "answer": 2,
           "explain": "Deux cœurs envoient le sang vers les branchies, un troisième vers le reste du corps. Son sang est bleu, grâce à l’hémocyanine, à base de cuivre. Une vraie romantique, version plomberie.",
-          "source": { "title": "Greenpeace — 10 faits incroyables sur les pieuvres", "url": "https://www.greenpeace.org/luxembourg/fr/actualites/18587/10-faits-incroyables-sur-les-pieuvres/" }
+          "source": {
+            "title": "Greenpeace — 10 faits incroyables sur les pieuvres",
+            "url": "https://www.greenpeace.org/luxembourg/fr/actualites/18587/10-faits-incroyables-sur-les-pieuvres/"
+          }
         },
         {
           "theme": "Expression française",
           "q": "Être « sur la sellette », à l’origine, c’était être assis où ?",
           "hint": "Pensez à un tribunal d’autrefois.",
-          "choices": ["Sur la selle d’un cheval de course", "Sur le petit tabouret bas de l’accusé", "Sur le banc des ministres", "Sur le siège du cordonnier"],
+          "choices": [
+            "Sur la selle d’un cheval de course",
+            "Sur le petit tabouret bas de l’accusé",
+            "Sur le banc des ministres",
+            "Sur le siège du cordonnier"
+          ],
           "answer": 1,
           "explain": "Dès le XIIIe siècle, l’accusé subissait son dernier interrogatoire sur ce siège bas, en contrebas des juges. La Révolution l’a remplacé par le banc des accusés. Mal assis, et mal parti.",
-          "source": { "title": "La langue française — Sur la sellette", "url": "https://www.lalanguefrancaise.com/expressions/sur-la-sellette" }
+          "source": {
+            "title": "La langue française — Sur la sellette",
+            "url": "https://www.lalanguefrancaise.com/expressions/sur-la-sellette"
+          }
         }
       ],
       "sources": [
-        { "title": "Greenpeace — 10 faits incroyables sur les pieuvres", "url": "https://www.greenpeace.org/luxembourg/fr/actualites/18587/10-faits-incroyables-sur-les-pieuvres/" },
-        { "title": "Connexion France — The form of France’s LU biscuits has a hidden message", "url": "https://www.connexionfrance.com/magazine/did-you-know-the-form-of-frances-lu-biscuits-has-a-hidden-message/158295" },
-        { "title": "La langue française — Sur la sellette", "url": "https://www.lalanguefrancaise.com/expressions/sur-la-sellette" },
-        { "title": "Wikipedia — Roland Garros (aviator)", "url": "https://en.wikipedia.org/wiki/Roland_Garros_(aviator)" },
-        { "title": "France.fr — Chambord ou le génie de ses prouesses architecturales", "url": "https://www.france.fr/fr/article/chambord-ou-le-genie-de-ses-prouesses-architecturales/" }
+        {
+          "title": "Greenpeace — 10 faits incroyables sur les pieuvres",
+          "url": "https://www.greenpeace.org/luxembourg/fr/actualites/18587/10-faits-incroyables-sur-les-pieuvres/"
+        },
+        {
+          "title": "Connexion France — The form of France’s LU biscuits has a hidden message",
+          "url": "https://www.connexionfrance.com/magazine/did-you-know-the-form-of-frances-lu-biscuits-has-a-hidden-message/158295"
+        },
+        {
+          "title": "La langue française — Sur la sellette",
+          "url": "https://www.lalanguefrancaise.com/expressions/sur-la-sellette"
+        },
+        {
+          "title": "Wikipedia — Roland Garros (aviator)",
+          "url": "https://en.wikipedia.org/wiki/Roland_Garros_(aviator)"
+        },
+        {
+          "title": "France.fr — Chambord ou le génie de ses prouesses architecturales",
+          "url": "https://www.france.fr/fr/article/chambord-ou-le-genie-de-ses-prouesses-architecturales/"
+        }
       ]
     }
   ]
