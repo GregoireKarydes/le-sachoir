@@ -15,7 +15,7 @@
           "name": "Patrick, l’animateur",
           "look": "Patrick, a tall slim smooth TV quiz show host, shiny swept-back grey hair, huge white smile, glossy purple tuxedo as main colour, red bow tie, white shirt, holding question cards",
           "file": "cast/insolite-patrick.png",
-          "status": "pending",
+          "status": "done",
           "role": "the smooth quiz host who asks the trick question and then explains the answer with a map; slick, smiling, always in showman pose"
         },
         {
@@ -23,7 +23,7 @@
           "name": "Bernard, le candidat",
           "look": "Bernard, a short round quiz show contestant in his fifties, bald head, thick black glasses, mustard-yellow cardigan as main colour over a white shirt, brown trousers, very sweaty forehead",
           "file": "cast/insolite-bernard.png",
-          "status": "pending",
+          "status": "done",
           "role": "the contestant sure the answer is Spain; round, sweaty, panicking, the reader's naive voice"
         }
       ],
@@ -34,8 +34,9 @@
           "bernard"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -62,8 +63,9 @@
               "bernard"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -78,8 +80,8 @@
               "bernard"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 3
           }
         },
         {
@@ -106,8 +108,8 @@
               "bernard"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +143,8 @@
               "bernard"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -169,8 +171,8 @@
               "bernard"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -207,8 +209,8 @@
               "bernard"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -235,8 +237,8 @@
               "bernard"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

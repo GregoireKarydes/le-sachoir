@@ -25,7 +25,7 @@
           "look": "Léo, a tall lanky modern French high-school student, messy curly red hair, bright green hoodie as main colour, blue jeans, white sneakers, a huge black school backpack, pale freckled skin",
           "role": "the curious student revising for his French exam, who asks the reader's questions; lanky, slouching, always counting syllables on his fingers",
           "file": "cast/cultureg-leo.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "alexandre",
@@ -33,7 +33,7 @@
           "look": "Alexandre, a short plump 12th-century French cleric poet, round head with a monk's tonsure and a ring of brown hair, rosy cheeks, deep blue long robe as main colour with a rope belt, a white goose quill tucked behind his ear",
           "role": "the medieval poet who knows the answer; short, plump, proud of his work and a little vain, chest always puffed out",
           "file": "cast/cultureg-alexandre.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -43,8 +43,9 @@
           "leo"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -71,8 +72,8 @@
               "alexandre"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -99,8 +100,8 @@
               "leo"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -127,8 +128,8 @@
               "leo"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -162,8 +163,8 @@
               "leo"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -190,8 +191,8 @@
               "leo"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -218,8 +219,8 @@
               "leo"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -262,8 +263,8 @@
               "alexandre"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

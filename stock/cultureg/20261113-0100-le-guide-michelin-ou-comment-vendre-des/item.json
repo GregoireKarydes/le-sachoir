@@ -80,8 +80,7 @@
             ],
             "file": "images/cultureg-01.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -206,8 +205,7 @@
             ],
             "file": "images/cultureg-05.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -297,8 +295,7 @@
             ],
             "file": "images/cultureg-08.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         }
       ],

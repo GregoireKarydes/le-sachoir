@@ -166,9 +166,9 @@
               "lucie"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (8cca5ae9-f600-4efe-ba78-7c6044675095)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "failed",
+            "attempts": 3,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (d0efe6f5-6d10-4c63-b564-3f6ef409dcfa)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -274,9 +274,8 @@
               "lucie"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (59f0225b-04b5-4380-9880-d45ea75cf7c6)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -670,8 +669,8 @@
               "prof"
             ],
             "file": "images/dossier-22.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -696,8 +695,8 @@
               "prof"
             ],
             "file": "images/dossier-23.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -722,8 +721,8 @@
               "prof"
             ],
             "file": "images/dossier-24.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -756,8 +755,8 @@
               "lucie"
             ],
             "file": "images/dossier-25.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
@@ -818,5 +817,6 @@
         }
       }
     }
-  ]
+  ],
+  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
 }

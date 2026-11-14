@@ -29,7 +29,7 @@
           "look": "Pierre, a short compact French baron of the 1890s, slicked-back dark brown hair with a neat side parting, an enormous bushy dark walrus moustache, pale skin, navy blue three-piece suit as main colour, high white collar, a gold watch chain on the waistcoat",
           "role": "the stubborn idealist who revives the Games and is ignored at first; small but stands very straight, chest out, chin up, often a hand on his heart",
           "file": "cast/dossier-coubertin.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "ines",
@@ -37,7 +37,7 @@
           "look": "Inès, a tall athletic young woman of today, very short bleached blonde buzz cut, warm brown skin, bright orange running vest as main colour, black running shorts, white sneakers, a black stopwatch on a cord around her neck",
           "role": "the curious runner from today who asks the reader's questions; bouncy, always stretching or jogging on the spot, huge expressive reactions",
           "file": "cast/dossier-ines.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "spyridon",
@@ -45,7 +45,7 @@
           "look": "Spyridon, a lean wiry Greek villager of 1896, curly black hair, thick black moustache, olive skin, loose white shirt, white pleated knee-length kilt, a bright red embroidered sleeveless vest as main colour, the jug often in hand",
           "role": "the humble water carrier who wins the first marathon; wiry and calm, runs with a serene little smile, never out of breath",
           "file": "cast/dossier-spyridon.png",
-          "status": "pending"
+          "status": "skipped"
         },
         {
           "id": "charlotte",
@@ -53,7 +53,8 @@
           "look": "Charlotte, a slender upright Edwardian woman of medium height, dark hair piled in a big bun under a flat straw boater hat, fair skin, long ankle-length white tennis dress with long sleeves, a bright green belt and green hat ribbon as main colour, the racket on her shoulder",
           "role": "the first woman Olympic champion; poised and calm, racket on her shoulder, amused and unimpressed by the baron",
           "file": "cast/dossier-charlotte.png",
-          "status": "pending"
+          "status": "pending",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (06ea491d-d5a9-45c1-ac24-84a1d0c67acc)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "cover": {
@@ -63,8 +64,9 @@
           "coubertin"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -91,8 +93,9 @@
               "coubertin"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -135,8 +138,8 @@
               "coubertin"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -163,8 +166,8 @@
               "coubertin"
             ],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -205,8 +208,8 @@
               "ines"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -234,8 +237,8 @@
               "coubertin"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -263,8 +266,8 @@
               "coubertin"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -292,8 +295,8 @@
               "ines"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -331,8 +334,8 @@
               "coubertin"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -376,8 +379,8 @@
               "coubertin"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -404,8 +407,8 @@
               "ines"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -433,8 +436,8 @@
               "ines"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -478,8 +481,8 @@
               "coubertin"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -507,8 +510,8 @@
               "ines"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -536,8 +539,8 @@
               "coubertin"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
