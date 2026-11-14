@@ -1,11 +1,11 @@
 {
- "updated_at": "2026-11-14T08:52:08.708326+01:00",
+ "updated_at": "2026-11-14T09:07:56.793821+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
   {
    "date": "2026-11-14",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -71,11 +71,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-14/cultureg : « Le guide Michelin, ou comment vendre des pneus avec un bon dîner » prise dans la file (20261113-0100-le-guide-michelin-ou-comment-vendre-des)",
-  "2026-11-14/insolite : « Docteur Vampire et ses quarante millions de sangsues » prise dans la file (20261112-0100-docteur-vampire-et-ses-quarante-millions)",
-  "2026-11-14/dossier : « On descend du singe ? Non, on est cousins (et c’est la faute à Darwin) » prise dans la file (20261108-1929-darwin-on-ne-descend-pas-du-singe)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
