@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T18:47+01:00",
+ "updated_at": "2026-11-14T19:30+01:00",
  "stock": {
   "cultureg": [
    {
@@ -226,6 +226,23 @@
     "photos": 3,
     "images_done": 0,
     "images_total": 19,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261114-1927-nucleaire-tiroir-ferme",
+    "name": "20261114-1927-nucleaire-tiroir-ferme",
+    "added": "20261114-1927",
+    "status": "waiting",
+    "next": false,
+    "title": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
+    "theme": "Sciences physiques",
+    "tagline": "De la plaque photo de Becquerel aux 57 réacteurs d’aujourd’hui : l’atome, la fission et la centrale expliqués sans prise de tête",
+    "minutes": 3,
+    "cases": 27,
+    "photos": 3,
+    "images_done": 0,
+    "images_total": 22,
     "failed": 0,
     "redo": 0
    }

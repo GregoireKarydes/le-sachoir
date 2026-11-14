@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T18:47:34.102930+01:00",
+ "updated_at": "2026-11-14T19:30:05.486191+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -127,9 +127,9 @@
   },
   "dossier": {
    "ready": 1,
-   "waiting": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 26,
+   "images_left": 48,
    "focus": "20261113-1926-jeux-olympiques-baron-tetu (7 image(s) à faire)",
    "next": "20261110-0100-qui-commande-en-france-la-ve-republique",
    "next_redo": 0
