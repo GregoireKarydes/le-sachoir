@@ -49,7 +49,8 @@
     "cultureg": 3,
     "insolite": 3,
     "notice": 2,
-    "dossier": 2
+    "dossier": 2,
+    "origine": 2
   },
   "stock_target_note": "BD finies d'avance par type (file stock/) avant de refaire les images demandées par le contrôle qualité",
   "emotion_touches_note": "8 novembre 2026 : les touches d'émotion (joues roses, larmes, sueur, rougeur, cœurs, étincelles) ne sont plus dans le style global, qui les faisait dessiner partout ; seul le prompt de scène les demande, quand l'émotion est vraiment là. 'scruffy spiky hair' retiré aussi (tous les personnages se ressemblaient).",
@@ -90,7 +91,10 @@
         248
       ]
     },
-    "note": "13 novembre 2026 : le fond de chaque image (la zone claire reliée aux bords du haut) prend la teinte pastel du format de la BD, la même dans toutes ses cases ; les traits, les personnages et les objets ne sont pas touchés. Les fiches casting restent sur fond blanc."
+    "note": "13 novembre 2026 : le fond de chaque image (la zone claire reliée aux bords du haut) prend la teinte pastel du format de la BD, la même dans toutes ses cases ; les traits, les personnages et les objets ne sont pas touchés. Les fiches casting restent sur fond blanc.",
+    "skip": [
+      "origine"
+    ]
   },
   "premium": {
     "enabled": true,
@@ -101,5 +105,10 @@
     "monthly_usd": 5.0,
     "safety_tolerance": "2",
     "note": "13 novembre 2026, décision de Greg : un meilleur modèle (FLUX.2 [pro], environ 0,045 $ l'image) pour la couverture et la première case de chaque BD, celles qui décident si on lit. Plafonds propres (0,20 $ par jour, 5 $ par mois) à l'intérieur du plafond fal.ai global (fal_monthly_usd) ; au-delà, retour au modèle habituel. Jamais pour les images à refaire."
+  },
+  "cine": {
+    "style": "Cinematic historical film still, realistic digital matte painting, dramatic low golden-hour or dusk light, haze, drifting smoke and mist, desaturated sepia and umber palette with deep soft shadows, painterly detail, sober and epic mood, believable and historically accurate, no fantasy elements.",
+    "constraints": "One single full-bleed picture, edge to edge, no border, no frame. Wordless picture: no text, no lettering, no captions, no logo, no watermark; any sign, banner, coin or board is blank. The subject sits in the upper 55 % of the frame; the lower 40 % is calm, dark and simple (ground, shadow, wall, water, crowd in silhouette), with no face and no important detail there, because text will be laid over it. People are seen from behind, in silhouette or from a distance; never a close-up of a face. Clothes, buildings, tools and weapons are accurate for the period.",
+    "note": "14 novembre 2026 : rubrique « D'où ça vient ? » (format origine), récit cinématique sur l'origine d'une expression, inspiré des carrousels Instagram de vulgarisation historique. Style réaliste propre à cette rubrique : pas de référence de style ni de fiche casting, pas de teinte de fond (harmonize.skip). Sans image de référence, le renfort fal.ai et le modèle premium (mode edit) ne s'appliquent pas : Cloudflare seulement."
   }
 }

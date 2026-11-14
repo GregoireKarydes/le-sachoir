@@ -15,8 +15,8 @@ FONTS = ROOT / "pipeline" / "fonts"
 LOGO = ROOT / "app" / "assets" / "logo.png"
 W, H = 1200, 630
 CREAM, INK, MUTED = (250, 246, 238), (23, 20, 15), (95, 90, 82)
-COLOR = {"dossier": (31, 143, 95), "actu": (47, 79, 162), "cultureg": (242, 163, 58), "insolite": (217, 71, 58), "notice": (122, 79, 184)}
-LABEL = {"dossier": "Le Grand Dossier", "actu": "L’Actu du jour", "cultureg": "La Pilule de Culture G", "insolite": "L’Insolite historique", "notice": "La Notice"}
+COLOR = {"dossier": (31, 143, 95), "actu": (47, 79, 162), "cultureg": (242, 163, 58), "insolite": (217, 71, 58), "notice": (122, 79, 184), "origine": (138, 90, 36)}
+LABEL = {"dossier": "Le Grand Dossier", "actu": "L’Actu du jour", "cultureg": "La Pilule de Culture G", "insolite": "L’Insolite historique", "notice": "La Notice", "origine": "D’où ça vient ?"}
 
 
 def _font(name, size):

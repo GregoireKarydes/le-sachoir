@@ -2,7 +2,7 @@
 import { esc, parisDay } from "./util.js";
 
 const C = { cream: "#faf6ee", ink: "#17140f", muted: "#5f5a52", line: "#e7e1d4", yellow: "#f5b62a",
-  dossier: "#1f8f5f", actu: "#2f4fa2", cultureg: "#f2a33a", insolite: "#d9473a", notice: "#7a4fb8", quiz: "#14275c" };
+  dossier: "#1f8f5f", actu: "#2f4fa2", cultureg: "#f2a33a", insolite: "#d9473a", notice: "#7a4fb8", origine: "#8a5a24", quiz: "#14275c" };
 const SERIF = "Georgia,'Times New Roman',serif", SANS = "Roboto,Helvetica,Arial,sans-serif";
 
 export const mailLimit = env => +(env.MAIL_DAILY_LIMIT || 290);
@@ -136,7 +136,7 @@ const POOLS = {
 const dayNum = day => Math.floor(Date.parse(day + "T12:00:00Z") / 86400000);
 const pick = (key, day, k = 0) => { const l = POOLS[key]; return l[(dayNum(day) * (k + 3) + k * 7) % l.length]; };
 const QUIZ_NAMES = { culture: "Quiz culture G", geo: "Quiz géo", frise: "La Frise", dico: "Le Dico menteur", plusmoins: "Plus ou moins", swipe: "Le Swipe", chiffre: "Le Chiffre", citation: "Qui a dit ça ?" };
-const EMOJI = { dossier: "📚", actu: "🗞️", cultureg: "💊", insolite: "🤯", notice: "⚙️" };
+const EMOJI = { dossier: "📚", actu: "🗞️", cultureg: "💊", insolite: "🤯", notice: "⚙️", origine: "📜" };
 
 export async function loadEdition(env, day) {
   const r = await fetch(`${env.APP_URL}editions/index.json`, { cf: { cacheTtl: 60 } });
