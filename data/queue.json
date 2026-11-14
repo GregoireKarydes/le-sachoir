@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T20:48+01:00",
+ "updated_at": "2026-11-14T20:51+01:00",
  "stock": {
   "cultureg": [
    {
@@ -84,6 +84,23 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261114-2049-tennis-15-30-40",
+    "name": "20261114-2049-tennis-15-30-40",
+    "added": "20261114-2049",
+    "status": "waiting",
+    "next": false,
+    "title": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main",
+    "theme": "Sports",
+    "tagline": "Un jeu de moines, un poème de prince, trois théories et cinq points disparus",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 7,
     "failed": 0,
     "redo": 0
    }

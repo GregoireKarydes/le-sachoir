@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T20:48:47.326684+01:00",
+ "updated_at": "2026-11-14T20:51:04.921008+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -92,9 +92,9 @@
  "stock": {
   "cultureg": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 32,
+   "images_left": 39,
    "focus": "20261113-2057-pourquoi-tant-de-martin (7 image(s) à faire)",
    "next": "20261113-2050-lalexandrin-roi-qui-na-jamais-rime",
    "next_redo": 0
