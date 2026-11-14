@@ -24,14 +24,18 @@
           "name": "Inès",
           "look": "Inès, a short round young Parisian commuter, curly black hair in a high bun, big round glasses, bright red raincoat as main colour, white sneakers, always holding a takeaway coffee cup",
           "file": "cast/origine-ines.png",
-          "role": "the commuter stuck by a strike who asks where the word comes from; short, round, exasperated then curious, the reader's voice"
+          "role": "the commuter stuck by a strike who asks where the word comes from; short, round, exasperated then curious, the reader's voice",
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "gustave",
           "name": "Gustave, journalier de la place de Grève",
           "look": "Gustave, a tall lanky labourer from 1700s Paris, scruffy blond beard, flat brown cap, rolled-up sleeves, blue work smock as main colour, a coil of rope over his shoulder",
           "file": "cast/origine-gustave.png",
-          "role": "a day labourer from the old riverbank square who explains the story; tall, lanky, proud of his square, deadpan"
+          "role": "a day labourer from the old riverbank square who explains the story; tall, lanky, proud of his square, deadpan",
+          "status": "done",
+          "via": "fal"
         }
       ],
       "cases": [
@@ -57,7 +61,9 @@
               "gustave"
             ],
             "file": "images/origine-01.webp",
-            "status": "pending"
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -82,7 +88,9 @@
               "ines"
             ],
             "file": "images/origine-02.webp",
-            "status": "pending"
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -107,7 +115,9 @@
               "ines"
             ],
             "file": "images/origine-03.webp",
-            "status": "pending"
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -143,7 +153,9 @@
               "ines"
             ],
             "file": "images/origine-05.webp",
-            "status": "pending"
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -168,7 +180,9 @@
               "gustave"
             ],
             "file": "images/origine-06.webp",
-            "status": "pending"
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
