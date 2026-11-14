@@ -655,13 +655,13 @@ body{overscroll-behavior-y:none}
   padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
 @media (min-width:560px){.phone{box-shadow:0 0 0 1px var(--line),0 10px 40px rgba(0,0,0,.08)}}
 .slide > img.panel{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-/* « D'où ça vient ? » (14 novembre 2026) : écran de cinéma, texte blanc sur le bas assombri, un mot en couleur */
-.slide.cine{background:#14110d}
+/* « D'où ça vient ? » (14 novembre 2026) : dessin du Sachoir en haut, texte blanc sur un bandeau encre en bas (le bas de l'image est vide), un mot en jaune */
+.slide.cine{background:var(--ink)}
 .slide.cine > img.panel{transform-origin:var(--fo,50% 40%);transform:scale(var(--z,1))}
-.cine-shade{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.72) 38%,rgba(0,0,0,.94) 100%);pointer-events:none}
-.cine-txt{position:absolute;left:7%;right:68px;bottom:16%;margin:0;z-index:2;color:#fff;font-family:var(--f-sans);font-weight:900;font-size:clamp(23px,7vw,32px);line-height:1.24;letter-spacing:-.2px;text-shadow:0 2px 14px rgba(0,0,0,.45);text-wrap:balance}
+.cine-shade{position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,rgba(23,20,15,0) 0%,rgba(23,20,15,.9) 30%,var(--ink) 55%);pointer-events:none}
+.cine-txt{position:absolute;left:7%;right:68px;bottom:12%;margin:0;z-index:2;color:#fff;font-family:var(--f-sans);font-weight:900;font-size:clamp(23px,7vw,32px);line-height:1.24;letter-spacing:-.2px;text-wrap:balance}
 .cine-txt em{font-style:normal;color:var(--yellow)}
-.cine-tag{position:absolute;top:16px;left:16px;z-index:2;background:rgba(0,0,0,.45);color:#fff;border-radius:999px;padding:4px 11px;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase}
+.cine-tag{position:absolute;top:16px;left:16px;z-index:2;background:var(--bronze);color:#fff;border-radius:999px;padding:4px 11px;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase}
 .slide .wip{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700;
   background-color:#f1e9d6;background-image:radial-gradient(circle,rgba(23,20,15,.08) 1.5px,transparent 1.8px);background-size:12px 12px}
 .card .coverimg{width:100%;display:block;border-radius:12px;aspect-ratio:16/9;object-fit:cover;background:rgba(255,255,255,.15)}
@@ -1065,7 +1065,7 @@ body{overscroll-behavior-y:none}
             <article class="ab-f orange"><span class="ab-t">2 min</span><h3>La Pilule de Culture G</h3><p>Un concept expliqué simplement. Le genre de truc que tout le monde fait semblant de connaître depuis toujours.</p></article>
             <article class="ab-f red"><span class="ab-t">2 min</span><h3>L’Insolite historique</h3><p>Une histoire vraie si absurde qu’on vérifie deux fois. Rassurez-vous : nous aussi, on a vérifié.</p></article>
             <article class="ab-f purple"><span class="ab-t">2 min</span><h3>La Notice</h3><p>Celle que personne ne lit. Le frigo, le micro-ondes, l’avion qui ne tombe pas : ces trucs qu’on utilise tous les jours sans savoir comment ils marchent. Une micro-BD, et vous l’expliquez à table.</p></article>
-            <article class="ab-f bronze"><span class="ab-t">1 min · un jour sur deux</span><h3>D’où ça vient ?</h3><p>Monter au créneau, payer en monnaie de singe, être limogé : on les dit tous les jours sans savoir d’où elles sortent. L’histoire vraie derrière une expression, racontée comme un film. En alternance avec la Notice.</p></article>
+            <article class="ab-f bronze"><span class="ab-t">1 min · un jour sur deux</span><h3>D’où ça vient ?</h3><p>Monter au créneau, payer en monnaie de singe, être limogé : on les dit tous les jours sans savoir d’où elles sortent. L’histoire vraie derrière une expression, racontée en dessins. En alternance avec la Notice.</p></article>
             <article class="ab-f green"><span class="ab-t">6 à 8 min</span><h3>Le Grand Dossier</h3><p>Un grand sujet raconté en entier : la guerre froide, les rois de France, les atomes. Des années de cours séchés, rattrapées en un café.</p></article>
           </div>
           <div class="ab-brille"><div class="ccard"><div class="hd"><span>Pour briller en société</span><em>Exemple</em></div><div class="ph">En 1925, Victor Lustig a vendu la tour Eiffel à un ferrailleur. Puis il a essayé une deuxième fois.</div><div class="src">À la fin de chaque histoire : une phrase à ressortir au prochain apéro.</div></div></div>
