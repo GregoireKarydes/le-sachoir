@@ -60,7 +60,10 @@
       ],
       "cover": {
         "prompt": "a bare modern room with a single wall socket. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left solemnly holding out the open drawer with both hands like a precious gift; Inès (short, round, big curly red hair, orange puffer jacket) on the right trying to plug the charger into the drawer, hopeful. visual gag: plugging a charger into a wooden drawer. wide shot",
-        "cast": ["becquerel", "ines"],
+        "cast": [
+          "becquerel",
+          "ines"
+        ],
         "file": "images/dossier-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -72,12 +75,23 @@
           "tag": "Chapitre 1 · Le tiroir",
           "caption": "En France, plus des deux tiers de l’électricité viennent du nucléaire. Mais comment un atome invisible allume-t-il une lampe ?",
           "bubbles": [
-            { "who": "ines", "text": "Je branche mon chargeur. Mais ce courant, il sort d’où ?", "side": "r" },
-            { "who": "becquerel", "text": "D’un tiroir, mademoiselle. Laissez-moi vous raconter.", "side": "l" }
+            {
+              "who": "ines",
+              "text": "Je branche mon chargeur. Mais ce courant, il sort d’où ?",
+              "side": "r"
+            },
+            {
+              "who": "becquerel",
+              "text": "D’un tiroir, mademoiselle. Laissez-moi vous raconter.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a bare modern room with a single wall socket. Inès (short, round, big curly red hair, orange puffer jacket) on the right crouching to plug the charger into the socket, puzzled; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left bending down towards her, carrying the drawer under his arm like a briefcase. visual gag: a 19th-century scientist carrying a whole desk drawer. medium shot",
-            "cast": ["ines", "becquerel"],
+            "cast": [
+              "ines",
+              "becquerel"
+            ],
             "file": "images/dossier-01.webp",
             "status": "pending",
             "attempts": 0
@@ -89,12 +103,23 @@
           "tag": "Février 1896",
           "caption": "À Paris, Henri Becquerel veut savoir si l’uranium, éclairé par le soleil, peut marquer une plaque photo.",
           "bubbles": [
-            { "who": "ines", "text": "Et il fait beau, ce jour-là ?", "side": "r" },
-            { "who": "becquerel", "text": "Ciel gris. Je range tout au fond d’un tiroir.", "side": "l" }
+            {
+              "who": "ines",
+              "text": "Et il fait beau, ce jour-là ?",
+              "side": "r"
+            },
+            {
+              "who": "becquerel",
+              "text": "Ciel gris. Je range tout au fond d’un tiroir.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "an 1890s Paris laboratory with a tall window showing a heavy grey cloudy sky. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left glaring at the clouds, holding the plate in one hand and the crystals in a small dish in the other, sulking; Inès (short, round, big curly red hair, orange puffer jacket) on the right holding a small umbrella open indoors. visual gag: the indoor umbrella. medium shot",
-            "cast": ["becquerel", "ines"],
+            "cast": [
+              "becquerel",
+              "ines"
+            ],
             "file": "images/dossier-02.webp",
             "status": "pending",
             "attempts": 0,
@@ -107,7 +132,15 @@
           "tag": "En vrai",
           "title": "Le vrai Henri Becquerel",
           "text": "Henri Becquerel (1852-1908), photographié par Paul Nadar. Ce physicien parisien étudie la fluorescence : la lumière que certains minéraux renvoient après avoir été éclairés.",
-          "photo": { "commons": "File:Paul Nadar - Henri Becquerel.jpg" }
+          "photo": {
+            "commons": "File:Paul Nadar - Henri Becquerel.jpg",
+            "credit": "Paul Nadar / Adam Cuerden",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Paul_Nadar_-_Henri_Becquerel.jpg",
+            "file": "images/photo-3-paul-nadar-henri-becquerel-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 4,
@@ -115,12 +148,23 @@
           "tag": "Début mars 1896",
           "caption": "Il développe quand même la plaque, emballée dans le noir. Les cristaux d’uranium y ont laissé leur ombre.",
           "bubbles": [
-            { "who": "becquerel", "text": "L’uranium a émis quelque chose. Tout seul, sans soleil.", "side": "l" },
-            { "who": "ines", "text": "Votre tiroir est hanté ?", "side": "r" }
+            {
+              "who": "becquerel",
+              "text": "L’uranium a émis quelque chose. Tout seul, sans soleil.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Votre tiroir est hanté ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "close-up in the 1890s Paris laboratory. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left holding up the plate, now unwrapped and showing dark blotches, eyes wide behind his pince-nez; Inès (short, round, big curly red hair, orange puffer jacket) on the right leaning in, jaw dropped, her curly hair standing on end, light-blue sweat drop. the open drawer on the desk between them",
-            "cast": ["becquerel", "ines"],
+            "cast": [
+              "becquerel",
+              "ines"
+            ],
             "file": "images/dossier-03.webp",
             "status": "pending",
             "attempts": 0
@@ -132,12 +176,23 @@
           "tag": "Chapitre 2 · Les Curie",
           "caption": "Ce rayonnement invisible intrigue Marie Curie, physicienne polonaise installée à Paris. Avec son mari Pierre, elle se lance.",
           "bubbles": [
-            { "who": "marie", "text": "Un rayon que personne ne comprend ? C’est pour moi.", "side": "l" },
-            { "who": "ines", "text": "Prendre le sujet dont personne ne veut : stratégie de génie.", "side": "r" }
+            {
+              "who": "marie",
+              "text": "Un rayon que personne ne comprend ? C’est pour moi.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Prendre le sujet dont personne ne veut : stratégie de génie.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare wooden shed used as a laboratory, with a long work table. Marie (small, slender, tight ash-blond bun, long black dress) on the left rolling up her sleeves, determined, the stirring rod under her arm; Inès (short, round, big curly red hair, orange puffer jacket) on the right giving an enthusiastic thumbs-up. medium shot",
-            "cast": ["marie", "ines"],
+            "cast": [
+              "marie",
+              "ines"
+            ],
             "file": "images/dossier-04.webp",
             "status": "pending",
             "attempts": 0,
@@ -150,12 +205,23 @@
           "tag": "1898",
           "caption": "Dans un minerai d’uranium, les Curie trouvent deux atomes inconnus. Le radium est environ 900 fois plus radioactif que l’uranium.",
           "bubbles": [
-            { "who": "ines", "text": "Et l’autre, vous l’appelez comment ?", "side": "r" },
-            { "who": "marie", "text": "Polonium. En hommage à ma Pologne natale.", "side": "l" }
+            {
+              "who": "ines",
+              "text": "Et l’autre, vous l’appelez comment ?",
+              "side": "r"
+            },
+            {
+              "who": "marie",
+              "text": "Polonium. En hommage à ma Pologne natale.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the same bare wooden shed laboratory. Marie (small, slender, tight ash-blond bun, long black dress) on the left stirring the cauldron with the stirring rod with both hands, grey steam rising, very focused; Inès (short, round, big curly red hair, orange puffer jacket) on the right pinching her nose, eyes squeezed shut. wide shot",
-            "cast": ["marie", "ines"],
+            "cast": [
+              "marie",
+              "ines"
+            ],
             "file": "images/dossier-05.webp",
             "status": "pending",
             "attempts": 0
@@ -179,12 +245,23 @@
           "tag": "1903 et 1911",
           "caption": "1903 : Becquerel et les Curie partagent le prix Nobel de physique. Marie reçoit aussi celui de chimie en 1911.",
           "bubbles": [
-            { "who": "becquerel", "text": "On partage, bien sûr. Moi, j’ai fourni le tiroir.", "side": "r" },
-            { "who": "marie", "text": "Et moi, je suis la première personne à en avoir deux.", "side": "l" }
+            {
+              "who": "becquerel",
+              "text": "On partage, bien sûr. Moi, j’ai fourni le tiroir.",
+              "side": "r"
+            },
+            {
+              "who": "marie",
+              "text": "Et moi, je suis la première personne à en avoir deux.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a small bare wooden stage. Marie (small, slender, tight ash-blond bun, long black dress) on the left holding two gold medals, one in each hand, calm and unimpressed; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the right holding one gold medal around his neck and raising the drawer high above his head like a trophy, beaming. visual gag: the drawer shown off like a trophy. medium shot",
-            "cast": ["marie", "becquerel"],
+            "cast": [
+              "marie",
+              "becquerel"
+            ],
             "file": "images/dossier-06.webp",
             "status": "pending",
             "attempts": 0,
@@ -197,11 +274,17 @@
           "tag": "1934",
           "caption": "On ignore alors les dangers des rayonnements. Marie Curie meurt en 1934 d’une maladie du sang qu’ils ont pu causer.",
           "bubbles": [
-            { "who": "ines", "text": "Ses carnets de 1898 sont encore radioactifs. On les range dans du plomb.", "side": "r" }
+            {
+              "who": "ines",
+              "text": "Ses carnets de 1898 sont encore radioactifs. On les range dans du plomb.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a quiet bare museum room. Inès (short, round, big curly red hair, orange puffer jacket) standing alone on the right, hands clasped, serious and silent, looking at a closed dull grey lead box on a small table on the left. calm, sober scene. wide shot",
-            "cast": ["ines"],
+            "cast": [
+              "ines"
+            ],
             "file": "images/dossier-07.webp",
             "status": "pending",
             "attempts": 0,
@@ -214,7 +297,15 @@
           "tag": "En vrai",
           "title": "Pierre et Marie Curie au travail",
           "text": "Le couple dans son laboratoire. Comme les chercheurs de leur époque, ils manipulent les produits radioactifs sans aucune protection.",
-          "photo": { "commons": "File:Pierre and Marie Curie at work in laboratory Wellcome L0001761.jpg" }
+          "photo": {
+            "commons": "File:Pierre and Marie Curie at work in laboratory Wellcome L0001761.jpg",
+            "credit": "Auteur inconnu",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Pierre_and_Marie_Curie_at_work_in_laboratory_Wellcome_L0001761.jpg",
+            "file": "images/photo-10-pierre-and-marie-curie-at-work-in-l.webp",
+            "status": "done"
+          }
         },
         {
           "n": 11,
@@ -222,12 +313,23 @@
           "tag": "Chapitre 3 · Casser l’atome",
           "caption": "1934 : leur fille Irène et son mari Frédéric Joliot-Curie créent la première radioactivité artificielle. Nobel de chimie en 1935.",
           "bubbles": [
-            { "who": "ines", "text": "Artificielle ? Comme un arôme de fraise ?", "side": "r" },
-            { "who": "joliot", "text": "Presque : on rend radioactif ce qui ne l’était pas.", "side": "l" }
+            {
+              "who": "ines",
+              "text": "Artificielle ? Comme un arôme de fraise ?",
+              "side": "r"
+            },
+            {
+              "who": "joliot",
+              "text": "Presque : on rend radioactif ce qui ne l’était pas.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a 1930s Paris laboratory with glass bottles on shelves. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left proudly holding up a small metal sample, the counter on the bench beside him with its needle jumping; Inès (short, round, big curly red hair, orange puffer jacket) on the right sniffing a test tube with her eyes half closed like a wine taster. visual gag: the wine-tasting pose. medium shot",
-            "cast": ["joliot", "ines"],
+            "cast": [
+              "joliot",
+              "ines"
+            ],
             "file": "images/dossier-08.webp",
             "status": "pending",
             "attempts": 0,
@@ -240,12 +342,23 @@
           "tag": "Fin 1938",
           "caption": "À Berlin, Otto Hahn et Fritz Strassmann bombardent de l’uranium avec des neutrons, les particules sans charge du noyau.",
           "bubbles": [
-            { "who": "joliot", "text": "Et ils obtiennent du baryum, un atome bien plus léger !", "side": "l" },
-            { "who": "ines", "text": "L’uranium a fait un régime ?", "side": "r" }
+            {
+              "who": "joliot",
+              "text": "Et ils obtiennent du baryum, un atome bien plus léger !",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "L’uranium a fait un régime ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "close-up in the 1930s Paris laboratory. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left reading a letter, eyebrows shooting up, mouth wide open; Inès (short, round, big curly red hair, orange puffer jacket) on the right standing on tiptoe to read over his shoulder, curious",
-            "cast": ["joliot", "ines"],
+            "cast": [
+              "joliot",
+              "ines"
+            ],
             "file": "images/dossier-09.webp",
             "status": "pending",
             "attempts": 0
@@ -257,12 +370,23 @@
           "tag": "Début 1939",
           "caption": "Lise Meitner et son neveu Otto Frisch comprennent : le noyau d’uranium s’est cassé en deux. C’est la « fission ».",
           "bubbles": [
-            { "who": "ines", "text": "Et en se cassant, il fait quoi ?", "side": "l" },
-            { "who": "joliot", "text": "Un peu de masse disparaît et devient énergie. Beaucoup d’énergie.", "side": "r" }
+            {
+              "who": "ines",
+              "text": "Et en se cassant, il fait quoi ?",
+              "side": "l"
+            },
+            {
+              "who": "joliot",
+              "text": "Un peu de masse disparaît et devient énergie. Beaucoup d’énergie.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the 1930s Paris laboratory, in front of a blackboard with a big chalk circle split into two halves. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the right snapping a stick of white chalk in two with a dramatic gesture, chalk dust flying; Inès (short, round, big curly red hair, orange puffer jacket) on the left flinching, covering her ears. wide shot",
-            "cast": ["ines", "joliot"],
+            "cast": [
+              "ines",
+              "joliot"
+            ],
             "file": "images/dossier-10.webp",
             "status": "pending",
             "attempts": 0
@@ -287,12 +411,23 @@
           "tag": "1939",
           "caption": "À Paris, Joliot, Hans von Halban et Lew Kowarski montrent que la fission libère d’autres neutrons. La chaîne est possible.",
           "bubbles": [
-            { "who": "ines", "text": "Et vous faites quoi de cette découverte ?", "side": "r" },
-            { "who": "joliot", "text": "Des brevets, sous pli cacheté. Avant que la guerre éclate.", "side": "l" }
+            {
+              "who": "ines",
+              "text": "Et vous faites quoi de cette découverte ?",
+              "side": "r"
+            },
+            {
+              "who": "joliot",
+              "text": "Des brevets, sous pli cacheté. Avant que la guerre éclate.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the 1930s Paris laboratory. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left sliding a thick envelope closed with a red wax seal into a small iron safe, glancing over his shoulder; Inès (short, round, big curly red hair, orange puffer jacket) on the right tiptoeing with a finger on her lips, conspiratorial. medium shot",
-            "cast": ["joliot", "ines"],
+            "cast": [
+              "joliot",
+              "ines"
+            ],
             "file": "images/dossier-11.webp",
             "status": "pending",
             "attempts": 0
@@ -304,12 +439,23 @@
           "tag": "1940",
           "caption": "Pendant la guerre, le stock d’eau lourde venu de Norvège est mis à l’abri en Angleterre, loin des Allemands.",
           "bubbles": [
-            { "who": "ines", "text": "De l’eau lourde ? Genre, très lourde ?", "side": "r" },
-            { "who": "joliot", "text": "Une eau rare qui ralentit les neutrons. Précieuse pour un réacteur.", "side": "l" }
+            {
+              "who": "ines",
+              "text": "De l’eau lourde ? Genre, très lourde ?",
+              "side": "r"
+            },
+            {
+              "who": "joliot",
+              "text": "Une eau rare qui ralentit les neutrons. Précieuse pour un réacteur.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the 1930s Paris laboratory. Inès (short, round, big curly red hair, orange puffer jacket) on the right straining with both arms to lift a tiny metal can, knees bent, red angry flush on her face; Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left watching with arms crossed, amused. visual gag: a tiny can treated like a huge weight. medium shot",
-            "cast": ["joliot", "ines"],
+            "cast": [
+              "joliot",
+              "ines"
+            ],
             "file": "images/dossier-12.webp",
             "status": "pending",
             "attempts": 0
@@ -321,12 +467,23 @@
           "tag": "Chapitre 4 · De l’atome à la prise",
           "caption": "18 octobre 1945 : le général de Gaulle crée le Commissariat à l’énergie atomique, le CEA. Joliot en est le haut-commissaire.",
           "bubbles": [
-            { "who": "joliot", "text": "Première mission : construire notre propre pile atomique.", "side": "l" },
-            { "who": "ines", "text": "Une pile ? Comme celle de ma télécommande ?", "side": "r" }
+            {
+              "who": "joliot",
+              "text": "Première mission : construire notre propre pile atomique.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Une pile ? Comme celle de ma télécommande ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare postwar office with a wooden desk. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left unrolling a large blank blueprint across the desk, enthusiastic; Inès (short, round, big curly red hair, orange puffer jacket) on the right holding up a tiny AA battery next to the blueprint, puzzled. visual gag: the tiny battery. medium shot",
-            "cast": ["joliot", "ines"],
+            "cast": [
+              "joliot",
+              "ines"
+            ],
             "file": "images/dossier-13.webp",
             "status": "pending",
             "attempts": 0,
@@ -339,12 +496,23 @@
           "tag": "15 décembre 1948",
           "caption": "Au fort de Châtillon, près de Paris, Zoé démarre : la première pile atomique française, c’est-à-dire un réacteur.",
           "bubbles": [
-            { "who": "ines", "text": "Et elle alimente quoi, Zoé ?", "side": "r" },
-            { "who": "joliot", "text": "Rien du tout. Elle sert à apprendre.", "side": "l" }
+            {
+              "who": "ines",
+              "text": "Et elle alimente quoi, Zoé ?",
+              "side": "r"
+            },
+            {
+              "who": "joliot",
+              "text": "Rien du tout. Elle sert à apprendre.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a bare concrete hall inside an old stone fort. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left patting a squat round concrete reactor block proudly, like a pet; Inès (short, round, big curly red hair, orange puffer jacket) on the right trying to plug the charger into the block, while Frédéric shakes his head. wide shot",
-            "cast": ["joliot", "ines"],
+            "cast": [
+              "joliot",
+              "ines"
+            ],
             "file": "images/dossier-14.webp",
             "status": "pending",
             "attempts": 0,
@@ -357,12 +525,22 @@
           "tag": "1973-1974",
           "caption": "Le prix du pétrole flambe. En mars 1974, le Premier ministre Pierre Messmer lance un énorme programme de centrales nucléaires.",
           "bubbles": [
-            { "who": "ines", "text": "Pourquoi tout miser sur l’atome ?", "side": "l" },
-            { "who": "Un ingénieur", "text": "On n’a presque pas de pétrole. Il faut produire notre énergie nous-mêmes.", "side": "r" }
+            {
+              "who": "ines",
+              "text": "Pourquoi tout miser sur l’atome ?",
+              "side": "l"
+            },
+            {
+              "who": "Un ingénieur",
+              "text": "On n’a presque pas de pétrole. Il faut produire notre énergie nous-mêmes.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a 1970s petrol station with one old pump. Inès (short, round, big curly red hair, orange puffer jacket) on the left holding an empty red jerrycan upside down, a single drop falling out, dismayed; on the right an engineer in a white hard hat and blue overalls, seen from behind, pointing at the tower being built on the far horizon. wide shot",
-            "cast": ["ines"],
+            "cast": [
+              "ines"
+            ],
             "file": "images/dossier-15.webp",
             "status": "pending",
             "attempts": 0,
@@ -387,12 +565,22 @@
           "tag": "Le combustible",
           "caption": "Dans le réacteur, l’uranium est rangé en pastilles d’environ 7 grammes. Chacune libère autant d’énergie qu’une tonne de charbon.",
           "bubbles": [
-            { "who": "ines", "text": "Ce petit bonbon gris vaut une tonne de charbon ?", "side": "l" },
-            { "who": "Un ingénieur", "text": "Oui. Et surtout, ne le croquez pas.", "side": "r" }
+            {
+              "who": "ines",
+              "text": "Ce petit bonbon gris vaut une tonne de charbon ?",
+              "side": "l"
+            },
+            {
+              "who": "Un ingénieur",
+              "text": "Oui. Et surtout, ne le croquez pas.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "close-up. Inès (short, round, big curly red hair, orange puffer jacket) on the left holding the pellet between two fingers at eye level, amazed; behind her a huge black mountain of coal fills the background; on the right only the white-gloved hand of an engineer, raising a warning finger. visual gag: a fingertip-sized pellet against a mountain of coal",
-            "cast": ["ines"],
+            "cast": [
+              "ines"
+            ],
             "file": "images/dossier-16.webp",
             "status": "pending",
             "attempts": 0,
@@ -405,12 +593,22 @@
           "tag": "Idée reçue",
           "caption": "Les grandes tours des centrales ne rejettent pas de fumée : c’est de la vapeur d’eau, qui sert au refroidissement.",
           "bubbles": [
-            { "who": "ines", "text": "Moi qui croyais que c’était de la pollution !", "side": "l" },
-            { "who": "Un ingénieur", "text": "Juste un nuage. Fait maison.", "side": "r" }
+            {
+              "who": "ines",
+              "text": "Moi qui croyais que c’était de la pollution !",
+              "side": "l"
+            },
+            {
+              "who": "Un ingénieur",
+              "text": "Juste un nuage. Fait maison.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the foot of a nuclear power plant on green grass, the tower rising high behind. Inès (short, round, big curly red hair, orange puffer jacket) on the left looking up with her mouth open while a small white cloud drifts down from the tower and settles above her head; an engineer in a white hard hat and blue overalls on the right, seen in profile, arms crossed, amused. wide shot",
-            "cast": ["ines"],
+            "cast": [
+              "ines"
+            ],
             "file": "images/dossier-17.webp",
             "status": "pending",
             "attempts": 0,
@@ -423,7 +621,15 @@
           "tag": "Le vrai lieu",
           "title": "La centrale de Cattenom, en Moselle",
           "text": "Le panache blanc au-dessus des tours, c’est de la vapeur d’eau. En 2025, les 57 réacteurs français ont produit 68 % de l’électricité du pays.",
-          "photo": { "commons": "File:Nuclear Power Plant Cattenom.jpg" }
+          "photo": {
+            "commons": "File:Nuclear Power Plant Cattenom.jpg",
+            "credit": "Stefan Kühn",
+            "license": "CC BY-SA 3.0",
+            "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "source": "https://commons.wikimedia.org/wiki/File:Nuclear_Power_Plant_Cattenom.jpg",
+            "file": "images/photo-23-nuclear-power-plant-cattenom-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 24,
@@ -431,11 +637,17 @@
           "tag": "Chapitre 5 · Le revers de la médaille",
           "caption": "Le nucléaire a deux gros revers : le risque d’accident grave et des déchets qui restent dangereux très longtemps.",
           "bubbles": [
-            { "who": "ines", "text": "Il y a déjà eu des accidents graves ?", "side": "r" }
+            {
+              "who": "ines",
+              "text": "Il y a déjà eu des accidents graves ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the bare modern room with the wall socket. Inès (short, round, big curly red hair, orange puffer jacket) in the centre holding a big shiny gold medal, flipping it over to discover that its back side is dull grey and dented, frowning. visual gag: the other side of the medal. medium shot",
-            "cast": ["ines"],
+            "cast": [
+              "ines"
+            ],
             "file": "images/dossier-18.webp",
             "status": "pending",
             "attempts": 0,
@@ -448,11 +660,17 @@
           "tag": "1986 et 2011",
           "caption": "Deux catastrophes ont marqué le monde : Tchernobyl, en Ukraine, en 1986, et Fukushima, au Japon, en 2011, après un tsunami.",
           "bubbles": [
-            { "who": "ines", "text": "Deux noms que personne n’a oubliés.", "side": "r" }
+            {
+              "who": "ines",
+              "text": "Deux noms que personne n’a oubliés.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the bare modern room. Inès (short, round, big curly red hair, orange puffer jacket) standing alone, still, seen from three-quarter back, in front of a large plain world map pinned on the wall with two small red pins, hands in her pockets, serious. calm, sober scene. medium shot",
-            "cast": ["ines"],
+            "cast": [
+              "ines"
+            ],
             "file": "images/dossier-19.webp",
             "status": "pending",
             "attempts": 0
@@ -464,12 +682,22 @@
           "tag": "Les déchets",
           "caption": "Les déchets les plus radioactifs restent dangereux des milliers d’années. Cigéo, à Bure, veut les enfouir à près de 500 m.",
           "bubbles": [
-            { "who": "ines", "text": "500 mètres sous terre ? Dans quoi ?", "side": "l" },
-            { "who": "Un ingénieur", "text": "Une argile vieille de 160 millions d’années. Elle sait attendre.", "side": "r" }
+            {
+              "who": "ines",
+              "text": "500 mètres sous terre ? Dans quoi ?",
+              "side": "l"
+            },
+            {
+              "who": "Un ingénieur",
+              "text": "Une argile vieille de 160 millions d’années. Elle sait attendre.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a long underground gallery with smooth grey clay walls lit by a row of lamps. Inès (short, round, big curly red hair, orange puffer jacket) on the left wearing a white hard hat far too big for her, sliding down over her eyes; an engineer in a white hard hat and blue overalls on the right, seen from behind, gently tapping the clay wall. wide shot",
-            "cast": ["ines"],
+            "cast": [
+              "ines"
+            ],
             "file": "images/dossier-20.webp",
             "status": "pending",
             "attempts": 0,
@@ -482,12 +710,23 @@
           "tag": "En résumé",
           "caption": "On casse des noyaux d’uranium, ça chauffe de l’eau, la vapeur fait tourner une turbine : votre prise s’allume.",
           "bubbles": [
-            { "who": "ines", "text": "Donc mon chargeur doit tout à un tiroir fermé ?", "side": "r" },
-            { "who": "becquerel", "text": "Et à un mois de février bien gris.", "side": "l" }
+            {
+              "who": "ines",
+              "text": "Donc mon chargeur doit tout à un tiroir fermé ?",
+              "side": "r"
+            },
+            {
+              "who": "becquerel",
+              "text": "Et à un mois de février bien gris.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the bare modern room with the wall socket again. Inès (short, round, big curly red hair, orange puffer jacket) on the right, the charger finally plugged into the socket, hugging her phone, delighted, yellow sparkles; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left sitting on the drawer turned upside down on the floor like a tiny stool, knees up to his chin, satisfied. medium shot",
-            "cast": ["ines", "becquerel"],
+            "cast": [
+              "ines",
+              "becquerel"
+            ],
             "file": "images/dossier-21.webp",
             "status": "pending",
             "attempts": 0,
@@ -501,23 +740,74 @@
       },
       "story": "Fin février 1896, à Paris, Henri Becquerel veut vérifier si des sels d’uranium éclairés par le soleil impressionnent une plaque photographique. Le ciel est couvert : il range l’uranium et la plaque, emballée de papier noir, dans un tiroir. Quand il la développe, elle porte pourtant l’image des cristaux. L’uranium émet donc tout seul un rayonnement invisible : c’est la radioactivité.\nMarie Curie et son mari Pierre étudient ce phénomène. En 1898, dans un minerai d’uranium, ils découvrent le polonium, nommé d’après la Pologne natale de Marie, puis le radium, environ 900 fois plus radioactif que l’uranium. Nobel de physique en 1903 avec Becquerel, Marie reçoit aussi celui de chimie en 1911. On ignore alors les dangers : elle meurt en 1934 d’une maladie du sang que les rayonnements peuvent causer.\nLa radioactivité vient du noyau, 100 000 fois plus petit que l’atome. En 1934, Irène et Frédéric Joliot-Curie fabriquent de la radioactivité artificielle. Fin 1938, Otto Hahn et Fritz Strassmann obtiennent du baryum en bombardant de l’uranium avec des neutrons ; Lise Meitner et Otto Frisch comprennent que le noyau s’est cassé en deux : la fission, qui libère beaucoup d’énergie. En 1939, à Paris, Joliot, Halban et Kowarski montrent qu’elle libère aussi des neutrons : une réaction en chaîne est possible.\nLe CEA naît le 18 octobre 1945 ; la pile Zoé démarre en 1948. Après le choc pétrolier, le plan Messmer de 1974 lance les grandes centrales. Aujourd’hui, 57 réacteurs fournissent environ 68 % de l’électricité française. Restent les risques d’accident, rappelés par Tchernobyl et Fukushima, et les déchets à vie longue, que le projet Cigéo veut enfouir dans l’argile, à Bure.",
       "sources": [
-        { "title": "CERN — Becquerel discovers radioactivity", "url": "https://timeline-upgrade.web.cern.ch/fr/node/575" },
-        { "title": "Science Notes — March 1: Discovery of radiation", "url": "https://sciencenotes.org/today-science-history-march-1-discovery-radiation/" },
-        { "title": "Hérodote — Marie Curie (1867-1934), deux fois prix Nobel", "url": "https://www.herodote.net/Deux_fois_Prix_Nobel-synthese-424.php" },
-        { "title": "Live Science — Marie Curie discovers a strange radioactive substance, Dec. 26, 1898", "url": "https://www.livescience.com/physics-mathematics/science-history-marie-curie-discovers-a-strange-radioactive-substance-that-would-eventually-kill-her-dec-26-1898" },
-        { "title": "SchoolMouv — Le noyau de l’atome", "url": "https://www.schoolmouv.fr/cours/le-noyau-de-l-atome/fiche-de-cours" },
-        { "title": "Musée Curie — Irène et Frédéric Joliot-Curie", "url": "https://musee.curie.fr/.uploads/2018-01/03_irene-et-frederic-joliot-curie-7a8d5825.pdf" },
-        { "title": "American Nuclear Society — Lise Meitner’s fantastic explanation: nuclear fission", "url": "https://www.ans.org/news/article-938/lise-meitners-fantastic-explanation-nuclear-fission/" },
-        { "title": "IN2P3, La radioactivité — The discovery of fission", "url": "https://laradioactivite-prod-en.apps.wok3.in2p3.fr/articles/phenomenon/fission_discovery" },
-        { "title": "Nature — Halban, Joliot, Kowarski, Energy of neutrons liberated in the nuclear fission of uranium (1939)", "url": "https://www.nature.com/articles/143939a0" },
-        { "title": "Techno-Science — Commissariat à l’énergie atomique", "url": "https://www.techno-science.net/fr/definitions/commissariat-a-l-energie-atomique" },
-        { "title": "Wikipedia — Zoé (reactor)", "url": "https://en.wikipedia.org/wiki/Zo%C3%A9_(reactor)" },
-        { "title": "Energy Transition — French nuclear power history (plan Messmer)", "url": "https://energytransition.org/2015/03/french-nuclear-power-history/" },
-        { "title": "EDF — Le fonctionnement d’une centrale nucléaire", "url": "https://www.edf.fr/groupe-edf/comprendre/production/nucleaire/fonctionnement-centrale-nucleaire" },
-        { "title": "EDF — L’uranium, le combustible nucléaire", "url": "https://www.edf.fr/groupe-edf/comprendre/production/nucleaire/uranium-combustible-nucleaire" },
-        { "title": "Connaissance des énergies — Le parc nucléaire français", "url": "https://www.connaissancedesenergies.org/fiche-pedagogique/parc-nucleaire-francais" },
-        { "title": "Planète Énergies — Nuclear safety: anticipating the risks", "url": "https://planete-energies.com/en/media/article/nuclear-safety-anticipating-risks" },
-        { "title": "Futura Sciences — Laboratoire de Bure : qu’est-ce que c’est ?", "url": "https://www.futura-sciences.com/sciences/definitions/physique-laboratoire-bure-4198/" }
+        {
+          "title": "CERN — Becquerel discovers radioactivity",
+          "url": "https://timeline-upgrade.web.cern.ch/fr/node/575"
+        },
+        {
+          "title": "Science Notes — March 1: Discovery of radiation",
+          "url": "https://sciencenotes.org/today-science-history-march-1-discovery-radiation/"
+        },
+        {
+          "title": "Hérodote — Marie Curie (1867-1934), deux fois prix Nobel",
+          "url": "https://www.herodote.net/Deux_fois_Prix_Nobel-synthese-424.php"
+        },
+        {
+          "title": "Live Science — Marie Curie discovers a strange radioactive substance, Dec. 26, 1898",
+          "url": "https://www.livescience.com/physics-mathematics/science-history-marie-curie-discovers-a-strange-radioactive-substance-that-would-eventually-kill-her-dec-26-1898"
+        },
+        {
+          "title": "SchoolMouv — Le noyau de l’atome",
+          "url": "https://www.schoolmouv.fr/cours/le-noyau-de-l-atome/fiche-de-cours"
+        },
+        {
+          "title": "Musée Curie — Irène et Frédéric Joliot-Curie",
+          "url": "https://musee.curie.fr/.uploads/2018-01/03_irene-et-frederic-joliot-curie-7a8d5825.pdf"
+        },
+        {
+          "title": "American Nuclear Society — Lise Meitner’s fantastic explanation: nuclear fission",
+          "url": "https://www.ans.org/news/article-938/lise-meitners-fantastic-explanation-nuclear-fission/"
+        },
+        {
+          "title": "IN2P3, La radioactivité — The discovery of fission",
+          "url": "https://laradioactivite-prod-en.apps.wok3.in2p3.fr/articles/phenomenon/fission_discovery"
+        },
+        {
+          "title": "Nature — Halban, Joliot, Kowarski, Energy of neutrons liberated in the nuclear fission of uranium (1939)",
+          "url": "https://www.nature.com/articles/143939a0"
+        },
+        {
+          "title": "Techno-Science — Commissariat à l’énergie atomique",
+          "url": "https://www.techno-science.net/fr/definitions/commissariat-a-l-energie-atomique"
+        },
+        {
+          "title": "Wikipedia — Zoé (reactor)",
+          "url": "https://en.wikipedia.org/wiki/Zo%C3%A9_(reactor)"
+        },
+        {
+          "title": "Energy Transition — French nuclear power history (plan Messmer)",
+          "url": "https://energytransition.org/2015/03/french-nuclear-power-history/"
+        },
+        {
+          "title": "EDF — Le fonctionnement d’une centrale nucléaire",
+          "url": "https://www.edf.fr/groupe-edf/comprendre/production/nucleaire/fonctionnement-centrale-nucleaire"
+        },
+        {
+          "title": "EDF — L’uranium, le combustible nucléaire",
+          "url": "https://www.edf.fr/groupe-edf/comprendre/production/nucleaire/uranium-combustible-nucleaire"
+        },
+        {
+          "title": "Connaissance des énergies — Le parc nucléaire français",
+          "url": "https://www.connaissancedesenergies.org/fiche-pedagogique/parc-nucleaire-francais"
+        },
+        {
+          "title": "Planète Énergies — Nuclear safety: anticipating the risks",
+          "url": "https://planete-energies.com/en/media/article/nuclear-safety-anticipating-risks"
+        },
+        {
+          "title": "Futura Sciences — Laboratoire de Bure : qu’est-ce que c’est ?",
+          "url": "https://www.futura-sciences.com/sciences/definitions/physique-laboratoire-bure-4198/"
+        }
       ]
     }
   ]
