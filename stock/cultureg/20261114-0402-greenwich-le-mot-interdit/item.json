@@ -1,0 +1,290 @@
+{
+  "added": "20261114-0402",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Greenwich, le mot que la France refusait de prononcer",
+      "tagline": "En 1911, la France recule ses horloges de 9 minutes 21 secondes. Sans jamais écrire le nom du coupable.",
+      "teaser": "Pourquoi la France a-t-elle reculé toutes ses horloges de 9 minutes et 21 secondes ? Indice : par fierté, et un peu par jalousie.",
+      "minutes": 2,
+      "theme": "Géographie",
+      "cast": [
+        {
+          "id": "gaston",
+          "name": "Gaston, chef de gare",
+          "look": "Gaston, a short round French stationmaster of 1911 in his fifties, big droopy walrus moustache, rosy cheeks, light peach skin, navy blue railway uniform with brass buttons as main colour, a tall red stationmaster's kepi, a big brass pocket watch always in his hand",
+          "file": "cast/cultureg-gaston.png",
+          "status": "pending",
+          "role": "the anxious stationmaster who asks the reader's questions and has to change all the clocks; round, fussy, forever checking his watch"
+        },
+        {
+          "id": "astro",
+          "name": "L’astronome",
+          "look": "an elderly very tall and thin astronomer of the Paris Observatory in 1911, long pointy white beard, bald head, small round spectacles, light peach skin, long mustard yellow frock coat as main colour, a brass telescope tucked under his arm",
+          "file": "cast/cultureg-astro.png",
+          "status": "pending",
+          "role": "the dry, slightly proud astronomer who explains simply; very tall, chin up, speaks with a raised finger"
+        }
+      ],
+      "cover": {
+        "prompt": "a railway station platform with one big round station clock on a post. Gaston (short, round, walrus moustache, navy uniform, red kepi) on the left standing on a wooden ladder, pushing the clock's minute hand backwards with both hands, sweating, light-blue sweat drop; the astronomer (very tall, thin, white beard, mustard yellow coat) on the right whistling innocently, hiding a folded map behind his back. wide shot",
+        "cast": [
+          "gaston",
+          "astro"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Mars 1911",
+          "caption": "En mars 1911, la France recule toutes ses horloges de 9 minutes et 21 secondes. Pourquoi un chiffre aussi bizarre ?",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Neuf minutes vingt et une ? Qui a choisi ça ?",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Greenwich. Mais chut, on ne dit pas son nom.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a railway station platform with one big round station clock on a post. Gaston (short, round, walrus moustache, navy uniform, red kepi) on the left at the foot of the clock, staring at his brass pocket watch, baffled; the astronomer (very tall, thin, white beard, mustard yellow coat) on the right leaning down to him with a finger on his lips, conspiratorial. medium shot",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Avant 1891",
+          "caption": "Avant, chaque ville vit à l’heure de son soleil : quand il est midi à Strasbourg, il n’est que 11 h 12 à Brest.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Pourquoi Brest est en retard ?",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Le soleil passe d’abord à l’est. Brest, tout à l’ouest, le voit midi plus tard.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room with a simple wall map of France and a small yellow sun drawn above its right side. Gaston (short, round, navy uniform, red kepi) on the left wearing five different pocket watches on both arms, looking from one to the other, dizzy; the astronomer (very tall, mustard yellow coat) on the right sliding the sun from right to left across the map with a pointer. medium shot",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "1891",
+          "caption": "Avec le train, c’est la pagaille. Une loi impose donc à toute la France l’heure de Paris, celle de son Observatoire.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Fini les gares avec deux horloges, l’heure d’ici et celle de Paris !",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Une seule heure. La nôtre, évidemment.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a station wall with two round clocks side by side showing different times. Gaston (short, round, navy uniform, red kepi) on the left happily unscrewing one of the two clocks, relieved, yellow sparkles; the astronomer (very tall, thin, white beard, mustard yellow coat) on the right puffing out his chest, chin high, hand on his heart, proud. medium shot",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Un méridien, c’est quoi ?",
+          "text": "Une ligne imaginaire tracée du pôle Nord au pôle Sud. Partout sur cette ligne, le soleil est au plus haut au même instant : il est midi en même temps. Pour compter les heures et les longitudes, le monde a besoin d’un méridien de départ, le « méridien zéro ».",
+          "joke": "Tout le monde veut être le zéro. Bizarrement."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "Washington, 1884",
+          "caption": "25 pays réunis choisissent le méridien zéro du monde : celui de Greenwich, près de Londres. La France s’abstient.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "S’abstenir, c’est perdre, non ?",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "C’est perdre avec dignité.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a conference hall with a long table and a globe on it. the astronomer (very tall, thin, white beard, mustard yellow coat) on the right sitting with arms tightly crossed, nose in the air, turning his chair away from the globe, sulking; Gaston (short, round, navy uniform, red kepi) on the left peeking at him over the table edge, worried. medium shot",
+            "cast": [
+              "astro",
+              "gaston"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "L’Observatoire de Paris, vu du ciel",
+          "text": "Le méridien de Paris traverse ce bâtiment. Jusqu’en 1911, c’est son heure qui règle les horloges de toute la France.",
+          "photo": {
+            "commons": "File:Observatoire de Paris.JPG"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "1911",
+          "caption": "La France s’aligne. La loi dit : « temps moyen de Paris, retardée de neuf minutes vingt et une secondes ».",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Donc c’est l’heure de Greenwich ?",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Exactement. Mais dite en français.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple office with a desk and an official sheet of paper with a red wax seal. the astronomer (very tall, thin, white beard, mustard yellow coat) on the right signing the sheet while covering a small map of England with his other hand, eyes looking away innocently; Gaston (short, round, navy uniform, red kepi) on the left squinting at him, suspicious, one eyebrow raised. medium shot",
+            "cast": [
+              "astro",
+              "gaston"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "Petite consolation",
+          "caption": "Des patriotes trouvent la parade : la ligne de Greenwich traverse aussi la France, par Argentan, en Normandie.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Donc on vit à l’heure d’Argentan !",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Voilà. L’honneur est sauf.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet small-town square with a tiny church and a road sign post with no text. Gaston (short, round, navy uniform, red kepi) on the left holding up his pocket watch triumphantly toward the church, beaming, yellow sparkles; the astronomer (very tall, thin, white beard, mustard yellow coat) on the right planting a tiny French flag in the ground with great solemnity. wide shot",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "9 min 21 s, c’est l’écart entre l’heure de Paris et celle de Greenwich. La France a changé d’heure, pas de vocabulaire.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Et si un Anglais me demande l’heure ?",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Donnez-la. Mais en français.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back on the railway station platform under the big round station clock. a gentleman in a bowler hat, seen from behind, tapping Gaston on the shoulder; Gaston (short, round, navy uniform, red kepi) in the middle frozen, clutching his pocket watch, light-blue sweat drop; the astronomer (very tall, mustard yellow coat) on the right whispering in his ear. medium shot",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Depuis la loi de 1911, l’heure légale française est « le temps moyen de Paris retardé de 9 minutes 21 secondes » : celle de Greenwich, sans la nommer.",
+        "source": "Hérodote — 9 mars 1911"
+      },
+      "story": "Jusqu’au XIXe siècle, chaque ville française vit à l’heure de son propre soleil. Comme le soleil passe d’abord à l’est, quand il est midi à Strasbourg, il n’est que 11 h 12 à Brest. Peu importe à cheval, mais avec les chemins de fer, c’est la confusion : les gares affichent deux horloges, l’heure locale et l’heure de Paris. En 1891, une loi fait donc de l’heure de Paris, celle de l’Observatoire que traverse le méridien de Paris, la seule heure légale du pays.\nOr, en 1884, une conférence internationale réunie à Washington avec 25 pays a choisi un méridien de référence pour le monde entier, d’où l’on compte les longitudes et les fuseaux horaires : celui de Greenwich, près de Londres. Paris était candidat ; la France s’abstient, comme le Brésil.\nIl faut attendre la loi de mars 1911 pour que la France s’aligne. Mais le texte évite soigneusement le nom de Greenwich : l’heure légale y est « le temps moyen de Paris, retardé de neuf minutes vingt et une secondes », soit exactement l’écart entre les deux méridiens. Les horloges reculent de 9 minutes 21 secondes. Pour se consoler, certains patriotes font remarquer que le méridien de Greenwich traverse aussi la France, notamment à Argentan, en Normandie.",
+      "sources": [
+        {
+          "title": "Hérodote — 9 mars 1911, la France adopte l’heure de Greenwich",
+          "url": "https://www.herodote.net/9_mars_1911-evenement-19110309.php"
+        },
+        {
+          "title": "Hérodote — Une histoire très politique de l’heure",
+          "url": "https://www.herodote.net/Une_Histoire_tres_politique_de_l_heure-synthese-3184-101.php"
+        },
+        {
+          "title": "Amusing Planet — The Meridian That Stood Up To Greenwich",
+          "url": "https://www.amusingplanet.com/2020/06/the-meridian-that-stood-up-to-greenwich.html"
+        },
+        {
+          "title": "Liste tz (IANA) — Texte de la loi du 9 mars 1911",
+          "url": "https://mm.icann.org/pipermail/tz/2020-June/029101.html"
+        }
+      ],
+      "art": {
+        "subject": "why France set its clocks back 9 minutes 21 seconds in 1911 to follow Greenwich time without naming it",
+        "setting": "a French railway station platform with a big round station clock, a bare room with a wall map of France, an international conference hall, a government office, a small Normandy town square",
+        "era": "France from 1884 to 1911, Belle Époque",
+        "props": {
+          "clock": "a big round white station clock with black hands on a cast-iron post",
+          "watch": "a big round brass pocket watch on a chain"
+        }
+      }
+    }
+  ]
+}
