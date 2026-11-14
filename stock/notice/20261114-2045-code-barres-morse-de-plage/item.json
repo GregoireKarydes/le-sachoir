@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a supermarket checkout counter with a conveyor belt, and a small pile of beach sand dumped on it. Karim (very tall, skinny, bald, black moustache, red vest) on the left holding the scanner, staring in disbelief at the sand; Norman Woodland (short, stocky, blond crew cut, sky-blue Hawaiian shirt) on the right, kneeling on the counter, drawing straight lines in the sand with four fingers, delighted. wide shot",
-        "cast": ["karim", "woodland"],
+        "cast": [
+          "karim",
+          "woodland"
+        ],
         "file": "images/notice-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "À la caisse",
           "caption": "Bip ! La caisse reconnaît aussitôt un paquet de pâtes. Comment de simples rayures peuvent-elles dire « pâtes » ?",
           "bubbles": [
-            { "who": "karim", "text": "Comment ce zèbre sait que ce sont des spaghettis ?", "side": "l" },
-            { "who": "woodland", "text": "Il ne sait rien du tout. Il lit un numéro.", "side": "r" }
+            {
+              "who": "karim",
+              "text": "Comment ce zèbre sait que ce sont des spaghettis ?",
+              "side": "l"
+            },
+            {
+              "who": "woodland",
+              "text": "Il ne sait rien du tout. Il lit un numéro.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a supermarket checkout counter with a conveyor belt. Karim (very tall, skinny, bald, black moustache, red vest) on the left holding the pasta packet up to his eyes, squinting at its stripes very closely, puzzled; Norman Woodland (short, stocky, blond crew cut, sky-blue Hawaiian shirt) on the right, standing on tiptoe at the end of the belt, grinning, one finger raised. medium shot",
-            "cast": ["karim", "woodland"],
+            "cast": [
+              "karim",
+              "woodland"
+            ],
             "file": "images/notice-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "Le principe",
           "caption": "Le lecteur envoie de la lumière rouge. Les bandes blanches la renvoient, les barres noires l’absorbent presque toute.",
           "bubbles": [
-            { "who": "karim", "text": "Donc le lecteur voit : clair, sombre, clair, sombre…", "side": "l" },
-            { "who": "woodland", "text": "Voilà. Comme du morse, mais en lumière.", "side": "r" }
+            {
+              "who": "karim",
+              "text": "Donc le lecteur voit : clair, sombre, clair, sombre…",
+              "side": "l"
+            },
+            {
+              "who": "woodland",
+              "text": "Voilà. Comme du morse, mais en lumière.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "close-up on the checkout counter. Karim (bald, black moustache, red vest) on the left pointing the scanner at the pasta packet, the thin red line of light across the stripes, his eyes going left and right very fast; Norman Woodland (blond crew cut, sky-blue Hawaiian shirt) on the right covering and uncovering a small torch with his hand, like a signal lamp, cheerful. medium close-up",
-            "cast": ["karim", "woodland"],
+            "cast": [
+              "karim",
+              "woodland"
+            ],
             "file": "images/notice-02.webp",
             "status": "pending",
             "attempts": 0
@@ -98,12 +123,23 @@
           "tag": "Idée reçue",
           "caption": "Les trois premiers chiffres disent quel organisme a attribué le code. De 300 à 379 : l’organisme français.",
           "bubbles": [
-            { "who": "karim", "text": "Ça commence par 3, donc c’est fabriqué en France !", "side": "l" },
-            { "who": "woodland", "text": "Non : ça dit où l’entreprise a pris son code, pas où est l’usine.", "side": "r" }
+            {
+              "who": "karim",
+              "text": "Ça commence par 3, donc c’est fabriqué en France !",
+              "side": "l"
+            },
+            {
+              "who": "woodland",
+              "text": "Non : ça dit où l’entreprise a pris son code, pas où est l’usine.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the supermarket checkout counter, wide shot. Karim (very tall, skinny, bald, black moustache, red vest) on the left proudly waving a tiny French flag above the pasta packet, chest puffed out; Norman Woodland (short, stocky, blond crew cut, sky-blue Hawaiian shirt) on the right slowly shaking his head, holding up a small world globe. wide shot",
-            "cast": ["karim", "woodland"],
+            "cast": [
+              "karim",
+              "woodland"
+            ],
             "file": "images/notice-04.webp",
             "status": "pending",
             "attempts": 0
@@ -115,7 +151,15 @@
           "tag": "En vrai",
           "title": "Le code UPC, le cousin américain",
           "text": "Le premier code-barres des supermarchés, choisi aux États-Unis en 1973. Notre code européen à 13 chiffres en reprend le principe : des barres, des chiffres en dessous.",
-          "photo": { "commons": "File:UPC A.svg" }
+          "photo": {
+            "commons": "File:UPC A.svg",
+            "credit": "Maly LOLek",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:UPC_A.svg",
+            "file": "images/photo-5-upc-a-svg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -123,12 +167,23 @@
           "tag": "Miami, 1949",
           "caption": "L’étudiant Norman Woodland veut identifier les produits automatiquement. Sur la plage, il repense au morse des scouts.",
           "bubbles": [
-            { "who": "woodland", "text": "Des points et des tirets… étirés en barres fines et épaisses !", "side": "r" },
-            { "who": "karim", "text": "Vous avez inventé ma caisse en faisant des pâtés ?", "side": "l" }
+            {
+              "who": "woodland",
+              "text": "Des points et des tirets… étirés en barres fines et épaisses !",
+              "side": "r"
+            },
+            {
+              "who": "karim",
+              "text": "Vous avez inventé ma caisse en faisant des pâtés ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a sunny Miami beach in 1949, flat sand and a calm sea line. Norman Woodland (short, stocky, blond crew cut, sky-blue Hawaiian shirt, beige shorts) on the right kneeling, pulling four fingers through the sand to draw long parallel lines, the manual open beside him, ecstatic, yellow sparkles; Karim (very tall, skinny, bald, red vest) on the left standing in the sand in his work clothes, still holding the scanner, completely lost. wide shot",
-            "cast": ["woodland", "karim"],
+            "cast": [
+              "woodland",
+              "karim"
+            ],
             "file": "images/notice-06.webp",
             "status": "pending",
             "attempts": 0
@@ -148,12 +203,23 @@
           "tag": "En résumé",
           "caption": "Un code-barres, c’est un numéro écrit en clair et sombre. La caisse le lit, puis cherche le prix.",
           "bubbles": [
-            { "who": "karim", "text": "Donc chaque bip, c’est du morse.", "side": "l" },
-            { "who": "woodland", "text": "Du morse de plage, monsieur.", "side": "r" }
+            {
+              "who": "karim",
+              "text": "Donc chaque bip, c’est du morse.",
+              "side": "l"
+            },
+            {
+              "who": "woodland",
+              "text": "Du morse de plage, monsieur.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back at the supermarket checkout counter. Karim (very tall, skinny, bald, black moustache, red vest) on the left scanning the pasta packet with a new respect, holding it delicately with two fingers; Norman Woodland (short, stocky, blond crew cut, sky-blue Hawaiian shirt) on the right sitting on the conveyor belt, emptying sand out of his shoe onto the counter, satisfied. medium shot",
-            "cast": ["karim", "woodland"],
+            "cast": [
+              "karim",
+              "woodland"
+            ],
             "file": "images/notice-08.webp",
             "status": "pending",
             "attempts": 0
@@ -166,11 +232,26 @@
       },
       "story": "Quand le caissier passe un produit, le lecteur envoie une ligne de lumière rouge sur le code-barres. Les bandes blanches renvoient la lumière, les barres noires en renvoient très peu. Un capteur sensible à la lumière transforme ces différences en une suite de signaux, allumé puis éteint, qu’un circuit traduit en chiffres. Sur le code européen le plus courant, l’EAN-13, la largeur des barres représente 13 chiffres, chacun dessiné sur sept fines bandes. Le dernier chiffre est une clé de contrôle calculée à partir des douze autres : si la lecture s’est trompée, le calcul ne tombe plus juste.\nLe code-barres ne contient ni le nom ni le prix du produit. Il donne seulement un numéro, que l’ordinateur du magasin cherche dans sa base pour afficher le prix. Les trois premiers chiffres indiquent quel organisme national a attribué le code (de 300 à 379 pour la France) : ils ne disent pas où le produit a été fabriqué.\nL’idée est née en 1949. L’étudiant américain Norman Woodland, qui cherchait avec son ami Bernard Silver comment identifier automatiquement les produits, s’est souvenu du morse appris chez les scouts : sur une plage de Miami, il a étiré dans le sable points et tirets en barres fines et épaisses. Leur brevet, déposé en 1949, est accordé en 1952. Il faut pourtant attendre 1973 pour que les magasins américains choisissent un code commun, et le 26 juin 1974 pour le premier passage en caisse : un paquet de chewing-gums, à Troy, dans l’Ohio.",
       "sources": [
-        { "title": "GS1 UK — The history of the barcode", "url": "https://www.gs1uk.org/insights/news/the-history-of-the-barcode" },
-        { "title": "GS1 — GS1 Prefixes", "url": "https://www.gs1.org/prefixes" },
-        { "title": "Techno-Science — Code-barres EAN", "url": "https://www.techno-science.net/fr/definitions/code-barres-ean" },
-        { "title": "Explain that Stuff — How do barcode scanners work?", "url": "https://www.explainthatstuff.com/barcodescanners.html" },
-        { "title": "History.com — Barcode scanner invention, first use", "url": "https://www.history.com/this-day-in-history/barcode-scanner-invention-first-use" }
+        {
+          "title": "GS1 UK — The history of the barcode",
+          "url": "https://www.gs1uk.org/insights/news/the-history-of-the-barcode"
+        },
+        {
+          "title": "GS1 — GS1 Prefixes",
+          "url": "https://www.gs1.org/prefixes"
+        },
+        {
+          "title": "Techno-Science — Code-barres EAN",
+          "url": "https://www.techno-science.net/fr/definitions/code-barres-ean"
+        },
+        {
+          "title": "Explain that Stuff — How do barcode scanners work?",
+          "url": "https://www.explainthatstuff.com/barcodescanners.html"
+        },
+        {
+          "title": "History.com — Barcode scanner invention, first use",
+          "url": "https://www.history.com/this-day-in-history/barcode-scanner-invention-first-use"
+        }
       ]
     }
   ]
