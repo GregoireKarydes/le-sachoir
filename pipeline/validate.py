@@ -19,14 +19,14 @@ from seo import POLES  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 EDITIONS = ROOT / "editions"
-FORMAT_IDS = {"actu", "cultureg", "insolite", "ccm", "dossier", "quiz"}
+FORMAT_IDS = {"actu", "cultureg", "insolite", "notice", "dossier", "quiz"}
 QUIZ_KINDS = {"", "culture", "geo", "frise", "dico", "plusmoins", "swipe", "chiffre", "citation"}
 IMAGE_STATUS = {None, "pending", "retry", "done", "failed"}
 CAST_STATUS = {None, "pending", "done", "skipped", "failed"}
 THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
 CAPTION_MAX, BUBBLE_MAX = 20, 15  # mots, d'après prompts/CHARTE.md (7 novembre 2026 : plus de place pour expliquer)
-MAX_CAST = {"cultureg": 2, "insolite": 2, "ccm": 2, "dossier": 4}  # 13 novembre 2026 : moins de personnages, moins de confusions au dessin
-MAX_CASES = {"dossier": 24, "ccm": 5}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30) ; 14 novembre : micro-BD « Comment ça marche ? »
+MAX_CAST = {"cultureg": 2, "insolite": 2, "notice": 2, "dossier": 4}  # 13 novembre 2026 : moins de personnages, moins de confusions au dessin
+MAX_CASES = {"dossier": 24, "notice": 5}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30) ; 14 novembre : micro-BD La Notice
 EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
 PHOTO_MAX = 45  # case photo : légende courte
 ACTU_CAPTION_MAX, ACTU_EXPLAIN_MAX = 30, 50  # 8 novembre 2026 : Actu = 1 case dessinée (récitatif chargé, 1 bulle) + 1 case « Ce qui se passe vraiment »
@@ -155,7 +155,7 @@ def check_story(fmt: dict, d: Path, err, warn):
             warn(f"case dessinée {i} : plus de 2 personnages avec fiche dans l'image")
     # 9 novembre 2026 (Greg) : des vraies images souvent, ça rend l'histoire réelle. Signalé pour que la tâche Stock en ajoute.
     n_photo = sum(1 for c in cases if isinstance(c, dict) and c.get("kind") == "photo")
-    want = {"cultureg": 1, "insolite": 1, "ccm": 1, "dossier": 2}.get(fid, 0)
+    want = {"cultureg": 1, "insolite": 1, "notice": 1, "dossier": 2}.get(fid, 0)
     if n_photo < want:
         warn(f"{n_photo} vraie(s) photo(s) (« kind »: « photo »), il en faut au moins {want} si un document libre existe")
     if fid != "actu":

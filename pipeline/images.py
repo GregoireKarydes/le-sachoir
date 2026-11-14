@@ -746,7 +746,7 @@ def process_stock(phase: str) -> int:
                 todo.append((summ[kind]["ready"], stock.TYPES.index(kind), kind, cur))
         if not todo:
             return total
-        todo.sort(key=lambda x: x[:2])  # le type le plus en retard d'abord ; à égalité Culture G, Insolite, Comment ça marche, Dossier
+        todo.sort(key=lambda x: x[:2])  # le type le plus en retard d'abord ; à égalité Culture G, Insolite, Notice, Dossier
         ready, _, kind, (p, it) = todo[0]
         f = p / "item.json"
         # Renfort payant seulement si ce type n'a plus aucune BD finie pour la prochaine publication.

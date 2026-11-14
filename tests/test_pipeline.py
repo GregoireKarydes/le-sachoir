@@ -106,7 +106,7 @@ def test_jours_d_avance(site):
     queue(site, "20261107-0900-a", story("cultureg"))
     queue(site, "20261107-0901-b", story("insolite"))
     queue(site, "20261107-0902-c", story("dossier", status="pending"))
-    queue(site, "20261107-0903-d", story("ccm"))
+    queue(site, "20261107-0903-d", story("notice"))
     publish.main(datetime(2026, 11, 7, 6, 0, tzinfo=PARIS))
     h = json.loads((site / "data" / "health.json").read_text())
     assert h["days_ahead_drawn"] == 0 and h["days_ahead_written"] == 1

@@ -2,7 +2,7 @@
 import { esc, parisDay } from "./util.js";
 
 const C = { cream: "#faf6ee", ink: "#17140f", muted: "#5f5a52", line: "#e7e1d4", yellow: "#f5b62a",
-  dossier: "#1f8f5f", actu: "#2f4fa2", cultureg: "#f2a33a", insolite: "#d9473a", ccm: "#7a4fb8", quiz: "#14275c" };
+  dossier: "#1f8f5f", actu: "#2f4fa2", cultureg: "#f2a33a", insolite: "#d9473a", notice: "#7a4fb8", quiz: "#14275c" };
 const SERIF = "Georgia,'Times New Roman',serif", SANS = "Roboto,Helvetica,Arial,sans-serif";
 
 export const mailLimit = env => +(env.MAIL_DAILY_LIMIT || 290);
@@ -59,7 +59,7 @@ export function loginMail(env, { link, code }) {
 export function welcomeMail(env, { unsubUrl }) {
   const inner = `<tr><td style="background:#fff;border-radius:18px;padding:22px 20px">
 <h1 style="font-family:${SERIF};font-size:26px;line-height:1.1;margin:0 0 10px">Bienvenue dans la newsletter</h1>
-<p style="margin:0 0 12px;font-size:16px;line-height:1.5">Chaque matin, l'édition du jour arrive ici : l'actu, une pilule de culture G, une histoire insolite, un « Comment ça marche ? », le Grand Dossier et le jeu du jour. Une minute pour survoler, cinq pour briller.</p>
+<p style="margin:0 0 12px;font-size:16px;line-height:1.5">Chaque matin, l'édition du jour arrive ici : l'actu, une pilule de culture G, une histoire insolite, la Notice, le Grand Dossier et le jeu du jour. Une minute pour survoler, cinq pour briller.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.5">Promis : pas de « Vous ne devinerez jamais… », pas de pub pour des matelas. Juste de quoi impressionner la machine à café.</p>
 <p style="margin:0;text-align:center"><a href="${env.APP_URL}" style="display:inline-block;background:${C.yellow};color:${C.ink};font-weight:700;font-size:17px;text-decoration:none;padding:13px 26px;border-radius:999px">Lire l'édition du jour</a></p>
 </td></tr>`;
@@ -119,7 +119,7 @@ const POOLS = {
 const dayNum = day => Math.floor(Date.parse(day + "T12:00:00Z") / 86400000);
 const pick = (key, day, k = 0) => { const l = POOLS[key]; return l[(dayNum(day) * (k + 3) + k * 7) % l.length]; };
 const QUIZ_NAMES = { culture: "Quiz culture G", geo: "Quiz géo", frise: "La Frise", dico: "Le Dico menteur", plusmoins: "Plus ou moins", swipe: "Le Swipe", chiffre: "Le Chiffre", citation: "Qui a dit ça ?" };
-const EMOJI = { dossier: "📚", actu: "🗞️", cultureg: "💊", insolite: "🤯", ccm: "⚙️" };
+const EMOJI = { dossier: "📚", actu: "🗞️", cultureg: "💊", insolite: "🤯", notice: "⚙️" };
 
 export async function loadEdition(env, day) {
   const r = await fetch(`${env.APP_URL}editions/index.json`, { cf: { cacheTtl: 60 } });

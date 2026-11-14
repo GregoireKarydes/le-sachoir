@@ -8,7 +8,7 @@ Chaque jour, l'actu et la culture G en BD. Pour briller en société (ou au moin
 
 | Heure (Paris) | Qui | Quoi |
 |---|---|---|
-| 19 h 19 et 20 h 37 | Tâches planifiées Claude « Grands Dossiers » et « Stock » | Écrivent à l'avance Grands Dossiers, Culture G, Insolite et « Comment ça marche ? » dans la **file d'attente** `stock/<type>/`, et le jeu du jour par date dans `editions/` |
+| 19 h 19 et 20 h 37 | Tâches planifiées Claude « Grands Dossiers » et « Stock » | Écrivent à l'avance Grands Dossiers, Culture G, Insolite et Notices dans la **file d'attente** `stock/<type>/`, et le jeu du jour par date dans `editions/` |
 | 0 h 05 | GitHub Actions `rss.yml` | Collecte les titres de la veille → `data/rss/` |
 | 1 h | Tâche planifiée Claude « Actu » | Choisit et vérifie 3 à 5 sujets, écrit 1 ou 2 cases par sujet → `editions/<date>/edition.json` |
 | À chaque push + toutes les heures la nuit | GitHub Actions `images.yml` | Génère les images (Cloudflare Workers AI, FLUX.2 klein 4B) : l'Actu d'abord, puis **une BD de la file à la fois, jusqu'à 100 %** |
@@ -17,8 +17,8 @@ Chaque jour, l'actu et la culture G en BD. Pour briller en société (ou au moin
 
 Les bulles et les récitatifs ne sont jamais dessinés dans les images : l'appli les pose par-dessus.
 
-## « Comment ça marche ? » (14 novembre 2026)
-Une micro-BD de 2 minutes par jour (format `ccm`, couleur violette) qui explique une chose du quotidien qu'on trouve normale : le frigo, le micro-ondes, l'avion qui vole… Écrite à l'avance par la tâche « Stock » dans `stock/ccm/` (consignes : `prompts/STOCK.md`), dessinée par GitHub Actions comme les autres (4 ou 5 cases dessinées, environ 7 images avec la couverture et les 2 fiches), piochée chaque matin par la publication. **Offerte dans l'édition gratuite du jour**, sans paywall ; comme le reste, les jours passés sont réservés à Premium.
+## La Notice (14 novembre 2026)
+« La Notice, celle que personne ne lit » : une micro-BD de 2 minutes par jour (format `notice`, couleur violette) qui explique une chose du quotidien qu'on trouve normale : le frigo, le micro-ondes, l'avion qui vole… Écrite à l'avance par la tâche « Stock » dans `stock/notice/` (consignes : `prompts/STOCK.md`), dessinée par GitHub Actions comme les autres (4 ou 5 cases dessinées, environ 7 images avec la couverture et les 2 fiches), piochée chaque matin par la publication. **Offerte dans l'édition gratuite du jour**, sans paywall ; comme le reste, les jours passés sont réservés à Premium.
 
 ## Référencement (SEO)
 À chaque publication, `pipeline/seo.py` génère pour chaque histoire une page statique indexable (`/histoires/<date>-<titre>/`) avec le texte complet des cases, les images, la description, Open Graph et les données structurées (Article, fil d'Ariane). Il génère aussi les pages `/themes/`, `/archives/`, `sitemap.xml` et `robots.txt`. L'édition de démonstration est en `noindex`.
@@ -27,7 +27,7 @@ L'adresse du site se règle dans `pipeline/site.json` (`base_url`), avec le code
 
 ## Dossiers
 - `app/` : l'appli PWA (un seul `index.html`, service worker, manifeste, images de l'interface).
-- `stock/` : la file d'attente des BD hors Actu (`cultureg`, `insolite`, `ccm`, `dossier`) (`stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` + `images/` + `cast/`), voir `pipeline/stock.py`.
+- `stock/` : la file d'attente des BD hors Actu (`cultureg`, `insolite`, `notice`, `dossier`) (`stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` + `images/` + `cast/`), voir `pipeline/stock.py`.
 - `editions/` : une édition par jour (`edition.json` + `images/` + `cast/`), et `index.json` (éditions publiées).
 - `pipeline/` : scripts Python (RSS, images, publication) et `style.json` (style des images).
 - `prompts/` : la charte de l'humour et les consignes des tâches Claude.

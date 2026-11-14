@@ -48,7 +48,7 @@
   "stock_target": {
     "cultureg": 3,
     "insolite": 3,
-    "ccm": 2,
+    "notice": 2,
     "dossier": 2
   },
   "stock_target_note": "BD finies d'avance par type (file stock/) avant de refaire les images demandées par le contrôle qualité",
@@ -84,7 +84,7 @@
         241,
         230
       ],
-      "ccm": [
+      "notice": [
         236,
         228,
         248
