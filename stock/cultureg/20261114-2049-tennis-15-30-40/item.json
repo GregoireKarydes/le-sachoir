@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a modern outdoor tennis court with a scoreboard showing only blank panels. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left holding the racket, staring up at the scoreboard with a confused frown; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right climbing a small ladder to the scoreboard, proudly hanging up a big round old clock with a single hand. wide shot",
-        "cast": ["chloe", "paumier"],
+        "cast": [
+          "chloe",
+          "paumier"
+        ],
         "file": "images/cultureg-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "Aujourd’hui",
           "caption": "Au tennis, on compte 15, 30, 40, puis « jeu ». Pourquoi pas 1, 2, 3, comme tout le monde ?",
           "bubbles": [
-            { "who": "chloe", "text": "Qui a inventé ce comptage absurde ?", "side": "l" },
-            { "who": "paumier", "text": "Nous, les Français. Il y a plus de cinq siècles.", "side": "r" }
+            {
+              "who": "chloe",
+              "text": "Qui a inventé ce comptage absurde ?",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "Nous, les Français. Il y a plus de cinq siècles.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a modern outdoor tennis court by the net. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left counting on her fingers with the racket under her arm, baffled; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right popping up from behind the net, bowing deeply with his flat black cap in his hand, very proud. medium shot",
-            "cast": ["chloe", "paumier"],
+            "cast": [
+              "chloe",
+              "paumier"
+            ],
             "file": "images/cultureg-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "XIIe siècle",
           "caption": "Le tennis descend du jeu de paume, joué en France dès le XIIe siècle, d’abord par des moines, à main nue.",
           "bubbles": [
-            { "who": "chloe", "text": "À main nue ? Ça devait piquer.", "side": "l" },
-            { "who": "paumier", "text": "D’où la raquette, plus tard. Nos paumes ont applaudi.", "side": "r" }
+            {
+              "who": "chloe",
+              "text": "À main nue ? Ça devait piquer.",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "D’où la raquette, plus tard. Nos paumes ont applaudi.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "an indoor jeu de paume hall with high walls and a net in the middle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right holding up his bright red swollen palm next to the ball, wincing dramatically; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left hugging her racket protectively against her chest. medium shot",
-            "cast": ["paumier", "chloe"],
+            "cast": [
+              "paumier",
+              "chloe"
+            ],
             "file": "images/cultureg-02.webp",
             "status": "pending",
             "attempts": 0
@@ -85,12 +110,23 @@
           "tag": "Vers 1435",
           "caption": "Le comptage est déjà là au Moyen Âge : vers 1435, un poème du prince Charles d’Orléans parle de « quarante cinq ».",
           "bubbles": [
-            { "who": "chloe", "text": "Quarante-cinq ? Pas quarante ?", "side": "l" },
-            { "who": "paumier", "text": "Patience. On a raccourci après.", "side": "r" }
+            {
+              "who": "chloe",
+              "text": "Quarante-cinq ? Pas quarante ?",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "Patience. On a raccourci après.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the indoor jeu de paume hall, close-up. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right unrolling a long blank parchment scroll that rolls all the way down to the floor, reading it with solemn pride; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left bending over it, squinting, one eyebrow raised. medium close-up",
-            "cast": ["paumier", "chloe"],
+            "cast": [
+              "paumier",
+              "chloe"
+            ],
             "file": "images/cultureg-03.webp",
             "status": "pending",
             "attempts": 0
@@ -114,12 +150,23 @@
           "tag": "La plus célèbre",
           "caption": "L’horloge est la plus citée. Mais l’aiguille des minutes ne se répand que vers 1690, bien après le poème.",
           "bubbles": [
-            { "who": "chloe", "text": "Donc l’horloge, c’est une légende ?", "side": "l" },
-            { "who": "paumier", "text": "Une jolie légende, avec deux siècles et demi de retard.", "side": "r" }
+            {
+              "who": "chloe",
+              "text": "Donc l’horloge, c’est une légende ?",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "Une jolie légende, avec deux siècles et demi de retard.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the indoor jeu de paume hall, a wall with the clock hanging on it. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left pointing at the clock and its single lonely hour hand, mouth open; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right shrugging with both palms up, innocent little smile. wide shot",
-            "cast": ["chloe", "paumier"],
+            "cast": [
+              "chloe",
+              "paumier"
+            ],
             "file": "images/cultureg-05.webp",
             "status": "pending",
             "attempts": 0
@@ -131,7 +178,15 @@
           "tag": "Document d’époque",
           "title": "Un jeu de paume français en 1632",
           "text": "Gravure de Charles Hulpeau : une salle fermée, un filet, des murs où la balle rebondit. Le tennis moderne en garde le filet, la raquette et le comptage.",
-          "photo": { "commons": "File:French Jeu de Paume in the 17th century.jpg" }
+          "photo": {
+            "commons": "File:French Jeu de Paume in the 17th century.jpg",
+            "credit": "Charles Hulpeau",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:French_Jeu_de_Paume_in_the_17th_century.jpg",
+            "file": "images/photo-6-french-jeu-de-paume-in-the-17th-cen.webp",
+            "status": "done"
+          }
         },
         {
           "n": 7,
@@ -139,12 +194,23 @@
           "tag": "Et le 40 ?",
           "caption": "Pourquoi 40 et pas 45 ? L’explication courante : « quarante », plus court, se crie plus clairement.",
           "bubbles": [
-            { "who": "chloe", "text": "Ils ont supprimé cinq points pour gagner une syllabe ?", "side": "l" },
-            { "who": "paumier", "text": "On est sportifs. Pas comptables.", "side": "r" }
+            {
+              "who": "chloe",
+              "text": "Ils ont supprimé cinq points pour gagner une syllabe ?",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "On est sportifs. Pas comptables.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the indoor jeu de paume hall, low angle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right shouting across the court with both hands cupped around his mouth, cheeks puffed, ruff shaking; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left covering her ears with her racket squeezed under her arm. medium shot",
-            "cast": ["paumier", "chloe"],
+            "cast": [
+              "paumier",
+              "chloe"
+            ],
             "file": "images/cultureg-07.webp",
             "status": "pending",
             "attempts": 0
@@ -164,12 +230,23 @@
           "tag": "En résumé",
           "caption": "15, 30, 40 vient du jeu de paume français. Pourquoi 15 au départ ? Personne ne le sait avec certitude.",
           "bubbles": [
-            { "who": "chloe", "text": "Donc quand je perds 40-0, je perds en vieux français.", "side": "l" },
-            { "who": "paumier", "text": "Avec cinq siècles d’histoire. C’est quand même plus chic.", "side": "r" }
+            {
+              "who": "chloe",
+              "text": "Donc quand je perds 40-0, je perds en vieux français.",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "Avec cinq siècles d’histoire. C’est quand même plus chic.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back on the modern outdoor tennis court. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left slumped on the bench, racket dangling, defeated but smiling; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right sitting beside her, cheerfully offering her the ball as a consolation gift. medium shot",
-            "cast": ["chloe", "paumier"],
+            "cast": [
+              "chloe",
+              "paumier"
+            ],
             "file": "images/cultureg-09.webp",
             "status": "pending",
             "attempts": 0
@@ -182,10 +259,22 @@
       },
       "story": "Le tennis moderne, mis au point en Angleterre au XIXe siècle, descend du jeu de paume, joué en France dès le XIIe siècle, d’abord par des moines dans les cloîtres, qui frappaient la balle de la paume de la main avant l’arrivée de la raquette. Le mot « tennis » viendrait d’ailleurs de « Tenez ! », lancé par le serveur à son adversaire ; il apparaît dans un texte vers 1400.\nLe comptage par 15 est très ancien : vers 1435, une ballade du prince-poète Charles d’Orléans parle déjà de « quarante cinq ». Pourquoi 15 ? Personne ne le sait avec certitude. L’hypothèse la plus citée est celle de l’horloge : chaque point ferait avancer l’aiguille d’un quart de tour, 15, 30, 45, et 60 pour le jeu. Mais l’aiguille des minutes ne se répand que vers 1690, ce qui la rend peu probable. Une autre veut que le serveur avançait de 15 pieds vers le filet à chaque point gagné, mais les terrains n’avaient pas de longueur standard. Une troisième rattache le système aux comptes par soixante, courants au Moyen Âge, quand on pariait sur les parties.\nLe 45 est ensuite devenu 40 : l’explication la plus répandue est que « quarante » est plus court et se crie plus clairement sur le terrain. Enfin, l’anglais « deuce », pour l’égalité à 40 partout, viendrait de « à deux » : il faut alors gagner deux points de suite pour remporter le jeu.",
       "sources": [
-        { "title": "Wikipedia — Tennis scoring system", "url": "https://en.wikipedia.org/wiki/Tennis_scoring_system" },
-        { "title": "Europe 1 — Roland-Garros : pourquoi compte-t-on les points en 15, 30, 40 et jeu au tennis ?", "url": "https://www.europe1.fr/sport/roland-garros-pourquoi-compte-on-les-points-en-15-30-40-et-jeu-au-tennis-4185785" },
-        { "title": "Mental Floss — Where did tennis get its scoring system?", "url": "https://www.mentalfloss.com/sports/where-did-tennis-get-its-scoring-system" },
-        { "title": "Hérodote — Jeu des moines, jeu des rois", "url": "https://www.herodote.net/Jeu_des_moines_jeu_des_rois-synthese-2037.php?resume=1" }
+        {
+          "title": "Wikipedia — Tennis scoring system",
+          "url": "https://en.wikipedia.org/wiki/Tennis_scoring_system"
+        },
+        {
+          "title": "Europe 1 — Roland-Garros : pourquoi compte-t-on les points en 15, 30, 40 et jeu au tennis ?",
+          "url": "https://www.europe1.fr/sport/roland-garros-pourquoi-compte-on-les-points-en-15-30-40-et-jeu-au-tennis-4185785"
+        },
+        {
+          "title": "Mental Floss — Where did tennis get its scoring system?",
+          "url": "https://www.mentalfloss.com/sports/where-did-tennis-get-its-scoring-system"
+        },
+        {
+          "title": "Hérodote — Jeu des moines, jeu des rois",
+          "url": "https://www.herodote.net/Jeu_des_moines_jeu_des_rois-synthese-2037.php?resume=1"
+        }
       ]
     }
   ]
