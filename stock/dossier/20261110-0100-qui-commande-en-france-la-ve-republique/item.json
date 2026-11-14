@@ -12,6 +12,7 @@
       "cast": [
         {
           "id": "gaulle",
+          "name": "Charles de Gaulle",
           "look": "Charles, an extremely tall thin French general in his late sixties, big long nose, small grey moustache, slicked-back grey hair, long black general's coat, round black kepi, a small red ribbon on the chest as the only colour",
           "file": "cast/dossier-gaulle.png",
           "status": "done",
@@ -19,6 +20,7 @@
         },
         {
           "id": "lucie",
+          "name": "Lucie",
           "look": "Lucie, a curious young woman in her twenties, very messy curly brown hair in a big loose bun, round glasses, oversized black sweater, white sneakers, a yellow pencil behind her ear as the only colour",
           "file": "cast/dossier-lucie.png",
           "status": "done",
@@ -26,6 +28,7 @@
         },
         {
           "id": "prof",
+          "name": "Bernard, le prof",
           "look": "Bernard, a dry old constitutional law professor, bald with white tufts above the ears, half-moon glasses on the tip of his nose, grey three-piece suit, a thick black book under his arm, a green bow tie as the only colour",
           "file": "cast/dossier-prof.png",
           "status": "done",
@@ -52,10 +55,12 @@
           "bubbles": [
             {
               "text": "J’ai toujours cru que c’était le président.",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Ça dépend des années. Et des élections.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -78,10 +83,12 @@
           "bubbles": [
             {
               "text": "Un gouvernement tous les six mois ?",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Le temps de trouver la machine à café.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -104,10 +111,12 @@
           "bubbles": [
             {
               "text": "Donc personne ne décide rien ?",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Si. La date de la prochaine crise.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -130,6 +139,7 @@
           "bubbles": [
             {
               "text": "Un général ? Pour écrire une constitution ?",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -152,10 +162,12 @@
           "bubbles": [
             {
               "text": "Il me faut une constitution à ma taille.",
+              "who": "gaulle",
               "side": "r"
             },
             {
               "text": "Vu sa taille, ça promet.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -178,10 +190,12 @@
           "bubbles": [
             {
               "text": "En 1875 et en 1946, c’étaient des assemblées qui écrivaient.",
+              "who": "prof",
               "side": "r"
             },
             {
               "text": "Moins de monde, moins de disputes.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -217,10 +231,12 @@
           "bubbles": [
             {
               "text": "80 % de Français d’accord ? Sur un même sujet ?",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Notez la date. Ça ne se reproduira pas souvent.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -259,10 +275,12 @@
           "bubbles": [
             {
               "text": "Élu par les maires. C’est charmant, mais un peu petit.",
+              "who": "gaulle",
               "side": "r"
             },
             {
               "text": "Il vise plus grand.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -285,10 +303,12 @@
           "bubbles": [
             {
               "text": "Sans passer par le Parlement. Les juristes s’étranglent.",
+              "who": "prof",
               "side": "r"
             },
             {
               "text": "Vous aussi, on dirait.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -312,10 +332,12 @@
           "bubbles": [
             {
               "text": "Ils censurent ? Je dissous.",
+              "who": "gaulle",
               "side": "r"
             },
             {
               "text": "Du ping-pong constitutionnel.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -349,10 +371,12 @@
           "bubbles": [
             {
               "text": "Donc c’est moi qui choisis le président ?",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Vous. Et vos voisins. Même celui qui tond le dimanche.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -375,10 +399,12 @@
           "bubbles": [
             {
               "text": "Un second tour ? Moi ?",
+              "who": "gaulle",
               "side": "r"
             },
             {
               "text": "Il gagne quand même, avec 55 %.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -418,10 +444,12 @@
           "bubbles": [
             {
               "text": "Ça sonne comme un code de cadenas.",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "C’en est un. Pour faire passer une loi.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -456,10 +484,12 @@
           "bubbles": [
             {
               "text": "Vingt-huit fois ?",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "À ce stade, c’est un abonnement.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -498,10 +528,12 @@
           "bubbles": [
             {
               "text": "On a rationné le bouton.",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Sauf pour le budget. Là, c’est à volonté.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -524,10 +556,12 @@
           "bubbles": [
             {
               "text": "Le président et son Premier ministre sont adversaires ?",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Bienvenue dans la cohabitation.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -576,10 +610,12 @@
           "bubbles": [
             {
               "text": "Il voulait ça ?",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Pas du tout. C’est le pari raté le plus célèbre de la Ve.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -602,10 +638,12 @@
           "bubbles": [
             {
               "text": "73 % de oui !",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Avec près de 70 % d’abstention.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -628,10 +666,12 @@
           "bubbles": [
             {
               "text": "Et ça marche ?",
+              "who": "lucie",
               "side": "l"
             },
             {
               "text": "Sur le papier, oui.",
+              "who": "prof",
               "side": "r"
             }
           ],
@@ -654,10 +694,12 @@
           "bubbles": [
             {
               "text": "Dix ans à l’Élysée, puis on laisse la place.",
+              "who": "prof",
               "side": "r"
             },
             {
               "text": "Au moins pour un mandat.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -680,10 +722,12 @@
           "bubbles": [
             {
               "text": "780 voix contre 72. Il en fallait trois cinquièmes.",
+              "who": "prof",
               "side": "r"
             },
             {
               "text": "Changer la Constitution demande une très large majorité.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -706,10 +750,12 @@
           "bubbles": [
             {
               "text": "Soixante-deux ans sans censure réussie.",
+              "who": "prof",
               "side": "r"
             },
             {
               "text": "La IVe aurait appelé ça un mardi.",
+              "who": "lucie",
               "side": "l"
             }
           ],
@@ -740,10 +786,12 @@
           "bubbles": [
             {
               "text": "Je vous l’avais dit : une constitution à ma taille.",
+              "who": "gaulle",
               "side": "r"
             },
             {
               "text": "Grande, et qui dure.",
+              "who": "lucie",
               "side": "l"
             }
           ],
