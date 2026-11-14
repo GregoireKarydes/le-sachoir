@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-21",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "chiffre",
+      "label": "Le Chiffre",
+      "title": "Au doigt mouillé (mais avec méthode)",
+      "teaser": "Un tunnel, une cloche, la Lune : trois chiffres à deviner au curseur. Vingt pour cent d’erreur autorisés, comme au restaurant.",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "estimate",
+          "theme": "Architecture",
+          "q": "Combien de kilomètres mesure le tunnel sous la Manche, de Folkestone à Calais ?",
+          "hint": "Un peu plus long qu’un marathon (42 km).",
+          "answer": 50,
+          "unit": "km",
+          "min": 5,
+          "max": 300,
+          "scale": "log",
+          "explain": "Environ 50 km, dont 38 sous la mer, jusqu’à 75 m sous le niveau de l’eau. Ouvert en 1994 : on peut enfin aller en Angleterre sans avoir le mal de mer.",
+          "source": {
+            "title": "LeShuttle — Le tunnel sous la Manche : faits intéressants",
+            "url": "https://www.leshuttle.com/fr-fr/decouvrir/pourquoi-choisir-leshuttle/construire/le-tunnel-sous-la-manche"
+          }
+        },
+        {
+          "type": "estimate",
+          "theme": "Histoire de l’art",
+          "q": "Combien de tonnes pèse Emmanuel, le bourdon (la plus grosse cloche) de Notre-Dame de Paris ?",
+          "hint": "Plus lourd qu’un éléphant d’Afrique, qui pèse environ 6 tonnes.",
+          "answer": 13,
+          "unit": "tonnes",
+          "min": 1,
+          "max": 200,
+          "scale": "log",
+          "explain": "13 tonnes : deux éléphants bien nourris. Il sonne pour les grandes fêtes et les grands événements. Les voisins sont prévenus.",
+          "source": {
+            "title": "Ministère de la Culture — Tours de la cathédrale Notre-Dame de Paris",
+            "url": "https://www.culture.gouv.fr/rechercher-une-publication-du-ministere-de-la-culture/repertoire-des-informations-publiques/Monuments-nationaux/tours-de-la-cathedrale-notre-dame-de-paris"
+          }
+        },
+        {
+          "type": "estimate",
+          "theme": "L’univers",
+          "q": "À combien de kilomètres de la Terre se trouve la Lune, en moyenne ?",
+          "hint": "Environ trente fois le diamètre de la Terre (12 700 km).",
+          "answer": 384400,
+          "unit": "km",
+          "min": 1000,
+          "max": 10000000,
+          "scale": "log",
+          "explain": "384 400 km en moyenne : une dizaine de tours de la Terre. En voiture à 130 km/h sans pause, comptez quatre mois. Prévoyez des sandwichs.",
+          "source": {
+            "title": "CNES — La Lune",
+            "url": "https://cnes.fr/dossiers/lune"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "LeShuttle — Le tunnel sous la Manche : faits intéressants",
+          "url": "https://www.leshuttle.com/fr-fr/decouvrir/pourquoi-choisir-leshuttle/construire/le-tunnel-sous-la-manche"
+        },
+        {
+          "title": "Ministère de la Culture — Tours de la cathédrale Notre-Dame de Paris",
+          "url": "https://www.culture.gouv.fr/rechercher-une-publication-du-ministere-de-la-culture/repertoire-des-informations-publiques/Monuments-nationaux/tours-de-la-cathedrale-notre-dame-de-paris"
+        },
+        {
+          "title": "CNES — La Lune",
+          "url": "https://cnes.fr/dossiers/lune"
+        }
+      ]
+    }
+  ]
+}
