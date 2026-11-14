@@ -165,7 +165,13 @@
           "title": "L’Observatoire de Paris, vu du ciel",
           "text": "Le méridien de Paris traverse ce bâtiment. Jusqu’en 1911, c’est son heure qui règle les horloges de toute la France.",
           "photo": {
-            "commons": "File:Observatoire de Paris.JPG"
+            "commons": "File:Observatoire de Paris.JPG",
+            "credit": "Pline",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Observatoire_de_Paris.JPG",
+            "file": "images/photo-6-observatoire-de-paris-jpg.webp",
+            "status": "done"
           }
         },
         {
