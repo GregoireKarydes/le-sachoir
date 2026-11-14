@@ -1,6 +1,6 @@
 # Format d'une édition : `editions/AAAA-MM-JJ/edition.json`
 
-Une édition par jour : l'Actu (écrite la veille au soir) et le jeu du jour y sont écrits directement. Les Culture G, Insolites et Grands Dossiers sont écrits dans la **file d'attente** `stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` (`{"added": …, "formats": [une seule BD]}`, même format que ci-dessous) ; la publication du matin les place dans l'édition une fois finis à 100 % (voir `prompts/STOCK.md`).
+Une édition par jour : l'Actu (écrite la veille au soir) et le jeu du jour y sont écrits directement. Les Culture G, Insolites, « Comment ça marche ? » (`ccm`) et Grands Dossiers sont écrits dans la **file d'attente** `stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` (`{"added": …, "formats": [une seule BD]}`, même format que ci-dessous) ; la publication du matin les place dans l'édition une fois finis à 100 % (voir `prompts/STOCK.md`).
 Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo`. Tout le reste est écrit par Claude. `"redo": true` sur une image faite = le contrôle qualité en veut une nouvelle version ; l'ancienne reste publiée en attendant.
 
 ```json
@@ -9,13 +9,13 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
   "status": "draft",                 // "draft" → "published" (posé par pipeline/publish.py à 5 h)
   "formats": [
     {
-      "id": "cultureg",              // "actu" | "cultureg" | "insolite" | "dossier" — un seul de chaque
+      "id": "cultureg",              // "actu" | "cultureg" | "insolite" | "ccm" | "dossier" — un seul de chaque ("ccm" = « Comment ça marche ? », label « Comment ça marche ? »)
       "label": "La Pilule de Culture G",
       "title": "Le Chat de Schrödinger expliqué à mon chat",
       "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
       "teaser": "Accroche drôle pour la newsletter, 25 mots max (voir « Newsletter »).",
       "minutes": 2,  // recalculée à la publication d'après les textes et les images (pipeline/publish.py, reading_minutes) : inutile de la soigner
-      "theme": "Sciences physiques",  // OBLIGATOIRE pour cultureg, insolite et dossier : une des 32 thématiques, écrite exactement comme dans prompts/STOCK.md ; vide pour actu
+      "theme": "Sciences physiques",  // OBLIGATOIRE pour cultureg, insolite, ccm et dossier : une des 32 thématiques, écrite exactement comme dans prompts/STOCK.md ; vide pour actu
       "cast": [
         { "id": "schro", "name": "Erwin Schrödinger",   // nom affiché au-dessus de ses bulles (voir « Qui parle ? »)
           "look": "Erwin, a 1930s physicist, slick dark hair, round glasses, grey three-piece suit, dark red tie",

@@ -97,8 +97,8 @@ async function hmac(env, text) {
   const sig = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(text));
   return btoa(String.fromCharCode(...new Uint8Array(sig))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "").slice(0, 32);
 }
-const IMG_PATH = /^(editions\/\d{4}-\d{2}-\d{2}|stock\/(cultureg|insolite|dossier)\/[\w.-]+)\/(images|cast)\/[\w.-]+\.(webp|png|jpe?g)$/;
-export const DIR_PATH = /^(editions\/\d{4}-\d{2}-\d{2}|stock\/(cultureg|insolite|dossier)\/[\w.-]+)$/;
+const IMG_PATH = /^(editions\/\d{4}-\d{2}-\d{2}|stock\/(cultureg|insolite|ccm|dossier)\/[\w.-]+)\/(images|cast)\/[\w.-]+\.(webp|png|jpe?g)$/;
+export const DIR_PATH = /^(editions\/\d{4}-\d{2}-\d{2}|stock\/(cultureg|insolite|ccm|dossier)\/[\w.-]+)$/;
 export const contentBase = env => (env.CONTENT_URL || "https://raw.githubusercontent.com/GregoireKarydes/le-sachoir/main/").replace(/\/?$/, "/");
 export const ghHeaders = env => env.GITHUB_TOKEN ? { authorization: `token ${env.GITHUB_TOKEN}`, accept: "application/vnd.github.raw" } : {};
 

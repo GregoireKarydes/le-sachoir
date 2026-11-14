@@ -1,6 +1,6 @@
 """File d'attente des BD hors Actu (8 novembre 2026).
 
-Les Culture G, Insolites et Grands Dossiers ne sont plus écrits pour une date : ils entrent dans une file,
+Les Culture G, Insolites, « Comment ça marche ? » et Grands Dossiers ne sont plus écrits pour une date : ils entrent dans une file,
 `stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` (même forme qu'une édition : {"formats": [une BD]}),
 avec leurs images dans `images/` et leurs fiches dans `cast/` à côté.
 
@@ -20,8 +20,8 @@ from seo import POLES  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 STOCK = ROOT / "stock"
-TYPES = ("cultureg", "insolite", "dossier")
-ORDER = ["dossier", "actu", "cultureg", "insolite", "quiz"]  # ordre des formats dans une édition
+TYPES = ("cultureg", "insolite", "ccm", "dossier")  # ccm = « Comment ça marche ? » (14 novembre 2026)
+ORDER = ["dossier", "actu", "cultureg", "insolite", "ccm", "quiz"]  # ordre des formats dans une édition
 
 _POLE_OF = {t: p for p, ts in POLES.items() for t in ts}
 
