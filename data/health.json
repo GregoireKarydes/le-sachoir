@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T15:15:16.987191+01:00",
+ "updated_at": "2026-11-14T15:15:49.335555+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -11,6 +11,7 @@
     "actu": "prêt",
     "cultureg": "prêt",
     "insolite": "prêt",
+    "origine": "prêt",
     "quiz": "prêt"
    }
   },
@@ -71,7 +72,9 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-14/origine : « « Payer en monnaie de singe » » prise dans la file (20261114-1500-payer-en-monnaie-de-singe)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -83,7 +86,8 @@
   "dossier",
   "actu",
   "cultureg",
-  "insolite"
+  "insolite",
+  "origine"
  ],
  "last_published": "2026-11-14",
  "stock": {
@@ -116,10 +120,10 @@
   },
   "origine": {
    "ready": 0,
-   "waiting": 1,
+   "waiting": 0,
    "blocked": 0,
-   "images_left": 6,
-   "focus": "20261114-1500-payer-en-monnaie-de-singe (6 image(s) à faire)",
+   "images_left": 0,
+   "focus": null,
    "next": null,
    "next_redo": 0
   },
@@ -134,7 +138,7 @@
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 1,
+ "days_ahead_written": 0,
  "quiz_days_ahead": 8,
  "quota": {
   "day": "2026-11-14",
@@ -148,9 +152,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.2215,
-  "images": 121,
-  "today_usd": 0.18899,
+  "spent_usd": 1.27968,
+  "images": 129,
+  "today_usd": 0.24717,
   "blocked": null
  }
 }
