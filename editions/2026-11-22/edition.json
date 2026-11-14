@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-22",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "citation",
+      "label": "Qui a dit ça ?",
+      "title": "Ces phrases ont un propriétaire (sauf une)",
+      "teaser": "Un philosophe, un aviateur, une écrivaine et un roi qui n’a peut-être rien dit du tout. À vous de rendre chaque phrase à son auteur.",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "choice",
+          "q": "« Je pense, donc je suis. »",
+          "hint": "Un philosophe français du XVIIe siècle, auteur du Discours de la méthode.",
+          "choices": [
+            "Jean-Jacques Rousseau",
+            "René Descartes",
+            "Blaise Pascal",
+            "Montaigne"
+          ],
+          "answer": 1,
+          "explain": "Écrit en français dans le Discours de la méthode (1637), avant de devenir « Cogito, ergo sum » en latin. Descartes doutait de tout, sauf d’une chose : qu’il était en train de douter.",
+          "source": {
+            "title": "History of Information — René Descartes writes « Je pense, donc je suis »",
+            "url": "https://www.historyofinformation.com/detail.php?id=1923"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "« On ne voit bien qu’avec le cœur. L’essentiel est invisible pour les yeux. »",
+          "hint": "C’est le secret confié par un renard dans un livre très célèbre.",
+          "choices": [
+            "Jules Verne",
+            "Victor Hugo",
+            "Jean de La Fontaine",
+            "Antoine de Saint-Exupéry"
+          ],
+          "answer": 3,
+          "explain": "Le renard le confie au Petit Prince, publié en 1943 aux États-Unis. Saint-Exupéry était aviateur : il savait que vu d’en haut, tout a l’air petit.",
+          "source": {
+            "title": "Le Petit Prince — le secret du renard",
+            "url": "https://www.cjvlang.com/petitprince/foxsecret/invisiblef.html"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "« On ne naît pas femme : on le devient. »",
+          "hint": "Une philosophe, compagne de Sartre, autrice du Deuxième Sexe.",
+          "choices": [
+            "Simone de Beauvoir",
+            "George Sand",
+            "Colette",
+            "Marguerite Duras"
+          ],
+          "answer": 0,
+          "explain": "Elle ouvre le tome II du Deuxième Sexe (1949) : pour Beauvoir, c’est l’éducation et la société qui fabriquent les rôles. On ne naît pas philosophe non plus, d’ailleurs.",
+          "source": {
+            "title": "Cours et fiches — Le Deuxième Sexe, Simone de Beauvoir",
+            "url": "https://cours-et-fiches.com/livres/le-deuxieme-sexe-simone-de-beauvoir/"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "« L’État, c’est moi. »",
+          "hint": "Aucune archive de l’époque ne contient cette phrase.",
+          "choices": [
+            "Napoléon Ier",
+            "Louis XIV",
+            "Personne de connu",
+            "Charles de Gaulle"
+          ],
+          "answer": 2,
+          "explain": "Attribuée à Louis XIV en 1655, elle n’apparaît dans aucun registre du Parlement : on la trouve dans un livre de 1818. Mourant, il aurait dit l’inverse : l’État lui survivrait.",
+          "source": {
+            "title": "Wikipedia — L’État, c’est moi",
+            "url": "https://www.wikiwand.com/en/articles/I_am_the_State"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "History of Information — René Descartes writes « Je pense, donc je suis »",
+          "url": "https://www.historyofinformation.com/detail.php?id=1923"
+        },
+        {
+          "title": "Le Petit Prince — le secret du renard",
+          "url": "https://www.cjvlang.com/petitprince/foxsecret/invisiblef.html"
+        },
+        {
+          "title": "Cours et fiches — Le Deuxième Sexe, Simone de Beauvoir",
+          "url": "https://cours-et-fiches.com/livres/le-deuxieme-sexe-simone-de-beauvoir/"
+        },
+        {
+          "title": "Wikipedia — L’État, c’est moi",
+          "url": "https://www.wikiwand.com/en/articles/I_am_the_State"
+        }
+      ]
+    }
+  ]
+}
