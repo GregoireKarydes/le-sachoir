@@ -1,0 +1,307 @@
+{
+  "added": "20261114-0359",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
+      "tagline": "Les noms des notes sortent d’une prière latine à saint Jean, recyclée par un moine pédagogue",
+      "teaser": "Pourquoi chante-t-on « do, ré, mi » et pas « bip, bop, bup » ? Un moine italien a eu une idée géniale vers 1030.",
+      "minutes": 2,
+      "theme": "Musique",
+      "cast": [
+        {
+          "id": "guido",
+          "name": "Guido d’Arezzo",
+          "look": "Guido, a very tall and thin Italian Benedictine monk in his forties around 1030, long bony face, shaved tonsure with a ring of black hair, long black monk's habit with a bright orange rope belt as main colour accent, light olive skin, always holding a small wooden monochord (a long narrow wooden box with one string)",
+          "file": "cast/cultureg-guido.png",
+          "status": "pending",
+          "role": "the patient music teacher monk who explains simply; tall, calm, plucking his one-string box like a professor's pointer"
+        },
+        {
+          "id": "pietro",
+          "name": "Pietro, le novice",
+          "look": "Pietro, a short round young novice monk around twenty, chubby pink cheeks, messy bowl-cut ginger hair, oversized light-brown robe with sleeves too long, light peach skin, a heavy green leather-bound songbook always clutched to his chest",
+          "file": "cast/cultureg-pietro.png",
+          "status": "pending",
+          "role": "the clumsy curious novice who asks the reader's questions; small, round, overwhelmed, hugging his songbook"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare stone monastery room with a simple wooden lectern. Guido (very tall, black habit, orange rope belt) on the right plucking his monochord, eyes closed, serene; Pietro (short, round, ginger bowl cut, light-brown robe) on the left singing with his mouth wide open, wrapped in a huge woolly scarf, holding his throat, yellow sparkles. medium shot",
+        "cast": [
+          "guido",
+          "pietro"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Italie, vers 1030",
+          "caption": "Pourquoi les notes s’appellent-elles do, ré, mi ? La réponse est dans un monastère italien, vers l’an 1030.",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "Do, ré, mi… Qui a inventé ces noms bizarres ?",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "Moi. Enfin, presque.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare stone monastery room with a simple wooden lectern and a small arched window. Pietro (short, round, ginger bowl cut, light-brown robe) on the left scratching his head, puzzled, songbook under his arm; Guido (very tall, thin, black habit, orange rope belt) on the right raising one finger modestly, holding his monochord, a small proud smile. medium shot",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Avant lui, les notes n’ont pas de nom facile à chanter : les chanteurs apprennent chaque mélodie à l’oreille, par cœur.",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "Tous les chants de l’année ? Par cœur ?",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "Oui. Et tu en es au premier.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the same stone monastery room. Pietro (short, round, ginger bowl cut) on the left almost buried under a towering pile of heavy songbooks, only his head and one arm sticking out, light-blue sweat drop; Guido (very tall, black habit, orange rope belt) on the right placing one more book on top of the pile, deadpan. wide shot",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "L’astuce",
+          "caption": "Guido prend un chant que tous connaissent, une hymne à saint Jean-Baptiste. Chaque vers y commence une note plus haut.",
+          "bubbles": [
+            {
+              "who": "guido",
+              "text": "Ut, ré, mi, fa, sol, la : six marches d’escalier.",
+              "side": "r"
+            },
+            {
+              "who": "pietro",
+              "text": "Un escalier qui se chante !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "close view of a simple stone staircase with six steps. Guido (very tall, black habit, orange rope belt) on the right pointing at the steps with his monochord like a teacher; Pietro (short, round, ginger bowl cut) on the left climbing the steps one by one on tiptoe, mouth open as if singing, delighted. medium shot",
+            "cast": [
+              "guido",
+              "pietro"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Six notes cachées dans une phrase latine",
+          "text": "Le début de l’hymne : « Ut queant laxis / resonare fibris / mira gestorum / famuli tuorum / solve polluti / labii reatum ».",
+          "steps": [
+            "UT queant laxis → ut",
+            "REsonare fibris → ré",
+            "MIra gestorum → mi",
+            "FAmuli tuorum → fa",
+            "SOLve polluti → sol",
+            "LAbii reatum → la"
+          ],
+          "joke": "Une phrase à retenir, six notes offertes."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "VIIIe siècle",
+          "caption": "Le texte, attribué au moine Paul Diacre, demande à saint Jean de libérer la voix de ceux qui chantent.",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "Une prière pour bien chanter ?",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "Une tradition dit que Paul l’a écrite un jour d’enrouement.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small monastery kitchen corner with a steaming clay cup on a bench. Pietro (short, round, ginger bowl cut) on the left wrapped in a gigantic woolly red scarf up to his nose, sipping the steaming cup, eyes half closed; Guido (very tall, black habit, orange rope belt) on the right reading from a small scroll, eyebrows raised, amused. medium shot",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Guido d’Arezzo dans un manuscrit médiéval",
+          "text": "Sur cette enluminure de la fin du XIIe siècle, Guido (à gauche) tient un monocorde, une boîte à une corde qui sert à trouver les notes, face à son évêque.",
+          "photo": {
+            "commons": "File:Guido e Teodaldo.jpg"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Plus tard",
+          "caption": "La septième note arrive plus tard : « si », formé des initiales du dernier vers, « Sancte Iohannes ».",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "S comme Sancte, I comme Iohannes : si !",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "Je n’en voulais que six. On m’a ajouté une marche.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the simple stone staircase now with a seventh wooden step clumsily nailed on top. Pietro (short, round, ginger bowl cut) on the left proudly hammering the new step, yellow sparkles; Guido (very tall, black habit, orange rope belt) on the right standing with arms crossed, lips pursed, slightly vexed. medium shot",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "XVIIe siècle",
+          "caption": "En Italie, « ut » devient « do » : une syllabe qui finit par une voyelle se chante bien plus facilement.",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "Uuuuut !",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "On dirait un hibou qui tousse. Va pour « do ».",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "close-up in front of the small arched monastery window. Pietro (short, round, ginger bowl cut) on the left straining to sing, cheeks puffed and bright red, lips pushed into a tiny circle; an offended brown owl sitting on the windowsill glaring at him; Guido (very tall, black habit, orange rope belt) on the right covering one ear with a hand, wincing. close-up",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "explain",
+          "tag": "En clair",
+          "title": "Ut n’a pas complètement disparu",
+          "text": "Les musiciens disent encore « clé d’ut » pour une des clés qu’on écrit au début des partitions. La vieille syllabe de Guido survit, bien rangée dans les conservatoires.",
+          "joke": "Ut a pris sa retraite. Mais il passe encore au bureau."
+        },
+        {
+          "n": 10,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Do, ré, mi, ce sont les débuts des vers d’une hymne à saint Jean, choisis par Guido pour retenir les notes.",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "Do, ré, mi, fa, sol, la, si… do !",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "Mille ans de succès. Et pas une extinction de voix.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bare stone monastery room at the wooden lectern, seen from a low angle. Pietro (short, round, ginger bowl cut) on the left singing triumphantly, arms wide open, songbook flying up in the air, yellow sparkles; Guido (very tall, black habit, orange rope belt) on the right plucking his monochord, a rare broad smile. wide shot",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Ut, ré, mi, fa, sol, la : les premières syllabes des vers de l’hymne latine « Ut queant laxis », utilisées par Guido d’Arezzo au XIe siècle.",
+        "source": "Larousse — Ut queant laxis"
+      },
+      "story": "Au début du XIe siècle, les chanteurs d’église apprennent les mélodies à l’oreille, une par une, parce que les notes n’ont pas encore de nom pratique à chanter. Le moine italien Guido d’Arezzo, considéré comme le père de la notation musicale moderne, cherche un moyen plus rapide : comparer chaque note inconnue à une mélodie que tout le monde connaît déjà.\nIl choisit l’hymne à saint Jean-Baptiste « Ut queant laxis », dont le texte est traditionnellement attribué au moine Paul Diacre (VIIIe siècle). Dans la mélodie qu’il utilise, chaque demi-vers commence une note plus haut que le précédent. Les syllabes du début de chaque demi-vers donnent donc l’échelle : ut, ré, mi, fa, sol, la. Le texte demande justement à saint Jean de délier la voix de ses serviteurs pour qu’ils chantent ses merveilles ; une tradition médiévale raconte d’ailleurs que Paul Diacre souffrait d’un enrouement.\nPlus tard, on ajoute une septième note, « si », formée des initiales du dernier vers, « Sancte Iohannes ». Au XVIIe siècle, en Italie, « ut » est remplacé par « do », plus facile à chanter parce qu’il finit par une voyelle. « Ut » n’a pas disparu pour autant : on parle encore de la « clé d’ut » sur les partitions.",
+      "sources": [
+        {
+          "title": "Larousse — Ut queant laxis",
+          "url": "https://www.larousse.fr/encyclopedie/musdico/Ut%20queant%20laxis/170480"
+        },
+        {
+          "title": "Wikipedia — Ut queant laxis",
+          "url": "https://en.wikipedia.org/wiki/Ut_queant_laxis"
+        },
+        {
+          "title": "Catholic Encyclopedia (New Advent) — Ut queant laxis resonare fibris",
+          "url": "https://www.newadvent.org/cathen/15244a.htm"
+        },
+        {
+          "title": "Daily Geek Show — L’écriture des notes de musique a 1 000 ans",
+          "url": "https://dailygeekshow.com/ecriture-notes-musique-1000-ans/"
+        }
+      ],
+      "art": {
+        "subject": "how a medieval Italian monk named the musical notes after the first syllables of a Latin hymn",
+        "setting": "a bare stone Benedictine monastery room with a wooden lectern and a small arched window, a simple stone staircase, a small monastery kitchen corner",
+        "era": "Italy around 1030, medieval monastery",
+        "props": {
+          "monochord": "a long narrow wooden box with one single string stretched on top",
+          "songbook": "a heavy green leather-bound medieval songbook",
+          "staircase": "a simple grey stone staircase with six steps"
+        }
+      }
+    }
+  ]
+}
