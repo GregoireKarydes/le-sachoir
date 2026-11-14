@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T20:47+01:00",
+ "updated_at": "2026-11-14T20:48+01:00",
  "stock": {
   "cultureg": [
    {
@@ -171,6 +171,23 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 7,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261114-2047-14-juillet-sans-annee",
+    "name": "20261114-2047-14-juillet-sans-annee",
+    "added": "20261114-2047",
+    "status": "waiting",
+    "next": false,
+    "title": "Le 14 Juillet a oublié de dire de quelle année il parlait",
+    "theme": "Politique française",
+    "tagline": "La fête nationale célèbre la Bastille. Ou la Fédération. Ou les deux. La loi n’a jamais tranché.",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
     "failed": 0,
     "redo": 0
    }

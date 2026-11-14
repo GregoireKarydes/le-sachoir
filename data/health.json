@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T20:47:19.982389+01:00",
+ "updated_at": "2026-11-14T20:48:47.326684+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -101,9 +101,9 @@
   },
   "insolite": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 27,
+   "images_left": 33,
    "focus": "20261113-2051-le-president-prince-dandorre (6 image(s) à faire)",
    "next": "20261113-0100-la-plus-longue-frontiere-de-la-france-av",
    "next_redo": 0
