@@ -61,7 +61,7 @@ L'origine d'une expression très connue, en 8 à 10 écrans : un dessin dans le 
   "tagline": "Pour traverser ce pont, certains payaient en grimaces.",
   "theme": "Expression française",
   "minutes": 1,
-  "art": {"subject": "the origin of the French saying 'payer en monnaie de singe'", "setting": "the Petit-Pont toll gate in Paris, by the Seine, Notre-Dame in the distance", "era": "13th century, Paris under Saint Louis", "props": {"gatehouse": "a small stone gatehouse with one round arched gate"}},
+  "art": {"subject": "a medieval toll at a Paris bridge where a showman's monkey performs tricks instead of paying", "setting": "the Petit-Pont toll gate in Paris, by the Seine, Notre-Dame in the distance", "era": "13th century, Paris under Saint Louis", "props": {"gatehouse": "a small stone gatehouse with one round arched gate"}},
   "cast": [{"id": "jehan", "name": "Jehan, le montreur de singes", "look": "Jehan, a skinny lanky medieval street entertainer, …, patched green tunic as main colour, …", "role": "…", "file": "cast/origine-jehan.png"}],
   "cases": [
     {"n": 1, "kind": "cine", "text": "Pour traverser ce pont,\nil fallait payer.\nCertains payaient\nen *grimaces*.",
