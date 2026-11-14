@@ -163,7 +163,13 @@
           "title": "Le vrai Auguste Bartholdi",
           "text": "Le sculpteur alsacien (1834-1904), photographié par Napoleon Sarony. Après l’échec égyptien, il garde son idée de géante à torche dans ses cartons.",
           "photo": {
-            "commons": "File:Frederic Auguste Bartholdi.jpg"
+            "commons": "File:Frederic Auguste Bartholdi.jpg",
+            "credit": "Napoleon Sarony",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Frederic_Auguste_Bartholdi.jpg",
+            "file": "images/photo-6-frederic-auguste-bartholdi-jpg.webp",
+            "status": "done"
           }
         },
         {
