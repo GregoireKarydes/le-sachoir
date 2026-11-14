@@ -51,6 +51,8 @@ def site(tmp_path, monkeypatch):
     monkeypatch.setattr(publish, "SITE", tmp_path / "_site")
     monkeypatch.setattr(publish.seo, "build", lambda *a, **k: None)
     monkeypatch.setattr(stock, "STOCK", tmp_path / "stock")
+    # Jamais l'API en ligne pendant les tests : ses BD masquées (vraies dates) faisaient échouer la publication testée.
+    monkeypatch.setattr(publish, "_CFG", {})
     return tmp_path
 
 
