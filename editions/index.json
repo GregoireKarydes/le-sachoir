@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T17:55:59.709846+01:00",
+ "updated_at": "2026-11-14T18:44:35.070489+01:00",
  "editions": [
   {
    "date": "2026-11-14",
@@ -56,13 +56,13 @@
     {
      "id": "origine",
      "label": "D’où ça vient ?",
-     "title": "« Payer en monnaie de singe »",
+     "title": "Pourquoi « faire grève » vient d’une plage parisienne",
      "kind": "",
-     "url": "histoires/2026-11-14-payer-en-monnaie-de-singe/",
+     "url": "histoires/2026-11-14-pourquoi-faire-greve-vient-d-une-plage-parisienne/",
      "theme": "Expression française",
-     "minutes": 1,
-     "tagline": "Pour traverser ce pont, certains payaient en grimaces.",
-     "cases": 9,
+     "minutes": 2,
+     "tagline": "Avant de bloquer le métro, la grève, c’était chercher du boulot",
+     "cases": 6,
      "cover": null
     },
     {

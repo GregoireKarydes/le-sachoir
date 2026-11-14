@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T17:55:59.709846+01:00",
+ "updated_at": "2026-11-14T18:44:35.070489+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -72,7 +72,9 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-14/origine : « Pourquoi « faire grève » vient d’une plage parisienne » prise dans la file (20261114-1800-faire-greve-plage-parisienne)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -150,9 +152,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.27968,
-  "images": 129,
-  "today_usd": 0.24717,
+  "spent_usd": 1.33584,
+  "images": 136,
+  "today_usd": 0.30333,
   "blocked": null
  }
 }
