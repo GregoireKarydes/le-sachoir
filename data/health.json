@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T19:59:49.680719+01:00",
+ "updated_at": "2026-11-14T20:46:06.782053+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -110,10 +110,10 @@
   },
   "notice": {
    "ready": 0,
-   "waiting": 0,
+   "waiting": 1,
    "blocked": 0,
-   "images_left": 0,
-   "focus": null,
+   "images_left": 2,
+   "focus": "20261114-2043-micro-ondes-soupe-qui-danse (2 image(s) à faire)",
    "next": null,
    "next_redo": 0
   },
@@ -137,7 +137,7 @@
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 0,
+ "days_ahead_written": 1,
  "quiz_days_ahead": 8,
  "quota": {
   "day": "2026-11-14",
@@ -151,9 +151,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.37996,
-  "images": 143,
-  "today_usd": 0.34745,
+  "spent_usd": 1.42606,
+  "images": 149,
+  "today_usd": 0.39355,
   "blocked": null
  }
 }

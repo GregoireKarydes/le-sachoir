@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T19:59+01:00",
+ "updated_at": "2026-11-14T20:46+01:00",
  "stock": {
   "cultureg": [
    {
@@ -175,7 +175,25 @@
     "redo": 0
    }
   ],
-  "notice": [],
+  "notice": [
+   {
+    "path": "stock/notice/20261114-2043-micro-ondes-soupe-qui-danse",
+    "name": "20261114-2043-micro-ondes-soupe-qui-danse",
+    "added": "20261114-2043",
+    "status": "waiting",
+    "next": false,
+    "title": "Le micro-ondes ne chauffe pas votre soupe, il la fait danser",
+    "theme": "Sciences physiques",
+    "tagline": "Pas de flamme, pas de plaque : juste de l'eau qui pivote des milliards de fois par seconde",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 4,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   }
+  ],
   "origine": [],
   "dossier": [
    {
