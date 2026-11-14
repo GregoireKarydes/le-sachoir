@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T20:46+01:00",
+ "updated_at": "2026-11-14T20:47+01:00",
  "stock": {
   "cultureg": [
    {
@@ -189,6 +189,23 @@
     "cases": 8,
     "photos": 1,
     "images_done": 4,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/notice/20261114-2045-code-barres-morse-de-plage",
+    "name": "20261114-2045-code-barres-morse-de-plage",
+    "added": "20261114-2045",
+    "status": "waiting",
+    "next": false,
+    "title": "Le code-barres, ou le morse dessiné dans le sable",
+    "theme": "Informatique et numérique",
+    "tagline": "Treize chiffres, de la lumière rouge, et une idée née les pieds dans le sable",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
     "images_total": 6,
     "failed": 0,
     "redo": 0
