@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a riverside lawn in Paris at night, fireworks bursting high in the sky. Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left cheering with the sparkler; Henri Martin (short, round, long white hair, dark plum frock coat) on the right holding up the law sheet and pointing with a puzzled frown at a blank spot on it where a year should be. wide shot",
-        "cast": ["jules", "martin"],
+        "cast": [
+          "jules",
+          "martin"
+        ],
         "file": "images/insolite-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "Un 14 juillet",
           "caption": "Chaque 14 juillet, on croit fêter la prise de la Bastille de 1789. Mais la loi ne précise pas l’année.",
           "bubbles": [
-            { "who": "jules", "text": "Vive la Bastille !", "side": "l" },
-            { "who": "martin", "text": "Laquelle ? Il y a deux 14 juillet célèbres.", "side": "r" }
+            {
+              "who": "jules",
+              "text": "Vive la Bastille !",
+              "side": "l"
+            },
+            {
+              "who": "martin",
+              "text": "Laquelle ? Il y a deux 14 juillet célèbres.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a riverside lawn in Paris at night, fireworks high in the sky. Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left jumping with both arms up, the sparkler in one hand; Henri Martin (short, round, long white hair, dark plum frock coat) on the right sitting calmly on a folding chair, one finger raised, eyebrow lifted. medium shot",
-            "cast": ["jules", "martin"],
+            "cast": [
+              "jules",
+              "martin"
+            ],
             "file": "images/insolite-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "1880",
           "caption": "La jeune IIIe République cherche une fête nationale. Le député Benjamin Raspail propose le 14 juillet.",
           "bubbles": [
-            { "who": "martin", "text": "Excellente date. Reste à savoir laquelle on fête.", "side": "r" },
-            { "who": "jules", "text": "Parce qu’il y en a plusieurs ?", "side": "l" }
+            {
+              "who": "martin",
+              "text": "Excellente date. Reste à savoir laquelle on fête.",
+              "side": "r"
+            },
+            {
+              "who": "jules",
+              "text": "Parce qu’il y en a plusieurs ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a Third Republic parliament chamber with red benches. Henri Martin (short, round, long white hair, dark plum frock coat) on the right standing at a small lectern, holding up the law sheet with satisfaction; Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left squeezed onto a red bench far too small for his long legs, knees up to his chin, puzzled. wide shot",
-            "cast": ["martin", "jules"],
+            "cast": [
+              "martin",
+              "jules"
+            ],
             "file": "images/insolite-02.webp",
             "status": "pending",
             "attempts": 0
@@ -97,12 +122,23 @@
           "tag": "Au Sénat, juin 1880",
           "caption": "Le rapporteur, l’historien Henri Martin, vante 1790, qui, dit-il, « a donné à la France conscience d’elle-même ».",
           "bubbles": [
-            { "who": "jules", "text": "Et la Bastille, alors ?", "side": "l" },
-            { "who": "martin", "text": "Trop sanglante pour certains. Par prudence, on ne la cite pas.", "side": "r" }
+            {
+              "who": "jules",
+              "text": "Et la Bastille, alors ?",
+              "side": "l"
+            },
+            {
+              "who": "martin",
+              "text": "Trop sanglante pour certains. Par prudence, on ne la cite pas.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the parliament chamber, close on the lectern. Henri Martin (short, round, long white hair, dark plum frock coat) on the right smiling innocently at the audience while hiding the tower model behind his back with both hands; Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left leaning over to peek behind him and spotting the tower, eyes wide. medium shot",
-            "cast": ["martin", "jules"],
+            "cast": [
+              "martin",
+              "jules"
+            ],
             "file": "images/insolite-04.webp",
             "status": "pending",
             "attempts": 0
@@ -114,7 +150,15 @@
           "tag": "Document d’époque",
           "title": "La Fête de la Fédération, 14 juillet 1790",
           "text": "Le Champ-de-Mars peint par Charles Thévenin : au centre, l’autel de la patrie, tout autour la foule. C’est ce 14 juillet-là que le Sénat avait en tête en 1880.",
-          "photo": { "commons": "File:Charles Thévenin - La Fête de la Fédération.jpg" }
+          "photo": {
+            "commons": "File:Charles Thévenin - La Fête de la Fédération.jpg",
+            "credit": "Charles Thévenin",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Charles_Th%C3%A9venin_-_La_F%C3%AAte_de_la_F%C3%A9d%C3%A9ration.jpg",
+            "file": "images/photo-5-charles-th-venin-la-f-te-de-la-f-d.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -122,12 +166,23 @@
           "tag": "14 juillet 1790",
           "caption": "Environ 260 000 Parisiens et 100 000 gardes venus de toute la France fêtent l’unité au Champ-de-Mars. Talleyrand dit la messe.",
           "bubbles": [
-            { "who": "jules", "text": "Une fête géante, et cette fois sans combat ?", "side": "l" },
-            { "who": "martin", "text": "Sans combat. Juste la pluie, à la fin.", "side": "r" }
+            {
+              "who": "jules",
+              "text": "Une fête géante, et cette fois sans combat ?",
+              "side": "l"
+            },
+            {
+              "who": "martin",
+              "text": "Sans combat. Juste la pluie, à la fin.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the huge Champ-de-Mars in 1790, a tiny crowd in the far background around a central altar, rain falling. Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left, the only one perfectly dry in his raincoat, smugly pulling his hood up; Henri Martin (short, round, long white hair, dark plum frock coat) on the right soaked, white hair dripping flat, holding his book over his head, still smiling. wide shot",
-            "cast": ["jules", "martin"],
+            "cast": [
+              "jules",
+              "martin"
+            ],
             "file": "images/insolite-06.webp",
             "status": "pending",
             "attempts": 0
@@ -139,12 +194,23 @@
           "tag": "En résumé",
           "caption": "La loi de 1880 dit seulement « le 14 juillet ». Chacun y voit donc 1789, 1790, ou les deux à la fois.",
           "bubbles": [
-            { "who": "jules", "text": "Donc j’ai le droit de fêter deux fois ?", "side": "l" },
-            { "who": "martin", "text": "Une seule fois. Mais avec deux bonnes raisons.", "side": "r" }
+            {
+              "who": "jules",
+              "text": "Donc j’ai le droit de fêter deux fois ?",
+              "side": "l"
+            },
+            {
+              "who": "martin",
+              "text": "Une seule fois. Mais avec deux bonnes raisons.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back on the riverside lawn in Paris at night, fireworks in the sky. Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left holding two sparklers at once, one in each hand, delighted; Henri Martin (short, round, long white hair, dark plum frock coat) on the right gently taking one of the two sparklers away from him, wise half-smile. medium shot",
-            "cast": ["jules", "martin"],
+            "cast": [
+              "jules",
+              "martin"
+            ],
             "file": "images/insolite-07.webp",
             "status": "pending",
             "attempts": 0
@@ -157,9 +223,18 @@
       },
       "story": "En 1880, la IIIe République, encore jeune, veut une fête nationale qui rassemble les Français. Le député Benjamin Raspail propose le 14 juillet, préféré à d’autres dates de la Révolution comme le 5 mai ou le 20 juin 1789. La loi votée en juillet 1880 tient en un article unique : « La République adopte le 14 juillet comme jour de fête nationale annuelle. » Aucune année n’y figure.\nCe silence est voulu. Le 14 juillet 1789, la prise de la Bastille a été une journée sanglante, qui gêne une partie des élus. Or un autre 14 juillet existe : celui de 1790, la Fête de la Fédération. Ce jour-là, au Champ-de-Mars, environ 260 000 Parisiens et quelque 100 000 gardes fédérés venus de tous les départements célèbrent l’unité du pays. Talleyrand, évêque d’Autun, dit la messe sur l’autel de la patrie, La Fayette puis le roi Louis XVI prêtent serment, et la pluie finit par tomber sans gâcher la fête.\nAu Sénat, le rapporteur de la loi, l’historien Henri Martin, met en avant ce 14 juillet 1790, qui selon lui « a donné à la France conscience d’elle-même ». Résultat : la loi ne tranche pas. Pour les uns, on fête la Bastille ; pour les autres, la Fédération ; et pour beaucoup d’historiens et de juristes, les deux à la fois.",
       "sources": [
-        { "title": "Hérodote — La fête nationale du 14 juillet", "url": "https://www.herodote.net/La_fete_nationale_du_14_juillet-synthese-1745.php" },
-        { "title": "Hérodote — 14 juillet 1790, la fête de la Fédération", "url": "https://www.herodote.net/14_juillet_1790-evenement-17900714.php" },
-        { "title": "Blog Landot & associés — 14 juillet : en souvenir de 1789, de 1790, ou des deux ?", "url": "https://blog.landot-avocats.net/2022/07/12/14-juillet-en-souvenir-de-celui-de-lete-1789-ou-en-celebration-de-la-fete-de-la-federation-de-1790-ou-des-deux/" }
+        {
+          "title": "Hérodote — La fête nationale du 14 juillet",
+          "url": "https://www.herodote.net/La_fete_nationale_du_14_juillet-synthese-1745.php"
+        },
+        {
+          "title": "Hérodote — 14 juillet 1790, la fête de la Fédération",
+          "url": "https://www.herodote.net/14_juillet_1790-evenement-17900714.php"
+        },
+        {
+          "title": "Blog Landot & associés — 14 juillet : en souvenir de 1789, de 1790, ou des deux ?",
+          "url": "https://blog.landot-avocats.net/2022/07/12/14-juillet-en-souvenir-de-celui-de-lete-1789-ou-en-celebration-de-la-fete-de-la-federation-de-1790-ou-des-deux/"
+        }
       ]
     }
   ]
