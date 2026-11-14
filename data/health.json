@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T19:30:05.486191+01:00",
+ "updated_at": "2026-11-14T19:59:49.680719+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -19,6 +19,7 @@
    "date": "2026-11-15",
    "status": "draft",
    "formats": {
+    "actu": "prêt",
     "quiz": "prêt"
    }
   },
@@ -150,9 +151,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.33584,
-  "images": 136,
-  "today_usd": 0.30333,
+  "spent_usd": 1.37996,
+  "images": 143,
+  "today_usd": 0.34745,
   "blocked": null
  }
 }

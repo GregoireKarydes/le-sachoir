@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T19:30+01:00",
+ "updated_at": "2026-11-14T19:59+01:00",
  "stock": {
   "cultureg": [
    {
@@ -343,8 +343,23 @@
    "date": "2026-11-15",
    "path": "editions/2026-11-15",
    "status": "draft",
-   "newsletter": false,
+   "newsletter": true,
    "formats": [
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Un ciel fermé, trois oreillettes et neuf défaites oubliées",
+     "theme": "",
+     "tagline": "La rue compte ses manifestants, les Bleus battent les Springboks, l’Amérique cloue ses avions au sol et trois présidents cherchent un interprète.",
+     "minutes": 4,
+     "cases": 15,
+     "photos": 4,
+     "images_done": 5,
+     "images_total": 5,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "Le Quiz du jour",
