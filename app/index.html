@@ -1036,7 +1036,7 @@ body{overscroll-behavior-y:none}
         <button class="ab-today" id="abToday" data-go="home"><span class="ab-dot"></span><span class="tx"><b id="abTodayT">L’édition du jour est servie</b><small id="abTodayS">Actu, Culture G, Insolite, la Notice, le Grand Dossier et le jeu</small></span><span class="go">Lire →</span></button>
         <div class="ab-hero">
           <div class="ab-copy">
-            <p class="ab-eyebrow"><span>Gratuit chaque jour</span><span>Sans pub</span><span>Newsletter du matin</span></p>
+            <p class="ab-eyebrow"><span>Gratuit chaque jour</span><span>Sans pub</span><span>Newsletter du dimanche</span></p>
             <h1 id="abH1">L’actu et la culture G en BD.<br><em>Pour briller en société</em> (ou au moins faire semblant).</h1>
             <p class="ab-lead">Chaque jour, Le Sachoir transforme l’actualité et la culture générale en bandes dessinées courtes, drôles et vérifiées. Deux minutes par BD, zéro effort apparent, et vous voilà la personne qui « sait des trucs » au dîner.</p>
             <div class="ab-ctas"><button class="ab-btn" data-go="home">Lire l’édition du jour</button><button class="ab-btn ghost" data-go="install">L’avoir dans ma poche</button></div>
@@ -1073,8 +1073,8 @@ body{overscroll-behavior-y:none}
           <h2>Gratuit, et encore mieux en Premium</h2>
           <p class="ab-sub">Le savoir à prix sachant : moins cher qu’un expresso en terrasse, et ça réveille plus longtemps.</p>
           <div class="ab-plans">
-            <div class="ab-plan"><h3>Gratuit</h3><b>0 €</b><ul><li>L’édition du jour : l’Actu, la Culture G, l’Insolite</li><li>La Notice du jour, offerte</li><li>Le début du Grand Dossier</li><li>Le jeu du jour</li><li>La newsletter du matin, avec un Grand Dossier offert</li><li>Un dossier offert pour chaque ami invité</li></ul><button class="ab-btn ghost" data-go="newsletter">Recevoir la newsletter</button></div>
-            <div class="ab-plan best"><h3>Premium</h3><b>2,99 €<small> / mois</small></b><span>ou 19,99 € par an, sans engagement</span><ul><li>Tous les Grands Dossiers en entier</li><li>Toutes les éditions passées</li><li>Toutes les histoires par thème, avec la recherche</li><li>Vos favoris sur tous vos appareils</li></ul><button class="ab-btn" data-go="premium">Passer Premium</button></div>
+            <div class="ab-plan"><h3>Gratuit</h3><b>0 €</b><ul><li>L’édition du jour : l’Actu, la Culture G, l’Insolite</li><li>La Notice du jour, offerte</li><li>Le début du Grand Dossier</li><li>Le jeu du jour</li><li>La newsletter du dimanche, avec un Grand Dossier offert</li><li>Un dossier offert pour chaque ami invité</li></ul><button class="ab-btn ghost" data-go="newsletter">Recevoir la newsletter</button></div>
+            <div class="ab-plan best"><h3>Premium</h3><b>2,99 €<small> / mois</small></b><span>ou 19,99 € par an, sans engagement</span><ul><li>Tous les Grands Dossiers en entier</li><li>Toutes les éditions passées</li><li>Toutes les histoires par thème, avec la recherche</li><li>Vos favoris sur tous vos appareils</li><li>La newsletter chaque matin</li></ul><button class="ab-btn" data-go="premium">Passer Premium</button></div>
           </div>
         </div>
 
@@ -1653,7 +1653,7 @@ function convNudge(f) {
   if (MAIL() && !ACC && s >= 2) return { ic: ic("flame"), t: `${s} jours de série !`, d: "Ne la perdez pas en changeant de téléphone.", b: "Sauver ma série", act: "acc" };
   if (pushState() === "ask" && ME.reads.length >= 2) return { ic: ic("bell"), t: "On vous prévient demain ?", d: "Une notif quand l’édition sort. Une seule.", b: "Oui, toquez-moi", act: "push" };
   if (!DESK.matches && !STANDALONE() && !ME.installDone && ME.reads.length >= 2) return { ic: ic("phone"), t: "Le Sachoir sur votre écran d’accueil", d: "Il s’ouvre comme une appli. Trois gestes, pas de store.", b: "L’installer", act: "install" };
-  if (MAIL() && !(ACC?.user?.newsletter || ME.nl) && !WALLET.newsletterGift) return { ic: ic("gift"), t: "Un Grand Dossier offert", d: "Avec la newsletter du matin, gratuite.", b: "Je le veux", act: "nl" };
+  if (MAIL() && !(ACC?.user?.newsletter || ME.nl) && !WALLET.newsletterGift) return { ic: ic("gift"), t: "Un Grand Dossier offert", d: "Avec la newsletter du dimanche, gratuite.", b: "Je le veux", act: "nl" };
   if (PW() && STRIPE() && !isPremium() && f.id === "dossier") return { ic: ic("star"), t: "Tous les Grands Dossiers", d: `Premium dès ${euros(CFG.prices?.month || 299)} par mois, sans engagement.`, b: "Voir Premium", act: "prem" };
   return null;
 }
@@ -2589,11 +2589,11 @@ function wirePay(tr, ed, f) {
     } catch (e) { toast(e.message); b.disabled = false; }
   });
 }
-const PREMIUM_WHY = { dossier: "La suite de ce dossier vous attend, et tous les autres avec.", archives: "Cette histoire fait partie des archives Premium : toutes les éditions passées, en entier, sans limite.", explore: "Explorer toutes les histoires par thème et chercher dans les archives, c’est Premium.", favs: "Garder vos histoires préférées, c’est Premium." };
+const PREMIUM_WHY = { dossier: "La suite de ce dossier vous attend, et tous les autres avec.", archives: "Cette histoire fait partie des archives Premium : toutes les éditions passées, en entier, sans limite.", explore: "Explorer toutes les histoires par thème et chercher dans les archives, c’est Premium.", favs: "Garder vos histoires préférées, c’est Premium.", newsletter: "La newsletter chaque matin, et tout le reste avec." };
 function openPremium(reason) {
   ev("paywall", "", reason || "");
   const P = CFG.prices || { month: 299, year: 1999 };
-  const perks = `<ul class="perks"><li>${ic("book")} Tous les Grands Dossiers en entier</li><li>${ic("cal")} Toutes les éditions passées</li><li>${ic("compass")} Toutes les histoires, par thème, avec la recherche</li><li>${ic("heart")} Vos favoris, sur tous vos appareils</li></ul>`;
+  const perks = `<ul class="perks"><li>${ic("book")} Tous les Grands Dossiers en entier</li><li>${ic("cal")} Toutes les éditions passées</li><li>${ic("compass")} Toutes les histoires, par thème, avec la recherche</li><li>${ic("heart")} Vos favoris, sur tous vos appareils</li><li>${ic("mail")} La newsletter chaque matin</li></ul>`;
   if (isPremium()) { openSheet(`<h3>Vous êtes Premium ${ic("star", "gold")}</h3>${perks}<p class="sub">${subLine(ACC.user)} Votre cerveau vous salue.</p><button class="btn ghost" id="pmAcc2">Gérer mon abonnement</button>`); $("#pmAcc2").onclick = openMyAccount; return; }
   if (!STRIPE()) return openSheet(`<h3>Le Sachoir Premium</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "Pour les esprits qui en veulent plus.")}</p>${perks}<p class="sub">Le paiement en ligne arrive très bientôt.</p>${MAIL() && WALLET.credits === 0 ? `<button class="cta" id="pmInv">En attendant : un ami inscrit = un dossier offert</button>` : ""}`), $("#pmInv") && ($("#pmInv").onclick = openInvite);
   openSheet(`<h3>Le savoir à prix sachant</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "")} ${euros(P.month)} par mois : moins cher qu’un expresso en terrasse, et ça réveille plus longtemps.</p>
@@ -2675,7 +2675,7 @@ function openAccount() {
   const step1 = () => {
     openSheet(`<h3>Votre compte Le Sachoir</h3><p class="sub">Gardez votre série, vos dossiers et vos favoris sur tous vos appareils. Pas de mot de passe : on vous envoie un code.</p>
      <form id="acF" class="field"><label for="acE">Adresse e-mail</label><input type="email" id="acE" autocomplete="email" inputmode="email" required value="${esc(email)}" placeholder="vous@exemple.fr"></form>
-     <label class="chk"><input type="checkbox" id="acNl" ${ME.nl ? "checked" : ""}><span>Recevoir aussi la newsletter : l’édition du jour, chaque matin.</span></label>
+     <label class="chk"><input type="checkbox" id="acNl" ${ME.nl ? "checked" : ""}><span>Recevoir aussi la newsletter : l’édition du dimanche (chaque matin avec Premium).</span></label>
      <button class="cta" id="acGo">Recevoir mon code</button>
      <p class="sub">Votre adresse sert seulement à vous connecter (et à la newsletter si vous la cochez). Jamais revendue, même pour un empire.</p>`);
     const go = async () => {
@@ -2729,7 +2729,7 @@ function openMyAccount() {
   openSheet(`<h3>Mon compte</h3>
    <div class="acc-card"><b>${esc(u.email || "")}</b><span>Membre depuis le ${u.since ? new Date(u.since + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : "—"}</span>${prem}
      <span>${ACC.synced ? "Synchronisé " + new Date(ACC.synced).toLocaleString("fr-FR", { hour: "2-digit", minute: "2-digit", day: "numeric", month: "short" }) : "Pas encore synchronisé"}</span></div>
-   <label class="chk"><input type="checkbox" id="myNl" ${u.newsletter ? "checked" : ""}><span>Newsletter quotidienne : l’édition du jour dans votre boîte, chaque matin.</span></label>
+   <label class="chk"><input type="checkbox" id="myNl" ${u.newsletter ? "checked" : ""}><span>Newsletter : l’édition dans votre boîte ${isPremium() ? "chaque matin" : "le dimanche (chaque matin avec Premium)"}.</span></label>
    <button class="btn ghost" id="mySync">Synchroniser maintenant</button>
    ${u.subscription ? `<div class="acc-card"><b>${ic("star")} Premium</b><span>${esc(subLine(u))}</span></div>
      ${u.subscription.cancel_at_end ? `<button class="btn" id="mySubOn">Reprendre mon abonnement</button>` : `<button class="btn ghost" id="mySubOff">Résilier mon abonnement</button>`}
@@ -2767,7 +2767,7 @@ function openNewsletter(gift) {
   if (!MAIL()) return toast("La newsletter arrive bientôt");
   if (ACC) return openMyAccount();
   const offer = !WALLET.newsletterGift;
-  openSheet(`<h3>${gift && offer ? "Ce dossier vous est offert" : "La newsletter du Sachoir"}</h3><p class="sub">Chaque matin : le Grand Dossier, l’actu, une pilule de culture G, une histoire insolite, la Notice et le jeu du jour. Une minute pour survoler, cinq pour briller.${offer ? " <b>En cadeau : un Grand Dossier en entier, celui de votre choix.</b>" : ""}</p>
+  openSheet(`<h3>${gift && offer ? "Ce dossier vous est offert" : "La newsletter du Sachoir"}</h3><p class="sub">Chaque dimanche matin : le Grand Dossier, l’actu, une pilule de culture G, une histoire insolite, la Notice et le jeu du jour. Une minute pour survoler, cinq pour briller. Chaque matin avec Premium.${offer ? " <b>En cadeau : un Grand Dossier en entier, celui de votre choix.</b>" : ""}</p>
    ${ME.nl ? `<p class="sub"><b>Vous êtes déjà abonné ✓</b> Pour vous désinscrire, utilisez le lien en bas de chaque e-mail.</p>` : ""}
    <form id="nlF" class="field"><label for="nlE">Adresse e-mail</label><input type="email" id="nlE" autocomplete="email" inputmode="email" required placeholder="vous@exemple.fr"></form>
    <button class="cta" id="nlGo">${offer ? "M’abonner et recevoir mon dossier" : "M’abonner"}</button>
@@ -2945,7 +2945,7 @@ function renderProfile() {
    <div class="pmenus">
    <p class="mh">Mon compte</p><div class="menu">
      ${MAIL() ? `<button id="m0">${I("#fff4d6", "#9a6a00", '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/>')}<span class="t">${ACC ? "Mon compte" : "Créer mon compte"}<small>${ACC ? esc(ACC.user?.email || "") + (isPremium() ? " · Premium" : "") : "Votre série et vos favoris sur tous vos appareils"}</small></span>${ICON.chev}</button>` : ""}
-     <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter du matin<small>${!MAIL() ? "Bientôt disponible" : nlOn ? "Abonné ✓ L’édition chaque matin" : WALLET.newsletterGift ? "L’édition du jour, chaque matin" : "Un Grand Dossier offert à l’inscription"}</small></span>${ICON.chev}</button>
+     <button id="m3">${I("#fdebd2", "#b8650c", '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>')}<span class="t">Newsletter<small>${!MAIL() ? "Bientôt disponible" : nlOn ? (isPremium() ? "Abonné ✓ L’édition chaque matin" : "Abonné ✓ Le dimanche, chaque matin avec Premium") : WALLET.newsletterGift ? "Le dimanche, chaque matin avec Premium" : "Un Grand Dossier offert à l’inscription"}</small></span>${ICON.chev}</button>
      ${MAIL() && PW() && !isPremium() && (WALLET.credits || WALLET.unlocked.length) ? `<button id="mGift">${I("#fff4d6", "#9a6a00", '<rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/>')}<span class="t">Mes dossiers offerts<small>${WALLET.credits ? `${WALLET.credits} à débloquer` : `${WALLET.unlocked.length} débloqué${WALLET.unlocked.length > 1 ? "s" : ""}`}</small></span>${ICON.chev}</button>` : ""}
      ${PW() && !isPremium() ? `<button id="mPrem">${I("#fff1cf", "#9a6a00", '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>')}<span class="t">Passer Premium<small>Tous les Grands Dossiers et les archives, sans engagement</small></span>${ICON.chev}</button>` : ""}
    </div>
@@ -3190,6 +3190,7 @@ let edReady; const ED_READY = new Promise(r => edReady = r);
     const wanted = new URLSearchParams(location.search).get("d");
     CUR = await loadEdition(wanted && INDEX.some(e => e.date === wanted) ? wanted : TODAY);
     if (new URLSearchParams(location.search).has("install") && !matchMedia("(display-mode: standalone)").matches) setTimeout(openInstall, 600);
+    if (new URLSearchParams(location.search).has("premium")) setTimeout(() => openPremium("newsletter"), 900); // lien « Passer Premium » de la newsletter
     const fid = new URLSearchParams(location.search).get("f");
     if (CUR && fid && CUR.formats.some(f => f.id === fid)) { render(); if (fid === "quiz") openQuiz(CUR); else openReader(CUR, fid); return; }
   } catch (e) { if (!navigator.onLine) $("#offline").classList.add("on"); }

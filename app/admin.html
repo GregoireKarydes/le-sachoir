@@ -191,7 +191,7 @@ function draw() {
     ${tile(st.today_published ? "En ligne" : "Pas encore", "Édition du jour", st.today_stories ? esc(st.today_stories.map(x => LBL[x] || x).join(" · ")) : esc(dLong(K.today)), STATUS && !st.today_published ? "alert" : "")}
     ${["dossier", "cultureg", "insolite", "notice"].map(t => st.stock?.[t] ? tile(nf(st.stock[t].ready), "BD prêtes : " + LBL[t], `${nf(st.stock[t].waiting)} en file · ${nf(st.stock[t].images_left)} image(s) à dessiner`, st.stock[t].ready < 1 ? "alert" : "") : "").join("")}
     ${tile(lastRun ? (lastRun.day === K.today ? (lastRun.status === "sent" ? "Envoyée" : lastRun.status === "failed" ? "Échec" : "En cours") : "Pas encore") : "Jamais", "Newsletter du jour", lastRun?.day === K.today ? nf(lastRun.recipients) + " destinataire(s)" : "part dès que l’édition est publiée", lastRun?.day === K.today && lastRun.status === "failed" ? "alert" : "")}
-    ${tile(`${nf(mailsToday)} / ${nf(K.mails.limit)}`, "E-mails envoyés aujourd’hui", "quota gratuit Brevo", mailsToday > K.mails.limit * .85 ? "alert" : "")}
+    ${tile(`${nf(mailsToday)} / ${nf(K.mails.limit)}`, "E-mails envoyés aujourd’hui", `quota gratuit Brevo, dont ${nf(K.mails.reserve || 0)} gardés pour les connexions`, mailsToday > K.mails.limit * .85 ? "alert" : "")}
   </div>
   ${issues.length ? `<div class="card" style="margin-top:12px"><h3>Problèmes signalés</h3><ul class="issues">${issues.map(i => `<li>${esc(typeof i === "string" ? i : i.message || JSON.stringify(i))}</li>`).join("")}</ul></div>` : ""}
 
@@ -246,7 +246,7 @@ function draw() {
       ${runs.length ? runs.map(r => `<tr><td>${esc(dShort(r.day))}${r.error ? `<br><span class="note">${esc(r.error)}</span>` : ""}</td><td><span class="pill ${r.status === "sent" ? "ok" : r.status === "failed" ? "ko" : "wait"}">${r.status === "sent" ? "Envoyée" : r.status === "failed" ? "Échec" : "En cours"}</span></td><td class="n">${nf(r.sent)}</td><td class="n">${pct(r.opened, r.sent)}</td><td class="n">${pct(r.clicked, r.sent)}</td></tr>`).join("") : `<tr><td colspan="5" class="note">Aucun envoi pour l’instant.</td></tr>`}</tbody></table></div>`)}
     ${card("Nouveaux abonnés par jour", "", bars(series(N.daily), { color: "#2f4fa2" }))}
   </div>
-  <div class="card" style="margin-top:12px"><h3>Newsletter du jour</h3><p class="note">Elle part toute seule dès que l’édition est publiée (vérification toutes les 30 min, de 5 h à 11 h). Ces boutons servent à vérifier ou à rattraper un envoi.</p>
+  <div class="card" style="margin-top:12px"><h3>Newsletter du jour</h3><p class="note">Elle part toute seule dès que l’édition est publiée (vérification toutes les 30 min, de 5 h à 11 h) : chaque matin pour les Premium, le dimanche pour les autres. Elle laisse toujours ${nf(K.mails.reserve || 0)} e-mails libres pour les connexions. Le test envoie les deux versions. Ces boutons servent à vérifier ou à rattraper un envoi.</p>
     <div class="row"><button class="btn ghost" id="nlPrev">Aperçu</button><button class="btn ghost" id="nlTest">M’envoyer un test</button><button class="btn" id="nlSend">Envoyer maintenant</button></div>
     <div id="nlBox"></div></div>
 

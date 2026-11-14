@@ -1,8 +1,8 @@
 /* API du Sachoir (Cloudflare Worker + D1).
    Comptes par lien magique ou code à 6 chiffres, synchro des données de l'appli, Premium donné à la main,
-   newsletter quotidienne (Brevo), mesure d'audience anonyme et indicateurs de l'écran admin. */
+   newsletter (Brevo : chaque matin en Premium, une fois par semaine sinon), mesure d'audience anonyme et indicateurs de l'écran admin. */
 import { nowIso, parisDay, parisHour, shiftDay, addSeconds, randomToken, randomCode, sha256, EMAIL_RE, normEmail, mergeState, streakOf, esc } from "./util.js";
-import { brevoSend, loginMail, welcomeMail, confirmMail, newsletterMail, loadEdition, page, btn, h1, mailLimit } from "./mail.js";
+import { brevoSend, loginMail, welcomeMail, confirmMail, newsletterMail, loadEdition, page, btn, h1, mailLimit, mailReserve, nlFreeDay, nlRecipients } from "./mail.js";
 import { adminQueue, adminItem } from "./credits.js";
 import { ownerOf, wallet, grant, grantNewsletter, rewardReferral, mergeOwners, unlock, premiumDossier, premiumImg, refCode, DEVICE_RE } from "./credits.js";
 import { vapid, pushSubscribe, pushUnsubscribe, pushDaily, pushBatch, pushTest, internalKey, editionPayload, notifyAdmins } from "./push.js";
@@ -136,31 +136,39 @@ async function subscribe(env, email, source, { confirmed = false, owner = null, 
 }
 async function sendWelcome(env, email, token) {
   if (await mailsToday(env) >= mailLimit(env)) return;
-  const m = welcomeMail(env, { unsubUrl: `${env.API_URL}/nl/unsub?t=${token}` });
+  const u = await env.DB.prepare("SELECT premium, premium_until FROM users WHERE email = ?").bind(email).first();
+  const m = welcomeMail(env, { unsubUrl: `${env.API_URL}/nl/unsub?t=${token}`, premium: !!u && premiumOn(u) });
   const sent = await brevoSend(env, { to: email, ...m, tag: "welcome" });
   if (sent.ok) await env.DB.prepare("INSERT INTO mails (kind, day, email, sent_at) VALUES ('welcome', ?, ?, ?)").bind(parisDay(), email, nowIso()).run();
 }
 const unsubscribe = (env, email) => env.DB.prepare("UPDATE subscribers SET status = 'unsub', unsub_at = ? WHERE email = ? AND status = 'active'").bind(nowIso(), email).run();
 
-/* ---------- Newsletter : envoi du jour ---------- */
+/* ---------- Newsletter : envoi du jour ----------
+   Premium : chaque matin. Sans Premium : le jour NL_FREE_DAY seulement (dimanche par défaut), avec un encart Premium.
+   La newsletter laisse toujours MAIL_LOGIN_RESERVE e-mails libres pour les connexions et confirmations de la journée. */
 async function sendNewsletter(env, { day = parisDay(), force = false, testTo = null } = {}) {
   const ed = await loadEdition(env, day);
   if (!ed || !ed.stories.length) return { skipped: "pas d'édition publiée" };
   if (!force && !testTo && ed.stories.length < 3 && parisHour() < 9) return { skipped: "édition incomplète, on attend" };
-  const m = newsletterMail(env, ed);
+  const mails = { premium: newsletterMail(env, ed, { premium: true }), free: newsletterMail(env, ed, { premium: false }) };
   if (testTo) {
-    const t = randomToken(12);
-    await env.DB.prepare("INSERT INTO mails (kind, day, email, token, sent_at) VALUES ('test', ?, ?, ?, ?)").bind(day, testTo, t, nowIso()).run();
+    // Le test envoie les deux versions : celle des Premium et celle du jour gratuit.
     const sub = await env.DB.prepare("SELECT token FROM subscribers WHERE email = ?").bind(testTo).first();
-    const r = await brevoSend(env, { versions: [{ email: testTo, params: { t, u: sub?.token || "test", r: "test" } }], subject: "[Test] " + m.subject, html: m.html, text: m.text, tag: "newsletter-test" });
-    return r.ok ? { ok: true, test: testTo } : { error: r.error };
+    for (const [k, m] of Object.entries(mails)) {
+      const t = randomToken(12);
+      await env.DB.prepare("INSERT INTO mails (kind, day, email, token, sent_at) VALUES ('test', ?, ?, ?, ?)").bind(day, testTo, t, nowIso()).run();
+      const r = await brevoSend(env, { versions: [{ email: testTo, params: { t, u: sub?.token || "test", r: "test" } }], subject: `[Test ${k === "premium" ? "Premium" : "gratuite"}] ` + m.subject, html: m.html, text: m.text, tag: "newsletter-test" });
+      if (!r.ok) return { error: r.error };
+    }
+    return { ok: true, test: testTo };
   }
   const lock = await env.DB.prepare("INSERT OR IGNORE INTO nl_runs (day, status, started_at) VALUES (?, 'sending', ?)").bind(day, nowIso()).run();
   if (!lock.meta.changes) return { skipped: "déjà envoyée" };
   try {
-    const subs = (await env.DB.prepare("SELECT email, token, owner FROM subscribers WHERE status = 'active' ORDER BY created_at").all()).results;
-    const room = Math.max(0, mailLimit(env) - await mailsToday(env));
-    const list = subs.slice(0, room);
+    const subs = (await env.DB.prepare(`SELECT s.email, s.token, s.owner, u.premium, u.premium_until FROM subscribers s LEFT JOIN users u ON u.email = s.email
+      WHERE s.status = 'active' ORDER BY s.created_at`).all()).results.map(s => ({ ...s, premium: premiumOn(s) }));
+    const room = Math.max(0, mailLimit(env) - mailReserve(env) - await mailsToday(env));
+    const { list, wanted, isFreeDay } = nlRecipients(subs, { day, freeDay: nlFreeDay(env), room });
     // Lien de parrainage de chaque abonné (créé si besoin), en quelques requêtes groupées.
     const codes = Object.fromEntries((await env.DB.prepare("SELECT owner, MIN(code) AS code FROM refcodes GROUP BY owner").all()).results.map(r => [r.owner, r.code]));
     const fresh = [];
@@ -169,18 +177,22 @@ async function sendNewsletter(env, { day = parisDay(), force = false, testTo = n
       const ch = fresh.slice(i, i + 30);
       await env.DB.prepare(`INSERT OR IGNORE INTO refcodes (code, owner, created_at) VALUES ${ch.map(() => "(?, ?, ?)").join(",")}`).bind(...ch.flatMap(([c, o]) => [c, o, nowIso()])).run();
     }
-    const versions = list.map(s => ({ email: s.email, params: { t: randomToken(12), u: s.token, r: codes[s.owner || `e:${s.email}`] } }));
+    const versions = list.map(s => ({ email: s.email, premium: s.premium, params: { t: randomToken(12), u: s.token, r: codes[s.owner || `e:${s.email}`] } }));
     for (let i = 0; i < versions.length; i += 24) {
       const ch = versions.slice(i, i + 24), ts = nowIso();
       await env.DB.prepare(`INSERT INTO mails (kind, day, email, token, sent_at) VALUES ${ch.map(() => "('newsletter', ?, ?, ?, ?)").join(",")}`).bind(...ch.flatMap(v => [day, v.email, v.params.t, ts])).run();
     }
-    for (let i = 0; i < versions.length; i += 100) {
-      const r = await brevoSend(env, { versions: versions.slice(i, i + 100), subject: m.subject, html: m.html, text: m.text, tag: "newsletter" });
-      if (!r.ok) throw new Error(r.error);
+    for (const kind of ["premium", "free"]) {
+      const group = versions.filter(v => (kind === "premium") === v.premium).map(({ email, params }) => ({ email, params })), m = mails[kind];
+      for (let i = 0; i < group.length; i += 100) {
+        const r = await brevoSend(env, { versions: group.slice(i, i + 100), subject: m.subject, html: m.html, text: m.text, tag: kind === "premium" ? "newsletter" : "newsletter-free" });
+        if (!r.ok) throw new Error(r.error);
+      }
     }
-    const note = subs.length > list.length ? `quota Brevo atteint : ${subs.length - list.length} abonné(s) non servi(s)` : null;
+    const note = wanted > list.length ? `quota Brevo atteint : ${wanted - list.length} abonné(s) non servi(s)`
+      : !isFreeDay ? "jour Premium : abonnés gratuits servis le jour de la newsletter gratuite" : null;
     await env.DB.prepare("UPDATE nl_runs SET status = 'sent', recipients = ?, finished_at = ?, error = ? WHERE day = ?").bind(list.length, nowIso(), note, day).run();
-    return { ok: true, recipients: list.length, note };
+    return { ok: true, recipients: list.length, premium: versions.filter(v => v.premium).length, free: versions.filter(v => !v.premium).length, note };
   } catch (e) {
     await env.DB.prepare("UPDATE nl_runs SET status = 'failed', finished_at = ?, error = ? WHERE day = ?").bind(nowIso(), String(e.message || e).slice(0, 400), day).run();
     return { error: String(e.message || e) };
@@ -266,7 +278,7 @@ async function kpi(env, days) {
       mrrCents: R(subsR).reduce((t, x) => t + (x.plan === "year" ? Math.round(x.n * PLANS.year.amount / 12) : x.n * PLANS.month.amount), 0) },
     revenue: { stripe: stripeOn(env), byPlan: R(payPlan), daily: R(payDay), totalCents: F(payAll).cents || 0, totalCount: F(payAll).n || 0 },
     credits: { grants: R(grantsR), unlocks: F(unlocksN).n || 0 },
-    mails: { today: R(mailsDay), limit: mailLimit(env) },
+    mails: { today: R(mailsDay), limit: mailLimit(env), reserve: mailReserve(env) },
     push: await pushStats(env),
   };
 }
