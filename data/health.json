@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T14:12:19.108589+01:00",
+ "updated_at": "2026-11-14T14:13:26.365952+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -114,6 +114,15 @@
    "next": null,
    "next_redo": 0
   },
+  "origine": {
+   "ready": 0,
+   "waiting": 1,
+   "blocked": 0,
+   "images_left": 6,
+   "focus": "20261114-1500-payer-en-monnaie-de-singe (6 image(s) à faire)",
+   "next": null,
+   "next_redo": 0
+  },
   "dossier": {
    "ready": 1,
    "waiting": 2,
@@ -125,7 +134,7 @@
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 0,
+ "days_ahead_written": 1,
  "quiz_days_ahead": 8,
  "quota": {
   "day": "2026-11-14",

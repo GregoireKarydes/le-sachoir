@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T14:12+01:00",
+ "updated_at": "2026-11-14T14:13+01:00",
  "stock": {
   "cultureg": [
    {
@@ -176,6 +176,25 @@
    }
   ],
   "notice": [],
+  "origine": [
+   {
+    "path": "stock/origine/20261114-1500-payer-en-monnaie-de-singe",
+    "name": "20261114-1500-payer-en-monnaie-de-singe",
+    "added": "20261114-1500",
+    "status": "waiting",
+    "next": false,
+    "title": "« Payer en monnaie de singe »",
+    "theme": "Expression française",
+    "tagline": "Pour traverser ce pont, certains payaient en grimaces.",
+    "minutes": 1,
+    "cases": 9,
+    "photos": 0,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   }
+  ],
   "dossier": [
    {
     "path": "stock/dossier/20261110-0100-qui-commande-en-france-la-ve-republique",
