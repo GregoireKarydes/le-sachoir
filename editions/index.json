@@ -1,6 +1,72 @@
 {
- "updated_at": "2026-11-13T09:38:43.147887+01:00",
+ "updated_at": "2026-11-14T08:52:08.708326+01:00",
  "editions": [
+  {
+   "date": "2026-11-14",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "On descend du singe ? Non, on est cousins (et c’est la faute à Darwin)",
+     "kind": "",
+     "url": "histoires/2026-11-14-on-descend-du-singe-non-on-est-cousins-et-c-est-la-faute-a-darwin/",
+     "theme": "Sciences du vivant",
+     "minutes": 6,
+     "tagline": "Des tortues des Galápagos aux bactéries résistantes : la sélection naturelle expliquée maillon par maillon",
+     "cases": 24,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un point gelé, une chaise pliante et seize minutes de bonheur",
+     "kind": "",
+     "url": "histoires/2026-11-14-un-point-gele-une-chaise-pliante-et-seize-minutes-de-bonheur/",
+     "theme": "",
+     "minutes": 4,
+     "tagline": "Les fonctionnaires attendent le dégel, l’Europe réserve sa place, les Bleus tombent à Milan et Nicole Kidman reçoit un César.",
+     "cases": 15,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Le guide Michelin, ou comment vendre des pneus avec un bon dîner",
+     "kind": "",
+     "url": "histoires/2026-11-14-le-guide-michelin-ou-comment-vendre-des-pneus-avec-un-bon-diner/",
+     "theme": "Entreprises et marques",
+     "minutes": 2,
+     "tagline": "Avant de distribuer des étoiles, le guide rouge était une pub gratuite pour automobilistes",
+     "cases": 10,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "Docteur Vampire et ses quarante millions de sangsues",
+     "kind": "",
+     "url": "histoires/2026-11-14-docteur-vampire-et-ses-quarante-millions-de-sangsues/",
+     "theme": "Médecine et santé",
+     "minutes": 2,
+     "tagline": "Dans les années 1830, la France a tellement saigné ses malades qu’elle a vidé ses mares",
+     "cases": 9,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Qui a dit ça ?",
+     "title": "Ils l’ont dit (ou pas)",
+     "kind": "citation",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-13",
    "demo": false,

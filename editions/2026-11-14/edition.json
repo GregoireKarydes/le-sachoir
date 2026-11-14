@@ -1,6 +1,6 @@
 {
   "date": "2026-11-14",
-  "status": "draft",
+  "status": "published",
   "newsletter": {
     "subject": "Un point au congélateur, une chaise à Dublin et un sabre à 4,8 M$ 🧊",
     "intro": "Samedi 14 novembre : un point d’indice gelé, un diplomate qui apporte sa chaise et un César pour Nicole Kidman. Le café, lui, est encore chaud.",
@@ -9,12 +9,771 @@
   },
   "formats": [
     {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "On descend du singe ? Non, on est cousins (et c’est la faute à Darwin)",
+      "tagline": "Des tortues des Galápagos aux bactéries résistantes : la sélection naturelle expliquée maillon par maillon",
+      "teaser": "Des tortues différentes sur chaque île, vingt ans de doute, des pigeons partout et une lettre au pire moment : bienvenue dans l’évolution.",
+      "minutes": 6,
+      "theme": "Sciences du vivant",
+      "art": {
+        "subject": "how Charles Darwin discovered evolution by natural selection, from the Beagle voyage to the debates, and why we are cousins of chimpanzees, not their descendants",
+        "setting": "a natural history classroom of today, a Paris study around 1809, the deck of a small sailing ship, volcanic Galápagos shores, Darwin's quiet English study with pigeon cages, a crowded Oxford lecture room",
+        "era": "1800s to 1880s, with one student from today",
+        "props": {
+          "notebook": "a small worn grey notebook",
+          "ship": "a small three-masted wooden sailing ship",
+          "tortoise": "a giant tortoise with a high domed shell",
+          "pigeon": "a fancy white pigeon with a puffed-up chest",
+          "letter": "a folded letter with a red wax seal",
+          "book": "a thick black book"
+        }
+      },
+      "cast": [
+        {
+          "id": "darwin",
+          "name": "Charles Darwin",
+          "look": "Charles, a large heavy-set stooped English naturalist, round bald dome with brown hair on the sides, enormous bushy brown sideburns, thick eyebrows, long dark-grey frock coat, the notebook always in hand, a dark-blue cravat as the only colour",
+          "role": "the shy, patient naturalist who collects everything and doubts for twenty years; stooped, notebook open, worried frown that turns into quiet wonder",
+          "file": "cast/dossier-darwin.png",
+          "status": "done"
+        },
+        {
+          "id": "lamarck",
+          "name": "Jean-Baptiste Lamarck",
+          "look": "Jean-Baptiste, a small very thin elderly French scholar of 1809, powdered white wig tied in a short ponytail, long pale grey tailcoat, a little wooden giraffe figurine in his hand, a green waistcoat as the only colour",
+          "role": "the proud French pioneer who was right that species change but wrong about how; small and thin, finger always raised, very sure of himself",
+          "file": "cast/dossier-lamarck.png",
+          "status": "skipped"
+        },
+        {
+          "id": "lea",
+          "name": "Léa",
+          "look": "Léa, a tall lanky young woman of today, long black hair in a high ponytail, big headphones around her neck, loose white hoodie, jeans, an orange backpack as the only colour",
+          "role": "the curious student from today who asks the reader's questions; lanky and eager, leans in, over-reacts with her whole body",
+          "file": "cast/dossier-lea.png",
+          "status": "done"
+        },
+        {
+          "id": "eveque",
+          "name": "L’évêque Wilberforce",
+          "look": "a short plump Victorian bishop, glossy black hair with a smooth side parting, round smiling face, black clerical gown with white bands and big puffy white sleeves, a purple sash as the only colour",
+          "role": "the witty bishop who mocks the theory in public; short and round, chin up, smug little smile, hands folded on his belly",
+          "file": "cast/dossier-eveque.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare shore with the tortoise in the middle. Charles (heavy-set, bushy sideburns) on the left kneeling to measure the tortoise's shell, fascinated, notebook open; Léa (tall, lanky, orange backpack) on the right crouching next to a calm chimpanzee, both staring at the viewer with the same puzzled face. wide shot",
+        "cast": [
+          "darwin",
+          "lea"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Avant Darwin",
+          "caption": "« L’homme descend du singe » : on prête cette phrase à Darwin. Mais qu’a-t-il vraiment découvert ?",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Donc mon arrière-arrière-grand-père était un chimpanzé ?",
+              "side": "l"
+            },
+            {
+              "who": "darwin",
+              "text": "Non. Votre cousin, à la rigueur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare classroom with one plain blackboard. Léa (tall, lanky, orange backpack) on the left pointing in shock at a calm chimpanzee sitting on a school chair beside her; Charles (heavy-set, bushy sideburns) on the right, stooped, notebook in hand, gently raising a finger to correct her. medium shot",
+            "cast": [
+              "lea",
+              "darwin"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Charles Darwin",
+          "text": "Le naturaliste anglais (1809-1882), devenu un savant célèbre. Son idée a changé notre regard sur tous les êtres vivants, nous compris.",
+          "photo": {
+            "commons": "File:Charles Darwin seated.jpg",
+            "credit": "Henry Maull (1829–1914) and John Fox (1832–1907) (Maull & Fox)[1]",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Charles_Darwin_seated.jpg",
+            "file": "images/photo-2-charles-darwin-seated-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "1809",
+          "caption": "Vers 1800, beaucoup de savants pensent que les espèces ne changent jamais. À Paris, Lamarck soutient l’inverse.",
+          "bubbles": [
+            {
+              "who": "lamarck",
+              "text": "La girafe étire son cou pour manger, et ses petits en héritent !",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Donc si je fais de la muscu, mes enfants naissent musclés ?",
+              "side": "r"
+            },
+            {
+              "who": "lamarck",
+              "text": "Euh… oui ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare Paris study with one tall bookshelf. Jean-Baptiste (small, thin, white wig, green waistcoat) on the left holding up his giraffe figurine and stretching its neck with his fingers, proud, finger raised; Léa (tall, lanky, orange backpack) on the right flexing one arm with a hopeful face. medium shot",
+            "cast": [
+              "lamarck",
+              "lea"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "27 décembre 1831",
+          "caption": "Bonne intuition, mauvais mécanisme. Le vrai « comment », un jeune Anglais va le chercher… au bout du monde.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "Cinq ans autour du monde. J’ai pris un carnet.",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Un seul ? Pour changer la biologie ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the deck of the ship leaving a harbour, open sea ahead. Charles (heavy-set, bushy sideburns) on the left leaning on the rail, holding up the notebook, a little nervous; Léa (tall, lanky, orange backpack) on the right sitting on a coil of rope, staring at the tiny notebook in disbelief. wide shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Le voyage du Beagle",
+          "caption": "De 1831 à 1836, le Beagle cartographie les côtes d’Amérique du Sud. Darwin, 22 ans au départ, est le naturaliste.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Et toi, tu fais quoi à bord ?",
+              "side": "r"
+            },
+            {
+              "who": "darwin",
+              "text": "Je ramasse tout. Fossiles, insectes, plantes, cailloux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a tiny cramped ship cabin with one small table. Charles (heavy-set, bushy sideburns) on the left surrounded by jars, bones, beetles and rocks piled up to the ceiling, happy; Léa (tall, lanky, orange backpack) on the right squeezed against the wall by the pile, light-blue sweat drop. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "Septembre 1835",
+          "caption": "Le Beagle arrive aux Galápagos, des îles volcaniques isolées dans le Pacifique, au large de l’Équateur.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "Des tortues géantes !",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Et des iguanes. Et zéro touriste.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare black volcanic shore. Charles (heavy-set, bushy sideburns) on the left kneeling in front of the tortoise, arms wide, amazed, yellow sparkles; Léa (tall, lanky, orange backpack) on the right taking a selfie with a grumpy iguana. wide shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "",
+          "caption": "Le vice-gouverneur des îles lui assure qu’il reconnaît, rien qu’à la carapace, de quelle île vient chaque tortue.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "Une île, une carapace ? Mais pourquoi ?",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Elles ont chacune leur tailleur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same volcanic shore, three tortoises in a row with differently shaped shells, one domed, one with a raised front like a saddle. Charles (heavy-set, bushy sideburns) on the left writing furiously in the notebook, frowning; Léa (tall, lanky, orange backpack) on the right comparing the shells with a tape measure, joking. wide shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Les pinsons de Darwin",
+          "text": "Des oiseaux des Galápagos, dessinés pour les livres de Darwin. Proches cousins, mais chaque espèce a son bec : gros et solide pour casser des graines dures, fin pour d’autres nourritures.",
+          "photo": {
+            "commons": "File:Darwin's finches by Gould.jpg",
+            "credit": "John Gould (14.Sep.1804 - 3.Feb.1881)",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Darwin%27s_finches_by_Gould.jpg",
+            "file": "images/photo-8-darwin-s-finches-by-gould-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "Retour en Angleterre",
+          "caption": "Ces espèces ressemblent à celles du continent voisin. Darwin se demande donc : et si elles descendaient d’ancêtres venus de là ?",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "Puis, sur chaque île, elles auraient changé peu à peu.",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Chaque île, sa version. Comme un accent.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet bare study with one desk covered in bird specimens. Charles (heavy-set, bushy sideburns) on the left drawing a small branching tree in the notebook, lost in thought; Léa (tall, lanky, orange backpack) on the right leaning over his shoulder, eyes widening, understanding. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-07.webp",
+            "status": "done",
+            "attempts": 2,
+            "same_place": false
+          }
+        },
+        {
+          "n": 10,
+          "kind": "",
+          "tag": "",
+          "caption": "En lisant l’économiste Malthus, il comprend : il naît bien plus d’êtres vivants qu’il ne peut en survivre.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "Tous ne peuvent pas survivre. Alors, lesquels survivent ?",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Ceux qui ont de la chance ?",
+              "side": "r"
+            },
+            {
+              "who": "darwin",
+              "text": "Les mieux adaptés.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "same study. Charles (heavy-set, bushy sideburns) on the left holding the book open, suddenly sitting bolt upright, eyes wide, yellow sparkles; Léa (tall, lanky, orange backpack) on the right shrugging, unconvinced, one eyebrow raised. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "La sélection naturelle, maillon par maillon",
+          "steps": [
+            "Dans une espèce, chaque individu naît un peu différent",
+            "Il en naît trop : tous ne survivent pas",
+            "Ceux qu’une différence avantage (un bec plus solide) vivent plus et ont plus de petits",
+            "Ils leur transmettent ce trait : génération après génération, l’espèce change"
+          ],
+          "joke": "Personne ne décide : le tri se fait tout seul, très, très lentement."
+        },
+        {
+          "n": 12,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Vingt ans de doute",
+          "caption": "Darwin tient son idée, mais ne publie pas. Il accumule les preuves pendant près de vingt ans.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Vingt ans ? Tu attends quoi ?",
+              "side": "r"
+            },
+            {
+              "who": "darwin",
+              "text": "D’être sûr. Et d’avoir le courage.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "same study, now with towering piles of papers and boxes. Charles (heavy-set, bushy sideburns) on the left, very stooped, hiding behind a stack of notes, anxious; Léa (tall, lanky, orange backpack) on the right tapping an imaginary watch on her wrist, impatient. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 13,
+          "kind": "",
+          "tag": "",
+          "caption": "Il élève des pigeons : en choisissant les parents, les éleveurs créent des races très différentes. La nature trie pareil.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "L’éleveur choisit en quelques siècles. La nature, en millions d’années.",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Je crois que ce pigeon te prend pour sa mère.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small garden with a few wooden pigeon cages. Charles (heavy-set, bushy sideburns) on the left explaining seriously with the pigeon sitting proudly on his bald head; Léa (tall, lanky, orange backpack) on the right trying hard not to laugh, hand over mouth, pink blush. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-10.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 14,
+          "kind": "fact",
+          "tag": "1858",
+          "caption": "Coup de théâtre : une lettre arrive d’Asie. Le naturaliste Alfred Russel Wallace a eu, seul, la même idée.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "Vingt ans de travail… doublé par la poste.",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Fallait publier, Charles.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back in the quiet study. Charles (heavy-set, bushy sideburns) on the left holding the open letter with trembling hands, turning pale, frozen, light-blue sweat drop; Léa (tall, lanky, orange backpack) on the right with her hand on her forehead, sighing. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-11.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 15,
+          "kind": "conf",
+          "tag": "1er juillet 1858",
+          "caption": "Les deux textes sont lus ensemble à la Société linnéenne de Londres. Le compte rendu ne note aucune réaction.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "La plus grande idée du siècle… et personne ne bronche ?",
+              "side": "l"
+            },
+            {
+              "who": "darwin",
+              "text": "Des savants anglais. Très démonstratifs.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet lecture hall with empty wooden benches. Léa (tall, lanky, orange backpack) on the left, arms spread wide, amazed; Charles (heavy-set, bushy sideburns) on the right, sitting on a bench with the notebook on his knees, giving a small polite shrug. medium shot",
+            "cast": [
+              "lea",
+              "darwin"
+            ],
+            "file": "images/dossier-12.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 16,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Le livre qui dérange",
+          "caption": "Le 24 novembre 1859, il publie enfin « De l’origine des espèces ». Les 1 250 exemplaires partent le premier jour.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Rupture de stock ! T’es une star !",
+              "side": "r"
+            },
+            {
+              "who": "darwin",
+              "text": "Une star qui ne dort plus.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare bookshop counter with empty shelves. Léa (tall, lanky, orange backpack) on the right jumping with joy, holding up the book; Charles (heavy-set, bushy sideburns) on the left, very stooped, huge dark circles under his eyes, clutching the notebook, worried. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 17,
+          "kind": "fact",
+          "tag": "30 juin 1860",
+          "caption": "À Oxford, devant près de 500 personnes, l’évêque Samuel Wilberforce et le biologiste Thomas Huxley s’affrontent sur la théorie.",
+          "bubbles": [
+            {
+              "who": "eveque",
+              "text": "Le singe, c’est du côté de votre grand-père ou de votre grand-mère ?",
+              "side": "l"
+            },
+            {
+              "who": "Thomas Huxley",
+              "text": "Je préfère un singe pour grand-père à un homme qui ridiculise la science.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a crowded lecture room with a noisy audience of tiny figures. the bishop (short, plump, purple sash) on the left, chin up, smug, hands on his round belly; on the right a lean dark-haired biologist with long side-whiskers standing up, pointing back firmly. Léa (tall, lanky, orange backpack) in the foreground eating popcorn, delighted. wide shot",
+            "cast": [
+              "eveque",
+              "lea"
+            ],
+            "file": "images/dossier-14.webp",
+            "status": "done",
+            "attempts": 3,
+            "same_place": false
+          }
+        },
+        {
+          "n": 18,
+          "kind": "",
+          "tag": "",
+          "caption": "Personne n’a noté les mots exacts : ces répliques célèbres sont peut-être enjolivées. Mais le débat est lancé.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Donc c’est une légende ?",
+              "side": "l"
+            },
+            {
+              "who": "darwin",
+              "text": "Une légende qui évolue. Ça me va.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "an empty corner of the same lecture room after the debate. Léa (tall, lanky, orange backpack) on the left holding an empty popcorn box, disappointed; Charles (heavy-set, bushy sideburns) on the right with a small amused smile, hands behind his back. medium shot",
+            "cast": [
+              "lea",
+              "darwin"
+            ],
+            "file": "images/dossier-15.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 19,
+          "kind": "",
+          "tag": "1871",
+          "caption": "Dans « La Filiation de l’homme », Darwin applique l’évolution aux humains. Un journal satirique le dessine en grand singe.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "Ils m’ont fait le front un peu bas.",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Mais les favoris sont très réussis.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back in the quiet study. Charles (heavy-set, bushy sideburns) on the left holding up a large newspaper caricature of an ape with his own bushy sideburns, studying it, offended; Léa (tall, lanky, orange backpack) on the right comparing the drawing with his face, thumbs up, grinning. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-16.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 20,
+          "kind": "explain",
+          "tag": "En clair",
+          "title": "Alors, on descend du singe ?",
+          "text": "Non. Les humains et les chimpanzés ont un ancêtre commun, qui vivait en Afrique il y a environ 7 millions d’années. Ni chimpanzé, ni humain : chaque lignée a ensuite évolué de son côté.",
+          "joke": "Le chimpanzé n’est pas votre grand-père. C’est un cousin. Lointain, et plus poilu."
+        },
+        {
+          "n": 21,
+          "kind": "chap",
+          "tag": "Chapitre 5 · La suite de l’histoire",
+          "caption": "Il reste un mystère : comment les traits passent-ils des parents aux enfants ? Darwin l’ignore. La génétique répondra.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "Il me manque le mode d’emploi de l’hérédité.",
+              "side": "l"
+            },
+            {
+              "who": "lea",
+              "text": "Il arrive au XXe siècle. Ça s’appelle l’ADN.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare classroom of today. Charles (heavy-set, bushy sideburns) on the left scratching his bald head, puzzled, notebook open on a blank page; Léa (tall, lanky, orange backpack) on the right proudly holding up a big twisted-ladder model of a DNA molecule. medium shot",
+            "cast": [
+              "darwin",
+              "lea"
+            ],
+            "file": "images/dossier-17.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 22,
+          "kind": "",
+          "tag": "1882",
+          "caption": "Darwin meurt le 19 avril 1882. Il est enterré à l’abbaye de Westminster, à quelques pas d’Isaac Newton.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Voisin de Newton. Pas mal, pour un ramasseur de cailloux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a calm, empty stone church aisle with a simple stone slab on the floor. Léa (tall, lanky, orange backpack) on the left standing quietly in front of it, headphones off, hands joined, a respectful little smile. sober, still. medium shot",
+            "cast": [
+              "lea"
+            ],
+            "file": "images/dossier-18.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 23,
+          "kind": "",
+          "tag": "Aujourd’hui",
+          "caption": "L’évolution se voit encore : quand on abuse des antibiotiques, les bactéries résistantes survivent et se multiplient.",
+          "bubbles": [
+            {
+              "who": "darwin",
+              "text": "La sélection naturelle, en direct.",
+              "side": "r"
+            },
+            {
+              "who": "lea",
+              "text": "Donc pas d’antibiotiques pour un simple rhume.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare classroom of today with a microscope on a table. Léa (tall, lanky, orange backpack) on the left looking into the microscope, alarmed, eyes wide; Charles (heavy-set, bushy sideburns) on the right, stooped, peering over her shoulder with quiet fascination, notebook open. medium shot",
+            "cast": [
+              "lea",
+              "darwin"
+            ],
+            "file": "images/dossier-19.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 24,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Les espèces changent parce que la nature trie, à chaque génération, ceux qui sont le mieux adaptés à leur milieu.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Donc je ne descends pas du singe.",
+              "side": "l"
+            },
+            {
+              "who": "darwin",
+              "text": "Non. Vous avez juste des arrière-grands-parents en commun. Très arrière.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "same classroom. Léa (tall, lanky, orange backpack) on the left and the calm chimpanzee sitting side by side on two chairs, both with the exact same thoughtful pose, chin on hand; Charles (heavy-set, bushy sideburns) on the right looking at them with a warm, satisfied smile. medium shot",
+            "cast": [
+              "lea",
+              "darwin"
+            ],
+            "file": "images/dossier-20.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "L’humain ne descend pas du chimpanzé : tous deux ont un ancêtre commun, qui vivait en Afrique il y a environ 7 millions d’années.",
+        "source": "Futura Sciences — L’Homme descend-il vraiment du singe ?"
+      },
+      "story": "Vers 1800, beaucoup de savants pensent que les espèces ne changent pas. En 1809, le Français Lamarck soutient qu’elles se transforment, mais il se trompe sur le mécanisme : un cou de girafe étiré ne se transmet pas aux petits.\nDe 1831 à 1836, Charles Darwin, 22 ans au départ, est le naturaliste du Beagle, un navire qui cartographie les côtes d’Amérique du Sud. Aux Galápagos, en 1835, on lui dit que chaque île a ses tortues, reconnaissables à leur carapace ; les pinsons ont des becs variés mais ressemblent à une espèce du continent. Darwin se demande s’ils ne descendent pas d’ancêtres venus de là, transformés sur chaque île.\nEn lisant Malthus, il comprend qu’il naît plus d’êtres qu’il n’en survit : ceux qu’une différence avantage survivent mieux et la transmettent à leurs petits. C’est la sélection naturelle. Il accumule les preuves pendant vingt ans. En 1858, Alfred Russel Wallace lui envoie la même idée ; leurs textes sont lus ensemble à Londres. « De l’origine des espèces » paraît le 24 novembre 1859 et déclenche des débats, comme à Oxford en 1860.\nDarwin ignorait comment les traits se transmettent : la génétique l’a montré ensuite. On sait aujourd’hui que l’humain et le chimpanzé ont un ancêtre commun d’il y a environ 7 millions d’années. Et les bactéries résistantes aux antibiotiques montrent la sélection naturelle à l’œuvre.",
+      "sources": [
+        {
+          "title": "Royal Museums Greenwich — Charles Darwin, one of Britain’s most celebrated naturalists",
+          "url": "https://www.rmg.co.uk/stories/topics/charles-darwin-one-britains-most-celebrated-naturalists"
+        },
+        {
+          "title": "Cambridge University Library — Darwin timeline",
+          "url": "https://wwwe.lib.cam.ac.uk/CUL/exhibitions/Darwin/timeline.html"
+        },
+        {
+          "title": "Hominidés — Transformisme, Jean-Baptiste Lamarck",
+          "url": "https://www.hominides.com/?p=13545"
+        },
+        {
+          "title": "AMNH — Different on each island",
+          "url": "https://amnh.org/exhibitions/darwin/a-trip-around-the-world/island-species/different-on-each-island"
+        },
+        {
+          "title": "LibreTexts — The Galapagos Finches and Natural Selection",
+          "url": "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/Book:_General_Biology_(Boundless)/18:_Evolution_and_the_Origin_of_Species/18.01:_Understanding_Evolution/18.1C:_The_Galapagos_Finches_and_Natural_Selection"
+        },
+        {
+          "title": "Historic UK — Charles Darwin, On the Origin of Species",
+          "url": "https://www.historic-uk.com/CultureUK/Charles-Darwin-On-Origin-of-Species/"
+        },
+        {
+          "title": "Memorial University — Darwin & Wallace 1858",
+          "url": "https://mun.ca/biology/scarr/Darwin_&_Wallace_1858.html"
+        },
+        {
+          "title": "Darwin’s Pigeons — 2025 publication anniversary",
+          "url": "https://www.darwinspigeons.com/2025-publication-anniversary"
+        },
+        {
+          "title": "Oxford University Museum of Natural History — The Great Debate",
+          "url": "https://oumnh.ox.ac.uk/node/270101"
+        },
+        {
+          "title": "Darwin Correspondence Project — Hornet caricature of Darwin (1871)",
+          "url": "https://darwinproject.ac.uk/about-darwin/portraits-charles-darwin-catalogue/410-hornet-caricature-darwin"
+        },
+        {
+          "title": "Futura Sciences — L’Homme descend-il vraiment du singe ?",
+          "url": "https://www.futura-sciences.com/sciences/questions-reponses/sciences-homme-descend-il-vraiment-singe-13738/"
+        },
+        {
+          "title": "Westminster Abbey — Charles Darwin",
+          "url": "https://www.westminster-abbey.org/abbey-commemorations/commemorations/charles-darwin"
+        },
+        {
+          "title": "Santé.fr — Résistance aux antibiotiques : un phénomène massif et préoccupant",
+          "url": "https://www.sante.fr/resistance-aux-antibiotiques-un-phenomene-massif-et-preoccupant-0"
+        }
+      ],
+      "from_stock": "20261108-1929-darwin-on-ne-descend-pas-du-singe"
+    },
+    {
       "id": "actu",
       "label": "L’Actu du jour",
       "title": "Un point gelé, une chaise pliante et seize minutes de bonheur",
       "tagline": "Les fonctionnaires attendent le dégel, l’Europe réserve sa place, les Bleus tombent à Milan et Nicole Kidman reçoit un César.",
       "teaser": "Un bloc de glace à Matignon, un diplomate qui ne fait plus confiance aux chaises des autres et un supporter optimiste.",
-      "minutes": 3,
+      "minutes": 4,
       "theme": "",
       "art": {
         "subject": "four news stories of the week, each told in one gag panel",
@@ -376,6 +1135,629 @@
       ]
     },
     {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le guide Michelin, ou comment vendre des pneus avec un bon dîner",
+      "tagline": "Avant de distribuer des étoiles, le guide rouge était une pub gratuite pour automobilistes",
+      "minutes": 2,
+      "theme": "Entreprises et marques",
+      "cast": [
+        {
+          "id": "andre",
+          "name": "André Michelin",
+          "look": "André, a French industrialist around 1900, round bald head, bushy white moustache, black three-piece suit, a gold watch chain as the only colour",
+          "file": "cast/cultureg-andre.png",
+          "status": "done",
+          "role": "the elder brother, the salesman with the big ideas; round, beaming, always pointing at the map"
+        },
+        {
+          "id": "edouard",
+          "name": "Édouard Michelin",
+          "look": "Édouard, his younger brother around 1900, thin, neat dark goatee, slicked hair, black suit, always holding a small rubber tyre under his arm",
+          "file": "cast/cultureg-edouard.png",
+          "status": "done",
+          "role": "the younger brother, the engineer obsessed with tyres; thin, serious, never without his tyre"
+        },
+        {
+          "id": "firmin",
+          "name": "Le garagiste",
+          "look": "Firmin, a short stocky 1910s tyre dealer and mechanic, grease-stained grey overalls, flat black cap, bushy black moustache, a spanner in his back pocket",
+          "file": "cast/cultureg-firmin.png",
+          "status": "done",
+          "role": "a garage owner who sells the tyres and hands out the guide; short, stocky, greasy hands, practical"
+        },
+        {
+          "id": "inspecteur",
+          "name": "L’inspecteur",
+          "look": "a 1930s anonymous restaurant inspector, black hat pulled low over the eyes, black coat with the collar up, thin moustache, a tiny notebook hidden in his palm",
+          "file": "cast/cultureg-inspecteur.png",
+          "status": "skipped",
+          "role": "the secret restaurant inspector of the 1930s; mysterious, hat low, scribbling in hiding"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare restaurant table with one plate. André (on the left) tucking a napkin into his collar, holding a fork and a tyre at the same time, delighted; Édouard (on the right) presenting a small red book like a precious jewel. medium shot",
+        "cast": [
+          "andre",
+          "edouard"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1900",
+          "caption": "Pourquoi un fabricant de pneus note-t-il des restaurants ? En 1900, les frères Michelin veulent que les Français roulent plus.",
+          "bubbles": [
+            {
+              "who": "edouard",
+              "text": "Plus ils roulent, plus ils usent de pneus.",
+              "side": "r"
+            },
+            {
+              "who": "andre",
+              "text": "Donc il faut leur donner envie de partir.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "one single panel, no frame divisions, each character appears only once. a bare office with a blank map of France pinned on the wall, no writing on it. Édouard (on the right, thin, dark goatee, slicked hair) spinning a small tyre on one finger; André (on the left, round bald head, bushy white moustache, gold watch chain) pointing at the map with a sly grin. medium shot",
+            "cast": [
+              "andre",
+              "edouard"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Bibendum, né sur une affiche de 1898",
+          "text": "Deux ans avant le guide, les frères Michelin font déjà leur pub : le dessinateur O’Galop invente ce bonhomme en pneus qui « boit l’obstacle ».",
+          "photo": {
+            "commons": "File:Michelin Poster 1898.jpg",
+            "credit": "O'Galop",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Michelin_Poster_1898.jpg",
+            "file": "images/photo-2-michelin-poster-1898-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Leur idée : un guide gratuit de 400 pages, offert aux automobilistes, avec garages, médecins et plans de villes.",
+          "bubbles": [
+            {
+              "who": "andre",
+              "text": "35 000 exemplaires, offerts avec les pneus !",
+              "side": "l"
+            },
+            {
+              "who": "edouard",
+              "text": "Et comment changer un pneu. Évidemment.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple shop counter with a tall stack of small red books. André (on the left) handing a book to an invisible customer with a huge salesman smile; Édouard (on the right) adding a tyre on top of the pile. medium shot",
+            "cast": [
+              "andre",
+              "edouard"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "La légende maison",
+          "caption": "Version officielle : André surprend un vendeur de pneus calant son établi avec des guides.",
+          "bubbles": [
+            {
+              "who": "firmin",
+              "text": "Il est très utile, votre guide. Pile la bonne hauteur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare garage with one wobbly workbench propped up by a stack of small red books under one leg. Firmin (on the right) leaning happily on the bench; André (on the left) frozen in the doorway, jaw dropped, moustache bristling. medium shot",
+            "cast": [
+              "andre",
+              "firmin"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "1920",
+          "caption": "Le guide devient payant en 1920 (7 francs en 1921), et la publicité en disparaît.",
+          "bubbles": [
+            {
+              "who": "andre",
+              "text": "Ce qu’on paie, on le respecte.",
+              "side": "l"
+            },
+            {
+              "who": "firmin",
+              "text": "Je calerai avec l’annuaire.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "André (on the left) holding a small red book high out of reach, stern like a teacher; Firmin (on the right) shrugging, already sliding a thick grey book under his workbench leg. plain background. medium shot",
+            "cast": [
+              "andre",
+              "firmin"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "1926",
+          "caption": "1926 : le guide se met à classer les restaurants. Une étoile récompense une bonne table.",
+          "bubbles": [
+            {
+              "who": "edouard",
+              "text": "Une étoile pour un bon dîner ?",
+              "side": "r"
+            },
+            {
+              "who": "andre",
+              "text": "Et un client qui use ses pneus pour y aller.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "one single panel, no frame divisions, each character appears only once. a single restaurant table with a steaming plate. André (on the left, round bald head, bushy white moustache, gold watch chain) standing, placing a small paper star on the table with great ceremony; Édouard (on the right, thin, dark goatee, slicked hair) seated, tasting with a fork, eyes closed, blissful. medium shot",
+            "cast": [
+              "andre",
+              "edouard"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "1931",
+          "caption": "1931 : on passe à trois étoiles. La troisième veut dire « vaut le voyage » : on prend la route exprès.",
+          "bubbles": [
+            {
+              "who": "edouard",
+              "text": "Le voyage… en voiture ?",
+              "side": "r"
+            },
+            {
+              "who": "andre",
+              "text": "Avec nos pneus. C’est tout le principe.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "André (on the left) holding up three small paper stars like a magician, sly wink; Édouard (on the right) slowly understanding, pointing at the tyre under his arm, mouth forming an O. plain background. medium shot",
+            "cast": [
+              "andre",
+              "edouard"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "title": "Les étoiles, mode d’emploi",
+          "steps": [
+            "1 étoile : une très bonne table dans sa catégorie",
+            "2 étoiles : une table excellente, qui mérite un détour",
+            "3 étoiles : une des meilleures tables, qui vaut le voyage"
+          ],
+          "joke": "Traduction Michelin : plus d’étoiles, plus de kilomètres, plus de pneus."
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "1933",
+          "caption": "Pour rester crédible, Michelin crée en 1933 des inspecteurs anonymes, payés par le guide, qui jugent en toute indépendance.",
+          "bubbles": [
+            {
+              "who": "inspecteur",
+              "text": "Je suis un client parfaitement normal.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a single restaurant table. the inspector (in the middle) sitting stiffly, hat pulled down to his nose, collar up, hiding a tiny notebook under his napkin, eyes darting suspiciously left and right. medium shot",
+            "cast": [
+              "inspecteur"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 10,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie.",
+          "bubbles": [
+            {
+              "who": "andre",
+              "text": "Et plus personne ne pense aux pneus.",
+              "side": "l"
+            },
+            {
+              "who": "edouard",
+              "text": "Si. Nous.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "André (on the left) and Édouard (on the right) in a confession-style shot, side by side, looking straight at the reader, André smug, Édouard hugging his small black rubber tyre tenderly in both arms, no animal. plain background",
+            "cast": [
+              "andre",
+              "edouard"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Le premier guide Michelin, en 1900, était un livret gratuit de 400 pages tiré à 35 000 exemplaires et offert aux acheteurs de pneus.",
+        "source": "Guide Michelin"
+      },
+      "sources": [
+        {
+          "title": "Guide Michelin — Le Guide MICHELIN, une longue histoire",
+          "url": "https://guide.michelin.com/fr/fr/article/features/le-guide-michelin-une-longue-histoire"
+        },
+        {
+          "title": "Moniteur Automobile — Le saviez-vous ? Le guide rouge Michelin a 120 ans",
+          "url": "https://www.moniteurautomobile.be/actu-auto/nostalgie/saviez-vous-le-guide-rouge-michelin-120-ans.html"
+        },
+        {
+          "title": "Hérodote — En route vers les étoiles",
+          "url": "https://www.herodote.net/En_route_vers_les_etoiles-synthese-2517.php"
+        }
+      ],
+      "story": "En 1900, les frères André et Édouard Michelin fabriquent des pneus. Les automobiles sont encore rares, et leur calcul est simple : plus les gens roulent, plus ils usent de pneus. Il faut donc leur donner envie de partir.\nIls publient un guide gratuit de 400 pages, tiré à 35 000 exemplaires et offert aux automobilistes : adresses de garages et de médecins, plans de villes, et bien sûr la méthode pour changer un pneu.\nSelon la légende maison, André découvre un jour un vendeur de pneus qui cale son établi avec des guides. Gratuit, le livre n’a aucune valeur aux yeux des clients. En 1920, il devient payant, et la publicité disparaît.\nÀ partir de 1926, le guide classe les restaurants et attribue une étoile aux bonnes tables. En 1931, l’échelle passe à trois étoiles ; la troisième signifie que la table « vaut le voyage ». Le calcul reste le même : pour aller dîner loin, il faut rouler.\nPour être crédible, Michelin emploie des inspecteurs anonymes, salariés du guide, qui jugent en toute indépendance. Né pour vendre des pneus, le guide est devenu une référence mondiale de la gastronomie.",
+      "art": {
+        "subject": "how the Michelin brothers created a free guide to make people drive more and wear out their tyres, before it rated restaurants",
+        "setting": "an office with a map of France around 1900, a dusty country road with an early car, a garage, a 1930s restaurant dining room",
+        "era": "1900 to 1930s France",
+        "props": {
+          "guide": "a small thick red book",
+          "tyre": "a small black rubber tyre"
+        }
+      },
+      "from_stock": "20261113-0100-le-guide-michelin-ou-comment-vendre-des"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Docteur Vampire et ses quarante millions de sangsues",
+      "tagline": "Dans les années 1830, la France a tellement saigné ses malades qu’elle a vidé ses mares",
+      "minutes": 2,
+      "theme": "Médecine et santé",
+      "cast": [
+        {
+          "id": "broussais",
+          "name": "Le docteur Broussais",
+          "look": "François, a tall bony stern French doctor of the 1820s, thick grey sideburns, bald forehead, fierce eyebrows, black frock coat, white cravat, holding a glass jar",
+          "file": "cast/insolite-broussais.png",
+          "status": "done",
+          "role": "the stern doctor who prescribes leeches for everything; tall, bony, fierce eyebrows, pointing"
+        },
+        {
+          "id": "hippolyte",
+          "name": "Hippolyte, le patient",
+          "look": "Hippolyte, a skinny 1830s Parisian patient, long white nightshirt, droopy white nightcap, pale face, huge terrified eyes",
+          "file": "cast/insolite-hippolyte.png",
+          "status": "done",
+          "role": "the frightened patient covered in leeches; skinny, pale, trembling in his nightshirt"
+        },
+        {
+          "id": "marthe",
+          "name": "Marthe, poseuse de sangsues",
+          "look": "Marthe, a sturdy 1830s woman leech applier, rolled sleeves, plain grey dress, white apron, a red headscarf as the only colour, carrying a big glass jar",
+          "file": "cast/insolite-marthe.png",
+          "status": "done",
+          "role": "the sturdy woman who applies the leeches; strong, matter-of-fact, sleeves rolled up",
+          "via": "fal"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare bedroom with one bed. Hippolyte (on the right) sitting up in bed, frozen in horror, staring at a huge glass jar; François (on the left) holding the jar up proudly like a gift, beaming. medium shot",
+        "cast": [
+          "broussais",
+          "hippolyte"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "qa": "ok",
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Années 1820",
+          "caption": "Pourquoi la France a-t-elle manqué de sangsues ? Pour le célèbre docteur Broussais, presque toute maladie vient d’un intestin enflammé.",
+          "bubbles": [
+            {
+              "who": "broussais",
+              "text": "Mal à la tête ? C’est l’intestin.",
+              "side": "l"
+            },
+            {
+              "who": "hippolyte",
+              "text": "Et mon pied ?",
+              "side": "r"
+            },
+            {
+              "who": "broussais",
+              "text": "L’intestin.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare consulting room. François (on the left) pointing firmly at Hippolyte's belly with one finger, absolutely certain; Hippolyte (on the right) holding his own foot up, confused, nightcap drooping. medium shot",
+            "cast": [
+              "broussais",
+              "hippolyte"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok",
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Son idée : pour calmer une inflammation, il faut retirer du sang. Les sangsues, posées sur le ventre, s’en chargent.",
+          "bubbles": [
+            {
+              "who": "hippolyte",
+              "text": "Combien ?",
+              "side": "r"
+            },
+            {
+              "who": "broussais",
+              "text": "Une petite quarantaine.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "one single panel, no frame divisions, each character appears only once, no animal. a bare bedroom with one bed. Hippolyte (on the right, skinny, white nightshirt, droopy white nightcap) lying in bed, sheet pulled up to his nose, only his terrified eyes showing; François (on the left, tall bony doctor, grey sideburns, bald forehead, black frock coat, white cravat) standing beside the bed, unscrewing the lid of a big glass jar full of dark leeches with a gentle smile. medium shot",
+            "cast": [
+              "broussais",
+              "hippolyte"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "redo": true,
+            "via": "fal",
+            "redo_attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (689a2309-8adf-45ae-889f-88b4483d6e3b)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "title": "Pourquoi saigner un malade ?",
+          "text": "Depuis l’Antiquité, on pense qu’une maladie vient souvent d’un excès de sang ou d’« humeurs ». Retirer du sang paraît donc logique. Broussais pousse l’idée à l’extrême : tout vient d’une inflammation, et une inflammation se calme en saignant.",
+          "joke": "Spoiler : la médecine a changé d’avis depuis."
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Vrai",
+          "caption": "Il en pose de 40 à 200 à la fois. Surnom : « le vampire de la médecine ».",
+          "bubbles": [
+            {
+              "who": "broussais",
+              "text": "Vampire ? Ils sont jaloux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "François (in the middle) standing tall with his arms crossed, chin up, offended, his black frock coat making him look like a bat; Hippolyte (on the right) in the background, pale as a ghost, slowly fainting. medium shot",
+            "cast": [
+              "broussais",
+              "hippolyte"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok",
+            "via": "fal"
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "Le vrai docteur",
+          "title": "François Broussais, le « vampire de la médecine »",
+          "text": "Le médecin vers 1817, quand ses cours attirent des foules d’étudiants. Pour lui, presque toute maladie est une inflammation… à calmer en retirant du sang.",
+          "photo": {
+            "commons": "File:François-Joseph-Victor Broussais.jpg",
+            "credit": "Unknown authorUnknown author",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois-Joseph-Victor_Broussais.jpg",
+            "file": "images/photo-5-fran-ois-joseph-victor-broussais-jp.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "",
+          "caption": "La demande explose : poser des sangsues devient presque un métier, souvent exercé à domicile par des femmes.",
+          "bubbles": [
+            {
+              "who": "marthe",
+              "text": "Sangsues fraîches ! Pose à domicile !",
+              "side": "l"
+            },
+            {
+              "who": "hippolyte",
+              "text": "Je ne suis pas là.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a simple house door ajar. Marthe (on the left) on the doorstep raising her glass jar cheerfully like a street vendor; Hippolyte (on the right) peeking through the gap in the door, trying to close it slowly, sweating. medium shot",
+            "cast": [
+              "marthe",
+              "hippolyte"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok",
+            "via": "fal"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "1833",
+          "caption": "Rien qu’en 1833, la France utilise entre 30 et 40 millions de sangsues : environ une par habitant.",
+          "bubbles": [
+            {
+              "who": "marthe",
+              "text": "Quarante millions. Et pas un merci.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Marthe (in the middle) slumped on a stool next to a towering stack of glass jars reaching the top of the frame, exhausted, wiping her forehead. plain background. wide shot",
+            "cast": [
+              "marthe"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok",
+            "via": "fal"
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "",
+          "caption": "Résultat : les étangs français sont vidés. Il faut importer des sangsues de Pologne et de Hongrie.",
+          "bubbles": [
+            {
+              "who": "marthe",
+              "text": "Plus une seule. Elles ont émigré.",
+              "side": "l"
+            },
+            {
+              "who": "broussais",
+              "text": "Commandez en Hongrie !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "an empty pond with cracked dry mud. Marthe (on the left) standing in it with her skirt rolled up, holding an empty jar upside down, deadpan; François (on the right) on the bank, waving an order letter with urgency. wide shot",
+            "cast": [
+              "marthe",
+              "broussais"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok",
+            "via": "fal"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "Le fin mot",
+          "caption": "Broussais meurt en 1838. Sa mode des sangsues aura saigné la France pendant deux décennies.",
+          "bubbles": [
+            {
+              "who": "hippolyte",
+              "text": "J’ai survécu. Je ne sais pas si c’est grâce à elles.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Hippolyte (in the middle) in a confession-style close-up, looking straight at the reader, very pale, tiny bandages all over his belly, giving a weak thumbs up. plain background",
+            "cast": [
+              "hippolyte"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok",
+            "via": "fal"
+          }
+        }
+      ],
+      "final": {
+        "text": "En 1833, sous l’influence du docteur Broussais, la France a utilisé entre 30 et 40 millions de sangsues.",
+        "source": "Hirudotherapy Society"
+      },
+      "sources": [
+        {
+          "title": "Hirudotherapy Society — François-Joseph-Victor Broussais",
+          "url": "https://www.hirudotherapysociety.org/en/biography/francois-broussais"
+        },
+        {
+          "title": "Revue médicale de Bruxelles (AMUB) — Histoire des sangsues en médecine",
+          "url": "https://amub-ulb.be/system/files/rmb/old/581"
+        }
+      ],
+      "story": "Au début du XIXe siècle, le médecin François Broussais est l’une des grandes figures de la médecine parisienne. Sa théorie : presque toutes les maladies viennent d’une inflammation, en particulier de l’intestin. Pour la calmer, il faut retirer du sang au malade.\nSon outil préféré : la sangsue, un petit ver qui se fixe sur la peau et aspire le sang. Broussais en pose de 40 à 200 à la fois, ce qui lui vaut le surnom de « vampire de la médecine ».\nSa méthode devient une mode. Poser des sangsues devient presque un métier, exercé à domicile, souvent par des femmes. En 1833, la France en utilise entre 30 et 40 millions, environ une par habitant. Les étangs français se vident, et il faut en importer de Pologne et de Hongrie.\nAprès la mort de Broussais, en 1838, la mode décline peu à peu : les médecins comprennent que saigner les malades les affaiblit plus qu’il ne les soigne. La sangsue n’a pourtant pas disparu : on l’utilise encore dans quelques cas précis, en chirurgie réparatrice, pour aider le sang à circuler.",
+      "art": {
+        "subject": "how, in the 1830s, doctor Broussais's fashion for bloodletting made France import tens of millions of leeches",
+        "setting": "a bare Paris hospital room with one bed, a pond in the countryside, a pharmacy counter with glass jars",
+        "era": "1820s-1830s France",
+        "props": {
+          "jar": "a big glass jar full of small black leeches"
+        }
+      },
+      "from_stock": "20261112-0100-docteur-vampire-et-ses-quarante-millions"
+    },
+    {
       "id": "quiz",
       "kind": "citation",
       "label": "Qui a dit ça ?",
@@ -472,5 +1854,6 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-14T08:52:08.708326+01:00"
 }

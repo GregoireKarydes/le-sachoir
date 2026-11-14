@@ -1,21 +1,38 @@
 {
- "updated_at": "2026-11-13T09:38+01:00",
+ "updated_at": "2026-11-14T08:52+01:00",
  "stock": {
   "cultureg": [
    {
-    "path": "stock/cultureg/20261113-0100-le-guide-michelin-ou-comment-vendre-des",
-    "name": "20261113-0100-le-guide-michelin-ou-comment-vendre-des",
-    "added": "20261113-0100",
+    "path": "stock/cultureg/20261113-2050-lalexandrin-roi-qui-na-jamais-rime",
+    "name": "20261113-2050-lalexandrin-roi-qui-na-jamais-rime",
+    "added": "20261113-2050",
+    "status": "ready",
+    "next": true,
+    "title": "L’alexandrin, le vers qui porte le nom d’un roi qui n’a jamais rimé",
+    "theme": "Littérature",
+    "tagline": "Douze syllabes, un conquérant et un poète du Moyen Âge un peu vexé",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 1,
+    "images_done": 8,
+    "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261113-2057-pourquoi-tant-de-martin",
+    "name": "20261113-2057-pourquoi-tant-de-martin",
+    "added": "20261113-2057",
     "status": "waiting",
     "next": false,
-    "title": "Le guide Michelin, ou comment vendre des pneus avec un bon dîner",
-    "theme": "Entreprises et marques",
-    "tagline": "Avant de distribuer des étoiles, le guide rouge était une pub gratuite pour automobilistes",
+    "title": "Pourquoi la France est pleine de Martin (merci le demi-manteau)",
+    "theme": "Société",
+    "tagline": "Un saint, un manteau coupé en deux, et six Martin dans chaque village",
     "minutes": 2,
-    "cases": 10,
+    "cases": 8,
     "photos": 1,
     "images_done": 0,
-    "images_total": 9,
+    "images_total": 7,
     "failed": 0,
     "redo": 0
    },
@@ -35,20 +52,18 @@
     "images_total": 9,
     "failed": 0,
     "redo": 0
-   }
-  ],
-  "insolite": [
+   },
    {
-    "path": "stock/insolite/20261112-0100-docteur-vampire-et-ses-quarante-millions",
-    "name": "20261112-0100-docteur-vampire-et-ses-quarante-millions",
-    "added": "20261112-0100",
+    "path": "stock/cultureg/20261114-0359-do-re-mi-tube-voix-enrouees",
+    "name": "20261114-0359-do-re-mi-tube-voix-enrouees",
+    "added": "20261114-0359",
     "status": "waiting",
     "next": false,
-    "title": "Docteur Vampire et ses quarante millions de sangsues",
-    "theme": "Médecine et santé",
-    "tagline": "Dans les années 1830, la France a tellement saigné ses malades qu’elle a vidé ses mares",
-    "minutes": 1,
-    "cases": 9,
+    "title": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
+    "theme": "Musique",
+    "tagline": "Les noms des notes sortent d’une prière latine à saint Jean, recyclée par un moine pédagogue",
+    "minutes": 2,
+    "cases": 10,
     "photos": 1,
     "images_done": 0,
     "images_total": 8,
@@ -56,19 +71,72 @@
     "redo": 0
    },
    {
+    "path": "stock/cultureg/20261114-0402-greenwich-le-mot-interdit",
+    "name": "20261114-0402-greenwich-le-mot-interdit",
+    "added": "20261114-0402",
+    "status": "waiting",
+    "next": false,
+    "title": "Greenwich, le mot que la France refusait de prononcer",
+    "theme": "Géographie",
+    "tagline": "En 1911, la France recule ses horloges de 9 minutes 21 secondes. Sans jamais écrire le nom du coupable.",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   }
+  ],
+  "insolite": [
+   {
     "path": "stock/insolite/20261113-0100-la-plus-longue-frontiere-de-la-france-av",
     "name": "20261113-0100-la-plus-longue-frontiere-de-la-france-av",
     "added": "20261113-0100",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "La plus longue frontière de la France ? Avec le Brésil",
     "theme": "Géographie",
     "tagline": "Plus de 730 km de frontière, et pas un seul Pyrénéen à l’horizon",
     "minutes": 1,
     "cases": 9,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 8,
     "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261113-2051-le-president-prince-dandorre",
+    "name": "20261113-2051-le-president-prince-dandorre",
+    "added": "20261113-2051",
+    "status": "waiting",
+    "next": false,
+    "title": "Le président français est prince d’Andorre, et c’est la faute d’un comte",
+    "theme": "Géopolitique",
+    "tagline": "Un partage de vallées signé en 1278, et l’Élysée hérite d’une couronne",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261113-2058-les-rats-dautun-avaient-un-avocat",
+    "name": "20261113-2058-les-rats-dautun-avaient-un-avocat",
+    "added": "20261113-2058",
+    "status": "waiting",
+    "next": false,
+    "title": "Les rats d’Autun avaient un avocat (et ils s’en sont tirés)",
+    "theme": "Histoire de France",
+    "tagline": "Vers 1520, des rats sont convoqués au tribunal. Leur défense : les chats.",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
     "failed": 0,
     "redo": 0
    },
@@ -88,26 +156,26 @@
     "images_total": 8,
     "failed": 0,
     "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261114-0400-la-liberte-a-dabord-postule-en-egypte",
+    "name": "20261114-0400-la-liberte-a-dabord-postule-en-egypte",
+    "added": "20261114-0400",
+    "status": "waiting",
+    "next": false,
+    "title": "La statue de la Liberté a d’abord postulé en Égypte",
+    "theme": "Arts plastiques",
+    "tagline": "Avant New York, Bartholdi avait proposé une géante à torche pour le canal de Suez. Refusée : trop chère.",
+    "minutes": 1,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 7,
+    "failed": 0,
+    "redo": 0
    }
   ],
   "dossier": [
-   {
-    "path": "stock/dossier/20261108-1929-darwin-on-ne-descend-pas-du-singe",
-    "name": "20261108-1929-darwin-on-ne-descend-pas-du-singe",
-    "added": "20261108-1929",
-    "status": "blocked",
-    "next": false,
-    "title": "On descend du singe ? Non, on est cousins (et c’est la faute à Darwin)",
-    "theme": "Sciences du vivant",
-    "tagline": "Des tortues des Galápagos aux bactéries résistantes : la sélection naturelle expliquée maillon par maillon",
-    "minutes": 3,
-    "cases": 24,
-    "photos": 2,
-    "images_done": 20,
-    "images_total": 21,
-    "failed": 1,
-    "redo": 0
-   },
    {
     "path": "stock/dossier/20261110-0100-qui-commande-en-france-la-ve-republique",
     "name": "20261110-0100-qui-commande-en-france-la-ve-republique",
@@ -120,8 +188,42 @@
     "minutes": 5,
     "cases": 32,
     "photos": 2,
-    "images_done": 20,
+    "images_done": 25,
     "images_total": 26,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261113-1926-jeux-olympiques-baron-tetu",
+    "name": "20261113-1926-jeux-olympiques-baron-tetu",
+    "added": "20261113-1926",
+    "status": "waiting",
+    "next": false,
+    "title": "Jeux olympiques : 2 800 ans de sport et un baron très têtu",
+    "theme": "Sports",
+    "tagline": "D’Olympie à Paris 2024 : comment un Français a ressuscité les Jeux, et pourquoi il a fallu attendre 2024 pour la parité",
+    "minutes": 3,
+    "cases": 27,
+    "photos": 3,
+    "images_done": 15,
+    "images_total": 22,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261113-1931-les-lumieres-sans-electricite",
+    "name": "20261113-1931-les-lumieres-sans-electricite",
+    "added": "20261113-1931",
+    "status": "waiting",
+    "next": false,
+    "title": "Les Lumières : comment des philosophes ont rallumé la France (sans électricité)",
+    "theme": "Philosophie",
+    "tagline": "Voltaire, Diderot, Montesquieu, Rousseau : le XVIIIe siècle qui a appris à penser par soi-même, malgré la Bastille et les bûchers de livres",
+    "minutes": 3,
+    "cases": 24,
+    "photos": 3,
+    "images_done": 0,
+    "images_total": 19,
     "failed": 0,
     "redo": 0
    }
@@ -129,18 +231,48 @@
  },
  "editions": [
   {
-   "date": "2026-11-13",
-   "path": "editions/2026-11-13",
+   "date": "2026-11-14",
+   "path": "editions/2026-11-14",
    "status": "published",
-   "newsletter": false,
+   "newsletter": true,
    "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "kind": "",
+     "title": "On descend du singe ? Non, on est cousins (et c’est la faute à Darwin)",
+     "theme": "Sciences du vivant",
+     "tagline": "Des tortues des Galápagos aux bactéries résistantes : la sélection naturelle expliquée maillon par maillon",
+     "minutes": 6,
+     "cases": 24,
+     "photos": 2,
+     "images_done": 21,
+     "images_total": 21,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Un point gelé, une chaise pliante et seize minutes de bonheur",
+     "theme": "",
+     "tagline": "Les fonctionnaires attendent le dégel, l’Europe réserve sa place, les Bleus tombent à Milan et Nicole Kidman reçoit un César.",
+     "minutes": 4,
+     "cases": 15,
+     "photos": 4,
+     "images_done": 5,
+     "images_total": 5,
+     "failed": 0,
+     "redo": 1
+    },
     {
      "id": "cultureg",
      "label": "La Pilule de Culture G",
      "kind": "",
-     "title": "Bonne année ! Oui, mais laquelle ?",
-     "theme": "Histoire moderne",
-     "tagline": "Avant 1564, la France fêtait le Nouvel An à Noël, en mars ou à Pâques, selon la ville",
+     "title": "Le guide Michelin, ou comment vendre des pneus avec un bon dîner",
+     "theme": "Entreprises et marques",
+     "tagline": "Avant de distribuer des étoiles, le guide rouge était une pub gratuite pour automobilistes",
      "minutes": 2,
      "cases": 10,
      "photos": 1,
@@ -153,32 +285,17 @@
      "id": "insolite",
      "label": "L’Insolite Historique",
      "kind": "",
-     "title": "Parisiennes en pantalon : hors-la-loi de 1800 à 2013",
-     "theme": "Droit",
-     "tagline": "Pendant 213 ans, une ordonnance exigeait un permis pour s’habiller « en homme »",
+     "title": "Docteur Vampire et ses quarante millions de sangsues",
+     "theme": "Médecine et santé",
+     "tagline": "Dans les années 1830, la France a tellement saigné ses malades qu’elle a vidé ses mares",
      "minutes": 2,
      "cases": 9,
      "photos": 1,
      "images_done": 8,
      "images_total": 8,
      "failed": 0,
-     "redo": 0
+     "redo": 1
     },
-    {
-     "id": "quiz",
-     "label": "Le Chiffre",
-     "kind": "chiffre",
-     "title": "Sortez vos doigts, on compte",
-     "questions": 3
-    }
-   ]
-  },
-  {
-   "date": "2026-11-14",
-   "path": "editions/2026-11-14",
-   "status": "draft",
-   "newsletter": false,
-   "formats": [
     {
      "id": "quiz",
      "label": "Qui a dit ça ?",
@@ -230,6 +347,81 @@
      "kind": "frise",
      "title": "Douze dates, un calendrier qui a le tournis",
      "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-18",
+   "path": "editions/2026-11-18",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Dico menteur",
+     "kind": "dico",
+     "title": "Quatre mots, douze mensonges",
+     "questions": 4
+    }
+   ]
+  },
+  {
+   "date": "2026-11-19",
+   "path": "editions/2026-11-19",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Plus ou moins",
+     "kind": "plusmoins",
+     "title": "Vieilles pierres contre jeunes premières",
+     "questions": 1
+    }
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "path": "editions/2026-11-20",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Swipe",
+     "kind": "swipe",
+     "title": "Vrai, faux, ou légende de comptoir ?",
+     "questions": 1
+    }
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "path": "editions/2026-11-21",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Chiffre",
+     "kind": "chiffre",
+     "title": "Au doigt mouillé (mais avec méthode)",
+     "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-22",
+   "path": "editions/2026-11-22",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Qui a dit ça ?",
+     "kind": "citation",
+     "title": "Ces phrases ont un propriétaire (sauf une)",
+     "questions": 4
     }
    ]
   }

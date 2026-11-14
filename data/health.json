@@ -1,23 +1,16 @@
 {
- "updated_at": "2026-11-13T09:38:43.147887+01:00",
- "today": "2026-11-13",
- "problems": [
-  "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock"
- ],
+ "updated_at": "2026-11-14T08:52:08.708326+01:00",
+ "today": "2026-11-14",
+ "problems": [],
  "days": [
-  {
-   "date": "2026-11-13",
-   "status": "published",
-   "formats": {
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-14",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
+    "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
     "quiz": "prêt"
    }
   },
@@ -41,9 +34,48 @@
    "formats": {
     "quiz": "prêt"
    }
+  },
+  {
+   "date": "2026-11-18",
+   "status": "draft",
+   "formats": {
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-19",
+   "status": "draft",
+   "formats": {
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-20",
+   "status": "draft",
+   "formats": {
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-21",
+   "status": "draft",
+   "formats": {
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-22",
+   "status": "draft",
+   "formats": {
+    "quiz": "prêt"
+   }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-14/cultureg : « Le guide Michelin, ou comment vendre des pneus avec un bon dîner » prise dans la file (20261113-0100-le-guide-michelin-ou-comment-vendre-des)",
+  "2026-11-14/insolite : « Docteur Vampire et ses quarante millions de sangsues » prise dans la file (20261112-0100-docteur-vampire-et-ses-quarante-millions)",
+  "2026-11-14/dossier : « On descend du singe ? Non, on est cousins (et c’est la faute à Darwin) » prise dans la file (20261108-1929-darwin-on-ne-descend-pas-du-singe)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -51,58 +83,59 @@
  ],
  "today_published": true,
  "today_stories": [
+  "dossier",
+  "actu",
   "cultureg",
   "insolite"
  ],
- "last_published": "2026-11-13",
+ "last_published": "2026-11-14",
  "stock": {
   "cultureg": {
-   "ready": 0,
-   "waiting": 2,
+   "ready": 1,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 18,
-   "focus": "20261113-0100-le-guide-michelin-ou-comment-vendre-des (9 image(s) à faire)",
-   "next": null,
+   "images_left": 32,
+   "focus": "20261113-2057-pourquoi-tant-de-martin (7 image(s) à faire)",
+   "next": "20261113-2050-lalexandrin-roi-qui-na-jamais-rime",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 0,
-   "waiting": 3,
+   "ready": 1,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 24,
-   "focus": "20261112-0100-docteur-vampire-et-ses-quarante-millions (8 image(s) à faire)",
-   "next": null,
+   "images_left": 27,
+   "focus": "20261113-2051-le-president-prince-dandorre (6 image(s) à faire)",
+   "next": "20261113-0100-la-plus-longue-frontiere-de-la-france-av",
    "next_redo": 0
   },
   "dossier": {
    "ready": 0,
-   "waiting": 1,
-   "blocked": 1,
-   "images_left": 6,
-   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (6 image(s) à faire)",
+   "waiting": 3,
+   "blocked": 0,
+   "images_left": 27,
+   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (1 image(s) à faire)",
    "next": null,
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 1,
- "quiz_days_ahead": 4,
+ "days_ahead_written": 3,
+ "quiz_days_ahead": 8,
  "quota": {
-  "day": "2026-11-13",
-  "count": 35,
-  "neurons": 6400,
+  "day": "2026-11-14",
+  "count": 49,
+  "neurons": 8960,
   "exhausted": false,
   "by_kind": {
-   "case": 29,
-   "cast": 5,
-   "cover": 1
+   "case": 42,
+   "cast": 7
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 0.78798,
-  "images": 100,
-  "today_usd": 0,
+  "spent_usd": 1.21251,
+  "images": 120,
+  "today_usd": 0.18,
   "blocked": null
  }
 }
