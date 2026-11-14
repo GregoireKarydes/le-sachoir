@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T09:11:54.872959+01:00",
+ "updated_at": "2026-11-14T09:58:18.869619+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -75,7 +75,8 @@
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
-  "2026-11-06|insolite"
+  "2026-11-06|insolite",
+  "2026-11-07|cultureg"
  ],
  "today_published": true,
  "today_stories": [
