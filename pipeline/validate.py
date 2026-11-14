@@ -189,6 +189,10 @@ def check_story(fmt: dict, d: Path, err, warn):
             if case.get("image"):
                 err(f"case {i} (Pour mieux comprendre) : pas d’image pour ce type de case")
             continue
+        if case.get("kind") == "buzz":  # « Pendant ce temps, sur Internet » : texte seul, contrôlé plus haut
+            if case.get("image"):
+                err(f"case {i} (Sur Internet) : pas d’image pour ce type de case")
+            continue
         if case.get("kind") == "photo":  # vraie photo (Wikimedia Commons) : titre, courte explication, source affichée
             ph = case.get("photo") or {}
             if not case.get("title") or not case.get("text"):
