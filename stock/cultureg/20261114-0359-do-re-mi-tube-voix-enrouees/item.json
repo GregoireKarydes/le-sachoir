@@ -173,7 +173,13 @@
           "title": "Guido d’Arezzo dans un manuscrit médiéval",
           "text": "Sur cette enluminure de la fin du XIIe siècle, Guido (à gauche) tient un monocorde, une boîte à une corde qui sert à trouver les notes, face à son évêque.",
           "photo": {
-            "commons": "File:Guido e Teodaldo.jpg"
+            "commons": "File:Guido e Teodaldo.jpg",
+            "credit": "Unknown scribe and illuminator of a scriptorium somewhere inbetween southern Germany and A",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Guido_e_Teodaldo.jpg",
+            "file": "images/photo-6-guido-e-teodaldo-jpg.webp",
+            "status": "done"
           }
         },
         {
