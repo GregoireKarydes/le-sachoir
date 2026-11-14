@@ -387,8 +387,8 @@ def harmonize(im: Image.Image, fid: str | None) -> Image.Image:
     """Fond uniforme dans toute une BD : la grande zone claire reliée au haut de l'image (le fond) prend la
     teinte pastel du format. Les bords des traits sont recolorés dans la même proportion (pas de liseré).
     Rien ne change si le fond n'est pas identifiable (moins de `min_border_share` du bord du haut)."""
-    if not HARM.get("enabled") or fid is None or fid in (HARM.get("skip") or []):
-        return im  # « D'où ça vient ? » : images réalistes, on ne touche pas au fond
+    if not HARM.get("enabled") or fid is None:
+        return im
     im = im.convert("RGB")
     w, h = im.size
     new = tuple((HARM.get("bg") or {}).get(fid) or (HARM.get("bg") or {}).get("default") or (246, 241, 230))
@@ -447,7 +447,7 @@ def story_context(fmt: dict) -> str:
     art = fmt.get("art") or {}
     bits = []
     if art.get("subject"):
-        bits.append(f"The {'film' if fmt.get('id') == 'origine' else 'strip'} tells {_clean(art['subject'])}")
+        bits.append(f"The strip tells {_clean(art['subject'])}")
     if art.get("setting"):
         bits.append(f"setting: {_clean(art['setting'])}")
     if art.get("era"):
@@ -473,8 +473,6 @@ def build(scene: str, cast: list[tuple], fmt: dict | None = None,
 
     `cast` : (look, fiche) ou (look, fiche, rôle). `panel` : (numéro de la case, nombre de cases dessinées)."""
     fmt = fmt or {}
-    if fmt.get("id") == "origine":
-        return build_cine(scene, fmt, panel)
     refs, who = [], []
     if STYLE_REF.exists():
         refs.append(STYLE_REF)
@@ -499,20 +497,12 @@ def build(scene: str, cast: list[tuple], fmt: dict | None = None,
     where = f"Panel {panel[0]} of {panel[1]} of the same comic strip. " if panel else ""
     logic = " Everything must make sense for this moment of the story: right people, right objects, right place, nothing random."
     # Les consignes impératives (pas de texte, haut libre) passent avant le style : jamais coupées si le prompt est long.
+    rules = CINE.get("constraints", STYLE["constraints"]) if fmt.get("id") == "origine" else STYLE["constraints"]
     return (f"{where}Scene: {_clean(scene)}.{story_context(fmt)}{chars}{props_for(fmt, scene)}{logic} "
-            f"{STYLE['constraints']} {head}{STYLE['style']}"), refs
+            f"{rules} {head}{STYLE['style']}"), refs
 
 
-CINE = STYLE.get("cine") or {}
-
-
-def build_cine(scene: str, fmt: dict, panel: tuple[int, int] | None = None) -> tuple[str, list[Path]]:
-    """« D'où ça vient ? » (14 novembre 2026) : plans réalistes de cinéma, sans référence de style ni fiche casting.
-    Le texte est posé par l'appli sur le bas de l'image : la consigne garde ce bas sombre et vide."""
-    where = f"Shot {panel[0]} of {panel[1]} of the same short historical film, same place and light. " if panel else ""
-    logic = " Everything must make sense for this moment of the story: right period, right people, right objects."
-    return (f"{where}Scene: {_clean(scene)}.{story_context(fmt)}{props_for(fmt, scene)}{logic} "
-            f"{CINE.get('constraints', STYLE['constraints'])} {CINE.get('style', STYLE['style'])}"), []
+CINE = STYLE.get("cine") or {}  # « D'où ça vient ? » : même style, mais le bas de l'image reste vide pour le texte
 
 
 def editions_to_process():

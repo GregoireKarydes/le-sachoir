@@ -390,7 +390,9 @@ def test_notice_remplace_si_pas_d_origine_prete(site, monkeypatch):
     assert "notice" in ids and "origine" not in ids
 
 
-def test_prompt_cine_sans_reference():
-    prompt, refs = images.build("a bridge at dawn", [], fmt={"id": "origine", "art": {"era": "1268"}}, panel=(1, 5))
-    assert refs == [] and "Shot 1 of 5" in prompt and "comic" not in prompt.lower()
-    assert images.CINE["style"] in prompt
+def test_prompt_origine_style_sachoir_bas_vide():
+    prompt, _ = images.build("a bridge at dawn", [], fmt={"id": "origine", "art": {"era": "1268"}}, panel=(1, 5))
+    assert images.STYLE["style"] in prompt and images.CINE["constraints"] in prompt
+    assert "top quarter" not in prompt and "bottom third is empty" in prompt
+    autre, _ = images.build("a bridge at dawn", [], fmt={"id": "cultureg"})
+    assert "top quarter" in autre

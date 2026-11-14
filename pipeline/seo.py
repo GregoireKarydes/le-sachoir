@@ -85,7 +85,7 @@ h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,48px);line-
 .panel.explain ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .panel.explain .ex-tag{align-self:flex-start;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:2px 9px;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
 .panel.explain .ex-joke{font-family:var(--letter);border-top:2px dashed var(--line);padding-top:8px}
-.panel.cine{background:#14110d}.panel.cine::after{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.72) 38%,rgba(0,0,0,.94))}
+.panel.cine{background:var(--ink)}.panel.cine::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,rgba(23,20,15,0),rgba(23,20,15,.9) 30%,var(--ink) 55%)}
 .panel.cine figcaption{top:auto;bottom:9%;left:7%;right:7%;z-index:1}.panel.cine p{margin:0;color:#fff;font-family:var(--sans);font-weight:700;font-size:20px;line-height:1.28}.panel.cine em{font-style:normal;color:var(--yellow)}
 .panel.photo{flex-direction:column}.panel.photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#efebe3}
 .panel.photo .credit{font-size:12px;color:#5f5a52}.panel.photo .credit a{color:inherit}

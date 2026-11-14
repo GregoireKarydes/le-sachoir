@@ -10,16 +10,35 @@
       "minutes": 1,
       "theme": "Expression française",
       "art": {
-        "subject": "the origin of the French saying 'payer en monnaie de singe' (to pay in monkey money)",
+        "subject": "a medieval toll at a Paris bridge where a street entertainer's monkey performs tricks instead of paying",
         "setting": "the Petit-Pont, a narrow stone bridge over the Seine in Paris, and the Petit Chatelet, the small fortified gatehouse at its end where the toll was collected; Notre-Dame in the distance",
         "era": "Moyen Âge — Paris around 1268, under King Louis IX (Saint Louis)",
         "props": {
-          "gatehouse": "a small fortified stone gatehouse with one round-arched gate and a slate roof",
-          "toll keeper": "a man in a dark hooded robe holding a wooden tally stick",
+          "gatehouse": "a small stone gatehouse with one round arched gate and a slate roof",
+          "tally stick": "a short notched wooden tally stick",
           "monkey": "a small brown monkey with a thin leather collar"
         }
       },
-      "cast": [],
+      "cast": [
+        {
+          "id": "jehan",
+          "name": "Jehan, le montreur de singes",
+          "look": "Jehan, a skinny lanky medieval street entertainer, messy black hair under a floppy red jester-like cap, patched green tunic as main colour, bare feet in worn sandals, a small brown monkey with a thin leather collar often sitting on his shoulder",
+          "file": "cast/origine-jehan.png",
+          "role": "the poor monkey showman who has no coin to pay the toll; thin, cheerful, a bit sheepish",
+          "status": "done",
+          "via": "fal"
+        },
+        {
+          "id": "peager",
+          "name": "Le péager",
+          "look": "the toll keeper, a short stocky round medieval man, bald head with a thick grey beard, dark blue hooded robe as main colour, a leather purse on his belt, holding a wooden tally stick",
+          "file": "cast/origine-peager.png",
+          "role": "the strict toll keeper at the gate of the bridge; stocky, stern, then amazed by the monkey",
+          "status": "done",
+          "via": "fal"
+        }
+      ],
       "cases": [
         {
           "n": 1,
@@ -27,9 +46,13 @@
           "text": "Pour traverser ce pont,\nil fallait payer.\nCertains payaient\nen *grimaces*.",
           "image": {
             "file": "images/origine-01.webp",
-            "status": "pending",
-            "prompt": "Wide shot of the Petit-Pont, a narrow medieval stone bridge over the Seine in Paris at dawn, thick river mist, the two towers of Notre-Dame cathedral faint in the distance; a poor street entertainer in a patched hooded tunic, seen from behind, walks toward a small fortified stone gatehouse at the end of the bridge, a small brown monkey sitting on his shoulder",
-            "attempts": 0
+            "status": "done",
+            "prompt": "The Petit-Pont, a narrow medieval stone bridge over the Seine in Paris at sunrise, the two towers of Notre-Dame in the distance; Jehan walks on the bridge toward a small stone gatehouse with an arched gate, his monkey on his shoulder",
+            "cast": [
+              "jehan"
+            ],
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -38,8 +61,14 @@
           "text": "Paris, vers 1268.\nAu bout du Petit-Pont,\ntout le monde paie le *péage*.",
           "image": {
             "file": "images/origine-02.webp",
-            "status": "pending",
-            "prompt": "The Petit Chatelet, a small fortified stone gatehouse with an arched gate guarding the end of a medieval bridge in Paris; a toll keeper in a dark hooded robe stands in the archway holding a wooden tally stick; a line of medieval merchants with mules, baskets and cloth bundles waits in front, seen from behind and from a distance, morning haze"
+            "status": "done",
+            "prompt": "The Petit Chatelet, a small stone gatehouse with a round arched gate at the end of the bridge; the toll keeper stands in the archway holding his tally stick, a short line of medieval merchants with a mule, baskets and cloth bundles waiting in front of him",
+            "cast": [
+              "peager"
+            ],
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -48,8 +77,14 @@
           "text": "Un marchand vient vendre un singe ?\nQuatre *deniers*,\ns'il vous plaît.",
           "image": {
             "file": "images/origine-03.webp",
-            "status": "pending",
-            "prompt": "At the arched gate of the medieval gatehouse, a well-dressed merchant seen from behind holds a small monkey in a wicker cage and hands small coins to the hooded toll keeper; mules and bundles around, warm low light through the haze"
+            "status": "done",
+            "prompt": "At the arched gate, a young thin merchant with curly brown hair and no beard, in a yellow tunic, holds a small monkey in a wicker cage and drops four small blank coins into the toll keeper's open hand; the toll keeper nods",
+            "cast": [
+              "peager"
+            ],
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -58,8 +93,15 @@
           "text": "Mais les montreurs de singes,\neux, n'avaient pas\nun *sou*.",
           "image": {
             "file": "images/origine-04.webp",
-            "status": "pending",
-            "prompt": "A poor medieval street entertainer in a patched tunic, seen from behind, stands before the hooded toll keeper at the arched gate of the gatehouse, a small brown monkey on his shoulder, his open empty hand held out; the toll keeper waits with his tally stick"
+            "status": "done",
+            "prompt": "Jehan stands in front of the toll keeper at the arched gate and turns out his two empty pockets with an embarrassed smile, his monkey on his shoulder doing the same gesture; the toll keeper frowns, holding out his hand",
+            "cast": [
+              "jehan",
+              "peager"
+            ],
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -76,8 +118,15 @@
           "text": "Le singe faisait son numéro\ndevant le péager.\nEt le passage était *payé*.",
           "image": {
             "file": "images/origine-06.webp",
-            "status": "pending",
-            "prompt": "In front of the arched gate of the medieval gatehouse, a small brown monkey turns a somersault on the cobblestones while its master, a street entertainer seen from behind, claps; the hooded toll keeper watches, a few merchants in the queue turn to look, golden morning light"
+            "status": "done",
+            "prompt": "In front of the arched gate, the little brown monkey jumps in the air doing a big somersault above the cobblestones while Jehan claps proudly; the toll keeper watches, mouth wide open, his tally stick falling from his hand",
+            "cast": [
+              "jehan",
+              "peager"
+            ],
+            "attempts": 1,
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -94,8 +143,13 @@
           "text": "Aujourd'hui, payer en monnaie de singe,\nc'est payer en belles paroles.\nBref, ne *pas payer*.",
           "image": {
             "file": "images/origine-08.webp",
-            "status": "pending",
-            "prompt": "The same medieval stone bridge over the Seine at dusk, now empty, the gatehouse closed, a single torch burning by the arched gate, the silhouette of Notre-Dame against an orange and violet sky, mist on the river"
+            "status": "done",
+            "prompt": "The same bridge and gatehouse at dusk, orange and violet sky, the gate closed, Jehan walking away across the bridge with his monkey on his shoulder, seen from behind",
+            "cast": [
+              "jehan"
+            ],
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
