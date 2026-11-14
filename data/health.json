@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T15:15:49.335555+01:00",
+ "updated_at": "2026-11-14T15:16:21.366025+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -72,9 +72,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-14/origine : « « Payer en monnaie de singe » » prise dans la file (20261114-1500-payer-en-monnaie-de-singe)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
