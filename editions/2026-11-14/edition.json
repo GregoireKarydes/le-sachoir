@@ -1811,7 +1811,7 @@
             }
           ],
           "image": {
-            "prompt": "In front of a closed Paris metro entrance with its metal gate pulled down and a blank paper sign taped on it, Inès (left) throws her arms up in despair, coffee cup in hand; Gustave (right), a labourer from the 1700s with his rope over his shoulder, stands next to her completely out of place, calm, one finger raised like a teacher",
+            "prompt": "One single scene, one moment, no inset: in front of a closed Paris metro entrance with its green railing and its metal gate pulled down, Inès on the left throws her arms up in despair, coffee cup in hand; Gustave on the right, standing calmly next to her with his rope over his shoulder, raises one finger like a teacher",
             "cast": [
               "ines",
               "gustave"
@@ -1819,7 +1819,8 @@
             "file": "images/origine-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1838,7 +1839,7 @@
             }
           ],
           "image": {
-            "prompt": "A wide sandy and muddy riverbank sloping down into the Seine in old Paris, wooden boats unloading logs and barrels, the old town hall with its tall slate roof and bell tower behind; Gustave stands proudly on the sand presenting the place with an open arm, Inès next to him in her red raincoat, sneakers sinking in the mud",
+            "prompt": "One single scene, one moment, no inset: a wide sandy and muddy riverbank sloping down into the Seine, wooden boats unloading logs and barrels, the old town hall with its tall slate roof and small bell tower in the background; Gustave on the sand presents the place with an open arm, Inès next to him looks down at her white sneakers sinking in the mud",
             "cast": [
               "gustave",
               "ines"
@@ -1846,7 +1847,8 @@
             "file": "images/origine-02.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1865,7 +1867,7 @@
             }
           ],
           "image": {
-            "prompt": "On the sandy square by the river, a row of waiting labourers in smocks and caps leaning on their tools, Gustave among them in front, looking hopeful; a stout boss in a three-cornered hat points at him; Inès watches from the side with a puzzled face",
+            "prompt": "One single scene, one moment, no inset: on the sandy riverbank square, a row of waiting labourers in smocks and caps leaning on their shovels; Gustave stands in front of them looking hopeful; a stout boss in a three-cornered hat points at Gustave to hire him; Inès watches from the side, puzzled",
             "cast": [
               "gustave",
               "ines"
@@ -1873,7 +1875,8 @@
             "file": "images/origine-03.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
