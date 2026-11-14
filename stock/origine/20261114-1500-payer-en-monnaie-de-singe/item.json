@@ -28,7 +28,8 @@
           "image": {
             "file": "images/origine-01.webp",
             "status": "pending",
-            "prompt": "Wide shot of the Petit-Pont, a narrow medieval stone bridge over the Seine in Paris at dawn, thick river mist, the two towers of Notre-Dame cathedral faint in the distance; a poor street entertainer in a patched hooded tunic, seen from behind, walks toward a small fortified stone gatehouse at the end of the bridge, a small brown monkey sitting on his shoulder"
+            "prompt": "Wide shot of the Petit-Pont, a narrow medieval stone bridge over the Seine in Paris at dawn, thick river mist, the two towers of Notre-Dame cathedral faint in the distance; a poor street entertainer in a patched hooded tunic, seen from behind, walks toward a small fortified stone gatehouse at the end of the bridge, a small brown monkey sitting on his shoulder",
+            "attempts": 0
           }
         },
         {
