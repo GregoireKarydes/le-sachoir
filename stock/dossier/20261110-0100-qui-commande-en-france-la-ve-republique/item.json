@@ -178,8 +178,9 @@
               "lucie"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {

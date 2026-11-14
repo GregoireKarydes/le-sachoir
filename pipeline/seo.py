@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import share_card  # noqa: E402
 SITE_CFG = json.loads((Path(__file__).parent / "site.json").read_text())
 BASE = SITE_CFG["base_url"].rstrip("/") + "/"
-COLOR = {"dossier": "#1f8f5f", "actu": "#2f4fa2", "cultureg": "#f2a33a", "insolite": "#d9473a"}
+COLOR = {"dossier": "#1f8f5f", "actu": "#2f4fa2", "cultureg": "#f2a33a", "insolite": "#d9473a", "notice": "#7a4fb8"}
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 POLES = {
     "Histoire": ["Histoire ancienne", "Histoire moderne", "Histoire de France", "Grandes personnalités", "Mythologies et religions"],
@@ -345,7 +345,7 @@ def build(site: Path, index: list, gate: bool = False):
         (out / "index.html").write_text(list_page(f"{t} en BD : toutes les histoires | Le Sachoir", f"{t}", f"Toutes les histoires du Sachoir sur le thème « {t} », racontées en BD humoristique et vérifiées.", lst, f"{BASE}themes/{slugify(t)}/"))
     # Archives
     (site / "archives").mkdir(exist_ok=True)
-    (site / "archives" / "index.html").write_text(list_page("Toutes les histoires du Sachoir en BD", "Toutes les histoires", "L’actu, la culture G, les histoires insolites et les grands dossiers du Sachoir, du plus récent au plus ancien.", public, f"{BASE}archives/"))
+    (site / "archives" / "index.html").write_text(list_page("Toutes les histoires du Sachoir en BD", "Toutes les histoires", "L’actu, la culture G, les histoires insolites, les Notices et les grands dossiers du Sachoir, du plus récent au plus ancien.", public, f"{BASE}archives/"))
     # Sitemap et robots
     urls = [(BASE, now), (f"{BASE}archives/", now), (f"{BASE}themes/", now)]
     urls += [(f"{BASE}themes/{slugify(t)}/", now) for t in themes]

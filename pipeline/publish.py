@@ -1,6 +1,6 @@
 """Publie l'édition du jour à partir de 5 h (heure de Paris) et reconstruit editions/index.json.
 
-File d'attente (8 novembre 2026) : dès 5 h, pour chaque type (Culture G, Insolite, Grand Dossier) qui manque
+File d'attente (8 novembre 2026) : dès 5 h, pour chaque type (Culture G, Insolite, La Notice, Grand Dossier) qui manque
 à l'édition du jour ou n'y est pas fini, on pioche la BD finie à 100 % la plus ancienne de `stock/` (en évitant
 le pôle de la veille et ceux des autres BD du jour). Une BD pas finie d'une édition du jour ou passée retourne
 en tête de file avec ses images : rien n'est perdu.

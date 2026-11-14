@@ -473,7 +473,7 @@ async function route(req, env, url, ctx) {
     if (p === "/admin/hide" && M === "POST") {
       const b = await body(req);
       // « actu:N » : un seul sujet de l'Actu (N à partir de 1), retiré à la relecture du soir.
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(b.ed || "") || !/^(dossier|actu|cultureg|insolite|quiz|actu:\d{1,2})$/.test(b.fid || "")) return err("BD inconnue.");
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(b.ed || "") || !/^(dossier|actu|cultureg|insolite|notice|quiz|actu:\d{1,2})$/.test(b.fid || "")) return err("BD inconnue.");
       if (b.hidden) await env.DB.prepare("INSERT OR IGNORE INTO hidden (ed, fid, created_at, by_email) VALUES (?, ?, ?, ?)").bind(b.ed, b.fid, nowIso(), u.email).run();
       else await env.DB.prepare("DELETE FROM hidden WHERE ed = ? AND fid = ?").bind(b.ed, b.fid).run();
       const rebuilt = await rebuildSite(env);

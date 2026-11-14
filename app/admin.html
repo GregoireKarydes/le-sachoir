@@ -114,7 +114,7 @@ const pct = (a, b) => b ? Math.round(100 * a / b) + " %" : "—";
 const shift = (iso, n) => { const d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const dShort = iso => new Date(iso + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
 const dLong = iso => new Date(iso + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
-const LBL = { dossier: "Le Grand Dossier", actu: "L’Actu du jour", cultureg: "Culture G", insolite: "Insolite", quiz: "Le jeu du jour" };
+const LBL = { dossier: "Le Grand Dossier", actu: "L’Actu du jour", cultureg: "Culture G", insolite: "Insolite", notice: "La Notice", quiz: "Le jeu du jour" };
 function toast(m) { const t = $("#toast"); t.textContent = m; t.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 2800); }
 
 async function api(path, opts = {}) {
@@ -180,7 +180,7 @@ function draw() {
   const A = K.audience, C = K.accounts, N = K.newsletter;
   const reads = evTotal("read"), done = evTotal("done");
   const mailsToday = K.mails.today.reduce((t, m) => t + m.n, 0);
-  const fmtRows = ["dossier", "actu", "cultureg", "insolite"].map(id => K.formats.find(f => f.fid === id) || { fid: id, opens: 0, done: 0, depth: null });
+  const fmtRows = ["dossier", "actu", "cultureg", "insolite", "notice"].map(id => K.formats.find(f => f.fid === id) || { fid: id, opens: 0, done: 0, depth: null });
   const runs = N.runs || [];
   const lastRun = runs[0];
   const st = STATUS || {};
@@ -189,7 +189,7 @@ function draw() {
   <h2>La chaîne de publication</h2><p class="note">État publié par le pipeline (status.json).</p>
   <div class="grid">
     ${tile(st.today_published ? "En ligne" : "Pas encore", "Édition du jour", st.today_stories ? esc(st.today_stories.map(x => LBL[x] || x).join(" · ")) : esc(dLong(K.today)), STATUS && !st.today_published ? "alert" : "")}
-    ${["dossier", "cultureg", "insolite"].map(t => st.stock?.[t] ? tile(nf(st.stock[t].ready), "BD prêtes : " + LBL[t], `${nf(st.stock[t].waiting)} en file · ${nf(st.stock[t].images_left)} image(s) à dessiner`, st.stock[t].ready < 1 ? "alert" : "") : "").join("")}
+    ${["dossier", "cultureg", "insolite", "notice"].map(t => st.stock?.[t] ? tile(nf(st.stock[t].ready), "BD prêtes : " + LBL[t], `${nf(st.stock[t].waiting)} en file · ${nf(st.stock[t].images_left)} image(s) à dessiner`, st.stock[t].ready < 1 ? "alert" : "") : "").join("")}
     ${tile(lastRun ? (lastRun.day === K.today ? (lastRun.status === "sent" ? "Envoyée" : lastRun.status === "failed" ? "Échec" : "En cours") : "Pas encore") : "Jamais", "Newsletter du jour", lastRun?.day === K.today ? nf(lastRun.recipients) + " destinataire(s)" : "part dès que l’édition est publiée", lastRun?.day === K.today && lastRun.status === "failed" ? "alert" : "")}
     ${tile(`${nf(mailsToday)} / ${nf(K.mails.limit)}`, "E-mails envoyés aujourd’hui", "quota gratuit Brevo", mailsToday > K.mails.limit * .85 ? "alert" : "")}
   </div>
@@ -311,14 +311,14 @@ async function users(q) {
 }
 
 /* ---------- BD à venir ---------- */
-const TYPES = { dossier: "Grands Dossiers", cultureg: "Culture G", insolite: "Insolites" };
+const TYPES = { dossier: "Grands Dossiers", cultureg: "Culture G", insolite: "Insolites", notice: "La Notice" };
 const QSTATUS = { ready: ["ok", "Prête"], waiting: ["wait", "En dessin"], blocked: ["ko", "Bloquée"] };
 const prog = r => `<div class="prog"><i><b style="width:${r.images_total ? Math.round(100 * r.images_done / r.images_total) : 0}%"></b></i><span>${nf(r.images_done)} / ${nf(r.images_total)} images${r.redo ? ` · ${r.redo} à refaire` : ""}${r.failed ? ` · ${r.failed} en échec` : ""}</span></div>`;
 async function loadQueue() {
   $("#main").classList.add("loading");
   try {
     const q = await api("/admin/queue");
-    const kinds = ["dossier", "cultureg", "insolite"];
+    const kinds = ["dossier", "cultureg", "insolite", "notice"];
     const tmw = new Date(Date.now() + 864e5).toLocaleDateString("en-CA", { timeZone: "Europe/Paris" });
     const nx = (q.editions || []).find(e => e.date === tmw), na = nx && nx.formats.find(f => f.id === "actu");
     const actuState = !na ? ["wait", "Pas encore écrite", "Écrite chaque soir vers 20 h"] : na.images_total && na.images_done < na.images_total ? ["wait", "En dessin", `${nf(na.images_done)} / ${nf(na.images_total)} images`] : ["ok", "Prête à relire", "Sort à 5 h telle quelle si vous ne faites rien"];

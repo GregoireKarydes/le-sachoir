@@ -7,7 +7,7 @@ L'ancienne charte publiée (https://claude.ai/artifact/X1ntQuLVCbehitA1mLZP5d) n
 On apprend en riant. Chaque BD explique et vulgarise un sujet exact, avec une vraie touche d'humour, et laisse au lecteur au moins un fait qu'il répétera le soir même.
 **On comprend d'abord, on rit ensuite.** Retour de Greg (7 novembre) : des BD drôles mais dures à lire, trop de gags et pas assez d'explications, on s'y perd. Une BD qu'on ne comprend pas est ratée, même si elle est drôle.
 
-## Clarté d'abord (Culture G, Insolite, Grand Dossier)
+## Clarté d'abord (Culture G, Insolite, La Notice, Grand Dossier)
 - **Un fil clair.** La case 1 pose la question que promet le titre (« Pourquoi les balcons sont-ils au 2e et au 5e ? »). Chaque case suivante fait avancer la réponse d'un cran, avec un lien logique visible (« parce que », « donc », « du coup »). L'avant-dernière case (ou la dernière) résume la réponse en une phrase simple.
 - **Le pourquoi avec chaque fait.** Pas de fait sec : on dit la cause ou la conséquence. « Pas d'ascenseur » ne suffit pas : « Pas d'ascenseur : monter six étages à pied, c'est pénible, donc les étages hauts coûtent moins cher. »
 - **Zéro jargon non expliqué.** Tout mot technique ou ancien est expliqué la première fois, en quelques mots (« un balcon filant, qui court sur toute la façade »). Un chiffre a toujours une comparaison ou une unité parlante.
@@ -36,7 +36,7 @@ Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'i
 ## Le casting : adapté à l'histoire
 - Les personnages sont **des humains** (figures historiques, témoins, scientifiques, gens ordinaires de l'époque) et, quand le sujet s'y prête vraiment, des animaux réels de l'histoire.
 - **Pas d'objets, de cellules, de molécules ni de billets qui parlent.** Pour expliquer un phénomène invisible, on le fait expliquer par un humain (un scientifique, un prof, un témoin), avec un objet ou un schéma dessiné à côté si besoin.
-- **Peu de personnages (13 novembre 2026, décision de Greg)** : **2 au plus** pour la Culture G et l'Insolite, **4 au plus** pour un Grand Dossier (et 2 par case), chacun résumé par un trait fort et visible de loin (couronne, chapeau haut-de-forme, barbe blanche, blouse de labo), reconnaissable dès sa première case. Moins il y a de personnages, moins le dessin les confond. Un figurant sans fiche (« un passant ») reste possible, de dos ou de loin. L'Actu n'est pas concernée (un sujet = une case).
+- **Peu de personnages (13 novembre 2026, décision de Greg)** : **2 au plus** pour la Culture G, l'Insolite et la Notice, **4 au plus** pour un Grand Dossier (et 2 par case), chacun résumé par un trait fort et visible de loin (couronne, chapeau haut-de-forme, barbe blanche, blouse de labo), reconnaissable dès sa première case. Moins il y a de personnages, moins le dessin les confond. Un figurant sans fiche (« un passant ») reste possible, de dos ou de loin. L'Actu n'est pas concernée (un sujet = une case).
 - **Le gag se voit (13 novembre 2026)** : dans au moins une case sur trois, l'image porte une partie du gag sans les bulles (objet absurde ou anachronique, posture exagérée, réaction muette en gros plan). Le prompt de la case décrit ce détail visuel précisément.
 - **Personnage lucide** pince-sans-rire qui dégonfle les légendes : seulement quand il est pertinent pour le sujet, pas systématique.
 - Figures historiques : sûres d'elles, décalées ; leurs répliques inventées sont visiblement des blagues ; une vraie citation est signalée dans le récitatif.
@@ -73,6 +73,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 | Actu du jour (`actu`) | environ 2 min | 4 à 6 sujets ; par sujet 1 case dessinée + 1 case « Ce qui se passe vraiment » | Le gag dans la case dessinée, l'explication neutre dans la case texte (voir plus bas) |
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par un duo curieux / qui sait ; un gag toutes les 2 ou 3 cases |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, raconté clairement ; un gag toutes les 2 ou 3 cases |
+| La Notice (`notice`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD : le mécanisme d'un objet ou d'un phénomène du quotidien (frigo, micro-ondes, avion qui vole…) expliqué par un duo curieux / qui sait ; un gag par case dessinée, chute en écho à la case 1 |
 | Grand Dossier (`dossier`) | environ 3 min | 24 au plus (8 novembre 2026, avant 30) | Humour dosé : la compréhension d'abord |
 | Jeu du jour (`quiz`), Quiz culture G | 1 à 2 min | 5 questions, sans image | Mauvaises réponses drôles mais plausibles, explication courte et drôle |
 | Jeu du jour (`quiz`), Quiz géo | 1 min | 3 questions : où c'est (carte), capitales, joker | Pièges crédibles, explication courte et drôle |
