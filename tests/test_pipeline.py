@@ -351,11 +351,17 @@ def check(fmt):
     return errs, warns
 
 
-def test_origine_valide_et_images_reprises():
-    errs, warns = check(origine(status="pending"))
-    assert errs == [] and warns == []
+def test_origine_images_reprises_ancien_format():
+    # Ancien format « écrans » (abandonné le 14 novembre) : toujours lisible, les écrans « image_of » ne se dessinent pas.
     assert publish.format_ready(origine()) and publish.pending_images(origine()) == 0
-    assert len(stock.images_of(origine())) == 4  # les écrans « image_of » ne se dessinent pas
+    assert len(stock.images_of(origine())) == 4
+
+
+def test_origine_est_une_bd_comme_les_autres():
+    s = story("origine", status="pending")
+    s["theme"] = "Expression française"
+    errs, _ = check(s)
+    assert errs == [] and "origine" in validate.FORMAT_IDS
 
 
 def test_origine_erreurs_signalees():
@@ -372,7 +378,7 @@ def test_origine_alterne_avec_la_notice(site, monkeypatch):
     write(site, "2026-11-09", [story("notice"), QUIZ])        # hier : la Notice
     write(site, "2026-11-10", [QUIZ])
     queue(site, "20261108-0900-n", story("notice"))
-    queue(site, "20261108-0901-o", origine())
+    queue(site, "20261108-0901-o", story("origine"))
     publish.main(datetime(2026, 11, 10, 5, 2, tzinfo=PARIS))
     ids = [f["id"] for f in json.loads((site / "editions" / "2026-11-10" / "edition.json").read_text())["formats"]]
     assert "origine" in ids and "notice" not in ids           # aujourd'hui : D'où ça vient ?, jamais les deux
@@ -384,15 +390,12 @@ def test_notice_remplace_si_pas_d_origine_prete(site, monkeypatch):
     write(site, "2026-11-09", [story("notice"), QUIZ])
     write(site, "2026-11-10", [QUIZ])
     queue(site, "20261108-0900-n", story("notice"))
-    queue(site, "20261108-0901-o", origine(status="pending"))
+    queue(site, "20261108-0901-o", story("origine", status="pending"))
     publish.main(datetime(2026, 11, 10, 5, 2, tzinfo=PARIS))
     ids = [f["id"] for f in json.loads((site / "editions" / "2026-11-10" / "edition.json").read_text())["formats"]]
     assert "notice" in ids and "origine" not in ids
 
 
-def test_prompt_origine_style_sachoir_bas_vide():
-    prompt, _ = images.build("a bridge at dawn", [], fmt={"id": "origine", "art": {"era": "1268"}}, panel=(1, 5))
-    assert images.STYLE["style"] in prompt and images.CINE["constraints"] in prompt
-    assert "top quarter" not in prompt and "bottom third is empty" in prompt
-    autre, _ = images.build("a bridge at dawn", [], fmt={"id": "cultureg"})
-    assert "top quarter" in autre
+def test_prompt_origine_comme_les_autres_bd():
+    prompt, _ = images.build("a sandy riverbank", [], fmt={"id": "origine", "art": {"era": "18th century"}}, panel=(1, 5))
+    assert images.STYLE["style"] in prompt and images.STYLE["constraints"] in prompt
