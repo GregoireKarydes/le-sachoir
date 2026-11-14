@@ -1,7 +1,273 @@
 {
   "date": "2026-11-15",
   "status": "draft",
+  "newsletter": {
+    "subject": "Un ciel fermé, trois oreillettes et un sapin-étendoir 🎄",
+    "intro": "Dimanche 15 novembre : les Bleus du rugby font tomber les Springboks, l’Amérique regarde ses avions dormir. Vous, restez couché : c’est dimanche.",
+    "game": "Cinq questions de culture G, un joker 50/50 offert, comme la grasse matinée.",
+    "ps": "P.-S. Ronaldinho rechausse les crampons à 46 ans. Si vous comptiez reprendre le footing lundi, vous n’avez plus d’excuse."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Un ciel fermé, trois oreillettes et neuf défaites oubliées",
+      "tagline": "La rue compte ses manifestants, les Bleus battent les Springboks, l’Amérique cloue ses avions au sol et trois présidents cherchent un interprète.",
+      "teaser": "Un compteur qui coupe la poire en deux, une interprète débordée et un contrôleur aérien très attaché à sa ficelle.",
+      "minutes": 4,
+      "theme": "",
+      "art": {
+        "subject": "four news stories of the week, each told in one gag panel",
+        "setting": "a Paris boulevard during a street march, a rugby stadium stand at night, an air traffic control room, a modern conference booth",
+        "era": "present day, November 2026",
+        "props": {
+          "clicker": "a small silver hand tally counter with a round button on top",
+          "calculator": "a small grey pocket calculator",
+          "tincans": "two shiny tin cans joined by a long taut piece of string",
+          "headsets": "three chunky headsets in three different colours, red, yellow and green, stacked on one head"
+        }
+      },
+      "cast": [
+        {
+          "id": "compteur",
+          "name": "Un compteur de manifestants",
+          "look": "a short, round ministry clerk in his fifties, light beige skin, neat grey hair with a side parting, thick black eyebrows, mustard yellow cardigan as main colour over a white shirt, brown trousers, small square black glasses",
+          "role": "the scrupulous official who counts everything and wants to upset no one; very serious, clicking with total concentration",
+          "file": "cast/actu-compteur.png",
+          "status": "pending"
+        },
+        {
+          "id": "supportrice",
+          "name": "Une supportrice des Bleus",
+          "look": "a tall, sporty rugby fan in her thirties, deep brown skin, big round afro puff hair, oversized bright blue rugby jersey with no number and no logo as main colour, a red and white stripe painted on one cheek, white jeans",
+          "role": "the fan who explains every victory with statistics; proud, triumphant, brandishing her calculator",
+          "file": "cast/actu-supportrice.png",
+          "status": "skipped"
+        },
+        {
+          "id": "controleur",
+          "name": "Un contrôleur aérien",
+          "look": "a lanky, very thin air traffic controller in his forties, pale pink skin, spiky ginger hair, bright orange short-sleeve shirt as main colour, grey trousers, a big black headset hanging around his neck",
+          "role": "the resourceful controller who keeps calm with whatever he has at hand; deadpan, very proud of his makeshift solution",
+          "file": "cast/actu-controleur.png",
+          "status": "pending"
+        },
+        {
+          "id": "interprete",
+          "name": "Une interprète",
+          "look": "a very upright, slim conference interpreter in her sixties, light olive skin, silver-white hair in a tight high bun, deep purple tailored suit as main colour, thin gold-rimmed glasses, a notepad and a pen",
+          "role": "the overworked interpreter who must handle three languages at once; stiff, eyes wide, trying to keep her dignity",
+          "file": "cast/actu-interprete.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "A plain empty hallway with a pale yellow background. compteur (short and round, grey side-parted hair, mustard yellow cardigan, square black glasses) on the left, clicking the clicker with intense concentration, tongue slightly out. controleur (lanky, very thin, spiky ginger hair, bright orange shirt) on the right, proudly holding one of the tincans to his ear, the string stretching out of frame, deadpan. Wide shot, calm empty space above.",
+        "cast": ["compteur", "controleur"],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Société",
+          "caption": "Samedi 14 novembre, cinquième samedi de mobilisation contre la vie chère : 106 000 manifestants selon le ministère de l’Intérieur, 200 000 selon les organisations de jeunesse.",
+          "bubbles": [
+            { "who": "compteur", "text": "J’en compte 153 000. Pile au milieu. Comme ça, personne n’est content.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "A wide Paris boulevard seen from a pavement, a long crowd of tiny simple marchers in the background holding blank signs, pale blue background. compteur (short and round, grey side-parted hair, mustard yellow cardigan, square black glasses) in the foreground on the right, standing on a small wooden crate, clicking the clicker with intense concentration, one eye squinting, tongue slightly out. Medium shot, calm empty space above.",
+            "cast": ["compteur"],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La place de la Nation, à Paris",
+          "text": "Le Triomphe de la République, statue de Jules Dalou au centre de la place de la Nation, où le cortège parisien est arrivé samedi.",
+          "photo": { "commons": "File:Paris 11e - Place de la Nation - Le Triomphe de la République (Jules Dalou) 01.jpg" }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Vie chère : un cinquième samedi dans la rue",
+          "text": "Quoi : gilets jaunes, syndicats étudiants et lycéens, associations ont défilé en France ; à Paris, de République à Nation.\nPourquoi ça compte : la mobilisation recule ; le 7 novembre, le ministère comptait 146 000 manifestants.\nEt maintenant : grève de la fonction publique mardi 17 novembre."
+        },
+        {
+          "n": 4,
+          "kind": "fact",
+          "tag": "Sport",
+          "caption": "Vendredi soir au Stade de France, le XV de France bat l’Afrique du Sud 21-19. Les Bleus avaient perdu neuf de leurs dix derniers matchs contre les Springboks.",
+          "bubbles": [
+            { "who": "supportrice", "text": "Neuf défaites sur dix. Statistiquement, celle-là, on nous la devait.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "A rugby stadium stand at night, rows of empty blue seats, pale green background. supportrice (tall and sporty, big round afro puff hair, oversized bright blue rugby jersey, red and white stripe on one cheek) on the left, standing on her seat, triumphantly holding the calculator high above her head like a trophy, the other fist raised, huge proud grin, yellow sparkles around the calculator. Medium shot, calm empty space above.",
+            "cast": ["supportrice"],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le Stade de France, à Saint-Denis",
+          "text": "Le Stade de France, à Saint-Denis, lors d’une finale de football en 2016 : environ 80 000 places, et la maison du XV de France.",
+          "photo": { "commons": "File:Le Stade de France lors de la finale de la Coupe de la Ligue 2015 - 2016.jpg" }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Rugby : les Bleus en tête de leur poule",
+          "text": "Quoi : la France marque trois essais en première période, puis tient bon jusqu’au bout.\nPourquoi ça compte : elle n’avait plus battu les Springboks au Stade de France depuis 2005, et compte quatre victoires en cinq matchs du Championnat des nations.\nEt maintenant : France-Argentine, samedi 21 novembre."
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Monde",
+          "caption": "Vendredi, l’agence américaine de l’aviation bloque tous les décollages aux États-Unis pendant plus de quatre heures : du matériel neuf a surchargé de vieux équipements de télécommunications.",
+          "bubbles": [
+            { "who": "controleur", "text": "Système de secours activé. Portée : trois mètres.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "An air traffic control room with one big dark radar screen and a desk, pale lilac background. controleur (lanky, very thin, spiky ginger hair, bright orange shirt, black headset around his neck) on the right, sitting very straight, holding one of the tincans to his mouth, the taut string running across the room to a tiny colleague far away holding the other tin can to his ear, deadpan proud expression. Medium wide shot, calm empty space above.",
+            "cast": ["controleur"],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un centre de contrôle aérien de la FAA",
+          "text": "L’entrée du centre de contrôle d’approche de la FAA à Vint Hill, en Virginie, qui guide les avions autour de Washington.",
+          "photo": { "commons": "File:FAA Potomac Consolidated TRACON.jpg" }
+        },
+        {
+          "n": 9,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "États-Unis : quatre heures sans décollage",
+          "text": "Quoi : la FAA a stoppé tous les décollages vendredi après des coupures de télécommunications.\nPourquoi ça compte : des milliers de vols annulés, encore samedi ; aucun signe de cyberattaque, selon le gouvernement.\nEt maintenant : le ministre des Transports réclame 50 milliards de dollars pour moderniser le contrôle aérien."
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "Diplomatie",
+          "caption": "La Maison-Blanche annonce une rencontre inédite à trois, dans les prochains jours à Shenzhen, en Chine : les présidents américain Donald Trump, chinois Xi Jinping et russe Vladimir Poutine.",
+          "bubbles": [
+            { "who": "interprete", "text": "Anglais, chinois, russe : trois oreillettes, et toujours une seule paire d’oreilles.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "A small modern interpreter booth with a glass window and a desk with a microphone, pale pink background. interprete (very upright and slim, silver-white high bun, deep purple suit, thin gold glasses) on the left, wearing the headsets stacked on her head, one over the other, eyes wide, sitting perfectly straight, pen frozen above her notepad, a tiny light-blue sweat drop on her temple. Medium shot, calm empty space above.",
+            "cast": ["interprete"],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Shenzhen, la ville du sommet",
+          "text": "Les tours de Shenzhen, dont le Ping An Finance Center : la métropole chinoise accueille cette année le sommet de l’APEC.",
+          "photo": { "commons": "File:Shenzhen Skyline Fuhua Road Ping An International Finance Center.jpg" }
+        },
+        {
+          "n": 12,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Trump, Xi et Poutine : un sommet à trois",
+          "text": "Quoi : les trois dirigeants doivent se voir en marge du sommet de l’APEC, le forum économique Asie-Pacifique.\nPourquoi ça compte : c’est leur première rencontre à trois ; Donald Trump veut parler arsenaux nucléaires.\nEt maintenant : Washington n’attend pas d’accord, et l’Ukraine ne serait pas au menu."
+        },
+        {
+          "n": 13,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Une salariée en télétravail",
+          "handle": "@MaBoiteMailVide",
+          "ago": "il y a 4 h",
+          "trend": "Panne Microsoft",
+          "text": "Jeudi soir, Outlook tombe. Vendredi, toujours rien. Première fois que ma boîte mail est vide et que je n’y suis pour rien.",
+          "why": "Une panne mondiale de Microsoft 365 a perturbé Outlook, Teams et OneDrive pendant plus de 29 heures, de jeudi à vendredi soir. Microsoft exclut une cyberattaque.",
+          "likes": "27 k",
+          "shares": "3 k",
+          "source": {
+            "title": "Selectra — Panne de Microsoft 365 : le récit heure par heure",
+            "url": "https://selectra.info/telecom/actualites/marche/panne-microsoft-365-direct-13-novembre-outlook"
+          }
+        },
+        {
+          "n": 14,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Un amateur de sapins",
+          "handle": "@TeamEpicea",
+          "ago": "il y a 6 h",
+          "trend": "Galeries Lafayette",
+          "text": "On compare le sapin des Galeries Lafayette à un étendoir à linge ? Parfait : cette année, les chaussettes se suspendent à côté des cadeaux.",
+          "why": "Le « sapin » 2026 des Galeries Lafayette Haussmann, signé Jean-Charles de Castelbajac, est une sculpture de branches colorées. Il divise les internautes depuis son inauguration jeudi.",
+          "likes": "15 k",
+          "shares": "2 k",
+          "source": {
+            "title": "Ulysse — « On ne dirait même pas un sapin de Noël » : les Galeries Lafayette bousculent les traditions",
+            "url": "https://ulysse.com/news/on-ne-dirait-meme-pas-un-sapin-de-noel-les-galeries-lafayette-bousculent-les-traditions-avec-leur-decor-de-noel-2026"
+          }
+        },
+        {
+          "n": 15,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Un nostalgique du ballon",
+          "handle": "@Pantoufles2005",
+          "ago": "il y a 2 h",
+          "trend": "Ronaldinho",
+          "text": "Ronaldinho revient à 46 ans en troisième division italienne. Moi, à 46 ans, je reviens surtout du canapé.",
+          "why": "Retraité depuis 2015, Ronaldinho doit rejouer dimanche 15 novembre avec Ravenne, en Serie C, contre Forlì. Il avait fini sa carrière à 299 buts.",
+          "likes": "41 k",
+          "shares": "5 k",
+          "source": {
+            "title": "ESPN — Ronaldinho at Ravenna: explaining comeback aged 46",
+            "url": "https://www.espn.com/soccer/story/_/id/50459813/ronaldinho-ravenna-how-watch-uk"
+          }
+        }
+      ],
+      "final": {
+        "text": "Le XV de France n’avait plus battu l’Afrique du Sud au Stade de France depuis 2005. C’est fait : 21-19, vendredi 13 novembre.",
+        "source": "Reuters / Boursorama"
+      },
+      "sources": [
+        { "title": "Le Monde via Titrespresse — Manifestations du 14 novembre : 106 000 personnes ont défilé samedi", "url": "https://www.titrespresse.com/29128572603/paris-manifestations-novembre" },
+        { "title": "CNews — Manifestations du 14 novembre : 106 000 manifestants en France, dont 24 000 à Paris", "url": "https://www.cnews.fr/france/2026-11-14/manifestations-du-14-novembre-106000-manifestants-en-france-dont-24000-paris-des" },
+        { "title": "ICI — Mobilisation du 14 novembre : 200 000 manifestants selon les syndicats, 106 000 selon le ministère", "url": "https://www.ici.fr/infos/societe/mobilisation-du-14-novembre-suivez-l-acte-v-des-manifestations-contre-la-vie-chere-et-pour-la-jeunesse-5378889" },
+        { "title": "Sortiraparis — Manifestations du 14 novembre à Paris : qui défile, où et quand", "url": "https://www.sortiraparis.com/actualites/a-paris/articles/358040-manifestations-du-14-novembre-a-paris-qui-defile-ou-et-quand-le-point" },
+        { "title": "Reuters via Boursorama — Le XV de France s’impose de justesse contre l’Afrique du Sud", "url": "https://www.boursorama.com/actualite-economique/actualites/rugby-le-xv-de-france-s-impose-de-justesse-contre-l-afrique-du-sud-391b83540073cd2ac426785c94670110" },
+        { "title": "Presse83 — France - Afrique du Sud : 21-19, le XV de France fait trembler le Stade de France", "url": "https://presse83.fr/2026/11/14/france-afrique-du-sud-21-19-le-xv-de-france-fait-trembler-le-stade-de-france/france-monde/nicolas-dupre/" },
+        { "title": "Al Jazeera — FAA ground stop lifted: why were US flights grounded, and what’s next?", "url": "https://www.aljazeera.com/news/2026/11/14/faa-ground-stop-lifted-why-were-us-flights-grounded-and-whats-next" },
+        { "title": "Fox Weather — Thousands of flights canceled as US air travel slowly recovers from nationwide ground stop", "url": "https://www.foxweather.com/weather-news/flights-canceled-delayed-us-ground-stop-november-2026" },
+        { "title": "Al Jazeera — Trump, Xi and Putin to hold first three-way summit in China", "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china" },
+        { "title": "US News (AP) — Trump, Xi and Putin plan an unprecedented joint meeting on the sidelines of APEC", "url": "https://www.usnews.com/news/politics/articles/2026-11-13/trump-xi-and-putin-plan-an-unprecedented-joint-meeting-on-the-sidelines-of-apec-officials-say" },
+        { "title": "Selectra — Panne de Microsoft 365 : Outlook, Teams et Copilot perturbés plus de 29 heures", "url": "https://selectra.info/telecom/actualites/marche/panne-microsoft-365-direct-13-novembre-outlook" },
+        { "title": "Franceinfo — Ce que l’on sait de la panne mondiale qui touche Microsoft", "url": "https://www.franceinfo.fr/internet/panne-informatique-mondiale/outlook-et-teams-perturbes-pas-de-cyberattaque-d-apres-microsoft-ce-que-l-on-sait-de-la-panne-mondiale-qui-touche-le-geant-americain-depuis-jeudi_8280671.html" },
+        { "title": "Ulysse — Les Galeries Lafayette bousculent les traditions avec leur décor de Noël 2026", "url": "https://ulysse.com/news/on-ne-dirait-meme-pas-un-sapin-de-noel-les-galeries-lafayette-bousculent-les-traditions-avec-leur-decor-de-noel-2026" },
+        { "title": "CNews — Le sapin de Noël des Galeries Lafayette divise les internautes", "url": "https://www.cnews.fr/france/2026-11-12/vilain-audacieux-etendoir-linge-le-sapin-de-noel-des-galeries-lafayette-paris" },
+        { "title": "ESPN — Ronaldinho at Ravenna: explaining comeback aged 46", "url": "https://www.espn.com/soccer/story/_/id/50459813/ronaldinho-ravenna-how-watch-uk" },
+        { "title": "Sky Sports — Ronaldinho returns: how to watch the Brazilian icon’s comeback", "url": "https://www.skysports.com/football/news/13610697/ronaldinho-returns-how-to-watch-brazilian-icons-comeback-live-on-sky-sports" }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "culture",
