@@ -50,32 +50,8 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
 }
 ```
 
-## « D'où ça vient ? » : écrans façon carrousel (`"id": "origine"`, `"kind": "cine"`, 14 novembre 2026)
-L'origine d'une expression très connue, en 8 à 10 écrans : un dessin dans le style du Sachoir (le bas de l'image reste vide), et quelques lignes posées par l'appli sur un bandeau sombre en bas. Règles d'écriture : `prompts/STOCK.md`, section « D'où ça vient ? ».
-
-```json
-{
-  "id": "origine",
-  "label": "D’où ça vient ?",
-  "title": "« Payer en monnaie de singe »",
-  "tagline": "Pour traverser ce pont, certains payaient en grimaces.",
-  "theme": "Expression française",
-  "minutes": 1,
-  "art": {"subject": "a medieval toll at a Paris bridge where a showman's monkey performs tricks instead of paying", "setting": "the Petit-Pont toll gate in Paris, by the Seine, Notre-Dame in the distance", "era": "13th century, Paris under Saint Louis", "props": {"gatehouse": "a small stone gatehouse with one round arched gate"}},
-  "cast": [{"id": "jehan", "name": "Jehan, le montreur de singes", "look": "Jehan, a skinny lanky medieval street entertainer, …, patched green tunic as main colour, …", "role": "…", "file": "cast/origine-jehan.png"}],
-  "cases": [
-    {"n": 1, "kind": "cine", "text": "Pour traverser ce pont,\nil fallait payer.\nCertains payaient\nen *grimaces*.",
-     "image": {"file": "images/origine-01.webp", "status": "pending", "cast": ["jehan"], "prompt": "The Petit-Pont, a narrow medieval stone bridge over the Seine at sunrise; Jehan walks toward a small stone gatehouse, his monkey on his shoulder"}},
-    {"n": 2, "kind": "cine", "text": "Paris, XIIIe siècle.\nPour franchir le Petit-Pont,\non paie un *péage*.", "image_of": 1, "zoom": 1.2, "focus": "40% 30%"}
-  ],
-  "final": {"text": "…", "source": "…"},
-  "story": "…", "teaser": "…", "sources": [{"title": "…", "url": "https://…"}]
-}
-```
-- `text` : 25 mots au plus, lignes séparées par `\n`, **un seul** mot ou groupe de mots clé entre astérisques (affiché en jaune).
-- `image` (un plan dessiné) **ou** `image_of` (numéro d'un écran précédent qui a sa propre image), jamais les deux ; 5 ou 6 images au plus. `zoom` (1 à 1,6) et `focus` (« X% Y% », le point vers lequel on zoome) recadrent l'image reprise, ou la sienne.
-- Pas de `bubbles`, pas de `caption`, pas de case `explain` ou `photo`, pas de `cover` ; 2 personnages au plus au casting, avec fiche.
-- Le prompt s'écrit comme pour les autres BD (scène, personnages, couleurs) ; le style du Sachoir et la consigne « bas de l'image vide » sont ajoutés par le pipeline.
+## « D'où ça vient ? » (`"id": "origine"`, 14 novembre 2026)
+Une micro-BD **au format habituel** (cases dessinées avec `caption` et `bubbles`, cases `explain` et `photo`, `cast` de 2 personnages au plus), comme La Notice : label « D’où ça vient ? », `theme` « Expression française ». Règles d'écriture : `prompts/STOCK.md`, section « D'où ça vient ? ». (Les écrans `"kind": "cine"` d'un premier essai ne s'écrivent plus.)
 
 ## « Pour mieux comprendre » : case de texte sans image (`"kind": "explain"`)
 Une case de texte glissée dans la BD, entre deux cases dessinées, là où le lecteur risque de décrocher (un mécanisme, une notion, un ordre de grandeur). Elle ne coûte aucune image.

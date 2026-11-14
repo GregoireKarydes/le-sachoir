@@ -26,7 +26,7 @@ CAST_STATUS = {None, "pending", "done", "skipped", "failed"}
 THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
 CAPTION_MAX, BUBBLE_MAX = 20, 15  # mots, d'après prompts/CHARTE.md (7 novembre 2026 : plus de place pour expliquer)
 MAX_CAST = {"cultureg": 2, "insolite": 2, "notice": 2, "origine": 2, "dossier": 4}  # 13 novembre 2026 : moins de personnages, moins de confusions au dessin
-MAX_CASES = {"dossier": 24, "notice": 5, "origine": 6}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30) ; 14 novembre : micro-BD La Notice
+MAX_CASES = {"dossier": 24, "notice": 5, "origine": 5}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30) ; 14 novembre : micro-BD La Notice
 EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
 PHOTO_MAX = 45  # case photo : légende courte
 ACTU_CAPTION_MAX, ACTU_EXPLAIN_MAX = 30, 50  # 8 novembre 2026 : Actu = 1 case dessinée (récitatif chargé, 1 bulle) + 1 case « Ce qui se passe vraiment »
@@ -153,8 +153,8 @@ def check_story(fmt: dict, d: Path, err, warn):
         err("aucune case")
         return
     drawn = [c for c in cases if isinstance(c, dict) and c.get("kind") not in ("explain", "photo", "buzz") and not c.get("image_of")]
-    if fid == "origine":
-        check_cine(cases, err, warn)
+    if any(isinstance(c, dict) and c.get("kind") == "cine" for c in cases):
+        check_cine(cases, err, warn)  # ancien format écrans (14 novembre 2026), abandonné le jour même
     # « Pendant ce temps, sur Internet » (13 novembre 2026) : 3 cases à la fin de l'Actu, réécrites par nous.
     buzz = [c for c in cases if isinstance(c, dict) and c.get("kind") == "buzz"]
     if buzz and fid != "actu":
@@ -193,7 +193,7 @@ def check_story(fmt: dict, d: Path, err, warn):
             warn(f"case dessinée {i} : plus de 2 personnages avec fiche dans l'image")
     # 9 novembre 2026 (Greg) : des vraies images souvent, ça rend l'histoire réelle. Signalé pour que la tâche Stock en ajoute.
     n_photo = sum(1 for c in cases if isinstance(c, dict) and c.get("kind") == "photo")
-    want = {"cultureg": 1, "insolite": 1, "notice": 1, "dossier": 2}.get(fid, 0)  # D'où ça vient ? : pas de photo
+    want = {"cultureg": 1, "insolite": 1, "notice": 1, "origine": 1, "dossier": 2}.get(fid, 0)
     if n_photo < want:
         warn(f"{n_photo} vraie(s) photo(s) (« kind »: « photo »), il en faut au moins {want} si un document libre existe")
     if fid != "actu":

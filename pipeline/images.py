@@ -497,12 +497,8 @@ def build(scene: str, cast: list[tuple], fmt: dict | None = None,
     where = f"Panel {panel[0]} of {panel[1]} of the same comic strip. " if panel else ""
     logic = " Everything must make sense for this moment of the story: right people, right objects, right place, nothing random."
     # Les consignes impératives (pas de texte, haut libre) passent avant le style : jamais coupées si le prompt est long.
-    rules = CINE.get("constraints", STYLE["constraints"]) if fmt.get("id") == "origine" else STYLE["constraints"]
     return (f"{where}Scene: {_clean(scene)}.{story_context(fmt)}{chars}{props_for(fmt, scene)}{logic} "
-            f"{rules} {head}{STYLE['style']}"), refs
-
-
-CINE = STYLE.get("cine") or {}  # « D'où ça vient ? » : même style, mais le bas de l'image reste vide pour le texte
+            f"{STYLE['constraints']} {head}{STYLE['style']}"), refs
 
 
 def editions_to_process():

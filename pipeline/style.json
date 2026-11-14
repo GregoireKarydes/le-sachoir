@@ -107,9 +107,5 @@
     "monthly_usd": 5.0,
     "safety_tolerance": "2",
     "note": "13 novembre 2026, décision de Greg : un meilleur modèle (FLUX.2 [pro], environ 0,045 $ l'image) pour la couverture et la première case de chaque BD, celles qui décident si on lit. Plafonds propres (0,20 $ par jour, 5 $ par mois) à l'intérieur du plafond fal.ai global (fal_monthly_usd) ; au-delà, retour au modèle habituel. Jamais pour les images à refaire."
-  },
-  "cine": {
-    "constraints": "One single full-bleed illustration, edge to edge, no panel borders. Wordless picture: no text, no lettering, no speech bubbles; any sign, board, coin or screen is blank. The scene sits in the upper 60 % of the picture; the bottom third is empty plain background (just the floor or ground colour, nothing else), because text will be laid over it. Every face and every hand is drawn in a skin colour (never filled in black, grey or a solid dark shape), with visible eyes and mouth.",
-    "note": "14 novembre 2026 : « D'où ça vient ? » (format origine) dessiné dans le style du Sachoir (Greg : « je ne veux pas un style réaliste, je veux mon style Le Sachoir »). Seules les consignes changent : le bas de l'image reste vide pour le texte posé par l'appli (au lieu du haut pour les bulles)."
   }
 }
