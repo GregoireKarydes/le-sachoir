@@ -160,15 +160,14 @@
             }
           ],
           "image": {
-            "prompt": "Charles (on the right) standing extremely tall, ducking his head under a low ceiling, hands behind his back, proud and serious; Lucie (on the left) looking up at him, craning her neck all the way back, tiny next to him, pink blush. plain background. medium shot",
+            "prompt": "a simple office with a big wooden desk and one blank sheet of paper on it. Charles (on the right) standing very tall behind the desk, holding a fountain pen, calm and serious; Lucie (on the left) looking up at him, small, smiling, pink blush. medium shot",
             "cast": [
               "gaulle",
               "lucie"
             ],
             "file": "images/dossier-05.webp",
-            "status": "failed",
-            "attempts": 3,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (d0efe6f5-6d10-4c63-b564-3f6ef409dcfa)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -817,6 +816,5 @@
         }
       }
     }
-  ],
-  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
+  ]
 }
