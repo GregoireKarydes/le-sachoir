@@ -1,0 +1,259 @@
+{
+  "added": "20261114-0400",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "La statue de la Liberté a d’abord postulé en Égypte",
+      "tagline": "Avant New York, Bartholdi avait proposé une géante à torche pour le canal de Suez. Refusée : trop chère.",
+      "teaser": "La plus célèbre Américaine est française. Et avant de traverser l’Atlantique, elle a raté un entretien d’embauche au bord du canal de Suez.",
+      "minutes": 1,
+      "theme": "Arts plastiques",
+      "cast": [
+        {
+          "id": "bartholdi",
+          "name": "Auguste Bartholdi",
+          "look": "Auguste, a short energetic French sculptor in his thirties in the 1860s, stocky build, big bushy dark brown beard and moustache, wavy dark hair, light peach skin, bright royal blue frock coat as main colour over a white shirt, grey trousers, always carrying a large sketchbook and a pencil",
+          "file": "cast/insolite-bartholdi.png",
+          "status": "pending",
+          "role": "the over-enthusiastic sculptor who only thinks in giant sizes; bouncing on his toes, waving his sketchbook"
+        },
+        {
+          "id": "ismail",
+          "name": "Le khédive Ismaïl",
+          "look": "Ismail, the plump ruler of Egypt in his late thirties in the 1860s, round belly, neat short grey-black beard, light brown skin, tall bright red fez with a black tassel, dark green long buttoned Ottoman frock coat as main colour with a few gold medals, a string of amber prayer beads in one hand",
+          "file": "cast/insolite-ismail.png",
+          "status": "pending",
+          "role": "the polite but broke ruler who listens and then says no; seated, calm, counting his beads, sighing"
+        }
+      ],
+      "cover": {
+        "prompt": "a sandy canal bank with a big ship in the distance. Auguste (short, bushy dark beard, royal blue frock coat) on the left holding up a large sketch of a giant woman raising a torch, beaming, yellow sparkles; Ismail (plump, red fez, dark green frock coat) on the right turning out his empty pockets with an apologetic smile. wide shot",
+        "cast": [
+          "bartholdi",
+          "ismail"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "New York, 1886",
+          "caption": "Inaugurée à New York en 1886, la statue de la Liberté est française. Mais l’Amérique n’était pas son premier projet.",
+          "bubbles": [
+            {
+              "who": "Un passant",
+              "text": "Elle a toujours voulu être américaine ?",
+              "side": "l"
+            },
+            {
+              "who": "bartholdi",
+              "text": "Pas du tout. Elle a d’abord postulé en Égypte.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a harbour quay with the green Statue of Liberty small in the far background. a passer-by in a bowler hat seen from behind on the left, looking up at it; Auguste (short, bushy dark beard, royal blue frock coat) on the right leaning in with a hand cupped by his mouth as if telling a secret, mischievous grin. medium shot",
+            "cast": [
+              "bartholdi"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "1855",
+          "caption": "En Égypte, le jeune sculpteur de Colmar découvre les statues géantes des pharaons. Il rêve de faire aussi grand.",
+          "bubbles": [
+            {
+              "who": "bartholdi",
+              "text": "Des pharaons hauts comme des immeubles ! Je veux la même chose.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the foot of a gigantic seated ancient Egyptian stone statue, only its huge stone feet and knees visible. Auguste (short, bushy dark beard, royal blue frock coat) tiny at the bottom, head tilted all the way back, sketchbook open, eyes shining, small red hearts. low angle, wide shot",
+            "cast": [
+              "bartholdi"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "1867-1869",
+          "caption": "Pendant le percement du canal de Suez, il propose au khédive, souverain de l’Égypte, un phare géant pour son entrée.",
+          "bubbles": [
+            {
+              "who": "bartholdi",
+              "text": "Une paysanne égyptienne qui lève une torche pour guider les bateaux !",
+              "side": "l"
+            },
+            {
+              "who": "ismail",
+              "text": "Un phare avec des bras. C’est nouveau.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a palace room with a low cushioned sofa and a small brass table. Auguste (short, bushy dark beard, royal blue frock coat) on the left unrolling a huge sketch of a giant woman holding up a torch, the paper rolling far across the floor; Ismail (plump, red fez, dark green frock coat) on the right seated on the sofa, leaning forward politely, counting his amber beads. medium shot",
+            "cast": [
+              "bartholdi",
+              "ismail"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Le projet",
+          "title": "« L’Égypte apportant la lumière à l’Asie »",
+          "steps": [
+            "Où : Port-Saïd, à l’entrée nord du canal de Suez",
+            "Quoi : une paysanne égyptienne qui brandit une torche",
+            "À quoi ça sert : un phare pour les navires",
+            "Taille prévue : environ 26 mètres, sur un socle de 15 mètres"
+          ],
+          "joke": "Une statue qui fait phare. Ou un phare qui fait statue."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "1869",
+          "caption": "Refus : l’Égypte a déjà dépensé des fortunes pour le canal. La statue coûte trop cher, on construit un phare classique.",
+          "bubbles": [
+            {
+              "who": "ismail",
+              "text": "Le canal a vidé mes caisses. Votre dame attendra.",
+              "side": "r"
+            },
+            {
+              "who": "bartholdi",
+              "text": "Elle attendra… ailleurs.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the same palace room. Ismail (plump, red fez, dark green frock coat) on the right standing and turning out both empty coat pockets, a single moth flying out, apologetic shrug; Auguste (short, bushy dark beard, royal blue frock coat) on the left hugging his rolled-up sketch to his chest, shoulders drooping, light-blue sweat drop. medium shot",
+            "cast": [
+              "ismail",
+              "bartholdi"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Auguste Bartholdi",
+          "text": "Le sculpteur alsacien (1834-1904), photographié par Napoleon Sarony. Après l’échec égyptien, il garde son idée de géante à torche dans ses cartons.",
+          "photo": {
+            "commons": "File:Frederic Auguste Bartholdi.jpg"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "1871-1886",
+          "caption": "Bartholdi recycle l’idée : la paysanne devient une déesse drapée à la grecque, torche levée. Direction New York.",
+          "bubbles": [
+            {
+              "who": "bartholdi",
+              "text": "Même pose, même torche. Juste une nouvelle robe.",
+              "side": "r"
+            },
+            {
+              "who": "Un passant",
+              "text": "Et un nouveau continent.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a sculptor's workshop with a large plaster model of a woman raising a torch, draped in a simple Greek toga. Auguste (short, bushy dark beard, royal blue frock coat) on the right throwing a toga-like sheet over the model with a flourish like a magician; a passer-by in a bowler hat on the left, seen from behind, applauding. medium shot",
+            "cast": [
+              "bartholdi"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "La Liberté est née d’un phare refusé par l’Égypte, faute d’argent. Bartholdi l’a rhabillée pour l’Amérique.",
+          "bubbles": [
+            {
+              "who": "bartholdi",
+              "text": "Refusée à Suez, adorée à New York.",
+              "side": "r"
+            },
+            {
+              "who": "ismail",
+              "text": "J’aurais peut-être dû payer.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a split scene: on the right Auguste (short, bushy dark beard, royal blue frock coat) on a harbour quay proudly presenting a tiny green Statue of Liberty in the distance, chest out, yellow sparkles; on the left Ismail (plump, red fez, dark green frock coat) peeking at a newspaper-sized blank picture of the statue, biting his lip, regretful. wide shot",
+            "cast": [
+              "bartholdi",
+              "ismail"
+            ],
+            "file": "images/insolite-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Vers 1867-1869, Bartholdi proposa à l’Égypte une statue-phare à torche pour le canal de Suez ; refusée, l’idée nourrit la statue de la Liberté.",
+        "source": "Musée d’Orsay — Liberté éclairant le monde"
+      },
+      "story": "Le sculpteur Auguste Bartholdi, né à Colmar, visite l’Égypte en 1855. Les statues colossales des pharaons le fascinent et lui donnent l’envie de créer, lui aussi, une œuvre gigantesque.\nEntre 1867 et 1869, pendant le percement du canal de Suez, il propose au khédive Ismaïl, souverain de l’Égypte, un phare monumental pour l’entrée nord du canal, à Port-Saïd. Son titre : « L’Égypte apportant la lumière à l’Asie ». Il s’agit d’une paysanne égyptienne qui brandit une torche, haute d’environ 26 mètres sur un socle de 15 mètres, inspirée du colosse de Rhodes. Mais l’Égypte s’est lourdement endettée pour creuser le canal : le khédive refuse, jugeant le projet trop coûteux. En 1869, c’est un phare classique qui est construit à Port-Saïd.\nBartholdi ne renonce pas à son idée. Il la transforme : la paysanne devient une figure drapée à la grecque, la lumière se concentre dans la torche levée. En 1871, il part aux États-Unis et repère l’île où elle se dressera. Gustave Eiffel conçoit la structure métallique intérieure, et « La Liberté éclairant le monde » est inaugurée à New York le 28 octobre 1886. La plus célèbre statue américaine est donc française… et a d’abord été pensée pour l’Égypte.",
+      "sources": [
+        {
+          "title": "Musée d’Orsay — Liberté éclairant le monde, Auguste Bartholdi",
+          "url": "https://www.musee-orsay.fr/fr/oeuvres/liberte-4813"
+        },
+        {
+          "title": "Wikipedia — Egypt Carrying the Light to Asia",
+          "url": "https://en.wikipedia.org/wiki/Egypt_Carrying_the_Light_to_Asia"
+        },
+        {
+          "title": "Britannica — Who Was the Woman Behind the Statue of Liberty?",
+          "url": "https://www.britannica.com/story/who-was-the-woman-behind-the-statue-of-liberty"
+        },
+        {
+          "title": "RTBF — À l’origine, la statue de la Liberté devait être offerte aux Égyptiens",
+          "url": "https://www.rtbf.be/article/la-minute-historique-a-l-origine-la-statue-de-la-liberte-devait-etre-offerte-aux-egyptiens-11382842"
+        }
+      ],
+      "art": {
+        "subject": "how Bartholdi's rejected giant lighthouse statue for the Suez Canal became the Statue of Liberty",
+        "setting": "the feet of a colossal ancient Egyptian statue, an Egyptian palace room with a low sofa, a sandy Suez canal bank, a Paris sculptor's workshop, a New York harbour quay",
+        "era": "1855 to 1886, Egypt, France and New York",
+        "props": {
+          "sketch": "a large rolled paper sketch of a giant robed woman raising a torch",
+          "beads": "a string of amber prayer beads"
+        }
+      }
+    }
+  ]
+}
