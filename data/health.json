@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T09:10:32.140867+01:00",
+ "updated_at": "2026-11-14T09:11:25.441508+01:00",
  "today": "2026-11-14",
  "problems": [],
  "days": [
@@ -104,18 +104,27 @@
    "next": "20261113-0100-la-plus-longue-frontiere-de-la-france-av",
    "next_redo": 0
   },
-  "dossier": {
+  "notice": {
    "ready": 0,
-   "waiting": 3,
+   "waiting": 0,
    "blocked": 0,
-   "images_left": 27,
-   "focus": "20261110-0100-qui-commande-en-france-la-ve-republique (1 image(s) à faire)",
+   "images_left": 0,
+   "focus": null,
    "next": null,
+   "next_redo": 0
+  },
+  "dossier": {
+   "ready": 1,
+   "waiting": 2,
+   "blocked": 0,
+   "images_left": 26,
+   "focus": "20261113-1926-jeux-olympiques-baron-tetu (7 image(s) à faire)",
+   "next": "20261110-0100-qui-commande-en-france-la-ve-republique",
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 3,
+ "days_ahead_written": 0,
  "quiz_days_ahead": 8,
  "quota": {
   "day": "2026-11-14",
@@ -129,9 +138,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.21251,
-  "images": 120,
-  "today_usd": 0.18,
+  "spent_usd": 1.2215,
+  "images": 121,
+  "today_usd": 0.18899,
   "blocked": null
  }
 }

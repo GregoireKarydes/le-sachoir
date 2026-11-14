@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T09:10+01:00",
+ "updated_at": "2026-11-14T09:11+01:00",
  "stock": {
   "cultureg": [
    {
@@ -175,20 +175,21 @@
     "redo": 0
    }
   ],
+  "notice": [],
   "dossier": [
    {
     "path": "stock/dossier/20261110-0100-qui-commande-en-france-la-ve-republique",
     "name": "20261110-0100-qui-commande-en-france-la-ve-republique",
     "added": "20261110-0100",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "Qui commande en France ? La Ve République, mode d’emploi",
     "theme": "Politique française",
     "tagline": "De Gaulle, le 49.3, la cohabitation : la Constitution de 1958 démontée pièce par pièce",
     "minutes": 5,
     "cases": 32,
     "photos": 2,
-    "images_done": 25,
+    "images_done": 26,
     "images_total": 26,
     "failed": 0,
     "redo": 0
