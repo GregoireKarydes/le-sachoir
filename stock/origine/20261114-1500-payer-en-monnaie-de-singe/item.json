@@ -10,7 +10,7 @@
       "minutes": 1,
       "theme": "Expression française",
       "art": {
-        "subject": "the origin of the French saying 'payer en monnaie de singe' (to pay in monkey money)",
+        "subject": "a medieval toll at a Paris bridge where a street entertainer's monkey performs tricks instead of paying",
         "setting": "the Petit-Pont, a narrow stone bridge over the Seine in Paris, and the Petit Chatelet, the small fortified gatehouse at its end where the toll was collected; Notre-Dame in the distance",
         "era": "Moyen Âge — Paris around 1268, under King Louis IX (Saint Louis)",
         "props": {
@@ -67,7 +67,8 @@
               "peager"
             ],
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -77,12 +78,13 @@
           "image": {
             "file": "images/origine-03.webp",
             "status": "done",
-            "prompt": "At the arched gate, a plump merchant in a yellow tunic holds a small monkey in a wicker cage and drops four small blank coins into the toll keeper's open hand; the toll keeper nods",
+            "prompt": "At the arched gate, a young thin merchant with curly brown hair and no beard, in a yellow tunic, holds a small monkey in a wicker cage and drops four small blank coins into the toll keeper's open hand; the toll keeper nods",
             "cast": [
               "peager"
             ],
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -98,7 +100,8 @@
               "peager"
             ],
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -116,13 +119,14 @@
           "image": {
             "file": "images/origine-06.webp",
             "status": "done",
-            "prompt": "In front of the arched gate, the little brown monkey does a big somersault on the cobblestones while Jehan claps proudly; the toll keeper watches, mouth open, his tally stick falling from his hand",
+            "prompt": "In front of the arched gate, the little brown monkey jumps in the air doing a big somersault above the cobblestones while Jehan claps proudly; the toll keeper watches, mouth wide open, his tally stick falling from his hand",
             "cast": [
               "jehan",
               "peager"
             ],
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
