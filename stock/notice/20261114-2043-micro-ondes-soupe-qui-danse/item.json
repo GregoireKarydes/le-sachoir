@@ -25,24 +25,30 @@
           "name": "Léa",
           "look": "Léa, a short round young woman in her twenties, big messy bun of curly bright red hair, freckles, light peach skin, oversized bright green hoodie as main colour, grey jogging pants, fluffy pink slippers",
           "file": "cast/notice-lea.png",
-          "status": "pending",
-          "role": "the hungry, curious flatmate who asks the reader's questions; slouchy, always holding the soup bowl or a spoon"
+          "status": "done",
+          "role": "the hungry, curious flatmate who asks the reader's questions; slouchy, always holding the soup bowl or a spoon",
+          "via": "fal"
         },
         {
           "id": "spencer",
           "name": "Percy Spencer",
           "look": "Percy Spencer, a very tall and thin 1940s American engineer in his fifties, grey hair neatly combed back, small round wire glasses, light peach skin, mustard brown three-piece tweed suit as main colour, a dark red bow tie, a screwdriver sticking out of his breast pocket",
           "file": "cast/notice-spencer.png",
-          "status": "pending",
-          "role": "the self-taught inventor who explains simply and is very proud of his accident; stands straight, explains with one finger raised"
+          "status": "done",
+          "role": "the self-taught inventor who explains simply and is very proud of his accident; stands straight, explains with one finger raised",
+          "via": "fal"
         }
       ],
       "cover": {
         "prompt": "a small modern kitchen with the microwave on the counter. Léa (short, round, curly red bun, bright green hoodie) on the left peering through the microwave door window with her nose pressed against it, amazed; Percy Spencer (very tall, thin, round glasses, mustard tweed suit) on the right proudly pulling a melted chocolate bar out of his trouser pocket, chocolate dripping. wide shot",
-        "cast": ["lea", "spencer"],
+        "cast": [
+          "lea",
+          "spencer"
+        ],
         "file": "images/notice-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -51,15 +57,27 @@
           "tag": "Ce soir",
           "caption": "Léa réchauffe sa soupe au micro-ondes. Pas de flamme, pas de plaque. Alors d’où vient la chaleur ?",
           "bubbles": [
-            { "who": "lea", "text": "Il n’y a même pas de résistance là-dedans !", "side": "l" },
-            { "who": "spencer", "text": "Normal : il fait chauffer l’eau de votre soupe, de l’intérieur.", "side": "r" }
+            {
+              "who": "lea",
+              "text": "Il n’y a même pas de résistance là-dedans !",
+              "side": "l"
+            },
+            {
+              "who": "spencer",
+              "text": "Normal : il fait chauffer l’eau de votre soupe, de l’intérieur.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a small modern kitchen with the microwave on the counter, door open. Léa (short, round, curly red bun, bright green hoodie) on the left holding the bowl, peering inside the empty microwave with a suspicious frown; Percy Spencer (very tall, thin, round glasses, mustard tweed suit) on the right leaning in calmly, one finger raised like a teacher. medium shot",
-            "cast": ["lea", "spencer"],
+            "cast": [
+              "lea",
+              "spencer"
+            ],
             "file": "images/notice-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -68,15 +86,27 @@
           "tag": "Le principe",
           "caption": "Au fond de l’appareil, un tube appelé magnétron fabrique des ondes invisibles, des cousines des ondes radio.",
           "bubbles": [
-            { "who": "lea", "text": "Des ondes radio ? Ma soupe écoute la radio ?", "side": "l" },
-            { "who": "spencer", "text": "Elle danse, plutôt. Au rythme de 2,45 milliards de fois par seconde.", "side": "r" }
+            {
+              "who": "lea",
+              "text": "Des ondes radio ? Ma soupe écoute la radio ?",
+              "side": "l"
+            },
+            {
+              "who": "spencer",
+              "text": "Elle danse, plutôt. Au rythme de 2,45 milliards de fois par seconde.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "close-up on the kitchen counter. Percy Spencer (very tall, thin, round glasses, mustard tweed suit) on the right holding up the magnetron like a trophy; Léa (short, round, curly red bun, bright green hoodie) on the left bending over the bowl, staring at the green soup whose surface has tiny wiggly lines as if it were dancing, eyebrows raised. medium close-up",
-            "cast": ["lea", "spencer"],
+            "cast": [
+              "lea",
+              "spencer"
+            ],
             "file": "images/notice-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -98,15 +128,27 @@
           "tag": "Et le plateau ?",
           "caption": "Les ondes rebondissent sur les parois en métal : certains endroits chauffent plus que d’autres. D’où le plateau tournant.",
           "bubbles": [
-            { "who": "lea", "text": "Il tourne pour faire joli, non ?", "side": "l" },
-            { "who": "spencer", "text": "Pour que chaque bout de soupe passe dans les zones chaudes.", "side": "r" }
+            {
+              "who": "lea",
+              "text": "Il tourne pour faire joli, non ?",
+              "side": "l"
+            },
+            {
+              "who": "spencer",
+              "text": "Pour que chaque bout de soupe passe dans les zones chaudes.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the same kitchen, wide shot of the microwave with the bowl turning on the glass turntable. Léa (short, round, curly red bun, bright green hoodie) on the left crouching at eye level with the window, her head turning in circles with the bowl, dizzy spiral eyes; Percy Spencer (very tall, thin, round glasses, mustard tweed suit) on the right drawing a circle in the air with his finger, patient. wide shot",
-            "cast": ["lea", "spencer"],
+            "cast": [
+              "lea",
+              "spencer"
+            ],
             "file": "images/notice-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -115,7 +157,15 @@
           "tag": "En vrai",
           "title": "Un ancien micro-ondes Raytheon",
           "text": "Un four Raytheon, la firme de Percy Spencer, conservé à bord du navire Savannah, à Baltimore. Même principe que le vôtre, en plus costaud.",
-          "photo": { "commons": "File:NS Savannah microwave oven MD8.jpg" }
+          "photo": {
+            "commons": "File:NS Savannah microwave oven MD8.jpg",
+            "credit": "Acroterion",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:NS_Savannah_microwave_oven_MD8.jpg",
+            "file": "images/photo-5-ns-savannah-microwave-oven-md8-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -123,12 +173,23 @@
           "tag": "1945",
           "caption": "Percy Spencer fabrique des magnétrons pour les radars. Un jour, la barre chocolatée dans sa poche fond près d’un tube allumé.",
           "bubbles": [
-            { "who": "spencer", "text": "J’ai inventé le micro-ondes avec ma poche de pantalon.", "side": "r" },
-            { "who": "lea", "text": "Et vous avez mangé le chocolat ?", "side": "l" }
+            {
+              "who": "spencer",
+              "text": "J’ai inventé le micro-ondes avec ma poche de pantalon.",
+              "side": "r"
+            },
+            {
+              "who": "lea",
+              "text": "Et vous avez mangé le chocolat ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a 1940s radar laboratory with a metal workbench and the magnetron glowing softly on it. Percy Spencer (very tall, thin, round glasses, mustard tweed suit) on the right holding up a melted chocolate bar dripping from his fingers, a big brown stain on his trouser pocket, beaming with pride, yellow sparkles; Léa (short, round, curly red bun, bright green hoodie) on the left, out of place in her slippers, staring at the chocolate with greedy eyes. medium shot",
-            "cast": ["spencer", "lea"],
+            "cast": [
+              "spencer",
+              "lea"
+            ],
             "file": "images/notice-06.webp",
             "status": "pending",
             "attempts": 0
@@ -148,12 +209,23 @@
           "tag": "En résumé",
           "caption": "Le micro-ondes ne chauffe pas l’air : il fait s’agiter l’eau des aliments. Et il est né des radars, par accident.",
           "bubbles": [
-            { "who": "lea", "text": "Donc ma soupe est réchauffée par un radar.", "side": "l" },
-            { "who": "spencer", "text": "Et par mon pantalon. N’oubliez pas mon pantalon.", "side": "r" }
+            {
+              "who": "lea",
+              "text": "Donc ma soupe est réchauffée par un radar.",
+              "side": "l"
+            },
+            {
+              "who": "spencer",
+              "text": "Et par mon pantalon. N’oubliez pas mon pantalon.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back in the small modern kitchen. Léa (short, round, curly red bun, bright green hoodie) on the left sitting on a stool, happily blowing on a spoonful of steaming soup from the bowl; Percy Spencer (very tall, thin, round glasses, mustard tweed suit) on the right standing stiff and solemn, pointing with both hands at the brown chocolate stain on his trouser pocket. medium shot",
-            "cast": ["lea", "spencer"],
+            "cast": [
+              "lea",
+              "spencer"
+            ],
             "file": "images/notice-08.webp",
             "status": "pending",
             "attempts": 0
@@ -166,10 +238,22 @@
       },
       "story": "Un four à micro-ondes n’a ni flamme ni plaque chauffante. Au fond de l’appareil, un tube appelé magnétron transforme l’électricité en ondes électromagnétiques d’une fréquence de 2,45 gigahertz, de la même famille que les ondes radio. Une antenne et un guide d’ondes les envoient dans l’enceinte, où elles pénètrent les aliments ou rebondissent sur les parois en métal.\nLe champ électrique de ces ondes change de sens des milliards de fois par seconde. Or une molécule d’eau a un côté légèrement positif et un côté légèrement négatif : elle pivote pour suivre le champ, s’agite et bouscule ses voisines. Cette agitation produit de la chaleur directement dans l’aliment, alors qu’une casserole chauffe d’abord la surface. Comme les ondes qui rebondissent se renforcent à certains endroits et s’annulent à d’autres, le plateau tournant fait passer chaque partie du plat dans les zones chaudes. Les parois et la grille de la porte, en métal, gardent les ondes à l’intérieur.\nL’invention est un accident. Vers 1945, Percy Spencer, ingénieur de la firme américaine Raytheon qui produisait des magnétrons pour les radars, remarque qu’une barre chocolatée a fondu dans sa poche près d’un tube en marche. Il essaie avec du maïs, qui éclate en pop-corn, et dépose un brevet le 8 octobre 1945. Le premier modèle commercialisé, le Radarange, sort en 1947 : environ 1,80 m de haut, 340 kg et 3 000 dollars.",
       "sources": [
-        { "title": "Office fédéral de la santé publique (Suisse) — Fiche d’information : four à micro-ondes", "url": "https://www.bag.admin.ch/dam/bag/fr/dokumente/str/nis/faktenblaetter-emf/faktenblatt-mikrowellenofen.pdf.download.pdf/faktenblatt%20mikrowellenofen%20f.pdf" },
-        { "title": "Futura Sciences — Comment ça marche : entrez à l’intérieur du four à micro-ondes", "url": "https://www.futura-sciences.com/sciences/actualites/physique-ca-marche-entrez-interieur-four-micro-ondes-51050/" },
-        { "title": "Lemelson-MIT — Percy Spencer", "url": "https://lemelson.mit.edu/resources/percy-spencer" },
-        { "title": "History.com — Microwave oven first patent", "url": "https://www.history.com/this-day-in-history/October/8/microwave-oven-first-patent" }
+        {
+          "title": "Office fédéral de la santé publique (Suisse) — Fiche d’information : four à micro-ondes",
+          "url": "https://www.bag.admin.ch/dam/bag/fr/dokumente/str/nis/faktenblaetter-emf/faktenblatt-mikrowellenofen.pdf.download.pdf/faktenblatt%20mikrowellenofen%20f.pdf"
+        },
+        {
+          "title": "Futura Sciences — Comment ça marche : entrez à l’intérieur du four à micro-ondes",
+          "url": "https://www.futura-sciences.com/sciences/actualites/physique-ca-marche-entrez-interieur-four-micro-ondes-51050/"
+        },
+        {
+          "title": "Lemelson-MIT — Percy Spencer",
+          "url": "https://lemelson.mit.edu/resources/percy-spencer"
+        },
+        {
+          "title": "History.com — Microwave oven first patent",
+          "url": "https://www.history.com/this-day-in-history/October/8/microwave-oven-first-patent"
+        }
       ]
     }
   ]
