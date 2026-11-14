@@ -1,6 +1,6 @@
 """Publie l'édition du jour à partir de 5 h (heure de Paris) et reconstruit editions/index.json.
 
-File d'attente (8 novembre 2026) : dès 5 h, pour chaque type (Culture G, Insolite, La Notice, Grand Dossier) qui manque
+File d'attente (8 novembre 2026) : dès 5 h, pour chaque type (Culture G, Insolite, La Notice ou D'où ça vient ?, Grand Dossier) qui manque
 à l'édition du jour ou n'y est pas fini, on pioche la BD finie à 100 % la plus ancienne de `stock/` (en évitant
 le pôle de la veille et ceux des autres BD du jour). Une BD pas finie d'une édition du jour ou passée retourne
 en tête de file avec ses images : rien n'est perdu.
@@ -93,12 +93,13 @@ def format_ready(fmt: dict) -> bool:
     if fmt.get("id") == "quiz":  # le quiz n'a pas d'image : prêt dès qu'il a ses questions
         return len(fmt.get("questions", [])) >= 1  # Plus ou moins et Swipe tiennent en une seule « question »
     cases = fmt.get("cases", [])
-    drawn = [c for c in cases if c.get("kind") not in TEXT_KINDS]  # texte ou photo : rien à dessiner
+    # texte ou photo : rien à dessiner ; « image_of » (D'où ça vient ?) : reprend l'image d'une case précédente
+    drawn = [c for c in cases if c.get("kind") not in TEXT_KINDS and not c.get("image_of")]
     return bool(drawn) and all(c.get("image", {}).get("status") == "done" for c in drawn)
 
 
 def pending_images(fmt: dict) -> int:
-    imgs = [c.get("image") or {} for c in fmt.get("cases", []) if c.get("kind") not in TEXT_KINDS] + ([fmt["cover"]] if fmt.get("cover") else [])
+    imgs = [c.get("image") or {} for c in fmt.get("cases", []) if c.get("kind") not in TEXT_KINDS and not c.get("image_of")] + ([fmt["cover"]] if fmt.get("cover") else [])
     return sum(1 for i in imgs if i.get("status") != "done")
 
 
@@ -201,6 +202,22 @@ def lock_site_edition(dst: Path):
     f.write_text(json.dumps(ed, ensure_ascii=False))
 
 
+# 14 novembre 2026 (Greg) : La Notice et « D'où ça vient ? » partagent la même place, un jour l'une, un jour l'autre.
+ALTERNATE = {"notice": "origine", "origine": "notice"}
+
+
+def alternate_order(prev: dict) -> list[str]:
+    """Types dans l'ordre où l'édition du jour les pioche. Dans la paire Notice / D'où ça vient ?, celle qui n'est
+    pas sortie la veille passe d'abord ; si sa file n'a aucune BD finie, l'autre la remplace (jamais les deux)."""
+    kinds = list(stock.TYPES)
+    first = "origine" if "notice" in prev else "notice"
+    second = ALTERNATE[first]
+    if kinds.index(second) < kinds.index(first):
+        i, j = kinds.index(second), kinds.index(first)
+        kinds[i], kinds[j] = kinds[j], kinds[i]
+    return kinds
+
+
 def fill_from_stock(now: datetime) -> list[str]:
     """Range les BD : celles pas finies des éditions passées ou du jour retournent en file, l'édition du jour pioche."""
     today = now.date()
@@ -235,9 +252,9 @@ def fill_from_stock(now: datetime) -> list[str]:
                 prev = {x.get("id"): stock.pole(x.get("theme")) for x in json.loads(yesterday.read_text()).get("formats", [])}
             except Exception:
                 prev = {}
-            for kind in stock.TYPES:
-                if any(x.get("id") == kind for x in ed.get("formats", [])):
-                    continue
+            for kind in alternate_order(prev):
+                if any(x.get("id") in (kind, ALTERNATE.get(kind)) for x in ed.get("formats", [])):
+                    continue  # déjà là, ou sa rubrique jumelle l'est (La Notice / D'où ça vient ?)
                 taken = {stock.pole(x.get("theme")) for x in ed.get("formats", []) if x.get("id") in stock.TYPES}
                 item = stock.pick(kind, taken | {prev.get(kind)})
                 if item:
@@ -420,9 +437,15 @@ def write_health(health: dict, index: list, today: date):
         print(f"! queue.json : {ex}")
     summ = stock.summary()
     health["stock"] = summ
-    ahead = min(s["ready"] for s in summ.values())
+    # La Notice et D'où ça vient ? se partagent une place : leurs files comptent ensemble pour les jours d'avance.
+    slots = {}
+    for k, s in summ.items():
+        key = "notice" if k in ALTERNATE else k
+        r, w = slots.get(key, (0, 0))
+        slots[key] = (r + s["ready"], w + s["ready"] + s["waiting"])
+    ahead = min(r for r, _ in slots.values())
     health["days_ahead_drawn"] = ahead
-    health["days_ahead_written"] = min(s["ready"] + s["waiting"] for s in summ.values())
+    health["days_ahead_written"] = min(w for _, w in slots.values())
     health["quiz_days_ahead"] = sum(1 for x in health["days"] if x["date"] > today.isoformat() and x["formats"].get("quiz") == "prêt")
     for kind, s in summ.items():
         if s["blocked"]:

@@ -1,6 +1,6 @@
 # Format d'une édition : `editions/AAAA-MM-JJ/edition.json`
 
-Une édition par jour : l'Actu (écrite la veille au soir) et le jeu du jour y sont écrits directement. Les Culture G, Insolites, Notices (`notice`) et Grands Dossiers sont écrits dans la **file d'attente** `stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` (`{"added": …, "formats": [une seule BD]}`, même format que ci-dessous) ; la publication du matin les place dans l'édition une fois finis à 100 % (voir `prompts/STOCK.md`).
+Une édition par jour : l'Actu (écrite la veille au soir) et le jeu du jour y sont écrits directement. Les Culture G, Insolites, Notices (`notice`), « D'où ça vient ? » (`origine`) et Grands Dossiers sont écrits dans la **file d'attente** `stock/<type>/<AAAAMMJJ-HHMM>-<mot-cle>/item.json` (`{"added": …, "formats": [une seule BD]}`, même format que ci-dessous) ; la publication du matin les place dans l'édition une fois finis à 100 % (voir `prompts/STOCK.md`).
 Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo`. Tout le reste est écrit par Claude. `"redo": true` sur une image faite = le contrôle qualité en veut une nouvelle version ; l'ancienne reste publiée en attendant.
 
 ```json
@@ -9,13 +9,13 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
   "status": "draft",                 // "draft" → "published" (posé par pipeline/publish.py à 5 h)
   "formats": [
     {
-      "id": "cultureg",              // "actu" | "cultureg" | "insolite" | "notice" | "dossier" — un seul de chaque ("notice" = la Notice, label « La Notice »)
+      "id": "cultureg",              // "actu" | "cultureg" | "insolite" | "notice" | "origine" | "dossier" — un seul de chaque ("notice" = la Notice, label « La Notice » ; "origine" = « D'où ça vient ? », jamais avec "notice" le même jour)
       "label": "La Pilule de Culture G",
       "title": "Le Chat de Schrödinger expliqué à mon chat",
       "tagline": "Un chat à la fois mort, vivant et probablement en train de juger votre vie",
       "teaser": "Accroche drôle pour la newsletter, 25 mots max (voir « Newsletter »).",
       "minutes": 2,  // recalculée à la publication d'après les textes et les images (pipeline/publish.py, reading_minutes) : inutile de la soigner
-      "theme": "Sciences physiques",  // OBLIGATOIRE pour cultureg, insolite, notice et dossier : une des 32 thématiques, écrite exactement comme dans prompts/STOCK.md ; vide pour actu
+      "theme": "Sciences physiques",  // OBLIGATOIRE pour cultureg, insolite, notice, origine et dossier : une des 32 thématiques, écrite exactement comme dans prompts/STOCK.md ; vide pour actu
       "cast": [
         { "id": "schro", "name": "Erwin Schrödinger",   // nom affiché au-dessus de ses bulles (voir « Qui parle ? »)
           "look": "Erwin, a 1930s physicist, slick dark hair, round glasses, grey three-piece suit, dark red tie",
@@ -49,6 +49,33 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
   ]
 }
 ```
+
+## « D'où ça vient ? » : écrans de cinéma (`"id": "origine"`, `"kind": "cine"`, 14 novembre 2026)
+L'origine d'une expression très connue, en 8 à 10 écrans : une image réaliste plein écran, et quelques lignes posées par l'appli sur le bas assombri de l'image. Règles d'écriture : `prompts/STOCK.md`, section « D'où ça vient ? ».
+
+```json
+{
+  "id": "origine",
+  "label": "D’où ça vient ?",
+  "title": "« Payer en monnaie de singe »",
+  "tagline": "Pour traverser ce pont, certains payaient en grimaces.",
+  "theme": "Expression française",
+  "minutes": 1,
+  "art": {"subject": "the origin of the French saying 'payer en monnaie de singe'", "setting": "the Petit-Pont toll gate in Paris, by the Seine, Notre-Dame in the distance", "era": "13th century, Paris under Saint Louis", "props": {"toll booth": "a small wooden toll booth with a slanted roof"}},
+  "cast": [],
+  "cases": [
+    {"n": 1, "kind": "cine", "text": "Pour traverser ce pont,\nil fallait payer.\nCertains payaient\nen *grimaces*.",
+     "image": {"file": "images/origine-01.webp", "status": "pending", "prompt": "Wide shot of a medieval stone bridge in Paris at dawn in the mist, a street entertainer seen from behind with a small monkey on his shoulder walking toward the toll booth"}},
+    {"n": 2, "kind": "cine", "text": "Paris, XIIIe siècle.\nPour franchir le Petit-Pont,\non paie un *péage*.", "image_of": 1, "zoom": 1.2, "focus": "40% 30%"}
+  ],
+  "final": {"text": "…", "source": "…"},
+  "story": "…", "teaser": "…", "sources": [{"title": "…", "url": "https://…"}]
+}
+```
+- `text` : 25 mots au plus, lignes séparées par `\n`, **un seul** mot ou groupe de mots clé entre astérisques (affiché en jaune).
+- `image` (un plan dessiné) **ou** `image_of` (numéro d'un écran précédent qui a sa propre image), jamais les deux ; 5 ou 6 images au plus. `zoom` (1 à 1,6) et `focus` (« X% Y% », le point vers lequel on zoome) recadrent l'image reprise, ou la sienne.
+- Pas de `bubbles`, pas de `caption`, pas de case `explain` ou `photo`, pas de `cover`, `cast` vide.
+- Le prompt décrit un plan de cinéma (lieu, époque, lumière, action), personnages de dos, en silhouette ou de loin, le sujet en haut de l'image ; le style réaliste et la consigne du bas sombre sont ajoutés par le pipeline.
 
 ## « Pour mieux comprendre » : case de texte sans image (`"kind": "explain"`)
 Une case de texte glissée dans la BD, entre deux cases dessinées, là où le lecteur risque de décrocher (un mécanisme, une notion, un ordre de grandeur). Elle ne coûte aucune image.

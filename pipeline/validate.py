@@ -19,17 +19,20 @@ from seo import POLES  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 EDITIONS = ROOT / "editions"
-FORMAT_IDS = {"actu", "cultureg", "insolite", "notice", "dossier", "quiz"}
+FORMAT_IDS = {"actu", "cultureg", "insolite", "notice", "origine", "dossier", "quiz"}
 QUIZ_KINDS = {"", "culture", "geo", "frise", "dico", "plusmoins", "swipe", "chiffre", "citation"}
 IMAGE_STATUS = {None, "pending", "retry", "done", "failed"}
 CAST_STATUS = {None, "pending", "done", "skipped", "failed"}
 THEMES = {t.replace("'", "’") for ths in POLES.values() for t in ths}
 CAPTION_MAX, BUBBLE_MAX = 20, 15  # mots, d'après prompts/CHARTE.md (7 novembre 2026 : plus de place pour expliquer)
-MAX_CAST = {"cultureg": 2, "insolite": 2, "notice": 2, "dossier": 4}  # 13 novembre 2026 : moins de personnages, moins de confusions au dessin
-MAX_CASES = {"dossier": 24, "notice": 5}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30) ; 14 novembre : micro-BD La Notice
+MAX_CAST = {"cultureg": 2, "insolite": 2, "notice": 2, "origine": 0, "dossier": 4}  # 13 novembre 2026 : moins de personnages, moins de confusions au dessin
+MAX_CASES = {"dossier": 24, "notice": 5, "origine": 6}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30) ; 14 novembre : micro-BD La Notice
 EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
 PHOTO_MAX = 45  # case photo : légende courte
 ACTU_CAPTION_MAX, ACTU_EXPLAIN_MAX = 30, 50  # 8 novembre 2026 : Actu = 1 case dessinée (récitatif chargé, 1 bulle) + 1 case « Ce qui se passe vraiment »
+# « D'où ça vient ? » (14 novembre 2026) : 8 à 10 écrans de cinéma, 25 mots au plus, un seul mot en couleur (*mot*),
+# 5 ou 6 images dessinées au plus (« image_of » reprend l'image d'un écran précédent).
+CINE_SCREENS, CINE_MAX = (8, 10), 25
 STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 
@@ -106,6 +109,39 @@ def check_quiz(fmt: dict, err, warn):
         warn(f"question(s) sans indice « hint » : {', '.join(no_hint)}")
 
 
+def check_cine(cases: list, err, warn):
+    """« D'où ça vient ? » : récit en écrans de cinéma (texte posé par l'appli sur le bas de l'image)."""
+    screens = [c for c in cases if isinstance(c, dict) and c.get("kind") == "cine"]
+    if len(screens) != len([c for c in cases if isinstance(c, dict)]):
+        warn("D'où ça vient ? : seulement des écrans « kind »: « cine » (ni bulles ni cases texte)")
+    lo, hi = CINE_SCREENS
+    if not lo <= len(screens) <= hi:
+        warn(f"D'où ça vient ? : {len(screens)} écrans, il en faut {lo} à {hi}")
+    for i, c in enumerate(cases, 1):
+        if not isinstance(c, dict) or c.get("kind") != "cine":
+            continue
+        txt = str(c.get("text") or "")
+        if not txt.strip():
+            err(f"écran {i} : « text » vide")
+        if words(txt.replace("*", "")) > CINE_MAX:
+            warn(f"écran {i} : {words(txt.replace('*', ''))} mots (max {CINE_MAX})")
+        marks = re.findall(r"\*[^*\n]+\*", txt)
+        if len(marks) != 1 or txt.count("*") != 2:
+            warn(f"écran {i} : un seul mot clé en couleur, écrit *ainsi*")
+        if c.get("bubbles") or c.get("caption"):
+            warn(f"écran {i} : ni bulle ni récitatif, tout le texte va dans « text »")
+        ref = c.get("image_of")
+        if ref is not None:
+            src = cases[ref - 1] if isinstance(ref, int) and 1 <= ref < i else None
+            if not (isinstance(src, dict) and src.get("image")):
+                err(f"écran {i} : « image_of » doit donner le numéro d'un écran précédent qui a sa propre image")
+            if c.get("image"):
+                err(f"écran {i} : « image » et « image_of » à la fois")
+        z = c.get("zoom")
+        if z is not None and not (isinstance(z, (int, float)) and 1 <= z <= 1.6):
+            warn(f"écran {i} : « zoom » entre 1 et 1,6")
+
+
 def check_story(fmt: dict, d: Path, err, warn):
     fid = fmt["id"]
     if fid != "actu" and (fmt.get("theme") or "").replace("'", "’") not in THEMES:
@@ -116,7 +152,9 @@ def check_story(fmt: dict, d: Path, err, warn):
     if not isinstance(cases, list) or not cases:
         err("aucune case")
         return
-    drawn = [c for c in cases if isinstance(c, dict) and c.get("kind") not in ("explain", "photo", "buzz")]
+    drawn = [c for c in cases if isinstance(c, dict) and c.get("kind") not in ("explain", "photo", "buzz") and not c.get("image_of")]
+    if fid == "origine":
+        check_cine(cases, err, warn)
     # « Pendant ce temps, sur Internet » (13 novembre 2026) : 3 cases à la fin de l'Actu, réécrites par nous.
     buzz = [c for c in cases if isinstance(c, dict) and c.get("kind") == "buzz"]
     if buzz and fid != "actu":
@@ -155,7 +193,7 @@ def check_story(fmt: dict, d: Path, err, warn):
             warn(f"case dessinée {i} : plus de 2 personnages avec fiche dans l'image")
     # 9 novembre 2026 (Greg) : des vraies images souvent, ça rend l'histoire réelle. Signalé pour que la tâche Stock en ajoute.
     n_photo = sum(1 for c in cases if isinstance(c, dict) and c.get("kind") == "photo")
-    want = {"cultureg": 1, "insolite": 1, "notice": 1, "dossier": 2}.get(fid, 0)
+    want = {"cultureg": 1, "insolite": 1, "notice": 1, "dossier": 2}.get(fid, 0)  # D'où ça vient ? : pas de photo
     if n_photo < want:
         warn(f"{n_photo} vraie(s) photo(s) (« kind »: « photo »), il en faut au moins {want} si un document libre existe")
     if fid != "actu":
@@ -189,6 +227,8 @@ def check_story(fmt: dict, d: Path, err, warn):
             if case.get("image"):
                 err(f"case {i} (Pour mieux comprendre) : pas d’image pour ce type de case")
             continue
+        if fid == "origine" and case.get("kind") == "cine" and case.get("image_of"):
+            continue  # reprend l'image d'un écran précédent : contrôlé dans check_cine
         if case.get("kind") == "buzz":  # « Pendant ce temps, sur Internet » : texte seul, contrôlé plus haut
             if case.get("image"):
                 err(f"case {i} (Sur Internet) : pas d’image pour ce type de case")

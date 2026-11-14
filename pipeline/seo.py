@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import share_card  # noqa: E402
 SITE_CFG = json.loads((Path(__file__).parent / "site.json").read_text())
 BASE = SITE_CFG["base_url"].rstrip("/") + "/"
-COLOR = {"dossier": "#1f8f5f", "actu": "#2f4fa2", "cultureg": "#f2a33a", "insolite": "#d9473a", "notice": "#7a4fb8"}
+COLOR = {"dossier": "#1f8f5f", "actu": "#2f4fa2", "cultureg": "#f2a33a", "insolite": "#d9473a", "notice": "#7a4fb8", "origine": "#8a5a24"}
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 POLES = {
     "Histoire": ["Histoire ancienne", "Histoire moderne", "Histoire de France", "Grandes personnalités", "Mythologies et religions"],
@@ -85,6 +85,8 @@ h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,48px);line-
 .panel.explain ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .panel.explain .ex-tag{align-self:flex-start;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:2px 9px;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
 .panel.explain .ex-joke{font-family:var(--letter);border-top:2px dashed var(--line);padding-top:8px}
+.panel.cine{background:#14110d}.panel.cine::after{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.72) 38%,rgba(0,0,0,.94))}
+.panel.cine figcaption{top:auto;bottom:9%;left:7%;right:7%;z-index:1}.panel.cine p{margin:0;color:#fff;font-family:var(--sans);font-weight:700;font-size:20px;line-height:1.28}.panel.cine em{font-style:normal;color:var(--yellow)}
 .panel.photo{flex-direction:column}.panel.photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#efebe3}
 .panel.photo .credit{font-size:12px;color:#5f5a52}.panel.photo .credit a{color:inherit}
 .locked{background:#fff;border-radius:18px;padding:16px 18px;margin:18px 0;display:flex;flex-direction:column;gap:10px}
@@ -222,6 +224,15 @@ def story_page(s, ed_dir: Path, related, gate=False):
             joke = f'<p class="ex-joke">{e(c["joke"])}</p>' if c.get("joke") else ""
             panels.append(f'<figure class="panel explain"><figcaption><b class="ex-tag">{e(c.get("tag") or "Pour mieux comprendre")}</b>'
                           f'<strong>{e(c.get("title", ""))}</strong>{paras}{steps}{joke}</figcaption></figure>')
+            continue
+        if c.get("kind") == "cine":  # D'où ça vient ? : texte posé sur le bas de l'image, un mot en couleur
+            ref = c.get("image_of")
+            img = (f["cases"][ref - 1].get("image") if isinstance(ref, int) and 0 < ref <= len(f["cases"]) else c.get("image")) or {}
+            src = img_base + img["file"] if img.get("status") == "done" else ""
+            plain = str(c.get("text") or "").replace("*", "")
+            lines = "<br>".join(re.sub(r"\*([^*]+)\*", r'<em>\1</em>', e(t)) for t in str(c.get("text") or "").split("\n") if t.strip())
+            pic = f'<img src="{e(src)}" alt="{e(clip(f["title"] + " : " + plain, 180))}" loading="lazy" decoding="async" width="1024" height="1792">' if src else ""
+            panels.append(f'<figure class="panel cine">{pic}<figcaption><p>{lines}</p></figcaption></figure>')
             continue
         img = c.get("image", {})
         src = img_base + img["file"] if img.get("status") == "done" else ""

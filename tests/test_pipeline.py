@@ -327,3 +327,70 @@ def test_prompt_porte_le_cadre_les_roles_sans_case_precedente(tmp_path):
     assert "previous panel" not in p and all("x-01" not in str(r) for r in refs)
     # les consignes impératives passent avant le style
     assert p.index("no lettering") < p.index("webcomic doodle")
+
+
+# --- « D'où ça vient ? » (format origine, 14 novembre 2026) ---------------------------------------------
+
+def origine(status="done", n=8):
+    cases = []
+    for i in range(1, n + 1):
+        c = {"n": i, "kind": "cine", "text": f"Ligne une,\nle mot *clé* {i}."}
+        if i % 2:
+            c["image"] = {"prompt": "p", "file": f"images/origine-{i:02d}.webp", "status": status}
+        else:
+            c.update(image_of=i - 1, zoom=1.2, focus="50% 30%")
+        cases.append(c)
+    return {"id": "origine", "title": "« Expression »", "theme": "Expression française", "cast": [],
+            "art": {"subject": "s", "setting": "s", "era": "e"}, "cases": cases,
+            "final": {"text": "Fait."}, "sources": [{"title": "s", "url": "https://x"}], "story": " ".join(["mot"] * 150)}
+
+
+def check(fmt):
+    errs, warns = [], []
+    validate.check_story(fmt, Path("."), errs.append, warns.append)
+    return errs, warns
+
+
+def test_origine_valide_et_images_reprises():
+    errs, warns = check(origine(status="pending"))
+    assert errs == [] and warns == []
+    assert publish.format_ready(origine()) and publish.pending_images(origine()) == 0
+    assert len(stock.images_of(origine())) == 4  # les écrans « image_of » ne se dessinent pas
+
+
+def test_origine_erreurs_signalees():
+    f = origine(status="pending")
+    f["cases"][1]["image_of"] = 5           # écran plus loin : interdit
+    f["cases"][2]["text"] = "Deux *mots* en *couleur*"
+    errs, warns = check(f)
+    assert any("image_of" in e for e in errs)
+    assert any("un seul mot clé" in w for w in warns)
+
+
+def test_origine_alterne_avec_la_notice(site, monkeypatch):
+    monkeypatch.setattr(publish, "QUEUE_SINCE", datetime(2026, 1, 1).date())
+    write(site, "2026-11-09", [story("notice"), QUIZ])        # hier : la Notice
+    write(site, "2026-11-10", [QUIZ])
+    queue(site, "20261108-0900-n", story("notice"))
+    queue(site, "20261108-0901-o", origine())
+    publish.main(datetime(2026, 11, 10, 5, 2, tzinfo=PARIS))
+    ids = [f["id"] for f in json.loads((site / "editions" / "2026-11-10" / "edition.json").read_text())["formats"]]
+    assert "origine" in ids and "notice" not in ids           # aujourd'hui : D'où ça vient ?, jamais les deux
+    assert len(stock.items("notice")) == 1
+
+
+def test_notice_remplace_si_pas_d_origine_prete(site, monkeypatch):
+    monkeypatch.setattr(publish, "QUEUE_SINCE", datetime(2026, 1, 1).date())
+    write(site, "2026-11-09", [story("notice"), QUIZ])
+    write(site, "2026-11-10", [QUIZ])
+    queue(site, "20261108-0900-n", story("notice"))
+    queue(site, "20261108-0901-o", origine(status="pending"))
+    publish.main(datetime(2026, 11, 10, 5, 2, tzinfo=PARIS))
+    ids = [f["id"] for f in json.loads((site / "editions" / "2026-11-10" / "edition.json").read_text())["formats"]]
+    assert "notice" in ids and "origine" not in ids
+
+
+def test_prompt_cine_sans_reference():
+    prompt, refs = images.build("a bridge at dawn", [], fmt={"id": "origine", "art": {"era": "1268"}}, panel=(1, 5))
+    assert refs == [] and "Shot 1 of 5" in prompt and "comic" not in prompt.lower()
+    assert images.CINE["style"] in prompt

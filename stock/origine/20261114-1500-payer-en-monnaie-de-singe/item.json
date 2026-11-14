@@ -1,0 +1,131 @@
+{
+  "added": "20261114-1500",
+  "formats": [
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "« Payer en monnaie de singe »",
+      "tagline": "Pour traverser ce pont, certains payaient en grimaces.",
+      "teaser": "Au Moyen Âge, un péage de Paris acceptait un paiement très spécial : le numéro d’un singe. Voici d’où vient l’expression.",
+      "minutes": 1,
+      "theme": "Expression française",
+      "art": {
+        "subject": "the origin of the French saying 'payer en monnaie de singe' (to pay in monkey money)",
+        "setting": "the Petit-Pont, a narrow stone bridge over the Seine in Paris, and the Petit Chatelet, the small fortified gatehouse at its end where the toll was collected; Notre-Dame in the distance",
+        "era": "Moyen Âge — Paris around 1268, under King Louis IX (Saint Louis)",
+        "props": {
+          "gatehouse": "a small fortified stone gatehouse with one round-arched gate and a slate roof",
+          "toll keeper": "a man in a dark hooded robe holding a wooden tally stick",
+          "monkey": "a small brown monkey with a thin leather collar"
+        }
+      },
+      "cast": [],
+      "cases": [
+        {
+          "n": 1,
+          "kind": "cine",
+          "text": "Pour traverser ce pont,\nil fallait payer.\nCertains payaient\nen *grimaces*.",
+          "image": {
+            "file": "images/origine-01.webp",
+            "status": "pending",
+            "prompt": "Wide shot of the Petit-Pont, a narrow medieval stone bridge over the Seine in Paris at dawn, thick river mist, the two towers of Notre-Dame cathedral faint in the distance; a poor street entertainer in a patched hooded tunic, seen from behind, walks toward a small fortified stone gatehouse at the end of the bridge, a small brown monkey sitting on his shoulder",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "cine",
+          "text": "Paris, vers 1268.\nAu bout du Petit-Pont,\ntout le monde paie le *péage*.",
+          "image": {
+            "file": "images/origine-02.webp",
+            "status": "pending",
+            "prompt": "The Petit Chatelet, a small fortified stone gatehouse with an arched gate guarding the end of a medieval bridge in Paris; a toll keeper in a dark hooded robe stands in the archway holding a wooden tally stick; a line of medieval merchants with mules, baskets and cloth bundles waits in front, seen from behind and from a distance, morning haze"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "cine",
+          "text": "Un marchand vient vendre un singe ?\nQuatre *deniers*,\ns'il vous plaît.",
+          "image": {
+            "file": "images/origine-03.webp",
+            "status": "pending",
+            "prompt": "At the arched gate of the medieval gatehouse, a well-dressed merchant seen from behind holds a small monkey in a wicker cage and hands small coins to the hooded toll keeper; mules and bundles around, warm low light through the haze"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "cine",
+          "text": "Mais les montreurs de singes,\neux, n'avaient pas\nun *sou*.",
+          "image": {
+            "file": "images/origine-04.webp",
+            "status": "pending",
+            "prompt": "A poor medieval street entertainer in a patched tunic, seen from behind, stands before the hooded toll keeper at the arched gate of the gatehouse, a small brown monkey on his shoulder, his open empty hand held out; the toll keeper waits with his tally stick"
+          }
+        },
+        {
+          "n": 5,
+          "kind": "cine",
+          "text": "Alors le règlement du péage\nleur offrait\nune autre *monnaie*.",
+          "image_of": 4,
+          "zoom": 1.35,
+          "focus": "50% 30%"
+        },
+        {
+          "n": 6,
+          "kind": "cine",
+          "text": "Le singe faisait son numéro\ndevant le péager.\nEt le passage était *payé*.",
+          "image": {
+            "file": "images/origine-06.webp",
+            "status": "pending",
+            "prompt": "In front of the arched gate of the medieval gatehouse, a small brown monkey turns a somersault on the cobblestones while its master, a street entertainer seen from behind, claps; the hooded toll keeper watches, a few merchants in the queue turn to look, golden morning light"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "cine",
+          "text": "Des cabrioles contre un passage.\nOn appela ça…\nla *monnaie de singe*.",
+          "image_of": 6,
+          "zoom": 1.3,
+          "focus": "45% 40%"
+        },
+        {
+          "n": 8,
+          "kind": "cine",
+          "text": "Aujourd'hui, payer en monnaie de singe,\nc'est payer en belles paroles.\nBref, ne *pas payer*.",
+          "image": {
+            "file": "images/origine-08.webp",
+            "status": "pending",
+            "prompt": "The same medieval stone bridge over the Seine at dusk, now empty, the gatehouse closed, a single torch burning by the arched gate, the silhouette of Notre-Dame against an orange and violet sky, mist on the river"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "cine",
+          "text": "Et vous,\non vous a déjà payé\nen *monnaie de singe* ?",
+          "image_of": 8,
+          "zoom": 1.2,
+          "focus": "50% 30%"
+        }
+      ],
+      "final": {
+        "text": "Le tarif du Petit-Pont, noté vers 1268 : un singe à vendre paie quatre deniers ; celui d’un montreur ne paie rien s’il joue devant le péager.",
+        "source": "Livre des métiers d’Étienne Boileau, prévôt de Paris sous Saint Louis"
+      },
+      "story": "Au XIIIe siècle, on ne traverse pas la Seine gratuitement. Au bout du Petit-Pont, qui relie l’île de la Cité à la rive gauche, à hauteur de l’actuelle rue Saint-Jacques, un péage est perçu au Petit Châtelet, une petite forteresse qui garde l’entrée du pont.\nLe tarif est consigné vers 1268 dans le Livre des métiers, le grand recueil des règlements de Paris réuni par Étienne Boileau, prévôt de Paris sous le règne de Louis IX, saint Louis. Chaque marchandise y a son prix. Un marchand qui apporte un singe pour le vendre doit payer quatre deniers.\nMais le texte prévoit un cas à part : si le singe appartient à un montreur, un artiste de rue qui vit de ses tours, il suffit de le faire jouer devant le péager. Le maître est alors quitte du péage, pour le singe comme pour les affaires qu’il porte pour son usage.\nDes cabrioles à la place des pièces : c’est la monnaie de singe. Avec le temps, l’expression a perdu son singe et gardé l’idée. Payer en monnaie de singe, c’est payer en promesses, en compliments ou en grimaces, bref, ne pas payer ce qu’on doit.\nOn lit souvent que saint Louis en personne aurait décidé de ce tarif : en réalité, il est écrit dans un règlement de son époque, rassemblé par son prévôt.",
+      "sources": [
+        {
+          "title": "RTBF — Pourquoi dit-on « payer en monnaie de singe » ?",
+          "url": "https://www.rtbf.be/article/pourquoi-dit-on-payer-en-monnaie-de-singe-10817227"
+        },
+        {
+          "title": "Wikisource — Dictionnaire administratif et historique des rues de Paris (Lazare), place du Petit-Pont",
+          "url": "https://fr.wikisource.org/wiki/Dictionnaire_administratif_et_historique_des_rues_de_Paris_et_de_ses_monuments/Pont_(place_du_Petit-)"
+        },
+        {
+          "title": "Expressio — Payer en monnaie de singe",
+          "url": "https://www.expressio.fr/expressions/payer-en-monnaie-de-singe"
+        }
+      ]
+    }
+  ]
+}
