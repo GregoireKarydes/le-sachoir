@@ -73,14 +73,15 @@
             }
           ],
           "image": {
-            "prompt": "a bare office with a map of France pinned on the wall. Édouard (on the right) spinning a small tyre on one finger; André (on the left) pointing at the map with a sly grin, stroking his white moustache. medium shot",
+            "prompt": "one single panel, no frame divisions, each character appears only once. a bare office with a blank map of France pinned on the wall, no writing on it. Édouard (on the right, thin, dark goatee, slicked hair) spinning a small tyre on one finger; André (on the left, round bald head, bushy white moustache, gold watch chain) pointing at the map with a sly grin. medium shot",
             "cast": [
               "andre",
               "edouard"
             ],
             "file": "images/cultureg-01.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -124,7 +125,8 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -175,7 +177,8 @@
             ],
             "file": "images/cultureg-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -196,14 +199,15 @@
             }
           ],
           "image": {
-            "prompt": "a single restaurant table with a steaming plate. André (on the left) placing a small paper star on the table with great ceremony; Édouard (on the right) tasting with closed eyes, blissful. medium shot",
+            "prompt": "one single panel, no frame divisions, each character appears only once. a single restaurant table with a steaming plate. André (on the left, round bald head, bushy white moustache, gold watch chain) standing, placing a small paper star on the table with great ceremony; Édouard (on the right, thin, dark goatee, slicked hair) seated, tasting with a fork, eyes closed, blissful. medium shot",
             "cast": [
               "andre",
               "edouard"
             ],
             "file": "images/cultureg-05.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -264,7 +268,8 @@
             ],
             "file": "images/cultureg-07.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -285,14 +290,15 @@
             }
           ],
           "image": {
-            "prompt": "André (on the left) and Édouard (on the right) in a confession-style shot, side by side, looking straight at the reader, André smug, Édouard hugging his little tyre tenderly. plain background",
+            "prompt": "André (on the left) and Édouard (on the right) in a confession-style shot, side by side, looking straight at the reader, André smug, Édouard hugging his small black rubber tyre tenderly in both arms, no animal. plain background",
             "cast": [
               "andre",
               "edouard"
             ],
             "file": "images/cultureg-08.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         }
       ],

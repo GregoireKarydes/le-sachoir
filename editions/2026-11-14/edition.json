@@ -70,7 +70,8 @@
         "file": "images/actu-cover.webp",
         "status": "done",
         "attempts": 1,
-        "via": "premium"
+        "via": "premium",
+        "qa": "ok"
       },
       "cases": [
         {
@@ -86,14 +87,15 @@
             }
           ],
           "image": {
-            "prompt": "A grand government meeting room with one tall window and a long empty polished table, pale blue background. syndicaliste (short and round, curly bright red hair, bright green vest, white knitted gloves) in the foreground on the right, holding up the iceblock in both arms like evidence, the tiny blue dot frozen in its middle, frost on her gloves, one eyebrow raised, unimpressed. Medium shot, calm empty space above.",
+            "prompt": "A grand government meeting room with one tall window and a long empty polished table, pale blue background. syndicaliste (short and round, curly bright red hair, bright green vest, white knitted gloves) in the foreground on the right, holding up the iceblock with exactly two arms, both gloved hands gripping the sides of the block like evidence, no other arm or hand anywhere, the tiny blue dot frozen in its middle, one eyebrow raised, unimpressed. Medium shot, calm empty space above.",
             "cast": [
               "syndicaliste"
             ],
             "file": "images/actu-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium"
+            "via": "premium",
+            "redo": true
           }
         },
         {
@@ -138,7 +140,8 @@
             ],
             "file": "images/actu-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -183,7 +186,8 @@
             ],
             "file": "images/actu-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -222,13 +226,14 @@
             }
           ],
           "image": {
-            "prompt": "A theatre backstage room with a red velvet curtain on one side, pale pink background. accessoiriste (plump, short, bald on top with grey side hair, big grey moustache, bright orange apron) on the left, on tiptoe on a small stool, measuring the small empty gap on the shelf with his yellow tape measure, holding the statuette in his other hand, very concentrated, tongue slightly out. Medium shot, calm empty space above.",
+            "prompt": "A theatre backstage room with a red velvet curtain on one side, pale pink background. accessoiriste (plump, short, light pink skin filled with flat colour on face and hands, bald on top with grey side hair, big grey moustache, bright orange apron over a white shirt) on the left, on tiptoe on a small stool, measuring the small empty gap on the shelf with his yellow tape measure, holding the golden statuette in his other hand, very concentrated, tongue slightly out, no hearts and no floating symbols. Full colour, medium shot, calm empty space above.",
             "cast": [
               "accessoiriste"
             ],
             "file": "images/actu-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {

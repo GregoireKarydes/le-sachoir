@@ -45,6 +45,7 @@
         "file": "images/insolite-cover.webp",
         "status": "done",
         "attempts": 1,
+        "qa": "ok",
         "via": "premium"
       },
       "cases": [
@@ -79,6 +80,7 @@
             "file": "images/insolite-01.webp",
             "status": "done",
             "attempts": 1,
+            "qa": "ok",
             "via": "premium"
           }
         },
@@ -100,7 +102,7 @@
             }
           ],
           "image": {
-            "prompt": "Hippolyte (on the right) lying in bed, sheet pulled up to his nose, only his terrified eyes showing; François (on the left) unscrewing the lid of a big glass jar with a gentle smile. medium shot",
+            "prompt": "one single panel, no frame divisions, each character appears only once, no animal. a bare bedroom with one bed. Hippolyte (on the right, skinny, white nightshirt, droopy white nightcap) lying in bed, sheet pulled up to his nose, only his terrified eyes showing; François (on the left, tall bony doctor, grey sideburns, bald forehead, black frock coat, white cravat) standing beside the bed, unscrewing the lid of a big glass jar full of dark leeches with a gentle smile. medium shot",
             "cast": [
               "broussais",
               "hippolyte"
@@ -108,6 +110,7 @@
             "file": "images/insolite-02.webp",
             "status": "done",
             "attempts": 1,
+            "redo": true,
             "via": "fal"
           }
         },
@@ -139,6 +142,7 @@
             "file": "images/insolite-03.webp",
             "status": "done",
             "attempts": 1,
+            "qa": "ok",
             "via": "fal"
           }
         },
@@ -184,6 +188,7 @@
             "file": "images/insolite-04.webp",
             "status": "done",
             "attempts": 1,
+            "qa": "ok",
             "via": "fal"
           }
         },
@@ -207,6 +212,7 @@
             "file": "images/insolite-05.webp",
             "status": "done",
             "attempts": 1,
+            "qa": "ok",
             "via": "fal"
           }
         },
@@ -236,6 +242,7 @@
             "file": "images/insolite-06.webp",
             "status": "done",
             "attempts": 1,
+            "qa": "ok",
             "via": "fal"
           }
         },
@@ -259,6 +266,7 @@
             "file": "images/insolite-07.webp",
             "status": "done",
             "attempts": 1,
+            "qa": "ok",
             "via": "fal"
           }
         }
