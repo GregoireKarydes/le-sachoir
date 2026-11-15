@@ -44,6 +44,7 @@
         ],
         "file": "images/cultureg-cover.webp",
         "status": "done",
+        "qa": "ok",
         "attempts": 1,
         "via": "premium"
       },
@@ -73,6 +74,7 @@
             ],
             "file": "images/cultureg-01.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -101,6 +103,7 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -122,13 +125,14 @@
             }
           ],
           "image": {
-            "prompt": "close-up on the desk. Alexandre (plump, blue robe, quill behind his ear) on the left adding two extra wavy lines to the scroll with great flourish; Léo (green hoodie, red curls) on the right holding up both hands, all ten fingers spread, then two more fingers drawn as a sad question. medium shot",
+            "prompt": "close-up on the desk. Alexandre (plump, blue robe, quill behind his ear) on the left adding two extra wavy lines to the scroll with great flourish, smug proud face, no hearts and no blush; Léo (lanky, green hoodie, red curls) on the right holding up both hands, all ten fingers spread, staring at them in dismay. medium shot",
             "cast": [
               "alexandre",
               "leo"
             ],
             "file": "images/cultureg-03.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1
           }
         },
@@ -164,6 +168,7 @@
             ],
             "file": "images/cultureg-04.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -192,6 +197,7 @@
             ],
             "file": "images/cultureg-05.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -220,6 +226,7 @@
             ],
             "file": "images/cultureg-06.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         },
@@ -264,6 +271,7 @@
             ],
             "file": "images/cultureg-07.webp",
             "status": "done",
+            "qa": "ok",
             "attempts": 1
           }
         }

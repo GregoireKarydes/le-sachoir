@@ -64,13 +64,14 @@
         }
       ],
       "cover": {
-        "prompt": "A plain empty hallway with a pale yellow background. compteur (short and round, grey side-parted hair, mustard yellow cardigan, square black glasses) on the left, clicking the clicker with intense concentration, tongue slightly out. controleur (lanky, very thin, spiky ginger hair, bright orange shirt) on the right, proudly holding one of the tincans to his ear, the string stretching out of frame, deadpan. Wide shot, calm empty space above.",
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A plain empty hallway with a pale yellow background. compteur (short and round, grey side-parted hair, mustard yellow cardigan, square black glasses) on the left, clicking the clicker with intense concentration, tongue slightly out. controleur (lanky, very thin, spiky ginger hair, bright orange shirt) on the right, proudly holding one of the tincans to his ear, the string stretching out of frame, deadpan. Wide shot, calm empty space above.",
         "cast": [
           "compteur",
           "controleur"
         ],
         "file": "images/actu-cover.webp",
         "status": "done",
+        "redo": true,
         "attempts": 1,
         "via": "fal"
       },
@@ -88,12 +89,13 @@
             }
           ],
           "image": {
-            "prompt": "A wide Paris boulevard seen from a pavement, a long crowd of tiny simple marchers in the background holding blank signs, pale blue background. compteur (short and round, grey side-parted hair, mustard yellow cardigan, square black glasses) in the foreground on the right, standing on a small wooden crate, clicking the clicker with intense concentration, one eye squinting, tongue slightly out. Medium shot, calm empty space above.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A wide Paris boulevard seen from a pavement, a long crowd of tiny simple marchers in the background holding blank signs, pale blue background. compteur (short and round, grey side-parted hair, mustard yellow cardigan, square black glasses) in the foreground on the right, standing on a small wooden crate, clicking the clicker with intense concentration, one eye squinting, tongue slightly out. Medium shot, calm empty space above.",
             "cast": [
               "compteur"
             ],
             "file": "images/actu-01.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1,
             "via": "fal"
           }
@@ -134,12 +136,13 @@
             }
           ],
           "image": {
-            "prompt": "A rugby stadium stand at night, rows of empty blue seats, pale green background. supportrice (tall and sporty, big round afro puff hair, oversized bright blue rugby jersey, red and white stripe on one cheek) on the left, standing on her seat, triumphantly holding the calculator high above her head like a trophy, the other fist raised, huge proud grin, yellow sparkles around the calculator. Medium shot, calm empty space above.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A rugby stadium stand at night, rows of empty blue seats, pale green background. supportrice (tall and sporty, big round afro puff hair, oversized bright blue rugby jersey, red and white stripe on one cheek) on the left, standing on her seat, triumphantly holding the calculator high above her head like a trophy, the other fist raised, huge proud grin, yellow sparkles around the calculator. Medium shot, calm empty space above.",
             "cast": [
               "supportrice"
             ],
             "file": "images/actu-02.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1,
             "via": "fal"
           }
@@ -180,12 +183,13 @@
             }
           ],
           "image": {
-            "prompt": "An air traffic control room with one big dark radar screen and a desk, pale lilac background. controleur (lanky, very thin, spiky ginger hair, bright orange shirt, black headset around his neck) on the right, sitting very straight, holding one of the tincans to his mouth, the taut string running across the room to a tiny colleague far away holding the other tin can to his ear, deadpan proud expression. Medium wide shot, calm empty space above.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. An air traffic control room with one big dark radar screen and a desk, pale lilac background. controleur (lanky, very thin, spiky ginger hair, bright orange shirt, black headset around his neck) on the right, sitting very straight, holding one of the tincans to his mouth, the taut string running across the room to a tiny colleague far away holding the other tin can to his ear, deadpan proud expression. Medium wide shot, calm empty space above.",
             "cast": [
               "controleur"
             ],
             "file": "images/actu-03.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1,
             "via": "fal"
           }
@@ -226,12 +230,13 @@
             }
           ],
           "image": {
-            "prompt": "A small modern interpreter booth with a glass window and a desk with a microphone, pale pink background. interprete (very upright and slim, silver-white high bun, deep purple suit, thin gold glasses) on the left, wearing the headsets stacked on her head, one over the other, eyes wide, sitting perfectly straight, pen frozen above her notepad, a tiny light-blue sweat drop on her temple. Medium shot, calm empty space above.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A small modern interpreter booth with a glass window and a desk with a microphone, pale pink background. interprete (very upright and slim, silver-white high bun, deep purple suit, thin gold glasses) on the left, wearing the headsets stacked on her head, one over the other, eyes wide, sitting perfectly straight, pen frozen above her notepad, a tiny light-blue sweat drop on her temple. Medium shot, calm empty space above.",
             "cast": [
               "interprete"
             ],
             "file": "images/actu-04.webp",
             "status": "done",
+            "redo": true,
             "attempts": 1,
             "via": "fal"
           }
