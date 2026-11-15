@@ -25,24 +25,30 @@
           "name": "Nadia",
           "look": "Nadia, a tall elegant office worker in her fifties, medium olive skin, sleek silver-grey chin-length bob haircut, long dangling gold earrings, bright teal turtleneck sweater as main colour, charcoal trousers, a big white coffee mug always in her hand",
           "file": "cast/origine-nadia.png",
-          "status": "pending",
-          "role": "the office gossip who says the word every week without knowing where it comes from; curious, raises an eyebrow, sips coffee loudly"
+          "status": "done",
+          "role": "the office gossip who says the word every week without knowing where it comes from; curious, raises an eyebrow, sips coffee loudly",
+          "via": "fal"
         },
         {
           "id": "joffre",
           "name": "Le général Joffre",
           "look": "Joseph Joffre, a heavy-set French general in his sixties in 1914, big round belly, thick white moustache, bushy white eyebrows, short white hair, light peach skin, dark navy blue army tunic with gold buttons as main colour, bright red trousers, the kepi on his head",
           "file": "cast/origine-joffre.png",
-          "status": "pending",
-          "role": "the calm, unflappable commander-in-chief of 1914 who sent incompetent generals away; slow, heavy, imperturbable, hands behind his back"
+          "status": "done",
+          "role": "the calm, unflappable commander-in-chief of 1914 who sent incompetent generals away; slow, heavy, imperturbable, hands behind his back",
+          "via": "fal"
         }
       ],
       "cover": {
         "prompt": "an office coffee machine corner. Nadia (tall, silver-grey bob, teal turtleneck) on the left, coffee mug in hand, staring with raised eyebrows at Joffre (heavy-set, white moustache, navy blue tunic, red trousers, the kepi) who stands on the right holding a small old railway ticket out to an empty office chair, perfectly serious. wide shot",
-        "cast": ["nadia", "joffre"],
+        "cast": [
+          "nadia",
+          "joffre"
+        ],
         "file": "images/origine-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -51,15 +57,27 @@
           "tag": "Aujourd’hui",
           "caption": "À la machine à café, une nouvelle tombe. Mais pourquoi dit-on « limoger » pour « renvoyer » ? Et quel rapport avec Limoges ?",
           "bubbles": [
-            { "who": "nadia", "text": "Le directeur s’est fait limoger ! Mais pourquoi Limoges ?", "side": "l" },
-            { "who": "joffre", "text": "Ça, madame, c’est un peu ma faute.", "side": "r" }
+            {
+              "who": "nadia",
+              "text": "Le directeur s’est fait limoger ! Mais pourquoi Limoges ?",
+              "side": "l"
+            },
+            {
+              "who": "joffre",
+              "text": "Ça, madame, c’est un peu ma faute.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "an office coffee machine corner with a small table. Nadia (tall, silver-grey bob, teal turtleneck) on the left reading the phone, coffee mug frozen halfway to her mouth; Joffre (heavy-set, white moustache, navy blue tunic, red trousers, the kepi) has just appeared on the right, calmly pressing a button on the coffee machine as if he worked here. wide shot",
-            "cast": ["nadia", "joffre"],
+            "cast": [
+              "nadia",
+              "joffre"
+            ],
             "file": "images/origine-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -68,15 +86,27 @@
           "tag": "Août 1914",
           "caption": "La guerre commence mal. Joffre, chef de l’armée française, juge certains généraux trop lents ou dépassés. Il veut les écarter vite.",
           "bubbles": [
-            { "who": "joffre", "text": "Celui-ci attaque toujours avec trois jours de retard.", "side": "r" },
-            { "who": "nadia", "text": "Et vous ne pouvez pas simplement le renvoyer ?", "side": "l" }
+            {
+              "who": "joffre",
+              "text": "Celui-ci attaque toujours avec trois jours de retard.",
+              "side": "r"
+            },
+            {
+              "who": "nadia",
+              "text": "Et vous ne pouvez pas simplement le renvoyer ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a French army headquarters room in 1914 with the map on the wall. Joffre (heavy-set, white moustache, navy blue tunic, red trousers, the kepi) in the foreground on the right, pulling a flag pin out of the map with two fingers, unimpressed; Nadia (tall, silver-grey bob, teal turtleneck) in the background on the left, still holding her coffee mug, peering at the map. low angle",
-            "cast": ["joffre", "nadia"],
+            "cast": [
+              "joffre",
+              "nadia"
+            ],
             "file": "images/origine-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -98,15 +128,26 @@
           "tag": "Direction le Limousin",
           "caption": "Un général envoyé à l’arrière n’a plus de troupes à commander. Il attend, loin du front, du côté de Limoges.",
           "bubbles": [
-            { "who": "Un général", "text": "Et qu’est-ce qu’on fera, là-bas ?", "side": "l" },
-            { "who": "joffre", "text": "Vous admirerez la porcelaine. De loin.", "side": "r" }
+            {
+              "who": "Un général",
+              "text": "Et qu’est-ce qu’on fera, là-bas ?",
+              "side": "l"
+            },
+            {
+              "who": "joffre",
+              "text": "Vous admirerez la porcelaine. De loin.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a small French railway station platform in 1914. Three gloomy elderly generals in navy blue tunics, seen from behind, trudge towards a waiting steam train carrying suitcases, one clutching a tiny white porcelain teacup like a consolation prize; Joffre (heavy-set, white moustache, navy blue tunic, red trousers, the kepi) on the right waving them goodbye with a large white handkerchief, totally unmoved. wide shot",
-            "cast": ["joffre"],
+            "cast": [
+              "joffre"
+            ],
             "file": "images/origine-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -115,7 +156,15 @@
           "tag": "En vrai",
           "title": "Le vrai Joseph Joffre",
           "text": "Joffre, chef des armées françaises au début de la Première Guerre mondiale, ici en 1917. Il a écarté des dizaines de généraux dès les premières semaines.",
-          "photo": { "commons": "File:Joseph Joffre R.Melcy 1917.jpg" }
+          "photo": {
+            "commons": "File:Joseph Joffre R.Melcy 1917.jpg",
+            "credit": "R. Melcy",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Joseph_Joffre_R.Melcy_1917.jpg",
+            "file": "images/photo-5-joseph-joffre-r-melcy-1917-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -123,15 +172,26 @@
           "tag": "La surprise",
           "caption": "En vrai, moins d’une vingtaine d’écartés ont dû rester dans cette région, et pas forcément à Limoges. Mais le nom est resté.",
           "bubbles": [
-            { "who": "joffre", "text": "La région, c’était aussi Brive ou Tulle.", "side": "r" },
-            { "who": "joffre", "text": "Mais « se faire tuller », ça sonnait moins bien.", "side": "r" }
+            {
+              "who": "joffre",
+              "text": "La région, c’était aussi Brive ou Tulle.",
+              "side": "r"
+            },
+            {
+              "who": "joffre",
+              "text": "Mais « se faire tuller », ça sonnait moins bien.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the French army headquarters room in 1914, the map behind. Joffre (heavy-set, white moustache, bushy white eyebrows, navy blue tunic, the kepi) alone, leaning towards the viewer with one finger raised, one eyebrow lifted, the faint smug smile of someone sharing gossip. close-up",
-            "cast": ["joffre"],
+            "cast": [
+              "joffre"
+            ],
             "file": "images/origine-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -153,15 +213,27 @@
           "tag": "En résumé",
           "caption": "« Limoger », c’est écarter quelqu’un de son poste, comme les généraux envoyés vers Limoges par Joffre en 1914.",
           "bubbles": [
-            { "who": "nadia", "text": "Donc mon directeur part pour Limoges ?", "side": "l" },
-            { "who": "joffre", "text": "Rassurez-vous : aujourd’hui, on limoge sans billet de train.", "side": "r" }
+            {
+              "who": "nadia",
+              "text": "Donc mon directeur part pour Limoges ?",
+              "side": "l"
+            },
+            {
+              "who": "joffre",
+              "text": "Rassurez-vous : aujourd’hui, on limoge sans billet de train.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back at the office coffee machine corner. Nadia (tall, silver-grey bob, teal turtleneck) on the left sitting on the edge of the small table, holding the phone, half amused, half relieved; Joffre (heavy-set, white moustache, navy blue tunic, red trousers) on the right, his kepi set down on the coffee machine, sipping from a tiny paper cup with great dignity. medium shot",
-            "cast": ["nadia", "joffre"],
+            "cast": [
+              "nadia",
+              "joffre"
+            ],
             "file": "images/origine-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
@@ -171,10 +243,22 @@
       },
       "story": "Le verbe « limoger », qui veut dire écarter quelqu’un de son poste, vient bien de la ville de Limoges. Tout commence en août 1914, au début de la Première Guerre mondiale. L’armée française recule, et son chef, le général Joseph Joffre, juge que plusieurs généraux sont dépassés. Le 15 août, un télégramme du ministre de la Guerre lui permet de mettre à la retraite d’office un officier général sur simple rapport.\nFin août, Joffre décide que les généraux écartés se retireront à l’arrière, dans la 12e région militaire, loin du front, dont Limoges est le chef-lieu. Au début de la bataille de la Marne, début septembre, 58 officiers ont déjà été renvoyés. Sans troupes à commander, ils attendent loin des combats : on dit qu’ils ont été « limogés ».\nLa légende est un peu plus belle que la réalité : selon Expressio, moins d’une vingtaine de ces officiers ont été obligés de rester dans cette région, et pas forcément à Limoges même. Le mot, lui, a fait son chemin. Il n’apparaît dans les écrits qu’à partir de 1916, d’abord pour les généraux, puis pour les préfets et les hauts fonctionnaires. Aujourd’hui, on limoge un patron, un ministre ou un entraîneur, sans le moindre billet pour le Limousin.",
       "sources": [
-        { "title": "Expressio — Se faire limoger", "url": "https://www.expressio.fr/expressions/se-faire-limoger" },
-        { "title": "La langue française — Limoger", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/limoger" },
-        { "title": "Larousse — Joseph Joffre", "url": "https://www.larousse.fr/encyclopedie/personnage/Joseph_Joffre/126011" },
-        { "title": "Wikimedia Commons — Joseph Joffre R.Melcy 1917", "url": "https://c.enwp.org/wiki/File:Joseph_Joffre_R.Melcy_1917.jpg" }
+        {
+          "title": "Expressio — Se faire limoger",
+          "url": "https://www.expressio.fr/expressions/se-faire-limoger"
+        },
+        {
+          "title": "La langue française — Limoger",
+          "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/limoger"
+        },
+        {
+          "title": "Larousse — Joseph Joffre",
+          "url": "https://www.larousse.fr/encyclopedie/personnage/Joseph_Joffre/126011"
+        },
+        {
+          "title": "Wikimedia Commons — Joseph Joffre R.Melcy 1917",
+          "url": "https://c.enwp.org/wiki/File:Joseph_Joffre_R.Melcy_1917.jpg"
+        }
       ]
     }
   ]
