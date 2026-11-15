@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T20:49:33.893013+01:00",
+ "updated_at": "2026-11-15T20:52:17.698384+01:00",
  "today": "2026-11-15",
  "problems": [],
  "days": [
@@ -84,9 +84,9 @@
  "stock": {
   "cultureg": {
    "ready": 2,
-   "waiting": 3,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 23,
+   "images_left": 31,
    "focus": "20261114-0359-do-re-mi-tube-voix-enrouees (8 image(s) à faire)",
    "next": "20261113-2057-pourquoi-tant-de-martin",
    "next_redo": 0

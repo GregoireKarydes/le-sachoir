@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T20:49+01:00",
+ "updated_at": "2026-11-15T20:52+01:00",
  "stock": {
   "cultureg": [
    {
@@ -84,6 +84,23 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 7,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261115-2050-departements-taille-cheval",
+    "name": "20261115-2050-departements-taille-cheval",
+    "added": "20261115-2050",
+    "status": "waiting",
+    "next": false,
+    "title": "Le département, ou la France taillée à la mesure d’un cheval",
+    "theme": "Histoire de France",
+    "tagline": "Une règle, un compas, des rivières et un cheval qui doit rentrer avant la nuit",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 8,
     "failed": 0,
     "redo": 0
    }
