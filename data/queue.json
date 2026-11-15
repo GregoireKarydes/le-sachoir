@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T11:47+01:00",
+ "updated_at": "2026-11-15T12:01+01:00",
  "stock": {
   "cultureg": [
    {
@@ -329,7 +329,7 @@
      "images_done": 6,
      "images_total": 6,
      "failed": 0,
-     "redo": 0
+     "redo": 6
     },
     {
      "id": "quiz",

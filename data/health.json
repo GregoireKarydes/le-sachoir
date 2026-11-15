@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T11:47:14.955600+01:00",
+ "updated_at": "2026-11-15T12:01:41.244879+01:00",
  "today": "2026-11-15",
  "problems": [],
  "days": [
@@ -144,9 +144,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.60606,
-  "images": 155,
-  "today_usd": 0.18,
+  "spent_usd": 1.62657,
+  "images": 162,
+  "today_usd": 0.20051,
   "blocked": null
  }
 }
