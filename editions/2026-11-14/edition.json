@@ -1490,9 +1490,10 @@
           "name": "Marthe, poseuse de sangsues",
           "look": "Marthe, a sturdy 1830s woman leech applier, rolled sleeves, plain grey dress, white apron, a red headscarf as the only colour, carrying a big glass jar",
           "file": "cast/insolite-marthe.png",
-          "status": "pending",
+          "status": "done",
           "role": "the sturdy woman who applies the leeches; strong, matter-of-fact, sleeves rolled up",
-          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
+          "via": "fal"
         }
       ],
       "cover": {
@@ -1784,8 +1785,9 @@
           "look": "Inès, a short round young Parisian commuter, curly black hair in a high bun, big round glasses, bright red raincoat as main colour, white sneakers, always holding a takeaway coffee cup",
           "file": "cast/origine-ines.png",
           "role": "the commuter stuck by a strike who asks where the word comes from; short, round, exasperated then curious, the reader's voice",
-          "status": "pending",
-          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
+          "status": "done",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
+          "via": "fal"
         },
         {
           "id": "gustave",
@@ -1793,8 +1795,9 @@
           "look": "Gustave, a tall lanky labourer from 1700s Paris, scruffy blond beard, flat brown cap, rolled-up sleeves, blue work smock as main colour, a coil of rope over his shoulder",
           "file": "cast/origine-gustave.png",
           "role": "a day labourer from the old riverbank square who explains the story; tall, lanky, proud of his square, deadpan",
-          "status": "pending",
-          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
+          "status": "done",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
+          "via": "fal"
         }
       ],
       "cases": [

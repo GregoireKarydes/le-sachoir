@@ -898,8 +898,9 @@
           "look": "a short, round ministry clerk in his fifties, light beige skin, neat grey hair with a side parting, thick black eyebrows, mustard yellow cardigan as main colour over a white shirt, brown trousers, small square black glasses",
           "role": "the scrupulous official who counts everything and wants to upset no one; very serious, clicking with total concentration",
           "file": "cast/actu-compteur.png",
-          "status": "pending",
-          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
+          "status": "done",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
+          "via": "fal"
         },
         {
           "id": "supportrice",
@@ -915,8 +916,9 @@
           "look": "a lanky, very thin air traffic controller in his forties, pale pink skin, spiky ginger hair, bright orange short-sleeve shirt as main colour, grey trousers, a big black headset hanging around his neck",
           "role": "the resourceful controller who keeps calm with whatever he has at hand; deadpan, very proud of his makeshift solution",
           "file": "cast/actu-controleur.png",
-          "status": "pending",
-          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
+          "status": "done",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
+          "via": "fal"
         },
         {
           "id": "interprete",
@@ -1840,18 +1842,20 @@
           "name": "Léa",
           "look": "Léa, a short round young woman in her twenties, big messy bun of curly bright red hair, freckles, light peach skin, oversized bright green hoodie as main colour, grey jogging pants, fluffy pink slippers",
           "file": "cast/notice-lea.png",
-          "status": "pending",
+          "status": "done",
           "role": "the hungry, curious flatmate who asks the reader's questions; slouchy, always holding the soup bowl or a spoon",
-          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
+          "via": "fal"
         },
         {
           "id": "spencer",
           "name": "Percy Spencer",
           "look": "Percy Spencer, a very tall and thin 1940s American engineer in his fifties, grey hair neatly combed back, small round wire glasses, light peach skin, mustard brown three-piece tweed suit as main colour, a dark red bow tie, a screwdriver sticking out of his breast pocket",
           "file": "cast/notice-spencer.png",
-          "status": "pending",
+          "status": "done",
           "role": "the self-taught inventor who explains simply and is very proud of his accident; stands straight, explains with one finger raised",
-          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
+          "via": "fal"
         }
       ],
       "cover": {
