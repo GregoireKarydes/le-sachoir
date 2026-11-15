@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T20:43+01:00",
+ "updated_at": "2026-11-15T20:44+01:00",
  "stock": {
   "cultureg": [
    {
@@ -189,6 +189,23 @@
     "cases": 8,
     "photos": 1,
     "images_done": 6,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/notice/20261115-2043-cocotte-minute-triche-avec-leau",
+    "name": "20261115-2043-cocotte-minute-triche-avec-leau",
+    "added": "20261115-2043",
+    "status": "waiting",
+    "next": false,
+    "title": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
+    "theme": "Sciences physiques",
+    "tagline": "Une marmite qui siffle, une soupape qui tourne, et un physicien qui cuisait des os en 1679",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
     "images_total": 6,
     "failed": 0,
     "redo": 0
