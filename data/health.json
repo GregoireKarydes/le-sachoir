@@ -1,20 +1,8 @@
 {
- "updated_at": "2026-11-14T21:42:09.631198+01:00",
- "today": "2026-11-14",
+ "updated_at": "2026-11-15T02:59:50.761687+01:00",
+ "today": "2026-11-15",
  "problems": [],
  "days": [
-  {
-   "date": "2026-11-14",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "origine": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-15",
    "status": "draft",
@@ -80,41 +68,35 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "origine"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-14",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 3,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 39,
-   "focus": "20261113-2057-pourquoi-tant-de-martin (7 image(s) à faire)",
+   "images_left": 23,
+   "focus": "20261114-0359-do-re-mi-tube-voix-enrouees (8 image(s) à faire)",
    "next": "20261113-2050-lalexandrin-roi-qui-na-jamais-rime",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 33,
-   "focus": "20261113-2051-le-president-prince-dandorre (6 image(s) à faire)",
+   "images_left": 22,
+   "focus": "20261113-2058-les-rats-dautun-avaient-un-avocat (1 image(s) à faire)",
    "next": "20261113-0100-la-plus-longue-frontiere-de-la-france-av",
    "next_redo": 0
   },
   "notice": {
-   "ready": 0,
-   "waiting": 2,
+   "ready": 2,
+   "waiting": 0,
    "blocked": 0,
-   "images_left": 8,
-   "focus": "20261114-2043-micro-ondes-soupe-qui-danse (2 image(s) à faire)",
-   "next": null,
+   "images_left": 0,
+   "focus": null,
+   "next": "20261114-2043-micro-ondes-soupe-qui-danse",
    "next_redo": 0
   },
   "origine": {
@@ -127,33 +109,34 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
-   "waiting": 3,
+   "ready": 2,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 48,
-   "focus": "20261113-1926-jeux-olympiques-baron-tetu (7 image(s) à faire)",
+   "images_left": 41,
+   "focus": "20261113-1931-les-lumieres-sans-electricite (19 image(s) à faire)",
    "next": "20261110-0100-qui-commande-en-france-la-ve-republique",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 2,
  "days_ahead_written": 2,
- "quiz_days_ahead": 8,
+ "quiz_days_ahead": 7,
  "quota": {
-  "day": "2026-11-14",
-  "count": 49,
+  "day": "2026-11-15",
+  "count": 52,
   "neurons": 8960,
   "exhausted": false,
   "by_kind": {
-   "case": 42,
-   "cast": 7
+   "case": 38,
+   "cast": 12,
+   "cover": 2
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.42606,
-  "images": 149,
-  "today_usd": 0.39355,
+  "spent_usd": 1.60606,
+  "images": 155,
+  "today_usd": 0.18,
   "blocked": null
  }
 }

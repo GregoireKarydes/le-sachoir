@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T21:42+01:00",
+ "updated_at": "2026-11-15T02:59+01:00",
  "stock": {
   "cultureg": [
    {
@@ -23,7 +23,7 @@
     "path": "stock/cultureg/20261113-2057-pourquoi-tant-de-martin",
     "name": "20261113-2057-pourquoi-tant-de-martin",
     "added": "20261113-2057",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Pourquoi la France est pleine de Martin (merci le demi-manteau)",
     "theme": "Société",
@@ -31,7 +31,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 7,
     "images_total": 7,
     "failed": 0,
     "redo": 0
@@ -40,7 +40,7 @@
     "path": "stock/cultureg/20261114-0100-neptune-la-planete-trouvee-sans-lever-le",
     "name": "20261114-0100-neptune-la-planete-trouvee-sans-lever-le",
     "added": "20261114-0100",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Neptune, la planète trouvée sans lever les yeux",
     "theme": "L’univers",
@@ -48,7 +48,7 @@
     "minutes": 2,
     "cases": 10,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 9,
     "images_total": 9,
     "failed": 0,
     "redo": 0
@@ -127,7 +127,7 @@
     "path": "stock/insolite/20261113-2051-le-president-prince-dandorre",
     "name": "20261113-2051-le-president-prince-dandorre",
     "added": "20261113-2051",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Le président français est prince d’Andorre, et c’est la faute d’un comte",
     "theme": "Géopolitique",
@@ -135,7 +135,7 @@
     "minutes": 1,
     "cases": 7,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -152,7 +152,7 @@
     "minutes": 1,
     "cases": 7,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 5,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -214,15 +214,15 @@
     "path": "stock/notice/20261114-2043-micro-ondes-soupe-qui-danse",
     "name": "20261114-2043-micro-ondes-soupe-qui-danse",
     "added": "20261114-2043",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "Le micro-ondes ne chauffe pas votre soupe, il la fait danser",
     "theme": "Sciences physiques",
     "tagline": "Pas de flamme, pas de plaque : juste de l'eau qui pivote des milliards de fois par seconde",
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 4,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -231,7 +231,7 @@
     "path": "stock/notice/20261114-2045-code-barres-morse-de-plage",
     "name": "20261114-2045-code-barres-morse-de-plage",
     "added": "20261114-2045",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Le code-barres, ou le morse dessiné dans le sable",
     "theme": "Informatique et numérique",
@@ -239,7 +239,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -268,7 +268,7 @@
     "path": "stock/dossier/20261113-1926-jeux-olympiques-baron-tetu",
     "name": "20261113-1926-jeux-olympiques-baron-tetu",
     "added": "20261113-1926",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Jeux olympiques : 2 800 ans de sport et un baron très têtu",
     "theme": "Sports",
@@ -276,7 +276,7 @@
     "minutes": 3,
     "cases": 27,
     "photos": 3,
-    "images_done": 15,
+    "images_done": 22,
     "images_total": 22,
     "failed": 0,
     "redo": 0
@@ -318,96 +318,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-14",
-   "path": "editions/2026-11-14",
-   "status": "published",
-   "newsletter": true,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "On descend du singe ? Non, on est cousins (et c’est la faute à Darwin)",
-     "theme": "Sciences du vivant",
-     "tagline": "Des tortues des Galápagos aux bactéries résistantes : la sélection naturelle expliquée maillon par maillon",
-     "minutes": 6,
-     "cases": 24,
-     "photos": 2,
-     "images_done": 21,
-     "images_total": 21,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "actu",
-     "label": "L’Actu du jour",
-     "kind": "",
-     "title": "Un point gelé, une chaise pliante et seize minutes de bonheur",
-     "theme": "",
-     "tagline": "Les fonctionnaires attendent le dégel, l’Europe réserve sa place, les Bleus tombent à Milan et Nicole Kidman reçoit un César.",
-     "minutes": 4,
-     "cases": 15,
-     "photos": 4,
-     "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Le guide Michelin, ou comment vendre des pneus avec un bon dîner",
-     "theme": "Entreprises et marques",
-     "tagline": "Avant de distribuer des étoiles, le guide rouge était une pub gratuite pour automobilistes",
-     "minutes": 2,
-     "cases": 10,
-     "photos": 1,
-     "images_done": 9,
-     "images_total": 9,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "kind": "",
-     "title": "Docteur Vampire et ses quarante millions de sangsues",
-     "theme": "Médecine et santé",
-     "tagline": "Dans les années 1830, la France a tellement saigné ses malades qu’elle a vidé ses mares",
-     "minutes": 2,
-     "cases": 9,
-     "photos": 1,
-     "images_done": 8,
-     "images_total": 8,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "origine",
-     "label": "D’où ça vient ?",
-     "kind": "",
-     "title": "Pourquoi « faire grève » vient d’une plage parisienne",
-     "theme": "Expression française",
-     "tagline": "Avant de bloquer le métro, la grève, c’était chercher du boulot",
-     "minutes": 2,
-     "cases": 6,
-     "photos": 0,
-     "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 3
-    },
-    {
-     "id": "quiz",
-     "label": "Qui a dit ça ?",
-     "kind": "citation",
-     "title": "Ils l’ont dit (ou pas)",
-     "questions": 4
-    }
-   ]
-  },
   {
    "date": "2026-11-15",
    "path": "editions/2026-11-15",
