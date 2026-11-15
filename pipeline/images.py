@@ -446,6 +446,10 @@ def story_context(fmt: dict) -> str:
     """Le cadre commun à toutes les images d'une BD (champ `art`), pour des cases cohérentes entre elles."""
     art = fmt.get("art") or {}
     bits = []
+    if fmt.get("id") == "actu":
+        # 15 novembre 2026 : l'Actu raconte 4 sujets sans lien, une image chacun. Donner les 4 lieux à chaque
+        # image faisait dessiner les 4 sujets en planche (4 à 6 vignettes par image). Seule l'époque reste.
+        art = {"era": art.get("era")}
     if art.get("subject"):
         bits.append(f"The strip tells {_clean(art['subject'])}")
     if art.get("setting"):
@@ -453,6 +457,37 @@ def story_context(fmt: dict) -> str:
     if art.get("era"):
         bits.append(f"period: {_clean(art['era'])}, with clothes, objects and places of that period unless a joke says otherwise")
     return (" " + "; ".join(bits) + ".") if bits else ""
+
+
+def looks_like_page(im: Image.Image) -> bool:
+    """Vrai si l'image ressemble à une planche (plusieurs vignettes) au lieu d'une seule scène.
+
+    Cherche, à l'intérieur de l'image, une gouttière : deux longs traits droits parallèles (bords de deux
+    vignettes) séparés par une bande claire et unie. Mesuré le 15 novembre 2026 : repère les 5 planches
+    connues (Actu du 15, Insolite du 14) pour 2 fausses alertes sur environ 280 cases (bord de table, moulure)."""
+    g = im.convert("L").resize((256, 448) if im.height > im.width else (448, 256))
+    w, h = g.size
+    px = list(g.getdata())
+    rows = [px[i * w:(i + 1) * w] for i in range(h)]
+    cols = [px[j::w] for j in range(w)]
+
+    def gutter(lines, n):
+        dens = [sum(1 for a, b in zip(lines[i], lines[i + 1]) if abs(a - b) > 45) / len(lines[i]) for i in range(n - 1)]
+        for r in range(int(.12 * n), int(.88 * n)):
+            if dens[r] <= .7:
+                continue
+            for k in range(3, 14):
+                if r + k < n - 1 and dens[r + k] > .7:
+                    band = [v for line in lines[r + 2:r + k] for v in line]
+                    if band:
+                        m = sum(band) / len(band)
+                        sd = (sum((v - m) ** 2 for v in band) / len(band)) ** .5
+                        if sd < 12 and m > 150:
+                            return True
+                    break
+        return False
+
+    return gutter(rows, h) or gutter(cols, w)
 
 
 def cast_prompt(fmt: dict, c: dict) -> str:
@@ -517,7 +552,11 @@ def build(scene: str, cast: list[tuple], fmt: dict | None = None,
         chars = " Character, as in the reference: " + who[0] + "."
     else:
         chars = ""
-    where = f"Panel {panel[0]} of {panel[1]} of the same comic strip. " if panel else ""
+    # 15 novembre 2026 : « Panel 3 of 7 of the same comic strip » poussait le modèle à dessiner une planche
+    # de plusieurs vignettes. On annonce désormais UNE image, sans parler de bande dessinée.
+    where = "ONE single picture showing one single moment, not a comic page: no panels, no grid, no inset pictures. "
+    if not panel:
+        where = ""
     logic = " Everything must make sense for this moment of the story: right people, right objects, right place, nothing random."
     # Les consignes impératives (pas de texte, haut libre) passent avant le style : jamais coupées si le prompt est long.
     return (f"{where}Scene: {_clean(scene)}.{story_context(fmt)}{chars}{props_for(fmt, scene)}{logic} "
@@ -688,6 +727,13 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
                 img["status"] = "pending" if img["attempts"] < max_att else "failed"
                 persist()
                 continue
+            if looks_like_page(im) and img["attempts"] < max_att:
+                # Planche de plusieurs vignettes au lieu d'une scène : on la jette et on retente au prochain passage.
+                print(f"  ! {img['file']} : planche de plusieurs vignettes, refusée")
+                img["error"] = "planche de plusieurs vignettes au lieu d'une seule scène"
+                img["status"] = "pending"
+                persist()
+                continue
             save_webp(im, d / img["file"], fmt.get("id"))
             img["status"] = "done"
             if via != "cloudflare":
@@ -716,6 +762,8 @@ def redo_one(d, img, size, kind, fmt, day, ctx, persist) -> int:
     prompt, refs = build(img["prompt"], **ctx)
     try:
         im, via = draw(fmt, day, prompt, size, refs, kind)
+        if looks_like_page(im):
+            raise RuntimeError("planche de plusieurs vignettes au lieu d'une seule scène")
     except (QuotaExhausted, BudgetReserved):
         raise
     except Exception as e:

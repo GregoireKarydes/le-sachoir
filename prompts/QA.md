@@ -12,6 +12,7 @@
 2. Regarder chaque image et vérifier :
    - les bons personnages, reconnaissables d'une case à l'autre (comparer aux fiches `cast/…png`) ;
    - le bon nombre de personnages et les bonnes positions (gauche / droite comme les bulles) ;
+   - **une seule scène par image** : jamais une planche de plusieurs vignettes, une grille ou des images incrustées (défaut grave, vu sur l'Actu du 15 novembre 2026) ;
    - **aucune lettre, aucun mot, aucun logo** dessiné ;
    - **aucun visage ni aucune main rempli de noir ou de gris** (peau toujours en couleur de peau) : c'est un défaut grave, à refaire en priorité ;
    - le haut de l'image assez calme pour les bulles ;
@@ -19,7 +20,7 @@
    - **les personnages se distinguent** : on ne confond pas deux personnages de la même BD (silhouette, coiffure, couleur dominante) ; si deux se ressemblent, c'est un vrai défaut ;
    - pas de touches d'émotion hors de propos : cœurs, sueur, larmes, joues roses ou étincelles seulement si la case raconte cette émotion (sinon défaut, retirer la touche du prompt) ;
    - style respecté : gros trait noir, **image en couleur** (aplats vifs sur la peau, les cheveux et les vêtements, fond pastel), décor presque vide, pas de dégradés ni de décor chargé. Une case en noir et blanc ou en gris (dessinée après le 9 novembre 2026) est à refaire.
-3. Image correcte → ajouter `"qa": "ok"`. Image ratée → corriger `prompt` si utile et ajouter `"redo": true` **sans toucher à `status`** (ne jamais mettre `"retry"` ni `"pending"` sur une image déjà faite). Réserver `redo` aux vrais défauts (visage ou peau en aplat noir, texte dessiné, mauvais personnage ou personnages qu'on confond, visage ou mains ratés, touche d'émotion hors de propos et voyante, case incompréhensible) ; un petit détail de style ne suffit pas. Au plus **6** `redo` par passage, l'édition du jour d'abord. Ces images sont refaites en priorité (juste après l'Actu) ; l'ancienne reste publiée si la nouvelle n'est pas prête.
+3. Image correcte → ajouter `"qa": "ok"`. Image ratée → corriger `prompt` si utile et ajouter `"redo": true` **sans toucher à `status`** (ne jamais mettre `"retry"` ni `"pending"` sur une image déjà faite). Réserver `redo` aux vrais défauts (planche de plusieurs vignettes, visage ou peau en aplat noir, texte dessiné, mauvais personnage ou personnages qu'on confond, visage ou mains ratés, touche d'émotion hors de propos et voyante, case incompréhensible) ; un petit détail de style ne suffit pas. Au plus **6** `redo` par passage, l'édition du jour d'abord. Ces images sont refaites en priorité (juste après l'Actu) ; l'ancienne reste publiée si la nouvelle n'est pas prête.
    Si deux personnages se ressemblent dans toute la BD, corriger aussi leurs fiches `look` dans le même fichier (silhouette, coiffure, couleur dominante différentes) pour les BD pas encore dessinées.
 4. Une image `failed` (jamais réussie) dans l'Actu : réécrire la case pour une scène plus simple et remettre `"status": "pending"`, `"attempts": 0`, ou retirer le sujet et renuméroter. Dans la file : la débloquer comme dit dans `prompts/STOCK.md`.
 5. Ne modifier que `editions/` et `stock/`. Commit « Contrôle qualité <date> », `git push`.
