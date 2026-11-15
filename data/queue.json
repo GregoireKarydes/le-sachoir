@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T19:27+01:00",
+ "updated_at": "2026-11-15T20:43+01:00",
  "stock": {
   "cultureg": [
    {
@@ -194,7 +194,25 @@
     "redo": 0
    }
   ],
-  "origine": [],
+  "origine": [
+   {
+    "path": "stock/origine/20261115-2041-limoge-billet-pour-limoges",
+    "name": "20261115-2041-limoge-billet-pour-limoges",
+    "added": "20261115-2041",
+    "status": "ready",
+    "next": true,
+    "title": "« Se faire limoger » : un aller simple pour Limoges",
+    "theme": "Expression française",
+    "tagline": "En 1914, être renvoyé, c’était d’abord prendre le train pour le Limousin",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 6,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   }
+  ],
   "dossier": [
    {
     "path": "stock/dossier/20261113-1926-jeux-olympiques-baron-tetu",
