@@ -455,6 +455,29 @@ def story_context(fmt: dict) -> str:
     return (" " + "; ".join(bits) + ".") if bits else ""
 
 
+def cast_prompt(fmt: dict, c: dict) -> str:
+    """Fiche casting : UN personnage seul, en pied, sur fond blanc uni.
+
+    15 novembre 2026 (retour de Greg : « les images de La Notice ne sont pas pareilles que les autres BD ») :
+    l'ancien prompt donnait le lieu de l'histoire (`art.setting`) et la description complète des autres
+    personnages. FLUX.2 klein sur fal.ai les dessinait tous : fiches avec deux personnages, un labo détaillé,
+    parfois une bulle de texte (Notice du 15, D'où ça vient ? et Insolite du 14, Actu du 15). Ces fiches
+    servant de référence à chaque case, toute la BD en héritait (décor chargé, traits fins, cheveux échangés).
+    Désormais : consignes impératives d'abord, seulement l'époque (pour les vêtements), aucun autre personnage
+    nommé ni décrit. Ce qui distingue les personnages passe par leur fiche « look » (silhouette, coiffure…)."""
+    head = STYLE["style_with_ref"] + " " if STYLE_REF.exists() else ""
+    role = f" Who they are: {_clean(c['role'])}." if c.get("role") else ""
+    era = _clean((fmt.get("art") or {}).get("era", ""))
+    era = f" Clothes of this period: {era}." if era else ""
+    return ("Character design sheet. Exactly ONE person in the whole picture, alone, full body, standing, "
+            "facing the viewer, centred, on a plain empty white background: no other person, no scenery, "
+            "no furniture, no room, no panels, no inset pictures. Wordless picture: no text, no lettering, "
+            "no speech bubble. Every face and hand in a skin colour. "
+            f"The person: {_clean(c.get('look', c['id']))}.{role}{era} "
+            "A singular, memorable caricature: exaggerated silhouette, signature hairstyle and accessory, "
+            f"body language that tells who this person is. {head}{STYLE['style']}")
+
+
 def props_for(fmt: dict, scene: str) -> str:
     """Objets récurrents décrits une fois pour toutes (`art.props`), rappelés quand la case les montre."""
     props = (fmt.get("art") or {}).get("props") or {}
@@ -610,16 +633,7 @@ def process(d: Path, f: Path, ed: dict, only_actu: bool = False, day: date | Non
                     c["status"] = "skipped"
                     persist()
                 continue
-            head = STYLE["style_with_ref"] + " " if STYLE_REF.exists() else ""
-            role = f" Role in the story: {_clean(c['role'])}." if c.get("role") else ""
-            others = [_clean(o.get("look", "")) for o in fmt.get("cast", []) if o is not c][:3]
-            unlike = (" This character must look clearly different from the other characters of the strip ("
-                      + "; ".join(others) + ").") if others else ""
-            prompt = (f"Character design sheet: one single character, full body, standing, facing the viewer, "
-                      f"plain white background, of {_clean(c.get('look', c['id']))}.{role}{story_context(fmt)} "
-                      "A singular, memorable caricature: exaggerated silhouette, signature hairstyle and accessory, "
-                      f"body language that tells who this person is.{unlike} One image only, no panel borders. "
-                      f"Wordless picture: no text, no lettering. {head}{STYLE['style']}")
+            prompt = cast_prompt(fmt, c)
             try:
                 im, via = draw(fmt, day, prompt, STYLE["cast_size"], [STYLE_REF], "cast")
                 im = ink(im)

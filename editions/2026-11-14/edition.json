@@ -1490,9 +1490,9 @@
           "name": "Marthe, poseuse de sangsues",
           "look": "Marthe, a sturdy 1830s woman leech applier, rolled sleeves, plain grey dress, white apron, a red headscarf as the only colour, carrying a big glass jar",
           "file": "cast/insolite-marthe.png",
-          "status": "done",
+          "status": "pending",
           "role": "the sturdy woman who applies the leeches; strong, matter-of-fact, sleeves rolled up",
-          "via": "fal"
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
         }
       ],
       "cover": {
@@ -1648,9 +1648,10 @@
             ],
             "file": "images/insolite-04.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "qa": "ok",
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1672,9 +1673,10 @@
             ],
             "file": "images/insolite-05.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "qa": "ok",
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1702,9 +1704,10 @@
             ],
             "file": "images/insolite-06.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "qa": "ok",
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1781,8 +1784,8 @@
           "look": "Inès, a short round young Parisian commuter, curly black hair in a high bun, big round glasses, bright red raincoat as main colour, white sneakers, always holding a takeaway coffee cup",
           "file": "cast/origine-ines.png",
           "role": "the commuter stuck by a strike who asks where the word comes from; short, round, exasperated then curious, the reader's voice",
-          "status": "done",
-          "via": "fal"
+          "status": "pending",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
         },
         {
           "id": "gustave",
@@ -1790,8 +1793,8 @@
           "look": "Gustave, a tall lanky labourer from 1700s Paris, scruffy blond beard, flat brown cap, rolled-up sleeves, blue work smock as main colour, a coil of rope over his shoulder",
           "file": "cast/origine-gustave.png",
           "role": "a day labourer from the old riverbank square who explains the story; tall, lanky, proud of his square, deadpan",
-          "status": "done",
-          "via": "fal"
+          "status": "pending",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor"
         }
       ],
       "cases": [
@@ -1818,7 +1821,7 @@
             ],
             "file": "images/origine-01.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "via": "fal",
             "redo": true
           }
@@ -1846,7 +1849,7 @@
             ],
             "file": "images/origine-02.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "via": "fal",
             "redo": true
           }
@@ -1874,7 +1877,7 @@
             ],
             "file": "images/origine-03.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "via": "fal",
             "redo": true
           }
@@ -1913,8 +1916,9 @@
             ],
             "file": "images/origine-05.webp",
             "status": "done",
-            "attempts": 1,
-            "via": "fal"
+            "attempts": 0,
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1940,8 +1944,9 @@
             ],
             "file": "images/origine-06.webp",
             "status": "done",
-            "attempts": 1,
-            "via": "fal"
+            "attempts": 0,
+            "via": "fal",
+            "redo": true
           }
         }
       ],
