@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T20:48+01:00",
+ "updated_at": "2026-11-15T20:49+01:00",
  "stock": {
   "cultureg": [
    {
@@ -202,6 +202,23 @@
     "title": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
     "theme": "Sciences physiques",
     "tagline": "Une marmite qui siffle, une soupape qui tourne, et un physicien qui cuisait des os en 1679",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/notice/20261115-2047-maree-la-mer-suit-la-lune",
+    "name": "20261115-2047-maree-la-mer-suit-la-lune",
+    "added": "20261115-2047",
+    "status": "waiting",
+    "next": false,
+    "title": "La marée : la mer ne part pas, elle fait le tour de la Terre",
+    "theme": "L’univers",
+    "tagline": "Une Lune qui tire, une Terre qui tourne, et un cheval au galop qui n’a jamais existé",
     "minutes": 2,
     "cases": 8,
     "photos": 1,

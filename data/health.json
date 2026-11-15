@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T20:48:34.721159+01:00",
+ "updated_at": "2026-11-15T20:49:01.999643+01:00",
  "today": "2026-11-15",
  "problems": [],
  "days": [
@@ -102,9 +102,9 @@
   },
   "notice": {
    "ready": 1,
-   "waiting": 1,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 6,
+   "images_left": 12,
    "focus": "20261115-2043-cocotte-minute-triche-avec-leau (6 image(s) à faire)",
    "next": "20261114-2045-code-barres-morse-de-plage",
    "next_redo": 0
