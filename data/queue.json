@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T02:59+01:00",
+ "updated_at": "2026-11-15T03:20+01:00",
  "stock": {
   "cultureg": [
    {
@@ -17,7 +17,7 @@
     "images_done": 8,
     "images_total": 8,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/cultureg/20261113-2057-pourquoi-tant-de-martin",
@@ -337,7 +337,7 @@
      "images_done": 5,
      "images_total": 5,
      "failed": 0,
-     "redo": 0
+     "redo": 5
     },
     {
      "id": "quiz",
