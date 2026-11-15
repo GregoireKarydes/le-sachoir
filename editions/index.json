@@ -1,6 +1,84 @@
 {
- "updated_at": "2026-11-15T03:20:11.444494+01:00",
+ "updated_at": "2026-11-15T07:38:18.513500+01:00",
  "editions": [
+  {
+   "date": "2026-11-15",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Qui commande en France ? La Ve République, mode d’emploi",
+     "kind": "",
+     "url": "histoires/2026-11-15-qui-commande-en-france-la-ve-republique-mode-d-emploi/",
+     "theme": "Politique française",
+     "minutes": 6,
+     "tagline": "De Gaulle, le 49.3, la cohabitation : la Constitution de 1958 démontée pièce par pièce",
+     "cases": 32,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un ciel fermé, trois oreillettes et neuf défaites oubliées",
+     "kind": "",
+     "url": "histoires/2026-11-15-un-ciel-ferme-trois-oreillettes-et-neuf-defaites-oubliees/",
+     "theme": "",
+     "minutes": 4,
+     "tagline": "La rue compte ses manifestants, les Bleus battent les Springboks, l’Amérique cloue ses avions au sol et trois présidents cherchent un interprète.",
+     "cases": 15,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "L’alexandrin, le vers qui porte le nom d’un roi qui n’a jamais rimé",
+     "kind": "",
+     "url": "histoires/2026-11-15-l-alexandrin-le-vers-qui-porte-le-nom-d-un-roi-qui-n-a-jamais-rime/",
+     "theme": "Littérature",
+     "minutes": 2,
+     "tagline": "Douze syllabes, un conquérant et un poète du Moyen Âge un peu vexé",
+     "cases": 9,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "La plus longue frontière de la France ? Avec le Brésil",
+     "kind": "",
+     "url": "histoires/2026-11-15-la-plus-longue-frontiere-de-la-france-avec-le-bresil/",
+     "theme": "Géographie",
+     "minutes": 2,
+     "tagline": "Plus de 730 km de frontière, et pas un seul Pyrénéen à l’horizon",
+     "cases": 9,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "notice",
+     "label": "La Notice",
+     "title": "Le micro-ondes ne chauffe pas votre soupe, il la fait danser",
+     "kind": "",
+     "url": "histoires/2026-11-15-le-micro-ondes-ne-chauffe-pas-votre-soupe-il-la-fait-danser/",
+     "theme": "Sciences physiques",
+     "minutes": 2,
+     "tagline": "Pas de flamme, pas de plaque : juste de l'eau qui pivote des milliards de fois par seconde",
+     "cases": 8,
+     "cover": "images/notice-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Quiz du jour",
+     "title": "Cinq questions, un seul tabouret",
+     "kind": "culture",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-14",
    "demo": false,

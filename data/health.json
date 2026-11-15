@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T03:20:11.444494+01:00",
+ "updated_at": "2026-11-15T07:38:18.513500+01:00",
  "today": "2026-11-15",
  "problems": [],
  "days": [
@@ -7,7 +7,11 @@
    "date": "2026-11-15",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
     "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "notice": "prêt",
     "quiz": "prêt"
    }
   },
@@ -61,42 +65,53 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-15/cultureg : « L’alexandrin, le vers qui porte le nom d’un roi qui n’a jamais rimé » prise dans la file (20261113-2050-lalexandrin-roi-qui-na-jamais-rime)",
+  "2026-11-15/insolite : « La plus longue frontière de la France ? Avec le Brésil » prise dans la file (20261113-0100-la-plus-longue-frontiere-de-la-france-av)",
+  "2026-11-15/notice : « Le micro-ondes ne chauffe pas votre soupe, il la fait danser » prise dans la file (20261114-2043-micro-ondes-soupe-qui-danse)",
+  "2026-11-15/dossier : « Qui commande en France ? La Ve République, mode d’emploi » prise dans la file (20261110-0100-qui-commande-en-france-la-ve-republique)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-14",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite",
+  "notice"
+ ],
+ "last_published": "2026-11-15",
  "stock": {
   "cultureg": {
-   "ready": 3,
+   "ready": 2,
    "waiting": 3,
    "blocked": 0,
    "images_left": 23,
    "focus": "20261114-0359-do-re-mi-tube-voix-enrouees (8 image(s) à faire)",
-   "next": "20261113-2050-lalexandrin-roi-qui-na-jamais-rime",
-   "next_redo": 1
+   "next": "20261113-2057-pourquoi-tant-de-martin",
+   "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 22,
    "focus": "20261113-2058-les-rats-dautun-avaient-un-avocat (1 image(s) à faire)",
-   "next": "20261113-0100-la-plus-longue-frontiere-de-la-france-av",
+   "next": "20261113-2051-le-president-prince-dandorre",
    "next_redo": 0
   },
   "notice": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 0,
    "blocked": 0,
    "images_left": 0,
    "focus": null,
-   "next": "20261114-2043-micro-ondes-soupe-qui-danse",
+   "next": "20261114-2045-code-barres-morse-de-plage",
    "next_redo": 0
   },
   "origine": {
@@ -109,17 +124,17 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 2,
    "blocked": 0,
    "images_left": 41,
    "focus": "20261113-1931-les-lumieres-sans-electricite (19 image(s) à faire)",
-   "next": "20261110-0100-qui-commande-en-france-la-ve-republique",
+   "next": "20261113-1926-jeux-olympiques-baron-tetu",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 2,
- "days_ahead_written": 2,
+ "days_ahead_drawn": 1,
+ "days_ahead_written": 1,
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-15",
