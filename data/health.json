@@ -1,11 +1,11 @@
 {
- "updated_at": "2026-11-15T07:38:18.513500+01:00",
+ "updated_at": "2026-11-15T11:39:45.092755+01:00",
  "today": "2026-11-15",
  "problems": [],
  "days": [
   {
    "date": "2026-11-15",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -65,12 +65,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-15/cultureg : « L’alexandrin, le vers qui porte le nom d’un roi qui n’a jamais rimé » prise dans la file (20261113-2050-lalexandrin-roi-qui-na-jamais-rime)",
-  "2026-11-15/insolite : « La plus longue frontière de la France ? Avec le Brésil » prise dans la file (20261113-0100-la-plus-longue-frontiere-de-la-france-av)",
-  "2026-11-15/notice : « Le micro-ondes ne chauffe pas votre soupe, il la fait danser » prise dans la file (20261114-2043-micro-ondes-soupe-qui-danse)",
-  "2026-11-15/dossier : « Qui commande en France ? La Ve République, mode d’emploi » prise dans la file (20261110-0100-qui-commande-en-france-la-ve-republique)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
