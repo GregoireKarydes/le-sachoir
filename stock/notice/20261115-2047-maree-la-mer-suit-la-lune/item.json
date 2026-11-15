@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a vast flat sandy bay at low tide, the rocky island with its abbey far on the horizon, the sea only a thin line very far away. Jeanne (short, stout, spiky white hair, coral-pink windbreaker, the bucket) in the foreground on the left, hands on hips, glaring at the distant sea; Laplace (tall, powdered grey hair, midnight-blue coat) on the right, calmly holding up the moon on one finger above the globe. wide shot",
-        "cast": ["jeanne", "laplace"],
+        "cast": [
+          "jeanne",
+          "laplace"
+        ],
         "file": "images/notice-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "Marée basse",
           "caption": "Au Mont-Saint-Michel, la mer s’en va à des kilomètres, puis revient, deux fois par jour. Qui la tire comme ça ?",
           "bubbles": [
-            { "who": "jeanne", "text": "Ce matin, la mer était là. Où est-elle partie ?", "side": "l" },
-            { "who": "laplace", "text": "Elle suit la Lune, madame. Fidèlement.", "side": "r" }
+            {
+              "who": "jeanne",
+              "text": "Ce matin, la mer était là. Où est-elle partie ?",
+              "side": "l"
+            },
+            {
+              "who": "laplace",
+              "text": "Elle suit la Lune, madame. Fidèlement.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a vast flat sandy bay at low tide, the rocky island with its abbey on the horizon, the sea a thin line far away. Jeanne (short, stout, spiky white hair, coral-pink windbreaker) on the left, standing beside a lonely sandcastle with the bucket, shading her eyes to look for the sea; Laplace (tall, powdered grey hair, midnight-blue coat) on the right, hands behind his back, pointing his chin at the sky. wide shot",
-            "cast": ["jeanne", "laplace"],
+            "cast": [
+              "jeanne",
+              "laplace"
+            ],
             "file": "images/notice-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "Le principe",
           "caption": "La Lune attire tout ce qui est sur Terre. L’eau des océans, qui est liquide, peut bouger : elle se déforme un peu.",
           "bubbles": [
-            { "who": "jeanne", "text": "La Lune tire sur la mer comme sur une nappe ?", "side": "l" },
-            { "who": "laplace", "text": "Oui. Une nappe qui fait le tour du globe.", "side": "r" }
+            {
+              "who": "jeanne",
+              "text": "La Lune tire sur la mer comme sur une nappe ?",
+              "side": "l"
+            },
+            {
+              "who": "laplace",
+              "text": "Oui. Une nappe qui fait le tour du globe.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "on the wet sand of the bay. Laplace (tall, powdered grey hair, midnight-blue coat) on the right holding the globe in one hand and the moon in the other, bringing them close, gently, like a teacher; Jeanne (short, stout, spiky white hair, coral-pink windbreaker) on the left, bending in to look very closely, nose almost touching the globe. medium close-up",
-            "cast": ["laplace", "jeanne"],
+            "cast": [
+              "laplace",
+              "jeanne"
+            ],
             "file": "images/notice-02.webp",
             "status": "pending",
             "attempts": 0
@@ -98,12 +123,23 @@
           "tag": "Les grandes marées",
           "caption": "Le Soleil tire aussi, environ deux fois moins fort. À la pleine et à la nouvelle lune, alignés, ils s’additionnent : grandes marées.",
           "bubbles": [
-            { "who": "jeanne", "text": "Donc les grandes marées, c’est un travail d’équipe ?", "side": "l" },
-            { "who": "laplace", "text": "La Lune et le Soleil tirent dans le même sens.", "side": "r" }
+            {
+              "who": "jeanne",
+              "text": "Donc les grandes marées, c’est un travail d’équipe ?",
+              "side": "l"
+            },
+            {
+              "who": "laplace",
+              "text": "La Lune et le Soleil tirent dans le même sens.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "on the sand of the bay. Jeanne (short, stout, spiky white hair, coral-pink windbreaker) and Laplace (tall, powdered grey hair, midnight-blue coat) both hauling hard on a long thick rope that goes off into the distant sea, one behind the other like a tug-of-war team, leaning back, heels digging into the sand, Laplace's wig slightly askew. low angle",
-            "cast": ["jeanne", "laplace"],
+            "cast": [
+              "jeanne",
+              "laplace"
+            ],
             "file": "images/notice-04.webp",
             "status": "pending",
             "attempts": 0
@@ -115,7 +151,15 @@
           "tag": "En vrai",
           "title": "Le Mont-Saint-Michel vu de la baie",
           "text": "La baie a les plus fortes marées d’Europe : environ 10 mètres d’écart entre basse et haute mer en moyenne, jusqu’à 15 mètres lors des plus grandes.",
-          "photo": { "commons": "File:Mont Saint Michel.jpg" }
+          "photo": {
+            "commons": "File:Mont Saint Michel.jpg",
+            "credit": "Eric Pouhier",
+            "license": "CC BY-SA 2.5",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+            "source": "https://commons.wikimedia.org/wiki/File:Mont_Saint_Michel.jpg",
+            "file": "images/photo-5-mont-saint-michel-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -123,12 +167,23 @@
           "tag": "Idée reçue",
           "caption": "On dit qu’ici la mer monte « à la vitesse d’un cheval au galop ». Faux : au plus vite, environ 6 km/h, un pas pressé.",
           "bubbles": [
-            { "who": "jeanne", "text": "Un cheval au galop ? Je la double en bottes !", "side": "l" },
-            { "who": "laplace", "text": "Mais elle arrive par les côtés. Gardez un œil sur l’heure.", "side": "r" }
+            {
+              "who": "jeanne",
+              "text": "Un cheval au galop ? Je la double en bottes !",
+              "side": "l"
+            },
+            {
+              "who": "laplace",
+              "text": "Mais elle arrive par les côtés. Gardez un œil sur l’heure.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the bay as the tide comes in, a thin flat sheet of water sliding over the sand. Jeanne (short, stout, spiky white hair, coral-pink windbreaker, rubber boots) in the foreground striding briskly ahead of the water with the bucket, elbows pumping, smug; far behind her, Laplace (tall, powdered grey hair, midnight-blue coat) holding up a pocket watch, frowning. from behind",
-            "cast": ["jeanne", "laplace"],
+            "cast": [
+              "jeanne",
+              "laplace"
+            ],
             "file": "images/notice-06.webp",
             "status": "pending",
             "attempts": 0
@@ -148,12 +203,22 @@
           "tag": "En résumé",
           "caption": "La Lune, aidée du Soleil, soulève deux bosses d’eau. La Terre tourne dessous : la mer monte et descend deux fois par jour.",
           "bubbles": [
-            { "who": "jeanne", "text": "Donc elle ne m’a pas quittée. Elle fait le tour de la Terre.", "side": "l" },
-            { "who": "jeanne", "text": "Rendez-vous dans 12 h 25.", "side": "l" }
+            {
+              "who": "jeanne",
+              "text": "Donc elle ne m’a pas quittée. Elle fait le tour de la Terre.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Rendez-vous dans 12 h 25.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the bay at high tide, calm water now right up to the shore. Jeanne (short, stout, spiky white hair, coral-pink windbreaker) alone, sitting on a folding chair at the water's edge with the bucket on her lap, a tiny wave touching her rubber boots, a smug reconciled smile. close-up",
-            "cast": ["jeanne"],
+            "cast": [
+              "jeanne"
+            ],
             "file": "images/notice-08.webp",
             "status": "pending",
             "attempts": 0
@@ -166,10 +231,22 @@
       },
       "story": "Les marées viennent surtout de la Lune. Elle attire tout ce qui se trouve sur Terre, mais d’autant plus fort que c’est proche d’elle. L’océan tourné vers la Lune est donc tiré un peu plus que le centre de la Terre, et l’océan du côté opposé un peu moins : il reste en arrière. Résultat, l’eau forme deux bosses, l’une face à la Lune, l’autre à l’opposé. En tournant sur elle-même, la Terre fait passer chaque côte sous ces deux bosses : deux marées hautes et deux marées basses en 24 h 50 min environ, d’où un décalage d’à peu près 50 minutes chaque jour.\nLe Soleil joue le même jeu, en environ deux fois moins fort. Quand il est aligné avec la Lune, à la pleine et à la nouvelle lune, leurs effets s’additionnent : ce sont les vives-eaux, les grandes marées. Quand ils tirent à angle droit, aux quartiers de lune, ils se contrarient : ce sont les mortes-eaux.\nLe mathématicien français Pierre-Simon de Laplace a compris que cela ne suffit pas : la forme des océans et des côtes amplifie ou réduit la marée selon l’endroit. La baie du Mont-Saint-Michel détient le record d’Europe, environ 10 mètres d’écart en moyenne et jusqu’à 15 mètres lors des plus grandes marées. La mer n’y monte pourtant pas « au galop » : sa vitesse maximale est d’environ 6 km/h, celle d’un marcheur pressé, mais elle avance vite sur une baie très plate.",
       "sources": [
-        { "title": "IMCCE — Promenade : les marées", "url": "https://promenade.imcce.fr/fr/pages5/525.html" },
-        { "title": "Île d’Oléron — Les marées, comment ça fonctionne ?", "url": "https://www.oleron.fr/marees-comment-fonctionne-306.html" },
-        { "title": "French Moments — Mont Saint-Michel Bay", "url": "https://frenchmoments.eu/mont-saint-michel-bay/" },
-        { "title": "Wikimedia Commons — Mont Saint Michel (Eric Pouhier)", "url": "https://c.enwp.org/wiki/File:Mont_Saint_Michel.jpg" }
+        {
+          "title": "IMCCE — Promenade : les marées",
+          "url": "https://promenade.imcce.fr/fr/pages5/525.html"
+        },
+        {
+          "title": "Île d’Oléron — Les marées, comment ça fonctionne ?",
+          "url": "https://www.oleron.fr/marees-comment-fonctionne-306.html"
+        },
+        {
+          "title": "French Moments — Mont Saint-Michel Bay",
+          "url": "https://frenchmoments.eu/mont-saint-michel-bay/"
+        },
+        {
+          "title": "Wikimedia Commons — Mont Saint Michel (Eric Pouhier)",
+          "url": "https://c.enwp.org/wiki/File:Mont_Saint_Michel.jpg"
+        }
       ]
     }
   ]
