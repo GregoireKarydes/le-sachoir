@@ -270,6 +270,12 @@ button{cursor:pointer}
 .slide > svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .panel-frame{position:absolute;inset:0;border:5px solid var(--ink);pointer-events:none}
 .stack{position:absolute;top:58px;left:14px;right:14px;display:flex;flex-direction:column;gap:9px;z-index:2}
+.cbox{position:absolute;inset:0;display:flex;flex-direction:column}
+.capband{flex:0 0 auto;padding:12px 62px 12px 12px;background:var(--cream);border-bottom:4px solid var(--ink);position:relative;z-index:2}
+.capband .caption{box-shadow:none}
+.artzone{position:relative;flex:1 1 auto;min-height:0;overflow:hidden}
+.artzone > img.panel{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.artzone .stack{top:12px}
 .caption{background:#fff1c9;border:3px solid var(--ink);padding:8px 11px;font-family:var(--f-letter);font-size:17.5px;line-height:1.25;box-shadow:3px 3px 0 var(--ink)}
 .caption.fact{background:#fff;border-left:10px solid var(--green)}
 .caption .ctag{display:block;font-family:var(--f-sans);font-weight:900;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--green)}
@@ -972,6 +978,8 @@ body{overscroll-behavior-y:none}
   .reader.desk .slide{height:100%;border-radius:6px}
   .reader.desk .slide.final{grid-column:1/-1;aspect-ratio:auto;padding:40px 20px;border-radius:16px}
   .reader.desk .stack{top:14px;left:12px;right:12px}
+  .reader.desk .capband{padding:10px}
+  .reader.desk .artzone .stack{top:10px}
   .reader.desk .caption{font-size:16px}
   .reader.desk .cine-txt{left:16px;right:16px;bottom:22px;font-size:19px}
   .reader.desk .bubble{font-size:16.5px}
@@ -1645,7 +1653,11 @@ function caseHTML(ed, c) {
     cap = `<div class="caption ${c.kind || ""}">${tag ? `<span class="ctag">${esc(tag)}</span>` : ""}${esc(c.caption || "")}</div>`;
   }
   const art = c.image?.status === "done" ? `<img class="panel" src="${c.image.src || imgUrl(ed, c.image.file)}" alt="" decoding="async">` : `<div class="wip">Dessin en cours…</div>`;
-  return `${art}<div class="stack">${cap}${(c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${b.who ? `<span class="who">${esc(SPEAKERS[b.who] || b.who)}</span>` : ""}${esc(b.text)}</div>`).join("")}</div><div class="panel-frame"></div>`;
+  const bubbles = (c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${b.who ? `<span class="who">${esc(SPEAKERS[b.who] || b.who)}</span>` : ""}${esc(b.text)}</div>`).join("");
+  // 15 novembre 2026 (Greg : le texte cache l'image) : le récitatif passe dans un bandeau au-dessus du dessin,
+  // les bulles seules se posent sur le haut de l'image, gardé vide au dessin.
+  if (cap) return `<div class="cbox"><div class="capband">${cap}</div><div class="artzone">${art}${bubbles ? `<div class="stack">${bubbles}</div>` : ""}<div class="panel-frame"></div></div></div>`;
+  return `${art}<div class="stack">${bubbles}</div><div class="panel-frame"></div>`;
 }
 // « D'où ça vient ? » : image plein écran (éventuellement recadrée), texte ligne par ligne, *mot* en couleur.
 function cineHTML(ed, c) {

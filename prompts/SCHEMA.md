@@ -270,7 +270,15 @@ Le pipeline envoie au modèle, pour chaque case : le numéro de la case, la scè
 - En **anglais**, 40 à 90 mots. Décrire : le décor, chaque personnage par son nom de fiche + position (on the left / on the right / in the foreground), expression, geste, accessoires, cadrage (wide shot, medium shot, close-up, low angle…).
 - Le style et l'interdiction de texte sont ajoutés automatiquement par `pipeline/style.json` : ne pas les répéter.
 - Jamais de texte, de lettres, de logos ou de marques à dessiner. Pas de nom de dessinateur ou de série existante.
-- Laisser le haut de l'image calme : les bulles s'y posent.
+- **Haut de l'image libre (15 novembre 2026)** : le tiers du haut reste vide (les bulles s'y posent, le récitatif est maintenant dans un bandeau au-dessus de l'image). Les têtes sont sous ce tiers. La consigne est ajoutée automatiquement ; ne pas mettre d'objet important en haut (lustre, panneau, tête d'un personnage très grand).
+- **Découpage : varier les plans (15 novembre 2026, demande de Greg).** Constat : 63 % des cases en plan moyen, 5 % en gros plan, presque toujours les deux personnages debout côte à côte face au lecteur : ça fait diaporama, pas BD. Règles pour chaque BD :
+  1. **Chaque prompt finit par son cadrage**, un seul, pris dans cette liste : `wide shot`, `medium wide shot`, `medium shot`, `medium close-up`, `close-up`, `extreme close-up`, `low angle`, `high angle`, `bird's-eye view`, `over-the-shoulder`, `from behind`, `insert` (objet seul en gros plan, sans personnage).
+  2. **Au plus 40 % de plans moyens** ; jamais deux cases dessinées de suite au même cadrage.
+  3. **Au moins un gros plan** (`close-up` ou `medium close-up`) : la réaction de la chute, une surprise, un visage qui comprend. Il montre un seul personnage, sa tête et ses épaules.
+  4. **Case 1 = plan large ou moyen large** qui installe le lieu ; la chute = gros plan ou changement d'angle franc.
+  5. **Au moins une case sans le duo** : un seul personnage, ou un objet seul (`insert`), ou un personnage vu de dos.
+  6. **De l'action, pas des poses** : au moins une case où un personnage fait quelque chose de physique (court, tombe, grimpe, porte, se cache, s'effondre), décrite en verbe d'action. Interdit par défaut : « X on the left and Y on the right, standing, facing the viewer ». Les placer en profondeur (l'un au premier plan, l'autre au fond), assis, de profil, l'un penché sur l'autre…
+  `pipeline/validate.py` signale une BD pas encore dessinée qui ne respecte pas 1, 2, 3 ou 5.
 - **Visages et mains toujours en couleur de peau (13 novembre 2026)** : jamais un visage rempli de noir ou de gris (un aplat noir sur un visage s'est vu dans l'Insolite du 13). Le noir est pour les cheveux, les chapeaux, les vêtements. La règle est aussi dans les consignes automatiques de `style.json`.
 - **Gag visuel** : quand la case porte le gag, décrire le détail qui fait rire dans l'image (« Napoleon proudly holds a tiny smartphone », « the clerk's stamp is the size of his head »).
 - **Fond** : inutile de choisir une teinte de fond, le pipeline donne au fond la teinte pastel du format (la même dans toutes les cases de la BD). Décrire seulement le décor utile.

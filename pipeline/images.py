@@ -521,6 +521,31 @@ def props_for(fmt: dict, scene: str) -> str:
     return (" Recurring objects, drawn exactly the same in every panel: " + "; ".join(used) + ".") if used else ""
 
 
+# 15 novembre 2026 : le modèle dessinait presque tout en plan moyen. Le cadrage écrit en fin de prompt
+# est traduit en consigne explicite, placée juste après la scène.
+FRAMING = {
+    "extreme close-up": "Framing: extreme close-up, only the face fills the picture.",
+    "medium close-up": "Framing: medium close-up, head and shoulders of one character, large in the picture.",
+    "close-up": "Framing: close-up, one character's head and shoulders fill most of the picture.",
+    "medium wide shot": "Framing: medium wide shot, characters seen full body, some room around them.",
+    "medium shot": "Framing: medium shot, characters seen from the knees up.",
+    "wide shot": "Framing: wide shot, small full-body characters in the setting.",
+    "low angle": "Framing: low angle, seen from below, the character looks tall and imposing.",
+    "high angle": "Framing: high angle, seen from above, the character looks small.",
+    "bird's-eye view": "Framing: bird's-eye view, seen from straight above.",
+    "over-the-shoulder": "Framing: over-the-shoulder, the back of one character's head and shoulder in the foreground, the other facing us.",
+    "from behind": "Framing: the character seen from behind.",
+    "insert": "Framing: insert shot, the object alone, large, no character.",
+}
+
+
+def framing_for(scene: str) -> str:
+    import re
+    pat = "|".join(re.escape(k) for k in sorted(FRAMING, key=len, reverse=True))
+    found = re.findall(pat, (scene or "").lower())
+    return (" " + FRAMING[found[-1]]) if found else ""
+
+
 def build(scene: str, cast: list[tuple], fmt: dict | None = None,
           panel: tuple[int, int] | None = None) -> tuple[str, list[Path]]:
     """Prompt et références. La référence de style est toujours l'image 0, puis une fiche par personnage.
@@ -559,7 +584,7 @@ def build(scene: str, cast: list[tuple], fmt: dict | None = None,
         where = ""
     logic = " Everything must make sense for this moment of the story: right people, right objects, right place, nothing random."
     # Les consignes impératives (pas de texte, haut libre) passent avant le style : jamais coupées si le prompt est long.
-    return (f"{where}Scene: {_clean(scene)}.{story_context(fmt)}{chars}{props_for(fmt, scene)}{logic} "
+    return (f"{where}Scene: {_clean(scene)}.{framing_for(scene)}{story_context(fmt)}{chars}{props_for(fmt, scene)}{logic} "
             f"{STYLE['constraints']} {head}{STYLE['style']}"), refs
 
 

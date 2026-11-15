@@ -409,3 +409,14 @@ def test_cast_prompt_one_person_no_scenery():
     p = images.cast_prompt(fmt, fmt["cast"][0])
     assert "radar laboratory" not in p and "Percy" not in p
     assert "Exactly ONE person" in p and "1945" in p
+
+
+def test_framing_and_shot_parsing():
+    """15/11/2026 : cadrages variés ; « medium close-up » n'est pas lu comme « close-up »."""
+    import images, validate
+    assert "head and shoulders of one character" in images.framing_for("Léa laughs. medium close-up")
+    assert validate.shot_of("a kitchen. medium wide shot") == "medium wide shot"
+    warns = []
+    drawn = [{"image": {"prompt": f"x. {s}", "cast": ["a", "b"]}} for s in ["medium shot"] * 5]
+    validate.check_shots(drawn, "cultureg", warns.append)
+    assert any("plans moyens" in w for w in warns) and any("gros plan" in w for w in warns)

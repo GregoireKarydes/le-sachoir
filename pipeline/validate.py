@@ -79,6 +79,43 @@ def check_cast_distinct(cast: list, warn):
                 warn(f"fiches {a.get('id')} et {b.get('id')} trop proches ({', '.join(sorted(wa & wb)[:6])})")
 
 
+# Découpage (15 novembre 2026, demande de Greg) : 63 % des cases étaient en « medium shot », 5 % en gros plan,
+# presque toujours deux personnages debout face au lecteur. Le dernier mot de cadrage du prompt fait foi.
+SHOTS = ["extreme close-up", "medium close-up", "close-up", "medium wide shot", "medium shot", "wide shot",
+         "low angle", "high angle", "bird's-eye view", "over-the-shoulder", "from behind", "insert"]
+CLOSE = {"extreme close-up", "medium close-up", "close-up", "insert"}
+
+
+def shot_of(prompt: str) -> str | None:
+    pat = "|".join(re.escape(k) for k in sorted(SHOTS, key=len, reverse=True))
+    found = re.findall(pat, (prompt or "").lower())
+    return found[-1] if found else None
+
+
+def check_shots(drawn: list, fid: str, warn):
+    """Variété des cadrages d'une BD pas encore dessinée (voir « Découpage » dans prompts/SCHEMA.md)."""
+    shots = [shot_of((c.get("image") or {}).get("prompt", "")) for c in drawn]
+    n = len(shots)
+    if n < 3:
+        return
+    missing = [i for i, s in enumerate(shots, 1) if not s]
+    if missing:
+        warn(f"découpage : cadrage absent en fin de prompt, case(s) dessinée(s) {', '.join(map(str, missing))}")
+    medium = sum(1 for s in shots if s == "medium shot")
+    if medium > max(1, round(.4 * n)):
+        warn(f"découpage : {medium} plans moyens sur {n} cases (au plus 40 %), varier gros plans, plans larges, angles")
+    if fid != "actu" and not any(s in CLOSE for s in shots):
+        warn("découpage : aucun gros plan (close-up) ; il en faut au moins un, souvent sur la réaction de la chute")
+    for i in range(1, n):
+        if shots[i] and shots[i] == shots[i - 1]:
+            warn(f"découpage : cases dessinées {i} et {i + 1} au même cadrage ({shots[i]})")
+            break
+    if fid != "actu":
+        duo = sum(1 for c in drawn if len((c.get("image") or {}).get("cast", []) or []) >= 2)
+        if duo == n:
+            warn("découpage : les deux personnages sont dans toutes les cases ; au moins une case avec un seul personnage ou un objet seul")
+
+
 def words(t: str) -> int:
     """Mots réels : la ponctuation française espacée (« : ; ? ! ») ne compte pas."""
     return sum(1 for w in str(t or "").split() if any(ch.isalnum() for ch in w))
@@ -191,6 +228,8 @@ def check_story(fmt: dict, d: Path, err, warn):
     for i, c in enumerate(drawn, 1):
         if todo and (c.get("image") or {}).get("status") != "done" and len((c.get("image") or {}).get("cast", []) or []) > 2:
             warn(f"case dessinée {i} : plus de 2 personnages avec fiche dans l'image")
+    if todo and ("stock" in d.parts or d.name >= __import__("datetime").date.today().isoformat()):
+        check_shots(drawn, fid, warn)
     # 9 novembre 2026 (Greg) : des vraies images souvent, ça rend l'histoire réelle. Signalé pour que la tâche Stock en ajoute.
     n_photo = sum(1 for c in cases if isinstance(c, dict) and c.get("kind") == "photo")
     want = {"cultureg": 1, "insolite": 1, "notice": 1, "origine": 1, "dossier": 2}.get(fid, 0)

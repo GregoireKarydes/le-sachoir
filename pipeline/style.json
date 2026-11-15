@@ -4,7 +4,7 @@
   "style_with_ref": "Same line style as image 0 (marker line weight, huge round eyes, oversized heads, nearly empty background - Sarah's Sribbles inspiration), but not its characters or scene, and fully coloured: image 0 is only a line reference, ignore its black-and-white palette.",
   "colour_since": "2026-11-09",
   "colour_note": "9 novembre 2026, demande de Greg : images entièrement en couleur (aplats vifs, peau, cheveux et vêtements colorés, fond pastel). Les fiches casting déjà dessinées en noir et blanc restent valables jusqu'à leur remplacement.",
-  "constraints": "One single full-bleed illustration, edge to edge, no panel borders. Wordless picture: no text, no lettering, no speech bubbles; any sign, board or screen is blank. The top quarter of the picture is empty white background. Every face and every hand is drawn in a skin colour (never filled in black, grey or a solid dark shape), with visible eyes and mouth.",
+  "constraints": "One single full-bleed illustration, edge to edge, no panel borders. Wordless picture: no text, no lettering, no speech bubbles; any sign, board or screen is blank. The top third of the picture is empty plain background with nothing in it; every head and face is below it. Every face and every hand is drawn in a skin colour (never filled in black, grey or a solid dark shape), with visible eyes and mouth.",
   "case_size": [
     512,
     896

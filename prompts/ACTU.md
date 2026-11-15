@@ -40,3 +40,5 @@ Voir `prompts/QA.md`.
 
 ## Si quelque chose bloque
 Ne jamais pousser une Actu incomplète ou non vérifiée. Mieux vaut une édition sans Actu (elle sort quand même avec le stock) qu'une erreur.
+
+- **Cadrages (15 novembre 2026)** : chaque image de l'Actu est une seule scène (jamais une planche) et finit par son cadrage (voir « Découpage » dans `prompts/SCHEMA.md`). Varier d'un sujet à l'autre : pas deux plans moyens de suite, au moins un gros plan ou un angle marqué (plongée, contre-plongée) dans l'Actu.
