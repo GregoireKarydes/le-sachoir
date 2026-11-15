@@ -25,7 +25,7 @@
           "name": "Karim, caissier",
           "look": "Karim, a very tall and skinny supermarket cashier in his forties, shiny bald head, thick black moustache, medium brown skin, bright red supermarket vest over a white shirt as main colour, black trousers, the scanner always in his hand",
           "file": "cast/notice-karim.png",
-          "status": "pending",
+          "status": "done",
           "role": "the cashier who has scanned millions of products without wondering how; lanky, leaning on his till, asks the reader's questions"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Norman Woodland",
           "look": "Norman Woodland, a short stocky young American student of 1949, blond crew cut, big round cheeks, light peach skin, bright sky-blue Hawaiian shirt with white flowers as main colour, beige shorts, sand on his knees, the manual in his hand",
           "file": "cast/notice-woodland.png",
-          "status": "pending",
+          "status": "done",
           "role": "the enthusiastic young inventor who explains simply; bouncy, always drawing lines in the air or in the sand with his fingers"
         }
       ],
@@ -44,8 +44,9 @@
           "woodland"
         ],
         "file": "images/notice-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "woodland"
             ],
             "file": "images/notice-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +102,8 @@
               "woodland"
             ],
             "file": "images/notice-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -141,8 +143,8 @@
               "woodland"
             ],
             "file": "images/notice-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -185,8 +187,8 @@
               "karim"
             ],
             "file": "images/notice-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -221,8 +223,8 @@
               "woodland"
             ],
             "file": "images/notice-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

@@ -25,7 +25,7 @@
           "look": "a tall thin young French lawyer around 1520, sharp pointed black beard, long nose, flat black lawyer's cap, bright scarlet lawyer's robe as main colour with a white collar, fair skin, always holding a rolled parchment",
           "role": "the brilliant young lawyer who defends the rats with total confidence; tall, thin, theatrical, one finger always raised",
           "file": "cast/insolite-chasseneuz.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "juge",
@@ -33,7 +33,7 @@
           "look": "a short very fat old French judge around 1520, bald head with a fringe of white hair, droopy white moustache, heavy dark green robe as main colour, tiny round spectacles on the tip of his nose, a wooden gavel",
           "role": "the weary judge who cannot believe he is judging rats; short, round, slumped in his big chair, sighing",
           "file": "cast/insolite-juge.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -43,8 +43,8 @@
           "juge"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -71,8 +71,8 @@
               "juge"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -99,8 +99,8 @@
               "chasseneuz"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -134,8 +134,8 @@
               "juge"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -157,8 +157,8 @@
               "juge"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {

@@ -191,8 +191,8 @@
               "lea"
             ],
             "file": "images/notice-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -227,8 +227,8 @@
               "spencer"
             ],
             "file": "images/notice-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         }
       ],
