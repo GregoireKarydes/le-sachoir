@@ -13,7 +13,7 @@
         {
           "id": "guido",
           "name": "Guido d’Arezzo",
-          "look": "Guido, a very tall and thin Italian Benedictine monk in his forties around 1030, long bony face, shaved tonsure with a ring of black hair, long black monk's habit with a bright orange rope belt as main colour accent, light olive skin, always holding a small wooden monochord (a long narrow wooden box with one string)",
+          "look": "Guido, a very tall and thin Italian Benedictine monk in his forties around 1030, long bony face, shaved tonsure with a ring of black hair, long black monk's habit with a pink rope belt as main colour accent, light olive skin, always holding a small wooden monochord (a long narrow wooden box with one string)",
           "file": "cast/cultureg-guido.png",
           "status": "pending",
           "role": "the patient music teacher monk who explains simply; tall, calm, plucking his one-string box like a professor's pointer"
@@ -28,7 +28,7 @@
         }
       ],
       "cover": {
-        "prompt": "a bare stone monastery room with a simple wooden lectern. Guido (very tall, black habit, orange rope belt) on the right plucking his monochord, eyes closed, serene; Pietro (short, round, ginger bowl cut, light-brown robe) on the left singing with his mouth wide open, wrapped in a huge woolly scarf, holding his throat, yellow sparkles. medium shot",
+        "prompt": "a bare stone monastery room with a simple wooden lectern. Guido (very tall, black habit, pink rope belt) on the right plucking his monochord, eyes closed, serene; Pietro (short, round, ginger bowl cut, light-brown robe) on the left singing with his mouth wide open, wrapped in a huge woolly scarf, holding his throat, yellow sparkles. medium shot",
         "cast": [
           "guido",
           "pietro"
@@ -56,7 +56,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare stone monastery room with a simple wooden lectern and a small arched window. Pietro (short, round, ginger bowl cut, light-brown robe) on the left scratching his head, puzzled, songbook under his arm; Guido (very tall, thin, black habit, orange rope belt) on the right raising one finger modestly, holding his monochord, a small proud smile. medium shot",
+            "prompt": "a bare stone monastery room with a simple wooden lectern and a small arched window. Pietro (short, round, ginger bowl cut, light-brown robe) on the left scratching his head, puzzled, songbook under his arm; Guido (very tall, thin, black habit, pink rope belt) on the right raising one finger modestly, holding his monochord, a small proud smile. wide shot",
             "cast": [
               "pietro",
               "guido"
@@ -84,7 +84,7 @@
             }
           ],
           "image": {
-            "prompt": "the same stone monastery room. Pietro (short, round, ginger bowl cut) on the left almost buried under a towering pile of heavy songbooks, only his head and one arm sticking out, light-blue sweat drop; Guido (very tall, black habit, orange rope belt) on the right placing one more book on top of the pile, deadpan. wide shot",
+            "prompt": "the same stone monastery room. Pietro (short, round, ginger bowl cut) on the left almost buried under a towering pile of heavy songbooks, only his head and one arm sticking out, light-blue sweat drop; Guido (very tall, black habit, pink rope belt) on the right placing one more book on top of the pile, deadpan. low angle",
             "cast": [
               "pietro",
               "guido"
@@ -112,7 +112,7 @@
             }
           ],
           "image": {
-            "prompt": "close view of a simple stone staircase with six steps. Guido (very tall, black habit, orange rope belt) on the right pointing at the steps with his monochord like a teacher; Pietro (short, round, ginger bowl cut) on the left climbing the steps one by one on tiptoe, mouth open as if singing, delighted. medium shot",
+            "prompt": "close view of a simple stone staircase with six steps. Guido (very tall, black habit, pink rope belt) on the right pointing at the steps with his monochord like a teacher; Pietro (short, round, ginger bowl cut) on the left climbing the steps one by one on tiptoe, mouth open as if singing, delighted. medium shot",
             "cast": [
               "guido",
               "pietro"
@@ -156,7 +156,7 @@
             }
           ],
           "image": {
-            "prompt": "a small monastery kitchen corner with a steaming clay cup on a bench. Pietro (short, round, ginger bowl cut) on the left wrapped in a gigantic woolly red scarf up to his nose, sipping the steaming cup, eyes half closed; Guido (very tall, black habit, orange rope belt) on the right reading from a small scroll, eyebrows raised, amused. medium shot",
+            "prompt": "a small monastery kitchen corner with a steaming clay cup on a bench. Pietro (short, round, ginger bowl cut) on the left wrapped in a gigantic woolly red scarf up to his nose, sipping the steaming cup, eyes half closed; Guido (very tall, black habit, pink rope belt) on the right reading from a small scroll, eyebrows raised, amused. over-the-shoulder",
             "cast": [
               "pietro",
               "guido"
@@ -200,7 +200,7 @@
             }
           ],
           "image": {
-            "prompt": "the simple stone staircase now with a seventh wooden step clumsily nailed on top. Pietro (short, round, ginger bowl cut) on the left proudly hammering the new step, yellow sparkles; Guido (very tall, black habit, orange rope belt) on the right standing with arms crossed, lips pursed, slightly vexed. medium shot",
+            "prompt": "the simple stone staircase now with a seventh wooden step clumsily nailed on top. Pietro (short, round, ginger bowl cut) on the left proudly hammering the new step, yellow sparkles; Guido (very tall, black habit, pink rope belt) on the right standing with arms crossed, lips pursed, slightly vexed. high angle",
             "cast": [
               "pietro",
               "guido"
@@ -228,7 +228,7 @@
             }
           ],
           "image": {
-            "prompt": "close-up in front of the small arched monastery window. Pietro (short, round, ginger bowl cut) on the left straining to sing, cheeks puffed and bright red, lips pushed into a tiny circle; an offended brown owl sitting on the windowsill glaring at him; Guido (very tall, black habit, orange rope belt) on the right covering one ear with a hand, wincing. close-up",
+            "prompt": "in front of the small arched monastery window. Pietro (short, round, ginger bowl cut) on the left straining to sing, cheeks puffed and bright red, lips pushed into a tiny circle; an offended brown owl sitting on the windowsill glaring at him; Guido (very tall, black habit, pink rope belt) on the right covering one ear with a hand, wincing. medium shot",
             "cast": [
               "pietro",
               "guido"
@@ -264,9 +264,8 @@
             }
           ],
           "image": {
-            "prompt": "the bare stone monastery room at the wooden lectern, seen from a low angle. Pietro (short, round, ginger bowl cut) on the left singing triumphantly, arms wide open, songbook flying up in the air, yellow sparkles; Guido (very tall, black habit, orange rope belt) on the right plucking his monochord, a rare broad smile. wide shot",
+            "prompt": "the bare stone monastery room at the wooden lectern. Close on Guido (very tall, black habit, pink rope belt) plucking his monochord, a rare broad smile, alone in the picture, the face large and very expressive. close-up",
             "cast": [
-              "pietro",
               "guido"
             ],
             "file": "images/cultureg-10.webp",

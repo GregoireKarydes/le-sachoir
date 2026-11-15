@@ -50,14 +50,14 @@
         {
           "id": "mathis",
           "name": "Mathis",
-          "look": "Mathis, a chubby young man of today of average height, short curly black hair, brown skin, big round black glasses, a bright yellow hoodie as main colour, jeans, the phone always in hand",
+          "look": "Mathis, a chubby young man of today of average height, short curly black hair, brown skin, big round black glasses, a brown hoodie as main colour, jeans, the phone always in hand",
           "role": "the curious student from today who asks the reader's questions; chubby and eager, reacts with his whole body, often checks his phone",
           "file": "cast/dossier-mathis.png",
           "status": "pending"
         }
       ],
       "cover": {
-        "prompt": "a dark bare room. Voltaire (tiny, bony, huge white wig, crimson coat) on the left holding up the candle, grinning slyly; Mathis (chubby, yellow hoodie, round glasses) on the right holding up the bulb with a hopeful face; between them the candle's light is much brighter than the bulb. wide shot",
+        "prompt": "a dark bare room. Voltaire (tiny, bony, huge white wig, crimson coat) on the left holding up the candle, grinning slyly; Mathis (chubby, brown hoodie, round glasses) on the right holding up the bulb with a hopeful face; between them the candle's light is much brighter than the bulb. wide shot",
         "cast": [
           "voltaire",
           "mathis"
@@ -85,7 +85,7 @@
             }
           ],
           "image": {
-            "prompt": "a dark bare room. Mathis (chubby, yellow hoodie, round glasses) on the right proudly holding up the bulb, which is not lit; Voltaire (tiny, bony, huge white wig, crimson coat) on the left holding the candle right next to his own head, which glows warmly, smirking at the viewer. visual gag: the unlit bulb. medium shot",
+            "prompt": "a dark bare room. Mathis (chubby, brown hoodie, round glasses) on the right proudly holding up the bulb, which is not lit; Voltaire (tiny, bony, huge white wig, crimson coat) on the left holding the candle right next to his own head, which glows warmly, smirking at the viewer. visual gag: the unlit bulb. wide shot",
             "cast": [
               "mathis",
               "voltaire"
@@ -113,7 +113,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare room with a gilded royal throne on a small platform in the background, empty. Voltaire (tiny, bony, huge white wig, crimson coat) on the left pointing at the throne with his quill, mocking; Mathis (chubby, yellow hoodie, round glasses) on the right hiding his phone behind his back, nervous, light-blue sweat drop. medium shot",
+            "prompt": "a bare room with a gilded royal throne on a small platform in the background, empty. Voltaire (tiny, bony, huge white wig, crimson coat) on the left pointing at the throne with his quill, mocking; Mathis (chubby, brown hoodie, round glasses) on the right hiding his phone behind his back, nervous, light-blue sweat drop. low angle",
             "cast": [
               "voltaire",
               "mathis"
@@ -157,7 +157,7 @@
             }
           ],
           "image": {
-            "prompt": "a stone prison cell with a tiny barred window and a straw bed. Voltaire (tiny, bony, huge white wig, crimson coat) on the right sitting cross-legged on the straw, writing furiously with the quill on a long sheet, mischievous grin; Mathis (chubby, yellow hoodie, round glasses) on the left peeking through the bars of the cell door, worried. medium shot",
+            "prompt": "a stone prison cell with a tiny barred window and a straw bed. Voltaire (tiny, bony, huge white wig, crimson coat) on the right sitting cross-legged on the straw, writing furiously with the quill on a long sheet, mischievous grin; Mathis (chubby, brown hoodie, round glasses) on the left peeking through the bars of the cell door, worried. medium shot",
             "cast": [
               "mathis",
               "voltaire"
@@ -198,7 +198,7 @@
             }
           ],
           "image": {
-            "prompt": "a foggy London quay with a few masts in the mist. Voltaire (tiny, bony, huge white wig, crimson coat) on the left, perfectly dry, sipping tea with his little finger raised, delighted; Mathis (chubby, yellow hoodie, round glasses) on the right under a small grey rain cloud that rains only on him, soaked and grumpy. medium shot",
+            "prompt": "a foggy London quay with a few masts in the mist. Voltaire (tiny, bony, huge white wig, crimson coat) on the left, perfectly dry, sipping tea with his little finger raised, delighted; Mathis (chubby, brown hoodie, round glasses) on the right under a small grey rain cloud that rains only on him, soaked and grumpy. over-the-shoulder",
             "cast": [
               "voltaire",
               "mathis"
@@ -227,7 +227,7 @@
             }
           ],
           "image": {
-            "prompt": "a Paris square with a small pile of burning books in the middle. Mathis (chubby, yellow hoodie, round glasses) on the left, horrified, both hands on his cheeks; Voltaire (tiny, bony, huge white wig, crimson coat) on the right warming his hands at the fire, smiling, a travel bag already packed at his feet. wide shot",
+            "prompt": "a Paris square with a small pile of burning books in the middle. Mathis (chubby, brown hoodie, round glasses) on the left, horrified, both hands on his cheeks; Voltaire (tiny, bony, huge white wig, crimson coat) on the right warming his hands at the fire, smiling, a travel bag already packed at his feet. wide shot",
             "cast": [
               "mathis",
               "voltaire"
@@ -256,7 +256,7 @@
             }
           ],
           "image": {
-            "prompt": "a quiet study in a château, a desk covered with letters and papers. Voltaire (tiny, bony, huge white wig, crimson coat) on the right reading a letter very seriously, frowning, quill in the other hand; Mathis (chubby, yellow hoodie, round glasses) on the left, standing still, serious, his phone lowered. calm, sober scene. medium shot",
+            "prompt": "a quiet study in a château, a desk covered with letters and papers. Voltaire (tiny, bony, huge white wig, crimson coat) on the right reading a letter very seriously, frowning, quill in the other hand; Mathis (chubby, brown hoodie, round glasses) on the left, standing still, serious, his phone lowered. calm, sober scene. high angle",
             "cast": [
               "mathis",
               "voltaire"
@@ -285,7 +285,7 @@
             }
           ],
           "image": {
-            "prompt": "same château study, now with an open window. Voltaire (tiny, bony, huge white wig, crimson coat) on the right standing on his chair, slamming the volume on the desk, determined; dozens of folded letters fly out of the window like a flock of white birds. Mathis (chubby, yellow hoodie, round glasses) on the left watching the letters fly away, impressed. wide shot",
+            "prompt": "same château study, now with an open window. Voltaire (tiny, bony, huge white wig, crimson coat) on the right standing on his chair, slamming the volume on the desk, determined; dozens of folded letters fly out of the window like a flock of white birds. Mathis (chubby, brown hoodie, round glasses) on the left watching the letters fly away, impressed. wide shot",
             "cast": [
               "mathis",
               "voltaire"
@@ -329,7 +329,7 @@
             }
           ],
           "image": {
-            "prompt": "a cluttered Paris workroom with piles of papers. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the left carrying a wobbling tower of books up to his chin, laughing; Mathis (chubby, yellow hoodie, round glasses) on the right holding up the phone next to the tower, smug. medium shot",
+            "prompt": "a cluttered Paris workroom with piles of papers. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the left carrying a wobbling tower of books up to his chin, laughing; Mathis (chubby, brown hoodie, round glasses) on the right holding up the phone next to the tower, smug. medium shot",
             "cast": [
               "diderot",
               "mathis"
@@ -358,7 +358,7 @@
             }
           ],
           "image": {
-            "prompt": "the same cluttered workroom with a giant wall of identical thick brown books. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right high on a wooden ladder, adding one more book to the top shelf, cheerful; Mathis (chubby, yellow hoodie, round glasses) on the left buried up to his waist in loose sheets of paper, dazed. wide shot",
+            "prompt": "the same cluttered workroom with a giant wall of identical thick brown books. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right high on a wooden ladder, adding one more book to the top shelf, cheerful; Mathis (chubby, brown hoodie, round glasses) on the left buried up to his waist in loose sheets of paper, dazed. wide shot",
             "cast": [
               "mathis",
               "diderot"
@@ -402,7 +402,7 @@
             }
           ],
           "image": {
-            "prompt": "a round stone room at the top of a tower, one narrow window. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right sitting on a stool, reading calmly as if at home, a teacup beside him; Mathis (chubby, yellow hoodie, round glasses) on the left looking around the cell, eyebrows raised, sarcastic. medium shot",
+            "prompt": "a round stone room at the top of a tower, one narrow window. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right sitting on a stool, reading calmly as if at home, a teacup beside him; Mathis (chubby, brown hoodie, round glasses) on the left looking around the cell, eyebrows raised, sarcastic. low angle",
             "cast": [
               "mathis",
               "diderot"
@@ -442,7 +442,7 @@
             }
           ],
           "image": {
-            "prompt": "a dim office with a big desk. a gentleman in a grey wig, seen from behind, slides a thick stack of papers under the desk; Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right crouching to grab it, eyes wide; Mathis (chubby, yellow hoodie, round glasses) on the left with a finger on his lips, tiptoeing, conspiratorial. medium shot",
+            "prompt": "a dim office with a big desk. a gentleman in a grey wig, seen from behind, slides a thick stack of papers under the desk; Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right crouching to grab it, eyes wide; Mathis (chubby, brown hoodie, round glasses) on the left with a finger on his lips, tiptoeing, conspiratorial. medium shot",
             "cast": [
               "mathis",
               "diderot"
@@ -471,7 +471,7 @@
             }
           ],
           "image": {
-            "prompt": "a Paris street at night under a big moon. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right tiptoeing while pushing a wheelbarrow piled high with thick brown books; Mathis (chubby, yellow hoodie, round glasses) on the left lighting the way with his phone's flashlight, looking around nervously. wide shot",
+            "prompt": "a Paris street at night under a big moon. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right tiptoeing while pushing a wheelbarrow piled high with thick brown books; Mathis (chubby, brown hoodie, round glasses) on the left lighting the way with his phone's flashlight, looking around nervously. wide shot",
             "cast": [
               "mathis",
               "diderot"
@@ -500,7 +500,7 @@
             }
           ],
           "image": {
-            "prompt": "Diderot's cluttered workroom again. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right sitting in a worn armchair, hugging a big pile of books, beaming, yellow sparkles; Mathis (chubby, yellow hoodie, round glasses) on the left holding a small leather coin purse, scratching his head, baffled. medium shot",
+            "prompt": "Diderot's cluttered workroom again. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right sitting in a worn armchair, hugging a big pile of books, beaming, yellow sparkles; Mathis (chubby, brown hoodie, round glasses) on the left holding a small leather coin purse, scratching his head, baffled. over-the-shoulder",
             "cast": [
               "mathis",
               "diderot"
@@ -529,7 +529,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare room with tall windows. Charles (very tall, stiff, grey judge's wig, black robe, purple sash) on the left holding the scale perfectly level at arm's length, solemn; Mathis (chubby, yellow hoodie, round glasses) on the right standing on tiptoe to see the two pans, curious. low angle, medium shot",
+            "prompt": "a bare room with tall windows. Charles (very tall, stiff, grey judge's wig, black robe, purple sash) on the left holding the scale perfectly level at arm's length, solemn; Mathis (chubby, brown hoodie, round glasses) on the right standing on tiptoe to see the two pans, curious. low angle. high angle",
             "cast": [
               "montesquieu",
               "mathis"
@@ -570,7 +570,7 @@
             }
           ],
           "image": {
-            "prompt": "a road outside a town, a small horse-drawn carriage racing away in a cloud of dust in the background. Voltaire (tiny, bony, huge white wig, crimson coat) on the right watching it go with a raised eyebrow, a thin book in his hand; Mathis (chubby, yellow hoodie, round glasses) on the left waving goodbye at the carriage, worried. wide shot",
+            "prompt": "a road outside a town, a small horse-drawn carriage racing away in a cloud of dust in the background. Voltaire (tiny, bony, huge white wig, crimson coat) on the right watching it go with a raised eyebrow, a thin book in his hand; Mathis (chubby, brown hoodie, round glasses) on the left waving goodbye at the carriage, worried. wide shot",
             "cast": [
               "mathis",
               "voltaire"
@@ -599,7 +599,7 @@
             }
           ],
           "image": {
-            "prompt": "a sunny Paris balcony above a cheering crowd of tiny people throwing flowers. Voltaire (tiny, bony, huge white wig, crimson coat) on the right waving like a rock star, standing on a stool to be seen; Mathis (chubby, yellow hoodie, round glasses) on the left in the foreground, taking a selfie with him with the phone. medium shot",
+            "prompt": "a sunny Paris balcony above a cheering crowd of tiny people throwing flowers. Voltaire (tiny, bony, huge white wig, crimson coat) on the right waving like a rock star, standing on a stool to be seen; Mathis (chubby, brown hoodie, round glasses) on the left in the foreground, taking a selfie with him with the phone. medium shot",
             "cast": [
               "mathis",
               "voltaire"
@@ -628,7 +628,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare room with a large blank parchment pinned on the wall. Charles (very tall, stiff, grey judge's wig, black robe, purple sash) on the left, chin up, a tiny proud smile, pink blush; Mathis (chubby, yellow hoodie, round glasses) on the right pointing at the parchment with excitement. medium shot",
+            "prompt": "a bare room with a large blank parchment pinned on the wall. Charles (very tall, stiff, grey judge's wig, black robe, purple sash) on the left, chin up, a tiny proud smile, pink blush; Mathis (chubby, brown hoodie, round glasses) on the right pointing at the parchment with excitement. medium close-up",
             "cast": [
               "montesquieu",
               "mathis"
@@ -657,10 +657,9 @@
             }
           ],
           "image": {
-            "prompt": "the dark bare room again, now lit warmly by the candle on a small table. Voltaire (tiny, bony, huge white wig, crimson coat) on the left, arms crossed, satisfied, a sly grin; Mathis (chubby, yellow hoodie, round glasses) on the right slipping the bulb into his hoodie pocket, a little sheepish. medium shot",
+            "prompt": "the dark bare room again, now lit warmly by the candle on a small table. Close on Voltaire (tiny, bony, huge white wig, crimson coat), arms crossed, satisfied, a sly grin, alone in the picture, the face large and very expressive. close-up",
             "cast": [
-              "voltaire",
-              "mathis"
+              "voltaire"
             ],
             "file": "images/dossier-18.webp",
             "status": "pending",

@@ -52,14 +52,14 @@
         {
           "id": "ines",
           "name": "Inès",
-          "look": "Inès, a short and round young woman of today, big voluminous curly red hair, light freckled skin, a bright orange puffer jacket as main colour, purple leggings, white sneakers, always holding the charger",
+          "look": "Inès, a short and round young woman of today, big voluminous curly red hair, light freckled skin, a pink puffer jacket as main colour, purple leggings, white sneakers, always holding the charger",
           "role": "the curious young woman from today who asks the reader's questions; short and lively, reacts with her whole body, always looking for a socket",
           "file": "cast/dossier-ines.png",
           "status": "pending"
         }
       ],
       "cover": {
-        "prompt": "a bare modern room with a single wall socket. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left solemnly holding out the open drawer with both hands like a precious gift; Inès (short, round, big curly red hair, orange puffer jacket) on the right trying to plug the charger into the drawer, hopeful. visual gag: plugging a charger into a wooden drawer. wide shot",
+        "prompt": "a bare modern room with a single wall socket. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left solemnly holding out the open drawer with both hands like a precious gift; Inès (short, round, big curly red hair, pink puffer jacket) on the right trying to plug the charger into the drawer, hopeful. visual gag: plugging a charger into a wooden drawer. wide shot",
         "cast": [
           "becquerel",
           "ines"
@@ -87,7 +87,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare modern room with a single wall socket. Inès (short, round, big curly red hair, orange puffer jacket) on the right crouching to plug the charger into the socket, puzzled; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left bending down towards her, carrying the drawer under his arm like a briefcase. visual gag: a 19th-century scientist carrying a whole desk drawer. medium shot",
+            "prompt": "a bare modern room with a single wall socket. Inès (short, round, big curly red hair, pink puffer jacket) on the right crouching to plug the charger into the socket, puzzled; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left bending down towards her, carrying the drawer under his arm like a briefcase. visual gag: a 19th-century scientist carrying a whole desk drawer. wide shot",
             "cast": [
               "ines",
               "becquerel"
@@ -115,7 +115,7 @@
             }
           ],
           "image": {
-            "prompt": "an 1890s Paris laboratory with a tall window showing a heavy grey cloudy sky. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left glaring at the clouds, holding the plate in one hand and the crystals in a small dish in the other, sulking; Inès (short, round, big curly red hair, orange puffer jacket) on the right holding a small umbrella open indoors. visual gag: the indoor umbrella. medium shot",
+            "prompt": "an 1890s Paris laboratory with a tall window showing a heavy grey cloudy sky. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left glaring at the clouds, holding the plate in one hand and the crystals in a small dish in the other, sulking; Inès (short, round, big curly red hair, pink puffer jacket) on the right holding a small umbrella open indoors. visual gag: the indoor umbrella. low angle",
             "cast": [
               "becquerel",
               "ines"
@@ -160,7 +160,7 @@
             }
           ],
           "image": {
-            "prompt": "close-up in the 1890s Paris laboratory. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left holding up the plate, now unwrapped and showing dark blotches, eyes wide behind his pince-nez; Inès (short, round, big curly red hair, orange puffer jacket) on the right leaning in, jaw dropped, her curly hair standing on end, light-blue sweat drop. the open drawer on the desk between them",
+            "prompt": "close-up in the 1890s Paris laboratory. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left holding up the plate, now unwrapped and showing dark blotches, eyes wide behind his pince-nez; Inès (short, round, big curly red hair, pink puffer jacket) on the right leaning in, jaw dropped, her curly hair standing on end, light-blue sweat drop. the open drawer on the desk between them. close-up",
             "cast": [
               "becquerel",
               "ines"
@@ -188,7 +188,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare wooden shed used as a laboratory, with a long work table. Marie (small, slender, tight ash-blond bun, long black dress) on the left rolling up her sleeves, determined, the stirring rod under her arm; Inès (short, round, big curly red hair, orange puffer jacket) on the right giving an enthusiastic thumbs-up. medium shot",
+            "prompt": "a bare wooden shed used as a laboratory, with a long work table. Marie (small, slender, tight ash-blond bun, long black dress) on the left rolling up her sleeves, determined, the stirring rod under her arm; Inès (short, round, big curly red hair, pink puffer jacket) on the right giving an enthusiastic thumbs-up. medium shot",
             "cast": [
               "marie",
               "ines"
@@ -217,7 +217,7 @@
             }
           ],
           "image": {
-            "prompt": "the same bare wooden shed laboratory. Marie (small, slender, tight ash-blond bun, long black dress) on the left stirring the cauldron with the stirring rod with both hands, grey steam rising, very focused; Inès (short, round, big curly red hair, orange puffer jacket) on the right pinching her nose, eyes squeezed shut. wide shot",
+            "prompt": "the same bare wooden shed laboratory. Marie (small, slender, tight ash-blond bun, long black dress) on the left stirring the cauldron with the stirring rod with both hands, grey steam rising, very focused; Inès (short, round, big curly red hair, pink puffer jacket) on the right pinching her nose, eyes squeezed shut. wide shot",
             "cast": [
               "marie",
               "ines"
@@ -257,7 +257,7 @@
             }
           ],
           "image": {
-            "prompt": "a small bare wooden stage. Marie (small, slender, tight ash-blond bun, long black dress) on the left holding two gold medals, one in each hand, calm and unimpressed; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the right holding one gold medal around his neck and raising the drawer high above his head like a trophy, beaming. visual gag: the drawer shown off like a trophy. medium shot",
+            "prompt": "a small bare wooden stage. Marie (small, slender, tight ash-blond bun, long black dress) on the left holding two gold medals, one in each hand, calm and unimpressed; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the right holding one gold medal around his neck and raising the drawer high above his head like a trophy, beaming. visual gag: the drawer shown off like a trophy. high angle",
             "cast": [
               "marie",
               "becquerel"
@@ -281,7 +281,7 @@
             }
           ],
           "image": {
-            "prompt": "a quiet bare museum room. Inès (short, round, big curly red hair, orange puffer jacket) standing alone on the right, hands clasped, serious and silent, looking at a closed dull grey lead box on a small table on the left. calm, sober scene. wide shot",
+            "prompt": "a quiet bare museum room. Inès (short, round, big curly red hair, pink puffer jacket) standing alone on the right, hands clasped, serious and silent, looking at a closed dull grey lead box on a small table on the left. calm, sober scene. wide shot",
             "cast": [
               "ines"
             ],
@@ -325,7 +325,7 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s Paris laboratory with glass bottles on shelves. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left proudly holding up a small metal sample, the counter on the bench beside him with its needle jumping; Inès (short, round, big curly red hair, orange puffer jacket) on the right sniffing a test tube with her eyes half closed like a wine taster. visual gag: the wine-tasting pose. medium shot",
+            "prompt": "a 1930s Paris laboratory with glass bottles on shelves. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left proudly holding up a small metal sample, the counter on the bench beside him with its needle jumping; Inès (short, round, big curly red hair, pink puffer jacket) on the right sniffing a test tube with her eyes half closed like a wine taster. visual gag: the wine-tasting pose. medium shot",
             "cast": [
               "joliot",
               "ines"
@@ -354,7 +354,7 @@
             }
           ],
           "image": {
-            "prompt": "close-up in the 1930s Paris laboratory. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left reading a letter, eyebrows shooting up, mouth wide open; Inès (short, round, big curly red hair, orange puffer jacket) on the right standing on tiptoe to read over his shoulder, curious",
+            "prompt": "close-up in the 1930s Paris laboratory. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left reading a letter, eyebrows shooting up, mouth wide open; Inès (short, round, big curly red hair, pink puffer jacket) on the right standing on tiptoe to read over his shoulder, curious. close-up",
             "cast": [
               "joliot",
               "ines"
@@ -382,7 +382,7 @@
             }
           ],
           "image": {
-            "prompt": "the 1930s Paris laboratory, in front of a blackboard with a big chalk circle split into two halves. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the right snapping a stick of white chalk in two with a dramatic gesture, chalk dust flying; Inès (short, round, big curly red hair, orange puffer jacket) on the left flinching, covering her ears. wide shot",
+            "prompt": "the 1930s Paris laboratory, in front of a blackboard with a big chalk circle split into two halves. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the right snapping a stick of white chalk in two with a dramatic gesture, chalk dust flying; Inès (short, round, big curly red hair, pink puffer jacket) on the left flinching, covering her ears. wide shot",
             "cast": [
               "ines",
               "joliot"
@@ -423,7 +423,7 @@
             }
           ],
           "image": {
-            "prompt": "the 1930s Paris laboratory. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left sliding a thick envelope closed with a red wax seal into a small iron safe, glancing over his shoulder; Inès (short, round, big curly red hair, orange puffer jacket) on the right tiptoeing with a finger on her lips, conspiratorial. medium shot",
+            "prompt": "the 1930s Paris laboratory. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left sliding a thick envelope closed with a red wax seal into a small iron safe, glancing over his shoulder; Inès (short, round, big curly red hair, pink puffer jacket) on the right tiptoeing with a finger on her lips, conspiratorial. low angle",
             "cast": [
               "joliot",
               "ines"
@@ -451,7 +451,7 @@
             }
           ],
           "image": {
-            "prompt": "the 1930s Paris laboratory. Inès (short, round, big curly red hair, orange puffer jacket) on the right straining with both arms to lift a tiny metal can, knees bent, red angry flush on her face; Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left watching with arms crossed, amused. visual gag: a tiny can treated like a huge weight. medium shot",
+            "prompt": "the 1930s Paris laboratory. Inès (short, round, big curly red hair, pink puffer jacket) on the right straining with both arms to lift a tiny metal can, knees bent, red angry flush on her face; Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left watching with arms crossed, amused. visual gag: a tiny can treated like a huge weight. medium shot",
             "cast": [
               "joliot",
               "ines"
@@ -479,7 +479,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare postwar office with a wooden desk. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left unrolling a large blank blueprint across the desk, enthusiastic; Inès (short, round, big curly red hair, orange puffer jacket) on the right holding up a tiny AA battery next to the blueprint, puzzled. visual gag: the tiny battery. medium shot",
+            "prompt": "a bare postwar office with a wooden desk. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left unrolling a large blank blueprint across the desk, enthusiastic; Inès (short, round, big curly red hair, pink puffer jacket) on the right holding up a tiny AA battery next to the blueprint, puzzled. visual gag: the tiny battery. over-the-shoulder",
             "cast": [
               "joliot",
               "ines"
@@ -508,7 +508,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare concrete hall inside an old stone fort. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left patting a squat round concrete reactor block proudly, like a pet; Inès (short, round, big curly red hair, orange puffer jacket) on the right trying to plug the charger into the block, while Frédéric shakes his head. wide shot",
+            "prompt": "a bare concrete hall inside an old stone fort. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left patting a squat round concrete reactor block proudly, like a pet; Inès (short, round, big curly red hair, pink puffer jacket) on the right trying to plug the charger into the block, while Frédéric shakes his head. wide shot",
             "cast": [
               "joliot",
               "ines"
@@ -537,7 +537,7 @@
             }
           ],
           "image": {
-            "prompt": "a 1970s petrol station with one old pump. Inès (short, round, big curly red hair, orange puffer jacket) on the left holding an empty red jerrycan upside down, a single drop falling out, dismayed; on the right an engineer in a white hard hat and blue overalls, seen from behind, pointing at the tower being built on the far horizon. wide shot",
+            "prompt": "a 1970s petrol station with one old pump. Inès (short, round, big curly red hair, pink puffer jacket) on the left holding an empty red jerrycan upside down, a single drop falling out, dismayed; on the right an engineer in a white hard hat and blue overalls, seen from behind, pointing at the tower being built on the far horizon. medium wide shot",
             "cast": [
               "ines"
             ],
@@ -577,7 +577,7 @@
             }
           ],
           "image": {
-            "prompt": "close-up. Inès (short, round, big curly red hair, orange puffer jacket) on the left holding the pellet between two fingers at eye level, amazed; behind her a huge black mountain of coal fills the background; on the right only the white-gloved hand of an engineer, raising a warning finger. visual gag: a fingertip-sized pellet against a mountain of coal",
+            "prompt": "close-up. Inès (short, round, big curly red hair, pink puffer jacket) on the left holding the pellet between two fingers at eye level, amazed; behind her a huge black mountain of coal fills the background; on the right only the white-gloved hand of an engineer, raising a warning finger. visual gag: a fingertip-sized pellet against a mountain of coal. close-up",
             "cast": [
               "ines"
             ],
@@ -605,7 +605,7 @@
             }
           ],
           "image": {
-            "prompt": "the foot of a nuclear power plant on green grass, the tower rising high behind. Inès (short, round, big curly red hair, orange puffer jacket) on the left looking up with her mouth open while a small white cloud drifts down from the tower and settles above her head; an engineer in a white hard hat and blue overalls on the right, seen in profile, arms crossed, amused. wide shot",
+            "prompt": "the foot of a nuclear power plant on green grass, the tower rising high behind. Inès (short, round, big curly red hair, pink puffer jacket) on the left looking up with her mouth open while a small white cloud drifts down from the tower and settles above her head; an engineer in a white hard hat and blue overalls on the right, seen in profile, arms crossed, amused. wide shot",
             "cast": [
               "ines"
             ],
@@ -644,7 +644,7 @@
             }
           ],
           "image": {
-            "prompt": "the bare modern room with the wall socket. Inès (short, round, big curly red hair, orange puffer jacket) in the centre holding a big shiny gold medal, flipping it over to discover that its back side is dull grey and dented, frowning. visual gag: the other side of the medal. medium shot",
+            "prompt": "the bare modern room with the wall socket. Inès (short, round, big curly red hair, pink puffer jacket) in the centre holding a big shiny gold medal, flipping it over to discover that its back side is dull grey and dented, frowning. visual gag: the other side of the medal. low angle",
             "cast": [
               "ines"
             ],
@@ -667,7 +667,7 @@
             }
           ],
           "image": {
-            "prompt": "the bare modern room. Inès (short, round, big curly red hair, orange puffer jacket) standing alone, still, seen from three-quarter back, in front of a large plain world map pinned on the wall with two small red pins, hands in her pockets, serious. calm, sober scene. medium shot",
+            "prompt": "the bare modern room. Inès (short, round, big curly red hair, pink puffer jacket) standing alone, still, seen from three-quarter back, in front of a large plain world map pinned on the wall with two small red pins, hands in her pockets, serious. calm, sober scene. medium shot",
             "cast": [
               "ines"
             ],
@@ -694,7 +694,7 @@
             }
           ],
           "image": {
-            "prompt": "a long underground gallery with smooth grey clay walls lit by a row of lamps. Inès (short, round, big curly red hair, orange puffer jacket) on the left wearing a white hard hat far too big for her, sliding down over her eyes; an engineer in a white hard hat and blue overalls on the right, seen from behind, gently tapping the clay wall. wide shot",
+            "prompt": "a long underground gallery with smooth grey clay walls lit by a row of lamps. Inès (short, round, big curly red hair, pink puffer jacket) on the left wearing a white hard hat far too big for her, sliding down over her eyes; an engineer in a white hard hat and blue overalls on the right, seen from behind, gently tapping the clay wall. wide shot",
             "cast": [
               "ines"
             ],
@@ -722,9 +722,8 @@
             }
           ],
           "image": {
-            "prompt": "the bare modern room with the wall socket again. Inès (short, round, big curly red hair, orange puffer jacket) on the right, the charger finally plugged into the socket, hugging her phone, delighted, yellow sparkles; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left sitting on the drawer turned upside down on the floor like a tiny stool, knees up to his chin, satisfied. medium shot",
+            "prompt": "the bare modern room with the wall socket again. Close on Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) sitting on the drawer turned upside down on the floor like a tiny stool, knees up to his chin, satisfied, alone in the picture, the face large and very expressive. close-up",
             "cast": [
-              "ines",
               "becquerel"
             ],
             "file": "images/dossier-21.webp",

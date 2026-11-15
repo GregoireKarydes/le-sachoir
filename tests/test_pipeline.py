@@ -320,7 +320,7 @@ def test_prompt_porte_le_cadre_les_roles_sans_case_precedente(tmp_path):
                    "props": {"chest": "a small wooden chest with iron bands"}}}
     p, refs = images.build("Law opens the chest", [("Law, a tall gambler", None, "the smooth salesman")],
                            fmt=fmt, panel=(2, 8))
-    assert p.startswith("Panel 2 of 8")
+    assert p.startswith("ONE single picture") and "comic strip" not in p.split("Scene:")[0]
     for bout in ("how paper money was born", "1710s France", "the smooth salesman", "small wooden chest"):
         assert bout in p
     # la case précédente n'est plus une référence : le modèle la recopiait
@@ -409,3 +409,14 @@ def test_cast_prompt_one_person_no_scenery():
     p = images.cast_prompt(fmt, fmt["cast"][0])
     assert "radar laboratory" not in p and "Percy" not in p
     assert "Exactly ONE person" in p and "1945" in p
+
+
+def test_framing_and_shot_parsing():
+    """15/11/2026 : cadrages variés ; « medium close-up » n'est pas lu comme « close-up »."""
+    import images, validate
+    assert "head and shoulders of one character" in images.framing_for("Léa laughs. medium close-up")
+    assert validate.shot_of("a kitchen. medium wide shot") == "medium wide shot"
+    warns = []
+    drawn = [{"image": {"prompt": f"x. {s}", "cast": ["a", "b"]}} for s in ["medium shot"] * 5]
+    validate.check_shots(drawn, "cultureg", warns.append)
+    assert any("plans moyens" in w for w in warns) and any("gros plan" in w for w in warns)

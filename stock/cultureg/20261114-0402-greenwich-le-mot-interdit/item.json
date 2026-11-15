@@ -21,14 +21,14 @@
         {
           "id": "astro",
           "name": "L’astronome",
-          "look": "an elderly very tall and thin astronomer of the Paris Observatory in 1911, long pointy white beard, bald head, small round spectacles, light peach skin, long mustard yellow frock coat as main colour, a brass telescope tucked under his arm",
+          "look": "an elderly very tall and thin astronomer of the Paris Observatory in 1911, long pointy white beard, bald head, small round spectacles, light peach skin, long teal frock coat as main colour, a brass telescope tucked under his arm",
           "file": "cast/cultureg-astro.png",
           "status": "pending",
           "role": "the dry, slightly proud astronomer who explains simply; very tall, chin up, speaks with a raised finger"
         }
       ],
       "cover": {
-        "prompt": "a railway station platform with one big round station clock on a post. Gaston (short, round, walrus moustache, navy uniform, red kepi) on the left standing on a wooden ladder, pushing the clock's minute hand backwards with both hands, sweating, light-blue sweat drop; the astronomer (very tall, thin, white beard, mustard yellow coat) on the right whistling innocently, hiding a folded map behind his back. wide shot",
+        "prompt": "a railway station platform with one big round station clock on a post. Gaston (short, round, walrus moustache, navy uniform, red kepi) on the left standing on a wooden ladder, pushing the clock's minute hand backwards with both hands, sweating, light-blue sweat drop; the astronomer (very tall, thin, white beard, teal coat) on the right whistling innocently, hiding a folded map behind his back. wide shot",
         "cast": [
           "gaston",
           "astro"
@@ -56,7 +56,7 @@
             }
           ],
           "image": {
-            "prompt": "a railway station platform with one big round station clock on a post. Gaston (short, round, walrus moustache, navy uniform, red kepi) on the left at the foot of the clock, staring at his brass pocket watch, baffled; the astronomer (very tall, thin, white beard, mustard yellow coat) on the right leaning down to him with a finger on his lips, conspiratorial. medium shot",
+            "prompt": "a railway station platform with one big round station clock on a post. Gaston (short, round, walrus moustache, navy uniform, red kepi) on the left at the foot of the clock, staring at his brass pocket watch, baffled; the astronomer (very tall, thin, white beard, teal coat) on the right leaning down to him with a finger on his lips, conspiratorial. wide shot",
             "cast": [
               "gaston",
               "astro"
@@ -84,7 +84,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare room with a simple wall map of France and a small yellow sun drawn above its right side. Gaston (short, round, navy uniform, red kepi) on the left wearing five different pocket watches on both arms, looking from one to the other, dizzy; the astronomer (very tall, mustard yellow coat) on the right sliding the sun from right to left across the map with a pointer. medium shot",
+            "prompt": "a bare room with a simple wall map of France and a small yellow sun drawn above its right side. Gaston (short, round, navy uniform, red kepi) on the left wearing five different pocket watches on both arms, looking from one to the other, dizzy; the astronomer (very tall, teal coat) on the right sliding the sun from right to left across the map with a pointer. low angle",
             "cast": [
               "gaston",
               "astro"
@@ -112,7 +112,7 @@
             }
           ],
           "image": {
-            "prompt": "a station wall with two round clocks side by side showing different times. Gaston (short, round, navy uniform, red kepi) on the left happily unscrewing one of the two clocks, relieved, yellow sparkles; the astronomer (very tall, thin, white beard, mustard yellow coat) on the right puffing out his chest, chin high, hand on his heart, proud. medium shot",
+            "prompt": "a station wall with two round clocks side by side showing different times. Gaston (short, round, navy uniform, red kepi) on the left happily unscrewing one of the two clocks, relieved, yellow sparkles; the astronomer (very tall, thin, white beard, teal coat) on the right puffing out his chest, chin high, hand on his heart, proud. medium shot",
             "cast": [
               "gaston",
               "astro"
@@ -148,7 +148,7 @@
             }
           ],
           "image": {
-            "prompt": "a conference hall with a long table and a globe on it. the astronomer (very tall, thin, white beard, mustard yellow coat) on the right sitting with arms tightly crossed, nose in the air, turning his chair away from the globe, sulking; Gaston (short, round, navy uniform, red kepi) on the left peeking at him over the table edge, worried. medium shot",
+            "prompt": "a conference hall with a long table and a globe on it. the astronomer (very tall, thin, white beard, teal coat) on the right sitting with arms tightly crossed, nose in the air, turning his chair away from the globe, sulking; Gaston (short, round, navy uniform, red kepi) on the left peeking at him over the table edge, worried. over-the-shoulder",
             "cast": [
               "astro",
               "gaston"
@@ -192,7 +192,7 @@
             }
           ],
           "image": {
-            "prompt": "a simple office with a desk and an official sheet of paper with a red wax seal. the astronomer (very tall, thin, white beard, mustard yellow coat) on the right signing the sheet while covering a small map of England with his other hand, eyes looking away innocently; Gaston (short, round, navy uniform, red kepi) on the left squinting at him, suspicious, one eyebrow raised. medium shot",
+            "prompt": "a simple office with a desk and an official sheet of paper with a red wax seal. the astronomer (very tall, thin, white beard, teal coat) on the right signing the sheet while covering a small map of England with his other hand, eyes looking away innocently; Gaston (short, round, navy uniform, red kepi) on the left squinting at him, suspicious, one eyebrow raised. high angle",
             "cast": [
               "astro",
               "gaston"
@@ -220,7 +220,7 @@
             }
           ],
           "image": {
-            "prompt": "a quiet small-town square with a tiny church and a road sign post with no text. Gaston (short, round, navy uniform, red kepi) on the left holding up his pocket watch triumphantly toward the church, beaming, yellow sparkles; the astronomer (very tall, thin, white beard, mustard yellow coat) on the right planting a tiny French flag in the ground with great solemnity. wide shot",
+            "prompt": "a quiet small-town square with a tiny church and a road sign post with no text. Gaston (short, round, navy uniform, red kepi) on the left holding up his pocket watch triumphantly toward the church, beaming, yellow sparkles; the astronomer (very tall, thin, white beard, teal coat) on the right planting a tiny French flag in the ground with great solemnity. wide shot",
             "cast": [
               "gaston",
               "astro"
@@ -248,9 +248,8 @@
             }
           ],
           "image": {
-            "prompt": "back on the railway station platform under the big round station clock. a gentleman in a bowler hat, seen from behind, tapping Gaston on the shoulder; Gaston (short, round, navy uniform, red kepi) in the middle frozen, clutching his pocket watch, light-blue sweat drop; the astronomer (very tall, mustard yellow coat) on the right whispering in his ear. medium shot",
+            "prompt": "back on the railway station platform, the big round station clock behind him. Close on the astronomer (very tall, thin, long pointy white beard, small round spectacles, teal coat) raising one finger with a sly, very dignified smile, one eyebrow up, as if sharing a secret with the reader. close-up",
             "cast": [
-              "gaston",
               "astro"
             ],
             "file": "images/cultureg-09.webp",

@@ -83,3 +83,8 @@ L'origine d'une **expression française que tout le monde utilise**, en **micro-
 - **Culture pop** : Musique, Mode et luxe, Sports, Jeux vidéo
 
 Chaque format (`cultureg`, `insolite`, `notice`, `origine`, `dossier`) a **obligatoirement** un champ `theme`, écrit exactement comme ci-dessus (apostrophe typographique ’ comprise). C'est lui qui range l'histoire dans les filtres de l'écran Découvrir et qui sert aux règles d'alternance.
+
+
+## Rattrapage : découpage et têtes répétées (15 novembre 2026)
+Le 15 novembre, les 8 BD de la file pas encore commencées ont déjà été redécoupées et 6 fiches recolorées. Pour les suivantes :
+`pipeline/validate.py` signale « découpage : … » sur des BD de la file. Pour chacune, réécrire **seulement les prompts des images pas encore dessinées** (`status` « pending ») selon la règle « Découpage : varier les plans » de `prompts/SCHEMA.md` : cadrage en fin de prompt, au plus 40 % de plans moyens, au moins un gros plan, au moins une case sans le duo, une case d'action. Garder le texte des cases (récitatifs, bulles) et les personnages qui parlent dans l'image. Ne jamais toucher une image déjà faite. Au plus 4 BD par passage, la prochaine à sortir de chaque type d'abord (`data/health.json`, `stock.<type>.next`). « même tête qu'un personnage récent » : changer la couleur dominante (ou la coiffure) dans la fiche **et** dans les rappels des prompts, seulement si aucune image de ce personnage n'est déjà faite.

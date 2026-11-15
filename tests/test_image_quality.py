@@ -48,3 +48,24 @@ def test_peau_jamais_en_aplat_noir_dans_les_consignes_imperatives():
     assert "never filled in black" in style["constraints"]
     prompt, _ = images.build("A king waves.", [])
     assert prompt.index("never filled in black") < prompt.index(style["style"][:40])
+
+
+def test_looks_like_page_detects_comic_grid():
+    """15/11/2026 : l'Actu du jour avait des planches de 4 à 6 vignettes au lieu d'une image par sujet."""
+    import images
+    from PIL import Image, ImageDraw
+    page = Image.new("RGB", (512, 896), (240, 240, 250))
+    d = ImageDraw.Draw(page)
+    for box in [(10, 10, 250, 440), (262, 10, 502, 440), (10, 452, 250, 886), (262, 452, 502, 886)]:
+        d.rectangle(box, fill=(180, 200, 230), outline=(0, 0, 0), width=4)
+    assert images.looks_like_page(page)
+    single = Image.new("RGB", (512, 896), (240, 240, 250))
+    ImageDraw.Draw(single).ellipse((150, 300, 360, 800), fill=(200, 120, 90), outline=(0, 0, 0), width=6)
+    assert not images.looks_like_page(single)
+
+
+def test_actu_context_has_no_other_subjects():
+    import images
+    fmt = {"id": "actu", "art": {"subject": "four news stories", "setting": "a stadium, a control room", "era": "2026"}}
+    ctx = images.story_context(fmt)
+    assert "stadium" not in ctx and "four news" not in ctx and "2026" in ctx

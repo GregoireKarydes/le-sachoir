@@ -21,7 +21,7 @@
         {
           "id": "titus",
           "name": "Titus, son fils",
-          "look": "Titus, a tall slim elegant Roman prince around thirty, short curly black hair, pointed nose always wrinkled in disgust, spotless white tunic under a bright red cloak as main colour",
+          "look": "Titus, a tall slim elegant Roman prince around thirty, short curly black hair, pointed nose always wrinkled in disgust, spotless white tunic under a teal cloak as main colour",
           "file": "cast/insolite-titus.png",
           "status": "pending",
           "role": "his disgusted son, the reader's voice; tall, elegant, nose wrinkled, holding his cloak away from everything"
@@ -56,7 +56,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare palace room with one marble column. Vespasian (on the left) stroking his chin, eyes narrowed with a scheming grin; Titus (on the right) slowly backing away, shoulders hunched, worried sweat drop. medium shot",
+            "prompt": "a bare palace room with one marble column. Vespasian (on the left) stroking his chin, eyes narrowed with a scheming grin; Titus (on the right) slowly backing away, shoulders hunched, worried sweat drop. wide shot",
             "cast": [
               "vespasien",
               "titus"
@@ -95,7 +95,7 @@
             }
           ],
           "image": {
-            "prompt": "a Roman laundry with the vat. on the right in the background, a small anonymous barefoot laundry worker seen from afar, happily stomping on white cloth in the vat like treading grapes; Vespasian (stocky, purple toga) in the foreground on the left, rubbing his hands, eyes shining at the vat as if it were full of gold. wide shot",
+            "prompt": "a Roman laundry with the vat. on the right in the background, a small anonymous barefoot laundry worker seen from afar, happily stomping on white cloth in the vat like treading grapes; Vespasian (stocky, purple toga) in the foreground on the left, rubbing his hands, eyes shining at the vat as if it were full of gold. low angle",
             "cast": [
               "vespasien"
             ],
@@ -146,7 +146,7 @@
             }
           ],
           "image": {
-            "prompt": "a bare palace room. Titus (on the right) dramatically draped over a couch, one hand on his forehead, despairing; Vespasian (on the left) calmly counting coins on a small table, not even looking up. medium shot",
+            "prompt": "a bare palace room. Titus (on the right) dramatically draped over a couch, one hand on his forehead, despairing; Vespasian (on the left) calmly counting coins on a small table, not even looking up. over-the-shoulder",
             "cast": [
               "titus",
               "vespasien"
@@ -202,7 +202,7 @@
             }
           ],
           "image": {
-            "prompt": "plain background. Vespasian (on the left) sitting slumped on a marble bench, chin in his hand, bored and resigned, half-lidded eyes, the gold coin balanced on his knee. medium shot",
+            "prompt": "plain background. Vespasian (on the left) sitting slumped on a marble bench, chin in his hand, bored and resigned, half-lidded eyes, the gold coin balanced on his knee. high angle",
             "cast": [
               "vespasien"
             ],
@@ -224,7 +224,7 @@
             }
           ],
           "image": {
-            "prompt": "an 1830s Paris street, almost empty, with one simple round green street urinal column. Titus (tall, red cloak) standing next to it in his Roman clothes, totally out of place, facing the viewer like in an interview, pinching his nose with one hand and pointing at the column with the other, deadpan stare. medium shot",
+            "prompt": "an 1830s Paris street, almost empty, with one simple round green street urinal column. Titus (tall, teal cloak) standing next to it in his Roman clothes, totally out of place, facing the viewer like in an interview, pinching his nose with one hand and pointing at the column with the other, deadpan stare. close-up",
             "cast": [
               "titus"
             ],

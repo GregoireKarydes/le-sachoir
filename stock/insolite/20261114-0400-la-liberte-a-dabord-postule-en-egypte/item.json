@@ -56,7 +56,7 @@
             }
           ],
           "image": {
-            "prompt": "a harbour quay with the green Statue of Liberty small in the far background. a passer-by in a bowler hat seen from behind on the left, looking up at it; Auguste (short, bushy dark beard, royal blue frock coat) on the right leaning in with a hand cupped by his mouth as if telling a secret, mischievous grin. medium shot",
+            "prompt": "a harbour quay with the green Statue of Liberty small in the far background. a passer-by in a bowler hat seen from behind on the left, looking up at it; Auguste (short, bushy dark beard, royal blue frock coat) on the right leaning in with a hand cupped by his mouth as if telling a secret, mischievous grin. wide shot",
             "cast": [
               "bartholdi"
             ],
@@ -78,7 +78,7 @@
             }
           ],
           "image": {
-            "prompt": "the foot of a gigantic seated ancient Egyptian stone statue, only its huge stone feet and knees visible. Auguste (short, bushy dark beard, royal blue frock coat) tiny at the bottom, head tilted all the way back, sketchbook open, eyes shining, small red hearts. low angle, wide shot",
+            "prompt": "the foot of a gigantic seated ancient Egyptian stone statue, only its huge stone feet and knees visible. Auguste (short, bushy dark beard, royal blue frock coat) tiny at the bottom, head tilted all the way back, sketchbook open, eyes shining, small red hearts. low angle. low angle",
             "cast": [
               "bartholdi"
             ],
@@ -146,7 +146,7 @@
             }
           ],
           "image": {
-            "prompt": "the same palace room. Ismail (plump, red fez, dark green frock coat) on the right standing and turning out both empty coat pockets, a single moth flying out, apologetic shrug; Auguste (short, bushy dark beard, royal blue frock coat) on the left hugging his rolled-up sketch to his chest, shoulders drooping, light-blue sweat drop. medium shot",
+            "prompt": "the same palace room. Ismail (plump, red fez, dark green frock coat) on the right standing and turning out both empty coat pockets, a single moth flying out, apologetic shrug; Auguste (short, bushy dark beard, royal blue frock coat) on the left hugging his rolled-up sketch to his chest, shoulders drooping, light-blue sweat drop. over-the-shoulder",
             "cast": [
               "ismail",
               "bartholdi"
@@ -217,9 +217,8 @@
             }
           ],
           "image": {
-            "prompt": "a split scene: on the right Auguste (short, bushy dark beard, royal blue frock coat) on a harbour quay proudly presenting a tiny green Statue of Liberty in the distance, chest out, yellow sparkles; on the left Ismail (plump, red fez, dark green frock coat) peeking at a newspaper-sized blank picture of the statue, biting his lip, regretful. wide shot",
+            "prompt": "a sunny harbour quay, far away on the horizon a tiny green Statue of Liberty. Close on Ismail (plump, red fez, dark green frock coat) in the foreground, looking back over his shoulder at the distant statue, biting his lip, deeply regretful, a tiny light-blue sweat drop. close-up",
             "cast": [
-              "bartholdi",
               "ismail"
             ],
             "file": "images/insolite-08.webp",
