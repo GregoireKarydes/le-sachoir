@@ -66,7 +66,7 @@
             }
           ],
           "image": {
-            "prompt": "a modern outdoor tennis court by the net. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left counting on her fingers with the racket under her arm, baffled; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right popping up from behind the net, bowing deeply with his flat black cap in his hand, very proud. medium shot",
+            "prompt": "a modern outdoor tennis court by the net. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left counting on her fingers with the racket under her arm, baffled; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right popping up from behind the net, bowing deeply with his flat black cap in his hand, very proud. wide shot",
             "cast": [
               "chloe",
               "paumier"
@@ -94,7 +94,7 @@
             }
           ],
           "image": {
-            "prompt": "an indoor jeu de paume hall with high walls and a net in the middle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right holding up his bright red swollen palm next to the ball, wincing dramatically; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left hugging her racket protectively against her chest. medium shot",
+            "prompt": "an indoor jeu de paume hall with high walls and a net in the middle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right holding up his bright red swollen palm next to the ball, wincing dramatically; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left hugging her racket protectively against her chest. low angle",
             "cast": [
               "paumier",
               "chloe"
@@ -206,7 +206,7 @@
             }
           ],
           "image": {
-            "prompt": "the indoor jeu de paume hall, low angle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right shouting across the court with both hands cupped around his mouth, cheeks puffed, ruff shaking; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left covering her ears with her racket squeezed under her arm. medium shot",
+            "prompt": "the indoor jeu de paume hall, low angle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right shouting across the court with both hands cupped around his mouth, cheeks puffed, ruff shaking; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left covering her ears with her racket squeezed under her arm. over-the-shoulder",
             "cast": [
               "paumier",
               "chloe"
@@ -242,9 +242,8 @@
             }
           ],
           "image": {
-            "prompt": "back on the modern outdoor tennis court. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left slumped on the bench, racket dangling, defeated but smiling; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right sitting beside her, cheerfully offering her the ball as a consolation gift. medium shot",
+            "prompt": "back on the modern outdoor tennis court, the net behind him. Close on the paumier (short, round, grey goatee, white ruff, crimson doublet) holding up an old leather tennis ball between two fingers like a precious jewel, chin up, very proud and refined smile. close-up",
             "cast": [
-              "chloe",
               "paumier"
             ],
             "file": "images/cultureg-09.webp",

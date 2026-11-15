@@ -79,6 +79,69 @@ def check_cast_distinct(cast: list, warn):
                 warn(f"fiches {a.get('id')} et {b.get('id')} trop proches ({', '.join(sorted(wa & wb)[:6])})")
 
 
+# Têtes qui reviennent (15 novembre 2026) : le « jeune roux en sweat vert » revenait 5 fois en dix jours, dont deux
+# fois dans l'édition du 15. Une fiche pas encore dessinée qui reprend la même coiffure (couleur) et la même couleur
+# dominante qu'un personnage d'une autre BD récente (14 derniers jours) ou de la file est signalée.
+HAIR = {"red": "red", "ginger": "red", "auburn": "red", "copper": "red", "orange": "red", "blond": "blond", "blonde": "blond",
+        "golden": "blond", "black": "black", "brown": "brown", "chestnut": "brown", "grey": "grey", "gray": "grey",
+        "silver": "grey", "white": "white", "pink": "pink", "blue": "blue", "purple": "purple", "green": "green"}
+_RECENT = None
+
+
+def _signature(look: str):
+    import re
+    low = (look or "").lower()
+    if re.search(r"\bbald", low):
+        hair = "bald"
+    else:
+        hair = None
+        for m in re.finditer(r"((?:[a-z-]+[ ,]+){0,4})(?:hair|bun|afro|curls|ponytail|braids?|mohawk)\b", low):
+            words = re.findall(r"[a-z]+", m.group(1))
+            hit = [HAIR[w] for w in words if w in HAIR]
+            if hit:
+                hair = hit[-1]
+                break
+    acc = _accent(look)
+    return (hair, acc) if hair and acc else None
+
+
+def recent_looks() -> list:
+    """(clé de la BD, id, signature, statut de la fiche) pour les éditions des 14 derniers jours et toute la file."""
+    global _RECENT
+    if _RECENT is not None:
+        return _RECENT
+    import datetime as _dt
+    since = (_dt.date.today() - _dt.timedelta(days=14)).isoformat()
+    files = [p for p in EDITIONS.glob("*/edition.json") if p.parent.name >= since] + list((ROOT / "stock").glob("*/*/item.json"))
+    out = []
+    for f in files:
+        try:
+            ed = json.loads(f.read_text())
+        except Exception:
+            continue
+        for fmt in ed.get("formats", []):
+            for c in fmt.get("cast", []) or []:
+                sig = _signature(c.get("look", "")) if isinstance(c, dict) else None
+                if sig:
+                    out.append((f"{f.parent.name}/{fmt.get('id')}", c.get("id"), sig))
+    _RECENT = out
+    return out
+
+
+def check_recent_faces(fmt: dict, d: Path, warn):
+    key = f"{d.name}/{fmt.get('id')}"
+    for c in fmt.get("cast", []) or []:
+        if not isinstance(c, dict) or c.get("status") == "done":
+            continue
+        sig = _signature(c.get("look", ""))
+        if not sig:
+            continue
+        same = sorted({k for k, cid, s in recent_looks() if s == sig and k != key})
+        if same:
+            warn(f"fiche {c.get('id')} : même tête qu'un personnage récent ({sig[0]} hair, {sig[1]} main colour : "
+                 f"{', '.join(same[:3])}) ; changer coiffure ou couleur dominante")
+
+
 # Découpage (15 novembre 2026, demande de Greg) : 63 % des cases étaient en « medium shot », 5 % en gros plan,
 # presque toujours deux personnages debout face au lecteur. Le dernier mot de cadrage du prompt fait foi.
 SHOTS = ["extreme close-up", "medium close-up", "close-up", "medium wide shot", "medium shot", "wide shot",
@@ -228,6 +291,8 @@ def check_story(fmt: dict, d: Path, err, warn):
     for i, c in enumerate(drawn, 1):
         if todo and (c.get("image") or {}).get("status") != "done" and len((c.get("image") or {}).get("cast", []) or []) > 2:
             warn(f"case dessinée {i} : plus de 2 personnages avec fiche dans l'image")
+    if todo and ("stock" in d.parts or d.name >= __import__("datetime").date.today().isoformat()):
+        check_recent_faces(fmt, d, warn)
     if todo and ("stock" in d.parts or d.name >= __import__("datetime").date.today().isoformat()):
         check_shots(drawn, fid, warn)
     # 9 novembre 2026 (Greg) : des vraies images souvent, ça rend l'histoire réelle. Signalé pour que la tâche Stock en ajoute.

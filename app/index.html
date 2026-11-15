@@ -36,6 +36,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,700;8..60,800&family=Roboto:wght@400;500;700;900&family=Patrick+Hand+SC&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
+/* Lettrage BD (15 novembre 2026) : Comic Neue (SIL OFL), hébergée avec l'appli pour un rendu identique partout, hors ligne compris */
+@font-face{font-family:"Sachoir Lettrage";src:url(assets/fonts/comic-neue-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Sachoir Lettrage";src:url(assets/fonts/comic-neue-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
 
 :root{
   /* Charte des maquettes : fond crème, titres serif gras, cartes vert / bleu / orange, boutons jaune d'or. */
@@ -56,7 +59,7 @@
   --grey:#efebe3;
   --f-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --f-sans:Roboto,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-letter:"Patrick Hand SC","Comic Sans MS",cursive;
+  --f-letter:"Sachoir Lettrage","Comic Neue","Comic Sans MS",cursive;
   --f-hand:Caveat,"Segoe Print",cursive;
   color-scheme:light;
 }
@@ -247,7 +250,10 @@ button{cursor:pointer}
 .segs i{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.28)}
 .segs i.on{background:var(--yellow)}
 .r-bot .cnt{font-weight:700;font-size:13px;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
-.r-side{position:absolute;right:8px;bottom:84px;z-index:6;display:flex;flex-direction:column;align-items:center;gap:16px}
+.r-side{display:flex;flex-direction:row;align-items:center;gap:14px;margin-left:4px}
+.r-side .side-btn span{display:none}
+.r-side .side-btn svg{width:24px;height:24px;filter:none}
+.r-bot .r-side .side-btn{width:auto;height:auto;background:none;box-shadow:none;border-radius:0}
 .side-btn{border:0;background:none;padding:0;display:flex;flex-direction:column;align-items:center;gap:3px;color:#fff;font-size:11.5px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.6)}
 .side-btn svg{width:31px;height:31px;fill:none;stroke:#fff;stroke-width:1.9;stroke-linejoin:round;stroke-linecap:round;filter:drop-shadow(0 1px 3px rgba(0,0,0,.55));transition:fill .15s,stroke .15s}
 .side-btn.fav.on svg{fill:#ff3040;stroke:#ff3040}
@@ -270,12 +276,31 @@ button{cursor:pointer}
 .slide > svg{position:absolute;inset:0;width:100%;height:100%;display:block}
 .panel-frame{position:absolute;inset:0;border:5px solid var(--ink);pointer-events:none}
 .stack{position:absolute;top:58px;left:14px;right:14px;display:flex;flex-direction:column;gap:9px;z-index:2}
-.cbox{position:absolute;inset:0;display:flex;flex-direction:column}
-.capband{flex:0 0 auto;padding:12px 62px 12px 12px;background:var(--cream);border-bottom:4px solid var(--ink);position:relative;z-index:2}
-.capband .caption{box-shadow:none}
-.artzone{position:relative;flex:1 1 auto;min-height:0;overflow:hidden}
+/* Page d'album (15 novembre 2026) : papier, cartouche, vignette au trait fin, bulles lettrées */
+.cbox{position:absolute;inset:0;display:flex;flex-direction:column;gap:9px;padding:10px 10px 12px;
+  background:#f7f1e3 radial-gradient(rgba(120,95,50,.07) 1px,transparent 1.2px) 0 0/7px 7px}
+.cbox.nocap{padding-top:10px}
+.capband{flex:0 0 auto;margin-right:48px}
+.capband .caption{background:#fdf3c6;border:2px solid var(--ink);border-radius:2px;box-shadow:none;padding:7px 11px 8px;
+  font-weight:700;font-size:14px;line-height:1.28;letter-spacing:.25px;text-transform:uppercase;color:#1d1a14}
+.capband .caption.fact{background:#fdf3c6;border-left:2px solid var(--ink)}
+.capband .caption .ctag{font-size:10px;letter-spacing:1px;margin-bottom:1px}
+.capband .caption.conf{background:var(--ink);color:#fff;align-self:stretch}
+.artzone{position:relative;flex:1 1 auto;min-height:0;overflow:hidden;border:2.5px solid var(--ink);border-radius:3px;background:#fff;
+  box-shadow:0 1px 0 rgba(23,20,15,.08),0 6px 16px -10px rgba(23,20,15,.35)}
 .artzone > img.panel{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
-.artzone .stack{top:12px}
+.artzone .wip{position:absolute;inset:0}
+.artzone .stack{top:10px;left:10px;right:10px;gap:14px}
+.cbox.nocap .artzone .stack{right:44px}
+.artzone .bubble{max-width:82%;border:2.2px solid var(--ink);border-radius:24px;padding:9px 15px 10px;background:#fff;
+  font-weight:700;font-size:14.5px;line-height:1.22;letter-spacing:.3px;text-transform:uppercase;text-align:center;color:#17140f;box-shadow:0 2px 0 rgba(23,20,15,.12)}
+.artzone .bubble .who{font-size:9.5px;letter-spacing:.8px;text-align:center;color:#8a8170;margin:0 0 2px}
+.artzone .bubble::before{display:none}
+.artzone .bubble::after{content:"";position:absolute;bottom:-19px;left:26px;width:26px;height:22px;border:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 22'%3E%3Cpath d='M4 0 Q11 11 3 21 Q17 13 23 0Z' fill='%23fff'/%3E%3Cpath d='M4 2 Q11 11 3 21 Q17 13 23 2' fill='none' stroke='%2317140f' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat 0 0/100% 100%}
+.artzone .bubble.r::after{left:auto;right:26px;transform:scaleX(-1)}
+.artzone .bubble.th{border-style:solid;border-radius:999px}
+.artzone .bubble.th::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 22'%3E%3Ccircle cx='9' cy='9' r='4.2' fill='%23fff' stroke='%2317140f' stroke-width='2'/%3E%3Ccircle cx='4.5' cy='17.5' r='2.6' fill='%23fff' stroke='%2317140f' stroke-width='1.8'/%3E%3C/svg%3E");bottom:-22px}
 .caption{background:#fff1c9;border:3px solid var(--ink);padding:8px 11px;font-family:var(--f-letter);font-size:17.5px;line-height:1.25;box-shadow:3px 3px 0 var(--ink)}
 .caption.fact{background:#fff;border-left:10px solid var(--green)}
 .caption .ctag{display:block;font-family:var(--f-sans);font-weight:900;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--green)}
@@ -978,16 +1003,17 @@ body{overscroll-behavior-y:none}
   .reader.desk .slide{height:100%;border-radius:6px}
   .reader.desk .slide.final{grid-column:1/-1;aspect-ratio:auto;padding:40px 20px;border-radius:16px}
   .reader.desk .stack{top:14px;left:12px;right:12px}
-  .reader.desk .capband{padding:10px}
-  .reader.desk .artzone .stack{top:10px}
-  .reader.desk .caption{font-size:16px}
+  .reader.desk .capband{margin-right:0}
+  .reader.desk .cbox{padding:8px}
+  .reader.desk .cbox.nocap .artzone .stack{right:10px}
+  .reader.desk .caption{font-size:13.5px}
   .reader.desk .cine-txt{left:16px;right:16px;bottom:22px;font-size:19px}
-  .reader.desk .bubble{font-size:16.5px}
+  .reader.desk .bubble{font-size:14px}
   .reader.desk .nav-arrow,.reader.desk .segs{display:none}
   .reader.desk .r-top{top:16px;right:max(32px,calc((100vw - 1180px)/2))}
   .reader.desk .r-bot{justify-content:center;gap:16px;padding:12px 32px}
   .reader.desk .r-bot .cnt{font-size:14.5px}
-  .reader.desk .r-side{right:max(18px,calc((100vw - 1180px)/2 - 64px));bottom:90px}
+
   /* Fenêtres centrées */
   .scrim{align-items:center;justify-content:center}
   .sheet{max-width:560px;max-height:86vh;border-radius:24px}
@@ -1134,13 +1160,13 @@ body{overscroll-behavior-y:none}
       <button id="rClose" aria-label="Fermer la lecture"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
     <div class="track" id="track"></div>
-    <div class="r-side">
-      <button id="rFav" class="side-btn fav" aria-label="J’aime cette histoire" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg><span>J’aime</span></button>
-      <button id="rShare" class="side-btn" aria-label="Partager cette histoire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3 9.2 10.1M22 3l-7.4 18-4.1-8.4L2 9.3 22 3z"/></svg><span>Partager</span></button>
-    </div>
     <div class="r-bot">
       <div class="segs" id="segs"></div>
       <span class="cnt" id="rCount"></span>
+      <div class="r-side">
+      <button id="rFav" class="side-btn fav" aria-label="J’aime cette histoire" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg><span>J’aime</span></button>
+      <button id="rShare" class="side-btn" aria-label="Partager cette histoire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3 9.2 10.1M22 3l-7.4 18-4.1-8.4L2 9.3 22 3z"/></svg><span>Partager</span></button>
+      </div>
     </div>
     <button class="nav-arrow prev" id="rPrev" aria-label="Case précédente"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="nav-arrow next" id="rNext" aria-label="Case suivante"><svg viewBox="0 0 24 24" fill="none" stroke="#17140f" stroke-width="3"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1640,6 +1666,8 @@ function photoHTML(ed, c) {
   const credit = [ph.credit, ph.license].filter(Boolean).map(esc).join(" · ");
   return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "En vrai")}</span><img class="ph-img" src="${ph.src || imgUrl(ed, ph.file)}" alt="${esc(c.title || "")}" decoding="async" onerror="this.remove()">${c.title ? `<h3>${esc(c.title)}</h3>` : ""}<p>${esc(c.text || "")}</p><span class="ph-credit">Photo : ${credit}${ph.source ? ` · <a href="${esc(ph.source)}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a>` : ""}</span></div>`;
 }
+// Typographie française : espace fine insécable avant ? ! ; : » et après «, pour qu'aucun signe ne tombe seul en début de ligne.
+const typo = t => esc(t).replace(/\s+([?!;:»])/g, "\u202f$1").replace(/«\s+/g, "«\u202f");
 // Nom affiché au-dessus des bulles : « who » = id d'un personnage du casting (son « name ») ou un nom écrit en clair.
 let SPEAKERS = {};
 function caseHTML(ed, c) {
@@ -1650,14 +1678,14 @@ function caseHTML(ed, c) {
   let cap = "";
   if (c.caption || c.kind === "conf") {
     const tag = c.tag || (c.kind === "fact" ? "Les faits" : c.kind === "react" ? "La réaction" : "");
-    cap = `<div class="caption ${c.kind || ""}">${tag ? `<span class="ctag">${esc(tag)}</span>` : ""}${esc(c.caption || "")}</div>`;
+    cap = `<div class="caption ${c.kind || ""}">${tag ? `<span class="ctag">${esc(tag)}</span>` : ""}${typo(c.caption || "")}</div>`;
   }
   const art = c.image?.status === "done" ? `<img class="panel" src="${c.image.src || imgUrl(ed, c.image.file)}" alt="" decoding="async">` : `<div class="wip">Dessin en cours…</div>`;
-  const bubbles = (c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${b.who ? `<span class="who">${esc(SPEAKERS[b.who] || b.who)}</span>` : ""}${esc(b.text)}</div>`).join("");
-  // 15 novembre 2026 (Greg : le texte cache l'image) : le récitatif passe dans un bandeau au-dessus du dessin,
-  // les bulles seules se posent sur le haut de l'image, gardé vide au dessin.
-  if (cap) return `<div class="cbox"><div class="capband">${cap}</div><div class="artzone">${art}${bubbles ? `<div class="stack">${bubbles}</div>` : ""}<div class="panel-frame"></div></div></div>`;
-  return `${art}<div class="stack">${bubbles}</div><div class="panel-frame"></div>`;
+  const bubbles = (c.bubbles || []).map(b => `<div class="bubble ${b.side === "r" ? "r" : "l"} ${b.thought ? "th" : ""}">${b.who ? `<span class="who">${esc(SPEAKERS[b.who] || b.who)}</span>` : ""}${typo(b.text)}</div>`).join("");
+  // 15 novembre 2026 (Greg : rendu premium, le texte ne doit pas cacher le dessin) : chaque case est une page
+  // d'album : fond papier, récitatif en cartouche au-dessus de la vignette, vignette cerclée d'un trait fin,
+  // bulles seules posées sur le haut du dessin (gardé vide au dessin).
+  return `<div class="cbox${cap ? "" : " nocap"}">${cap ? `<div class="capband">${cap}</div>` : ""}<div class="artzone">${art}${bubbles ? `<div class="stack">${bubbles}</div>` : ""}</div></div>`;
 }
 // « D'où ça vient ? » : image plein écran (éventuellement recadrée), texte ligne par ligne, *mot* en couleur.
 function cineHTML(ed, c) {

@@ -539,6 +539,16 @@ FRAMING = {
 }
 
 
+EMOTION_WORDS = ("blush", "pink cheek", "rosy", "red angry flush", "flushed", "embarrass")
+
+
+def calm_faces(scene: str) -> str:
+    """15 novembre 2026 : le modèle ajoutait des joues roses partout (Culture G du 15). Sans touche demandée
+    par la case, on l'interdit explicitement."""
+    low = (scene or "").lower()
+    return "" if any(w in low for w in EMOTION_WORDS) else " No blush marks, no pink cheeks: plain skin colour on every face."
+
+
 def framing_for(scene: str) -> str:
     import re
     pat = "|".join(re.escape(k) for k in sorted(FRAMING, key=len, reverse=True))
@@ -584,7 +594,7 @@ def build(scene: str, cast: list[tuple], fmt: dict | None = None,
         where = ""
     logic = " Everything must make sense for this moment of the story: right people, right objects, right place, nothing random."
     # Les consignes impératives (pas de texte, haut libre) passent avant le style : jamais coupées si le prompt est long.
-    return (f"{where}Scene: {_clean(scene)}.{framing_for(scene)}{story_context(fmt)}{chars}{props_for(fmt, scene)}{logic} "
+    return (f"{where}Scene: {_clean(scene)}.{framing_for(scene)}{calm_faces(scene)}{story_context(fmt)}{chars}{props_for(fmt, scene)}{logic} "
             f"{STYLE['constraints']} {head}{STYLE['style']}"), refs
 
 

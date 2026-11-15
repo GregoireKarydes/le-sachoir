@@ -23,7 +23,7 @@
         {
           "id": "jules",
           "name": "Jules",
-          "look": "Jules, a very tall and lanky young man of today, messy black curly hair, light brown skin, bright yellow raincoat as main colour, blue jeans, white sneakers, the sparkler in his hand",
+          "look": "Jules, a very tall and lanky young man of today, short bleached blond hair in a small quiff, light brown skin, bright yellow raincoat as main colour, blue jeans, white sneakers, the sparkler in his hand",
           "file": "cast/insolite-jules.png",
           "status": "pending",
           "role": "the cheerful party-goer who thinks he knows why he celebrates and asks the reader's questions; bouncy, arms always up"
@@ -38,7 +38,7 @@
         }
       ],
       "cover": {
-        "prompt": "a riverside lawn in Paris at night, fireworks bursting high in the sky. Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left cheering with the sparkler; Henri Martin (short, round, long white hair, dark plum frock coat) on the right holding up the law sheet and pointing with a puzzled frown at a blank spot on it where a year should be. wide shot",
+        "prompt": "a riverside lawn in Paris at night, fireworks bursting high in the sky. Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left cheering with the sparkler; Henri Martin (short, round, long white hair, dark plum frock coat) on the right holding up the law sheet and pointing with a puzzled frown at a blank spot on it where a year should be. wide shot",
         "cast": [
           "jules",
           "martin"
@@ -66,7 +66,7 @@
             }
           ],
           "image": {
-            "prompt": "a riverside lawn in Paris at night, fireworks high in the sky. Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left jumping with both arms up, the sparkler in one hand; Henri Martin (short, round, long white hair, dark plum frock coat) on the right sitting calmly on a folding chair, one finger raised, eyebrow lifted. medium shot",
+            "prompt": "a riverside lawn in Paris at night, fireworks high in the sky. Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left jumping with both arms up, the sparkler in one hand; Henri Martin (short, round, long white hair, dark plum frock coat) on the right sitting calmly on a folding chair, one finger raised, eyebrow lifted. wide shot",
             "cast": [
               "jules",
               "martin"
@@ -94,7 +94,7 @@
             }
           ],
           "image": {
-            "prompt": "a Third Republic parliament chamber with red benches. Henri Martin (short, round, long white hair, dark plum frock coat) on the right standing at a small lectern, holding up the law sheet with satisfaction; Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left squeezed onto a red bench far too small for his long legs, knees up to his chin, puzzled. wide shot",
+            "prompt": "a Third Republic parliament chamber with red benches. Henri Martin (short, round, long white hair, dark plum frock coat) on the right standing at a small lectern, holding up the law sheet with satisfaction; Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left squeezed onto a red bench far too small for his long legs, knees up to his chin, puzzled. low angle",
             "cast": [
               "martin",
               "jules"
@@ -134,7 +134,7 @@
             }
           ],
           "image": {
-            "prompt": "the parliament chamber, close on the lectern. Henri Martin (short, round, long white hair, dark plum frock coat) on the right smiling innocently at the audience while hiding the tower model behind his back with both hands; Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left leaning over to peek behind him and spotting the tower, eyes wide. medium shot",
+            "prompt": "the parliament chamber, close on the lectern. Henri Martin (short, round, long white hair, dark plum frock coat) on the right smiling innocently at the audience while hiding the tower model behind his back with both hands; Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left leaning over to peek behind him and spotting the tower, eyes wide. medium shot",
             "cast": [
               "martin",
               "jules"
@@ -178,7 +178,7 @@
             }
           ],
           "image": {
-            "prompt": "the huge Champ-de-Mars in 1790, a tiny crowd in the far background around a central altar, rain falling. Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left, the only one perfectly dry in his raincoat, smugly pulling his hood up; Henri Martin (short, round, long white hair, dark plum frock coat) on the right soaked, white hair dripping flat, holding his book over his head, still smiling. wide shot",
+            "prompt": "the huge Champ-de-Mars in 1790, a tiny crowd in the far background around a central altar, rain falling. Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left, the only one perfectly dry in his raincoat, smugly pulling his hood up; Henri Martin (short, round, long white hair, dark plum frock coat) on the right soaked, white hair dripping flat, holding his book over his head, still smiling. wide shot",
             "cast": [
               "jules",
               "martin"
@@ -206,9 +206,8 @@
             }
           ],
           "image": {
-            "prompt": "back on the riverside lawn in Paris at night, fireworks in the sky. Jules (very tall, lanky, curly black hair, bright yellow raincoat) on the left holding two sparklers at once, one in each hand, delighted; Henri Martin (short, round, long white hair, dark plum frock coat) on the right gently taking one of the two sparklers away from him, wise half-smile. medium shot",
+            "prompt": "back on the riverside lawn in Paris at night, fireworks in the sky behind him. Close on Henri Martin (short, round, long white hair, dark plum frock coat) holding up two lit sparklers crossed like an X, wise half-smile, eyes twinkling. close-up",
             "cast": [
-              "jules",
               "martin"
             ],
             "file": "images/insolite-07.webp",
