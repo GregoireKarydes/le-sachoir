@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a small modern kitchen with a gas stove. On the stove, the cooker puffs a jet of steam from its valve. Samir (short, plump, black curly beard, top knot, red and white checked apron) on the left crouches behind the kitchen table holding a frying pan up as a shield; Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right bends over the cooker, listening to it lovingly like a doctor. wide shot",
-        "cast": ["samir", "papin"],
+        "cast": [
+          "samir",
+          "papin"
+        ],
         "file": "images/notice-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "Dimanche midi",
           "caption": "La cocotte-minute cuit deux à quatre fois plus vite qu’une casserole, sur le même feu. Comment fait-elle ?",
           "bubbles": [
-            { "who": "samir", "text": "Même feu, même eau… et elle va trois fois plus vite. Elle triche ?", "side": "l" },
-            { "who": "papin", "text": "Elle triche avec l’eau. C’est moi qui lui ai appris.", "side": "r" }
+            {
+              "who": "samir",
+              "text": "Même feu, même eau… et elle va trois fois plus vite. Elle triche ?",
+              "side": "l"
+            },
+            {
+              "who": "papin",
+              "text": "Elle triche avec l’eau. C’est moi qui lui ai appris.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a small modern kitchen with a gas stove, the cooker and the saucepan side by side on two burners. Samir (short, plump, black curly beard, top knot, red and white checked apron) on the left, wooden spoon raised, looking suspiciously from one pot to the other; Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right leaning on the counter, smiling proudly at the cooker. medium wide shot",
-            "cast": ["samir", "papin"],
+            "cast": [
+              "samir",
+              "papin"
+            ],
             "file": "images/notice-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "Le principe",
           "caption": "Dans une casserole ouverte, l’eau bout à 100 °C et n’en dépasse pas : la chaleur en plus sert seulement à faire de la vapeur.",
           "bubbles": [
-            { "who": "samir", "text": "Donc même à fond, ma casserole plafonne à 100 °C ?", "side": "l" },
-            { "who": "papin", "text": "Oui. Le gaz s’épuise, l’eau ne bouge pas.", "side": "r" }
+            {
+              "who": "samir",
+              "text": "Donc même à fond, ma casserole plafonne à 100 °C ?",
+              "side": "l"
+            },
+            {
+              "who": "papin",
+              "text": "Oui. Le gaz s’épuise, l’eau ne bouge pas.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the modern kitchen, high angle looking down on the stove. Samir (plump, black curly beard, top knot, red and white checked apron) turning the gas knob of the saucepan to maximum with both hands, straining with effort, a tiny light-blue sweat drop; Denis Papin (long brown periwig, forest green coat) standing behind him, arms crossed, calmly shaking his head. high angle",
-            "cast": ["samir", "papin"],
+            "cast": [
+              "samir",
+              "papin"
+            ],
             "file": "images/notice-02.webp",
             "status": "pending",
             "attempts": 0
@@ -98,12 +123,23 @@
           "tag": "Pourquoi elle siffle",
           "caption": "Pour éviter que ça explose, une soupape, un petit clapet, laisse filer la vapeur en trop. C’est elle qui siffle et qui tourne.",
           "bubbles": [
-            { "who": "samir", "text": "Donc ce sifflement, ce n’est pas une menace ?", "side": "l" },
-            { "who": "papin", "text": "C’est elle qui vous protège. Vous pouvez sortir de là.", "side": "r" }
+            {
+              "who": "samir",
+              "text": "Donc ce sifflement, ce n’est pas une menace ?",
+              "side": "l"
+            },
+            {
+              "who": "papin",
+              "text": "C’est elle qui vous protège. Vous pouvez sortir de là.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the modern kitchen, the cooker on the stove whistling with a jet of steam from its spinning valve. Samir (short, plump, black curly beard, top knot, red and white checked apron) in the foreground on the left, hiding under the kitchen table, only his eyes and the wooden spoon showing, holding a frying pan as a shield; Denis Papin (tall, lanky, long brown periwig, forest green coat) in the background on the right, delicately touching the valve with one finger, delighted. low angle",
-            "cast": ["samir", "papin"],
+            "cast": [
+              "samir",
+              "papin"
+            ],
             "file": "images/notice-04.webp",
             "status": "pending",
             "attempts": 0
@@ -115,7 +151,15 @@
           "tag": "En vrai",
           "title": "Une marmite de Papin, au musée",
           "text": "Une « marmite de Papin » du XVIIIe siècle, au musée des Arts et Métiers, à Paris : du fer, une vis pour serrer le couvercle. L’ancêtre de la cocotte.",
-          "photo": { "commons": "File:Papin cooking pot-CnAM 1630-1-IMG 6614-white.jpg" }
+          "photo": {
+            "commons": "File:Papin cooking pot-CnAM 1630-1-IMG 6614-white.jpg",
+            "credit": "Rama",
+            "license": "CC BY-SA 3.0 fr",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en",
+            "source": "https://commons.wikimedia.org/wiki/File:Papin_cooking_pot-CnAM_1630-1-IMG_6614-white.jpg",
+            "file": "images/photo-5-papin-cooking-pot-cnam-1630-1-img-6.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -123,12 +167,23 @@
           "tag": "1679",
           "caption": "Le physicien français Denis Papin invente son « digesteur » : une marmite fermée par une vis, déjà avec une soupape.",
           "bubbles": [
-            { "who": "papin", "text": "J’ai rendu des os de bœuf mous comme du fromage.", "side": "r" },
-            { "who": "samir", "text": "Vous avez inventé le pot-au-feu express pour des os ?", "side": "l" }
+            {
+              "who": "papin",
+              "text": "J’ai rendu des os de bœuf mous comme du fromage.",
+              "side": "r"
+            },
+            {
+              "who": "samir",
+              "text": "Vous avez inventé le pot-au-feu express pour des os ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a 17th-century scientist's workshop with a wooden table and a fireplace. Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right proudly lifting the screw lid of the digester, holding up a big soft floppy beef bone that bends like rubber; Samir (short, plump, black curly beard, top knot, red and white checked apron) on the left, out of place in his apron, recoiling in disgust with the wooden spoon. medium shot",
-            "cast": ["papin", "samir"],
+            "cast": [
+              "papin",
+              "samir"
+            ],
             "file": "images/notice-06.webp",
             "status": "pending",
             "attempts": 0
@@ -153,12 +208,22 @@
           "tag": "En résumé",
           "caption": "La cocotte enferme la vapeur : la pression monte, l’eau bout vers 120 °C, donc tout cuit plus vite.",
           "bubbles": [
-            { "who": "samir", "text": "Donc elle ne triche pas. Elle change les règles.", "side": "l" },
-            { "who": "papin", "text": "Comme tous les bons inventeurs.", "side": "r" }
+            {
+              "who": "samir",
+              "text": "Donc elle ne triche pas. Elle change les règles.",
+              "side": "l"
+            },
+            {
+              "who": "papin",
+              "text": "Comme tous les bons inventeurs.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back in the modern kitchen, Samir (short, plump, black curly beard, top knot, red and white checked apron) alone, sitting at the table in front of a steaming plate of potatoes, gently patting the cooker beside him like a pet, with a respectful little smile, yellow sparkles. close-up",
-            "cast": ["samir"],
+            "cast": [
+              "samir"
+            ],
             "file": "images/notice-08.webp",
             "status": "pending",
             "attempts": 0
@@ -171,11 +236,26 @@
       },
       "story": "Dans une casserole ouverte, l’eau ne dépasse jamais 100 °C : dès qu’elle bout, toute la chaleur en plus sert à fabriquer de la vapeur, qui s’envole. La cocotte-minute contourne cette limite. Son couvercle étanche enferme la vapeur, qui s’accumule et fait monter la pression à l’intérieur, à environ un bar de plus que l’air ambiant, soit à peu près le double. Or plus l’eau est sous pression, plus il lui faut de chaleur pour bouillir : dans la cocotte, elle monte vers 120 °C. Les aliments, plus chauds, cuisent deux à quatre fois plus vite.\nPour que la pression ne monte pas sans fin, une soupape, un petit clapet réglé, laisse sortir la vapeur en trop : c’est elle qui tourne et qui siffle. Les modèles modernes ont en plus des soupapes de secours et un couvercle qui ne s’ouvre pas tant qu’il reste de la pression.\nL’idée est française. En 1679, le physicien Denis Papin invente le « digesteur », une marmite de fer fermée par une vis et munie d’une soupape. Il s’en sert pour ramollir des os, et en 1682 il cuisine avec devant la Royal Society de Londres : les os de bœuf ressortent « mous comme du fromage », note un témoin. Il faut pourtant attendre 1953 pour que l’autocuiseur entre dans les cuisines françaises : à Selongey, en Côte-d’Or, SEB lance la Super-Cocotte, vendue à 130 000 exemplaires dès 1954, puis à plus de 70 millions.",
       "sources": [
-        { "title": "Wikipédia (en) — Pressure cooker", "url": "https://en.wikipedia.org/wiki/Pressure_cooker" },
-        { "title": "Futura Sciences — Autocuiseur : qu’est-ce que c’est ?", "url": "https://www.futura-sciences.com/maison/definitions/maison-autocuiseur-11104/" },
-        { "title": "Amusing Planet — How the pressure cooker inspired the steam engine", "url": "https://www.amusingplanet.com/2022/12/how-pressure-cooker-inspired-steam.html" },
-        { "title": "WMC — La cocotte-minute SEB, une sexagénaire entrée dans 70 millions de foyers", "url": "https://www.webmanagercenter.com/2013/05/03/134328/la-cocotte-minute-seb-une-sexagenaire-entree-dans-70-millions-de-foyers/" },
-        { "title": "Wikimedia Commons — Papin cooking pot, CnAM", "url": "https://download.osmand.net/wiki/File:Papin_cooking_pot-CnAM_1630-1-IMG_6614-white.jpg" }
+        {
+          "title": "Wikipédia (en) — Pressure cooker",
+          "url": "https://en.wikipedia.org/wiki/Pressure_cooker"
+        },
+        {
+          "title": "Futura Sciences — Autocuiseur : qu’est-ce que c’est ?",
+          "url": "https://www.futura-sciences.com/maison/definitions/maison-autocuiseur-11104/"
+        },
+        {
+          "title": "Amusing Planet — How the pressure cooker inspired the steam engine",
+          "url": "https://www.amusingplanet.com/2022/12/how-pressure-cooker-inspired-steam.html"
+        },
+        {
+          "title": "WMC — La cocotte-minute SEB, une sexagénaire entrée dans 70 millions de foyers",
+          "url": "https://www.webmanagercenter.com/2013/05/03/134328/la-cocotte-minute-seb-une-sexagenaire-entree-dans-70-millions-de-foyers/"
+        },
+        {
+          "title": "Wikimedia Commons — Papin cooking pot, CnAM",
+          "url": "https://download.osmand.net/wiki/File:Papin_cooking_pot-CnAM_1630-1-IMG_6614-white.jpg"
+        }
       ]
     }
   ]
