@@ -1,0 +1,182 @@
+{
+  "added": "20261115-2045",
+  "formats": [
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
+      "tagline": "Un préfet, trois boîtes et un journaliste moqueur : la naissance d’un mot qu’on dit tous les jours",
+      "teaser": "Ce mot que vous dites en sortant les ordures, c’était le nom de famille d’un haut fonctionnaire. Il n’avait rien demandé.",
+      "minutes": 2,
+      "theme": "Expression française",
+      "art": {
+        "subject": "how the family name of a Paris prefect became the common word for a household rubbish bin, after his 1883 order",
+        "setting": "the pavement in front of a modern Paris apartment building at night; a Paris street with a stone apartment building in the 1880s; a prefect's office with a wooden desk",
+        "era": "1880s Paris, with a man from today",
+        "props": {
+          "bin": "a modern dark green plastic wheelie bin with a lid",
+          "box": "an old wooden household rubbish box lined with tin, with a hinged lid",
+          "newspaper": "a large folded 1880s newspaper with only blank grey columns"
+        }
+      },
+      "cast": [
+        {
+          "id": "lucas",
+          "name": "Lucas",
+          "look": "Lucas, a very tall bulky man in his forties, light peach skin, short curly salt-and-pepper hair, thick black-framed glasses, a fluffy bright purple dressing gown as main colour over blue pyjamas, big grey slippers, a trash bag in his hand",
+          "file": "cast/origine-lucas.png",
+          "status": "pending",
+          "role": "the sleepy resident who takes the bins out every week without a thought; big, slow, yawning, shuffles in his slippers"
+        },
+        {
+          "id": "poubelle",
+          "name": "Eugène Poubelle",
+          "look": "Eugène Poubelle, a short slender French prefect of the 1880s in his fifties, receding dark hair combed back, neat short dark beard and moustache, light peach skin, black frock coat with a wide blue-white-red sash across the chest as main colour, a rolled paper decree in his hand",
+          "file": "cast/origine-poubelle.png",
+          "status": "pending",
+          "role": "the proud, very formal senior official who wanted a cleaner Paris and got his name on every bin; stiff, chin up, touchy about his name"
+        }
+      ],
+      "cover": {
+        "prompt": "the pavement in front of a modern apartment building at night. Lucas (very tall, bulky, salt-and-pepper curls, black glasses, purple dressing gown, slippers) on the left wheels the bin to the kerb, yawning; Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right stands at attention beside the bin like at a ceremony, one hand on its lid, chin up, very proud. wide shot",
+        "cast": ["lucas", "poubelle"],
+        "file": "images/origine-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Mardi soir",
+          "caption": "Tous les mardis, Lucas sort la poubelle. Mais d’où vient ce mot bizarre, « poubelle » ?",
+          "bubbles": [
+            { "who": "lucas", "text": "Qui a eu l’idée d’appeler ce bac une poubelle ?", "side": "l" },
+            { "who": "poubelle", "text": "Personne. C’est mon nom de famille, monsieur.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the pavement in front of a modern apartment building at night, a street lamp. Lucas (very tall, bulky, salt-and-pepper curls, black glasses, purple dressing gown, slippers) on the left dragging the bin with one hand, a trash bag in the other, frozen mid-step; Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right, popping up from behind the bin, offended, chin up. wide shot",
+            "cast": ["lucas", "poubelle"],
+            "file": "images/origine-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Paris, 1883",
+          "caption": "Le 24 novembre 1883, le préfet de la Seine, Eugène Poubelle, oblige les propriétaires à fournir des boîtes fermées pour les ordures.",
+          "bubbles": [
+            { "who": "poubelle", "text": "Un couvercle, monsieur. Voilà la modernité.", "side": "r" },
+            { "who": "lucas", "text": "Révolutionnaire. Et c’est qui, qui paie les boîtes ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a Paris street in the 1880s in front of a stone apartment building. Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right lifting the box above his head with both arms like a trophy, beaming; Lucas (very tall, bulky, purple dressing gown, slippers) on the left in the background, arms crossed, sceptical, one eyebrow up. low angle",
+            "cast": ["poubelle", "lucas"],
+            "file": "images/origine-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Le tri sélectif… en 1883",
+          "steps": [
+            "Boîte 1 : ce qui pourrit, les restes de repas",
+            "Boîte 2 : les papiers et les chiffons",
+            "Boîte 3 : la vaisselle cassée, le verre et les coquilles d’huîtres",
+            "Mars 1884 : un second arrêté abandonne ce tri"
+          ],
+          "joke": "Paris a inventé le tri, puis l’a oublié pendant un siècle."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "La colère",
+          "caption": "Les propriétaires râlent contre la dépense, les concierges contre la corvée. Les chiffonniers, qui vivaient des ordures, craignent pour leur métier.",
+          "bubbles": [
+            { "who": "Un chiffonnier", "text": "Vous enfermez mon gagne-pain sous un couvercle !", "side": "l" },
+            { "who": "poubelle", "text": "J’appelle ça le progrès.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the 1880s Paris street. An angry old ragpicker with a grey beard, a huge wicker basket on his back overflowing with rags and old bottles, shaking his hook at Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right, who sits firmly on the closed box with his arms crossed, refusing to move. medium wide shot",
+            "cast": ["poubelle"],
+            "file": "images/origine-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Eugène Poubelle",
+          "text": "Eugène Poubelle, photographié par l’atelier Nadar. Préfet de la Seine de 1883 à 1896, il est l’homme le plus cité chaque soir en France sans qu’on le sache.",
+          "photo": { "commons": "File:Eugène Poubelle - Atelier Nadar.jpg" }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Le surnom",
+          "caption": "Le 16 janvier 1884, dans Le Figaro, un journaliste se moque des « boîtes Poubelle ». Le surnom se répand dans tout Paris.",
+          "bubbles": [
+            { "who": "poubelle", "text": "« Boîtes Poubelle » ! Quelle insolence !", "side": "r" },
+            { "who": "poubelle", "text": "… Bon. Au moins, on ne m’oubliera pas.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a prefect's office with a wooden desk. Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) alone, gripping the newspaper with both hands so hard it crumples, glaring at it, red angry flush on his face. close-up",
+            "cast": ["poubelle"],
+            "file": "images/origine-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment un nom propre devient un nom commun",
+          "steps": [
+            "1883 : l’arrêté du préfet Poubelle impose les boîtes",
+            "1884 : Le Figaro les baptise « boîtes Poubelle », pour se moquer",
+            "Les Parisiens raccourcissent : on dit « une poubelle »",
+            "1890 : le mot entre dans le Grand dictionnaire universel du XIXe siècle"
+          ],
+          "joke": "Son nom est dans toutes les cuisines. Rarement avec un merci."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "« Poubelle », c’est le nom du préfet qui a imposé les boîtes à ordures à Paris en 1883. Une moquerie devenue mot.",
+          "bubbles": [
+            { "who": "lucas", "text": "Donc chaque mardi, je sors monsieur le préfet.", "side": "l" },
+            { "who": "poubelle", "text": "Avec le couvercle fermé, je vous prie.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "back on the pavement in front of the modern apartment building at night. Lucas (very tall, bulky, salt-and-pepper curls, black glasses, purple dressing gown) on the left bowing very politely to the bin as if to a dignitary, holding the trash bag; Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right, firmly pressing the lid of the bin shut with one finger, satisfied. medium shot",
+            "cast": ["lucas", "poubelle"],
+            "file": "images/origine-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le mot « poubelle » vient d’Eugène Poubelle, préfet de la Seine, qui imposa en 1883 des boîtes à ordures fermées à Paris.",
+        "source": "Hérodote — 24 novembre 1883"
+      },
+      "story": "Le mot « poubelle » est un nom de famille. Le 24 novembre 1883, le préfet de la Seine, Eugène Poubelle, signe un arrêté qui oblige les propriétaires parisiens à fournir à leurs locataires des récipients couverts pour les ordures ménagères, ramassés chaque jour. Le texte prévoit même un tri : une boîte pour ce qui pourrit, une pour les papiers et les chiffons, une pour la vaisselle cassée, le verre et les coquilles d’huîtres. Ce tri est abandonné par un second arrêté, le 7 mars 1884.\nLa mesure est mal reçue. Les propriétaires dénoncent la dépense, les concierges la corvée de sortir les boîtes. Les chiffonniers, qui vivaient de ce qu’ils récupéraient dans les ordures pour le revendre, craignent de perdre leur métier.\nLe 16 janvier 1884, dans Le Figaro, le journaliste Georges Grison se moque des « boîtes Poubelle ». Le surnom, d’abord moqueur, se répand vite, puis se raccourcit : on dit « une poubelle ». Le mot entre dès 1890 dans le Grand dictionnaire universel du XIXe siècle. Le préfet, resté en poste jusqu’en 1896, n’avait pas cherché cette gloire : il voulait seulement des rues plus propres.",
+      "sources": [
+        { "title": "Hérodote — 24 novembre 1883 : le préfet Poubelle impose les boîtes à ordures", "url": "https://www.herodote.net/almanach-ID-445.php" },
+        { "title": "Paris Zigzag — Eugène Poubelle ou l’invention de la boîte à ordures", "url": "https://www.pariszigzag.fr/?p=118358" },
+        { "title": "Wikipédia (en) — Eugène Poubelle", "url": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Poubelle" },
+        { "title": "Larousse — Poubelle", "url": "https://www.larousse.fr/dictionnaires/francais/poubelle/63217" },
+        { "title": "Vikidia — Fichier : Eugène Poubelle, atelier Nadar (Wikimedia Commons)", "url": "https://fr.vikidia.org/wiki/Fichier:Eug%C3%A8ne_Poubelle_-_Atelier_Nadar.jpg" }
+      ]
+    }
+  ]
+}
