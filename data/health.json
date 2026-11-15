@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T16:38:56.150077+01:00",
+ "updated_at": "2026-11-15T19:27:57.959901+01:00",
  "today": "2026-11-15",
  "problems": [],
  "days": [
@@ -120,9 +120,9 @@
   },
   "dossier": {
    "ready": 1,
-   "waiting": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 41,
+   "images_left": 63,
    "focus": "20261113-1931-les-lumieres-sans-electricite (19 image(s) à faire)",
    "next": "20261113-1926-jeux-olympiques-baron-tetu",
    "next_redo": 0

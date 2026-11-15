@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T16:38+01:00",
+ "updated_at": "2026-11-15T19:27+01:00",
  "stock": {
   "cultureg": [
    {
@@ -239,6 +239,23 @@
     "title": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
     "theme": "Sciences physiques",
     "tagline": "De la plaque photo de Becquerel aux 57 réacteurs d’aujourd’hui : l’atome, la fission et la centrale expliqués sans prise de tête",
+    "minutes": 3,
+    "cases": 27,
+    "photos": 3,
+    "images_done": 0,
+    "images_total": 22,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261115-1923-krach-1929",
+    "name": "20261115-1923-krach-1929",
+    "added": "20261115-1923",
+    "status": "waiting",
+    "next": false,
+    "title": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
+    "theme": "Économie",
+    "tagline": "Du jeudi noir de Wall Street au New Deal de Roosevelt : comment un krach boursier est devenu la Grande Dépression, jusqu’en France",
     "minutes": 3,
     "cases": 27,
     "photos": 3,
