@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T20:44+01:00",
+ "updated_at": "2026-11-15T20:48+01:00",
  "stock": {
   "cultureg": [
    {
@@ -225,6 +225,23 @@
     "cases": 8,
     "photos": 1,
     "images_done": 6,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/origine/20261115-2045-poubelle-monsieur-le-prefet",
+    "name": "20261115-2045-poubelle-monsieur-le-prefet",
+    "added": "20261115-2045",
+    "status": "waiting",
+    "next": false,
+    "title": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
+    "theme": "Expression française",
+    "tagline": "Un préfet, trois boîtes et un journaliste moqueur : la naissance d’un mot qu’on dit tous les jours",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
     "images_total": 6,
     "failed": 0,
     "redo": 0
