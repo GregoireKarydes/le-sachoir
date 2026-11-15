@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T20:52+01:00",
+ "updated_at": "2026-11-15T20:54+01:00",
  "stock": {
   "cultureg": [
    {
@@ -186,6 +186,23 @@
     "minutes": 1,
     "cases": 7,
     "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261115-2053-perec-roman-sans-e",
+    "name": "20261115-2053-perec-roman-sans-e",
+    "added": "20261115-2053",
+    "status": "waiting",
+    "next": false,
+    "title": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)",
+    "theme": "Littérature",
+    "tagline": "Un écrivain, une machine à écrire amputée, et des lecteurs qui n’ont rien vu",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 0,
     "images_done": 0,
     "images_total": 6,
     "failed": 0,

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T20:52:17.698384+01:00",
+ "updated_at": "2026-11-15T20:54:59.077993+01:00",
  "today": "2026-11-15",
  "problems": [],
  "days": [
@@ -93,9 +93,9 @@
   },
   "insolite": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 22,
+   "images_left": 28,
    "focus": "20261113-2058-les-rats-dautun-avaient-un-avocat (1 image(s) à faire)",
    "next": "20261113-2051-le-president-prince-dandorre",
    "next_redo": 0
