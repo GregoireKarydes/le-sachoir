@@ -1492,6 +1492,7 @@
           "file": "cast/insolite-marthe.png",
           "status": "done",
           "role": "the sturdy woman who applies the leeches; strong, matter-of-fact, sleeves rolled up",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
           "via": "fal"
         }
       ],
@@ -1648,9 +1649,10 @@
             ],
             "file": "images/insolite-04.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "qa": "ok",
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1672,9 +1674,10 @@
             ],
             "file": "images/insolite-05.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "qa": "ok",
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1702,9 +1705,10 @@
             ],
             "file": "images/insolite-06.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "qa": "ok",
-            "via": "fal"
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1782,6 +1786,7 @@
           "file": "cast/origine-ines.png",
           "role": "the commuter stuck by a strike who asks where the word comes from; short, round, exasperated then curious, the reader's voice",
           "status": "done",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
           "via": "fal"
         },
         {
@@ -1791,6 +1796,7 @@
           "file": "cast/origine-gustave.png",
           "role": "a day labourer from the old riverbank square who explains the story; tall, lanky, proud of his square, deadpan",
           "status": "done",
+          "note": "fiche refaite le 15/11 : l’ancienne (fal.ai) montrait plusieurs personnages et un décor",
           "via": "fal"
         }
       ],
@@ -1818,7 +1824,7 @@
             ],
             "file": "images/origine-01.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "via": "fal",
             "redo": true
           }
@@ -1846,7 +1852,7 @@
             ],
             "file": "images/origine-02.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "via": "fal",
             "redo": true
           }
@@ -1874,7 +1880,7 @@
             ],
             "file": "images/origine-03.webp",
             "status": "done",
-            "attempts": 1,
+            "attempts": 0,
             "via": "fal",
             "redo": true
           }
@@ -1913,8 +1919,9 @@
             ],
             "file": "images/origine-05.webp",
             "status": "done",
-            "attempts": 1,
-            "via": "fal"
+            "attempts": 0,
+            "via": "fal",
+            "redo": true
           }
         },
         {
@@ -1940,8 +1947,9 @@
             ],
             "file": "images/origine-06.webp",
             "status": "done",
-            "attempts": 1,
-            "via": "fal"
+            "attempts": 0,
+            "via": "fal",
+            "redo": true
           }
         }
       ],

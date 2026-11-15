@@ -399,3 +399,13 @@ def test_notice_remplace_si_pas_d_origine_prete(site, monkeypatch):
 def test_prompt_origine_comme_les_autres_bd():
     prompt, _ = images.build("a sandy riverbank", [], fmt={"id": "origine", "art": {"era": "18th century"}}, panel=(1, 5))
     assert images.STYLE["style"] in prompt and images.STYLE["constraints"] in prompt
+
+
+def test_cast_prompt_one_person_no_scenery():
+    """15/11/2026 : la fiche casting ne décrit ni le lieu ni les autres personnages (fal.ai les dessinait)."""
+    import images
+    fmt = {"art": {"setting": "a 1940s radar laboratory", "era": "1945"},
+           "cast": [{"id": "a", "look": "Léa, short round, red bun"}, {"id": "b", "look": "Percy, very tall, tweed suit"}]}
+    p = images.cast_prompt(fmt, fmt["cast"][0])
+    assert "radar laboratory" not in p and "Percy" not in p
+    assert "Exactly ONE person" in p and "1945" in p
