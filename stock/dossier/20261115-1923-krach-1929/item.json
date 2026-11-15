@@ -59,7 +59,10 @@
       ],
       "cover": {
         "prompt": "a 1920s stock exchange floor. Harold (short, very round, orange checked suit, boater) on the left, grinning, sliding down a giant red playground slide that plunges steeply down, certificates flying from his hands; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right at the bottom of the slide, holding up the phone as if filming him. visual gag: the stock market as a playground slide. wide shot",
-        "cast": ["harold", "awa"],
+        "cast": [
+          "harold",
+          "awa"
+        ],
         "file": "images/dossier-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -71,12 +74,23 @@
           "tag": "Chapitre 1 · La grande fête",
           "caption": "En 1929, la Bourse de New York s’effondre. Comment ce krach a-t-il plongé le monde entier dans la crise ?",
           "bubbles": [
-            { "who": "awa", "text": "Mon appli de banque affiche « krach ». C’est grave ?", "side": "r" },
-            { "who": "harold", "text": "Un krach ? J’en ai vécu un magnifique, en 1929.", "side": "l" }
+            {
+              "who": "awa",
+              "text": "Mon appli de banque affiche « krach ». C’est grave ?",
+              "side": "r"
+            },
+            {
+              "who": "harold",
+              "text": "Un krach ? J’en ai vécu un magnifique, en 1929.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a bare modern living room with a sofa. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right sitting on the sofa, frowning at the phone; Harold (short, very round, orange checked suit, boater) on the left bursting in through a door with his arms wide like an old friend, ticker tape trailing behind him. visual gag: a 1920s speculator walking into a modern flat. wide shot",
-            "cast": ["awa", "harold"],
+            "cast": [
+              "awa",
+              "harold"
+            ],
             "file": "images/dossier-01.webp",
             "status": "pending",
             "attempts": 0
@@ -88,12 +102,23 @@
           "tag": "Années 1920",
           "caption": "Après la guerre, l’Amérique s’enrichit et achète à crédit : en 1929, environ 70 % des voitures sont payées ainsi.",
           "bubbles": [
-            { "who": "awa", "text": "Payer plus tard, c’est pratique.", "side": "r" },
-            { "who": "harold", "text": "Pareil pour les actions, ces petits bouts d’entreprise : je les achète à crédit !", "side": "l" }
+            {
+              "who": "awa",
+              "text": "Payer plus tard, c’est pratique.",
+              "side": "r"
+            },
+            {
+              "who": "harold",
+              "text": "Pareil pour les actions, ces petits bouts d’entreprise : je les achète à crédit !",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a 1920s New York street with a shiny new black car at the kerb. Harold (short, very round, orange checked suit, boater) on the left proudly polishing the car's bonnet with his sleeve, a certificate tucked under his arm; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right leaning on a lamppost, one eyebrow raised. medium wide shot",
-            "cast": ["harold", "awa"],
+            "cast": [
+              "harold",
+              "awa"
+            ],
             "file": "images/dossier-02.webp",
             "status": "pending",
             "attempts": 0,
@@ -118,12 +143,23 @@
           "tag": "Octobre 1929",
           "caption": "En octobre 1929, le célèbre économiste Irving Fisher l’assure : les actions ont atteint « un plateau haut permanent ».",
           "bubbles": [
-            { "who": "harold", "text": "Permanent ! C’est un professeur qui le dit.", "side": "l" },
-            { "who": "awa", "text": "Alors pourquoi tout le monde court vers la Bourse ?", "side": "r" }
+            {
+              "who": "harold",
+              "text": "Permanent ! C’est un professeur qui le dit.",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Alors pourquoi tout le monde court vers la Bourse ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a 1920s New York street corner. Harold (short, very round, orange checked suit, boater) in the foreground on the left, lying back in a striped deckchair with a blank newspaper, eyes closed, blissful smile; behind him on the right Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) turning in alarm towards a crowd of small men in hats running past in the background. low angle",
-            "cast": ["harold", "awa"],
+            "cast": [
+              "harold",
+              "awa"
+            ],
             "file": "images/dossier-03.webp",
             "status": "pending",
             "attempts": 0
@@ -135,7 +171,15 @@
           "tag": "En vrai",
           "title": "La foule devant la Bourse de New York, octobre 1929",
           "text": "Des milliers de personnes se massent à Wall Street : elles veulent savoir si leurs actions valent encore quelque chose.",
-          "photo": { "commons": "File:Crowd outside nyse.jpg" }
+          "photo": {
+            "commons": "File:Crowd outside nyse.jpg",
+            "credit": "US-gov",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Crowd_outside_nyse.jpg",
+            "file": "images/photo-5-crowd-outside-nyse-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -143,12 +187,23 @@
           "tag": "Chapitre 2 · Le krach",
           "caption": "Jeudi 24 octobre, le « jeudi noir » : tout le monde vend. Près de 13 millions d’actions changent de main.",
           "bubbles": [
-            { "who": "harold", "text": "Tout le monde vend ! Mais qui achète ?", "side": "l" },
-            { "who": "awa", "text": "Personne. C’est bien le problème.", "side": "r" }
+            {
+              "who": "harold",
+              "text": "Tout le monde vend ! Mais qui achète ?",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Personne. C’est bien le problème.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a crowded 1920s stock exchange floor. Harold (short, very round, orange checked suit, boater) in the centre buried up to his chin in a huge pile of tape spilling from the ticker, waving one arm in panic, light-blue sweat drop; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right calmly pulling a strip of tape off his boater. visual gag: drowning in ticker tape. high angle",
-            "cast": ["harold", "awa"],
+            "cast": [
+              "harold",
+              "awa"
+            ],
             "file": "images/dossier-04.webp",
             "status": "pending",
             "attempts": 0,
@@ -161,12 +216,23 @@
           "tag": "Le même après-midi",
           "caption": "Pour rassurer, de grands banquiers rachètent des actions en masse. Le soir, la baisse est presque effacée.",
           "bubbles": [
-            { "who": "harold", "text": "Ouf ! Les banquiers nous sauvent. J’avais raison !", "side": "l" },
-            { "who": "awa", "text": "Attendez mardi.", "side": "r" }
+            {
+              "who": "harold",
+              "text": "Ouf ! Les banquiers nous sauvent. J’avais raison !",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Attendez mardi.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the stock exchange floor, now calm, tape scattered on the floor. Harold (short, very round, orange checked suit, boater) on the left doing a little victory dance on one leg, boater raised high; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right, arms crossed, glancing at a blank wall calendar, unimpressed. medium shot",
-            "cast": ["harold", "awa"],
+            "cast": [
+              "harold",
+              "awa"
+            ],
             "file": "images/dossier-05.webp",
             "status": "pending",
             "attempts": 0
@@ -178,11 +244,17 @@
           "tag": "Mardi 29 octobre 1929",
           "caption": "Le « mardi noir », plus de 16 millions d’actions sont vendues. Le Dow Jones, l’indice des grandes actions, perd encore 12 %.",
           "bubbles": [
-            { "who": "harold", "text": "Mon courtier exige son argent. Je dois tout vendre !", "side": "l" }
+            {
+              "who": "harold",
+              "text": "Mon courtier exige son argent. Je dois tout vendre !",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "Harold (short, very round, orange checked suit, boater) alone on the stock exchange floor, pulling both trouser pockets inside out, a single small moth fluttering out of one pocket, his jaw dropped and his moustache drooping. visual gag: the moth escaping his empty pocket. medium close-up",
-            "cast": ["harold"],
+            "cast": [
+              "harold"
+            ],
             "file": "images/dossier-06.webp",
             "status": "pending",
             "attempts": 0
@@ -194,12 +266,23 @@
           "tag": "1929-1932",
           "caption": "Et ce n’est qu’un début : en 1932, les actions ont perdu 89 % de leur valeur de 1929.",
           "bubbles": [
-            { "who": "awa", "text": "Donc 100 dollars placés en 1929… il en reste 11 ?", "side": "l" },
-            { "who": "harold", "text": "Onze dollars. Et un très beau chapeau.", "side": "r" }
+            {
+              "who": "awa",
+              "text": "Donc 100 dollars placés en 1929… il en reste 11 ?",
+              "side": "l"
+            },
+            {
+              "who": "harold",
+              "text": "Onze dollars. Et un très beau chapeau.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bare grey New York pavement. Harold (short, very round, orange checked suit, holding the boater) on the right sitting on the kerb, chin up with wounded dignity, pressing the boater against his chest like his last treasure; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left standing, counting on her fingers and wincing. wide shot",
-            "cast": ["awa", "harold"],
+            "cast": [
+              "awa",
+              "harold"
+            ],
             "file": "images/dossier-07.webp",
             "status": "pending",
             "attempts": 0,
@@ -212,12 +295,23 @@
           "tag": "Chapitre 3 · De la Bourse à la rue",
           "caption": "Pourquoi un krach ruine-t-il aussi ceux qui n’ont jamais acheté une seule action ? À cause des banques.",
           "bubbles": [
-            { "who": "awa", "text": "Moi, je n’ai pas d’actions. Je ne risque rien ?", "side": "l" },
-            { "who": "harold", "text": "Vous avez un compte en banque ?", "side": "r" }
+            {
+              "who": "awa",
+              "text": "Moi, je n’ai pas d’actions. Je ne risque rien ?",
+              "side": "l"
+            },
+            {
+              "who": "harold",
+              "text": "Vous avez un compte en banque ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a 1930s small-town bank with a marble counter and a closed iron grille. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left, relaxed, leaning on the counter with the phone; Harold (short, very round, orange checked suit, boater) on the right tapping her shoulder and pointing gravely at the shut grille. over-the-shoulder",
-            "cast": ["awa", "harold"],
+            "cast": [
+              "awa",
+              "harold"
+            ],
             "file": "images/dossier-08.webp",
             "status": "pending",
             "attempts": 0,
@@ -243,12 +337,23 @@
           "tag": "1930-1931",
           "caption": "Partout aux États-Unis, des foules font la queue pour vider leur compte avant que leur banque ne ferme.",
           "bubbles": [
-            { "who": "awa", "text": "Si tout le monde retire son argent en même temps…", "side": "l" },
-            { "who": "harold", "text": "La banque coule. Et le fond de la queue avec.", "side": "r" }
+            {
+              "who": "awa",
+              "text": "Si tout le monde retire son argent en même temps…",
+              "side": "l"
+            },
+            {
+              "who": "harold",
+              "text": "La banque coule. Et le fond de la queue avec.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a long queue of people in coats in front of the small-town bank door. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) near the back of the line, standing on tiptoe to see the door; Harold (short, very round, orange checked suit, boater) behind her, so short he only sees backs, jumping up and down to see over them. visual gag: tiny Harold jumping. from behind",
-            "cast": ["awa", "harold"],
+            "cast": [
+              "awa",
+              "harold"
+            ],
             "file": "images/dossier-09.webp",
             "status": "pending",
             "attempts": 0
@@ -260,7 +365,15 @@
           "tag": "En vrai",
           "title": "Panique devant une banque de New York",
           "text": "Au début de la crise, une foule se presse devant l’American Union Bank : chacun veut récupérer son argent avant les autres.",
-          "photo": { "commons": "File:American union bank.gif" }
+          "photo": {
+            "commons": "File:American union bank.gif",
+            "credit": "National Archives Photo",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:American_union_bank.gif",
+            "file": "images/photo-13-american-union-bank-gif.webp",
+            "status": "done"
+          }
         },
         {
           "n": 14,
@@ -268,12 +381,23 @@
           "tag": "1930",
           "caption": "Pour protéger ses usines, l’Amérique taxe lourdement les produits étrangers, à environ 50 %. Les autres pays répliquent.",
           "bubbles": [
-            { "who": "harold", "text": "Fermons les portes ! Personne n’entre !", "side": "l" },
-            { "who": "awa", "text": "Et vos voitures, vous les vendrez à qui ?", "side": "r" }
+            {
+              "who": "harold",
+              "text": "Fermons les portes ! Personne n’entre !",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Et vos voitures, vous les vendrez à qui ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a harbour dock with a big wooden gate. Harold (short, very round, orange checked suit, boater) on the left frantically hammering planks across the gate, nails between his teeth, while behind him a pile of crates full of small new cars has no way out; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right pointing at the stuck crates. visual gag: he boards himself in with his own goods. medium wide shot",
-            "cast": ["harold", "awa"],
+            "cast": [
+              "harold",
+              "awa"
+            ],
             "file": "images/dossier-10.webp",
             "status": "pending",
             "attempts": 0,
@@ -286,11 +410,17 @@
           "tag": "1929-1932",
           "caption": "Résultat : en trois ans, le commerce mondial s’effondre et la production mondiale recule de 35 %.",
           "bubbles": [
-            { "who": "awa", "text": "Chacun se protège… et tout le monde coule ensemble.", "side": "l" }
+            {
+              "who": "awa",
+              "text": "Chacun se protège… et tout le monde coule ensemble.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) alone at the top of a long bare staircase, unrolling the chart; the red line runs off the edge of the paper and keeps going down the steps all the way to the bottom, she stares after it, bewildered. visual gag: the line escaping the paper. bird's-eye view",
-            "cast": ["awa"],
+            "cast": [
+              "awa"
+            ],
             "file": "images/dossier-11.webp",
             "status": "pending",
             "attempts": 0,
@@ -303,11 +433,17 @@
           "tag": "1933",
           "caption": "En 1933, au moins un Américain sur quatre est au chômage. Beaucoup dépendent de soupes populaires gratuites.",
           "bubbles": [
-            { "who": "harold", "text": "Hier, je jouais en Bourse. Aujourd’hui, je compte sur une soupe.", "side": "r" }
+            {
+              "who": "harold",
+              "text": "Hier, je jouais en Bourse. Aujourd’hui, je compte sur une soupe.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a grey winter street. Harold (short, very round, faded and patched orange checked suit, boater) standing quietly in a long line of men in dark coats seen from behind, holding an empty tin bowl with both hands, head lowered. calm, sober scene. medium shot",
-            "cast": ["harold"],
+            "cast": [
+              "harold"
+            ],
             "file": "images/dossier-12.webp",
             "status": "pending",
             "attempts": 0,
@@ -320,7 +456,15 @@
           "tag": "En vrai",
           "title": "La soupe populaire, à Chicago, en 1931",
           "text": "Des chômeurs attendent un repas gratuit, en février 1931. Cette soupe populaire avait été ouverte par le gangster Al Capone.",
-          "photo": { "commons": "File:Unemployed men queued outside a depression soup kitchen opened in Chicago by Al Capone, 02-1931 - NARA - 541927.jpg" }
+          "photo": {
+            "commons": "File:Unemployed men queued outside a depression soup kitchen opened in Chicago by Al Capone, 02-1931 - NARA - 541927.jpg",
+            "credit": "Unknown authorUnknown author or not provided",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone,_02-1931_-_NARA_-_541927.jpg",
+            "file": "images/photo-17-unemployed-men-queued-outside-a-dep.webp",
+            "status": "done"
+          }
         },
         {
           "n": 18,
@@ -328,12 +472,23 @@
           "tag": "Chapitre 4 · La crise fait le tour du monde",
           "caption": "Ruinées, les banques américaines rapatrient l’argent prêté à l’Europe. En mai 1931, la grande banque autrichienne Kreditanstalt s’effondre.",
           "bubbles": [
-            { "who": "awa", "text": "L’Amérique éternue, et c’est l’Europe qui s’enrhume ?", "side": "r" },
-            { "who": "harold", "text": "Pire : on lui reprend aussi son mouchoir.", "side": "l" }
+            {
+              "who": "awa",
+              "text": "L’Amérique éternue, et c’est l’Europe qui s’enrhume ?",
+              "side": "r"
+            },
+            {
+              "who": "harold",
+              "text": "Pire : on lui reprend aussi son mouchoir.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a bare room with a big world globe on a wooden stand. Harold (short, very round, orange checked suit, boater) on the left sneezing hugely onto the globe, his boater flying off; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right holding a tiny umbrella over Europe on the globe. visual gag: the tiny umbrella over a continent. wide shot",
-            "cast": ["harold", "awa"],
+            "cast": [
+              "harold",
+              "awa"
+            ],
             "file": "images/dossier-13.webp",
             "status": "pending",
             "attempts": 0,
@@ -346,11 +501,17 @@
           "tag": "Allemagne, 1932",
           "caption": "En Allemagne, la crise fait 6 millions de chômeurs. Les nazis en profitent : Hitler devient chancelier en janvier 1933.",
           "bubbles": [
-            { "who": "awa", "text": "La crise économique devient une crise politique. La pire de toutes.", "side": "r" }
+            {
+              "who": "awa",
+              "text": "La crise économique devient une crise politique. La pire de toutes.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) alone, serious and still, in front of a plain map of Europe pinned on a bare wall, Germany shaded dark grey, her hands in her hoodie pocket. calm, sober scene. medium close-up",
-            "cast": ["awa"],
+            "cast": [
+              "awa"
+            ],
             "file": "images/dossier-14.webp",
             "status": "pending",
             "attempts": 0,
@@ -363,12 +524,23 @@
           "tag": "Et la France ?",
           "caption": "La France n’est touchée que vers 1931, en partie parce que peu de Français placent leur argent en Bourse.",
           "bubbles": [
-            { "who": "marcel", "text": "La Bourse ? Très peu pour moi. Je garde mon or.", "side": "r" },
-            { "who": "awa", "text": "Sous le matelas ?", "side": "l" }
+            {
+              "who": "marcel",
+              "text": "La Bourse ? Très peu pour moi. Je garde mon or.",
+              "side": "r"
+            },
+            {
+              "who": "awa",
+              "text": "Sous le matelas ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a modest 1930s Paris bedroom with a flowery armchair and an iron bed. Marcel (very old, very thin, white walrus moustache, black beret, sky-blue cardigan) on the right hugging the sack tightly and eyeing Awa with suspicion; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left lifting the corner of the mattress to peek underneath. wide shot",
-            "cast": ["marcel", "awa"],
+            "cast": [
+              "marcel",
+              "awa"
+            ],
             "file": "images/dossier-15.webp",
             "status": "pending",
             "attempts": 0,
@@ -381,12 +553,23 @@
           "tag": "1927-1930",
           "caption": "La Banque de France entasse aussi de l’or : ses réserves passent de 18 à 80 milliards de francs.",
           "bubbles": [
-            { "who": "marcel", "text": "Notre franc est solide comme un lingot.", "side": "l" },
-            { "who": "awa", "text": "Solide… ou trop cher ?", "side": "r" }
+            {
+              "who": "marcel",
+              "text": "Notre franc est solide comme un lingot.",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Solide… ou trop cher ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a bank vault with gold bars stacked up to the walls. Marcel (very old, very thin, white walrus moustache, black beret, sky-blue cardigan) in the foreground on the left, tiny next to the huge wall of gold bars, gazing up with yellow sparkles in his eyes, still hugging the sack; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) further back on the right, hands on hips. low angle",
-            "cast": ["marcel", "awa"],
+            "cast": [
+              "marcel",
+              "awa"
+            ],
             "file": "images/dossier-16.webp",
             "status": "pending",
             "attempts": 0,
@@ -399,11 +582,17 @@
           "tag": "1931",
           "caption": "Le Royaume-Uni dévalue : sa livre vaut moins. Donc ses produits deviennent moins chers que les produits français.",
           "bubbles": [
-            { "who": "marcel", "text": "Dévaluer le franc ? Jamais ! C’est sacré.", "side": "l" }
+            {
+              "who": "marcel",
+              "text": "Dévaluer le franc ? Jamais ! C’est sacré.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "Marcel (very old, very thin, white walrus moustache, black beret, sky-blue cardigan) alone, clutching the sack with both arms and shaking his head furiously, red angry flush, his beret flying off his head. close-up",
-            "cast": ["marcel"],
+            "cast": [
+              "marcel"
+            ],
             "file": "images/dossier-17.webp",
             "status": "pending",
             "attempts": 0,
@@ -416,12 +605,23 @@
           "tag": "1931-1936",
           "caption": "Moins compétitive, la France s’enfonce dans la crise. Le franc n’est finalement dévalué qu’en 1936, d’environ 30 %.",
           "bubbles": [
-            { "who": "awa", "text": "Cinq ans après les Anglais.", "side": "l" },
-            { "who": "marcel", "text": "Mais avec beaucoup de dignité.", "side": "r" }
+            {
+              "who": "awa",
+              "text": "Cinq ans après les Anglais.",
+              "side": "l"
+            },
+            {
+              "who": "marcel",
+              "text": "Mais avec beaucoup de dignité.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a 1930s Paris café terrace. Marcel (very old, very thin, white walrus moustache, black beret, sky-blue cardigan) on the right sitting very upright at a small round table, sipping a tiny coffee with his nose in the air, the sack on his lap; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left leaning on the table, holding up a blank calendar, deadpan. medium shot",
-            "cast": ["awa", "marcel"],
+            "cast": [
+              "awa",
+              "marcel"
+            ],
             "file": "images/dossier-18.webp",
             "status": "pending",
             "attempts": 0,
@@ -434,12 +634,23 @@
           "tag": "Chapitre 5 · Comment on s’en sort",
           "caption": "4 mars 1933, Franklin D. Roosevelt devient président. Il lance : « La seule chose à craindre, c’est la peur elle-même. »",
           "bubbles": [
-            { "who": "awa", "text": "Belle phrase. Et concrètement ?", "side": "l" },
-            { "who": "roosevelt", "text": "Concrètement ? Dès demain, je ferme toutes les banques.", "side": "r" }
+            {
+              "who": "awa",
+              "text": "Belle phrase. Et concrètement ?",
+              "side": "l"
+            },
+            {
+              "who": "roosevelt",
+              "text": "Concrètement ? Dès demain, je ferme toutes les banques.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a 1930s presidential office with a big wooden desk. Franklin (tall, broad-shouldered, pince-nez, navy-blue cape, grey fedora) on the right leaning towards the mic on the desk with a huge confident grin, one hand raised theatrically; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left, arms crossed, sceptical. medium wide shot",
-            "cast": ["roosevelt", "awa"],
+            "cast": [
+              "roosevelt",
+              "awa"
+            ],
             "file": "images/dossier-19.webp",
             "status": "pending",
             "attempts": 0,
@@ -464,12 +675,23 @@
           "tag": "Et aujourd’hui ?",
           "caption": "En 2008, la banque centrale américaine prête massivement aux banques, pour éviter une vague de faillites comme en 1930.",
           "bubbles": [
-            { "who": "roosevelt", "text": "Vous voyez ? La leçon a été retenue.", "side": "l" },
-            { "who": "awa", "text": "Et avec les dépôts garantis, les files devant les banques sont devenues rares.", "side": "r" }
+            {
+              "who": "roosevelt",
+              "text": "Vous voyez ? La leçon a été retenue.",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Et avec les dépôts garantis, les files devant les banques sont devenues rares.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the bare modern living room with the sofa. Franklin (tall, broad-shouldered, pince-nez, navy-blue cape, grey fedora) on the left sitting stiffly on the sofa, holding the phone at arm's length and squinting at it through his pince-nez; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right leaning over the back of the sofa, pointing at the screen. visual gag: a 1930s president puzzled by a smartphone. high angle",
-            "cast": ["roosevelt", "awa"],
+            "cast": [
+              "roosevelt",
+              "awa"
+            ],
             "file": "images/dossier-20.webp",
             "status": "pending",
             "attempts": 0,
@@ -482,12 +704,23 @@
           "tag": "En résumé",
           "caption": "Des actions achetées à crédit, un krach, des banques qui tombent, des frontières fermées : la crise devient mondiale.",
           "bubbles": [
-            { "who": "awa", "text": "Donc mon alerte « krach », je la prends au sérieux ?", "side": "r" },
-            { "who": "harold", "text": "Gardez votre calme. Et surtout, achetez !", "side": "l" }
+            {
+              "who": "awa",
+              "text": "Donc mon alerte « krach », je la prends au sérieux ?",
+              "side": "r"
+            },
+            {
+              "who": "harold",
+              "text": "Gardez votre calme. Et surtout, achetez !",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the bare modern living room. Harold (short, very round, orange checked suit, boater) in the foreground, grinning madly with shining eyes, holding up a fresh certificate right at the viewer; small in the background, Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) slapping her palm onto her forehead. close-up",
-            "cast": ["harold", "awa"],
+            "cast": [
+              "harold",
+              "awa"
+            ],
             "file": "images/dossier-21.webp",
             "status": "pending",
             "attempts": 0
@@ -500,17 +733,50 @@
       },
       "story": "Dans les années 1920, l’Amérique vit à crédit. À Wall Street, la Bourse de New York, les actions triplent en dix ans, et beaucoup les achètent « sur marge », avec jusqu’à 90 % d’argent emprunté. En octobre 1929, l’économiste Irving Fisher parle encore d’un « plateau haut permanent ».\nLe jeudi 24 octobre, la panique éclate : près de 13 millions d’actions changent de main. Le mardi 29, plus de 16 millions sont vendues. Parce que les acheteurs sur marge doivent rembourser leur courtier, ils vendent, ce qui fait encore baisser les prix. En 1932, les actions ont perdu 89 % de leur valeur.\nLa crise gagne les banques : les clients retirent leur argent, et environ 9 000 banques américaines ferment entre 1929 et 1933. Les entreprises licencient ; en 1933, au moins un Américain sur quatre est au chômage. Les droits de douane de 1930 et les représailles font s’effondrer le commerce mondial. Les capitaux américains quittent l’Europe : la Kreditanstalt autrichienne tombe en 1931, l’Allemagne compte 6 millions de chômeurs et Hitler arrive au pouvoir en 1933.\nLa France, riche en or et peu tournée vers la Bourse, n’est touchée que vers 1931, mais elle refuse de dévaluer le franc jusqu’en 1936. Aux États-Unis, Roosevelt ferme les banques dès mars 1933, garantit les petits dépôts et lance de grands travaux : le New Deal. En 2008, la banque centrale américaine s’en est souvenue.",
       "sources": [
-        { "title": "Banque de France — La crise de 1929", "url": "https://www.banque-france.fr/fr/publications-et-statistiques/publications/la-crise-de-1929" },
-        { "title": "History.com — 1929 Stock Market Crash", "url": "https://www.history.com/articles/1929-stock-market-crash" },
-        { "title": "Larousse — La crise de 1929", "url": "https://www.larousse.fr/encyclopedie/divers/la_crise_de_1929/187370" },
-        { "title": "Motley Fool — There’s no such thing as a “permanently high plateau”", "url": "https://www.fool.com/investing/general/2013/10/15/theres-no-such-thing-as-a-permanently-high-plateau.aspx" },
-        { "title": "Britannica — United States: The Great Depression", "url": "https://www.britannica.com/place/United-States/The-Great-Depression" },
-        { "title": "Federal Reserve History — Banking Panics of 1930-31", "url": "https://www.federalreservehistory.org/essays/banking_panics_1930_31" },
-        { "title": "Wikipedia — Great Depression in France", "url": "https://en.wikipedia.org/wiki/Great_Depression_in_France" },
-        { "title": "Hérodote — 28 mars 1930, Brüning chancelier", "url": "https://www.herodote.net/28_mars_1930-evenement-19300328.php" },
-        { "title": "Britannica — Germany: The end of the republic", "url": "https://www.britannica.com/place/Germany/The-end-of-the-republic" },
-        { "title": "Federal Reserve — Bernanke, speech of April 8, 2010", "url": "https://www.federalreserve.gov/newsevents/speech/bernanke20100408a.htm" },
-        { "title": "Rare Historical Photos — Al Capone’s soup kitchen, Chicago, 1931", "url": "https://rarehistoricalphotos.com/al-capones-soup-kitchen-great-depression-chicago-1931/" }
+        {
+          "title": "Banque de France — La crise de 1929",
+          "url": "https://www.banque-france.fr/fr/publications-et-statistiques/publications/la-crise-de-1929"
+        },
+        {
+          "title": "History.com — 1929 Stock Market Crash",
+          "url": "https://www.history.com/articles/1929-stock-market-crash"
+        },
+        {
+          "title": "Larousse — La crise de 1929",
+          "url": "https://www.larousse.fr/encyclopedie/divers/la_crise_de_1929/187370"
+        },
+        {
+          "title": "Motley Fool — There’s no such thing as a “permanently high plateau”",
+          "url": "https://www.fool.com/investing/general/2013/10/15/theres-no-such-thing-as-a-permanently-high-plateau.aspx"
+        },
+        {
+          "title": "Britannica — United States: The Great Depression",
+          "url": "https://www.britannica.com/place/United-States/The-Great-Depression"
+        },
+        {
+          "title": "Federal Reserve History — Banking Panics of 1930-31",
+          "url": "https://www.federalreservehistory.org/essays/banking_panics_1930_31"
+        },
+        {
+          "title": "Wikipedia — Great Depression in France",
+          "url": "https://en.wikipedia.org/wiki/Great_Depression_in_France"
+        },
+        {
+          "title": "Hérodote — 28 mars 1930, Brüning chancelier",
+          "url": "https://www.herodote.net/28_mars_1930-evenement-19300328.php"
+        },
+        {
+          "title": "Britannica — Germany: The end of the republic",
+          "url": "https://www.britannica.com/place/Germany/The-end-of-the-republic"
+        },
+        {
+          "title": "Federal Reserve — Bernanke, speech of April 8, 2010",
+          "url": "https://www.federalreserve.gov/newsevents/speech/bernanke20100408a.htm"
+        },
+        {
+          "title": "Rare Historical Photos — Al Capone’s soup kitchen, Chicago, 1931",
+          "url": "https://rarehistoricalphotos.com/al-capones-soup-kitchen-great-depression-chicago-1931/"
+        }
       ]
     }
   ]
