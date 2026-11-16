@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T20:00+01:00",
+ "updated_at": "2026-11-16T20:45+01:00",
  "stock": {
   "cultureg": [
    {
@@ -84,6 +84,23 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 8,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261116-2043-stethoscope-sans-rougir",
+    "name": "20261116-2043-stethoscope-sans-rougir",
+    "added": "20261116-2043",
+    "status": "waiting",
+    "next": false,
+    "title": "Le stéthoscope, ou comment écouter un cœur sans rougir",
+    "theme": "Médecine et santé",
+    "tagline": "En 1816, un médecin trop pudique roule un cahier en tube et invente l’objet le plus célèbre de la médecine",
+    "minutes": 2,
+    "cases": 10,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 9,
     "failed": 0,
     "redo": 0
    }
