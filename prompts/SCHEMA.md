@@ -42,7 +42,7 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
           }
         }
       ],
-      "final": { "text": "Phrase « Pour briller en société », 25 mots max, exacte.", "source": "Source principale" },
+      "final": { "text": "Phrase « Pour briller en société », 25 mots max, exacte : le fait le plus surprenant, pas la redite du titre ni du résumé.", "source": "Source principale" },
       "story": "L’histoire complète : 150 à 250 mots, 2 à 4 paragraphes séparés par \n (voir plus bas).",
       "sources": [ { "title": "…", "url": "https://…" } ]
     }
@@ -52,6 +52,13 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
 
 ## « D'où ça vient ? » (`"id": "origine"`, 14 novembre 2026)
 Une micro-BD **au format habituel** (cases dessinées avec `caption` et `bubbles`, cases `explain` et `photo`, `cast` de 2 personnages au plus), comme La Notice : label « D’où ça vient ? », `theme` « Expression française ». Règles d'écriture : `prompts/STOCK.md`, section « D'où ça vient ? ». (Les écrans `"kind": "cine"` d'un premier essai ne s'écrivent plus.)
+
+## Case muette, mécanique de gag, travers (16 novembre 2026)
+- **Case muette** : `"bubbles": []`. Le récitatif peut rester ; le prompt de l'image décrit précisément le gag visuel (réaction en gros plan, regard vers le lecteur, objet absurde). Au moins une par BD de 5 cases dessinées ou plus.
+- **`gag`** (Actu, obligatoire sur chaque case dessinée ; facultatif ailleurs) : `litteral`, `anachronisme`, `mauvaise-foi`, `litote`, `escalade`, `bureau`, `comparaison` ou `silence`. Une mécanique ne sert qu'une fois par Actu. Champ ignoré par l'appli.
+- **Travers** : le `role` de chaque personnage dit aussi son défaut comique (« vain, never admits he is wrong »), d'où viennent les gags.
+- **Actu, case « Ce qui se passe vraiment »** : quatre lignes, « Quoi : », « Pourquoi ça compte : », « Repère : », « Et maintenant : », 65 mots au plus.
+- Contrôles : `pipeline/validate.py` (formules usées en ouverture et en chute, format interview, case muette, carte `final` redite, mécaniques de l'Actu, ligne « Repère »).
 
 ## « Pour mieux comprendre » : case de texte sans image (`"kind": "explain"`)
 Une case de texte glissée dans la BD, entre deux cases dessinées, là où le lecteur risque de décrocher (un mécanisme, une notion, un ordre de grandeur). Elle ne coûte aucune image.

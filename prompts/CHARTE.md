@@ -1,6 +1,6 @@
 # Charte de l'humour du Sachoir
 
-Ce fichier est la référence à jour (révisée le 6 novembre 2026 d'après le questionnaire de Greg, puis le 7 novembre : **la clarté passe avant l'humour**).
+Ce fichier est la référence à jour (révisée le 6 novembre 2026 d'après le questionnaire de Greg, puis le 7 novembre : **la clarté passe avant l'humour**, puis le 16 novembre : **des scènes, pas des interviews**).
 L'ancienne charte publiée (https://claude.ai/artifact/X1ntQuLVCbehitA1mLZP5d) n'est plus à jour : en cas de différence, ce fichier gagne.
 
 ## Promesse
@@ -11,19 +11,51 @@ On apprend en riant. Chaque BD explique et vulgarise un sujet exact, avec une vr
 - **Un fil clair.** La case 1 pose la question que promet le titre (« Pourquoi les balcons sont-ils au 2e et au 5e ? »). Chaque case suivante fait avancer la réponse d'un cran, avec un lien logique visible (« parce que », « donc », « du coup »). L'avant-dernière case (ou la dernière) résume la réponse en une phrase simple.
 - **Le pourquoi avec chaque fait.** Pas de fait sec : on dit la cause ou la conséquence. « Pas d'ascenseur » ne suffit pas : « Pas d'ascenseur : monter six étages à pied, c'est pénible, donc les étages hauts coûtent moins cher. »
 - **Zéro jargon non expliqué.** Tout mot technique ou ancien est expliqué la première fois, en quelques mots (« un balcon filant, qui court sur toute la façade »). Un chiffre a toujours une comparaison ou une unité parlante.
-- **Le duo qui explique** (Culture G surtout) : un personnage curieux pose les questions naïves que se pose le lecteur, un autre répond simplement. Le lecteur s'identifie au curieux.
+- **L'explication passe par ce qui arrive aux personnages** (16 novembre 2026, voir « Des scènes, pas des interviews »). Le récitatif porte le fait ; les personnages le vivent, le subissent ou le provoquent. Le duo « un curieux pose la question, un autre répond » reste possible, mais **dans une BD sur trois au plus** et jamais dans plus d'un tiers des cases.
 - **Les bulles peuvent expliquer.** Le récitatif donne le fait, la bulle peut donner le pourquoi ou un exemple concret ; les gags viennent en plus, pas à la place.
 - **Dosage : un vrai gag toutes les 2 ou 3 cases**, pas à chaque case. Les autres cases sont des cases d'explication, vivantes (expressions, petites réactions) mais sans chute forcée.
 - **Cases « Pour mieux comprendre »** (texte seul, sans image, voir `prompts/SCHEMA.md`) : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, là où un mécanisme ou une notion ne tient pas dans une case dessinée. Souvent une chaîne d’étapes. Elles ne coûtent aucune image : ne pas hésiter.
 - **« L’histoire complète »** (champ `story`, 150 à 250 mots) : l’explication continue, en fin d’histoire, pour qui veut tout comprendre. Elle doit se suffire à elle-même.
 - **Une idée par case.** Si une case contient deux faits, la couper ou en garder un.
 - **Un mécanisme se raconte maillon par maillon** (une arnaque, une invention, un phénomène) : qui fait quoi, comment l'information ou l'objet passe d'une étape à la suivante, pourquoi personne ne s'en aperçoit. Aucun maillon sauté : si le lecteur doit deviner une étape, elle manque. Exemple raté (7 novembre) : le piratage des frères Blanc sans dire comment l'employé de Tours connaissait les cours de Paris.
+
+## Des scènes, pas des interviews (16 novembre 2026, décision de Greg)
+Constat sur 38 BD : presque toutes suivaient le même moule. Un naïf d'aujourd'hui pose une question, un personnage historique répond par un bon mot ; 19 chutes commençaient par « Donc… », 6 ouvertures par « Qui a inventé… ? », 4 cases muettes sur 359. Les faits étaient justes, mais c'était la même BD, sujet après sujet. Les meilleures (les six Martin à l'appel, l'avocat des rats d'Autun, le médecin aux sangsues) avaient un point commun : **les personnages vivent la situation au lieu de la commenter**.
+- **Une scène = quelqu'un veut quelque chose, et quelque chose l'en empêche.** Avant d'écrire, répondre en une ligne : où est-on, qui veut quoi, quel est l'obstacle ? Le fait à apprendre **est** l'obstacle ou sa solution. Exemple : au lieu de « Pourquoi Martin est-il si fréquent ? — Parce que saint Martin… », un scribe fait l'appel et six Martin avancent d'un pas : il lui faut une solution, ce sera le nom de famille.
+- **On entre dans l'époque.** Le sujet se joue là où il s'est passé, avec les gens qui l'ont vécu (y compris des anonymes : un greffier, une lavandière, un stagiaire du ministère). Le visiteur d'aujourd'hui qui interroge une figure historique (le « fantôme-guide ») : une BD sur trois au plus.
+- **Un personnage a un travers**, écrit dans son `role` : vaniteux, radin, de mauvaise foi, froussard, zélé, flemmard, susceptible… Les gags naissent de ce travers face au fait, pas de bons mots posés sur une explication. Il ne change pas en cours de route.
+- **Un gag récurrent qui monte en trois temps** : posé, répété, retourné à la chute (le manteau que Martin n'aura jamais). Un par BD, pas plus.
+- **Au moins une case muette** (aucune bulle) dans toute BD de 5 cases dessinées ou plus : l'image porte le gag (regard caméra après une énormité, objet absurde, personnage qui se décompose). Le récitatif peut rester ; le prompt décrit précisément ce qu'on voit.
+- **Formules interdites**, signalées par `pipeline/validate.py` :
+  - en ouverture : « Qui a inventé / eu l'idée de… ? », « C'est (un peu) ma faute », « Moi. Enfin, presque. » ;
+  - en chute : une bulle qui commence par « Donc… » ou « En bref… ». Le résumé se fait dans le récitatif de la dernière case ; la chute est une réplique de personnage, en écho au début, qu'on n'explique pas ;
+  - une ouverture ou une chute qui commence par les mêmes mots qu'une BD des 14 derniers jours ou de la file.
+- **Pas de question-distributeur.** Une question n'a sa place dans une bulle que si le personnage a une raison de la poser (il a peur, il veut gagner, il n'y croit pas). « Et il y avait combien d'épreuves ? » n'est pas une réplique : c'est un récitatif déguisé.
+- **Clarté intacte.** Toutes les règles de « Clarté d'abord » restent vraies : case 1 = la question du titre (posée par le récitatif), un cran de réponse par case, le pourquoi avec chaque fait, résumé à la fin. La scène sert l'explication ; si on ne comprend plus, on simplifie la scène, pas l'explication.
+
+### Le relecteur comique (avant de pousser la BD)
+Une seconde passe, à froid, comme le fact-check :
+1. Pour **chaque gag**, écrire **trois variantes** avec trois mécaniques différentes (liste ci-dessous) et garder la meilleure. La première idée est presque toujours la plus attendue.
+2. Noter chaque gag gardé : fait-il sourire **sans** le récitatif ? sert-il le fait (règle du gag porteur) ? vient-il du travers du personnage ? Deux « non » : le réécrire ou le couper. Mieux vaut une case d'explication vivante qu'une vanne tiède.
+3. Relire la première et la dernière case : aucune formule interdite, et la chute répond au début.
+4. Lancer `python3 pipeline/validate.py stock/<type>/<dossier>` et corriger ce qu'il signale (formules, interview, case muette, « Pour briller »).
+
+### Les mécaniques de gag (pour varier)
+`litteral` (prendre un mot ou un chiffre au pied de la lettre), `anachronisme` (le monde d'aujourd'hui dans le passé), `mauvaise-foi` (nier l'évidence avec aplomb), `litote` (sous-réagir à une énormité), `escalade` (une logique poussée un cran trop loin), `bureau` (jargon de réunion, de RH ou d'administration plaqué sur la situation), `comparaison` (ramener le chiffre à une échelle domestique), `silence` (case muette, regard caméra).
+
+## Dates et repères (16 novembre 2026)
+- **Toute case qui raconte un événement dit quand** : une année, un siècle ou « dix ans plus tard ». « À la Sorbonne, Coubertin propose… » devient « En 1892, à la Sorbonne… ».
+- **Un chiffre a toujours son échelle** : une comparaison parlante (« 241 athlètes, moins qu'une rame de métro ») ou la valeur d'aujourd'hui. Un chiffre seul ne s'imprime pas.
+
 Inspirations (techniques, jamais leurs répliques) : **Jonathan Cohen**, **The Office**, **Kaamelott**, et pour l'image et le jeu d'acteur **le strip minimaliste façon Sarah's Scribbles**.
 
 ## L'Actu : une case drôle, une case vraie (8 novembre 2026, retour de Greg)
 Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'info pour comprendre. Désormais l'humour et l'explication sont séparés.
 - **Case dessinée** : le récitatif est bien rempli (30 mots max) et donne tout ce qu'il faut pour comprendre la blague : qui (son nom et sa fonction), quoi, où, et le détail précis que le gag détourne. **Une seule bulle** : la blague. L'image sert le gag.
-- **Case « Ce qui se passe vraiment »** juste après (texte seul, sans image) : « Quoi : », « Pourquoi ça compte : », « Et maintenant : ». 50 mots max, neutre, sans blague.
+- **Jamais deux fois la même blague le même jour (16 novembre 2026).** Le 16 novembre, les cinq sujets avaient la même : un anonyme prend un chiffre au pied de la lettre. Chaque case dessinée porte un champ `gag` (une des mécaniques de « Les mécaniques de gag ») et **une mécanique ne sert qu'une fois par Actu**. Celui qui parle varie aussi : la personnalité elle-même (parodiée dans son rôle), un proche collaborateur, un anonyme concerné ; pas cinq anonymes de suite. Trois variantes par blague, on garde la meilleure (voir « Le relecteur comique »).
+- **Case « Ce qui se passe vraiment »** juste après (texte seul, sans image) : « Quoi : », « Pourquoi ça compte : », « Repère : », « Et maintenant : ». 65 mots max, neutre, sans blague.
+  - **« Pourquoi ça compte » répond à la question** : la conséquence pour les gens ou l'enjeu, pas un détail de plus. Raté : « Narva, Luhamaa et Koidula sont ses trois passages routiers ». Réussi : « C'est la dernière frontière terrestre ouverte entre la Russie et l'Union européenne dans cette région ».
+  - **« Repère »** (16 novembre 2026) : une comparaison chiffrée et sourcée qui donne l'échelle. « 4 millions de logements en dix ans » ne dit rien seul ; « Repère : 400 000 par an, alors que la France en a mis en chantier tant l'an dernier (chiffre sourcé du jour) » dit si c'est énorme ou banal. Si aucun chiffre de comparaison n'est sourcé, un repère historique (« la dernière fois, c'était en… »).
 - **Photo réelle** entre les deux (9 novembre 2026) : le vrai lieu, l'institution, l'objet ou la carte du sujet (Wikimedia Commons, jamais une personne vivante). Ordre : dessin → photo → « Ce qui se passe vraiment ».
 - Une seule image dessinée par sujet : on peut traiter 4 à 6 sujets sans dessiner plus (les photos ne coûtent rien).
 - Exemple de forme (sujet inventé, ne jamais le reprendre) : récitatif « La mairie de Lyon interdit les trottinettes en libre-service dans le centre dès lundi, après 300 plaintes de piétons en un an. » ; bulle d'un livreur à trottinette, figé sur la ligne : « Techniquement, ma roue avant est encore dans le 7e. » ; puis la case Quoi / Pourquoi ça compte / Et maintenant.
@@ -31,6 +63,7 @@ Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'i
 ## « Pendant ce temps, sur Internet » (fin de l'Actu, 13 novembre 2026)
 - Trois tendances légères du jour. Pour chacune, de préférence **le vrai post** qui la résume (intégration officielle du réseau, avec un lien vers l'original), suivi d'une vanne du Sachoir ; sinon une carte réécrite par nous, avec un pseudo inventé.
 - Le ton : celui d'un ami qui raconte le buzz du jour à la machine à café. Une chute par post. On rit avec Internet, pas d'une personne.
+- **Trois vannes, trois constructions (16 novembre 2026).** Pas trois fois « Moi, ma… » : une comparaison avec sa propre vie au plus, les deux autres sur une autre mécanique (pousser la logique du buzz un cran trop loin, lui trouver une conséquence administrative, le prendre au pied de la lettre).
 - Interdits : particuliers (nom, pseudo, visage), drames et victimes, santé, politique partisane, rumeurs non vérifiées. Le « Pourquoi ça buzze » reste neutre et sourcé.
 
 ## Le casting : adapté à l'histoire
@@ -71,15 +104,15 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 | Format | Durée visée | Cases (repère) | Humour |
 |---|---|---|---|
 | Actu du jour (`actu`) | environ 2 min | 4 à 6 sujets ; par sujet 1 case dessinée + 1 case « Ce qui se passe vraiment » | Le gag dans la case dessinée, l'explication neutre dans la case texte (voir plus bas) |
-| Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par un duo curieux / qui sait ; un gag toutes les 2 ou 3 cases |
+| Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par une scène (des personnages qui vivent le problème) ; un gag toutes les 2 ou 3 cases, une case muette |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, raconté clairement ; un gag toutes les 2 ou 3 cases |
-| La Notice (`notice`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD : le mécanisme d'un objet ou d'un phénomène du quotidien (frigo, micro-ondes, avion qui vole…) expliqué par un duo curieux / qui sait ; un gag par case dessinée, chute en écho à la case 1 |
-| D'où ça vient ? (`origine`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD comme La Notice : l'origine d'une expression que tout le monde utilise (faire grève, être limogé…), duo d'aujourd'hui et témoin d'époque, chute en écho à la case 1. En alternance avec La Notice. Règles : `prompts/STOCK.md` |
+| La Notice (`notice`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD : le mécanisme d'un objet ou d'un phénomène du quotidien (frigo, micro-ondes, avion qui vole…) expliqué en situation (quelqu'un a un problème concret avec l'objet, quelqu'un sait pourquoi) ; un gag par case dessinée, une case muette, chute en écho à la case 1 |
+| D'où ça vient ? (`origine`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD comme La Notice : l'origine d'une expression que tout le monde utilise (faire grève, être limogé…), la scène d'époque où l'expression est née, jouée par ceux qui l'ont vécue (le duo « quelqu'un d'aujourd'hui + témoin d'époque » : une fois sur trois au plus), chute en écho à la case 1. En alternance avec La Notice. Règles : `prompts/STOCK.md` |
 | Grand Dossier (`dossier`) | environ 3 min | 24 au plus (8 novembre 2026, avant 30) | Humour dosé : la compréhension d'abord |
 | Jeu du jour (`quiz`), Quiz culture G | 1 à 2 min | 5 questions, sans image | Mauvaises réponses drôles mais plausibles, explication courte et drôle |
 | Jeu du jour (`quiz`), Quiz géo | 1 min | 3 questions : où c'est (carte), capitales, joker | Pièges crédibles, explication courte et drôle |
 | Jeu du jour (`quiz`) : Frise, Dico menteur, Plus ou moins, Swipe, Chiffre, Qui a dit ça ? | 1 à 2 min | voir `prompts/SCHEMA.md` | Un jeu par jour, en rotation sur 8 jours |
-| Carte « Pour briller » (`final`) | — | 1 | Aucun humour : 25 mots max, exacte |
+| Carte « Pour briller » (`final`) | — | 1 | Aucun humour : 25 mots max, exacte. **Le fait le plus surprenant de la BD, celui qu'on ressort au dîner** : jamais la redite du titre ni du résumé de la dernière case (16 novembre 2026) |
 
 - Le récitatif (`caption`) porte les faits. Toute énormité qui ressemble à un fait est démentie dans la même case ou la suivante. Les anachronismes sont des blagues évidentes.
 - Grand Dossier : des **cases « pause »** sont permises quand c'est utile (chiffre clé, frise, carte du monde) ; le contenu est dans le récitatif, l'image reste un dessin sans texte (ex. un personnage qui déroule une longue frise vierge).
@@ -103,13 +136,19 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - [ ] Chaque fait a son pourquoi ; aucun mot technique sans explication.
 - [ ] 1 ou 2 cases « Pour mieux comprendre » (2 à 4 en Grand Dossier) et « L’histoire complète » (150 à 250 mots, faits sourcés).
 - [ ] Un gag toutes les 2 ou 3 cases, chaque gag sert un fait.
+- [ ] Une scène, pas une interview : qui veut quoi, quel obstacle ; un personnage avec un travers ; au plus un tiers de cases « question → réponse ».
+- [ ] Au moins une case muette (BD de 5 cases dessinées ou plus) ; un gag récurrent en trois temps si possible.
+- [ ] Aucune formule interdite en ouverture ni en chute ; pas de « Donc… » final.
+- [ ] Relecteur comique passé : trois variantes par gag, les tièdes coupés ; `validate.py` sans avertissement d'humour.
+- [ ] Une date dans chaque case qui raconte un événement ; chaque chiffre a son échelle.
 - [ ] Titre drôle.
 - [ ] Durée de lecture dans la cible du format.
 - [ ] Faits dans les récitatifs, aucune énormité sans démenti, sources renseignées.
 - [ ] Longueurs respectées.
 - [ ] Grand Dossier : compréhension d'abord, cliffhanger en case 4 ; sujets graves traités sans moquer les victimes.
 - [ ] Personnalités vivantes : règles ci-dessus respectées ; pas de politique partisane ; rien de blessant.
-- [ ] Carte « Pour briller » exacte, 25 mots max.
+- [ ] Carte « Pour briller » exacte, 25 mots max : le fait le plus surprenant, pas une redite du titre ou du résumé.
+- [ ] Actu : un champ `gag` par case dessinée, jamais deux fois la même mécanique ; ligne « Repère : » dans chaque « Ce qui se passe vraiment ».
 - [ ] Lu à voix haute : une blague qu'il faut expliquer est coupée.
 - [ ] Vraies images (9 novembre 2026) : au moins une case photo dès qu'un document pertinent existe (1 ou 2 en Culture G et Insolite, 2 à 4 en Grand Dossier, une par sujet dans l'Actu) ; fichier Wikimedia Commons sous licence libre ; jamais de personne vivante ni d'image choquante.
 - [ ] `teaser` pour la newsletter : drôle, 25 mots max, sans dévoiler la chute.
