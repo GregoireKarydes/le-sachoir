@@ -14,7 +14,7 @@
       "title": "Un point gelé, une fusée rattrapée et dix ans de bilan",
       "tagline": "Les fonctionnaires en grève, SpaceX qui attrape son vaisseau au vol, Emmanuel Macron qui fait le point, et la Francophonie qui reporte.",
       "teaser": "Un salaire au congélateur, une fusée qui atterrit dans des baguettes géantes et un président qui s'auto-évalue.",
-      "minutes": 3,
+      "minutes": 4,
       "theme": "",
       "art": {
         "subject": "three news stories of the day, each told in one gag panel: a civil service strike over frozen pay, a rocket caught by its launch tower, a president's ten-year review",
@@ -272,7 +272,18 @@
             "url": "https://ulysse.com/news/on-ne-dirait-meme-pas-un-sapin-de-noel-les-galeries-lafayette-bousculent-les-traditions-avec-leur-decor-de-noel-2026"
           },
           "video": {
-            "url": "https://www.youtube.com/watch?v=eQ14Rb5zu-o"
+            "url": "https://www.youtube.com/watch?v=eQ14Rb5zu-o",
+            "status": "ok",
+            "embed": {
+              "platform": "youtube",
+              "label": "YouTube",
+              "url": "https://www.youtube.com/watch?v=eQ14Rb5zu-o",
+              "text": "Le sapin de Noël des Galeries Lafayette de Jean-Charles de Castelbajac ne fait pas l’unanimité",
+              "author": "LeHuffPost",
+              "handle": "",
+              "date": "",
+              "thumb": "images/buzz-10.jpg"
+            }
           }
         },
         {
@@ -288,7 +299,18 @@
             "url": "https://fr.euronews.com/video/2026/11/16/linfo-du-jour-16-novembre-2026-soir"
           },
           "video": {
-            "url": "https://www.youtube.com/watch?v=WJpJFbT5f18"
+            "url": "https://www.youtube.com/watch?v=WJpJFbT5f18",
+            "status": "ok",
+            "embed": {
+              "platform": "youtube",
+              "label": "YouTube",
+              "url": "https://www.youtube.com/watch?v=WJpJFbT5f18",
+              "text": "Christmas Island Red Crab Migration Live Stream 16.11.26",
+              "author": "ParksAustralia",
+              "handle": "",
+              "date": "",
+              "thumb": "images/buzz-11.jpg"
+            }
           }
         }
       ],

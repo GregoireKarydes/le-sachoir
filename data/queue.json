@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T19:35+01:00",
+ "updated_at": "2026-11-16T20:00+01:00",
  "stock": {
   "cultureg": [
    {
@@ -413,8 +413,23 @@
    "date": "2026-11-17",
    "path": "editions/2026-11-17",
    "status": "draft",
-   "newsletter": false,
+   "newsletter": true,
    "formats": [
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Un point gelé, une fusée rattrapée et dix ans de bilan",
+     "theme": "",
+     "tagline": "Les fonctionnaires en grève, SpaceX qui attrape son vaisseau au vol, Emmanuel Macron qui fait le point, et la Francophonie qui reporte.",
+     "minutes": 4,
+     "cases": 11,
+     "photos": 1,
+     "images_done": 4,
+     "images_total": 4,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "La Frise",

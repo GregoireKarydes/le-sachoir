@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T19:35:02.539292+01:00",
+ "updated_at": "2026-11-16T20:00:08.658943+01:00",
  "today": "2026-11-16",
  "problems": [],
  "days": [
@@ -19,6 +19,7 @@
    "date": "2026-11-17",
    "status": "draft",
    "formats": {
+    "actu": "prêt",
     "quiz": "prêt"
    }
   },
@@ -126,32 +127,44 @@
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-16",
-  "count": 51,
-  "neurons": 8880,
+  "count": 52,
+  "neurons": 8960,
   "exhausted": false,
   "by_kind": {
-   "cast": 11,
+   "cast": 12,
    "case": 38,
    "cover": 2
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.90326,
-  "images": 180,
-  "today_usd": 0.21449,
+  "spent_usd": 1.93734,
+  "images": 185,
+  "today_usd": 0.24857,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-15T22:49:48.771422+01:00",
-  "age_hours": 20.8,
+  "age_hours": 21.2,
   "feeds": null,
   "empty_feeds": []
  },
  "actu_balance": {
   "days": 14,
-  "editions": 6,
-  "people": [],
-  "parties": []
+  "editions": 7,
+  "people": [
+   {
+    "name": "Emmanuel Macron",
+    "party": "Renaissance",
+    "n": 1,
+    "last": "2026-11-17"
+   }
+  ],
+  "parties": [
+   {
+    "party": "Renaissance",
+    "n": 1
+   }
+  ]
  }
 }

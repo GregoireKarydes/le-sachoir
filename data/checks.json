@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T19:35+01:00",
+ "updated_at": "2026-11-16T20:00+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -150,6 +150,19 @@
     "cultureg : case 8 : récitatif de 23 mots (max 20)",
     "origine : case 2 : récitatif de 21 mots (max 20)",
     "origine : case 6 : récitatif de 22 mots (max 20)"
+   ]
+  },
+  {
+   "path": "editions/2026-11-17",
+   "titles": {
+    "actu": "Un point gelé, une fusée rattrapée et dix ans de bilan",
+    "quiz": "Douze dates, un calendrier qui a le tournis"
+   },
+   "errors": [],
+   "warnings": [
+    "actu : case 10 (Sur Internet) : « handle » inventé et générique attendu (« @Internet »)",
+    "actu : case 11 (Sur Internet) : « handle » inventé et générique attendu (« @Internet »)",
+    "actu : case 3 (Pour mieux comprendre) : 68 mots (max 65)"
    ]
   }
  ]
