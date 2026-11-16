@@ -98,3 +98,36 @@ def test_bd_masquee_retiree_du_site(tmp_path):
     out = json.loads((d / "edition.json").read_text())
     assert [f["id"] for f in out["formats"]] == ["dossier"]
     assert not (d / "images/cg-1.webp").exists() and (d / "images/dossier-1.webp").exists()
+
+
+def test_seo_sitemap_images_rubriques_flux_et_indexnow(tmp_path, monkeypatch):
+    """Référencement automatique : sitemap avec images (sans la suite payante), rubriques, flux, 404, clé IndexNow et liste à envoyer."""
+    import xml.dom.minidom
+    from datetime import date
+    day = date.today().isoformat()
+    monkeypatch.setattr(seo, "ROOT", tmp_path)
+    monkeypatch.setattr(seo.share_card, "ensure", lambda *a, **k: (_ for _ in ()).throw(RuntimeError("pas d'image en test")))
+    monkeypatch.setitem(seo.SITE_CFG, "indexnow_key", "abc123")
+    f = dossier()
+    for c in f["cases"]:
+        c["image"] = {"status": "done", "file": f"images/dossier-{c['n']}.webp"}
+    actu = {"id": "actu", "label": "L’Actu du jour", "title": "Une actu & deux brèves", "tagline": "Résumé", "cases": [], "final": {"text": "Fin."}}
+    (tmp_path / "editions" / day).mkdir(parents=True)
+    (tmp_path / "editions" / day / "edition.json").write_text(json.dumps({"date": day, "published_at": f"{day}T05:02:00+01:00", "formats": [f, actu]}))
+    site = tmp_path / "_site"
+    site.mkdir()
+    (site / "index.html").write_text("<html><!--SEO_LINKS--></html>")
+    seo.build(site, [{"date": day, "formats": [{"id": "dossier"}, {"id": "actu"}]}], gate=True)
+    sm = (site / "sitemap.xml").read_text()
+    xml.dom.minidom.parseString(sm)
+    assert "images/dossier-4.webp" in sm and "images/dossier-5.webp" not in sm
+    assert "/rubriques/grands-dossiers/" in sm and "/rubriques/actu-du-jour/" in sm
+    assert f"<lastmod>{day}T05:02:00+01:00</lastmod>" in sm
+    news = (site / "sitemap-news.xml").read_text()
+    xml.dom.minidom.parseString(news)
+    assert "Une actu &amp; deux brèves" in news and "dossier" not in news.split("<url>", 1)[1]
+    xml.dom.minidom.parseString((site / "feed.xml").read_text())
+    assert (site / "rubriques" / "grands-dossiers" / "index.html").exists() and (site / "404.html").exists()
+    assert "Sitemap: " in (site / "robots.txt").read_text() and (site / "abc123.txt").read_text() == "abc123"
+    job = json.loads((tmp_path / "indexnow.json").read_text())
+    assert job["key"] == "abc123" and any("/histoires/" in u for u in job["urlList"])
