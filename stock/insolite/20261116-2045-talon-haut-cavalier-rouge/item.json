@@ -1,0 +1,228 @@
+{
+  "added": "20261116-2045",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Le talon haut, une chaussure de cavalier que Louis XIV a peinte en rouge",
+      "tagline": "Avant les escarpins, il y avait des cavaliers perses, des marquis qui boitent et un roi très pointilleux sur la couleur",
+      "teaser": "Ils boitaient, se tordaient les chevilles et en redemandaient. Non, ce n’est pas un défilé de mode : c’est la cour de Louis XIV.",
+      "minutes": 1,
+      "theme": "Mode et luxe",
+      "art": {
+        "subject": "how high heels were first men's riding shoes from Persia, became a sign of nobility in Europe, and how Louis XIV reserved red heels for a few chosen nobles",
+        "setting": "the gravel gardens and a gilded parquet gallery of a French royal palace in the 1670s, and its stone courtyard with a horse",
+        "era": "1670s France, court of Louis XIV",
+        "props": {
+          "redheels": "men's shoes with a tall red heel and a big ribbon bow on top",
+          "beigeheels": "men's shoes with a tall plain beige heel and a small bow",
+          "cane": "a tall ebony walking cane with a gold knob"
+        }
+      },
+      "cast": [
+        {
+          "id": "louis",
+          "name": "Louis XIV",
+          "look": "Louis XIV in his thirties, short but holding himself extremely upright, an enormous long black curly wig falling to his chest, thin black moustache, pale skin, a shimmering bright gold brocade coat as main colour, white lace cravat, white stockings, the redheels, the cane always in hand",
+          "file": "cast/insolite-louis.png",
+          "status": "pending",
+          "role": "the vain king who uses heels to look taller and treats red heels as a privilege; chin always raised, looks down his nose, enjoys making people wait"
+        },
+        {
+          "id": "marquis",
+          "name": "Le marquis",
+          "look": "a tall gangly courtier with very long thin legs and knobbly knees, a towering curly chestnut-brown wig, long face with a hopeful grin, pale skin, a pale mint-green silk coat as main colour, pink ribbons at the knees, the beigeheels",
+          "file": "cast/insolite-marquis.png",
+          "status": "pending",
+          "role": "the envious social climber desperate for red heels; wobbles and trips constantly on his heels, flatters the king, never gives up"
+        }
+      ],
+      "cover": {
+        "prompt": "a gilded parquet gallery in a 1670s French palace. Louis (short, very upright, enormous black curly wig, gold brocade coat, the redheels, the cane) stands proudly on the right, chin raised, showing off one red heel; the marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) on the left, wobbling with his arms out for balance, staring enviously at the red heel. medium wide shot",
+        "cast": [
+          "louis",
+          "marquis"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Années 1670",
+          "caption": "À la cour de Louis XIV, années 1670. Pourquoi ces messieurs marchent-ils tous perchés sur des talons hauts ?",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "J’ai gagné trois centimètres. Et une cheville foulée.",
+              "side": "l"
+            },
+            {
+              "who": "louis",
+              "text": "Tenez-vous droit, marquis. Nous sommes à la cour, pas à la ferme.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a long gilded parquet gallery in a French palace. The marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) in the foreground on the left, wobbling on one foot, arms flailing, one ankle bent; Louis (short, very upright, enormous black curly wig, gold brocade coat, the redheels, the cane) walking past further back on the right, perfectly steady, nose in the air. wide shot",
+            "cast": [
+              "marquis",
+              "louis"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "À l’origine",
+          "caption": "Le talon vient des cavaliers perses : il cale le pied dans l’étrier, pour tenir solidement en selle.",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "À cheval, c’est parfait. C’est la descente qui coince.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a stone palace courtyard. The marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) alone, trying to climb down from a brown horse, one heel stuck in the stirrup, his body hanging sideways upside down along the horse's flank, wig slipping; the horse looks back at him, unimpressed. low angle",
+            "cast": [
+              "marquis"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Vers 1600",
+          "caption": "Vers 1600, la mode gagne l’Europe. Les nobles adorent : marcher mal prouve qu’on ne travaille pas aux champs.",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "Impossible de labourer avec ça.",
+              "side": "l"
+            },
+            {
+              "who": "louis",
+              "text": "C’est exactement le but.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the palace gravel garden with a clipped hedge. The marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) on the left, heels sunk deep in the gravel, leaning on a garden rake to stay upright; Louis (short, very upright, enormous black curly wig, gold brocade coat, the cane) seated on a stone bench on the right in profile, legs crossed to show off the redheels. medium shot",
+            "cast": [
+              "marquis",
+              "louis"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le talon rouge",
+          "caption": "Louis XIV les porte rouges. Au début des années 1670, il réserve le talon rouge à quelques nobles choisis.",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "Sire, un petit talon rouge ? Juste le gauche ?",
+              "side": "l"
+            },
+            {
+              "who": "louis",
+              "text": "Le rouge se mérite. Le beige vous va si bien.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "in the gilded parquet gallery, seen over Louis's shoulder. Louis (short, very upright, enormous black curly wig, gold brocade coat, the cane) in the foreground on the right, seen from behind, one redheel shoe raised slightly; the marquis (tall, gangly, chestnut wig, mint-green coat) kneeling on the floor in front of him on the left, hands clasped in prayer, huge pleading puppy eyes. over-the-shoulder",
+            "cast": [
+              "louis",
+              "marquis"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Louis XIV et ses talons rouges, en 1701",
+          "text": "Sur son portrait officiel peint par Hyacinthe Rigaud, le roi a 63 ans. Il montre toujours ses jambes et ses talons rouges sous le manteau du sacre.",
+          "photo": {
+            "commons": "File:Louis XIV of France.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment le talon a changé de pied",
+          "steps": [
+            "Perse : le talon cale le pied du cavalier dans l’étrier",
+            "Vers 1600 : la mode arrive en Europe, chez les nobles",
+            "XVIIIe siècle : les Lumières jugent le talon frivole ; les hommes passent au plat",
+            "1789 : la Révolution enterre les talons rouges de Versailles"
+          ],
+          "joke": "Les femmes, elles, l’ont gardé. Avec moins de chevaux autour."
+        },
+        {
+          "n": 7,
+          "kind": "react",
+          "tag": "En résumé",
+          "caption": "Né pour les cavaliers, adopté par les rois, le talon haut n’a été lâché par les hommes qu’au XVIIIe siècle.",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "Rouges ! Trois centimètres de plus. Et deux entorses.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the marquis (tall, gangly, chestnut wig askew, mint-green coat) alone, lying flat on his back on the gilded parquet, both legs raised in the air to show off brand-new redheels, a blissful ecstatic grin, small red hearts above his head. close-up",
+            "cast": [
+              "marquis"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Au début des années 1670, Louis XIV réservait les talons rouges à une poignée de nobles : un insigne d’honneur qu’on portait aux pieds.",
+        "source": "Getty Museum — Louis XIV’s red heels"
+      },
+      "story": "Le talon haut n’a pas été inventé pour les femmes. Il vient des cavaliers de Perse : un talon cale le pied dans l’étrier et aide à tenir solidement en selle. Vers 1600, cette mode arrive en Europe, et les nobles l’adoptent avec enthousiasme. À pied, le talon est peu pratique, mais c’est justement l’intérêt : il montre qu’on ne travaille pas aux champs, et il fait paraître plus grand.\nLouis XIV en fait un symbole. Le roi porte des talons rouges dès le début de son règne, et au début des années 1670 il en réserve l’usage, à la cour, à quelques nobles choisis : le talon rouge devient un insigne d’honneur. En 1701, sur le célèbre portrait peint par Hyacinthe Rigaud, le roi de 63 ans montre encore fièrement ses talons rouges. On en verra à Versailles jusqu’à la Révolution.\nAu XVIIIe siècle, la philosophie des Lumières valorise la raison et la simplicité : le talon passe pour frivole et féminin, et les hommes reviennent peu à peu aux chaussures plates. Après 1789, leurs vêtements deviennent plus sobres, ce que le psychologue John Carl Flügel appellera en 1930 la « grande renonciation masculine ». Les femmes, elles, gardent les talons, qui deviennent avec le temps un accessoire presque exclusivement féminin.",
+      "sources": [
+        {
+          "title": "Getty Museum — Louis XIV’s red heels",
+          "url": "https://blogs.getty.edu/iris/?p=23772"
+        },
+        {
+          "title": "Slate.fr — Les talons hauts, une histoire de pouvoir",
+          "url": "https://www.slate.fr/story/175827/mode-talons-hauts-histoire-pouvoir-genres"
+        },
+        {
+          "title": "Quartz — Why did men stop wearing high heels, anyway?",
+          "url": "https://qz.com/409254/why-did-men-stop-wearing-high-heels-anyway"
+        },
+        {
+          "title": "Wikimedia Commons — Louis XIV par Hyacinthe Rigaud (1701)",
+          "url": "https://en.vikidia.org/wiki/File:Louis_XIV_of_France.jpg"
+        }
+      ]
+    }
+  ]
+}
