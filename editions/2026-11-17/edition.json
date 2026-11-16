@@ -1,7 +1,337 @@
 {
   "date": "2026-11-17",
   "status": "draft",
+  "newsletter": {
+    "subject": "Le point d'indice au congélateur, une fusée dans les bras 🚀",
+    "intro": "Mardi de grève, mardi de bilan : on a mis le café à chauffer. Lui, au moins, n’est pas gelé.",
+    "game": "La Frise du jour : remettez l'Histoire dans l'ordre, elle ne le fera pas toute seule.",
+    "ps": "P.-S. Des millions de crabes traversent une île en ce moment. Aucun n'a demandé son chemin. Respect."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Un point gelé, une fusée rattrapée et dix ans de bilan",
+      "tagline": "Les fonctionnaires en grève, SpaceX qui attrape son vaisseau au vol, Emmanuel Macron qui fait le point, et la Francophonie qui reporte.",
+      "teaser": "Un salaire au congélateur, une fusée qui atterrit dans des baguettes géantes et un président qui s'auto-évalue.",
+      "minutes": 3,
+      "theme": "",
+      "art": {
+        "subject": "three news stories of the day, each told in one gag panel: a civil service strike over frozen pay, a rocket caught by its launch tower, a president's ten-year review",
+        "setting": "the street in front of a grand French public building, the foot of a giant steel rocket launch tower in Texas, a presidential office",
+        "era": "present day, November 2026",
+        "props": {
+          "iceblock": "a big translucent pale blue block of ice with one large shiny gold coin frozen inside",
+          "tower": "a giant grey steel launch tower with two huge mechanical arms, like chopsticks",
+          "ship": "a tall shiny silver stainless-steel rocket stage with small black fins, no markings",
+          "form": "a single sheet of plain white paper on a clipboard, with empty tick boxes and no writing"
+        }
+      },
+      "cast": [
+        {
+          "id": "syndicaliste",
+          "name": "Une syndicaliste",
+          "look": "a short, sturdy woman in her forties, deep brown skin, voluminous natural black afro hair, bright red puffer vest as main colour over a grey hoodie, dark blue jeans, a silver whistle on a cord around her neck",
+          "role": "the union delegate on strike day, holding the frozen pay like evidence; deadpan, unimpressed, arms full, always a little out of breath",
+          "file": "cast/actu-syndicaliste.png",
+          "status": "pending"
+        },
+        {
+          "id": "ingenieure",
+          "name": "Une ingénieure de SpaceX",
+          "look": "a very tall, lanky woman in her thirties, light olive skin, long straight auburn hair in a high ponytail, mustard yellow work overalls as main colour, white hard hat, chunky safety glasses, a tablet in one hand",
+          "role": "the launch engineer who can catch a rocket but never her own keys; brilliant, clumsy in daily life, staring upward in awe",
+          "file": "cast/actu-ingenieure.png",
+          "status": "pending"
+        },
+        {
+          "id": "macron",
+          "name": "Emmanuel Macron",
+          "look": "a cartoon caricature of a slim middle-aged French president, short swept-back brown-grey hair, big eager smile, navy blue suit as main colour, white shirt, thin dark tie, sitting very straight",
+          "role": "the head of state reviewing his own ten years in office like a self-assessment at work; pleased with himself, earnest, pen always ready",
+          "file": "cast/actu-macron.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. The foot of the tower in a flat sandy landscape, the ship held high in its two arms, pale yellow background. syndicaliste (short and sturdy, black afro hair, bright red puffer vest, silver whistle) on the left, hugging the iceblock against her chest, shivering a little; ingenieure (very tall and lanky, auburn ponytail, mustard yellow overalls, white hard hat) on the right, head tilted far back, pointing up at the ship in delight. Wide shot.",
+        "cast": [
+          "syndicaliste",
+          "ingenieure"
+        ],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Société",
+          "lead": true,
+          "major": true,
+          "gag": "litteral",
+          "caption": "Mardi 17 novembre, les syndicats de la fonction publique appellent à la grève : le point d’indice, qui sert à calculer le salaire des fonctionnaires, est gelé depuis juillet 2023.",
+          "bubbles": [
+            {
+              "who": "syndicaliste",
+              "text": "Trois ans au congélateur. Même les surgelés ont une date limite.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A wide stone pavement in front of a grand classical public building with tall plain windows, a few tiny distant marchers with blank placards, pale blue background. syndicaliste (short and sturdy, black afro hair, bright red puffer vest, silver whistle) in the foreground on the right, walking towards the reader while carrying the iceblock in both arms like a heavy parcel, breath fogging, deadpan unimpressed face. Medium wide shot.",
+            "cast": [
+              "syndicaliste"
+            ],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "L’hôtel de Matignon, à Paris",
+          "text": "La façade côté jardin de la résidence du Premier ministre, où les syndicats ont été reçus le 13 novembre et reviendront le 11 décembre.",
+          "photo": {
+            "commons": "File:Facade @ Jardin de l'Hôtel Matignon @ Paris (34261927513).jpg"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Fonctionnaires : une journée de grève pour le point d’indice",
+          "text": "Quoi : grève dans les écoles et les services publics, plus de 100 rassemblements, des trains perturbés.\nPourquoi ça compte : sans hausse du point, le salaire des agents publics ne suit pas la hausse des prix.\nRepère : dernière hausse, +1,5 % en juillet 2023 ; depuis 2017, le point n’a augmenté qu’un peu plus de 5 % en tout.\nEt maintenant : chiffres de participation mardi ; nouvelle réunion à Matignon le 11 décembre.",
+          "due": "2026-11-17",
+          "sources": [
+            {
+              "title": "MétéoManif",
+              "url": "https://meteomanif.fr/dossier/greve-fonction-publique-17-novembre-2026"
+            },
+            {
+              "title": "Moneyvox",
+              "url": "https://www.moneyvox.fr/votre-argent/actualites/110663/salaire-des-fonctionnaires-point-indice-le-gel-qui-declenche-la-colere-des-agents-publics"
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Comment ça se fait ?",
+          "zoom": true,
+          "title": "Pourquoi le salaire des fonctionnaires ne bouge plus ?",
+          "steps": [
+            "Le salaire d’un fonctionnaire se calcule en points : son indice (selon grade et ancienneté) × la valeur du point, 4,92 € brut par mois",
+            "Relever la valeur du point augmente d’un coup le salaire de tous les agents",
+            "C’est cher : 1 % de hausse coûte environ 2,4 milliards d’euros",
+            "Pour freiner les dépenses, le budget 2027 ne prévoit aucune hausse : seuls les plus bas salaires sont relevés, pour ne pas passer sous le smic"
+          ],
+          "text": "Ce qu’on ne sait pas encore : combien d’agents feront grève mardi.",
+          "sources": [
+            {
+              "title": "Acteurs publics",
+              "url": "https://acteurspublics.fr/articles/le-gouvernement-sous-pression-maximale-en-faveur-dune-hausse-du-point-dindice-des-fonctionnaires/"
+            },
+            {
+              "title": "Moneyvox",
+              "url": "https://www.moneyvox.fr/votre-argent/actualites/110663/salaire-des-fonctionnaires-point-indice-le-gel-qui-declenche-la-colere-des-agents-publics"
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Espace",
+          "major": true,
+          "gag": "comparaison",
+          "caption": "Ce week-end au Texas, SpaceX a rattrapé pour la première fois l’étage supérieur de sa fusée Starship, haut de 52 mètres, avec les bras géants de sa tour de lancement.",
+          "bubbles": [
+            {
+              "who": "ingenieure",
+              "text": "Cinquante-deux mètres attrapés au vol. Et moi, je rate encore mes clés.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. Seen from the ground looking up: the tower rising high, its two arms gently holding the ship, pale orange background. ingenieure (very tall and lanky, auburn ponytail, mustard yellow overalls, white hard hat, safety glasses) in the foreground on the left, head thrown back in awe, tablet in one hand, while a small bunch of keys falls from her other hand towards the ground. Low angle.",
+            "cast": [
+              "ingenieure"
+            ],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Starship : le vaisseau revient dans les bras de sa tour",
+          "text": "Quoi : le vaisseau a passé environ 22 heures en orbite ; le premier étage, lui, n’a pas été récupéré.\nPourquoi ça compte : un étage rattrapé peut revoler, pour des lancements moins chers.\nEt maintenant : inspection du vaisseau ; la NASA compte sur Starship pour retourner sur la Lune.",
+          "sources": [
+            {
+              "title": "L’EnerGeek",
+              "url": "https://lenergeek.com/2026/11/16/spacex-starship-elon-musk-2026/"
+            },
+            {
+              "title": "Génération NT",
+              "url": "https://www.generation-nt.com/actualites/spacex-starship-recuperation-vaisseau-pinces-chopstick-mechazilla-2084506"
+            }
+          ]
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Politique",
+          "gag": "bureau",
+          "people": [
+            {
+              "name": "Emmanuel Macron",
+              "party": "Renaissance",
+              "role": "président de la République"
+            }
+          ],
+          "caption": "Lundi 16 novembre, dix ans jour pour jour après sa candidature annoncée à Bobigny, le président Emmanuel Macron publie un bilan sur X : il y reconnaît des « erreurs ».",
+          "bubbles": [
+            {
+              "who": "macron",
+              "text": "Dix ans de poste, entretien annuel : « a fait de son mieux ». Signé : moi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A plain presidential office, one gilded desk, pale green background. macron (slim, swept-back brown-grey hair, navy blue suit, thin dark tie, big eager smile) sitting very straight at the desk, holding up the form towards the reader with one hand and proudly ticking a box with a pen in the other, one eyebrow raised in self-satisfaction. Close-up.",
+            "cast": [
+              "macron"
+            ],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Emmanuel Macron : dix ans après, le bilan",
+          "text": "Quoi : il remercie ses soutiens depuis 2016 et promet de rester engagé jusqu’au bout.\nPourquoi ça compte : son second mandat s’achève le 13 mai 2027 ; il ne peut pas en briguer un troisième de suite.\nEt maintenant : la course à sa succession est lancée, avec plusieurs candidats déjà déclarés.",
+          "sources": [
+            {
+              "title": "Ouest-France",
+              "url": "https://www.ouest-france.fr/politique/emmanuel-macron/jai-fait-de-mon-mieux-dix-ans-apres-sa-candidature-le-president-emmanuel-macron-reconnait-des-erreurs-d2606a40-e1e3-11f1-b029-43a761592972"
+            },
+            {
+              "title": "Boursorama (AFP)",
+              "url": "https://www.boursorama.com/actualite-economique/actualites/j-ai-fait-de-mon-mieux-malgre-des-erreurs-assure-macron-2fcdc242058aa0d9817c96012db3cf58"
+            }
+          ]
+        },
+        {
+          "n": 9,
+          "kind": "explain",
+          "suite": true,
+          "tag": "La suite",
+          "title": "Francophonie : pas de nouveau secrétaire général",
+          "text": "Annoncé : la succession de Louise Mushikiwabo à la tête de l’OIF se jouait lundi 16 novembre, au sommet de Phnom Penh.\nRésultat : faute de consensus, l’élection est reportée d’un an ; Louise Mushikiwabo reste en poste d’ici là.",
+          "of": "2026-11-16#8",
+          "sources": [
+            {
+              "title": "Œil d’Afrique",
+              "url": "https://oeildafrique.com/2026/11/16/oif-election-secretaire-general-reportee-un-an/"
+            },
+            {
+              "title": "Jeune Afrique",
+              "url": "https://www.jeuneafrique.com/1861844/politique/oif-louise-mushikiwabo-reconduite-pour-un-an-son-depart-desormais-programme/"
+            }
+          ]
+        },
+        {
+          "n": 10,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "trend": "Sapin des Galeries Lafayette",
+          "title": "Le sapin des Galeries Lafayette ne ressemble pas à un sapin",
+          "why": "Pourquoi ça buzze : le sapin 2026 du grand magasin parisien, une sculpture colorée signée Jean-Charles de Castelbajac, divise : certains regrettent un décor plus traditionnel.",
+          "text": "Prochaine étape logique : une bûche de Noël en forme de sapin. Pour rassurer tout le monde.",
+          "source": {
+            "title": "Ulysse — Les Galeries Lafayette bousculent les traditions avec leur décor de Noël 2026",
+            "url": "https://ulysse.com/news/on-ne-dirait-meme-pas-un-sapin-de-noel-les-galeries-lafayette-bousculent-les-traditions-avec-leur-decor-de-noel-2026"
+          },
+          "video": {
+            "url": "https://www.youtube.com/watch?v=eQ14Rb5zu-o"
+          }
+        },
+        {
+          "n": 11,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "trend": "Crabes rouges",
+          "title": "Des millions de crabes rouges en route vers la mer",
+          "why": "Pourquoi ça buzze : la migration annuelle des crabes rouges de l’île Christmas, en Australie, a commencé ; les rangers du parc national la filment en direct sur YouTube.",
+          "text": "Des millions à marcher de côté, sans GPS ni correspondance. Et ils arrivent quand même avant mon RER.",
+          "source": {
+            "title": "Euronews — L’info du jour, 16 novembre 2026",
+            "url": "https://fr.euronews.com/video/2026/11/16/linfo-du-jour-16-novembre-2026-soir"
+          },
+          "video": {
+            "url": "https://www.youtube.com/watch?v=WJpJFbT5f18"
+          }
+        }
+      ],
+      "final": {
+        "text": "Sur l’île Christmas, en Australie, les rangers ont bâti un pont de 5 mètres réservé aux crabes rouges, pour leur faire franchir une route.",
+        "source": "Parks Australia"
+      },
+      "sources": [
+        {
+          "title": "MétéoManif — Mardi 17 novembre : grève dans la fonction publique et le privé",
+          "url": "https://meteomanif.fr/dossier/greve-fonction-publique-17-novembre-2026"
+        },
+        {
+          "title": "Moneyvox — Salaire des fonctionnaires : le gel du point d’indice",
+          "url": "https://www.moneyvox.fr/votre-argent/actualites/110663/salaire-des-fonctionnaires-point-indice-le-gel-qui-declenche-la-colere-des-agents-publics"
+        },
+        {
+          "title": "Acteurs publics — Le gouvernement sous pression maximale en faveur d’une hausse du point d’indice",
+          "url": "https://acteurspublics.fr/articles/le-gouvernement-sous-pression-maximale-en-faveur-dune-hausse-du-point-dindice-des-fonctionnaires/"
+        },
+        {
+          "title": "L’EnerGeek — SpaceX rattrape un étage de sa fusée Starship",
+          "url": "https://lenergeek.com/2026/11/16/spacex-starship-elon-musk-2026/"
+        },
+        {
+          "title": "Génération NT — SpaceX réussit sa première capture du vaisseau Starship",
+          "url": "https://www.generation-nt.com/actualites/spacex-starship-recuperation-vaisseau-pinces-chopstick-mechazilla-2084506"
+        },
+        {
+          "title": "Ouest-France — « J’ai fait de mon mieux » : Emmanuel Macron reconnaît des « erreurs »",
+          "url": "https://www.ouest-france.fr/politique/emmanuel-macron/jai-fait-de-mon-mieux-dix-ans-apres-sa-candidature-le-president-emmanuel-macron-reconnait-des-erreurs-d2606a40-e1e3-11f1-b029-43a761592972"
+        },
+        {
+          "title": "Boursorama (AFP) — « J’ai fait de mon mieux » malgré des « erreurs », assure Macron",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/j-ai-fait-de-mon-mieux-malgre-des-erreurs-assure-macron-2fcdc242058aa0d9817c96012db3cf58"
+        },
+        {
+          "title": "Œil d’Afrique — L’élection du secrétaire général de l’OIF reportée d’un an",
+          "url": "https://oeildafrique.com/2026/11/16/oif-election-secretaire-general-reportee-un-an/"
+        },
+        {
+          "title": "Jeune Afrique — OIF : Louise Mushikiwabo reconduite pour un an",
+          "url": "https://www.jeuneafrique.com/1861844/politique/oif-louise-mushikiwabo-reconduite-pour-un-an-son-depart-desormais-programme/"
+        },
+        {
+          "title": "Ulysse — Le sapin des Galeries Lafayette 2026",
+          "url": "https://ulysse.com/news/on-ne-dirait-meme-pas-un-sapin-de-noel-les-galeries-lafayette-bousculent-les-traditions-avec-leur-decor-de-noel-2026"
+        },
+        {
+          "title": "Parks Australia — Christmas Island Red Crab Migration Live Stream (YouTube)",
+          "url": "https://www.youtube.com/watch?v=WJpJFbT5f18"
+        }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "frise",
