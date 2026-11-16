@@ -29,7 +29,8 @@
           "look": "Voltaire, a small extremely thin and bony French writer, sharp pointed nose and chin, a huge curly powdered white wig, pale skin, a crimson red velvet coat as main colour with white lace cuffs, the quill always in hand",
           "role": "the sarcastic, fearless writer who mocks power and keeps getting into trouble; tiny and bony, eyebrows raised, a sly sideways grin",
           "file": "cast/dossier-voltaire.png",
-          "status": "pending"
+          "status": "pending",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (927fb230-fb43-4046-8bbe-999fcfab4625)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         },
         {
           "id": "diderot",
@@ -37,7 +38,7 @@
           "look": "Denis, a sturdy broad-shouldered French philosopher, his own untidy grey hair with no wig, ruddy cheeks, open white shirt, a long faded sky-blue dressing gown as main colour, always carrying an armful of books",
           "role": "the tireless, warm-hearted editor of the Encyclopédie; sturdy and messy, always busy, carrying too many books, laughing loudly",
           "file": "cast/dossier-diderot.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "montesquieu",
@@ -45,7 +46,7 @@
           "look": "Charles, a very tall stiff aristocratic magistrate, long grey curled judge's wig, long nose, pale skin, black magistrate's robe with a wide purple sash as main colour, holding the scale",
           "role": "the calm, dignified judge who thinks in balances; very tall and stiff as a post, slow precise gestures",
           "file": "cast/dossier-montesquieu.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "mathis",
@@ -53,7 +54,7 @@
           "look": "Mathis, a chubby young man of today of average height, short curly black hair, brown skin, big round black glasses, a brown hoodie as main colour, jeans, the phone always in hand",
           "role": "the curious student from today who asks the reader's questions; chubby and eager, reacts with his whole body, often checks his phone",
           "file": "cast/dossier-mathis.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -63,8 +64,8 @@
           "mathis"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -91,8 +92,8 @@
               "voltaire"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -119,8 +120,8 @@
               "mathis"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -163,8 +164,8 @@
               "voltaire"
             ],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -204,8 +205,8 @@
               "mathis"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -233,8 +234,8 @@
               "voltaire"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -262,8 +263,8 @@
               "voltaire"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -291,8 +292,8 @@
               "voltaire"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -335,8 +336,8 @@
               "mathis"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -364,8 +365,8 @@
               "diderot"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -408,8 +409,8 @@
               "diderot"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -449,8 +450,9 @@
             ],
             "file": "images/dossier-11.webp",
             "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "attempts": 1,
+            "same_place": false,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (558b8310-88aa-4a20-bd85-294840c14c94)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -477,8 +479,8 @@
               "diderot"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -506,8 +508,8 @@
               "diderot"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },

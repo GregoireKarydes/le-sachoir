@@ -201,8 +201,8 @@
               "juge"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

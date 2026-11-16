@@ -25,7 +25,7 @@
           "name": "Lucas",
           "look": "Lucas, a very tall bulky man in his forties, light peach skin, short curly salt-and-pepper hair, thick black-framed glasses, a fluffy bright purple dressing gown as main colour over blue pyjamas, big grey slippers, a trash bag in his hand",
           "file": "cast/origine-lucas.png",
-          "status": "pending",
+          "status": "done",
           "role": "the sleepy resident who takes the bins out every week without a thought; big, slow, yawning, shuffles in his slippers"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Eugène Poubelle",
           "look": "Eugène Poubelle, a short slender French prefect of the 1880s in his fifties, receding dark hair combed back, neat short dark beard and moustache, light peach skin, black frock coat with a wide blue-white-red sash across the chest as main colour, a rolled paper decree in his hand",
           "file": "cast/origine-poubelle.png",
-          "status": "pending",
+          "status": "done",
           "role": "the proud, very formal senior official who wanted a cleaner Paris and got his name on every bin; stiff, chin up, touchy about his name"
         }
       ],
@@ -44,8 +44,8 @@
           "poubelle"
         ],
         "file": "images/origine-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -72,8 +72,9 @@
               "poubelle"
             ],
             "file": "images/origine-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +101,8 @@
               "lucas"
             ],
             "file": "images/origine-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -140,8 +141,8 @@
               "poubelle"
             ],
             "file": "images/origine-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -183,8 +184,8 @@
               "poubelle"
             ],
             "file": "images/origine-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -224,8 +225,8 @@
               "poubelle"
             ],
             "file": "images/origine-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

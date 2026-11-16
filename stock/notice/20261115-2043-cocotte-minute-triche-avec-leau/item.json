@@ -25,7 +25,7 @@
           "name": "Samir",
           "look": "Samir, a short plump man in his thirties, warm brown skin, thick black curly beard, black hair tied in a small top knot, bright cherry-red and white checked apron as main colour over a plain grey T-shirt, a wooden spoon always in his hand",
           "file": "cast/notice-samir.png",
-          "status": "pending",
+          "status": "done",
           "role": "the home cook who uses the pressure cooker every Sunday without understanding it, and is a little scared of it; jumpy, often hiding behind a lid or a tea towel"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Denis Papin",
           "look": "Denis Papin, a tall lanky French physicist of the 1680s in his thirties, long thin face, pale skin, long curly brown periwig falling to his shoulders, deep forest green long coat with brass buttons as main colour, white lace cravat, a small brass weight in his hand",
           "file": "cast/notice-papin.png",
-          "status": "pending",
+          "status": "done",
           "role": "the patient inventor who explains simply; bends down from his height to talk, fascinated by anything that boils, taps the lid of pots affectionately"
         }
       ],
@@ -44,8 +44,9 @@
           "papin"
         ],
         "file": "images/notice-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "papin"
             ],
             "file": "images/notice-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +102,8 @@
               "papin"
             ],
             "file": "images/notice-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +143,8 @@
               "papin"
             ],
             "file": "images/notice-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -185,8 +187,8 @@
               "samir"
             ],
             "file": "images/notice-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -225,8 +227,8 @@
               "samir"
             ],
             "file": "images/notice-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
