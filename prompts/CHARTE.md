@@ -38,7 +38,7 @@ Une seconde passe, à froid, comme le fact-check :
 1. Pour **chaque gag**, écrire **trois variantes** avec trois mécaniques différentes (liste ci-dessous) et garder la meilleure. La première idée est presque toujours la plus attendue.
 2. Noter chaque gag gardé : fait-il sourire **sans** le récitatif ? sert-il le fait (règle du gag porteur) ? vient-il du travers du personnage ? Deux « non » : le réécrire ou le couper. Mieux vaut une case d'explication vivante qu'une vanne tiède.
 3. Relire la première et la dernière case : aucune formule interdite, et la chute répond au début.
-4. Lancer `python3 pipeline/validate.py stock/<type>/<dossier>` et corriger ce qu'il signale (formules, interview, case muette, « Pour briller »).
+4. Lire **`data/checks.json`** (ce que le contrôle automatique a signalé à la dernière publication, par BD : formules, interview, case muette, « Pour briller », et pour l'Actu : structure, rubriques, sources, suites attendues) et ne pas refaire ces défauts. Les tâches automatiques ne lancent pas `pipeline/validate.py` elles-mêmes : le contrôle tourne à chaque push et à chaque publication.
 
 ### Les mécaniques de gag (pour varier)
 `litteral` (prendre un mot ou un chiffre au pied de la lettre), `anachronisme` (le monde d'aujourd'hui dans le passé), `mauvaise-foi` (nier l'évidence avec aplomb), `litote` (sous-réagir à une énormité), `escalade` (une logique poussée un cran trop loin), `bureau` (jargon de réunion, de RH ou d'administration plaqué sur la situation), `comparaison` (ramener le chiffre à une échelle domestique), `silence` (case muette, regard caméra).

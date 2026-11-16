@@ -651,3 +651,18 @@ def test_equilibre_de_l_actu(tmp_path, monkeypatch):
     assert b["editions"] == 2
     assert [(p["name"], p["n"]) for p in b["people"]] == [("A", 2), ("B", 1)]  # une fois par édition, hors période ignoré
     assert b["parties"] == [{"party": "X", "n": 2}, {"party": "Y", "n": 1}]
+
+
+def test_checks_json_pour_les_taches(tmp_path, monkeypatch):
+    from datetime import date
+    root = tmp_path
+    (root / "data").mkdir(); (root / "editions").mkdir()
+    bd = root / "stock" / "cultureg" / "20261201-0000-essai"
+    bd.mkdir(parents=True)
+    fmt = _bd([("Un fait.", ["Qui a inventé ce truc ?", "Nous."]), ("Deux.", ["Ah."]), ("Trois.", ["Donc voilà.", "Oui."])])
+    (bd / "item.json").write_text(json.dumps({"added": "20261201-0000", "formats": [fmt]}))
+    monkeypatch.setattr(publish, "ROOT", root); monkeypatch.setattr(publish, "EDITIONS", root / "editions")
+    publish.write_checks(date(2026, 12, 1))
+    out = json.loads((root / "data" / "checks.json").read_text())
+    assert out["items"][0]["path"] == "stock/cultureg/20261201-0000-essai"
+    assert any("formule usée en ouverture" in w for w in out["items"][0]["warnings"])

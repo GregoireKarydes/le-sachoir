@@ -427,6 +427,23 @@ def queue_index(today: date) -> dict:
     return out
 
 
+def write_checks(today: date):
+    """data/checks.json (16 novembre 2026) : les avertissements du contrôle pour la file et les éditions à partir d'aujourd'hui."""
+    dirs = sorted(p.parent for p in (ROOT / "stock").glob("*/*/item.json")) + sorted(
+        p for p in EDITIONS.iterdir() if p.is_dir() and p.name >= today.isoformat() and (p / "edition.json").exists())
+    items = []
+    for d in dirs:
+        r = check_edition(d)
+        if not (r["warnings"] or r["errors"]):
+            continue
+        titles = {f.get("id"): f.get("title", "") for f in (r["data"] or {}).get("formats", []) if isinstance(f, dict)}
+        items.append({"path": str(d.relative_to(ROOT)), "titles": titles, "errors": r["errors"], "warnings": r["warnings"]})
+    (ROOT / "data" / "checks.json").write_text(json.dumps({
+        "updated_at": datetime.now(ZoneInfo("Europe/Paris")).isoformat(timespec="minutes"),
+        "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
+        "items": items}, ensure_ascii=False, indent=1))
+
+
 def actu_balance(today: date, days: int = 14) -> dict:
     """Qui l'Actu a-t-elle mis en scène ces 14 derniers jours ? (16 novembre 2026, promesse de neutralité.)
     Compte les personnalités politiques déclarées dans le champ `people` des cases dessinées de l'Actu,
@@ -508,6 +525,12 @@ def write_health(health: dict, index: list, today: date):
             health["problems"].append(f"collecte des flux d'actualité vieille de {round(age_h)} h : l'Actu choisit ses sujets sans elle")
     except Exception:  # noqa: BLE001 — jamais bloquant
         health["rss"] = None
+    # Ce que le contrôle signale sur les BD de la file et les éditions à venir, lisible par les tâches d'écriture
+    # (elles n'ont pas le droit de lancer validate.py) : data/checks.json, réécrit à chaque publication.
+    try:
+        write_checks(today)
+    except Exception as ex:  # noqa: BLE001 — jamais bloquant
+        print(f"! checks.json : {ex}")
     try:
         health["actu_balance"] = actu_balance(today)
     except Exception as ex:  # noqa: BLE001
