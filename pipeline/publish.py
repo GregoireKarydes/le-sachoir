@@ -92,6 +92,22 @@ def drop_subjects(fmt: dict, ed_date: str, hidden: set) -> dict:
     return {**fmt, "cases": cases}
 
 
+BUZZ_REAL_SINCE = "2026-11-18"  # éditions où une case « Sur Internet » sans vraie image n'est plus publiée
+
+
+def drop_unready_buzz(fmt: dict, ed_date: str) -> dict:
+    """« Pas d'image, pas de case » (16 novembre 2026, Greg : les faux posts, « c'est pas terrible »). Dans l'édition
+    publiée, une case « Sur Internet » ne sort qu'avec sa vraie image prête : vignette officielle de la vidéo,
+    photo libre de Commons, ou vrai post. Le fichier source n'est pas touché : la case sort dès que l'image arrive.
+    Les éditions d'avant le 18 novembre gardent leurs cartes réécrites."""
+    if fmt.get("id") != "actu" or ed_date < BUZZ_REAL_SINCE:
+        return fmt
+    cases = [c for c in fmt.get("cases", []) or [] if not (isinstance(c, dict) and c.get("kind") == "buzz" and not embeds.buzz_media(c))]
+    if len(cases) == len(fmt.get("cases", []) or []):
+        return fmt
+    return {**fmt, "cases": [({**c, "n": n} if "n" in c else c) for n, c in enumerate(cases, 1)]}
+
+
 def format_ready(fmt: dict) -> bool:
     if fmt.get("id") == "quiz":  # le quiz n'a pas d'image : prêt dès qu'il a ses questions
         return len(fmt.get("questions", [])) >= 1  # Plus ou moins et Swipe tiennent en une seule « question »
@@ -351,7 +367,7 @@ def main(now: datetime | None = None):
                               "theme": x.get("theme", ""), "minutes": x.get("minutes", 0),
                               "tagline": x.get("tagline", ""),
                               # Nombre de cases lisibles : l'appli affiche « Lu ✓ » ou « Case 3 / 10 » dans les listes.
-                              "cases": len([c for c in x.get("cases", []) if c.get("kind") != "photo" or (c.get("photo") or {}).get("status") == "done"]),
+                              "cases": len([c for c in drop_unready_buzz(x, d.name).get("cases", []) if c.get("kind") != "photo" or (c.get("photo") or {}).get("status") == "done"]),
                               "cover": x.get("cover", {}).get("file") if x.get("cover", {}).get("status") == "done" else None}
                              for x in ready],
             })
@@ -371,10 +387,10 @@ def main(now: datetime | None = None):
         dst = SITE / "editions" / e["date"]
         shutil.copytree(src, dst, ignore=shutil.ignore_patterns("cast", "*.md"))
         strip_hidden(dst, hidden)
-        if any(k.startswith(f"{e['date']}|actu:") for k in hidden):
+        if any(k.startswith(f"{e['date']}|actu:") for k in hidden) or e["date"] >= BUZZ_REAL_SINCE:
             f2 = dst / "edition.json"
             ed2 = json.loads(f2.read_text())
-            ed2["formats"] = [drop_subjects(x, e["date"], hidden) for x in ed2.get("formats", [])]
+            ed2["formats"] = [drop_unready_buzz(drop_subjects(x, e["date"], hidden), e["date"]) for x in ed2.get("formats", [])]
             f2.write_text(json.dumps(ed2, ensure_ascii=False, indent=2))
         if gate:
             lock_site_edition(dst)

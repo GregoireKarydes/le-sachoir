@@ -236,6 +236,19 @@ def story_page(s, ed_dir: Path, related, gate=False):
                         f'<p><b>Le Sachoir :</b> {e(c.get("text", ""))}</p>')
             else:
                 top = f'<strong>{e(c.get("name") or "Internet")} {e(c.get("handle") or "")}</strong><p>{e(c.get("text", ""))}</p>'
+            # Vraie image (16 novembre 2026) : vignette officielle de la vidéo ou photo libre, titre, raison du buzz, vanne.
+            vid, ph = c.get("video") or {}, c.get("photo") or {}
+            vemb = vid.get("embed") if vid.get("status") == "ok" else None
+            if vemb and vemb.get("thumb"):
+                top = (f'<a href="{e(vemb["url"])}" rel="nofollow noopener" target="_blank"><img src="{e(img_base + vemb["thumb"])}" alt="{e(c.get("title") or vemb.get("text", ""))}" loading="lazy" decoding="async"></a>'
+                       f'<small>Vidéo : {e(vemb.get("author", ""))} sur {e(vemb.get("label", ""))}</small>'
+                       f'<strong>{e(c.get("title") or vemb.get("text", ""))}</strong><p><b>Le Sachoir :</b> {e(c.get("text", ""))}</p>')
+            elif ph.get("status") == "done" and ph.get("file"):
+                top = (f'<img src="{e(img_base + ph["file"])}" alt="{e(c.get("title", ""))}" loading="lazy" decoding="async">'
+                       f'<small>Photo : {e(ph.get("credit", ""))} · {e(ph.get("license", ""))}</small>'
+                       f'<strong>{e(c.get("title", ""))}</strong><p><b>Le Sachoir :</b> {e(c.get("text", ""))}</p>')
+            elif not emb and date >= "2026-11-18":
+                continue  # pas d'image, pas de case
             panels.append(f'<figure class="panel explain"><figcaption><b class="ex-tag">{e(c.get("tag") or "Sur Internet")}</b>'
                           f'{top}<p>{e(c.get("why", ""))}{link}</p></figcaption></figure>')
             continue

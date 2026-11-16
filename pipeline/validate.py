@@ -37,6 +37,7 @@ ACTU_ZOOM_MAX = 90   # « Comment ça se fait ? » (13 novembre 2026) : sujet du
 ACTU_BRIEF_MAX = 45  # 16 novembre 2026 : « Ce qui se passe vraiment » d'une brève (le sujet du jour garde 65 mots)
 ACTU_SUITE_MAX = 45  # case « La suite »
 ACTU_MINUTES_MAX = 4  # l'Actu se lit en 3 à 4 minutes (elle en faisait 5 le 16 novembre)
+BUZZ_REAL_SINCE = "2026-11-18"  # « Sur Internet » : une vraie image par case, plus de faux post (même date que publish.py)
 HUMOUR_SINCE = "2026-11-18"  # éditions concernées par les contrôles d'humour (les BD déjà publiées ne sont pas relues)
 STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
@@ -533,7 +534,24 @@ def check_story(fmt: dict, d: Path, err, warn):
                 warn(f"case {k} (Sur Internet) : {words(c.get('text'))} mots (max 40)")
             if words(c.get("why")) > 30:
                 warn(f"case {k} (Sur Internet) : « why » de {words(c.get('why'))} mots (max 30)")
-            if not re.match(r"^@[A-Za-zÀ-ÿ0-9_]{2,24}$", str(c.get("handle") or "")):
+            # 16 novembre 2026 (Greg : les faux posts, « c'est pas terrible ») : une vraie image, plus de pseudo ni de compteurs inventés.
+            real = bool(re.fullmatch(r"\d{4}-\d\d-\d\d", d.name)) and d.name >= BUZZ_REAL_SINCE
+            if real:
+                vurl = str((c.get("video") or {}).get("url") or "")
+                has = embeds.provider(vurl) in embeds.VIDEO or str((c.get("photo") or {}).get("commons") or "").startswith("File:") \
+                    or bool(embeds.provider(str((c.get("post") or {}).get("url") or "")))
+                if not has:
+                    warn(f"case {k} (Sur Internet) : pas de vraie image (« video.url » YouTube ou TikTok, ou « photo.commons ») : la case ne sera pas publiée")
+                if vurl and embeds.provider(vurl) not in embeds.VIDEO:
+                    warn(f"case {k} (Sur Internet) : « video.url » doit être l'adresse d'une vidéo YouTube ou TikTok ({vurl!r})")
+                if not c.get("title"):
+                    warn(f"case {k} (Sur Internet) : « title » manquant (la tendance en quelques mots)")
+                elif words(c.get("title")) > 12:
+                    warn(f"case {k} (Sur Internet) : titre de {words(c.get('title'))} mots (max 12)")
+                fake = [x for x in ("handle", "name", "likes", "shares", "ago") if c.get(x)]
+                if fake:
+                    warn(f"case {k} (Sur Internet) : champs de faux post à retirer ({', '.join(fake)})")
+            elif not re.match(r"^@[A-Za-zÀ-ÿ0-9_]{2,24}$", str(c.get("handle") or "")):
                 warn(f"case {k} (Sur Internet) : « handle » inventé et générique attendu (« @Internet »)")
             if not str((c.get("source") or {}).get("url", "")).startswith("https://"):
                 warn(f"case {k} (Sur Internet) : source (article qui explique la tendance) manquante")

@@ -72,11 +72,12 @@ Constat du 16 novembre : des Actus de 15 ou 16 cases et 5 minutes pour 2 visées
 - **Équilibre** : chaque personnalité politique mise en scène est déclarée (`people` : nom, parti) ; l'écran admin en fait le compte sur 14 jours ; pas la même personnalité dans trois Actus en une semaine quand un autre sujet de poids comparable existe.
 - Rien d'inventé : ce qui n'est pas encore connu est dit comme tel ; ce qui est général (comment marche le service, ce qui se passe d'habitude) est présenté comme général.
 
-## « Pendant ce temps, sur Internet » (fin de l'Actu, 13 novembre 2026)
-- Trois tendances légères du jour. Pour chacune, de préférence **le vrai post** qui la résume (intégration officielle du réseau, avec un lien vers l'original), suivi d'une vanne du Sachoir ; sinon une carte réécrite par nous, avec un pseudo inventé.
-- Le ton : celui d'un ami qui raconte le buzz du jour à la machine à café. Une chute par post. On rit avec Internet, pas d'une personne.
+## « Pendant ce temps, sur Internet » (fin de l'Actu, 13 novembre 2026 ; vraies images depuis le 16 novembre)
+- Deux ou trois tendances légères du jour. **Chaque case montre une vraie image** (16 novembre 2026, Greg : « les faux posts de réseau, c'est pas terrible ») : la vignette officielle de la vidéo du buzz (YouTube ou TikTok, avec un lien vers la vidéo), sinon une photo libre de Wikimedia Commons. **Pas d'image, pas de case.** Plus de faux post : ni pseudo, ni avatar, ni compteurs inventés.
+- Sous l'image : la tendance en clair, « Pourquoi ça buzze » (neutre et sourcé), puis la vanne du Sachoir, signée.
+- Le ton : celui d'un ami qui raconte le buzz du jour à la machine à café. Une chute par case. On rit avec Internet, pas d'une personne.
 - **Trois vannes, trois constructions (16 novembre 2026).** Pas trois fois « Moi, ma… » : une comparaison avec sa propre vie au plus, les deux autres sur une autre mécanique (pousser la logique du buzz un cran trop loin, lui trouver une conséquence administrative, le prendre au pied de la lettre).
-- Interdits : particuliers (nom, pseudo, visage), drames et victimes, santé, politique partisane, rumeurs non vérifiées. Le « Pourquoi ça buzze » reste neutre et sourcé.
+- Interdits : particuliers (nom, pseudo, visage), drames et victimes, santé, politique partisane, rumeurs non vérifiées, captures d'écran de posts et photos de presse.
 
 ## Le casting : adapté à l'histoire
 - Les personnages sont **des humains** (figures historiques, témoins, scientifiques, gens ordinaires de l'époque) et, quand le sujet s'y prête vraiment, des animaux réels de l'histoire.
