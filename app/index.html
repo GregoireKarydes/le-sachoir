@@ -1086,6 +1086,15 @@ body{overscroll-behavior-y:none}
 .wx-src{font-size:11.5px!important;text-align:center}
 .wx-src a{color:var(--muted)}
 .wx-wait{min-height:120px;display:grid;place-items:center;color:var(--muted);font-weight:700;text-align:center}
+/* ---------- Finitions d'usage (16 novembre 2026) ----------
+   Zones de toucher : les petits boutons de l'en-tête et de l'accueil faisaient 26 à 33 px de haut. Leur dessin ne change
+   pas, mais la zone qui répond au doigt est agrandie à 44 px environ (repère d'accessibilité). */
+.pill.streak,.pill.hist,.start .nx{position:relative}
+.installmini::after,.pill.streak::after,.pill.hist::after,.start .nx::after{content:"";position:absolute;inset:-9px -6px}
+/* Petites cartes de l'édition (Actu, Culture G côte à côte) : l'accroche tient en trois lignes, les deux cartes restent alignées. */
+.card.small .tl{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+/* Jeu du jour : un bouton pas encore actif se lit comme tel (le jaune à demi transparent virait au marron sur le fond bleu nuit). */
+.quiz .cta:disabled{opacity:1;background:rgba(255,255,255,.14);color:rgba(255,255,255,.62);box-shadow:none}
 </style>
 </head>
 <body>
@@ -1466,11 +1475,11 @@ function renderAbout() {
   ["dossier", "cultureg", "insolite"].forEach((id, i) => {
     const s = stories.find(x => x.id === id); if (!s || !cards[i]) return;
     cards[i].className = `ab-c c${i + 1} ${cls[id]}`;
-    cards[i].innerHTML = `<div class="tx"><b>${lbl[id]}</b><span>${esc(s.title)}</span></div>${s.cover ? `<img src="editions/${s.date}/${s.cover}" alt="" loading="lazy">` : ""}`;
+    cards[i].innerHTML = `<div class="tx"><b>${lbl[id]}</b><span>${typo(s.title)}</span></div>${s.cover ? `<img src="editions/${s.date}/${s.cover}" alt="" loading="lazy">` : ""}`;
   });
   const sec = $("#abLatestSec"), list = stories.slice(0, 6);
   sec.hidden = !list.length;
-  $("#abLatest").innerHTML = list.map(s => `<button class="ab-story" data-d="${s.date}" data-f="${s.id}">${s.cover ? `<img src="editions/${s.date}/${s.cover}" alt="" loading="lazy">` : `<span class="ph0"></span>`}<div><small>${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""}</small><strong>${esc(s.title)}</strong><small>${esc(s.tagline || "")}</small></div></button>`).join("");
+  $("#abLatest").innerHTML = list.map(s => `<button class="ab-story" data-d="${s.date}" data-f="${s.id}">${s.cover ? `<img src="editions/${s.date}/${s.cover}" alt="" loading="lazy">` : `<span class="ph0"></span>`}<div><small>${esc(s.label)}${s.theme ? " · " + esc(s.theme) : ""}</small><strong>${typo(s.title)}</strong><small>${esc(s.tagline || "")}</small></div></button>`).join("");
   $("#abLatest").querySelectorAll("[data-d]").forEach(b => b.onclick = async () => { try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); } catch (e) { toast("Indisponible hors ligne"); } });
 }
 
@@ -1500,13 +1509,13 @@ function renderHome() {
   const hello = ME.name ? `Salut, ${esc(ME.name)}` : "Salut !";
   const isToday = ed.date === TODAY;
   const card = {
-    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span>${dossierBadge(ed.date)}<h3>${esc(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}${f.teaser ? `<p class="dteaser">${esc(f.teaser)}</p>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 3} min) →</span><p class="tagline">${esc(f.tagline || "")}</p></button>`; },
-    small: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} small" data-f="${f.id}"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><div class="mid"><span class="dur">${ICON.clock}${f.minutes || 2} min</span>${c ? `<img class="thumb" src="${c}" alt="" loading="lazy">` : ""}</div><span class="tl">${readState(ed, f) || esc(f.tagline || "")}</span></button>`; },
-    wide: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} wide" data-f="${f.id}"><div class="txt"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || esc(f.tagline || "")}</span></div>${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}</button>`; }
+    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span>${dossierBadge(ed.date)}<h3>${typo(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}${f.teaser ? `<p class="dteaser">${esc(f.teaser)}</p>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 3} min) →</span><p class="tagline">${typo(f.tagline || "")}</p></button>`; },
+    small: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} small" data-f="${f.id}"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><div class="mid"><span class="dur">${ICON.clock}${f.minutes || 2} min</span>${c ? `<img class="thumb" src="${c}" alt="" loading="lazy">` : ""}</div><span class="tl">${readState(ed, f) || typo(f.tagline || "")}</span></button>`; },
+    wide: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} wide" data-f="${f.id}"><div class="txt"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || typo(f.tagline || "")}</span></div>${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}</button>`; }
   };
   const duo = ["actu", "cultureg"].filter(id => F[id]);
   const others = ["actu", "cultureg", "insolite", "notice", "origine"].filter(id => F[id]);
-  card.tile = f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} tile" data-f="${f.id}">${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}<div class="txt"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || esc(f.tagline || "")}</span></div></button>`; };
+  card.tile = f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} tile" data-f="${f.id}">${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}<div class="txt"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || typo(f.tagline || "")}</span></div></button>`; };
   const cardsHTML = DESK.matches
     ? (F.dossier
         ? `<div class="ed-grid has-big">${card.dossier(F.dossier)}${others.length ? `<div class="ed-side${others.length >= 4 ? " two" : ""}" style="--k:${others.length}">${others.map(id => card.wide(F[id])).join("")}</div>` : ""}</div>`
@@ -1656,7 +1665,7 @@ function explainHTML(c) {
   const srcs = (c.sources || []).filter(x => x && /^https:\/\//.test(x.url || "") && x.title).slice(0, 3);
   const src = srcs.length ? `<p class="ex-src">${ic("sources")} ${srcs.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener nofollow">${esc(x.title)}</a>`).join(" · ")}</p>` : "";
   // « Comment ça se fait ? » (zoom) : les maillons d'abord, puis « Ce qu'on ne sait pas encore ».
-  return `<div class="exbox${c.suite ? " suite" : ""}"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${esc(c.title)}</h3>` : ""}${c.zoom ? steps + paras : paras + steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}${src}</div>`;
+  return `<div class="exbox${c.suite ? " suite" : ""}"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${typo(c.title)}</h3>` : ""}${c.zoom ? steps + paras : paras + steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}${src}</div>`;
 }
 /* « Pendant ce temps, sur Internet » (13 novembre 2026) : ce qui buzze, en carte de post, mais réécrit par nous.
    Pseudo inventé et générique, jamais un vrai compte de particulier ; « Pourquoi ça buzze » et la source en dessous. */
@@ -1691,7 +1700,7 @@ function buzzHTML(c, ed) {
 function photoHTML(ed, c) {
   const ph = c.photo || {};
   const credit = [ph.credit, ph.license].filter(Boolean).map(esc).join(" · ");
-  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "En vrai")}</span><img class="ph-img" src="${ph.src || imgUrl(ed, ph.file)}" alt="${esc(c.title || "")}" decoding="async" onerror="this.remove()">${c.title ? `<h3>${esc(c.title)}</h3>` : ""}<p>${esc(c.text || "")}</p><span class="ph-credit">Photo : ${credit}${ph.source ? ` · <a href="${esc(ph.source)}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a>` : ""}</span></div>`;
+  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "En vrai")}</span><img class="ph-img" src="${ph.src || imgUrl(ed, ph.file)}" alt="${esc(c.title || "")}" decoding="async" onerror="this.remove()">${c.title ? `<h3>${typo(c.title)}</h3>` : ""}<p>${esc(c.text || "")}</p><span class="ph-credit">Photo : ${credit}${ph.source ? ` · <a href="${esc(ph.source)}" target="_blank" rel="noopener nofollow">Wikimedia Commons</a>` : ""}</span></div>`;
 }
 // Typographie française : espace fine insécable avant ? ! ; : » et après «, pour qu'aucun signe ne tombe seul en début de ligne.
 const typo = t => esc(t).replace(/\s+([?!;:»])/g, "\u202f$1").replace(/«\s+/g, "«\u202f");
@@ -1749,7 +1758,7 @@ function afterHTML(ed, f) {
   let out = "";
   if (ed.date === TODAY || ed.date === CUR?.date) {
     const n = nextOf(ed, f);
-    if (n.kind === "story") out += `<button class="nextup" data-act="next" data-f="${n.f.id}" style="--c:${COLOR[n.f.id]}"><small>À suivre · ${n.f.minutes || 2} min</small><b>${esc(n.f.title)}</b><span>→</span></button>`;
+    if (n.kind === "story") out += `<button class="nextup" data-act="next" data-f="${n.f.id}" style="--c:${COLOR[n.f.id]}"><small>À suivre · ${n.f.minutes || 2} min</small><b>${typo(n.f.title)}</b><span>→</span></button>`;
     else if (n.kind === "quiz") out += `<button class="nextup" data-act="quiz" style="--c:${COLOR.quiz}"><small>Pour finir en beauté</small><b>Le jeu du jour : ${esc(n.f.title)}</b><span>${ic("dice")}</span></button>`;
     else out += `<div class="alldone">${ic("party")} <b>Édition bouclée !</b> Vous en savez plus que ce matin. Revenez demain, on remet ça.</div><button class="btn ghost" data-act="explore">Explorer d’autres histoires</button>`;
   }
@@ -2002,7 +2011,7 @@ function quizCard(ed, f) {
   const status = done ? `Votre score : ${fmtScore(st.s ?? 0)}/${max} · revoir les réponses`
     : played ? `Partie en cours · une seule partie par jour`
     : `${size} · ${K.sub}`;
-  return `<button class="card quizcard k-${kind}" data-quiz="1"><span class="qc-ic">${K.ic}</span><span class="qc-tx"><span class="tag">${esc(K.name)}</span><h3>${esc(f.title || K.name)}</h3><span class="qc-st">${status}</span></span><span class="qc-go">${done ? "Revoir" : played ? "Reprendre" : "Jouer"}</span></button>`;
+  return `<button class="card quizcard k-${kind}" data-quiz="1"><span class="qc-ic">${K.ic}</span><span class="qc-tx"><span class="tag">${esc(K.name)}</span><h3>${typo(f.title || K.name)}</h3><span class="qc-st">${status}</span></span><span class="qc-go">${done ? "Revoir" : played ? "Reprendre" : "Jouer"}</span></button>`;
 }
 async function openQuiz(ed) {
   const f = ed.formats.find(x => x.id === "quiz"); if (!f || !(f.questions || []).length) return;
@@ -2712,7 +2721,7 @@ function openGifts() {
   const list = allDossiers(), n = WALLET.credits || 0;
   openSheet(`<h3>Mes dossiers offerts</h3><p class="sub">${n ? `Vous avez <b>${n} Grand${n > 1 ? "s" : ""} Dossier${n > 1 ? "s" : ""}</b> à débloquer. Choisissez : il reste à vous pour toujours.` : "Plus de dossier à débloquer pour l’instant. Un ami inscrit avec votre lien = un dossier de plus."}</p>
    <div class="giftlist">${list.map(f => { const done = isPremium() || WALLET.unlocked.includes(f.date), cover = f.cover ? `editions/${f.date}/${f.cover}` : "";
-     return `<button class="gitem" data-d="${f.date}" data-act="${done ? "read" : n ? "unlock" : "peek"}">${cover ? `<img src="${cover}" alt="" loading="lazy">` : `<span class="ph0"></span>`}<span class="t">${esc(f.title)}<small>${esc(f.theme || "")} · ${new Date(f.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</small></span><span class="go ${done || n ? "y" : ""}">${done ? "Lire" : n ? `${ic("gift")} Débloquer` : "4 cases"}</span></button>`; }).join("") || `<p class="sub">Les premiers Grands Dossiers arrivent.</p>`}</div>
+     return `<button class="gitem" data-d="${f.date}" data-act="${done ? "read" : n ? "unlock" : "peek"}">${cover ? `<img src="${cover}" alt="" loading="lazy">` : `<span class="ph0"></span>`}<span class="t">${typo(f.title)}<small>${esc(f.theme || "")} · ${new Date(f.date + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" })}</small></span><span class="go ${done || n ? "y" : ""}">${done ? "Lire" : n ? `${ic("gift")} Débloquer` : "4 cases"}</span></button>`; }).join("") || `<p class="sub">Les premiers Grands Dossiers arrivent.</p>`}</div>
    <button class="btn ghost" id="gfInv">Inviter un ami pour en gagner un</button>`);
   $("#gfInv").onclick = openInvite;
   $("#sheet").querySelectorAll("[data-d]").forEach(b => b.onclick = async () => {
@@ -2922,12 +2931,12 @@ function storyRow(s) {
   const ri = readInfo(s), pole = poleOf(s.theme);
   return `<button class="srow" data-d="${s.date}" data-f="${s.id}"><span class="th">${thumb(s)}${ri && !ri.done ? `<i class="prog"><i style="width:${ri.pct}%"></i></i>` : ""}</span>
     <span class="bd"><span class="kick"><span class="fm f-${s.id}">${FMT[s.id]?.[0] || esc(s.label)}</span>${s.theme ? `<span class="pl" style="color:${pole?.color || "var(--muted)"}">${esc(s.theme)}</span>` : ""}</span>
-    <span class="tt">${esc(s.title)}</span>
+    <span class="tt">${typo(s.title)}</span>
     <span class="mt">${s.minutes || 2} min · ${dShort(s.date)}${ri ? ` · <b class="${ri.done ? "ok" : ""}">${ri.label}</b>` : ""}</span>${storyBadge(s)}</span></button>`;
 }
 function storyCard(s) {
   const ri = readInfo(s);
-  return `<button class="scard" data-d="${s.date}" data-f="${s.id}"><span class="cv">${thumb(s)}${ri?.done ? `<span class="done">${ri.label}</span>` : ""}</span><span class="fm f-${s.id}">${FMT[s.id]?.[0] || ""}</span><b>${esc(s.title)}</b><small>${s.minutes || 2} min${s.theme ? " · " + esc(s.theme) : ""}</small></button>`;
+  return `<button class="scard" data-d="${s.date}" data-f="${s.id}"><span class="cv">${thumb(s)}${ri?.done ? `<span class="done">${ri.label}</span>` : ""}</span><span class="fm f-${s.id}">${FMT[s.id]?.[0] || ""}</span><b>${typo(s.title)}</b><small>${s.minutes || 2} min${s.theme ? " · " + esc(s.theme) : ""}</small></button>`;
 }
 function wireStories(v) {
   v.querySelectorAll("[data-d][data-f]").forEach(b => b.onclick = async () => { try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); } catch (e) { toast("Indisponible hors ligne"); } });
@@ -2991,7 +3000,7 @@ function renderFavs() {
   const doing = hist.filter(s => !readInfo(s)?.done).slice(0, 10), done = hist.filter(s => readInfo(s)?.done).slice(0, 12);
   v.innerHTML = `<div><h1 class="h1">Favoris</h1><p class="lead">${favs.length ? `${favs.length} histoire${favs.length > 1 ? "s" : ""} gardée${favs.length > 1 ? "s" : ""} précieusement.` : "Vos histoires préférées, toujours sous la main."}</p></div>
    ${nudgeHTML("favs")}
-   ${favs.length ? `<div class="fgrid">${favs.map(({ x, s }) => `<div class="fcard"><button class="go" data-d="${x.date}" data-f="${x.fid}"><span class="cv">${thumb(s)}</span><span class="fm f-${x.fid}">${FMT[x.fid]?.[0] || esc(x.label)}</span><b>${esc(s.title || x.title)}</b><small>${dShort(x.date)}${s.minutes ? ` · ${s.minutes} min` : ""}</small></button><button class="unfav" data-un="${x.date}|${x.fid}|${x.type}" aria-label="Retirer des favoris"><svg viewBox="0 0 24 24"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg></button></div>`).join("")}</div>`
+   ${favs.length ? `<div class="fgrid">${favs.map(({ x, s }) => `<div class="fcard"><button class="go" data-d="${x.date}" data-f="${x.fid}"><span class="cv">${thumb(s)}</span><span class="fm f-${x.fid}">${FMT[x.fid]?.[0] || esc(x.label)}</span><b>${typo(s.title || x.title)}</b><small>${dShort(x.date)}${s.minutes ? ` · ${s.minutes} min` : ""}</small></button><button class="unfav" data-un="${x.date}|${x.fid}|${x.type}" aria-label="Retirer des favoris"><svg viewBox="0 0 24 24"><path d="M16.8 3.5c-1.9 0-3.6 1-4.8 2.6C10.8 4.5 9.1 3.5 7.2 3.5 4 3.5 1.5 6.1 1.5 9.4c0 5.6 7.9 10.4 10.2 11.5.2.1.4.1.6 0 2.3-1.1 10.2-5.9 10.2-11.5 0-3.3-2.5-5.9-5.7-5.9z"/></svg></button></div>`).join("")}</div>`
     : `<div class="empty-state"><span class="bigic red">${ic("heart")}</span><h2>Aucun favori, pour l’instant</h2><p class="sub">Pendant une lecture, touchez le cœur ou double-touchez une case. L’histoire atterrit ici, au chaud.</p><button class="btn" id="fvGo">Trouver une histoire à aimer</button></div>`}
    ${doing.length ? `<section class="blk"><div class="bh"><h2>À reprendre</h2></div><div class="slist">${doing.map(storyRow).join("")}</div></section>` : ""}
    ${done.length ? `<section class="blk"><div class="bh"><h2>Déjà lu</h2><small class="sub">${done.length > 11 ? "Les 12 derniers" : ""}</small></div><div class="hscroll">${done.map(storyCard).join("")}</div></section>` : ""}`;
@@ -3219,7 +3228,7 @@ function openOnboarding() {
     } else {
       const f = firstStory();
       body = `<div class="onb-art">${ic("play")}</div><h2>${ME.name ? `C’est parti, ${esc(ME.name)} !` : "C’est parti !"}</h2>
-        ${f ? `<p>Votre première BD vous attend. ${f.minutes || 2} minute${(f.minutes || 2) > 1 ? "s" : ""}, montre en main.</p><button class="onb-first" id="obFirst" style="--c:${COLOR[f.id]}">${coverOf(CUR, f) ? `<img src="${coverOf(CUR, f)}" alt="">` : ""}<span><small>${esc(f.label)}</small><b>${esc(f.title)}</b><em>Lire maintenant →</em></span></button>` : `<p>L’édition du jour vous attend.</p>`}
+        ${f ? `<p>Votre première BD vous attend. ${f.minutes || 2} minute${(f.minutes || 2) > 1 ? "s" : ""}, montre en main.</p><button class="onb-first" id="obFirst" style="--c:${COLOR[f.id]}">${coverOf(CUR, f) ? `<img src="${coverOf(CUR, f)}" alt="">` : ""}<span><small>${esc(f.label)}</small><b>${typo(f.title)}</b><em>Lire maintenant →</em></span></button>` : `<p>L’édition du jour vous attend.</p>`}
         <p class="onb-hint">Ensuite : le jeu du jour, et votre série démarre.</p>`;
       foot = `${f ? `<button class="cta" id="obGo">Lire ma première BD</button>` : ""}<button class="onb-later" id="obEd">${f ? "Voir toute l’édition d’abord" : "Voir l’édition"}</button>`;
     }
