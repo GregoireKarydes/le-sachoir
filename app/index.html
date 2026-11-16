@@ -156,6 +156,7 @@ button{cursor:pointer}
 .illu{position:relative;margin:0 -16px;display:flex;justify-content:center}
 .illu img{width:100%;max-width:330px;height:auto;display:block}
 .illu .tag{position:absolute;left:16px;bottom:6px}
+.dteaser{display:none}
 .cta{background:var(--yellow);color:var(--ink);border:0;border-radius:999px;padding:13px 16px;font-weight:700;font-size:18px;text-align:center;width:100%;box-shadow:0 3px 0 rgba(0,0,0,.18)}
 .cta:active{transform:translateY(2px);box-shadow:none}
 .tagline{font-size:12.5px;text-align:center;opacity:.92;margin:-2px 0 0}
@@ -971,6 +972,15 @@ body{overscroll-behavior-y:none}
   .ed-side{display:grid;gap:20px;grid-template-rows:repeat(var(--k,1),minmax(0,1fr))}
   .ed-side .card.wide{height:100%;min-height:150px}
   .ed-side .card.wide .pic{flex-basis:150px}
+  /* 4 histoires ou plus à côté du dossier : grille 2 × 2 de vignettes (dessin en haut), pour que la colonne
+     ait la même hauteur que le dossier au lieu de l'étirer et de laisser une bande verte vide. */
+  .ed-side.two{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:1fr;gap:18px}
+  .ed-side.two .card.wide{flex-direction:column-reverse;justify-content:flex-end;padding:0;gap:0;min-height:0}
+  .ed-side.two .card.wide .pic{flex:0 0 auto;aspect-ratio:16/9;border-radius:0;border-bottom:3px solid var(--ink)}
+  .ed-side.two .card.wide .txt{padding:12px 14px 14px;gap:6px}
+  .ed-side.two .card.wide h3{font-size:19px}
+  .ed-side.two .card.wide .tag{font-size:11px;letter-spacing:.2px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+  .ed-side.two .card.wide .readstate{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .card.tile{padding:0;gap:0;height:100%}
   .card.tile .pic{aspect-ratio:16/9;overflow:hidden;background:#fff;border-bottom:3px solid var(--ink)}
   .card.tile .pic img{width:100%;height:100%;object-fit:cover;display:block}
@@ -978,8 +988,12 @@ body{overscroll-behavior-y:none}
   .card.tile h3{font-size:25px}
   .card.tile .readstate{margin-top:auto}
   .ed-grid .card.big{height:100%}
-  .ed-grid .card.big .illu{flex:1;margin:4px 0 0;min-height:0}
-  .ed-grid .card.big .illu img{max-width:none;width:100%;height:100%;max-height:330px;object-fit:cover;border-radius:14px;border:3px solid var(--ink)}
+  /* 16 nov. 2026 (Greg : « sur le PC le style est bizarre ») : l'image garde son format (plus de bande verte vide
+     sous un dessin plafonné à 330 px), l'accroche du dossier comble la hauteur et le bouton descend en bas de la carte. */
+  .ed-grid .card.big .illu{flex:0 0 auto;margin:4px 0 0}
+  .ed-grid .card.big .illu img{max-width:none;width:100%;height:auto;aspect-ratio:1792/1024;object-fit:cover;border-radius:14px;border:3px solid var(--ink)}
+  .ed-grid .card.big .dteaser{display:block;margin:4px 2px 0;font-size:19px;line-height:1.4;font-weight:500}
+  .ed-grid .card.big .cta{margin-top:auto}
   .ed-grid .card.big .illu .tag{left:12px;bottom:12px}
   .card.big h3{font-size:40px}
   .card{transition:transform .15s,box-shadow .15s}
@@ -1484,7 +1498,7 @@ function renderHome() {
   const hello = ME.name ? `Salut, ${esc(ME.name)}` : "Salut !";
   const isToday = ed.date === TODAY;
   const card = {
-    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span>${dossierBadge(ed.date)}<h3>${esc(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 3} min) →</span><p class="tagline">${esc(f.tagline || "")}</p></button>`; },
+    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span>${dossierBadge(ed.date)}<h3>${esc(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}${f.teaser ? `<p class="dteaser">${esc(f.teaser)}</p>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 3} min) →</span><p class="tagline">${esc(f.tagline || "")}</p></button>`; },
     small: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} small" data-f="${f.id}"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><div class="mid"><span class="dur">${ICON.clock}${f.minutes || 2} min</span>${c ? `<img class="thumb" src="${c}" alt="" loading="lazy">` : ""}</div><span class="tl">${readState(ed, f) || esc(f.tagline || "")}</span></button>`; },
     wide: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} wide" data-f="${f.id}"><div class="txt"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || esc(f.tagline || "")}</span></div>${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}</button>`; }
   };
@@ -1493,7 +1507,7 @@ function renderHome() {
   card.tile = f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} tile" data-f="${f.id}">${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}<div class="txt"><span class="tag">${esc(f.label)}</span><h3>${esc(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || esc(f.tagline || "")}</span></div></button>`; };
   const cardsHTML = DESK.matches
     ? (F.dossier
-        ? `<div class="ed-grid has-big">${card.dossier(F.dossier)}${others.length ? `<div class="ed-side" style="--k:${others.length}">${others.map(id => card.wide(F[id])).join("")}</div>` : ""}</div>`
+        ? `<div class="ed-grid has-big">${card.dossier(F.dossier)}${others.length ? `<div class="ed-side${others.length >= 4 ? " two" : ""}" style="--k:${others.length}">${others.map(id => card.wide(F[id])).join("")}</div>` : ""}</div>`
         : `<div class="ed-grid n${others.length}" style="--n:${others.length}">${others.map(id => card.tile(F[id])).join("")}</div>`)
     : `${F.dossier ? card.dossier(F.dossier) : ""}
    ${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
