@@ -565,10 +565,10 @@
               "voltaire"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 1,
+            "status": "done",
+            "attempts": 2,
             "same_place": false,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (3fd69b47-6e68-46b3-8c58-6b229bc04b78)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "via": "fal"
           }
         },
         {
@@ -595,10 +595,10 @@
               "voltaire"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 1,
+            "status": "done",
+            "attempts": 2,
             "same_place": false,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (ff31e66d-fd4a-4100-a83a-e8b2aa8141fc)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "via": "fal"
           }
         },
         {
@@ -625,9 +625,10 @@
               "mathis"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -653,9 +654,10 @@
               "voltaire"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         }
       ],
