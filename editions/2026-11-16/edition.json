@@ -1,7 +1,295 @@
 {
   "date": "2026-11-16",
   "status": "draft",
+  "newsletter": {
+    "subject": "Un tunnel au repos, un cadenas géant et une chaise musicale 🎶",
+    "intro": "Lundi 16 novembre : l’A13 fait une pause, l’Estonie sort le cadenas et les Bleus passent en quarts. Courage, le café ne se fera pas tout seul.",
+    "game": "Quiz géo : une ville horlogère, une capitale africaine et un fromage qui vit dans une grotte.",
+    "ps": "P.-S. Au Pérou, le pape voyage en « papacóptero ». Nous, ce matin, ce sera métro, debout, sans coussin."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Un tunnel au repos, un cadenas géant et une chaise musicale",
+      "tagline": "L’A13 ferme vers la Normandie, Édouard Philippe compte les logements, la Francophonie cherche l’unité, l’Estonie verrouille et les Bleus passent.",
+      "teaser": "Un cadenas pour trois frontières, une chaise pour quatre candidats et un camembert qui a neuf mois devant lui.",
+      "minutes": 3,
+      "theme": "",
+      "art": {
+        "subject": "five news stories of the weekend, each told in one gag panel",
+        "setting": "a car stuck in a traffic jam, a housing construction site, a palace reception hall, a river border bridge in winter, a football commentary booth above a stadium",
+        "era": "present day, November 2026",
+        "props": {
+          "camembert": "a small round wooden camembert cheese box",
+          "padlock": "an enormous shiny brass padlock, as big as a suitcase",
+          "chair": "one single ornate golden armchair with red velvet cushions",
+          "trowel": "a small steel mason's trowel with a wooden handle",
+          "microphone": "a big silver commentator headset with a microphone"
+        }
+      },
+      "cast": [
+        {
+          "id": "automobiliste",
+          "name": "Une automobiliste",
+          "look": "a plump, short woman in her fifties, warm brown skin, short tight curly grey hair, bright teal puffer jacket as main colour, round red-framed glasses, dark jeans",
+          "role": "the patient driver resigned to a nine-month detour; deadpan, hands on the steering wheel, finding the bright side",
+          "file": "cast/actu-automobiliste.png",
+          "status": "pending"
+        },
+        {
+          "id": "chef",
+          "name": "Un chef de chantier",
+          "look": "a tall, broad-shouldered builder in his sixties, light tan skin, bushy black moustache, white hard hat, fluorescent yellow high-visibility vest as main colour over a navy blue shirt, a pencil behind the ear",
+          "role": "the site foreman faced with an impossible schedule; overwhelmed but proud, holding the trowel like a sword",
+          "file": "cast/actu-chef.png",
+          "status": "skipped"
+        },
+        {
+          "id": "protocole",
+          "name": "Une cheffe du protocole",
+          "look": "a small, very thin woman in her forties, pale skin, sleek black bob haircut with a straight fringe, emerald green tailored suit as main colour, a clipboard and a tiny earpiece",
+          "role": "the protocol officer who solves diplomatic crises with seating plans; brisk, unflappable, very pleased with her idea",
+          "file": "cast/actu-protocole.png",
+          "status": "skipped"
+        },
+        {
+          "id": "douanier",
+          "name": "Un garde-frontière estonien",
+          "look": "a very tall, lanky young border guard in his twenties, pale skin, straight blond hair under a dark peaked cap, steel blue uniform jacket as main colour, black boots, thick grey scarf",
+          "role": "the conscientious guard who must lock three border posts with one padlock; earnest, slightly overwhelmed, carrying the padlock in his arms",
+          "file": "cast/actu-douanier.png",
+          "status": "pending"
+        },
+        {
+          "id": "commentateur",
+          "name": "Un commentateur sportif",
+          "look": "a short, round commentator in his sixties, medium brown skin, thick white hair combed straight back, burgundy blazer as main colour over a white shirt, wearing the microphone headset",
+          "role": "the enthusiastic match commentator who always finds a positive spin; leaning towards the pitch, arms wide open",
+          "file": "cast/actu-commentateur.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A plain empty road at a closed tunnel entrance, pale yellow background. automobiliste (plump and short, curly grey hair, bright teal puffer jacket, round red glasses) on the left, sitting on the bonnet of her small car, calmly holding the camembert on her lap. douanier (very tall and lanky, blond hair under a dark peaked cap, steel blue uniform) on the right, staggering under the weight of the padlock held in both arms. Wide shot, calm empty space above.",
+        "cast": ["automobiliste", "douanier"],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Transports",
+          "caption": "À partir de ce lundi 16 novembre, 6 h, le tunnel de Saint-Cloud, sur l’A13, ferme vers la Normandie jusqu’à fin août 2027 : sa voûte des années 1930 se déforme.",
+          "bubbles": [
+            { "who": "automobiliste", "text": "Neuf mois de détour. Mon camembert arrivera parfaitement affiné.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. Inside a small car stuck in a traffic jam, rows of tiny cars behind the windscreen, pale blue background. automobiliste (plump, curly grey hair, bright teal puffer jacket, round red glasses) behind the wheel, chin resting on her hand, perfectly calm, glancing sideways at the camembert sitting on the dashboard like a passenger. Close-up.",
+            "cast": ["automobiliste"],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "A13 : neuf mois de travaux à Saint-Cloud",
+          "text": "Quoi : le tube nord, sens Paris-province, ferme du périphérique à Vaucresson ; le sens vers Paris reste ouvert.\nPourquoi ça compte : jusqu’à 80 000 véhicules par jour ; les travaux coûtent 35 millions d’euros.\nEt maintenant : l’A14 est gratuite en semaine vers la province, pour les voitures et les deux-roues."
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Politique",
+          "caption": "Dimanche, dans Le Parisien, l’ancien Premier ministre Édouard Philippe, candidat à la présidentielle 2027, promet 4 millions de logements en dix ans : environ 1 100 par jour.",
+          "bubbles": [
+            { "who": "chef", "text": "Mille cent par jour ? Je pose ma première brique et je suis déjà en retard.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A bare construction site seen from above: one lonely brick on the ground and an endless field of empty building plots stretching to the horizon, pale green background. chef (tall and broad, bushy black moustache, white hard hat, fluorescent yellow high-visibility vest) kneeling in the middle, placing the brick with the trowel, shoulders slumped, a tiny light-blue sweat drop on his temple. High angle.",
+            "cast": ["chef"],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Des grues sur un chantier à Sète",
+          "text": "Deux grues à tour au-dessus d’un chantier, près de l’étang de Thau, à Sète (Hérault) : à quoi ressemble une ville qui construit.",
+          "photo": { "commons": "File:Construction in Sète, Hérault 01.jpg" }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Logement : le pari chiffré d’Édouard Philippe",
+          "text": "Quoi : le candidat Horizons veut construire et louer plus, grâce à des normes simplifiées et une fiscalité avantageuse.\nPourquoi ça compte : il voit le logement comme le premier frein au pouvoir d’achat.\nEt maintenant : il propose aussi de supprimer les frais de notaire pour les moins de 35 ans."
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "Diplomatie",
+          "caption": "Dimanche à Phnom Penh (Cambodge), au sommet de la Francophonie, le président Emmanuel Macron appelle à l’« unité » : quatre candidats visent le poste de secrétaire général.",
+          "bubbles": [
+            { "who": "protocole", "text": "Quatre candidats, un fauteuil. Pour le consensus, j’ai prévu la chaise musicale.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A grand palace reception hall with a polished floor, the chair alone in the middle, pale pink background. protocole (small and very thin, sleek black bob with fringe, emerald green suit) in the foreground on the right, cranking a small wooden music box with one hand and holding her clipboard in the other, proud satisfied smile, four tiny anonymous figures in the background tiptoeing around the chair. Medium shot.",
+            "cast": ["protocole"],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le Palais royal de Phnom Penh",
+          "text": "Le pavillon Chan Chaya du Palais royal, résidence du roi du Cambodge, pays hôte du XXe sommet de la Francophonie.",
+          "photo": { "commons": "File:Chan Chaya royal pavilion (Phnom Penh).jpg" }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Francophonie : une succession sous tension",
+          "text": "Quoi : la Rwandaise Louise Mushikiwabo vise un troisième mandat ; la RDC, qui accuse Kigali de soutenir le groupe armé M23, s’y oppose.\nPourquoi ça compte : l’OIF compte 90 membres et décide d’habitude par consensus.\nEt maintenant : la succession se joue ce lundi, par un vote si le consensus manque."
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Monde",
+          "caption": "Dimanche, l’Estonie annonce qu’elle fermera ses trois postes-frontières routiers avec la Russie le 1er décembre, après une tentative d’incendie contre une usine de drones.",
+          "bubbles": [
+            { "who": "douanier", "text": "Trois frontières, un seul cadenas : je vais faire beaucoup d’allers-retours.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A long empty concrete bridge over a frozen grey river, a closed metal barrier at its end, pale lilac background. douanier (very tall and lanky, blond hair under a dark peaked cap, steel blue uniform, grey scarf) running along the bridge, hugging the padlock against his chest, legs stretched in a big stride, eyes wide with determination. Low angle.",
+            "cast": ["douanier"],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le château de Narva, en Estonie",
+          "text": "Le château Hermann de Narva, ville estonienne posée sur la rivière Narva ; sur l’autre rive, c’est déjà la Russie.",
+          "photo": { "commons": "File:Narva Hermanni linnus 2020 01.jpg" }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "L’Estonie ferme sa frontière avec la Russie",
+          "text": "Quoi : selon les services estoniens, le renseignement militaire russe a commandité l’attaque ratée du 14 novembre contre Threod Systems, près de Tallinn.\nPourquoi ça compte : Narva, Luhamaa et Koidula sont ses trois passages routiers vers la Russie.\nEt maintenant : des suspects sont arrêtés ; la Finlande, la Lettonie et la Lituanie sont prévenues."
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "Sport",
+          "caption": "Dimanche à Bordeaux, les Bleus du sélectionneur Zinédine Zidane battent la Turquie 2-1 et filent en quarts de la Ligue des nations. Premier but : un Turc, contre son camp.",
+          "bubbles": [
+            { "who": "commentateur", "text": "Premier but des Bleus, signé Turquie. C’est ça, l’esprit d’équipe… élargi.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A commentary booth high above a football stadium at night, a small desk and a monitor, tiny players far below on the green pitch, pale orange background. commentateur (short and round, white hair combed back, burgundy blazer, the microphone headset) seen from behind and slightly to the side, standing up from his chair, arms flung wide open towards the pitch in delighted surprise. Medium wide shot.",
+            "cast": ["commentateur"],
+            "file": "images/actu-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Ligue des nations : les Bleus en quarts",
+          "text": "Quoi : Topçu marque contre son camp (49e), Kroupi signe son premier but en Bleu (80e), Bardakci réduit l’écart (90e).\nPourquoi ça compte : trois jours après la défaite 3-1 en Italie, la France finit première de son groupe.\nEt maintenant : tirage au sort des quarts vendredi 20 novembre ; retour à domicile en mars."
+        },
+        {
+          "n": 14,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Un catcheur de canapé",
+          "handle": "@PriseDuLundi",
+          "ago": "il y a 5 h",
+          "trend": "FinalSlam",
+          "text": "Des youtubeurs font du catch dans une vraie arène, en direct à la télé. Moi, ma prise spéciale, c’est l’étranglement de la couette le lundi matin.",
+          "why": "Samedi 14 novembre à Nanterre, le streamer AmineMaTue a organisé The FinalSlam, un show de catch entre créateurs du web ; il a battu Squeezie en combat principal.",
+          "likes": "36 k",
+          "shares": "4 k",
+          "source": {
+            "title": "Fightful — AmineMaTue’s Final Slam event reportedly draws 18,000 fans",
+            "url": "https://www.fightful.com/wrestling-news/raj-dhesi-says-twitch-streamer-aminematues-final-slam-event-drew-an-attendance-of-18000"
+          }
+        },
+        {
+          "n": 15,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Un usager du bus",
+          "handle": "@LigneDirecteEcurie",
+          "ago": "il y a 8 h",
+          "trend": "Chevaux dans le bus",
+          "text": "Deux chevaux sellés montent dans un bus à Detroit. Pour une fois, personne n’a osé leur demander de libérer le siège.",
+          "why": "Une vidéo montre deux chevaux sellés traversant un bus municipal arrêté à Detroit ; la régie des transports rappelle que seuls les animaux d’assistance sont admis.",
+          "likes": "22 k",
+          "shares": "3 k",
+          "source": {
+            "title": "ABC30 — Detroit transit officials looking into ‘unsafe’ incident where 2 horses boarded public bus",
+            "url": "https://abc30.com/story/detroit-transit-officials-looking-unsafe-incident-where-2-horses-boarded-public-bus/20033227/"
+          }
+        },
+        {
+          "n": 16,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "name": "Un pro du marketing",
+          "handle": "@TrottinetteSansNom",
+          "ago": "il y a 3 h",
+          "trend": "Papacóptero",
+          "text": "Au Pérou, l’hélico du pape a un surnom : le « papacóptero ». Ma trottinette s’appelle toujours « la trottinette ». Je dois revoir ma communication.",
+          "why": "Pour la visite de Léon XIV au Pérou, du 11 au 16 novembre, l’armée de l’air a présenté un hélicoptère Mi-17 surnommé « papacóptero », avec des coussins en plus.",
+          "likes": "18 k",
+          "shares": "2 k",
+          "source": {
+            "title": "Euronews — Il Perù presenta il papacóptero che trasporterà Leone XIV",
+            "url": "https://it.euronews.com/2026/10/29/il-peru-presenta-il-papacoptero-che-trasportera-leone-xiv-durante-la-visita-nel-paese"
+          }
+        }
+      ],
+      "final": {
+        "text": "Le tunnel de Saint-Cloud, sur l’A13, voit passer jusqu’à 80 000 véhicules par jour ; son tube vers la Normandie date des années 1930.",
+        "source": "Sortiraparis / Infos Yvelines"
+      },
+      "sources": [
+        { "title": "Sortiraparis — A13 : fermeture du tunnel de Saint-Cloud jusqu’en août 2027", "url": "https://www.sortiraparis.com/actualites/a-paris/articles/349445-a-13-fermeture-du-tunnel-de-saint-cloud-jusqu-en-aout-2027" },
+        { "title": "Infos Yvelines — Versailles : le tunnel de Saint-Cloud fermé lundi 16 novembre", "url": "https://www.infosyvelines.fr/articles/versailles-tunnel-saint-cloud-ferme-lundi-novembre-2026" },
+        { "title": "Quartz (AFP) — Édouard Philippe propose 4 millions de logements en dix ans", "url": "https://fr.qz.com/edouard-philippe-propose-construire-4-millions-logements-dix-ans-111526" },
+        { "title": "Élections 2027 — Edouard Philippe veut bâtir 4 millions de logements en dix ans", "url": "https://elections2027.com/article/2026-11-15-edouard-philippe-veut-batir-4-millions-de-logements-en-dix-ans" },
+        { "title": "Boursorama (AFP) — Francophonie : Macron appelle à l’« unité » et au « consensus » face aux tensions RDC-Rwanda", "url": "https://www.boursorama.com/actualite-economique/actualites/francophonie-macron-appelle-a-l-unite-et-au-consensus-face-aux-tensions-rdc-rwanda-00f1bfdf5d2488c67a1e2a23b799aaaa" },
+        { "title": "Impact.sn — Au Cambodge, Macron appelle à l’unité de l’OIF sur fond de tensions entre la RDC et le Rwanda", "url": "https://www.impact.sn/Francophonie-au-Cambodge-Macron-appelle-a-l-unite-de-l-OIF-sur-fond-de-tensions-entre-la-RDC-et-le-Rwanda_a59733.html" },
+        { "title": "Anadolu — Estonia to close all border crossings with Russia from Dec. 1", "url": "https://www.aa.com.tr/en/europe/estonia-to-close-all-border-crossings-with-russia-from-dec-1-foreign-minister/4125957" },
+        { "title": "Euromaidan Press — Estonia to close all border crossings with Russia", "url": "https://euromaidanpress.com/2026/11/15/estonia-to-close-all-border-crossings-with-russia/" },
+        { "title": "Foot01 — LdN : la France mate la Turquie et se qualifie en quarts", "url": "https://www.foot01.com/equipe-de-france/ldn-la-france-mate-la-turquie-et-se-qualifie-en-quarts" },
+        { "title": "Orange Sports — Les Bleus dominent la Turquie et se qualifient en quarts de finale", "url": "https://sports.orange.fr/football/ligue-des-nations/debrief/ligue-des-nations-j6-les-bleus-dominent-la-turquie-et-se-qualifient-en-quarts-de-finale-exclu-CNT000002tJIrs.html" },
+        { "title": "Fightful — AmineMaTue’s Final Slam event reportedly draws 18,000 fans", "url": "https://www.fightful.com/wrestling-news/raj-dhesi-says-twitch-streamer-aminematues-final-slam-event-drew-an-attendance-of-18000" },
+        { "title": "Puremédias — Audiences samedi : petit score pour « The Final Slam » sur TMC", "url": "https://www.ozap.com/actu/audiences-samedi-petit-score-pour-the-final-slam-avec-aminematue-et-squeezie-sur-tmc-nouveaux-records-pour-mohamed-bouhafsi-sur-france-5/657808" },
+        { "title": "ABC30 — Detroit transit officials looking into ‘unsafe’ incident where 2 horses boarded public bus", "url": "https://abc30.com/story/detroit-transit-officials-looking-unsafe-incident-where-2-horses-boarded-public-bus/20033227/" },
+        { "title": "Euronews — Il Perù presenta il papacóptero che trasporterà Leone XIV", "url": "https://it.euronews.com/2026/10/29/il-peru-presenta-il-papacoptero-che-trasportera-leone-xiv-durante-la-visita-nel-paese" }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "geo",
