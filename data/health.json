@@ -1,11 +1,11 @@
 {
- "updated_at": "2026-11-16T07:35:40.275375+01:00",
+ "updated_at": "2026-11-16T11:56:54.188533+01:00",
  "today": "2026-11-16",
  "problems": [],
  "days": [
   {
    "date": "2026-11-16",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -58,12 +58,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-16/cultureg : « Pourquoi la France est pleine de Martin (merci le demi-manteau) » prise dans la file (20261113-2057-pourquoi-tant-de-martin)",
-  "2026-11-16/insolite : « Le président français est prince d’Andorre, et c’est la faute d’un comte » prise dans la file (20261113-2051-le-president-prince-dandorre)",
-  "2026-11-16/origine : « « Se faire limoger » : un aller simple pour Limoges » prise dans la file (20261115-2041-limoge-billet-pour-limoges)",
-  "2026-11-16/dossier : « Jeux olympiques : 2 800 ans de sport et un baron très têtu » prise dans la file (20261113-1926-jeux-olympiques-baron-tetu)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
