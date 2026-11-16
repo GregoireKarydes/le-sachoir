@@ -1,14 +1,15 @@
 """Pages statiques pour le référencement naturel.
 
 Pour chaque histoire publiée (un format d'une édition) : une page HTML complète et indexable
-(texte des cases, images, métadonnées, Open Graph, données structurées), plus des pages par thème,
-une page d'archives, sitemap.xml et robots.txt. Appelé par publish.py après la construction de _site/.
+(texte des cases, images, métadonnées, Open Graph, données structurées), plus des pages par thème et par rubrique,
+une page d'archives, une page 404, sitemap.xml (avec images), sitemap-news.xml, feed.xml, robots.txt et la clé IndexNow. Appelé par publish.py après la construction de _site/.
 """
 import html
 import json
 import re
 import unicodedata
-from datetime import datetime
+from datetime import datetime, timedelta
+from email.utils import format_datetime
 import shutil
 import sys
 from pathlib import Path
@@ -28,6 +29,34 @@ POLES = {
     "Art & Culture": ["Histoire de l’art", "Arts plastiques", "Architecture", "Littérature", "Expression française"],
     "Culture pop": ["Musique", "Mode et luxe", "Sports", "Jeux vidéo"],
 }
+
+# Rubriques : une page par format, écrite pour les recherches que les gens tapent vraiment
+# (« origine de l'expression… », « comment fonctionne… »). id du format -> (adresse, nom, titre de page, texte d'intro, fin de <title> d'une histoire).
+RUBRIQUES = {
+    "actu": ("actu-du-jour", "L’actu du jour", "L’actu du jour en BD : l’essentiel de l’actualité, expliqué avec humour",
+             "Chaque matin, l’essentiel de l’actualité en France et dans le monde, raconté en bande dessinée : les faits vérifiés et sourcés, le pourquoi et le comment, sans parti pris et avec le sourire.",
+             "l’actu en BD"),
+    "cultureg": ("culture-generale", "Culture générale", "Culture générale en BD : une chose à savoir par jour",
+                 "Deux minutes par jour pour enrichir sa culture générale : histoire, sciences, langue française, géographie, société. Des BD courtes, drôles et vérifiées, pour avoir toujours quelque chose à raconter.",
+                 "culture générale en BD"),
+    "insolite": ("histoires-insolites", "Histoires insolites", "Histoires insolites et vraies, racontées en BD",
+                 "Les anecdotes historiques les plus improbables, toutes vraies et sourcées : lois oubliées, hasards de l’histoire, personnages invraisemblables. À lire en deux minutes, à ressortir au dîner.",
+                 "histoire insolite en BD"),
+    "notice": ("comment-ca-marche", "Comment ça marche ?", "Comment ça marche ? Les objets du quotidien expliqués en BD",
+               "Comment fonctionne un micro-ondes, un frigo, un avion ? La Notice explique simplement, en BD, les choses du quotidien qu’on utilise sans jamais s’être demandé comment elles marchent.",
+               "comment ça marche, expliqué en BD"),
+    "origine": ("origine-des-expressions", "Origine des expressions", "Origine des expressions françaises : d’où ça vient ? En BD",
+                "D’où viennent les expressions françaises qu’on emploie tous les jours ? Leur origine et leur histoire, racontées en BD : « se faire limoger », « faire grève », « monter au créneau »…",
+                "origine de l’expression, en BD"),
+    "dossier": ("grands-dossiers", "Grands dossiers", "Les grands dossiers du Sachoir : un sujet compris en 7 minutes de BD",
+                "Un grand sujet d’histoire, de sciences, d’économie ou de société, expliqué de A à Z en une BD d’une trentaine de cases : de quoi comprendre pour de bon, en sept minutes.",
+                "le dossier complet en BD"),
+}
+
+
+def rubrique_url(fid: str) -> str:
+    return f"{BASE}rubriques/{RUBRIQUES[fid][0]}/" if fid in RUBRIQUES else f"{BASE}archives/"
+
 
 e = lambda t: html.escape(str(t or ""), quote=True)
 
@@ -86,7 +115,7 @@ a{color:inherit}img{max-width:100%;display:block}
 .crumbs{font-size:13.5px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}.crumbs a{color:var(--muted)}
 h1{font-family:var(--serif);font-weight:800;font-size:clamp(30px,5vw,48px);line-height:1.05;margin:10px 0 8px;text-wrap:balance}
 .meta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:14.5px}
-.tag{display:inline-block;background:var(--fc,#1f8f5f);color:#fff;border-radius:8px;padding:3px 10px;font-weight:700;font-size:12.5px;letter-spacing:.4px;text-transform:uppercase}
+.tag{display:inline-block;text-decoration:none;background:var(--fc,#1f8f5f);color:#fff;border-radius:8px;padding:3px 10px;font-weight:700;font-size:12.5px;letter-spacing:.4px;text-transform:uppercase}
 .lead{font-size:18px;max-width:70ch;margin:14px 0}
 .cta{display:inline-block;background:var(--yellow);color:var(--ink);text-decoration:none;font-weight:700;border-radius:999px;padding:11px 20px}
 .cover{border-radius:18px;overflow:hidden;margin:18px 0;aspect-ratio:16/9;background:var(--grey)}.cover img{width:100%;height:100%;object-fit:cover}
@@ -120,7 +149,7 @@ h2.sec{font-family:var(--serif);font-weight:800;font-size:26px;margin:36px 0 12p
 .sources li{margin:4px 0;font-size:14.5px}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
 .card{display:flex;flex-direction:column;gap:8px;text-decoration:none;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-.card img{aspect-ratio:16/9;object-fit:cover;width:100%;background:var(--grey)}.card div{padding:4px 14px 14px}
+.card img{aspect-ratio:16/9;object-fit:cover;width:100%;height:auto;background:var(--grey)}.card div{padding:4px 14px 14px}
 .card strong{font-family:var(--serif);font-weight:800;font-size:19px;line-height:1.15;display:block}.card span{font-size:13px;color:var(--muted)}
 @media (max-width:640px){.top{gap:8px;padding:10px 16px}.top img{height:30px}.top nav{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.top nav a{white-space:nowrap;padding:6px 10px;font-size:14px}.top .cta{display:none}.intro .cta{display:none}.wrap{padding:14px 16px 90px}
 .sticky{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:10;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.22)}}
@@ -159,6 +188,7 @@ def head(title, desc, canonical, image, noindex=False, extra="", og_type="websit
 <meta name="theme-color" content="#faf6ee">
 <link rel="icon" href="{BASE}assets/icon-192.png">
 <link rel="manifest" href="{BASE}manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Le Sachoir : les dernières histoires" href="{BASE}feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,800&family=Roboto:wght@400;500;700&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
 <style>{CSS}</style>
@@ -172,7 +202,8 @@ def head(title, desc, canonical, image, noindex=False, extra="", og_type="websit
 
 
 FOOT = f"""<footer>Le Sachoir — l’actu et la culture G en BD, chaque jour. Les faits sont vérifiés et sourcés ; les personnages et les dialogues sont des parodies.
-· <a href="{BASE}archives/">Toutes les histoires</a> · <a href="{BASE}themes/">Thèmes</a></footer>
+· <a href="{BASE}archives/">Toutes les histoires</a> · <a href="{BASE}themes/">Thèmes</a>
+<br>{" · ".join(f'<a href="{BASE}rubriques/{r[0]}/">{e(r[1])}</a>' for r in RUBRIQUES.values())} · <a href="{BASE}feed.xml">Flux RSS</a></footer>
 </body></html>"""
 
 
@@ -188,7 +219,7 @@ FREE_CASES = 4  # même règle que publish.py
 REF_JS = """<script>document.addEventListener("DOMContentLoaded",function(){var r=new URLSearchParams(location.search).get("ref");if(!r)return;r=r.slice(0,16);
 try{if(!localStorage.getItem("sachoir.ref"))localStorage.setItem("sachoir.ref",r)}catch(e){}
 document.querySelectorAll("a[href]").forEach(function(a){var u;try{u=new URL(a.href)}catch(e){return}
-if(u.origin!==location.origin||/\/(histoires|themes|archives)\//.test(u.pathname))return;u.searchParams.set("ref",r);a.href=u.href})})</script>"""
+if(u.origin!==location.origin||/\/(histoires|themes|archives|rubriques)\//.test(u.pathname))return;u.searchParams.set("ref",r);a.href=u.href})})</script>"""
 
 
 def photo_figure(c, img_base):
@@ -212,7 +243,7 @@ def story_page(s, ed_dir: Path, related, gate=False):
         f = {**f, "cases": f["cases"][:FREE_CASES]}
     img_base = f"{BASE}editions/{date}/"
     desc = clip(f.get("final", {}).get("text") or f.get("tagline") or f["title"])
-    title = f'{f["title"]} — {f.get("label", "")} en BD | Le Sachoir'
+    title = f'{f["title"]} — {RUBRIQUES[f["id"]][4] if f["id"] in RUBRIQUES else f.get("label", "") + " en BD"} | Le Sachoir'
     canonical = s["url_abs"]
     image = s.get("share_abs") or s["cover_abs"] or f"{BASE}assets/og.png"
     theme = f.get("theme", "")
@@ -284,7 +315,7 @@ def story_page(s, ed_dir: Path, related, gate=False):
     ld = {
         "@context": "https://schema.org",
         "@graph": [
-            {"@type": "Article", "headline": f["title"][:110], "description": desc, "image": [image],
+            {"@type": "NewsArticle" if f["id"] == "actu" else "Article", "headline": f["title"][:110], "description": desc, "image": [image],
              "datePublished": published, "dateModified": published, "inLanguage": "fr",
              "articleSection": theme or f.get("label", ""), "isAccessibleForFree": not locked,
              "author": {"@type": "Organization", "name": "Le Sachoir", "url": BASE},
@@ -292,18 +323,19 @@ def story_page(s, ed_dir: Path, related, gate=False):
              "mainEntityOfPage": canonical},
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Le Sachoir", "item": BASE},
-                {"@type": "ListItem", "position": 2, "name": theme or f.get("label", ""), "item": f"{BASE}themes/{slugify(theme)}/" if theme else f"{BASE}archives/"},
+                {"@type": "ListItem", "position": 2, "name": theme or f.get("label", ""), "item": f"{BASE}themes/{slugify(theme)}/" if theme else rubrique_url(f["id"])},
                 {"@type": "ListItem", "position": 3, "name": f["title"], "item": canonical}]}]}
     extra = (f'<meta property="article:published_time" content="{published}">'
              + (f'<meta property="article:section" content="{e(theme)}">' if theme else "")
              + f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
              + REF_JS)
-    crumb_theme = f'<a href="{BASE}themes/{slugify(theme)}/">{e(theme)}</a> ›' if theme else ""
+    crumb_theme = (f'<a href="{BASE}themes/{slugify(theme)}/">{e(theme)}</a> ›' if theme
+                   else f'<a href="{rubrique_url(f["id"])}">{e(RUBRIQUES[f["id"]][1])}</a> ›' if f["id"] in RUBRIQUES else "")
     body = f"""<main class="wrap" style="--fc:{COLOR.get(f['id'], '#1f8f5f')}">
 <nav class="crumbs" aria-label="Fil d’Ariane"><a href="{BASE}">Le Sachoir</a> › {crumb_theme} <span>{e(f['title'])}</span></nav>
 <div class="head"><div class="intro">
 <h1>{e(f['title'])}</h1>
-<div class="meta"><span class="tag">{e(f.get('label', ''))}</span>{('<span>' + e(theme) + '</span>') if theme else ''}<time datetime="{date}">{date_fr(date)}</time><span>{f.get('minutes', 2)} min de lecture</span></div>
+<div class="meta"><a class="tag" href="{rubrique_url(f['id'])}">{e(f.get('label', ''))}</a>{('<span>' + e(theme) + '</span>') if theme else ''}<time datetime="{date}">{date_fr(date)}</time><span>{f.get('minutes', 2)} min de lecture</span></div>
 <p class="lead">{e(f.get('tagline', ''))}</p>
 <a class="cta" href="{BASE}?d={date}&amp;f={f['id']}">Lire en BD dans l’appli</a></div>
 {('<div class="cover"><img src="' + e(s['cover_abs']) + '" alt="' + e(f['title']) + '" width="1792" height="1024" fetchpriority="high"></div>') if s['cover_abs'] else ''}</div>
@@ -326,10 +358,37 @@ def locked_block(f, date, rest):
             f'<a class="cta" href="{BASE}?d={date}&amp;f={f["id"]}">Lire la suite dans l’appli</a></section>')
 
 
+def story_images(s, gate=False):
+    """Images d'une histoire pour le sitemap (Google Images) : couverture puis cases, sans la partie réservée aux abonnés."""
+    f, base = s["fmt"], f"{BASE}editions/{s['date']}/"
+    cases = f.get("cases", [])
+    if gate and f["id"] == "dossier" and len(cases) > FREE_CASES:
+        cases = cases[:FREE_CASES]
+    out = [s["cover_abs"]] if s.get("cover_abs") else []
+    for c in cases:
+        img = c.get("image") or {}
+        if img.get("status") == "done" and img.get("file") and base + img["file"] not in out:
+            out.append(base + img["file"])
+    return out[:20]
+
+
+def pub(s) -> str:
+    return s.get("published") or f"{s['date']}T05:00:00+01:00"
+
+
 def list_page(title, h1, intro, stories, canonical):
+    ld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "name": h1, "description": intro, "url": canonical, "inLanguage": "fr",
+         "isPartOf": {"@type": "WebSite", "name": "Le Sachoir", "url": BASE}},
+        {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": s["url_abs"], "name": s["title"]} for i, s in enumerate(stories[:30])]}]}
+    extra = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+    return _list_page(title, h1, intro, stories, canonical, extra)
+
+
+def _list_page(title, h1, intro, stories, canonical, extra=""):
     body = f"""<main class="wrap"><nav class="crumbs"><a href="{BASE}">Le Sachoir</a> › <span>{e(h1)}</span></nav>
 <h1>{e(h1)}</h1><p class="lead">{e(intro)}</p><div class="cards">{''.join(card(s) for s in stories)}</div></main>"""
-    return head(title, clip(intro), canonical, f"{BASE}assets/og.png") + body + FOOT
+    return head(title, clip(intro), canonical, f"{BASE}assets/og.png", extra=extra) + body + FOOT
 
 
 def build(site: Path, index: list, gate: bool = False):
@@ -400,15 +459,60 @@ def build(site: Path, index: list, gate: bool = False):
     # Archives
     (site / "archives").mkdir(exist_ok=True)
     (site / "archives" / "index.html").write_text(list_page("Toutes les histoires du Sachoir en BD", "Toutes les histoires", "L’actu, la culture G, les histoires insolites, les Notices et les grands dossiers du Sachoir, du plus récent au plus ancien.", public, f"{BASE}archives/"))
-    # Sitemap et robots
-    urls = [(BASE, now), (f"{BASE}archives/", now), (f"{BASE}themes/", now)]
-    urls += [(f"{BASE}themes/{slugify(t)}/", now) for t in themes]
-    urls += [(s["url_abs"], s["published"] or f"{s['date']}T00:00:00+01:00") for s in public]
-    xml = "".join(f"<url><loc>{e(u)}</loc><lastmod>{m}</lastmod></url>" for u, m in urls)
-    (site / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{xml}</urlset>\n')
-    # Remarque : sur un site de projet GitHub Pages, Google ne lit robots.txt qu'à la racine du domaine.
-    # Le sitemap doit donc être déclaré dans la Search Console (inutile avec un domaine personnalisé).
-    (site / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n")
+    # Rubriques (une page par format)
+    rubriques = {}
+    for s in public:
+        if s["fmt"]["id"] in RUBRIQUES:
+            rubriques.setdefault(s["fmt"]["id"], []).append(s)
+    for fid, lst in rubriques.items():
+        slug, name, titre, intro, _ = RUBRIQUES[fid]
+        out = site / "rubriques" / slug
+        out.mkdir(parents=True, exist_ok=True)
+        (out / "index.html").write_text(list_page(f"{titre} | Le Sachoir", name, intro, lst, f"{BASE}rubriques/{slug}/"))
+    # Page introuvable (GitHub Pages sert 404.html pour toute adresse inconnue)
+    (site / "404.html").write_text(
+        head("Page introuvable | Le Sachoir", "Cette page n’existe pas ou a changé d’adresse.", BASE, f"{BASE}assets/og.png", noindex=True)
+        + f'<main class="wrap"><h1>Cette page s’est fait limoger</h1><p class="lead">Elle n’existe pas, ou elle a changé d’adresse. Les histoires, elles, sont toujours là.</p>'
+          f'<p><a class="cta" href="{BASE}">Lire l’édition du jour</a></p><h2 class="sec">Les dernières histoires</h2><div class="cards">{"".join(card(s) for s in public[:6])}</div></main>' + FOOT)
+    # Sitemap (avec les images, pour Google Images), sitemap d'actualité, flux RSS et robots.
+    # lastmod = vraie date du dernier changement : une date qui bouge à chaque publication est ignorée par Google.
+    newest = lambda lst: max((pub(s) for s in lst), default=now)
+    urls = [(BASE, newest(public), []), (f"{BASE}archives/", newest(public), []), (f"{BASE}themes/", newest(public), [])]
+    urls += [(f"{BASE}rubriques/{RUBRIQUES[fid][0]}/", newest(lst), []) for fid, lst in rubriques.items()]
+    urls += [(f"{BASE}themes/{slugify(t)}/", newest(lst), []) for t, lst in themes.items()]
+    urls += [(s["url_abs"], pub(s), story_images(s, gate)) for s in public]
+    xml = "".join(f"<url><loc>{e(u)}</loc><lastmod>{m}</lastmod>" + "".join(f"<image:image><image:loc>{e(i)}</image:loc></image:image>" for i in imgs) + "</url>\n" for u, m, imgs in urls)
+    (site / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                                      f'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n{xml}</urlset>\n')
+    # Google Actualités : seulement l'Actu des deux derniers jours (règle du format).
+    limit = (datetime.now().astimezone() - timedelta(days=2)).date().isoformat()
+    news = "".join(f"<url><loc>{e(s['url_abs'])}</loc><news:news><news:publication><news:name>Le Sachoir</news:name><news:language>fr</news:language></news:publication>"
+                   f"<news:publication_date>{pub(s)}</news:publication_date><news:title>{e(s['title'])}</news:title></news:news></url>\n"
+                   for s in public if s["fmt"]["id"] == "actu" and s["date"] >= limit)
+    (site / "sitemap-news.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                                           f'xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n{news}</urlset>\n')
+    latest = sorted(public, key=lambda s: (s["date"], pub(s)), reverse=True)[:30]
+    items = "".join(f"<item><title>{e(s['title'])}</title><link>{e(s['url_abs'])}</link><guid isPermaLink=\"true\">{e(s['url_abs'])}</guid>"
+                    f"<pubDate>{format_datetime(datetime.fromisoformat(pub(s)))}</pubDate><category>{e(s['label'])}</category>"
+                    f"<description>{e(s['fmt'].get('tagline') or s['title'])}</description></item>\n" for s in latest)
+    (site / "feed.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+                                   f'<title>Le Sachoir</title><link>{BASE}</link><description>{e(SITE_CFG.get("tagline", ""))}</description><language>fr</language>'
+                                   f'<atom:link href="{BASE}feed.xml" rel="self" type="application/rss+xml"/>\n{items}</channel></rss>\n')
+    (site / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /admin.html\n\nSitemap: {BASE}sitemap.xml\nSitemap: {BASE}sitemap-news.xml\n")
+    # IndexNow (Bing, Yandex, Seznam, Naver… et les moteurs qui s'appuient sur Bing : DuckDuckGo, Ecosia, Qwant, ChatGPT) :
+    # la clé est publiée à la racine du site, et la liste des pages nouvelles est envoyée par le workflow Publication après la mise en ligne.
+    key = SITE_CFG.get("indexnow_key", "")
+    fresh = [s for s in public if s["date"] >= (datetime.now().astimezone() - timedelta(days=1)).date().isoformat()]
+    job = site.parent / "indexnow.json"
+    job.unlink(missing_ok=True)
+    if key:
+        (site / f"{key}.txt").write_text(key)
+        if fresh:
+            pages = [BASE, f"{BASE}archives/"]
+            pages += sorted({f"{BASE}rubriques/{RUBRIQUES[s['fmt']['id']][0]}/" for s in fresh if s["fmt"]["id"] in RUBRIQUES})
+            pages += sorted({f"{BASE}themes/{slugify(s['theme'])}/" for s in fresh if s["theme"]})
+            pages += [s["url_abs"] for s in fresh]
+            job.write_text(json.dumps({"host": BASE.split("/")[2], "key": key, "keyLocation": f"{BASE}{key}.txt", "urlList": pages}, ensure_ascii=False))
     # Page d'accueil de l'appli : base des URL et liens pour les robots
     app = site / "index.html"
     links = "".join(f'<a href="{e(s["url_abs"])}">{e(s["title"])} — {e(s["label"])}</a>' for s in public[:30])
