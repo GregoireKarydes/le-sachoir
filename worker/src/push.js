@@ -67,7 +67,7 @@ export async function encrypt(sub, payload, eph) {
 }
 
 /* ---------- Envoi ---------- */
-const subject = env => env.APP_URL || "https://gregoirekarydes.github.io/le-sachoir/";
+const subject = env => env.APP_URL || "https://lesachoir.fr/";
 async function sendOne(env, v, sub, payload, eph, jwts = {}) {
   const origin = new URL(sub.endpoint).origin;
   jwts[origin] = jwts[origin] || await vapidJwt(v, sub.endpoint, subject(env));

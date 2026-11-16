@@ -6,8 +6,8 @@ compatibility_date = "2026-10-01"
 workers_dev = true
 
 [vars]
-APP_URL = "https://gregoirekarydes.github.io/le-sachoir/"
-APP_ORIGINS = "https://gregoirekarydes.github.io"
+APP_URL = "https://lesachoir.fr/"
+APP_ORIGINS = "https://lesachoir.fr,https://www.lesachoir.fr,https://gregoirekarydes.github.io"  # github.io gardé le temps de la bascule
 ADMIN_EMAILS = "gregoire.karydes@gmail.com"
 SENDER_NAME = "Le Sachoir"
 SENDER_EMAIL = "gregoire.karydes@gmail.com"
