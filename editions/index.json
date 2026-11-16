@@ -1,6 +1,84 @@
 {
- "updated_at": "2026-11-16T03:23:44.602099+01:00",
+ "updated_at": "2026-11-16T07:35:40.275375+01:00",
  "editions": [
+  {
+   "date": "2026-11-16",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Jeux olympiques : 2 800 ans de sport et un baron très têtu",
+     "kind": "",
+     "url": "histoires/2026-11-16-jeux-olympiques-2-800-ans-de-sport-et-un-baron-tres-tetu/",
+     "theme": "Sports",
+     "minutes": 6,
+     "tagline": "D’Olympie à Paris 2024 : comment un Français a ressuscité les Jeux, et pourquoi il a fallu attendre 2024 pour la parité",
+     "cases": 27,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un tunnel au repos, un cadenas géant et une chaise musicale",
+     "kind": "",
+     "url": "histoires/2026-11-16-un-tunnel-au-repos-un-cadenas-geant-et-une-chaise-musicale/",
+     "theme": "",
+     "minutes": 5,
+     "tagline": "L’A13 ferme vers la Normandie, Édouard Philippe compte les logements, la Francophonie cherche l’unité, l’Estonie verrouille et les Bleus passent.",
+     "cases": 16,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Pourquoi la France est pleine de Martin (merci le demi-manteau)",
+     "kind": "",
+     "url": "histoires/2026-11-16-pourquoi-la-france-est-pleine-de-martin-merci-le-demi-manteau/",
+     "theme": "Société",
+     "minutes": 2,
+     "tagline": "Un saint, un manteau coupé en deux, et six Martin dans chaque village",
+     "cases": 8,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "Le président français est prince d’Andorre, et c’est la faute d’un comte",
+     "kind": "",
+     "url": "histoires/2026-11-16-le-president-francais-est-prince-d-andorre-et-c-est-la-faute-d-un-comt/",
+     "theme": "Géopolitique",
+     "minutes": 2,
+     "tagline": "Un partage de vallées signé en 1278, et l’Élysée hérite d’une couronne",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "origine",
+     "label": "D’où ça vient ?",
+     "title": "« Se faire limoger » : un aller simple pour Limoges",
+     "kind": "",
+     "url": "histoires/2026-11-16-se-faire-limoger-un-aller-simple-pour-limoges/",
+     "theme": "Expression française",
+     "minutes": 2,
+     "tagline": "En 1914, être renvoyé, c’était d’abord prendre le train pour le Limousin",
+     "cases": 8,
+     "cover": "images/origine-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Quiz géo",
+     "title": "Trois questions, une boussole et un fromage",
+     "kind": "geo",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-15",
    "demo": false,
