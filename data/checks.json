@@ -1,0 +1,156 @@
+{
+ "updated_at": "2026-11-16T13:19+01:00",
+ "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
+ "items": [
+  {
+   "path": "stock/cultureg/20261114-0359-do-re-mi-tube-voix-enrouees",
+   "titles": {
+    "cultureg": "Do, ré, mi : un tube du XIe siècle pour voix enrouées"
+   },
+   "errors": [],
+   "warnings": [
+    "cultureg : case 10 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/cultureg/20261114-0402-greenwich-le-mot-interdit",
+   "titles": {
+    "cultureg": "Greenwich, le mot que la France refusait de prononcer"
+   },
+   "errors": [],
+   "warnings": [
+    "cultureg : case 2 : récitatif de 23 mots (max 20)",
+    "cultureg : case 9 : récitatif de 22 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/cultureg/20261114-2049-tennis-15-30-40",
+   "titles": {
+    "cultureg": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main"
+   },
+   "errors": [],
+   "warnings": [
+    "cultureg : case 2 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/cultureg/20261115-2050-departements-taille-cheval",
+   "titles": {
+    "cultureg": "Le département, ou la France taillée à la mesure d’un cheval"
+   },
+   "errors": [],
+   "warnings": [
+    "cultureg : case 6 : récitatif de 22 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/dossier/20261114-1927-nucleaire-tiroir-ferme",
+   "titles": {
+    "dossier": "Le nucléaire : comment un tiroir fermé a fini par allumer la France"
+   },
+   "errors": [],
+   "warnings": [
+    "dossier : fiche joliot : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »",
+    "dossier : case 26 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/dossier/20261115-1923-krach-1929",
+   "titles": {
+    "dossier": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)"
+   },
+   "errors": [],
+   "warnings": [
+    "dossier : fiche harold : même tête qu'un personnage récent (black hair, orange main colour : 2026-11-14/dossier) ; changer coiffure ou couleur dominante",
+    "dossier : fiche awa : même tête qu'un personnage récent (black hair, purple main colour : 2026-11-11/insolite, 2026-11-14/dossier) ; changer coiffure ou couleur dominante"
+   ]
+  },
+  {
+   "path": "stock/insolite/20261114-0100-lempereur-qui-taxait-le-pipi",
+   "titles": {
+    "insolite": "L’empereur qui taxait le pipi"
+   },
+   "errors": [],
+   "warnings": [
+    "insolite : fiche vespasien : même tête qu'un personnage récent (bald hair, purple main colour : 2026-11-08/dossier) ; changer coiffure ou couleur dominante"
+   ]
+  },
+  {
+   "path": "stock/insolite/20261114-2047-14-juillet-sans-annee",
+   "titles": {
+    "insolite": "Le 14 Juillet a oublié de dire de quelle année il parlait"
+   },
+   "errors": [],
+   "warnings": [
+    "insolite : case 6 : récitatif de 21 mots (max 20)",
+    "insolite : case 7 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/insolite/20261115-2053-perec-roman-sans-e",
+   "titles": {
+    "insolite": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)"
+   },
+   "errors": [],
+   "warnings": [
+    "insolite : 0 vraie(s) photo(s) (« kind »: « photo »), il en faut au moins 1 si un document libre existe"
+   ]
+  },
+  {
+   "path": "stock/notice/20261115-2043-cocotte-minute-triche-avec-leau",
+   "titles": {
+    "notice": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C"
+   },
+   "errors": [],
+   "warnings": [
+    "notice : case 2 : récitatif de 24 mots (max 20)",
+    "notice : case 4 : récitatif de 23 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/notice/20261115-2047-maree-la-mer-suit-la-lune",
+   "titles": {
+    "notice": "La marée : la mer ne part pas, elle fait le tour de la Terre"
+   },
+   "errors": [],
+   "warnings": [
+    "notice : case 2 : récitatif de 22 mots (max 20)",
+    "notice : case 3 (Pour mieux comprendre) : 75 mots (max 70)",
+    "notice : case 4 : récitatif de 22 mots (max 20)",
+    "notice : case 6 : récitatif de 23 mots (max 20)",
+    "notice : case 8 : récitatif de 22 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/origine/20261115-2045-poubelle-monsieur-le-prefet",
+   "titles": {
+    "origine": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet"
+   },
+   "errors": [],
+   "warnings": [
+    "origine : case 2 : récitatif de 22 mots (max 20)",
+    "origine : case 4 : récitatif de 21 mots (max 20)",
+    "origine : case 6 : récitatif de 21 mots (max 20)",
+    "origine : case 8 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "editions/2026-11-16",
+   "titles": {
+    "dossier": "Jeux olympiques : 2 800 ans de sport et un baron très têtu",
+    "actu": "Un tunnel au repos, un cadenas géant et une chaise musicale",
+    "cultureg": "Pourquoi la France est pleine de Martin (merci le demi-manteau)",
+    "insolite": "Le président français est prince d’Andorre, et c’est la faute d’un comte",
+    "origine": "« Se faire limoger » : un aller simple pour Limoges",
+    "quiz": "Trois questions, une boussole et un fromage"
+   },
+   "errors": [],
+   "warnings": [
+    "dossier : case 4 : récitatif de 21 mots (max 20)",
+    "cultureg : case 8 : récitatif de 23 mots (max 20)",
+    "origine : case 2 : récitatif de 21 mots (max 20)",
+    "origine : case 6 : récitatif de 22 mots (max 20)"
+   ]
+  }
+ ]
+}

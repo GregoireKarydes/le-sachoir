@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T13:06:05.313996+01:00",
+ "updated_at": "2026-11-16T13:19:25.606334+01:00",
  "today": "2026-11-16",
  "problems": [],
  "days": [
@@ -141,5 +141,17 @@
   "images": 180,
   "today_usd": 0.21449,
   "blocked": null
+ },
+ "rss": {
+  "collected_at": "2026-11-15T22:49:48.771422+01:00",
+  "age_hours": 14.5,
+  "feeds": null,
+  "empty_feeds": []
+ },
+ "actu_balance": {
+  "days": 14,
+  "editions": 6,
+  "people": [],
+  "parties": []
  }
 }

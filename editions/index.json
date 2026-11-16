@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T13:06:05.313996+01:00",
+ "updated_at": "2026-11-16T13:19:25.606334+01:00",
  "editions": [
   {
    "date": "2026-11-16",
@@ -12,7 +12,7 @@
      "kind": "",
      "url": "histoires/2026-11-16-jeux-olympiques-2-800-ans-de-sport-et-un-baron-tres-tetu/",
      "theme": "Sports",
-     "minutes": 6,
+     "minutes": 7,
      "tagline": "D’Olympie à Paris 2024 : comment un Français a ressuscité les Jeux, et pourquoi il a fallu attendre 2024 pour la parité",
      "cases": 27,
      "cover": "images/dossier-cover.webp"
@@ -90,7 +90,7 @@
      "kind": "",
      "url": "histoires/2026-11-15-qui-commande-en-france-la-ve-republique-mode-d-emploi/",
      "theme": "Politique française",
-     "minutes": 6,
+     "minutes": 7,
      "tagline": "De Gaulle, le 49.3, la cohabitation : la Constitution de 1958 démontée pièce par pièce",
      "cases": 32,
      "cover": "images/dossier-cover.webp"
@@ -372,7 +372,7 @@
      "kind": "",
      "url": "histoires/2026-11-10-impressionnisme-la-peinture-qui-a-rate-son-examen-et-gagne-quand-meme/",
      "theme": "Histoire de l’art",
-     "minutes": 5,
+     "minutes": 6,
      "tagline": "Refusés par le jury, moqués par la presse, fauchés en 1874 : l’histoire des peintres de la lumière",
      "cases": 24,
      "cover": "images/dossier-cover.webp"
