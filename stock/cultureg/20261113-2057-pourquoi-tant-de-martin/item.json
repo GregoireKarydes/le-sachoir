@@ -45,7 +45,8 @@
         "file": "images/cultureg-cover.webp",
         "status": "done",
         "attempts": 1,
-        "via": "premium"
+        "via": "premium",
+        "qa": "ok"
       },
       "cases": [
         {
@@ -74,7 +75,8 @@
             "file": "images/cultureg-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium"
+            "via": "premium",
+            "qa": "ok"
           }
         },
         {
@@ -102,7 +104,8 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -130,7 +133,8 @@
             ],
             "file": "images/cultureg-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -167,7 +171,7 @@
             }
           ],
           "image": {
-            "prompt": "the village square. the scribe (tall, gaunt, wine-red robe) on the left pointing with his quill at two peasants seen from afar, one holding a hammer next to an anvil, the other standing next to a single tree; Martin (short, stocky, orange tunic) on the right looking down at himself, arms spread, searching for anything special about himself. wide shot",
+            "prompt": "the village square. the scribe (tall, gaunt, wine-red robe) on the left pointing with his quill at two peasants seen from afar, one holding a hammer next to an anvil, the other standing next to a single tree; Martin (short, stocky, orange tunic) on the right looking down at himself, holding his straw hat against his chest with both hands (only two hands), puzzled, searching for anything special about himself. the scribe wears his small black skullcap. wide shot",
             "cast": [
               "scribe",
               "martin"
@@ -214,7 +218,8 @@
             ],
             "file": "images/cultureg-05.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -242,7 +247,8 @@
             ],
             "file": "images/cultureg-06.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         }
       ],

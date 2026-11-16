@@ -79,7 +79,8 @@
         "file": "images/actu-cover.webp",
         "status": "done",
         "attempts": 1,
-        "via": "premium"
+        "via": "premium",
+        "qa": "ok"
       },
       "cases": [
         {
@@ -95,14 +96,15 @@
             }
           ],
           "image": {
-            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. Inside a small car stuck in a traffic jam, rows of tiny cars behind the windscreen, pale blue background. automobiliste (plump, curly grey hair, bright teal puffer jacket, round red glasses) behind the wheel, chin resting on her hand, perfectly calm, glancing sideways at the camembert sitting on the dashboard like a passenger. Close-up.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. Inside a small car stuck in a traffic jam, rows of tiny cars behind the windscreen, pale blue background. automobiliste (plump, curly grey hair, bright teal puffer jacket, round red glasses) behind the wheel, chin resting on her hand, perfectly calm, glancing sideways at the camembert sitting on the dashboard like a passenger; the round lid of the camembert box is plain and blank, with no writing or marks on it. Close-up.",
             "cast": [
               "automobiliste"
             ],
             "file": "images/actu-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium"
+            "via": "premium",
+            "redo": true
           }
         },
         {
@@ -131,7 +133,8 @@
             ],
             "file": "images/actu-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -176,7 +179,8 @@
             ],
             "file": "images/actu-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -215,7 +219,7 @@
             }
           ],
           "image": {
-            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A long empty concrete bridge over a frozen grey river, a closed metal barrier at its end, pale lilac background. douanier (very tall and lanky, blond hair under a dark peaked cap, steel blue uniform, grey scarf) running along the bridge, hugging the padlock against his chest, legs stretched in a big stride, eyes wide with determination. Low angle.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A long empty concrete bridge over a frozen grey river, a closed metal barrier at its end, pale lilac background. douanier (very tall and lanky, blond hair under a dark peaked cap, steel blue uniform, grey scarf) walking briskly along the bridge, carrying the padlock in both arms like a heavy suitcase, cheerful and earnest face, puffing a little. Calm, friendly cartoon scene. Low angle.",
             "cast": [
               "douanier"
             ],
@@ -261,13 +265,14 @@
             }
           ],
           "image": {
-            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A commentary booth high above a football stadium at night, a small desk and a monitor, tiny players far below on the green pitch, pale orange background. commentateur (short and round, white hair combed back, burgundy blazer, the microphone headset) seen from behind and slightly to the side, standing up from his chair, arms flung wide open towards the pitch in delighted surprise. Medium wide shot.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A commentary booth high above a football stadium at night, a small desk and a monitor, tiny players far below on the green pitch, pale orange background. commentateur (short and round, white hair combed back, burgundy blazer, the microphone headset) seen from behind and slightly to the side, standing on the floor of the booth behind the desk, a small plain grey office stool pushed back behind him, arms flung wide open towards the pitch in delighted surprise. The monitor screen shows only green grass. Medium wide shot.",
             "cast": [
               "commentateur"
             ],
             "file": "images/actu-05.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {

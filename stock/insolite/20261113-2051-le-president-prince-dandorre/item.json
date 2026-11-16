@@ -45,7 +45,8 @@
         "file": "images/insolite-cover.webp",
         "status": "done",
         "attempts": 1,
-        "via": "premium"
+        "via": "premium",
+        "qa": "ok"
       },
       "cases": [
         {
@@ -66,7 +67,7 @@
             }
           ],
           "image": {
-            "prompt": "a gilded palace office with one desk piled with mail. the stagiaire (short, navy suit, red glasses) on the left at the desk, holding the envelope, frozen mid-sort; the comte (tall, yellow and red striped tunic, gold circlet) on the right popping up from behind the pile of mail like a medieval jack-in-the-box, hand on his heart. medium shot",
+            "prompt": "a gilded palace office with one desk piled with mail. the stagiaire (short, navy suit, red glasses) on the left at the desk, holding the envelope, frozen mid-sort; the comte (tall, yellow and red striped tunic, gold circlet) on the right popping up from behind the pile of mail like a medieval jack-in-the-box, hand on his heart. Both have bare skin-coloured hands, no gloves. medium shot",
             "cast": [
               "stagiaire",
               "comte"
@@ -74,7 +75,8 @@
             "file": "images/insolite-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium"
+            "via": "premium",
+            "redo": true
           }
         },
         {
@@ -95,13 +97,14 @@
             }
           ],
           "image": {
-            "prompt": "green Pyrenees valleys in the background. the comte (tall, yellow and red striped tunic) on the right carefully cutting the valley model in two with a huge bread knife; on the left a bishop seen from behind, only his tall white mitre and purple robe visible, holding the other side. the stagiaire is not in this panel. medium shot",
+            "prompt": "outdoors on a green Pyrenees mountain meadow, no building, no palace. the valley model on a flat rock between two men. on the right the comte (tall, long black hair and black beard, yellow and red striped tunic, gold circlet) carefully cutting the valley model in two with a huge bread knife. on the left a short plump old bishop, clean-shaven, white hair, tall white mitre and plain purple robe, holding the other side of the model and frowning. only these two people. medium wide shot",
             "cast": [
               "comte"
             ],
             "file": "images/insolite-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -129,14 +132,15 @@
             }
           ],
           "image": {
-            "prompt": "plain background. the comte (tall, yellow and red striped tunic, gold circlet) on the right handing the valley model over his shoulder like a family heirloom, eyes closed, solemn; the stagiaire (short, navy suit, red glasses) on the left frantically drawing a family tree in her folder, tongue out in concentration. medium shot",
+            "prompt": "plain background, two people. on the right the comte (tall, long black hair and black beard, yellow and red striped tunic, gold circlet) solemnly holding out the valley model with both hands, eyes closed, as if passing on a family heirloom. on the left the stagiaire (short, tidy black bun, red glasses, navy suit, nothing on her head) scribbling a family tree in her open cardboard folder, tongue out in concentration. no animals. medium wide shot",
             "cast": [
               "stagiaire",
               "comte"
             ],
             "file": "images/insolite-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -180,7 +184,8 @@
             ],
             "file": "images/insolite-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -201,14 +206,15 @@
             }
           ],
           "image": {
-            "prompt": "confession-style shot, plain background. the stagiaire (short, navy suit, red glasses) on the left looking straight at the reader, deadpan, buried up to her chin in a pile of cream envelopes; the comte (tall, yellow and red striped tunic) on the right sulking with crossed arms, nose in the air, a light-blue sweat drop. medium shot",
+            "prompt": "confession-style shot, plain background. the stagiaire (short, navy suit, red glasses) on the left looking straight at the reader, deadpan, buried up to her chin in a huge pile of cream envelopes, only her head visible; the comte (tall, long black hair and black beard, yellow and red striped tunic) on the right, turned away, sulking with crossed arms and nose in the air. Bare skin-coloured hands, no gloves. medium shot",
             "cast": [
               "stagiaire",
               "comte"
             ],
             "file": "images/insolite-05.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         }
       ],
