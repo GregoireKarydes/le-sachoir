@@ -25,7 +25,7 @@ Constat sur 38 BD : presque toutes suivaient le même moule. Un naïf d'aujourd'
 - **On entre dans l'époque.** Le sujet se joue là où il s'est passé, avec les gens qui l'ont vécu (y compris des anonymes : un greffier, une lavandière, un stagiaire du ministère). Le visiteur d'aujourd'hui qui interroge une figure historique (le « fantôme-guide ») : une BD sur trois au plus.
 - **Un personnage a un travers**, écrit dans son `role` : vaniteux, radin, de mauvaise foi, froussard, zélé, flemmard, susceptible… Les gags naissent de ce travers face au fait, pas de bons mots posés sur une explication. Il ne change pas en cours de route.
 - **Un gag récurrent qui monte en trois temps** : posé, répété, retourné à la chute (le manteau que Martin n'aura jamais). Un par BD, pas plus.
-- **Au moins une case muette** (aucune bulle) dans toute BD de 5 cases dessinées ou plus : l'image porte le gag (regard caméra après une énormité, objet absurde, personnage qui se décompose). Le récitatif peut rester ; le prompt décrit précisément ce qu'on voit.
+- **Au moins une case muette** (aucune bulle) dans toute BD de 6 cases dessinées ou plus (les micro-BD de 4 ou 5 cases en sont dispensées) : l'image porte le gag (regard caméra après une énormité, objet absurde, personnage qui se décompose). Le récitatif peut rester ; le prompt décrit précisément ce qu'on voit.
 - **Formules interdites**, signalées par `pipeline/validate.py` :
   - en ouverture : « Qui a inventé / eu l'idée de… ? », « C'est (un peu) ma faute », « Moi. Enfin, presque. » ;
   - en chute : une bulle qui commence par « Donc… » ou « En bref… ». Le résumé se fait dans le récitatif de la dernière case ; la chute est une réplique de personnage, en écho au début, qu'on n'explique pas ;
@@ -106,7 +106,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 | Actu du jour (`actu`) | environ 2 min | 4 à 6 sujets ; par sujet 1 case dessinée + 1 case « Ce qui se passe vraiment » | Le gag dans la case dessinée, l'explication neutre dans la case texte (voir plus bas) |
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par une scène (des personnages qui vivent le problème) ; un gag toutes les 2 ou 3 cases, une case muette |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, raconté clairement ; un gag toutes les 2 ou 3 cases |
-| La Notice (`notice`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD : le mécanisme d'un objet ou d'un phénomène du quotidien (frigo, micro-ondes, avion qui vole…) expliqué en situation (quelqu'un a un problème concret avec l'objet, quelqu'un sait pourquoi) ; un gag par case dessinée, une case muette, chute en écho à la case 1 |
+| La Notice (`notice`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD : le mécanisme d'un objet ou d'un phénomène du quotidien (frigo, micro-ondes, avion qui vole…) expliqué en situation (quelqu'un a un problème concret avec l'objet, quelqu'un sait pourquoi) ; un gag par case dessinée, chute en écho à la case 1 |
 | D'où ça vient ? (`origine`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD comme La Notice : l'origine d'une expression que tout le monde utilise (faire grève, être limogé…), la scène d'époque où l'expression est née, jouée par ceux qui l'ont vécue (le duo « quelqu'un d'aujourd'hui + témoin d'époque » : une fois sur trois au plus), chute en écho à la case 1. En alternance avec La Notice. Règles : `prompts/STOCK.md` |
 | Grand Dossier (`dossier`) | environ 3 min | 24 au plus (8 novembre 2026, avant 30) | Humour dosé : la compréhension d'abord |
 | Jeu du jour (`quiz`), Quiz culture G | 1 à 2 min | 5 questions, sans image | Mauvaises réponses drôles mais plausibles, explication courte et drôle |
@@ -137,7 +137,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - [ ] 1 ou 2 cases « Pour mieux comprendre » (2 à 4 en Grand Dossier) et « L’histoire complète » (150 à 250 mots, faits sourcés).
 - [ ] Un gag toutes les 2 ou 3 cases, chaque gag sert un fait.
 - [ ] Une scène, pas une interview : qui veut quoi, quel obstacle ; un personnage avec un travers ; au plus un tiers de cases « question → réponse ».
-- [ ] Au moins une case muette (BD de 5 cases dessinées ou plus) ; un gag récurrent en trois temps si possible.
+- [ ] Au moins une case muette (BD de 6 cases dessinées ou plus) ; un gag récurrent en trois temps si possible.
 - [ ] Aucune formule interdite en ouverture ni en chute ; pas de « Donc… » final.
 - [ ] Relecteur comique passé : trois variantes par gag, les tièdes coupés ; `validate.py` sans avertissement d'humour.
 - [ ] Une date dans chaque case qui raconte un événement ; chaque chiffre a son échelle.

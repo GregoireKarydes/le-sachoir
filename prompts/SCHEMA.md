@@ -54,7 +54,7 @@ Le pipeline d'images ne touche qu'aux champs `status`, `attempts`, `file`, `redo
 Une micro-BD **au format habituel** (cases dessinées avec `caption` et `bubbles`, cases `explain` et `photo`, `cast` de 2 personnages au plus), comme La Notice : label « D’où ça vient ? », `theme` « Expression française ». Règles d'écriture : `prompts/STOCK.md`, section « D'où ça vient ? ». (Les écrans `"kind": "cine"` d'un premier essai ne s'écrivent plus.)
 
 ## Case muette, mécanique de gag, travers (16 novembre 2026)
-- **Case muette** : `"bubbles": []`. Le récitatif peut rester ; le prompt de l'image décrit précisément le gag visuel (réaction en gros plan, regard vers le lecteur, objet absurde). Au moins une par BD de 5 cases dessinées ou plus.
+- **Case muette** : `"bubbles": []`. Le récitatif peut rester ; le prompt de l'image décrit précisément le gag visuel (réaction en gros plan, regard vers le lecteur, objet absurde). Au moins une par BD de 6 cases dessinées ou plus.
 - **`gag`** (Actu, obligatoire sur chaque case dessinée ; facultatif ailleurs) : `litteral`, `anachronisme`, `mauvaise-foi`, `litote`, `escalade`, `bureau`, `comparaison` ou `silence`. Une mécanique ne sert qu'une fois par Actu. Champ ignoré par l'appli.
 - **Travers** : le `role` de chaque personnage dit aussi son défaut comique (« vain, never admits he is wrong »), d'où viennent les gags.
 - **Actu, case « Ce qui se passe vraiment »** : quatre lignes, « Quoi : », « Pourquoi ça compte : », « Repère : », « Et maintenant : », 65 mots au plus.

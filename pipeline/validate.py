@@ -195,7 +195,7 @@ CLOSING_FORMULAS = [
 ]
 GAG_KINDS = {"litteral", "anachronisme", "mauvaise-foi", "litote", "escalade", "bureau", "comparaison", "silence"}
 INTERVIEW_MAX = .34      # part des cases dessinées « question → réponse » au-delà de laquelle la BD est une interview
-SILENT_FROM = 5          # à partir de 5 cases dessinées, au moins une case muette
+SILENT_FROM = 6          # à partir de 6 cases dessinées, au moins une case muette (les micro-BD de 4 ou 5 cases en sont dispensées)
 FINAL_OVERLAP = .6       # part des mots de la carte « Pour briller » déjà dans une même case : au-delà, c'est une redite
 STOP_FR = set("le la les un une des de du d l et ou a au aux en est sont c ce cet cette ces qui que qu dans par pour sur avec sans "
               "son sa ses leur leurs se s n ne pas plus il elle ils elles on y à ont été être avoir comme mais donc car "
@@ -264,14 +264,14 @@ def check_humour(fmt: dict, d: Path, warn, others=None):
              "faire vivre la situation aux personnages au lieu de la commenter")
     if len(dr) >= SILENT_FROM and not any(not (c.get("bubbles") or []) for c in dr):
         warn("aucune case muette : au moins une case sans bulle où l'image porte le gag (réaction, objet absurde)")
+    # La carte « Pour briller » ne répète ni le résumé (récitatif de la dernière case dessinée) ni le titre.
     fin = _content((fmt.get("final") or {}).get("text"))
     if len(fin) >= 5:
-        for i, c in enumerate(fmt.get("cases", []) or [], 1):
-            if isinstance(c, dict) and c.get("kind") not in ("explain", "photo", "buzz"):
-                cap = _content(c.get("caption"))
-                if cap and len(fin & cap) / len(fin) >= FINAL_OVERLAP:
-                    warn(f"carte « Pour briller » : redite de la case {i} ; donner plutôt le fait le plus surprenant, celui qu'on ressort au dîner")
-                    break
+        resume, title = _content(dr[-1].get("caption")), _content(fmt.get("title"))
+        if resume and len(fin & resume) / len(fin) >= FINAL_OVERLAP:
+            warn("carte « Pour briller » : redite du résumé de la dernière case ; donner plutôt le fait le plus surprenant, celui qu'on ressort au dîner")
+        elif len(title) >= 4 and len(fin & title) / len(title) >= .75:
+            warn("carte « Pour briller » : redite du titre ; donner plutôt le fait le plus surprenant, celui qu'on ressort au dîner")
     mine = _edges(fmt)
     for where, title, op, cl in (recent_edges() if others is None else others):
         if where == str(d) or title == fmt.get("title"):

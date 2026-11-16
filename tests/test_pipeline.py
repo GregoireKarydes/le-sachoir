@@ -484,7 +484,7 @@ def test_interview_et_absence_de_case_muette():
 def test_pour_briller_ne_repete_pas_une_case():
     resume = "Saint Martin a rendu son prénom très populaire, devenu le nom de famille numéro un en France."
     fmt = _bd([("Début.", ["Tiens."]), ("Milieu.", []), (resume, ["Voilà."])], final="Saint Martin a rendu son prénom populaire : il est devenu le nom de famille numéro un en France.")
-    assert any("Pour briller" in m and "case 3" in m for m in _humour(fmt))
+    assert any("Pour briller" in m and "résumé" in m for m in _humour(fmt))
     fmt["final"]["text"] = "Martin n'a donné que la moitié de son manteau : l'autre moitié appartenait à l'armée romaine."
     assert not any("Pour briller" in m for m in _humour(fmt))
 
