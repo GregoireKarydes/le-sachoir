@@ -29,8 +29,7 @@
           "look": "Voltaire, a small extremely thin and bony French writer, sharp pointed nose and chin, a huge curly powdered white wig, pale skin, a crimson red velvet coat as main colour with white lace cuffs, the quill always in hand",
           "role": "the sarcastic, fearless writer who mocks power and keeps getting into trouble; tiny and bony, eyebrows raised, a sly sideways grin",
           "file": "cast/dossier-voltaire.png",
-          "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (927fb230-fb43-4046-8bbe-999fcfab4625)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done"
         },
         {
           "id": "diderot",
@@ -449,10 +448,9 @@
               "diderot"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 1,
-            "same_place": false,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (558b8310-88aa-4a20-bd85-294840c14c94)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2,
+            "same_place": false
           }
         },
         {
@@ -537,8 +535,8 @@
               "mathis"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -579,8 +577,9 @@
             ],
             "file": "images/dossier-15.webp",
             "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "attempts": 1,
+            "same_place": false,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (3fd69b47-6e68-46b3-8c58-6b229bc04b78)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -608,8 +607,9 @@
             ],
             "file": "images/dossier-16.webp",
             "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "attempts": 1,
+            "same_place": false,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (ff31e66d-fd4a-4100-a83a-e8b2aa8141fc)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {

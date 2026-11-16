@@ -75,8 +75,7 @@
             "file": "images/insolite-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium",
-            "redo": true
+            "via": "premium"
           }
         },
         {
@@ -103,8 +102,7 @@
             ],
             "file": "images/insolite-02.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -139,8 +137,7 @@
             ],
             "file": "images/insolite-03.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         },
         {
@@ -213,8 +210,7 @@
             ],
             "file": "images/insolite-05.webp",
             "status": "done",
-            "attempts": 1,
-            "redo": true
+            "attempts": 1
           }
         }
       ],
