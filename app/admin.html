@@ -113,6 +113,19 @@ const euro = c => ((+c || 0) / 100).toLocaleString("fr-FR", { style: "currency",
 const pct = (a, b) => b ? Math.round(100 * a / b) + " %" : "—";
 const shift = (iso, n) => { const d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const dShort = iso => new Date(iso + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
+// L'Actu sous surveillance (16 novembre 2026) : personnalités et partis mis en scène sur 14 jours, état de la collecte des flux.
+function balanceHTML(st) {
+  const b = st.actu_balance, r = st.rss;
+  if (!b && !r) return "";
+  const people = (b?.people || []).slice(0, 12), parties = b?.parties || [];
+  const rows = (list, f) => list.map(f).join("");
+  const rss = r ? `<p class="note">Flux d’actualité : collectés ${r.age_hours < 1 ? "il y a moins d’une heure" : "il y a " + nf(Math.round(r.age_hours)) + " h"}${(r.empty_feeds || []).length ? ` · <b>vides : ${esc(r.empty_feeds.join(", "))}</b>` : " · tous les flux répondent"}.</p>` : "";
+  const body = b && people.length
+    ? `<div class="scroll"><table><thead><tr><th>Personnalité</th><th>Parti</th><th class="n">Actus</th><th>Dernière</th></tr></thead><tbody>${rows(people, p => `<tr><td>${esc(p.name)}</td><td>${esc(p.party)}</td><td class="n">${nf(p.n)}</td><td>${esc(p.last)}</td></tr>`)}</tbody></table></div>
+       <p class="note" style="margin-top:8px">Par parti : ${esc(parties.map(p => `${p.party} ${p.n}`).join(" · "))}</p>`
+    : `<p class="note">Aucune personnalité politique déclarée pour l’instant${b ? ` (${nf(b.editions)} Actu(s) sur ${nf(b.days)} jours)` : ""}. Le compte démarre avec les Actus écrites au nouveau format (16 novembre 2026).</p>`;
+  return `<div class="card" style="margin-top:12px"><h3>L’Actu : équilibre et sources</h3><p class="note">Personnalités politiques mises en scène dans l’Actu sur ${nf(b?.days || 14)} jours, une fois par édition. Pas affiché aux lecteurs.</p>${body}${rss}</div>`;
+}
 const dLong = iso => new Date(iso + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
 const LBL = { dossier: "Le Grand Dossier", actu: "L’Actu du jour", cultureg: "Culture G", insolite: "Insolite", notice: "La Notice", origine: "D’où ça vient ?", quiz: "Le jeu du jour" };
 function toast(m) { const t = $("#toast"); t.textContent = m; t.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 2800); }
@@ -193,6 +206,7 @@ function draw() {
     ${tile(lastRun ? (lastRun.day === K.today ? (lastRun.status === "sent" ? "Envoyée" : lastRun.status === "failed" ? "Échec" : "En cours") : "Pas encore") : "Jamais", "Newsletter du jour", lastRun?.day === K.today ? nf(lastRun.recipients) + " destinataire(s)" : "part dès que l’édition est publiée", lastRun?.day === K.today && lastRun.status === "failed" ? "alert" : "")}
     ${tile(`${nf(mailsToday)} / ${nf(K.mails.limit)}`, "E-mails envoyés aujourd’hui", `quota gratuit Brevo, dont ${nf(K.mails.reserve || 0)} gardés pour les connexions`, mailsToday > K.mails.limit * .85 ? "alert" : "")}
   </div>
+  ${balanceHTML(st)}
   ${issues.length ? `<div class="card" style="margin-top:12px"><h3>Problèmes signalés</h3><ul class="issues">${issues.map(i => `<li>${esc(typeof i === "string" ? i : i.message || JSON.stringify(i))}</li>`).join("")}</ul></div>` : ""}
 
   <h2>Audience</h2><p class="note">Téléphones et ordinateurs anonymes (un identifiant tiré au hasard par appareil, ni cookie ni IP). « Do Not Track » respecté.</p>

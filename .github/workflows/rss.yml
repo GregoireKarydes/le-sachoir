@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: repo-write
+  group: rss   # pas la file des images : la collecte y attendait des heures et arrivait après l'Actu (constaté du 13 au 15 novembre 2026)
   cancel-in-progress: false
 
 jobs:

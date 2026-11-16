@@ -1,12 +1,22 @@
 [
-  {"name": "HugoDécrypte - Actus du jour", "rubrique": "sélection", "role": "selection", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAcAnMF0OrCtUep3Y4M-ZPw"},
+  {"name": "Google Actualités", "rubrique": "à la une", "role": "une", "split_source": true, "url": "https://news.google.com/rss?hl=fr&gl=FR&ceid=FR:fr"},
   {"name": "franceinfo", "rubrique": "général", "url": "https://www.francetvinfo.fr/titres.rss"},
   {"name": "Le Monde", "rubrique": "général", "url": "https://www.lemonde.fr/rss/une.xml"},
   {"name": "Le Figaro", "rubrique": "général", "url": "https://www.lefigaro.fr/rss/figaro_actualites.xml"},
   {"name": "Libération", "rubrique": "général", "url": "https://www.liberation.fr/arc/outboundfeeds/rss-all/?outputType=xml"},
-  {"name": "Les Échos", "rubrique": "économie", "url": "https://syndication.lesechos.fr/rss/rss_une.xml"},
+  {"name": "20 Minutes", "rubrique": "général", "url": "https://www.20minutes.fr/feeds/rss-une.xml"},
+  {"name": "Ouest-France", "rubrique": "général", "url": "https://www.ouest-france.fr/rss/une"},
+  {"name": "Le Parisien", "rubrique": "général", "url": "https://feeds.leparisien.fr/leparisien/rss"},
+  {"name": "BFMTV", "rubrique": "général", "url": "https://www.bfmtv.com/rss/news-24-7/"},
+  {"name": "Les Échos", "rubrique": "économie", "urls": ["https://services.lesechos.fr/rss/les-echos-economie.xml", "https://syndication.lesechos.fr/rss/rss_une.xml"]},
+  {"name": "Les Échos Tech", "rubrique": "tech", "urls": ["https://services.lesechos.fr/rss/les-echos-tech-medias.xml"]},
   {"name": "Le Monde International", "rubrique": "international", "url": "https://www.lemonde.fr/international/rss_full.xml"},
-  {"name": "Le Monde Sciences", "rubrique": "sciences", "url": "https://www.lemonde.fr/sciences/rss_full.xml"},
   {"name": "BBC World", "rubrique": "international", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
-  {"name": "Sciences et Avenir", "rubrique": "sciences", "url": "https://www.sciencesetavenir.fr/rss.xml"}
+  {"name": "Le Monde Sciences", "rubrique": "sciences", "url": "https://www.lemonde.fr/sciences/rss_full.xml"},
+  {"name": "Sciences et Avenir", "rubrique": "sciences", "url": "https://www.sciencesetavenir.fr/rss.xml"},
+  {"name": "Le Monde Planète", "rubrique": "environnement", "url": "https://www.lemonde.fr/planete/rss_full.xml"},
+  {"name": "Le Monde Pixels", "rubrique": "tech", "url": "https://www.lemonde.fr/pixels/rss_full.xml"},
+  {"name": "Le Monde Santé", "rubrique": "santé", "url": "https://www.lemonde.fr/sante/rss_full.xml"},
+  {"name": "Le Monde Culture", "rubrique": "culture", "url": "https://www.lemonde.fr/culture/rss_full.xml"},
+  {"name": "HugoDécrypte - Actus du jour", "rubrique": "indice", "role": "indice", "skip_shorts": true, "often_empty": true, "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCAcAnMF0OrCtUep3Y4M-ZPw"}
 ]

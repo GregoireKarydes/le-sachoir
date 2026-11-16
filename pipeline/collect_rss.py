@@ -12,10 +12,13 @@ from zoneinfo import ZoneInfo
 import feedparser
 import requests
 
+from hot import hot_topics
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "rss"
 FEEDS = json.loads((Path(__file__).parent / "feeds.json").read_text())
 PARIS = ZoneInfo("Europe/Paris")
+DISCOVERY_RUBRIQUES = {"sciences", "tech", "santé", "environnement", "culture"}
 
 
 def clean(html: str, n: int = 280) -> str:
@@ -63,14 +66,29 @@ def main():
     now = datetime.now(PARIS)
     since = now - timedelta(hours=30)
     items = []
+    counts = {}  # titres gardés par flux : un flux à zéro est signalé dans l'écran admin (16 novembre 2026)
     for feed in FEEDS:
-        try:
-            parsed = feedparser.parse(feed["url"], agent="LeSachoirBot/1.0 (+https://github.com)")
-        except Exception as e:
-            print(f"! {feed['name']} : {e}")
+        # Plusieurs adresses possibles (« urls ») : on garde la première qui répond avec des titres.
+        parsed = None
+        for url in feed.get("urls") or [feed["url"]]:
+            try:
+                got = feedparser.parse(url, agent="LeSachoirBot/1.0 (+https://github.com)")
+            except Exception as e:
+                print(f"! {feed['name']} ({url}) : {e}")
+                continue
+            if got.entries:
+                parsed = got
+                break
+        if parsed is None:
+            counts[feed["name"]] = 0
+            print(f"! {feed['name']} : aucun titre (flux vide ou adresse changée)")
             continue
         n = 0
         for e in parsed.entries:
+            # HugoDécrypte : le flux de la chaîne mêle les vidéos courtes (galas de youtubeurs, extraits) au
+            # journal du jour. On ne garde que les vraies vidéos (16 novembre 2026).
+            if feed.get("skip_shorts") and "/shorts/" in str(e.get("link", "")):
+                continue
             when = None
             for key in ("published_parsed", "updated_parsed"):
                 if getattr(e, key, None):
@@ -78,20 +96,37 @@ def main():
                     break
             if when and when < since:
                 continue
+            title, source = clean(e.get("title", ""), 300), feed["name"]
+            # Google Actualités (« À la une ») : le média est en fin de titre (« … - Le Parisien »).
+            # On le garde comme source, pour compter combien de médias différents reprennent un sujet.
+            if feed.get("split_source") and " - " in title:
+                title, pub = title.rsplit(" - ", 1)
+                source = pub.strip() or source
             items.append({
-                "source": feed["name"],
+                "source": source,
+                "feed": feed["name"],
                 "rubrique": feed.get("rubrique", ""),
-                "role": feed.get("role", "veille"),  # "selection" = liste de sujets de référence (HugoDécrypte)
-                "title": clean(e.get("title", ""), 300),
-                "summary": clean(e.get("summary", ""), 900 if feed.get("role") == "selection" else 280),
+                # "une" = classement « À la une » de Google Actualités ; "indice" = HugoDécrypte, un indice parmi d'autres
+                "role": feed.get("role", "veille"),
+                "title": title,
+                "summary": "" if feed.get("split_source") else clean(e.get("summary", ""), 900 if feed.get("role") == "indice" else 280),
                 "link": e.get("link", ""),
                 "published": when.isoformat() if when else None,
             })
             n += 1
+        counts[feed["name"]] = n
         print(f"{feed['name']} : {n} titres")
     OUT.mkdir(parents=True, exist_ok=True)
     day = now.date().isoformat()
-    (OUT / f"{day}.json").write_text(json.dumps({"collected_at": now.isoformat(), "items": items, "trends": trends()}, ensure_ascii=False, indent=1))
+    # Les sujets les plus repris (nombre de médias différents) : signal principal pour choisir les sujets de l'Actu.
+    hot = hot_topics([i for i in items if i["role"] != "indice"])
+    for g in hot[:5]:
+        print(f"À la une : {g['sources']} médias — {g['titles'][0]['title'][:80]}")
+    # Sujets « découverte » repris par plusieurs médias : l'Actu en veut un par jour (sciences, tech, santé, environnement, culture).
+    disc = hot_topics([i for i in items if i["role"] != "indice"], top=8, min_sources=1, keep=lambda i: i.get("rubrique") in DISCOVERY_RUBRIQUES)
+    empty = sorted(k for k, n in counts.items() if not n and not next((f for f in FEEDS if f["name"] == k), {}).get("often_empty"))
+    (OUT / f"{day}.json").write_text(json.dumps({"collected_at": now.isoformat(), "feeds": counts, "empty_feeds": empty, "hot": hot, "discovery": disc,
+                                                 "items": items, "trends": trends()}, ensure_ascii=False, indent=1))
     for old in OUT.glob("*.json"):
         if old.stem < (now.date() - timedelta(days=3)).isoformat():
             old.unlink()
