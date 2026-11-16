@@ -57,7 +57,12 @@ Une micro-BD **au format habituel** (cases dessinées avec `caption` et `bubbles
 - **Case muette** : `"bubbles": []`. Le récitatif peut rester ; le prompt de l'image décrit précisément le gag visuel (réaction en gros plan, regard vers le lecteur, objet absurde). Au moins une par BD de 6 cases dessinées ou plus.
 - **`gag`** (Actu, obligatoire sur chaque case dessinée ; facultatif ailleurs) : `litteral`, `anachronisme`, `mauvaise-foi`, `litote`, `escalade`, `bureau`, `comparaison` ou `silence`. Une mécanique ne sert qu'une fois par Actu. Champ ignoré par l'appli.
 - **Travers** : le `role` de chaque personnage dit aussi son défaut comique (« vain, never admits he is wrong »), d'où viennent les gags.
-- **Actu, case « Ce qui se passe vraiment »** : quatre lignes, « Quoi : », « Pourquoi ça compte : », « Repère : », « Et maintenant : », 65 mots au plus.
+- **Actu, structure (16 novembre 2026)** : le sujet du jour d'abord (`"lead": true` sur sa case dessinée), puis 2 à 4 brèves, puis « La suite », puis « Sur Internet ».
+  - Case dessinée d'un sujet : `tag` (rubrique : « Politique », « Économie », « Société », « Monde », « Sciences », « Espace », « Tech », « Santé », « Environnement », « Culture », « Sport »…), `gag`, `"lead": true` pour le sujet du jour, `"major": true` pour un sujet majeur (5 médias ou plus), `people` (`[{"name", "party", "role"}]`) si une personnalité politique est mise en scène ou citée.
+  - Case « Ce qui se passe vraiment » : sujet du jour = « Quoi : », « Pourquoi ça compte : », « Repère : », « Et maintenant : », 65 mots ; brève = les trois lignes sans « Repère », 45 mots. Champs `sources` (deux médias : `[{"title", "url"}]`, affichés sous l'explication) et, si un rendez-vous daté est annoncé, `"due": "AAAA-MM-JJ"`.
+  - « Comment ça se fait ? » (sujet du jour) : case `explain` avec `"zoom": true`, `"tag": "Comment ça se fait ?"`, `title` en question, `steps` (3 à 5 maillons), `text` facultatif d'une ligne « Ce qu'on ne sait pas encore : … », 90 mots en tout ; précédée si utile d'une case dessinée avec les mêmes `tag` et `zoom`.
+  - « La suite » : `{"kind": "explain", "suite": true, "tag": "La suite", "title", "text": "Annoncé : …\nRésultat : …", "of": "AAAA-MM-JJ#n", "sources": […]}`, 45 mots, 2 au plus.
+  - Photo réelle : attendue pour le sujet du jour, facultative pour une brève (seulement si elle montre vraiment le sujet).
 - Contrôles : `pipeline/validate.py` (formules usées en ouverture et en chute, format interview, case muette, carte `final` redite, mécaniques de l'Actu, ligne « Repère »).
 
 ## « Pour mieux comprendre » : case de texte sans image (`"kind": "explain"`)
@@ -75,7 +80,7 @@ Une case de texte glissée dans la BD, entre deux cases dessinées, là où le l
 }
 ```
 - **Pas d’image** (pas de champ `image`), pas de bulles. 70 mots au plus en tout (`text` + `steps` + `joke`).
-- Combien : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, jamais en case 1 ni deux de suite. **Actu : une par sujet, après la case dessinée et sa photo réelle**, avec `"tag": "Ce qui se passe vraiment"` et `text` en trois lignes « Quoi : … \n Pourquoi ça compte : … \n Et maintenant : … » (50 mots max, sans `joke`) ; un libellé court suivi de « : » en début de ligne est affiché en gras. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
+- Combien : 1 ou 2 par Culture G ou Insolite, 2 à 4 par Grand Dossier, jamais en case 1 ni deux de suite. **Actu : une par sujet, après la case dessinée (et sa photo)**, avec `"tag": "Ce qui se passe vraiment"`, sans `joke` ; lignes, longueurs, « Comment ça se fait ? » et « La suite » : voir « Actu, structure » plus haut ; un libellé court suivi de « : » en début de ligne est affiché en gras. Dans un Grand Dossier, au moins une avant la case 5 si elle aide (les cases 1 à 4 sont la partie gratuite).
 - La numérotation `n` suit l’ordre de lecture (les cases dessinées et les cases texte se suivent : 1, 2, 3…).
 - Même ton que le Sachoir : simple, concret, une touche d’humour, mais la clarté d’abord.
 

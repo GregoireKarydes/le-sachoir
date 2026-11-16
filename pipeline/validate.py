@@ -33,6 +33,10 @@ ACTU_CAPTION_MAX, ACTU_EXPLAIN_MAX = 30, 65  # 16 novembre 2026 : 65 mots avec l
 # « D'où ça vient ? » (14 novembre 2026) : 8 à 10 écrans de cinéma, 25 mots au plus, un seul mot en couleur (*mot*),
 # 5 ou 6 images dessinées au plus (« image_of » reprend l'image d'un écran précédent).
 CINE_SCREENS, CINE_MAX = (8, 10), 25
+ACTU_ZOOM_MAX = 90   # « Comment ça se fait ? » (13 novembre 2026) : sujet du jour creusé, 3 à 5 maillons
+ACTU_BRIEF_MAX = 45  # 16 novembre 2026 : « Ce qui se passe vraiment » d'une brève (le sujet du jour garde 65 mots)
+ACTU_SUITE_MAX = 45  # case « La suite »
+ACTU_MINUTES_MAX = 4  # l'Actu se lit en 3 à 4 minutes (elle en faisait 5 le 16 novembre)
 HUMOUR_SINCE = "2026-11-18"  # éditions concernées par les contrôles d'humour (les BD déjà publiées ne sont pas relues)
 STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
@@ -247,7 +251,7 @@ def check_humour(fmt: dict, d: Path, warn, others=None):
     fid = fmt["id"]
     dr = _drawn(fmt)
     if fid == "actu":
-        return check_actu_humour(fmt, dr, warn)
+        return check_actu_humour(fmt, dr, warn, d)
     if fid not in MAX_CAST or len(dr) < 3:
         return
     first = [b.get("text", "") for b in dr[0].get("bubbles", []) or []]
@@ -284,9 +288,69 @@ def check_humour(fmt: dict, d: Path, warn, others=None):
             break
 
 
-def check_actu_humour(fmt: dict, dr: list, warn):
-    """Actu : pas deux fois la même mécanique de blague, un repère chiffré par sujet, des vannes « Sur Internet » variées."""
-    gags = [c.get("gag") for c in dr]
+DISCOVERY_TAGS = {"sciences", "science", "espace", "tech", "technologie", "numerique", "sante", "environnement", "climat", "energie",
+                  "culture", "cinema", "musique", "livres", "patrimoine", "arts"}
+SCIENCE_TAGS = {"sciences", "science", "espace", "tech", "technologie", "numerique", "sante", "environnement", "climat", "energie"}
+SPORT_TAGS = {"sport", "sports", "football", "rugby", "tennis", "cyclisme", "basket", "handball", "athletisme", "formule 1"}
+
+
+def _tag(c: dict) -> str:
+    t = __import__("unicodedata").normalize("NFKD", str(c.get("tag") or "").lower())
+    return "".join(ch for ch in t if not __import__("unicodedata").combining(ch)).strip()
+
+
+def actu_subjects(fmt: dict) -> list:
+    """Les sujets de l'Actu : chaque case dessinée (hors « Comment ça se fait ? ») ouvre un sujet ; les cases qui suivent
+    (photo, « Ce qui se passe vraiment », zoom) lui appartiennent. « La suite » et « Sur Internet » sont à part."""
+    out = []
+    for c in fmt.get("cases", []) or []:
+        if not isinstance(c, dict) or c.get("kind") == "buzz" or c.get("suite"):
+            continue
+        if c.get("kind") not in ("explain", "photo") and not c.get("zoom"):
+            out.append([])
+        if out:
+            out[-1].append(c)
+    return out
+
+
+def previous_actus(d: Path, n: int = 6) -> list:
+    """Les Actus des éditions précédentes (les plus récentes d'abord) : [(date, format actu)], au plus n jours en arrière."""
+    out = []
+    try:
+        day = __import__("datetime").date.fromisoformat(d.name)
+    except ValueError:
+        return out
+    for k in range(1, n + 1):
+        prev = (day - __import__("datetime").timedelta(days=k)).isoformat()
+        try:
+            ed = json.loads((d.parent / prev / "edition.json").read_text())
+        except (OSError, ValueError):
+            continue
+        a = next((f for f in ed.get("formats", []) if isinstance(f, dict) and f.get("id") == "actu"), None)
+        if a:
+            out.append((prev, a))
+    return out
+
+
+def _actu_minutes(fmt: dict) -> float:
+    w, pics = 0, 0
+    for c in fmt.get("cases", []) or []:
+        if not isinstance(c, dict):
+            continue
+        w += words(c.get("caption")) + words(c.get("text")) + words(c.get("why")) + sum(words(x) for x in c.get("steps") or [])
+        w += sum(words((b or {}).get("text")) for b in c.get("bubbles", []) or [])
+        pics += c.get("kind") not in ("explain", "buzz")
+    w += words((fmt.get("final") or {}).get("text"))
+    return (w / 180 * 60 + pics * 3 + 10) / 60
+
+
+def check_actu_humour(fmt: dict, dr: list, warn, d: Path | None = None, prev=None):
+    """L'Actu (règles des 16 novembre 2026) : blagues variées, un sujet du jour creusé et des brèves, un sujet « découverte »,
+    le sport un jour sur deux, les sources de chaque sujet, les suites promises, l'équilibre des personnalités, 3 à 4 minutes."""
+    prev = (previous_actus(d) if d is not None else []) if prev is None else prev
+    cases = [c for c in fmt.get("cases", []) or [] if isinstance(c, dict)]
+    # --- blagues : une mécanique une seule fois (la case dessinée « Comment ça se fait ? » en est dispensée)
+    gags = [c.get("gag") for c in dr if not c.get("zoom")]
     for i, g in enumerate(gags, 1):
         if not g:
             warn(f"case dessinée {i} : mécanique de la blague absente (champ « gag » : {', '.join(sorted(GAG_KINDS))})")
@@ -295,15 +359,86 @@ def check_actu_humour(fmt: dict, dr: list, warn):
     twice = sorted({g for g in gags if g and gags.count(g) > 1})
     if twice:
         warn(f"même mécanique de blague plusieurs fois le même jour : {', '.join(twice)} (une fois chacune au plus)")
-    for i, c in enumerate(fmt.get("cases", []) or [], 1):
-        if isinstance(c, dict) and c.get("kind") == "explain":
-            lines = [l.strip() for l in str(c.get("text") or "").split("\n")]
-            if not any(l.startswith("Repère :") for l in lines):
-                warn(f"case {i} (Ce qui se passe vraiment) : ligne « Repère : » absente (une comparaison chiffrée qui donne l'échelle)")
-    buzz = [str(c.get("text") or "") for c in fmt.get("cases", []) or [] if isinstance(c, dict) and c.get("kind") == "buzz"]
+    buzz = [str(c.get("text") or "") for c in cases if c.get("kind") == "buzz"]
     starts = [" ".join(_norm(t.split(". ")[-1])[:1]) for t in buzz]
     if len(buzz) >= 2 and any(starts.count(x) > 1 for x in starts if x):
         warn("« Sur Internet » : plusieurs vannes construites pareil (même premier mot de chute, « Moi, ma… ») ; varier")
+    subjects = actu_subjects(fmt)
+    if not subjects:
+        return
+    # --- un sujet du jour creusé, puis des brèves
+    if not 3 <= len(subjects) <= 5:
+        warn(f"{len(subjects)} sujets : viser 1 sujet du jour et 2 à 4 brèves (3 à 5 sujets)")
+    leads = [k for k, sub in enumerate(subjects) if sub[0].get("lead")]
+    if len(leads) != 1:
+        warn(f"{len(leads)} sujet(s) du jour (« lead »: true sur sa case dessinée) : il en faut exactement un")
+    elif leads[0] != 0:
+        warn("le sujet du jour (« lead ») ouvre l'Actu : le placer en premier")
+    for k, sub in enumerate(subjects, 1):
+        lead = bool(sub[0].get("lead"))
+        name = "sujet du jour" if lead else f"brève {k}"
+        ex = next((c for c in sub if c.get("kind") == "explain" and not c.get("zoom")), None)
+        if ex:
+            lines = [l.strip() for l in str(ex.get("text") or "").split("\n") if l.strip()]
+            for label in ("Quoi :", "Pourquoi ça compte :", "Et maintenant :"):
+                if not any(l.startswith(label) for l in lines):
+                    warn(f"{name} : ligne « {label} » absente de « Ce qui se passe vraiment »")
+            if lead and not any(l.startswith("Repère :") for l in lines):
+                warn("sujet du jour : ligne « Repère : » absente (une comparaison chiffrée qui donne l'échelle)")
+            if not lead and words(ex.get("text")) > ACTU_BRIEF_MAX:
+                warn(f"{name} : « Ce qui se passe vraiment » de {words(ex.get('text'))} mots (max {ACTU_BRIEF_MAX} pour une brève)")
+            srcs = {str(x.get("title") or "").strip().lower() for x in ex.get("sources") or [] if isinstance(x, dict) and str(x.get("url", "")).startswith("https://")}
+            if len(srcs - {""}) < 2:
+                warn(f"{name} : deux sources de médias différents attendues dans « sources » de la case « Ce qui se passe vraiment » (titre + adresse https)")
+        if lead:
+            if not any(c.get("kind") == "photo" for c in sub):
+                warn("sujet du jour : pas de vraie photo (le lieu, l'objet ou l'institution dont on parle)")
+            if not any(c.get("kind") == "explain" and c.get("zoom") for c in sub):
+                warn("sujet du jour : pas creusé (case texte « Comment ça se fait ? », « zoom »: true, 3 à 5 maillons)")
+    # --- rubriques : un sujet « découverte » par Actu, le sport un jour sur deux, les sciences régulièrement
+    tags = [_tag(sub[0]) for sub in subjects]
+    if not any(t in DISCOVERY_TAGS for t in tags):
+        warn("aucun sujet « découverte » (sciences, espace, tech, santé, environnement ou culture) : en prendre un dans « discovery » du fichier RSS")
+    prev_tags = [[_tag(sub[0]) for sub in actu_subjects(a)] for _, a in prev[:2]]
+    sport = [sub[0] for sub in subjects if _tag(sub[0]) in SPORT_TAGS]
+    if sport and prev_tags and any(t in SPORT_TAGS for t in prev_tags[0]) and not any(c.get("major") for c in sport):
+        warn("du sport deux jours de suite : un jour sur deux au plus, sauf événement majeur (« major »: true sur la case)")
+    if len(prev_tags) == 2 and not any(t in SCIENCE_TAGS for ts in [tags] + prev_tags for t in ts):
+        warn("aucun sujet de sciences, de tech, de santé ou d'environnement en trois Actus")
+    # --- personnalités politiques : déclarées, et pas toujours les mêmes
+    for sub in subjects:
+        c = sub[0]
+        if _tag(c) == "politique" and not c.get("people"):
+            warn("sujet politique sans champ « people » (nom et parti des personnalités mises en scène) : l'équilibre ne peut pas être suivi")
+    week = {}
+    for _, a in prev[:6]:
+        for name in {str(w.get("name") or "").strip() for c in a.get("cases", []) or [] if isinstance(c, dict) for w in c.get("people") or []}:
+            week[name] = week.get(name, 0) + 1
+    for name in sorted({str(w.get("name") or "").strip() for c in cases for w in c.get("people") or []} - {""}):
+        if week.get(name, 0) >= 2:
+            warn(f"{name} : déjà dans {week[name]} Actus sur les 6 derniers jours ; varier les personnalités et les bords")
+    # --- « La suite » : ce que les Actus précédentes avaient annoncé (« due ») et dont on connaît le résultat
+    suites = [c for c in cases if c.get("suite")]
+    if len(suites) > 2:
+        warn(f"{len(suites)} cases « La suite », 2 au plus")
+    for c in suites:
+        if not re.fullmatch(r"\d{4}-\d\d-\d\d#\d+", str(c.get("of") or "")):
+            warn("case « La suite » : champ « of » attendu (« AAAA-MM-JJ#n » : édition et numéro de la case qui annonçait l'échéance)")
+        if not any(str(x.get("url", "")).startswith("https://") for x in c.get("sources") or [] if isinstance(x, dict)):
+            warn("case « La suite » : au moins une source (titre + adresse https)")
+    if d is not None and re.fullmatch(r"\d{4}-\d\d-\d\d", d.name):
+        done = {str(c.get("of")) for c in suites}
+        for i, (date, a) in enumerate(prev[:4]):
+            later = prev[:i]  # éditions sorties entre l'annonce et aujourd'hui
+            done_before = {str(c.get("of")) for _, x in later for c in x.get("cases", []) or [] if isinstance(c, dict) and c.get("suite")}
+            for c in a.get("cases", []) or []:
+                if isinstance(c, dict) and c.get("kind") == "explain" and re.fullmatch(r"\d{4}-\d\d-\d\d", str(c.get("due") or "")):
+                    ref = f"{date}#{c.get('n')}"
+                    if c["due"] < d.name and ref not in done and ref not in done_before:
+                        warn(f"« La suite » attendue : « {c.get('title', '')} » annonçait une échéance le {c['due']} ({ref}) ; donner le résultat s'il est connu")
+    # --- durée de lecture
+    if _actu_minutes(fmt) > ACTU_MINUTES_MAX + .5:
+        warn(f"Actu trop longue : environ {round(_actu_minutes(fmt))} min de lecture (viser 3 à 4) ; raccourcir les brèves ou en retirer une")
 
 
 def words(t: str) -> int:
@@ -455,7 +590,9 @@ def check_story(fmt: dict, d: Path, err, warn):
             if not case.get("title") or not (case.get("text") or case.get("steps")):
                 err(f"case {i} (Pour mieux comprendre) : « title » et « text » ou « steps » obligatoires")
             n = words(case.get("text")) + sum(words(x) for x in case.get("steps") or []) + words(case.get("joke"))
-            emax = ACTU_EXPLAIN_MAX if fid == "actu" else EXPLAIN_MAX
+            emax = (ACTU_ZOOM_MAX if case.get("zoom") else ACTU_SUITE_MAX if case.get("suite") else ACTU_EXPLAIN_MAX) if fid == "actu" else EXPLAIN_MAX
+            if fid == "actu" and case.get("zoom") and not 3 <= len(case.get("steps") or []) <= 5:
+                warn(f"case {i} (Comment ça se fait ?) : 3 à 5 maillons dans « steps »")
             if n > emax:
                 warn(f"case {i} (Pour mieux comprendre) : {n} mots (max {emax})")
             if case.get("image"):
@@ -486,15 +623,15 @@ def check_story(fmt: dict, d: Path, err, warn):
         if fid == "actu":
             if len(case.get("bubbles") or []) > 1:
                 warn(f"case {i} : Actu, une seule bulle (la blague) ; l'info va dans le récitatif")
-            # 9 novembre 2026 : par sujet, case dessinée → photo réelle (« En vrai ») → « Ce qui se passe vraiment ».
             nxt = cases[i] if i < len(cases) else None
-            has_photo = isinstance(nxt, dict) and nxt.get("kind") == "photo"
-            if has_photo:
-                nxt = cases[i + 1] if i + 1 < len(cases) else None
-            else:
-                warn(f"case {i} : Actu, pas de photo réelle (« kind »: « photo ») juste après la case dessinée")
-            if not (isinstance(nxt, dict) and nxt.get("kind") == "explain"):
-                warn(f"case {i} : Actu, il manque la case « Ce qui se passe vraiment » après la case dessinée (et sa photo)")
+            if case.get("zoom"):  # 13 novembre 2026 : « Comment ça se fait ? », dessin du mécanisme puis sa case texte
+                if not (isinstance(nxt, dict) and nxt.get("kind") == "explain" and nxt.get("zoom")):
+                    warn(f"case {i} : « Comment ça se fait ? » dessinée sans sa case texte (explain, zoom) juste après")
+            else:  # par sujet : case dessinée → photo réelle si elle montre vraiment le sujet → « Ce qui se passe vraiment »
+                if isinstance(nxt, dict) and nxt.get("kind") == "photo":
+                    nxt = cases[i + 1] if i + 1 < len(cases) else None
+                if not (isinstance(nxt, dict) and nxt.get("kind") == "explain" and not nxt.get("suite")):
+                    warn(f"case {i} : Actu, il manque la case « Ce qui se passe vraiment » après la case dessinée (et sa photo)")
         for b in case.get("bubbles", []) or []:
             if not b.get("who"):
                 warn(f"case {i} : bulle sans « who » (nom de la personne qui parle)")

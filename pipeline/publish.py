@@ -48,6 +48,7 @@ def reading_minutes(fmt: dict) -> int:
             continue
         for k in ("caption", "text"):
             words += len(str(c.get(k) or "").split())
+        words += sum(len(str(x).split()) for x in c.get("steps") or [])  # maillons de « Comment ça se fait ? » et étapes
         for b in c.get("bubbles", []) or []:
             words += len(str((b or {}).get("text") or "").split())
         if c.get("kind") not in ("explain", "buzz"):
@@ -66,8 +67,10 @@ def actu_subjects(fmt: dict) -> list[list[int]]:
     (photo « En vrai », « Ce qui se passe vraiment ») lui appartiennent. Renvoie les index des cases par sujet."""
     out = []
     for i, c in enumerate(fmt.get("cases", []) or []):
-        # Une case « Sur Internet » est un sujet à elle seule : Greg peut la retirer seule.
-        if c.get("kind") not in TEXT_KINDS or c.get("kind") == "buzz" or not out:
+        # Une case « Sur Internet » est un sujet à elle seule : Greg peut la retirer seule. Une case « La suite » aussi.
+        # La case dessinée « Comment ça se fait ? » (zoom) reste dans le sujet du jour qu'elle creuse.
+        opens = (c.get("kind") not in TEXT_KINDS and not c.get("zoom")) or c.get("kind") == "buzz" or c.get("suite")
+        if opens or not out:
             out.append([])
         out[-1].append(i)
     return out
@@ -424,6 +427,38 @@ def queue_index(today: date) -> dict:
     return out
 
 
+def actu_balance(today: date, days: int = 14) -> dict:
+    """Qui l'Actu a-t-elle mis en scène ces 14 derniers jours ? (16 novembre 2026, promesse de neutralité.)
+    Compte les personnalités politiques déclarées dans le champ `people` des cases dessinées de l'Actu,
+    par personne et par parti, une fois par édition. Affiché dans l'écran admin ; rien n'est publié aux lecteurs."""
+    since = (today - timedelta(days=days - 1)).isoformat()
+    people, parties, editions = {}, {}, 0
+    for d in sorted(p for p in EDITIONS.iterdir() if p.is_dir() and since <= p.name <= (today + timedelta(days=1)).isoformat()):
+        try:
+            ed = json.loads((d / "edition.json").read_text())
+        except (OSError, ValueError):
+            continue
+        actu = next((f for f in ed.get("formats", []) if isinstance(f, dict) and f.get("id") == "actu"), None)
+        if not actu:
+            continue
+        editions += 1
+        seen_p, seen_party = set(), set()
+        for c in actu.get("cases", []) or []:
+            for who in (c.get("people") or []) if isinstance(c, dict) else []:
+                name, party = str(who.get("name") or "").strip(), str(who.get("party") or "").strip() or "sans étiquette"
+                if name and name not in seen_p:
+                    seen_p.add(name)
+                    e = people.setdefault(name, {"name": name, "party": party, "n": 0, "last": d.name})
+                    e["n"] += 1
+                    e["last"] = d.name
+                if name and party not in seen_party:
+                    seen_party.add(party)
+                    parties[party] = parties.get(party, 0) + 1
+    return {"days": days, "editions": editions,
+            "people": sorted(people.values(), key=lambda e: (-e["n"], e["name"])),
+            "parties": [{"party": k, "n": v} for k, v in sorted(parties.items(), key=lambda kv: (-kv[1], kv[0]))]}
+
+
 def write_health(health: dict, index: list, today: date):
     """Résumé lisible par une machine : l'édition du jour est-elle en ligne, combien de jours d'avance ?"""
     pub = next((e for e in index if e["date"] == today.isoformat()), None)
@@ -460,6 +495,23 @@ def write_health(health: dict, index: list, today: date):
                          "today_usd": fal.get("days", {}).get(today.isoformat(), 0), "blocked": fal.get("blocked")}
     except Exception:
         health["fal"] = None
+    # Collecte des flux (16 novembre 2026) : un flux qui ne renvoie plus rien, ou une collecte trop ancienne, se voit ici.
+    try:
+        last = sorted((ROOT / "data" / "rss").glob("*.json"))[-1]
+        rss = json.loads(last.read_text())
+        when = datetime.fromisoformat(rss["collected_at"])
+        age_h = round((datetime.now(ZoneInfo("Europe/Paris")) - when).total_seconds() / 3600, 1)
+        health["rss"] = {"collected_at": rss["collected_at"], "age_hours": age_h, "feeds": rss.get("feeds"), "empty_feeds": rss.get("empty_feeds", [])}
+        if rss.get("empty_feeds"):
+            health["problems"].append("flux d'actualité vides à la dernière collecte : " + ", ".join(rss["empty_feeds"]) + " (adresse à vérifier dans pipeline/feeds.json)")
+        if age_h > 30:
+            health["problems"].append(f"collecte des flux d'actualité vieille de {round(age_h)} h : l'Actu choisit ses sujets sans elle")
+    except Exception:  # noqa: BLE001 — jamais bloquant
+        health["rss"] = None
+    try:
+        health["actu_balance"] = actu_balance(today)
+    except Exception as ex:  # noqa: BLE001
+        print(f"! équilibre de l'Actu : {ex}")
     (ROOT / "data").mkdir(exist_ok=True)
     (ROOT / "data" / "health.json").write_text(json.dumps(health, ensure_ascii=False, indent=1))
     print(f"Santé : édition du jour {'en ligne' if pub else 'ABSENTE'}, file : "

@@ -496,22 +496,119 @@ def test_ouverture_identique_a_une_bd_recente():
     assert not any("identique" in m for m in _humour(fmt, [("stock/cultureg/autre", "Une autre BD", "bonjour à tous", "bonne nuit les")]))
 
 
-def test_actu_mecaniques_variees_et_repere():
-    def sujet(i, gag, repere=True):
-        txt = "Quoi : un fait.\nPourquoi ça compte : parce que.\n" + ("Repère : dix fois plus qu'en 2020.\n" if repere else "") + "Et maintenant : la suite."
-        return [{"n": 2 * i + 1, "kind": "fact", "gag": gag, "caption": "Un fait.", "bubbles": [{"who": "x", "text": "Blague."}], "image": {"prompt": "x", "file": f"a{i}.webp"}},
-                {"n": 2 * i + 2, "kind": "explain", "title": "T", "text": txt}]
-    fmt = {"id": "actu", "title": "Actu", "cases": sujet(0, "litteral") + sujet(1, "litteral") + sujet(2, None, repere=False)}
+SRC2 = [{"title": "Le Monde", "url": "https://a.fr/1"}, {"title": "franceinfo", "url": "https://b.fr/2"}]
+
+
+def _sujet(gag, tag="Société", lead=False, repere=True, zoom=True, photo=True, sources=SRC2, words_extra="", **extra):
+    """Un sujet d'Actu au format du 16 novembre 2026 : dessin, photo (sujet du jour), explication, zoom (sujet du jour)."""
+    txt = "Quoi : un fait." + words_extra + "\nPourquoi ça compte : parce que.\n" + ("Repère : dix fois plus qu'en 2020.\n" if repere else "") + "Et maintenant : la suite."
+    out = [{"kind": "fact", "tag": tag, "gag": gag, "lead": lead, "caption": "Un fait.", "bubbles": [{"who": "x", "text": "Blague."}], "image": {"prompt": "x", "file": "a.webp"}, **extra}]
+    if lead and photo:
+        out.append({"kind": "photo", "title": "Le lieu", "text": "Ce qu'on voit.", "photo": {"commons": "File:X.jpg"}})
+    out.append({"kind": "explain", "tag": "Ce qui se passe vraiment", "title": "T", "text": txt, "sources": sources})
+    if lead and zoom:
+        out.append({"kind": "explain", "zoom": True, "tag": "Comment ça se fait ?", "title": "Pourquoi ?", "steps": ["Un.", "Deux.", "Trois."]})
+    return out
+
+
+def _actu(*subjects, extra=()):
+    cases = [c for s in subjects for c in s] + list(extra)
+    for n, c in enumerate(cases, 1):
+        c["n"] = n
+    return {"id": "actu", "title": "Actu", "cases": cases}
+
+
+def _check_actu(fmt, prev=()):
     got = []
-    validate.check_humour(fmt, Path("editions/2026-12-01"), got.append)
-    joined = " | ".join(got)
+    validate.check_actu_humour(fmt, validate._drawn(fmt), got.append, Path("editions/2026-12-01"), prev=list(prev))
+    return got
+
+
+def test_actu_au_bon_format_sans_avertissement():
+    ok = _actu(_sujet("litteral", "Économie", lead=True), _sujet("litote", "Sciences"), _sujet("escalade", "Monde"), _sujet("bureau", "Culture"))
+    assert _check_actu(ok) == []
+
+
+def test_actu_mecaniques_variees_et_repere():
+    fmt = _actu(_sujet("litteral", "Économie", lead=True, repere=False), _sujet("litteral", "Sciences"), _sujet(None, "Monde"))
+    joined = " | ".join(_check_actu(fmt))
     assert "même mécanique de blague plusieurs fois" in joined and "litteral" in joined
     assert "mécanique de la blague absente" in joined
-    assert joined.count("Repère") == 1
-    ok = {"id": "actu", "title": "Actu", "cases": sujet(0, "litteral") + sujet(1, "litote") + sujet(2, "escalade")}
-    got = []
-    validate.check_humour(ok, Path("editions/2026-12-01"), got.append)
-    assert got == []
+    assert joined.count("Repère") == 1  # demandé au sujet du jour seulement
+
+
+def test_actu_sujet_du_jour_et_breves():
+    sans_lead = _actu(_sujet("litteral", "Sciences"), _sujet("litote", "Monde"), _sujet("escalade", "Culture"))
+    assert any("0 sujet(s) du jour" in m for m in _check_actu(sans_lead))
+    pas_creuse = _actu(_sujet("litteral", "Sciences", lead=True, zoom=False, photo=False), _sujet("litote", "Monde"), _sujet("escalade", "Culture"))
+    got = " | ".join(_check_actu(pas_creuse))
+    assert "pas creusé" in got and "pas de vraie photo" in got
+    longue = _actu(_sujet("litteral", "Sciences", lead=True), _sujet("litote", "Monde", words_extra=" mot" * 40), _sujet("escalade", "Culture"))
+    assert any("max 45 pour une brève" in m for m in _check_actu(longue))
+    six = _actu(_sujet("litteral", "Sciences", lead=True), *[_sujet(g, "Monde") for g in ("litote", "escalade", "bureau", "comparaison", "anachronisme")])
+    assert any("6 sujets" in m for m in _check_actu(six))
+
+
+def test_actu_sources_par_sujet():
+    fmt = _actu(_sujet("litteral", "Sciences", lead=True), _sujet("litote", "Monde", sources=[{"title": "Le Monde", "url": "https://a.fr/1"}]), _sujet("escalade", "Culture"))
+    got = _check_actu(fmt)
+    assert sum("deux sources" in m for m in got) == 1 and any("brève 2" in m for m in got)
+
+
+def test_actu_decouverte_sport_et_sciences():
+    sans = _actu(_sujet("litteral", "Politique", lead=True, people=[{"name": "A", "party": "X"}]), _sujet("litote", "Monde"), _sujet("escalade", "Sport"))
+    assert any("découverte" in m for m in _check_actu(sans))
+    hier = _actu(_sujet("litteral", "Économie", lead=True), _sujet("litote", "Sport"), _sujet("escalade", "Culture"))
+    avant = _actu(_sujet("litteral", "Économie", lead=True), _sujet("litote", "Monde"), _sujet("escalade", "Cinéma"))
+    auj = _actu(_sujet("litteral", "Économie", lead=True), _sujet("litote", "Sport"), _sujet("escalade", "Culture"))
+    got = " | ".join(_check_actu(auj, prev=[("2026-11-30", hier), ("2026-11-29", avant)]))
+    assert "du sport deux jours de suite" in got
+    assert "aucun sujet de sciences" in got
+    majeur = _actu(_sujet("litteral", "Économie", lead=True), _sujet("litote", "Sport", major=True), _sujet("escalade", "Santé"))
+    got = " | ".join(_check_actu(majeur, prev=[("2026-11-30", hier), ("2026-11-29", avant)]))
+    assert "sport" not in got and "sciences" not in got
+
+
+def test_actu_personnalites_politiques():
+    lecornu = [{"name": "Sébastien Lecornu", "party": "Renaissance"}]
+    sans_people = _actu(_sujet("litteral", "Politique", lead=True), _sujet("litote", "Sciences"), _sujet("escalade", "Culture"))
+    assert any("sans champ « people »" in m for m in _check_actu(sans_people))
+    def jour(people):
+        return _actu(_sujet("litteral", "Politique", lead=True, people=people), _sujet("litote", "Sciences"), _sujet("escalade", "Culture"))
+    prev = [("2026-11-30", jour(lecornu)), ("2026-11-28", jour(lecornu))]
+    assert any("Sébastien Lecornu : déjà dans 2 Actus" in m for m in _check_actu(jour(lecornu), prev=prev))
+    assert not any("déjà dans" in m for m in _check_actu(jour([{"name": "Autre", "party": "Y"}]), prev=prev))
+
+
+def test_actu_la_suite_attendue():
+    hier = _actu(_sujet("litteral", "Diplomatie", lead=True), _sujet("litote", "Sciences"), _sujet("escalade", "Culture"))
+    annonce = next(c for c in hier["cases"] if c["kind"] == "explain" and not c.get("zoom"))
+    annonce.update(title="Francophonie : une succession sous tension", due="2026-11-30")
+    auj = _actu(_sujet("litteral", "Économie", lead=True), _sujet("litote", "Sciences"), _sujet("escalade", "Culture"))
+    got = _check_actu(auj, prev=[("2026-11-30", hier)])
+    assert any("« La suite » attendue" in m and "Francophonie" in m and f"2026-11-30#{annonce['n']}" in m for m in got)
+    suite = {"kind": "explain", "suite": True, "tag": "La suite", "title": "Francophonie : c'est voté", "text": "Annoncé : un vote lundi.\nRésultat : élue.",
+             "of": f"2026-11-30#{annonce['n']}", "sources": SRC2[:1]}
+    assert _check_actu(_actu(_sujet("litteral", "Économie", lead=True), _sujet("litote", "Sciences"), _sujet("escalade", "Culture"), extra=[suite]), prev=[("2026-11-30", hier)]) == []
+    # une échéance pas encore passée n'est pas réclamée
+    annonce["due"] = "2026-12-05"
+    assert not any("La suite" in m for m in _check_actu(auj, prev=[("2026-11-30", hier)]))
+
+
+def test_actu_trop_longue():
+    fmt = _actu(_sujet("litteral", "Sciences", lead=True), _sujet("litote", "Monde"), _sujet("escalade", "Culture"),
+                extra=[{"kind": "buzz", "text": "mot " * 900, "why": "x"}])
+    assert any("Actu trop longue" in m for m in _check_actu(fmt))
+
+
+def test_sujets_retirables_avec_zoom_et_suite():
+    fmt = _actu(_sujet("litteral", "Sciences", lead=True), _sujet("litote", "Monde"),
+                extra=[{"kind": "explain", "suite": True, "title": "S", "text": "x"}, {"kind": "buzz", "text": "b"}])
+    fmt["cases"].insert(4, {"kind": "fact", "zoom": True, "caption": "Le mécanisme.", "image": {"prompt": "x", "file": "z.webp"}})
+    groups = publish.actu_subjects(fmt)
+    kinds = [[("zoom-" if fmt["cases"][i].get("zoom") else "") + ("suite" if fmt["cases"][i].get("suite") else fmt["cases"][i]["kind"]) for i in g] for g in groups]
+    assert kinds == [["fact", "photo", "explain", "zoom-explain", "zoom-fact"], ["fact", "explain"], ["suite"], ["buzz"]]
+    assert publish.reading_minutes({"cases": [{"kind": "explain", "steps": ["mot " * 90] * 2}]}) == 1
 
 
 def test_sur_internet_vannes_variees():
@@ -521,3 +618,36 @@ def test_sur_internet_vannes_variees():
     got = []
     validate.check_humour(fmt, Path("editions/2026-12-01"), got.append)
     assert any("Sur Internet" in m for m in got)
+
+
+# ---------- Collecte : sujets les plus repris, équilibre de l'Actu (16 novembre 2026) ----------
+def test_sujets_les_plus_repris_et_decouverte():
+    import hot
+    def it(source, title, rubrique="général"):
+        return {"source": source, "title": title, "rubrique": rubrique, "role": "veille", "published": "2026-11-15T10:00:00+01:00"}
+    items = [it("Le Monde", "SpaceX récupère l'étage supérieur de Starship", "sciences"),
+             it("Le Figaro", "Starship : SpaceX réussit à récupérer l'étage supérieur"),
+             it("Le Parisien", "SpaceX récupère enfin l'étage supérieur de sa fusée Starship"),
+             it("franceinfo", "Le Smic augmente de 1,6 % au 1er décembre"),
+             it("Libération", "Smic : une hausse de 1,6 % au 1er décembre, annonce Matignon"),
+             it("BBC World", "Storm warning issued for northern coasts")]
+    groups = hot.hot_topics(items)
+    assert [g["sources"] for g in groups] == [3, 2]
+    assert "starship" in groups[0]["keywords"]
+    disc = hot.hot_topics(items, min_sources=1, keep=lambda i: i["rubrique"] == "sciences")
+    assert len(disc) == 1 and disc[0]["sources"] == 3
+
+
+def test_equilibre_de_l_actu(tmp_path, monkeypatch):
+    from datetime import date
+    def actu(people):
+        return {"formats": [{"id": "actu", "cases": [{"kind": "fact", "people": people}, {"kind": "fact", "people": people[:1]}]}]}
+    for d, people in [("2026-11-20", [{"name": "A", "party": "X"}, {"name": "B", "party": "Y"}]), ("2026-11-21", [{"name": "A", "party": "X"}]),
+                      ("2026-11-01", [{"name": "Vieux", "party": "Z"}])]:
+        (tmp_path / d).mkdir()
+        (tmp_path / d / "edition.json").write_text(json.dumps(actu(people)))
+    monkeypatch.setattr(publish, "EDITIONS", tmp_path)
+    b = publish.actu_balance(date(2026, 11, 21))
+    assert b["editions"] == 2
+    assert [(p["name"], p["n"]) for p in b["people"]] == [("A", 2), ("B", 1)]  # une fois par édition, hors période ignoré
+    assert b["parties"] == [{"party": "X", "n": 2}, {"party": "Y", "n": 1}]

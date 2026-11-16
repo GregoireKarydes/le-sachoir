@@ -57,8 +57,20 @@ Avant : deux bulles par case, une « vraie » et une blague ; il manquait de l'i
   - **« Pourquoi ça compte » répond à la question** : la conséquence pour les gens ou l'enjeu, pas un détail de plus. Raté : « Narva, Luhamaa et Koidula sont ses trois passages routiers ». Réussi : « C'est la dernière frontière terrestre ouverte entre la Russie et l'Union européenne dans cette région ».
   - **« Repère »** (16 novembre 2026) : une comparaison chiffrée et sourcée qui donne l'échelle. « 4 millions de logements en dix ans » ne dit rien seul ; « Repère : 400 000 par an, alors que la France en a mis en chantier tant l'an dernier (chiffre sourcé du jour) » dit si c'est énorme ou banal. Si aucun chiffre de comparaison n'est sourcé, un repère historique (« la dernière fois, c'était en… »).
 - **Photo réelle** entre les deux (9 novembre 2026) : le vrai lieu, l'institution, l'objet ou la carte du sujet (Wikimedia Commons, jamais une personne vivante). Ordre : dessin → photo → « Ce qui se passe vraiment ».
-- Une seule image dessinée par sujet : on peut traiter 4 à 6 sujets sans dessiner plus (les photos ne coûtent rien).
+- Une seule image dessinée par sujet (deux pour le sujet du jour s'il a sa case dessinée « Comment ça se fait ? »).
 - Exemple de forme (sujet inventé, ne jamais le reprendre) : récitatif « La mairie de Lyon interdit les trottinettes en libre-service dans le centre dès lundi, après 300 plaintes de piétons en un an. » ; bulle d'un livreur à trottinette, figé sur la ligne : « Techniquement, ma roue avant est encore dans le 7e. » ; puis la case Quoi / Pourquoi ça compte / Et maintenant.
+
+## L'Actu : un sujet du jour, des brèves (13 et 16 novembre 2026, décisions de Greg)
+Constat du 16 novembre : des Actus de 15 ou 16 cases et 5 minutes pour 2 visées ; aucun sujet de sciences, de tech, de santé ou d'environnement en quatre Actus, du sport chaque jour ; des « Et maintenant » restés sans suite ; un sujet repris par trois médias (Starship) écarté au profit d'un sujet local.
+- **Les sujets se choisissent selon leur poids réel dans la presse** (nombre de médias qui les reprennent), pas d'après une seule source. Un sujet majeur (repris partout, ou qui touche des millions de gens) ne manque jamais.
+- **Une Actu hiérarchisée, 3 à 4 minutes** : **le sujet du jour**, creusé, puis **2 à 4 brèves**.
+  - Sujet du jour : dessin, vraie photo, « Ce qui se passe vraiment » en quatre lignes (avec « Repère »), puis **« Comment ça se fait ? »** : une case texte en **3 à 5 maillons** (cause → mécanisme → conséquence) qui répond à la question que tout le monde se pose ; une case dessinée du mécanisme en plus si elle tient en une image simple.
+  - Brève : dessin + « Ce qui se passe vraiment » en trois lignes, 45 mots. Une photo seulement si elle montre vraiment le sujet.
+- **Un sujet « découverte » par Actu** : sciences, espace, tech, santé, environnement ou culture ; et un sujet de sciences, de tech, de santé ou d'environnement au moins toutes les trois Actus. **Le sport un jour sur deux au plus**, sauf événement majeur.
+- **« La suite »** : quand une Actu a annoncé un rendez-vous daté (« Et maintenant : vote lundi »), l'Actu suivante en donne le résultat dans une case texte « Annoncé / Résultat », si une source le confirme. Deux au plus. C'est ce qui donne envie de revenir.
+- **Les sources de chaque sujet** (deux médias) sont affichées sous son explication.
+- **Équilibre** : chaque personnalité politique mise en scène est déclarée (`people` : nom, parti) ; l'écran admin en fait le compte sur 14 jours ; pas la même personnalité dans trois Actus en une semaine quand un autre sujet de poids comparable existe.
+- Rien d'inventé : ce qui n'est pas encore connu est dit comme tel ; ce qui est général (comment marche le service, ce qui se passe d'habitude) est présenté comme général.
 
 ## « Pendant ce temps, sur Internet » (fin de l'Actu, 13 novembre 2026)
 - Trois tendances légères du jour. Pour chacune, de préférence **le vrai post** qui la résume (intégration officielle du réseau, avec un lien vers l'original), suivi d'une vanne du Sachoir ; sinon une carte réécrite par nous, avec un pseudo inventé.
@@ -103,7 +115,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 
 | Format | Durée visée | Cases (repère) | Humour |
 |---|---|---|---|
-| Actu du jour (`actu`) | environ 2 min | 4 à 6 sujets ; par sujet 1 case dessinée + 1 case « Ce qui se passe vraiment » | Le gag dans la case dessinée, l'explication neutre dans la case texte (voir plus bas) |
+| Actu du jour (`actu`) | 3 à 4 min | 1 sujet du jour creusé (« Comment ça se fait ? ») + 2 à 4 brèves ; « La suite » (2 au plus) ; 3 cases « Sur Internet » | Le gag dans la case dessinée, l'explication neutre dans la case texte (voir plus bas) |
 | Pilule de culture G (`cultureg`) | 1 à 2 min | 6 à 10 | Concept expliqué et vulgarisé par une scène (des personnages qui vivent le problème) ; un gag toutes les 2 ou 3 cases, une case muette |
 | Insolite historique (`insolite`) | 1 min | 5 à 7 | Un fait ahurissant ou une idée reçue démontée, raconté clairement ; un gag toutes les 2 ou 3 cases |
 | La Notice (`notice`, 14 novembre 2026) | 2 min | 4 ou 5 dessinées au plus + 1 ou 2 « Pour mieux comprendre » + 1 photo | Micro-BD : le mécanisme d'un objet ou d'un phénomène du quotidien (frigo, micro-ondes, avion qui vole…) expliqué en situation (quelqu'un a un problème concret avec l'objet, quelqu'un sait pourquoi) ; un gag par case dessinée, chute en écho à la case 1 |
@@ -148,7 +160,7 @@ Libres mais **toujours humoristiques** (jeu de mots, promesse décalée, questio
 - [ ] Grand Dossier : compréhension d'abord, cliffhanger en case 4 ; sujets graves traités sans moquer les victimes.
 - [ ] Personnalités vivantes : règles ci-dessus respectées ; pas de politique partisane ; rien de blessant.
 - [ ] Carte « Pour briller » exacte, 25 mots max : le fait le plus surprenant, pas une redite du titre ou du résumé.
-- [ ] Actu : un champ `gag` par case dessinée, jamais deux fois la même mécanique ; ligne « Repère : » dans chaque « Ce qui se passe vraiment ».
+- [ ] Actu : un champ `gag` par case dessinée, jamais deux fois la même mécanique ; un sujet du jour (`lead`) creusé, avec « Repère » ; 2 à 4 brèves de 45 mots ; un sujet « découverte » ; pas de sport deux jours de suite ; deux sources par sujet ; `people` sur les sujets politiques ; « La suite » des échéances passées ; 4 minutes au plus.
 - [ ] Lu à voix haute : une blague qu'il faut expliquer est coupée.
 - [ ] Vraies images (9 novembre 2026) : au moins une case photo dès qu'un document pertinent existe (1 ou 2 en Culture G et Insolite, 2 à 4 en Grand Dossier, une par sujet dans l'Actu) ; fichier Wikimedia Commons sous licence libre ; jamais de personne vivante ni d'image choquante.
 - [ ] `teaser` pour la newsletter : drôle, 25 mots max, sans dévoiler la chute.

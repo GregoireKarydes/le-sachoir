@@ -409,6 +409,8 @@ button{cursor:pointer}
 .slide.explain{background:var(--cream);display:flex;align-items:center;justify-content:center;padding:64px 18px 70px}
 .exbox{width:100%;max-width:322px;margin-right:22px;background:#fff;border:3px solid var(--ink);border-radius:20px;box-shadow:5px 5px 0 var(--ink);padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;max-height:100%;overflow-y:auto}
 .exbox .ex-tag{align-self:flex-start;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:3px 10px;font-weight:900;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase}
+.exbox .ex-src{margin:2px 0 0;font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:4px}.exbox .ex-src a{color:inherit}.exbox .ex-src .ic{width:13px;height:13px}
+.exbox.suite .ex-tag{background:var(--ink);color:#fff}
 .exbox h3{margin:0;font-family:var(--f-serif);font-weight:800;font-size:23px;line-height:1.12;text-wrap:balance}
 .exbox p{margin:0;font-size:16.5px;line-height:1.42}
 .exbox ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:0}
@@ -1650,7 +1652,11 @@ let R = { ed: null, f: null, idx: 0, n: 0 };
 function explainHTML(c) {
   const paras = String(c.text || "").split(/\n+/).map(t => t.trim()).filter(Boolean).map(t => { const m = t.match(/^([^:]{2,28}) : (.+)$/); return m ? `<p><b class="ex-lbl">${esc(m[1])} :</b> ${esc(m[2])}</p>` : `<p>${esc(t)}</p>`; }).join("");
   const steps = (c.steps || []).length ? `<ol>${c.steps.map(t => `<li>${esc(t)}</li>`).join("")}</ol>` : "";
-  return `<div class="exbox"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${esc(c.title)}</h3>` : ""}${paras}${steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}</div>`;
+  // Sources du sujet (Actu, 16 novembre 2026) : les médias qui ont servi à vérifier, sous l'explication.
+  const srcs = (c.sources || []).filter(x => x && /^https:\/\//.test(x.url || "") && x.title).slice(0, 3);
+  const src = srcs.length ? `<p class="ex-src">${ic("sources")} ${srcs.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener nofollow">${esc(x.title)}</a>`).join(" · ")}</p>` : "";
+  // « Comment ça se fait ? » (zoom) : les maillons d'abord, puis « Ce qu'on ne sait pas encore ».
+  return `<div class="exbox${c.suite ? " suite" : ""}"><span class="ex-tag">${esc(c.tag || "Pour mieux comprendre")}</span>${c.title ? `<h3>${esc(c.title)}</h3>` : ""}${c.zoom ? steps + paras : paras + steps}${c.joke ? `<p class="ex-joke">${esc(c.joke)}</p>` : ""}${src}</div>`;
 }
 /* « Pendant ce temps, sur Internet » (13 novembre 2026) : ce qui buzze, en carte de post, mais réécrit par nous.
    Pseudo inventé et générique, jamais un vrai compte de particulier ; « Pourquoi ça buzze » et la source en dessous. */
