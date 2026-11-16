@@ -1,0 +1,305 @@
+{
+  "added": "20261116-2043",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le stéthoscope, ou comment écouter un cœur sans rougir",
+      "tagline": "En 1816, un médecin trop pudique roule un cahier en tube et invente l’objet le plus célèbre de la médecine",
+      "teaser": "Un médecin, une patiente, un cahier d’écolier et beaucoup de gêne : la naissance très pudique d’un objet que tout le monde connaît.",
+      "minutes": 2,
+      "theme": "Médecine et santé",
+      "art": {
+        "subject": "how the French doctor Laennec, too embarrassed to press his ear on a young woman's chest, rolled paper into a tube in 1816 and invented the stethoscope",
+        "setting": "a bright ward of a Paris hospital in 1816 with a simple wooden bed and white curtains; a small wooden courtyard with a long timber beam",
+        "era": "1810s France, Napoleonic-era clothes",
+        "props": {
+          "notebook": "a thick paper notebook of plain white pages, rolled into a tight tube",
+          "cylinder": "a plain light-brown wooden tube about one foot long with a wide funnel at one end, the early stethoscope",
+          "fan": "a small folding fan painted with pink flowers"
+        }
+      },
+      "cast": [
+        {
+          "id": "laennec",
+          "name": "Le docteur Laennec",
+          "look": "René Laennec, a very tall, very thin, slightly stooped French doctor of 35, pale skin, long narrow face, short curly sandy-blond hair with long sideburns, a deep crimson-red tailcoat as main colour, high white cravat, black trousers, a small black doctor's bag",
+          "file": "cast/cultureg-laennec.png",
+          "status": "pending",
+          "role": "the painfully bashful doctor who blushes at the idea of touching a patient; fiddles with his cravat, always keeps an awkward polite distance, but lights up when he discovers something"
+        },
+        {
+          "id": "patiente",
+          "name": "La patiente",
+          "look": "a short, plump, cheerful young Parisian woman of about 25, light olive skin, a big pile of glossy black ringlet curls under a frilly white lace bonnet, a high-waisted Empire dress in bright sky-blue as main colour, white shawl, the fan always in her hand",
+          "file": "cast/cultureg-patiente.png",
+          "status": "pending",
+          "role": "the chatty patient who never stops talking about her symptoms and her cousin; waves the fan non-stop, totally unbothered by anything"
+        }
+      ],
+      "cover": {
+        "prompt": "a bright hospital ward in 1816. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress, the fan) sits on the wooden bed on the right, chatting happily; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) stands on the left, leaning in from as far away as possible, pressing the rolled notebook to her chest with an outstretched arm, ear at the other end, blushing. medium wide shot",
+        "cast": [
+          "laennec",
+          "patiente"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1816",
+          "caption": "Paris, 1816. Comment le docteur Laennec va-t-il écouter ce cœur sans y coller l’oreille ?",
+          "bubbles": [
+            {
+              "who": "patiente",
+              "text": "Ça palpite, ça cogne, ça galope… Et ma cousine aussi, d’ailleurs !",
+              "side": "r"
+            },
+            {
+              "who": "laennec",
+              "text": "Je… vais écouter. Quelque part. Prudemment.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bright hospital ward with white curtains and a simple wooden bed. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress) sits on the bed on the right, talking with big gestures, waving the fan; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) on the far left, clutching his black bag against his chest, tugging his cravat nervously, a light-blue sweat drop. wide shot",
+            "cast": [
+              "patiente",
+              "laennec"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le problème",
+          "caption": "À l’époque, on écoute le cœur l’oreille collée à la poitrine. Sur une jeune femme, Laennec trouve ça indécent.",
+          "bubbles": [
+            {
+              "who": "patiente",
+              "text": "Allez-y, docteur, mon cœur ne mord pas.",
+              "side": "r"
+            },
+            {
+              "who": "laennec",
+              "text": "Mon oreille et votre poitrine n’ont pas été présentées.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the hospital ward. Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) alone in the frame, bent stiffly at the waist, his ear frozen a few centimetres away from an off-screen patient, eyes squeezed shut, pink blush on the cheeks, hands held up in a polite refusal. medium close-up",
+            "cast": [
+              "laennec"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Plan B",
+          "caption": "Plan B : tapoter la poitrine et écouter si ça sonne creux. Mais la corpulence et les vêtements étouffent tout.",
+          "bubbles": [
+            {
+              "who": "laennec",
+              "text": "Toc, toc ?",
+              "side": "l"
+            },
+            {
+              "who": "patiente",
+              "text": "Entrez !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "in the hospital ward. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress, the fan) sits on the bed in the foreground on the right, wrapped in many layers of shawls; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) behind her on the left, tapping on her shoulder blade with two fingers like knocking on a door, head tilted to listen, puzzled frown. medium shot",
+            "cast": [
+              "laennec",
+              "patiente"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Souvenir",
+          "caption": "Il pense à un jeu d’enfants : l’un gratte une poutre, l’autre, oreille collée au bout, entend tout.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a small courtyard with a long timber beam lying on the ground. At the far end a little boy scratches the wood with a pin; in the foreground a little girl lies with her ear pressed to the other end of the beam, eyes wide with wonder; in the background Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) has stopped dead in his tracks, bag dropped, staring at them with a sudden idea, yellow sparkles. high angle",
+            "cast": [
+              "laennec"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "L’idée",
+          "caption": "Il roule un cahier en tube bien serré, pose un bout sur la poitrine et l’oreille à l’autre.",
+          "bubbles": [
+            {
+              "who": "patiente",
+              "text": "Un cornet ? Vous allez me lire l’avenir ?",
+              "side": "r"
+            },
+            {
+              "who": "laennec",
+              "text": "Chut. Votre cœur parle. Laissez-le finir.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the hospital ward, seen over Laennec's shoulder. Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) in the foreground on the left, seen from behind, twisting the notebook into a tight tube with both hands, concentrating; the patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress) sitting on the bed on the right, chattering and pointing curiously at the tube with the closed fan. over-the-shoulder",
+            "cast": [
+              "laennec",
+              "patiente"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "Surprise",
+          "caption": "Surprise : le cœur s’entend plus fort et plus net qu’avec l’oreille collée. Et sans toucher personne.",
+          "bubbles": [
+            {
+              "who": "laennec",
+              "text": "Je vous entends battre comme si j’étais dedans !",
+              "side": "l"
+            },
+            {
+              "who": "patiente",
+              "text": "Docteur… on n’a pas été présentés.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "close on Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) with his ear pressed to one end of the rolled notebook, the other end resting on the patient's sky-blue dress at the edge of the frame on the right; his eyes huge with joy, mouth open in amazement, yellow sparkles around his head. close-up",
+            "cast": [
+              "laennec",
+              "patiente"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi le tube marche mieux que l’oreille",
+          "steps": [
+            "Le cœur fait vibrer la poitrine : c’est un son",
+            "À l’air libre, ce son s’éparpille dans toutes les directions",
+            "Dans un tube, il reste canalisé jusqu’à l’oreille",
+            "Moins de son perdu : on entend mieux, et sans contact"
+          ],
+          "joke": "La pudeur venait d’inventer un instrument médical."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "Le stéthoscope",
+          "caption": "Il remplace le papier par un tube de bois démontable, baptisé stéthoscope : « examiner la poitrine », en grec.",
+          "bubbles": [
+            {
+              "who": "laennec",
+              "text": "Enfin une distance respectable entre mes patients et moi.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) alone, seen from below, proudly holding the cylinder up at arm's length like a trophy, chin raised, a satisfied little smile, plain pale background with a simple wooden workbench and wood shavings at his feet. low angle",
+            "cast": [
+              "laennec"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un vrai stéthoscope de Laennec, vers 1820",
+          "text": "Un simple tube de bois d’environ trente centimètres, percé au centre, qui se démonte pour tenir dans la poche. L’oreille d’un côté, la poitrine de l’autre.",
+          "photo": {
+            "commons": "File:Laennecs stethoscope, c 1820. (9660576833).jpg"
+          }
+        },
+        {
+          "n": 10,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Le stéthoscope est né de la gêne : un tube canalise le son du cœur jusqu’à l’oreille du médecin.",
+          "bubbles": [
+            {
+              "who": "patiente",
+              "text": "Docteur, ça repalpite ! Et ma cousine aussi, d’ailleurs…",
+              "side": "r"
+            },
+            {
+              "who": "laennec",
+              "text": "Je vous écoute. D’une distance tout à fait convenable.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the hospital ward, seen from high up. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress, the fan) sits on the bed on the right, chattering happily; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) on the left, perfectly calm and relaxed now, holding the cylinder to her chest at full arm's length, the other hand behind his back, serene smile. bird's-eye view",
+            "cast": [
+              "patiente",
+              "laennec"
+            ],
+            "file": "images/cultureg-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Laennec, l’inventeur du stéthoscope, est mort en 1826, à peine dix ans plus tard, d’une tuberculose : la maladie des poumons qu’il avait appris à écouter.",
+        "source": "AP-HP — René Laennec ; PBS NewsHour"
+      },
+      "story": "En 1816, René Laennec, médecin à l’hôpital Necker à Paris, doit examiner une jeune femme qui souffre du cœur. À l’époque, on écoute le cœur en collant directement l’oreille contre la poitrine du malade. Laennec juge le geste inconvenant avec une jeune patiente, et l’autre méthode, tapoter la poitrine pour écouter si elle sonne creux, ne donne rien : sa corpulence et ses vêtements étouffent les sons.\nIl pense alors à un phénomène bien connu des enfants : quand on gratte une poutre à un bout, on entend nettement le bruit en collant l’oreille à l’autre bout. Il roule un cahier en tube serré, en pose une extrémité sur la poitrine de la patiente et l’oreille sur l’autre. Il entend les battements bien plus nettement qu’avec l’oreille posée directement, parce que le tube canalise le son au lieu de le laisser se disperser.\nIl remplace vite le papier par un cylindre de bois d’environ trente centimètres, percé au centre et démontable, qu’il baptise stéthoscope, du grec stethos, la poitrine, et skopein, examiner. En 1819, il publie un traité d’« auscultation médiate » qui relie chaque bruit entendu à une maladie du cœur ou des poumons, vérifiée lors des autopsies. Ironie cruelle : Laennec meurt en 1826, dix ans seulement après son invention, d’une tuberculose, la maladie des poumons qu’il avait appris à reconnaître à l’oreille.",
+      "sources": [
+        {
+          "title": "AP-HP — René Laennec, inventeur du stéthoscope",
+          "url": "https://aphp.fr/node/2326"
+        },
+        {
+          "title": "PBS NewsHour — A curious inspiration for the first stethoscope",
+          "url": "https://www.pbs.org/newshour/health/a-curious-inspiration-for-the-first-stethoscope"
+        },
+        {
+          "title": "Allodocteurs — Histoire de la médecine : l’invention du stéthoscope",
+          "url": "https://www.allodocteurs.fr/se-soigner/histoire-de-la-medecine/histoire-de-la-medecine-l-invention-du-stethoscope_22889.html"
+        },
+        {
+          "title": "Science Museum Group — Laennec’s stethoscope",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co90986/laennecs-stethoscope"
+        }
+      ]
+    }
+  ]
+}
