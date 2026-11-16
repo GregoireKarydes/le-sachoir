@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T13:00:18.411602+01:00",
+ "updated_at": "2026-11-16T13:02:16.546274+01:00",
  "today": "2026-11-16",
  "problems": [],
  "days": [
@@ -112,16 +112,16 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 0,
-   "waiting": 3,
+   "ready": 1,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 48,
-   "focus": "20261113-1931-les-lumieres-sans-electricite (4 image(s) à faire)",
-   "next": null,
+   "images_left": 44,
+   "focus": "20261114-1927-nucleaire-tiroir-ferme (22 image(s) à faire)",
+   "next": "20261113-1931-les-lumieres-sans-electricite",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 1,
  "days_ahead_written": 3,
  "quiz_days_ahead": 6,
  "quota": {
@@ -137,9 +137,9 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.86877,
-  "images": 176,
-  "today_usd": 0.18,
+  "spent_usd": 1.90326,
+  "images": 180,
+  "today_usd": 0.21449,
   "blocked": null
  }
 }
