@@ -245,7 +245,13 @@
           "title": "Un vrai stéthoscope de Laennec, vers 1820",
           "text": "Un simple tube de bois d’environ trente centimètres, percé au centre, qui se démonte pour tenir dans la poche. L’oreille d’un côté, la poitrine de l’autre.",
           "photo": {
-            "commons": "File:Laennecs stethoscope, c 1820. (9660576833).jpg"
+            "commons": "File:Laennecs stethoscope, c 1820. (9660576833).jpg",
+            "credit": "Science Museum London / Science and Society Picture Library",
+            "license": "CC BY-SA 2.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Laennecs_stethoscope,_c_1820._(9660576833).jpg",
+            "file": "images/photo-9-laennecs-stethoscope-c-1820-9660576.webp",
+            "status": "done"
           }
         },
         {
