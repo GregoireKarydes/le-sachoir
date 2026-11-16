@@ -161,7 +161,13 @@
           "title": "Louis XIV et ses talons rouges, en 1701",
           "text": "Sur son portrait officiel peint par Hyacinthe Rigaud, le roi a 63 ans. Il montre toujours ses jambes et ses talons rouges sous le manteau du sacre.",
           "photo": {
-            "commons": "File:Louis XIV of France.jpg"
+            "commons": "File:Louis XIV of France.jpg",
+            "credit": "Hyacinthe Rigaud",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Louis_XIV_of_France.jpg",
+            "file": "images/photo-5-louis-xiv-of-france-jpg.webp",
+            "status": "done"
           }
         },
         {
