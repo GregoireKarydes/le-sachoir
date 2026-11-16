@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a cluttered Paris writer's study in 1969. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) at his desk on the right, typing happily on the typewriter whose missing key is taped over; Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) on the left, bent over the keyboard with a magnifying glass, staring at the empty hole, scandalised. wide shot",
-        "cast": ["perec", "odile"],
+        "cast": [
+          "perec",
+          "odile"
+        ],
         "file": "images/insolite-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "Paris, 1969",
           "caption": "Georges Perec publie « La Disparition », un roman d’environ 300 pages écrit sans jamais utiliser la lettre « e ».",
           "bubbles": [
-            { "who": "odile", "text": "Trois cents pages sans un seul « e » ? C’est impossible.", "side": "l" },
-            { "who": "perec", "text": "Si. Un gros roman, sans lui. Aucun.", "side": "r" }
+            {
+              "who": "odile",
+              "text": "Trois cents pages sans un seul « e » ? C’est impossible.",
+              "side": "l"
+            },
+            {
+              "who": "perec",
+              "text": "Si. Un gros roman, sans lui. Aucun.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a cluttered Paris writer's study in 1969 with a desk. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) on the right proudly dropping the manuscript on the desk with a loud thud, papers flying; Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) on the left, pencil raised, staring at the typewriter's taped-over missing key in disbelief. wide shot",
-            "cast": ["perec", "odile"],
+            "cast": [
+              "perec",
+              "odile"
+            ],
             "file": "images/insolite-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "Le défi",
           "caption": "Or le « e » est partout : « le », « et », « je », « elle », « père », « mère »… Perec doit s’en passer à chaque phrase.",
           "bubbles": [
-            { "who": "odile", "text": "Sans « je » ? Comment parlez-vous de vous, alors ?", "side": "l" },
-            { "who": "perec", "text": "Moi, toujours moi. Ça suffit.", "side": "r" }
+            {
+              "who": "odile",
+              "text": "Sans « je » ? Comment parlez-vous de vous, alors ?",
+              "side": "l"
+            },
+            {
+              "who": "perec",
+              "text": "Moi, toujours moi. Ça suffit.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the writer's study. Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) in the foreground on the left, leaning across the desk and pointing the pencil at him like an interrogator; Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) in the background on the right, tapping his own chest with both thumbs, smug. medium close-up",
-            "cast": ["odile", "perec"],
+            "cast": [
+              "odile",
+              "perec"
+            ],
             "file": "images/insolite-02.webp",
             "status": "pending",
             "attempts": 0
@@ -98,12 +123,23 @@
           "tag": "Le plus fou",
           "caption": "Selon le récit souvent rapporté, plusieurs premiers lecteurs n’auraient même pas remarqué qu’une lettre manquait.",
           "bubbles": [
-            { "who": "odile", "text": "J’ai tout lu. Très bien. Il manquait quelque chose ?", "side": "l" },
-            { "who": "perec", "text": "Ah. Bon. Un dur travail pour rien.", "side": "r" }
+            {
+              "who": "odile",
+              "text": "J’ai tout lu. Très bien. Rien à signaler.",
+              "side": "l"
+            },
+            {
+              "who": "perec",
+              "text": "Ah. Bon. Un dur travail pour rien.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a quiet publisher's office with a big armchair and piles of manuscripts. Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) on the left sitting comfortably in the armchair, closing the manuscript with a satisfied smile; Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) on the right sliding slowly down the wall to the floor, deflated, his frizzy hair drooping. medium shot",
-            "cast": ["odile", "perec"],
+            "cast": [
+              "odile",
+              "perec"
+            ],
             "file": "images/insolite-04.webp",
             "status": "pending",
             "attempts": 0
@@ -123,12 +159,22 @@
           "tag": "Et en anglais ?",
           "caption": "Dans les années 1990, le roman paraît en anglais, « A Void », traduit par Gilbert Adair… toujours sans « e ».",
           "bubbles": [
-            { "who": "perec", "text": "Un Anglais l’a traduit. Sans lui aussi.", "side": "r" },
-            { "who": "perec", "text": "Il fallait un fou. Il y avait Adair.", "side": "r" }
+            {
+              "who": "perec",
+              "text": "Un Anglais l’a traduit. Sans lui aussi.",
+              "side": "r"
+            },
+            {
+              "who": "perec",
+              "text": "Il fallait un fou. Il y avait Adair.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the writer's study. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) alone, holding up a thin blank-covered book with both hands like a precious trophy, eyes shining with mischief, yellow sparkles around him. close-up",
-            "cast": ["perec"],
+            "cast": [
+              "perec"
+            ],
             "file": "images/insolite-06.webp",
             "status": "pending",
             "attempts": 0
@@ -140,12 +186,23 @@
           "tag": "En résumé",
           "caption": "« La Disparition » est un vrai roman de 300 pages sans un seul « e ». Un défi d’écrivain, pas une coquille.",
           "bubbles": [
-            { "who": "odile", "text": "Et le prochain ? Vous vous privez du « a » ?", "side": "l" },
-            { "who": "perec", "text": "Non. Cette fois, je mets des « e » partout. Je me venge.", "side": "r" }
+            {
+              "who": "odile",
+              "text": "Et le prochain ? Vous vous privez du « a » ?",
+              "side": "l"
+            },
+            {
+              "who": "perec",
+              "text": "Non. Cette fois, je mets des « e » partout. Je me venge.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back in the writer's study. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) on the right ripping the strip of tape off the typewriter and hammering the restored key with one finger, triumphant; Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) on the left, hands over her ears, pencil in her mouth. low angle",
-            "cast": ["perec", "odile"],
+            "cast": [
+              "perec",
+              "odile"
+            ],
             "file": "images/insolite-07.webp",
             "status": "pending",
             "attempts": 0
@@ -153,15 +210,27 @@
         }
       ],
       "final": {
-        "text": "« La Disparition » (1969) de Georges Perec est un roman d’environ 300 pages écrit entièrement sans la lettre « e ».",
+        "text": "Dans les années 1990, « La Disparition » a été traduit en anglais par Gilbert Adair, sous le titre « A Void »… toujours sans « e ».",
         "source": "Wikipédia — A Void"
       },
       "story": "En 1969, l’écrivain Georges Perec publie chez Gallimard « La Disparition », un roman d’environ 300 pages. Particularité : la lettre « e », pourtant partout en français, n’y apparaît jamais. Ce type de texte, qui se prive d’une ou de plusieurs lettres, s’appelle un lipogramme. Perec doit donc renoncer à « le », « et », « je », « elle » et à tous les mots qui contiennent la lettre interdite, en cherchant sans cesse d’autres façons de dire la même chose. Il ne peut même pas écrire son propre nom dans le livre.\nL’intrigue joue avec la contrainte : un groupe d’amis enquête sur la disparition d’un certain Anton Voyl, comme si l’histoire racontait sa propre lettre manquante. Selon un récit souvent rapporté, plusieurs premiers lecteurs n’auraient pas remarqué l’absence du « e ». Certains lecteurs y voient aussi l’écho d’une autre absence : la mère de Perec, déportée pendant la guerre, avait été déclarée « disparue » par l’administration.\nPerec appartient à l’Oulipo, l’« Ouvroir de littérature potentielle », fondé le 24 novembre 1960 par Raymond Queneau et François Le Lionnais : ses membres s’imposent des règles pour inventer de nouvelles formes. L’exploit a été refait en anglais par Gilbert Adair, dont la traduction sans « e », « A Void », a reçu en 1995 le prix Scott Moncrieff. Perec a aussi écrit « Les Revenentes », où le « e » est au contraire la seule voyelle.",
       "sources": [
-        { "title": "Wikipédia (en) — A Void", "url": "https://en.wikipedia.org/wiki/A_Void" },
-        { "title": "Los Angeles Review of Books — Avoided: On Georges Perec", "url": "https://lareviewofbooks.org/article/avoided-georges-perec/" },
-        { "title": "Wikipédia (en) — Oulipo", "url": "https://en.wikipedia.org/wiki/Oulipo" },
-        { "title": "BnF — L’Oulipo : mode d’emploi", "url": "https://multimedia-ext.bnf.fr/pdf/fiche_Oulipo.pdf" }
+        {
+          "title": "Wikipédia (en) — A Void",
+          "url": "https://en.wikipedia.org/wiki/A_Void"
+        },
+        {
+          "title": "Los Angeles Review of Books — Avoided: On Georges Perec",
+          "url": "https://lareviewofbooks.org/article/avoided-georges-perec/"
+        },
+        {
+          "title": "Wikipédia (en) — Oulipo",
+          "url": "https://en.wikipedia.org/wiki/Oulipo"
+        },
+        {
+          "title": "BnF — L’Oulipo : mode d’emploi",
+          "url": "https://multimedia-ext.bnf.fr/pdf/fiche_Oulipo.pdf"
+        }
       ]
     }
   ]

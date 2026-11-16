@@ -432,13 +432,7 @@
           "kind": "",
           "tag": "1933",
           "caption": "En 1933, au moins un Américain sur quatre est au chômage. Beaucoup dépendent de soupes populaires gratuites.",
-          "bubbles": [
-            {
-              "who": "harold",
-              "text": "Hier, je jouais en Bourse. Aujourd’hui, je compte sur une soupe.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "a grey winter street. Harold (short, very round, faded and patched orange checked suit, boater) standing quietly in a long line of men in dark coats seen from behind, holding an empty tin bowl with both hands, head lowered. calm, sober scene. medium shot",
             "cast": [
@@ -706,12 +700,12 @@
           "bubbles": [
             {
               "who": "awa",
-              "text": "Donc mon alerte « krach », je la prends au sérieux ?",
+              "text": "Je coupe l’alerte « krach ». Vous m’avez assez fait peur.",
               "side": "r"
             },
             {
               "who": "harold",
-              "text": "Gardez votre calme. Et surtout, achetez !",
+              "text": "Excellente idée. Et surtout, achetez !",
               "side": "l"
             }
           ],
@@ -728,7 +722,7 @@
         }
       ],
       "final": {
-        "text": "Le 29 octobre 1929, le « mardi noir », plus de 16 millions d’actions ont été vendues à Wall Street en une seule journée.",
+        "text": "En 1931, à Chicago, une soupe populaire pour les chômeurs avait été ouverte par le gangster Al Capone.",
         "source": "History.com — 1929 Stock Market Crash"
       },
       "story": "Dans les années 1920, l’Amérique vit à crédit. À Wall Street, la Bourse de New York, les actions triplent en dix ans, et beaucoup les achètent « sur marge », avec jusqu’à 90 % d’argent emprunté. En octobre 1929, l’économiste Irving Fisher parle encore d’un « plateau haut permanent ».\nLe jeudi 24 octobre, la panique éclate : près de 13 millions d’actions changent de main. Le mardi 29, plus de 16 millions sont vendues. Parce que les acheteurs sur marge doivent rembourser leur courtier, ils vendent, ce qui fait encore baisser les prix. En 1932, les actions ont perdu 89 % de leur valeur.\nLa crise gagne les banques : les clients retirent leur argent, et environ 9 000 banques américaines ferment entre 1929 et 1933. Les entreprises licencient ; en 1933, au moins un Américain sur quatre est au chômage. Les droits de douane de 1930 et les représailles font s’effondrer le commerce mondial. Les capitaux américains quittent l’Europe : la Kreditanstalt autrichienne tombe en 1931, l’Allemagne compte 6 millions de chômeurs et Hitler arrive au pouvoir en 1933.\nLa France, riche en or et peu tournée vers la Bourse, n’est touchée que vers 1931, mais elle refuse de dévaluer le franc jusqu’en 1936. Aux États-Unis, Roosevelt ferme les banques dès mars 1933, garantit les petits dépôts et lance de grands travaux : le New Deal. En 2008, la banque centrale américaine s’en est souvenue.",

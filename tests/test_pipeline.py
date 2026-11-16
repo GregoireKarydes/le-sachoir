@@ -442,3 +442,82 @@ def test_les_anciennes_adresses_ne_bougent_pas():
     fmt = {"id": "insolite", "title": "Le président français est prince d’Andorre, et c’est la faute d’un comte de Foix"}
     assert seo.story_slug("2026-11-16", fmt) == seo.legacy_story_slug("2026-11-16", fmt)
     assert seo.story_slug(seo.WHOLE_WORD_SLUGS_SINCE, fmt) != seo.legacy_story_slug(seo.WHOLE_WORD_SLUGS_SINCE, fmt)
+
+
+# ---------- Humour et info : formules, interview, cases muettes, « Pour briller » (16 novembre 2026) ----------
+def _bd(cases, final="Le fait le plus surprenant de toute cette histoire, raconté autrement.", fid="cultureg", title="Titre"):
+    out = []
+    for i, c in enumerate(cases, 1):
+        cap, bubbles = c
+        out.append({"n": i, "caption": cap, "bubbles": [{"who": "a", "text": t} for t in bubbles], "image": {"prompt": "x", "file": f"i{i}.webp"}})
+    return {"id": fid, "title": title, "cases": out, "final": {"text": final}}
+
+
+def _humour(fmt, others=()):
+    got = []
+    validate.check_humour(fmt, Path("stock/cultureg/x"), got.append, others=list(others))
+    return got
+
+
+def test_formules_usees_signalees():
+    fmt = _bd([("Un fait.", ["Qui a inventé ce comptage absurde ?", "Nous."]), ("Un autre fait.", []), ("Un troisième.", ["Tiens."]),
+               ("Suite.", ["Ah."]), ("Fin.", ["Donc je perds en vieux français.", "Voilà."])])
+    got = " | ".join(_humour(fmt))
+    assert "ouverture" in got and "Qui a inventé" in got
+    assert "chute" in got and "Donc" in got
+
+
+def test_bd_en_scene_sans_avertissement():
+    fmt = _bd([("Au village, le scribe fait l'appel.", ["Martin ! Avancez !", "Lequel ? On est six."]), ("Les six avancent d'un pas.", []),
+               ("Le scribe soupire.", ["Bon. On va vous trouver des surnoms."]), ("Il trempe sa plume.", ["Toi, le forgeron : Lefèvre."]),
+               ("Le sixième attend toujours.", ["Et toujours pas de manteau."])])
+    assert _humour(fmt) == []
+
+
+def test_interview_et_absence_de_case_muette():
+    fmt = _bd([("Fait %d." % i, ["Et pourquoi ?", "Parce que."]) for i in range(6)])
+    got = " | ".join(_humour(fmt))
+    assert "format interview : 6 cases sur 6" in got
+    assert "aucune case muette" in got
+
+
+def test_pour_briller_ne_repete_pas_une_case():
+    resume = "Saint Martin a rendu son prénom très populaire, devenu le nom de famille numéro un en France."
+    fmt = _bd([("Début.", ["Tiens."]), ("Milieu.", []), (resume, ["Voilà."])], final="Saint Martin a rendu son prénom populaire : il est devenu le nom de famille numéro un en France.")
+    assert any("Pour briller" in m and "résumé" in m for m in _humour(fmt))
+    fmt["final"]["text"] = "Martin n'a donné que la moitié de son manteau : l'autre moitié appartenait à l'armée romaine."
+    assert not any("Pour briller" in m for m in _humour(fmt))
+
+
+def test_ouverture_identique_a_une_bd_recente():
+    fmt = _bd([("Début.", ["Regardez-moi ce bazar, messieurs !"]), ("Milieu.", []), ("Fin.", ["Rideau."])])
+    others = [("stock/cultureg/autre", "Une autre BD", "regardez moi ce", "tout autre chose")]
+    assert any("ouverture identique" in m for m in _humour(fmt, others))
+    assert not any("identique" in m for m in _humour(fmt, [("stock/cultureg/autre", "Une autre BD", "bonjour à tous", "bonne nuit les")]))
+
+
+def test_actu_mecaniques_variees_et_repere():
+    def sujet(i, gag, repere=True):
+        txt = "Quoi : un fait.\nPourquoi ça compte : parce que.\n" + ("Repère : dix fois plus qu'en 2020.\n" if repere else "") + "Et maintenant : la suite."
+        return [{"n": 2 * i + 1, "kind": "fact", "gag": gag, "caption": "Un fait.", "bubbles": [{"who": "x", "text": "Blague."}], "image": {"prompt": "x", "file": f"a{i}.webp"}},
+                {"n": 2 * i + 2, "kind": "explain", "title": "T", "text": txt}]
+    fmt = {"id": "actu", "title": "Actu", "cases": sujet(0, "litteral") + sujet(1, "litteral") + sujet(2, None, repere=False)}
+    got = []
+    validate.check_humour(fmt, Path("editions/2026-12-01"), got.append)
+    joined = " | ".join(got)
+    assert "même mécanique de blague plusieurs fois" in joined and "litteral" in joined
+    assert "mécanique de la blague absente" in joined
+    assert joined.count("Repère") == 1
+    ok = {"id": "actu", "title": "Actu", "cases": sujet(0, "litteral") + sujet(1, "litote") + sujet(2, "escalade")}
+    got = []
+    validate.check_humour(ok, Path("editions/2026-12-01"), got.append)
+    assert got == []
+
+
+def test_sur_internet_vannes_variees():
+    fmt = {"id": "actu", "title": "Actu", "cases": [
+        {"n": 1, "kind": "buzz", "text": "Des chevaux dans un bus. Moi, ma trottinette reste dehors."},
+        {"n": 2, "kind": "buzz", "text": "Un hélico papal. Moi, mon vélo n'a pas de surnom."}]}
+    got = []
+    validate.check_humour(fmt, Path("editions/2026-12-01"), got.append)
+    assert any("Sur Internet" in m for m in got)

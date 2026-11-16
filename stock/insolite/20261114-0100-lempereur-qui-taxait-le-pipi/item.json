@@ -87,13 +87,7 @@
           "kind": "fact",
           "tag": "",
           "caption": "À l’époque, l’urine vaut de l’argent : son ammoniaque aide les blanchisseurs à nettoyer et détacher les tissus.",
-          "bubbles": [
-            {
-              "who": "Un foulon",
-              "text": "Rien de tel pour une toge bien blanche.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "a Roman laundry with the vat. on the right in the background, a small anonymous barefoot laundry worker seen from afar, happily stomping on white cloth in the vat like treading grapes; Vespasian (stocky, purple toga) in the foreground on the left, rubbing his hands, eyes shining at the vat as if it were full of gold. low angle",
             "cast": [
@@ -235,7 +229,7 @@
         }
       ],
       "final": {
-        "text": "Les vespasiennes, urinoirs installés à Paris dès 1834, doivent leur nom à Vespasien, l’empereur romain qui taxait l’urine.",
+        "text": "Selon Suétone, Vespasien fit sentir à son fils une pièce tirée de sa taxe sur l’urine. De là vient « l’argent n’a pas d’odeur ».",
         "source": "Paris ZigZag — La dernière vespasienne de Paris"
       },
       "sources": [

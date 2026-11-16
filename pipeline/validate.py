@@ -29,10 +29,11 @@ MAX_CAST = {"cultureg": 2, "insolite": 2, "notice": 2, "origine": 2, "dossier": 
 MAX_CASES = {"dossier": 24, "notice": 5, "origine": 5}  # 8 novembre 2026 : dossiers un peu plus courts (avant : 30) ; 14 novembre : micro-BD La Notice
 EXPLAIN_MAX = 70            # mots d'une case « Pour mieux comprendre »
 PHOTO_MAX = 45  # case photo : légende courte
-ACTU_CAPTION_MAX, ACTU_EXPLAIN_MAX = 30, 50  # 8 novembre 2026 : Actu = 1 case dessinée (récitatif chargé, 1 bulle) + 1 case « Ce qui se passe vraiment »
+ACTU_CAPTION_MAX, ACTU_EXPLAIN_MAX = 30, 65  # 16 novembre 2026 : 65 mots avec la ligne « Repère : » (avant 50).  8 novembre 2026 : Actu = 1 case dessinée (récitatif chargé, 1 bulle) + 1 case « Ce qui se passe vraiment »
 # « D'où ça vient ? » (14 novembre 2026) : 8 à 10 écrans de cinéma, 25 mots au plus, un seul mot en couleur (*mot*),
 # 5 ou 6 images dessinées au plus (« image_of » reprend l'image d'un écran précédent).
 CINE_SCREENS, CINE_MAX = (8, 10), 25
+HUMOUR_SINCE = "2026-11-18"  # éditions concernées par les contrôles d'humour (les BD déjà publiées ne sont pas relues)
 STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 
@@ -179,6 +180,132 @@ def check_shots(drawn: list, fid: str, warn):
             warn("découpage : les deux personnages sont dans toutes les cases ; au moins une case avec un seul personnage ou un objet seul")
 
 
+# ---------- Humour et info : les formules qui reviennent (16 novembre 2026) ----------
+# Constat sur 38 BD : 19 chutes en « Donc… », 6 ouvertures en « Qui a inventé… ? », presque aucune case muette,
+# une question suivie d'une réponse dans près d'une case sur deux, et une carte « Pour briller » qui répète le résumé.
+# Règles : « Des scènes, pas des interviews » dans prompts/CHARTE.md. Avertissements seulement, rien de bloquant.
+OPENING_FORMULAS = [
+    (re.compile(r"^\W*(mais )?qui a (invent|eu l.id|choisi|d[ée]cid|pondu|imagin)", re.I), "« Qui a inventé / eu l’idée… ? »"),
+    (re.compile(r"(c.est|c.[ée]tait) (un peu |encore )?(de )?ma faute|c.est moi qui ai commenc", re.I), "« C’est (un peu) ma faute »"),
+    (re.compile(r"^\W*moi\W+(enfin|presque)", re.I), "« Moi. Enfin, presque. »"),
+]
+CLOSING_FORMULAS = [
+    (re.compile(r"^\W*donc\b", re.I), "une chute qui commence par « Donc… » (le résumé va dans le récitatif, pas dans la chute)"),
+    (re.compile(r"^\W*(en r[ée]sum[ée]|en bref|bref)\b", re.I), "une chute qui résume (« En bref… »)"),
+]
+GAG_KINDS = {"litteral", "anachronisme", "mauvaise-foi", "litote", "escalade", "bureau", "comparaison", "silence"}
+INTERVIEW_MAX = .34      # part des cases dessinées « question → réponse » au-delà de laquelle la BD est une interview
+SILENT_FROM = 6          # à partir de 6 cases dessinées, au moins une case muette (les micro-BD de 4 ou 5 cases en sont dispensées)
+FINAL_OVERLAP = .6       # part des mots de la carte « Pour briller » déjà dans une même case : au-delà, c'est une redite
+STOP_FR = set("le la les un une des de du d l et ou a au aux en est sont c ce cet cette ces qui que qu dans par pour sur avec sans "
+              "son sa ses leur leurs se s n ne pas plus il elle ils elles on y à ont été être avoir comme mais donc car "
+              "très tout tous toute toutes même depuis vers chez entre aussi alors puis".split())
+_OPENERS = None
+
+
+def _norm(t: str) -> list:
+    return [w for w in re.findall(r"[a-zà-ÿœ0-9]+", str(t or "").lower().replace("’", " ").replace("'", " "))]
+
+
+def _content(t: str) -> set:
+    return {w for w in _norm(t) if w not in STOP_FR and len(w) > 2}
+
+
+def _drawn(fmt: dict) -> list:
+    return [c for c in fmt.get("cases", []) or [] if isinstance(c, dict) and c.get("kind") not in ("explain", "photo", "buzz") and not c.get("image_of")]
+
+
+def _edges(fmt: dict):
+    """(trois premiers mots de la première bulle, trois premiers mots de la dernière bulle) d'une BD."""
+    dr = _drawn(fmt)
+    first = next((b.get("text", "") for c in dr for b in c.get("bubbles", []) or []), "")
+    last = next((b.get("text", "") for c in reversed(dr) for b in reversed(c.get("bubbles", []) or [])), "")
+    return " ".join(_norm(first)[:3]), " ".join(_norm(last)[:3])
+
+
+def recent_edges() -> list:
+    """Ouvertures et chutes des BD récentes (14 jours) et de la file, pour repérer deux BD qui commencent ou finissent pareil."""
+    global _OPENERS
+    if _OPENERS is not None:
+        return _OPENERS
+    out = []
+    since = (__import__("datetime").date.today() - __import__("datetime").timedelta(days=14)).isoformat()
+    files = [p for p in sorted(EDITIONS.glob("*/edition.json")) if p.parent.name >= since] + sorted((ROOT / "stock").glob("*/*/item.json"))
+    for p in files:
+        try:
+            for f in json.loads(p.read_text()).get("formats", []):
+                if isinstance(f, dict) and f.get("id") in MAX_CAST:
+                    out.append((str(p.parent), f.get("title", ""), *_edges(f)))
+        except (ValueError, OSError):
+            continue
+    _OPENERS = out
+    return out
+
+
+def check_humour(fmt: dict, d: Path, warn, others=None):
+    """Formules, interview, cases muettes, carte « Pour briller » : BD de la file ou à venir (les bulles se réécrivent sans redessiner)."""
+    fid = fmt["id"]
+    dr = _drawn(fmt)
+    if fid == "actu":
+        return check_actu_humour(fmt, dr, warn)
+    if fid not in MAX_CAST or len(dr) < 3:
+        return
+    first = [b.get("text", "") for b in dr[0].get("bubbles", []) or []]
+    last = [b.get("text", "") for b in dr[-1].get("bubbles", []) or []]
+    for rx, label in OPENING_FORMULAS:
+        if any(rx.search(t) for t in first):
+            warn(f"formule usée en ouverture : {label}")
+    for rx, label in CLOSING_FORMULAS:
+        if any(rx.search(t) for t in last):
+            warn(f"formule usée en chute : {label}")
+    qa = sum(1 for c in dr if len(c.get("bubbles") or []) >= 2 and str(c["bubbles"][0].get("text", "")).rstrip(" » ").endswith("?"))
+    if qa > max(2, round(INTERVIEW_MAX * len(dr))):
+        warn(f"format interview : {qa} cases sur {len(dr)} sont une question suivie de sa réponse (au plus un tiers) ; "
+             "faire vivre la situation aux personnages au lieu de la commenter")
+    if len(dr) >= SILENT_FROM and not any(not (c.get("bubbles") or []) for c in dr):
+        warn("aucune case muette : au moins une case sans bulle où l'image porte le gag (réaction, objet absurde)")
+    # La carte « Pour briller » ne répète ni le résumé (récitatif de la dernière case dessinée) ni le titre.
+    fin = _content((fmt.get("final") or {}).get("text"))
+    if len(fin) >= 5:
+        resume, title = _content(dr[-1].get("caption")), _content(fmt.get("title"))
+        if resume and len(fin & resume) / len(fin) >= FINAL_OVERLAP:
+            warn("carte « Pour briller » : redite du résumé de la dernière case ; donner plutôt le fait le plus surprenant, celui qu'on ressort au dîner")
+        elif len(title) >= 4 and len(fin & title) / len(title) >= .75:
+            warn("carte « Pour briller » : redite du titre ; donner plutôt le fait le plus surprenant, celui qu'on ressort au dîner")
+    mine = _edges(fmt)
+    for where, title, op, cl in (recent_edges() if others is None else others):
+        if where == str(d) or title == fmt.get("title"):
+            continue
+        if mine[0] and len(mine[0].split()) == 3 and mine[0] == op:
+            warn(f"ouverture identique à « {title} » (« {op}… »)")
+            break
+        if mine[1] and len(mine[1].split()) == 3 and mine[1] == cl:
+            warn(f"chute identique à « {title} » (« {cl}… »)")
+            break
+
+
+def check_actu_humour(fmt: dict, dr: list, warn):
+    """Actu : pas deux fois la même mécanique de blague, un repère chiffré par sujet, des vannes « Sur Internet » variées."""
+    gags = [c.get("gag") for c in dr]
+    for i, g in enumerate(gags, 1):
+        if not g:
+            warn(f"case dessinée {i} : mécanique de la blague absente (champ « gag » : {', '.join(sorted(GAG_KINDS))})")
+        elif g not in GAG_KINDS:
+            warn(f"case dessinée {i} : mécanique « {g} » inconnue ({', '.join(sorted(GAG_KINDS))})")
+    twice = sorted({g for g in gags if g and gags.count(g) > 1})
+    if twice:
+        warn(f"même mécanique de blague plusieurs fois le même jour : {', '.join(twice)} (une fois chacune au plus)")
+    for i, c in enumerate(fmt.get("cases", []) or [], 1):
+        if isinstance(c, dict) and c.get("kind") == "explain":
+            lines = [l.strip() for l in str(c.get("text") or "").split("\n")]
+            if not any(l.startswith("Repère :") for l in lines):
+                warn(f"case {i} (Ce qui se passe vraiment) : ligne « Repère : » absente (une comparaison chiffrée qui donne l'échelle)")
+    buzz = [str(c.get("text") or "") for c in fmt.get("cases", []) or [] if isinstance(c, dict) and c.get("kind") == "buzz"]
+    starts = [" ".join(_norm(t.split(". ")[-1])[:1]) for t in buzz]
+    if len(buzz) >= 2 and any(starts.count(x) > 1 for x in starts if x):
+        warn("« Sur Internet » : plusieurs vannes construites pareil (même premier mot de chute, « Moi, ma… ») ; varier")
+
+
 def words(t: str) -> int:
     """Mots réels : la ponctuation française espacée (« : ; ? ! ») ne compte pas."""
     return sum(1 for w in str(t or "").split() if any(ch.isalnum() for ch in w))
@@ -295,6 +422,9 @@ def check_story(fmt: dict, d: Path, err, warn):
         check_recent_faces(fmt, d, warn)
     if todo and ("stock" in d.parts or d.name >= __import__("datetime").date.today().isoformat()):
         check_shots(drawn, fid, warn)
+    # 16 novembre 2026 : formules, interview, cases muettes, « Pour briller ». Même une BD dessinée : les bulles se réécrivent.
+    if "stock" in d.parts or (re.fullmatch(r"\d{4}-\d\d-\d\d", d.name) and d.name >= HUMOUR_SINCE):
+        check_humour(fmt, d, warn)
     # 9 novembre 2026 (Greg) : des vraies images souvent, ça rend l'histoire réelle. Signalé pour que la tâche Stock en ajoute.
     n_photo = sum(1 for c in cases if isinstance(c, dict) and c.get("kind") == "photo")
     want = {"cultureg": 1, "insolite": 1, "notice": 1, "origine": 1, "dossier": 2}.get(fid, 0)

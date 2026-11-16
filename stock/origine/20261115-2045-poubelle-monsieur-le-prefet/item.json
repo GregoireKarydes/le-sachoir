@@ -56,12 +56,12 @@
           "bubbles": [
             {
               "who": "lucas",
-              "text": "Qui a eu l’idée d’appeler ce bac une poubelle ?",
+              "text": "Poubelle. Drôle de nom, pour un bac.",
               "side": "l"
             },
             {
               "who": "poubelle",
-              "text": "Personne. C’est mon nom de famille, monsieur.",
+              "text": "C’est le mien, monsieur. Eugène Poubelle, préfet.",
               "side": "r"
             }
           ],
@@ -209,7 +209,7 @@
           "bubbles": [
             {
               "who": "lucas",
-              "text": "Donc chaque mardi, je sors monsieur le préfet.",
+              "text": "Monsieur le préfet, c’est l’heure. Je vous sors.",
               "side": "l"
             },
             {
@@ -231,7 +231,7 @@
         }
       ],
       "final": {
-        "text": "Le mot « poubelle » vient d’Eugène Poubelle, préfet de la Seine, qui imposa en 1883 des boîtes à ordures fermées à Paris.",
+        "text": "Dès 1883, l’arrêté du préfet Poubelle imposait trois boîtes : un tri sélectif avant l’heure, abandonné dès mars 1884.",
         "source": "Hérodote — 24 novembre 1883"
       },
       "story": "Le mot « poubelle » est un nom de famille. Le 24 novembre 1883, le préfet de la Seine, Eugène Poubelle, signe un arrêté qui oblige les propriétaires parisiens à fournir à leurs locataires des récipients couverts pour les ordures ménagères, ramassés chaque jour. Le texte prévoit même un tri : une boîte pour ce qui pourrit, une pour les papiers et les chiffons, une pour la vaisselle cassée, le verre et les coquilles d’huîtres. Ce tri est abandonné par un second arrêté, le 7 mars 1884.\nLa mesure est mal reçue. Les propriétaires dénoncent la dépense, les concierges la corvée de sortir les boîtes. Les chiffonniers, qui vivaient de ce qu’ils récupéraient dans les ordures pour le revendre, craignent de perdre leur métier.\nLe 16 janvier 1884, dans Le Figaro, le journaliste Georges Grison se moque des « boîtes Poubelle ». Le surnom, d’abord moqueur, se répand vite, puis se raccourcit : on dit « une poubelle ». Le mot entre dès 1890 dans le Grand dictionnaire universel du XIXe siècle. Le préfet, resté en poste jusqu’en 1896, n’avait pas cherché cette gloire : il voulait seulement des rues plus propres.",

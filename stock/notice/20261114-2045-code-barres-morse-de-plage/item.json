@@ -210,7 +210,7 @@
           "bubbles": [
             {
               "who": "karim",
-              "text": "Donc chaque bip, c’est du morse.",
+              "text": "Des millions de bips. Je parlais morse sans le savoir.",
               "side": "l"
             },
             {
@@ -232,7 +232,7 @@
         }
       ],
       "final": {
-        "text": "Un code-barres ne contient pas le prix, seulement un numéro, que la caisse cherche dans la liste du magasin.",
+        "text": "Le premier produit scanné en caisse fut un paquet de chewing-gums, le 26 juin 1974, à Troy, dans l’Ohio.",
         "source": "GS1 — Prefixes"
       },
       "story": "Quand le caissier passe un produit, le lecteur envoie une ligne de lumière rouge sur le code-barres. Les bandes blanches renvoient la lumière, les barres noires en renvoient très peu. Un capteur sensible à la lumière transforme ces différences en une suite de signaux, allumé puis éteint, qu’un circuit traduit en chiffres. Sur le code européen le plus courant, l’EAN-13, la largeur des barres représente 13 chiffres, chacun dessiné sur sept fines bandes. Le dernier chiffre est une clé de contrôle calculée à partir des douze autres : si la lecture s’est trompée, le calcul ne tombe plus juste.\nLe code-barres ne contient ni le nom ni le prix du produit. Il donne seulement un numéro, que l’ordinateur du magasin cherche dans sa base pour afficher le prix. Les trois premiers chiffres indiquent quel organisme national a attribué le code (de 300 à 379 pour la France) : ils ne disent pas où le produit a été fabriqué.\nL’idée est née en 1949. L’étudiant américain Norman Woodland, qui cherchait avec son ami Bernard Silver comment identifier automatiquement les produits, s’est souvenu du morse appris chez les scouts : sur une plage de Miami, il a étiré dans le sable points et tirets en barres fines et épaisses. Leur brevet, déposé en 1949, est accordé en 1952. Il faut pourtant attendre 1973 pour que les magasins américains choisissent un code commun, et le 26 juin 1974 pour le premier passage en caisse : un paquet de chewing-gums, à Troy, dans l’Ohio.",

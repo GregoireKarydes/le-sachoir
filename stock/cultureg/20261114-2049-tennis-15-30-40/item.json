@@ -26,7 +26,7 @@
           "look": "Chloé, a very tall athletic young woman of today, black hair in a high bouncy ponytail, dark brown skin, bright turquoise tennis dress as main colour, white visor cap, white sneakers, the racket in her hand",
           "file": "cast/cultureg-chloe.png",
           "status": "pending",
-          "role": "the beginner tennis player who asks the reader's questions; energetic, a bit competitive, keeps swinging her racket while she talks"
+          "role": "the beginner tennis player who hates losing and counts every single point she is owed; energetic, very competitive, keeps swinging her racket while she talks"
         },
         {
           "id": "paumier",
@@ -56,12 +56,12 @@
           "bubbles": [
             {
               "who": "chloe",
-              "text": "Qui a inventé ce comptage absurde ?",
+              "text": "Quinze ? J’ai marqué un point. Un. Vous me devez quatorze explications.",
               "side": "l"
             },
             {
               "who": "paumier",
-              "text": "Nous, les Français. Il y a plus de cinq siècles.",
+              "text": "En France, on compte ainsi depuis plus de cinq siècles.",
               "side": "r"
             }
           ],
@@ -81,18 +81,7 @@
           "kind": "fact",
           "tag": "XIIe siècle",
           "caption": "Le tennis descend du jeu de paume, joué en France dès le XIIe siècle, d’abord par des moines, à main nue.",
-          "bubbles": [
-            {
-              "who": "chloe",
-              "text": "À main nue ? Ça devait piquer.",
-              "side": "l"
-            },
-            {
-              "who": "paumier",
-              "text": "D’où la raquette, plus tard. Nos paumes ont applaudi.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "an indoor jeu de paume hall with high walls and a net in the middle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right holding up his bright red swollen palm next to the ball, wincing dramatically; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left hugging her racket protectively against her chest. low angle",
             "cast": [
@@ -112,12 +101,12 @@
           "bubbles": [
             {
               "who": "chloe",
-              "text": "Quarante-cinq ? Pas quarante ?",
+              "text": "Quarante-cinq ? On m’a volé cinq points !",
               "side": "l"
             },
             {
               "who": "paumier",
-              "text": "Patience. On a raccourci après.",
+              "text": "Patience. Le vol a lieu plus tard.",
               "side": "r"
             }
           ],
@@ -152,12 +141,12 @@
           "bubbles": [
             {
               "who": "chloe",
-              "text": "Donc l’horloge, c’est une légende ?",
+              "text": "L’horloge ! Un quart de tour par point, c’est évident.",
               "side": "l"
             },
             {
               "who": "paumier",
-              "text": "Une jolie légende, avec deux siècles et demi de retard.",
+              "text": "Évident, oui. Avec deux siècles et demi de retard.",
               "side": "r"
             }
           ],
@@ -232,12 +221,12 @@
           "bubbles": [
             {
               "who": "chloe",
-              "text": "Donc quand je perds 40-0, je perds en vieux français.",
+              "text": "Je perds 40-0, mais en vieux français. Et mes cinq points ?",
               "side": "l"
             },
             {
               "who": "paumier",
-              "text": "Avec cinq siècles d’histoire. C’est quand même plus chic.",
+              "text": "Perdus depuis des siècles. Vous n’êtes pas la première à réclamer.",
               "side": "r"
             }
           ],
@@ -253,7 +242,7 @@
         }
       ],
       "final": {
-        "text": "Le « quarante-cinq » du tennis apparaît déjà vers 1435 dans un poème de Charles d’Orléans, à propos du jeu de paume.",
+        "text": "« Tennis » viendrait du français « Tenez ! », lancé par le serveur ; et l’anglais « deuce », de « à deux ».",
         "source": "Wikipedia — Tennis scoring system"
       },
       "story": "Le tennis moderne, mis au point en Angleterre au XIXe siècle, descend du jeu de paume, joué en France dès le XIIe siècle, d’abord par des moines dans les cloîtres, qui frappaient la balle de la paume de la main avant l’arrivée de la raquette. Le mot « tennis » viendrait d’ailleurs de « Tenez ! », lancé par le serveur à son adversaire ; il apparaît dans un texte vers 1400.\nLe comptage par 15 est très ancien : vers 1435, une ballade du prince-poète Charles d’Orléans parle déjà de « quarante cinq ». Pourquoi 15 ? Personne ne le sait avec certitude. L’hypothèse la plus citée est celle de l’horloge : chaque point ferait avancer l’aiguille d’un quart de tour, 15, 30, 45, et 60 pour le jeu. Mais l’aiguille des minutes ne se répand que vers 1690, ce qui la rend peu probable. Une autre veut que le serveur avançait de 15 pieds vers le filet à chaque point gagné, mais les terrains n’avaient pas de longueur standard. Une troisième rattache le système aux comptes par soixante, courants au Moyen Âge, quand on pariait sur les parties.\nLe 45 est ensuite devenu 40 : l’explication la plus répandue est que « quarante » est plus court et se crie plus clairement sur le terrain. Enfin, l’anglais « deuce », pour l’égalité à 40 partout, viendrait de « à deux » : il faut alors gagner deux points de suite pour remporter le jeu.",
