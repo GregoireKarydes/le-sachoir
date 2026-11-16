@@ -221,8 +221,8 @@
             ],
             "file": "images/actu-04.webp",
             "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (420f8ae4-909f-49a6-ac50-46540ab03006)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "attempts": 2,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (607a494c-3204-4957-802b-d117f0206391)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
