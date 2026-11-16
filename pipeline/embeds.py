@@ -6,7 +6,12 @@ On en garde l'auteur, le pseudo, le texte, la date et le lien, que l'appli affic
 traceur du réseau n'est chargé chez le lecteur. Un post supprimé ou devenu privé n'est plus renvoyé :
 la case reprend alors sa version réécrite par le Sachoir.
 
-Réseaux pris en charge : X (Twitter), Bluesky, TikTok (vignette téléchargée, les liens expirent)."""
+Réseaux pris en charge : X (Twitter), Bluesky, TikTok (vignette téléchargée, les liens expirent).
+
+Vraies images (16 novembre 2026, demande de Greg : « les faux posts de réseau, c'est pas terrible ») : une case
+« Sur Internet » montre désormais une vraie image. Soit la vignette officielle de la vidéo du buzz (`video.url`,
+YouTube ou TikTok : l'image que la plateforme fournit elle-même pour les aperçus de liens), copiée à côté de
+l'édition, avec un lien vers la vidéo ; soit une photo libre de Wikimedia Commons (`photo.commons`, voir photos.py)."""
 import html
 import re
 from pathlib import Path
@@ -22,8 +27,23 @@ PROVIDERS = [
      "https://embed.bsky.app/oembed?url={u}"),
     ("tiktok", re.compile(r"^https://(www\.)?tiktok\.com/@[\w.]+/video/\d+"),
      "https://www.tiktok.com/oembed?url={u}"),
+    ("youtube", re.compile(r"^https://((www\.|m\.)?youtube\.com/(watch\?(.*&)?v=|shorts/)|youtu\.be/)[A-Za-z0-9_-]{11}"),
+     "https://www.youtube.com/oembed?format=json&url={u}"),
 ]
-LABEL = {"x": "X", "bluesky": "Bluesky", "tiktok": "TikTok"}
+LABEL = {"x": "X", "bluesky": "Bluesky", "tiktok": "TikTok", "youtube": "YouTube"}
+VIDEO = ("youtube", "tiktok")  # réseaux dont la vignette officielle peut illustrer une case « Sur Internet »
+
+
+def youtube_id(url: str) -> str:
+    m = re.search(r"(?:v=|shorts/|youtu\.be/)([A-Za-z0-9_-]{11})", url or "")
+    return m.group(1) if m else ""
+
+
+def youtube_thumbs(url: str, fallback: str = "") -> list:
+    """Vignettes d'une vidéo YouTube, de la plus grande (16:9, sans bandes noires) à celle que donne oEmbed."""
+    vid = youtube_id(url)
+    out = [f"https://i.ytimg.com/vi/{vid}/{n}.jpg" for n in ("maxresdefault", "hq720", "mqdefault")] if vid else []
+    return out + ([fallback] if fallback else [])
 
 
 class Gone(Exception):
@@ -70,49 +90,87 @@ def resolve(url: str, timeout: int = 20) -> dict:
         post = {"text": (d.get("title") or "").strip(), "author": d.get("author_name", ""),
                 "handle": "@" + d.get("author_unique_id", "") if d.get("author_unique_id") else "",
                 "date": "", "thumb_url": d.get("thumbnail_url", "")}
+    elif name == "youtube":
+        post = {"text": (d.get("title") or "").strip(), "author": d.get("author_name", ""), "handle": "", "date": "",
+                "thumb_urls": youtube_thumbs(url, d.get("thumbnail_url", ""))}
     else:
         post = parse_blockquote(d.get("html", ""))
         post["author"] = post["author"] or d.get("author_name", "")
-    if not post["text"] and not post.get("thumb_url"):
+    if not post["text"] and not post.get("thumb_url") and not post.get("thumb_urls"):
         raise Gone(f"{LABEL[name]} : post vide")
     return {"platform": name, "label": LABEL[name], "url": url, **post}
 
 
+def _download(urls: list, dest: Path) -> bool:
+    """Copie la première vignette qui répond (les liens TikTok expirent, YouTube n'a pas toujours la grande taille)."""
+    for u in urls:
+        try:
+            img = requests.get(u, headers=UA, timeout=20)
+            img.raise_for_status()
+            if len(img.content) < 1500:  # image vide ou de remplacement
+                continue
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(img.content)
+            return True
+        except Exception as e:  # noqa: BLE001
+            print(f"  ! vignette {u} : {e}")
+    return False
+
+
+def _refresh_one(obj: dict, rel: str, ed_dir: Path, recheck: bool, need_thumb: bool) -> bool:
+    """Un vrai post (`post`) ou la vidéo qui illustre la case (`video`). Renvoie True si quelque chose a changé."""
+    if obj.get("status") == "gone" or (obj.get("status") == "ok" and not recheck):
+        return False
+    try:
+        emb = resolve(obj["url"])
+    except Gone as e:
+        obj.update(status="gone", error=str(e)[:200])
+        obj.pop("embed", None)
+        print(f"  retiré ({e}) : {obj['url']}")
+        return True
+    except Exception as e:  # réseau, quota : on garde l'état et on réessaiera
+        print(f"  ! {obj['url']} : {e}")
+        return False
+    urls = emb.pop("thumb_urls", None) or ([emb.pop("thumb_url")] if emb.get("thumb_url") else [])
+    emb.pop("thumb_url", None)
+    had = (obj.get("embed") or {}).get("thumb")
+    if had and (ed_dir / had).exists():
+        emb["thumb"] = had  # déjà copiée : on ne la retélécharge pas à chaque passage
+    elif urls and _download(urls, ed_dir / rel):
+        emb["thumb"] = rel
+    if need_thumb and not emb.get("thumb"):
+        print(f"  ! pas de vignette pour {obj['url']} : nouvel essai au prochain passage")
+        return False
+    if obj.get("embed") != emb or obj.get("status") != "ok":
+        obj.update(status="ok", embed=emb)
+        obj.pop("error", None)
+        return True
+    return False
+
+
 def refresh(fmt: dict, ed_dir: Path, recheck: bool = False) -> bool:
-    """Pour chaque case « Sur Internet » qui cite un vrai post (`post.url`) : va chercher le post si ce n'est
-    pas fait (ou le revérifie si `recheck`, au moment de la publication). Renvoie True si l'édition a changé.
-    Une erreur réseau ne change rien : on réessaiera au passage suivant."""
+    """Pour chaque case « Sur Internet » : va chercher le vrai post cité (`post.url`) et la vidéo qui l'illustre
+    (`video.url`, YouTube ou TikTok) si ce n'est pas fait, ou les revérifie si `recheck` (au moment de la
+    publication). Renvoie True si l'édition a changé. Une erreur réseau ne change rien : on réessaiera."""
     changed = False
     for c in fmt.get("cases", []) or []:
-        post = c.get("post") if isinstance(c, dict) and c.get("kind") == "buzz" else None
-        if not isinstance(post, dict) or not post.get("url"):
+        if not isinstance(c, dict) or c.get("kind") != "buzz":
             continue
-        if post.get("status") == "gone" or (post.get("status") == "ok" and not recheck):
-            continue
-        try:
-            emb = resolve(post["url"])
-        except Gone as e:
-            post.update(status="gone", error=str(e)[:200])
-            post.pop("embed", None)
-            changed = True
-            print(f"  post retiré ({e}) : {post['url']}")
-            continue
-        except Exception as e:  # réseau, quota : on garde l'état et on réessaiera
-            print(f"  ! post {post['url']} : {e}")
-            continue
-        thumb = emb.pop("thumb_url", "")
-        if thumb:
-            try:
-                img = requests.get(thumb, headers=UA, timeout=20)
-                img.raise_for_status()
-                rel = f"images/post-{c.get('n', 'x')}.jpg"
-                (ed_dir / "images").mkdir(parents=True, exist_ok=True)
-                (ed_dir / rel).write_bytes(img.content)
-                emb["thumb"] = rel
-            except Exception as e:
-                print(f"  ! vignette {post['url']} : {e}")
-        if post.get("embed") != emb or post.get("status") != "ok":
-            post.update(status="ok", embed=emb)
-            post.pop("error", None)
-            changed = True
+        post, video = c.get("post"), c.get("video")
+        if isinstance(post, dict) and post.get("url"):
+            changed = _refresh_one(post, f"images/post-{c.get('n', 'x')}.jpg", ed_dir, recheck, need_thumb=False) or changed
+        if isinstance(video, dict) and video.get("url") and provider(video["url"]) in VIDEO:
+            changed = _refresh_one(video, f"images/buzz-{c.get('n', 'x')}.jpg", ed_dir, recheck, need_thumb=True) or changed
     return changed
+
+
+def buzz_media(c: dict) -> str:
+    """La vraie image prête pour une case « Sur Internet » : "video", "photo", "post" ou "" (rien de prêt)."""
+    v, ph, po = c.get("video") or {}, c.get("photo") or {}, c.get("post") or {}
+    if v.get("status") == "ok" and (v.get("embed") or {}).get("thumb"):
+        return "video"
+    if ph.get("status") == "done" and ph.get("file"):
+        return "photo"
+    if po.get("status") == "ok" and po.get("embed"):
+        return "post"
+    return ""

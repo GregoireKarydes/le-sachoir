@@ -244,22 +244,24 @@ Affirmations de 12 mots maximum, environ moitié vraies, beaucoup d'idées reçu
 
 **Qui a dit ça ?** (`"kind": "citation"`, 4 questions `"type": "choice"`) : une citation célèbre et 4 auteurs possibles, ou une citation à attribuer à « Personne de connu » quand elle est apocryphe (« Qu'ils mangent de la brioche »). Citations exactes et sourcées ; aucune citation inventée présentée comme vraie.
 
-## Case « Sur Internet » (`"kind": "buzz"`, Actu seulement, 13 novembre 2026)
-Trois cases à la fin de l'Actu, à la suite, après le dernier sujet : « Pendant ce temps, sur Internet ». L'appli les affiche comme des cartes de post sur fond bleu nuit, avec la mention « Post réécrit par Le Sachoir ». Aucune image à dessiner.
+## Case « Sur Internet » (`"kind": "buzz"`, Actu seulement ; vraies images depuis le 16 novembre 2026)
+Deux ou trois cases à la fin de l'Actu, à la suite : « Pendant ce temps, sur Internet ». **Chaque case montre une vraie image** ; l'appli affiche l'image, le titre de la tendance, « Pourquoi ça buzze », la vanne signée du Sachoir et la source, sur fond bleu nuit. **Une case sans vraie image prête n'est pas publiée.** Aucune image à dessiner.
 ```json
 { "n": 19, "kind": "buzz", "tag": "Pendant ce temps, sur Internet",
-  "name": "Ton collègue de bureau", "handle": "@TonCollegue",      // pseudo inventé, générique, visiblement fictif ; jamais un vrai compte
-  "ago": "il y a 3 h",                                             // facultatif, pour l'ambiance
-  "trend": "Pain au chocolat",                                     // le mot-clé qui buzze (affiché en #)
-  "text": "Le post, drôle, qui résume ce que dit Internet (40 mots max).",
+  "trend": "Pain au chocolat",                                     // le mot-clé qui buzze
+  "title": "Le débat pain au chocolat ou chocolatine repart",      // la tendance en clair, 12 mots max
   "why": "Pourquoi ça buzze : le fait réel, neutre et vérifié (30 mots max).",
-  "likes": "48,2 k", "shares": "6 k",                              // facultatifs, inventés et ronds
+  "text": "La vanne du Sachoir, qui se comprend seule (25 mots max).",
   "source": { "title": "Le Parisien", "url": "https://…" },       // article qui explique la tendance (trouvé par WebSearch)
-  "post": { "url": "https://x.com/<compte>/status/<numéro>" } }   // facultatif : le vrai post (X, Bluesky, TikTok), voir plus bas
+  "video": { "url": "https://www.youtube.com/watch?v=XXXXXXXXXXX" } }  // la vraie image : la vidéo du buzz (YouTube ou TikTok)…
+  // … ou, à la place de "video" : "photo": { "commons": "File:Nom exact.jpg" }   (photo libre de Wikimedia Commons)
 ```
-**Vrai post** (13 novembre 2026) : avec `post.url`, la publication va chercher le post par l'intégration officielle du réseau (oEmbed, gratuite) et l'enregistre dans `post.embed` (auteur, pseudo, texte, date ; vignette pour TikTok) avec `post.status` (`ok`, ou `gone` s'il a été supprimé ou rendu privé) ; il est revérifié au moment de la publication. L'appli l'affiche elle-même (aucun script ni traceur du réseau), avec « Voir sur X », puis `text` en « Le Sachoir : … ». Si le post est `gone`, la carte réécrite s'affiche. Ne jamais remplir `post.embed` à la main.
+- **`video.url`** : `https://www.youtube.com/watch?v=<id>`, `https://youtu.be/<id>`, `https://www.youtube.com/shorts/<id>` ou `https://www.tiktok.com/@<compte>/video/<numéro>`, adresse venue d'un résultat de WebSearch. La publication interroge l'intégration officielle de la plateforme (oEmbed, gratuite), copie la vignette d'aperçu à côté de l'édition (`images/buzz-<n>.jpg`) et remplit `video.embed` (plateforme, auteur, titre, lien) et `video.status` (`ok`, ou `gone` si la vidéo n'est plus publique). L'appli affiche la vignette avec un lien vers la vidéo : aucun lecteur ni traceur de la plateforme n'est chargé.
+- **`photo.commons`** : mêmes règles que la case photo (fichier Wikimedia Commons sous licence libre, nom exact, jamais une personne vivante) ; le workflow Images la télécharge et remplit `photo.file`, `credit`, `license`, `status`.
+- **Vrai post** (facultatif, en plus) : `"post": {"url": "https://x.com/<compte>/status/<numéro>"}` (X, Bluesky, TikTok), récupéré par l'intégration officielle du réseau dans `post.embed` ; `post.status` vaut `ok` ou `gone`.
+- **Plus de faux post** : les champs `name`, `handle`, `ago`, `likes`, `shares` ne s'écrivent plus (ils ne servent qu'aux éditions d'avant le 18 novembre 2026).
 
-Règles : 3 cases au plus, toutes à la fin ; on rit **avec** Internet, jamais d'un particulier ; pas de drame, de victime, de rumeur ni de politique partisane ; aucun post, tweet ou pseudo réel recopié ; `why` neutre et sourcé. `pipeline/validate.py` vérifie la place, les longueurs, le pseudo et la source.
+Règles : 3 cases au plus, toutes à la fin ; on rit **avec** Internet, jamais d'un particulier ; pas de drame, de victime, de rumeur ni de politique partisane ; ni capture d'écran d'un post ni photo de presse ; `why` neutre et sourcé. `pipeline/validate.py` signale une case sans vraie image, un titre manquant, une adresse de vidéo non reconnue et les champs de faux post.
 
 ## Cohérence visuelle d'une BD (8 novembre 2026)
 Le pipeline envoie au modèle, pour chaque case : le numéro de la case, la scène, **le cadre de toute l'histoire** (`art`), chaque personnage avec sa fiche **et son rôle**, les objets récurrents montrés dans la case, et la **case précédente** en image de référence quand elle partage un personnage (continuité). À fournir dans chaque BD :

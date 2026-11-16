@@ -90,7 +90,8 @@ def main():
         changed = False
         for fmt in fmts:
             for c in fmt.get("cases", []) or []:
-                if isinstance(c, dict) and c.get("kind") == "photo":
+                # Cases photo, et cases « Sur Internet » illustrées par une photo libre (16 novembre 2026).
+                if isinstance(c, dict) and (c.get("kind") == "photo" or (c.get("kind") == "buzz" and (c.get("photo") or {}).get("commons"))):
                     changed |= fetch(c, f.parent)
         if changed:
             f.write_text(json.dumps(data, ensure_ascii=False, indent=2))
