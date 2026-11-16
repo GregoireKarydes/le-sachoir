@@ -18,7 +18,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 API = "https://commons.wikimedia.org/w/api.php"
-UA = {"User-Agent": "LeSachoirBot/1.0 (https://gregoirekarydes.github.io/le-sachoir/)"}
+UA = {"User-Agent": "LeSachoirBot/1.0 (https://lesachoir.fr/)"}
 FREE = re.compile(r"^(cc0|cc[ -]by|cc[ -]by-sa|public domain|pd\b|pd-|attribution|no restrictions)", re.I)
 
 

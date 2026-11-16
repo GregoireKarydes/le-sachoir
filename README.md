@@ -2,7 +2,7 @@
 
 Chaque jour, l'actu et la culture G en BD. Pour briller en société (ou au moins faire semblant).
 
-**Appli :** https://gregoirekarydes.github.io/le-sachoir/
+**Appli :** https://lesachoir.fr/
 
 ## Comment ça marche (V1 gratuite, 100 % automatique)
 
