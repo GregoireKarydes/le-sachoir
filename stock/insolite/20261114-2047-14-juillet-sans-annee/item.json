@@ -80,7 +80,7 @@
           "n": 2,
           "kind": "fact",
           "tag": "1880",
-          "caption": "La jeune IIIe République cherche une fête nationale. Le député Benjamin Raspail propose le 14 juillet.",
+          "caption": "En 1880, la jeune IIIe République cherche une fête nationale. Le député Benjamin Raspail propose le 14 juillet.",
           "bubbles": [
             {
               "who": "martin",
@@ -89,7 +89,7 @@
             },
             {
               "who": "jules",
-              "text": "Parce qu’il y en a plusieurs ?",
+              "text": "Moi, tant qu’il y a un feu d’artifice, je vote pour.",
               "side": "l"
             }
           ],
@@ -124,12 +124,12 @@
           "bubbles": [
             {
               "who": "jules",
-              "text": "Et la Bastille, alors ?",
+              "text": "Vous cachez quelque chose dans votre dos.",
               "side": "l"
             },
             {
               "who": "martin",
-              "text": "Trop sanglante pour certains. Par prudence, on ne la cite pas.",
+              "text": "Une journée un peu trop sanglante. Par prudence, on ne la cite pas.",
               "side": "r"
             }
           ],
@@ -167,14 +167,14 @@
           "caption": "Environ 260 000 Parisiens et 100 000 gardes venus de toute la France fêtent l’unité au Champ-de-Mars. Talleyrand dit la messe.",
           "bubbles": [
             {
-              "who": "jules",
-              "text": "Une fête géante, et cette fois sans combat ?",
-              "side": "l"
+              "who": "martin",
+              "text": "Aucun combat. Seulement la pluie, à la fin.",
+              "side": "r"
             },
             {
-              "who": "martin",
-              "text": "Sans combat. Juste la pluie, à la fin.",
-              "side": "r"
+              "who": "jules",
+              "text": "J’ai l’imperméable. Pour une fois que je suis prêt.",
+              "side": "l"
             }
           ],
           "image": {
@@ -193,18 +193,7 @@
           "kind": "",
           "tag": "En résumé",
           "caption": "La loi de 1880 dit seulement « le 14 juillet ». Chacun y voit donc 1789, 1790, ou les deux à la fois.",
-          "bubbles": [
-            {
-              "who": "jules",
-              "text": "Donc j’ai le droit de fêter deux fois ?",
-              "side": "l"
-            },
-            {
-              "who": "martin",
-              "text": "Une seule fois. Mais avec deux bonnes raisons.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "back on the riverside lawn in Paris at night, fireworks in the sky behind him. Close on Henri Martin (short, round, long white hair, dark plum frock coat) holding up two lit sparklers crossed like an X, wise half-smile, eyes twinkling. close-up",
             "cast": [
@@ -217,7 +206,7 @@
         }
       ],
       "final": {
-        "text": "La loi du 6 juillet 1880 fait du 14 juillet la fête nationale sans préciser l’année : 1789, la Bastille, ou 1790, la Fédération.",
+        "text": "Le 14 juillet 1790, environ 260 000 Parisiens et 100 000 gardes fêtent l’unité du pays au Champ-de-Mars. Talleyrand y dit la messe.",
         "source": "Hérodote — La fête nationale du 14 juillet"
       },
       "story": "En 1880, la IIIe République, encore jeune, veut une fête nationale qui rassemble les Français. Le député Benjamin Raspail propose le 14 juillet, préféré à d’autres dates de la Révolution comme le 5 mai ou le 20 juin 1789. La loi votée en juillet 1880 tient en un article unique : « La République adopte le 14 juillet comme jour de fête nationale annuelle. » Aucune année n’y figure.\nCe silence est voulu. Le 14 juillet 1789, la prise de la Bastille a été une journée sanglante, qui gêne une partie des élus. Or un autre 14 juillet existe : celui de 1790, la Fête de la Fédération. Ce jour-là, au Champ-de-Mars, environ 260 000 Parisiens et quelque 100 000 gardes fédérés venus de tous les départements célèbrent l’unité du pays. Talleyrand, évêque d’Autun, dit la messe sur l’autel de la patrie, La Fayette puis le roi Louis XVI prêtent serment, et la pluie finit par tomber sans gâcher la fête.\nAu Sénat, le rapporteur de la loi, l’historien Henri Martin, met en avant ce 14 juillet 1790, qui selon lui « a donné à la France conscience d’elle-même ». Résultat : la loi ne tranche pas. Pour les uns, on fête la Bastille ; pour les autres, la Fédération ; et pour beaucoup d’historiens et de juristes, les deux à la fois.",

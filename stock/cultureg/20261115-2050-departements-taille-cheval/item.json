@@ -56,12 +56,12 @@
           "bubbles": [
             {
               "who": "yanis",
-              "text": "Qui a eu l’idée de couper la France en 101 morceaux ?",
+              "text": "Regardez-moi ces frontières. On dirait une carte dessinée dans un bus.",
               "side": "l"
             },
             {
               "who": "sieyes",
-              "text": "En 83, d’abord. Et à la règle, jeune homme.",
+              "text": "Ne m’en parlez pas. Moi, j’avais prévu des carrés.",
               "side": "r"
             }
           ],
@@ -83,14 +83,14 @@
           "caption": "Avant la Révolution, provinces, diocèses et autres circonscriptions se chevauchent, avec des tailles très différentes. Un vrai casse-tête pour administrer.",
           "bubbles": [
             {
-              "who": "yanis",
-              "text": "Donc personne ne savait vraiment de qui il dépendait ?",
-              "side": "l"
+              "who": "sieyes",
+              "text": "Mille ans de bricolage. Pas une ligne droite.",
+              "side": "r"
             },
             {
-              "who": "sieyes",
-              "text": "Mille ans de bricolage, monsieur. On repart de zéro.",
-              "side": "r"
+              "who": "yanis",
+              "text": "Et pas un GPS. Je compatis.",
+              "side": "l"
             }
           ],
           "image": {
@@ -249,18 +249,7 @@
           "kind": "",
           "tag": "En résumé",
           "caption": "En 1790, l’Assemblée crée 83 départements de taille proche, nommés d’après la nature, pour une France plus simple à gouverner.",
-          "bubbles": [
-            {
-              "who": "yanis",
-              "text": "Donc mon département, c’est une journée de cheval.",
-              "side": "l"
-            },
-            {
-              "who": "sieyes",
-              "text": "Aller et retour. Repas du cheval compris.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "the modern bicycle courier stop with the big wall map of France. Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket) on the left patting the neck of the horse, which is now parked among the bikes in the bike rack; Sieyès (tall, very thin, powdered white hair, olive-green frock coat, tricorn hat) on the right, folding the ruler away with quiet satisfaction. medium shot",
             "cast": [
@@ -274,7 +263,7 @@
         }
       ],
       "final": {
-        "text": "En 1790, les départements ont été dimensionnés pour qu’on puisse aller à cheval au chef-lieu et revenir dans la journée.",
+        "text": "Le premier projet, en 1789, découpait la France en 81 carrés d’environ 70 km de côté. Trop rigide : il fut abandonné.",
         "source": "Futura Sciences — La création des départements"
       },
       "story": "Avant la Révolution, la France était découpée en provinces, diocèses et autres circonscriptions qui se chevauchaient, de tailles très différentes, héritées de siècles d’histoire. Pour administrer le pays plus simplement, l’Assemblée constituante décide de tout redécouper.\nLe comité chargé du projet, où siège l’abbé Sieyès, part d’une idée géométrique : une grille de 81 carrés d’environ 70 kilomètres de côté (18 lieues sur 18), chacun divisé en neuf. Trop rigide : le plan, critiqué notamment par Mirabeau, est abandonné, et les limites finales suivent souvent celles des anciennes provinces et le relief.\nUn repère guide la taille des départements, attribué à Condorcet : depuis le point le plus éloigné, un habitant doit pouvoir se rendre à cheval au chef-lieu, la ville où siège l’administration, et revenir dans la journée. C’est pourquoi les départements ont des tailles assez proches. Pour rompre avec les anciennes provinces, on leur donne des noms de rivières, de fleuves et de montagnes.\nLe 15 janvier 1790, l’Assemblée arrête la carte ; le décret du 26 février 1790 fixe le nombre de 83 départements. Leur nombre a varié depuis avec l’histoire du pays : on en compte aujourd’hui 101, outre-mer compris.",

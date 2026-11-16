@@ -143,16 +143,16 @@
           "n": 4,
           "kind": "",
           "tag": "1717",
-          "caption": "Voltaire en sait quelque chose : pour des vers moqueurs contre le Régent, il passe près d’un an à la Bastille.",
+          "caption": "Voltaire en sait quelque chose : en 1717, des vers moqueurs contre le Régent lui valent près d’un an de Bastille.",
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Après ça, vous allez vous calmer, non ?",
+              "text": "Un an de prison. À votre place, j’arrêtais d’écrire.",
               "side": "l"
             },
             {
               "who": "voltaire",
-              "text": "Me calmer ? J’y ai écrit une tragédie. Et je ne fais que commencer.",
+              "text": "Arrêter ? J’y ai écrit une tragédie. Et je ne fais que commencer.",
               "side": "r"
             }
           ],
@@ -213,11 +213,11 @@
           "n": 7,
           "kind": "fact",
           "tag": "1734",
-          "caption": "Il en tire les « Lettres philosophiques », éloge de la liberté anglaise. En France, le livre est brûlé.",
+          "caption": "Il en tire les « Lettres philosophiques », éloge de la liberté anglaise. En 1734, en France, le livre est brûlé.",
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Ils ont brûlé votre livre ?",
+              "text": "Ils brûlent votre livre ! Faites quelque chose !",
               "side": "l"
             },
             {
@@ -242,7 +242,7 @@
           "n": 8,
           "kind": "",
           "tag": "1762",
-          "caption": "À Toulouse, le protestant Jean Calas est exécuté, accusé d’avoir tué son fils pour l’empêcher de devenir catholique.",
+          "caption": "En 1762, à Toulouse, le protestant Jean Calas est exécuté, accusé d’avoir tué son fils pour l’empêcher de devenir catholique.",
           "bubbles": [
             {
               "who": "mathis",
@@ -275,7 +275,7 @@
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Un livre qui fait rouvrir un procès ?",
+              "text": "Un livre contre des juges. Vous n’avez aucune chance.",
               "side": "l"
             },
             {
@@ -348,7 +348,7 @@
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Et qui a écrit tout ça ?",
+              "text": "72 000 articles. Mon exposé fait deux pages, et j’ai souffert.",
               "side": "l"
             },
             {
@@ -428,7 +428,7 @@
           "n": 16,
           "kind": "",
           "tag": "8 mars 1759",
-          "caption": "Le pouvoir interdit l’Encyclopédie. Mais Malesherbes, chef de la censure, aide discrètement Diderot.",
+          "caption": "En 1759, le pouvoir interdit l’Encyclopédie. Mais Malesherbes, chef de la censure, aide discrètement Diderot.",
           "bubbles": [
             {
               "who": "mathis",
@@ -458,18 +458,7 @@
           "kind": "fact",
           "tag": "1765",
           "caption": "D’Alembert abandonne. Diderot, presque seul, fait paraître en 1765 les dix derniers volumes de texte.",
-          "bubbles": [
-            {
-              "who": "mathis",
-              "text": "Avec l’autorisation du roi ?",
-              "side": "l"
-            },
-            {
-              "who": "diderot",
-              "text": "Disons… sans trop la demander.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "a Paris street at night under a big moon. Denis (sturdy, untidy grey hair, sky-blue dressing gown) on the right tiptoeing while pushing a wheelbarrow piled high with thick brown books; Mathis (chubby, brown hoodie, round glasses) on the left lighting the way with his phone's flashlight, looking around nervously. wide shot",
             "cast": [
@@ -490,7 +479,7 @@
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Elle achète vos livres… et vous les laisse ?",
+              "text": "Elle paie vos livres et vous les laisse. Je veux la même pour mes mangas.",
               "side": "l"
             },
             {
@@ -519,7 +508,7 @@
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Concrètement, ça veut dire quoi ?",
+              "text": "« Que le pouvoir arrête le pouvoir. » On dirait un tuto de judo.",
               "side": "r"
             },
             {
@@ -560,7 +549,7 @@
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Et ça plaît, cette idée ?",
+              "text": "Le pouvoir au peuple ! Ça a dû plaire.",
               "side": "l"
             },
             {
@@ -590,7 +579,7 @@
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Un philosophe acclamé comme une star ?",
+              "text": "Une foule, des fleurs… Il ne manque que les selfies.",
               "side": "l"
             },
             {
@@ -620,7 +609,7 @@
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Libres et égaux en droits : c’est l’article 1, non ?",
+              "text": "Libres et égaux en droits : l’article 1, je le connais !",
               "side": "r"
             },
             {
@@ -649,12 +638,12 @@
           "bubbles": [
             {
               "who": "mathis",
-              "text": "Donc les Lumières, c’est penser par soi-même… et oser l’écrire ?",
+              "text": "Penser par soi-même, et oser l’écrire. Je le note dans mon téléphone.",
               "side": "r"
             },
             {
               "who": "voltaire",
-              "text": "Voilà. Et maintenant, rangez votre ampoule.",
+              "text": "Notez surtout de ranger cette ampoule.",
               "side": "l"
             }
           ],
@@ -671,7 +660,7 @@
         }
       ],
       "final": {
-        "text": "L’article 16 de la Déclaration de 1789 reprend l’idée de Montesquieu : sans séparation des pouvoirs, une société n’a pas de Constitution.",
+        "text": "Le chevalier de Jaucourt a écrit à lui seul 17 000 des près de 72 000 articles de l’Encyclopédie.",
         "source": "Élysée — La Déclaration des droits de l’homme et du citoyen"
       },
       "story": "Au XVIIIe siècle, en France, le roi gouverne seul, l’Église catholique encadre les croyances et la censure contrôle les livres. Les philosophes des Lumières veulent que chacun juge par la raison : en 1784, Kant résume l’idée par « Sapere aude », ose penser par toi-même.\nVoltaire en paie le prix. En 1717, des vers contre le Régent lui valent près d’un an de Bastille. En Angleterre, de 1726 à 1728, il admire une société plus libre ; ses « Lettres philosophiques » sont brûlées en 1734. En 1762, le protestant Jean Calas est exécuté à Toulouse ; Voltaire dénonce le fanatisme, publie le « Traité sur la tolérance » en 1763, et Calas est réhabilité en 1765.\nÀ partir de 1751, Diderot et d’Alembert publient l’Encyclopédie : 17 volumes de texte, 11 de planches, près de 72 000 articles, écrits par plus de 140 auteurs. Interdite en 1759, elle est achevée grâce à l’aide discrète de Malesherbes, le chef de la censure, et à l’obstination de Diderot. Catherine II de Russie lui achète sa bibliothèque en 1765 et la lui laisse.\nMontesquieu, en 1748, veut que « le pouvoir arrête le pouvoir » : séparer les pouvoirs législatif, exécutif et judiciaire. Rousseau, en 1762, veut confier le pouvoir au peuple. En 1789, la Déclaration des droits de l’homme reprend ces idées, et notre Constitution la cite toujours.",

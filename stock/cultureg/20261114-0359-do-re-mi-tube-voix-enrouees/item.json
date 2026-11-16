@@ -24,7 +24,7 @@
           "look": "Pietro, a short round young novice monk around twenty, chubby pink cheeks, messy bowl-cut ginger hair, oversized light-brown robe with sleeves too long, light peach skin, a heavy green leather-bound songbook always clutched to his chest",
           "file": "cast/cultureg-pietro.png",
           "status": "pending",
-          "role": "the clumsy curious novice who asks the reader's questions; small, round, overwhelmed, hugging his songbook"
+          "role": "the clumsy, lazy novice who would do anything to avoid learning every chant by heart; small, round, overwhelmed, hugging his songbook"
         }
       ],
       "cover": {
@@ -46,12 +46,12 @@
           "bubbles": [
             {
               "who": "pietro",
-              "text": "Do, ré, mi… Qui a inventé ces noms bizarres ?",
+              "text": "Tous les chants de l’année ? Par cœur ?",
               "side": "l"
             },
             {
               "who": "guido",
-              "text": "Moi. Enfin, presque.",
+              "text": "Oui. Et tu en es au premier.",
               "side": "r"
             }
           ],
@@ -71,18 +71,7 @@
           "kind": "fact",
           "tag": "",
           "caption": "Avant lui, les notes n’ont pas de nom facile à chanter : les chanteurs apprennent chaque mélodie à l’oreille, par cœur.",
-          "bubbles": [
-            {
-              "who": "pietro",
-              "text": "Tous les chants de l’année ? Par cœur ?",
-              "side": "l"
-            },
-            {
-              "who": "guido",
-              "text": "Oui. Et tu en es au premier.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "the same stone monastery room. Pietro (short, round, ginger bowl cut) on the left almost buried under a towering pile of heavy songbooks, only his head and one arm sticking out, light-blue sweat drop; Guido (very tall, black habit, pink rope belt) on the right placing one more book on top of the pile, deadpan. low angle",
             "cast": [
@@ -145,14 +134,14 @@
           "caption": "Le texte, attribué au moine Paul Diacre, demande à saint Jean de libérer la voix de ceux qui chantent.",
           "bubbles": [
             {
-              "who": "pietro",
-              "text": "Une prière pour bien chanter ?",
-              "side": "l"
-            },
-            {
               "who": "guido",
               "text": "Une tradition dit que Paul l’a écrite un jour d’enrouement.",
               "side": "r"
+            },
+            {
+              "who": "pietro",
+              "text": "Moi aussi, je suis enroué. Dispensé de chant ?",
+              "side": "l"
             }
           ],
           "image": {
@@ -275,7 +264,7 @@
         }
       ],
       "final": {
-        "text": "Ut, ré, mi, fa, sol, la : les premières syllabes des vers de l’hymne latine « Ut queant laxis », utilisées par Guido d’Arezzo au XIe siècle.",
+        "text": "« Ut » était si dur à chanter que l’Italie l’a remplacé par « do ». Il survit dans la « clé d’ut » des partitions.",
         "source": "Larousse — Ut queant laxis"
       },
       "story": "Au début du XIe siècle, les chanteurs d’église apprennent les mélodies à l’oreille, une par une, parce que les notes n’ont pas encore de nom pratique à chanter. Le moine italien Guido d’Arezzo, considéré comme le père de la notation musicale moderne, cherche un moyen plus rapide : comparer chaque note inconnue à une mélodie que tout le monde connaît déjà.\nIl choisit l’hymne à saint Jean-Baptiste « Ut queant laxis », dont le texte est traditionnellement attribué au moine Paul Diacre (VIIIe siècle). Dans la mélodie qu’il utilise, chaque demi-vers commence une note plus haut que le précédent. Les syllabes du début de chaque demi-vers donnent donc l’échelle : ut, ré, mi, fa, sol, la. Le texte demande justement à saint Jean de délier la voix de ses serviteurs pour qu’ils chantent ses merveilles ; une tradition médiévale raconte d’ailleurs que Paul Diacre souffrait d’un enrouement.\nPlus tard, on ajoute une septième note, « si », formée des initiales du dernier vers, « Sancte Iohannes ». Au XVIIe siècle, en Italie, « ut » est remplacé par « do », plus facile à chanter parce qu’il finit par une voyelle. « Ut » n’a pas disparu pour autant : on parle encore de la « clé d’ut » sur les partitions.",

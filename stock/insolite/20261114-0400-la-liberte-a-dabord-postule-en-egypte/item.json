@@ -46,12 +46,12 @@
           "bubbles": [
             {
               "who": "Un passant",
-              "text": "Elle a toujours voulu être américaine ?",
+              "text": "Belle statue. Très américaine.",
               "side": "l"
             },
             {
               "who": "bartholdi",
-              "text": "Pas du tout. Elle a d’abord postulé en Égypte.",
+              "text": "Américaine ? Elle a d’abord postulé en Égypte !",
               "side": "r"
             }
           ],
@@ -69,14 +69,8 @@
           "n": 2,
           "kind": "",
           "tag": "1855",
-          "caption": "En Égypte, le jeune sculpteur de Colmar découvre les statues géantes des pharaons. Il rêve de faire aussi grand.",
-          "bubbles": [
-            {
-              "who": "bartholdi",
-              "text": "Des pharaons hauts comme des immeubles ! Je veux la même chose.",
-              "side": "l"
-            }
-          ],
+          "caption": "En 1855, en Égypte, le jeune sculpteur de Colmar découvre les statues géantes des pharaons. Il rêve d’aussi grand.",
+          "bubbles": [],
           "image": {
             "prompt": "the foot of a gigantic seated ancient Egyptian stone statue, only its huge stone feet and knees visible. Auguste (short, bushy dark beard, royal blue frock coat) tiny at the bottom, head tilted all the way back, sketchbook open, eyes shining, small red hearts. low angle. low angle",
             "cast": [
@@ -91,7 +85,7 @@
           "n": 3,
           "kind": "",
           "tag": "1867-1869",
-          "caption": "Pendant le percement du canal de Suez, il propose au khédive, souverain de l’Égypte, un phare géant pour son entrée.",
+          "caption": "Entre 1867 et 1869, il propose au khédive, souverain de l’Égypte, un phare géant pour l’entrée du canal de Suez.",
           "bubbles": [
             {
               "who": "bartholdi",
@@ -228,7 +222,7 @@
         }
       ],
       "final": {
-        "text": "Vers 1867-1869, Bartholdi proposa à l’Égypte une statue-phare à torche pour le canal de Suez ; refusée, l’idée nourrit la statue de la Liberté.",
+        "text": "Le premier projet de Bartholdi s’appelait « L’Égypte apportant la lumière à l’Asie » : une paysanne à torche, haute d’environ 26 mètres.",
         "source": "Musée d’Orsay — Liberté éclairant le monde"
       },
       "story": "Le sculpteur Auguste Bartholdi, né à Colmar, visite l’Égypte en 1855. Les statues colossales des pharaons le fascinent et lui donnent l’envie de créer, lui aussi, une œuvre gigantesque.\nEntre 1867 et 1869, pendant le percement du canal de Suez, il propose au khédive Ismaïl, souverain de l’Égypte, un phare monumental pour l’entrée nord du canal, à Port-Saïd. Son titre : « L’Égypte apportant la lumière à l’Asie ». Il s’agit d’une paysanne égyptienne qui brandit une torche, haute d’environ 26 mètres sur un socle de 15 mètres, inspirée du colosse de Rhodes. Mais l’Égypte s’est lourdement endettée pour creuser le canal : le khédive refuse, jugeant le projet trop coûteux. En 1869, c’est un phare classique qui est construit à Port-Saïd.\nBartholdi ne renonce pas à son idée. Il la transforme : la paysanne devient une figure drapée à la grecque, la lumière se concentre dans la torche levée. En 1871, il part aux États-Unis et repère l’île où elle se dressera. Gustave Eiffel conçoit la structure métallique intérieure, et « La Liberté éclairant le monde » est inaugurée à New York le 28 octobre 1886. La plus célèbre statue américaine est donc française… et a d’abord été pensée pour l’Égypte.",

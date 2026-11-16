@@ -56,7 +56,7 @@
           "bubbles": [
             {
               "who": "jeanne",
-              "text": "Ce matin, la mer était là. Où est-elle partie ?",
+              "text": "Ce matin, la mer était là. Elle est partie sans prévenir.",
               "side": "l"
             },
             {
@@ -125,12 +125,12 @@
           "bubbles": [
             {
               "who": "jeanne",
-              "text": "Donc les grandes marées, c’est un travail d’équipe ?",
+              "text": "La Lune ET le Soleil ? Ils s’y mettent à deux, maintenant !",
               "side": "l"
             },
             {
               "who": "laplace",
-              "text": "La Lune et le Soleil tirent dans le même sens.",
+              "text": "À la pleine lune, oui. Ils tirent dans le même sens.",
               "side": "r"
             }
           ],
@@ -205,7 +205,7 @@
           "bubbles": [
             {
               "who": "jeanne",
-              "text": "Donc elle ne m’a pas quittée. Elle fait le tour de la Terre.",
+              "text": "Elle ne m’a pas quittée. Elle fait juste le tour de la Terre.",
               "side": "l"
             },
             {
@@ -226,7 +226,7 @@
         }
       ],
       "final": {
-        "text": "Il y a deux marées hautes par jour car la Lune soulève deux bosses d’eau : une face à elle, une à l’opposé.",
+        "text": "Au Mont-Saint-Michel, la mer ne monte pas « à la vitesse d’un cheval au galop » : au plus vite, environ 6 km/h.",
         "source": "IMCCE — Les marées"
       },
       "story": "Les marées viennent surtout de la Lune. Elle attire tout ce qui se trouve sur Terre, mais d’autant plus fort que c’est proche d’elle. L’océan tourné vers la Lune est donc tiré un peu plus que le centre de la Terre, et l’océan du côté opposé un peu moins : il reste en arrière. Résultat, l’eau forme deux bosses, l’une face à la Lune, l’autre à l’opposé. En tournant sur elle-même, la Terre fait passer chaque côte sous ces deux bosses : deux marées hautes et deux marées basses en 24 h 50 min environ, d’où un décalage d’à peu près 50 minutes chaque jour.\nLe Soleil joue le même jeu, en environ deux fois moins fort. Quand il est aligné avec la Lune, à la pleine et à la nouvelle lune, leurs effets s’additionnent : ce sont les vives-eaux, les grandes marées. Quand ils tirent à angle droit, aux quartiers de lune, ils se contrarient : ce sont les mortes-eaux.\nLe mathématicien français Pierre-Simon de Laplace a compris que cela ne suffit pas : la forme des océans et des côtes amplifie ou réduit la marée selon l’endroit. La baie du Mont-Saint-Michel détient le record d’Europe, environ 10 mètres d’écart en moyenne et jusqu’à 15 mètres lors des plus grandes marées. La mer n’y monte pourtant pas « au galop » : sa vitesse maximale est d’environ 6 km/h, celle d’un marcheur pressé, mais elle avance vite sur une baie très plate.",

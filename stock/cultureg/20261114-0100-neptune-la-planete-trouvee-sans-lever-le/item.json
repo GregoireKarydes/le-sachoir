@@ -181,13 +181,7 @@
           "kind": "react",
           "tag": "",
           "caption": "Écart avec la prédiction : moins d’un degré, à peine deux fois la largeur de la Lune. On la baptise Neptune.",
-          "bubbles": [
-            {
-              "text": "Évidemment.",
-              "who": "leverrier",
-              "side": "l"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "plain background. Urbain (in the centre) extreme close-up, eyes half closed, a tiny smug smile, nose high in the air, calmly blowing on the tip of his quill like a gunslinger. close-up",
             "cast": [

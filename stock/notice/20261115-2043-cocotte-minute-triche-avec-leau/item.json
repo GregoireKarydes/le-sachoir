@@ -86,12 +86,12 @@
           "bubbles": [
             {
               "who": "samir",
-              "text": "Donc même à fond, ma casserole plafonne à 100 °C ?",
+              "text": "À fond ! Cette fois, elle va dépasser les 100 °C !",
               "side": "l"
             },
             {
               "who": "papin",
-              "text": "Oui. Le gaz s’épuise, l’eau ne bouge pas.",
+              "text": "Non. Vous fabriquez seulement plus de vapeur.",
               "side": "r"
             }
           ],
@@ -212,7 +212,7 @@
           "bubbles": [
             {
               "who": "samir",
-              "text": "Donc elle ne triche pas. Elle change les règles.",
+              "text": "Elle ne triche pas. Elle change les règles.",
               "side": "l"
             },
             {
@@ -233,7 +233,7 @@
         }
       ],
       "final": {
-        "text": "Dans une cocotte-minute, la vapeur enfermée fait monter la pression : l’eau bout alors vers 120 °C au lieu de 100 °C.",
+        "text": "L’ancêtre de la cocotte-minute date de 1679 : le « digesteur » de Denis Papin, conçu pour ramollir des os de bœuf.",
         "source": "Wikipédia — Pressure cooker"
       },
       "story": "Dans une casserole ouverte, l’eau ne dépasse jamais 100 °C : dès qu’elle bout, toute la chaleur en plus sert à fabriquer de la vapeur, qui s’envole. La cocotte-minute contourne cette limite. Son couvercle étanche enferme la vapeur, qui s’accumule et fait monter la pression à l’intérieur, à environ un bar de plus que l’air ambiant, soit à peu près le double. Or plus l’eau est sous pression, plus il lui faut de chaleur pour bouillir : dans la cocotte, elle monte vers 120 °C. Les aliments, plus chauds, cuisent deux à quatre fois plus vite.\nPour que la pression ne monte pas sans fin, une soupape, un petit clapet réglé, laisse sortir la vapeur en trop : c’est elle qui tourne et qui siffle. Les modèles modernes ont en plus des soupapes de secours et un couvercle qui ne s’ouvre pas tant qu’il reste de la pression.\nL’idée est française. En 1679, le physicien Denis Papin invente le « digesteur », une marmite de fer fermée par une vis et munie d’une soupape. Il s’en sert pour ramollir des os, et en 1682 il cuisine avec devant la Royal Society de Londres : les os de bœuf ressortent « mous comme du fromage », note un témoin. Il faut pourtant attendre 1953 pour que l’autocuiseur entre dans les cuisines françaises : à Selongey, en Côte-d’Or, SEB lance la Super-Cocotte, vendue à 130 000 exemplaires dès 1954, puis à plus de 70 millions.",

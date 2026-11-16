@@ -24,7 +24,7 @@
           "look": "an elderly very tall and thin astronomer of the Paris Observatory in 1911, long pointy white beard, bald head, small round spectacles, light peach skin, long teal frock coat as main colour, a brass telescope tucked under his arm",
           "file": "cast/cultureg-astro.png",
           "status": "pending",
-          "role": "the dry, slightly proud astronomer who explains simply; very tall, chin up, speaks with a raised finger"
+          "role": "the dry, proud astronomer who explains simply but refuses, out of wounded national pride, to ever say the name of the English village; very tall, chin up, speaks with a raised finger"
         }
       ],
       "cover": {
@@ -46,12 +46,12 @@
           "bubbles": [
             {
               "who": "gaston",
-              "text": "Neuf minutes vingt et une ? Qui a choisi ça ?",
+              "text": "Neuf minutes vingt et une. Pas dix. Pas neuf. Qui déteste les chefs de gare ?",
               "side": "l"
             },
             {
               "who": "astro",
-              "text": "Greenwich. Mais chut, on ne dit pas son nom.",
+              "text": "Un village anglais. Dont nous ne dirons pas le nom.",
               "side": "r"
             }
           ],
@@ -73,14 +73,14 @@
           "caption": "Avant, chaque ville vit à l’heure de son soleil : quand il est midi à Strasbourg, il n’est que 11 h 12 à Brest.",
           "bubbles": [
             {
-              "who": "gaston",
-              "text": "Pourquoi Brest est en retard ?",
-              "side": "l"
+              "who": "astro",
+              "text": "Le soleil passe d’abord à l’est : Brest, à l’ouest, voit midi plus tard.",
+              "side": "r"
             },
             {
-              "who": "astro",
-              "text": "Le soleil passe d’abord à l’est. Brest, tout à l’ouest, le voit midi plus tard.",
-              "side": "r"
+              "who": "gaston",
+              "text": "Cinq montres, cinq heures. Je ne sais plus quand déjeuner.",
+              "side": "l"
             }
           ],
           "image": {
@@ -98,7 +98,7 @@
           "n": 3,
           "kind": "",
           "tag": "1891",
-          "caption": "Avec le train, c’est la pagaille. Une loi impose donc à toute la France l’heure de Paris, celle de son Observatoire.",
+          "caption": "Avec le train, c’est la pagaille. En 1891, une loi impose partout l’heure de Paris, celle de l’Observatoire.",
           "bubbles": [
             {
               "who": "gaston",
@@ -134,7 +134,7 @@
           "n": 5,
           "kind": "",
           "tag": "Washington, 1884",
-          "caption": "25 pays réunis choisissent le méridien zéro du monde : celui de Greenwich, près de Londres. La France s’abstient.",
+          "caption": "En 1884, à Washington, 25 pays choisissent le méridien zéro du monde : Greenwich, près de Londres. La France s’abstient.",
           "bubbles": [
             {
               "who": "gaston",
@@ -179,18 +179,7 @@
           "kind": "",
           "tag": "1911",
           "caption": "La France s’aligne. La loi dit : « temps moyen de Paris, retardée de neuf minutes vingt et une secondes ».",
-          "bubbles": [
-            {
-              "who": "gaston",
-              "text": "Donc c’est l’heure de Greenwich ?",
-              "side": "l"
-            },
-            {
-              "who": "astro",
-              "text": "Exactement. Mais dite en français.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "a simple office with a desk and an official sheet of paper with a red wax seal. the astronomer (very tall, thin, white beard, teal coat) on the right signing the sheet while covering a small map of England with his other hand, eyes looking away innocently; Gaston (short, round, navy uniform, red kepi) on the left squinting at him, suspicious, one eyebrow raised. high angle",
             "cast": [
@@ -210,7 +199,7 @@
           "bubbles": [
             {
               "who": "gaston",
-              "text": "Donc on vit à l’heure d’Argentan !",
+              "text": "Alors on vit à l’heure d’Argentan !",
               "side": "l"
             },
             {
@@ -238,12 +227,12 @@
           "bubbles": [
             {
               "who": "gaston",
-              "text": "Et si un Anglais me demande l’heure ?",
+              "text": "Bon. Je règle toutes mes horloges sur Gr…",
               "side": "l"
             },
             {
               "who": "astro",
-              "text": "Donnez-la. Mais en français.",
+              "text": "Sur Argentan, monsieur. Sur Argentan.",
               "side": "r"
             }
           ],
@@ -259,7 +248,7 @@
         }
       ],
       "final": {
-        "text": "Depuis la loi de 1911, l’heure légale française est « le temps moyen de Paris retardé de 9 minutes 21 secondes » : celle de Greenwich, sans la nommer.",
+        "text": "La loi française de 1911 adopte l’heure de Greenwich sans écrire son nom. Et ce méridien traverse aussi la Normandie, par Argentan.",
         "source": "Hérodote — 9 mars 1911"
       },
       "story": "Jusqu’au XIXe siècle, chaque ville française vit à l’heure de son propre soleil. Comme le soleil passe d’abord à l’est, quand il est midi à Strasbourg, il n’est que 11 h 12 à Brest. Peu importe à cheval, mais avec les chemins de fer, c’est la confusion : les gares affichent deux horloges, l’heure locale et l’heure de Paris. En 1891, une loi fait donc de l’heure de Paris, celle de l’Observatoire que traverse le méridien de Paris, la seule heure légale du pays.\nOr, en 1884, une conférence internationale réunie à Washington avec 25 pays a choisi un méridien de référence pour le monde entier, d’où l’on compte les longitudes et les fuseaux horaires : celui de Greenwich, près de Londres. Paris était candidat ; la France s’abstient, comme le Brésil.\nIl faut attendre la loi de mars 1911 pour que la France s’aligne. Mais le texte évite soigneusement le nom de Greenwich : l’heure légale y est « le temps moyen de Paris, retardé de neuf minutes vingt et une secondes », soit exactement l’écart entre les deux méridiens. Les horloges reculent de 9 minutes 21 secondes. Pour se consoler, certains patriotes font remarquer que le méridien de Greenwich traverse aussi la France, notamment à Argentan, en Normandie.",

@@ -53,7 +53,7 @@
           "id": "ines",
           "name": "Inès",
           "look": "Inès, a short and round young woman of today, big voluminous curly red hair, light freckled skin, a pink puffer jacket as main colour, purple leggings, white sneakers, always holding the charger",
-          "role": "the curious young woman from today who asks the reader's questions; short and lively, reacts with her whole body, always looking for a socket",
+          "role": "the lively young woman from today whose phone is always about to die; she judges every discovery by one question, can it charge her phone; short, reacts with her whole body, always looking for a socket",
           "file": "cast/dossier-ines.png",
           "status": "pending"
         }
@@ -82,7 +82,7 @@
             },
             {
               "who": "becquerel",
-              "text": "D’un tiroir, mademoiselle. Laissez-moi vous raconter.",
+              "text": "D’un tiroir, mademoiselle. Le mien.",
               "side": "l"
             }
           ],
@@ -101,17 +101,17 @@
           "n": 2,
           "kind": "fact",
           "tag": "Février 1896",
-          "caption": "À Paris, Henri Becquerel veut savoir si l’uranium, éclairé par le soleil, peut marquer une plaque photo.",
+          "caption": "En 1896, à Paris, Henri Becquerel veut savoir si l’uranium, éclairé par le soleil, peut marquer une plaque photo.",
           "bubbles": [
             {
-              "who": "ines",
-              "text": "Et il fait beau, ce jour-là ?",
-              "side": "r"
+              "who": "becquerel",
+              "text": "Ciel gris. Pas de soleil, pas d’expérience. Je range tout dans un tiroir.",
+              "side": "l"
             },
             {
-              "who": "becquerel",
-              "text": "Ciel gris. Je range tout au fond d’un tiroir.",
-              "side": "l"
+              "who": "ines",
+              "text": "Remettre au lendemain : enfin un savant qui me ressemble.",
+              "side": "r"
             }
           ],
           "image": {
@@ -206,14 +206,14 @@
           "caption": "Dans un minerai d’uranium, les Curie trouvent deux atomes inconnus. Le radium est environ 900 fois plus radioactif que l’uranium.",
           "bubbles": [
             {
-              "who": "ines",
-              "text": "Et l’autre, vous l’appelez comment ?",
-              "side": "r"
+              "who": "marie",
+              "text": "Le second, je l’appelle polonium. En hommage à ma Pologne natale.",
+              "side": "l"
             },
             {
-              "who": "marie",
-              "text": "Polonium. En hommage à ma Pologne natale.",
-              "side": "l"
+              "who": "ines",
+              "text": "Moi, j’ai donné mon nom à un mot de passe wifi.",
+              "side": "r"
             }
           ],
           "image": {
@@ -340,7 +340,7 @@
           "n": 12,
           "kind": "fact",
           "tag": "Fin 1938",
-          "caption": "À Berlin, Otto Hahn et Fritz Strassmann bombardent de l’uranium avec des neutrons, les particules sans charge du noyau.",
+          "caption": "Fin 1938, à Berlin, Otto Hahn et Fritz Strassmann bombardent de l’uranium de neutrons, particules sans charge du noyau.",
           "bubbles": [
             {
               "who": "joliot",
@@ -371,14 +371,14 @@
           "caption": "Lise Meitner et son neveu Otto Frisch comprennent : le noyau d’uranium s’est cassé en deux. C’est la « fission ».",
           "bubbles": [
             {
-              "who": "ines",
-              "text": "Et en se cassant, il fait quoi ?",
-              "side": "l"
+              "who": "joliot",
+              "text": "En se cassant, un peu de masse disparaît et devient énergie. Beaucoup d’énergie.",
+              "side": "r"
             },
             {
-              "who": "joliot",
-              "text": "Un peu de masse disparaît et devient énergie. Beaucoup d’énergie.",
-              "side": "r"
+              "who": "ines",
+              "text": "Vous venez de casser une craie pour me le dire.",
+              "side": "l"
             }
           ],
           "image": {
@@ -409,17 +409,17 @@
           "n": 15,
           "kind": "fact",
           "tag": "1939",
-          "caption": "À Paris, Joliot, Hans von Halban et Lew Kowarski montrent que la fission libère d’autres neutrons. La chaîne est possible.",
+          "caption": "En 1939, à Paris, Joliot, Halban et Kowarski montrent que la fission libère d’autres neutrons. La chaîne est possible.",
           "bubbles": [
             {
-              "who": "ines",
-              "text": "Et vous faites quoi de cette découverte ?",
-              "side": "r"
+              "who": "joliot",
+              "text": "Vite, des brevets, sous pli cacheté. Avant que la guerre éclate.",
+              "side": "l"
             },
             {
-              "who": "joliot",
-              "text": "Des brevets, sous pli cacheté. Avant que la guerre éclate.",
-              "side": "l"
+              "who": "ines",
+              "text": "Un secret dans une enveloppe. Moi, j’aurais fait une story.",
+              "side": "r"
             }
           ],
           "image": {
@@ -494,16 +494,16 @@
           "n": 18,
           "kind": "",
           "tag": "15 décembre 1948",
-          "caption": "Au fort de Châtillon, près de Paris, Zoé démarre : la première pile atomique française, c’est-à-dire un réacteur.",
+          "caption": "En 1948, au fort de Châtillon, près de Paris, Zoé démarre : la première pile atomique française, c’est-à-dire un réacteur.",
           "bubbles": [
             {
               "who": "ines",
-              "text": "Et elle alimente quoi, Zoé ?",
+              "text": "Un réacteur ! Je peux brancher mon chargeur ?",
               "side": "r"
             },
             {
               "who": "joliot",
-              "text": "Rien du tout. Elle sert à apprendre.",
+              "text": "Non. Zoé n’alimente rien. Elle sert à apprendre.",
               "side": "l"
             }
           ],
@@ -527,7 +527,7 @@
           "bubbles": [
             {
               "who": "ines",
-              "text": "Pourquoi tout miser sur l’atome ?",
+              "text": "Une goutte. Ça ne chargera pas grand-chose.",
               "side": "l"
             },
             {
@@ -659,13 +659,7 @@
           "kind": "",
           "tag": "1986 et 2011",
           "caption": "Deux catastrophes ont marqué le monde : Tchernobyl, en Ukraine, en 1986, et Fukushima, au Japon, en 2011, après un tsunami.",
-          "bubbles": [
-            {
-              "who": "ines",
-              "text": "Deux noms que personne n’a oubliés.",
-              "side": "r"
-            }
-          ],
+          "bubbles": [],
           "image": {
             "prompt": "the bare modern room. Inès (short, round, big curly red hair, pink puffer jacket) standing alone, still, seen from three-quarter back, in front of a large plain world map pinned on the wall with two small red pins, hands in her pockets, serious. calm, sober scene. medium shot",
             "cast": [
@@ -712,7 +706,7 @@
           "bubbles": [
             {
               "who": "ines",
-              "text": "Donc mon chargeur doit tout à un tiroir fermé ?",
+              "text": "Mon téléphone est chargé. Grâce à un tiroir.",
               "side": "r"
             },
             {
@@ -734,7 +728,7 @@
         }
       ],
       "final": {
-        "text": "Une pastille d’uranium d’environ 7 grammes, longue d’un centimètre, libère autant d’énergie qu’une tonne de charbon.",
+        "text": "Les carnets de laboratoire de Marie Curie, écrits en 1898, sont encore radioactifs : on les range dans du plomb.",
         "source": "EDF — L’uranium, le combustible nucléaire"
       },
       "story": "Fin février 1896, à Paris, Henri Becquerel veut vérifier si des sels d’uranium éclairés par le soleil impressionnent une plaque photographique. Le ciel est couvert : il range l’uranium et la plaque, emballée de papier noir, dans un tiroir. Quand il la développe, elle porte pourtant l’image des cristaux. L’uranium émet donc tout seul un rayonnement invisible : c’est la radioactivité.\nMarie Curie et son mari Pierre étudient ce phénomène. En 1898, dans un minerai d’uranium, ils découvrent le polonium, nommé d’après la Pologne natale de Marie, puis le radium, environ 900 fois plus radioactif que l’uranium. Nobel de physique en 1903 avec Becquerel, Marie reçoit aussi celui de chimie en 1911. On ignore alors les dangers : elle meurt en 1934 d’une maladie du sang que les rayonnements peuvent causer.\nLa radioactivité vient du noyau, 100 000 fois plus petit que l’atome. En 1934, Irène et Frédéric Joliot-Curie fabriquent de la radioactivité artificielle. Fin 1938, Otto Hahn et Fritz Strassmann obtiennent du baryum en bombardant de l’uranium avec des neutrons ; Lise Meitner et Otto Frisch comprennent que le noyau s’est cassé en deux : la fission, qui libère beaucoup d’énergie. En 1939, à Paris, Joliot, Halban et Kowarski montrent qu’elle libère aussi des neutrons : une réaction en chaîne est possible.\nLe CEA naît le 18 octobre 1945 ; la pile Zoé démarre en 1948. Après le choc pétrolier, le plan Messmer de 1974 lance les grandes centrales. Aujourd’hui, 57 réacteurs fournissent environ 68 % de l’électricité française. Restent les risques d’accident, rappelés par Tchernobyl et Fukushima, et les déchets à vie longue, que le projet Cigéo veut enfouir dans l’argile, à Bure.",
