@@ -7,6 +7,7 @@ import { adminQueue, adminItem } from "./credits.js";
 import { ownerOf, wallet, grant, grantNewsletter, rewardReferral, mergeOwners, unlock, premiumDossier, premiumImg, refCode, DEVICE_RE } from "./credits.js";
 import { vapid, pushSubscribe, pushUnsubscribe, pushDaily, pushBatch, pushTest, internalKey, editionPayload, notifyAdmins } from "./push.js";
 import { contentBase, ghHeaders } from "./credits.js";
+import { ipLimited } from "./iplimit.js";
 import { PLANS, stripeOn, checkout, confirm as payConfirm, checkPending, webhook, setCancel, portal, cancelNow } from "./pay.js";
 
 const SESSION_DAYS = 365;
@@ -52,6 +53,7 @@ async function authRequest(req, env) {
   const since = new Date(Date.now() - 3600e3).toISOString();
   const recent = (await env.DB.prepare("SELECT COUNT(*) AS n FROM logins WHERE email = ? AND created_at > ?").bind(email, since).first()).n;
   if (recent >= 5) return err("Trop de demandes. Réessayez dans une heure (ou utilisez le dernier code reçu).", 429);
+  if (await ipLimited(env, req)) return err("Trop de demandes depuis cette connexion aujourd'hui. Réessayez demain.", 429);
   if (await mailsToday(env) >= mailLimit(env)) return err("Le facteur est débordé aujourd'hui. Réessayez demain.", 503);
   const token = randomToken(), code = randomCode(), th = await sha256(token);
   await env.DB.prepare("INSERT INTO logins (email, token_hash, code_hash, newsletter, created_at, expires_at) VALUES (?, ?, ?, ?, ?, ?)")
@@ -368,6 +370,7 @@ async function route(req, env, url, ctx) {
     const b = await body(req), email = normEmail(b.email);
     if (!EMAIL_RE.test(email)) return err("Adresse e-mail invalide.");
     const u0 = await currentUser(req, env);
+    if (!u0 && await ipLimited(env, req)) return err("Trop de demandes depuis cette connexion aujourd'hui. Réessayez demain.", 429);
     // Un appareil déjà lié à un compte : le dossier offert va au compte (une seule fois).
     const linked = !u0 && DEVICE_RE.test(String(b.d || "")) && await env.DB.prepare("SELECT user_id FROM devices WHERE device = ? AND user_id IS NOT NULL").bind(String(b.d)).first();
     const r = await subscribe(env, email, String(b.source || "appli").slice(0, 20), { owner: (linked ? `u:${linked.user_id}` : ownerOf(u0, b.d)) || `e:${email}`, ref: b.ref ? String(b.ref).slice(0, 16) : null });
