@@ -34,7 +34,7 @@
           "look": "a short, sturdy woman in her forties, deep brown skin, voluminous natural black afro hair, bright red puffer vest as main colour over a grey hoodie, dark blue jeans, a silver whistle on a cord around her neck",
           "role": "the union delegate on strike day, holding the frozen pay like evidence; deadpan, unimpressed, arms full, always a little out of breath",
           "file": "cast/actu-syndicaliste.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "ingenieure",
@@ -42,7 +42,8 @@
           "look": "a very tall, lanky woman in her thirties, light olive skin, long straight auburn hair in a high ponytail, mustard yellow work overalls as main colour, white hard hat, chunky safety glasses, a tablet in one hand",
           "role": "the launch engineer who can catch a rocket but never her own keys; brilliant, clumsy in daily life, staring upward in awe",
           "file": "cast/actu-ingenieure.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "macron",
@@ -60,8 +61,9 @@
           "ingenieure"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -85,8 +87,9 @@
               "syndicaliste"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -96,7 +99,13 @@
           "title": "L’hôtel de Matignon, à Paris",
           "text": "La façade côté jardin de la résidence du Premier ministre, où les syndicats ont été reçus le 13 novembre et reviendront le 11 décembre.",
           "photo": {
-            "commons": "File:Facade @ Jardin de l'Hôtel Matignon @ Paris (34261927513).jpg"
+            "commons": "File:Facade @ Jardin de l'Hôtel Matignon @ Paris (34261927513).jpg",
+            "credit": "Guilhem Vellut from Paris, France",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Facade_@_Jardin_de_l%27H%C3%B4tel_Matignon_@_Paris_(34261927513).jpg",
+            "file": "images/photo-2-facade-jardin-de-l-h-tel-matignon-p.webp",
+            "status": "done"
           }
         },
         {
@@ -161,8 +170,9 @@
               "ingenieure"
             ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -208,8 +218,9 @@
               "macron"
             ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
