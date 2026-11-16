@@ -420,3 +420,25 @@ def test_framing_and_shot_parsing():
     drawn = [{"image": {"prompt": f"x. {s}", "cast": ["a", "b"]}} for s in ["medium shot"] * 5]
     validate.check_shots(drawn, "cultureg", warns.append)
     assert any("plans moyens" in w for w in warns) and any("gros plan" in w for w in warns)
+
+
+# ---------- Adresses des pages d'histoire (16 novembre 2026) ----------
+def test_slug_coupe_au_mot_entier_pour_les_nouvelles_histoires():
+    import seo
+    fmt = {"id": "insolite", "title": "Le président français est prince d’Andorre, et c’est la faute d’un comte de Foix"}
+    brut = seo.slugify(fmt["title"])
+    entier = seo.slugify(fmt["title"], whole=True)
+    assert len(brut) <= 70 and len(entier) <= 70
+    assert brut.startswith(entier) and not entier.endswith("-")
+    assert entier == "le-president-francais-est-prince-d-andorre-et-c-est-la-faute"
+    # un titre court ou qui tombe juste ne change pas
+    assert seo.slugify("Un titre court", whole=True) == "un-titre-court"
+    # un mot interminable : coupe brute plutôt qu'une adresse trop courte
+    assert len(seo.slugify("a" * 200, whole=True)) == 70
+
+
+def test_les_anciennes_adresses_ne_bougent_pas():
+    import seo
+    fmt = {"id": "insolite", "title": "Le président français est prince d’Andorre, et c’est la faute d’un comte de Foix"}
+    assert seo.story_slug("2026-11-16", fmt) == seo.legacy_story_slug("2026-11-16", fmt)
+    assert seo.story_slug(seo.WHOLE_WORD_SLUGS_SINCE, fmt) != seo.legacy_story_slug(seo.WHOLE_WORD_SLUGS_SINCE, fmt)

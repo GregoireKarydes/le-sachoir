@@ -10,11 +10,18 @@
 <link rel="canonical" href="__BASE__">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Le Sachoir">
-<meta property="og:title" content="Le Sachoir — L'actu et la culture G en BD">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Le Sachoir — L’actu et la culture générale en BD, chaque jour">
 <meta property="og:description" content="Chaque jour : l'actu du jour, une pilule de culture G, une histoire insolite, la Notice (celle que personne ne lit) ou l’origine d’une expression, et un grand dossier, en BD humoristique.">
 <meta property="og:url" content="__BASE__">
 <meta property="og:image" content="__BASE__assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Le Sachoir : l’actu et la culture générale en BD, chaque jour">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Le Sachoir — L’actu et la culture générale en BD, chaque jour">
+<meta name="twitter:description" content="Chaque jour, l’actualité et la culture générale racontées en BD courtes, drôles et vérifiées. Gratuit, sans compte.">
+<meta name="twitter:image" content="__BASE__assets/og.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Le Sachoir", "url": "__BASE__", "inLanguage": "fr", "description": "L’actualité et la culture générale en bandes dessinées humoristiques et vérifiées, chaque jour."}, {"@type": "Organization", "name": "Le Sachoir", "url": "__BASE__", "logo": "__BASE__assets/icon-512.png"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Le Sachoir, c’est gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L’édition du jour se lit gratuitement, sans carte bancaire : l’Actu, la Culture G, l’Insolite, la Notice ou « D’où ça vient ? », le début du Grand Dossier et le jeu. Pour lire tous les Grands Dossiers en entier et les archives, Premium coûte 2,99 € par mois ou 19,99 € par an, sans engagement."}}, {"@type": "Question", "name": "C’est quoi, La Notice ?", "acceptedAnswer": {"@type": "Answer", "text": "Une micro-BD de deux minutes, chaque jour, sur un objet ou un phénomène du quotidien qu’on trouve normal sans savoir l’expliquer : le frigo, le micro-ondes, l’avion, le GPS… Elle est offerte dans l’édition du jour, sans abonnement."}}, {"@type": "Question", "name": "C’est quoi, « D’où ça vient ? »", "acceptedAnswer": {"@type": "Answer", "text": "L’origine d’une expression que tout le monde dit sans savoir d’où elle sort : faire grève, être limogé, mettre en quarantaine… Une micro-BD de deux minutes, en alternance avec la Notice, offerte dans l’édition du jour."}}, {"@type": "Question", "name": "Comment lire un Grand Dossier en entier sans payer ?", "acceptedAnswer": {"@type": "Answer", "text": "Abonnez-vous à la newsletter : un Grand Dossier vous est offert. Et chaque ami qui s’inscrit avec votre lien vous en offre un autre, celui de votre choix."}}, {"@type": "Question", "name": "Les informations sont-elles fiables ?", "acceptedAnswer": {"@type": "Answer", "text": "Les faits, les dates et les chiffres sont vérifiés dans plusieurs sources, citées à la fin de chaque histoire. Les dialogues, eux, sont inventés : Napoléon n’a jamais parlé de KPI."}}, {"@type": "Question", "name": "Faut-il créer un compte ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas pour lire l’édition du jour. Un compte gratuit, sans mot de passe, garde votre série, vos favoris et vos dossiers débloqués sur tous vos appareils."}}, {"@type": "Question", "name": "Faut-il installer une application ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le Sachoir se lit dans le navigateur, sur téléphone comme sur ordinateur. Vous pouvez l’ajouter à l’écran d’accueil de votre téléphone en trois gestes, sans passer par un store."}}, {"@type": "Question", "name": "Je peux arrêter Premium quand je veux ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, en deux touches depuis votre compte. Vous gardez l’accès jusqu’à la fin de la période payée, et plus aucun prélèvement ensuite."}}, {"@type": "Question", "name": "C’est pour qui ?", "acceptedAnswer": {"@type": "Answer", "text": "Pour les curieux pressés, les étudiants qui révisent sans en avoir l’air, et tous ceux qui veulent placer « en fait, techniquement… » au prochain dîner."}}, {"@type": "Question", "name": "Quand sort une nouvelle édition ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque jour. Avant votre café, et sans doute avant votre motivation."}}]}]}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon-192.png">
@@ -558,13 +565,13 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .onb-first em{font-style:normal;font-weight:700;font-size:13.5px;color:var(--muted)}
 .onb-hint{font-size:14px!important;color:var(--muted)!important}
 /* ---------- Mode d'emploi sur la première BD ---------- */
-.coach{position:absolute;inset:0;z-index:40;display:grid;grid-template-columns:1fr 2fr;grid-template-rows:1fr auto;background:rgba(23,20,15,.55);opacity:0;transition:opacity .3s}
+.coach{position:absolute;inset:0;z-index:40;display:grid;grid-template-columns:1fr 2fr;grid-template-rows:1fr auto;background:rgba(23,20,15,.45);opacity:0;transition:opacity .3s;cursor:pointer}
 .coach.on{opacity:1}
 .cz{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#fff;font-weight:700;font-size:15px;text-align:center}
 .cz b{font-size:40px;animation:tapx 1.4s ease-in-out infinite}
 .cz.l{border-right:2px dashed rgba(255,255,255,.6);background:rgba(255,255,255,.06)}
 @keyframes tapx{50%{transform:scale(.85)}}
-.cm{grid-column:1/-1;background:var(--cream);border-radius:22px 22px 0 0;padding:18px 18px max(18px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:8px;font-size:15.5px}
+.cm{grid-column:1/-1;justify-self:center;margin:0 0 max(64px,calc(env(safe-area-inset-bottom) + 56px));background:var(--cream);border-radius:999px;padding:9px 16px;display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:700}
 .cm p{margin:0}
 /* ---------- Fin de BD : la suite et une invitation ---------- */
 .nextup{display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;border:0;border-radius:16px;background:var(--c);color:#fff;padding:11px 44px 11px 14px;text-align:left;position:relative;box-shadow:0 3px 0 rgba(23,20,15,.25)}
@@ -1774,9 +1781,12 @@ function showCoach() {
   lsSet("sachoir.coach", "1");
   const c = document.createElement("div"); c.className = "coach"; c.setAttribute("role", "dialog"); c.setAttribute("aria-label", "Comment lire");
   c.innerHTML = `<div class="cz l"><b>${ic("left")}</b><span>Case précédente</span></div><div class="cz r"><b>${ic("right")}</b><span>Case suivante</span></div>
-    <div class="cm"><p><b>${ic("heart", "red")} Double-touchez</b> une case pour aimer l’histoire.</p><p>Tout en bas, la barre montre où vous en êtes.</p><button class="cta" id="coOk">Compris, on lit !</button></div>`;
+    <p class="cm">${ic("heart", "red")} Double-touchez pour aimer</p>`;
   $("#reader").appendChild(c);
-  const off = () => c.remove(); c.querySelector("#coOk").onclick = off; setTimeout(() => c.classList.add("on"), 30);
+  // Allégé le 16 novembre 2026 : plus de bouton à valider. Un toucher n'importe où (ou 5 secondes) et on lit.
+  let gone = false;
+  const off = () => { if (gone) return; gone = true; c.classList.remove("on"); setTimeout(() => c.remove(), 300); };
+  c.onclick = off; setTimeout(() => c.classList.add("on"), 30); setTimeout(off, 5000);
 }
 function updateReader(i, init) {
   const { ed, f } = R, total = f.cases.length; R.idx = i;
@@ -3144,7 +3154,8 @@ function openPush() {
    ce qui personnalise l'appli (univers préférés, prénom) et l'accord pour les notifications.
    1. La promesse, avec les vraies couvertures du jour  2. Vos univers  3. Votre prénom
    4. Les notifications (si possible ici)  5. « Votre première BD vous attend » → elle s'ouvre directement.
-   Le mode d'emploi (toucher à droite/à gauche, double toucher) est montré dans la BD elle-même, à la première lecture. */
+   Le mode d'emploi (toucher à droite/à gauche, double toucher) est montré dans la BD elle-même, à la première lecture :
+   un voile léger qui s'efface au premier toucher ou après 5 secondes. « Passer » ferme l'accueil et ouvre l'édition. */
 const LIKES_KEY = "sachoir.likes";
 const likes = () => { try { return JSON.parse(lsGet(LIKES_KEY) || "[]"); } catch (e) { return []; } };
 // La BD du jour la plus courte qui parle d'un univers choisi (Culture G, Insolite ou Notice d'abord : 1 à 2 minutes).
@@ -3201,7 +3212,8 @@ function openOnboarding() {
     };
     if ($("#obNext")) $("#obNext").onclick = () => { save1(); next(); };
     if ($("#obNameF")) { $("#obNameF").onsubmit = e => { e.preventDefault(); save1(); next(); }; }
-    if ($("#obSkip")) $("#obSkip").onclick = () => { save1(); i = slides.indexOf("go"); draw(); };
+    // « Passer » passe vraiment (16 novembre 2026) : on enregistre ce qui est déjà saisi et on ouvre l'édition du jour.
+    if ($("#obSkip")) $("#obSkip").onclick = () => { save1(); ev("open", "", "onbskip" + i); finish(); };
     const go = () => { const f = firstStory(); finish(); if (f) setTimeout(() => openReader(CUR, f.id), 120); };
     if ($("#obGo")) $("#obGo").onclick = go; if ($("#obFirst")) $("#obFirst").onclick = go;
     if ($("#obEd")) $("#obEd").onclick = finish;

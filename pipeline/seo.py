@@ -32,13 +32,34 @@ POLES = {
 e = lambda t: html.escape(str(t or ""), quote=True)
 
 
-def slugify(text: str, n: int = 70) -> str:
+SLUG_TAIL = {"d", "l", "c", "s", "n", "j", "m", "t", "qu", "un", "une", "le", "la", "les", "de", "du", "des", "et", "ou", "a", "au", "aux", "en", "est", "ce", "sa", "son", "ses", "sur", "par", "pour"}
+
+
+def slugify(text: str, n: int = 70, whole: bool = False) -> str:
+    """Adresse lisible. `whole` : on coupe au dernier mot entier au lieu du milieu d'un mot (« …d-un-comt »)."""
     t = unicodedata.normalize("NFKD", re.sub(r"[’'`]", "-", text or "")).encode("ascii", "ignore").decode().lower()
     t = re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+    if whole and len(t) > n and t[n] != "-":
+        cut = t[:n].rsplit("-", 1)[0]
+        while cut.rsplit("-", 1)[-1] in SLUG_TAIL and "-" in cut:  # pas de fin en « …-d-un » ou « …-et-la »
+            cut = cut.rsplit("-", 1)[0]
+        if len(cut) >= n // 2:  # un mot interminable : on garde la coupe brute plutôt qu'une adresse trop courte
+            return cut.rstrip("-") or "histoire"
     return t[:n].rstrip("-") or "histoire"
 
 
+# Adresses coupées au mot entier (16 novembre 2026) : seulement pour les histoires publiées à partir de cette date,
+# pour ne casser aucun lien déjà partagé ou référencé. Les adresses sont recalculées à chaque publication :
+# ne pas avancer cette date après coup.
+WHOLE_WORD_SLUGS_SINCE = "2026-11-18"
+
+
 def story_slug(date: str, fmt: dict) -> str:
+    return f"{date}-{slugify(fmt.get('title') or fmt['id'], whole=date >= WHOLE_WORD_SLUGS_SINCE)}"
+
+
+def legacy_story_slug(date: str, fmt: dict) -> str:
+    """Ancienne adresse (coupe brute). Si elle diffère de la nouvelle, une page de redirection y est posée."""
     return f"{date}-{slugify(fmt.get('title') or fmt['id'])}"
 
 
@@ -101,7 +122,7 @@ h2.sec{font-family:var(--serif);font-weight:800;font-size:26px;margin:36px 0 12p
 .card{display:flex;flex-direction:column;gap:8px;text-decoration:none;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.06)}
 .card img{aspect-ratio:16/9;object-fit:cover;width:100%;background:var(--grey)}.card div{padding:4px 14px 14px}
 .card strong{font-family:var(--serif);font-weight:800;font-size:19px;line-height:1.15;display:block}.card span{font-size:13px;color:var(--muted)}
-@media (max-width:640px){.top{gap:8px;padding:10px 16px}.top img{height:30px}.top nav{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.top nav a{white-space:nowrap;padding:6px 10px;font-size:14px}.top .cta{display:none}.wrap{padding:14px 16px 90px}
+@media (max-width:640px){.top{gap:8px;padding:10px 16px}.top img{height:30px}.top nav{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.top nav a{white-space:nowrap;padding:6px 10px;font-size:14px}.top .cta{display:none}.intro .cta{display:none}.wrap{padding:14px 16px 90px}
 .sticky{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:10;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.22)}}
 @media (min-width:641px){.sticky{display:none}}
 @media (min-width:1000px){.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:center}.head .cover{margin:0}}
@@ -337,6 +358,15 @@ def build(site: Path, index: list, gate: bool = False):
         out = site / "histoires" / s["slug"]
         out.mkdir(parents=True, exist_ok=True)
         (out / "index.html").write_text(story_page(s, ROOT / "editions" / s["date"], related, gate))
+        # Ancienne adresse coupée au milieu d'un mot : une redirection vers la nouvelle (hors sitemap, non indexée).
+        old = legacy_story_slug(s["date"], s["fmt"])
+        if old != s["slug"]:
+            (site / "histoires" / old).mkdir(parents=True, exist_ok=True)
+            (site / "histoires" / old / "index.html").write_text(
+                f'<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>{e(s["title"])}</title>'
+                f'<meta name="robots" content="noindex"><link rel="canonical" href="{e(s["url_abs"])}">'
+                f'<meta http-equiv="refresh" content="0; url={e(s["url_abs"])}"></head>'
+                f'<body><a href="{e(s["url_abs"])}">{e(s["title"])}</a></body></html>')
     # Thèmes
     themes = {}
     for s in public:
