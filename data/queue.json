@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T19:30+01:00",
+ "updated_at": "2026-11-16T19:35+01:00",
  "stock": {
   "cultureg": [
    {
@@ -296,6 +296,23 @@
     "photos": 3,
     "images_done": 0,
     "images_total": 22,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261116-1930-cathedrales-gothiques",
+    "name": "20261116-1930-cathedrales-gothiques",
+    "added": "20261116-1930",
+    "status": "waiting",
+    "next": false,
+    "title": "Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général)",
+    "theme": "Architecture",
+    "tagline": "De Saint-Denis à la réouverture de Notre-Dame : l’arc brisé, la croisée d’ogives et l’arc-boutant expliqués sans vertige",
+    "minutes": 3,
+    "cases": 26,
+    "photos": 3,
+    "images_done": 0,
+    "images_total": 21,
     "failed": 0,
     "redo": 0
    }

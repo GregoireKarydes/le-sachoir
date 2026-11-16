@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T19:30:27.690935+01:00",
+ "updated_at": "2026-11-16T19:35:02.539292+01:00",
  "today": "2026-11-16",
  "problems": [],
  "days": [
@@ -113,16 +113,16 @@
   },
   "dossier": {
    "ready": 1,
-   "waiting": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 44,
+   "images_left": 65,
    "focus": "20261114-1927-nucleaire-tiroir-ferme (22 image(s) à faire)",
    "next": "20261113-1931-les-lumieres-sans-electricite",
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 1,
- "days_ahead_written": 3,
+ "days_ahead_written": 4,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-16",
@@ -144,7 +144,7 @@
  },
  "rss": {
   "collected_at": "2026-11-15T22:49:48.771422+01:00",
-  "age_hours": 20.7,
+  "age_hours": 20.8,
   "feeds": null,
   "empty_feeds": []
  },
