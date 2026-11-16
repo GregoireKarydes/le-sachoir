@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T20:45:19.096254+01:00",
+ "updated_at": "2026-11-16T20:47:32.319932+01:00",
  "today": "2026-11-16",
  "problems": [],
  "days": [
@@ -87,9 +87,9 @@
   },
   "insolite": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 27,
+   "images_left": 33,
    "focus": "20261114-0100-lempereur-qui-taxait-le-pipi (8 image(s) à faire)",
    "next": "20261113-2058-les-rats-dautun-avaient-un-avocat",
    "next_redo": 0
@@ -145,7 +145,7 @@
  },
  "rss": {
   "collected_at": "2026-11-15T22:49:48.771422+01:00",
-  "age_hours": 21.9,
+  "age_hours": 22.0,
   "feeds": null,
   "empty_feeds": []
  },

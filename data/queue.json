@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T20:45+01:00",
+ "updated_at": "2026-11-16T20:47+01:00",
  "stock": {
   "cultureg": [
    {
@@ -186,6 +186,23 @@
     "minutes": 1,
     "cases": 7,
     "photos": 0,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261116-2045-talon-haut-cavalier-rouge",
+    "name": "20261116-2045-talon-haut-cavalier-rouge",
+    "added": "20261116-2045",
+    "status": "waiting",
+    "next": false,
+    "title": "Le talon haut, une chaussure de cavalier que Louis XIV a peinte en rouge",
+    "theme": "Mode et luxe",
+    "tagline": "Avant les escarpins, il y avait des cavaliers perses, des marquis qui boitent et un roi très pointilleux sur la couleur",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 1,
     "images_done": 0,
     "images_total": 6,
     "failed": 0,
