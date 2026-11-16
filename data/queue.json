@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T03:02+01:00",
+ "updated_at": "2026-11-16T03:23+01:00",
  "stock": {
   "cultureg": [
    {
@@ -328,7 +328,7 @@
     "minutes": 3,
     "cases": 24,
     "photos": 3,
-    "images_done": 13,
+    "images_done": 15,
     "images_total": 19,
     "failed": 0,
     "redo": 0
@@ -386,10 +386,10 @@
      "minutes": 5,
      "cases": 16,
      "photos": 3,
-     "images_done": 5,
+     "images_done": 6,
      "images_total": 6,
      "failed": 0,
-     "redo": 0
+     "redo": 1
     },
     {
      "id": "quiz",

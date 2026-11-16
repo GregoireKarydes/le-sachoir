@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T03:02:31.284084+01:00",
+ "updated_at": "2026-11-16T03:23:44.602099+01:00",
  "today": "2026-11-16",
  "problems": [],
  "days": [
@@ -7,7 +7,7 @@
    "date": "2026-11-16",
    "status": "draft",
    "formats": {
-    "actu": "1 image(s) à faire",
+    "actu": "prêt",
     "quiz": "prêt"
    }
   },
@@ -105,8 +105,8 @@
    "ready": 1,
    "waiting": 3,
    "blocked": 0,
-   "images_left": 50,
-   "focus": "20261113-1931-les-lumieres-sans-electricite (6 image(s) à faire)",
+   "images_left": 48,
+   "focus": "20261113-1931-les-lumieres-sans-electricite (4 image(s) à faire)",
    "next": "20261113-1926-jeux-olympiques-baron-tetu",
    "next_redo": 0
   }
@@ -116,12 +116,12 @@
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-16",
-  "count": 39,
-  "neurons": 6600,
+  "count": 51,
+  "neurons": 8880,
   "exhausted": false,
   "by_kind": {
-   "cast": 10,
-   "case": 27,
+   "cast": 11,
+   "case": 38,
    "cover": 2
   }
  },
