@@ -1,24 +1,13 @@
 {
- "updated_at": "2026-11-15T22:02:18.369303+01:00",
- "today": "2026-11-15",
+ "updated_at": "2026-11-16T02:01:00.074654+01:00",
+ "today": "2026-11-16",
  "problems": [],
  "days": [
-  {
-   "date": "2026-11-15",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "notice": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-16",
    "status": "draft",
    "formats": {
+    "actu": "1 image(s) à faire",
     "quiz": "prêt"
    }
   },
@@ -72,14 +61,8 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "notice"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-15",
  "stock": {
   "cultureg": {
@@ -92,29 +75,29 @@
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 28,
-   "focus": "20261113-2058-les-rats-dautun-avaient-un-avocat (1 image(s) à faire)",
+   "images_left": 27,
+   "focus": "20261114-0100-lempereur-qui-taxait-le-pipi (8 image(s) à faire)",
    "next": "20261113-2051-le-president-prince-dandorre",
    "next_redo": 0
   },
   "notice": {
-   "ready": 1,
-   "waiting": 2,
+   "ready": 2,
+   "waiting": 1,
    "blocked": 0,
-   "images_left": 12,
-   "focus": "20261115-2043-cocotte-minute-triche-avec-leau (6 image(s) à faire)",
+   "images_left": 6,
+   "focus": "20261115-2047-maree-la-mer-suit-la-lune (6 image(s) à faire)",
    "next": "20261114-2045-code-barres-morse-de-plage",
    "next_redo": 0
   },
   "origine": {
-   "ready": 1,
-   "waiting": 1,
+   "ready": 2,
+   "waiting": 0,
    "blocked": 0,
-   "images_left": 6,
-   "focus": "20261115-2045-poubelle-monsieur-le-prefet (6 image(s) à faire)",
+   "images_left": 0,
+   "focus": null,
    "next": "20261115-2041-limoge-billet-pour-limoges",
    "next_redo": 0
   },
@@ -122,31 +105,31 @@
    "ready": 1,
    "waiting": 3,
    "blocked": 0,
-   "images_left": 63,
-   "focus": "20261113-1931-les-lumieres-sans-electricite (19 image(s) à faire)",
+   "images_left": 50,
+   "focus": "20261113-1931-les-lumieres-sans-electricite (6 image(s) à faire)",
    "next": "20261113-1926-jeux-olympiques-baron-tetu",
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-15",
-  "count": 52,
-  "neurons": 8960,
+  "day": "2026-11-16",
+  "count": 38,
+  "neurons": 6400,
   "exhausted": false,
   "by_kind": {
-   "case": 38,
-   "cast": 12,
+   "cast": 10,
+   "case": 26,
    "cover": 2
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 1.68877,
-  "images": 170,
-  "today_usd": 0.26271,
+  "spent_usd": 1.86877,
+  "images": 176,
+  "today_usd": 0.18,
   "blocked": null
  }
 }

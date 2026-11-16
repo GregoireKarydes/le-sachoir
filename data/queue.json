@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T22:02+01:00",
+ "updated_at": "2026-11-16T02:01+01:00",
  "stock": {
   "cultureg": [
    {
@@ -127,7 +127,7 @@
     "path": "stock/insolite/20261113-2058-les-rats-dautun-avaient-un-avocat",
     "name": "20261113-2058-les-rats-dautun-avaient-un-avocat",
     "added": "20261113-2058",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Les rats d’Autun avaient un avocat (et ils s’en sont tirés)",
     "theme": "Histoire de France",
@@ -135,7 +135,7 @@
     "minutes": 1,
     "cases": 7,
     "photos": 1,
-    "images_done": 5,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -231,7 +231,7 @@
     "path": "stock/notice/20261115-2043-cocotte-minute-triche-avec-leau",
     "name": "20261115-2043-cocotte-minute-triche-avec-leau",
     "added": "20261115-2043",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
     "theme": "Sciences physiques",
@@ -239,7 +239,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -284,7 +284,7 @@
     "path": "stock/origine/20261115-2045-poubelle-monsieur-le-prefet",
     "name": "20261115-2045-poubelle-monsieur-le-prefet",
     "added": "20261115-2045",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
     "theme": "Expression française",
@@ -292,7 +292,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -328,7 +328,7 @@
     "minutes": 3,
     "cases": 24,
     "photos": 3,
-    "images_done": 0,
+    "images_done": 13,
     "images_total": 19,
     "failed": 0,
     "redo": 0
@@ -371,101 +371,26 @@
  },
  "editions": [
   {
-   "date": "2026-11-15",
-   "path": "editions/2026-11-15",
-   "status": "published",
+   "date": "2026-11-16",
+   "path": "editions/2026-11-16",
+   "status": "draft",
    "newsletter": true,
    "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Qui commande en France ? La Ve République, mode d’emploi",
-     "theme": "Politique française",
-     "tagline": "De Gaulle, le 49.3, la cohabitation : la Constitution de 1958 démontée pièce par pièce",
-     "minutes": 6,
-     "cases": 32,
-     "photos": 2,
-     "images_done": 26,
-     "images_total": 26,
-     "failed": 0,
-     "redo": 0
-    },
     {
      "id": "actu",
      "label": "L’Actu du jour",
      "kind": "",
-     "title": "Un ciel fermé, trois oreillettes et neuf défaites oubliées",
+     "title": "Un tunnel au repos, un cadenas géant et une chaise musicale",
      "theme": "",
-     "tagline": "La rue compte ses manifestants, les Bleus battent les Springboks, l’Amérique cloue ses avions au sol et trois présidents cherchent un interprète.",
-     "minutes": 4,
-     "cases": 15,
-     "photos": 4,
+     "tagline": "L’A13 ferme vers la Normandie, Édouard Philippe compte les logements, la Francophonie cherche l’unité, l’Estonie verrouille et les Bleus passent.",
+     "minutes": 5,
+     "cases": 16,
+     "photos": 3,
      "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 5
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "L’alexandrin, le vers qui porte le nom d’un roi qui n’a jamais rimé",
-     "theme": "Littérature",
-     "tagline": "Douze syllabes, un conquérant et un poète du Moyen Âge un peu vexé",
-     "minutes": 2,
-     "cases": 9,
-     "photos": 1,
-     "images_done": 8,
-     "images_total": 8,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "kind": "",
-     "title": "La plus longue frontière de la France ? Avec le Brésil",
-     "theme": "Géographie",
-     "tagline": "Plus de 730 km de frontière, et pas un seul Pyrénéen à l’horizon",
-     "minutes": 2,
-     "cases": 9,
-     "photos": 1,
-     "images_done": 8,
-     "images_total": 8,
+     "images_total": 6,
      "failed": 0,
      "redo": 0
     },
-    {
-     "id": "notice",
-     "label": "La Notice",
-     "kind": "",
-     "title": "Le micro-ondes ne chauffe pas votre soupe, il la fait danser",
-     "theme": "Sciences physiques",
-     "tagline": "Pas de flamme, pas de plaque : juste de l'eau qui pivote des milliards de fois par seconde",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 6
-    },
-    {
-     "id": "quiz",
-     "label": "Le Quiz du jour",
-     "kind": "culture",
-     "title": "Cinq questions, un seul tabouret",
-     "questions": 5
-    }
-   ]
-  },
-  {
-   "date": "2026-11-16",
-   "path": "editions/2026-11-16",
-   "status": "draft",
-   "newsletter": false,
-   "formats": [
     {
      "id": "quiz",
      "label": "Le Quiz géo",
