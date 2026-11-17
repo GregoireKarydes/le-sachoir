@@ -326,7 +326,8 @@ dessin, musique, mixage) et l'envoie à Buffer. Publication à **20:30** (`"time
 ## C2. Avant d'écrire
 1. Lis `social/instagram/ig-skills/README.md`, puis les skills `skills/ig-reel/SKILL.md` (et `hooks.json`),
    `skills/ig-human/SKILL.md` et `skills/ig-caption/SKILL.md`, et `social/instagram/voice.md` et `social/instagram/swipe.md`.
-2. Vérifie que l'édition du jour est publiée (`editions/index.json`) et que `social/instagram/<date>-sitcom/` n'existe pas.
+2. Vérifie que l'édition du jour est publiée (`editions/index.json`) et que `social/instagram/<date>-sitcom/post.json`
+   n'existe pas (s'il existe avec `"skip": true`, c'est un essai : remplace-le).
 3. Lis les 14 derniers `social/instagram/*-sitcom/post.json` : jamais deux fois le même sujet ni deux fois de suite le
    même monde (`set`).
 4. Si `social/instagram/stats.md` existe (bilan des vues et partages), garde les formules qui marchent, abandonne celle
