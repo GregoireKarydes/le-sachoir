@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T02:09:23.062659+01:00",
+ "updated_at": "2026-11-17T03:23:28.641063+01:00",
  "today": "2026-11-17",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Google Actualités, Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -81,7 +81,7 @@
    "images_left": 30,
    "focus": "20261114-0402-greenwich-le-mot-interdit (6 image(s) à faire)",
    "next": "20261114-0100-neptune-la-planete-trouvee-sans-lever-le",
-   "next_redo": 0
+   "next_redo": 2
   },
   "insolite": {
    "ready": 2,
@@ -90,7 +90,7 @@
    "images_left": 25,
    "focus": "20261114-0400-la-liberte-a-dabord-postule-en-egypte (7 image(s) à faire)",
    "next": "20261113-2058-les-rats-dautun-avaient-un-avocat",
-   "next_redo": 0
+   "next_redo": 1
   },
   "notice": {
    "ready": 2,
@@ -117,7 +117,7 @@
    "images_left": 43,
    "focus": "20261115-1923-krach-1929 (22 image(s) à faire)",
    "next": "20261113-1931-les-lumieres-sans-electricite",
-   "next_redo": 0
+   "next_redo": 2
   }
  },
  "days_ahead_drawn": 2,
@@ -143,7 +143,7 @@
  },
  "rss": {
   "collected_at": "2026-11-17T01:48:45.333072+01:00",
-  "age_hours": 0.3,
+  "age_hours": 1.6,
   "feeds": {
    "Google Actualités": 0,
    "franceinfo": 30,
