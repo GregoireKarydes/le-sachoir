@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T20:24+01:00",
+ "updated_at": "2026-11-17T20:48+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -129,6 +129,16 @@
    "errors": [],
    "warnings": [
     "notice : fiche gaston : même tête qu'un personnage récent (black hair, red main colour : 2026-11-14/origine, 2026-11-16/dossier, 2026-11-16/insolite) ; changer coiffure ou couleur dominante"
+   ]
+  },
+  {
+   "path": "stock/notice/20261117-2046-carte-sans-contact-sans-pile",
+   "titles": {
+    "notice": "Votre carte sans contact n’a pas de pile : c’est le terminal qui la réveille"
+   },
+   "errors": [],
+   "warnings": [
+    "notice : case 6 : récitatif de 21 mots (max 20)"
    ]
   },
   {

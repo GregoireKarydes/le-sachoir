@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T20:24:51.599339+01:00",
+ "updated_at": "2026-11-17T20:48:12.940024+01:00",
  "today": "2026-11-17",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Google Actualités, Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -105,9 +105,9 @@
   },
   "notice": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 21,
+   "images_left": 26,
    "focus": "20261115-2047-maree-la-mer-suit-la-lune (6 image(s) à faire)",
    "next": "20261115-2043-cocotte-minute-triche-avec-leau",
    "next_redo": 0
@@ -154,7 +154,7 @@
  },
  "rss": {
   "collected_at": "2026-11-17T01:48:45.333072+01:00",
-  "age_hours": 18.6,
+  "age_hours": 19.0,
   "feeds": {
    "Google Actualités": 0,
    "franceinfo": 30,
