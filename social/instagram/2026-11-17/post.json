@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-17",
+  "kind": "reel",
+  "story": {"edition": "2026-11-17", "format": "notice"},
+  "hook": "Ce code-barres ne connaît même pas le prix de vos pâtes",
+  "cases": [1, 2, 4],
+  "end": "Et le tout premier produit scanné de l'histoire, c'était… un truc à mâcher.",
+  "caption": "Bip. La caisse sait que ce sont des spaghettis, mais le code-barres, lui, n'en sait rien.\n\nCes rayures ne contiennent qu'un numéro, écrit en clair et en sombre. Le lecteur l'éclaire en rouge, l'ordinateur du magasin cherche ce numéro et affiche le prix.\n\nEt non, un code qui commence par 3 ne veut pas dire « fabriqué en France ».\n\nComment marche un code-barres, et d'où vient l'idée (indice : une plage de Floride) : toute la BD est dans l'appli, lien en bio.\n\nUne BD d'actu et de culture G chaque matin, gratuite.",
+  "hashtags": ["lesachoir", "culturegenerale", "lesaviezvous", "codebarres"],
+  "alt": "Un caissier moustachu en gilet rouge regarde, incrédule, un homme en chemise hawaïenne tracer des traits dans du sable posé sur le tapis de caisse."
+}

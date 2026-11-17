@@ -394,6 +394,17 @@ def main(now: datetime | None = None):
             f2.write_text(json.dumps(ed2, ensure_ascii=False, indent=2))
         if gate:
             lock_site_edition(dst)
+    # Instagram (17 novembre 2026) : les carrousels et Reels des 10 derniers jours sont mis en ligne pour que Buffer
+    # puisse les récupérer par URL (social/instagram/<date>/, rendus par pipeline/social_render.py).
+    social = ROOT / "social" / "instagram"
+    if social.exists():
+        since = (now.date() - timedelta(days=10)).isoformat()
+        for d in sorted(social.iterdir()):
+            if d.is_dir() and d.name >= since:
+                for f in list(d.glob("*.jpg")) + list(d.glob("*.mp4")):
+                    dst = SITE / "social" / "instagram" / d.name / f.name
+                    dst.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy(f, dst)
     (SITE / ".nojekyll").write_text("")
     shutil.copy(ROOT / "data" / "health.json", SITE / "status.json")
     seo.build(SITE, index, gate=gate)

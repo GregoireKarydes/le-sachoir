@@ -1,0 +1,7 @@
+Comic Neue — Copyright 2014 The Comic Neue Project Authors (https://github.com/crozynski/comicneue)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+https://openfontlicense.org
+
+ComicNeue-Bold.ttf et ComicNeue-Regular.ttf sont les fichiers de l'appli (app/assets/fonts/*.woff2, sous-ensemble latin)
+convertis en TTF pour Pillow (pipeline/social_render.py), sans autre modification.
