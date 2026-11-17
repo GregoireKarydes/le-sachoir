@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T20:49:10.230476+01:00",
+ "updated_at": "2026-11-17T20:50:37.304234+01:00",
  "today": "2026-11-17",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Google Actualités, Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -87,9 +87,9 @@
  "stock": {
   "cultureg": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 30,
+   "images_left": 37,
    "focus": "20261114-0402-greenwich-le-mot-interdit (6 image(s) à faire)",
    "next": "20261114-0359-do-re-mi-tube-voix-enrouees",
    "next_redo": 0
