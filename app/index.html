@@ -1170,7 +1170,7 @@ body{overscroll-behavior-y:none}
           <p class="ab-sub">Le savoir à prix sachant : moins cher qu’un expresso en terrasse, et ça réveille plus longtemps.</p>
           <div class="ab-plans">
             <div class="ab-plan"><h3>Gratuit</h3><b>0 €</b><ul><li>L’édition du jour : l’Actu, la Culture G, l’Insolite</li><li>La Notice ou « D’où ça vient ? », offerte</li><li>Le début du Grand Dossier</li><li>Le jeu du jour</li><li>La newsletter du dimanche, avec un Grand Dossier offert</li><li>Un dossier offert pour chaque ami invité</li></ul><button class="ab-btn ghost" data-go="newsletter">Recevoir la newsletter</button></div>
-            <div class="ab-plan best"><h3>Premium</h3><b>2,99 €<small> / mois</small></b><span>ou 19,99 € par an, sans engagement</span><ul><li>Tous les Grands Dossiers en entier</li><li>Toutes les éditions passées</li><li>Toutes les histoires par thème, avec la recherche</li><li>Vos favoris sur tous vos appareils</li><li>La newsletter chaque matin</li></ul><button class="ab-btn" data-go="premium">Passer Premium</button></div>
+            <div class="ab-plan best"><h3>Premium</h3><b>2,99 €<small> / mois</small></b><span>ou 19,99 € par an, sans engagement</span><ul><li>Tous les Grands Dossiers en entier</li><li>Toutes les éditions passées</li><li>Toutes les histoires par thème, avec la recherche</li><li>La newsletter chaque matin</li></ul><button class="ab-btn" data-go="premium">Passer Premium</button></div>
           </div>
         </div>
 
@@ -1911,7 +1911,7 @@ $("#rShare").onclick = async () => {
   if (navigator.share) { try { await navigator.share(data); return; } catch (e) { if (e.name === "AbortError") return; } }
   try { await navigator.clipboard.writeText(url); toast("Lien copié, il n’y a plus qu’à coller"); } catch (e) { toast(url); }
 };
-$("#rFav").onclick = () => { if (!canFav()) return openPremium("favs"); const was = isFav(); toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true); if (!was) popHeart(); };
+$("#rFav").onclick = () => { const was = isFav(); toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true); if (!was) popHeart(); };
 document.addEventListener("keydown", e => {
   if ($("#scrim").classList.contains("on")) { if (e.key === "Escape") closeSheet(); return; }
   if (!$("#reader").classList.contains("on")) return;
@@ -1937,7 +1937,6 @@ function bigHeart(slide, off) {
   slide.appendChild(h); setTimeout(() => h.remove(), 950);
 }
 function likeByTap(slide) {
-  if (!canFav()) return openPremium("favs");
   const was = isFav();
   bigHeart(slide, was);
   toggleFav(R.ed, R.f, "bd", true); updateReader(R.idx, true);
@@ -2715,7 +2714,6 @@ function openBilan() {
 // En gratuit : l'édition du jour (ou la dernière publiée si celle du jour n'est pas prête).
 const latestDate = () => INDEX.map(e => e.date).filter(d => d <= TODAY).sort().pop() || TODAY;
 const canOpenDate = d => !PW() || isPremium() || d === TODAY || d === latestDate();
-const canFav = () => !PW() || isPremium();
 const euros = c => (c / 100).toFixed(2).replace(".", ",") + " €";
 function payHTML(ed, f) {
   const cover = coverOf(ed, f);
@@ -2742,11 +2740,11 @@ function wirePay(tr, ed, f) {
     } catch (e) { toast(e.message); b.disabled = false; }
   });
 }
-const PREMIUM_WHY = { dossier: "La suite de ce dossier vous attend, et tous les autres avec.", archives: "Cette histoire fait partie des archives Premium : toutes les éditions passées, en entier, sans limite.", explore: "Explorer toutes les histoires par thème et chercher dans les archives, c’est Premium.", favs: "Garder vos histoires préférées, c’est Premium.", newsletter: "La newsletter chaque matin, et tout le reste avec." };
+const PREMIUM_WHY = { dossier: "La suite de ce dossier vous attend, et tous les autres avec.", archives: "Cette histoire fait partie des archives Premium : toutes les éditions passées, en entier, sans limite.", explore: "Explorer toutes les histoires par thème et chercher dans les archives, c’est Premium.", newsletter: "La newsletter chaque matin, et tout le reste avec." };
 function openPremium(reason) {
   ev("paywall", "", reason || "");
   const P = CFG.prices || { month: 299, year: 1999 };
-  const perks = `<ul class="perks"><li>${ic("book")} Tous les Grands Dossiers en entier</li><li>${ic("cal")} Toutes les éditions passées</li><li>${ic("compass")} Toutes les histoires, par thème, avec la recherche</li><li>${ic("heart")} Vos favoris, sur tous vos appareils</li><li>${ic("mail")} La newsletter chaque matin</li></ul>`;
+  const perks = `<ul class="perks"><li>${ic("book")} Tous les Grands Dossiers en entier</li><li>${ic("cal")} Toutes les éditions passées</li><li>${ic("compass")} Toutes les histoires, par thème, avec la recherche</li><li>${ic("mail")} La newsletter chaque matin</li></ul>`;
   if (isPremium()) { openSheet(`<h3>Vous êtes Premium ${ic("star", "gold")}</h3>${perks}<p class="sub">${subLine(ACC.user)} Votre cerveau vous salue.</p><button class="btn ghost" id="pmAcc2">Gérer mon abonnement</button>`); $("#pmAcc2").onclick = openMyAccount; return; }
   if (!STRIPE()) return openSheet(`<h3>Le Sachoir Premium</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "Pour les esprits qui en veulent plus.")}</p>${perks}<p class="sub">Le paiement en ligne arrive très bientôt.</p>${MAIL() && WALLET.credits === 0 ? `<button class="cta" id="pmInv">En attendant : un ami inscrit = un dossier offert</button>` : ""}`), $("#pmInv") && ($("#pmInv").onclick = openInvite);
   openSheet(`<h3>Le savoir à prix sachant</h3><p class="sub">${esc(PREMIUM_WHY[reason] || "")} ${euros(P.month)} par mois : moins cher qu’un expresso en terrasse, et ça réveille plus longtemps.</p>
@@ -3045,7 +3043,6 @@ function renderExplore() {
 function renderFavs() {
   const v = $("#v-favs");
   if (BOOTING && !INDEX.length && ME.favs.length) { v.innerHTML = SK_LIST(3); return; }
-  if (!canFav()) { v.innerHTML = `<h1 class="h1">Favoris</h1><div class="lockcard"><span class="bigic gold">${ic("star")}</span><h2>Réservé aux abonnés Premium</h2><p class="sub">Gardez vos histoires préférées et retrouvez-les sur tous vos appareils.</p><button class="cta" id="lkGo">Découvrir Premium</button></div>`; $("#lkGo").onclick = () => openPremium("favs"); return; }
   const favs = ME.favs.slice().reverse().map(x => ({ x, s: storyOf(x.date, x.fid) || { id: x.fid, date: x.date, title: x.title, label: x.label } }));
   const seen = new Set(), hist = [];
   for (const r of ME.reads.slice().reverse()) { const k = r.date + "|" + r.fid; if (seen.has(k) || r.fid === "quiz") continue; seen.add(k); const s = storyOf(r.date, r.fid); if (s) hist.push(s); }
