@@ -314,9 +314,9 @@ dessin, musique, mixage) et l'envoie à Buffer. Publication à **20:30** (`"time
 
 ## C1. La série
 - **MAX** (sweat violet, casque vert autour du cou) : curieux, s'inquiète vite. Il pose LA question, la même que le
-  spectateur. Il tutoie. Voix : Microsoft Rémy.
+  spectateur. Il tutoie. Voix : Microsoft Fabrice.
 - **LE PROF** (blouse verte, nœud papillon rouge, deux crayons derrière les oreilles) : pince-sans-rire, répond court,
-  a un temps d'avance. Voix : Microsoft Henri.
+  a un temps d'avance. Voix : Microsoft Rémy.
 - **La Machine à Savoir** : une grosse ampoule dans le labo ; elle ouvre un portail jaune (le jaune Sachoir n'appartient
   qu'à elle) vers un ou deux « mondes » où se trouve la réponse. Retour au labo pour la chute.
 - **Le Bidule** : une petite créature de couleur qui ne parle pas. Elle peut apparaître dans un monde (`"bidule": true`).

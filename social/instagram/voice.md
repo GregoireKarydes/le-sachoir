@@ -18,7 +18,7 @@ Lu par les skills de `social/instagram/ig-skills/` à la place de `~/.claude/ins
 - **Jamais :** jargon, « Le saviez-vous ? » seul, « incroyable », « hallucinant », « vous n'allez pas le croire », points
   d'exclamation en série, anglicismes de créateur (« hack », « mindset »), emoji dans le texte parlé.
 - **Gros mots :** non. **Emoji en légende :** un au plus, rarement. **Visage :** aucun (dessin animé). **Voix :** voix off des
-  personnages (Microsoft Edge : Henri pour le Prof, Rémy pour Max).
+  personnages (Microsoft Edge, sans traitement : Rémy pour le Prof, Fabrice pour Max).
 - **Rythme :** environ 170 mots par minute.
 
 ## Nos positions

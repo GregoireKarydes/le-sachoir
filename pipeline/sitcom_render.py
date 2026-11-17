@@ -6,7 +6,7 @@ Entrée : `social/instagram/<date>-sitcom/post.json` avec `"kind": "sitcom"` et 
 écrit chaque jour par la tâche « Le Sachoir – Reel sitcom ».
 Sortie : `reel.mp4` (1080 x 1920, 24 i/s, −14 LUFS) et `reel-cover.jpg`.
 
-Chaîne : voix Microsoft Edge (Henri pour le Prof, Rémy pour Max ; secours Kokoro) → minutage des scènes et des plans →
+Chaîne : voix Microsoft Edge brutes (Rémy pour le Prof, Fabrice pour Max ; secours Kokoro) → minutage des scènes et des plans →
 images du sujet (Wikimedia Commons ou cases de la BD liée) → page `pipeline/sitcom/` (Canvas, trait qui « bout ») filmée image par
 image avec Playwright → musique et bruitages synthétisés (`sitcom_score.py`) → mixage → ffmpeg (loudnorm en deux passes).
 Moteur de dessin adapté de Lemo-Opuscar (style Sci-Fi Sitcom Toon, code MIT)."""
@@ -30,11 +30,11 @@ SR = 48000
 FPS = 24
 sys.path.insert(0, str(ROOT / "pipeline"))
 
-VOICES = {   # Microsoft Edge (neural, gratuit, sans clé). Le Prof grave et posé ; Max plus aigu et plus rapide.
-    "prof": {"voice": "fr-FR-HenriNeural", "rate": -6, "pitch": -4},
-    "max": {"voice": "fr-FR-RemyMultilingualNeural", "rate": 6, "pitch": 6},
+VOICES = {   # Microsoft Edge (neural, gratuit, sans clé). Choix de Greg (17 nov.) : voix brutes, sans traitement ni réglage.
+    "prof": {"voice": "fr-FR-RemyMultilingualNeural", "rate": 0, "pitch": 0},
+    "max": {"voice": "fr-CH-FabriceNeural", "rate": 0, "pitch": 0},
 }
-EMO_TTS = {"panic": (14, 10), "shock": (8, 12), "wow": (6, 8), "happy": (4, 4), "tired": (-10, -4), "alarmed": (10, 6), "smug": (-4, -2)}
+EMO_TTS = {}   # pas de débit ni de hauteur selon l'émotion : ça sonnait faux
 MAX_EMO = {"curious", "panic", "shock", "happy", "proud", "bored", "think", "wow"}
 PROF_EMO = {"deadpan", "smug", "tired", "alarmed", "explain", "happy"}
 SETS = {"paris-ancien", "ville", "ciel", "espace", "mer", "nature", "antiquite", "moyen-age", "desert", "neige", "cuisine", "usine", "corps", "bureau", "musee", "futur"}
@@ -83,23 +83,10 @@ def read_wav(path):
 
 
 def process_voice(a, who):
-    from sitcom_score import hp, bp, lp
-    a = hp(a, 85)
-    # trim silences
+    """Voix brute (choix de Greg) : on coupe seulement les silences du début et de la fin et on règle le volume."""
     e = np.abs(a); thr = max(1e-4, e.max() * .02); idx = np.where(e > thr)[0]
     if len(idx):
         a = a[max(0, idx[0] - int(.02 * SR)):idx[-1] + int(.06 * SR)]
-    if who == "prof":
-        a = a + .35 * bp(a, 140, 240)        # grain grave
-        a = np.tanh(a / (np.abs(a).max() + 1e-9) * 1.6) / np.tanh(1.6)
-    else:
-        a = a + .3 * bp(a, 2500, 5000)       # présence
-    # compression douce
-    from scipy.ndimage import uniform_filter1d
-    lvl = np.sqrt(uniform_filter1d(a ** 2, int(.02 * SR)) + 1e-9)
-    thr = np.percentile(lvl, 70)
-    g = np.where(lvl > thr, (thr * (lvl / thr) ** (1 / 3)) / lvl, 1)
-    a = a * g
     return a / (np.sqrt((a ** 2).mean()) + 1e-9) * .1
 
 
@@ -406,7 +393,7 @@ def render(post, out: Path, workers=None):
         shutil.copy(frames / f"{cover_i:05d}.jpg", out / "reel-cover.jpg")
     shutil.rmtree(ep_dir, ignore_errors=True)
     return {"files": ["reel.mp4"], "tiktok_files": ["reel.mp4"], "cover": "reel-cover.jpg", "seconds": round(tl["dur"], 1), "voice": sorted(engines),
-            "credits": "Voix : Microsoft Edge TTS (Henri, Rémy) ; images : Wikimedia Commons (domaine public / CC0) ou cases du Sachoir"}
+            "credits": "Voix : Microsoft Edge TTS (Rémy, Fabrice) ; images : Wikimedia Commons (domaine public / CC0) ou cases du Sachoir"}
 
 
 if __name__ == "__main__":
