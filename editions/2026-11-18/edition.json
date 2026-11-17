@@ -33,7 +33,8 @@
           "look": "a cartoon caricature of a tall, lean British actor around forty, messy tousled dark-brown hair swept upward, strong square jaw with light stubble, thick eyebrows, brooding half-smile, a sleek black tuxedo with a black bow tie and white shirt as main look, a silver wristwatch",
           "role": "the actor just cast as the famous spy, who has only ever played night-time characters; brooding, a little vain, always adjusting his bow tie",
           "file": "cast/actu-pattinson.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "directeur",
@@ -41,7 +42,8 @@
           "look": "a short, round man in his fifties, light pink-beige skin, bald head with a thin grey horseshoe of hair, bushy grey moustache, a bright teal hospital scrub top as main colour under an open white coat, a blue lanyard badge, small reading glasses on the tip of his nose",
           "role": "the hospital director told to protect his servers from pirates, who takes the word literally; zealous, proud of his solutions, never doubts himself",
           "file": "cast/actu-directeur.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "chercheuse",
@@ -67,8 +69,9 @@
           "pattinson"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -92,8 +95,9 @@
               "pattinson"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -103,7 +107,13 @@
           "title": "Les studios Pinewood, à l’ouest de Londres",
           "text": "L’entrée des studios britanniques qui abritent le « 007 Stage », un plateau géant baptisé en l’honneur de James Bond.",
           "photo": {
-            "commons": "File:Pinewood Studios Gateway.jpg"
+            "commons": "File:Pinewood Studios Gateway.jpg",
+            "credit": "alexander williams",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Pinewood_Studios_Gateway.jpg",
+            "file": "images/photo-2-pinewood-studios-gateway-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -167,8 +177,9 @@
               "directeur"
             ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -207,8 +218,9 @@
               "chercheuse"
             ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -254,8 +266,9 @@
               "deputee"
             ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -307,7 +320,13 @@
             "url": "https://www.avcesar.com/rockstar-games-gta-vi-pres-de-8-millions-de-precommandes-avant-sa-sortie-le-19-novembre-74-sur-ps5-48995"
           },
           "photo": {
-            "commons": "File:\"1430 Ocean Drive - Miami Beach, Florida\" (10943962224).jpg"
+            "commons": "File:\"1430 Ocean Drive - Miami Beach, Florida\" (10943962224).jpg",
+            "credit": "State Library and Archives of Florida",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:%221430_Ocean_Drive_-_Miami_Beach,_Florida%22_(10943962224).jpg",
+            "file": "images/photo-12-1430-ocean-drive-miami-beach-florid.webp",
+            "status": "done"
           }
         },
         {
@@ -323,7 +342,13 @@
             "url": "https://www.buzzwebzine.fr/leonides-2026-nuit-17-18-novembre-horaire-etoiles-filantes/"
           },
           "photo": {
-            "commons": "File:Leonid Meteor Storm 1833.jpg"
+            "commons": "File:Leonid Meteor Storm 1833.jpg",
+            "credit": "Edmund Weiß",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Leonid_Meteor_Storm_1833.jpg",
+            "file": "images/photo-13-leonid-meteor-storm-1833-jpg.webp",
+            "status": "done"
           }
         }
       ],
@@ -426,7 +451,10 @@
           ],
           "answer": 1,
           "explain": "Une petite querelle, souvent pour un rien. Le mot vient de l’italien bisbiglio, un chuchotement : deux personnes qui murmurent dans un coin, et voilà la brouille.",
-          "source": { "title": "Expressio — Être en bisbille avec quelqu’un", "url": "https://www.expressio.fr/expressions/etre-en-bisbille-avec-quelqu-un" }
+          "source": {
+            "title": "Expressio — Être en bisbille avec quelqu’un",
+            "url": "https://www.expressio.fr/expressions/etre-en-bisbille-avec-quelqu-un"
+          }
         },
         {
           "type": "choice",
@@ -440,7 +468,10 @@
           ],
           "answer": 2,
           "explain": "Le prendre dans un sac de nœuds, l’entortiller. Un mot de fantaisie, sans doute une déformation d’« emberlucoquer ». Rien que le prononcer, c’est déjà s’emberlificoter.",
-          "source": { "title": "La langue française — Emberlificoter", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/emberlificoter" }
+          "source": {
+            "title": "La langue française — Emberlificoter",
+            "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/emberlificoter"
+          }
         },
         {
           "type": "choice",
@@ -454,7 +485,10 @@
           ],
           "answer": 0,
           "explain": "Un animal imaginaire, puis une baliverne. Le mot apparaît chez Rabelais. « À la venue des coquecigrues » veut dire… jamais. Comme une augmentation sans réunion.",
-          "source": { "title": "La langue française — Coquecigrue", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/coquecigrue" }
+          "source": {
+            "title": "La langue française — Coquecigrue",
+            "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/coquecigrue"
+          }
         },
         {
           "type": "choice",
@@ -468,14 +502,29 @@
           ],
           "answer": 1,
           "explain": "Du grec nux (nuit) et hêmera (jour) : un cycle de 24 heures, avec une période de veille et une de sommeil. Votre nycthémère idéal compte sans doute plus de sommeil.",
-          "source": { "title": "Dictionnaire de l’Académie française — Nycthémère", "url": "https://www.dictionnaire-academie.fr/article/A9N0856" }
+          "source": {
+            "title": "Dictionnaire de l’Académie française — Nycthémère",
+            "url": "https://www.dictionnaire-academie.fr/article/A9N0856"
+          }
         }
       ],
       "sources": [
-        { "title": "Expressio — Être en bisbille avec quelqu’un", "url": "https://www.expressio.fr/expressions/etre-en-bisbille-avec-quelqu-un" },
-        { "title": "La langue française — Emberlificoter", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/emberlificoter" },
-        { "title": "La langue française — Coquecigrue", "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/coquecigrue" },
-        { "title": "Dictionnaire de l’Académie française — Nycthémère", "url": "https://www.dictionnaire-academie.fr/article/A9N0856" }
+        {
+          "title": "Expressio — Être en bisbille avec quelqu’un",
+          "url": "https://www.expressio.fr/expressions/etre-en-bisbille-avec-quelqu-un"
+        },
+        {
+          "title": "La langue française — Emberlificoter",
+          "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/emberlificoter"
+        },
+        {
+          "title": "La langue française — Coquecigrue",
+          "url": "https://www.lalanguefrancaise.com/dictionnaire/definition/coquecigrue"
+        },
+        {
+          "title": "Dictionnaire de l’Académie française — Nycthémère",
+          "url": "https://www.dictionnaire-academie.fr/article/A9N0856"
+        }
       ]
     }
   ]
