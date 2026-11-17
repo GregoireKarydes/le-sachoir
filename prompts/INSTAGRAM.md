@@ -35,26 +35,57 @@ On reprend la **mécanique**, jamais les textes ni la formulation d'un autre com
 - Coller au calendrier quand une date fait parler (Beaujolais nouveau, Black Friday, Noël, Chandeleur…).
 - Jamais de politique partisane, jamais une personne réelle vivante au centre, jamais un drame récent.
 
-## A3. Les diapositives (`slides`)
+## A3. Les diapositives (`slides`) : écrire une énigme, pas une explication
 
 6 à 9 diapositives de récit (la carte finale du Sachoir est ajoutée automatiquement, 10 images au plus).
 
-- **Diapositive 1, la couverture : une énigme qui cache le sujet.** On donne le mystère, pas la réponse : « Ils étaient
-  tellement incapables… qu'on en fit un verbe. », « Ce code-barres ne connaît même pas le prix de vos pâtes. »
-  10 à 16 mots, sur 2 ou 3 lignes. Jamais le mot-réponse sur la couverture.
-- **Diapositives suivantes : une idée par diapositive, 8 à 25 mots**, en 1 à 3 blocs très courts (une ligne vide entre
-  deux blocs). Phrases de 3 à 10 mots, au présent, rythmées : « Août 1914. La guerre commence. »
-- **Chaque diapositive finit sur une relance** qui donne envie de glisser : « Un territoire avec une ville bien
-  précise. » → diapositive suivante : « Cette ville, c'est **Limoges**. »
-- **La révélation** arrive sur l'avant-dernière ou la dernière diapositive de récit, avec le mot-réponse en valeur
-  (`**…**`, en jaune).
-- **La touche Sachoir** : une phrase drôle et bienveillante, au plus deux par carrousel (ironie, anachronisme, chute),
-  par exemple juste après la révélation. Le reste est raconté droit, comme une bonne histoire.
-- **Dernière diapositive de récit : la boucle** : elle renvoie à la couverture (« Une bataille a disparu. Son
-  expression, elle, est restée. »).
+**Règle d'or : on raconte une enquête, pas une leçon.** Le lecteur doit glisser parce qu'il VEUT savoir. On retient la
+réponse le plus longtemps possible, on dramatise, on crée du mystère même pour un sujet banal (un code-barres se raconte
+comme un polar). Exagère : trop de suspense vaut mieux que pas assez.
+
+**La couverture (diapositive 1) : une énigme qui cache tout.**
+- Elle ne nomme JAMAIS le sujet, le mot, l'objet ou la personne : elle les remplace par « il », « ils », « ce mot »,
+  « cet objet », « cette ville », « un geste ».
+- Elle pose un paradoxe, une menace, un mystère ou une conséquence énorme : on doit se dire « hein ? ».
+- 8 à 16 mots, 2 ou 3 lignes, souvent coupée par des points de suspension.
+- Formules qui marchent (à varier, jamais à recopier telles quelles) :
+  - « Ils étaient si [défaut]… qu'on en a fait un [mot / verbe / expression]. »
+  - « On se moquait de lui. Aujourd'hui, vous [utilisez / portez / dites] son nom. »
+  - « Avant d'être une expression, c'était [un geste / une punition / un métier] qui pouvait [coûter la vie]. »
+  - « Vous le dites chaque semaine. Vous ne savez pas que c'est une [insulte / menace / blague] de [époque]. »
+  - « Cet objet est dans votre poche. Il a été inventé [sur une plage / par erreur / pour la guerre]. »
+  - « Personne ne l'a jamais remarqué. Pourtant, il est partout autour de vous. »
+  - « Il a changé votre quotidien. Personne ne connaît son nom. »
+
+**Le récit (diapositives 2 à avant-dernière) : du suspense à chaque glissement.**
+- On commence loin de la réponse : une date, un lieu, une scène. « Floride, 1948. Un homme est assis sur une plage. »
+- Phrases de 2 à 8 mots. Fragments permis. Présent dramatique. Un retour à la ligne par phrase.
+- **Chaque diapositive finit sur un crochet** qui rend la suivante obligatoire : une question (« Mais pourquoi
+  lui ? »), un « Sauf que… », un « Et là, tout bascule. », un indice incomplet (« Une ville bien précise. »), une
+  menace (« Il ne le sait pas encore, mais… »).
+- **On retarde la révélation** : indices de plus en plus précis, fausses pistes possibles (« On pense aux soldats. Raté. »).
+  Le mot-réponse n'apparaît qu'à l'avant-dernière ou à la dernière diapositive de récit, seul sur sa ligne, en jaune :
+  « On dit qu'il s'est fait… **LIMOGER**. »
+- 8 à 25 mots par diapositive, en 1 à 3 blocs séparés par une ligne vide. Une seule idée.
+- **La touche Sachoir** : une ou deux phrases drôles au plus (ironie pince-sans-rire, anachronisme, aparté), placées
+  pour relâcher la tension, jamais à la place de la révélation. Le reste se raconte avec le sérieux d'un documentaire.
+- **La dernière diapositive de récit referme la boucle** avec une phrase qui claque : « Une bataille a disparu. Son
+  expression, elle, est restée. »
+
+**Exemple** (code-barres, sujet du quotidien raconté en énigme) :
+1. « Ce petit dessin\nest sur tout ce que vous achetez.\n\nIl est né… **dans le sable**. »
+2. « Philadelphie, 1948.\n\nUn patron de supermarché\nen a assez.\nSes caisses sont trop lentes. »
+3. « Il demande de l'aide\nà une université.\n\nPersonne ne le prend au sérieux.\n\nSauf un étudiant. »
+4. « Des mois de recherche.\nRien ne marche.\n\nAlors il part\nen Floride. »
+5. « Sur une plage,\nil trace du **morse** dans le sable.\n\nPoints. Traits.\nEt il les étire vers le bas. »
+6. « Des traits fins.\nDes traits épais.\n\nIl vient d'inventer\nquelque chose. »
+7. « Le **code-barres**.\n\n(Le premier produit scanné, en 1974 ?\nUn paquet de chewing-gums. On a connu plus solennel.) »
+8. « Aujourd'hui, il est bipé\ndes milliards de fois par jour.\n\nEt il ne contient même pas le prix. »
+(Faits à vérifier et à sourcer comme les autres : ceci montre le ton, pas des faits à reprendre sans vérification.)
+
 - `**mot**` met un ou deux mots-clés en jaune par diapositive, pas plus. Retours à la ligne voulus avec `\n`.
 - Vouvoiement, comme dans l'appli. Aucun mot creux d'IA (« plongez », « découvrez », « fascinant », « incontournable »,
-  « véritable »), pas de tiret long, pas d'émoji sur les images.
+  « véritable »), pas de tiret long, pas d'émoji sur les images, jamais « Le saviez-vous ? ».
 
 **Images (`image` de chaque diapositive)** : elles servent le récit, pas la BD.
 - Histoire, origines, expressions : `{"commons": "termes de recherche"}` (gravure, tableau, photo ancienne du domaine
@@ -69,7 +100,8 @@ On reprend la **mécanique**, jamais les textes ni la formulation d'un autre com
 
 - **`end`** (facultatif) : la petite phrase sous « Une question comme ça chaque matin, en BD » sur la carte finale
   (par défaut « Gratuit, en 2 minutes. »).
-- **`caption`** : ligne 1 = la phrase de couverture. Puis l'histoire racontée en entier en 4 à 8 paragraphes courts
+- **`caption`** : ligne 1 = la phrase de couverture (l'énigme, sans la réponse : la réponse se découvre en glissant).
+  Puis, après une ligne vide, l'histoire racontée en entier en 4 à 8 paragraphes courts
   (personne ne doit se sentir piégé), une nuance si l'origine est discutée, puis UNE demande : en priorité « Envoyez-le
   à celui qui… », un jour sur trois « L'histoire en BD : lien en bio. » Puis « Sources : » et les sources en une ligne.
   Dernière ligne : « Une question comme ça chaque matin, en BD : lesachoir.fr ». 1 500 caractères au plus, aucun lien
