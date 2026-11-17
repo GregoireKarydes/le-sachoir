@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-24",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "geo",
+      "label": "Le Quiz géo",
+      "title": "Trois questions, un phare et un parallèle menteur",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "map",
+          "map": "france",
+          "q": "Où se trouve Brest ?",
+          "hint": "Allez tout à l’ouest. Encore un peu. Voilà.",
+          "target": { "lat": 48.388, "lon": -4.49 },
+          "name": "Brest",
+          "explain": "Au bout du Finistère, dont le nom vient du latin « finis terrae », la fin de la terre. Brest est un grand port militaire. Après, c’est l’Atlantique, et l’Amérique si on insiste.",
+          "source": { "title": "Cartes France — Brest", "url": "https://www.cartesfrance.fr/Brest-29200/carte-Brest.html" }
+        },
+        {
+          "type": "choice",
+          "q": "Quelle est la capitale de la Turquie ?",
+          "hint": "Ce n’est pas la ville la plus célèbre du pays.",
+          "choices": ["Istanbul", "Ankara", "Izmir", "Antalya"],
+          "answer": 1,
+          "explain": "Ankara devient la capitale définitive en 1923 : au centre du pays, reliée par le train, alors qu’Istanbul était jugée trop excentrée. Istanbul reste la plus grande ville. La star, mais pas la cheffe.",
+          "source": { "title": "Larousse — Ankara", "url": "https://www.larousse.fr/encyclopedie/ville/Ankara/105544" }
+        },
+        {
+          "type": "order",
+          "by": "nord-sud",
+          "q": "Du nord au sud : classez ces quatre villes.",
+          "hint": "Le Québec est plus au sud qu’on ne le croit.",
+          "items": [
+            { "name": "Montréal", "lat": 45.502, "lon": -73.567 },
+            { "name": "Paris", "lat": 48.857, "lon": 2.352 },
+            { "name": "Lyon", "lat": 45.764, "lon": 4.836 },
+            { "name": "Londres", "lat": 51.507, "lon": -0.128 }
+          ],
+          "explain": "Londres, Paris, Lyon, puis Montréal, à peu près à la latitude de Lyon. Si Montréal est bien plus froide, c’est que l’Europe a le Gulf Stream et pas le Canada. Pas de chance.",
+          "source": { "title": "La Drôme Montagne — Latitude de Montréal : pourquoi fait-il plus froid qu’à Paris ?", "url": "https://www.ladromemontagne.fr/latitude-montreal-pourquoi-fait-il-plus-froid-qua-paris-situee-plus-nord/" }
+        }
+      ],
+      "sources": [
+        { "title": "Cartes France — Brest", "url": "https://www.cartesfrance.fr/Brest-29200/carte-Brest.html" },
+        { "title": "Wikipedia — Finistère", "url": "https://en.wikipedia.org/wiki/Finist%C3%A8re" },
+        { "title": "Larousse — Ankara", "url": "https://www.larousse.fr/encyclopedie/ville/Ankara/105544" },
+        { "title": "Partir.com — Quelles villes partagent la même latitude ?", "url": "https://www.partir.com/cartedumonde/appli-latitude.html" },
+        { "title": "La Drôme Montagne — Latitude de Montréal", "url": "https://www.ladromemontagne.fr/latitude-montreal-pourquoi-fait-il-plus-froid-qua-paris-situee-plus-nord/" }
+      ]
+    }
+  ]
+}
