@@ -1,0 +1,228 @@
+{
+  "added": "20261117-2047",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
+      "tagline": "Un blocus, un café trop amer, une betterave et une Légion d’honneur arrachée à la poitrine de l’Empereur",
+      "teaser": "Napoléon boit son café amer depuis des années. Un banquier de Passy promet du sucre… qui pousse dans un champ.",
+      "minutes": 1,
+      "theme": "Économie",
+      "art": {
+        "subject": "how the British blockade cut France off from cane sugar, and how Napoleon pushed beet sugar until he pinned his own Legion of Honour on the industrialist Benjamin Delessert (1806-1812)",
+        "setting": "Napoleon's study at the Tuileries palace in Paris (a desk with a map of Europe and a coffee cup), then Delessert's sugar workshop at Passy (a big copper cauldron, piles of white beets, steam)",
+        "era": "1806-1812 France, First Empire",
+        "props": {
+          "cup": "a small white porcelain coffee cup with a gold rim",
+          "beet": "a big pale white sugar beet root with green leaves",
+          "loaf": "a tall white cone-shaped sugar loaf",
+          "cauldron": "a huge round copper cauldron full of steaming brownish syrup",
+          "cross": "a small white-enamelled star medal on a red ribbon"
+        }
+      },
+      "cast": [
+        {
+          "id": "napoleon",
+          "name": "Napoléon",
+          "look": "Napoléon in 1810, a short paunchy man in his early forties, round pale face, short receding dark-brown hair combed forward, a black bicorne hat worn sideways, a dark green colonel's uniform coat with a red collar as main colour, white waistcoat and white breeches, black boots, the cross medal on his chest",
+          "file": "cast/insolite-napoleon.png",
+          "status": "pending",
+          "role": "the Emperor with a sweet tooth who hates bitter coffee; impatient and vain, drums his fingers, hand tucked in his waistcoat, sulks like a child when deprived"
+        },
+        {
+          "id": "delessert",
+          "name": "Benjamin Delessert",
+          "look": "Benjamin Delessert, a tall pear-shaped Parisian banker and industrialist of 39, chubby cheeks, curly light-brown hair with long sideburns, light pink skin, a high white cravat, a pale caramel-brown tailcoat as main colour, cream waistcoat, often holding the sugar loaf",
+          "file": "cast/insolite-delessert.png",
+          "status": "pending",
+          "role": "the banker turned sugar maker, a smooth flatterer who takes credit for his chemist's work; bows too low, rubs his hands, smiles nervously"
+        }
+      ],
+      "cover": {
+        "prompt": "Delessert's sugar workshop at Passy, steam and piles of white beets. Napoléon (short, paunchy, sideways bicorne, dark green uniform) on the left, standing on tiptoe to pin the cross medal on the chest of Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) on the right, who bows while proudly holding the tall white sugar loaf. medium wide shot",
+        "cast": [
+          "napoleon",
+          "delessert"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1806",
+          "caption": "1806 : Napoléon interdit les marchandises anglaises en Europe. Pourquoi finira-t-il par décorer un fabricant de sucre ?",
+          "bubbles": [
+            {
+              "who": "napoleon",
+              "text": "Ce café est amer. Comme l’Angleterre.",
+              "side": "l"
+            },
+            {
+              "who": "delessert",
+              "text": "C’est que le sucre, Sire, voyage par la mer. Anglaise.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Napoleon's study at the Tuileries palace, a desk with a big map of Europe. Napoléon (short, paunchy, sideways bicorne, dark green uniform) sitting on the left behind the desk, grimacing with disgust after a sip from the small cup, tongue out; Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) standing near the door on the right, bowing very low, hat in hand. wide shot",
+            "cast": [
+              "napoleon",
+              "delessert"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1804-1806",
+          "caption": "Le sucre de canne n’arrive plus : la flotte anglaise bloque les ports. En 1804, un pain de sucre coûte dix fois son prix d’avant 1789.",
+          "bubbles": [
+            {
+              "who": "napoleon",
+              "text": "Trouvez-moi du sucre qui pousse en France.",
+              "side": "l"
+            },
+            {
+              "who": "delessert",
+              "text": "Dans un champ, Sire ? Le sucre ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Napoleon's study at the Tuileries, seen from above. Napoléon (short, paunchy, sideways bicorne, dark green uniform) on the left, angrily stabbing his finger on the map of Europe spread on the desk; Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) on the right, leaning over the map, eyebrows raised in disbelief, holding the empty cup. high angle",
+            "cast": [
+              "napoleon",
+              "delessert"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Le sucre caché dans le potager",
+          "steps": [
+            "1747 : le chimiste prussien Marggraf tire des cristaux de sucre de la betterave",
+            "Son élève Achard monte en Silésie la première sucrerie de betterave, qui échoue",
+            "À Passy, près de Paris, Delessert et son chimiste Jean-Baptiste Quéruel cherchent un procédé rentable"
+          ],
+          "joke": "Le sucre poussait en Europe depuis le début. Il fallait juste le sortir de terre."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1811",
+          "caption": "En 1811, Napoléon fait semer 32 000 hectares de betteraves, trois fois Paris. À Passy, Delessert cuit le jus.",
+          "bubbles": [
+            {
+              "who": "delessert",
+              "text": "Quéruel ! Ça sent le chou bouilli. C’est normal ?",
+              "side": "l"
+            },
+            {
+              "who": "Jean-Baptiste Quéruel",
+              "text": "Le sucre, c’est après l’odeur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Delessert's sugar workshop at Passy, piles of white beets and thick steam. Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat, sleeves rolled up) on the left, stirring the huge copper cauldron with a long wooden paddle, pinching his nose with his other hand, a light-blue sweat drop; in the background on the right a small chemist in a leather apron seen from behind, busy with glass flasks. medium shot",
+            "cast": [
+              "delessert"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La betterave, héroïne de l’Empire",
+          "text": "Une betterave dessinée en 1885 par le botaniste Otto Wilhelm Thomé. Sa grosse racine cache du sucre, repéré dès 1747.",
+          "photo": {
+            "commons": "File:Illustration Beta vulgaris var.JPG"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Janvier 1812",
+          "caption": "Début janvier 1812, Passy sort deux pains de sucre blanc de betterave. Napoléon accourt goûter.",
+          "bubbles": [],
+          "image": {
+            "prompt": "in the sugar workshop at Passy. Napoléon (short, paunchy, sideways bicorne, dark green uniform) in the foreground licking a pinch of white sugar from his fingertips, eyes closed in pure bliss, melting with happiness, yellow sparkles; behind him Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) holding up the tall white sugar loaf with both trembling hands, anxious smile. low angle",
+            "cast": [
+              "napoleon",
+              "delessert"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "La chute",
+          "caption": "Ravi, Napoléon épingle sa propre Légion d’honneur sur Delessert. La France apprend à tirer son sucre de ses champs.",
+          "bubbles": [
+            {
+              "who": "delessert",
+              "text": "Je la partagerai avec mon chimiste. Un peu.",
+              "side": "r"
+            },
+            {
+              "who": "napoleon",
+              "text": "Et mon café. Avec deux sucres français.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) puffing out his chest with smug pride, chin up, admiring the cross medal pinned on his chest, the sugar loaf tucked under his arm; a hand in a dark green sleeve holding out the small cup into the frame from the left. close-up",
+            "cast": [
+              "delessert"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Grâce aux progrès de la betterave, le prix du sucre est passé en moins d’un siècle de 15 francs à 7 centimes le kilo.",
+        "source": "Hérodote — 2 janvier 1812"
+      },
+      "story": "Au début du XIXe siècle, le sucre de la France vient de la canne, cultivée aux colonies. Mais la guerre avec l’Angleterre change tout : la flotte britannique bloque les ports, Haïti, premier producteur mondial, est devenue indépendante en 1804, et en 1806 Napoléon répond par le Blocus continental, qui interdit les marchandises anglaises en Europe. Le sucre devient un luxe : un pain de sucre qui valait environ 3 francs avant la Révolution en coûte plus de 30 en 1804.\nLa solution pousse pourtant en Europe. En 1747, le chimiste prussien Marggraf a tiré des cristaux de sucre de la betterave ; son élève Achard a ensuite monté en Silésie une première sucrerie, sans succès durable. Napoléon décide de miser sur la betterave : en 1811, un décret réserve 100 000 arpents à sa culture et promet un million de francs à la recherche. Dès cette année-là, 32 000 hectares sont ensemencés.\nÀ Passy, près de Paris, le banquier Benjamin Delessert et son chimiste Jean-Baptiste Quéruel mettent au point une fabrication industrielle. Début janvier 1812, ils obtiennent deux pains de sucre blanc. Napoléon vient voir la fabrique et, séduit, épingle sa propre croix de la Légion d’honneur sur la poitrine de Delessert, qui sera fait baron d’Empire. L’Empire tombe avant que la filière ne s’impose, mais elle survivra : en moins d’un siècle, le prix du sucre passe de 15 francs à 7 centimes le kilo.",
+      "sources": [
+        {
+          "title": "Hérodote — 2 janvier 1812 : Napoléon décore le sucre de betterave",
+          "url": "https://www.herodote.net/2_janvier_1812-evenement-18120102.php"
+        },
+        {
+          "title": "Fondation Napoléon — La bataille du sucre",
+          "url": "https://www.napoleon.org/histoire-des-2-empires/articles/la-bataille-du-sucre/"
+        },
+        {
+          "title": "Wikipedia — Benjamin Delessert",
+          "url": "https://en.wikipedia.org/wiki/Benjamin_Delessert"
+        },
+        {
+          "title": "Wikimedia Commons — Illustration Beta vulgaris var. (Thomé, 1885, domaine public)",
+          "url": "https://download.osmand.net/wiki/File:Illustration_Beta_vulgaris_var.JPG"
+        }
+      ]
+    }
+  ]
+}
