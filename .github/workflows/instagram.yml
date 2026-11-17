@@ -66,6 +66,9 @@ jobs:
           pip install "kokoro>=0.9.4" soundfile
       - name: Rendu
         if: steps.need.outputs.render == 'yes'
+        env:
+          # Reel v2 : vidéos libres de droits Pexels (facultatif ; sans clé, archives Wikimedia Commons et cases du Sachoir)
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python pipeline/social_render.py
       - name: Garder les fichiers 7 jours (artefact, pas dans git)
         if: steps.need.outputs.render == 'yes'

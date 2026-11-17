@@ -405,10 +405,48 @@ def main(now: datetime | None = None):
                     dst = SITE / "social" / "instagram" / d.name / f.name
                     dst.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy(f, dst)
+    write_insta(index, now)
     (SITE / ".nojekyll").write_text("")
     shutil.copy(ROOT / "data" / "health.json", SITE / "status.json")
     seo.build(SITE, index, gate=gate)
     print("Site construit dans _site/")
+
+
+def insta_target(index: list, today: str, social: Path) -> str:
+    """Adresse du lien en bio Instagram (`/insta`, 17 novembre 2026) : l'histoire liée au dernier Reel publié.
+    BD de l'édition du jour : ouverte dans l'appli (lisible gratuitement) ; plus ancienne : sa page publique
+    `/histoires/…/` (lisible sans compte). Sinon l'accueil. Toujours marqué `utm_source=instagram`."""
+    published = {(e["date"], f["id"]): f for e in index for f in e["formats"]}
+    posts = []
+    for pj in sorted(social.glob("*/post.json")) if social.exists() else []:
+        try:
+            p = json.loads(pj.read_text())
+        except ValueError:
+            continue
+        if p.get("date", "") <= today and not p.get("skip"):
+            posts.append(p)
+    utm = "utm_source=instagram&utm_medium=social"
+    for p in reversed(posts):
+        s = p.get("story") or {}
+        f = published.get((s.get("edition"), s.get("format")))
+        if not f:
+            continue
+        camp = f"&utm_campaign={p['date']}"
+        if s["edition"] == today:
+            return f"./?d={s['edition']}&f={s['format']}&{utm}{camp}"
+        return f"./{f['url']}?{utm}{camp}"
+    return f"./?{utm}"
+
+
+def write_insta(index: list, now: datetime):
+    target = insta_target(index, now.date().isoformat(), ROOT / "social" / "instagram")
+    url = "../" + target[2:]
+    (SITE / "insta").mkdir(parents=True, exist_ok=True)
+    (SITE / "insta" / "index.html").write_text(
+        f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="robots" content="noindex">'
+        f'<meta http-equiv="refresh" content="0;url={url}"><link rel="canonical" href="{url}">'
+        f'<title>Le Sachoir</title></head><body><script>location.replace({json.dumps(url)})</script>'
+        f'<a href="{url}">La BD du jour sur Le Sachoir</a></body></html>\n')
 
 
 def queue_index(today: date) -> dict:
