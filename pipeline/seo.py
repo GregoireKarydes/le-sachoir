@@ -201,9 +201,12 @@ def head(title, desc, canonical, image, noindex=False, extra="", og_type="websit
 """
 
 
+SOCIAL = ["https://www.instagram.com/lesachoir.fr/", "https://www.tiktok.com/@lesachoir_fr"]
+
 FOOT = f"""<footer>Le Sachoir — l’actu et la culture G en BD, chaque jour. Les faits sont vérifiés et sourcés ; les personnages et les dialogues sont des parodies.
 · <a href="{BASE}archives/">Toutes les histoires</a> · <a href="{BASE}themes/">Thèmes</a>
-<br>{" · ".join(f'<a href="{BASE}rubriques/{r[0]}/">{e(r[1])}</a>' for r in RUBRIQUES.values())} · <a href="{BASE}feed.xml">Flux RSS</a></footer>
+<br>{" · ".join(f'<a href="{BASE}rubriques/{r[0]}/">{e(r[1])}</a>' for r in RUBRIQUES.values())} · <a href="{BASE}feed.xml">Flux RSS</a>
+<br>Suivez-nous : <a href="https://www.instagram.com/lesachoir.fr/" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@lesachoir_fr" rel="noopener">TikTok</a></footer>
 </body></html>"""
 
 
@@ -318,7 +321,7 @@ def story_page(s, ed_dir: Path, related, gate=False):
             {"@type": "NewsArticle" if f["id"] == "actu" else "Article", "headline": f["title"][:110], "description": desc, "image": [image],
              "datePublished": published, "dateModified": published, "inLanguage": "fr",
              "articleSection": theme or f.get("label", ""), "isAccessibleForFree": not locked,
-             "author": {"@type": "Organization", "name": "Le Sachoir", "url": BASE},
+             "author": {"@type": "Organization", "name": "Le Sachoir", "url": BASE, "sameAs": SOCIAL},
              "publisher": {"@type": "Organization", "name": "Le Sachoir", "logo": {"@type": "ImageObject", "url": f"{BASE}assets/icon-512.png"}},
              "mainEntityOfPage": canonical},
             {"@type": "BreadcrumbList", "itemListElement": [
