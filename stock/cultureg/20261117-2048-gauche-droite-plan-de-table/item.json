@@ -1,0 +1,255 @@
+{
+  "added": "20261117-2048",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "La gauche et la droite, ou le plan de table qui a mal tourné",
+      "tagline": "Un huissier, un plan des places, un roi qui veut dire non, et deux camps qui ne se sont jamais rassis ailleurs",
+      "teaser": "Septembre 1789 : un huissier de Versailles a un plan des places parfait. Il lui reste deux semaines à vivre.",
+      "minutes": 2,
+      "theme": "Politique française",
+      "art": {
+        "subject": "how the words left and right in politics were born in September 1789, when deputies of the National Assembly at Versailles grouped on either side of the president during the debate on the king's veto",
+        "setting": "the great assembly hall of the Menus-Plaisirs at Versailles in 1789: rows of wooden benches facing a raised president's desk, columns, crowds of deputies in dark coats",
+        "era": "1789 France, beginning of the French Revolution",
+        "props": {
+          "plan": "a large rolled paper seating plan with neat blank rectangles drawn on it",
+          "desk": "the raised wooden president's desk with a small brass bell"
+        }
+      },
+      "cast": [
+        {
+          "id": "anselme",
+          "name": "Anselme, huissier",
+          "look": "Anselme, a small skinny nervous usher in his fifties, slightly hunched, long thin neck, slicked dark-grey hair tied in a tiny queue, huge round spectacles, light olive skin, a long royal-blue livery coat as main colour with a heavy silver chain of office around his neck, always clutching the plan",
+          "file": "cast/cultureg-anselme.png",
+          "status": "pending",
+          "role": "the Assembly usher obsessed with protocol and his seating plan; overzealous, panics when people sit anywhere, clutches the plan against his chest like a baby"
+        },
+        {
+          "id": "mounier",
+          "name": "Jean-Joseph Mounier",
+          "look": "Jean-Joseph Mounier, a stocky self-important deputy in his early thirties, round face with a small double chin, short powdered white wig with side curls, pale skin, a long burnt-orange coat as main colour over a white cravat, black breeches, a black tricorn hat always under his arm",
+          "file": "cast/cultureg-mounier.png",
+          "status": "pending",
+          "role": "the leader of the deputies who want a strong king; vain about rank and seats of honour, walks with his nose in the air, sulks with dignity when he loses"
+        }
+      ],
+      "cover": {
+        "prompt": "the great assembly hall at Versailles, wooden benches split into two crowds of deputies on either side of the raised president's desk. In the foreground Anselme (small, skinny, huge round spectacles, royal-blue livery coat, silver chain) staring in horror at the plan in his hands; behind him Mounier (stocky, white wig, burnt-orange coat, tricorn under his arm) striding proudly towards the right-hand benches, nose in the air. medium wide shot",
+        "cast": [
+          "anselme",
+          "mounier"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Versailles, 1789",
+          "caption": "Fin août 1789, l’Assemblée siège à Versailles. Pourquoi parle-t-on, depuis, de la gauche et de la droite ?",
+          "bubbles": [
+            {
+              "who": "anselme",
+              "text": "Messieurs, chacun à sa place ! Tout est sur mon plan.",
+              "side": "l"
+            },
+            {
+              "who": "mounier",
+              "text": "Votre plan est très beau. Personne ne l’a lu.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the great assembly hall at Versailles, rows of wooden benches facing the raised president's desk, deputies in dark coats milling around in disorder. Anselme (small, skinny, huge round spectacles, royal-blue livery coat, silver chain) on the left, standing on a bench and waving the unrolled plan above his head; Mounier (stocky, white wig, burnt-orange coat, tricorn under his arm) on the right, walking past him without a glance. wide shot",
+            "cast": [
+              "anselme",
+              "mounier"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le débat",
+          "caption": "Le débat : le roi pourra-t-il bloquer les lois votées ? C’est le droit de veto, « j’interdis » en latin.",
+          "bubbles": [
+            {
+              "who": "mounier",
+              "text": "Le roi doit pouvoir dire non. Pour toujours.",
+              "side": "r"
+            },
+            {
+              "who": "Un député",
+              "text": "Pour toujours ? Et nous, on sert à quoi ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the assembly hall at Versailles. Mounier (stocky, white wig, burnt-orange coat, tricorn under his arm) on the right at a wooden lectern, one finger raised high, chin up, speaking grandly; on the left an angry deputy in a plain black coat seen from behind, shaking his fist. medium shot",
+            "cast": [
+              "mounier"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Deux vetos, deux camps",
+          "text": "Veto absolu : le roi peut bloquer une loi pour toujours.\nVeto suspensif : il la bloque seulement un temps. Si trois Assemblées élues de suite la revotent, elle passe quand même.",
+          "joke": "Le second, c’est « non », mais avec une date de péremption."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le placement",
+          "caption": "Pendant le débat, les députés se regroupent par opinion. Les partisans du veto absolu prennent la droite du président.",
+          "bubbles": [
+            {
+              "who": "mounier",
+              "text": "À droite, la place d’honneur. Naturellement.",
+              "side": "r"
+            },
+            {
+              "who": "anselme",
+              "text": "Mais votre place est au fond, à gauche !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the assembly hall at Versailles. Mounier (stocky, white wig, burnt-orange coat, tricorn under his arm) in the foreground, striding over a wooden bench with one leg high in the air towards the right-hand side of the president's desk, nose up; Anselme (small, skinny, huge round spectacles, royal-blue livery coat, silver chain) behind him, running after him and pointing desperately at his plan. low angle",
+            "cast": [
+              "mounier",
+              "anselme"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "En face",
+          "caption": "Ceux qui veulent un veto suspensif se rangent en face, à gauche du président. La salle est coupée en deux.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Anselme (small, skinny, huge round spectacles, royal-blue livery coat, silver chain) alone, looking straight at the reader with a blank stunned face, slowly tearing his seating plan in two, the two halves hanging from his hands, a light-blue sweat drop; behind him, blurry, two crowds of deputies sitting on opposite sides of the hall. close-up",
+            "cast": [
+              "anselme"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "La salle des Menus-Plaisirs, à Versailles",
+          "text": "L’ouverture des États généraux, le 5 mai 1789, peinte par Auguste Couder en 1839. C’est dans cette salle que l’Assemblée débat du veto, quatre mois plus tard.",
+          "photo": {
+            "commons": "File:Couder Stati generali.jpg"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "11 septembre 1789",
+          "caption": "Le 11 septembre 1789, la gauche l’emporte : 673 voix pour le veto suspensif, 325 pour l’absolu. Deux contre un.",
+          "bubbles": [
+            {
+              "who": "mounier",
+              "text": "La place d’honneur, et pas la majorité. Charmant.",
+              "side": "r"
+            },
+            {
+              "who": "anselme",
+              "text": "Je note : à droite, les perdants du jour.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the assembly hall at Versailles, seen from above the benches. Mounier (stocky, white wig, burnt-orange coat) slumped alone on a right-hand bench, arms crossed, sulking, his tricorn crushed beside him; Anselme (small, skinny, huge round spectacles, royal-blue livery coat, silver chain) beside him, busily writing on what is left of his plan with a quill. high angle",
+            "cast": [
+              "mounier",
+              "anselme"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi les deux côtés sont restés",
+          "steps": [
+            "Octobre 1789 : l’Assemblée part à Paris, salle du Manège, et chaque camp garde son côté",
+            "À droite, ceux qui veulent freiner la Révolution ; à gauche, ceux qui se disent « patriotes »",
+            "Les mots passent des bancs aux idées, puis au monde entier"
+          ],
+          "joke": "Un plan de table improvisé, toujours en service."
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Gauche et droite : en 1789, les députés se rangent de chaque côté du président, selon leur avis sur le veto.",
+          "bubbles": [
+            {
+              "who": "anselme",
+              "text": "Nouveau plan. Deux cases. Valable deux cents ans, minimum.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Anselme (small, skinny, huge round spectacles, royal-blue livery coat, silver chain) proudly holding up a brand-new plan showing only two big blank halves, chest puffed out, chin high, yellow sparkles around the paper; the empty wooden benches of the hall behind him. medium close-up",
+            "cast": [
+              "anselme"
+            ],
+            "file": "images/cultureg-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "La droite est née d’une défaite : le 11 septembre 1789, les partisans d’un roi fort perdent par 325 voix contre 673.",
+        "source": "Wikipedia — French Constitution of 1791"
+      },
+      "story": "À l’été 1789, les députés des États généraux, réunis à Versailles, sont devenus l’Assemblée nationale constituante : ils écrivent une Constitution. Fin août s’ouvre une question décisive : le roi pourra-t-il bloquer les lois votées par l’Assemblée ? C’est le droit de veto, du latin « j’interdis ».\nDeux camps s’affrontent. Les « monarchiens », menés par Jean-Joseph Mounier, veulent un veto absolu : le roi pourrait rejeter une loi pour toujours. En face, d’autres députés n’acceptent qu’un veto suspensif : le roi peut retarder une loi, mais si trois Assemblées élues de suite la revotent, elle s’applique. Pendant le débat, les députés se regroupent par opinion de part et d’autre du président. Les partisans du veto absolu prennent la droite, côté des places d’honneur ; leurs adversaires s’installent à gauche.\nLe 11 septembre 1789, le veto suspensif l’emporte par 673 voix contre 325. Le placement, lui, reste : en octobre 1789, l’Assemblée s’installe à Paris, dans la salle du Manège, et chaque camp garde son côté. La droite regroupe ceux qui veulent contenir la Révolution, la gauche ceux qui se disent « patriotes ».\nLes mots « droite » et « gauche » ont d’abord désigné des côtés de la salle, puis des familles d’opinion. Ils sont aujourd’hui employés dans le monde entier.",
+      "sources": [
+        {
+          "title": "Hérodote — 11 septembre 1789 : naissance de la gauche et de la droite",
+          "url": "https://www.herodote.net/almanach-ID-1703.php"
+        },
+        {
+          "title": "Larousse — Droite (politique)",
+          "url": "https://www.larousse.fr/encyclopedie/divers/wd/44839"
+        },
+        {
+          "title": "Wikipedia — French Constitution of 1791 (vote du veto, 673 contre 325)",
+          "url": "https://en.wikipedia.org/wiki/French_Constitution_of_1791"
+        },
+        {
+          "title": "Wikimedia Commons — Couder, Ouverture des États généraux",
+          "url": "https://EN.wikipedia.com/wiki/File:Couder_Stati_generali.jpg"
+        }
+      ]
+    }
+  ]
+}
