@@ -17,6 +17,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: read      # récupérer les artefacts Instagram
 
 concurrency:
   group: pages
@@ -38,6 +39,17 @@ jobs:
           cache: pip
           cache-dependency-path: pipeline/requirements.txt
       - run: pip install -r pipeline/requirements.txt   # Pillow : image de partage (share_card.py)
+      # Instagram : les carrousels et Reels ne sont pas dans git (le dépôt grossirait sans fin) mais dans des
+      # artefacts « instagram-<date> » gardés 7 jours ; on récupère ceux des 3 derniers jours pour les mettre en ligne.
+      - name: Fichiers Instagram (artefacts)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in 0 1 2; do
+            d=$(TZ=Europe/Paris date -d "-$i day" +%F)
+            gh run download -n "instagram-$d" -D social/instagram >/dev/null 2>&1 && echo "Instagram $d : fichiers récupérés" || true
+          done
       - name: Publier l'édition du jour et construire le site
         run: python pipeline/publish.py
       - name: Commit

@@ -1,8 +1,9 @@
 name: Instagram
 
 # 17 novembre 2026. La tâche Claude « Le Sachoir – Instagram » pousse chaque matin social/instagram/<date>/post.json.
-# 1. Rendu (à chaque push d'un post.json) : carrousel 1080 x 1350 ou Reel 1080 x 1920 avec voix Kokoro, commité,
-#    puis la Publication est relancée pour mettre les fichiers en ligne sur le site.
+# 1. Rendu (à chaque push d'un post.json) : carrousel 1080 x 1350 ou Reel 1080 x 1920 avec voix Kokoro. Les images et
+#    vidéos vont dans un artefact « instagram-<date> » gardé 7 jours (jamais dans git : seul render.json est commité),
+#    puis la Publication est relancée : elle récupère l'artefact et met les fichiers en ligne sur le site.
 # 2. Envoi (9 h 10, 10 h 40 et 11 h 40 à Paris l'hiver) : le post du jour part chez Buffer, programmé à son heure
 #    (12 h 15 par défaut). Rien n'est envoyé tant que le secret BUFFER_API_KEY n'existe pas.
 
@@ -54,6 +55,7 @@ jobs:
               if not rj.exists() or json.loads(rj.read_text()).get("fingerprint") != fp:
                   need.append(pj.parent.name)
           print("render=" + ("yes" if need else "no"))
+          print("artifact=instagram-" + (max(need) if need else "none"))
           print("reel=" + ("yes" if any(json.loads((Path("social/instagram") / n / "post.json").read_text()).get("kind") == "reel" for n in need) else "no"))
           EOF
       - name: Voix (Kokoro)
@@ -65,6 +67,16 @@ jobs:
       - name: Rendu
         if: steps.need.outputs.render == 'yes'
         run: python pipeline/social_render.py
+      - name: Garder les fichiers 7 jours (artefact, pas dans git)
+        if: steps.need.outputs.render == 'yes'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.need.outputs.artifact }}
+          path: |
+            social/instagram/*/*.jpg
+            social/instagram/*/*.mp4
+          retention-days: 7
+          if-no-files-found: error
       - name: Envoi à Buffer
         if: github.event_name != 'push'
         env:
@@ -83,7 +95,7 @@ jobs:
           [ -n "$ok" ] || { echo "::error::Push impossible"; exit 1; }
           echo "changed=yes" >> "$GITHUB_OUTPUT"
       - name: Mettre les fichiers en ligne (Publication)
-        if: steps.need.outputs.render == 'yes' && steps.commit.outputs.changed == 'yes'
+        if: steps.need.outputs.render == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run publish.yml --ref main

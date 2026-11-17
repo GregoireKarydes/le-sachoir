@@ -5,3 +5,6 @@ __pycache__/
 health-report.md
 .pytest_cache/
 indexnow.json
+# Instagram : images et vidéos en artefacts GitHub (7 jours), jamais dans git
+social/instagram/*/*.jpg
+social/instagram/*/*.mp4
