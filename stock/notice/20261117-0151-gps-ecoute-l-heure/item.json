@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a thick white fog on a mountain plateau, a lone pine tree. Gaston (short, stocky, bushy black beard, bright red poncho, the foilcap on his head) in the foreground clutching the phone wrapped in foil to his chest, glaring suspiciously up at the sky; Yasmine (tall, slender, high dark ponytail, lime-green fleece, round glasses) behind him, hands in her pockets, trying not to laugh. medium wide shot",
-        "cast": ["gaston", "yasmine"],
+        "cast": [
+          "gaston",
+          "yasmine"
+        ],
         "file": "images/notice-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "Brouillard",
           "caption": "Dans le brouillard du Vercors, Gaston est perdu. Son téléphone pourrait dire où il est. Mais comment le sait-il ?",
           "bubbles": [
-            { "who": "gaston", "text": "Pas question d’allumer le GPS. Ils vont me pister.", "side": "l" },
-            { "who": "yasmine", "text": "Qui ça, « ils » ?", "side": "r" }
+            {
+              "who": "gaston",
+              "text": "Pas question d’allumer le GPS. Ils vont me pister.",
+              "side": "l"
+            },
+            {
+              "who": "yasmine",
+              "text": "Qui ça, « ils » ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a thick white fog on a mountain plateau, a wooden signpost with blank arrows pointing in every direction. Gaston (short, stocky, bushy black beard, bright red poncho, the foilcap) on the left, hugging the signpost, peering into the fog, the foil-wrapped phone pressed to his chest; Yasmine (tall, slender, high dark ponytail, lime-green fleece) appearing out of the fog on the right, headlamp on. wide shot",
-            "cast": ["gaston", "yasmine"],
+            "cast": [
+              "gaston",
+              "yasmine"
+            ],
             "file": "images/notice-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "Le principe",
           "caption": "Des satellites, à 20 200 km de haut, diffusent l’heure exacte et leur position. Le téléphone écoute, sans rien émettre.",
           "bubbles": [
-            { "who": "yasmine", "text": "Vous pouvez enlever l’alu. Il ne leur envoie rien.", "side": "r" },
-            { "who": "gaston", "text": "C’est ce qu’ils veulent qu’on croie.", "side": "l" }
+            {
+              "who": "yasmine",
+              "text": "Vous pouvez enlever l’alu. Il ne leur envoie rien.",
+              "side": "r"
+            },
+            {
+              "who": "gaston",
+              "text": "C’est ce qu’ils veulent qu’on croie.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "on the foggy plateau, under the lone pine tree. Gaston (short, stocky, bushy black beard, bright red poncho, the foilcap) on the left wrapping one more layer of shiny foil around the phone, tongue out in concentration; Yasmine (tall, slender, high dark ponytail, lime-green fleece, round glasses) on the right, leaning down toward him, gently pointing up at the sky with one finger. medium shot",
-            "cast": ["gaston", "yasmine"],
+            "cast": [
+              "gaston",
+              "yasmine"
+            ],
             "file": "images/notice-02.webp",
             "status": "pending",
             "attempts": 0
@@ -98,12 +123,23 @@
           "tag": "La surprise",
           "caption": "Là-haut, le temps file plus vite, comme Einstein l’avait prévu : les horloges gagnent 40 millionièmes de seconde par jour.",
           "bubbles": [
-            { "who": "yasmine", "text": "Sans correction, votre point dériverait d’une dizaine de kilomètres par jour.", "side": "r" },
-            { "who": "gaston", "text": "Même le temps est de mèche.", "side": "l" }
+            {
+              "who": "yasmine",
+              "text": "Sans correction, votre point dériverait d’une dizaine de kilomètres par jour.",
+              "side": "r"
+            },
+            {
+              "who": "gaston",
+              "text": "Même le temps est de mèche.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "on the foggy plateau. Gaston (short, stocky, bushy black beard, bright red poncho, the foilcap) in the foreground holding the watch right up to his ear, eyes narrowed with deep suspicion, as if the watch were lying to him; Yasmine (tall, slender, high dark ponytail, lime-green fleece) small in the background, sitting on a rock, shrugging with a half smile. medium close-up",
-            "cast": ["gaston", "yasmine"],
+            "cast": [
+              "gaston",
+              "yasmine"
+            ],
             "file": "images/notice-04.webp",
             "status": "pending",
             "attempts": 0
@@ -115,7 +151,15 @@
           "tag": "En vrai",
           "title": "Un satellite GPS, vu par la NASA",
           "text": "Une trentaine de satellites comme celui-ci tournent à 20 200 km d’altitude, un tour de Terre en 12 heures environ. Chacun embarque plusieurs horloges atomiques.",
-          "photo": { "commons": "File:GPS Satellite NASA art-iif.jpg" }
+          "photo": {
+            "commons": "File:GPS Satellite NASA art-iif.jpg",
+            "credit": "NASA",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:GPS_Satellite_NASA_art-iif.jpg",
+            "file": "images/photo-5-gps-satellite-nasa-art-iif-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -123,11 +167,17 @@
           "tag": "En résumé",
           "caption": "Le GPS ne suit personne : le téléphone écoute l’heure de quatre satellites et calcule lui-même sa position.",
           "bubbles": [
-            { "who": "gaston", "text": "Bon. J’allume. Mais je garde l’alu.", "side": "l" }
+            {
+              "who": "gaston",
+              "text": "Bon. J’allume. Mais je garde l’alu.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the fog lifting on the plateau, a path visible ahead. Gaston (short, stocky, bushy black beard, bright red poncho) alone, walking out of the fog with the phone glowing in one hand, now wearing two foilcaps stacked on top of each other, chin up, proud and stubborn. low angle",
-            "cast": ["gaston"],
+            "cast": [
+              "gaston"
+            ],
             "file": "images/notice-06.webp",
             "status": "pending",
             "attempts": 0
@@ -140,10 +190,22 @@
       },
       "story": "Le GPS repose sur une constellation d’une trentaine de satellites qui tournent à environ 20 200 km d’altitude. Chacun embarque des horloges atomiques et diffuse en permanence un signal qui dit, en gros : « voici l’heure exacte à laquelle je t’envoie ce message, et voici où je suis ». Le téléphone, lui, n’émet rien vers eux : c’est un récepteur passif, une sorte de radio qui écoute le ciel.\nLe signal voyage à la vitesse de la lumière, environ 300 000 km par seconde. En comparant l’heure de départ inscrite dans le message à l’heure d’arrivée, le téléphone en déduit la distance qui le sépare de chaque satellite. Avec trois distances, il ne reste qu’un seul point possible sur Terre. Mais l’horloge du téléphone est bien moins précise qu’une horloge atomique : un quatrième satellite sert à corriger cette erreur. Il faut être très précis, car une erreur d’un millionième de seconde décale la position d’environ 300 mètres.\nReste une surprise, prévue par Einstein : là-haut, où la gravité est plus faible, le temps passe un peu plus vite. Les horloges des satellites de navigation gagnent environ 40 millionièmes de seconde par jour sur celles du sol. Sans correction, la position dériverait d’une dizaine de kilomètres chaque jour. Les ingénieurs règlent donc les horloges des satellites pour compenser.",
       "sources": [
-        { "title": "Futura — GPS : qu’est-ce que c’est ?", "url": "https://www.futura-sciences.com/tech/definitions/technologie-gps-1897/" },
-        { "title": "Techno-Science — Global Positioning System", "url": "https://www.techno-science.net/fr/definitions/global-positioning-system" },
-        { "title": "Futura — Deux satellites Galileo perdus vont mettre Einstein à l’épreuve", "url": "https://www.futura-sciences.com/sciences/actualites/constellation-satellites-relativite-deux-galileo-perdus-vont-mettre-einstein-epreuve-60473/" },
-        { "title": "Wikimedia Commons — GPS Satellite NASA art-iif", "url": "https://www.limswiki.org/index.php/File:GPS_Satellite_NASA_art-iif.jpg" }
+        {
+          "title": "Futura — GPS : qu’est-ce que c’est ?",
+          "url": "https://www.futura-sciences.com/tech/definitions/technologie-gps-1897/"
+        },
+        {
+          "title": "Techno-Science — Global Positioning System",
+          "url": "https://www.techno-science.net/fr/definitions/global-positioning-system"
+        },
+        {
+          "title": "Futura — Deux satellites Galileo perdus vont mettre Einstein à l’épreuve",
+          "url": "https://www.futura-sciences.com/sciences/actualites/constellation-satellites-relativite-deux-galileo-perdus-vont-mettre-einstein-epreuve-60473/"
+        },
+        {
+          "title": "Wikimedia Commons — GPS Satellite NASA art-iif",
+          "url": "https://www.limswiki.org/index.php/File:GPS_Satellite_NASA_art-iif.jpg"
+        }
       ]
     }
   ]

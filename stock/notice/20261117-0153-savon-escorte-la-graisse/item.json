@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a small car garage in Marseille. Rémi (big, burly, sandy-blond gelled quiff, burgundy work shirt, black greasy hands) at the sink, holding up his black hands in despair under the running tap; tiny Mireille (very old, white bun, cat-eye glasses, lavender apron) at the open door, holding out the soap like a precious jewel, unimpressed. medium wide shot",
-        "cast": ["remi", "mireille"],
+        "cast": [
+          "remi",
+          "mireille"
+        ],
         "file": "images/notice-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "Mains noires",
           "caption": "Rémi, garagiste marseillais, va serrer la main de sa future belle-mère. L’eau glisse sur son cambouis, la graisse des moteurs.",
           "bubbles": [
-            { "who": "remi", "text": "Dix minutes que je rince. Pourquoi elles restent noires ?", "side": "l" },
-            { "who": "mireille", "text": "L’eau et le gras, c’est comme vous et la patience.", "side": "r" }
+            {
+              "who": "remi",
+              "text": "Dix minutes que je rince. Pourquoi elles restent noires ?",
+              "side": "l"
+            },
+            {
+              "who": "mireille",
+              "text": "L’eau et le gras, c’est comme vous et la patience.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a small car garage in Marseille, an old car with its bonnet open in the background. Rémi (big, burly, sandy-blond gelled quiff, burgundy work shirt) on the left bent over the sink, scrubbing his black greasy hands under the running tap, water beading and sliding off without effect; tiny Mireille (very old, white bun, cat-eye glasses, lavender apron) on the right leaning in the open doorway, holding the soap. wide shot",
-            "cast": ["remi", "mireille"],
+            "cast": [
+              "remi",
+              "mireille"
+            ],
             "file": "images/notice-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "Le principe",
           "caption": "Une molécule de savon a deux bouts : une tête qui aime l’eau, une queue qui aime le gras.",
           "bubbles": [
-            { "who": "mireille", "text": "Les queues plongent dans votre graisse. Les têtes restent côté eau.", "side": "r" },
-            { "who": "remi", "text": "Un pied dans chaque camp. Comme mon beau-frère.", "side": "l" }
+            {
+              "who": "mireille",
+              "text": "Les queues plongent dans votre graisse. Les têtes restent côté eau.",
+              "side": "r"
+            },
+            {
+              "who": "remi",
+              "text": "Un pied dans chaque camp. Comme mon beau-frère.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "at the sink in the garage. Tiny Mireille (very old, white bun, cat-eye glasses, lavender apron) standing on an upturned crate on the right to reach, firmly rubbing the soap into Rémi's black hands, grey foam bubbling up; Rémi (big, burly, sandy-blond gelled quiff, burgundy work shirt) on the left, looking down at her, skeptical, one eyebrow up. medium close-up",
-            "cast": ["mireille", "remi"],
+            "cast": [
+              "mireille",
+              "remi"
+            ],
             "file": "images/notice-02.webp",
             "status": "pending",
             "attempts": 0
@@ -98,12 +123,23 @@
           "tag": "Et les microbes ?",
           "caption": "Certains virus, comme celui du Covid, ont une enveloppe de gras. Le savon la désorganise : ils n’infectent plus.",
           "bubbles": [
-            { "who": "mireille", "text": "D’où les trente secondes de frottage. Pas trois.", "side": "r" },
-            { "who": "remi", "text": "Vingt-huit… vingt-neuf…", "side": "l" }
+            {
+              "who": "mireille",
+              "text": "D’où les trente secondes de frottage. Pas trois.",
+              "side": "r"
+            },
+            {
+              "who": "remi",
+              "text": "Vingt-huit… vingt-neuf…",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "at the sink in the garage. Rémi (big, burly, sandy-blond gelled quiff, burgundy work shirt) in the foreground scrubbing furiously, foam piled up to his elbows and splashing everywhere, eyes squeezed shut, counting through clenched teeth, a light-blue sweat drop; tiny Mireille (very old, white bun, cat-eye glasses, lavender apron) in the background calmly checking her wristwatch. low angle",
-            "cast": ["remi", "mireille"],
+            "cast": [
+              "remi",
+              "mireille"
+            ],
             "file": "images/notice-04.webp",
             "status": "pending",
             "attempts": 0
@@ -115,7 +151,15 @@
           "tag": "En vrai",
           "title": "Un vrai savon de Marseille",
           "text": "En 1688, un édit de Louis XIV réserve le savon de Marseille aux huiles d’olive pures. Il interdit aussi d’en fabriquer l’été : la chaleur gâtait le savon.",
-          "photo": { "commons": "File:Savon de Marseille.jpg" }
+          "photo": {
+            "commons": "File:Savon de Marseille.jpg",
+            "credit": "No machine-readable author provided. Dodo assumed (based on copyright claims).",
+            "license": "CC BY-SA 3.0",
+            "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "source": "https://commons.wikimedia.org/wiki/File:Savon_de_Marseille.jpg",
+            "file": "images/photo-5-savon-de-marseille-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -123,11 +167,17 @@
           "tag": "En résumé",
           "caption": "Le savon tient la graisse par un bout et l’eau par l’autre : au rinçage, tout part ensemble.",
           "bubbles": [
-            { "who": "remi", "text": "Trente secondes, madame. Record personnel.", "side": "r" }
+            {
+              "who": "remi",
+              "text": "Trente secondes, madame. Record personnel.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "on the sunny street in front of the garage. Rémi (big, burly, sandy-blond gelled quiff perfect again, burgundy work shirt) bowing slightly and holding out one spotless gleaming clean hand, a proud grin, yellow sparkles around the hand; in the foreground a woman with a huge flowery hat seen from behind, no face visible. over-the-shoulder",
-            "cast": ["remi"],
+            "cast": [
+              "remi"
+            ],
             "file": "images/notice-06.webp",
             "status": "pending",
             "attempts": 0
@@ -140,10 +190,22 @@
       },
       "story": "L’eau seule ne suffit pas à enlever la graisse : les deux ne se mélangent pas, l’eau glisse dessus. Le savon fait l’intermédiaire. Chacune de ses molécules est allongée et a deux bouts : une « tête » attirée par l’eau et repoussée par les corps gras, et une « queue » qui fait l’inverse, attirée par les graisses et repoussée par l’eau.\nQuand on se savonne, les queues plongent dans la graisse collée à la peau, tandis que les têtes restent tournées vers l’eau. Des milliers de molécules finissent par entourer chaque gouttelette de gras et l’enferment dans une minuscule bille, appelée micelle. Vue de l’extérieur, cette bille ne montre plus que des têtes qui aiment l’eau : au rinçage, l’eau l’emporte, avec la graisse prisonnière à l’intérieur.\nLe même mécanisme agit sur certains microbes. Des virus comme celui du Covid sont entourés d’une enveloppe faite de graisses : les queues du savon s’y fixent et la désorganisent, et le virus n’est plus infectieux. D’où la consigne de l’OMS : se frotter les mains au moins trente secondes, paumes, dos, entre les doigts et sous les ongles.\nÀ Marseille, le savon est une affaire d’État depuis longtemps : un édit de Louis XIV, en 1688, impose aux savonniers les seules huiles d’olive pures, et leur interdit de travailler l’été, parce que la chaleur gâtait le savon.",
       "sources": [
-        { "title": "Futura — Comment le savon lave-t-il ?", "url": "https://www.futura-sciences.com/sciences/questions-reponses/chimie-savon-lave-t-il-6335/" },
-        { "title": "Futura — Pourquoi le savon est-il efficace contre le coronavirus ?", "url": "https://www.futura-sciences.com/sante/questions-reponses/coronavirus-savon-il-efficace-coronavirus-13402/" },
-        { "title": "Techno-Science — Savon de Marseille", "url": "https://www.techno-science.net/fr/definitions/savon-de-marseille" },
-        { "title": "Wikimedia Commons — Savon de Marseille (CC BY-SA 3.0)", "url": "https://xn--h1ajim.xn--p1ai/%D0%A4%D0%B0%D0%B9%D0%BB:Savon_de_Marseille.jpg" }
+        {
+          "title": "Futura — Comment le savon lave-t-il ?",
+          "url": "https://www.futura-sciences.com/sciences/questions-reponses/chimie-savon-lave-t-il-6335/"
+        },
+        {
+          "title": "Futura — Pourquoi le savon est-il efficace contre le coronavirus ?",
+          "url": "https://www.futura-sciences.com/sante/questions-reponses/coronavirus-savon-il-efficace-coronavirus-13402/"
+        },
+        {
+          "title": "Techno-Science — Savon de Marseille",
+          "url": "https://www.techno-science.net/fr/definitions/savon-de-marseille"
+        },
+        {
+          "title": "Wikimedia Commons — Savon de Marseille (CC BY-SA 3.0)",
+          "url": "https://xn--h1ajim.xn--p1ai/%D0%A4%D0%B0%D0%B9%D0%BB:Savon_de_Marseille.jpg"
+        }
       ]
     }
   ]
