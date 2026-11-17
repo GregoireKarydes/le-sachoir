@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T20:48+01:00",
+ "updated_at": "2026-11-17T20:49+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -84,6 +84,17 @@
    "errors": [],
    "warnings": [
     "insolite : 0 vraie(s) photo(s) (« kind »: « photo »), il en faut au moins 1 si un document libre existe"
+   ]
+  },
+  {
+   "path": "stock/insolite/20261117-2047-napoleon-decore-un-sucrier",
+   "titles": {
+    "insolite": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)"
+   },
+   "errors": [],
+   "warnings": [
+    "insolite : fiche napoleon : même tête qu'un personnage récent (brown hair, red main colour : 2026-11-09/actu) ; changer coiffure ou couleur dominante",
+    "insolite : case 2 : récitatif de 25 mots (max 20)"
    ]
   },
   {

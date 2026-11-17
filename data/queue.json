@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T20:48+01:00",
+ "updated_at": "2026-11-17T20:49+01:00",
  "stock": {
   "cultureg": [
    {
@@ -166,6 +166,23 @@
     "title": "Le talon haut, une chaussure de cavalier que Louis XIV a peinte en rouge",
     "theme": "Mode et luxe",
     "tagline": "Avant les escarpins, il y avait des cavaliers perses, des marquis qui boitent et un roi très pointilleux sur la couleur",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261117-2047-napoleon-decore-un-sucrier",
+    "name": "20261117-2047-napoleon-decore-un-sucrier",
+    "added": "20261117-2047",
+    "status": "waiting",
+    "next": false,
+    "title": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
+    "theme": "Économie",
+    "tagline": "Un blocus, un café trop amer, une betterave et une Légion d’honneur arrachée à la poitrine de l’Empereur",
     "minutes": 1,
     "cases": 7,
     "photos": 1,
