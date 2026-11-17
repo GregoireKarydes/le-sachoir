@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T03:55+01:00",
+ "updated_at": "2026-11-17T08:08+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -147,7 +147,11 @@
   {
    "path": "editions/2026-11-17",
    "titles": {
+    "dossier": "Les Lumières : comment des philosophes ont rallumé la France (sans électricité)",
     "actu": "Un point gelé, une fusée rattrapée et dix ans de bilan",
+    "cultureg": "Neptune, la planète trouvée sans lever les yeux",
+    "insolite": "Les rats d’Autun avaient un avocat (et ils s’en sont tirés)",
+    "notice": "Le code-barres, ou le morse dessiné dans le sable",
     "quiz": "Douze dates, un calendrier qui a le tournis"
    },
    "errors": [],

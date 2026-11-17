@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T03:55:12.970043+01:00",
+ "updated_at": "2026-11-17T08:08:23.360553+01:00",
  "today": "2026-11-17",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Google Actualités, Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,7 +9,11 @@
    "date": "2026-11-17",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
     "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "notice": "prêt",
     "quiz": "prêt"
    }
   },
@@ -63,42 +67,53 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-17/cultureg : « Neptune, la planète trouvée sans lever les yeux » prise dans la file (20261114-0100-neptune-la-planete-trouvee-sans-lever-le)",
+  "2026-11-17/insolite : « Les rats d’Autun avaient un avocat (et ils s’en sont tirés) » prise dans la file (20261113-2058-les-rats-dautun-avaient-un-avocat)",
+  "2026-11-17/notice : « Le code-barres, ou le morse dessiné dans le sable » prise dans la file (20261114-2045-code-barres-morse-de-plage)",
+  "2026-11-17/dossier : « Les Lumières : comment des philosophes ont rallumé la France (sans électricité) » prise dans la file (20261113-1931-les-lumieres-sans-electricite)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-16",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite",
+  "notice"
+ ],
+ "last_published": "2026-11-17",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 30,
    "focus": "20261114-0402-greenwich-le-mot-interdit (6 image(s) à faire)",
-   "next": "20261114-0100-neptune-la-planete-trouvee-sans-lever-le",
-   "next_redo": 2
+   "next": "20261114-0359-do-re-mi-tube-voix-enrouees",
+   "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 25,
    "focus": "20261114-0400-la-liberte-a-dabord-postule-en-egypte (7 image(s) à faire)",
-   "next": "20261113-2058-les-rats-dautun-avaient-un-avocat",
-   "next_redo": 1
+   "next": "20261114-0100-lempereur-qui-taxait-le-pipi",
+   "next_redo": 0
   },
   "notice": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 21,
    "focus": "20261115-2047-maree-la-mer-suit-la-lune (6 image(s) à faire)",
-   "next": "20261114-2045-code-barres-morse-de-plage",
+   "next": "20261115-2043-cocotte-minute-triche-avec-leau",
    "next_redo": 0
   },
   "origine": {
@@ -111,17 +126,17 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 2,
    "blocked": 0,
    "images_left": 43,
    "focus": "20261115-1923-krach-1929 (22 image(s) à faire)",
-   "next": "20261113-1931-les-lumieres-sans-electricite",
-   "next_redo": 2
+   "next": "20261114-1927-nucleaire-tiroir-ferme",
+   "next_redo": 0
   }
  },
- "days_ahead_drawn": 2,
- "days_ahead_written": 4,
+ "days_ahead_drawn": 1,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-17",
@@ -143,7 +158,7 @@
  },
  "rss": {
   "collected_at": "2026-11-17T01:48:45.333072+01:00",
-  "age_hours": 2.1,
+  "age_hours": 6.3,
   "feeds": {
    "Google Actualités": 0,
    "franceinfo": 30,

@@ -1,6 +1,84 @@
 {
- "updated_at": "2026-11-17T03:55:12.970043+01:00",
+ "updated_at": "2026-11-17T08:08:23.360553+01:00",
  "editions": [
+  {
+   "date": "2026-11-17",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Les Lumières : comment des philosophes ont rallumé la France (sans électricité)",
+     "kind": "",
+     "url": "histoires/2026-11-17-les-lumieres-comment-des-philosophes-ont-rallume-la-france-sans-electr/",
+     "theme": "Philosophie",
+     "minutes": 6,
+     "tagline": "Voltaire, Diderot, Montesquieu, Rousseau : le XVIIIe siècle qui a appris à penser par soi-même, malgré la Bastille et les bûchers de livres",
+     "cases": 24,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un point gelé, une fusée rattrapée et dix ans de bilan",
+     "kind": "",
+     "url": "histoires/2026-11-17-un-point-gele-une-fusee-rattrapee-et-dix-ans-de-bilan/",
+     "theme": "",
+     "minutes": 4,
+     "tagline": "Les fonctionnaires en grève, SpaceX qui attrape son vaisseau au vol, Emmanuel Macron qui fait le point, et la Francophonie qui reporte.",
+     "cases": 11,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Neptune, la planète trouvée sans lever les yeux",
+     "kind": "",
+     "url": "histoires/2026-11-17-neptune-la-planete-trouvee-sans-lever-les-yeux/",
+     "theme": "L’univers",
+     "minutes": 2,
+     "tagline": "En 1846, un Français découvre une planète avec un crayon. Un Allemand n’a plus qu’à regarder.",
+     "cases": 10,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "Les rats d’Autun avaient un avocat (et ils s’en sont tirés)",
+     "kind": "",
+     "url": "histoires/2026-11-17-les-rats-d-autun-avaient-un-avocat-et-ils-s-en-sont-tires/",
+     "theme": "Histoire de France",
+     "minutes": 2,
+     "tagline": "Vers 1520, des rats sont convoqués au tribunal. Leur défense : les chats.",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "notice",
+     "label": "La Notice",
+     "title": "Le code-barres, ou le morse dessiné dans le sable",
+     "kind": "",
+     "url": "histoires/2026-11-17-le-code-barres-ou-le-morse-dessine-dans-le-sable/",
+     "theme": "Informatique et numérique",
+     "minutes": 2,
+     "tagline": "Treize chiffres, de la lumière rouge, et une idée née les pieds dans le sable",
+     "cases": 8,
+     "cover": "images/notice-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "La Frise",
+     "title": "Douze dates, un calendrier qui a le tournis",
+     "kind": "frise",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-16",
    "demo": false,
