@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T01:54+01:00",
+ "updated_at": "2026-11-17T01:55+01:00",
  "stock": {
   "cultureg": [
    {
@@ -506,6 +506,21 @@
      "kind": "citation",
      "title": "Ces phrases ont un propriétaire (sauf une)",
      "questions": 4
+    }
+   ]
+  },
+  {
+   "date": "2026-11-23",
+   "path": "editions/2026-11-23",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Quiz du jour",
+     "kind": "culture",
+     "title": "Cinq questions, un aigle et zéro pédale",
+     "questions": 5
     }
    ]
   }
