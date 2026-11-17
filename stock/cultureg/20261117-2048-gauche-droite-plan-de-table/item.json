@@ -161,7 +161,13 @@
           "title": "La salle des Menus-Plaisirs, à Versailles",
           "text": "L’ouverture des États généraux, le 5 mai 1789, peinte par Auguste Couder en 1839. C’est dans cette salle que l’Assemblée débat du veto, quatre mois plus tard.",
           "photo": {
-            "commons": "File:Couder Stati generali.jpg"
+            "commons": "File:Couder Stati generali.jpg",
+            "credit": "Auguste Couder",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Couder_Stati_generali.jpg",
+            "file": "images/photo-6-couder-stati-generali-jpg.webp",
+            "status": "done"
           }
         },
         {
