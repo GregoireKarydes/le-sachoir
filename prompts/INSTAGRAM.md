@@ -34,13 +34,19 @@ Les deux carrousels racontent chacun **une BD de l'édition du jour** (`story` =
 le lien en bio ouvre alors cette BD dans l'appli, lisible gratuitement. Les faits viennent de la BD (déjà vérifiée) ;
 pour tout ajout, 2 sources sérieuses dans `sources`.
 
-**1. Le carrousel culture (18:30)** : une BD parmi La Notice (`notice`), D'où ça vient ? (`origine`), la Pilule de
-Culture G (`cultureg`), l'Insolite historique (`insolite`) et le Grand Dossier (`dossier`, au plus une fois par
-semaine).
-- **Tourne** : pas la même rubrique que les 2 derniers carrousels culture si une autre convient.
-- Parmi celles qui restent, prends **celle qui fait la meilleure énigme** : un mot ou un objet que tout le monde
-  connaît, une histoire avec une révélation, un paradoxe (« Les rats d'Autun avaient un avocat » bat « Neptune trouvée
-  par le calcul » si la seconde se raconte moins bien en énigme). En cas d'égalité, suis la rotation.
+**1. Le carrousel culture (18:30) : le sujet le plus viral, expliqué à fond.** C'est le post qui doit faire le plus de
+partages : on prend LE meilleur sujet, pas le suivant d'une rotation.
+- **Candidats** : les BD de l'édition du jour parmi La Notice (`notice`), D'où ça vient ? (`origine`), la Pilule de
+  Culture G (`cultureg`), l'Insolite historique (`insolite`) et le Grand Dossier (`dossier`). Si aucune ne marque au
+  moins 9 points ci-dessous, élargis aux BD publiées ces 30 derniers jours (`editions/index.json`) jamais postées.
+- **Note chaque candidat sur 12** (0, 1 ou 2 par critère) et prends la meilleure note :
+  1. **Connu de tous** : un mot, une expression, un objet, un lieu ou un personnage que 9 Français sur 10 connaissent.
+  2. **Révélation** : la réponse surprend vraiment (« je n'aurais jamais deviné »), pas un simple détail.
+  3. **Émotion** : étonnement, rire, indignation légère, fierté (« c'est français ! »), frisson historique.
+  4. **Envoyable** : on pense tout de suite à quelqu'un à qui l'envoyer.
+  5. **Racontable en scènes** : il y a des personnages, un lieu, une date, un enchaînement de causes.
+  6. **Images** : on trouvera de vraies images d'archives ou des photos fortes pour le raconter.
+  Départage : la rubrique la moins postée des 7 derniers jours. Jamais un sujet déjà posté.
 
 **2. Le carrousel actu (12:15)** : un sujet de l'Actu du jour (`actu`), raconté en énigme comme le reste.
 - Prends **le sujet dont tout le monde parle ou dont on a envie de parler** : un record, une découverte, une première,
@@ -56,7 +62,8 @@ semaine).
 
 ## A3. Les diapositives (`slides`) : écrire une énigme, pas une explication
 
-6 à 9 diapositives de récit (la carte finale du Sachoir est ajoutée automatiquement, 10 images au plus).
+Culture (18:30) : 8 ou 9 diapositives de récit ; actu (12:15) : 6 à 8. La carte finale du Sachoir est ajoutée
+automatiquement (10 images au plus).
 
 **Règle d'or : on raconte une enquête, pas une leçon.** Le lecteur doit glisser parce qu'il VEUT savoir. On retient la
 réponse le plus longtemps possible, on dramatise, on crée du mystère même pour un sujet banal (un code-barres se raconte
@@ -75,6 +82,14 @@ comme un polar). Exagère : trop de suspense vaut mieux que pas assez.
   - « Cet objet est dans votre poche. Il a été inventé [sur une plage / par erreur / pour la guerre]. »
   - « Personne ne l'a jamais remarqué. Pourtant, il est partout autour de vous. »
   - « Il a changé votre quotidien. Personne ne connaît son nom. »
+
+**Expliquer vraiment (surtout le carrousel de 18:30).** Le suspense sert à faire glisser, mais à la fin le lecteur doit
+avoir COMPRIS : le contexte, le mécanisme (le pourquoi, le comment), et ce qu'il en reste aujourd'hui. Test : après le
+dernier glissement, il peut raconter l'histoire à quelqu'un en 30 secondes. Trame type en 8 à 9 diapositives :
+1. l'énigme ; 2 et 3. la scène de départ (date, lieu, personnages, le problème) ; 4 à 6. l'enchaînement, une cause par
+diapositive, avec un chiffre ou un détail concret à chaque fois ; 7. la révélation ; 8. la nuance ou la suite (« Tous
+n'ont pas été envoyés à Limoges. Mais le mot, lui, est resté. ») ; 9. la boucle avec la couverture. Le carrousel actu
+peut être plus court (6 ou 7).
 
 **Le récit (diapositives 2 à avant-dernière) : du suspense à chaque glissement.**
 - On commence loin de la réponse : une date, un lieu, une scène. « Floride, 1948. Un homme est assis sur une plage. »
