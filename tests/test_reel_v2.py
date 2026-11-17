@@ -40,3 +40,15 @@ def test_lien_en_bio(tmp_path):
     (d / "post.json").write_text(json.dumps({"date": "2026-11-19", "story": {"edition": "2026-11-19", "format": "notice"}}))
     assert publish.insta_target(index, "2026-11-19", tmp_path).startswith("./?d=2026-11-19&f=notice&utm_source=instagram")
     assert publish.insta_target(index, "2026-11-19", tmp_path / "rien").startswith("./?utm_source=instagram")
+
+
+def test_carrousel_v2(tmp_path):
+    import carousel_v2  # noqa: E402
+    post = {"date": "2026-11-18", "kind": "carousel", "version": 2, "tone": "archive",
+            "slides": [{"text": "Une énigme\nsur **deux** lignes."}, {"text": "Bloc un.\n\nBloc **deux**."},
+                       {"text": "La **réponse**."}]}
+    info = carousel_v2.render(post, tmp_path)
+    assert info["files"] == ["slide-01.jpg", "slide-02.jpg", "slide-03.jpg", "slide-04.jpg"]
+    from PIL import Image
+    assert Image.open(tmp_path / "slide-01.jpg").size == (1080, 1350)
+    assert carousel_v2.tokens("le **13 chiffres**.")[-1] == [("chiffres", True), (".", False)]
