@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-23",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "culture",
+      "label": "Le Quiz du jour",
+      "title": "Cinq questions, un aigle et zéro pédale",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "theme": "Sciences du vivant",
+          "q": "Quel est le seul mammifère capable de voler vraiment, en battant des ailes ?",
+          "hint": "Il dort la tête en bas.",
+          "choices": [
+            "L’écureuil volant",
+            "La chauve-souris",
+            "Le poisson volant",
+            "Le colugo, ou « lémur volant »"
+          ],
+          "answer": 1,
+          "explain": "L’écureuil volant et le colugo planent seulement ; le poisson volant n’est pas un mammifère. Les chauves-souris, plus de 1 400 espèces, sont les seules à voler pour de bon. Les autres font du parapente.",
+          "source": { "title": "Espace des sciences — Les chauves-souris, reines de la nuit", "url": "https://espace-sciences.org/sciences-ouest/420/actualite/les-chauves-souris-reines-de-la-nuit" }
+        },
+        {
+          "theme": "Sports",
+          "q": "Pourquoi, selon la version la plus connue, le maillot du leader du Tour est-il jaune ?",
+          "hint": "Pensez au journal qui organisait la course.",
+          "choices": [
+            "C’était la couleur la moins chère",
+            "Pour qu’on le voie de loin dans les cols",
+            "C’était la couleur du papier du journal L’Auto",
+            "En hommage au soleil de juillet"
+          ],
+          "answer": 2,
+          "explain": "L’Auto, qui organisait le Tour, était imprimé sur papier jaune. Le maillot apparaît officiellement en 1919, porté d’abord par Eugène Christophe. Un coureur habillé en une de journal.",
+          "source": { "title": "DH — Pourquoi le maillot du leader du Tour est-il jaune ?", "url": "https://www.dhnet.be/sports/cyclisme/tour-de-france/tour-de-france-pourquoi-le-maillot-du-leader-est-il-jaune-62b06bbb7b50a6292b246a9b" }
+        },
+        {
+          "theme": "Histoire de France",
+          "q": "En 1804, quel animal Napoléon impose-t-il comme emblème de l’Empire ?",
+          "hint": "L’oiseau de Jupiter, symbole de la Rome impériale.",
+          "choices": [
+            "Le coq",
+            "Le lion",
+            "L’aigle",
+            "L’éléphant"
+          ],
+          "answer": 2,
+          "explain": "Le Conseil d’État avait choisi le coq, Napoléon préférait le lion ; il impose finalement l’aigle, oiseau de la Rome impériale. Un éléphant était aussi en lice. On l’a échappé belle.",
+          "source": { "title": "Fondation Napoléon — Symbolique impériale", "url": "https://www.napoleon.org/histoire-des-2-empires/symbolique-imperiale/" }
+        },
+        {
+          "theme": "Architecture",
+          "q": "De quelle couleur était peinte la tour Eiffel avant l’Exposition de 1889 ?",
+          "hint": "Rien à voir avec le gris qu’on imagine.",
+          "choices": [
+            "Gris acier",
+            "Rouge, un « rouge Venise »",
+            "Blanc, pour briller la nuit",
+            "Noir, comme une locomotive"
+          ],
+          "answer": 1,
+          "explain": "En 1887-1888, ses pièces reçoivent deux couches de rouge Venise. Elle a porté sept couleurs depuis ; elle a retrouvé en 2024 le jaune brun de 1907. Une dame qui change souvent de robe.",
+          "source": { "title": "Ville de Paris — Les sept couleurs de la tour Eiffel", "url": "https://www.paris.fr/pages/les-sept-couleurs-de-la-tour-eiffel-16827" }
+        },
+        {
+          "theme": "Géographie",
+          "q": "Quel est le département le plus peuplé de France ?",
+          "hint": "Ce n’est pas la capitale, mais il est tout en haut.",
+          "choices": [
+            "Paris",
+            "Les Bouches-du-Rhône",
+            "Le Rhône",
+            "Le Nord"
+          ],
+          "answer": 3,
+          "explain": "Le Nord compte environ 2,6 millions d’habitants, devant Paris puis les Bouches-du-Rhône. Lille, Roubaix, Tourcoing, Dunkerque, Valenciennes : ça fait du monde à la braderie.",
+          "source": { "title": "Insee — Un portrait du Nord, département français le plus peuplé", "url": "https://www.insee.fr/fr/statistiques/2538231" }
+        }
+      ],
+      "sources": [
+        { "title": "Espace des sciences — Les chauves-souris, reines de la nuit", "url": "https://espace-sciences.org/sciences-ouest/420/actualite/les-chauves-souris-reines-de-la-nuit" },
+        { "title": "DH — Pourquoi le maillot du leader du Tour est-il jaune ?", "url": "https://www.dhnet.be/sports/cyclisme/tour-de-france/tour-de-france-pourquoi-le-maillot-du-leader-est-il-jaune-62b06bbb7b50a6292b246a9b" },
+        { "title": "Fondation Napoléon — Symbolique impériale", "url": "https://www.napoleon.org/histoire-des-2-empires/symbolique-imperiale/" },
+        { "title": "Ville de Paris — Les sept couleurs de la tour Eiffel", "url": "https://www.paris.fr/pages/les-sept-couleurs-de-la-tour-eiffel-16827" },
+        { "title": "Insee — Un portrait du Nord, département français le plus peuplé", "url": "https://www.insee.fr/fr/statistiques/2538231" }
+      ]
+    }
+  ]
+}
