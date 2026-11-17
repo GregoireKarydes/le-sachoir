@@ -151,7 +151,13 @@
           "title": "Dans le ventre d’une carte sans contact",
           "text": "L’intérieur d’une carte de transport sans contact : la puce et son antenne, cachées dans le plastique. Les cartes bancaires sans contact cachent le même genre d’antenne.",
           "photo": {
-            "commons": "File:IC Inlay of Standard Ticket Transit Card.jpg"
+            "commons": "File:IC Inlay of Standard Ticket Transit Card.jpg",
+            "credit": "Z22",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:IC_Inlay_of_Standard_Ticket_Transit_Card.jpg",
+            "file": "images/photo-5-ic-inlay-of-standard-ticket-transit.webp",
+            "status": "done"
           }
         },
         {
