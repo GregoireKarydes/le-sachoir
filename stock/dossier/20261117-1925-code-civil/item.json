@@ -1,0 +1,479 @@
+{
+  "added": "20261117-1925",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Le Code civil : 2 281 articles pour ranger le bazar de la France",
+      "tagline": "Des 300 coutumes de l’Ancien Régime à l’article 1240 : comment Bonaparte et quatre juristes ont donné une seule loi à tous les Français",
+      "teaser": "Trois cents lois différentes, quatre juristes, un général qui regarde sa montre : comment la France a écrit sa loi commune.",
+      "minutes": 3,
+      "theme": "Droit",
+      "art": {
+        "subject": "how France went from about 300 local customary laws to one single Civil Code in 1804: the Revolution's failed drafts, four jurists writing in four months, Bonaparte pushing the debates, what the Code changed, the married woman's inferior status and its reforms in 1965 and 1970, the Code spreading abroad, and why it is still in force today",
+      "setting": "a coaching inn and post relay on a French country road around 1780; a revolutionary assembly hall full of paper in the 1790s; a candle-lit council room in the Tuileries palace around 1801; a town hall wedding room in 1804; a Paris bank counter in 1965; a Paris park in 1970; a New Orleans river quay around 1808; a rocky shore on Saint Helena island; a modern university library; a modern Paris street market",
+      "era": "France from 1780 to 1807, Saint Helena after 1815, Paris in 1965 and 1970, and France today",
+      "props": {
+        "watch": "a round gold pocket watch on a gold chain",
+        "code": "a thick brown leather-bound book with gold edges and no visible writing",
+        "speech": "a thick bundle of handwritten paper pages tied with a green ribbon, with no visible writing",
+        "lawbooks": "small fat law books in many different colours, with no visible writing"
+      }
+    },
+      "cast": [
+        {
+          "id": "bonaparte",
+          "name": "Bonaparte",
+          "look": "Bonaparte in 1800, a short wiry young general about thirty years old, thin pale face, lank straight dark-brown hair falling to his collar, a deep navy-blue consul's coat with gold embroidery on collar and cuffs as main colour, white breeches, a red sash, always holding the watch",
+          "role": "the First Consul who wants the code finished at once; impatient and bossy, always snapping open his pocket watch, arms crossed, foot tapping",
+          "file": "cast/dossier-bonaparte.png",
+          "status": "pending"
+        },
+        {
+          "id": "portalis",
+          "name": "Portalis",
+          "look": "Portalis, a very tall and very thin jurist in his fifties, long bony face, white powdered hair tied in a short queue, small round spectacles, light skin, a forest-green frock coat as main colour, black breeches, always holding the speech",
+          "role": "one of the four jurists who write the Code; long-winded orator who never stops talking, one bony finger always raised as if starting a speech",
+          "file": "cast/dossier-portalis.png",
+          "status": "pending"
+        },
+        {
+          "id": "marchand",
+          "name": "Le marchand",
+          "look": "the merchant, a very fat 1780s cloth merchant, ginger mutton-chop sideburns under a grey tricorn hat, ruddy light skin, a mustard-yellow coat and waistcoat as main colour, brown boots, clutching a small leather purse",
+          "role": "a stingy cloth merchant travelling across the kingdom; easily outraged, clutches his purse to his belly whenever the law changes",
+          "file": "cast/dossier-marchand.png",
+          "status": "pending"
+        },
+        {
+          "id": "madeleine",
+          "name": "Madeleine",
+          "look": "Madeleine, a small plump Parisian woman of 1965 in her forties, a tall blonde beehive hairdo, light olive skin, a bright coral-red dress as main colour, a white handbag and white gloves",
+          "role": "a married Parisian of the 1960s who finally gets her own rights; proud show-off, waves every new right in the air like a trophy",
+          "file": "cast/dossier-madeleine.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a candle-lit council room with a long table covered with piles of the lawbooks. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) in the foreground on the left, arms crossed, glaring at the watch; Portalis (very tall, thin, white powdered hair, forest-green coat) on the right, reading the speech aloud, one finger raised, the pages unrolling down to the floor. visual gag: the endless speech versus the watch. wide shot",
+        "cast": ["bonaparte", "portalis"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Le royaume aux 300 lois",
+          "caption": "Vers 1780, sur une route de France. Comment tout un pays a-t-il fini avec une seule loi ?",
+          "bubbles": [
+            { "who": "marchand", "text": "Mon contrat signé à Paris ne vaut rien ici ?", "side": "l" },
+            { "who": "Le notaire", "text": "Ici, monsieur, c’est une autre coutume. Une autre loi.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the yard of a coaching inn on a French country road around 1780, a stagecoach with steaming horses. The merchant (very fat, ginger sideburns, grey tricorn, mustard-yellow coat) on the left, waving a paper contract, red angry flush; a skinny local notary in a black gown and white wig on the right, calmly shaking his head and pointing at one of the lawbooks under his arm. wide shot",
+            "cast": ["marchand"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Avant 1789",
+          "caption": "Avant 1789, la France compte près de 300 coutumes, des lois locales : environ trois par département actuel.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the stagecoach on the country road. The roof of the coach is loaded with a towering, wobbling pile of the lawbooks, twice as high as the coach, tied with ropes; the merchant (very fat, ginger sideburns, grey tricorn, mustard-yellow coat) sits squashed on the driver's bench, clutching his purse to his belly, staring at the viewer in despair. visual gag: a coach crushed by law books. medium wide shot",
+            "cast": ["marchand"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le livre qui va remplacer les coutumes",
+          "text": "La page de titre de l’édition originale du « Code civil des Français », publiée en 1804 : un seul livre pour tout le pays.",
+          "photo": { "commons": "File:Code Civil 1804.png" }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1791-1796",
+          "caption": "En 1791, la Révolution promet un code commun. Mais en 1793, 1794 et 1796, trois projets échouent.",
+          "bubbles": [
+            { "who": "Un député", "text": "Un code, ça se discute. Pendant des années.", "side": "l" },
+            { "who": "Un autre député", "text": "Il nous faudrait quelqu’un qui déteste discuter.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a revolutionary assembly hall buried under mountains of paper drafts. Two exhausted deputies with tricolour sashes slumped on the benches in the foreground, one asleep on a pile of drafts; far behind them, in a bright open doorway, the small dark silhouette of a short man in a bicorne hat, seen from behind the deputies, waiting. cliffhanger mood. high angle",
+            "cast": [],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "title": "Deux France, deux droits",
+          "steps": [
+            "Au nord, à peu près au-dessus de la Loire : les coutumes, comme celle de Paris, écrite en 1510",
+            "Au sud : le droit romain, écrit depuis l’Antiquité",
+            "Résultat : héritage, mariage et contrats changent d’une province à l’autre"
+          ],
+          "joke": "Voltaire s’en moquait : en voyage, on changeait aussi souvent de lois que de chevaux de poste."
+        },
+        {
+          "n": 6,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Quatre juristes, quatre mois",
+          "caption": "En août 1800, Bonaparte, Premier consul depuis neuf mois, confie le code à quatre juristes.",
+          "bubbles": [
+            { "who": "portalis", "text": "Un travail pareil ? Dix ans, au moins.", "side": "r" },
+            { "who": "bonaparte", "text": "Quatre mois.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a study in the Tuileries palace with one desk. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) on the left, sitting on the edge of the desk, snapping the watch open under the nose of Portalis (very tall, thin, white powdered hair, forest-green coat) on the right, who bends down towards him, stunned, the speech slipping from his hands. medium shot",
+            "cast": ["bonaparte", "portalis"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "1800",
+          "caption": "Deux juristes viennent du Nord des coutumes, deux du Sud du droit romain : il faut marier les deux.",
+          "bubbles": [
+            { "who": "Tronchet", "text": "Le Nord a raison.", "side": "l" },
+            { "who": "portalis", "text": "Le Sud aussi. On écrit les deux, mais une seule fois.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a round table seen from above, covered with the lawbooks and quills. On the left a tiny bald old jurist in a black coat pulls the code towards him with both hands; on the right Portalis (very tall, thin, white powdered hair, forest-green coat) pulls it the other way, both leaning back like a tug of war over the book. bird's-eye view",
+            "cast": ["portalis"],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "1801",
+          "caption": "En 1801, Portalis présente le projet. Vraie phrase de son discours : « Les lois sont faites pour les hommes. »",
+          "bubbles": [
+            { "who": "portalis", "text": "… et non les hommes pour les lois. Deuxième partie !", "side": "r" },
+            { "who": "bonaparte", "text": "Il y en a combien ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a candle-lit council room. Portalis (very tall, thin, white powdered hair, forest-green coat) standing on the right, seen from below, reading the speech with one finger raised, the pages hanging down to the floor; Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) seated low on the left, chin in his hand, staring at the watch. low angle",
+            "cast": ["portalis", "bonaparte"],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Portalis, peint par Gautherot",
+          "text": "Juriste provençal, Jean-Étienne-Marie Portalis est l’un des quatre rédacteurs. Son « Discours préliminaire » explique l’esprit du Code.",
+          "photo": { "commons": "File:Jean-Étienne-Marie Portalis by Pierre Gautherot.jpg" }
+        },
+        {
+          "n": 10,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Le Premier consul s’en mêle",
+          "caption": "Dès juillet 1801, les juristes du gouvernement, le Conseil d’État, débattent du projet : plus de cent séances.",
+          "bubbles": [
+            { "who": "bonaparte", "text": "Personne ne sort avant d’avoir fini le mariage.", "side": "l" },
+            { "who": "Un conseiller", "text": "Il est deux heures du matin, Premier consul.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a long council table at night, candles burnt down, a dozen sleepy councillors in dark blue coats slumped over piles of paper. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) wide awake at the head of the table on the left, leaning forward on both fists; one old councillor on the right yawning hugely. wide shot",
+            "cast": ["bonaparte"],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "fact",
+          "tag": "1801",
+          "caption": "Bonaparte préside plus de la moitié des séances. Il tient à garder le divorce, créé en 1792.",
+          "bubbles": [
+            { "who": "Un conseiller", "text": "Le divorce ? L’Église va hurler.", "side": "r" },
+            { "who": "bonaparte", "text": "Une loi doit prévoir les accidents. Tous.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the council room. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) on the left, pointing firmly at a page of the code open on the table; a worried councillor in a dark blue coat on the right, half rising from his chair with both hands raised, a light-blue sweat drop. medium close-up",
+            "cast": ["bonaparte"],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "",
+          "tag": "1802",
+          "caption": "En 1802, le Tribunat, une assemblée qui discute les lois, freine le projet. Bonaparte écarte les opposants.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the tall doorway of an assembly hall. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) holding the door wide open with one hand and the watch in the other, eyes on the watch; a line of grumpy tribunes in long blue robes walks out past him, each one carrying his own chair on his back. visual gag: opponents leaving with their chairs. medium wide shot",
+            "cast": ["bonaparte"],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "fact",
+          "tag": "21 mars 1804",
+          "caption": "Entre 1803 et 1804, 36 lois sont votées, puis réunies le 21 mars 1804 : 2 281 articles.",
+          "bubbles": [
+            { "who": "portalis", "text": "Deux mille deux cent quatre-vingt-un articles. Un par jour pendant six ans.", "side": "r" },
+            { "who": "bonaparte", "text": "Trop long. Mon nom est sur la couverture ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the Tuileries study. Portalis (very tall, thin, white powdered hair, forest-green coat) on the right, proudly holding up the finished code with both hands like a trophy, yellow sparkles; Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) on the left, standing on tiptoe to peer at the cover, unimpressed. medium shot",
+            "cast": ["portalis", "bonaparte"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "explain",
+          "title": "Ce que le Code change pour tous",
+          "steps": [
+            "La même loi de Lille à Marseille",
+            "Tous égaux devant la loi : fini les privilèges de naissance",
+            "La propriété protégée, les droits féodaux balayés",
+            "Les enfants héritent à parts égales",
+            "Le juge applique la loi, il ne l’invente plus"
+          ],
+          "joke": "Le marchand peut enfin ranger sa malle."
+        },
+        {
+          "n": 15,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Égaux… sauf au mariage",
+          "caption": "En 1804, l’article 213 dit : « Le mari doit protection à sa femme, la femme obéissance à son mari. »",
+          "bubbles": [
+            { "who": "La mariée", "text": "Lui, il me protège de quoi, exactement ?", "side": "l" },
+            { "who": "Le maire", "text": "Ce n’est pas précisé, madame.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a town hall wedding room in 1804 with a tricolour sash on the wall. A young bride in a white empire dress on the left, eyebrow raised, arms folded; her tiny skinny groom beside her puffs out his chest; on the right a round mayor with a tricolour sash reads solemnly from the code held at arm's length. medium wide shot",
+            "cast": [],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 16,
+          "kind": "fact",
+          "tag": "1804",
+          "caption": "Sans l’accord de son mari, l’épouse ne peut ni gérer ses biens ni choisir librement son métier.",
+          "bubbles": [
+            { "who": "Une couturière", "text": "Mon atelier, mes clientes, mon argent. Et sa signature.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small sewing workshop in 1804. A seamstress with a brown bun and a lilac apron, pins between her lips, holding a contract out to her husband with an exasperated face; the husband, a sleepy man in a nightcap, signs it without even looking up from his newspaper with no visible writing. close-up",
+            "cast": [],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "",
+          "tag": "13 juillet 1965",
+          "caption": "Loi du 13 juillet 1965 : les femmes mariées gèrent enfin leurs biens et ouvrent un compte seules.",
+          "bubbles": [
+            { "who": "madeleine", "text": "Un compte à mon nom. Sans la signature de Gérard.", "side": "l" },
+            { "who": "Le banquier", "text": "C’est-à-dire que… euh… oui, madame.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a Paris bank counter in 1965 with a wooden grille. Seen over the shoulder of a nervous bald bank clerk in a grey suit, holding a pen frozen in mid-air; Madeleine (small, plump, tall blonde beehive, coral-red dress) on the other side of the counter, slapping her white gloves down on the counter, chin raised, triumphant. over-the-shoulder",
+            "cast": ["madeleine"],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 18,
+          "kind": "fact",
+          "tag": "4 juin 1970",
+          "caption": "Le 4 juin 1970, l’« autorité parentale » partagée remplace la « puissance paternelle » du père seul.",
+          "bubbles": [
+            { "who": "madeleine", "text": "Partagée, Gérard. On décide à deux.", "side": "l" },
+            { "who": "Gérard", "text": "Et les couches, on les change aussi à deux ?", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a Paris park in 1970 with one bench. Madeleine (small, plump, tall blonde beehive, coral-red dress) on the left, waving a document in the air like a trophy; on the right her husband, a lanky man with a thin moustache in a brown suit, holding a crying baby at arm's length with a baby bottle in his other hand, bewildered. medium shot",
+            "cast": ["madeleine"],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 19,
+          "kind": "explain",
+          "title": "Un code qui se réécrit",
+          "steps": [
+            "1816 : le divorce est supprimé",
+            "1884 : il revient, mais seulement pour faute",
+            "1965 : les femmes mariées gèrent leurs biens",
+            "1970 : l’autorité parentale est partagée",
+            "1975 : nouvelle loi, le divorce par consentement mutuel revient"
+          ],
+          "joke": "Le livre change, mais il garde sa couverture."
+        },
+        {
+          "n": 20,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Un livre qui voyage",
+          "caption": "En 1807, il devient « Code Napoléon ». Les conquêtes l’imposent en Belgique, aux Pays-Bas, en Italie.",
+          "bubbles": [
+            { "who": "Un grenadier", "text": "Des canons, des fusils… et deux mille articles de droit.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a muddy road in 1807. A tall grenadier with a huge black bearskin hat and a white-and-blue uniform marching in the foreground, bent double under a big wooden crate full of copies of the code on his back; behind him a cannon pulled by horses. low angle",
+            "cast": [],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 21,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Les systèmes juridiques du monde",
+          "text": "Cette carte colore les familles de droit. Le droit civil, fait de codes écrits, couvre une large part du monde : le Code de 1804 en est un grand modèle.",
+          "photo": { "commons": "File:CarteSystemesJuridiquesFR.png" }
+        },
+        {
+          "n": 22,
+          "kind": "fact",
+          "tag": "1808",
+          "caption": "Il inspire même hors d’Europe : la Louisiane en 1808, puis l’Égypte dans les années 1870 et 1880.",
+          "bubbles": [
+            { "who": "Un avocat", "text": "Les Américains ont acheté la Louisiane. Pas notre droit.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a sunny New Orleans river quay around 1808 with barrels and a sailing ship. A sharp-featured lawyer in a cream linen suit and a straw hat on the right, sitting on a barrel with the code open on his knees, smiling slyly; on the left, far away, two American officials in dark coats walk past carrying a big rolled map. wide shot",
+            "cast": [],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 23,
+          "kind": "",
+          "tag": "Après 1815",
+          "caption": "En exil à Sainte-Hélène, après 1815, Napoléon affirme que son Code vivra plus longtemps que ses victoires.",
+          "bubbles": [
+            { "who": "bonaparte", "text": "Pour une fois, j’ai tout mon temps.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a lonely rocky shore on Saint Helena island facing a wide empty sea. Bonaparte (short, lank dark-brown hair, navy-blue coat) seen from behind, sitting alone on a rock with the code on his knees, holding the watch open in his hand, letting it dangle on its chain. calm, melancholy. from behind",
+            "cast": ["bonaparte"],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 24,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Toujours en vigueur",
+          "caption": "Il avait raison sur un point : une petite moitié des articles d’aujourd’hui datent encore de 1804.",
+          "bubbles": [
+            { "who": "Une étudiante", "text": "Mon examen porte sur un texte écrit sous Napoléon.", "side": "l" },
+            { "who": "Un étudiant", "text": "Et toujours pas de version courte.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a modern university library. A young student with short pink hair and a yellow hoodie on the left, face flat on a very thick red law book, arms dangling; a tall student with dreadlocks in a grey sweater on the right, flicking through the same thick red book, sighing. medium shot",
+            "cast": [],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 25,
+          "kind": "fact",
+          "tag": "1804-2016",
+          "caption": "Exemple : « Tout fait quelconque de l’homme, qui cause à autrui un dommage » oblige à réparer. Même phrase depuis 1804.",
+          "bubbles": [
+            { "who": "Le primeur", "text": "Article 1240, ex-1382. Vous me devez trois melons.", "side": "r" },
+            { "who": "Le livreur", "text": "Napoléon, sérieux ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a modern Paris street market. A delivery rider in a turquoise jacket and helmet on the left, sprawled on the ground next to his fallen scooter, melons rolling everywhere; a stout greengrocer with a grey beard and a green apron on the right, standing over him, holding up the code open at a page with a stern look. medium wide shot",
+            "cast": [],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 26,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "En résumé : en 1804, une seule loi écrite remplace 300 coutumes. Depuis, on la retouche sans la jeter.",
+          "bubbles": [
+            { "who": "portalis", "text": "Pour la nouvelle version, j’ai préparé un petit discours de…", "side": "r" },
+            { "who": "bonaparte", "text": "Quatre mois.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the candle-lit Tuileries study. Close on Bonaparte (short, lank dark-brown hair, navy-blue consul's coat), deadpan, holding the watch right up to the viewer; behind him, blurred and tiny, Portalis (very tall, thin, white powdered hair, forest-green coat) unrolling the speech, which pours over the floor like a carpet. visual gag: the endless speech again. close-up",
+            "cast": ["bonaparte", "portalis"],
+            "file": "images/dossier-20.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Stendhal lisait quelques pages du Code civil chaque matin pour trouver le ton sec de La Chartreuse de Parme.",
+        "source": "Maison de Balzac — The Civil Code"
+      },
+      "story": "Avant 1789, la France n’a pas une loi, mais près de 300 coutumes : des règles locales nées des usages. Au nord, à peu près au-dessus de la Loire, on suit ces coutumes, comme celle de Paris, écrite en 1510 ; au sud, le droit romain. Héritage, mariage et contrats changent donc d’une province à l’autre. Voltaire s’en moquait : en voyage, on changeait aussi souvent de lois que de chevaux de poste.\nEn 1791, la Révolution promet un code commun, mais les projets de 1793, 1794 et 1796 échouent. En août 1800, le Premier consul Bonaparte confie le travail à quatre juristes : Tronchet et Bigot de Préameneu, venus des pays de coutumes, Portalis et Maleville, du droit écrit. En quatre mois, ils rédigent un projet. Dès juillet 1801, le Conseil d’État en débat en plus de cent séances, dont plus de la moitié présidées par Bonaparte, qui tient à garder le divorce. En 1802, il écarte les opposants du Tribunat. Entre 1803 et 1804, 36 lois sont votées, puis réunies le 21 mars 1804 : 2 281 articles.\nLe Code fixe l’égalité devant la loi, protège la propriété et partage l’héritage à égalité entre les enfants. Mais l’épouse doit « obéissance » à son mari : il faut attendre 1965 pour qu’elle gère ses biens seule, et 1970 pour l’autorité parentale partagée.\nRebaptisé Code Napoléon en 1807, il inspire la Louisiane, l’Égypte et une grande partie de l’Europe. Aujourd’hui encore, une petite moitié de ses articles date de 1804.",
+      "sources": [
+        { "title": "Hérodote — 21 mars 1804, promulgation du Code civil", "url": "https://www.herodote.net/21_mars_1804-evenement-18040322.php" },
+        { "title": "Fondation Napoléon — Le Code civil des Français, quelques points de repère", "url": "https://www.napoleon.org/histoire-des-2-empires/articles/le-code-civil/" },
+        { "title": "Fondation Napoléon — Le Code civil (21 mars 1804) : naissance, principes et postérité", "url": "https://www.napoleon.org/enseignants/documents/le-code-civil-21-mars-1804-naissance-principes-et-posterite" },
+        { "title": "Wikipedia — Old French law", "url": "https://en.wikipedia.org/wiki/Old_French_law" },
+        { "title": "Wikipedia — Tribunat", "url": "https://en.wikipedia.org/wiki/Tribunat" },
+        { "title": "Hérodote — Le droit du divorce vu par Bonaparte", "url": "https://www.herodote.net/Le_droit_du_divorce_vu_par_Bonaparte-article-1587.php" },
+        { "title": "Justice Canada — Portalis, Discours préliminaire du premier projet de Code civil", "url": "https://justice.gc.ca/fra/pr-rp/sjc-csj/pji-ilp/code/index.html" },
+        { "title": "Criminocorpus — Code civil, article 213 (version de 1804)", "url": "https://criminocorpus.org/fr/legislation/droit/versions/718/213/pdf/" },
+        { "title": "Vie publique — Mariage, divorce et autorité parentale : deux siècles d’évolution", "url": "https://www.vie-publique.fr/eclairage/24161-mariage-divorce-et-autorite-parentale-deux-siecles-devolution" },
+        { "title": "Info.gouv — « La femme mariée avait le statut de mineure »", "url": "https://www.info.gouv.fr/actualite/la-femme-mariee-avait-le-statut-de-mineure-au-meme-titre-que-les-enfants" },
+        { "title": "Universalis — Code Napoléon, l’expansion", "url": "https://www.universalis.fr/encyclopedie/code-napoleon/3-expansion/" },
+        { "title": "Legalplace — Article 1382 devenu 1240 du Code civil", "url": "https://www.legalplace.fr/guides/article-1382-code-civil-1240/" },
+        { "title": "Maison de Balzac — The Civil Code (Stendhal)", "url": "https://accueilmaisondebalzac.paris.fr/en/?p=1308" }
+      ]
+    }
+  ]
+}
