@@ -1,0 +1,209 @@
+{
+  "added": "20261117-2046",
+  "formats": [
+    {
+      "id": "notice",
+      "label": "La Notice",
+      "title": "Votre carte sans contact n’a pas de pile : c’est le terminal qui la réveille",
+      "tagline": "Une antenne cachée dans le plastique, un champ magnétique timide, et une file d’attente qui s’allonge",
+      "teaser": "Bastien agite sa carte à 30 cm de la machine et accuse la batterie. Problème : sa carte n’en a jamais eu.",
+      "minutes": 2,
+      "theme": "Informatique et numérique",
+      "art": {
+        "subject": "how a contactless bank card with no battery is powered for a split second by the magnetic field of the payment terminal, through a coil antenna hidden inside the card",
+        "setting": "a small French bakery in Lille on a Saturday morning: a wooden counter with baguettes in baskets, a glass display of pastries, a short queue of customers",
+        "era": "today",
+        "props": {
+          "card": "a plain blue plastic bank card with a small gold chip, no text, no logo",
+          "terminal": "a small black handheld card payment terminal with a blank grey screen and a keypad"
+        }
+      },
+      "cast": [
+        {
+          "id": "bastien",
+          "name": "Bastien",
+          "look": "Bastien, a short wiry young man in his twenties, warm beige skin, dark-brown hair in a small messy man-bun, thin dark stubble, a puffy sunflower-yellow puffer jacket as main colour, black joggers, white sneakers, the card always in his hand",
+          "file": "cast/notice-bastien.png",
+          "status": "pending",
+          "role": "the hurried customer of bad faith: always blames the machine, never himself; waves his arms, puffs out his chest when he thinks he is right"
+        },
+        {
+          "id": "odette",
+          "name": "Odette",
+          "look": "Odette, a tall broad-shouldered baker in her fifties, deep brown skin, steel-grey hair cut in a sharp short bob, a pencil behind her ear, a flour-dusted navy-blue apron as main colour over a white baker's blouse, flour on her forearms",
+          "file": "cast/notice-odette.png",
+          "status": "pending",
+          "role": "the bakery owner, a former electronics technician, dry and deadpan; answers without raising her voice, one eyebrow up, arms crossed"
+        }
+      ],
+      "cover": {
+        "prompt": "a small French bakery with baguettes in baskets. Bastien (short, wiry, dark man-bun, sunflower-yellow puffer jacket) on the left, holding the card at arm's length far above the terminal and shaking it like a thermometer, frustrated; Odette (tall, broad, steel-grey bob, navy-blue floury apron) behind the counter on the right, arms crossed, one eyebrow raised, the terminal on the counter between them. medium wide shot",
+        "cast": [
+          "bastien",
+          "odette"
+        ],
+        "file": "images/notice-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Samedi, 8 h",
+          "caption": "Boulangerie de Lille. Bastien agite sa carte à 30 cm du terminal : rien. Comment paie-t-on sans contact, au juste ?",
+          "bubbles": [
+            {
+              "who": "bastien",
+              "text": "Ma carte n’a plus de batterie. Vous avez un chargeur ?",
+              "side": "l"
+            },
+            {
+              "who": "odette",
+              "text": "Elle n’a jamais eu de batterie.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "inside a small French bakery, baguettes in baskets and a glass pastry display, a short queue of blurry customers behind. Bastien (short, wiry, dark man-bun, sunflower-yellow puffer jacket) on the left, swinging the card high in the air far from the terminal, arm fully stretched, annoyed; Odette (tall, broad, steel-grey bob, navy-blue floury apron) behind the counter on the right, holding the terminal flat on her palm, unimpressed. wide shot",
+            "cast": [
+              "bastien",
+              "odette"
+            ],
+            "file": "images/notice-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le principe",
+          "caption": "La carte n’a ni pile ni batterie. C’est le terminal qui lui prête de l’énergie, par un champ magnétique invisible.",
+          "bubbles": [
+            {
+              "who": "odette",
+              "text": "C’est ma machine qui allume votre carte. Seulement de très près.",
+              "side": "r"
+            },
+            {
+              "who": "bastien",
+              "text": "Elle est éteinte, là ? Depuis quand ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "behind the bakery counter. Odette (tall, broad, steel-grey bob, pencil behind her ear, navy-blue floury apron) on the right, holding the terminal up close to her face and tapping it with one floury finger, explaining calmly; Bastien (short, wiry, dark man-bun, sunflower-yellow puffer jacket) on the left in the foreground, seen from the side, staring at his card with horror as if it were a dead pet. medium close-up",
+            "cast": [
+              "odette",
+              "bastien"
+            ],
+            "file": "images/notice-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Comment une carte sans pile se réveille",
+          "steps": [
+            "Le terminal fait vibrer un champ magnétique 13,56 millions de fois par seconde",
+            "Dans la carte, une antenne, un fil enroulé, fait le tour du plastique",
+            "Tout près du terminal, ce champ fait naître un petit courant dans l’antenne : c’est l’induction",
+            "Ce courant allume la puce, qui répond au terminal par le même champ"
+          ],
+          "joke": "Votre carte dort dans votre poche. Le terminal la réveille, le temps d’un bip."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Et les pirates ?",
+          "caption": "Ce champ faiblit très vite : au-delà de quelques centimètres, plus rien. Il faut presque toucher le terminal.",
+          "bubbles": [
+            {
+              "who": "bastien",
+              "text": "Et le gars derrière moi, il peut me pirater à distance ?",
+              "side": "l"
+            },
+            {
+              "who": "odette",
+              "text": "À quatre centimètres ? Il serait dans votre doudoune.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "in the bakery queue. Bastien (short, wiry, dark man-bun, sunflower-yellow puffer jacket) in the foreground hugging his card against his chest and glaring suspiciously back over his shoulder at a tall man in a grey coat behind him, seen from behind, who is innocently reading a newspaper; Odette (tall, broad, steel-grey bob, navy-blue floury apron) in the background behind the counter, rolling her eyes. over-the-shoulder",
+            "cast": [
+              "bastien",
+              "odette"
+            ],
+            "file": "images/notice-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Dans le ventre d’une carte sans contact",
+          "text": "L’intérieur d’une carte de transport sans contact : la puce et son antenne, cachées dans le plastique. Les cartes bancaires sans contact cachent le même genre d’antenne.",
+          "photo": {
+            "commons": "File:IC Inlay of Standard Ticket Transit Card.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "En résumé : la carte n’a aucune énergie à elle. Le terminal la lui prête, à quelques centimètres, le temps du paiement.",
+          "bubbles": [
+            {
+              "who": "bastien",
+              "text": "Bip ! Voilà. Je l’ai rechargée.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "on the bakery counter. Bastien (short, wiry, dark man-bun, sunflower-yellow puffer jacket) leaning over the counter, pressing the card flat onto the terminal with both hands, eyes closed, chin up, triumphant smug grin, yellow sparkles around the card. close-up",
+            "cast": [
+              "bastien"
+            ],
+            "file": "images/notice-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le champ magnétique d’un terminal sans contact oscille 13,56 millions de fois par seconde : la fréquence commune à toutes ces cartes.",
+        "source": "TechTarget — Near-field communication (NFC)"
+      },
+      "story": "Une carte bancaire sans contact ne contient ni pile ni batterie. Elle cache pourtant une puce électronique et, tout autour du plastique, une antenne : un fil enroulé en boucle, invisible à l’œil nu. C’est le terminal de paiement qui fournit l’énergie.\nLe terminal fait circuler un courant dans sa propre antenne et crée un champ magnétique qui change de sens 13,56 millions de fois par seconde. Quand on approche la carte à quelques centimètres, ce champ traverse la boucle de fil et y fait naître un petit courant électrique : c’est l’induction électromagnétique, le même principe que celui des plaques à induction ou des chargeurs sans fil. Ce courant suffit à allumer la puce le temps d’un échange, et la puce répond au terminal par le même champ. La technologie s’appelle NFC, pour « communication en champ proche ».\nCe champ s’affaiblit très vite avec la distance : il faut tenir la carte à 3 ou 4 cm du terminal, ce qui rend l’espionnage de loin très difficile. Le code à 4 chiffres et le code à 3 chiffres du dos de la carte ne sont pas transmis pendant un paiement sans contact. Par sécurité, chaque banque fixe aussi un plafond cumulé (souvent autour de 100 € par jour ou par semaine) au-delà duquel il faut taper son code.",
+      "sources": [
+        {
+          "title": "TechTarget — Near-field communication (NFC)",
+          "url": "https://www.techtarget.com/enterprise-software/definition/near-field-communication-NFC?amp=1"
+        },
+        {
+          "title": "Tangem — Comment fonctionne le NFC (énergie par induction, sans batterie)",
+          "url": "https://tangem.com/fr/learning-hub/post/how-does-tangem-nfc-work/"
+        },
+        {
+          "title": "INC — Le paiement sans contact",
+          "url": "https://www.inc-conso.fr/content/le-paiement-sans-contact-0"
+        },
+        {
+          "title": "Tom’s Guide — NFC : fonctionnement, utilisations",
+          "url": "https://www.tomsguide.fr/nfc-utilisations-fonctionnement-activation-tout-savoir-sur-la-technologie-de-communication-sans-contact/"
+        },
+        {
+          "title": "Wikimedia Commons — IC Inlay of Standard Ticket Transit Card",
+          "url": "https://Www.Wikipedia.org/wiki/File:IC_Inlay_of_Standard_Ticket_Transit_Card.jpg"
+        }
+      ]
+    }
+  ]
+}
