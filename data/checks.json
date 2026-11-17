@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T01:56+01:00",
+ "updated_at": "2026-11-17T02:00+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -63,17 +63,6 @@
    "warnings": [
     "dossier : fiche harold : même tête qu'un personnage récent (black hair, orange main colour : 2026-11-14/dossier) ; changer coiffure ou couleur dominante",
     "dossier : fiche awa : même tête qu'un personnage récent (black hair, purple main colour : 2026-11-11/insolite, 2026-11-14/dossier) ; changer coiffure ou couleur dominante"
-   ]
-  },
-  {
-   "path": "stock/insolite/20261114-0100-lempereur-qui-taxait-le-pipi",
-   "titles": {
-    "insolite": "L’empereur qui taxait le pipi"
-   },
-   "errors": [],
-   "warnings": [
-    "insolite : fiche vespasien : même tête qu'un personnage récent (bald hair, purple main colour : 2026-11-08/dossier) ; changer coiffure ou couleur dominante",
-    "insolite : fiche titus : même tête qu'un personnage récent (black hair, teal main colour : 20261117-0151-frigo-chaleur-a-la-porte/notice) ; changer coiffure ou couleur dominante"
    ]
   },
   {

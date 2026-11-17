@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T01:56+01:00",
+ "updated_at": "2026-11-17T02:00+01:00",
  "stock": {
   "cultureg": [
    {
@@ -23,7 +23,7 @@
     "path": "stock/cultureg/20261114-0359-do-re-mi-tube-voix-enrouees",
     "name": "20261114-0359-do-re-mi-tube-voix-enrouees",
     "added": "20261114-0359",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
     "theme": "Musique",
@@ -31,7 +31,7 @@
     "minutes": 2,
     "cases": 10,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 8,
     "images_total": 8,
     "failed": 0,
     "redo": 0
@@ -48,7 +48,7 @@
     "minutes": 2,
     "cases": 9,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 2,
     "images_total": 8,
     "failed": 0,
     "redo": 0
@@ -127,7 +127,7 @@
     "path": "stock/insolite/20261114-0100-lempereur-qui-taxait-le-pipi",
     "name": "20261114-0100-lempereur-qui-taxait-le-pipi",
     "added": "20261114-0100",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "L’empereur qui taxait le pipi",
     "theme": "Histoire ancienne",
@@ -135,7 +135,7 @@
     "minutes": 1,
     "cases": 9,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 8,
     "images_total": 8,
     "failed": 0,
     "redo": 0
@@ -354,7 +354,7 @@
     "path": "stock/dossier/20261114-1927-nucleaire-tiroir-ferme",
     "name": "20261114-1927-nucleaire-tiroir-ferme",
     "added": "20261114-1927",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
     "theme": "Sciences physiques",
@@ -362,7 +362,7 @@
     "minutes": 3,
     "cases": 27,
     "photos": 3,
-    "images_done": 0,
+    "images_done": 22,
     "images_total": 22,
     "failed": 0,
     "redo": 0
