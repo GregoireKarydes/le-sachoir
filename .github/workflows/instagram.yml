@@ -1,7 +1,8 @@
 name: Instagram
 
 # 17 novembre 2026. La tâche Claude « Le Sachoir – Instagram » pousse chaque matin social/instagram/<date>/post.json.
-# 1. Rendu (à chaque push d'un post.json) : carrousel 1080 x 1350 ou Reel 1080 x 1920 avec voix Kokoro. Les images et
+# 1. Rendu (à chaque push d'un post.json) : carrousel 1080 x 1350, Reel 1080 x 1920 avec voix Kokoro, ou Reel « sitcom »
+#    (dessin animé Max et le Prof, voix Microsoft Edge, `pipeline/sitcom_render.py`). Les images et
 #    vidéos vont dans un artefact « instagram-<date> » gardé 7 jours (jamais dans git : seul render.json est commité),
 #    puis la Publication est relancée : elle récupère l'artefact et met les fichiers en ligne sur le site.
 # 2. Envoi (9 h 10, 10 h 40 et 11 h 40 à Paris l'hiver) : le post du jour part chez Buffer, programmé à son heure
@@ -56,7 +57,9 @@ jobs:
                   need.append(pj.parent.name)
           print("render=" + ("yes" if need else "no"))
           print("artifact=instagram-" + (max(need) if need else "none"))
-          print("reel=" + ("yes" if any(json.loads((Path("social/instagram") / n / "post.json").read_text()).get("kind") == "reel" for n in need) else "no"))
+          kinds = [json.loads((Path("social/instagram") / n / "post.json").read_text()).get("kind") for n in need]
+          print("reel=" + ("yes" if "reel" in kinds else "no"))
+          print("sitcom=" + ("yes" if "sitcom" in kinds else "no"))
           EOF
       - name: Voix (Kokoro)
         if: steps.need.outputs.reel == 'yes'
@@ -64,8 +67,14 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng ffmpeg
           pip install torch --index-url https://download.pytorch.org/whl/cpu
           pip install "kokoro>=0.9.4" soundfile
+      - name: Sitcom (voix Microsoft Edge, navigateur, ffmpeg)
+        if: steps.need.outputs.sitcom == 'yes'
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install edge-tts playwright numpy scipy soundfile
+          python -m playwright install --with-deps chromium
       - name: ffmpeg (Reel du carrousel culture)
-        if: steps.need.outputs.render == 'yes' && steps.need.outputs.reel != 'yes'
+        if: steps.need.outputs.render == 'yes' && steps.need.outputs.reel != 'yes' && steps.need.outputs.sitcom != 'yes'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Rendu
         if: steps.need.outputs.render == 'yes'

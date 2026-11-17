@@ -71,7 +71,7 @@ def tiktok_channel(key):
 
 def tiktok_title(post):
     slides = post.get("slides") or []
-    first = slides[0]["text"] if slides else (post.get("hook") or "Le Sachoir")
+    first = slides[0]["text"] if slides else (post.get("hook") or (post.get("episode") or {}).get("band", "").replace("\n", " ") or "Le Sachoir")
     t = " ".join(first.replace("**", "").split())
     return t if len(t) <= 90 else t[:87].rsplit(" ", 1)[0] + "…"
 
@@ -84,7 +84,7 @@ def build_tiktok_input(folder, post, render, channel, due):
         "schedulingType": "automatic",
         "mode": "customScheduled",
         "dueAt": due.astimezone(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "assets": [{"image": {"url": url + f}} for f in render["tiktok_files"]],
+        "assets": [{"video": {"url": url + f}} if f.endswith(".mp4") else {"image": {"url": url + f}} for f in render["tiktok_files"]],
         "metadata": {"tiktok": {"title": tiktok_title(post)}},
     }
 
@@ -113,8 +113,8 @@ def due_at(post, now):
 def build_input(folder, post, render, channel, due):
     url = f"{BASE}social/instagram/{folder}/"
     alt = (post.get("alt") or post.get("hook") or "Le Sachoir")[:400]
-    if render.get("kind") == "reel":
-        assets = [{"video": {"url": url + render["files"][0], "metadata": {"thumbnailOffset": 1500 if render.get("version") == 2 else 500}}}]
+    if render.get("kind") in ("reel", "sitcom"):
+        assets = [{"video": {"url": url + render["files"][0], "metadata": {"thumbnailOffset": 1500 if render.get("version") == 2 or render.get("kind") == "sitcom" else 500}}}]
         ig_type = "reel"
     else:
         assets = [{"image": {"url": url + f, "metadata": {"altText": alt}}} for f in render["files"]]

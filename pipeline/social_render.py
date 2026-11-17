@@ -471,6 +471,8 @@ def fingerprint(post):
     if post.get("version") == 2:
         keys = ("kind", "version", "story", "title", "number", "series_label", "beats", "slides", "tone", "end",
                 "reel_copy", "format")
+    if post.get("kind") == "sitcom":
+        keys = ("kind", "story", "episode")
     keep = {k: post.get(k) for k in keys}
     return hashlib.sha1(json.dumps(keep, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12]
 
@@ -486,6 +488,9 @@ def render(day_dir: Path, force=False) -> bool:
     if post.get("kind") == "carousel" and post.get("version") == 2:
         import carousel_v2  # Carrousel v2 « récit en diapositives » (17 novembre 2026)
         info = carousel_v2.render(post, day_dir)
+    elif post.get("kind") == "sitcom":
+        import sitcom_render  # Reel « sitcom » Max et le Prof (17 novembre 2026)
+        info = sitcom_render.render(post, day_dir)
     elif post.get("kind") == "reel" and post.get("version") == 2:
         import reel_v2  # Reel v2 « La question du jour » (17 novembre 2026)
         info = reel_v2.render(post, day_dir)

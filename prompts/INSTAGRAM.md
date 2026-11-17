@@ -8,6 +8,9 @@ publication de 5 h, tu prépares **DEUX carrousels** tirés de l'édition du jou
 **carrousel « récit en diapositives »** (partie A). Les Reels (partie B) sont **en pause** : n'en fais pas tant que Greg
 ne l'a pas demandé.
 
+**Le Reel « sitcom » (partie C), lui, est quotidien** depuis le 17 novembre 2026 : il a sa propre tâche
+(« Le Sachoir – Reel sitcom ») ; la tâche des carrousels ne s'en occupe pas.
+
 **Le but : un maximum de vues et de partages**, puis amener du monde sur lesachoir.fr (lien en bio `lesachoir.fr/insta`,
 qui ouvre l'histoire liée au post).
 
@@ -301,3 +304,103 @@ Un temps = une phrase dite = un plan à l'écran. 7 à 10 temps, **55 à 80 mots
 Avant de finir : compte les mots dits (55 à 80), relis chaque phrase à voix haute, vérifie que l'accroche passe le test
 « à qui on l'enverrait ? ». Valide le JSON (`python3 -m json.tool`), commit « Instagram <date> : <title> »,
 `git pull --rebase`, `git push origin main`. Le push déclenche le rendu ; ne touche à rien d'autre.
+
+# C. Le Reel « sitcom » : Max et le Prof (tous les jours, tâche « Le Sachoir – Reel sitcom »)
+
+Décision de Greg (17 novembre 2026) : **un Reel par jour en plus des deux carrousels**, en dessin animé façon sitcom de
+science-fiction, aux couleurs du Sachoir, publié sur Instagram et TikTok. Tu n'écris que
+`social/instagram/<date>-sitcom/post.json` ; GitHub Actions fabrique la vidéo (`pipeline/sitcom_render.py` : voix,
+dessin, musique, mixage) et l'envoie à Buffer. Publication à **20:30** (`"time": "20:30"`).
+
+## C1. La série
+- **MAX** (sweat violet, casque vert autour du cou) : curieux, s'inquiète vite. Il pose LA question, la même que le
+  spectateur. Il tutoie. Voix : Microsoft Rémy.
+- **LE PROF** (blouse verte, nœud papillon rouge, deux crayons derrière les oreilles) : pince-sans-rire, répond court,
+  a un temps d'avance. Voix : Microsoft Henri.
+- **La Machine à Savoir** : une grosse ampoule dans le labo ; elle ouvre un portail jaune (le jaune Sachoir n'appartient
+  qu'à elle) vers un ou deux « mondes » où se trouve la réponse. Retour au labo pour la chute.
+- **Le Bidule** : une petite créature de couleur qui ne parle pas. Elle peut apparaître dans un monde (`"bidule": true`).
+- Mécanique de l'humour : un tout petit problème réglé avec des moyens énormes ; le contraste entre la panique de Max et
+  le calme du Prof ; une chute après un silence ; la dernière réplique fait écho à la première (le Reel boucle).
+
+## C2. Avant d'écrire
+1. Lis `social/instagram/ig-skills/README.md`, puis les skills `skills/ig-reel/SKILL.md` (et `hooks.json`),
+   `skills/ig-human/SKILL.md` et `skills/ig-caption/SKILL.md`, et `social/instagram/voice.md` et `social/instagram/swipe.md`.
+2. Vérifie que l'édition du jour est publiée (`editions/index.json`) et que `social/instagram/<date>-sitcom/` n'existe pas.
+3. Lis les 14 derniers `social/instagram/*-sitcom/post.json` : jamais deux fois le même sujet ni deux fois de suite le
+   même monde (`set`).
+4. Si `social/instagram/stats.md` existe (bilan des vues et partages), garde les formules qui marchent, abandonne celle
+   qui fait le moins.
+
+## C3. Le sujet
+- Une BD de l'édition du jour (de préférence `insolite`, `origine`, `notice` ou `cultureg` ; l'actu seulement si le sujet
+  est léger), **différente des deux carrousels du jour** si ceux-ci existent déjà. Si rien ne marque 9/12 sur la grille de
+  la partie A2, élargis aux BD des 30 derniers jours jamais postées en Reel sitcom.
+- Le test : « à qui on l'enverrait ? ». Si la réponse est « à personne », change de sujet.
+- Les faits viennent de la BD (déjà vérifiée). Tout ajout : 2 sources sérieuses dans `sources` (WebSearch).
+
+## C4. L'accroche (méthode `ig-reel`)
+- Écris **3 accroches** à partir des formules de `hooks.json` (contradiction, fait absurde mais vrai, question piège,
+  chiffre étonnant, idée reçue), en français parlé, 5 à 12 mots. Lance
+  `python3 social/instagram/ig-skills/skills/ig-reel/hookscore.py --hook "<accroche>"` pour chacune (note indicative :
+  le script est réglé sur l'anglais), et garde la meilleure à ton jugement : concrète, une tension, la surprise devant.
+- L'accroche est la **première réplique de Max** (`text`) et, raccourcie en 2 lignes de 18 caractères au plus, le
+  bandeau jaune `band` (affiché pendant toute la première scène ; c'est aussi la couverture). Jamais de définition, de
+  date ou de « Le saviez-vous ? ».
+
+## C5. Le script (25 à 40 s, 8 à 13 répliques, 75 à 110 mots en tout)
+- Scène 1 `home` (2 à 4 répliques) : Max pose la question, le Prof répond en un mot qui relance (« Pire. »), Max réagit.
+  Le Prof ouvre ensuite le portail tout seul (automatique, pas de réplique à écrire).
+- Scène 2 `world` (2 à 4 répliques) : le lieu ou l'époque de la réponse. Première réplique du Prof = l'explication
+  principale (une seule idée). Max réagit ou relance.
+- Scène 3 `world` facultative (1 à 3 répliques) : le détail qui surprend, ou la fausse piste prise au pied de la lettre
+  (le gag), selon ce qui est le plus drôle.
+- Scène 4 `home` (2 ou 3 répliques) : Max pose la question de la fin ; le Prof donne la chute après un silence
+  (`"pause": 0.8` sur sa réplique) ; Max conclut d'une réplique courte qui fait écho à l'accroche.
+- Chaque réplique : une phrase dite, 14 mots au plus, du français oral naturel, ponctuation pour l'intonation (« ? »,
+  « … »). Écris les nombres en lettres dans `say` si la voix risque de mal les lire (`text` garde les chiffres pour les
+  sous-titres). Passe le texte au crible de `ig-human` (pas de tournures d'IA).
+- Mondes (`set`) : `paris-ancien`, `ville`, `ciel`, `espace`, `mer`, `nature`, `antiquite`, `moyen-age`, `desert`, `neige`,
+  `cuisine`, `usine`, `corps`, `bureau`, `musee`, `futur`. Palette facultative (`palette`) : `violet`, `marine`, `vert`,
+  `rouge`, `orange`, `beige`, `nuit`, `menthe` ; deux mondes successifs de palettes très différentes.
+- Dans chaque monde, l'écran flottant montre le sujet : `image` = `{"bd": <n° de case de la BD liée>}` (de préférence) ou
+  `{"commons": "<mots-clés anglais>"}` (Wikimedia Commons, domaine public) ; sans image, il affiche `big` (14 caractères
+  au plus : un mot, un nombre, un lieu) et `small` (20 caractères au plus). Avec une image, `big` s'affiche sur une
+  plaque dessous. `tag` (22 caractères au plus, en capitales) s'écrit en haut comme un terminal.
+- Émotions (`emo`) — Max : `curious`, `panic`, `shock`, `happy`, `proud`, `bored`, `think`, `wow` ; le Prof : `deadpan`,
+  `smug`, `tired`, `alarmed`, `explain`, `happy`. `"shake": true` sur une réplique de choc (secousse et gros plan).
+  `react` facultatif : `{"max": "shock"}` pour la réaction de l'autre pendant la réplique.
+- Interdits : politique partisane, personne réelle vivante nommée, moquerie blessante, marques, personnages ou répliques
+  d'une série existante.
+
+## C6. Le fichier
+```json
+{
+  "date": "<AAAA-MM-JJ>", "kind": "sitcom", "time": "20:30",
+  "story": {"edition": "<AAAA-MM-JJ>", "format": "<id>"},
+  "episode": {
+    "band": "DES RATS ONT EU\nUN AVOCAT ?!",
+    "board": ["QUESTION DU JOUR", "procès de rats ?"],
+    "scenes": [
+      {"kind": "home", "lines": [
+        {"who": "max", "emo": "curious", "text": "Prof… c'est vrai qu'on a fait un procès à des rats ?"},
+        {"who": "prof", "emo": "deadpan", "text": "Pire. Ils avaient un avocat."},
+        {"who": "max", "emo": "shock", "shake": true, "text": "Un avocat ?!"}]},
+      {"kind": "world", "set": "moyen-age", "tag": "AUTUN, VERS 1520", "big": "AUTUN · 1520", "small": "Bourgogne",
+       "image": {"bd": 1}, "bidule": true, "lines": [
+        {"who": "prof", "emo": "explain", "text": "Autun, en Bourgogne. Des rats dévorent les récoltes : on les convoque au tribunal."},
+        {"who": "max", "emo": "think", "text": "Et… ils sont venus ?"}]},
+      {"kind": "home", "lines": [
+        {"who": "max", "emo": "curious", "text": "Et alors, ils ont été condamnés ?"},
+        {"who": "prof", "emo": "smug", "pause": 0.8, "text": "Zéro condamnation."},
+        {"who": "max", "emo": "proud", "text": "Je veux le même avocat."}]}
+    ],
+    "end": {"url": "lesachoir.fr", "lines": ["Une question comme ça,", "chaque matin, en BD."]}
+  },
+  "caption": "<1re ligne : l'accroche ou la question>\n\n<2 lignes de réponse>\n\n<lien en bio>\n\nEnvoie-le à <qui>.",
+  "hashtags": ["lesachoir", "culturegenerale", "..."],
+  "sources": ["<url>"]
+}
+```
+Légende (méthode `ig-caption`) : la première ligne doit donner envie d'ouvrir avant le « … plus » ; une seule demande, en
+priorité « Envoie-le à celui qui… » ; 4 à 6 hashtags. Valide avec `python3 -m json.tool`.
