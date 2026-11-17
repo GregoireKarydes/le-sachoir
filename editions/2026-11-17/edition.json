@@ -55,7 +55,7 @@
         }
       ],
       "cover": {
-        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. The foot of the tower in a flat sandy landscape, the ship held high in its two arms, pale yellow background. syndicaliste (short and sturdy, black afro hair, bright red puffer vest, silver whistle) on the left, hugging the iceblock against her chest, shivering a little; ingenieure (very tall and lanky, auburn ponytail, mustard yellow overalls, white hard hat) on the right, head tilted far back, pointing up at the ship in delight. Wide shot.",
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A flat sandy landscape; in the background, a giant grey steel launch tower rises far above the characters, much taller than them, its two huge mechanical arms gripping a tall shiny silver rocket stage (a rocket, not a boat, no hull, no deck). Pale yellow background. syndicaliste (short and sturdy, black afro hair, bright red puffer vest, silver whistle) on the left, hugging the iceblock against her chest; ingenieure (very tall and lanky, auburn ponytail, mustard yellow overalls, white hard hat) on the right, head tilted far back, pointing up at the rocket in delight. Only one block of ice, in the syndicaliste's arms. Wide shot.",
         "cast": [
           "syndicaliste",
           "ingenieure"
@@ -63,7 +63,8 @@
         "file": "images/actu-cover.webp",
         "status": "done",
         "attempts": 1,
-        "via": "fal"
+        "via": "fal",
+        "redo": true
       },
       "cases": [
         {
@@ -89,7 +90,8 @@
             "file": "images/actu-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -172,7 +174,8 @@
             "file": "images/actu-02.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -220,7 +223,8 @@
             "file": "images/actu-03.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {

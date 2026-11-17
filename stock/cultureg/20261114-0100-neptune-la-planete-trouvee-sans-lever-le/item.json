@@ -56,14 +56,15 @@
             }
           ],
           "image": {
-            "prompt": "a bare observatory room with one big telescope pointing at a small planet through a window. François (on the left) tearing at his wild hair, eyes bulging; Urbain (on the right) arms crossed, calm, one eyebrow raised, unimpressed. medium shot",
+            "prompt": "a bare observatory room with the telescope pointing at a small planet through a window. TWO men in the picture. François (short and round, wild curly white hair, royal blue coat, long yellow scarf) on the left, tearing at his hair with both hands, eyes bulging; Urbain (tall, thin and stiff, slicked-back dark hair, long sideburns, bright red waistcoat under a black frock coat) on the right, arms crossed, calm, one eyebrow raised, unimpressed. medium wide shot",
             "cast": [
               "arago",
               "leverrier"
             ],
             "file": "images/cultureg-01.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -91,7 +92,8 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -119,7 +121,8 @@
             ],
             "file": "images/cultureg-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -153,7 +156,8 @@
             ],
             "file": "images/cultureg-04.webp",
             "status": "done",
-            "attempts": 2
+            "attempts": 2,
+            "qa": "ok"
           }
         },
         {
@@ -183,13 +187,14 @@
           "caption": "Écart avec la prédiction : moins d’un degré, à peine deux fois la largeur de la Lune. On la baptise Neptune.",
           "bubbles": [],
           "image": {
-            "prompt": "plain background. Urbain (in the centre) extreme close-up, eyes half closed, a tiny smug smile, nose high in the air, calmly blowing on the tip of his quill like a gunslinger. close-up",
+            "prompt": "plain background. Urbain (tall thin 1840s mathematician, slicked-back dark hair, long sideburns, frowning eyebrows, bright red waistcoat under a black frock coat) in the centre, head and shoulders, eyes half closed, a tiny smug smile, nose high in the air, calmly blowing on the tip of his quill like a gunslinger. no blush. close-up",
             "cast": [
               "leverrier"
             ],
             "file": "images/cultureg-06.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -228,7 +233,8 @@
             ],
             "file": "images/cultureg-07.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -250,7 +256,8 @@
             ],
             "file": "images/cultureg-08.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         }
       ],

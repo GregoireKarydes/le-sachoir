@@ -44,7 +44,8 @@
         ],
         "file": "images/insolite-cover.webp",
         "status": "done",
-        "attempts": 1
+        "attempts": 1,
+        "qa": "ok"
       },
       "cases": [
         {
@@ -56,12 +57,12 @@
             {
               "who": "juge",
               "text": "Les accusés sont… des rats. Bien. Très bien.",
-              "side": "r"
+              "side": "l"
             },
             {
               "who": "chasseneuz",
               "text": "Et ils ont un avocat. Moi.",
-              "side": "l"
+              "side": "r"
             }
           ],
           "image": {
@@ -72,7 +73,8 @@
             ],
             "file": "images/insolite-01.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -84,12 +86,12 @@
             {
               "who": "juge",
               "text": "D’habitude, ce sont des cochons. Ils traînent partout en ville.",
-              "side": "r"
+              "side": "l"
             },
             {
               "who": "chasseneuz",
               "text": "Mes clients, eux, sont discrets.",
-              "side": "l"
+              "side": "r"
             }
           ],
           "image": {
@@ -100,7 +102,8 @@
             ],
             "file": "images/insolite-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -119,12 +122,12 @@
             {
               "who": "juge",
               "text": "Ils ne sont pas venus. Votre défense, maître ?",
-              "side": "r"
+              "side": "l"
             },
             {
               "who": "chasseneuz",
               "text": "Ils avaient une excellente raison.",
-              "side": "l"
+              "side": "r"
             }
           ],
           "image": {
@@ -135,7 +138,8 @@
             ],
             "file": "images/insolite-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -151,14 +155,15 @@
             }
           ],
           "image": {
-            "prompt": "the courtroom. Chasseneuz (tall, thin, scarlet robe) on the left pointing dramatically at the courtroom window, where a dozen cats of all colours sit lined up on the sill, staring in hungrily; the juge (short, fat, green robe) on the right slowly lowering his gavel, speechless. wide shot",
+            "prompt": "the bare courtroom, only TWO men in the room. Chasseneuz (tall and thin, sharp pointed black beard, flat black cap, bright scarlet robe) standing on the left, pointing dramatically at one tall window on the right wall; outside the window, on the sill, a row of cats of all colours stare in hungrily. the juge (short and very fat, bald with a white fringe, droopy white moustache, dark green robe) sitting on the right behind his high bench, slowly lowering his gavel, speechless. medium wide shot",
             "cast": [
               "chasseneuz",
               "juge"
             ],
             "file": "images/insolite-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -202,7 +207,8 @@
             ],
             "file": "images/insolite-05.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         }
       ],
