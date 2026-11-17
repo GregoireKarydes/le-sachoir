@@ -480,7 +480,7 @@ def render(day_dir: Path, force=False) -> bool:
     fp = fingerprint(post)
     if not force and rj.exists() and json.loads(rj.read_text()).get("fingerprint") == fp:
         return False
-    for old in list(day_dir.glob("slide-*.jpg")) + list(day_dir.glob("reel*")):
+    for old in list(day_dir.glob("slide-*.jpg")) + list(day_dir.glob("tiktok-*.jpg")) + list(day_dir.glob("reel*")):
         old.unlink()
     if post.get("kind") == "carousel" and post.get("version") == 2:
         import carousel_v2  # Carrousel v2 « récit en diapositives » (17 novembre 2026)

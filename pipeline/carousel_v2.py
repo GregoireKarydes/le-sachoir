@@ -181,7 +181,7 @@ def draw_text(img, text, cover):
             break
         size -= 2
     y = int(H * 0.30) - total // 2 if not cover else int(H * 0.40) - total // 2
-    y = max(150, y)
+    y = max(330 if PLATFORM == "tiktok" else 150, y)
     space = d.textlength(" ", font=fnt)
     for ln in lines:
         if ln is None:
@@ -199,6 +199,9 @@ def draw_text(img, text, cover):
     return img
 
 
+PLATFORM = "instagram"  # « tiktok » pendant le rendu de la version verticale 1080 x 1920
+
+
 def brand(img, n, total):
     from social_render import logo  # noqa
     lg = logo(150)
@@ -207,6 +210,9 @@ def brand(img, n, total):
     plate = Image.new("RGBA", (lg.width + 2 * pad, lg.height + 2 * pad), (0, 0, 0, 0))
     ImageDraw.Draw(plate).rounded_rectangle([0, 0, plate.width - 1, plate.height - 1], radius=18, fill=CREAM + (235,))
     plate.paste(lg, (pad, pad), lg)
+    if PLATFORM == "tiktok":  # le bas et la droite de l'écran TikTok sont couverts par la légende et les boutons
+        img.paste(plate, (60, 170), plate)
+        return img
     img.paste(plate, (W - plate.width - 48, H - plate.height - 44), plate)
     if 1 < n < total:  # petit compteur discret, comme une page de BD
         d = ImageDraw.Draw(img)
@@ -238,6 +244,18 @@ def end_slide(post, bd_first):
 
 
 def render(post, out: Path):
+    """Instagram (1080 x 1350, `slide-XX.jpg`) puis TikTok en photo mode (1080 x 1920, `tiktok-XX.jpg`)."""
+    global H, PLATFORM
+    info = _render(post, out, "slide")
+    H, PLATFORM = 1920, "tiktok"
+    try:
+        info["tiktok_files"] = _render(post, out, "tiktok")["files"]
+    finally:
+        H, PLATFORM = 1350, "instagram"
+    return info
+
+
+def _render(post, out: Path, prefix):
     slides = [s for s in post.get("slides", []) if s.get("text")][: MAX_SLIDES - 1]
     if len(slides) < 3:
         raise ValueError("carrousel v2 : au moins 3 diapositives avec du texte")
@@ -258,15 +276,15 @@ def render(post, out: Path):
         img = background(p, s.get("tone", tone), variant)
         draw_text(img, s["text"], cover=(i == 0))
         brand(img, i + 1, total)
-        name = f"slide-{i + 1:02d}.jpg"
+        name = f"{prefix}-{i + 1:02d}.jpg"
         img.save(out / name, quality=90)
         files.append(name)
         prev = p
     first_bd = next(iter(bd.values()), None)
-    name = f"slide-{total:02d}.jpg"
+    name = f"{prefix}-{total:02d}.jpg"
     end_slide(post, first_bd).save(out / name, quality=90)
     files.append(name)
-    for old in out.glob("slide-*.jpg"):
+    for old in out.glob(f"{prefix}-*.jpg"):
         if old.name not in files:
             old.unlink()
     return {"files": files, "version": 2, "credits": sorted(credits)}

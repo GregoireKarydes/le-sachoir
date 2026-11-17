@@ -51,6 +51,44 @@ def instagram_channel(key):
     raise RuntimeError("aucun canal Instagram dans le compte Buffer (connecte le compte pro Instagram dans Buffer)")
 
 
+def tiktok_channel(key):
+    """Canal TikTok du compte Buffer (17 novembre 2026) : les carrousels partent aussi en « photo mode » TikTok
+    dès qu'un compte TikTok est relié dans Buffer. `BUFFER_TIKTOK_CHANNEL_ID` facultatif ; `BUFFER_TIKTOK=0` coupe."""
+    if os.environ.get("BUFFER_TIKTOK", "").strip() == "0":
+        return None
+    if os.environ.get("BUFFER_TIKTOK_CHANNEL_ID"):
+        return os.environ["BUFFER_TIKTOK_CHANNEL_ID"]
+    orgs = gql(key, "query { account { organizations { id name } } }")["account"]["organizations"]
+    for org in orgs:
+        chans = gql(key, 'query { channels(input: {organizationId: %s}) { id name service isQueuePaused } }'
+                    % json.dumps(org["id"]))["channels"]
+        for c in chans:
+            if c.get("service") == "tiktok":
+                print(f"Canal TikTok Buffer : {c['name']} ({c['id']})")
+                return c["id"]
+    return None
+
+
+def tiktok_title(post):
+    slides = post.get("slides") or []
+    first = slides[0]["text"] if slides else (post.get("hook") or "Le Sachoir")
+    t = " ".join(first.replace("**", "").split())
+    return t if len(t) <= 90 else t[:87].rsplit(" ", 1)[0] + "…"
+
+
+def build_tiktok_input(folder, post, render, channel, due):
+    url = f"{BASE}social/instagram/{folder}/"
+    return {
+        "text": caption_of(post)[:2000],
+        "channelId": channel,
+        "schedulingType": "automatic",
+        "mode": "customScheduled",
+        "dueAt": due.astimezone(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "assets": [{"image": {"url": url + f}} for f in render["tiktok_files"]],
+        "metadata": {"tiktok": {"title": tiktok_title(post)}},
+    }
+
+
 def online(url):
     try:
         return requests.head(url, timeout=30, allow_redirects=True).status_code == 200
@@ -112,7 +150,9 @@ def main(args):
     for pj in sorted(SOCIAL.glob("*/post.json")):
         d = pj.parent
         post = json.loads(pj.read_text())
-        if post.get("date") != today or post.get("skip") or (d / "buffer.json").exists():
+        tiktok_due = bool(json.loads((d / "render.json").read_text()).get("tiktok_files")) and not (d / "buffer-tiktok.json").exists() \
+            if (d / "render.json").exists() else False
+        if post.get("date") != today or post.get("skip") or ((d / "buffer.json").exists() and not tiktok_due):
             continue
         if not (d / "render.json").exists():
             print(f"::warning::Instagram {d.name} : pas encore rendu.")
@@ -122,12 +162,23 @@ def main(args):
         print(f"Instagram : rien à envoyer pour le {today}.")
         return
     channel = None if dry else instagram_channel(key)
+    tiktok = None
+    if not dry:
+        try:
+            tiktok = tiktok_channel(key)
+        except Exception as e:  # noqa
+            print(f"::warning::TikTok : canal introuvable ({e})")
     for d, post, render in todo:
-        missing = [f for f in render["files"] if not online(f"{BASE}social/instagram/{d.name}/{f}")]
+        missing = [f for f in render["files"] + render.get("tiktok_files", []) if not online(f"{BASE}social/instagram/{d.name}/{f}")]
         if missing and not dry:
             print(f"::warning::Instagram {d.name} : fichiers pas encore en ligne ({', '.join(missing)}), nouvel essai au prochain passage.")
             continue
-        inp = build_input(d.name, post, render, channel or "DRY", due_at(post, now))
+        due = due_at(post, now)
+        if render.get("tiktok_files") and (tiktok or dry) and not (d / "buffer-tiktok.json").exists():
+            send_tiktok(key, d, post, render, tiktok, due, now, dry)
+        if (d / "buffer.json").exists():
+            continue
+        inp = build_input(d.name, post, render, channel or "DRY", due)
         if dry:
             print(json.dumps(inp, ensure_ascii=False, indent=1))
             continue
@@ -144,6 +195,26 @@ def main(args):
             (d / "buffer-error.json").write_text(json.dumps({"at": now.isoformat(timespec="seconds"), "message": res.get("message")},
                                                             ensure_ascii=False, indent=1) + "\n")
             print(f"::warning::Instagram {d.name} : Buffer a refusé le post ({res.get('message')}).")
+
+
+def send_tiktok(key, d, post, render, channel, due, now, dry):
+    inp = build_tiktok_input(d.name, post, render, channel or "DRY", due)
+    if dry:
+        print(json.dumps(inp, ensure_ascii=False, indent=1))
+        return
+    try:
+        res = gql(key, CREATE, {"input": inp})["createPost"]
+    except Exception as e:  # noqa
+        res = {"message": str(e)}
+    if res.get("post"):
+        (d / "buffer-tiktok.json").write_text(json.dumps({"id": res["post"]["id"], "due_at": res["post"].get("dueAt") or inp["dueAt"],
+                                                          "sent_at": now.isoformat(timespec="seconds")}, indent=1) + "\n")
+        (d / "buffer-tiktok-error.json").unlink(missing_ok=True)
+        print(f"TikTok {d.name} : envoyé à Buffer, publication prévue {inp['dueAt']}.")
+    else:
+        (d / "buffer-tiktok-error.json").write_text(json.dumps({"at": now.isoformat(timespec="seconds"), "message": res.get("message")},
+                                                               ensure_ascii=False, indent=1) + "\n")
+        print(f"::warning::TikTok {d.name} : Buffer a refusé le post ({res.get('message')}).")
 
 
 if __name__ == "__main__":

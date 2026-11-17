@@ -59,4 +59,5 @@ def test_carrousel_v2(tmp_path):
     assert info["files"] == ["slide-01.jpg", "slide-02.jpg", "slide-03.jpg", "slide-04.jpg"]
     from PIL import Image
     assert Image.open(tmp_path / "slide-01.jpg").size == (1080, 1350)
+    assert info["tiktok_files"][0] == "tiktok-01.jpg" and Image.open(tmp_path / "tiktok-01.jpg").size == (1080, 1920)
     assert carousel_v2.tokens("le **13 chiffres**.")[-1] == [("chiffres", True), (".", False)]
