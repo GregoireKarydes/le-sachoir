@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T18:37+01:00",
+ "updated_at": "2026-11-17T19:28+01:00",
  "stock": {
   "cultureg": [
    {
@@ -325,6 +325,23 @@
     "title": "Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général)",
     "theme": "Architecture",
     "tagline": "De Saint-Denis à la réouverture de Notre-Dame : l’arc brisé, la croisée d’ogives et l’arc-boutant expliqués sans vertige",
+    "minutes": 3,
+    "cases": 26,
+    "photos": 3,
+    "images_done": 0,
+    "images_total": 21,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261117-1925-code-civil",
+    "name": "20261117-1925-code-civil",
+    "added": "20261117-1925",
+    "status": "waiting",
+    "next": false,
+    "title": "Le Code civil : 2 281 articles pour ranger le bazar de la France",
+    "theme": "Droit",
+    "tagline": "Des 300 coutumes de l’Ancien Régime à l’article 1240 : comment Bonaparte et quatre juristes ont donné une seule loi à tous les Français",
     "minutes": 3,
     "cases": 26,
     "photos": 3,

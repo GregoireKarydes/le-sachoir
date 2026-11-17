@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T18:37:46.717017+01:00",
+ "updated_at": "2026-11-17T19:28:34.348001+01:00",
  "today": "2026-11-17",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Google Actualités, Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -122,16 +122,16 @@
   },
   "dossier": {
    "ready": 1,
-   "waiting": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 43,
+   "images_left": 64,
    "focus": "20261115-1923-krach-1929 (22 image(s) à faire)",
    "next": "20261114-1927-nucleaire-tiroir-ferme",
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 1,
- "days_ahead_written": 3,
+ "days_ahead_written": 4,
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-17",
@@ -153,7 +153,7 @@
  },
  "rss": {
   "collected_at": "2026-11-17T01:48:45.333072+01:00",
-  "age_hours": 16.8,
+  "age_hours": 17.7,
   "feeds": {
    "Google Actualités": 0,
    "franceinfo": 30,
