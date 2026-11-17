@@ -40,6 +40,14 @@ def test_lien_en_bio(tmp_path):
     (d / "post.json").write_text(json.dumps({"date": "2026-11-19", "story": {"edition": "2026-11-19", "format": "notice"}}))
     assert publish.insta_target(index, "2026-11-19", tmp_path).startswith("./?d=2026-11-19&f=notice&utm_source=instagram")
     assert publish.insta_target(index, "2026-11-19", tmp_path / "rien").startswith("./?utm_source=instagram")
+    # Deux posts le même jour : l'actu à 12 h 15, la culture à 18 h 30 ; la page choisit au clic.
+    a = tmp_path / "2026-11-19-actu"
+    a.mkdir()
+    (a / "post.json").write_text(json.dumps({"date": "2026-11-19", "time": "12:15", "story": {"edition": "2026-11-19", "format": "actu"}}))
+    (d / "post.json").write_text(json.dumps({"date": "2026-11-19", "time": "18:30", "story": {"edition": "2026-11-19", "format": "notice"}}))
+    index[0]["formats"].append({"id": "actu", "url": "histoires/2026-11-19-a/"})
+    t = publish.insta_targets(index, "2026-11-19", tmp_path)
+    assert [x[0] for x in t] == ["12:15", "18:30"] and "f=actu" in t[0][1] and "f=notice" in t[1][1]
 
 
 def test_carrousel_v2(tmp_path):

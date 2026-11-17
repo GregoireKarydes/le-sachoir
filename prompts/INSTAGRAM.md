@@ -1,8 +1,8 @@
 # Instagram : le post du jour (consigne de la tâche « Le Sachoir – Instagram »)
 
 Version 2, depuis le 17 novembre 2026 (étude et choix : doc projet `claude/reel-v2.md`). Chaque matin, après la
-publication de 5 h, tu prépares UN post. Tu n'écris que `social/instagram/<date>/post.json` ; GitHub Actions fabrique
-les images (`pipeline/carousel_v2.py`) ou la vidéo (`pipeline/reel_v2.py`) et les envoie à Buffer.
+publication de 5 h, tu prépares **DEUX carrousels** tirés de l'édition du jour (partie A2). Tu n'écris que leurs
+`post.json` ; GitHub Actions fabrique les images (`pipeline/carousel_v2.py`) ou la vidéo (`pipeline/reel_v2.py`) et les envoie à Buffer.
 
 **Décision de Greg (17 novembre 2026) : mieux vaut un bon carrousel qu'un mauvais Reel.** Le post du jour est donc un
 **carrousel « récit en diapositives »** (partie A). Les Reels (partie B) sont **en pause** : n'en fais pas tant que Greg
@@ -19,21 +19,40 @@ On reprend la **mécanique**, jamais les textes ni la formulation d'un autre com
 
 ## A1. Avant d'écrire
 
-- Date de Paris : `TZ=Europe/Paris date +%F`. Si `social/instagram/<date>/post.json` existe déjà, ne fais rien.
-- Lis les 10 derniers `social/instagram/*/post.json` : jamais deux fois le même sujet.
-- Lis `editions/index.json` et l'édition du jour.
+- Date de Paris : `TZ=Europe/Paris date +%F`. L'édition du jour doit être publiée (date dans `editions/index.json`),
+  sinon n'écris rien et dis-le.
+- Les deux fichiers du jour :
+  - **l'actu** : `social/instagram/<date>-actu/post.json`, publié à **12:15** (`"time": "12:15"`) ;
+  - **la culture** : `social/instagram/<date>/post.json`, publié à **18:30** (`"time": "18:30"`).
+  Si un des deux existe déjà, ne refais que l'autre.
+- Lis `editions/<date>/edition.json` et les 14 derniers `social/instagram/*/post.json` : jamais deux fois le même
+  sujet, et l'alternance des rubriques ci-dessous.
 
-## A2. Le sujet
+## A2. Choisir les deux sujets dans l'édition du jour
 
-- **Une histoire avec une révélation** : l'origine d'un mot ou d'une expression que tout le monde emploie, une idée
-  reçue démontée, l'histoire cachée d'un objet du quotidien, un fait historique surprenant. Le test : « à qui on
-  l'enverrait ? » (« à mon père qui dit toujours ça »). Si la réponse n'est pas immédiate, change de sujet.
-- De préférence un sujet qu'une histoire publiée du Sachoir explique déjà (faits vérifiés) : mets-la dans `story`
-  (édition du jour en priorité, sinon les archives). Sinon, vérifie chaque fait sur 2 sources sérieuses (CNRTL, Académie
-  française, Larousse, encyclopédies, institutions, grands médias) et liste-les dans `sources`. Dans le doute, une
-  nuance (« serait née », « selon la version la plus répandue ») vaut mieux qu'une affirmation fausse.
-- Coller au calendrier quand une date fait parler (Beaujolais nouveau, Black Friday, Noël, Chandeleur…).
-- Jamais de politique partisane, jamais une personne réelle vivante au centre, jamais un drame récent.
+Les deux carrousels racontent chacun **une BD de l'édition du jour** (`story` = `{"edition": "<date>", "format": "<id>"}`) :
+le lien en bio ouvre alors cette BD dans l'appli, lisible gratuitement. Les faits viennent de la BD (déjà vérifiée) ;
+pour tout ajout, 2 sources sérieuses dans `sources`.
+
+**1. Le carrousel culture (18:30)** : une BD parmi La Notice (`notice`), D'où ça vient ? (`origine`), la Pilule de
+Culture G (`cultureg`), l'Insolite historique (`insolite`) et le Grand Dossier (`dossier`, au plus une fois par
+semaine).
+- **Tourne** : pas la même rubrique que les 2 derniers carrousels culture si une autre convient.
+- Parmi celles qui restent, prends **celle qui fait la meilleure énigme** : un mot ou un objet que tout le monde
+  connaît, une histoire avec une révélation, un paradoxe (« Les rats d'Autun avaient un avocat » bat « Neptune trouvée
+  par le calcul » si la seconde se raconte moins bien en énigme). En cas d'égalité, suis la rotation.
+
+**2. Le carrousel actu (12:15)** : un sujet de l'Actu du jour (`actu`), raconté en énigme comme le reste.
+- Prends **le sujet dont tout le monde parle ou dont on a envie de parler** : un record, une découverte, une première,
+  un chiffre fou, un événement sportif, spatial, scientifique, une décision qui change le quotidien (prix, règles,
+  calendrier). Le test « à qui on l'enverrait ? » compte double.
+- L'angle : ce que la BD explique (le pourquoi, le comment), pas une simple dépêche. « Pourquoi tout le monde parle
+  de… », « Ce chiffre va changer votre… », « Il a fallu 30 ans pour… ».
+- **Neutre et factuel** : jamais de politique partisane ni d'avis, aucun parti ni candidat au centre, pas de drame avec
+  des victimes (attentat, catastrophe, fait divers). Une personne réelle peut être nommée pour ce qu'elle a fait, sans
+  moquerie ni caricature, et jamais en photo (images d'objets, de lieux, d'archives).
+- Si aucun sujet de l'Actu ne convient, fais le carrousel actu sur une date du jour (anniversaire d'un événement,
+  fête du calendrier) racontée par une autre BD de l'édition, ou n'en fais pas et dis-le.
 
 ## A3. Les diapositives (`slides`) : écrire une énigme, pas une explication
 
@@ -109,7 +128,7 @@ comme un polar). Exagère : trop de suspense vaut mieux que pas assez.
 - **`hashtags`** : 3 à 5, en français, sans « # » : `lesachoir`, `culturegenerale`, plus 1 à 3 du sujet (`histoire`,
   `etymologie`, `expressionfrancaise`…). Jamais `viral`, `fyp`, `explore`.
 - **`alt`** : 1 phrase qui décrit la couverture.
-- `time` facultatif (12:15 par défaut), `"skip": true` retire le post.
+- **`time`** : `"12:15"` pour l'actu, `"18:30"` pour la culture. `"skip": true` retire le post (Greg peut le poser).
 
 ## A5. Le fichier
 
@@ -119,6 +138,7 @@ comme un polar). Exagère : trop de suspense vaut mieux que pas assez.
   "kind": "carousel",
   "version": 2,
   "tone": "archive",
+  "time": "18:30",
   "story": {"edition": "2026-11-18", "format": "origine"},
   "slides": [
     {"text": "Avant d'être une expression,\nc'était un geste\nqui pouvait **coûter la vie**.", "image": {"commons": "château fort créneaux gravure"}},
@@ -133,9 +153,12 @@ comme un polar). Exagère : trop de suspense vaut mieux que pas assez.
 }
 ```
 
+Le carrousel actu suit le même modèle dans `social/instagram/<date>-actu/post.json`, avec `"time": "12:15"` et
+`"story": {"edition": "<date>", "format": "actu"}`.
+
 Avant de finir : relis chaque diapositive seule (elle doit donner envie de voir la suivante), vérifie que la couverture
-ne donne pas la réponse et que chaque fait est sourcé. Valide le JSON (`python3 -m json.tool`), commit « Instagram
-<date> : <sujet> », `git pull --rebase`, `git push origin main`. Le push déclenche le rendu ; ne touche à rien d'autre.
+ne donne pas la réponse et que chaque fait est sourcé. Valide le JSON (`python3 -m json.tool`), un seul commit pour les
+deux fichiers « Instagram <date> : <sujet actu> / <sujet culture> », `git pull --rebase`, `git push origin main`. Le push déclenche le rendu ; ne touche à rien d'autre.
 
 # B. Le Reel « La question du jour » (EN PAUSE, seulement si Greg le demande)
 

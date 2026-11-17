@@ -48,7 +48,11 @@ jobs:
         run: |
           for i in 0 1 2; do
             d=$(TZ=Europe/Paris date -d "-$i day" +%F)
-            gh run download -n "instagram-$d" -D social/instagram >/dev/null 2>&1 && echo "Instagram $d : fichiers récupérés" || true
+            # Deux posts par jour depuis le 17 novembre 2026 : <date> (culture) et <date>-actu ; un rendu commun porte le
+            # nom du dernier dossier (instagram-<date>-actu), des rendus séparés portent chacun le leur.
+            for n in "$d-actu" "$d"; do
+              gh run download -n "instagram-$n" -D social/instagram >/dev/null 2>&1 && echo "Instagram $n : fichiers récupérés" || true
+            done
           done
       - name: Publier l'édition du jour et construire le site
         run: python pipeline/publish.py
