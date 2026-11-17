@@ -3,36 +3,131 @@
   "kind": "sitcom",
   "time": "20:30",
   "skip": true,
-  "story": {"edition": "2026-11-17", "format": "insolite"},
+  "story": {
+    "edition": "2026-11-17",
+    "format": "insolite"
+  },
   "episode": {
     "band": "DES RATS ONT EU\nUN AVOCAT ?!",
-    "board": ["QUESTION DU JOUR", "procès de rats ?"],
-    "scenes": [
-      {"kind": "home", "lines": [
-        {"who": "max", "emo": "curious", "text": "Prof… c'est vrai qu'on a fait un procès à des rats ?"},
-        {"who": "prof", "emo": "deadpan", "text": "Pire. Ils avaient un avocat."},
-        {"who": "max", "emo": "shock", "shake": true, "text": "Un avocat ?!"}
-      ]},
-      {"kind": "world", "set": "moyen-age", "tag": "AUTUN, VERS 1520", "big": "AUTUN · 1520", "small": "Bourgogne",
-       "image": {"bd": 1}, "bidule": true, "lines": [
-        {"who": "prof", "emo": "explain", "text": "Autun, en Bourgogne. Des rats dévorent les récoltes : on les convoque au tribunal."},
-        {"who": "max", "emo": "think", "text": "Et… ils sont venus ?"},
-        {"who": "prof", "emo": "deadpan", "text": "Aucun. Leur avocat plaide que la route est trop dangereuse."},
-        {"who": "max", "emo": "curious", "text": "À cause de quoi ?"}
-      ]},
-      {"kind": "world", "set": "ville", "palette": "nuit", "tag": "L'ARGUMENT", "big": "LES CHATS", "small": "trajet mortel", "lines": [
-        {"who": "prof", "emo": "smug", "text": "Les chats. Les obliger à venir, c'est les envoyer à la mort."},
-        {"who": "max", "emo": "wow", "text": "Malin."}
-      ]},
-      {"kind": "home", "lines": [
-        {"who": "max", "emo": "curious", "text": "Et alors, ils ont été condamnés ?"},
-        {"who": "prof", "emo": "smug", "pause": 0.8, "text": "Zéro condamnation."},
-        {"who": "max", "emo": "proud", "text": "Je veux le même avocat."}
-      ]}
+    "board": [
+      "QUESTION DU JOUR",
+      "procès de rats ?"
     ],
-    "end": {"url": "lesachoir.fr", "lines": ["Une question comme ça,", "chaque matin, en BD."]}
+    "scenes": [
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Prof… c'est vrai qu'on a fait un procès à des rats ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Pire. Ils avaient un avocat."
+          },
+          {
+            "who": "max",
+            "emo": "shock",
+            "shake": true,
+            "text": "Un avocat ?!"
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "moyen-age",
+        "tag": "AUTUN, VERS 1520",
+        "big": "AUTUN · 1520",
+        "small": "Bourgogne",
+        "image": {
+          "bd": 1
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Autun, en Bourgogne. Des rats dévorent les récoltes : on les convoque au tribunal."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Et… ils sont venus ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Aucun. Leur avocat plaide que la route est trop dangereuse."
+          },
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "À cause de quoi ?"
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "ville",
+        "palette": "nuit",
+        "tag": "L'ARGUMENT",
+        "big": "LES CHATS",
+        "small": "trajet mortel",
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "smug",
+            "text": "Les chats. Les obliger à venir, c'est les envoyer à la mort."
+          },
+          {
+            "who": "max",
+            "emo": "wow",
+            "text": "Malin."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et alors, ils ont été condamnés ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "Zéro condamnation."
+          },
+          {
+            "who": "max",
+            "emo": "proud",
+            "text": "Je veux le même avocat."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "Une question comme ça,",
+        "chaque matin, en BD."
+      ]
+    }
   },
   "caption": "Au XVIe siècle, à Autun, des rats ont été convoqués au tribunal. Et ils avaient un avocat.\n\nSa défense : la route jusqu'au tribunal grouillait de chats. Les obliger à venir, c'était les envoyer à la mort.\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nEnvoie-le à ton pote juriste.",
-  "hashtags": ["lesachoir", "culturegenerale", "histoiredefrance", "insolite", "lesaviezvous"],
-  "sources": ["https://www.slate.fr/story/239866/moyen-age-animaux-insectes-justice-proces-tribunal-loi-europe"]
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "histoiredefrance",
+    "insolite",
+    "lesaviezvous"
+  ],
+  "sources": [
+    "https://www.slate.fr/story/239866/moyen-age-animaux-insectes-justice-proces-tribunal-loi-europe"
+  ],
+  "note": "pilote, voix Rémy + Fabrice"
 }
