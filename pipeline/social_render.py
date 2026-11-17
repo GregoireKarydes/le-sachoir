@@ -469,7 +469,8 @@ def render_reel(post, out: Path):
 def fingerprint(post):
     keys = ("kind", "story", "hook", "cases", "end", "voice")
     if post.get("version") == 2:
-        keys = ("kind", "version", "story", "title", "number", "series_label", "beats", "slides", "tone", "end")
+        keys = ("kind", "version", "story", "title", "number", "series_label", "beats", "slides", "tone", "end",
+                "reel_copy", "format")
     keep = {k: post.get(k) for k in keys}
     return hashlib.sha1(json.dumps(keep, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12]
 

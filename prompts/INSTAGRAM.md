@@ -144,6 +144,9 @@ peut être plus court (6 ou 7).
   `etymologie`, `expressionfrancaise`…). Jamais `viral`, `fyp`, `explore`.
 - **`alt`** : 1 phrase qui décrit la couverture.
 - **`time`** : `"12:15"` pour l'actu, `"18:30"` pour la culture. `"skip": true` retire le post (Greg peut le poser).
+- **Version Reel (test de 2 semaines depuis le 17 novembre 2026)** : le carrousel culture est aussi publié
+  automatiquement en Reel à 21 h (les mêmes images, chacune le temps de la lire, sur la musique suspense). Rien à
+  écrire de plus. `"reel_copy": false` l'empêche pour un post, `"reel_time": "20:30"` change l'heure.
 
 ## A5. Le fichier
 

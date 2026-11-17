@@ -150,9 +150,10 @@ def main(args):
     for pj in sorted(SOCIAL.glob("*/post.json")):
         d = pj.parent
         post = json.loads(pj.read_text())
-        tiktok_due = bool(json.loads((d / "render.json").read_text()).get("tiktok_files")) and not (d / "buffer-tiktok.json").exists() \
-            if (d / "render.json").exists() else False
-        if post.get("date") != today or post.get("skip") or ((d / "buffer.json").exists() and not tiktok_due):
+        rj = json.loads((d / "render.json").read_text()) if (d / "render.json").exists() else {}
+        tiktok_due = bool(rj.get("tiktok_files")) and not (d / "buffer-tiktok.json").exists()
+        reel_due = bool(rj.get("reel")) and not (d / "buffer-reel.json").exists()
+        if post.get("date") != today or post.get("skip") or ((d / "buffer.json").exists() and not tiktok_due and not reel_due):
             continue
         if not (d / "render.json").exists():
             print(f"::warning::Instagram {d.name} : pas encore rendu.")
@@ -169,13 +170,16 @@ def main(args):
         except Exception as e:  # noqa
             print(f"::warning::TikTok : canal introuvable ({e})")
     for d, post, render in todo:
-        missing = [f for f in render["files"] + render.get("tiktok_files", []) if not online(f"{BASE}social/instagram/{d.name}/{f}")]
+        extra = render.get("tiktok_files", []) + ([render["reel"]["file"]] if render.get("reel") else [])
+        missing = [f for f in render["files"] + extra if not online(f"{BASE}social/instagram/{d.name}/{f}")]
         if missing and not dry:
             print(f"::warning::Instagram {d.name} : fichiers pas encore en ligne ({', '.join(missing)}), nouvel essai au prochain passage.")
             continue
         due = due_at(post, now)
         if render.get("tiktok_files") and (tiktok or dry) and not (d / "buffer-tiktok.json").exists():
             send_tiktok(key, d, post, render, tiktok, due, now, dry)
+        if render.get("reel") and not (d / "buffer-reel.json").exists():
+            send_reel_copy(key, d, post, render, channel, now, dry)
         if (d / "buffer.json").exists():
             continue
         inp = build_input(d.name, post, render, channel or "DRY", due)
@@ -195,6 +199,38 @@ def main(args):
             (d / "buffer-error.json").write_text(json.dumps({"at": now.isoformat(timespec="seconds"), "message": res.get("message")},
                                                             ensure_ascii=False, indent=1) + "\n")
             print(f"::warning::Instagram {d.name} : Buffer a refusé le post ({res.get('message')}).")
+
+
+def send_reel_copy(key, d, post, render, channel, now, dry):
+    """Test du 17 novembre 2026 : la version Reel du carrousel culture, publiée sur Instagram à 21 h."""
+    reel = render["reel"]
+    due = due_at({**post, "time": reel.get("time") or "21:00"}, now)
+    url = f"{BASE}social/instagram/{d.name}/{reel['file']}"
+    inp = {
+        "text": caption_of(post),
+        "channelId": channel or "DRY",
+        "schedulingType": "automatic",
+        "mode": "customScheduled",
+        "dueAt": due.astimezone(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "assets": [{"video": {"url": url, "metadata": {"thumbnailOffset": 0}}}],
+        "metadata": {"instagram": {"type": "reel", "shouldShareToFeed": True}},
+    }
+    if dry:
+        print(json.dumps(inp, ensure_ascii=False, indent=1))
+        return
+    try:
+        res = gql(key, CREATE, {"input": inp})["createPost"]
+    except Exception as e:  # noqa
+        res = {"message": str(e)}
+    if res.get("post"):
+        (d / "buffer-reel.json").write_text(json.dumps({"id": res["post"]["id"], "due_at": res["post"].get("dueAt") or inp["dueAt"],
+                                                        "sent_at": now.isoformat(timespec="seconds")}, indent=1) + "\n")
+        (d / "buffer-reel-error.json").unlink(missing_ok=True)
+        print(f"Reel {d.name} : envoyé à Buffer, publication prévue {inp['dueAt']}.")
+    else:
+        (d / "buffer-reel-error.json").write_text(json.dumps({"at": now.isoformat(timespec="seconds"), "message": res.get("message")},
+                                                             ensure_ascii=False, indent=1) + "\n")
+        print(f"::warning::Reel {d.name} : Buffer a refusé le post ({res.get('message')}).")
 
 
 def send_tiktok(key, d, post, render, channel, due, now, dry):

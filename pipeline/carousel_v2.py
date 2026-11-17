@@ -252,7 +252,56 @@ def render(post, out: Path):
         info["tiktok_files"] = _render(post, out, "tiktok")["files"]
     finally:
         H, PLATFORM = 1350, "instagram"
+    # Test du 17 novembre 2026 (2 semaines) : le carrousel culture sort aussi en Reel à 21 h, pour toucher des
+    # non-abonnés. Le Reel est fait des images verticales, chacune le temps de la lire, sur la musique suspense.
+    for old in out.glob("reel*"):
+        old.unlink()
+    if wants_reel(post):
+        info["reel"] = slideshow_reel(post, out, info["tiktok_files"])
     return info
+
+
+def wants_reel(post):
+    if "reel_copy" in post:
+        return bool(post["reel_copy"])
+    return (post.get("story") or {}).get("format") != "actu" and post.get("format") != "actu"
+
+
+def slide_seconds(text):
+    words = len(re.sub(r"\*\*", "", str(text)).split())
+    return round(max(2.6, min(6.5, 1.3 + words * 0.27)), 2)
+
+
+def slideshow_reel(post, out: Path, images):
+    """Reel 1080 x 1920 : une image par diapositive, le temps de la lire, léger zoom, musique (stock/music/)."""
+    import subprocess
+    texts = [s["text"] for s in post.get("slides", []) if s.get("text")][: len(images) - 1]
+    durs = [slide_seconds(t) for t in texts] + [3.0]  # carte finale
+    tmp = Path(tempfile.mkdtemp())
+    segs = []
+    for i, (img, d) in enumerate(zip(images, durs)):
+        n = round(d * 30)
+        seg = tmp / f"s{i:02d}.mp4"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", str(out / img), "-vf",
+                        f"scale=2160:3840,zoompan=z='1+0.04*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s=1080x1920:fps=30,format=yuv420p",
+                        "-frames:v", str(n), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", str(seg)], check=True)
+        segs.append(seg)
+    lst = tmp / "list.txt"
+    lst.write_text("".join(f"file '{p}'\n" for p in segs))
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy",
+                    str(tmp / "video.mp4")], check=True)
+    total = sum(durs)
+    music = reel_v2.music_file(post, total, tmp)
+    loop = [] if music.parent == tmp else ["-stream_loop", "-1"]
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp / "video.mp4"), *loop, "-i", str(music),
+                    "-filter_complex", f"[1:a]afade=t=in:d=0.4,afade=t=out:st={max(0, total - 1.5):.2f}:d=1.5,loudnorm=I=-16:TP=-1.5,aresample=44100[a]",
+                    "-map", "0:v", "-map", "[a]", "-t", f"{total:.2f}", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k",
+                    "-ac", "2", "-movflags", "+faststart", str(out / "reel.mp4")], check=True)
+    import shutil
+    shutil.copy(out / images[0], out / "reel-cover.jpg")
+    shutil.rmtree(tmp, ignore_errors=True)
+    return {"file": "reel.mp4", "cover": "reel-cover.jpg", "seconds": round(total, 1), "time": post.get("reel_time") or "21:00",
+            "music": music.name if music.parent != tmp else "synthèse"}
 
 
 def _render(post, out: Path, prefix):
