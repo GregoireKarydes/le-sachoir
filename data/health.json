@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T19:28:34.348001+01:00",
+ "updated_at": "2026-11-17T20:02:00.992904+01:00",
  "today": "2026-11-17",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Google Actualités, Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -21,6 +21,7 @@
    "date": "2026-11-18",
    "status": "draft",
    "formats": {
+    "actu": "prêt",
     "quiz": "prêt"
    }
   },
@@ -146,14 +147,14 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 2.11734,
-  "images": 191,
-  "today_usd": 0.18,
+  "spent_usd": 2.16146,
+  "images": 198,
+  "today_usd": 0.22412,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-17T01:48:45.333072+01:00",
-  "age_hours": 17.7,
+  "age_hours": 18.2,
   "feeds": {
    "Google Actualités": 0,
    "franceinfo": 30,
@@ -184,8 +185,14 @@
  },
  "actu_balance": {
   "days": 14,
-  "editions": 7,
+  "editions": 8,
   "people": [
+   {
+    "name": "Aleksandar Vučić",
+    "party": "étranger",
+    "n": 1,
+    "last": "2026-11-18"
+   },
    {
     "name": "Emmanuel Macron",
     "party": "Renaissance",
@@ -196,6 +203,10 @@
   "parties": [
    {
     "party": "Renaissance",
+    "n": 1
+   },
+   {
+    "party": "étranger",
     "n": 1
    }
   ]

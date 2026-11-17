@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T19:28+01:00",
+ "updated_at": "2026-11-17T20:02+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -62,7 +62,7 @@
    "errors": [],
    "warnings": [
     "dossier : fiche harold : même tête qu'un personnage récent (black hair, orange main colour : 2026-11-14/dossier) ; changer coiffure ou couleur dominante",
-    "dossier : fiche awa : même tête qu'un personnage récent (black hair, purple main colour : 2026-11-11/insolite, 2026-11-14/dossier) ; changer coiffure ou couleur dominante"
+    "dossier : fiche awa : même tête qu'un personnage récent (black hair, purple main colour : 2026-11-11/insolite, 2026-11-14/dossier, 2026-11-18/actu) ; changer coiffure ou couleur dominante"
    ]
   },
   {
@@ -159,6 +159,19 @@
     "actu : case 10 (Sur Internet) : « handle » inventé et générique attendu (« @Internet »)",
     "actu : case 11 (Sur Internet) : « handle » inventé et générique attendu (« @Internet »)",
     "actu : case 3 (Pour mieux comprendre) : 68 mots (max 65)"
+   ]
+  },
+  {
+   "path": "editions/2026-11-18",
+   "titles": {
+    "actu": "Un espion de nuit, un canon anti-pirates et des étoiles pressées",
+    "quiz": "Quatre mots, douze mensonges"
+   },
+   "errors": [],
+   "warnings": [
+    "actu : fiche deputee : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »",
+    "actu : brève 2 : « Ce qui se passe vraiment » de 46 mots (max 45 pour une brève)",
+    "actu : brève 3 : « Ce qui se passe vraiment » de 47 mots (max 45 pour une brève)"
    ]
   }
  ]

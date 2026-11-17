@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T19:28+01:00",
+ "updated_at": "2026-11-17T20:02+01:00",
  "stock": {
   "cultureg": [
    {
@@ -447,8 +447,23 @@
    "date": "2026-11-18",
    "path": "editions/2026-11-18",
    "status": "draft",
-   "newsletter": false,
+   "newsletter": true,
    "formats": [
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Un espion de nuit, un canon anti-pirates et des étoiles pressées",
+     "theme": "",
+     "tagline": "Robert Pattinson devient James Bond, les députés votent contre les pirates, l’ONU traque les perturbateurs endocriniens et la Serbie change de Parlement.",
+     "minutes": 4,
+     "cases": 13,
+     "photos": 1,
+     "images_done": 5,
+     "images_total": 5,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "Le Dico menteur",
