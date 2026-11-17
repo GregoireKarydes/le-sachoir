@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T20:47+01:00",
+ "updated_at": "2026-11-17T01:54+01:00",
  "stock": {
   "cultureg": [
    {
@@ -260,6 +260,57 @@
     "images_total": 6,
     "failed": 0,
     "redo": 0
+   },
+   {
+    "path": "stock/notice/20261117-0151-frigo-chaleur-a-la-porte",
+    "name": "20261117-0151-frigo-chaleur-a-la-porte",
+    "added": "20261117-0151",
+    "status": "waiting",
+    "next": false,
+    "title": "Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière)",
+    "theme": "Sciences physiques",
+    "tagline": "Un fluide qui bout dans le froid, un moteur qui ronronne, et une grille noire qui chauffe votre cuisine",
+    "minutes": 2,
+    "cases": 6,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 5,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/notice/20261117-0151-gps-ecoute-l-heure",
+    "name": "20261117-0151-gps-ecoute-l-heure",
+    "added": "20261117-0151",
+    "status": "waiting",
+    "next": false,
+    "title": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)",
+    "theme": "Informatique et numérique",
+    "tagline": "Des satellites qui crient l’heure, un téléphone qui tend l’oreille, et un randonneur en papier d’alu",
+    "minutes": 2,
+    "cases": 6,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 5,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/notice/20261117-0153-savon-escorte-la-graisse",
+    "name": "20261117-0153-savon-escorte-la-graisse",
+    "added": "20261117-0153",
+    "status": "waiting",
+    "next": false,
+    "title": "Le savon ne lave rien : il escorte la graisse jusqu’à la sortie",
+    "theme": "Médecine et santé",
+    "tagline": "Des molécules à deux bouts, des petites billes de gras, et une belle-mère qui attend sur le trottoir",
+    "minutes": 2,
+    "cases": 6,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 5,
+    "failed": 0,
+    "redo": 0
    }
   ],
   "origine": [
@@ -353,96 +404,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-16",
-   "path": "editions/2026-11-16",
-   "status": "published",
-   "newsletter": true,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Jeux olympiques : 2 800 ans de sport et un baron très têtu",
-     "theme": "Sports",
-     "tagline": "D’Olympie à Paris 2024 : comment un Français a ressuscité les Jeux, et pourquoi il a fallu attendre 2024 pour la parité",
-     "minutes": 7,
-     "cases": 27,
-     "photos": 3,
-     "images_done": 22,
-     "images_total": 22,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "actu",
-     "label": "L’Actu du jour",
-     "kind": "",
-     "title": "Un tunnel au repos, un cadenas géant et une chaise musicale",
-     "theme": "",
-     "tagline": "L’A13 ferme vers la Normandie, Édouard Philippe compte les logements, la Francophonie cherche l’unité, l’Estonie verrouille et les Bleus passent.",
-     "minutes": 5,
-     "cases": 16,
-     "photos": 3,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Pourquoi la France est pleine de Martin (merci le demi-manteau)",
-     "theme": "Société",
-     "tagline": "Un saint, un manteau coupé en deux, et six Martin dans chaque village",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 7,
-     "images_total": 7,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "kind": "",
-     "title": "Le président français est prince d’Andorre, et c’est la faute d’un comte",
-     "theme": "Géopolitique",
-     "tagline": "Un partage de vallées signé en 1278, et l’Élysée hérite d’une couronne",
-     "minutes": 2,
-     "cases": 7,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "origine",
-     "label": "D’où ça vient ?",
-     "kind": "",
-     "title": "« Se faire limoger » : un aller simple pour Limoges",
-     "theme": "Expression française",
-     "tagline": "En 1914, être renvoyé, c’était d’abord prendre le train pour le Limousin",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "quiz",
-     "label": "Le Quiz géo",
-     "kind": "geo",
-     "title": "Trois questions, une boussole et un fromage",
-     "questions": 3
-    }
-   ]
-  },
   {
    "date": "2026-11-17",
    "path": "editions/2026-11-17",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T20:47+01:00",
+ "updated_at": "2026-11-17T01:54+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -72,7 +72,8 @@
    },
    "errors": [],
    "warnings": [
-    "insolite : fiche vespasien : même tête qu'un personnage récent (bald hair, purple main colour : 2026-11-08/dossier) ; changer coiffure ou couleur dominante"
+    "insolite : fiche vespasien : même tête qu'un personnage récent (bald hair, purple main colour : 2026-11-08/dossier) ; changer coiffure ou couleur dominante",
+    "insolite : fiche titus : même tête qu'un personnage récent (black hair, teal main colour : 20261117-0151-frigo-chaleur-a-la-porte/notice) ; changer coiffure ou couleur dominante"
    ]
   },
   {
@@ -122,6 +123,26 @@
    ]
   },
   {
+   "path": "stock/notice/20261117-0151-frigo-chaleur-a-la-porte",
+   "titles": {
+    "notice": "Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière)"
+   },
+   "errors": [],
+   "warnings": [
+    "notice : fiche ines : même tête qu'un personnage récent (black hair, teal main colour : 20261114-0100-lempereur-qui-taxait-le-pipi/insolite) ; changer coiffure ou couleur dominante"
+   ]
+  },
+  {
+   "path": "stock/notice/20261117-0151-gps-ecoute-l-heure",
+   "titles": {
+    "notice": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)"
+   },
+   "errors": [],
+   "warnings": [
+    "notice : fiche gaston : même tête qu'un personnage récent (black hair, red main colour : 2026-11-14/origine, 2026-11-16/dossier, 2026-11-16/insolite) ; changer coiffure ou couleur dominante"
+   ]
+  },
+  {
    "path": "stock/origine/20261115-2045-poubelle-monsieur-le-prefet",
    "titles": {
     "origine": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet"
@@ -132,24 +153,6 @@
     "origine : case 4 : récitatif de 21 mots (max 20)",
     "origine : case 6 : récitatif de 21 mots (max 20)",
     "origine : case 8 : récitatif de 21 mots (max 20)"
-   ]
-  },
-  {
-   "path": "editions/2026-11-16",
-   "titles": {
-    "dossier": "Jeux olympiques : 2 800 ans de sport et un baron très têtu",
-    "actu": "Un tunnel au repos, un cadenas géant et une chaise musicale",
-    "cultureg": "Pourquoi la France est pleine de Martin (merci le demi-manteau)",
-    "insolite": "Le président français est prince d’Andorre, et c’est la faute d’un comte",
-    "origine": "« Se faire limoger » : un aller simple pour Limoges",
-    "quiz": "Trois questions, une boussole et un fromage"
-   },
-   "errors": [],
-   "warnings": [
-    "dossier : case 4 : récitatif de 21 mots (max 20)",
-    "cultureg : case 8 : récitatif de 23 mots (max 20)",
-    "origine : case 2 : récitatif de 21 mots (max 20)",
-    "origine : case 6 : récitatif de 22 mots (max 20)"
    ]
   },
   {

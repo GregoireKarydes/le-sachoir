@@ -1,20 +1,10 @@
 {
- "updated_at": "2026-11-16T20:47:32.319932+01:00",
- "today": "2026-11-16",
- "problems": [],
+ "updated_at": "2026-11-17T01:54:52.989714+01:00",
+ "today": "2026-11-17",
+ "problems": [
+  "flux d'actualité vides à la dernière collecte : Google Actualités, Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
+ ],
  "days": [
-  {
-   "date": "2026-11-16",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "origine": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-17",
    "status": "draft",
@@ -66,14 +56,8 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "origine"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-16",
  "stock": {
   "cultureg": {
@@ -96,9 +80,9 @@
   },
   "notice": {
    "ready": 2,
-   "waiting": 1,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 6,
+   "images_left": 21,
    "focus": "20261115-2047-maree-la-mer-suit-la-lune (6 image(s) à faire)",
    "next": "20261114-2045-code-barres-morse-de-plage",
    "next_redo": 0
@@ -124,7 +108,7 @@
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 6,
+ "quiz_days_ahead": 5,
  "quota": {
   "day": "2026-11-16",
   "count": 52,
@@ -140,14 +124,39 @@
   "month": "2026-11",
   "spent_usd": 1.93734,
   "images": 185,
-  "today_usd": 0.24857,
+  "today_usd": 0,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-15T22:49:48.771422+01:00",
-  "age_hours": 22.0,
-  "feeds": null,
-  "empty_feeds": []
+  "collected_at": "2026-11-17T01:48:45.333072+01:00",
+  "age_hours": 0.1,
+  "feeds": {
+   "Google Actualités": 0,
+   "franceinfo": 30,
+   "Le Monde": 16,
+   "Le Figaro": 20,
+   "Libération": 50,
+   "20 Minutes": 26,
+   "Ouest-France": 10,
+   "Le Parisien": 100,
+   "BFMTV": 30,
+   "Les Échos": 0,
+   "Les Échos Tech": 0,
+   "Le Monde International": 20,
+   "BBC World": 19,
+   "Le Monde Sciences": 7,
+   "Sciences et Avenir": 6,
+   "Le Monde Planète": 9,
+   "Le Monde Pixels": 17,
+   "Le Monde Santé": 4,
+   "Le Monde Culture": 11,
+   "HugoDécrypte - Actus du jour": 1
+  },
+  "empty_feeds": [
+   "Google Actualités",
+   "Les Échos",
+   "Les Échos Tech"
+  ]
  },
  "actu_balance": {
   "days": 14,
