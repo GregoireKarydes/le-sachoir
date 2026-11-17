@@ -152,7 +152,13 @@
           "title": "La betterave, héroïne de l’Empire",
           "text": "Une betterave dessinée en 1885 par le botaniste Otto Wilhelm Thomé. Sa grosse racine cache du sucre, repéré dès 1747.",
           "photo": {
-            "commons": "File:Illustration Beta vulgaris var.JPG"
+            "commons": "File:Illustration Beta vulgaris var.JPG",
+            "credit": "Illustration_Beta_vulgaris_var._rapacea0.jpg: Otto Wilhelm Thomé derivative work: Thiotrix",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Illustration_Beta_vulgaris_var.JPG",
+            "file": "images/photo-5-illustration-beta-vulgaris-var-jpg.webp",
+            "status": "done"
           }
         },
         {
