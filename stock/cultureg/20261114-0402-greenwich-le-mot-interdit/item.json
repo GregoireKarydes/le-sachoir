@@ -15,7 +15,7 @@
           "name": "Gaston, chef de gare",
           "look": "Gaston, a short round French stationmaster of 1911 in his fifties, big droopy walrus moustache, rosy cheeks, light peach skin, navy blue railway uniform with brass buttons as main colour, a tall red stationmaster's kepi, a big brass pocket watch always in his hand",
           "file": "cast/cultureg-gaston.png",
-          "status": "pending",
+          "status": "done",
           "role": "the anxious stationmaster who asks the reader's questions and has to change all the clocks; round, fussy, forever checking his watch"
         },
         {
@@ -23,7 +23,7 @@
           "name": "L’astronome",
           "look": "an elderly very tall and thin astronomer of the Paris Observatory in 1911, long pointy white beard, bald head, small round spectacles, light peach skin, long teal frock coat as main colour, a brass telescope tucked under his arm",
           "file": "cast/cultureg-astro.png",
-          "status": "pending",
+          "status": "done",
           "role": "the dry, proud astronomer who explains simply but refuses, out of wounded national pride, to ever say the name of the English village; very tall, chin up, speaks with a raised finger"
         }
       ],
@@ -34,8 +34,8 @@
           "astro"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -62,8 +62,8 @@
               "astro"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -91,7 +91,8 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (82059d38-b917-4e39-8a7c-c49d5aae4b78)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {

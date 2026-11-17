@@ -15,7 +15,7 @@
           "name": "Vespasien",
           "look": "Vespasian, a short stocky Roman emperor in his sixties, bald round head, deep forehead wrinkles, permanent strained squint, deep purple toga as main colour, gold laurel wreath, tanned skin",
           "file": "cast/insolite-vespasien.png",
-          "status": "pending",
+          "status": "done",
           "role": "the thrifty emperor who taxes everything; stocky, squinting, always counting coins"
         },
         {
@@ -23,7 +23,7 @@
           "name": "Titus, son fils",
           "look": "Titus, a tall slim elegant Roman prince around thirty, short curly black hair, pointed nose always wrinkled in disgust, spotless white tunic under a teal cloak as main colour",
           "file": "cast/insolite-titus.png",
-          "status": "pending",
+          "status": "done",
           "role": "his disgusted son, the reader's voice; tall, elegant, nose wrinkled, holding his cloak away from everything"
         }
       ],
@@ -34,8 +34,9 @@
           "titus"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -62,8 +63,9 @@
               "titus"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -94,8 +96,8 @@
               "vespasien"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -123,8 +125,8 @@
               "vespasien"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -146,8 +148,8 @@
               "vespasien"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -179,8 +181,8 @@
               "titus"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -201,8 +203,8 @@
               "vespasien"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -223,8 +225,8 @@
               "titus"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

@@ -15,7 +15,7 @@
           "name": "Guido d’Arezzo",
           "look": "Guido, a very tall and thin Italian Benedictine monk in his forties around 1030, long bony face, shaved tonsure with a ring of black hair, long black monk's habit with a pink rope belt as main colour accent, light olive skin, always holding a small wooden monochord (a long narrow wooden box with one string)",
           "file": "cast/cultureg-guido.png",
-          "status": "pending",
+          "status": "done",
           "role": "the patient music teacher monk who explains simply; tall, calm, plucking his one-string box like a professor's pointer"
         },
         {
@@ -23,7 +23,7 @@
           "name": "Pietro, le novice",
           "look": "Pietro, a short round young novice monk around twenty, chubby pink cheeks, messy bowl-cut ginger hair, oversized light-brown robe with sleeves too long, light peach skin, a heavy green leather-bound songbook always clutched to his chest",
           "file": "cast/cultureg-pietro.png",
-          "status": "pending",
+          "status": "done",
           "role": "the clumsy, lazy novice who would do anything to avoid learning every chant by heart; small, round, overwhelmed, hugging his songbook"
         }
       ],
@@ -34,8 +34,9 @@
           "pietro"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -62,8 +63,9 @@
               "guido"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -79,8 +81,8 @@
               "guido"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -107,8 +109,8 @@
               "pietro"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -151,8 +153,8 @@
               "guido"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -195,8 +197,8 @@
               "guido"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -223,8 +225,8 @@
               "guido"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -258,8 +260,8 @@
               "guido"
             ],
             "file": "images/cultureg-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 3
           }
         }
       ],

@@ -31,7 +31,7 @@
           "look": "Henri, a very tall and very thin 1890s French physicist, long narrow face, a long pointed grey beard and grey moustache, short grey hair, pale skin, small round pince-nez glasses, a dark bottle-green frock coat as main colour over a white shirt and black bow tie, often carrying the drawer",
           "role": "the dignified physicist who discovered radioactivity by accident; stiff and solemn, but secretly very proud of his drawer, holds it like a treasure",
           "file": "cast/dossier-becquerel.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "marie",
@@ -39,7 +39,7 @@
           "look": "Marie, a small slender woman of the 1900s, ash-blond hair pulled into a tight high bun with a frizzy fringe, pale skin, serious grey eyes, a long plain black dress with a high collar as main colour, a long iron stirring rod in hand",
           "role": "the stubborn, tireless scientist who works harder than anyone; calm and serious, sleeves rolled up, never impressed by honours",
           "file": "cast/dossier-marie.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "joliot",
@@ -47,7 +47,7 @@
           "look": "Frédéric, a sturdy energetic man of the 1930s, slick wavy jet-black hair combed back, tanned skin, strong square jaw, a long white lab coat as main colour over a bright red tie, holding the counter",
           "role": "the enthusiastic physicist of the atomic age, Marie Curie's son-in-law; always in motion, big dramatic gestures, a bit of a showman",
           "file": "cast/dossier-joliot.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "ines",
@@ -55,7 +55,7 @@
           "look": "Inès, a short and round young woman of today, big voluminous curly red hair, light freckled skin, a pink puffer jacket as main colour, purple leggings, white sneakers, always holding the charger",
           "role": "the lively young woman from today whose phone is always about to die; she judges every discovery by one question, can it charge her phone; short, reacts with her whole body, always looking for a socket",
           "file": "cast/dossier-ines.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -65,8 +65,9 @@
           "ines"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -93,8 +94,9 @@
               "becquerel"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -121,8 +123,8 @@
               "ines"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -166,8 +168,8 @@
               "ines"
             ],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -194,8 +196,8 @@
               "ines"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -223,8 +225,8 @@
               "ines"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -263,8 +265,8 @@
               "becquerel"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -286,8 +288,8 @@
               "ines"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -331,8 +333,8 @@
               "ines"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -360,8 +362,8 @@
               "ines"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -388,8 +390,8 @@
               "joliot"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -429,8 +431,8 @@
               "ines"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -457,8 +459,8 @@
               "ines"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -485,8 +487,8 @@
               "ines"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -514,8 +516,8 @@
               "ines"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -542,8 +544,8 @@
               "ines"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -582,8 +584,8 @@
               "ines"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 2,
             "same_place": false
           }
         },
@@ -610,8 +612,8 @@
               "ines"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -649,8 +651,8 @@
               "ines"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -666,8 +668,8 @@
               "ines"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -693,8 +695,8 @@
               "ines"
             ],
             "file": "images/dossier-20.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -721,8 +723,8 @@
               "becquerel"
             ],
             "file": "images/dossier-21.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         }
