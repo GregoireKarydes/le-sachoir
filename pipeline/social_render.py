@@ -467,7 +467,11 @@ def render_reel(post, out: Path):
 # ---------- main ----------
 
 def fingerprint(post):
-    keep = {k: post.get(k) for k in ("kind", "story", "hook", "cases", "end", "voice")}
+    keys = ("kind", "story", "hook", "cases", "end", "voice")
+    if post.get("version") == 2:
+        keys = ("kind", "version", "story", "title", "number", "series_label", "beats", "slides", "tone", "end",
+                "reel_copy", "format")
+    keep = {k: post.get(k) for k in keys}
     return hashlib.sha1(json.dumps(keep, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12]
 
 
@@ -477,9 +481,16 @@ def render(day_dir: Path, force=False) -> bool:
     fp = fingerprint(post)
     if not force and rj.exists() and json.loads(rj.read_text()).get("fingerprint") == fp:
         return False
-    for old in list(day_dir.glob("slide-*.jpg")) + list(day_dir.glob("reel*")):
+    for old in list(day_dir.glob("slide-*.jpg")) + list(day_dir.glob("tiktok-*.jpg")) + list(day_dir.glob("reel*")):
         old.unlink()
-    info = render_reel(post, day_dir) if post.get("kind") == "reel" else render_carousel(post, day_dir)
+    if post.get("kind") == "carousel" and post.get("version") == 2:
+        import carousel_v2  # Carrousel v2 « récit en diapositives » (17 novembre 2026)
+        info = carousel_v2.render(post, day_dir)
+    elif post.get("kind") == "reel" and post.get("version") == 2:
+        import reel_v2  # Reel v2 « La question du jour » (17 novembre 2026)
+        info = reel_v2.render(post, day_dir)
+    else:
+        info = render_reel(post, day_dir) if post.get("kind") == "reel" else render_carousel(post, day_dir)
     info.update({"fingerprint": fp, "kind": post.get("kind", "carousel")})
     rj.write_text(json.dumps(info, ensure_ascii=False, indent=1) + "\n")
     print(f"{day_dir.name} : {info['kind']} rendu ({', '.join(info['files'])})")

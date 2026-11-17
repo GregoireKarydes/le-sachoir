@@ -1,0 +1,9 @@
+Musiques libres de droits pour les vidéos du Sachoir (mp3, wav, m4a ou ogg), Pixabay Music (licence Pixabay).
+Le préfixe choisit l'ambiance : suspense-* pour la culture (énigme, histoire), humour-* pour l'actu et le quiz.
+Plusieurs titres d'une même ambiance : l'un d'eux est choisi selon la date. Sans fichier, une boucle est synthétisée.
+Fichiers réencodés en 128 kbit/s pour garder le dépôt léger.
+
+Titres (17 novembre 2026), avec leur page de licence (preuve en cas de réclamation automatique) :
+- suspense-documentary-mystery.mp3 : « Documentary Mystery », leberch, https://pixabay.com/music/modern-classical-documentary-mystery-313613/ (Content ID enregistré)
+- humour-curious-background.mp3 : « Curious Background Music », Sonican, https://pixabay.com/music/comedy-curious-background-music-634638/ (Content ID enregistré)
+- humour-sneaky-quirky.mp3 : « Sneaky Quirky Music », Starostin, Pixabay n° 635314

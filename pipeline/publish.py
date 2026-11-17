@@ -405,10 +405,69 @@ def main(now: datetime | None = None):
                     dst = SITE / "social" / "instagram" / d.name / f.name
                     dst.parent.mkdir(parents=True, exist_ok=True)
                     shutil.copy(f, dst)
+    write_insta(index, now)
     (SITE / ".nojekyll").write_text("")
     shutil.copy(ROOT / "data" / "health.json", SITE / "status.json")
     seo.build(SITE, index, gate=gate)
     print("Site construit dans _site/")
+
+
+def _insta_url(p: dict, published: dict, today: str) -> str | None:
+    s = p.get("story") or {}
+    f = published.get((s.get("edition"), s.get("format")))
+    if not f:
+        return None
+    utm = f"utm_source=instagram&utm_medium=social&utm_campaign={p['date']}" + (f"-{s['format']}" if s.get("format") else "")
+    if s["edition"] == today:
+        return f"./?d={s['edition']}&f={s['format']}&{utm}"
+    return f"./{f['url']}?{utm}"
+
+
+def insta_targets(index: list, today: str, social: Path) -> list:
+    """Lien en bio Instagram (`/insta`, 17 novembre 2026) : [(heure, adresse)] des posts du jour (2 par jour depuis le
+    17 novembre : l'actu à 12 h 15, une autre rubrique à 18 h 30), plus en tête (« 00:00 ») le dernier post des jours
+    précédents. La page choisit au moment du clic le dernier post déjà publié. BD de l'édition du jour : ouverte dans
+    l'appli (lisible gratuitement) ; plus ancienne : sa page publique `/histoires/…/`. Sinon l'accueil."""
+    published = {(e["date"], f["id"]): f for e in index for f in e["formats"]}
+    posts = []
+    for pj in sorted(social.glob("*/post.json")) if social.exists() else []:
+        try:
+            p = json.loads(pj.read_text())
+        except ValueError:
+            continue
+        if p.get("date", "") <= today and not p.get("skip"):
+            posts.append(p)
+    out = []
+    before = [p for p in posts if p["date"] < today]
+    for p in sorted(before, key=lambda p: (p["date"], p.get("time") or "12:15"), reverse=True):
+        url = _insta_url(p, published, today)
+        if url:
+            out.append(("00:00", url))
+            break
+    for p in sorted((p for p in posts if p["date"] == today), key=lambda p: p.get("time") or "12:15"):
+        url = _insta_url(p, published, today)
+        if url:
+            out.append((p.get("time") or "12:15", url))
+    return out or [("00:00", "./?utm_source=instagram&utm_medium=social")]
+
+
+def insta_target(index: list, today: str, social: Path) -> str:
+    """Adresse vers laquelle /insta envoie en fin de journée (le dernier post du jour, sinon le précédent)."""
+    return insta_targets(index, today, social)[-1][1]
+
+
+def write_insta(index: list, now: datetime):
+    targets = [(t, "../" + u[2:]) for t, u in insta_targets(index, now.date().isoformat(), ROOT / "social" / "instagram")]
+    first = targets[0][1]
+    script = ("var T=" + json.dumps(targets) + ";var n=new Date().toLocaleTimeString('fr-FR',{timeZone:'Europe/Paris',"
+              "hour:'2-digit',minute:'2-digit'}),u=T[0][1];for(var i=0;i<T.length;i++){if(T[i][0]<=n)u=T[i][1]}"
+              "location.replace(u)")
+    (SITE / "insta").mkdir(parents=True, exist_ok=True)
+    (SITE / "insta" / "index.html").write_text(
+        f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="robots" content="noindex">'
+        f'<title>Le Sachoir</title></head><body><script>{script}</script>'
+        f'<noscript><meta http-equiv="refresh" content="0;url={first}"></noscript>'
+        f'<a href="{first}">La BD du jour sur Le Sachoir</a></body></html>\n')
 
 
 def queue_index(today: date) -> dict:
