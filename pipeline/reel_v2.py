@@ -9,7 +9,8 @@ un plan), écrit par la tâche « Le Sachoir – Instagram » (`prompts/INSTAGRA
 Sortie : `reel.mp4` (1080 x 1920, 30 i/s) et `reel-cover.jpg`.
 
 Images, dans l'ordre d'essai pour chaque plan (`show`) :
-1. `{"pexels": "mots-clés en anglais"}` : vidéo verticale libre de droits (secret `PEXELS_API_KEY` ; sans clé, on passe) ;
+1. `{"video": "mots-clés en anglais"}` : vidéo libre de droits, Pexels (secret `PEXELS_API_KEY`) ou Pixabay (secret
+   `PIXABAY_API_KEY`) ; sans clé, on passe (l'ancien nom `pexels` marche aussi) ;
 2. `{"commons": "search terms"}` : image du domaine public ou CC0 sur Wikimedia Commons (sans clé), animée ;
 3. `{"bd": 3}` : la case n° 3 de l'histoire liée (`story`) ;
 4. `{"card": "TEXTE"}` : carte aux couleurs du Sachoir.
@@ -196,6 +197,47 @@ def pexels_clip(query, used, folder, min_secs):
     return None
 
 
+def pixabay_clip(query, used, folder, min_secs):
+    """Vidéo libre de droits Pixabay (secret `PIXABAY_API_KEY`), téléchargée (jamais liée directement)."""
+    key = os.environ.get("PIXABAY_API_KEY", "").strip()
+    if not key or not query:
+        return None
+    try:
+        r = requests.get("https://pixabay.com/api/videos/", timeout=30, params={
+            "key": key, "q": query[:100], "per_page": 20, "safesearch": "true", "video_type": "film"})
+        r.raise_for_status()
+        hits = r.json().get("hits", [])
+    except Exception as e:  # noqa
+        print(f"Pixabay « {query} » : {e}")
+        return None
+    def files(h):
+        return [v for v in (h.get("videos") or {}).values() if v.get("url") and v.get("height", 0) >= 720]
+    # Les vidéos verticales d'abord ; sinon un plan horizontal recadré au centre.
+    hits = sorted(hits, key=lambda h: not any(f["height"] > f["width"] for f in files(h)))
+    for h in hits:
+        if ("pixabay", h["id"]) in used or h.get("duration", 0) < min_secs or not files(h):
+            continue
+        f = min(files(h), key=lambda x: abs(x["height"] - 1920))
+        dst = folder / f"pixabay-{h['id']}.mp4"
+        try:
+            with requests.get(f["url"], stream=True, timeout=120) as resp:
+                resp.raise_for_status()
+                with open(dst, "wb") as out:
+                    for chunk in resp.iter_content(1 << 16):
+                        out.write(chunk)
+        except Exception as e:  # noqa
+            print(f"Pixabay : téléchargement raté ({e})")
+            continue
+        used.add(("pixabay", h["id"]))
+        return {"kind": "video", "path": dst, "duration": h.get("duration", 0), "credit": "Pixabay"}
+    return None
+
+
+def video_clip(query, used, folder, min_secs):
+    """Plan vidéo : Pexels si sa clé existe, sinon Pixabay."""
+    return pexels_clip(query, used, folder, min_secs) or pixabay_clip(query, used, folder, min_secs)
+
+
 def commons_image(query, used, folder):
     """Image du domaine public ou CC0 sur Wikimedia Commons (aucune attribution exigée)."""
     if not query:
@@ -315,10 +357,11 @@ def pick_source(beat, i, post, bd, used, folder, secs):
     if beat.get("role") == "end":
         return end_image(post, bd, folder)
     src = None
-    if show.get("pexels"):
-        src = pexels_clip(show["pexels"], used, folder, secs)
-    if not src and (show.get("commons") or show.get("pexels")):
-        src = commons_image(show.get("commons") or show.get("pexels"), used, folder)
+    words = show.get("video") or show.get("pexels")
+    if words:
+        src = video_clip(words, used, folder, secs)
+    if not src and (show.get("commons") or words):
+        src = commons_image(show.get("commons") or words, used, folder)
     if not src and show.get("bd") is not None and bd.get(show["bd"]):
         src = {"kind": "image", "path": bd[show["bd"]], "credit": ""}
     if not src and bd and not show.get("card"):
@@ -577,7 +620,8 @@ def render(post, out: Path):
         for j, part in enumerate(parts):
             s2 = src
             if j == 1 and src["kind"] == "video":
-                s2 = pexels_clip((b.get("show") or {}).get("pexels"), used, tmp, part) or src
+                show = b.get("show") or {}
+                s2 = video_clip(show.get("video") or show.get("pexels"), used, tmp, part) or src
             motion = "punch" if (i == 0 and j == 0) else motions[(i + j) % 4]
             if b.get("role") == "end":
                 motion = "in"

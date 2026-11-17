@@ -2,7 +2,7 @@
 
 Version 2, depuis le 17 novembre 2026 (étude et choix : doc projet `claude/reel-v2.md`). Chaque matin, après la
 publication de 5 h, tu prépares UN Reel « La question du jour ». GitHub Actions le fabrique (`pipeline/reel_v2.py` :
-vraies vidéos, voix Kokoro, sous-titres, musique) et l'envoie à Buffer (`pipeline/social_publish.py`). Tu n'écris que
+vraies vidéos Pixabay ou Pexels, voix Kokoro, sous-titres, musique) et l'envoie à Buffer (`pipeline/social_publish.py`). Tu n'écris que
 `social/instagram/<date>/post.json`.
 
 **Le but : un maximum de vues.** Instagram pousse un Reel quand on le regarde jusqu'au bout et quand on l'envoie à
@@ -68,14 +68,14 @@ Un temps = une phrase dite = un plan à l'écran. 7 à 10 temps, **55 à 80 mots
 - **`big`** (facultatif) : 1 à 3 mots en très gros à l'écran pendant le temps (« 13 CHIFFRES », « 7 ANS ? », « FAUX »).
   Sur 2 ou 3 temps au plus.
 - **`show`** : l'image du temps, une de ces formes :
-  - `{"pexels": "barcode scanner supermarket"}` : vidéo libre de droits ; 2 à 5 mots-clés **en anglais**, concrets et
+  - `{"video": "barcode scanner supermarket"}` : vidéo libre de droits (Pixabay ou Pexels) ; 2 à 5 mots-clés **en anglais**, concrets et
     filmables (un objet, un geste, un lieu), jamais abstraits (« truth », « history ») ;
   - `{"commons": "Louis XIV portrait"}` : archive du domaine public (gravure, tableau ancien, vieille photo), pour
     l'histoire et les origines ;
   - `{"bd": 4}` : la case n° 4 de l'histoire `story` (utile pour montrer « la BD du Sachoir », au plus 2 temps) ;
   - `{"card": "13 CHIFFRES"}` : une carte texte aux couleurs du Sachoir (pour un chiffre, une liste, une question de
     quiz). Pas de `big` sur un temps `card`.
-  On peut combiner un essai et un secours : `{"pexels": "...", "bd": 2}`. Le 1er temps doit avoir l'image la plus forte.
+  On peut combiner un essai et un secours : `{"video": "...", "bd": 2}`. Le 1er temps doit avoir l'image la plus forte.
 
 ## 4. Le reste du post
 
@@ -105,10 +105,10 @@ Un temps = une phrase dite = un plan à l'écran. 7 à 10 temps, **55 à 80 mots
   "title": "BEAUJOLAIS NOUVEAU",
   "story": {"edition": "2026-11-19", "format": "cultureg"},
   "beats": [
-    {"role": "hook", "say": "Pourquoi tout le monde boit du vin pas fini ce jeudi ?", "show": {"pexels": "red wine glass pouring"}},
-    {"role": "tension", "say": "Et surtout, pourquoi ce jeudi-là, et pas un autre ?", "show": {"pexels": "vineyard autumn"}},
+    {"role": "hook", "say": "Pourquoi tout le monde boit du vin pas fini ce jeudi ?", "show": {"video": "red wine glass pouring"}},
+    {"role": "tension", "say": "Et surtout, pourquoi ce jeudi-là, et pas un autre ?", "show": {"video": "vineyard autumn"}},
     {"role": "explain", "say": "…", "show": {"commons": "Beaujolais vendanges ancienne photo"}, "big": "3e JEUDI"},
-    {"role": "answer", "say": "…", "show": {"pexels": "wine bottles cellar"}}
+    {"role": "answer", "say": "…", "show": {"video": "wine bottles cellar"}}
   ],
   "caption": "Pourquoi le Beaujolais nouveau sort le 3e jeudi de novembre ?\n\n…\n\nEnvoie-le à celui qui en ouvre une ce soir.\n\nUne question comme ça chaque matin, en BD : lesachoir.fr",
   "hashtags": ["lesachoir", "culturegenerale", "beaujolaisnouveau"],
