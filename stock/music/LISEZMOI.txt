@@ -1,3 +1,8 @@
-Musiques libres de droits pour les Reels v2 (mp3, wav, m4a ou ogg), choisies selon la date.
-Sans fichier ici, une boucle douce est synthétisée. Sources possibles : bibliothèque audio de YouTube Studio,
-Pixabay Music (vérifier que la licence permet Instagram, TikTok et YouTube sans attribution).
+Musiques libres de droits pour les vidéos du Sachoir (mp3, wav, m4a ou ogg), Pixabay Music (licence Pixabay).
+Le préfixe choisit l'ambiance : suspense-* pour la culture (énigme, histoire), humour-* pour l'actu et le quiz.
+Plusieurs titres d'une même ambiance : l'un d'eux est choisi selon la date. Sans fichier, une boucle est synthétisée.
+
+Titres prévus (17 novembre 2026), avec leur page de licence :
+- suspense-documentary-mystery.mp3 : « Documentary Mystery », leberch, https://pixabay.com/music/modern-classical-documentary-mystery-313613/ (Content ID enregistré)
+- humour-sneaky-jazz.mp3 : « Sneaky Jazz - Curious Loop », Sonican, https://pixabay.com/music/modern-jazz-sneaky-jazz-curious-loop-527153/ (Content ID enregistré)
+- humour-quirky-comedy-strings.mp3 : « Quirky Comedy Strings », TOP_SUE, https://pixabay.com/music/comedy-quirky-comedy-strings-629010/

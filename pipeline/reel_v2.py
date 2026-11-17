@@ -533,7 +533,11 @@ def synth_music(secs, seed):
 
 
 def music_file(post, total, folder):
+    """Ambiance selon le sujet : `stock/music/suspense-*` pour la culture (énigme, histoire), `stock/music/humour-*`
+    pour l'actu et le quiz ; sinon n'importe quel titre du dossier ; sinon une boucle synthétisée."""
     tracks = sorted(p for p in MUSIC.glob("*") if p.suffix.lower() in (".mp3", ".wav", ".m4a", ".ogg")) if MUSIC.exists() else []
+    mood = "humour" if post.get("format") in ("actu", "quiz") or (post.get("story") or {}).get("format") == "actu" else "suspense"
+    tracks = [t for t in tracks if t.name.startswith(mood + "-")] or tracks
     if tracks:
         h = int(hashlib.sha1(post.get("date", "").encode()).hexdigest(), 16)
         return tracks[h % len(tracks)]
