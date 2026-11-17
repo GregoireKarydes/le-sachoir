@@ -1,7 +1,411 @@
 {
   "date": "2026-11-18",
   "status": "draft",
+  "newsletter": {
+    "subject": "Un nouveau 007, un canon anti-pirates et des étoiles pressées 🌠",
+    "intro": "Mercredi 18 novembre : 007 change de visage, la Serbie change de Parlement. Votre café, lui, garde son poste : il a fait ses preuves.",
+    "game": "Le Dico menteur : quatre mots rares, douze mensonges, un seul vrai sens à flairer.",
+    "ps": "P.-S. L’ONU veut surveiller de plus près les produits chimiques du quotidien. Votre canard de bain n’a fait aucun commentaire."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Un espion de nuit, un canon anti-pirates et des étoiles pressées",
+      "tagline": "Robert Pattinson devient James Bond, les députés votent contre les pirates, l’ONU traque les perturbateurs endocriniens et la Serbie change de Parlement.",
+      "teaser": "Un ex-vampire devient espion, un hôpital sort le canon et l’ONU fait l’inventaire de votre salle de bains.",
+      "minutes": 4,
+      "theme": "",
+      "art": {
+        "subject": "four news stories of the day, each told in one gag panel: a new actor cast as a famous British spy, a cybersecurity law, a UN report on hormone-disrupting chemicals, a student movement entering a parliament",
+        "setting": "a tailor's fitting room at night, a hospital server room, a laboratory bench covered with everyday objects, a semicircular parliament chamber",
+        "era": "present day, November 2026",
+        "props": {
+          "cannon": "a small antique black iron cannon on two wooden wheels, with a few round black cannonballs",
+          "cape": "a long black vampire cape with a high red collar, on a wooden coat rack",
+          "pile": "a tall messy pile of everyday plastic objects: a yellow rubber duck, plastic bottles, a shampoo bottle, a lipstick, a toy car, a plastic food box"
+        }
+      },
+      "cast": [
+        {
+          "id": "pattinson",
+          "name": "Robert Pattinson",
+          "look": "a cartoon caricature of a tall, lean British actor around forty, messy tousled dark-brown hair swept upward, strong square jaw with light stubble, thick eyebrows, brooding half-smile, a sleek black tuxedo with a black bow tie and white shirt as main look, a silver wristwatch",
+          "role": "the actor just cast as the famous spy, who has only ever played night-time characters; brooding, a little vain, always adjusting his bow tie",
+          "file": "cast/actu-pattinson.png",
+          "status": "pending"
+        },
+        {
+          "id": "directeur",
+          "name": "Un directeur d’hôpital",
+          "look": "a short, round man in his fifties, light pink-beige skin, bald head with a thin grey horseshoe of hair, bushy grey moustache, a bright teal hospital scrub top as main colour under an open white coat, a blue lanyard badge, small reading glasses on the tip of his nose",
+          "role": "the hospital director told to protect his servers from pirates, who takes the word literally; zealous, proud of his solutions, never doubts himself",
+          "file": "cast/actu-directeur.png",
+          "status": "pending"
+        },
+        {
+          "id": "chercheuse",
+          "name": "Une chercheuse de l’ONU",
+          "look": "a slim woman in her sixties, light freckled skin, short silver-white bob, round red glasses, a lime green cardigan as main colour over a white lab coat, grey trousers, holding a clipboard",
+          "role": "the scientist who must check hundreds of thousands of chemicals; unflappably polite, understates everything",
+          "file": "cast/actu-chercheuse.png",
+          "status": "skipped"
+        },
+        {
+          "id": "deputee",
+          "name": "Une nouvelle députée serbe",
+          "look": "a young woman in her late twenties, warm tan skin, long curly black hair in a loose bun with a pencil stuck in it, a lilac purple oversized sweater as main colour, blue jeans, white sneakers, a stack of books under one arm",
+          "role": "a university lecturer just elected to parliament, a total political novice; relaxed, treats the chamber like a lecture hall",
+          "file": "cast/actu-deputee.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A narrow hospital server room with tall grey server cabinets and small blinking green lights, pale yellow background. directeur (short and round, bald with grey horseshoe hair, bushy grey moustache, bright teal scrub top under an open white coat) in the foreground on the left, standing proudly next to the cannon aimed at the door, hands on his hips. pattinson (tall and lean, messy dark-brown swept-up hair, black tuxedo, black bow tie) tiptoeing past in the background on the right, one eyebrow raised at the cannon. Wide shot.",
+        "cast": [
+          "directeur",
+          "pattinson"
+        ],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Culture",
+          "lead": true,
+          "major": true,
+          "gag": "bureau",
+          "caption": "Lundi 16 novembre, Amazon MGM a choisi l’acteur britannique Robert Pattinson, 40 ans, ex-Batman et ex-vampire de Twilight, pour être le septième James Bond du cinéma.",
+          "bubbles": [
+            {
+              "who": "pattinson",
+              "text": "Vampire, Batman, puis espion : je ne postule qu’aux horaires de nuit.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A tailor's fitting room at night, a tall plain mirror, a big round full moon visible through the dark window, pale lavender background. pattinson (tall and lean, messy dark-brown swept-up hair, black tuxedo, black bow tie) standing on a small wooden fitting stool, adjusting his bow tie with a brooding half-smile; behind him the cape hangs on its coat rack. Medium wide shot.",
+            "cast": [
+              "pattinson"
+            ],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Les studios Pinewood, à l’ouest de Londres",
+          "text": "L’entrée des studios britanniques qui abritent le « 007 Stage », un plateau géant baptisé en l’honneur de James Bond.",
+          "photo": {
+            "commons": "File:Pinewood Studios Gateway.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Robert Pattinson succède à Daniel Craig en 007",
+          "text": "Quoi : l’acteur parle de « l’honneur d’une vie » ; le film sera réalisé par Denis Villeneuve (Dune).\nPourquoi ça compte : c’est le premier James Bond choisi par Amazon, qui a pris les commandes de la saga en 2025.\nRepère : avant lui, six acteurs ont joué 007 au cinéma, de Sean Connery à Daniel Craig.\nEt maintenant : tournage en 2027, sortie prévue en 2028.",
+          "sources": [
+            {
+              "title": "franceinfo",
+              "url": "https://www.franceinfo.fr/culture/cinema/james-bond/l-acteur-britannique-robert-pattinson-choisi-pour-incarner-james-bond_8285012.html"
+            },
+            {
+              "title": "RTÉ",
+              "url": "https://www.rte.ie/entertainment/2026/1116/1599426-robert-pattinson-announced-as-next-james-bond/"
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Comment ça se fait ?",
+          "zoom": true,
+          "title": "Pourquoi faudra-t-il attendre sept ans entre deux James Bond ?",
+          "steps": [
+            "2021 : Daniel Craig quitte le rôle après Mourir peut attendre, le 25e film",
+            "Depuis 1995, les producteurs Barbara Broccoli et Michael G. Wilson décidaient de tout ; Amazon, propriétaire de MGM depuis 2022, distribuait seulement",
+            "Février 2025 : Amazon prend le contrôle créatif ; les deux producteurs restent copropriétaires",
+            "Amazon engage le réalisateur Denis Villeneuve et le scénariste Steven Knight, puis l’acteur",
+            "Tournage en 2027, sortie en 2028 : sept ans après le dernier film"
+          ],
+          "text": "Ce qu’on ne sait pas encore : le titre du film.",
+          "sources": [
+            {
+              "title": "Boursorama",
+              "url": "https://www.boursorama.com/bourse/actualites-amp/les-studios-mgm-d-amazon-obtiennent-le-controle-creatif-de-la-franchise-james-bond-1ca3cf94760f4a7eb2f7a06d4a2fb806"
+            },
+            {
+              "title": "RTÉ",
+              "url": "https://www.rte.ie/entertainment/2026/1116/1599426-robert-pattinson-announced-as-next-james-bond/"
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Tech",
+          "gag": "litteral",
+          "caption": "Mardi 17 novembre, les députés ont voté une loi qui oblige 18 000 organismes, des hôpitaux à l’énergie, à se protéger des pirates informatiques et à signaler leurs incidents.",
+          "bubbles": [
+            {
+              "who": "directeur",
+              "text": "Des pirates ? On a installé un canon devant le serveur. On ne sait jamais.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A narrow hospital server room with tall grey server cabinets and small blinking green lights, pale mint background. Seen from above: directeur (short and round, bald with grey horseshoe hair, bushy grey moustache, bright teal scrub top under an open white coat) kneeling on the floor, proudly pushing the cannon into position in front of the server cabinets, aiming it at the door, a small pyramid of cannonballs beside him. High angle.",
+            "cast": [
+              "directeur"
+            ],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Cybersécurité : une loi pour 18 000 organismes",
+          "text": "Quoi : votée par 464 voix contre 64, elle renforce l’Anssi, l’agence de cybersécurité.\nPourquoi ça compte : en septembre, une fuite chez une filiale de La Poste a exposé les coordonnées de 22 millions de personnes.\nEt maintenant : Assemblée et Sénat doivent s’accorder sur un texte commun.",
+          "sources": [
+            {
+              "title": "Boursorama (AFP)",
+              "url": "https://www.boursorama.com/actualite-economique/actualites/les-deputes-adoptent-le-projet-de-loi-cybersecurite-en-pleine-multiplication-des-cyberattaques-9ff943b664f103bb0dd156c503ef2fd2"
+            },
+            {
+              "title": "Ouest-France",
+              "url": "https://www.ouest-france.fr/societe/cyberattaque/cyberattaques-les-deputes-adoptent-un-projet-de-loi-pour-renforcer-la-protection-des-entreprises-5dde0ffa-e2b1-11f1-a3b1-0c6de532ce7d"
+            }
+          ]
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Santé",
+          "gag": "litote",
+          "caption": "Mardi 17 novembre, l’ONU alerte sur les produits chimiques qui dérèglent les hormones, cachés dans plastiques, cosmétiques, jouets : sur 350 000 substances, la plupart n’ont jamais été testées pour ça.",
+          "bubbles": [
+            {
+              "who": "chercheuse",
+              "text": "Il en reste quelques centaines de milliers à tester. Je préviens que je rentrerai tard.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A laboratory bench with the pile of everyday plastic objects towering behind it, pale peach background. chercheuse (slim, short silver-white bob, round red glasses, lime green cardigan over a white lab coat) in front of the pile, holding her clipboard against her chest, calm polite smile, one tiny light-blue sweat drop on her temple. Medium close-up.",
+            "cast": [
+              "chercheuse"
+            ],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Perturbateurs endocriniens : l’ONU hausse le ton",
+          "text": "Quoi : premier bilan de l’ONU depuis 2012 : des liens solides avec des troubles de fertilité, du cerveau, de la thyroïde.\nPourquoi ça compte : l’exposition commence avant la naissance et coûte plus de 1 100 milliards de dollars par an.\nEt maintenant : l’ONU réclame des règles plus strictes.",
+          "sources": [
+            {
+              "title": "Euronews",
+              "url": "https://www.euronews.com/2026/11/17/hormone-disrupting-chemicals-pose-growing-health-threat-un-warns"
+            },
+            {
+              "title": "AP (News4Jax)",
+              "url": "https://www.news4jax.com/business/2026/11/17/latest-science-shows-chemicals-in-many-everyday-items-pose-a-growing-threat-un-report-says/"
+            }
+          ]
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Monde",
+          "gag": "comparaison",
+          "people": [
+            {
+              "name": "Aleksandar Vučić",
+              "party": "étranger",
+              "role": "dirigeant du Parti progressiste serbe"
+            }
+          ],
+          "caption": "Mardi 17 novembre en Serbie, les élus d’une liste née des manifestations étudiantes, surtout des universitaires novices, ont prêté serment : avec 140 sièges sur 250, ils ont la majorité.",
+          "bubbles": [
+            {
+              "who": "deputee",
+              "text": "250 sièges ? J’ai déjà fait cours devant pire : un amphi, le lundi à 8 h.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A big semicircular parliament chamber with rows of empty dark-red seats rising upward, pale sky-blue background. deputee (young, long curly black hair in a loose bun with a pencil stuck in it, lilac purple oversized sweater, stack of books under one arm) seen from below at a wooden lectern, relaxed and confident, leaning on it with one elbow as if about to start a lecture. Low angle.",
+            "cast": [
+              "deputee"
+            ],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Serbie : la fronde étudiante entre au Parlement",
+          "text": "Quoi : 53 % des voix le 25 octobre, contre 39 % pour le parti d’Aleksandar Vučić.\nPourquoi ça compte : après 14 ans au pouvoir, son camp passe dans l’opposition.\nEt maintenant : 90 jours pour former un gouvernement, et une présidentielle avant le 27 décembre.",
+          "sources": [
+            {
+              "title": "Boursorama (AFP)",
+              "url": "https://www.boursorama.com/actualite-economique/actualites/serbie-les-elus-issus-du-mouvement-etudiant-ont-prete-serment-au-parlement-56e79c5230cb27508833a62581315d6c"
+            },
+            {
+              "title": "RFE/RL",
+              "url": "https://www.rferl.org/a/serbia-parliament-student-list-opposition-vucic/33899684.html"
+            }
+          ]
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "suite": true,
+          "tag": "La suite",
+          "title": "Grève du 17 novembre : des cortèges moins fournis",
+          "text": "Annoncé : grève et manifestations mardi 17 novembre pour les salaires des fonctionnaires.\nRésultat : 146 000 manifestants selon l’Intérieur, plus de 500 000 selon la CGT ; moins de 3 % de grévistes dans la fonction publique d’État, contre près de 10 % le 5 novembre.",
+          "of": "2026-11-17#3",
+          "sources": [
+            {
+              "title": "Sud Radio (AFP)",
+              "url": "https://www.sudradio.fr/societe/fonctionnaires-jeunesse-salaries-du-prive-une-colere-qui-converge-malgre-des-corteges-moins-fournis"
+            },
+            {
+              "title": "France 24",
+              "url": "https://www.france24.com/fr/france/20261117-en-direct-nouvelle-journ%C3%A9e-mobilisation-gr%C3%A8ve-fonction-publique-gilets-jaunes-pouvoir-achat-%C3%A9tudiants-lyc%C3%A9ens"
+            }
+          ]
+        },
+        {
+          "n": 12,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "trend": "GTA VI",
+          "title": "GTA VI sort jeudi : Internet compte les heures",
+          "why": "Pourquoi ça buzze : le jeu de Rockstar sort jeudi 19 novembre, treize ans après GTA V ; il se déroule dans une Floride imaginaire inspirée de Miami.",
+          "text": "Treize ans d’attente. À ce stade, ce n’est plus un jeu vidéo, c’est un plan d’épargne retraite.",
+          "source": {
+            "title": "AVCésar — GTA VI avant sa sortie le 19 novembre",
+            "url": "https://www.avcesar.com/rockstar-games-gta-vi-pres-de-8-millions-de-precommandes-avant-sa-sortie-le-19-novembre-74-sur-ps5-48995"
+          },
+          "photo": {
+            "commons": "File:\"1430 Ocean Drive - Miami Beach, Florida\" (10943962224).jpg"
+          }
+        },
+        {
+          "n": 13,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "trend": "Léonides",
+          "title": "Les Léonides, étoiles filantes de novembre, au rendez-vous",
+          "why": "Pourquoi ça buzze : la pluie d’étoiles filantes culminait dans la nuit du 17 au 18 novembre, jusqu’à 15 par heure sous un ciel noir, à 71 km/s.",
+          "text": "Jusqu’à quinze vœux par heure. Préparez une liste : l’improvisation, à 71 km/s, pardonne mal.",
+          "source": {
+            "title": "Buzzwebzine — Léonides 2026, nuit du 17 au 18 novembre",
+            "url": "https://www.buzzwebzine.fr/leonides-2026-nuit-17-18-novembre-horaire-etoiles-filantes/"
+          },
+          "photo": {
+            "commons": "File:Leonid Meteor Storm 1833.jpg"
+          }
+        }
+      ],
+      "final": {
+        "text": "Les étoiles filantes des Léonides foncent à 71 km par seconde : de quoi relier Paris à Marseille en une dizaine de secondes.",
+        "source": "Buzzwebzine (calendrier de l’IMO)"
+      },
+      "sources": [
+        {
+          "title": "franceinfo — Robert Pattinson choisi pour incarner James Bond",
+          "url": "https://www.franceinfo.fr/culture/cinema/james-bond/l-acteur-britannique-robert-pattinson-choisi-pour-incarner-james-bond_8285012.html"
+        },
+        {
+          "title": "RTÉ — Robert Pattinson says Bond role is 'honour of a lifetime'",
+          "url": "https://www.rte.ie/entertainment/2026/1116/1599426-robert-pattinson-announced-as-next-james-bond/"
+        },
+        {
+          "title": "TBS News — Robert Pattinson confirmed as next James Bond, 26th film set for 2028",
+          "url": "https://www.tbsnews.net/splash/robert-pattinson-confirmed-next-james-bond-26th-film-set-2028-1604946"
+        },
+        {
+          "title": "Boursorama — Les studios MGM d’Amazon obtiennent le contrôle créatif de James Bond (février 2025)",
+          "url": "https://www.boursorama.com/bourse/actualites-amp/les-studios-mgm-d-amazon-obtiennent-le-controle-creatif-de-la-franchise-james-bond-1ca3cf94760f4a7eb2f7a06d4a2fb806"
+        },
+        {
+          "title": "Wikipédia — Robert Pattinson",
+          "url": "https://en.wikipedia.org/wiki/Robert_Pattinson"
+        },
+        {
+          "title": "Boursorama (AFP) — Les députés adoptent le projet de loi cybersécurité",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/les-deputes-adoptent-le-projet-de-loi-cybersecurite-en-pleine-multiplication-des-cyberattaques-9ff943b664f103bb0dd156c503ef2fd2"
+        },
+        {
+          "title": "Ouest-France — Cyberattaques : les députés adoptent un projet de loi",
+          "url": "https://www.ouest-france.fr/societe/cyberattaque/cyberattaques-les-deputes-adoptent-un-projet-de-loi-pour-renforcer-la-protection-des-entreprises-5dde0ffa-e2b1-11f1-a3b1-0c6de532ce7d"
+        },
+        {
+          "title": "Armees.com — Cybersécurité : l’Assemblée adopte le projet de loi Résilience par 464 voix",
+          "url": "https://armees.com/cybersecurite-resilience-assemblee-464-voix-17-novembre-2026/"
+        },
+        {
+          "title": "Euronews — Hormone-disrupting chemicals pose growing health threat, UN warns",
+          "url": "https://www.euronews.com/2026/11/17/hormone-disrupting-chemicals-pose-growing-health-threat-un-warns"
+        },
+        {
+          "title": "AP (News4Jax) — Chemicals in many everyday items pose a growing threat, UN report says",
+          "url": "https://www.news4jax.com/business/2026/11/17/latest-science-shows-chemicals-in-many-everyday-items-pose-a-growing-threat-un-report-says/"
+        },
+        {
+          "title": "Boursorama (AFP) — Serbie : les élus issus du mouvement étudiant ont prêté serment",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/serbie-les-elus-issus-du-mouvement-etudiant-ont-prete-serment-au-parlement-56e79c5230cb27508833a62581315d6c"
+        },
+        {
+          "title": "RFE/RL — Serbia's Student List Sworn In As Lawmakers",
+          "url": "https://www.rferl.org/a/serbia-parliament-student-list-opposition-vucic/33899684.html"
+        },
+        {
+          "title": "Sud Radio (AFP) — Une colère qui converge malgré des cortèges moins fournis",
+          "url": "https://www.sudradio.fr/societe/fonctionnaires-jeunesse-salaries-du-prive-une-colere-qui-converge-malgre-des-corteges-moins-fournis"
+        },
+        {
+          "title": "France 24 — Mobilisation : 500 000 manifestants selon la CGT, 146 000 selon Beauvau",
+          "url": "https://www.france24.com/fr/france/20261117-en-direct-nouvelle-journ%C3%A9e-mobilisation-gr%C3%A8ve-fonction-publique-gilets-jaunes-pouvoir-achat-%C3%A9tudiants-lyc%C3%A9ens"
+        },
+        {
+          "title": "AVCésar — GTA VI avant sa sortie le 19 novembre",
+          "url": "https://www.avcesar.com/rockstar-games-gta-vi-pres-de-8-millions-de-precommandes-avant-sa-sortie-le-19-novembre-74-sur-ps5-48995"
+        },
+        {
+          "title": "Paris Match — Après 13 ans d’attente, GTA VI lance ses précommandes",
+          "url": "https://www.parismatch.be/lifestyle/jeux-video/2026/06/24/apres-13-ans-dattente-grand-theft-auto-vi-lance-enfin-ses-precommandes-voici-quand-elles-auront-lieu-UOYUI3BMBZFHVFYK4G3F7XUCKE/"
+        },
+        {
+          "title": "Fox 11 — Grand Theft Auto VI brings series back to Florida-inspired Vice City",
+          "url": "https://fox11online.com/news/offbeat/rockstar-games-grand-theft-auto-vi-brings-series-back-florida-inspired-vice-city-leonida-everglades-miami-florida-keys-wetland-video-game-xbox-playstation-jason-duval-lucia-caminos"
+        },
+        {
+          "title": "Buzzwebzine — Léonides 2026, nuit du 17 au 18 novembre",
+          "url": "https://www.buzzwebzine.fr/leonides-2026-nuit-17-18-novembre-horaire-etoiles-filantes/"
+        }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "dico",
