@@ -2,132 +2,37 @@
   "date": "2026-11-18",
   "kind": "sitcom",
   "time": "20:30",
-  "skip": true,
-  "story": {
-    "edition": "2026-11-17",
-    "format": "insolite"
-  },
+  "story": {"edition": "2026-11-18", "format": "insolite"},
   "episode": {
-    "band": "DES RATS ONT EU\nUN AVOCAT ?!",
-    "board": [
-      "QUESTION DU JOUR",
-      "procès de rats ?"
-    ],
+    "band": "UN EMPEREUR A\nTAXÉ LE PIPI ?!",
+    "board": ["QUESTION DU JOUR", "le pipi taxé ?"],
     "scenes": [
-      {
-        "kind": "home",
-        "lines": [
-          {
-            "who": "max",
-            "emo": "curious",
-            "text": "Prof… c'est vrai qu'on a fait un procès à des rats ?"
-          },
-          {
-            "who": "prof",
-            "emo": "deadpan",
-            "text": "Pire. Ils avaient un avocat."
-          },
-          {
-            "who": "max",
-            "emo": "shock",
-            "shake": true,
-            "text": "Un avocat ?!"
-          }
-        ]
-      },
-      {
-        "kind": "world",
-        "set": "moyen-age",
-        "tag": "AUTUN, VERS 1520",
-        "big": "AUTUN · 1520",
-        "small": "Bourgogne",
-        "image": {
-          "bd": 1
-        },
-        "bidule": true,
-        "lines": [
-          {
-            "who": "prof",
-            "emo": "explain",
-            "text": "Autun, en Bourgogne. Des rats dévorent les récoltes : on les convoque au tribunal."
-          },
-          {
-            "who": "max",
-            "emo": "think",
-            "text": "Et… ils sont venus ?"
-          },
-          {
-            "who": "prof",
-            "emo": "deadpan",
-            "text": "Aucun. Leur avocat plaide que la route est trop dangereuse."
-          },
-          {
-            "who": "max",
-            "emo": "curious",
-            "text": "À cause de quoi ?"
-          }
-        ]
-      },
-      {
-        "kind": "world",
-        "set": "ville",
-        "palette": "nuit",
-        "tag": "L'ARGUMENT",
-        "big": "LES CHATS",
-        "small": "trajet mortel",
-        "lines": [
-          {
-            "who": "prof",
-            "emo": "smug",
-            "text": "Les chats. Les obliger à venir, c'est les envoyer à la mort."
-          },
-          {
-            "who": "max",
-            "emo": "wow",
-            "text": "Malin."
-          }
-        ]
-      },
-      {
-        "kind": "home",
-        "lines": [
-          {
-            "who": "max",
-            "emo": "curious",
-            "text": "Et alors, ils ont été condamnés ?"
-          },
-          {
-            "who": "prof",
-            "emo": "smug",
-            "pause": 0.8,
-            "text": "Zéro condamnation."
-          },
-          {
-            "who": "max",
-            "emo": "proud",
-            "text": "Je veux le même avocat."
-          }
-        ]
-      }
+      {"kind": "home", "lines": [
+        {"who": "max", "emo": "curious", "text": "Prof… un empereur romain a vraiment taxé le pipi ?"},
+        {"who": "prof", "emo": "deadpan", "text": "Oui. Et tu répètes sa leçon sans le savoir."},
+        {"who": "max", "emo": "shock", "shake": true, "text": "Moi ?!"}]},
+      {"kind": "world", "set": "antiquite", "palette": "beige", "tag": "ROME, VERS L'AN 70", "big": "AMMONIAQUE", "small": "lave les toges",
+       "image": {"bd": 3}, "bidule": true, "lines": [
+        {"who": "prof", "emo": "explain", "text": "Rome, vers l'an 70. On lave les toges à l'urine : ça détache.", "say": "Rome, vers l'an soixante-dix. On lave les toges à l'urine : ça détache."},
+        {"who": "max", "emo": "panic", "text": "Avec du pipi ?! Et ils en redemandent ?"},
+        {"who": "prof", "emo": "smug", "react": {"max": "shock"}, "text": "Ils l'achètent. Alors l'empereur Vespasien taxe ce commerce."}]},
+      {"kind": "world", "set": "antiquite", "palette": "nuit", "tag": "SELON SUÉTONE", "big": "ÇA SENT ?", "small": "une pièce de la taxe",
+       "image": {"bd": 7}, "lines": [
+        {"who": "prof", "emo": "explain", "text": "Son fils trouve ça indigne. Vespasien lui fait sentir une pièce."},
+        {"who": "max", "emo": "think", "text": "Et… elle sent ?"},
+        {"who": "prof", "emo": "deadpan", "text": "Rien. D'où : « l'argent n'a pas d'odeur »."}]},
+      {"kind": "home", "lines": [
+        {"who": "max", "emo": "curious", "text": "Attends… il a eu une récompense, au moins ?"},
+        {"who": "prof", "emo": "smug", "pause": 0.8, "text": "En 1834, les urinoirs de Paris prennent son nom : les vespasiennes.", "say": "En mille huit cent trente-quatre, les urinoirs de Paris prennent son nom : les vespasiennes."},
+        {"who": "max", "emo": "proud", "text": "Il a taxé le pipi. Le pipi s'est vengé."}]}
     ],
-    "end": {
-      "url": "lesachoir.fr",
-      "lines": [
-        "Une question comme ça,",
-        "chaque matin, en BD."
-      ]
-    }
+    "end": {"url": "lesachoir.fr", "lines": ["Une question comme ça,", "chaque matin, en BD."]}
   },
-  "caption": "Au XVIe siècle, à Autun, des rats ont été convoqués au tribunal. Et ils avaient un avocat.\n\nSa défense : la route jusqu'au tribunal grouillait de chats. Les obliger à venir, c'était les envoyer à la mort.\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nEnvoie-le à ton pote juriste.",
-  "hashtags": [
-    "lesachoir",
-    "culturegenerale",
-    "histoiredefrance",
-    "insolite",
-    "lesaviezvous"
-  ],
+  "caption": "Un empereur romain a vraiment taxé le pipi. Et tu répètes sa leçon sans le savoir.\n\nÀ Rome, les blanchisseurs achetaient l'urine des toilettes publiques : son ammoniaque nettoyait les toges. Vespasien a taxé ce commerce. Quand son fils Titus s'en est plaint, il lui a fait sentir une pièce de la taxe. Elle ne sentait rien : c'est l'origine de « l'argent n'a pas d'odeur ».\n\nEn 1834, Paris a surnommé ses nouveaux urinoirs les « vespasiennes ».\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nEnvoie-le à celui qui dit toujours « l'argent n'a pas d'odeur ».",
+  "hashtags": ["lesachoir", "culturegenerale", "histoire", "romeantique", "expressionfrancaise"],
   "sources": [
-    "https://www.slate.fr/story/239866/moyen-age-animaux-insectes-justice-proces-tribunal-loi-europe"
-  ],
-  "note": "pilote, voix Rémy + Fabrice"
+    "https://lexundria.com/suet_ves/23.3/r",
+    "https://imperiumromanum.pl/en/curiosities/emperor-vespasians-urinary-tax/",
+    "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/vespasienne-derniere/"
+  ]
 }
