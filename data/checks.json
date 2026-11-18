@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T08:50+01:00",
+ "updated_at": "2026-11-18T08:52+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -31,6 +31,17 @@
    "errors": [],
    "warnings": [
     "cultureg : case 6 : récitatif de 22 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/cultureg/20261118-0850-pendule-foucault-chapeau",
+   "titles": {
+    "cultureg": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau"
+   },
+   "errors": [],
+   "warnings": [
+    "cultureg : case 2 : récitatif de 21 mots (max 20)",
+    "cultureg : case 4 : récitatif de 21 mots (max 20)"
    ]
   },
   {

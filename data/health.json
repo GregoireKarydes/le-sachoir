@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T08:50:25.584428+01:00",
+ "updated_at": "2026-11-18T08:52:02.417576+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -79,9 +79,9 @@
  "stock": {
   "cultureg": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 25,
+   "images_left": 32,
    "focus": "20261114-0402-greenwich-le-mot-interdit (1 image(s) à faire)",
    "next": "20261114-2049-tennis-15-30-40",
    "next_redo": 0

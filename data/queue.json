@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T08:50+01:00",
+ "updated_at": "2026-11-18T08:52+01:00",
  "stock": {
   "cultureg": [
    {
@@ -81,6 +81,23 @@
     "tagline": "Un huissier, un plan des places, un roi qui veut dire non, et deux camps qui ne se sont jamais rassis ailleurs",
     "minutes": 2,
     "cases": 9,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 7,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261118-0850-pendule-foucault-chapeau",
+    "name": "20261118-0850-pendule-foucault-chapeau",
+    "added": "20261118-0850",
+    "status": "waiting",
+    "next": false,
+    "title": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
+    "theme": "Sciences physiques",
+    "tagline": "Une boule, un fil, un cercle de sable et un voisin qui refuse de tourner avec la planète",
+    "minutes": 2,
+    "cases": 8,
     "photos": 1,
     "images_done": 0,
     "images_total": 7,
