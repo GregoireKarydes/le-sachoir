@@ -2,11 +2,13 @@ name: Images
 
 on:
   push:
+    branches: [main]
     paths:
       - "editions/**/edition.json"
       - "stock/**/item.json"
       - "pipeline/style.json"
       - "pipeline/style_ref.png"
+      - "data/heartbeat/images.txt"   # « top » poussé par la tâche Claude « Le Sachoir – Top départ » (crons GitHub en retard de 6 à 9 h)
   schedule:
     - cron: "17 0-6 * * *"     # toutes les heures la nuit : reprend les images en attente
     - cron: "17 8-22/2 * * *"  # et toutes les 2 h dans la journée : le stock prend de l'avance quand il reste du quota

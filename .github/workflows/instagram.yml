@@ -17,6 +17,10 @@ on:
     - cron: "10 8 * * *"
     - cron: "40 9 * * *"
     - cron: "40 10 * * *"
+  # Envoi à Buffer dès que les fichiers sont en ligne : après chaque Publication (les crons GitHub arrivent 6 à 9 h en retard).
+  workflow_run:
+    workflows: ["Publication"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
