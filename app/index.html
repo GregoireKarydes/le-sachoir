@@ -373,6 +373,38 @@ button{cursor:pointer}
 .scard .cv .dbadges{flex-direction:column;gap:3px}.scard .cv .dbadges .dbadge{position:static;font-size:11px;padding:2px 7px}
 .paylegend{display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--muted);margin-top:-6px;background:#fff;border-radius:14px;padding:10px 12px}
 .paylegend > span{display:flex;align-items:center;gap:8px}
+/* Bande des 7 derniers jours sous la date */
+.dstrip{display:flex;gap:6px;margin-top:-4px;overflow-x:auto;scrollbar-width:none}
+.dstrip::-webkit-scrollbar{display:none}
+.dstrip-d{flex:1 1 0;min-width:40px;display:flex;flex-direction:column;align-items:center;gap:1px;padding:6px 2px 5px;border-radius:12px;border:2px solid transparent;background:#fff;color:var(--ink);font:inherit}
+.dstrip-d .wd{font-size:11.5px;color:var(--muted);text-transform:capitalize}
+.dstrip-d .dn{font-weight:800;font-size:17px;line-height:1.1}
+.dstrip-d .dot{width:6px;height:6px;border-radius:50%;background:transparent}
+.dstrip-d.done .dot{background:var(--green)}
+.dstrip-d .lk{height:10px;display:flex;color:#b07a00}.dstrip-d .lk .ic{width:10px;height:10px}
+.dstrip-d.sel{border-color:var(--ink);background:var(--yellow)}.dstrip-d.sel .wd{color:var(--ink)}
+.dstrip-d.off{opacity:.35}
+.dstrip-d.all{background:var(--grey);justify-content:center;gap:2px}.dstrip-d.all svg{width:18px;height:18px}
+/* Éditions précédentes en cartes */
+.pasted{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.sec-h h2 svg{width:22px;height:22px}
+.pedcard{flex:0 0 220px;scroll-snap-align:start;background:#fff;border:2.5px solid var(--ink);border-radius:16px;box-shadow:3px 3px 0 var(--ink);padding:0 0 12px;text-align:left;display:flex;flex-direction:column;gap:6px;overflow:hidden;color:var(--ink);font:inherit}
+.pedcard .cv{position:relative;display:block;aspect-ratio:16/9;background:#ece6da;border-bottom:2.5px solid var(--ink)}
+.pedcard .cv img{width:100%;height:100%;object-fit:cover;display:block}
+.pedcard .cv .dbadge{position:absolute;left:6px;top:6px;margin:0;font-size:11px;padding:2px 7px}
+.pedcard .cv .done{position:absolute;right:6px;bottom:6px;background:#fff;border-radius:999px;padding:2px 8px;font-size:11.5px;font-weight:800;color:var(--green-d)}
+.pedcard b{font-family:var(--f-serif);font-weight:800;font-size:16px;padding:0 12px}
+.pedcard ul{list-style:none;margin:0;padding:0 12px;display:flex;flex-direction:column;gap:3px;font-size:13px;line-height:1.25}
+.pedcard li{display:flex;gap:6px;align-items:baseline}.pedcard li span,.pedcard li{overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.pedcard li i{flex:0 0 8px;width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
+.pedcard small{color:var(--muted);font-size:12.5px;padding:0 12px;margin-top:auto}
+.pedcard.more{flex-basis:150px;align-items:center;justify-content:center;padding:16px 12px;background:var(--grey);text-align:center}
+.pedcard.more svg{width:30px;height:30px}.pedcard.more b,.pedcard.more small{padding:0}
+.ed-more .bh.sub2{margin-top:8px}.ed-more .bh.sub2 h3{font-family:var(--f-serif);font-weight:800;font-size:18px;margin:0}
+/* Dates dans Découvrir */
+.scard small.dt{display:flex;align-items:center;gap:4px;color:var(--ink);font-weight:600}.scard small.dt svg{width:13px;height:13px;flex:0 0 auto}
+.dsep{grid-column:1/-1;display:flex;align-items:center;gap:7px;font-family:var(--f-serif);font-weight:800;font-size:17px;margin:10px 2px 0}
+.dsep svg{width:17px;height:17px}.slist .dsep:first-child{margin-top:0}
 .paylegend .dbadge{white-space:nowrap;flex:0 0 auto}
 .dbadges{flex-direction:row}.srow .dbadges{margin-top:2px;gap:4px}.srow .dbadges .dbadge{font-size:11.5px;padding:2px 7px}
 .paylegend .dbadge{margin:0}
@@ -1031,6 +1063,7 @@ body{overscroll-behavior-y:none}
   .card.tile h3{font-size:25px}
   .card.tile .readstate{margin-top:auto}
   .ed-grid .card.big{height:100%}
+  .dstrip-d{flex:0 0 84px;padding:8px 4px}
   /* Grand Dossier en fin d'édition : texte à gauche, dessin à droite. */
   .ed-more .card.big{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);column-gap:26px;row-gap:10px;align-content:start;padding:22px}
   .ed-more .card.big > *{grid-column:1}
@@ -1560,6 +1593,34 @@ const SK_HOME = `<div class="skwrap" aria-busy="true" aria-label="Chargement de 
 const SK_LIST = n => `<div class="skwrap" aria-busy="true" aria-label="Chargement"><div class="sk h" style="width:40%"></div><div class="sk" style="height:46px;border-radius:14px"></div>
   ${Array.from({ length: n }, () => `<div class="skrow" style="background:#fff;border-radius:16px;padding:9px"><div class="sk" style="width:74px;height:96px;border-radius:11px"></div><div style="flex:1;display:flex;flex-direction:column;gap:9px;padding-top:4px"><div class="sk t" style="width:35%"></div><div class="sk t" style="width:90%;height:18px"></div><div class="sk t" style="width:60%"></div></div></div>`).join("")}</div>`;
 let BOOTING = true; // vrai jusqu'au premier chargement de l'édition (réussi ou non)
+/* Jours précédents bien visibles (18 novembre 2026, demande de Greg : « c'est qu'un bouton pour l'instant »).
+   En haut : une bande des 7 derniers jours (jour, numéro, point vert si lu, ⭐ si réservé Premium).
+   En bas : les éditions précédentes en cartes (couverture, titres), et l'historique complet. */
+const pubDates = () => INDEX.map(e => e.date).filter(d => d <= TODAY).sort().reverse();
+function dayStripHTML(sel) {
+  const has = new Set(INDEX.map(e => e.date));
+  let out = "";
+  for (let o = -6; o <= 0; o++) {
+    const iso = shift(TODAY, o), ok = has.has(iso) || iso === TODAY, dd = new Date(iso + "T12:00:00Z");
+    const lock = ok && !canOpenDate(iso);
+    out += `<button class="dstrip-d${iso === sel ? " sel" : ""}${ok ? "" : " off"}${ME.visited.includes(iso) ? " done" : ""}" data-day="${iso}" ${ok ? "" : "disabled"} aria-label="${fmtLong(iso)}${ok ? (lock ? ", Premium" : "") : ", pas d’édition"}"><span class="wd">${o === 0 ? "Auj." : dd.toLocaleDateString("fr-FR", { weekday: "short", timeZone: "UTC" }).replace(".", "")}</span><span class="dn">${dd.getUTCDate()}</span>${lock ? `<span class="lk">${ic("star")}</span>` : `<span class="dot"></span>`}</button>`;
+  }
+  return `<div class="dstrip" role="group" aria-label="Les 7 derniers jours">${out}</div>`;
+}
+function pastEditionsHTML(cur) {
+  const list = pubDates().filter(d => d !== cur && d < TODAY || (d === TODAY && cur !== TODAY)).slice(0, 8);
+  if (!list.length) return "";
+  const cards = list.map(d => {
+    const e = INDEX.find(x => x.date === d), fs = (e.formats || []).filter(f => f.id !== "quiz");
+    const main = fs.find(f => f.id === "dossier" && f.cover) || fs.find(f => f.cover), cv = main ? `editions/${d}/${main.cover}` : "";
+    const lock = !canOpenDate(d);
+    return `<button class="pedcard" data-day="${d}"><span class="cv">${cv ? `<img src="${cv}" alt="" loading="lazy">` : ""}${ME.visited.includes(d) ? `<span class="done">Lue ✓</span>` : ""}${PW() && !isPremium() ? (lock ? `<span class="dbadge prem">${ic("star")} Premium</span>` : `<span class="dbadge free">${ic("checkc")} Gratuit</span>`) : ""}</span>
+      <b>${cap1(new Date(d + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" }))}</b>
+      <ul>${fs.slice(0, 3).map(f => `<li><i style="background:${COLOR[f.id] || "#1f8f5f"}"></i>${typo(f.title)}</li>`).join("")}</ul>
+      <small>${fs.length} BD${fs.length > 3 ? `, dont ${fs.length - 3} autre${fs.length - 3 > 1 ? "s" : ""}` : ""}</small></button>`;
+  }).join("");
+  return `<section class="pasted"><div class="sec-h"><h2>${ICON.cal} Les éditions précédentes</h2><small>${PW() && !isPremium() ? `En entier avec ${ic("star")} Premium. Les ${FREE_CASES} premières cases de chaque Grand Dossier restent offertes.` : "Tout ce que vous avez peut-être raté."}</small></div><div class="hscroll">${cards}<button class="pedcard more" data-day="all">${ICON.cal}<b>Tout l’historique</b><small>Par jour, mois, année</small></button></div></section>`;
+}
 function renderHome() {
   const v = $("#v-home");
   if (!CUR) {
@@ -1590,25 +1651,33 @@ function renderHome() {
    ${F.notice ? card.wide(F.notice) : ""}
    ${F.origine ? card.wide(F.origine) : ""}`;
   const dn = F.dossier ? F.dossier.cases.length + (F.dossier.locked || 0) : 0;
-  const moreHTML = F.dossier ? `<section class="ed-more"><div class="sec-h"><h2>${ic("book")} Pour aller plus loin</h2><small>Le Grand Dossier : un gros sujet vu en entier, ${dn} cases, ~${F.dossier.minutes || 3} min.${showFree && !entitled(ed.date) ? ` Les ${FREE_CASES} premières sont offertes, la suite avec ${ic("star")} Premium.` : ""}</small></div>${card.dossier(F.dossier)}</section>` : "";
+  // Les Grands Dossiers des jours précédents (18 novembre 2026, Greg) : 4 cases offertes dans chacun.
+  const prevDossiers = allStories().filter(x => x.id === "dossier" && x.date < ed.date).slice(0, 10);
+  const prevHTML = prevDossiers.length ? `<div class="bh sub2"><h3>Les Grands Dossiers précédents</h3><button class="linkbtn" data-act-home="dossiers">Tout voir</button></div><div class="hscroll">${prevDossiers.map(storyCard).join("")}</div>` : "";
+  const moreHTML = F.dossier || prevHTML ? `<section class="ed-more"><div class="sec-h"><h2>${ic("book")} Pour aller plus loin</h2><small>${F.dossier ? `Le Grand Dossier : un gros sujet vu en entier, ${dn} cases, ~${F.dossier.minutes || 3} min.` : "Les Grands Dossiers : de gros sujets vus en entier."}${showFree ? ` Les ${FREE_CASES} premières cases de chaque dossier sont offertes, la suite avec ${ic("star")} Premium.` : ""}</small></div>${F.dossier ? card.dossier(F.dossier) : ""}${prevHTML}</section>` : "";
   const cardsHTML = `${freeHead}${freeHTML}`;
   const prog = isToday && !ed.empty ? todayProgress(ed) : null;
   const fresh = setHTML(v, `
    <div class="home-top"><div><h1 class="h1 hello">${hello}</h1><p class="lead">${prog && prog.done === prog.total ? "Édition bouclée. Vous pouvez briller en toute légalité." : prog && prog.done ? `Plus que ${prog.total - prog.done} à lire. Vous y êtes presque.` : "Prêt à briller en société (ou au moins à faire semblant) ?"}</p></div>
    ${startHTML()}</div>
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
+   ${dayStripHTML(ed.date)}
    ${prog ? `<div class="tprog" aria-label="Progression du jour : ${prog.done} sur ${prog.total}"><div class="dots">${prog.items.map(x => `<i class="${x.done ? "on" : ""}" style="--c:${COLOR[x.id]}" title="${esc(x.label)}"></i>`).join("")}</div><span>${prog.done === prog.total ? `${ic("party")} Tout lu aujourd’hui` : `${prog.done} / ${prog.total} aujourd’hui · ~${prog.left} min restantes`}</span></div>` : ""}
    ${isToday ? `<button class="wx wait" id="wxLine"></button>` : ""}
    ${ed.empty
       ? `<div class="empty-state"><h2>${isToday ? "L’édition du jour est encore sous le crayon" : "Pas d’édition ce jour-là"}</h2><p class="lead">${isToday ? "Le dessinateur taille ses mines. Revenez un peu plus tard." : "Le Sachoir dormait. Ça arrive aux meilleurs."}</p>${last ? `<button class="btn ghost sm" id="hLast">Lire la dernière édition (${fmtLong(last)})</button>` : ""}</div>`
       : cardsHTML}
    ${F.quiz ? quizCard(ed, F.quiz) : ""}
-   ${ed.empty ? "" : moreHTML}
+   ${moreHTML}
+   ${pastEditionsHTML(ed.date)}
    <p class="daily">Chaque jour, une nouvelle édition. Votre culture G, elle, ne prend pas de congés.</p>`);
   if (!fresh) return; // rien n'a changé : on ne touche à rien (ni images ni météo)
   v.querySelectorAll("[data-f]").forEach(b => b.onclick = () => openReader(ed, b.dataset.f));
   v.querySelectorAll("[data-quiz]").forEach(b => b.onclick = () => openQuiz(ed));
   $("#hHist").onclick = openHistory;
+  v.querySelectorAll("[data-day]").forEach(b => b.onclick = () => b.dataset.day === "all" ? openHistory() : selectDate(b.dataset.day));
+  v.querySelectorAll("[data-act-home=dossiers]").forEach(b => b.onclick = () => { EX = { pole: null, theme: null, q: "", fmt: "dossier", unread: false }; setTab("explore"); });
+  const em = v.querySelector(".ed-more"); if (em) wireStories(em);
   if ($("#hLast")) $("#hLast").onclick = () => selectDate(last);
   if (isToday) wxPaint();
   wireStart(v);
@@ -3016,6 +3085,10 @@ const storyOf = (date, fid) => { const e = INDEX.find(x => x.date === date), f =
 const coverSrc = s => s?.cover ? `editions/${s.date}/${s.cover}` : "";
 const FMT = { dossier: ["Grand Dossier", ic("book")], cultureg: ["Culture G", ic("pill")], insolite: ["Insolite", ic("zap")], notice: ["La Notice", ic("gear")], origine: ["D’où ça vient ?", ic("quote")], actu: ["L’Actu", ic("news")] };
 const dShort = d => new Date(d + "T12:00:00Z").toLocaleDateString("fr-FR", { day: "numeric", month: "short", timeZone: "UTC" });
+// « Aujourd'hui », « Hier » ou « lun. 16 nov. » (dates visibles dans Découvrir, 18 novembre 2026).
+const dDay = d => d === TODAY ? "Aujourd’hui" : d === shift(TODAY, -1) ? "Hier" : new Date(d + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "short", timeZone: "UTC" });
+// Liste groupée par jour, avec un intertitre de date (l'index est déjà du plus récent au plus ancien).
+const byDayList = res => { let last = ""; return res.map(s => { const h = s.date !== last ? `<h3 class="dsep">${ICON.cal}${s.date === TODAY ? "Aujourd’hui" : s.date === shift(TODAY, -1) ? "Hier" : cap1(fmtLong(s.date).toLowerCase())}</h3>` : ""; last = s.date; return h + storyRow(s); }).join(""); };
 // État de lecture d'une histoire, d'après le nombre de cases publié dans l'index.
 function readInfo(s) {
   const r = ME.reads.find(x => x.date === s.date && x.fid === s.id);
@@ -3030,11 +3103,11 @@ function storyRow(s) {
   return `<button class="srow" data-d="${s.date}" data-f="${s.id}"><span class="th">${thumb(s)}${ri && !ri.done ? `<i class="prog"><i style="width:${ri.pct}%"></i></i>` : ""}</span>
     <span class="bd"><span class="kick"><span class="fm f-${s.id}">${FMT[s.id]?.[0] || esc(s.label)}</span>${s.theme ? `<span class="pl" style="color:${pole?.color || "var(--muted)"}">${esc(s.theme)}</span>` : ""}</span>
     <span class="tt">${typo(s.title)}</span>
-    <span class="mt">${s.minutes || 2} min · ${dShort(s.date)}${ri ? ` · <b class="${ri.done ? "ok" : ""}">${ri.label}</b>` : ""}</span>${storyBadge(s)}</span></button>`;
+    <span class="mt">${dDay(s.date)} · ${s.minutes || 2} min${ri ? ` · <b class="${ri.done ? "ok" : ""}">${ri.label}</b>` : ""}</span>${storyBadge(s)}</span></button>`;
 }
 function storyCard(s) {
   const ri = readInfo(s);
-  return `<button class="scard" data-d="${s.date}" data-f="${s.id}"><span class="cv">${thumb(s)}${storyBadge(s)}${ri?.done ? `<span class="done">${ri.label}</span>` : ""}</span><span class="fm f-${s.id}">${FMT[s.id]?.[0] || ""}</span><b>${typo(s.title)}</b><small>${s.minutes || 2} min${s.theme ? " · " + esc(s.theme) : ""}</small></button>`;
+  return `<button class="scard" data-d="${s.date}" data-f="${s.id}"><span class="cv">${thumb(s)}${storyBadge(s)}${ri?.done ? `<span class="done">${ri.label}</span>` : ""}</span><span class="fm f-${s.id}">${FMT[s.id]?.[0] || ""}</span><b>${typo(s.title)}</b><small class="dt">${ICON.cal}${dDay(s.date)} · ${s.minutes || 2} min</small>${s.theme ? `<small>${esc(s.theme)}</small>` : ""}</button>`;
 }
 function wireStories(v) {
   v.querySelectorAll("[data-d][data-f]").forEach(b => b.onclick = async () => { try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); } catch (e) { toast("Indisponible hors ligne"); } });
@@ -3075,7 +3148,7 @@ function renderExplore() {
    ${!browsing && (poles.length > 1 || EX.pole) ? `<div class="chips row1" role="group" aria-label="Univers"><button class="chip c-all" data-p="" aria-pressed="${!EX.pole}">Tous ${n(byF.length)}</button>${poles.map(({ p, n: k }) => `<button class="chip c-${p.id}" data-p="${p.id}" aria-pressed="${EX.pole === p.id}">${p.em} ${p.name} ${n(k)}</button>`).join("")}</div>` : ""}
    ${themes.length > 1 ? `<div class="chips row1 sub" role="group" aria-label="Thématique"><button class="chip c-${cur.id}" data-t="" aria-pressed="${!EX.theme}">Toutes</button>${themes.map(({ th, n: k }) => `<button class="chip c-${cur.id}" data-t="${esc(th)}" aria-pressed="${EX.theme === th}">${esc(th)} ${n(k)}</button>`).join("")}</div>` : ""}</div>
    <p class="count">${res.length} histoire${res.length > 1 ? "s" : ""}</p>
-   <div class="slist">${res.map(storyRow).join("")}</div>
+   <div class="slist">${byDayList(res)}</div>
    ${res.length ? "" : `<div class="empty-state"><span class="bigic">${ic("search")}</span><h2>Rien trouvé</h2><p class="sub">${EX.unread ? "Vous avez tout lu dans cette sélection. Respect." : "Même Wikipédia sèche parfois. Essayez un autre mot."}</p></div>`}</section>`;
   const inp = $("#exQ");
   inp.oninput = () => { EX.q = inp.value; const p = inp.selectionStart; renderExplore(); const n2 = $("#exQ"); n2.focus(); n2.setSelectionRange(p, p); };
