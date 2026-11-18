@@ -1,22 +1,10 @@
 {
- "updated_at": "2026-11-17T21:00:37.416555+01:00",
- "today": "2026-11-17",
+ "updated_at": "2026-11-18T01:57:34.802710+01:00",
+ "today": "2026-11-18",
  "problems": [
-  "flux d'actualité vides à la dernière collecte : Google Actualités, Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
+  "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
-  {
-   "date": "2026-11-17",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "notice": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-18",
    "status": "draft",
@@ -75,14 +63,8 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "notice"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-17",
  "stock": {
   "cultureg": {
@@ -133,52 +115,50 @@
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-17",
-  "count": 51,
-  "neurons": 9000,
-  "exhausted": false,
+  "day": "2026-11-18",
+  "count": 0,
+  "neurons": 0,
+  "exhausted": true,
   "by_kind": {
-   "cast": 10,
-   "case": 40,
-   "cover": 1
-  }
+   "case": 0
+  },
+  "exhausted_at": "2026-11-18T00:57:02.297880+00:00"
  },
  "fal": {
   "month": "2026-11",
   "spent_usd": 2.16146,
   "images": 198,
-  "today_usd": 0.22412,
+  "today_usd": 0,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-17T01:48:45.333072+01:00",
-  "age_hours": 19.2,
+  "collected_at": "2026-11-18T00:51:06.803396+01:00",
+  "age_hours": 1.1,
   "feeds": {
-   "Google Actualités": 0,
-   "franceinfo": 30,
+   "Google Actualités": 33,
+   "franceinfo": 27,
    "Le Monde": 16,
    "Le Figaro": 20,
    "Libération": 50,
-   "20 Minutes": 26,
+   "20 Minutes": 27,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 19,
-   "Le Monde Sciences": 7,
-   "Sciences et Avenir": 6,
-   "Le Monde Planète": 9,
-   "Le Monde Pixels": 17,
-   "Le Monde Santé": 4,
-   "Le Monde Culture": 11,
-   "HugoDécrypte - Actus du jour": 1
+   "BBC World": 26,
+   "Le Monde Sciences": 5,
+   "Sciences et Avenir": 7,
+   "Le Monde Planète": 17,
+   "Le Monde Pixels": 11,
+   "Le Monde Santé": 6,
+   "Le Monde Culture": 12,
+   "HugoDécrypte - Actus du jour": 2
   },
   "empty_feeds": [
-   "Google Actualités",
    "Les Échos",
    "Les Échos Tech"
   ]

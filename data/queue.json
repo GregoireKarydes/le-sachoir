@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T21:00+01:00",
+ "updated_at": "2026-11-18T01:57+01:00",
  "stock": {
   "cultureg": [
    {
@@ -404,96 +404,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-17",
-   "path": "editions/2026-11-17",
-   "status": "published",
-   "newsletter": true,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Les Lumières : comment des philosophes ont rallumé la France (sans électricité)",
-     "theme": "Philosophie",
-     "tagline": "Voltaire, Diderot, Montesquieu, Rousseau : le XVIIIe siècle qui a appris à penser par soi-même, malgré la Bastille et les bûchers de livres",
-     "minutes": 6,
-     "cases": 24,
-     "photos": 3,
-     "images_done": 19,
-     "images_total": 19,
-     "failed": 0,
-     "redo": 2
-    },
-    {
-     "id": "actu",
-     "label": "L’Actu du jour",
-     "kind": "",
-     "title": "Un point gelé, une fusée rattrapée et dix ans de bilan",
-     "theme": "",
-     "tagline": "Les fonctionnaires en grève, SpaceX qui attrape son vaisseau au vol, Emmanuel Macron qui fait le point, et la Francophonie qui reporte.",
-     "minutes": 4,
-     "cases": 11,
-     "photos": 1,
-     "images_done": 4,
-     "images_total": 4,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Neptune, la planète trouvée sans lever les yeux",
-     "theme": "L’univers",
-     "tagline": "En 1846, un Français découvre une planète avec un crayon. Un Allemand n’a plus qu’à regarder.",
-     "minutes": 2,
-     "cases": 10,
-     "photos": 1,
-     "images_done": 9,
-     "images_total": 9,
-     "failed": 0,
-     "redo": 2
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite Historique",
-     "kind": "",
-     "title": "Les rats d’Autun avaient un avocat (et ils s’en sont tirés)",
-     "theme": "Histoire de France",
-     "tagline": "Vers 1520, des rats sont convoqués au tribunal. Leur défense : les chats.",
-     "minutes": 2,
-     "cases": 7,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "notice",
-     "label": "La Notice",
-     "kind": "",
-     "title": "Le code-barres, ou le morse dessiné dans le sable",
-     "theme": "Informatique et numérique",
-     "tagline": "Treize chiffres, de la lumière rouge, et une idée née les pieds dans le sable",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "quiz",
-     "label": "La Frise",
-     "kind": "frise",
-     "title": "Douze dates, un calendrier qui a le tournis",
-     "questions": 3
-    }
-   ]
-  },
   {
    "date": "2026-11-18",
    "path": "editions/2026-11-18",
