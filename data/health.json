@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T20:01:46.491292+01:00",
+ "updated_at": "2026-11-18T20:46:56.217003+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -113,12 +113,12 @@
    "next_redo": 0
   },
   "origine": {
-   "ready": 0,
+   "ready": 1,
    "waiting": 0,
    "blocked": 0,
    "images_left": 0,
    "focus": null,
-   "next": null,
+   "next": "20261118-2044-silhouette-ministre-radin",
    "next_redo": 0
   },
   "dossier": {
@@ -148,14 +148,14 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 2.42842,
-  "images": 214,
-  "today_usd": 0.26696,
+  "spent_usd": 2.48259,
+  "images": 222,
+  "today_usd": 0.32113,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-18T19:05:09.017395+01:00",
-  "age_hours": 0.9,
+  "age_hours": 1.7,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 30,

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T20:01+01:00",
+ "updated_at": "2026-11-18T20:46+01:00",
  "stock": {
   "cultureg": [
    {
@@ -313,7 +313,25 @@
     "redo": 0
    }
   ],
-  "origine": [],
+  "origine": [
+   {
+    "path": "stock/origine/20261118-2044-silhouette-ministre-radin",
+    "name": "20261118-2044-silhouette-ministre-radin",
+    "added": "20261118-2044",
+    "status": "ready",
+    "next": true,
+    "title": "Vous « surveillez votre silhouette » ? Vous surveillez un ministre radin de 1759",
+    "theme": "Expression française",
+    "tagline": "Huit mois au ministère, des impôts sur les fenêtres et un nom devenu synonyme de « strict minimum »",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 6,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   }
+  ],
   "dossier": [
    {
     "path": "stock/dossier/20261115-1923-krach-1929",
