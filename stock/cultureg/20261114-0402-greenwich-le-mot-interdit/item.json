@@ -90,9 +90,8 @@
               "astro"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (82059d38-b917-4e39-8a7c-c49d5aae4b78)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 3
           }
         },
         {
@@ -119,8 +118,8 @@
               "astro"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -155,8 +154,8 @@
               "gaston"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -188,8 +187,9 @@
               "gaston"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "failed",
+            "attempts": 3,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (bb666690-63f4-421a-8acb-3a1fec0ac6db)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -216,8 +216,8 @@
               "astro"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -243,8 +243,8 @@
               "astro"
             ],
             "file": "images/cultureg-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
@@ -281,5 +281,6 @@
         }
       }
     }
-  ]
+  ],
+  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
 }

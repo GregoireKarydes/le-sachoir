@@ -15,7 +15,7 @@
           "name": "Auguste Bartholdi",
           "look": "Auguste, a short energetic French sculptor in his thirties in the 1860s, stocky build, big bushy dark brown beard and moustache, wavy dark hair, light peach skin, bright royal blue frock coat as main colour over a white shirt, grey trousers, always carrying a large sketchbook and a pencil",
           "file": "cast/insolite-bartholdi.png",
-          "status": "pending",
+          "status": "done",
           "role": "the over-enthusiastic sculptor who only thinks in giant sizes; bouncing on his toes, waving his sketchbook"
         },
         {
@@ -23,7 +23,7 @@
           "name": "Le khédive Ismaïl",
           "look": "Ismail, the plump ruler of Egypt in his late thirties in the 1860s, round belly, neat short grey-black beard, light brown skin, tall bright red fez with a black tassel, dark green long buttoned Ottoman frock coat as main colour with a few gold medals, a string of amber prayer beads in one hand",
           "file": "cast/insolite-ismail.png",
-          "status": "pending",
+          "status": "done",
           "role": "the polite but broke ruler who listens and then says no; seated, calm, counting his beads, sighing"
         }
       ],
@@ -34,8 +34,9 @@
           "ismail"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -61,8 +62,9 @@
               "bartholdi"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -77,8 +79,8 @@
               "bartholdi"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -105,8 +107,8 @@
               "ismail"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -146,8 +148,8 @@
               "bartholdi"
             ],
             "file": "images/insolite-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -189,8 +191,8 @@
               "bartholdi"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -216,8 +218,8 @@
               "ismail"
             ],
             "file": "images/insolite-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

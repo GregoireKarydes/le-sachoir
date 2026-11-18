@@ -30,7 +30,7 @@
           "look": "Harold, a short and very round 1920s Wall Street speculator, slicked-back shiny black hair with a centre parting, thin pencil moustache, light pink-beige skin, a loud orange checked three-piece suit as main colour, the boater on his head, a strip of ticker tape always spilling from his breast pocket",
           "role": "the overconfident small speculator who bought everything on credit; struts with his chest out and never doubts, then deflates like a balloon",
           "file": "cast/dossier-harold.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "awa",
@@ -38,7 +38,7 @@
           "look": "Awa, a tall slim young woman of today, short natural black afro hair with a bright yellow headband, dark brown skin, a bright purple hoodie as main colour, light grey jeans, white sneakers, holding the phone",
           "role": "the curious young woman from today who asks the reader's questions; calm and sceptical, one eyebrow raised, arms often crossed",
           "file": "cast/dossier-awa.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "marcel",
@@ -46,7 +46,7 @@
           "look": "Marcel, a very old and very thin French saver of the 1930s, slightly hunched, bushy white walrus moustache, white tufts of hair under a black beret, pale skin, a sky-blue knitted cardigan as main colour over a white shirt, brown trousers, always hugging the sack",
           "role": "the cautious French saver who trusts only gold; suspicious, clutches his sack tightly, very proud of the strong franc",
           "file": "cast/dossier-marcel.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "roosevelt",
@@ -54,7 +54,7 @@
           "look": "Franklin, a 1930s American president in his fifties, tall and broad-shouldered, big confident grin, grey hair combed back, small pince-nez glasses, light skin, a long dark navy-blue cape over a grey suit as main colour, a grey fedora hat",
           "role": "the president who restores confidence; warm and theatrical, broad reassuring gestures, often speaking into the mic",
           "file": "cast/dossier-roosevelt.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -64,8 +64,9 @@
           "awa"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -92,8 +93,8 @@
               "harold"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -120,8 +121,8 @@
               "awa"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -161,8 +162,8 @@
               "awa"
             ],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -205,8 +206,8 @@
               "awa"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },

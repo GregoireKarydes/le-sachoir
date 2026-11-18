@@ -25,7 +25,7 @@
           "name": "Chloé",
           "look": "Chloé, a very tall athletic young woman of today, black hair in a high bouncy ponytail, dark brown skin, bright turquoise tennis dress as main colour, white visor cap, white sneakers, the racket in her hand",
           "file": "cast/cultureg-chloe.png",
-          "status": "pending",
+          "status": "done",
           "role": "the beginner tennis player who hates losing and counts every single point she is owed; energetic, very competitive, keeps swinging her racket while she talks"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Le maître paumier",
           "look": "a short round French jeu de paume master of 1630 in his fifties, pointed grey goatee and upturned moustache, light peach skin, flat black velvet cap, big white ruff collar, puffy crimson red doublet as main colour, black breeches and white stockings, the ball always in his hand",
           "file": "cast/cultureg-paumier.png",
-          "status": "pending",
+          "status": "done",
           "role": "the proud old master of the game who explains simply and admits when nobody knows; small, chest out, waves the ball like a pointer"
         }
       ],
@@ -44,8 +44,8 @@
           "paumier"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -72,8 +72,8 @@
               "paumier"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -89,8 +89,8 @@
               "chloe"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -117,8 +117,8 @@
               "chloe"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -157,8 +157,8 @@
               "paumier"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -201,8 +201,8 @@
               "chloe"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -236,8 +236,8 @@
               "paumier"
             ],
             "file": "images/cultureg-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
