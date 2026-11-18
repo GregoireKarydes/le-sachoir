@@ -2,6 +2,7 @@ name: Images
 
 on:
   push:
+    branches: [main]
     paths:
       - "editions/**/edition.json"
       - "stock/**/item.json"
