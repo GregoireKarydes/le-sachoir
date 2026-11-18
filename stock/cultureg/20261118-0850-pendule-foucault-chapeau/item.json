@@ -1,0 +1,247 @@
+{
+  "added": "20261118-0850",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
+      "tagline": "Une boule, un fil, un cercle de sable et un voisin qui refuse de tourner avec la planète",
+      "teaser": "En 1851, un Parisien jure que si la Terre tournait, son chapeau s’envolerait. Un physicien insomniaque décide de lui prouver le contraire.",
+      "minutes": 2,
+      "theme": "Sciences physiques",
+      "art": {
+        "subject": "how Léon Foucault proved in 1851, with a long pendulum swinging over a circle of sand, that the Earth turns on itself, first in his cellar, then at the Paris Observatory, then under the dome of the Panthéon",
+        "setting": "a small stone cellar lit by a candle in a Paris house, a big bare hall of the Paris Observatory with tall windows, the vast stone interior of the Panthéon under its dome",
+        "era": "Paris in 1851, Second Republic",
+        "props": {
+          "ball": "a shiny round brass ball hanging from a very long thin steel wire, with a small pointed tip underneath",
+          "sand": "a wide flat circle of pale sand on a low wooden platform, marked with thin straight grooves",
+          "hat": "a very tall shiny black top hat"
+        }
+      },
+      "cast": [
+        {
+          "id": "foucault",
+          "name": "Léon Foucault",
+          "look": "Léon Foucault, a French physicist of 31 in 1851, slight and narrow-shouldered, nervous, neat dark-brown hair with a side parting and a short trimmed brown beard, light peach skin, a mossy olive-green frock coat as main colour, beige waistcoat, a small notebook always in hand",
+          "file": "cast/cultureg-foucault.png",
+          "status": "pending",
+          "role": "the self-taught physicist who quit medicine because he could not stand blood; an anxious perfectionist who demands total silence and stillness around his pendulum, freezes everyone with a raised finger"
+        },
+        {
+          "id": "voisin",
+          "name": "Le voisin",
+          "look": "a tall big-bellied Parisian bourgeois in his fifties, bushy grey mutton-chop sideburns, ruddy light skin, the hat always on his head, a bright sky-blue waistcoat as main colour, pale grey trousers, a gold watch chain across his belly",
+          "file": "cast/cultureg-voisin.png",
+          "status": "pending",
+          "role": "Foucault's sceptical neighbour, full of bad faith, certain the Earth stands still because he does not feel it move; clutches his hat whenever the Earth's rotation is mentioned"
+        }
+      ],
+      "cover": {
+        "prompt": "the vast stone interior of the Panthéon under its dome, the ball swinging low over the sand circle on its very long wire. Foucault (slight, short brown beard, olive-green frock coat) on the left kneeling by the sand, raising one finger for silence; the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) on the right holding the hat firmly on his head with both hands, eyes wide. medium wide shot",
+        "cast": [
+          "foucault",
+          "voisin"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Janvier 1851",
+          "caption": "Janvier 1851, à Paris. Personne ne sent la Terre tourner sur elle-même. Comment le prouver sans quitter le sol ?",
+          "bubbles": [
+            {
+              "who": "voisin",
+              "text": "Si la Terre tournait, mon chapeau s’envolerait.",
+              "side": "r"
+            },
+            {
+              "who": "foucault",
+              "text": "Gardez-le bien. Descendez, je vais vous montrer.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small stone cellar lit by a single candle, the ball hanging from a beam on a short wire. Foucault (slight, short brown beard, olive-green frock coat) on the left beckoning with one hand, notebook in the other; the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) on the right halfway down the stone stairs in a long white nightshirt but still wearing the hat, pressing it down on his head, suspicious. wide shot",
+            "cast": [
+              "foucault",
+              "voisin"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "La cave",
+          "caption": "Cave, la nuit : une boule de 5 kilos, un fil de 2 mètres. Le jour, les fiacres font trembler le sol.",
+          "bubbles": [
+            {
+              "who": "foucault",
+              "text": "Ne bougez plus ! Vos chaussons font trembler la planète.",
+              "side": "l"
+            },
+            {
+              "who": "voisin",
+              "text": "Je suis en chaussons, justement !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the same candle-lit stone cellar seen from above. Foucault (slight, short brown beard, olive-green frock coat) lying flat on his stomach on the floor, nose an inch from the small swinging ball, one arm raised behind him in a frantic stop gesture; the voisin (tall, big-bellied, grey mutton-chops, white nightshirt, the hat) frozen mid-step on tiptoe in fluffy slippers, one leg in the air. high angle",
+            "cast": [
+              "foucault",
+              "voisin"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi un pendule trahit la Terre",
+          "steps": [
+            "On lance une lourde boule au bout d’un long fil",
+            "Rien ne la pousse sur le côté : elle oscille toujours dans le même plan",
+            "Pendant ce temps, la Terre tourne sous elle",
+            "Vu du sol, la ligne d’oscillation pivote lentement : au pôle Nord, un tour en 24 heures ; à Paris, en 32 heures environ"
+          ],
+          "joke": "Le pendule ne fait rien du tout. C’est tout son talent."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "3 février 1851",
+          "caption": "3 février 1851, Observatoire de Paris : un fil de 11 mètres. Il invite les savants à « venir voir tourner la Terre ».",
+          "bubbles": [
+            {
+              "who": "foucault",
+              "text": "La ligne glisse vers la droite. C’est nous qui tournons, pas elle.",
+              "side": "l"
+            },
+            {
+              "who": "voisin",
+              "text": "J’ai mis mon chapeau le plus lourd. Par précaution.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a big bare hall of the Paris Observatory with tall windows, the ball swinging on a long wire. Foucault (slight, short brown beard, olive-green frock coat) on the left crouching and pointing at the floor where the swing line has shifted; the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) on the right in a smart coat, the hat strapped under his chin with a scarf tied in a bow, standing stiff as a post. medium shot",
+            "cast": [
+              "foucault",
+              "voisin"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un pendule de Foucault aux Arts et Métiers",
+          "text": "Un pendule de Foucault au musée des Arts et Métiers, à Paris, où la boule de 1851 a été conservée. Une copie oscille au Panthéon depuis 1995.",
+          "photo": {
+            "commons": "File:Pendule de Foucault au musee des arts et metiers.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Mars 1851",
+          "caption": "Mars 1851, au Panthéon : un fil de 67 mètres, haut comme vingt étages, et une boule de 28 kilos.",
+          "bubbles": [
+            {
+              "who": "foucault",
+              "text": "Plus le fil est long, plus la boule va lentement : on la suit mieux.",
+              "side": "l"
+            },
+            {
+              "who": "voisin",
+              "text": "Et si elle se décroche, elle tombe sur qui ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "inside the vast stone Panthéon under its dome, the ball hanging from a dizzyingly long wire. Foucault (slight, short brown beard, olive-green frock coat) on the left kneeling and carefully raking the sand circle flat with a small wooden rake; the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) on the right peeking from behind a stone column, holding the hat down, staring nervously up the wire. low angle",
+            "cast": [
+              "foucault",
+              "voisin"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Le sable",
+          "caption": "Sous la boule, un cercle de sable. Sa pointe y trace un sillon, chaque fois un peu décalé : la preuve.",
+          "bubbles": [],
+          "image": {
+            "prompt": "close on the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) alone, bent over the sand circle with its fan of thin grooves, jaw dropped, eyes huge, slowly lifting the hat off his head in stunned respect, a light-blue sweat drop on his temple. close-up",
+            "cast": [
+              "voisin"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "La boule garde sa direction, la Terre tourne dessous. À Paris, la ligne fait un tour en 32 heures environ.",
+          "bubbles": [
+            {
+              "who": "voisin",
+              "text": "Elle tourne. Et je ne lâche plus jamais ce chapeau.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "on the steps outside the Panthéon. The voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) in the foreground on the right clinging to a stone column with one arm and jamming the hat on his head with the other, legs wobbly as if on a ship deck; Foucault (slight, short brown beard, olive-green frock coat) small in the background on the left, calmly writing in his notebook. medium close-up",
+            "cast": [
+              "voisin",
+              "foucault"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Léon Foucault avait abandonné ses études de médecine parce qu’il ne supportait pas la vue du sang.",
+        "source": "APS News — February 3, 1851: Léon Foucault Demonstrates That Earth Rotates"
+      },
+      "story": "Depuis Copernic, les savants savent que la Terre tourne sur elle-même. Mais personne ne le sent, et en 1851 on n’a encore jamais vu cette rotation de ses propres yeux. Léon Foucault, physicien parisien qui a abandonné la médecine parce qu’il ne supportait pas le sang, a une idée : un pendule.\nUne boule lourde au bout d’un long fil oscille toujours dans le même plan, car rien ne la pousse sur le côté. Si la Terre tourne sous elle, la ligne de ses allers-retours semble donc pivoter lentement pour qui reste au sol. Au pôle Nord, elle ferait un tour en 24 heures ; à la latitude de Paris, elle pivote d’environ 11 degrés par heure, vers la droite, soit un tour en 32 heures environ.\nEn janvier 1851, Foucault essaie dans la cave de sa maison, rue d’Assas, avec une boule de 5 kilos et un fil de 2 mètres, la nuit pour éviter les vibrations des voitures. Le 3 février, il refait l’expérience à l’Observatoire de Paris avec un fil de 11 mètres et invite les savants à « venir voir tourner la Terre ». En mars, le grand public la découvre au Panthéon : une boule de 28 kilos et 38 centimètres de diamètre, au bout d’un fil de 67 mètres, dont la pointe trace des sillons dans un cercle de sable.\nLa boule de 1851 est partie au musée des Arts et Métiers ; une copie oscille sous le dôme du Panthéon depuis 1995.",
+      "sources": [
+        {
+          "title": "APS News — February 3, 1851: Léon Foucault Demonstrates That Earth Rotates",
+          "url": "https://aps.org/apsnews/2007/02/foucault-earth-rotates"
+        },
+        {
+          "title": "Paris Zigzag — Le pendule de Foucault, une révolution sous le Panthéon",
+          "url": "https://www.pariszigzag.fr/?p=142110"
+        },
+        {
+          "title": "Wikipedia — Foucault pendulum",
+          "url": "https://en.wikipedia.org/wiki/Foucault_pendulum"
+        }
+      ]
+    }
+  ]
+}
