@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-18",
+  "kind": "carousel",
+  "version": 2,
+  "tone": "archive",
+  "time": "18:30",
+  "story": {"edition": "2026-11-18", "format": "origine"},
+  "slides": [
+    {"text": "Vous le sortez\nchaque semaine.\n\nVous ne savez pas\nque c'était **un homme**.", "image": {"commons": "Eugène Poubelle Atelier Nadar"}},
+    {"text": "Paris, 1883.\n\nUn haut fonctionnaire\nveut des rues propres.\n\nIl a un plan.\nEt un nom de famille\nqu'il va regretter.", "image": {"commons": "Paris rue 1880 photographie"}},
+    {"text": "Le 24 novembre,\nil signe un arrêté.\n\nChaque propriétaire devra fournir\ndes boîtes fermées pour les ordures.\n\nAvec un couvercle.\nUne révolution.", "image": {"commons": "Paris immeuble 1880"}},
+    {"text": "Il va même plus loin.\n\nUne boîte pour ce qui pourrit.\nUne pour les papiers.\nUne pour le verre et les huîtres.\n\nLe tri sélectif. **En 1883.**", "image": {"commons": "huîtres gravure XIXe"}},
+    {"text": "Sauf que Paris\nn'en veut pas.\n\nLes propriétaires paient.\nLes concierges portent.\n\nEt les chiffonniers, qui vivent des ordures,\ncraignent pour leur métier.", "image": {"commons": "chiffonnier Paris Atget"}},
+    {"text": "16 janvier 1884.\n\nUn journaliste du Figaro\nprend sa plume.\n\nIl a trouvé de quoi se moquer.\n\nLe nom du préfet.", "image": {"commons": "Le Figaro 1884 journal"}},
+    {"text": "Il écrit : les « boîtes… »\n\nTout Paris en rit.\nLe surnom se répand,\npuis se raccourcit.\n\n(Le préfet, lui, n'a pas ri.)", "image": {"same": true}},
+    {"text": "Le préfet de la Seine\ns'appelait Eugène…\n\n**POUBELLE**.", "image": {"commons": "Eugène Poubelle préfet de la Seine"}},
+    {"text": "Il voulait seulement\ndes rues propres.\n\nEn 1890, son nom entre au dictionnaire.\n\nEt chaque mardi soir,\nvous sortez **un préfet**.", "image": {"bd": 8}}
+  ],
+  "end": "Gratuit, en 2 minutes.",
+  "caption": "Vous le sortez chaque semaine. Vous ne savez pas que c'était un homme.\n\nLe 24 novembre 1883, le préfet de la Seine signe un arrêté : les propriétaires parisiens doivent fournir des boîtes fermées pour les ordures ménagères.\n\nIl prévoit même un tri en trois boîtes : ce qui pourrit, les papiers et chiffons, le verre, la vaisselle cassée et les coquilles d'huîtres. Ce tri est abandonné dès mars 1884.\n\nLa mesure passe mal : les propriétaires paient, les concierges portent, les chiffonniers craignent pour leur métier.\n\nLe 16 janvier 1884, dans Le Figaro, un journaliste se moque des « boîtes Poubelle ». Car le préfet s'appelle Eugène Poubelle. Le surnom se répand, se raccourcit, et en 1890 « poubelle » entre au dictionnaire.\n\nIl voulait seulement des rues propres. Il a eu son nom dans toutes les cuisines.\n\nEnvoyez-le à celui qui oublie toujours de sortir les poubelles.\n\nSources : Hérodote, Paris Zigzag, Larousse.\n\nUne question comme ça chaque matin, en BD : lesachoir.fr",
+  "hashtags": ["lesachoir", "culturegenerale", "etymologie", "histoiredeparis"],
+  "alt": "Portrait photographique ancien d'un homme barbu en costume sombre, par l'atelier Nadar.",
+  "sources": [
+    "https://www.herodote.net/almanach-ID-445.php",
+    "https://www.pariszigzag.fr/?p=118358",
+    "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Poubelle",
+    "https://www.europe1.fr/emissions/Aujourd-hui-dans-l-Histoire/24-novembre-1883-le-prefet-poubelle-impose-le-ramassage-des-ordures-a-paris-702190"
+  ]
+}

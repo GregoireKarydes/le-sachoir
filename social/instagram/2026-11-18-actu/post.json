@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-18",
+  "kind": "carousel",
+  "version": 2,
+  "tone": "couleur",
+  "time": "12:15",
+  "story": {"edition": "2026-11-18", "format": "actu"},
+  "slides": [
+    {"text": "Il a été vampire.\nPuis chauve-souris.\n\nSon prochain rôle\n**a un numéro**.", "image": {"bd": 1}},
+    {"text": "Lundi 16 novembre.\n\nUn studio annonce un nom.\n\nEt Internet\nne parle plus que de ça.", "image": {"photo": "film clapperboard studio"}},
+    {"text": "L'élu a 40 ans.\nIl est britannique.\n\nIl a déjà porté une cape.\nEt des canines.\n\nMais jamais ce costume-là.", "image": {"photo": "black tuxedo bow tie"}},
+    {"text": "Six hommes l'ont porté\navant lui au cinéma.\n\nLe dernier a raccroché en 2021,\naprès le 25e film.\n\nDepuis : plus rien.", "image": {"photo": "empty cinema seats red"}},
+    {"text": "Pourquoi si long ?\n\nEn 2025, Amazon prend\nles commandes de la saga.\n\nIl faut tout reconstruire.\nEt d'abord, trouver l'homme.", "image": {"photo": "film set studio lights"}},
+    {"text": "Un réalisateur :\nDenis Villeneuve, celui de **Dune**.\n\nIl ne manque que l'acteur.\n\nQuelqu'un d'habitué\naux horaires de nuit.", "image": {"photo": "city night rain neon"}},
+    {"text": "Robert Pattinson\nsera le prochain…\n\n**JAMES BOND**.", "image": {"photo": "martini glass tuxedo"}},
+    {"text": "Tournage en 2027.\nSortie en 2028.\n\nSept ans d'attente.\n\nL'ex-vampire a l'habitude :\nil a l'éternité devant lui.", "image": {"photo": "vintage silver sports car night"}}
+  ],
+  "end": "Gratuit, en 2 minutes.",
+  "caption": "Il a été vampire. Puis chauve-souris. Son prochain rôle a un numéro.\n\nLundi 16 novembre, Amazon MGM a choisi l'acteur britannique Robert Pattinson, 40 ans, ex-vampire de Twilight et ex-Batman, pour être le septième James Bond du cinéma.\n\nAvant lui, six acteurs ont joué 007, de Sean Connery à Daniel Craig. Craig a quitté le rôle en 2021, après Mourir peut attendre, le 25e film.\n\nPourquoi une si longue pause ? En février 2025, Amazon, propriétaire de MGM depuis 2022, a pris le contrôle créatif de la saga, jusque-là décidé par les producteurs Barbara Broccoli et Michael G. Wilson.\n\nAmazon a d'abord engagé le réalisateur Denis Villeneuve (Dune) et le scénariste Steven Knight, puis l'acteur. Tournage en 2027, sortie prévue en 2028 : sept ans après le dernier film. Le titre, lui, reste secret.\n\nL'histoire en BD, avec le reste de l'actu du jour : lien en bio.\n\nSources : franceinfo, RTÉ, Amazon, Boursorama.\n\nUne question comme ça chaque matin, en BD : lesachoir.fr",
+  "hashtags": ["lesachoir", "culturegenerale", "jamesbond", "cinema"],
+  "alt": "Dessin d'un acteur en smoking sur un tabouret d'essayage, la nuit, une cape de vampire accrochée derrière lui.",
+  "sources": [
+    "https://www.aboutamazon.com/news/entertainment/james-bond-robert-pattinson-cast-amazon-mgm-film",
+    "https://www.thewrap.com/creative-content/movies/robert-pattinson-james-bond-actor/",
+    "https://www.franceinfo.fr/culture/cinema/james-bond/l-acteur-britannique-robert-pattinson-choisi-pour-incarner-james-bond_8285012.html",
+    "https://www.rte.ie/entertainment/2026/1116/1599426-robert-pattinson-announced-as-next-james-bond/"
+  ]
+}
