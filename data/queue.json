@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T08:53+01:00",
+ "updated_at": "2026-11-18T08:54+01:00",
  "stock": {
   "cultureg": [
    {
@@ -545,6 +545,21 @@
      "label": "Le Quiz géo",
      "kind": "geo",
      "title": "Trois questions, un phare et un parallèle menteur",
+     "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "path": "editions/2026-11-25",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "La Frise",
+     "kind": "frise",
+     "title": "Douze dates et un duel à l’épée en pleine ère spatiale",
      "questions": 3
     }
    ]
