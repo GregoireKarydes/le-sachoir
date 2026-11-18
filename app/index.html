@@ -357,6 +357,25 @@ button{cursor:pointer}
 .dbadge{display:inline-block;align-self:flex-start;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:700;margin-top:4px;background:#fff;color:var(--ink)}
 .card .dbadge{margin:6px 0 0}
 .dbadge.lock{background:var(--grey)}.dbadge.gift{background:#fff4d6}.dbadge.prem{background:var(--yellow)}
+/* Gratuit / payant d'un coup d'œil (18 nov. 2026) : vert = offert, jaune ⭐ = Premium, plus complet. */
+.dbadge.free{background:#dff3e6;color:#11603c}
+.dbadges{display:flex;flex-wrap:wrap;gap:5px;align-self:flex-start}
+.dbadges .dbadge{margin:0}
+.card .dbadges{margin-top:6px}
+.sec-h{display:flex;flex-direction:column;gap:2px;margin:6px 2px -4px}
+.sec-h h2{font-family:var(--f-serif);font-weight:800;font-size:21px;line-height:1.1;margin:0;display:flex;align-items:center;gap:7px}
+.sec-h h2 .ic{width:22px;height:22px}
+.sec-h small{color:var(--muted);font-size:13.5px;line-height:1.35}
+.sec-h small .ic{width:1em;height:1em;vertical-align:-.12em}
+.ed-more{display:flex;flex-direction:column;gap:14px;margin-top:8px;padding-top:16px;border-top:2.5px dashed rgba(23,20,15,.18)}
+.ed-more .card.big{border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.scard .cv .dbadge,.scard .cv .dbadges{position:absolute;left:6px;top:6px;margin:0;font-size:11px;padding:2px 7px}
+.scard .cv .dbadges{flex-direction:column;gap:3px}.scard .cv .dbadges .dbadge{position:static;font-size:11px;padding:2px 7px}
+.paylegend{display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--muted);margin-top:-6px;background:#fff;border-radius:14px;padding:10px 12px}
+.paylegend > span{display:flex;align-items:center;gap:8px}
+.paylegend .dbadge{white-space:nowrap;flex:0 0 auto}
+.dbadges{flex-direction:row}.srow .dbadges{margin-top:2px;gap:4px}.srow .dbadges .dbadge{font-size:11.5px;padding:2px 7px}
+.paylegend .dbadge{margin:0}
 .giftlist{display:flex;flex-direction:column;gap:8px}
 .gitem{display:flex;gap:10px;align-items:center;background:#fff;border-radius:14px;padding:8px;border:0;text-align:left;width:100%}
 .gitem img,.gitem .ph0{width:56px;height:72px;object-fit:cover;object-position:top;border-radius:10px;background:var(--grey);flex:0 0 auto}
@@ -1012,6 +1031,14 @@ body{overscroll-behavior-y:none}
   .card.tile h3{font-size:25px}
   .card.tile .readstate{margin-top:auto}
   .ed-grid .card.big{height:100%}
+  /* Grand Dossier en fin d'édition : texte à gauche, dessin à droite. */
+  .ed-more .card.big{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);column-gap:26px;row-gap:10px;align-content:start;padding:22px}
+  .ed-more .card.big > *{grid-column:1}
+  .ed-more .card.big > .tag,.ed-more .card.big > .dbadges,.ed-more .card.big > .dbadge{justify-self:start}
+  .ed-more .card.big .illu{grid-column:2;grid-row:1 / span 7;margin:0;align-self:center}
+  .ed-more .card.big .illu img{max-width:none;width:100%;height:auto;aspect-ratio:1792/1024;object-fit:cover;border-radius:14px;border:3px solid var(--ink)}
+  .ed-more .card.big .illu .tag{left:12px;bottom:12px}
+  .ed-more .card.big .dteaser{display:block;margin:4px 2px 0;font-size:18px;line-height:1.4;font-weight:500}
   /* 16 nov. 2026 (Greg : « sur le PC le style est bizarre ») : l'image garde son format (plus de bande verte vide
      sous un dessin plafonné à 330 px), l'accroche du dossier comble la hauteur et le bouton descend en bas de la carte. */
   .ed-grid .card.big .illu{flex:0 0 auto;margin:4px 0 0}
@@ -1239,7 +1266,7 @@ body{overscroll-behavior-y:none}
 /* =========================================================
    Le Sachoir — appli PWA (V1 gratuite, données locales)
    ========================================================= */
-const ORDER = ["dossier", "actu", "cultureg", "insolite", "notice", "origine", "quiz"];
+const ORDER = ["actu", "cultureg", "insolite", "notice", "origine", "quiz", "dossier"]; // le Grand Dossier en dernier : « pour aller plus loin »
 const DESK = matchMedia("(min-width: 900px)");
 const CLS = { dossier: "green", actu: "navy", cultureg: "orange", insolite: "red", notice: "purple", origine: "bronze", quiz: "navy-d" };
 const COLOR = { dossier: "#1f8f5f", actu: "#2f4fa2", cultureg: "#f2a33a", insolite: "#d9473a", notice: "#7a4fb8", origine: "#8a5a24", quiz: "#14275c" };
@@ -1278,6 +1305,7 @@ const IC = {
   pin: '<path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
   compass: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
   lock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>',
+  unlock: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 7.6-1.8"/>',
   bulb: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>',
   chart: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
   hand: '<path d="M8 11.5V6a1.5 1.5 0 0 1 3 0v5M11 10.5V4.5a1.5 1.5 0 0 1 3 0v6M14 10.5V6a1.5 1.5 0 0 1 3 0v6.5M17 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.6a6.3 6.3 0 0 1-5.2-2.8l-2.9-4.4a1.6 1.6 0 0 1 2.6-1.8L8 13.6"/>',
@@ -1355,16 +1383,22 @@ async function loadWallet() {
 const entitled = date => isPremium() || WALLET.unlocked.includes(date);
 // Tout partage porte le code de parrainage : un ami qui s'inscrit par ce lien rapporte un Grand Dossier.
 const withRef = url => { if (!WALLET.ref || !MAIL()) return url; const u = new URL(url); u.searchParams.set("ref", WALLET.ref); return u.href; };
-// Badge d'une histoire dans Découvrir : réservée (⭐ Premium) ou, pour un Grand Dossier, son état.
-const storyBadge = s => !PW() || isPremium() ? (s.id === "dossier" ? dossierBadge(s.date) : "")
-  : canOpenDate(s.date) || WALLET.unlocked.includes(s.date) ? (s.id === "dossier" ? dossierBadge(s.date) : "")
-  : `<span class="dbadge prem">${ic("star")} Premium</span>`;
-// Badge d'un Grand Dossier quand le paywall est actif.
-function dossierBadge(date) {
+// Badges gratuit / payant (18 novembre 2026, demande de Greg : on doit voir d'un coup d'œil ce qui est offert).
+// ✓ Gratuit : l'édition du jour. Grand Dossier : 4 cases offertes pour tous, anciens compris, et ⭐ la suite
+// en Premium (« payant mais plus complet »). ⭐ Premium : les autres histoires des éditions passées.
+const FREE_CASES = 4;
+const storyBadge = s => {
   if (!PW()) return "";
-  if (isPremium()) return `<span class="dbadge prem">${ic("star")} Premium</span>`;
+  if (s.id === "dossier") return dossierBadge(s.date, s.cases);
+  if (isPremium()) return "";
+  return canOpenDate(s.date) ? `<span class="dbadge free">${ic("checkc")} Gratuit aujourd’hui</span>` : `<span class="dbadge prem">${ic("star")} Premium</span>`;
+};
+// Badge d'un Grand Dossier quand le paywall est actif (n = nombre total de cases, s'il est connu).
+function dossierBadge(date, n) {
+  if (!PW()) return "";
+  if (isPremium()) return `<span class="dbadge prem">${ic("star")} En entier</span>`;
   if (WALLET.unlocked.includes(date)) return `<span class="dbadge gift">${ic("gift")} Débloqué</span>`;
-  return `<span class="dbadge lock">${ic("lock")} 4 cases offertes</span>`;
+  return `<span class="dbadges"><span class="dbadge free">${ic("unlock")} ${FREE_CASES} cases offertes</span><span class="dbadge prem">${ic("star")} ${n > FREE_CASES ? `Complet : ${n} cases` : "Suite en Premium"}</span></span>`;
 }
 const ACC_KEY = "sachoir.acc";
 let ACC = (() => { try { return JSON.parse(localStorage.getItem(ACC_KEY) || "null"); } catch (e) { return null; } })();
@@ -1537,22 +1571,27 @@ function renderHome() {
   const hello = ME.name ? `Salut, ${esc(ME.name)}` : "Salut !";
   const isToday = ed.date === TODAY;
   const card = {
-    dossier: f => { const c = coverOf(ed, f); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span>${dossierBadge(ed.date)}<h3>${typo(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}${f.teaser ? `<p class="dteaser">${esc(f.teaser)}</p>` : ""}<span class="cta">${readState(ed, f) ? "Reprendre" : "Lire le dossier"} (${f.minutes || 3} min) →</span><p class="tagline">${typo(f.tagline || "")}</p></button>`; },
+    dossier: f => { const c = coverOf(ed, f), n = f.cases.length + (f.locked || 0), gated = PW() && !entitled(ed.date); return `<button class="card green big" data-f="dossier"><span class="tag">${esc(f.label)}</span>${dossierBadge(ed.date, n)}<h3>${typo(f.title)}</h3>${c ? `<div class="illu"><img src="${c}" alt="" loading="lazy">${f.theme ? `<span class="tag">${esc(f.theme)}</span>` : ""}</div>` : ""}${f.teaser ? `<p class="dteaser">${esc(f.teaser)}</p>` : ""}<span class="cta">${readState(ed, f) ? `Reprendre (${f.minutes || 3} min)` : gated ? "Commencer gratuitement" : `Lire le dossier (${f.minutes || 3} min)`} →</span><p class="tagline">${typo(f.tagline || "")}</p></button>`; },
     small: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} small" data-f="${f.id}"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><div class="mid"><span class="dur">${ICON.clock}${f.minutes || 2} min</span>${c ? `<img class="thumb" src="${c}" alt="" loading="lazy">` : ""}</div><span class="tl">${readState(ed, f) || typo(f.tagline || "")}</span></button>`; },
     wide: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} wide" data-f="${f.id}"><div class="txt"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || typo(f.tagline || "")}</span></div>${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}</button>`; }
   };
   const duo = ["actu", "cultureg"].filter(id => F[id]);
   const others = ["actu", "cultureg", "insolite", "notice", "origine"].filter(id => F[id]);
   card.tile = f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} tile" data-f="${f.id}">${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}<div class="txt"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || typo(f.tagline || "")}</span></div></button>`; };
-  const cardsHTML = DESK.matches
-    ? (F.dossier
-        ? `<div class="ed-grid has-big">${card.dossier(F.dossier)}${others.length ? `<div class="ed-side${others.length >= 4 ? " two" : ""}" style="--k:${others.length}">${others.map(id => card.wide(F[id])).join("")}</div>` : ""}</div>`
-        : `<div class="ed-grid n${others.length}" style="--n:${others.length}">${others.map(id => card.tile(F[id])).join("")}</div>`)
-    : `${F.dossier ? card.dossier(F.dossier) : ""}
-   ${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
+  // Ordre de l'édition (18 novembre 2026, demande de Greg) : d'abord ce qui est offert, puis le jeu,
+  // et le Grand Dossier en dernier, présenté comme le gros sujet « pour aller plus loin ».
+  const showFree = PW() && !isPremium();
+  const freeMin = others.reduce((t, id) => t + (F[id].minutes || 2), 0);
+  const freeHead = others.length ? `<div class="sec-h"><h2>${showFree ? `${ic("checkc")} Offert aujourd’hui` : "Au menu du jour"}</h2><small>${others.length} BD · ~${freeMin} min${showFree ? " · gratuit, sans compte" : ""}</small></div>` : "";
+  const freeHTML = DESK.matches
+    ? `<div class="ed-grid n${others.length}" style="--n:${others.length === 4 ? 4 : Math.min(others.length, 3)}">${others.map(id => card.tile(F[id])).join("")}</div>`
+    : `${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
    ${F.insolite ? card.wide(F.insolite) : ""}
    ${F.notice ? card.wide(F.notice) : ""}
    ${F.origine ? card.wide(F.origine) : ""}`;
+  const dn = F.dossier ? F.dossier.cases.length + (F.dossier.locked || 0) : 0;
+  const moreHTML = F.dossier ? `<section class="ed-more"><div class="sec-h"><h2>${ic("book")} Pour aller plus loin</h2><small>Le Grand Dossier : un gros sujet vu en entier, ${dn} cases, ~${F.dossier.minutes || 3} min.${showFree && !entitled(ed.date) ? ` Les ${FREE_CASES} premières sont offertes, la suite avec ${ic("star")} Premium.` : ""}</small></div>${card.dossier(F.dossier)}</section>` : "";
+  const cardsHTML = `${freeHead}${freeHTML}`;
   const prog = isToday && !ed.empty ? todayProgress(ed) : null;
   const fresh = setHTML(v, `
    <div class="home-top"><div><h1 class="h1 hello">${hello}</h1><p class="lead">${prog && prog.done === prog.total ? "Édition bouclée. Vous pouvez briller en toute légalité." : prog && prog.done ? `Plus que ${prog.total - prog.done} à lire. Vous y êtes presque.` : "Prêt à briller en société (ou au moins à faire semblant) ?"}</p></div>
@@ -1564,6 +1603,7 @@ function renderHome() {
       ? `<div class="empty-state"><h2>${isToday ? "L’édition du jour est encore sous le crayon" : "Pas d’édition ce jour-là"}</h2><p class="lead">${isToday ? "Le dessinateur taille ses mines. Revenez un peu plus tard." : "Le Sachoir dormait. Ça arrive aux meilleurs."}</p>${last ? `<button class="btn ghost sm" id="hLast">Lire la dernière édition (${fmtLong(last)})</button>` : ""}</div>`
       : cardsHTML}
    ${F.quiz ? quizCard(ed, F.quiz) : ""}
+   ${ed.empty ? "" : moreHTML}
    <p class="daily">Chaque jour, une nouvelle édition. Votre culture G, elle, ne prend pas de congés.</p>`);
   if (!fresh) return; // rien n'a changé : on ne touche à rien (ni images ni météo)
   v.querySelectorAll("[data-f]").forEach(b => b.onclick = () => openReader(ed, b.dataset.f));
@@ -1790,10 +1830,14 @@ function finalHTML(ed, f) {
 // Ce qui suit une BD : la prochaine histoire non lue de l'édition (puis le jeu), sinon « édition bouclée ».
 function nextOf(ed, f) {
   const order = ["actu", "cultureg", "insolite", "notice", "origine", "dossier"].map(id => ed.formats.find(x => x.id === id)).filter(x => x && x.id !== f.id);
-  const unread = order.find(x => { const r = ME.reads.find(y => y.date === ed.date && y.fid === x.id); return !r || r.max < (x.cases?.length || 99); });
+  const unreadOf = x => { const r = ME.reads.find(y => y.date === ed.date && y.fid === x.id); return !r || r.max < (x.cases?.length || 99); };
+  // D'abord les BD gratuites, puis le jeu, et le Grand Dossier pour finir (même ordre que l'écran Édition).
+  const unread = order.find(x => x.id !== "dossier" && unreadOf(x));
   if (unread) return { kind: "story", f: unread };
   const q = ed.formats.find(x => x.id === "quiz");
   if (q && !(ME.quiz?.[ed.date]?.done)) return { kind: "quiz", f: q };
+  const d = order.find(x => x.id === "dossier" && unreadOf(x));
+  if (d) return { kind: "story", f: d };
   return { kind: "done" };
 }
 // Une seule invitation, la plus utile au bon moment (jamais en pleine lecture).
@@ -1810,7 +1854,7 @@ function afterHTML(ed, f) {
   let out = "";
   if (ed.date === TODAY || ed.date === CUR?.date) {
     const n = nextOf(ed, f);
-    if (n.kind === "story") out += `<button class="nextup" data-act="next" data-f="${n.f.id}" style="--c:${COLOR[n.f.id]}"><small>À suivre · ${n.f.minutes || 2} min</small><b>${typo(n.f.title)}</b><span>→</span></button>`;
+    if (n.kind === "story") out += `<button class="nextup" data-act="next" data-f="${n.f.id}" style="--c:${COLOR[n.f.id]}"><small>${n.f.id === "dossier" ? "Pour aller plus loin · Grand Dossier" : "À suivre"} · ${n.f.minutes || 2} min</small><b>${typo(n.f.title)}</b><span>→</span></button>`;
     else if (n.kind === "quiz") out += `<button class="nextup" data-act="quiz" style="--c:${COLOR.quiz}"><small>Pour finir en beauté</small><b>Le jeu du jour : ${esc(n.f.title)}</b><span>${ic("dice")}</span></button>`;
     else out += `<div class="alldone">${ic("party")} <b>Édition bouclée !</b> Vous en savez plus que ce matin. Revenez demain, on remet ça.</div><button class="btn ghost" data-act="explore">Explorer d’autres histoires</button>`;
   }
@@ -1820,7 +1864,8 @@ function afterHTML(ed, f) {
 }
 async function openReader(ed, fid, startAt = 0) {
   let full = ed.formats.find(x => x.id === fid); if (!full) return;
-  if (!canOpenDate(ed.date) && !(fid === "dossier" && (WALLET.unlocked.includes(ed.date) || WALLET.credits > 0))) return openPremium("archives");
+  // Grand Dossier : ses 4 premières cases sont offertes à tous, quelle que soit la date (18 novembre 2026, Greg).
+  if (!canOpenDate(ed.date) && fid !== "dossier") return openPremium("archives");
   // Paywall : le site publié ne contient que le début du Grand Dossier (champ « locked » = cases restantes).
   // Abonné Premium ou dossier débloqué : la suite est demandée à l'API.
   if (full.locked && entitled(ed.date)) {
@@ -2989,7 +3034,7 @@ function storyRow(s) {
 }
 function storyCard(s) {
   const ri = readInfo(s);
-  return `<button class="scard" data-d="${s.date}" data-f="${s.id}"><span class="cv">${thumb(s)}${ri?.done ? `<span class="done">${ri.label}</span>` : ""}</span><span class="fm f-${s.id}">${FMT[s.id]?.[0] || ""}</span><b>${typo(s.title)}</b><small>${s.minutes || 2} min${s.theme ? " · " + esc(s.theme) : ""}</small></button>`;
+  return `<button class="scard" data-d="${s.date}" data-f="${s.id}"><span class="cv">${thumb(s)}${storyBadge(s)}${ri?.done ? `<span class="done">${ri.label}</span>` : ""}</span><span class="fm f-${s.id}">${FMT[s.id]?.[0] || ""}</span><b>${typo(s.title)}</b><small>${s.minutes || 2} min${s.theme ? " · " + esc(s.theme) : ""}</small></button>`;
 }
 function wireStories(v) {
   v.querySelectorAll("[data-d][data-f]").forEach(b => b.onclick = async () => { try { const ed = await loadEdition(b.dataset.d); openReader(ed, b.dataset.f); } catch (e) { toast("Indisponible hors ligne"); } });
@@ -3016,7 +3061,10 @@ function renderExplore() {
   const L = likes(), forYou = L.length ? all.filter(s => L.includes(poleOf(s.theme)?.id) && !readInfo(s)?.done).slice(0, 10) : [];
   const fmts = [["", "Tout"], ["dossier", ic("book") + " Grands Dossiers"], ["cultureg", ic("pill") + " Culture G"], ["insolite", ic("zap") + " Insolite"], ["notice", ic("gear") + " La Notice"], ["origine", ic("quote") + " D’où ça vient ?"]].filter(([id]) => !id || byQ.some(s => s.id === id));
   const n = k => `<span class="cnt">${k}</span>`;
+  // Légende gratuit / payant, tant qu'on n'est pas Premium (18 novembre 2026).
+  const legend = PW() && !isPremium() ? `<div class="paylegend"><span><span class="dbadge free">${ic("checkc")} Gratuit</span>l’édition du jour, en entier</span><span><span class="dbadge free">${ic("unlock")} ${FREE_CASES} cases offertes</span>dans chaque Grand Dossier, même ancien</span><span><span class="dbadge prem">${ic("star")} Premium</span>tout le reste, et les dossiers complets</span></div>` : "";
   v.innerHTML = `<div><h1 class="h1">Découvrir</h1><p class="lead">${all.length} histoires pour briller en société sans trop d’efforts.</p></div>
+   ${legend}
    <label class="search" for="exQ"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#5f5a52" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg><input id="exQ" type="search" placeholder="Napoléon, krach, quantique…" value="${esc(EX.q)}" aria-label="Rechercher une histoire" enterkeyhint="search">${EX.q ? `<button class="clr" id="exClr" aria-label="Effacer">✕</button>` : ""}</label>
    ${browsing && forYou.length >= 2 ? `<section class="blk"><div class="bh"><h2>Pour vous</h2><small class="sub">${likes().map(id => POLES.find(p => p.id === id)?.em || "").join(" ")}</small></div><div class="hscroll">${forYou.map(storyCard).join("")}</div></section>` : ""}
    ${browsing && dossiers.length ? `<section class="blk"><div class="bh"><h2>À la une : les Grands Dossiers</h2><button class="linkbtn" data-fmt="dossier">Tout voir</button></div><div class="hscroll">${dossiers.map(storyCard).join("")}</div></section>` : ""}
