@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-25",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "frise",
+      "label": "La Frise",
+      "title": "Douze dates et un duel à l’épée en pleine ère spatiale",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "hint": "Le métro parisien a ouvert pour une Exposition universelle.",
+          "items": [
+            {
+              "name": "Premiers pas d’un homme sur la Lune",
+              "year": 1969
+            },
+            {
+              "name": "Louis XIV installe la cour à Versailles",
+              "year": 1682
+            },
+            {
+              "name": "Ouverture de la première ligne du métro de Paris",
+              "year": 1900
+            },
+            {
+              "name": "Prise de la Bastille",
+              "year": 1789
+            }
+          ],
+          "explain": "La ligne 1 ouvre le 19 juillet 1900, en pleine Exposition universelle, de Porte de Vincennes à Porte Maillot. Les premiers voyageurs de Paris ont donc précédé ceux de la Lune de soixante-neuf ans.",
+          "source": {
+            "title": "RATP — L’histoire de la ligne 1",
+            "url": "https://www.ratp.fr/decouvrir/patrimoine/histoire-metro-ligne-1"
+          }
+        },
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "hint": "La Sorbonne est née sous Saint Louis, bien avant Christophe Colomb.",
+          "items": [
+            {
+              "name": "Champlain fonde Québec",
+              "year": 1608
+            },
+            {
+              "name": "Charlemagne est couronné empereur à Rome",
+              "year": 800
+            },
+            {
+              "name": "Christophe Colomb atteint l’Amérique",
+              "year": 1492
+            },
+            {
+              "name": "Robert de Sorbon fonde le collège de la Sorbonne",
+              "year": 1257
+            }
+          ],
+          "explain": "En 1257, Robert de Sorbon, chapelain de Saint Louis, ouvre un collège pour loger des étudiants pauvres en théologie. Il a donné son nom à toute une université. Pas mal, pour un foyer étudiant.",
+          "source": {
+            "title": "Wikipedia — College of Sorbonne",
+            "url": "https://en.wikipedia.org/wiki/College_of_Sorbonne"
+          }
+        },
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "hint": "Ce duel est bien plus récent qu’on ne le croit.",
+          "items": [
+            {
+              "name": "Les samouraïs perdent le droit de porter le sabre",
+              "year": 1876
+            },
+            {
+              "name": "Dernier duel à l’épée entre deux députés français",
+              "year": 1967
+            },
+            {
+              "name": "Nicéphore Niépce prend la première photographie",
+              "year": 1827,
+              "label": "vers 1827"
+            },
+            {
+              "name": "Premier vol motorisé des frères Wright",
+              "year": 1903
+            }
+          ],
+          "explain": "Le 21 avril 1967, à Neuilly, Gaston Defferre affronte à l’épée le député René Ribière, qu’il avait traité d’« abruti » à l’Assemblée. Premier sang : Ribière. Defferre refuse de s’excuser. Deux fois.",
+          "source": {
+            "title": "Paris Zigzag — Le dernier duel à l’épée entre deux députés a eu lieu en 1967",
+            "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-dernier-duel-a-lepee-entre-deux-deputes-a-eu-lieu-en-1967/"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "RATP — L’histoire de la ligne 1",
+          "url": "https://www.ratp.fr/decouvrir/patrimoine/histoire-metro-ligne-1"
+        },
+        {
+          "title": "Wikipedia — History of the Palace of Versailles",
+          "url": "https://en.wikipedia.org/wiki/History_of_the_Palace_of_Versailles"
+        },
+        {
+          "title": "Hérodote — 25 décembre 800, couronnement de Charlemagne",
+          "url": "https://www.herodote.net/25_decembre_800-evenement-08001225.php"
+        },
+        {
+          "title": "Hérodote — 3 juillet 1608, Champlain fonde Québec",
+          "url": "https://www.herodote.net/3_juillet_1608-evenement-16080703.php"
+        },
+        {
+          "title": "Wikipedia — College of Sorbonne",
+          "url": "https://en.wikipedia.org/wiki/College_of_Sorbonne"
+        },
+        {
+          "title": "Phototrend — Le Point de vue du Gras, première photographie de l’histoire",
+          "url": "https://phototrend.fr/2024/12/le-point-de-vue-du-gras-premiere-photographie-de-lhistoire/"
+        },
+        {
+          "title": "Wikiwand — Haitō Edict (1876)",
+          "url": "https://www.wikiwand.com/en/articles/Hait%C5%8D_Edict"
+        },
+        {
+          "title": "Paris Zigzag — Le dernier duel à l’épée entre deux députés a eu lieu en 1967",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/le-dernier-duel-a-lepee-entre-deux-deputes-a-eu-lieu-en-1967/"
+        }
+      ]
+    }
+  ]
+}
