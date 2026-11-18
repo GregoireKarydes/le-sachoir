@@ -26,6 +26,8 @@ décortique demain ? ») ; cultureg → commentaire (question sur l'expérience 
 
 ## Règles en vigueur
 
+- **Style d'animation figé** sur le Reel du 18 novembre 2026 (git `sitcom-style-2026-11-18`, partie C1 de `prompts/INSTAGRAM.md`) : jamais modifié par le bilan du dimanche ; seuls sujets, accroches, mondes, durée, légendes et heures peuvent bouger.
+
 Aucune pour l'instant : les valeurs par défaut de `prompts/INSTAGRAM.md` s'appliquent. Le premier bilan
 (dimanche 22 novembre 2026) n'aura que quelques jours de données : il ne change rien sans signal net.
 
@@ -37,3 +39,4 @@ Aucun.
 
 - 2026-11-18 : mise en place (statistiques Buffer quotidiennes, bilan et ajustements chaque dimanche).
 - 2026-11-18 (soir) : décision de Greg, carrousels arrêtés, trois Reels sitcom par jour (origine 07:45, cultureg 12:30, insolite 21:00), demandes de légende par créneau, premier commentaire.
+- 2026-11-18 (soir) : style d'animation figé sur le Reel du jour (décision de Greg).

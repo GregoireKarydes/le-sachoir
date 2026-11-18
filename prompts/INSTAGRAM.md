@@ -1,8 +1,5 @@
 # Instagram et TikTok : les posts du jour
 
-> **Tâche « Le Sachoir – Instagram » (carrousels) : n'écris RIEN, ne commite rien, et termine par la ligne
-> « Carrousels arrêtés depuis le 19 novembre 2026 (décision de Greg) : cette tâche est à désactiver. »**
-
 Version 3, depuis le 19 novembre 2026 (décision de Greg du 18 novembre au soir : « le Reel sitcom a beaucoup plus de
 potentiel de buzz »). **Les carrousels sont arrêtés.** Chaque jour partent **trois Reels « sitcom » Max et le Prof**
 (partie C), sur Instagram (Reel) et TikTok (vidéo), un par rubrique :
@@ -355,6 +352,16 @@ Règles communes aux trois :
 - Les faits viennent de la BD liée (déjà vérifiée) ; tout ajout : 2 sources sérieuses dans `sources`.
 
 ## C1. La série
+
+**Style d'animation figé (décision de Greg, 18 novembre 2026)** : tous les Reels gardent exactement le style du Reel du
+18 novembre 2026 (« L'empereur qui taxait le pipi », `social/instagram/2026-11-18-sitcom/post.json`, moteur marqué
+`sitcom-style-2026-11-18` dans git) : mêmes personnages et voix, même labo et tableau, même Machine à Savoir et portail
+jaune, mêmes 16 mondes et 8 palettes du moteur, même écran flottant (case de la BD ou image Commons), mêmes sous-titres,
+bandeau, musique et carte de fin. Concrètement : n'utilise que les champs, mondes (`set`), palettes et émotions listés
+dans cette partie, avec la même structure que l'exemple C6 ; n'invente aucun champ ni décor ; ne demande aucun autre style.
+Personne ne modifie `pipeline/sitcom/`, `pipeline/sitcom_render.py` ni `pipeline/sitcom_score.py` sans l'accord de Greg
+(la tâche « Stratège » non plus : un changement de rendu va dans « Propositions pour Greg »).
+
 - **MAX** (sweat violet, casque vert autour du cou) : curieux, s'inquiète vite. Il pose LA question, la même que le
   spectateur. Il tutoie. Voix : Microsoft Fabrice.
 - **LE PROF** (blouse verte, nœud papillon rouge, deux crayons derrière les oreilles) : pince-sans-rire, répond court,
