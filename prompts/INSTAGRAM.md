@@ -354,34 +354,93 @@ dessin, musique, mixage) et l'envoie à Buffer. Publication à **20:30** (`"time
 - Le test : « à qui on l'enverrait ? ». Si la réponse est « à personne », change de sujet.
 - Les faits viennent de la BD (déjà vérifiée). Tout ajout : 2 sources sérieuses dans `sources` (WebSearch).
 
-## C4. L'accroche (méthode `ig-reel`)
-- Écris **3 accroches** à partir des formules de `hooks.json` (contradiction, fait absurde mais vrai, question piège,
-  chiffre étonnant, idée reçue), en français parlé, 5 à 12 mots. Lance
-  `python3 social/instagram/ig-skills/skills/ig-reel/hookscore.py --hook "<accroche>"` pour chacune (note indicative :
-  le script est réglé sur l'anglais), et garde la meilleure à ton jugement : concrète, une tension, la surprise devant.
-- L'accroche est la **première réplique de Max** (`text`) et, raccourcie en 2 lignes de 18 caractères au plus, le
-  bandeau jaune `band` (affiché pendant toute la première scène ; c'est aussi la couverture). Jamais de définition, de
-  date ou de « Le saviez-vous ? ».
+## C4. La question, la réponse, puis l'accroche (méthode `ig-reel`)
+Retour de Greg (18 novembre 2026) : l'animation est top, mais **le texte était trop raccourci, on ne comprenait plus**.
+Le Reel doit **répondre vraiment à sa question de départ et vulgariser la réponse**. Comprendre d'abord, rire ensuite :
+un Reel compris est regardé jusqu'au bout et partagé, un Reel flou est zappé (le skill `ig-reel` le dit aussi : une
+accroche promet quelque chose, la vidéo doit le livrer).
 
-## C5. Le script (25 à 40 s, 8 à 13 répliques, 75 à 110 mots en tout)
-- Scène 1 `home` (2 à 4 répliques) : Max pose la question, le Prof répond en un mot qui relance (« Pire. »), Max réagit.
-  Le Prof ouvre ensuite le portail tout seul (automatique, pas de réplique à écrire).
-- Scène 2 `world` (2 à 4 répliques) : le lieu ou l'époque de la réponse. Première réplique du Prof = l'explication
-  principale (une seule idée). Max réagit ou relance.
-- Scène 3 `world` facultative (1 à 3 répliques) : le détail qui surprend, ou la fausse piste prise au pied de la lettre
-  (le gag), selon ce qui est le plus drôle.
+Avant toute réplique, écris dans le `post.json` :
+1. `question` : la question de départ, comme la poserait quelqu'un au café (« Pourquoi on dit que l'argent n'a pas
+   d'odeur ? »).
+2. `answer` : la réponse complète en 1 ou 2 phrases, compréhensible par un enfant de 12 ans, **avec le pourquoi**.
+3. `chain` : la chaîne d'explication, 3 à 5 maillons « cause → conséquence », sans trou (voir l'exemple en C6).
+   **Chaque maillon sera dit à voix haute, en entier.** Si un maillon manque, le spectateur décroche.
+
+Puis l'accroche :
+- Écris **3 accroches de 3 formules différentes** de `hooks.json` (pas 3 variantes d'une même phrase), en français
+  parlé, 6 à 14 mots. Celles qui marchent le mieux pour nous :
+  - **#22 l'idée reçue retournée** : « Non, le chewing-gum avalé ne reste pas sept ans dans ton ventre. »
+  - **#16 la question telle qu'on la pose** : « Prof… pourquoi on dit que l'argent n'a pas d'odeur ? »
+  - **#3 « personne ne te dit que… »** : « Personne ne te dit que les urinoirs de Paris portent le nom d'un empereur. »
+  - **#23 le chiffre qu'on répète au dîner** : « Huit araignées avalées par an pendant ton sommeil ? Faux. »
+  - **#2 l'interdit** : « Ne dis jamais à un Romain que l'argent n'a pas d'odeur. »
+  - **#21 en pleine scène** : « … et c'est là que l'empereur lui a fait sentir la pièce. » (la mise en place doit
+    arriver avant 8 s)
+- Note-les avec `python3 social/instagram/ig-skills/skills/ig-reel/hookscore.py --hook "<accroche>"` (indicatif : réglé
+  sur l'anglais) et garde la meilleure à ton jugement : **concrète, une vraie tension, une promesse que le Reel tient**.
+  Une accroche qui pourrait servir à n'importe quel compte de culture G n'est pas la bonne : mets-y le détail du sujet
+  (le pipi, l'empereur, l'avocat des rats).
+- L'accroche est la **première réplique de Max** (`text`) et, raccourcie en 2 lignes de 18 caractères au plus, le bandeau
+  jaune `band` (affiché pendant toute la première scène ; c'est aussi la couverture). Le bandeau n'est pas la phrase
+  dite : il est plus court et plus brutal (6 mots au plus).
+- Jamais de définition, de date, d'intro ni de « Le saviez-vous ? ». Indique la formule retenue dans `hook_formula`.
+
+## C5. Le script : 40 à 55 s, 11 à 15 répliques, 100 à 150 mots
+**Le test du copain** (obligatoire) : quelqu'un qui ne connaît rien au sujet regarde le Reel une seule fois, sans lire la
+légende. Peut-il réexpliquer la réponse en deux phrases, avec le pourquoi, au dîner du soir ? Si non, réécris.
+Mieux vaut un Reel de 50 s compris qu'un Reel de 30 s que personne ne suit : **on coupe un gag, jamais un maillon.**
+
+Le déroulé (calé sur `ig-reel` : accroche, enjeu, corps, réponse, boucle) :
+- Scène 1 `home` (2 ou 3 répliques, 0 à 7 s) : Max pose la question (l'accroche). Le Prof donne **l'enjeu** en une phrase
+  qui intrigue sans tout dire (« Oui. Et c'est à cause de lui qu'on dit “l'argent n'a pas d'odeur”. »). Max relance avec
+  la question que se pose le spectateur (« Attends… quel rapport ? »). Le Prof ouvre ensuite le portail tout seul
+  (automatique, pas de réplique à écrire).
+- Scène 2 `world` (3 à 5 répliques) : les premiers maillons de `chain`. Le Prof explique, Max pose le « pourquoi ? »
+  dès qu'un trou apparaît. **La réponse à la question de départ arrive avant la moitié du Reel**, ou au plus tard au
+  début de la scène 3.
+- Scène 3 `world` facultative (2 à 4 répliques) : le dernier maillon, le détail qui surprend, ou la mise en scène du fait
+  (Max qui joue un rôle, la fausse piste prise au pied de la lettre).
 - Scène 4 `home` (2 ou 3 répliques) : Max pose la question de la fin ; le Prof donne la chute après un silence
-  (`"pause": 0.8` sur sa réplique) ; Max conclut d'une réplique courte qui fait écho à l'accroche.
-- Chaque réplique : une phrase dite, 14 mots au plus, du français oral naturel, ponctuation pour l'intonation (« ? »,
-  « … »). Écris les nombres en lettres dans `say` si la voix risque de mal les lire (`text` garde les chiffres pour les
-  sous-titres). Passe le texte au crible de `ig-human` (pas de tournures d'IA).
+  (`"pause": 0.8`), un fait vrai et surprenant ; Max conclut d'une réplique courte qui fait écho à l'accroche (le
+  Reel boucle).
+
+Écrire pour qu'on comprenne :
+- **Max est le spectateur.** Chaque fois qu'une explication laisse un « mais pourquoi ? » ou un « c'est qui ? », c'est
+  Max qui le dit. C'est à la fois la vulgarisation et le rythme. Une réaction de Max qui n'apporte ni question ni rire
+  (« Moi ?! » sans suite) est supprimée.
+- **Le Prof est pince-sans-rire dans le ton, pas dans le contenu.** Ses répliques d'explication sont des phrases
+  complètes (sujet, verbe, complément), 8 à 20 mots, deux phrases courtes au plus. Ses répliques très courtes
+  (« Pire. », « Voilà. ») sont réservées aux réactions et à la chute.
+- **Interdit, le style télégraphique** : phrase sans verbe qui porte une information, pronom dont on ne sait pas qui il
+  désigne, cause sous-entendue. À ne plus faire (Reel du 18 novembre) : « Son fils râle. » (contre quoi ?) ;
+  « Et ils l'achètent ?! » (qui, et pourquoi ?) ; « Oui. Donc Vespasien la taxe. » (qui est Vespasien ?).
+- **Chaque nom a son rôle** à la première mention (« l'empereur Vespasien », « son fils Titus », « les blanchisseurs,
+  ceux qui lavent les vêtements »). **Chaque mot rare est traduit** dans la même réplique (« l'ammoniaque, ça détache »).
+- **Du concret et des comparaisons du quotidien** (« comme notre eau de Javel »), des nombres plutôt que des adjectifs.
+- **Une seule idée par Reel.** Si deux sujets se battent, garde le meilleur.
+- L'humour vient des faits (le contraste, Max qui prend tout au pied de la lettre, l'énorme pour le minuscule) ; il ne
+  remplace jamais une explication. Un gag pur au plus par scène.
+- Du français oral naturel, tutoiement ; ponctuation pour l'intonation (« ? », « … »). Écris les nombres en lettres dans
+  `say` si la voix risque de mal les lire (`text` garde les chiffres pour les sous-titres). Les longues répliques
+  s'affichent en sous-titres deux lignes par deux lignes, au rythme de la voix.
+
+Relecture avant d'écrire le fichier (dans cet ordre) :
+1. Lis **seulement les répliques**, à voix haute, sans les images : chaque phrase se comprend-elle seule ?
+2. Coche chaque maillon de `chain` : est-il dit en entier ? La réponse (`answer`) est-elle dite avant la moitié ?
+3. Passe le texte parlé dans `python3 social/instagram/ig-skills/skills/ig-human/detect.py <fichier>` (tournures d'IA,
+   triades, « ce n'est pas X, c'est Y ») et réécris à la main ce qui est signalé.
+4. Compte les mots : 100 à 150. Au-delà, coupe d'abord les gags et les réactions vides, jamais un maillon.
+
+Le reste :
 - Mondes (`set`) : `paris-ancien`, `ville`, `ciel`, `espace`, `mer`, `nature`, `antiquite`, `moyen-age`, `desert`, `neige`,
   `cuisine`, `usine`, `corps`, `bureau`, `musee`, `futur`. Palette facultative (`palette`) : `violet`, `marine`, `vert`,
   `rouge`, `orange`, `beige`, `nuit`, `menthe` ; deux mondes successifs de palettes très différentes.
 - Dans chaque monde, l'écran flottant montre le sujet : `image` = `{"bd": <n° de case de la BD liée>}` (de préférence) ou
   `{"commons": "<mots-clés anglais>"}` (Wikimedia Commons, domaine public) ; sans image, il affiche `big` (14 caractères
   au plus : un mot, un nombre, un lieu) et `small` (20 caractères au plus). Avec une image, `big` s'affiche sur une
-  plaque dessous. `tag` (22 caractères au plus, en capitales) s'écrit en haut comme un terminal.
+  plaque dessous. `big` et `small` servent la compréhension : le mot clé de l'explication (« AMMONIAQUE »,
+  « ça détache »). `tag` (22 caractères au plus, en capitales) s'écrit en haut comme un terminal.
 - Émotions (`emo`) — Max : `curious`, `panic`, `shock`, `happy`, `proud`, `bored`, `think`, `wow` ; le Prof : `deadpan`,
   `smug`, `tired`, `alarmed`, `explain`, `happy`. `"shake": true` sur une réplique de choc (secousse et gros plan).
   `react` facultatif : `{"max": "shock"}` pour la réaction de l'autre pendant la réplique.
@@ -389,32 +448,163 @@ dessin, musique, mixage) et l'envoie à Buffer. Publication à **20:30** (`"time
   d'une série existante.
 
 ## C6. Le fichier
+Exemple complet (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répliques, environ 145 mots) :
 ```json
 {
-  "date": "<AAAA-MM-JJ>", "kind": "sitcom", "time": "20:30",
-  "story": {"edition": "<AAAA-MM-JJ>", "format": "<id>"},
+  "date": "<AAAA-MM-JJ>",
+  "kind": "sitcom",
+  "time": "20:30",
+  "story": {
+    "edition": "<AAAA-MM-JJ>",
+    "format": "<id>"
+  },
+  "question": "Pourquoi on dit que l'argent n'a pas d'odeur ?",
+  "answer": "Les Romains lavaient leurs toges avec de l'urine, qui détache ; l'empereur Vespasien a taxé ce commerce et, quand son fils s'en est plaint, lui a fait sentir une pièce de la taxe : elle ne sentait rien.",
+  "chain": [
+    "l'urine vieillie donne de l'ammoniaque, qui détache",
+    "les blanchisseurs achètent l'urine pour laver les toges",
+    "Vespasien taxe ce commerce",
+    "Titus trouve ça dégoûtant ; la pièce de la taxe ne sent rien",
+    "d'où « l'argent n'a pas d'odeur » ; à Paris, les urinoirs s'appellent des vespasiennes"
+  ],
+  "hook_formula": 16,
   "episode": {
-    "band": "DES RATS ONT EU\nUN AVOCAT ?!",
-    "board": ["QUESTION DU JOUR", "procès de rats ?"],
-    "scenes": [
-      {"kind": "home", "lines": [
-        {"who": "max", "emo": "curious", "text": "Prof… c'est vrai qu'on a fait un procès à des rats ?"},
-        {"who": "prof", "emo": "deadpan", "text": "Pire. Ils avaient un avocat."},
-        {"who": "max", "emo": "shock", "shake": true, "text": "Un avocat ?!"}]},
-      {"kind": "world", "set": "moyen-age", "tag": "AUTUN, VERS 1520", "big": "AUTUN · 1520", "small": "Bourgogne",
-       "image": {"bd": 1}, "bidule": true, "lines": [
-        {"who": "prof", "emo": "explain", "text": "Autun, en Bourgogne. Des rats dévorent les récoltes : on les convoque au tribunal."},
-        {"who": "max", "emo": "think", "text": "Et… ils sont venus ?"}]},
-      {"kind": "home", "lines": [
-        {"who": "max", "emo": "curious", "text": "Et alors, ils ont été condamnés ?"},
-        {"who": "prof", "emo": "smug", "pause": 0.8, "text": "Zéro condamnation."},
-        {"who": "max", "emo": "proud", "text": "Je veux le même avocat."}]}
+    "band": "UN EMPEREUR A\nTAXÉ LE PIPI ?!",
+    "board": [
+      "QUESTION DU JOUR",
+      "le pipi taxé ?"
     ],
-    "end": {"url": "lesachoir.fr", "lines": ["Une question comme ça,", "chaque matin, en BD."]}
+    "scenes": [
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Prof… c'est vrai qu'un empereur romain a taxé le pipi ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Oui. Et c'est à cause de lui qu'on dit « l'argent n'a pas d'odeur »."
+          },
+          {
+            "who": "max",
+            "emo": "shock",
+            "shake": true,
+            "text": "Attends… quel rapport entre le pipi et l'argent ?"
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "antiquite",
+        "palette": "beige",
+        "tag": "ROME, VERS L'AN 70",
+        "big": "AMMONIAQUE",
+        "small": "ça détache",
+        "image": {
+          "bd": 3
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "À Rome, les blanchisseurs lavent les toges avec de l'urine."
+          },
+          {
+            "who": "max",
+            "emo": "panic",
+            "text": "Pourquoi du pipi ?!"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "En vieillissant, l'urine donne de l'ammoniaque. Et l'ammoniaque, ça détache très bien."
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "react": {
+              "max": "shock"
+            },
+            "text": "Ils achètent donc l'urine des toilettes publiques. Et l'empereur Vespasien taxe ce commerce."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "antiquite",
+        "palette": "nuit",
+        "tag": "SELON SUÉTONE",
+        "big": "ÇA SENT ?",
+        "small": "une pièce de la taxe",
+        "image": {
+          "bd": 7
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Son fils Titus trouve ça dégoûtant. Vespasien lui met sous le nez une pièce de la taxe."
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Et il demande : « Elle sent mauvais ? »"
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Euh… non ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "text": "Voilà. Elle vient du pipi et elle ne sent rien. L'argent n'a pas d'odeur."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et aujourd'hui, il reste quoi de lui ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "À Paris, les urinoirs de rue s'appellent des vespasiennes."
+          },
+          {
+            "who": "max",
+            "emo": "proud",
+            "text": "Il a taxé le pipi… et le pipi porte son nom."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "Une question comme ça,",
+        "chaque matin, en BD."
+      ]
+    }
   },
   "caption": "<1re ligne : l'accroche ou la question>\n\n<2 lignes de réponse>\n\n<lien en bio>\n\nEnvoie-le à <qui>.",
-  "hashtags": ["lesachoir", "culturegenerale", "..."],
-  "sources": ["<url>"]
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "..."
+  ],
+  "sources": [
+    "<url>"
+  ]
 }
 ```
 Légende (méthode `ig-caption`) : la première ligne doit donner envie d'ouvrir avant le « … plus » ; une seule demande, en
