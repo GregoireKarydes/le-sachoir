@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T07:54:43.809464+01:00",
+ "updated_at": "2026-11-18T08:01:09.503661+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-18",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -60,12 +60,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-18/cultureg : « Do, ré, mi : un tube du XIe siècle pour voix enrouées » prise dans la file (20261114-0359-do-re-mi-tube-voix-enrouees)",
-  "2026-11-18/insolite : « L’empereur qui taxait le pipi » prise dans la file (20261114-0100-lempereur-qui-taxait-le-pipi)",
-  "2026-11-18/origine : « Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet » prise dans la file (20261115-2045-poubelle-monsieur-le-prefet)",
-  "2026-11-18/dossier : « Le nucléaire : comment un tiroir fermé a fini par allumer la France » prise dans la file (20261114-1927-nucleaire-tiroir-ferme)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -150,7 +145,7 @@
  },
  "rss": {
   "collected_at": "2026-11-18T00:51:06.803396+01:00",
-  "age_hours": 7.1,
+  "age_hours": 7.2,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 27,
