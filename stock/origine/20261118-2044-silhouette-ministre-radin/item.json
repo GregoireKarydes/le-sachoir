@@ -25,16 +25,18 @@
           "name": "Étienne de Silhouette",
           "look": "Étienne de Silhouette, a very tall and extremely thin French minister of 1759 in his fifties, long pointed nose, hollow cheeks, short white powdered wig with a black ribbon, light peach skin, a plain mustard-yellow frock coat as main colour with no lace and no gold, grey stockings, the ledger and a quill always in his hands",
           "file": "cast/origine-silhouette.png",
-          "status": "pending",
-          "role": "the stingy, overzealous finance minister who wants the rich to pay; counts everything, pinches pennies even on himself and is proud of it; thin as a rake, always peering closely at numbers"
+          "status": "done",
+          "role": "the stingy, overzealous finance minister who wants the rich to pay; counts everything, pinches pennies even on himself and is proud of it; thin as a rake, always peering closely at numbers",
+          "via": "fal"
         },
         {
           "id": "lea",
           "name": "Léa",
           "look": "Léa, a short and round young woman of today in her twenties, light olive skin, long straight copper-red hair in two thick braids, a bright lilac raincoat as main colour, dark jeans, white sneakers, a canvas tote bag on her shoulder",
           "file": "cast/origine-lea.png",
-          "status": "pending",
-          "role": "a tourist in Montmartre who haggles over everything and wants the real thing for the price of the cheap one; leans forward, eyebrows raised, suspicious of every price"
+          "status": "done",
+          "role": "a tourist in Montmartre who haggles over everything and wants the real thing for the price of the cheap one; leans forward, eyebrows raised, suspicious of every price",
+          "via": "fal"
         }
       ],
       "cover": {
@@ -44,8 +46,9 @@
           "lea"
         ],
         "file": "images/origine-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -71,8 +74,9 @@
               "lea"
             ],
             "file": "images/origine-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -98,8 +102,9 @@
               "silhouette"
             ],
             "file": "images/origine-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -137,8 +142,9 @@
             "prompt": "a lavish 1750s dining table. The plump marquis (pink silk coat, huge grey wig) alone, sitting very straight, holding with silver tongs one single tiny green half olive above a gigantic empty white plate, smug, pinky finger raised, mocking. close-up",
             "cast": [],
             "file": "images/origine-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -148,7 +154,13 @@
           "title": "Un portrait « à la silhouette »",
           "text": "Un profil découpé dans du papier noir, vers 1850. Avant la photographie, c’était le portrait le moins cher : ni peinture, ni peintre célèbre, juste une ombre et des ciseaux.",
           "photo": {
-            "commons": "File:Silhouette of a Man in Left Profile byWJHubard 19thc Harvard.png"
+            "commons": "File:Silhouette of a Man in Left Profile byWJHubard 19thc Harvard.png",
+            "credit": "William James Hubard",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Silhouette_of_a_Man_in_Left_Profile_byWJHubard_19thc_Harvard.png",
+            "file": "images/photo-5-silhouette-of-a-man-in-left-profile.webp",
+            "status": "done"
           }
         },
         {
@@ -174,8 +186,9 @@
               "silhouette"
             ],
             "file": "images/origine-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -214,8 +227,9 @@
               "lea"
             ],
             "file": "images/origine-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
