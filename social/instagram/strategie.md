@@ -16,7 +16,7 @@ lesachoir.fr. Les vues brutes ne servent qu'à repérer les posts « hors norme 
 |---|---|---|---|
 | actu | carrousel récit (énigme) | 12:15 | Le Sachoir – Instagram |
 | culture | carrousel récit (énigme) + copie Reel 21:00 | 18:30 | Le Sachoir – Instagram |
-| sitcom | Reel Max et le Prof, 25 à 40 s | 20:30 | Le Sachoir – Reel sitcom |
+| sitcom | Reel Max et le Prof, 40 à 55 s | 20:30 | Le Sachoir – Reel sitcom |
 
 ## Règles en vigueur
 

@@ -123,7 +123,15 @@ function wrap(text, maxW) {
 function subtitles(t) {
   const l = TL.lines.find(x => t >= x.t - .05 && t < x.sub_t1); if (!l) return;
   g.setTransform(1, 0, 0, 1, 0, 0); g.font = '800 58px "Baloo 2"'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.lineJoin = 'round';
-  const lines = wrap(l.text, 940), yb = H - 420, top = yb - (lines.length - 1) * 66;
+  // long explanation lines: show 2 lines at a time, paged in step with the voice (by characters)
+  const all = wrap(l.text, 940), pages = [];
+  for (let i = 0; i < all.length; i += 2) pages.push(all.slice(i, i + 2));
+  let lines = pages[0];
+  if (pages.length > 1) {
+    const tot = all.join(' ').length, f = clamp((t - l.t) / Math.max(.1, l.dur || 1)) * tot;
+    let acc = 0; for (const P of pages) { lines = P; acc += P.join(' ').length + 1; if (f < acc) break; }
+  }
+  const yb = H - 420, top = yb - (lines.length - 1) * 66;
   const col = l.who === 'max' ? '#8a55b8' : '#1f8f5f', name = l.who === 'max' ? 'MAX' : 'LE PROF';
   g.font = '800 34px "Baloo 2"'; const pw = g.measureText(name).width + 36;
   g.fillStyle = col; g.strokeStyle = '#17140f'; g.lineWidth = 5; g.beginPath(); g.roundRect(W / 2 - pw / 2, top - 92, pw, 50, 25); g.fill(); g.stroke();

@@ -13,7 +13,9 @@ Lu par les skills de `social/instagram/ig-skills/` à la place de `~/.claude/ins
 - **Ton :** malin, bienveillant, pince-sans-rire ; l'humour sert toujours un fait vrai. Inspiration : Jonathan Cohen et
   The Office, en restant pédagogique.
 - **Le Reel sitcom :** deux personnages. MAX pose la question que tout le monde se pose (tutoiement, phrases courtes, il
-  s'inquiète vite). LE PROF répond en quatre mots, impassible, et a toujours un temps d'avance.
+  s'inquiète vite). LE PROF est impassible et a toujours un temps d'avance ;
+  il réagit en deux mots, mais il explique en phrases complètes : le Reel doit répondre vraiment à la question et
+  la vulgariser (retour de Greg, 18 nov. 2026).
 - **Mots qu'on emploie :** « en vrai », « attends », « c'est vrai que… ? », « pire », « et pourtant ».
 - **Jamais :** jargon, « Le saviez-vous ? » seul, « incroyable », « hallucinant », « vous n'allez pas le croire », points
   d'exclamation en série, anglicismes de créateur (« hack », « mindset »), emoji dans le texte parlé.
