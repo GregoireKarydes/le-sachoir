@@ -27,7 +27,7 @@ décortique demain ? ») ; cultureg → commentaire (question sur l'expérience 
 ## Règles en vigueur
 
 - **Ouverture à froid obligatoire** (Greg, 18 novembre 2026 : « la plupart des gens scrollent instantanément ») : chaque Reel démarre dans le monde du sujet, sur son fait le plus fou, 10 mots au plus en moins de 3 s, image forte + bandeau dès l'image 1 (partie C4b de `prompts/INSTAGRAM.md`). Le bilan du dimanche peut comparer les 6 types d'ouverture, jamais revenir à une ouverture au labo.
-- **Style d'animation figé** sur le Reel du 18 novembre 2026 (moteur tel qu'au commit `2ddeb90`, partie C1 de `prompts/INSTAGRAM.md`) : jamais modifié par le bilan du dimanche ; seuls sujets, accroches, mondes, durée, légendes et heures peuvent bouger.
+- **Style d'animation figé** sur le Reel du 18 novembre 2026 (moteur tel qu'au commit `3a37503` (ouverture à froid comprise), partie C1 de `prompts/INSTAGRAM.md`) : jamais modifié par le bilan du dimanche ; seuls sujets, accroches, mondes, durée, légendes et heures peuvent bouger.
 
 Aucune pour l'instant : les valeurs par défaut de `prompts/INSTAGRAM.md` s'appliquent. Le premier bilan
 (dimanche 22 novembre 2026) n'aura que quelques jours de données : il ne change rien sans signal net.

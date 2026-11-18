@@ -355,7 +355,7 @@ Règles communes aux trois :
 
 **Style d'animation figé (décision de Greg, 18 novembre 2026)** : tous les Reels gardent exactement le style du Reel du
 18 novembre 2026 (« L'empereur qui taxait le pipi », `social/instagram/2026-11-18-sitcom/post.json`, moteur tel qu'au
-commit `2ddeb90`) : mêmes personnages et voix, même labo et tableau, même Machine à Savoir et portail
+commit `3a37503` (ouverture à froid comprise)) : mêmes personnages et voix, même labo et tableau, même Machine à Savoir et portail
 jaune, mêmes 16 mondes et 8 palettes du moteur, même écran flottant (case de la BD ou image Commons), mêmes sous-titres,
 bandeau, musique et carte de fin. Concrètement : n'utilise que les champs, mondes (`set`), palettes et émotions listés
 dans cette partie, avec la même structure que l'exemple C6 ; n'invente aucun champ ni décor ; ne demande aucun autre style.
