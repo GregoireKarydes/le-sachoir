@@ -48,9 +48,10 @@ jobs:
         run: |
           for i in 0 1 2; do
             d=$(TZ=Europe/Paris date -d "-$i day" +%F)
-            # Deux posts par jour depuis le 17 novembre 2026 : <date> (culture) et <date>-actu ; un rendu commun porte le
-            # nom du dernier dossier (instagram-<date>-actu), des rendus séparés portent chacun le leur.
-            for n in "$d-actu" "$d"; do
+            # Trois posts par jour : <date> (culture), <date>-actu et <date>-sitcom (Reel, depuis le 18 novembre 2026) ;
+            # un rendu commun porte le nom du dernier dossier (instagram-<date>-sitcom ou -actu), des rendus séparés
+            # portent chacun le leur. Le plus « large » d'abord, pour que les rendus séparés, plus récents, gagnent.
+            for n in "$d-sitcom" "$d-actu" "$d"; do
               gh run download -n "instagram-$n" -D social/instagram >/dev/null 2>&1 && echo "Instagram $n : fichiers récupérés" || true
             done
           done

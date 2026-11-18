@@ -1,6 +1,9 @@
 """Reel v2 « La question du jour » (17 novembre 2026) : voix, minutage des sous-titres, lien en bio /insta."""
 import json
+import shutil
 import sys
+
+import pytest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "pipeline"))
@@ -50,6 +53,7 @@ def test_lien_en_bio(tmp_path):
     assert [x[0] for x in t] == ["12:15", "18:30"] and "f=actu" in t[0][1] and "f=notice" in t[1][1]
 
 
+@pytest.mark.skipif(shutil.which("ffmpeg") is None, reason="ffmpeg absent (Contrôle des PR)")
 def test_carrousel_v2(tmp_path):
     import carousel_v2  # noqa: E402
     post = {"date": "2026-11-18", "kind": "carousel", "version": 2, "tone": "archive",
@@ -61,3 +65,11 @@ def test_carrousel_v2(tmp_path):
     assert Image.open(tmp_path / "slide-01.jpg").size == (1080, 1350)
     assert info["tiktok_files"][0] == "tiktok-01.jpg" and Image.open(tmp_path / "tiktok-01.jpg").size == (1080, 1920)
     assert carousel_v2.tokens("le **13 chiffres**.")[-1] == [("chiffres", True), (".", False)]
+
+
+def test_publication_recupere_les_artefacts_des_trois_posts():
+    # 18 novembre 2026 : le Reel sitcom restait bloqué (« fichiers pas encore en ligne ») car son artefact
+    # instagram-<date>-sitcom n'était jamais téléchargé par la Publication.
+    wf = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "publish.yml").read_text()
+    for n in ('"$d-sitcom"', '"$d-actu"', '"$d"'):
+        assert n in wf
