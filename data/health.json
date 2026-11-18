@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T08:46:41.448200+01:00",
+ "updated_at": "2026-11-18T08:50:25.584428+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -88,9 +88,9 @@
   },
   "insolite": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 24,
+   "images_left": 30,
    "focus": "20261114-2047-14-juillet-sans-annee (6 image(s) à faire)",
    "next": "20261114-0400-la-liberte-a-dabord-postule-en-egypte",
    "next_redo": 0
@@ -146,29 +146,29 @@
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-18T00:51:06.803396+01:00",
-  "age_hours": 7.9,
+  "collected_at": "2026-11-18T08:49:40.809615+01:00",
+  "age_hours": 0.0,
   "feeds": {
-   "Google Actualités": 33,
-   "franceinfo": 27,
+   "Google Actualités": 34,
+   "franceinfo": 30,
    "Le Monde": 16,
    "Le Figaro": 20,
    "Libération": 50,
-   "20 Minutes": 27,
+   "20 Minutes": 28,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 26,
-   "Le Monde Sciences": 5,
+   "BBC World": 23,
+   "Le Monde Sciences": 6,
    "Sciences et Avenir": 7,
-   "Le Monde Planète": 17,
-   "Le Monde Pixels": 11,
-   "Le Monde Santé": 6,
-   "Le Monde Culture": 12,
-   "HugoDécrypte - Actus du jour": 2
+   "Le Monde Planète": 19,
+   "Le Monde Pixels": 13,
+   "Le Monde Santé": 7,
+   "Le Monde Culture": 14,
+   "HugoDécrypte - Actus du jour": 1
   },
   "empty_feeds": [
    "Les Échos",

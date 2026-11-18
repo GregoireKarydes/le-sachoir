@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T08:46+01:00",
+ "updated_at": "2026-11-18T08:50+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -63,6 +63,17 @@
    "warnings": [
     "insolite : fiche napoleon : même tête qu'un personnage récent (brown hair, red main colour : 2026-11-09/actu) ; changer coiffure ou couleur dominante",
     "insolite : case 2 : récitatif de 25 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/insolite/20261118-0848-elephant-bastille-rats",
+   "titles": {
+    "insolite": "Napoléon commande un éléphant, Paris reçoit des rats"
+   },
+   "errors": [],
+   "warnings": [
+    "insolite : case 2 : récitatif de 21 mots (max 20)",
+    "insolite : case 7 : récitatif de 21 mots (max 20)"
    ]
   },
   {

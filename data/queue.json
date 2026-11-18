@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T08:46+01:00",
+ "updated_at": "2026-11-18T08:50+01:00",
  "stock": {
   "cultureg": [
    {
@@ -166,6 +166,23 @@
     "title": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
     "theme": "Économie",
     "tagline": "Un blocus, un café trop amer, une betterave et une Légion d’honneur arrachée à la poitrine de l’Empereur",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261118-0848-elephant-bastille-rats",
+    "name": "20261118-0848-elephant-bastille-rats",
+    "added": "20261118-0848",
+    "status": "waiting",
+    "next": false,
+    "title": "Napoléon commande un éléphant, Paris reçoit des rats",
+    "theme": "Architecture",
+    "tagline": "Une fontaine en bronze promise pour l’an prochain, un éléphant en plâtre resté trente-deux ans et des locataires à moustaches",
     "minutes": 1,
     "cases": 7,
     "photos": 1,
