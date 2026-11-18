@@ -14,6 +14,20 @@ ne l'a pas demandé.
 **Le but : un maximum de vues et de partages**, puis amener du monde sur lesachoir.fr (lien en bio `lesachoir.fr/insta`,
 qui ouvre l'histoire liée au post).
 
+# 0. La stratégie en cours (tous les posts, carrousels et Reel sitcom)
+
+Depuis le 18 novembre 2026, la tâche « Le Sachoir – Stratège Instagram » analyse chaque dimanche les statistiques
+(`social/instagram/stats.md`, mis à jour chaque jour par le workflow « Statistiques réseaux ») et tient à jour
+**`social/instagram/strategie.md`**. Avant d'écrire un post, lis-le s'il existe :
+- ses **règles en vigueur** priment sur les valeurs par défaut des parties A et C (heures de publication, nombre de
+  diapositives, durée et rythme du Reel, formules d'accroche à privilégier ou à éviter, rubriques, légende, hashtags) ;
+- ses **tests de la semaine** s'appliquent aux posts qu'ils désignent : ajoute alors `"test": "<id du test>"` au
+  `post.json` ;
+- elle ne prime **jamais** sur `prompts/CHARTE.md`, les faits sourcés, les interdits, ni le format JSON.
+Dans chaque `post.json`, ajoute aussi `"hook_formula"` : l'`id` de la formule de
+`social/instagram/ig-skills/skills/ig-reel/hooks.json` utilisée pour l'accroche ou la couverture (un nombre), pour que
+l'analyse sache quelles formules marchent.
+
 # A. Le carrousel « récit en diapositives » (format par défaut)
 
 Modèle de mécanique : les carrousels d'histoire qui font des centaines de milliers de j'aime (Le Coq Savant : « Ils
@@ -330,8 +344,8 @@ dessin, musique, mixage) et l'envoie à Buffer. Publication à **20:30** (`"time
    n'existe pas (s'il existe avec `"skip": true`, c'est un essai : remplace-le).
 3. Lis les 14 derniers `social/instagram/*-sitcom/post.json` : jamais deux fois le même sujet ni deux fois de suite le
    même monde (`set`).
-4. Si `social/instagram/stats.md` existe (bilan des vues et partages), garde les formules qui marchent, abandonne celle
-   qui fait le moins.
+4. Lis `social/instagram/strategie.md` (partie 0) et, s'il existe, `social/instagram/stats.md` (bilan des vues et
+   partages) : garde les formules qui marchent, abandonne celle qui fait le moins.
 
 ## C3. Le sujet
 - Une BD de l'édition du jour (de préférence `insolite`, `origine`, `notice` ou `cultureg` ; l'actu seulement si le sujet
