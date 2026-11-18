@@ -1612,12 +1612,15 @@ function pastEditionsHTML(cur) {
   if (!list.length) return "";
   const cards = list.map(d => {
     const e = INDEX.find(x => x.date === d), fs = (e.formats || []).filter(f => f.id !== "quiz");
-    // Vignette : pas le Grand Dossier (déjà dans « Pour aller plus loin »), mais l'Actu ou la BD culture du jour.
-    const main = ["actu", "cultureg", "insolite", "notice", "origine"].map(id => fs.find(f => f.id === id && f.cover)).find(Boolean) || fs.find(f => f.cover), cv = main ? `editions/${d}/${main.cover}` : "";
+    // Vignette et titres : ceux qui donnent envie de lire (Insolite, La Notice, D'où ça vient ?, Culture G) ;
+    // l'Actu, datée, passe après, et le Grand Dossier en dernier (déjà dans « Pour aller plus loin »).
+    const PREF = ["insolite", "notice", "origine", "cultureg", "actu", "dossier"], rk = f => (i => i < 0 ? 9 : i)(PREF.indexOf(f.id));
+    const pick = fs.slice().sort((a, b) => rk(a) - rk(b));
+    const main = pick.find(f => f.cover), cv = main ? `editions/${d}/${main.cover}` : "";
     const lock = !canOpenDate(d);
     return `<button class="pedcard" data-day="${d}"><span class="cv">${cv ? `<img src="${cv}" alt="" loading="lazy">` : ""}${ME.visited.includes(d) ? `<span class="done">Lue ✓</span>` : ""}${PW() && !isPremium() ? (lock ? `<span class="dbadge prem">${ic("star")} Premium</span>` : `<span class="dbadge free">${ic("checkc")} Gratuit</span>`) : ""}</span>
       <b>${cap1(new Date(d + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" }))}</b>
-      <ul>${fs.filter(f => f.id !== "dossier").concat(fs.filter(f => f.id === "dossier")).slice(0, 3).map(f => `<li><i style="background:${COLOR[f.id] || "#1f8f5f"}"></i>${typo(f.title)}</li>`).join("")}</ul>
+      <ul>${pick.slice(0, 3).map(f => `<li><i style="background:${COLOR[f.id] || "#1f8f5f"}"></i>${typo(f.title)}</li>`).join("")}</ul>
       <small>${fs.length} BD${fs.length > 3 ? `, dont ${fs.length - 3} autre${fs.length - 3 > 1 ? "s" : ""}` : ""}</small></button>`;
   }).join("");
   return `<section class="pasted"><div class="sec-h"><h2>${ICON.cal} Les éditions précédentes</h2><small>${PW() && !isPremium() ? `En entier avec ${ic("star")} Premium. Les ${FREE_CASES} premières cases de chaque Grand Dossier restent offertes.` : "Tout ce que vous avez peut-être raté."}</small></div><div class="hscroll">${cards}<button class="pedcard more" data-day="all">${ICON.cal}<b>Tout l’historique</b><small>Par jour, mois, année</small></button></div></section>`;
