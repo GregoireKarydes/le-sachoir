@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T08:31+01:00",
+ "updated_at": "2026-11-18T08:39+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -31,17 +31,6 @@
    "errors": [],
    "warnings": [
     "cultureg : case 6 : récitatif de 22 mots (max 20)"
-   ]
-  },
-  {
-   "path": "stock/dossier/20261115-1923-krach-1929",
-   "titles": {
-    "dossier": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)"
-   },
-   "errors": [],
-   "warnings": [
-    "dossier : fiche harold : même tête qu'un personnage récent (black hair, orange main colour : 2026-11-14/dossier) ; changer coiffure ou couleur dominante",
-    "dossier : fiche awa : même tête qu'un personnage récent (black hair, purple main colour : 2026-11-11/insolite, 2026-11-14/dossier, 2026-11-18/actu) ; changer coiffure ou couleur dominante"
    ]
   },
   {

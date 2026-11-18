@@ -1,7 +1,8 @@
 {
- "updated_at": "2026-11-18T08:31:23.473209+01:00",
+ "updated_at": "2026-11-18T08:39:52.737447+01:00",
  "today": "2026-11-18",
  "problems": [
+  "file cultureg : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock",
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
@@ -78,21 +79,21 @@
  "last_published": "2026-11-18",
  "stock": {
   "cultureg": {
-   "ready": 0,
-   "waiting": 5,
-   "blocked": 0,
-   "images_left": 37,
-   "focus": "20261114-0402-greenwich-le-mot-interdit (6 image(s) à faire)",
-   "next": null,
+   "ready": 1,
+   "waiting": 3,
+   "blocked": 1,
+   "images_left": 24,
+   "focus": "20261115-2050-departements-taille-cheval (8 image(s) à faire)",
+   "next": "20261114-2049-tennis-15-30-40",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 0,
-   "waiting": 5,
+   "ready": 1,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 31,
-   "focus": "20261114-0400-la-liberte-a-dabord-postule-en-egypte (7 image(s) à faire)",
-   "next": null,
+   "images_left": 24,
+   "focus": "20261114-2047-14-juillet-sans-annee (6 image(s) à faire)",
+   "next": "20261114-0400-la-liberte-a-dabord-postule-en-egypte",
    "next_redo": 0
   },
   "notice": {
@@ -117,8 +118,8 @@
    "ready": 0,
    "waiting": 3,
    "blocked": 0,
-   "images_left": 64,
-   "focus": "20261115-1923-krach-1929 (22 image(s) à faire)",
+   "images_left": 59,
+   "focus": "20261115-1923-krach-1929 (17 image(s) à faire)",
    "next": null,
    "next_redo": 0
   }
@@ -128,24 +129,26 @@
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-18",
-  "count": 0,
-  "neurons": 0,
-  "exhausted": true,
+  "count": 36,
+  "neurons": 6240,
+  "exhausted": false,
   "by_kind": {
-   "case": 0
+   "case": 27,
+   "cast": 8,
+   "cover": 1
   },
   "exhausted_at": "2026-11-18T00:57:02.297880+00:00"
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 2.16146,
-  "images": 198,
-  "today_usd": 0,
+  "spent_usd": 2.34146,
+  "images": 204,
+  "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-18T00:51:06.803396+01:00",
-  "age_hours": 7.7,
+  "age_hours": 7.8,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 27,
