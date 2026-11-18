@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T01:57+01:00",
+ "updated_at": "2026-11-18T03:22+01:00",
  "stock": {
   "cultureg": [
    {
@@ -17,7 +17,7 @@
     "images_done": 8,
     "images_total": 8,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/cultureg/20261114-0402-greenwich-le-mot-interdit",
@@ -121,7 +121,7 @@
     "images_done": 8,
     "images_total": 8,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/insolite/20261114-0400-la-liberte-a-dabord-postule-en-egypte",
@@ -348,7 +348,7 @@
     "images_done": 22,
     "images_total": 22,
     "failed": 0,
-    "redo": 0
+    "redo": 4
    },
    {
     "path": "stock/dossier/20261115-1923-krach-1929",

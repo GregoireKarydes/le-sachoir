@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T01:57:34.802710+01:00",
+ "updated_at": "2026-11-18T03:22:28.722233+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -74,7 +74,7 @@
    "images_left": 37,
    "focus": "20261114-0402-greenwich-le-mot-interdit (6 image(s) à faire)",
    "next": "20261114-0359-do-re-mi-tube-voix-enrouees",
-   "next_redo": 0
+   "next_redo": 1
   },
   "insolite": {
    "ready": 1,
@@ -83,7 +83,7 @@
    "images_left": 31,
    "focus": "20261114-0400-la-liberte-a-dabord-postule-en-egypte (7 image(s) à faire)",
    "next": "20261114-0100-lempereur-qui-taxait-le-pipi",
-   "next_redo": 0
+   "next_redo": 1
   },
   "notice": {
    "ready": 1,
@@ -110,7 +110,7 @@
    "images_left": 64,
    "focus": "20261115-1923-krach-1929 (22 image(s) à faire)",
    "next": "20261114-1927-nucleaire-tiroir-ferme",
-   "next_redo": 0
+   "next_redo": 4
   }
  },
  "days_ahead_drawn": 1,
@@ -135,7 +135,7 @@
  },
  "rss": {
   "collected_at": "2026-11-18T00:51:06.803396+01:00",
-  "age_hours": 1.1,
+  "age_hours": 2.5,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 27,
