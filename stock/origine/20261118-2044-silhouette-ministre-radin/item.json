@@ -1,0 +1,251 @@
+{
+  "added": "20261118-2044",
+  "formats": [
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "Vous « surveillez votre silhouette » ? Vous surveillez un ministre radin de 1759",
+      "tagline": "Huit mois au ministère, des impôts sur les fenêtres et un nom devenu synonyme de « strict minimum »",
+      "teaser": "Ce mot qu’on pense en se regardant dans la glace était le nom d’un ministre. Les nobles le détestaient tellement qu’ils l’ont transformé en blague.",
+      "minutes": 2,
+      "theme": "Expression française",
+      "art": {
+        "subject": "how the name of a stingy French finance minister of 1759 became the word for a cheap cut-out shadow profile portrait",
+        "setting": "a street artist's stool on a sunny square of Montmartre today; a minister's wooden office in Versailles in 1759 with a tall window; a candle-lit room of the 1760s with a sheet of paper pinned on the wall",
+        "era": "1759 Versailles and Paris under Louis XV, with a young woman of today",
+        "props": {
+          "ledger": "a thick brown leather account ledger with many paper slips sticking out",
+          "profile": "a small black paper cut-out of a head in profile, glued on a white card",
+          "candle": "a single tall white candle in a brass candlestick"
+        }
+      },
+      "cast": [
+        {
+          "id": "silhouette",
+          "name": "Étienne de Silhouette",
+          "look": "Étienne de Silhouette, a very tall and extremely thin French minister of 1759 in his fifties, long pointed nose, hollow cheeks, short white powdered wig with a black ribbon, light peach skin, a plain mustard-yellow frock coat as main colour with no lace and no gold, grey stockings, the ledger and a quill always in his hands",
+          "file": "cast/origine-silhouette.png",
+          "status": "pending",
+          "role": "the stingy, overzealous finance minister who wants the rich to pay; counts everything, pinches pennies even on himself and is proud of it; thin as a rake, always peering closely at numbers"
+        },
+        {
+          "id": "lea",
+          "name": "Léa",
+          "look": "Léa, a short and round young woman of today in her twenties, light olive skin, long straight copper-red hair in two thick braids, a bright lilac raincoat as main colour, dark jeans, white sneakers, a canvas tote bag on her shoulder",
+          "file": "cast/origine-lea.png",
+          "status": "pending",
+          "role": "a tourist in Montmartre who haggles over everything and wants the real thing for the price of the cheap one; leans forward, eyebrows raised, suspicious of every price"
+        }
+      ],
+      "cover": {
+        "prompt": "a sunny square of Montmartre. Léa (short, round, copper-red braids, lilac raincoat) sits in profile on a small stool on the right, chin up, posing very seriously; behind her, Étienne de Silhouette (very tall, extremely thin, white powdered wig, mustard-yellow frock coat) bends down from the left and measures the length of her nose with his quill, frowning, the ledger open under his arm, as if calculating a tax. medium wide shot",
+        "cast": [
+          "silhouette",
+          "lea"
+        ],
+        "file": "images/origine-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "On « surveille sa silhouette », on dessine des silhouettes… Mais d’où sort ce mot ? D’un nom de famille.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Une silhouette en papier ? Et un vrai portrait, plutôt ?",
+              "side": "r"
+            },
+            {
+              "who": "L’artiste",
+              "text": "Le vrai, c’est trois fois plus cher, madame.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a sunny square of Montmartre, a small easel and two folding stools. On the left, a bearded street artist in a beret holds small scissors and a sheet of black paper; Léa (short, round, copper-red braids, lilac raincoat, tote bag) sits on the right on a stool, leaning forward with narrowed eyes and one eyebrow raised, clutching her tote bag, suspicious of the price. wide shot",
+            "cast": [
+              "lea"
+            ],
+            "file": "images/origine-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Mars 1759",
+          "caption": "Mars 1759 : la guerre a vidé les caisses. Le ministre des Finances, Étienne de Silhouette, veut taxer le luxe.",
+          "bubbles": [
+            {
+              "who": "Un marquis",
+              "text": "Même mes fenêtres ?!",
+              "side": "l"
+            },
+            {
+              "who": "silhouette",
+              "text": "Les quatorze. J’ai compté. Deux fois.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a minister's wooden office in Versailles. Étienne de Silhouette (very tall, extremely thin, white powdered wig, mustard-yellow frock coat) on the right bends over his desk with a magnifying glass above a small drawing of a mansion facade, counting its windows on his long bony fingers, the ledger open; in the background on the left, a plump marquis in a pink silk coat and a huge grey wig bursts through the door, arms in the air, outraged. medium shot",
+            "cast": [
+              "silhouette"
+            ],
+            "file": "images/origine-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Huit mois de Silhouette au ministère",
+          "steps": [
+            "4 mars 1759 : il devient contrôleur général des Finances",
+            "Il propose un impôt sur les signes de richesse : portes, fenêtres, domestiques, objets de luxe",
+            "Cible : les nobles et le clergé, qui payaient très peu",
+            "26 octobre : l’argenterie doit partir à la fonte",
+            "20 novembre 1759 : il est renvoyé"
+          ],
+          "joke": "Même son mandat a été taillé au plus court."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Automne 1759",
+          "caption": "Les privilégiés détestent ces impôts. Ils se vengent : tout ce qui est maigre ou mesquin devient « à la Silhouette ».",
+          "bubbles": [
+            {
+              "who": "Un marquis",
+              "text": "Ce soir, dîner à la Silhouette : une olive.",
+              "side": "l"
+            },
+            {
+              "who": "Un marquis",
+              "text": "Coupée en deux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a lavish 1750s dining table. The plump marquis (pink silk coat, huge grey wig) alone, sitting very straight, holding with silver tongs one single tiny green half olive above a gigantic empty white plate, smug, pinky finger raised, mocking. close-up",
+            "cast": [],
+            "file": "images/origine-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un portrait « à la silhouette »",
+          "text": "Un profil découpé dans du papier noir, vers 1850. Avant la photographie, c’était le portrait le moins cher : ni peinture, ni peintre célèbre, juste une ombre et des ciseaux.",
+          "photo": {
+            "commons": "File:Silhouette of a Man in Left Profile byWJHubard 19thc Harvard.png"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Années 1760",
+          "caption": "Le portrait le moins cher, une ombre de profil tracée puis découpée, prend le surnom de « portrait à la silhouette ».",
+          "bubbles": [
+            {
+              "who": "Un portraitiste",
+              "text": "À l’huile, c’est hors budget, monsieur.",
+              "side": "l"
+            },
+            {
+              "who": "silhouette",
+              "text": "Enfin un homme raisonnable.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a candle-lit room of the 1760s. Étienne de Silhouette (very tall, extremely thin, white powdered wig, mustard-yellow frock coat) sits sideways on a chair on the right, chin up, delighted, his long nose casting a huge sharp shadow on a sheet of paper pinned on the wall; on the left a small hunched portrait maker in a brown apron traces the shadow with a pencil, the candle between them. low angle",
+            "cast": [
+              "silhouette"
+            ],
+            "file": "images/origine-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi son nom ? Les spécialistes hésitent",
+          "steps": [
+            "L’Académie française : ses réformes n’ont été qu’« esquissées », comme ces portraits",
+            "L’écrivain Mercier, en 1781 : on se moquait de ses économies",
+            "Une légende : il traçait lui-même des profils dans son château de Bry-sur-Marne",
+            "Un texte de 1763 parle de portraits « à la Silhouette » dès 1758, avant son ministère"
+          ],
+          "joke": "Une seule certitude : c’est bien son nom."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "« Silhouette », c’est Étienne de Silhouette, ministre de 1759 si économe que son nom a désigné le strict minimum.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "En gros, je me suis offert un ministre.",
+              "side": "r"
+            },
+            {
+              "who": "L’artiste",
+              "text": "Au tarif réduit, madame.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the sunny square of Montmartre, seen over the shoulder of the bearded street artist in a beret on the left. Léa (short, round, copper-red braids, lilac raincoat) on the right holds the profile card next to her own face, comparing, proud and smug, wallet still firmly closed in her other hand. over-the-shoulder",
+            "cast": [
+              "lea"
+            ],
+            "file": "images/origine-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Aucun portrait d’Étienne de Silhouette n’a survécu : ses tableaux ont été détruits pendant la Révolution. Il ne reste même pas sa silhouette.",
+        "source": "Wikipédia (en) — Étienne de Silhouette"
+      },
+      "story": "Le mot « silhouette » est un nom de famille. Étienne de Silhouette (1709-1767) devient contrôleur général des Finances, c’est-à-dire ministre des Finances de Louis XV, le 4 mars 1759. Les caisses du royaume sont vides. Pour les remplir, il propose une « subvention générale » : un impôt sur les signes visibles de richesse, comme les portes et les fenêtres, les domestiques ou les objets de luxe. Le but est de faire payer la noblesse et le clergé, qui échappaient en grande partie à l’impôt. Le 26 octobre 1759, il ordonne même de fondre l’argenterie. Ces mesures soulèvent une telle colère qu’il est renvoyé le 20 novembre, après huit mois.\nLes privilégiés se vengent par la moquerie : ce qui est maigre, mesquin ou réduit au minimum est dit « à la Silhouette ». Le nom finit par désigner le portrait le moins cher qui soit : l’ombre d’un profil, tracée puis découpée dans du papier noir.\nPourquoi ce portrait-là ? On n’en est pas sûr. L’Académie française estime que c’est parce que ses mesures fiscales ne furent qu’esquissées. L’écrivain Louis-Sébastien Mercier, en 1781, y voit une moquerie de ses économies. Une autre tradition raconte qu’il traçait lui-même des profils dans son château de Bry-sur-Marne. Et un texte publié en 1763 évoque des « portraits à la Silhouette » dès 1758, avant même son ministère. Ironie finale : aucun portrait de lui n’a survécu.",
+      "sources": [
+        {
+          "title": "Dictionnaire de l’Académie française, 9e édition — Silhouette",
+          "url": "https://dictionnaire-academie.fr/article/A9S1633"
+        },
+        {
+          "title": "Wikipédia (en) — Étienne de Silhouette",
+          "url": "https://en.wikipedia.org/wiki/%C3%89tienne_de_Silhouette"
+        },
+        {
+          "title": "Word Histories — The shadowy history of the word « silhouette »",
+          "url": "https://wordhistories.net/2018/03/30/silhouette-uncertain-origin/"
+        },
+        {
+          "title": "Musée de Bry-sur-Marne — Archives sur Étienne de Silhouette (1759)",
+          "url": "https://musee.brysurmarne.fr/fichier/3164/1444"
+        },
+        {
+          "title": "Wikimedia Commons — Silhouette of a Man in Left Profile, W. J. Hubard (Harvard)",
+          "url": "https://download.osmand.net/wiki/File:Silhouette_of_a_Man_in_Left_Profile_byWJHubard_19thc_Harvard.png"
+        }
+      ]
+    }
+  ]
+}
