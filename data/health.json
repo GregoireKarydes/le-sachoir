@@ -1,8 +1,7 @@
 {
- "updated_at": "2026-11-18T08:39:52.737447+01:00",
+ "updated_at": "2026-11-18T08:46:41.448200+01:00",
  "today": "2026-11-18",
  "problems": [
-  "file cultureg : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock",
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
@@ -80,10 +79,10 @@
  "stock": {
   "cultureg": {
    "ready": 1,
-   "waiting": 3,
-   "blocked": 1,
-   "images_left": 24,
-   "focus": "20261115-2050-departements-taille-cheval (8 image(s) à faire)",
+   "waiting": 4,
+   "blocked": 0,
+   "images_left": 25,
+   "focus": "20261114-0402-greenwich-le-mot-interdit (1 image(s) à faire)",
    "next": "20261114-2049-tennis-15-30-40",
    "next_redo": 0
   },
@@ -148,7 +147,7 @@
  },
  "rss": {
   "collected_at": "2026-11-18T00:51:06.803396+01:00",
-  "age_hours": 7.8,
+  "age_hours": 7.9,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 27,

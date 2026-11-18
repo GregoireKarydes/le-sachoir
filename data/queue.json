@@ -1,12 +1,12 @@
 {
- "updated_at": "2026-11-18T08:39+01:00",
+ "updated_at": "2026-11-18T08:46+01:00",
  "stock": {
   "cultureg": [
    {
     "path": "stock/cultureg/20261114-0402-greenwich-le-mot-interdit",
     "name": "20261114-0402-greenwich-le-mot-interdit",
     "added": "20261114-0402",
-    "status": "blocked",
+    "status": "waiting",
     "next": false,
     "title": "Greenwich, le mot que la France refusait de prononcer",
     "theme": "Géographie",
@@ -16,7 +16,7 @@
     "photos": 1,
     "images_done": 7,
     "images_total": 8,
-    "failed": 1,
+    "failed": 0,
     "redo": 0
    },
    {
