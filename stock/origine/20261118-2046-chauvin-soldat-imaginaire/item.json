@@ -1,0 +1,247 @@
+{
+  "added": "20261118-2046",
+  "formats": [
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "« Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé",
+      "tagline": "Dix-sept blessures, une pièce de théâtre et aucun acte de naissance",
+      "teaser": "Le soldat le plus fier de France a donné son nom à un défaut. Petit problème : personne n’a jamais retrouvé sa trace.",
+      "minutes": 2,
+      "theme": "Expression française",
+      "art": {
+        "subject": "how a legendary, probably invented Napoleonic soldier and a Paris stage comedy of 1831 gave French its word for blind, excessive patriotism",
+        "setting": "a small sports bar of today with a TV screen showing a football match; a 1810s army camp with tents; a small Paris theatre stage of 1831 with red curtains and footlights; a 19th-century café table",
+        "era": "Napoleonic wars and 1830s Paris, with a football fan of today",
+        "props": {
+          "cockade": "a large round blue-white-red ribbon cockade",
+          "bandages": "many white cloth bandages wrapped around the head, both arms and one leg",
+          "screen": "a big flat TV screen on the wall showing green football grass and tiny players, no logos"
+        }
+      },
+      "cast": [
+        {
+          "id": "chauvin",
+          "name": "Nicolas Chauvin",
+          "look": "Nicolas Chauvin, a short and stocky young French soldier of Napoleon's army, round chin always lifted, huge bushy chestnut-brown moustache and sideburns, light peach skin, a dark blue soldier's coat with white crossbelts and red cuffs as main colour, white trousers, a tall black bicorne hat with the cockade, the bandages all over him",
+          "file": "cast/origine-chauvin.png",
+          "status": "pending",
+          "role": "the legendary over-the-top patriot who thinks everything French is the best in the world; naive, puffed-up chest, salutes at every occasion, never doubts for a second"
+        },
+        {
+          "id": "karim",
+          "name": "Karim",
+          "look": "Karim, a tall and lanky football fan of today in his thirties, brown skin, cleanly shaved bald head, short black beard, a bright red hoodie as main colour, a blue-white-red stripe of face paint on one cheek, a glass of soda in his hand",
+          "file": "cast/origine-karim.png",
+          "status": "pending",
+          "role": "a fan who swears his national team never commits a foul; arguing with total bad faith, jumps up and points at the screen"
+        }
+      ],
+      "cover": {
+        "prompt": "a small sports bar of today. Karim (tall, lanky, bald, black beard, bright red hoodie, face paint) on the left jumps up from his stool, pointing furiously at the screen; next to him on the right, Nicolas Chauvin (short, stocky, huge chestnut moustache, dark blue Napoleonic coat, bicorne with the cockade, the bandages) stands on the next stool, saluting the screen, chest puffed out, tears of pride in his eyes. medium wide shot",
+        "cast": [
+          "karim",
+          "chauvin"
+        ],
+        "file": "images/origine-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "« Chauvin » se dit d’un patriote aveugle. Le mot vient d’un soldat… qui n’a peut-être jamais existé.",
+          "bubbles": [
+            {
+              "who": "karim",
+              "text": "Hors-jeu ? Impossible. Un Français n’est jamais hors-jeu !",
+              "side": "l"
+            },
+            {
+              "who": "La serveuse",
+              "text": "Ce que tu es chauvin, Karim…",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small sports bar of today, the screen on the wall. Karim (tall, lanky, bald, black beard, bright red hoodie, face paint) leaps off his bar stool, soda splashing out of his glass, arm stretched toward the screen in outrage; on the right behind the counter, a calm waitress with grey curls and a black apron dries a glass, rolling her eyes. wide shot",
+            "cast": [
+              "karim"
+            ],
+            "file": "images/origine-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "La légende",
+          "caption": "On raconte que Nicolas Chauvin, né à Rochefort vers 1780, a servi Napoléon et reçu dix-sept blessures.",
+          "bubbles": [
+            {
+              "who": "Un officier",
+              "text": "Vous pourriez en éviter une ou deux, Chauvin ?",
+              "side": "l"
+            },
+            {
+              "who": "chauvin",
+              "text": "Et priver la France de mon sang ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Napoleonic army camp with a few tents. Nicolas Chauvin (short, stocky, huge chestnut moustache, dark blue coat with white crossbelts, bicorne with the cockade) on the right, covered with the bandages from head to toe, one arm in a sling, stands rigidly at attention and salutes proudly with the other hand; on the left an exhausted officer with a grey moustache and a green coat holds his forehead in despair. low angle",
+            "cast": [
+              "chauvin"
+            ],
+            "file": "images/origine-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le hic",
+          "title": "Dix-sept blessures, zéro trace",
+          "steps": [
+            "Aucun registre de l’armée ne mentionne ce Nicolas Chauvin",
+            "Pour l’historien Gérard de Puymège, c’est une légende née après 1815",
+            "Chansonniers, auteurs de vaudeville et dessinateurs l’ont façonnée peu à peu",
+            "Il rappelle un vieux personnage comique : le soldat fanfaron du théâtre romain"
+          ],
+          "joke": "Le héros a tout eu : des blessures, des médailles… sauf un acte de naissance."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Paris, 1831",
+          "caption": "19 mars 1831, aux Folies-Dramatiques : la pièce « La Cocarde tricolore » lance Chauvin et sa vraie réplique culte.",
+          "bubbles": [
+            {
+              "who": "chauvin",
+              "text": "Je suis Français, je suis Chauvin !",
+              "side": "r"
+            },
+            {
+              "who": "Le public",
+              "text": "Ha ha ha !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small Paris theatre of 1831 seen from behind the audience: rows of dark heads and top hats in the foreground, shaking with laughter. On the lit stage between red curtains, Nicolas Chauvin (short, stocky, huge chestnut moustache, dark blue coat with white crossbelts, bicorne with the cockade) strikes a heroic pose, one foot on a drum, fist on his heart, completely serious. from behind",
+            "cast": [
+              "chauvin"
+            ],
+            "file": "images/origine-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Charlet, l’homme qui dessinait les grognards",
+          "text": "Le lithographe Nicolas-Toussaint Charlet, en 1830. Selon l’Académie française, ses images de vieux soldats de l’Empire ont popularisé la figure de Chauvin.",
+          "photo": {
+            "commons": "File:Charlet (BM 1895,0617.298).jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "XIXe siècle",
+          "caption": "Le nom devient un mot : un « chauvin » est un patriote naïf, qui juge son pays supérieur à tout.",
+          "bubbles": [
+            {
+              "who": "chauvin",
+              "text": "Le fromage étranger ? Inutile de goûter : il a perdu.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 19th-century café table. Nicolas Chauvin (short, stocky, huge chestnut moustache, bicorne with the cockade, dark blue coat) alone, pushing away a plate of pale foreign cheese with one finger without looking at it, nose turned up in disdain, while hugging a big round French cheese against his chest with his other arm. close-up",
+            "cast": [
+              "chauvin"
+            ],
+            "file": "images/origine-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment un soldat devient un défaut",
+          "steps": [
+            "Après 1815 : on surnomme ainsi les vieux soldats fous de Napoléon",
+            "1831 : la pièce rend le nom célèbre et ridicule",
+            "Le mot s’étend à tout patriotisme aveugle : le « chauvinisme »",
+            "Années 1930 : l’anglais parle de « male chauvinism » pour les sexistes"
+          ],
+          "joke": "Un mot français qui s’exporte bien. Chauvin aurait été ravi."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "« Chauvin » vient de Nicolas Chauvin, soldat de légende sans doute inventé, que le théâtre de 1831 a rendu ridicule.",
+          "bubbles": [
+            {
+              "who": "karim",
+              "text": "Un soldat inventé ? Encore un coup des Anglais.",
+              "side": "l"
+            },
+            {
+              "who": "La serveuse",
+              "text": "Tu vois ? Chauvin.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back in the small sports bar of today. Karim (tall, lanky, bald, black beard, bright red hoodie, face paint) sits back on his stool, arms crossed, chin raised, eyes half-closed in total bad faith; the waitress with grey curls and a black apron leans on the counter on the right, pointing at him with her drying cloth, deadpan. medium shot",
+            "cast": [
+              "karim"
+            ],
+            "file": "images/origine-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le mot « chauvinisme » est passé en anglais au XIXe siècle ; dans les années 1930, « male chauvinism » y désigne déjà le sexisme.",
+        "source": "Wordorigins.org — Chauvinism"
+      },
+      "story": "Un « chauvin », c’est quelqu’un qui admire son pays de façon naïve et excessive, au point de le juger supérieur à tout. Le mot vient d’un nom propre : Nicolas Chauvin. Selon la légende, ce soldat né à Rochefort vers 1780 aurait servi la République puis Napoléon, reçu dix-sept blessures, un sabre d’honneur et une petite pension, sans jamais cesser d’idolâtrer l’Empereur.\nLe problème, c’est que les historiens n’ont retrouvé aucune trace de lui. Pour Gérard de Puymège, Chauvin est une figure inventée peu à peu après la chute de Napoléon, sous la Restauration et la monarchie de Juillet, par des chansonniers, des auteurs de vaudeville et des dessinateurs. Il rappelle le soldat fanfaron du théâtre antique. Selon l’Académie française, les lithographies de Nicolas-Toussaint Charlet, qui montraient de vieux grognards, ont popularisé sa figure.\nLe 19 mars 1831, au théâtre des Folies-Dramatiques, à Paris, les frères Cogniard créent « La Cocarde tricolore ». Chauvin y est un jeune soldat ridicule, qui lance : « Je suis Français, je suis Chauvin ! » Le public rit, et le nom devient un mot pour désigner les patriotes aveugles, puis donne « chauvinisme ».\nLe mot voyage : l’anglais l’adopte au XIXe siècle et, dans les années 1930, parle de « male chauvinism » pour le sexisme.",
+      "sources": [
+        {
+          "title": "Dictionnaire de l’Académie française, 9e édition — Chauvin",
+          "url": "https://dictionnaire-academie.fr/article/A9C1838"
+        },
+        {
+          "title": "Wikipédia (en) — Nicolas Chauvin",
+          "url": "https://en.wikipedia.org/wiki/Nicolas_Chauvin"
+        },
+        {
+          "title": "Wikipédia (en) — The Tricolour Cockade",
+          "url": "https://en.wikipedia.org/wiki/The_Tricolour_Cockade"
+        },
+        {
+          "title": "Wordorigins.org — Chauvinism",
+          "url": "https://wordorigins.org/big-list-entries/chauvinism"
+        },
+        {
+          "title": "Wikimedia Commons — Charlet, lithographie de Louis Dupré (1830)",
+          "url": "https://download.osmand.net/wiki/File:Charlet_(BM_1895,0617.298).jpg"
+        }
+      ]
+    }
+  ]
+}
