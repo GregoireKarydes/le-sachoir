@@ -26,7 +26,7 @@ décortique demain ? ») ; cultureg → commentaire (question sur l'expérience 
 
 ## Règles en vigueur
 
-- **Style d'animation figé** sur le Reel du 18 novembre 2026 (git `sitcom-style-2026-11-18`, partie C1 de `prompts/INSTAGRAM.md`) : jamais modifié par le bilan du dimanche ; seuls sujets, accroches, mondes, durée, légendes et heures peuvent bouger.
+- **Style d'animation figé** sur le Reel du 18 novembre 2026 (moteur tel qu'au commit `2ddeb90`, partie C1 de `prompts/INSTAGRAM.md`) : jamais modifié par le bilan du dimanche ; seuls sujets, accroches, mondes, durée, légendes et heures peuvent bouger.
 
 Aucune pour l'instant : les valeurs par défaut de `prompts/INSTAGRAM.md` s'appliquent. Le premier bilan
 (dimanche 22 novembre 2026) n'aura que quelques jours de données : il ne change rien sans signal net.
