@@ -1,5 +1,8 @@
 # Instagram et TikTok : les posts du jour
 
+> **Tâche « Le Sachoir – Instagram » (carrousels) : n'écris RIEN, ne commite rien, et termine par la ligne
+> « Carrousels arrêtés depuis le 19 novembre 2026 (décision de Greg) : cette tâche est à désactiver. »**
+
 Version 3, depuis le 19 novembre 2026 (décision de Greg du 18 novembre au soir : « le Reel sitcom a beaucoup plus de
 potentiel de buzz »). **Les carrousels sont arrêtés.** Chaque jour partent **trois Reels « sitcom » Max et le Prof**
 (partie C), sur Instagram (Reel) et TikTok (vidéo), un par rubrique :
