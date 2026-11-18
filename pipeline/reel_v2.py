@@ -338,7 +338,7 @@ def end_image(post, bd, folder):
     lg = logo(560)
     bg.paste(lg, ((W - lg.width) // 2, y0 + 70), lg)
     f1, f2 = font("serif", 62), font("sans", 54)
-    lines = ["Une question comme ça", "chaque matin, en BD"]
+    lines = ["L’actu et la culture G", "en BD, chaque matin"]
     y = y0 + 110 + lg.height
     for line in lines:
         d.text(((W - d.textlength(line, font=f1)) // 2, y), line, font=f1, fill=INK)
@@ -571,7 +571,7 @@ def render(post, out: Path):
     if not beats:
         raise ValueError("post v2 sans « beats »")
     if beats[-1].get("role") != "end":
-        beats.append({"role": "end", "say": "Une question comme ça chaque matin, sur lesachoir point f r."})
+        beats.append({"role": "end", "say": "L'actu et la culture G en BD, chaque matin, sur lesachoir point f r."})
 
     # 1. Voix, phrase par phrase, et minutage
     voice, words, bigs, counts, plan = [], [], [], [], []

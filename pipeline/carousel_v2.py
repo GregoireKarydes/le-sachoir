@@ -12,7 +12,7 @@ Entrée : `social/instagram/<date>/post.json` avec `"kind": "carousel"`, `"versi
   l'histoire `story`), `{"same": true}` (même image que la diapositive précédente, cadrée un peu autrement),
   ou rien (fond encre uni). Une image introuvable retombe sur Commons, une case de l'histoire, puis le fond uni.
 - `tone` (au niveau du post) : `archive` (noir et blanc, par défaut pour l'histoire) ou `couleur`.
-La dernière diapositive est toujours la carte du Sachoir (« Une question comme ça chaque matin, en BD »).
+La dernière diapositive est toujours la carte du Sachoir (« L’actu et la culture G en BD, chaque matin »).
 Sortie : `slide-01.jpg`… en 1080 x 1350."""
 import hashlib
 import json
@@ -230,7 +230,7 @@ def end_slide(post, bd_first):
     lg = logo(560)
     img.paste(lg, ((W - lg.width) // 2, y0 + 80), lg)
     y = y0 + 120 + lg.height
-    for line, f in [("Une question comme ça", mont(58)), ("chaque matin, en BD", mont(58))]:
+    for line, f in [("L’actu et la culture G", mont(58)), ("en BD, chaque matin", mont(58))]:
         d.text(((W - d.textlength(line, font=f)) // 2, y), line, font=f, fill=INK)
         y += 78
     sub = post.get("end") or "Gratuit, en 2 minutes."

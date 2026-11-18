@@ -154,7 +154,7 @@ function endCard(t, scene) {
   g.restore();
   g.setTransform(1, 0, 0, 1, 0, 0); g.textAlign = 'center'; g.textBaseline = 'middle';
   if (lt > .25) { g.fillStyle = '#17140f'; g.fillRect(140, 540, 800, 110); g.fillStyle = '#faf6ee'; g.font = '800 76px "Baloo 2"'; g.fillText(TL.end?.url || 'lesachoir.fr', W / 2, 598); }
-  if (lt > .5) { g.fillStyle = '#17140f'; g.font = '800 46px "Baloo 2"'; for (const [i, L] of (TL.end?.lines || ['Une question comme ça,', 'chaque matin, en BD.']).entries()) g.fillText(L, W / 2, 730 + i * 58); }
+  if (lt > .5) { g.fillStyle = '#17140f'; g.font = '800 46px "Baloo 2"'; for (const [i, L] of (TL.end?.lines || ['L’actu et la culture G', 'en BD, chaque matin.']).entries()) g.fillText(L, W / 2, 730 + i * 58); }
 }
 
 function render(t) {

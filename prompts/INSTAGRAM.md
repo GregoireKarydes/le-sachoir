@@ -149,13 +149,13 @@ peut être plus court (6 ou 7).
 
 ## A4. Le reste du post
 
-- **`end`** (facultatif) : la petite phrase sous « Une question comme ça chaque matin, en BD » sur la carte finale
+- **`end`** (facultatif) : la petite phrase sous « L'actu et la culture G en BD, chaque matin » sur la carte finale
   (par défaut « Gratuit, en 2 minutes. »).
 - **`caption`** : ligne 1 = la phrase de couverture (l'énigme, sans la réponse : la réponse se découvre en glissant).
   Puis, après une ligne vide, l'histoire racontée en entier en 4 à 8 paragraphes courts
   (personne ne doit se sentir piégé), une nuance si l'origine est discutée, puis UNE demande : en priorité « Envoyez-le
   à celui qui… », un jour sur trois « L'histoire en BD : lien en bio. » Puis « Sources : » et les sources en une ligne.
-  Dernière ligne : « Une question comme ça chaque matin, en BD : lesachoir.fr ». 1 500 caractères au plus, aucun lien
+  Dernière ligne : « L'actu et la culture G en BD, chaque matin : lesachoir.fr ». 1 500 caractères au plus, aucun lien
   cliquable, au plus 2 émojis.
 - **`hashtags`** : 3 à 5, en français, sans « # » : `lesachoir`, `culturegenerale`, plus 1 à 3 du sujet (`histoire`,
   `etymologie`, `expressionfrancaise`…). Jamais `viral`, `fyp`, `explore`.
@@ -255,7 +255,7 @@ Un temps = une phrase dite = un plan à l'écran. 7 à 10 temps, **55 à 80 mots
 | `countdown` | Compte à rebours | Pas de texte : `{"role": "countdown", "secs": 3}`. |
 | `reveal` | Réponse du quiz | La réponse en une phrase, avec le petit détail qui fait sourire. |
 | `answer` | Réponse | La réponse claire, avec un détail surprenant en bonus. |
-| `end` | Fin | Facultatif. Par défaut : « Une question comme ça chaque matin, sur lesachoir point f r. » |
+| `end` | Fin | Facultatif. Par défaut : « L'actu et la culture G en BD, chaque matin, sur lesachoir point f r. » |
 
 - **Écris pour l'oreille** : phrases courtes, mots simples, chiffres en lettres quand ils sont dits (« treize
   chiffres »), questions qui finissent par « ? ». Ton du Sachoir (`prompts/CHARTE.md`) : drôle, bienveillant, complice.
@@ -281,8 +281,8 @@ Un temps = une phrase dite = un plan à l'écran. 7 à 10 temps, **55 à 80 mots
   “BLACK” FRIDAY ? »).
 - **`caption`** : ligne 1 = la question, telle qu'on la taperait dans la recherche. Puis 2 ou 3 lignes courtes qui
   donnent la réponse en entier (personne ne doit se sentir piégé). UNE seule demande, en priorité « Envoie-le à celui
-  qui… » (adaptée au sujet) ; un jour sur trois « Toute l'histoire en BD : lien en bio. » Dernière ligne : « Une
-  question comme ça chaque matin, en BD : lesachoir.fr ». 600 caractères au plus, au plus 2 émojis, aucun lien
+  qui… » (adaptée au sujet) ; un jour sur trois « Toute l'histoire en BD : lien en bio. » Dernière ligne : « L'actu
+  et la culture G en BD, chaque matin : lesachoir.fr ». 600 caractères au plus, au plus 2 émojis, aucun lien
   cliquable.
 - **`hashtags`** : 3 à 5, en français, sans « # » : `lesachoir`, `culturegenerale`, plus 1 à 3 du sujet. Jamais
   `viral`, `fyp`, `explore`.
@@ -308,7 +308,7 @@ Un temps = une phrase dite = un plan à l'écran. 7 à 10 temps, **55 à 80 mots
     {"role": "explain", "say": "…", "show": {"commons": "Beaujolais vendanges ancienne photo"}, "big": "3e JEUDI"},
     {"role": "answer", "say": "…", "show": {"video": "wine bottles cellar"}}
   ],
-  "caption": "Pourquoi le Beaujolais nouveau sort le 3e jeudi de novembre ?\n\n…\n\nEnvoie-le à celui qui en ouvre une ce soir.\n\nUne question comme ça chaque matin, en BD : lesachoir.fr",
+  "caption": "Pourquoi le Beaujolais nouveau sort le 3e jeudi de novembre ?\n\n…\n\nEnvoie-le à celui qui en ouvre une ce soir.\n\nL'actu et la culture G en BD, chaque matin : lesachoir.fr",
   "hashtags": ["lesachoir", "culturegenerale", "beaujolaisnouveau"],
   "alt": "Du vin rouge versé dans un verre.",
   "sources": ["https://…", "https://…"]
@@ -591,8 +591,8 @@ Exemple complet (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répl
     "end": {
       "url": "lesachoir.fr",
       "lines": [
-        "Une question comme ça,",
-        "chaque matin, en BD."
+        "L'actu et la culture G",
+        "en BD, chaque matin."
       ]
     }
   },
