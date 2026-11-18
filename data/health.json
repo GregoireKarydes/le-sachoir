@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T19:31:01.739703+01:00",
+ "updated_at": "2026-11-18T20:01:46.491292+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -21,7 +21,8 @@
    "date": "2026-11-19",
    "status": "draft",
    "formats": {
-    "quiz": "prêt"
+    "quiz": "prêt",
+    "actu": "prêt"
    }
   },
   {
@@ -121,40 +122,40 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 0,
-   "waiting": 4,
+   "ready": 1,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 82,
-   "focus": "20261115-1923-krach-1929 (17 image(s) à faire)",
-   "next": null,
+   "images_left": 65,
+   "focus": "20261116-1930-cathedrales-gothiques (21 image(s) à faire)",
+   "next": "20261115-1923-krach-1929",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 1,
  "days_ahead_written": 4,
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-18",
-  "count": 36,
-  "neurons": 6240,
+  "count": 51,
+  "neurons": 9000,
   "exhausted": false,
   "by_kind": {
-   "case": 27,
-   "cast": 8,
-   "cover": 1
+   "case": 39,
+   "cast": 10,
+   "cover": 2
   },
   "exhausted_at": "2026-11-18T00:57:02.297880+00:00"
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 2.34146,
-  "images": 204,
-  "today_usd": 0.18,
+  "spent_usd": 2.42842,
+  "images": 214,
+  "today_usd": 0.26696,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-18T19:05:09.017395+01:00",
-  "age_hours": 0.4,
+  "age_hours": 0.9,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 30,
@@ -184,7 +185,7 @@
  },
  "actu_balance": {
   "days": 14,
-  "editions": 8,
+  "editions": 9,
   "people": [
    {
     "name": "Aleksandar Vučić",
@@ -193,19 +194,37 @@
     "last": "2026-11-18"
    },
    {
+    "name": "Donald Trump",
+    "party": "étranger",
+    "n": 1,
+    "last": "2026-11-19"
+   },
+   {
     "name": "Emmanuel Macron",
     "party": "Renaissance",
     "n": 1,
     "last": "2026-11-17"
+   },
+   {
+    "name": "Vladimir Poutine",
+    "party": "étranger",
+    "n": 1,
+    "last": "2026-11-19"
+   },
+   {
+    "name": "Xi Jinping",
+    "party": "étranger",
+    "n": 1,
+    "last": "2026-11-19"
    }
   ],
   "parties": [
    {
-    "party": "Renaissance",
-    "n": 1
+    "party": "étranger",
+    "n": 2
    },
    {
-    "party": "étranger",
+    "party": "Renaissance",
     "n": 1
    }
   ]

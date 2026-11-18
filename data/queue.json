@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T19:31+01:00",
+ "updated_at": "2026-11-18T20:01+01:00",
  "stock": {
   "cultureg": [
    {
@@ -319,15 +319,15 @@
     "path": "stock/dossier/20261115-1923-krach-1929",
     "name": "20261115-1923-krach-1929",
     "added": "20261115-1923",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
     "theme": "Économie",
     "tagline": "Du jeudi noir de Wall Street au New Deal de Roosevelt : comment un krach boursier est devenu la Grande Dépression, jusqu’en France",
     "minutes": 3,
     "cases": 27,
     "photos": 3,
-    "images_done": 5,
+    "images_done": 22,
     "images_total": 22,
     "failed": 0,
     "redo": 0
@@ -480,7 +480,7 @@
    "date": "2026-11-19",
    "path": "editions/2026-11-19",
    "status": "draft",
-   "newsletter": false,
+   "newsletter": true,
    "formats": [
     {
      "id": "quiz",
@@ -488,6 +488,21 @@
      "kind": "plusmoins",
      "title": "Vieilles pierres contre jeunes premières",
      "questions": 1
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Un budget en garde alternée et une sonde à un jour de nous",
+     "theme": "",
+     "tagline": "Le Sénat adopte le budget de la Sécu rejeté par les députés, Voyager 1 passe un cap historique, le Salon de l’agriculture encadre les candidats et Shenzhen prépare un sommet à trois.",
+     "minutes": 4,
+     "cases": 12,
+     "photos": 2,
+     "images_done": 5,
+     "images_total": 5,
+     "failed": 0,
+     "redo": 0
     }
    ]
   },
