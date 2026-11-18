@@ -181,15 +181,14 @@
           "caption": "La France s’aligne. La loi dit : « temps moyen de Paris, retardée de neuf minutes vingt et une secondes ».",
           "bubbles": [],
           "image": {
-            "prompt": "a simple office with a desk and an official sheet of paper with a red wax seal. the astronomer (very tall, thin, white beard, teal coat) on the right signing the sheet while covering a small map of England with his other hand, eyes looking away innocently; Gaston (short, round, navy uniform, red kepi) on the left squinting at him, suspicious, one eyebrow raised. high angle",
+            "prompt": "a bright simple office with a wooden desk and a blank sheet of paper. the astronomer (very tall, thin, white beard, teal coat) on the right holding a quill pen above the paper, whistling innocently, eyes turned to the ceiling; Gaston (short, round, navy uniform, red kepi) on the left leaning on the desk, one eyebrow raised, amused. high angle",
             "cast": [
               "astro",
               "gaston"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "failed",
-            "attempts": 3,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (bb666690-63f4-421a-8acb-3a1fec0ac6db)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -281,6 +280,5 @@
         }
       }
     }
-  ],
-  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
+  ]
 }
