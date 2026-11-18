@@ -17,25 +17,83 @@
           "crit": "plus ancien",
           "pick": "min",
           "items": [
-            { "name": "La tour Eiffel", "value": 1889, "label": "1889", "explain": "Construite pour l’Exposition universelle de 1889." },
-            { "name": "L’Arc de triomphe de l’Étoile", "value": 1836, "label": "1836", "explain": "Voulu par Napoléon en 1806, inauguré seulement en 1836." },
-            { "name": "Notre-Dame de Paris", "value": 1163, "label": "1163", "explain": "Le chantier commence vers 1163 et dure près de deux siècles." },
-            { "name": "Le pont du Gard", "value": 50, "label": "vers 50", "explain": "Un aqueduc romain bâti vers l’an 50 pour alimenter Nîmes." },
-            { "name": "La pyramide du Louvre", "value": 1989, "label": "1989", "explain": "Inaugurée le 29 mars 1989, œuvre de l’architecte Pei." },
-            { "name": "L’abbaye du Mont-Saint-Michel", "value": 966, "label": "966", "explain": "Fondée en 966 par le duc de Normandie, confiée aux bénédictins." },
-            { "name": "Le château de Chambord", "value": 1519, "label": "1519", "explain": "François Ier lance le chantier en 1519." },
-            { "name": "L’Opéra Garnier", "value": 1875, "label": "1875", "explain": "Inauguré en 1875, sous la IIIe République." }
+            {
+              "name": "La tour Eiffel",
+              "value": 1889,
+              "label": "1889",
+              "explain": "Construite pour l’Exposition universelle de 1889."
+            },
+            {
+              "name": "L’Arc de triomphe de l’Étoile",
+              "value": 1836,
+              "label": "1836",
+              "explain": "Voulu par Napoléon en 1806, inauguré seulement en 1836."
+            },
+            {
+              "name": "Notre-Dame de Paris",
+              "value": 1163,
+              "label": "1163",
+              "explain": "Le chantier commence vers 1163 et dure près de deux siècles."
+            },
+            {
+              "name": "Le pont du Gard",
+              "value": 50,
+              "label": "vers 50",
+              "explain": "Un aqueduc romain bâti vers l’an 50 pour alimenter Nîmes."
+            },
+            {
+              "name": "La pyramide du Louvre",
+              "value": 1989,
+              "label": "1989",
+              "explain": "Inaugurée le 29 mars 1989, œuvre de l’architecte Pei."
+            },
+            {
+              "name": "L’abbaye du Mont-Saint-Michel",
+              "value": 966,
+              "label": "966",
+              "explain": "Fondée en 966 par le duc de Normandie, confiée aux bénédictins."
+            },
+            {
+              "name": "Le château de Chambord",
+              "value": 1519,
+              "label": "1519",
+              "explain": "François Ier lance le chantier en 1519."
+            },
+            {
+              "name": "L’Opéra Garnier",
+              "value": 1875,
+              "label": "1875",
+              "explain": "Inauguré en 1875, sous la IIIe République."
+            }
           ],
           "explain": "Entre le pont du Gard et la pyramide du Louvre, presque deux mille ans d’écart. Et la tour Eiffel, qu’on croit éternelle, n’a « que » 137 ans.",
-          "source": { "title": "Larousse — Le Mont-Saint-Michel", "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946" }
+          "source": {
+            "title": "Larousse — Le Mont-Saint-Michel",
+            "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946"
+          }
         }
       ],
       "sources": [
-        { "title": "Larousse — Le Mont-Saint-Michel", "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946" },
-        { "title": "France.fr — Le Pont du Gard, merveille de l’Antiquité", "url": "https://www.france.fr/fr/article/site-du-pont-du-gard/" },
-        { "title": "Ministère de la Culture — Musée du Louvre, les trente ans de la pyramide", "url": "https://www.culture.gouv.fr/actualites/Musee-du-Louvre-les-trente-ans-de-la-pyramide" },
-        { "title": "France.fr — The Opéra Garnier: an icon of Parisian architecture", "url": "https://www.france.fr/en/article/palais-garnier-opera-national-paris/" },
-        { "title": "Sortir à Paris — 15 août, première pierre de l’Arc de triomphe", "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/257448-ephemeride-du-15-aout-on-pose-la-premiere-pierre-de-l-arc-de-triomphe-a-paris" }
+        {
+          "title": "Larousse — Le Mont-Saint-Michel",
+          "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946"
+        },
+        {
+          "title": "France.fr — Le Pont du Gard, merveille de l’Antiquité",
+          "url": "https://www.france.fr/fr/article/site-du-pont-du-gard/"
+        },
+        {
+          "title": "Ministère de la Culture — Musée du Louvre, les trente ans de la pyramide",
+          "url": "https://www.culture.gouv.fr/actualites/Musee-du-Louvre-les-trente-ans-de-la-pyramide"
+        },
+        {
+          "title": "France.fr — The Opéra Garnier: an icon of Parisian architecture",
+          "url": "https://www.france.fr/en/article/palais-garnier-opera-national-paris/"
+        },
+        {
+          "title": "Sortir à Paris — 15 août, première pierre de l’Arc de triomphe",
+          "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/257448-ephemeride-du-15-aout-on-pose-la-premiere-pierre-de-l-arc-de-triomphe-a-paris"
+        }
       ]
     },
     {
@@ -64,7 +122,7 @@
           "look": "a tall, very thin man in his sixties, light skin, neat white hair with a side parting, thin white moustache, a mustard-yellow three-piece suit as main colour, dark green tie, round gold-rimmed glasses",
           "role": "a senior senator who receives the budget the deputies rejected; pompous and self-satisfied, treats every text like a family matter, chin always held high",
           "file": "cast/actu-senateur.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "ingenieure",
@@ -72,7 +130,7 @@
           "look": "a short, round woman in her forties, dark brown skin, big curly black afro, a bright orange polo shirt as main colour, grey trousers, a headset with a small microphone, a large blue coffee mug",
           "role": "the engineer who talks to a 49-year-old space probe; unflappably calm, understates everything, sips her coffee while waiting",
           "file": "cast/actu-ingenieure.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "organisateur",
@@ -93,10 +151,13 @@
       ],
       "cover": {
         "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. Night outdoors under a starry sky, pale navy-blue background. In the foreground on the left, senateur (tall and very thin, neat white hair, mustard-yellow three-piece suit) walks proudly carrying the budget under his arm, chin held high. In the background on the right, ingenieure (short and round, big curly black afro, bright orange polo shirt, headset) sits at the foot of the dish, calmly sipping from her blue coffee mug and looking up at the stars. Wide shot.",
-        "cast": ["senateur", "ingenieure"],
+        "cast": [
+          "senateur",
+          "ingenieure"
+        ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -108,14 +169,20 @@
           "gag": "comparaison",
           "caption": "Mercredi 18 novembre, le Sénat a adopté le budget de la Sécurité sociale 2027 par 201 voix contre 124. L’Assemblée nationale l’avait rejeté le 23 octobre.",
           "bubbles": [
-            { "who": "senateur", "text": "Rejeté chez les députés, adopté chez nous : ce budget vit en garde alternée.", "side": "r" }
+            {
+              "who": "senateur",
+              "text": "Rejeté chez les députés, adopté chez nous : ce budget vit en garde alternée.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A tall wooden double doorway opening onto a red-velvet senate chamber, pale lavender background. From the left edge, only an arm in a dark sleeve hands over the budget, which wears a tiny child's backpack with two straps, like a child at a custody handover. senateur (tall and very thin, neat white hair, thin white moustache, mustard-yellow three-piece suit, round gold glasses) on the right takes it with both hands, chin high, smug and fatherly. Medium wide shot.",
-            "cast": ["senateur"],
+            "cast": [
+              "senateur"
+            ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -124,7 +191,15 @@
           "tag": "En vrai",
           "title": "Le palais du Luxembourg, siège du Sénat",
           "text": "La façade sud du palais, dans le 6e arrondissement de Paris : c’est là que les sénateurs ont voté le budget de la Sécu.",
-          "photo": { "commons": "File:Palais du Luxembourg, South View 140116 1.jpg" }
+          "photo": {
+            "commons": "File:Palais du Luxembourg, South View 140116 1.jpg",
+            "credit": "DXR",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Palais_du_Luxembourg,_South_View_140116_1.jpg",
+            "file": "images/photo-2-palais-du-luxembourg-south-view-140.webp",
+            "status": "done"
+          }
         },
         {
           "n": 3,
@@ -134,8 +209,14 @@
           "text": "Quoi : les sénateurs annulent la suspension de la réforme des retraites de 2023 et refusent de geler les pensions au-dessus de 1 260 €.\nPourquoi ça compte : ce budget fixe ce que la Sécu dépense pour les malades, les retraités et les familles.\nRepère : déficit visé, 14 milliards d’euros, contre 21,8 milliards estimés en 2026.\nEt maintenant : commission mixte paritaire le 26 novembre.",
           "due": "2026-11-26",
           "sources": [
-            { "title": "franceinfo", "url": "https://www.franceinfo.fr/economie/budget/le-senat-adopte-en-premiere-lecture-le-projet-de-budget-de-la-securite-sociale-pour-2027_8288699.html" },
-            { "title": "Presse Agence", "url": "https://presseagence.fr/paris-budget-de-la-securite-sociale-le-senat-adopte-sa-version-du-projet-pour-2027/" }
+            {
+              "title": "franceinfo",
+              "url": "https://www.franceinfo.fr/economie/budget/le-senat-adopte-en-premiere-lecture-le-projet-de-budget-de-la-securite-sociale-pour-2027_8288699.html"
+            },
+            {
+              "title": "Presse Agence",
+              "url": "https://presseagence.fr/paris-budget-de-la-securite-sociale-le-senat-adopte-sa-version-du-projet-pour-2027/"
+            }
           ]
         },
         {
@@ -153,8 +234,14 @@
           ],
           "text": "Ce qu’on ne sait pas encore : quelle version l’emportera.",
           "sources": [
-            { "title": "Stéphane Larue", "url": "https://stephanelarue.com/budget-de-la-secu-2027-le-senat-ladopte-par-201-voix-deficit-fixe-a-14-milliards/" },
-            { "title": "Public Sénat", "url": "https://www.publicsenat.fr/actualites/politique/retraites-le-senat-vote-lindexation-complete-des-pensions-sur-linflation-en-2027" }
+            {
+              "title": "Stéphane Larue",
+              "url": "https://stephanelarue.com/budget-de-la-secu-2027-le-senat-ladopte-par-201-voix-deficit-fixe-a-14-milliards/"
+            },
+            {
+              "title": "Public Sénat",
+              "url": "https://www.publicsenat.fr/actualites/politique/retraites-le-senat-vote-lindexation-complete-des-pensions-sur-linflation-en-2027"
+            }
           ]
         },
         {
@@ -164,14 +251,20 @@
           "gag": "litote",
           "caption": "Mercredi 18 novembre, la sonde Voyager 1 de la NASA, lancée en 1977, est passée à un jour-lumière de la Terre : 25,9 milliards de km. Ses messages mettent 24 heures.",
           "bubbles": [
-            { "who": "ingenieure", "text": "Bonjour envoyé hier, réponse prévue demain. À 49 ans, elle reste très réactive.", "side": "l" }
+            {
+              "who": "ingenieure",
+              "text": "Bonjour envoyé hier, réponse prévue demain. À 49 ans, elle reste très réactive.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A space mission control desk at night with one plain computer screen, pale teal background. ingenieure (short and round, big curly black afro, bright orange polo shirt, headset with small microphone) leans back in her office chair, perfectly calm, sipping from her blue coffee mug while staring at the hourglass standing on the desk beside the keyboard, its sand barely started. Medium close-up.",
-            "cast": ["ingenieure"],
+            "cast": [
+              "ingenieure"
+            ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -180,7 +273,15 @@
           "tag": "En vrai",
           "title": "Voyager, la sonde vue par la NASA",
           "text": "Une illustration de la NASA : la sonde et sa grande antenne blanche, qui lui sert à parler avec la Terre.",
-          "photo": { "commons": "File:Voyager spacecraft.jpg" }
+          "photo": {
+            "commons": "File:Voyager spacecraft.jpg",
+            "credit": "NASA/JPL",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Voyager_spacecraft.jpg",
+            "file": "images/photo-6-voyager-spacecraft-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 7,
@@ -189,8 +290,14 @@
           "title": "Voyager 1, l’objet humain le plus lointain",
           "text": "Quoi : aucun engin fabriqué par l’humain n’est allé aussi loin ; elle file à 61 000 km/h.\nPourquoi ça compte : elle envoie encore des mesures de l’espace entre les étoiles.\nEt maintenant : sa jumelle, Voyager 2, n’atteindra ce cap qu’en 2035.",
           "sources": [
-            { "title": "AP (ABC11)", "url": "https://abc11.com/story/nasas-voyager-1-closes-light-day-interstellar-space-new-distance-record/20042574/" },
-            { "title": "EarthSky", "url": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/" }
+            {
+              "title": "AP (ABC11)",
+              "url": "https://abc11.com/story/nasas-voyager-1-closes-light-day-interstellar-space-new-distance-record/20042574/"
+            },
+            {
+              "title": "EarthSky",
+              "url": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/"
+            }
           ]
         },
         {
@@ -200,14 +307,20 @@
           "gag": "bureau",
           "caption": "Mercredi 18 novembre, les organisateurs du Salon de l’agriculture ont rappelé leurs règles aux candidats à la présidentielle : 25 accompagnateurs au plus et un parcours décidé à l’avance.",
           "bubbles": [
-            { "who": "organisateur", "text": "Itinéraire tamponné, 25 accompagnateurs maxi. Et caresse de vache sur rendez-vous.", "side": "l" }
+            {
+              "who": "organisateur",
+              "text": "Itinéraire tamponné, 25 accompagnateurs maxi. Et caresse de vache sur rendez-vous.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. The entrance of a big exhibition hall with straw bales on the floor, pale wheat-yellow background. Seen from below: organisateur (stocky, bald, thick short black beard, forest green fleece vest over a blue checked shirt) stands firmly in the doorway, holding up his clipboard like a barrier, stern face; behind him a big brown cow peeks over his shoulder, wearing a small visitor badge on a string. Low angle.",
-            "cast": ["organisateur"],
+            "cast": [
+              "organisateur"
+            ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -217,8 +330,14 @@
           "title": "Le Salon de l’agriculture encadre les candidats",
           "text": "Quoi : pas de tracts, une seule journée de visite ; le Salon ouvre le 27 février 2027.\nPourquoi ça compte : les visites officielles ont doublé en cinq ans, jusqu’à 80 par édition.\nEt maintenant : vaches et volailles devraient revenir, après une édition 2026 sans bovins.",
           "sources": [
-            { "title": "BFMTV (via Shango)", "url": "https://www.shango.media/bfm-tv-il-ne-faut-pas-oublier-que-les-visiteurs-paient-17-euros-le-salon-de-lagriculture-veut-eviter-le-defile-des-politiques-durant-la-presidentielle-pour-ne-pas-devenir-champ-de-bataille-electo-12063329" },
-            { "title": "Agri Mutuel (AFP)", "url": "https://www.agri-mutuel.com/elevage-peche/le-salon-de-lagriculture-2027-attend-le-retour-des-animaux-et-des-visiteurs/" }
+            {
+              "title": "BFMTV (via Shango)",
+              "url": "https://www.shango.media/bfm-tv-il-ne-faut-pas-oublier-que-les-visiteurs-paient-17-euros-le-salon-de-lagriculture-veut-eviter-le-defile-des-politiques-durant-la-presidentielle-pour-ne-pas-devenir-champ-de-bataille-electo-12063329"
+            },
+            {
+              "title": "Agri Mutuel (AFP)",
+              "url": "https://www.agri-mutuel.com/elevage-peche/le-salon-de-lagriculture-2027-attend-le-retour-des-animaux-et-des-visiteurs/"
+            }
           ]
         },
         {
@@ -228,18 +347,32 @@
           "major": true,
           "gag": "silence",
           "people": [
-            { "name": "Xi Jinping", "party": "étranger", "role": "président de la Chine" },
-            { "name": "Donald Trump", "party": "étranger", "role": "président des États-Unis" },
-            { "name": "Vladimir Poutine", "party": "étranger", "role": "président de la Russie" }
+            {
+              "name": "Xi Jinping",
+              "party": "étranger",
+              "role": "président de la Chine"
+            },
+            {
+              "name": "Donald Trump",
+              "party": "étranger",
+              "role": "président des États-Unis"
+            },
+            {
+              "name": "Vladimir Poutine",
+              "party": "étranger",
+              "role": "président de la Russie"
+            }
           ],
           "caption": "Les présidents Donald Trump et Vladimir Poutine sont à Shenzhen, en Chine. Jeudi 19 novembre, le président chinois, Xi Jinping, les réunit pour un sommet à trois inédit.",
           "bubbles": [],
           "image": {
             "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A vast empty reception hall with a long red carpet, pale jade-green background. Seen from straight above: xi (stocky, wide round face, combed-back black hair, dark navy suit, burgundy tie) kneels on the carpet with a long yellow tape measure stretched between the three chairs, which stand in a perfect triangle, checking that the distances are exactly equal, one tiny light-blue sweat drop on his temple. Bird's-eye view.",
-            "cast": ["xi"],
+            "cast": [
+              "xi"
+            ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -250,8 +383,14 @@
           "text": "Quoi : la Chine accueille le forum Asie-Pacifique (APEC), 21 économies et environ 60 % de la richesse mondiale.\nPourquoi ça compte : Washington veut y parler de réduire les arsenaux nucléaires ; Pékin n’a donné aucun programme.\nEt maintenant : réunion à trois jeudi 19 novembre.",
           "due": "2026-11-19",
           "sources": [
-            { "title": "Gulf News (AFP)", "url": "https://gulfnews.com/amp/story/world%2Fasia%2Fchina-confirms-first-xi-trump-putin-summit-on-thursday-1.500748570" },
-            { "title": "China Global South Project", "url": "https://chinaglobalsouth.com/2026/11/16/2026-apec-summit-shenzhen-china/" }
+            {
+              "title": "Gulf News (AFP)",
+              "url": "https://gulfnews.com/amp/story/world%2Fasia%2Fchina-confirms-first-xi-trump-putin-summit-on-thursday-1.500748570"
+            },
+            {
+              "title": "China Global South Project",
+              "url": "https://chinaglobalsouth.com/2026/11/16/2026-apec-summit-shenzhen-china/"
+            }
           ]
         },
         {
@@ -262,8 +401,19 @@
           "title": "GTA VI : des joueurs tentent le raccourci par la Nouvelle-Zélande",
           "why": "Pourquoi ça buzze : le jeu sort à minuit heure locale ; en Nouvelle-Zélande, minuit tombait mercredi à midi, heure de Paris. Des sites conseillent de changer la région de sa console.",
           "text": "Douze heures gagnées sur treize ans d’attente : un raccourci de 0,01 %. Et un compte peut-être suspendu en prime.",
-          "source": { "title": "Selectra — GTA 6 dès le 18 novembre à midi, l’astuce Nouvelle-Zélande", "url": "https://selectra.info/telecom/actualites/marche/gta-6-18-novembre-midi-astuce-nouvelle-zelande" },
-          "photo": { "commons": "File:Wynyard Crossing & Auckland Skyline.jpg" }
+          "source": {
+            "title": "Selectra — GTA 6 dès le 18 novembre à midi, l’astuce Nouvelle-Zélande",
+            "url": "https://selectra.info/telecom/actualites/marche/gta-6-18-novembre-midi-astuce-nouvelle-zelande"
+          },
+          "photo": {
+            "commons": "File:Wynyard Crossing & Auckland Skyline.jpg",
+            "credit": "Vishal Makwana",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Wynyard_Crossing_%26_Auckland_Skyline.jpg",
+            "file": "images/photo-12-wynyard-crossing-auckland-skyline-j.webp",
+            "status": "done"
+          }
         }
       ],
       "final": {
@@ -271,18 +421,54 @@
         "source": "AP (ABC11)"
       },
       "sources": [
-        { "title": "franceinfo — Le Sénat adopte en première lecture le projet de budget de la Sécurité sociale pour 2027", "url": "https://www.franceinfo.fr/economie/budget/le-senat-adopte-en-premiere-lecture-le-projet-de-budget-de-la-securite-sociale-pour-2027_8288699.html" },
-        { "title": "Ouest-France — Le Sénat adopte le budget de la Sécurité sociale 2027", "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/le-senat-adopte-le-budget-de-la-securite-sociale-2027-avec-plusieurs-modifications-de-la-copie-du-gouvernement-ade90de0-e34e-11f1-a3b1-0c6de532ce7d" },
-        { "title": "Presse Agence — Le Sénat adopte sa version du budget de la Sécu 2027", "url": "https://presseagence.fr/paris-budget-de-la-securite-sociale-le-senat-adopte-sa-version-du-projet-pour-2027/" },
-        { "title": "Stéphane Larue — Budget de la Sécu 2027 : le Sénat l’adopte par 201 voix", "url": "https://stephanelarue.com/budget-de-la-secu-2027-le-senat-ladopte-par-201-voix-deficit-fixe-a-14-milliards/" },
-        { "title": "Public Sénat — Le Sénat vote l’indexation complète des pensions en 2027", "url": "https://www.publicsenat.fr/actualites/politique/retraites-le-senat-vote-lindexation-complete-des-pensions-sur-linflation-en-2027" },
-        { "title": "AP (ABC11) — Voyager 1 closes in on a light-day", "url": "https://abc11.com/story/nasas-voyager-1-closes-light-day-interstellar-space-new-distance-record/20042574/" },
-        { "title": "EarthSky — Voyager 1 is 1 light-day from Earth", "url": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/" },
-        { "title": "BFMTV (via Shango) — Le Salon de l’agriculture veut éviter le défilé des politiques", "url": "https://www.shango.media/bfm-tv-il-ne-faut-pas-oublier-que-les-visiteurs-paient-17-euros-le-salon-de-lagriculture-veut-eviter-le-defile-des-politiques-durant-la-presidentielle-pour-ne-pas-devenir-champ-de-bataille-electo-12063329" },
-        { "title": "Agri Mutuel (AFP) — Le Salon de l’agriculture 2027 attend le retour des animaux", "url": "https://www.agri-mutuel.com/elevage-peche/le-salon-de-lagriculture-2027-attend-le-retour-des-animaux-et-des-visiteurs/" },
-        { "title": "Gulf News (AFP) — China confirms first Xi-Trump-Putin summit on Thursday", "url": "https://gulfnews.com/amp/story/world%2Fasia%2Fchina-confirms-first-xi-trump-putin-summit-on-thursday-1.500748570" },
-        { "title": "China Global South Project — Xi hosts Trump and Putin as APEC opens in Shenzhen", "url": "https://chinaglobalsouth.com/2026/11/16/2026-apec-summit-shenzhen-china/" },
-        { "title": "Selectra — GTA 6 : l’astuce Nouvelle-Zélande", "url": "https://selectra.info/telecom/actualites/marche/gta-6-18-novembre-midi-astuce-nouvelle-zelande" }
+        {
+          "title": "franceinfo — Le Sénat adopte en première lecture le projet de budget de la Sécurité sociale pour 2027",
+          "url": "https://www.franceinfo.fr/economie/budget/le-senat-adopte-en-premiere-lecture-le-projet-de-budget-de-la-securite-sociale-pour-2027_8288699.html"
+        },
+        {
+          "title": "Ouest-France — Le Sénat adopte le budget de la Sécurité sociale 2027",
+          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/le-senat-adopte-le-budget-de-la-securite-sociale-2027-avec-plusieurs-modifications-de-la-copie-du-gouvernement-ade90de0-e34e-11f1-a3b1-0c6de532ce7d"
+        },
+        {
+          "title": "Presse Agence — Le Sénat adopte sa version du budget de la Sécu 2027",
+          "url": "https://presseagence.fr/paris-budget-de-la-securite-sociale-le-senat-adopte-sa-version-du-projet-pour-2027/"
+        },
+        {
+          "title": "Stéphane Larue — Budget de la Sécu 2027 : le Sénat l’adopte par 201 voix",
+          "url": "https://stephanelarue.com/budget-de-la-secu-2027-le-senat-ladopte-par-201-voix-deficit-fixe-a-14-milliards/"
+        },
+        {
+          "title": "Public Sénat — Le Sénat vote l’indexation complète des pensions en 2027",
+          "url": "https://www.publicsenat.fr/actualites/politique/retraites-le-senat-vote-lindexation-complete-des-pensions-sur-linflation-en-2027"
+        },
+        {
+          "title": "AP (ABC11) — Voyager 1 closes in on a light-day",
+          "url": "https://abc11.com/story/nasas-voyager-1-closes-light-day-interstellar-space-new-distance-record/20042574/"
+        },
+        {
+          "title": "EarthSky — Voyager 1 is 1 light-day from Earth",
+          "url": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/"
+        },
+        {
+          "title": "BFMTV (via Shango) — Le Salon de l’agriculture veut éviter le défilé des politiques",
+          "url": "https://www.shango.media/bfm-tv-il-ne-faut-pas-oublier-que-les-visiteurs-paient-17-euros-le-salon-de-lagriculture-veut-eviter-le-defile-des-politiques-durant-la-presidentielle-pour-ne-pas-devenir-champ-de-bataille-electo-12063329"
+        },
+        {
+          "title": "Agri Mutuel (AFP) — Le Salon de l’agriculture 2027 attend le retour des animaux",
+          "url": "https://www.agri-mutuel.com/elevage-peche/le-salon-de-lagriculture-2027-attend-le-retour-des-animaux-et-des-visiteurs/"
+        },
+        {
+          "title": "Gulf News (AFP) — China confirms first Xi-Trump-Putin summit on Thursday",
+          "url": "https://gulfnews.com/amp/story/world%2Fasia%2Fchina-confirms-first-xi-trump-putin-summit-on-thursday-1.500748570"
+        },
+        {
+          "title": "China Global South Project — Xi hosts Trump and Putin as APEC opens in Shenzhen",
+          "url": "https://chinaglobalsouth.com/2026/11/16/2026-apec-summit-shenzhen-china/"
+        },
+        {
+          "title": "Selectra — GTA 6 : l’astuce Nouvelle-Zélande",
+          "url": "https://selectra.info/telecom/actualites/marche/gta-6-18-novembre-midi-astuce-nouvelle-zelande"
+        }
       ]
     }
   ],

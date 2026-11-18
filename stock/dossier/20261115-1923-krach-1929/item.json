@@ -235,8 +235,8 @@
               "awa"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -257,8 +257,8 @@
               "harold"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -285,9 +285,10 @@
               "harold"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 2,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -314,8 +315,8 @@
               "harold"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -356,8 +357,8 @@
               "harold"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -400,8 +401,8 @@
               "awa"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -423,8 +424,8 @@
               "awa"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -440,8 +441,8 @@
               "harold"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0,
+            "status": "done",
+            "attempts": 1,
             "same_place": false
           }
         },
@@ -485,9 +486,10 @@
               "awa"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -508,9 +510,10 @@
               "awa"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -537,9 +540,10 @@
               "awa"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -566,9 +570,10 @@
               "awa"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -589,9 +594,10 @@
               "marcel"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -618,9 +624,10 @@
               "marcel"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -647,9 +654,10 @@
               "awa"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -688,9 +696,10 @@
               "awa"
             ],
             "file": "images/dossier-20.webp",
-            "status": "pending",
-            "attempts": 0,
-            "same_place": false
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
           }
         },
         {
@@ -717,8 +726,9 @@
               "awa"
             ],
             "file": "images/dossier-21.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
