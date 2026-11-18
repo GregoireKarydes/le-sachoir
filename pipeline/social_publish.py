@@ -130,39 +130,6 @@ def build_input(folder, post, render, channel, due):
     }
 
 
-DELETE = """mutation($input: DeletePostInput!) {
-  deletePost(input: $input) {
-    ... on DeletePostSuccess { id }
-    ... on MutationError { message }
-  }
-}"""
-
-
-def replace_changed(key, d, render, now, dry):
-    """Post refait (nouveau rendu) alors qu'il est déjà dans la file Buffer : supprime les anciens posts encore à venir
-    pour que le nouveau rendu parte à leur place. Ne touche qu'aux envois marqués d'une empreinte différente."""
-    fp = render.get("fingerprint")
-    for name in ("buffer.json", "buffer-tiktok.json", "buffer-reel.json"):
-        f = d / name
-        if not f.exists() or not fp:
-            continue
-        b = json.loads(f.read_text())
-        if not b.get("fingerprint") or b["fingerprint"] == fp:
-            continue
-        due = datetime.fromisoformat(b["due_at"].replace("Z", "+00:00"))
-        if due <= now:
-            print(f"::warning::Instagram {d.name} : {name} déjà publié, l'ancien rendu reste en ligne.")
-            continue
-        if dry:
-            print(f"(essai) suppression Buffer {b['id']} ({name})")
-            continue
-        res = gql(key, DELETE, {"input": {"id": b["id"]}})["deletePost"]
-        if res.get("message"):
-            raise RuntimeError(f"Buffer deletePost {b['id']} : {res['message']}")
-        f.unlink()
-        print(f"Instagram {d.name} : ancien post Buffer {b['id']} supprimé ({name}), le nouveau rendu va partir.")
-
-
 CREATE = """mutation($input: CreatePostInput!) {
   createPost(input: $input) {
     ... on PostActionSuccess { post { id dueAt } }
@@ -184,11 +151,6 @@ def main(args):
         d = pj.parent
         post = json.loads(pj.read_text())
         rj = json.loads((d / "render.json").read_text()) if (d / "render.json").exists() else {}
-        if rj and post.get("date") == today and not post.get("skip"):
-            try:
-                replace_changed(key, d, rj, now, dry)
-            except Exception as e:  # noqa
-                print(f"::warning::Instagram {d.name} : remplacement Buffer impossible ({e})")
         tiktok_due = bool(rj.get("tiktok_files")) and not (d / "buffer-tiktok.json").exists()
         reel_due = bool(rj.get("reel")) and not (d / "buffer-reel.json").exists()
         if post.get("date") != today or post.get("skip") or ((d / "buffer.json").exists() and not tiktok_due and not reel_due):
@@ -230,7 +192,7 @@ def main(args):
             res = {"message": str(e)}
         if res.get("post"):
             (d / "buffer.json").write_text(json.dumps({"id": res["post"]["id"], "due_at": res["post"].get("dueAt") or inp["dueAt"],
-                                                       "sent_at": now.isoformat(timespec="seconds"), "fingerprint": render.get("fingerprint")}, indent=1) + "\n")
+                                                       "sent_at": now.isoformat(timespec="seconds")}, indent=1) + "\n")
             (d / "buffer-error.json").unlink(missing_ok=True)
             print(f"Instagram {d.name} : envoyé à Buffer, publication prévue {inp['dueAt']}.")
         else:
@@ -262,7 +224,7 @@ def send_reel_copy(key, d, post, render, channel, now, dry):
         res = {"message": str(e)}
     if res.get("post"):
         (d / "buffer-reel.json").write_text(json.dumps({"id": res["post"]["id"], "due_at": res["post"].get("dueAt") or inp["dueAt"],
-                                                        "sent_at": now.isoformat(timespec="seconds"), "fingerprint": render.get("fingerprint")}, indent=1) + "\n")
+                                                        "sent_at": now.isoformat(timespec="seconds")}, indent=1) + "\n")
         (d / "buffer-reel-error.json").unlink(missing_ok=True)
         print(f"Reel {d.name} : envoyé à Buffer, publication prévue {inp['dueAt']}.")
     else:
@@ -282,7 +244,7 @@ def send_tiktok(key, d, post, render, channel, due, now, dry):
         res = {"message": str(e)}
     if res.get("post"):
         (d / "buffer-tiktok.json").write_text(json.dumps({"id": res["post"]["id"], "due_at": res["post"].get("dueAt") or inp["dueAt"],
-                                                          "sent_at": now.isoformat(timespec="seconds"), "fingerprint": render.get("fingerprint")}, indent=1) + "\n")
+                                                          "sent_at": now.isoformat(timespec="seconds")}, indent=1) + "\n")
         (d / "buffer-tiktok-error.json").unlink(missing_ok=True)
         print(f"TikTok {d.name} : envoyé à Buffer, publication prévue {inp['dueAt']}.")
     else:
