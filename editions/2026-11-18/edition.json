@@ -1,6 +1,6 @@
 {
   "date": "2026-11-18",
-  "status": "draft",
+  "status": "published",
   "newsletter": {
     "subject": "Un nouveau 007, un canon anti-pirates et des étoiles pressées 🌠",
     "intro": "Mercredi 18 novembre : 007 change de visage, la Serbie change de Parlement. Votre café, lui, garde son poste : il a fait ses preuves.",
@@ -8,6 +8,831 @@
     "ps": "P.-S. L’ONU veut surveiller de plus près les produits chimiques du quotidien. Votre canard de bain n’a fait aucun commentaire."
   },
   "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
+      "tagline": "De la plaque photo de Becquerel aux 57 réacteurs d’aujourd’hui : l’atome, la fission et la centrale expliqués sans prise de tête",
+      "teaser": "Un ciel gris, un tiroir fermé, une plaque photo qui noircit toute seule : votre chargeur de téléphone vient de là.",
+      "minutes": 7,
+      "theme": "Sciences physiques",
+      "art": {
+        "subject": "the story of nuclear energy in France: Becquerel discovers radioactivity in 1896, the Curies find radium, the Joliot-Curies and fission, the first French reactor, the 1974 nuclear plan, how a power plant works, and its risks and waste",
+        "setting": "a bare modern room with a wall socket, Becquerel's 1890s Paris laboratory with a tall window, the Curies' bare wooden shed laboratory, a quiet museum room, a 1930s Paris laboratory with glass bottles and a blackboard, a bare postwar office, a concrete hall inside an old fort, a 1970s petrol station, the foot of a nuclear power plant, a deep underground gallery with grey clay walls",
+        "era": "France from 1896 to today, with one young woman from today",
+        "props": {
+          "drawer": "a small wooden desk drawer with a brass knob",
+          "plate": "a glass photographic plate wrapped in black paper",
+          "crystals": "a small heap of yellow-green uranium salt crystals",
+          "charger": "a white phone charger with a long white cable",
+          "cauldron": "a big black iron cauldron",
+          "counter": "a small brass radiation counter with a round dial and a needle",
+          "pellet": "a small grey metal cylinder the size of a fingertip",
+          "tower": "a huge curved concrete cooling tower releasing a white cloud of steam"
+        }
+      },
+      "cast": [
+        {
+          "id": "becquerel",
+          "name": "Henri Becquerel",
+          "look": "Henri, a very tall and very thin 1890s French physicist, long narrow face, a long pointed grey beard and grey moustache, short grey hair, pale skin, small round pince-nez glasses, a dark bottle-green frock coat as main colour over a white shirt and black bow tie, often carrying the drawer",
+          "role": "the dignified physicist who discovered radioactivity by accident; stiff and solemn, but secretly very proud of his drawer, holds it like a treasure",
+          "file": "cast/dossier-becquerel.png",
+          "status": "done"
+        },
+        {
+          "id": "marie",
+          "name": "Marie Curie",
+          "look": "Marie, a small slender woman of the 1900s, ash-blond hair pulled into a tight high bun with a frizzy fringe, pale skin, serious grey eyes, a long plain black dress with a high collar as main colour, a long iron stirring rod in hand",
+          "role": "the stubborn, tireless scientist who works harder than anyone; calm and serious, sleeves rolled up, never impressed by honours",
+          "file": "cast/dossier-marie.png",
+          "status": "done"
+        },
+        {
+          "id": "joliot",
+          "name": "Frédéric Joliot-Curie",
+          "look": "Frédéric, a sturdy energetic man of the 1930s, slick wavy jet-black hair combed back, tanned skin, strong square jaw, a long white lab coat as main colour over a bright red tie, holding the counter",
+          "role": "the enthusiastic physicist of the atomic age, Marie Curie's son-in-law; always in motion, big dramatic gestures, a bit of a showman",
+          "file": "cast/dossier-joliot.png",
+          "status": "done"
+        },
+        {
+          "id": "ines",
+          "name": "Inès",
+          "look": "Inès, a short and round young woman of today, big voluminous curly red hair, light freckled skin, a pink puffer jacket as main colour, purple leggings, white sneakers, always holding the charger",
+          "role": "the lively young woman from today whose phone is always about to die; she judges every discovery by one question, can it charge her phone; short, reacts with her whole body, always looking for a socket",
+          "file": "cast/dossier-ines.png",
+          "status": "done"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare modern room with a single wall socket. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left solemnly holding out the open drawer with both hands like a precious gift; Inès (short, round, big curly red hair, pink puffer jacket) on the right trying to plug the charger into the drawer, hopeful. visual gag: plugging a charger into a wooden drawer. wide shot",
+        "cast": [
+          "becquerel",
+          "ines"
+        ],
+        "file": "images/dossier-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Le tiroir",
+          "caption": "En France, plus des deux tiers de l’électricité viennent du nucléaire. Mais comment un atome invisible allume-t-il une lampe ?",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Je branche mon chargeur. Mais ce courant, il sort d’où ?",
+              "side": "r"
+            },
+            {
+              "who": "becquerel",
+              "text": "D’un tiroir, mademoiselle. Le mien.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare modern room with a single wall socket, plain pale wall, upper third of the picture empty. Inès (short, round young woman, big voluminous curly bright red hair, freckles, pink puffer jacket, purple leggings) on the right crouching to plug the white charger into the socket, puzzled; Henri (very tall, thin old man, long pointed grey beard and grey moustache, small round pince-nez, bottle-green frock coat, black bow tie) on the left bending down towards her, carrying the drawer under his arm like a briefcase. visual gag: a 19th-century scientist carrying a whole desk drawer. wide shot",
+            "cast": [
+              "ines",
+              "becquerel"
+            ],
+            "file": "images/dossier-01.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Février 1896",
+          "caption": "En 1896, à Paris, Henri Becquerel veut savoir si l’uranium, éclairé par le soleil, peut marquer une plaque photo.",
+          "bubbles": [
+            {
+              "who": "becquerel",
+              "text": "Ciel gris. Pas de soleil, pas d’expérience. Je range tout dans un tiroir.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Remettre au lendemain : enfin un savant qui me ressemble.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "an 1890s Paris laboratory with a tall window showing a heavy grey cloudy sky. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left glaring at the clouds, holding the plate in one hand and the crystals in a small dish in the other, sulking; Inès (short, round, big curly red hair, pink puffer jacket) on the right holding a small umbrella open indoors. visual gag: the indoor umbrella. low angle",
+            "cast": [
+              "becquerel",
+              "ines"
+            ],
+            "file": "images/dossier-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Henri Becquerel",
+          "text": "Henri Becquerel (1852-1908), photographié par Paul Nadar. Ce physicien parisien étudie la fluorescence : la lumière que certains minéraux renvoient après avoir été éclairés.",
+          "photo": {
+            "commons": "File:Paul Nadar - Henri Becquerel.jpg",
+            "credit": "Paul Nadar / Adam Cuerden",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Paul_Nadar_-_Henri_Becquerel.jpg",
+            "file": "images/photo-3-paul-nadar-henri-becquerel-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Début mars 1896",
+          "caption": "Il développe quand même la plaque, emballée dans le noir. Les cristaux d’uranium y ont laissé leur ombre.",
+          "bubbles": [
+            {
+              "who": "becquerel",
+              "text": "L’uranium a émis quelque chose. Tout seul, sans soleil.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Votre tiroir est hanté ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "close-up in the 1890s Paris laboratory. Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left holding up the plate, now unwrapped and showing dark blotches, eyes wide behind his pince-nez; Inès (short, round, big curly red hair, pink puffer jacket) on the right leaning in, jaw dropped, her curly hair standing on end, light-blue sweat drop. the open drawer on the desk between them. close-up",
+            "cast": [
+              "becquerel",
+              "ines"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Les Curie",
+          "caption": "Ce rayonnement invisible intrigue Marie Curie, physicienne polonaise installée à Paris. Avec son mari Pierre, elle se lance.",
+          "bubbles": [
+            {
+              "who": "marie",
+              "text": "Un rayon que personne ne comprend ? C’est pour moi.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Prendre le sujet dont personne ne veut : stratégie de génie.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare wooden shed used as a laboratory, with a long work table. Marie (small, slender, tight ash-blond bun, long black dress) on the left rolling up her sleeves, determined, the stirring rod under her arm; Inès (short, round, big curly red hair, pink puffer jacket) on the right giving an enthusiastic thumbs-up. medium shot",
+            "cast": [
+              "marie",
+              "ines"
+            ],
+            "file": "images/dossier-04.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "1898",
+          "caption": "Dans un minerai d’uranium, les Curie trouvent deux atomes inconnus. Le radium est environ 900 fois plus radioactif que l’uranium.",
+          "bubbles": [
+            {
+              "who": "marie",
+              "text": "Le second, je l’appelle polonium. En hommage à ma Pologne natale.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Moi, j’ai donné mon nom à un mot de passe wifi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the same bare wooden shed laboratory. Marie (small, slender, tight ash-blond bun, long black dress) on the left stirring the cauldron with the stirring rod with both hands, grey steam rising, very focused; Inès (short, round, big curly red hair, pink puffer jacket) on the right pinching her nose, eyes squeezed shut. wide shot",
+            "cast": [
+              "marie",
+              "ines"
+            ],
+            "file": "images/dossier-05.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "title": "Radioactif, ça veut dire quoi ?",
+          "text": "Tout est fait d’atomes. Au centre de chacun, un noyau 100 000 fois plus petit que l’atome.",
+          "steps": [
+            "Certains noyaux, comme ceux de l’uranium et du radium, sont instables",
+            "Ils se transforment tout seuls en éjectant des particules et de l’énergie",
+            "C’est ce rayonnement qui a noirci la plaque de Becquerel"
+          ],
+          "joke": "Le tiroir n’était pas hanté. Juste bien occupé."
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "1903 et 1911",
+          "caption": "1903 : Becquerel et les Curie partagent le prix Nobel de physique. Marie reçoit aussi celui de chimie en 1911.",
+          "bubbles": [
+            {
+              "who": "becquerel",
+              "text": "On partage, bien sûr. Moi, j’ai fourni le tiroir.",
+              "side": "r"
+            },
+            {
+              "who": "marie",
+              "text": "Et moi, je suis la première personne à en avoir deux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small bare wooden stage. Marie (small, slender, tight ash-blond bun, long black dress) on the left holding two gold medals, one in each hand, calm and unimpressed; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the right holding one gold medal around his neck and raising the drawer high above his head like a trophy, beaming. visual gag: the drawer shown off like a trophy. high angle",
+            "cast": [
+              "marie",
+              "becquerel"
+            ],
+            "file": "images/dossier-06.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "1934",
+          "caption": "On ignore alors les dangers des rayonnements. Marie Curie meurt en 1934 d’une maladie du sang qu’ils ont pu causer.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Ses carnets de 1898 sont encore radioactifs. On les range dans du plomb.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet bare museum room drawn in the same flat cartoon style as the rest, plain pastel walls, no realistic background. Inès (short, round, big curly red hair, pink puffer jacket) standing alone on the right, seen in profile, hands clasped, mouth closed, sad and respectful expression, no smile, looking at a closed dull grey lead box on a small table on the left. calm, sober scene. wide shot",
+            "cast": [
+              "ines"
+            ],
+            "file": "images/dossier-07.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 10,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Pierre et Marie Curie au travail",
+          "text": "Le couple dans son laboratoire. Comme les chercheurs de leur époque, ils manipulent les produits radioactifs sans aucune protection.",
+          "photo": {
+            "commons": "File:Pierre and Marie Curie at work in laboratory Wellcome L0001761.jpg",
+            "credit": "Auteur inconnu",
+            "license": "CC BY 4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Pierre_and_Marie_Curie_at_work_in_laboratory_Wellcome_L0001761.jpg",
+            "file": "images/photo-10-pierre-and-marie-curie-at-work-in-l.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 11,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Casser l’atome",
+          "caption": "1934 : leur fille Irène et son mari Frédéric Joliot-Curie créent la première radioactivité artificielle. Nobel de chimie en 1935.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Artificielle ? Comme un arôme de fraise ?",
+              "side": "r"
+            },
+            {
+              "who": "joliot",
+              "text": "Presque : on rend radioactif ce qui ne l’était pas.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s Paris laboratory with glass bottles on shelves. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left proudly holding up a small metal sample, the counter on the bench beside him with its needle jumping; Inès (short, round, big curly red hair, pink puffer jacket) on the right sniffing a test tube with her eyes half closed like a wine taster. visual gag: the wine-tasting pose. medium shot",
+            "cast": [
+              "joliot",
+              "ines"
+            ],
+            "file": "images/dossier-08.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "Fin 1938",
+          "caption": "Fin 1938, à Berlin, Otto Hahn et Fritz Strassmann bombardent de l’uranium de neutrons, particules sans charge du noyau.",
+          "bubbles": [
+            {
+              "who": "joliot",
+              "text": "Et ils obtiennent du baryum, un atome bien plus léger !",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "L’uranium a fait un régime ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "close-up in the 1930s Paris laboratory. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left reading a letter, eyebrows shooting up, mouth wide open; Inès (short, round, big curly red hair, pink puffer jacket) on the right standing on tiptoe to read over his shoulder, curious. close-up",
+            "cast": [
+              "joliot",
+              "ines"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 13,
+          "kind": "",
+          "tag": "Début 1939",
+          "caption": "Lise Meitner et son neveu Otto Frisch comprennent : le noyau d’uranium s’est cassé en deux. C’est la « fission ».",
+          "bubbles": [
+            {
+              "who": "joliot",
+              "text": "En se cassant, un peu de masse disparaît et devient énergie. Beaucoup d’énergie.",
+              "side": "r"
+            },
+            {
+              "who": "ines",
+              "text": "Vous venez de casser une craie pour me le dire.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the 1930s Paris laboratory, in front of a blackboard with a big chalk circle split into two halves. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the right snapping a stick of white chalk in two with a dramatic gesture, chalk dust flying; Inès (short, round, big curly red hair, pink puffer jacket) on the left flinching, covering her ears. wide shot",
+            "cast": [
+              "ines",
+              "joliot"
+            ],
+            "file": "images/dossier-10.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 14,
+          "kind": "explain",
+          "title": "La réaction en chaîne",
+          "text": "On utilise surtout l’uranium 235, la variété d’uranium dont les noyaux se cassent le plus facilement.",
+          "steps": [
+            "Un neutron frappe un noyau d’uranium 235",
+            "Le noyau se casse en deux et dégage de la chaleur",
+            "Il éjecte aussi d’autres neutrons",
+            "Chacun peut casser un autre noyau, et ainsi de suite"
+          ],
+          "joke": "Des dominos qui chauffent. Dans une centrale, on contrôle la chute."
+        },
+        {
+          "n": 15,
+          "kind": "fact",
+          "tag": "1939",
+          "caption": "En 1939, à Paris, Joliot, Halban et Kowarski montrent que la fission libère d’autres neutrons. La chaîne est possible.",
+          "bubbles": [
+            {
+              "who": "joliot",
+              "text": "Vite, des brevets, sous pli cacheté. Avant que la guerre éclate.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Un secret dans une enveloppe. Moi, j’aurais fait une story.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the 1930s Paris laboratory. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left sliding a thick envelope closed with a red wax seal into a small iron safe, glancing over his shoulder; Inès (short, round, big curly red hair, pink puffer jacket) on the right tiptoeing with a finger on her lips, conspiratorial. low angle",
+            "cast": [
+              "joliot",
+              "ines"
+            ],
+            "file": "images/dossier-11.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 16,
+          "kind": "",
+          "tag": "1940",
+          "caption": "Pendant la guerre, le stock d’eau lourde venu de Norvège est mis à l’abri en Angleterre, loin des Allemands.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "De l’eau lourde ? Genre, très lourde ?",
+              "side": "r"
+            },
+            {
+              "who": "joliot",
+              "text": "Une eau rare qui ralentit les neutrons. Précieuse pour un réacteur.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the 1930s Paris laboratory. Inès (short, round, big curly red hair, pink puffer jacket) on the right straining with both arms to lift a tiny metal can, knees bent, red angry flush on her face; Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left watching with arms crossed, amused. visual gag: a tiny can treated like a huge weight. medium shot",
+            "cast": [
+              "joliot",
+              "ines"
+            ],
+            "file": "images/dossier-12.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 17,
+          "kind": "chap",
+          "tag": "Chapitre 4 · De l’atome à la prise",
+          "caption": "18 octobre 1945 : le général de Gaulle crée le Commissariat à l’énergie atomique, le CEA. Joliot en est le haut-commissaire.",
+          "bubbles": [
+            {
+              "who": "joliot",
+              "text": "Première mission : construire notre propre pile atomique.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Une pile ? Comme celle de ma télécommande ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare postwar office with a wooden desk. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left unrolling a large blank blueprint across the desk, enthusiastic; Inès (short, round, big curly red hair, pink puffer jacket) on the right holding up a tiny AA battery next to the blueprint, puzzled. visual gag: the tiny battery. over-the-shoulder",
+            "cast": [
+              "joliot",
+              "ines"
+            ],
+            "file": "images/dossier-13.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 18,
+          "kind": "",
+          "tag": "15 décembre 1948",
+          "caption": "En 1948, au fort de Châtillon, près de Paris, Zoé démarre : la première pile atomique française, c’est-à-dire un réacteur.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Un réacteur ! Je peux brancher mon chargeur ?",
+              "side": "r"
+            },
+            {
+              "who": "joliot",
+              "text": "Non. Zoé n’alimente rien. Elle sert à apprendre.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare concrete hall inside an old stone fort. Frédéric (sturdy, slick black hair, white lab coat, bright red tie) on the left patting a squat round concrete reactor block proudly, like a pet; Inès (short, round, big curly red hair, pink puffer jacket) on the right trying to plug the charger into the block, while Frédéric shakes his head. wide shot",
+            "cast": [
+              "joliot",
+              "ines"
+            ],
+            "file": "images/dossier-14.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 19,
+          "kind": "fact",
+          "tag": "1973-1974",
+          "caption": "Le prix du pétrole flambe. En mars 1974, le Premier ministre Pierre Messmer lance un énorme programme de centrales nucléaires.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Une goutte. Ça ne chargera pas grand-chose.",
+              "side": "l"
+            },
+            {
+              "who": "Un ingénieur",
+              "text": "On n’a presque pas de pétrole. Il faut produire notre énergie nous-mêmes.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1970s petrol station with one plain old pump with no sign, no lettering and no logo anywhere. Inès (short, round, big curly red hair, pink puffer jacket) on the left holding an empty red jerrycan upside down, a single drop falling out, dismayed; on the right an engineer in a white hard hat and blue overalls, seen from behind, pointing at a half-built concrete cooling tower on the far horizon. medium wide shot",
+            "cast": [
+              "ines"
+            ],
+            "file": "images/dossier-15.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 20,
+          "kind": "explain",
+          "title": "De l’atome à votre prise",
+          "steps": [
+            "Dans le réacteur, la fission chauffe l’eau d’un premier circuit à environ 320 °C, sous pression",
+            "Cette eau chauffe un deuxième circuit, qui se change en vapeur",
+            "La vapeur fait tourner une turbine reliée à un alternateur",
+            "L’alternateur produit le courant envoyé sur le réseau"
+          ],
+          "joke": "En gros, une bouilloire géante. Très, très surveillée."
+        },
+        {
+          "n": 21,
+          "kind": "",
+          "tag": "Le combustible",
+          "caption": "Dans le réacteur, l’uranium est rangé en pastilles d’environ 7 grammes. Chacune libère autant d’énergie qu’une tonne de charbon.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Ce petit bonbon gris vaut une tonne de charbon ?",
+              "side": "l"
+            },
+            {
+              "who": "Un ingénieur",
+              "text": "Oui. Et surtout, ne le croquez pas.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "close-up. Inès (short, round, big curly red hair, pink puffer jacket) on the left holding the pellet between two fingers at eye level, amazed; behind her a huge black mountain of coal fills the background; on the right only the white-gloved hand of an engineer, raising a warning finger. visual gag: a fingertip-sized pellet against a mountain of coal. close-up",
+            "cast": [
+              "ines"
+            ],
+            "file": "images/dossier-16.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 2,
+            "same_place": false
+          }
+        },
+        {
+          "n": 22,
+          "kind": "fact",
+          "tag": "Idée reçue",
+          "caption": "Les grandes tours des centrales ne rejettent pas de fumée : c’est de la vapeur d’eau, qui sert au refroidissement.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Moi qui croyais que c’était de la pollution !",
+              "side": "l"
+            },
+            {
+              "who": "Un ingénieur",
+              "text": "Juste un nuage. Fait maison.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the foot of a nuclear power plant on green grass, the tower rising high behind. Inès (short, round, big curly red hair, pink puffer jacket) on the left looking up with her mouth open while a small white cloud drifts down from the tower and settles above her head; an engineer in a white hard hat and blue overalls on the right, seen in profile, arms crossed, amused. wide shot",
+            "cast": [
+              "ines"
+            ],
+            "file": "images/dossier-17.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 23,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "La centrale de Cattenom, en Moselle",
+          "text": "Le panache blanc au-dessus des tours, c’est de la vapeur d’eau. En 2025, les 57 réacteurs français ont produit 68 % de l’électricité du pays.",
+          "photo": {
+            "commons": "File:Nuclear Power Plant Cattenom.jpg",
+            "credit": "Stefan Kühn",
+            "license": "CC BY-SA 3.0",
+            "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "source": "https://commons.wikimedia.org/wiki/File:Nuclear_Power_Plant_Cattenom.jpg",
+            "file": "images/photo-23-nuclear-power-plant-cattenom-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 24,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Le revers de la médaille",
+          "caption": "Le nucléaire a deux gros revers : le risque d’accident grave et des déchets qui restent dangereux très longtemps.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Il y a déjà eu des accidents graves ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bare modern room with the wall socket. Inès (short, round, big curly red hair, pink puffer jacket) in the centre holding a big shiny gold medal, flipping it over to discover that its back side is dull grey and dented, frowning. visual gag: the other side of the medal. low angle",
+            "cast": [
+              "ines"
+            ],
+            "file": "images/dossier-18.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 25,
+          "kind": "",
+          "tag": "1986 et 2011",
+          "caption": "Deux catastrophes ont marqué le monde : Tchernobyl, en Ukraine, en 1986, et Fukushima, au Japon, en 2011, après un tsunami.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the bare modern room. Inès (short, round, big curly red hair, pink puffer jacket) standing alone, still, seen from three-quarter back, in front of a large plain world map pinned on the wall with two small red pins, hands in her pockets, serious. calm, sober scene. medium shot",
+            "cast": [
+              "ines"
+            ],
+            "file": "images/dossier-19.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 26,
+          "kind": "",
+          "tag": "Les déchets",
+          "caption": "Les déchets les plus radioactifs restent dangereux des milliers d’années. Cigéo, à Bure, veut les enfouir à près de 500 m.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "500 mètres sous terre ? Dans quoi ?",
+              "side": "l"
+            },
+            {
+              "who": "Un ingénieur",
+              "text": "Une argile vieille de 160 millions d’années. Elle sait attendre.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a long underground gallery with smooth grey clay walls lit by a row of lamps. Inès (short, round, big curly red hair, pink puffer jacket) on the left wearing a white hard hat far too big for her, sliding down over her eyes; an engineer in a white hard hat and blue overalls on the right, seen from behind, gently tapping the clay wall. wide shot",
+            "cast": [
+              "ines"
+            ],
+            "file": "images/dossier-20.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 27,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "On casse des noyaux d’uranium, ça chauffe de l’eau, la vapeur fait tourner une turbine : votre prise s’allume.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Mon téléphone est chargé. Grâce à un tiroir.",
+              "side": "r"
+            },
+            {
+              "who": "becquerel",
+              "text": "Et à un mois de février bien gris.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the bare modern room with the wall socket again, plain pale wall, upper third of the picture empty. Henri (very tall, thin, long pointed grey beard, pince-nez, bottle-green frock coat) sitting on the closed wooden drawer turned upside down on the floor like a tiny stool, his long legs folded with both knees up near his chin, arms wrapped around his knees, both feet flat on the floor, satisfied smile, alone in the picture. full body, medium shot",
+            "cast": [
+              "becquerel"
+            ],
+            "file": "images/dossier-21.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        }
+      ],
+      "final": {
+        "text": "Les carnets de laboratoire de Marie Curie, écrits en 1898, sont encore radioactifs : on les range dans du plomb.",
+        "source": "EDF — L’uranium, le combustible nucléaire"
+      },
+      "story": "Fin février 1896, à Paris, Henri Becquerel veut vérifier si des sels d’uranium éclairés par le soleil impressionnent une plaque photographique. Le ciel est couvert : il range l’uranium et la plaque, emballée de papier noir, dans un tiroir. Quand il la développe, elle porte pourtant l’image des cristaux. L’uranium émet donc tout seul un rayonnement invisible : c’est la radioactivité.\nMarie Curie et son mari Pierre étudient ce phénomène. En 1898, dans un minerai d’uranium, ils découvrent le polonium, nommé d’après la Pologne natale de Marie, puis le radium, environ 900 fois plus radioactif que l’uranium. Nobel de physique en 1903 avec Becquerel, Marie reçoit aussi celui de chimie en 1911. On ignore alors les dangers : elle meurt en 1934 d’une maladie du sang que les rayonnements peuvent causer.\nLa radioactivité vient du noyau, 100 000 fois plus petit que l’atome. En 1934, Irène et Frédéric Joliot-Curie fabriquent de la radioactivité artificielle. Fin 1938, Otto Hahn et Fritz Strassmann obtiennent du baryum en bombardant de l’uranium avec des neutrons ; Lise Meitner et Otto Frisch comprennent que le noyau s’est cassé en deux : la fission, qui libère beaucoup d’énergie. En 1939, à Paris, Joliot, Halban et Kowarski montrent qu’elle libère aussi des neutrons : une réaction en chaîne est possible.\nLe CEA naît le 18 octobre 1945 ; la pile Zoé démarre en 1948. Après le choc pétrolier, le plan Messmer de 1974 lance les grandes centrales. Aujourd’hui, 57 réacteurs fournissent environ 68 % de l’électricité française. Restent les risques d’accident, rappelés par Tchernobyl et Fukushima, et les déchets à vie longue, que le projet Cigéo veut enfouir dans l’argile, à Bure.",
+      "sources": [
+        {
+          "title": "CERN — Becquerel discovers radioactivity",
+          "url": "https://timeline-upgrade.web.cern.ch/fr/node/575"
+        },
+        {
+          "title": "Science Notes — March 1: Discovery of radiation",
+          "url": "https://sciencenotes.org/today-science-history-march-1-discovery-radiation/"
+        },
+        {
+          "title": "Hérodote — Marie Curie (1867-1934), deux fois prix Nobel",
+          "url": "https://www.herodote.net/Deux_fois_Prix_Nobel-synthese-424.php"
+        },
+        {
+          "title": "Live Science — Marie Curie discovers a strange radioactive substance, Dec. 26, 1898",
+          "url": "https://www.livescience.com/physics-mathematics/science-history-marie-curie-discovers-a-strange-radioactive-substance-that-would-eventually-kill-her-dec-26-1898"
+        },
+        {
+          "title": "SchoolMouv — Le noyau de l’atome",
+          "url": "https://www.schoolmouv.fr/cours/le-noyau-de-l-atome/fiche-de-cours"
+        },
+        {
+          "title": "Musée Curie — Irène et Frédéric Joliot-Curie",
+          "url": "https://musee.curie.fr/.uploads/2018-01/03_irene-et-frederic-joliot-curie-7a8d5825.pdf"
+        },
+        {
+          "title": "American Nuclear Society — Lise Meitner’s fantastic explanation: nuclear fission",
+          "url": "https://www.ans.org/news/article-938/lise-meitners-fantastic-explanation-nuclear-fission/"
+        },
+        {
+          "title": "IN2P3, La radioactivité — The discovery of fission",
+          "url": "https://laradioactivite-prod-en.apps.wok3.in2p3.fr/articles/phenomenon/fission_discovery"
+        },
+        {
+          "title": "Nature — Halban, Joliot, Kowarski, Energy of neutrons liberated in the nuclear fission of uranium (1939)",
+          "url": "https://www.nature.com/articles/143939a0"
+        },
+        {
+          "title": "Techno-Science — Commissariat à l’énergie atomique",
+          "url": "https://www.techno-science.net/fr/definitions/commissariat-a-l-energie-atomique"
+        },
+        {
+          "title": "Wikipedia — Zoé (reactor)",
+          "url": "https://en.wikipedia.org/wiki/Zo%C3%A9_(reactor)"
+        },
+        {
+          "title": "Energy Transition — French nuclear power history (plan Messmer)",
+          "url": "https://energytransition.org/2015/03/french-nuclear-power-history/"
+        },
+        {
+          "title": "EDF — Le fonctionnement d’une centrale nucléaire",
+          "url": "https://www.edf.fr/groupe-edf/comprendre/production/nucleaire/fonctionnement-centrale-nucleaire"
+        },
+        {
+          "title": "EDF — L’uranium, le combustible nucléaire",
+          "url": "https://www.edf.fr/groupe-edf/comprendre/production/nucleaire/uranium-combustible-nucleaire"
+        },
+        {
+          "title": "Connaissance des énergies — Le parc nucléaire français",
+          "url": "https://www.connaissancedesenergies.org/fiche-pedagogique/parc-nucleaire-francais"
+        },
+        {
+          "title": "Planète Énergies — Nuclear safety: anticipating the risks",
+          "url": "https://planete-energies.com/en/media/article/nuclear-safety-anticipating-risks"
+        },
+        {
+          "title": "Futura Sciences — Laboratoire de Bure : qu’est-ce que c’est ?",
+          "url": "https://www.futura-sciences.com/sciences/definitions/physique-laboratoire-bure-4198/"
+        }
+      ],
+      "from_stock": "20261114-1927-nucleaire-tiroir-ferme"
+    },
     {
       "id": "actu",
       "label": "L’Actu du jour",
@@ -437,6 +1262,838 @@
       ]
     },
     {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
+      "tagline": "Les noms des notes sortent d’une prière latine à saint Jean, recyclée par un moine pédagogue",
+      "teaser": "Pourquoi chante-t-on « do, ré, mi » et pas « bip, bop, bup » ? Un moine italien a eu une idée géniale vers 1030.",
+      "minutes": 3,
+      "theme": "Musique",
+      "cast": [
+        {
+          "id": "guido",
+          "name": "Guido d’Arezzo",
+          "look": "Guido, a very tall and thin Italian Benedictine monk in his forties around 1030, long bony face, shaved tonsure with a ring of black hair, long black monk's habit with a pink rope belt as main colour accent, light olive skin, always holding a small wooden monochord (a long narrow wooden box with one string)",
+          "file": "cast/cultureg-guido.png",
+          "status": "done",
+          "role": "the patient music teacher monk who explains simply; tall, calm, plucking his one-string box like a professor's pointer"
+        },
+        {
+          "id": "pietro",
+          "name": "Pietro, le novice",
+          "look": "Pietro, a short round young novice monk around twenty, chubby pink cheeks, messy bowl-cut ginger hair, oversized light-brown robe with sleeves too long, light peach skin, a heavy green leather-bound songbook always clutched to his chest",
+          "file": "cast/cultureg-pietro.png",
+          "status": "done",
+          "role": "the clumsy, lazy novice who would do anything to avoid learning every chant by heart; small, round, overwhelmed, hugging his songbook"
+        }
+      ],
+      "cover": {
+        "prompt": "a bare stone monastery room with a simple wooden lectern. Guido (very tall, black habit, pink rope belt) on the right plucking his monochord, eyes closed, serene; Pietro (short, round, ginger bowl cut, light-brown robe) on the left singing with his mouth wide open, wrapped in a huge woolly scarf, holding his throat, yellow sparkles. medium shot",
+        "cast": [
+          "guido",
+          "pietro"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Italie, vers 1030",
+          "caption": "Pourquoi les notes s’appellent-elles do, ré, mi ? La réponse est dans un monastère italien, vers l’an 1030.",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "Tous les chants de l’année ? Par cœur ?",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "Oui. Et tu en es au premier.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare stone monastery room with a simple wooden lectern and a small arched window. Pietro (short, round, ginger bowl cut, light-brown robe) on the left scratching his head, puzzled, songbook under his arm; Guido (very tall, thin, black habit, pink rope belt) on the right raising one finger modestly, holding his monochord, a small proud smile. wide shot",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Avant lui, les notes n’ont pas de nom facile à chanter : les chanteurs apprennent chaque mélodie à l’oreille, par cœur.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the same stone monastery room. Pietro (short, round, ginger bowl cut) on the left almost buried under a towering pile of heavy songbooks, only his head and one arm sticking out, light-blue sweat drop; Guido (very tall, black habit, pink rope belt) on the right placing one more book on top of the pile, deadpan. low angle",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "L’astuce",
+          "caption": "Guido prend un chant que tous connaissent, une hymne à saint Jean-Baptiste. Chaque vers y commence une note plus haut.",
+          "bubbles": [
+            {
+              "who": "guido",
+              "text": "Ut, ré, mi, fa, sol, la : six marches d’escalier.",
+              "side": "r"
+            },
+            {
+              "who": "pietro",
+              "text": "Un escalier qui se chante !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "close view of a simple stone staircase with six steps. Guido (very tall, black habit, pink rope belt) on the right pointing at the steps with his monochord like a teacher; Pietro (short, round, ginger bowl cut) on the left climbing the steps one by one on tiptoe, mouth open as if singing, delighted. medium shot",
+            "cast": [
+              "guido",
+              "pietro"
+            ],
+            "file": "images/cultureg-03.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Six notes cachées dans une phrase latine",
+          "text": "Le début de l’hymne : « Ut queant laxis / resonare fibris / mira gestorum / famuli tuorum / solve polluti / labii reatum ».",
+          "steps": [
+            "UT queant laxis → ut",
+            "REsonare fibris → ré",
+            "MIra gestorum → mi",
+            "FAmuli tuorum → fa",
+            "SOLve polluti → sol",
+            "LAbii reatum → la"
+          ],
+          "joke": "Une phrase à retenir, six notes offertes."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "VIIIe siècle",
+          "caption": "Le texte, attribué au moine Paul Diacre, demande à saint Jean de libérer la voix de ceux qui chantent.",
+          "bubbles": [
+            {
+              "who": "guido",
+              "text": "Une tradition dit que Paul l’a écrite un jour d’enrouement.",
+              "side": "r"
+            },
+            {
+              "who": "pietro",
+              "text": "Moi aussi, je suis enroué. Dispensé de chant ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small monastery kitchen corner with a steaming clay cup on a bench. Pietro (short, round, ginger bowl cut) on the left wrapped in a gigantic woolly red scarf up to his nose, sipping the steaming cup, eyes half closed; Guido (very tall, black habit, pink rope belt) on the right reading from a small scroll, eyebrows raised, amused. over-the-shoulder",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-05.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Guido d’Arezzo dans un manuscrit médiéval",
+          "text": "Sur cette enluminure de la fin du XIIe siècle, Guido (à gauche) tient un monocorde, une boîte à une corde qui sert à trouver les notes, face à son évêque.",
+          "photo": {
+            "commons": "File:Guido e Teodaldo.jpg",
+            "credit": "Unknown scribe and illuminator of a scriptorium somewhere inbetween southern Germany and A",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Guido_e_Teodaldo.jpg",
+            "file": "images/photo-6-guido-e-teodaldo-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Plus tard",
+          "caption": "La septième note arrive plus tard : « si », formé des initiales du dernier vers, « Sancte Iohannes ».",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "S comme Sancte, I comme Iohannes : si !",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "Je n’en voulais que six. On m’a ajouté une marche.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the simple stone staircase now with a seventh wooden step clumsily nailed on top. Pietro (short, round, ginger bowl cut) on the left proudly hammering the new step, yellow sparkles; Guido (very tall, black habit, pink rope belt) on the right standing with arms crossed, lips pursed, slightly vexed. high angle",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "XVIIe siècle",
+          "caption": "En Italie, « ut » devient « do » : une syllabe qui finit par une voyelle se chante bien plus facilement.",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "Uuuuut !",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "On dirait un hibou qui tousse. Va pour « do ».",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "in front of the small arched monastery window, plain pale wall above them, upper third of the picture empty. Pietro (short, round, ginger bowl cut, light-brown robe, green songbook) on the left straining to sing a long note, eyes squeezed shut, cheeks puffed out, lips pushed forward into a tiny round O like a hooting owl; ONE single offended brown owl sitting on the windowsill, glaring at Pietro; Guido (very tall, thin, black habit, pink rope belt) on the right covering one ear with a hand, wincing. medium shot",
+            "cast": [
+              "pietro",
+              "guido"
+            ],
+            "file": "images/cultureg-08.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "explain",
+          "tag": "En clair",
+          "title": "Ut n’a pas complètement disparu",
+          "text": "Les musiciens disent encore « clé d’ut » pour une des clés qu’on écrit au début des partitions. La vieille syllabe de Guido survit, bien rangée dans les conservatoires.",
+          "joke": "Ut a pris sa retraite. Mais il passe encore au bureau."
+        },
+        {
+          "n": 10,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Do, ré, mi, ce sont les débuts des vers d’une hymne à saint Jean, choisis par Guido pour retenir les notes.",
+          "bubbles": [
+            {
+              "who": "pietro",
+              "text": "Do, ré, mi, fa, sol, la, si… do !",
+              "side": "l"
+            },
+            {
+              "who": "guido",
+              "text": "Mille ans de succès. Et pas une extinction de voix.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bare stone monastery room at the wooden lectern. Close on Guido (very tall, black habit, pink rope belt) plucking his monochord, a rare broad smile, alone in the picture, the face large and very expressive. close-up",
+            "cast": [
+              "guido"
+            ],
+            "file": "images/cultureg-10.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 3
+          }
+        }
+      ],
+      "final": {
+        "text": "« Ut » était si dur à chanter que l’Italie l’a remplacé par « do ». Il survit dans la « clé d’ut » des partitions.",
+        "source": "Larousse — Ut queant laxis"
+      },
+      "story": "Au début du XIe siècle, les chanteurs d’église apprennent les mélodies à l’oreille, une par une, parce que les notes n’ont pas encore de nom pratique à chanter. Le moine italien Guido d’Arezzo, considéré comme le père de la notation musicale moderne, cherche un moyen plus rapide : comparer chaque note inconnue à une mélodie que tout le monde connaît déjà.\nIl choisit l’hymne à saint Jean-Baptiste « Ut queant laxis », dont le texte est traditionnellement attribué au moine Paul Diacre (VIIIe siècle). Dans la mélodie qu’il utilise, chaque demi-vers commence une note plus haut que le précédent. Les syllabes du début de chaque demi-vers donnent donc l’échelle : ut, ré, mi, fa, sol, la. Le texte demande justement à saint Jean de délier la voix de ses serviteurs pour qu’ils chantent ses merveilles ; une tradition médiévale raconte d’ailleurs que Paul Diacre souffrait d’un enrouement.\nPlus tard, on ajoute une septième note, « si », formée des initiales du dernier vers, « Sancte Iohannes ». Au XVIIe siècle, en Italie, « ut » est remplacé par « do », plus facile à chanter parce qu’il finit par une voyelle. « Ut » n’a pas disparu pour autant : on parle encore de la « clé d’ut » sur les partitions.",
+      "sources": [
+        {
+          "title": "Larousse — Ut queant laxis",
+          "url": "https://www.larousse.fr/encyclopedie/musdico/Ut%20queant%20laxis/170480"
+        },
+        {
+          "title": "Wikipedia — Ut queant laxis",
+          "url": "https://en.wikipedia.org/wiki/Ut_queant_laxis"
+        },
+        {
+          "title": "Catholic Encyclopedia (New Advent) — Ut queant laxis resonare fibris",
+          "url": "https://www.newadvent.org/cathen/15244a.htm"
+        },
+        {
+          "title": "Daily Geek Show — L’écriture des notes de musique a 1 000 ans",
+          "url": "https://dailygeekshow.com/ecriture-notes-musique-1000-ans/"
+        }
+      ],
+      "art": {
+        "subject": "how a medieval Italian monk named the musical notes after the first syllables of a Latin hymn",
+        "setting": "a bare stone Benedictine monastery room with a wooden lectern and a small arched window, a simple stone staircase, a small monastery kitchen corner",
+        "era": "Italy around 1030, medieval monastery",
+        "props": {
+          "monochord": "a long narrow wooden box with one single string stretched on top",
+          "songbook": "a heavy green leather-bound medieval songbook",
+          "staircase": "a simple grey stone staircase with six steps"
+        }
+      },
+      "from_stock": "20261114-0359-do-re-mi-tube-voix-enrouees"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "L’empereur qui taxait le pipi",
+      "tagline": "Vespasien a fait payer l’urine des Romains. Paris l’en a remercié en donnant son nom à ses urinoirs.",
+      "minutes": 2,
+      "theme": "Histoire ancienne",
+      "cast": [
+        {
+          "id": "vespasien",
+          "name": "Vespasien",
+          "look": "Vespasian, a short stocky Roman emperor in his sixties, bald round head, deep forehead wrinkles, permanent strained squint, deep purple toga as main colour, gold laurel wreath, tanned skin",
+          "file": "cast/insolite-vespasien.png",
+          "status": "done",
+          "role": "the thrifty emperor who taxes everything; stocky, squinting, always counting coins"
+        },
+        {
+          "id": "titus",
+          "name": "Titus, son fils",
+          "look": "Titus, a tall slim elegant Roman prince around thirty, short curly black hair, pointed nose always wrinkled in disgust, spotless white tunic under a teal cloak as main colour",
+          "file": "cast/insolite-titus.png",
+          "status": "done",
+          "role": "his disgusted son, the reader's voice; tall, elegant, nose wrinkled, holding his cloak away from everything"
+        }
+      ],
+      "cover": {
+        "prompt": "a plain Roman street with one big clay jar. Vespasian (on the left) proudly holding up a single gold coin, beaming; Titus (on the right) pinching his nose, leaning back in horror, eyes squeezed shut. wide shot",
+        "cast": [
+          "vespasien",
+          "titus"
+        ],
+        "file": "images/insolite-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Rome, Ier siècle",
+          "caption": "Pourquoi les urinoirs s’appelaient-ils des « vespasiennes » ? Rome, Ier siècle : l’empereur Vespasien cherche de l’argent pour l’État.",
+          "bubbles": [
+            {
+              "who": "vespasien",
+              "text": "Que produisent les Romains chaque jour, gratuitement ?",
+              "side": "l"
+            },
+            {
+              "who": "titus",
+              "text": "Je sens que je ne vais pas aimer.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare palace room with one marble column. Vespasian (on the left) stroking his chin, eyes narrowed with a scheming grin; Titus (on the right) slowly backing away, shoulders hunched, worried sweat drop. wide shot",
+            "cast": [
+              "vespasien",
+              "titus"
+            ],
+            "file": "images/insolite-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "Le vrai empereur",
+          "title": "Vespasien, empereur de 69 à 79",
+          "text": "Un buste antique de l’empereur, au musée archéologique national de Venise. Il arrive au pouvoir après une guerre civile qui a vidé les caisses : il cherche de l’argent partout.",
+          "photo": {
+            "commons": "File:(Venice) Bust of Vespasianus - Venice National Archaeological Museum.jpg",
+            "credit": "Didier Descouens",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:(Venice)_Bust_of_Vespasianus_-_Venice_National_Archaeological_Museum.jpg",
+            "file": "images/photo-2-venice-bust-of-vespasianus-venice-n.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "",
+          "caption": "À l’époque, l’urine vaut de l’argent : son ammoniaque aide les blanchisseurs à nettoyer et détacher les tissus.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a Roman laundry with the vat. on the right in the background, a small anonymous barefoot laundry worker seen from afar, happily stomping on white cloth in the vat like treading grapes; Vespasian (stocky, purple toga) in the foreground on the left, rubbing his hands, eyes shining at the vat as if it were full of gold. low angle",
+            "cast": [
+              "vespasien"
+            ],
+            "file": "images/insolite-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "title": "Pourquoi l’urine valait de l’argent",
+          "text": "En vieillissant, l’urine dégage de l’ammoniaque, un puissant nettoyant. Les foulons, les blanchisseurs de Rome, s’en servaient pour dégraisser et blanchir la laine et les toges. Ils achetaient donc celle des toilettes publiques.",
+          "joke": "Le recyclage, version romaine. Le parfum en moins."
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "",
+          "caption": "Vespasien taxe donc l’urine récoltée dans les toilettes publiques et revendue aux ateliers.",
+          "bubbles": [
+            {
+              "who": "vespasien",
+              "text": "Un impôt sur le revenu. Le revenu liquide.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a plain wall with a row of simple stone public seats. Vespasian (on the left) proudly nailing a blank wooden sign to the wall with a little hammer, chest puffed out, very satisfied. medium shot",
+            "cast": [
+              "vespasien"
+            ],
+            "file": "images/insolite-03.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "",
+          "caption": "Son fils Titus trouve la mesure indigne d’un empereur.",
+          "bubbles": [
+            {
+              "who": "titus",
+              "text": "Père, on va se moquer de nous jusqu’en Gaule.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare palace room, plain wall, upper third of the picture empty. On the RIGHT: Titus (tall, slim, short curly black hair, white tunic, teal cloak) lying dramatically draped over a couch, one hand on his forehead, despairing, facing the viewer. On the LEFT: Vespasian (short, stocky, bald, purple toga, gold laurel wreath) sitting calmly at a small table, counting gold coins, relaxed, not even looking up. Both faces visible. medium wide shot",
+            "cast": [
+              "titus",
+              "vespasien"
+            ],
+            "file": "images/insolite-04.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "react",
+          "tag": "Selon Suétone",
+          "caption": "Vespasien met sous le nez de Titus une pièce issue de la taxe.",
+          "bubbles": [
+            {
+              "who": "vespasien",
+              "text": "Elle sent mauvais ?",
+              "side": "l"
+            },
+            {
+              "who": "titus",
+              "text": "Non.",
+              "side": "r"
+            },
+            {
+              "who": "vespasien",
+              "text": "Pourtant, c’est l’urine.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "close-up of two faces. Vespasian (on the left) holding a single gold coin right under Titus's nose with a triumphant grin; Titus (on the right) cross-eyed, staring at the coin, sniffing cautiously, deeply suspicious. close-up",
+            "cast": [
+              "vespasien",
+              "titus"
+            ],
+            "file": "images/insolite-05.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "",
+          "caption": "D’où « l’argent n’a pas d’odeur », formule qu’il n’a pas prononcée telle quelle.",
+          "bubbles": [
+            {
+              "who": "vespasien",
+              "text": "Je dis une phrase, on en retient une autre.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "plain background. Vespasian (on the left) sitting slumped on a marble bench, chin in his hand, bored and resigned, half-lidded eyes, the gold coin balanced on his knee. high angle",
+            "cast": [
+              "vespasien"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "conf",
+          "tag": "Paris, 1834",
+          "caption": "Bilan : en 1834, le préfet Rambuteau installe à Paris des urinoirs publics, baptisés « vespasiennes » en souvenir de cette taxe.",
+          "bubbles": [
+            {
+              "who": "titus",
+              "text": "Dix-huit siècles plus tard, notre nom sur des urinoirs. Je l’avais dit.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "an 1830s Paris street, almost empty, with one simple round green street urinal column. Titus (tall, teal cloak) standing next to it in his Roman clothes, totally out of place, facing the viewer like in an interview, pinching his nose with one hand and pointing at the column with the other, deadpan stare. close-up",
+            "cast": [
+              "titus"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Selon Suétone, Vespasien fit sentir à son fils une pièce tirée de sa taxe sur l’urine. De là vient « l’argent n’a pas d’odeur ».",
+        "source": "Paris ZigZag — La dernière vespasienne de Paris"
+      },
+      "sources": [
+        {
+          "title": "Suétone, Vie de Vespasien, 23.3 (trad. J. C. Rolfe)",
+          "url": "https://lexundria.com/suet_ves/23.3/r"
+        },
+        {
+          "title": "Imperium Romanum — Emperor Vespasian’s urinary tax",
+          "url": "https://imperiumromanum.pl/en/curiosities/emperor-vespasians-urinary-tax/"
+        },
+        {
+          "title": "Hérodote — 20 décembre 69, Vespasien empereur",
+          "url": "https://www.herodote.net/20_decembre_69-evenement-691220.php"
+        },
+        {
+          "title": "Paris ZigZag — La dernière vespasienne de Paris",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/vespasienne-derniere/"
+        }
+      ],
+      "story": "Au Ier siècle, l’empereur Vespasien prend la tête d’un empire aux finances fragiles. Il cherche donc de nouvelles recettes.\nÀ Rome, l’urine a de la valeur. En vieillissant, elle dégage de l’ammoniaque, et les foulons, ces artisans qui nettoient et blanchissent les tissus, l’utilisent pour dégraisser la laine et les toges. Ils récupèrent celle des toilettes publiques. Vespasien a l’idée de taxer ce commerce.\nSelon l’historien Suétone, son fils Titus trouve la mesure indigne. Vespasien lui met alors sous le nez une pièce tirée de cette taxe et lui demande si elle sent mauvais. Titus répond que non. Et pourtant, elle vient de l’urine, réplique l’empereur. De cet échange est née l’expression « l’argent n’a pas d’odeur », même si Vespasien ne l’a pas prononcée telle quelle.\nDix-huit siècles plus tard, en 1834, le préfet Rambuteau installe à Paris des urinoirs publics en forme de colonnes. On les surnomme « vespasiennes », en souvenir de l’empereur qui taxait l’urine. Les Parisiens les ont aussi appelées « colonnes Rambuteau ».",
+      "art": {
+        "subject": "how emperor Vespasian taxed urine collected for Roman laundries, and why Paris urinals were named after him",
+        "setting": "a Roman palace room, a Roman laundry with big vats, a Paris street in the 1830s",
+        "era": "mixed on purpose: ancient Rome in the 70s AD and Paris in the 1830s",
+        "props": {
+          "coin": "a small gold Roman coin",
+          "vat": "a big round stone vat"
+        }
+      },
+      "from_stock": "20261114-0100-lempereur-qui-taxait-le-pipi"
+    },
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
+      "tagline": "Un préfet, trois boîtes et un journaliste moqueur : la naissance d’un mot qu’on dit tous les jours",
+      "teaser": "Ce mot que vous dites en sortant les ordures, c’était le nom de famille d’un haut fonctionnaire. Il n’avait rien demandé.",
+      "minutes": 2,
+      "theme": "Expression française",
+      "art": {
+        "subject": "how the family name of a Paris prefect became the common word for a household rubbish bin, after his 1883 order",
+        "setting": "the pavement in front of a modern Paris apartment building at night; a Paris street with a stone apartment building in the 1880s; a prefect's office with a wooden desk",
+        "era": "1880s Paris, with a man from today",
+        "props": {
+          "bin": "a modern dark green plastic wheelie bin with a lid",
+          "box": "an old wooden household rubbish box lined with tin, with a hinged lid",
+          "newspaper": "a large folded 1880s newspaper with only blank grey columns"
+        }
+      },
+      "cast": [
+        {
+          "id": "lucas",
+          "name": "Lucas",
+          "look": "Lucas, a very tall bulky man in his forties, light peach skin, short curly salt-and-pepper hair, thick black-framed glasses, a fluffy bright purple dressing gown as main colour over blue pyjamas, big grey slippers, a trash bag in his hand",
+          "file": "cast/origine-lucas.png",
+          "status": "done",
+          "role": "the sleepy resident who takes the bins out every week without a thought; big, slow, yawning, shuffles in his slippers"
+        },
+        {
+          "id": "poubelle",
+          "name": "Eugène Poubelle",
+          "look": "Eugène Poubelle, a short slender French prefect of the 1880s in his fifties, receding dark hair combed back, neat short dark beard and moustache, light peach skin, black frock coat with a wide blue-white-red sash across the chest as main colour, a rolled paper decree in his hand",
+          "file": "cast/origine-poubelle.png",
+          "status": "done",
+          "role": "the proud, very formal senior official who wanted a cleaner Paris and got his name on every bin; stiff, chin up, touchy about his name"
+        }
+      ],
+      "cover": {
+        "prompt": "the pavement in front of a modern apartment building at night. Lucas (very tall, bulky, salt-and-pepper curls, black glasses, purple dressing gown, slippers) on the left wheels the bin to the kerb, yawning; Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right stands at attention beside the bin like at a ceremony, one hand on its lid, chin up, very proud. wide shot",
+        "cast": [
+          "lucas",
+          "poubelle"
+        ],
+        "file": "images/origine-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Mardi soir",
+          "caption": "Tous les mardis, Lucas sort la poubelle. Mais d’où vient ce mot bizarre, « poubelle » ?",
+          "bubbles": [
+            {
+              "who": "lucas",
+              "text": "Poubelle. Drôle de nom, pour un bac.",
+              "side": "l"
+            },
+            {
+              "who": "poubelle",
+              "text": "C’est le mien, monsieur. Eugène Poubelle, préfet.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the pavement in front of a modern apartment building at night, a street lamp. Lucas (very tall, bulky, salt-and-pepper curls, black glasses, purple dressing gown, slippers) on the left dragging the bin with one hand, a trash bag in the other, frozen mid-step; Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right, popping up from behind the bin, offended, chin up. wide shot",
+            "cast": [
+              "lucas",
+              "poubelle"
+            ],
+            "file": "images/origine-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Paris, 1883",
+          "caption": "Le 24 novembre 1883, le préfet de la Seine, Eugène Poubelle, oblige les propriétaires à fournir des boîtes fermées pour les ordures.",
+          "bubbles": [
+            {
+              "who": "poubelle",
+              "text": "Un couvercle, monsieur. Voilà la modernité.",
+              "side": "r"
+            },
+            {
+              "who": "lucas",
+              "text": "Révolutionnaire. Et c’est qui, qui paie les boîtes ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a Paris street in the 1880s in front of a stone apartment building. Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right lifting the box above his head with both arms like a trophy, beaming; Lucas (very tall, bulky, purple dressing gown, slippers) on the left in the background, arms crossed, sceptical, one eyebrow up. low angle",
+            "cast": [
+              "poubelle",
+              "lucas"
+            ],
+            "file": "images/origine-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Le tri sélectif… en 1883",
+          "steps": [
+            "Boîte 1 : ce qui pourrit, les restes de repas",
+            "Boîte 2 : les papiers et les chiffons",
+            "Boîte 3 : la vaisselle cassée, le verre et les coquilles d’huîtres",
+            "Mars 1884 : un second arrêté abandonne ce tri"
+          ],
+          "joke": "Paris a inventé le tri, puis l’a oublié pendant un siècle."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "La colère",
+          "caption": "Les propriétaires râlent contre la dépense, les concierges contre la corvée. Les chiffonniers, qui vivaient des ordures, craignent pour leur métier.",
+          "bubbles": [
+            {
+              "who": "Un chiffonnier",
+              "text": "Vous enfermez mon gagne-pain sous un couvercle !",
+              "side": "l"
+            },
+            {
+              "who": "poubelle",
+              "text": "J’appelle ça le progrès.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the 1880s Paris street. An angry old ragpicker with a grey beard, a huge wicker basket on his back overflowing with rags and old bottles, shaking his hook at Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right, who sits firmly on the closed box with his arms crossed, refusing to move. medium wide shot",
+            "cast": [
+              "poubelle"
+            ],
+            "file": "images/origine-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Eugène Poubelle",
+          "text": "Eugène Poubelle, photographié par l’atelier Nadar. Préfet de la Seine de 1883 à 1896, il a vu son nom de famille devenir un mot du dictionnaire.",
+          "photo": {
+            "commons": "File:Eugène Poubelle - Atelier Nadar.jpg",
+            "credit": "Nadar",
+            "license": "CC0",
+            "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "source": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Poubelle_-_Atelier_Nadar.jpg",
+            "file": "images/photo-5-eug-ne-poubelle-atelier-nadar-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Le surnom",
+          "caption": "Le 16 janvier 1884, dans Le Figaro, un journaliste se moque des « boîtes Poubelle ». Le surnom se répand dans tout Paris.",
+          "bubbles": [
+            {
+              "who": "poubelle",
+              "text": "« Boîtes Poubelle » ! Quelle insolence !",
+              "side": "r"
+            },
+            {
+              "who": "poubelle",
+              "text": "… Bon. Au moins, on ne m’oubliera pas.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a prefect's office with a wooden desk. Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) alone, gripping the newspaper with both hands so hard it crumples, glaring at it, red angry flush on his face. close-up",
+            "cast": [
+              "poubelle"
+            ],
+            "file": "images/origine-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment un nom propre devient un nom commun",
+          "steps": [
+            "1883 : l’arrêté du préfet Poubelle impose les boîtes",
+            "1884 : Le Figaro les baptise « boîtes Poubelle », pour se moquer",
+            "Les Parisiens raccourcissent : on dit « une poubelle »",
+            "1890 : le mot entre dans le Grand dictionnaire universel du XIXe siècle"
+          ],
+          "joke": "Son nom est dans toutes les cuisines. Rarement avec un merci."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "« Poubelle », c’est le nom du préfet qui a imposé les boîtes à ordures à Paris en 1883. Une moquerie devenue mot.",
+          "bubbles": [
+            {
+              "who": "lucas",
+              "text": "Monsieur le préfet, c’est l’heure. Je vous sors.",
+              "side": "l"
+            },
+            {
+              "who": "poubelle",
+              "text": "Avec le couvercle fermé, je vous prie.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back on the pavement in front of the modern apartment building at night. Lucas (very tall, bulky, salt-and-pepper curls, black glasses, purple dressing gown) on the left bowing very politely to the bin as if to a dignitary, holding the trash bag; Eugène Poubelle (short, slender, dark beard, black frock coat, blue-white-red sash) on the right, firmly pressing the lid of the bin shut with one finger, satisfied. medium shot",
+            "cast": [
+              "lucas",
+              "poubelle"
+            ],
+            "file": "images/origine-08.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Dès 1883, l’arrêté du préfet Poubelle imposait trois boîtes : un tri sélectif avant l’heure, abandonné dès mars 1884.",
+        "source": "Hérodote — 24 novembre 1883"
+      },
+      "story": "Le mot « poubelle » est un nom de famille. Le 24 novembre 1883, le préfet de la Seine, Eugène Poubelle, signe un arrêté qui oblige les propriétaires parisiens à fournir à leurs locataires des récipients couverts pour les ordures ménagères, ramassés chaque jour. Le texte prévoit même un tri : une boîte pour ce qui pourrit, une pour les papiers et les chiffons, une pour la vaisselle cassée, le verre et les coquilles d’huîtres. Ce tri est abandonné par un second arrêté, le 7 mars 1884.\nLa mesure est mal reçue. Les propriétaires dénoncent la dépense, les concierges la corvée de sortir les boîtes. Les chiffonniers, qui vivaient de ce qu’ils récupéraient dans les ordures pour le revendre, craignent de perdre leur métier.\nLe 16 janvier 1884, dans Le Figaro, le journaliste Georges Grison se moque des « boîtes Poubelle ». Le surnom, d’abord moqueur, se répand vite, puis se raccourcit : on dit « une poubelle ». Le mot entre dès 1890 dans le Grand dictionnaire universel du XIXe siècle. Le préfet, resté en poste jusqu’en 1896, n’avait pas cherché cette gloire : il voulait seulement des rues plus propres.",
+      "sources": [
+        {
+          "title": "Hérodote — 24 novembre 1883 : le préfet Poubelle impose les boîtes à ordures",
+          "url": "https://www.herodote.net/almanach-ID-445.php"
+        },
+        {
+          "title": "Paris Zigzag — Eugène Poubelle ou l’invention de la boîte à ordures",
+          "url": "https://www.pariszigzag.fr/?p=118358"
+        },
+        {
+          "title": "Wikipédia (en) — Eugène Poubelle",
+          "url": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Poubelle"
+        },
+        {
+          "title": "Larousse — Poubelle",
+          "url": "https://www.larousse.fr/dictionnaires/francais/poubelle/63217"
+        },
+        {
+          "title": "Vikidia — Fichier : Eugène Poubelle, atelier Nadar (Wikimedia Commons)",
+          "url": "https://fr.vikidia.org/wiki/Fichier:Eug%C3%A8ne_Poubelle_-_Atelier_Nadar.jpg"
+        }
+      ],
+      "from_stock": "20261115-2045-poubelle-monsieur-le-prefet"
+    },
+    {
       "id": "quiz",
       "kind": "dico",
       "label": "Le Dico menteur",
@@ -532,5 +2189,6 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-18T07:54:43.809464+01:00"
 }

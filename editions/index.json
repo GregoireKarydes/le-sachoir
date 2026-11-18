@@ -1,6 +1,84 @@
 {
- "updated_at": "2026-11-18T03:22:28.722233+01:00",
+ "updated_at": "2026-11-18T07:54:43.809464+01:00",
  "editions": [
+  {
+   "date": "2026-11-18",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
+     "kind": "",
+     "url": "histoires/2026-11-18-le-nucleaire-comment-un-tiroir-ferme-a-fini-par-allumer-la-france/",
+     "theme": "Sciences physiques",
+     "minutes": 7,
+     "tagline": "De la plaque photo de Becquerel aux 57 réacteurs d’aujourd’hui : l’atome, la fission et la centrale expliqués sans prise de tête",
+     "cases": 27,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un espion de nuit, un canon anti-pirates et des étoiles pressées",
+     "kind": "",
+     "url": "histoires/2026-11-18-un-espion-de-nuit-un-canon-anti-pirates-et-des-etoiles-pressees/",
+     "theme": "",
+     "minutes": 4,
+     "tagline": "Robert Pattinson devient James Bond, les députés votent contre les pirates, l’ONU traque les perturbateurs endocriniens et la Serbie change de Parlement.",
+     "cases": 13,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
+     "kind": "",
+     "url": "histoires/2026-11-18-do-re-mi-un-tube-du-xie-siecle-pour-voix-enrouees/",
+     "theme": "Musique",
+     "minutes": 3,
+     "tagline": "Les noms des notes sortent d’une prière latine à saint Jean, recyclée par un moine pédagogue",
+     "cases": 10,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "L’empereur qui taxait le pipi",
+     "kind": "",
+     "url": "histoires/2026-11-18-l-empereur-qui-taxait-le-pipi/",
+     "theme": "Histoire ancienne",
+     "minutes": 2,
+     "tagline": "Vespasien a fait payer l’urine des Romains. Paris l’en a remercié en donnant son nom à ses urinoirs.",
+     "cases": 9,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "origine",
+     "label": "D’où ça vient ?",
+     "title": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
+     "kind": "",
+     "url": "histoires/2026-11-18-chaque-mardi-soir-vous-sortez-la-poubelle-c-est-a-dire-un-prefet/",
+     "theme": "Expression française",
+     "minutes": 2,
+     "tagline": "Un préfet, trois boîtes et un journaliste moqueur : la naissance d’un mot qu’on dit tous les jours",
+     "cases": 8,
+     "cover": "images/origine-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Dico menteur",
+     "title": "Quatre mots, douze mensonges",
+     "kind": "dico",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-17",
    "demo": false,

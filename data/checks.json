@@ -1,17 +1,7 @@
 {
- "updated_at": "2026-11-18T03:22+01:00",
+ "updated_at": "2026-11-18T07:54+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
-  {
-   "path": "stock/cultureg/20261114-0359-do-re-mi-tube-voix-enrouees",
-   "titles": {
-    "cultureg": "Do, ré, mi : un tube du XIe siècle pour voix enrouées"
-   },
-   "errors": [],
-   "warnings": [
-    "cultureg : case 10 : récitatif de 21 mots (max 20)"
-   ]
-  },
   {
    "path": "stock/cultureg/20261114-0402-greenwich-le-mot-interdit",
    "titles": {
@@ -41,17 +31,6 @@
    "errors": [],
    "warnings": [
     "cultureg : case 6 : récitatif de 22 mots (max 20)"
-   ]
-  },
-  {
-   "path": "stock/dossier/20261114-1927-nucleaire-tiroir-ferme",
-   "titles": {
-    "dossier": "Le nucléaire : comment un tiroir fermé a fini par allumer la France"
-   },
-   "errors": [],
-   "warnings": [
-    "dossier : fiche joliot : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »",
-    "dossier : case 26 : récitatif de 21 mots (max 20)"
    ]
   },
   {
@@ -129,7 +108,7 @@
    },
    "errors": [],
    "warnings": [
-    "notice : fiche ines : même tête qu'un personnage récent (black hair, teal main colour : 20261114-0100-lempereur-qui-taxait-le-pipi/insolite) ; changer coiffure ou couleur dominante"
+    "notice : fiche ines : même tête qu'un personnage récent (black hair, teal main colour : 2026-11-18/insolite) ; changer coiffure ou couleur dominante"
    ]
   },
   {
@@ -153,29 +132,27 @@
    ]
   },
   {
-   "path": "stock/origine/20261115-2045-poubelle-monsieur-le-prefet",
-   "titles": {
-    "origine": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet"
-   },
-   "errors": [],
-   "warnings": [
-    "origine : case 2 : récitatif de 22 mots (max 20)",
-    "origine : case 4 : récitatif de 21 mots (max 20)",
-    "origine : case 6 : récitatif de 21 mots (max 20)",
-    "origine : case 8 : récitatif de 21 mots (max 20)"
-   ]
-  },
-  {
    "path": "editions/2026-11-18",
    "titles": {
+    "dossier": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
     "actu": "Un espion de nuit, un canon anti-pirates et des étoiles pressées",
+    "cultureg": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
+    "insolite": "L’empereur qui taxait le pipi",
+    "origine": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
     "quiz": "Quatre mots, douze mensonges"
    },
    "errors": [],
    "warnings": [
+    "dossier : fiche joliot : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »",
+    "dossier : case 26 : récitatif de 21 mots (max 20)",
     "actu : fiche deputee : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »",
     "actu : brève 2 : « Ce qui se passe vraiment » de 46 mots (max 45 pour une brève)",
-    "actu : brève 3 : « Ce qui se passe vraiment » de 47 mots (max 45 pour une brève)"
+    "actu : brève 3 : « Ce qui se passe vraiment » de 47 mots (max 45 pour une brève)",
+    "cultureg : case 10 : récitatif de 21 mots (max 20)",
+    "origine : case 2 : récitatif de 22 mots (max 20)",
+    "origine : case 4 : récitatif de 21 mots (max 20)",
+    "origine : case 6 : récitatif de 21 mots (max 20)",
+    "origine : case 8 : récitatif de 21 mots (max 20)"
    ]
   }
  ]

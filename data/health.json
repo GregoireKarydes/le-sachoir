@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T03:22:28.722233+01:00",
+ "updated_at": "2026-11-18T07:54:43.809464+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,7 +9,11 @@
    "date": "2026-11-18",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
     "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "origine": "prêt",
     "quiz": "prêt"
    }
   },
@@ -56,34 +60,45 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-18/cultureg : « Do, ré, mi : un tube du XIe siècle pour voix enrouées » prise dans la file (20261114-0359-do-re-mi-tube-voix-enrouees)",
+  "2026-11-18/insolite : « L’empereur qui taxait le pipi » prise dans la file (20261114-0100-lempereur-qui-taxait-le-pipi)",
+  "2026-11-18/origine : « Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet » prise dans la file (20261115-2045-poubelle-monsieur-le-prefet)",
+  "2026-11-18/dossier : « Le nucléaire : comment un tiroir fermé a fini par allumer la France » prise dans la file (20261114-1927-nucleaire-tiroir-ferme)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-17",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite",
+  "origine"
+ ],
+ "last_published": "2026-11-18",
  "stock": {
   "cultureg": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 5,
    "blocked": 0,
    "images_left": 37,
    "focus": "20261114-0402-greenwich-le-mot-interdit (6 image(s) à faire)",
-   "next": "20261114-0359-do-re-mi-tube-voix-enrouees",
-   "next_redo": 1
+   "next": null,
+   "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 5,
    "blocked": 0,
    "images_left": 31,
    "focus": "20261114-0400-la-liberte-a-dabord-postule-en-egypte (7 image(s) à faire)",
-   "next": "20261114-0100-lempereur-qui-taxait-le-pipi",
-   "next_redo": 1
+   "next": null,
+   "next_redo": 0
   },
   "notice": {
    "ready": 1,
@@ -95,26 +110,26 @@
    "next_redo": 0
   },
   "origine": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 0,
    "blocked": 0,
    "images_left": 0,
    "focus": null,
-   "next": "20261115-2045-poubelle-monsieur-le-prefet",
+   "next": null,
    "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 3,
    "blocked": 0,
    "images_left": 64,
    "focus": "20261115-1923-krach-1929 (22 image(s) à faire)",
-   "next": "20261114-1927-nucleaire-tiroir-ferme",
-   "next_redo": 4
+   "next": null,
+   "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 4,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-18",
@@ -135,7 +150,7 @@
  },
  "rss": {
   "collected_at": "2026-11-18T00:51:06.803396+01:00",
-  "age_hours": 2.5,
+  "age_hours": 7.1,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 27,

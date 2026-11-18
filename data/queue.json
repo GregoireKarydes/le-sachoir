@@ -1,24 +1,7 @@
 {
- "updated_at": "2026-11-18T03:22+01:00",
+ "updated_at": "2026-11-18T07:54+01:00",
  "stock": {
   "cultureg": [
-   {
-    "path": "stock/cultureg/20261114-0359-do-re-mi-tube-voix-enrouees",
-    "name": "20261114-0359-do-re-mi-tube-voix-enrouees",
-    "added": "20261114-0359",
-    "status": "ready",
-    "next": true,
-    "title": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
-    "theme": "Musique",
-    "tagline": "Les noms des notes sortent d’une prière latine à saint Jean, recyclée par un moine pédagogue",
-    "minutes": 2,
-    "cases": 10,
-    "photos": 1,
-    "images_done": 8,
-    "images_total": 8,
-    "failed": 0,
-    "redo": 1
-   },
    {
     "path": "stock/cultureg/20261114-0402-greenwich-le-mot-interdit",
     "name": "20261114-0402-greenwich-le-mot-interdit",
@@ -106,23 +89,6 @@
    }
   ],
   "insolite": [
-   {
-    "path": "stock/insolite/20261114-0100-lempereur-qui-taxait-le-pipi",
-    "name": "20261114-0100-lempereur-qui-taxait-le-pipi",
-    "added": "20261114-0100",
-    "status": "ready",
-    "next": true,
-    "title": "L’empereur qui taxait le pipi",
-    "theme": "Histoire ancienne",
-    "tagline": "Vespasien a fait payer l’urine des Romains. Paris l’en a remercié en donnant son nom à ses urinoirs.",
-    "minutes": 1,
-    "cases": 9,
-    "photos": 1,
-    "images_done": 8,
-    "images_total": 8,
-    "failed": 0,
-    "redo": 1
-   },
    {
     "path": "stock/insolite/20261114-0400-la-liberte-a-dabord-postule-en-egypte",
     "name": "20261114-0400-la-liberte-a-dabord-postule-en-egypte",
@@ -313,43 +279,8 @@
     "redo": 0
    }
   ],
-  "origine": [
-   {
-    "path": "stock/origine/20261115-2045-poubelle-monsieur-le-prefet",
-    "name": "20261115-2045-poubelle-monsieur-le-prefet",
-    "added": "20261115-2045",
-    "status": "ready",
-    "next": true,
-    "title": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
-    "theme": "Expression française",
-    "tagline": "Un préfet, trois boîtes et un journaliste moqueur : la naissance d’un mot qu’on dit tous les jours",
-    "minutes": 2,
-    "cases": 8,
-    "photos": 1,
-    "images_done": 6,
-    "images_total": 6,
-    "failed": 0,
-    "redo": 0
-   }
-  ],
+  "origine": [],
   "dossier": [
-   {
-    "path": "stock/dossier/20261114-1927-nucleaire-tiroir-ferme",
-    "name": "20261114-1927-nucleaire-tiroir-ferme",
-    "added": "20261114-1927",
-    "status": "ready",
-    "next": true,
-    "title": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
-    "theme": "Sciences physiques",
-    "tagline": "De la plaque photo de Becquerel aux 57 réacteurs d’aujourd’hui : l’atome, la fission et la centrale expliqués sans prise de tête",
-    "minutes": 3,
-    "cases": 27,
-    "photos": 3,
-    "images_done": 22,
-    "images_total": 22,
-    "failed": 0,
-    "redo": 4
-   },
    {
     "path": "stock/dossier/20261115-1923-krach-1929",
     "name": "20261115-1923-krach-1929",
@@ -407,9 +338,24 @@
   {
    "date": "2026-11-18",
    "path": "editions/2026-11-18",
-   "status": "draft",
+   "status": "published",
    "newsletter": true,
    "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "kind": "",
+     "title": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
+     "theme": "Sciences physiques",
+     "tagline": "De la plaque photo de Becquerel aux 57 réacteurs d’aujourd’hui : l’atome, la fission et la centrale expliqués sans prise de tête",
+     "minutes": 7,
+     "cases": 27,
+     "photos": 3,
+     "images_done": 22,
+     "images_total": 22,
+     "failed": 0,
+     "redo": 4
+    },
     {
      "id": "actu",
      "label": "L’Actu du jour",
@@ -422,6 +368,51 @@
      "photos": 1,
      "images_done": 5,
      "images_total": 5,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "kind": "",
+     "title": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
+     "theme": "Musique",
+     "tagline": "Les noms des notes sortent d’une prière latine à saint Jean, recyclée par un moine pédagogue",
+     "minutes": 3,
+     "cases": 10,
+     "photos": 1,
+     "images_done": 8,
+     "images_total": 8,
+     "failed": 0,
+     "redo": 1
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "kind": "",
+     "title": "L’empereur qui taxait le pipi",
+     "theme": "Histoire ancienne",
+     "tagline": "Vespasien a fait payer l’urine des Romains. Paris l’en a remercié en donnant son nom à ses urinoirs.",
+     "minutes": 2,
+     "cases": 9,
+     "photos": 1,
+     "images_done": 8,
+     "images_total": 8,
+     "failed": 0,
+     "redo": 1
+    },
+    {
+     "id": "origine",
+     "label": "D’où ça vient ?",
+     "kind": "",
+     "title": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
+     "theme": "Expression française",
+     "tagline": "Un préfet, trois boîtes et un journaliste moqueur : la naissance d’un mot qu’on dit tous les jours",
+     "minutes": 2,
+     "cases": 8,
+     "photos": 1,
+     "images_done": 6,
+     "images_total": 6,
      "failed": 0,
      "redo": 0
     },
