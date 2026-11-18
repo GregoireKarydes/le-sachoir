@@ -1,0 +1,37 @@
+{
+ "updated_at": "2026-11-18T17:15:27+00:00",
+ "rows": [
+  {
+   "post": "2026-11-17",
+   "date": "2026-11-17",
+   "kind": "reel",
+   "slot": "culture",
+   "rubrique": "notice",
+   "time": null,
+   "slides": null,
+   "seconds": 44.6,
+   "hook": "Ce code-barres ne connaît même pas le prix de vos pâtes",
+   "hook_formula": null,
+   "test": null,
+   "hashtags": 4,
+   "caption_words": 94,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 1,
+    "comments": 0,
+    "engagementRate": 1.44,
+    "views": 228,
+    "shares": 1,
+    "saves": 0,
+    "totalTimeWatched": 17.69,
+    "averageTimeWatched": 5.05,
+    "reach": 209
+   },
+   "interactions": 2,
+   "shares_per_reach": 0.0048,
+   "saves_per_reach": 0.0,
+   "engagement_rate": 0.0096,
+   "outlier": 1.0
+  }
+ ]
+}
