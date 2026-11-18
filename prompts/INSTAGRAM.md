@@ -1,20 +1,29 @@
-# Instagram : le post du jour (consigne de la tâche « Le Sachoir – Instagram »)
+# Instagram et TikTok : les posts du jour
 
-Version 2, depuis le 17 novembre 2026 (étude et choix : doc projet `claude/reel-v2.md`). Chaque matin, après la
-publication de 5 h, tu prépares **DEUX carrousels** tirés de l'édition du jour (partie A2). Tu n'écris que leurs
-`post.json` ; GitHub Actions fabrique les images (`pipeline/carousel_v2.py`) ou la vidéo (`pipeline/reel_v2.py`) et les envoie à Buffer.
+Version 3, depuis le 19 novembre 2026 (décision de Greg du 18 novembre au soir : « le Reel sitcom a beaucoup plus de
+potentiel de buzz »). **Les carrousels sont arrêtés.** Chaque jour partent **trois Reels « sitcom » Max et le Prof**
+(partie C), sur Instagram (Reel) et TikTok (vidéo), un par rubrique :
 
-**Décision de Greg (17 novembre 2026) : mieux vaut un bon carrousel qu'un mauvais Reel.** Le post du jour est donc un
-**carrousel « récit en diapositives »** (partie A). Les Reels (partie B) sont **en pause** : n'en fais pas tant que Greg
-ne l'a pas demandé.
+| créneau (`slot`) | rubrique | heure (`time`) | dossier |
+|---|---|---|---|
+| `origine` | D'où ça vient ? | 07:45 | `social/instagram/<date>-sitcom-origine/` |
+| `cultureg` | La Pilule de Culture G | 12:30 | `social/instagram/<date>-sitcom-cultureg/` |
+| `insolite` | L'Insolite historique | 21:00 | `social/instagram/<date>-sitcom-insolite/` |
 
-**Le Reel « sitcom » (partie C), lui, est quotidien** depuis le 17 novembre 2026 : il a sa propre tâche
-(« Le Sachoir – Reel sitcom ») ; la tâche des carrousels ne s'en occupe pas.
+Pourquoi ces heures : 7 h 45, le petit-déjeuner et les transports (le rendez-vous « chaque matin » du Sachoir) ; 12 h 30,
+la pause déjeuner ; 21 h, après le dîner, le créneau où les Reels sont le plus regardés et partagés. Plus de 4 h entre deux
+Reels pour qu'ils ne se volent pas leur public. La tâche « Le Sachoir – Stratège Instagram » peut déplacer ces heures
+(entre 7 h et 22 h, dans le même ordre) d'après les statistiques.
 
-**Le but : un maximum de vues et de partages**, puis amener du monde sur lesachoir.fr (lien en bio `lesachoir.fr/insta`,
-qui ouvre l'histoire liée au post).
+Ils sont écrits par la tâche « Le Sachoir – Reels sitcom ». Tu n'écris que les `post.json` ; GitHub Actions fabrique les
+vidéos (`pipeline/sitcom_render.py`) et les envoie à Buffer. Les parties A (carrousels) et B (Reel « question du jour »)
+sont **en pause** : n'en fais pas tant que Greg ne l'a pas demandé (la grille de viralité de la partie A2 sert encore à
+choisir les sujets).
 
-# 0. La stratégie en cours (tous les posts, carrousels et Reel sitcom)
+**Le but : le buzz.** Un maximum de vues, de partages (envois en message privé), de commentaires et d'enregistrements,
+puis des visites sur lesachoir.fr (lien en bio `lesachoir.fr/insta`, qui ouvre l'histoire liée au post).
+
+# 0. La stratégie en cours (tous les posts : les trois Reels sitcom)
 
 Depuis le 18 novembre 2026, la tâche « Le Sachoir – Stratège Instagram » analyse chaque dimanche les statistiques
 (`social/instagram/stats.md`, mis à jour chaque jour par le workflow « Statistiques réseaux ») et tient à jour
@@ -28,7 +37,7 @@ Dans chaque `post.json`, ajoute aussi `"hook_formula"` : l'`id` de la formule de
 `social/instagram/ig-skills/skills/ig-reel/hooks.json` utilisée pour l'accroche ou la couverture (un nombre), pour que
 l'analyse sache quelles formules marchent.
 
-# A. Le carrousel « récit en diapositives » (format par défaut)
+# A. Le carrousel « récit en diapositives » (EN PAUSE depuis le 19 novembre 2026, seulement si Greg le demande)
 
 Modèle de mécanique : les carrousels d'histoire qui font des centaines de milliers de j'aime (Le Coq Savant : « Ils
 étaient tellement incapables… qu'on en fit un verbe. » → l'origine de « limoger », 142 k j'aime, 2 500 partages).
@@ -319,12 +328,28 @@ Avant de finir : compte les mots dits (55 à 80), relis chaque phrase à voix ha
 « à qui on l'enverrait ? ». Valide le JSON (`python3 -m json.tool`), commit « Instagram <date> : <title> »,
 `git pull --rebase`, `git push origin main`. Le push déclenche le rendu ; ne touche à rien d'autre.
 
-# C. Le Reel « sitcom » : Max et le Prof (tous les jours, tâche « Le Sachoir – Reel sitcom »)
+# C. Les Reels « sitcom » : Max et le Prof (trois par jour, tâche « Le Sachoir – Reels sitcom »)
 
-Décision de Greg (17 novembre 2026) : **un Reel par jour en plus des deux carrousels**, en dessin animé façon sitcom de
-science-fiction, aux couleurs du Sachoir, publié sur Instagram et TikTok. Tu n'écris que
-`social/instagram/<date>-sitcom/post.json` ; GitHub Actions fabrique la vidéo (`pipeline/sitcom_render.py` : voix,
-dessin, musique, mixage) et l'envoie à Buffer. Publication à **20:30** (`"time": "20:30"`).
+Décision de Greg (17 novembre 2026) : un Reel par jour en dessin animé façon sitcom de science-fiction, aux couleurs du
+Sachoir, publié sur Instagram et TikTok. **Depuis le 19 novembre 2026 : trois par jour, à la place des carrousels**, un
+par rubrique (tableau en tête de fichier). Tu n'écris que les `post.json` ; GitHub Actions fabrique les vidéos
+(`pipeline/sitcom_render.py` : voix, dessin, musique, mixage) et les envoie à Buffer.
+
+## C0. Les trois rendez-vous
+Chaque Reel garde la même série (C1), la même méthode (C4, C5) et le même format (C6). Ce qui change : la rubrique,
+l'heure, le tableau du labo (`board`) et la demande de la légende (C7).
+
+| `slot` | rubrique | `time` | `board[0]` | la question type | l'esprit |
+|---|---|---|---|---|---|
+| `origine` | D'où ça vient ? | `07:45` | `D'OÙ ÇA VIENT ?` | « Pourquoi on dit… ? », « D'où vient le mot… ? » | l'expression qu'on va dire au bureau aujourd'hui ; le témoin d'époque, le glissement de sens |
+| `cultureg` | La Pilule de Culture G | `12:30` | `PILULE CULTURE G` | « Pourquoi… ? », « Comment ça marche… ? », « C'est vrai que… ? » | le mécanisme du quotidien qu'on n'a jamais compris, l'idée reçue cassée, le chiffre fou |
+| `insolite` | L'Insolite historique | `21:00` | `HISTOIRE VRAIE` | « C'est vrai qu'un jour… ? » | le fait historique ahurissant qu'on a envie de raconter au dîner : un personnage, une scène, une date |
+
+Règles communes aux trois :
+- **Trois sujets différents**, trois mondes (`set`) différents, et **trois formules d'accroche différentes** dans la journée
+  (pour que l'analyse du dimanche sache lesquelles marchent).
+- Une seule idée par Reel, la réponse avant la moitié, le test du copain (C5).
+- Les faits viennent de la BD liée (déjà vérifiée) ; tout ajout : 2 sources sérieuses dans `sources`.
 
 ## C1. La série
 - **MAX** (sweat violet, casque vert autour du cou) : curieux, s'inquiète vite. Il pose LA question, la même que le
@@ -340,19 +365,31 @@ dessin, musique, mixage) et l'envoie à Buffer. Publication à **20:30** (`"time
 ## C2. Avant d'écrire
 1. Lis `social/instagram/ig-skills/README.md`, puis les skills `skills/ig-reel/SKILL.md` (et `hooks.json`),
    `skills/ig-human/SKILL.md` et `skills/ig-caption/SKILL.md`, et `social/instagram/voice.md` et `social/instagram/swipe.md`.
-2. Vérifie que l'édition du jour est publiée (`editions/index.json`) et que `social/instagram/<date>-sitcom/post.json`
-   n'existe pas (s'il existe avec `"skip": true`, c'est un essai : remplace-le).
-3. Lis les 14 derniers `social/instagram/*-sitcom/post.json` : jamais deux fois le même sujet ni deux fois de suite le
-   même monde (`set`).
+2. Regarde quels Reels du jour existent déjà : `social/instagram/<date>-sitcom-origine/`, `-cultureg/`, `-insolite/`.
+   N'écris que ceux qui manquent (un `post.json` avec `"skip": true` est un essai : remplace-le). N'écris pas un Reel
+   dont l'heure de publication est déjà passée ou à moins de 45 minutes (il partirait trop tard et trop près du
+   suivant) : dis-le simplement.
+3. Lis les `post.json` des 30 derniers Reels (`social/instagram/*-sitcom*/post.json`) : jamais deux fois le même sujet
+   (ni la même BD, ni le même fait), jamais deux fois de suite le même monde (`set`) dans un même créneau.
 4. Lis `social/instagram/strategie.md` (partie 0) et, s'il existe, `social/instagram/stats.md` (bilan des vues et
    partages) : garde les formules qui marchent, abandonne celle qui fait le moins.
 
-## C3. Le sujet
-- Une BD de l'édition du jour (de préférence `insolite`, `origine`, `notice` ou `cultureg` ; l'actu seulement si le sujet
-  est léger), **différente des deux carrousels du jour** si ceux-ci existent déjà. Si rien ne marque 9/12 sur la grille de
-  la partie A2, élargis aux BD des 30 derniers jours jamais postées en Reel sitcom.
+## C3. Les sujets (un par créneau)
+Pour chaque créneau, prends la BD la plus « envoyable » parmi ses candidates, dans cet ordre (note la grille de la partie
+A2 sur 12 ; en dessous de 9, passe à la candidate suivante) :
+- `origine` (07:45) : 1) la BD `origine` de l'édition du jour ; 2) une BD `origine` publiée ces 30 derniers jours et jamais
+  mise en Reel ; 3) la BD `notice` du jour si elle raconte l'origine d'un objet ou d'un mot (« D'où vient le
+  code-barres ? ») ; 4) sinon une expression que **tout le monde a déjà dite** (règles de `prompts/STOCK.md`, section
+  D'où ça vient ? : jamais d'expression rare ou littéraire), origine vérifiée dans deux sources sérieuses (CNRTL, Littré,
+  Rey, Larousse), images Wikimedia Commons, `story` d'une BD proche ou omis. Ce Reel peut sortir **avant** l'édition du
+  jour : si elle n'est pas encore publiée, prends directement 2), 3) de la veille ou 4).
+- `cultureg` (12:30) : 1) la BD `cultureg` du jour ; 2) la BD `notice` du jour (« comment ça marche ») ; 3) une BD
+  `cultureg` ou `notice` des 30 derniers jours jamais mise en Reel.
+- `insolite` (21:00) : 1) la BD `insolite` du jour ; 2) un fait ahurissant du Grand Dossier du jour (`dossier`, dans ses
+  4 premières cases, gratuites) ; 3) une BD `insolite` des 30 derniers jours jamais mise en Reel.
+- `cultureg` et `insolite` attendent l'édition du jour ; si elle n'est pas publiée, n'écris que `origine`.
+- L'Actu n'est jamais un sujet de Reel.
 - Le test : « à qui on l'enverrait ? ». Si la réponse est « à personne », change de sujet.
-- Les faits viennent de la BD (déjà vérifiée). Tout ajout : 2 sources sérieuses dans `sources` (WebSearch).
 
 ## C4. La question, la réponse, puis l'accroche (méthode `ig-reel`)
 Retour de Greg (18 novembre 2026) : l'animation est top, mais **le texte était trop raccourci, on ne comprenait plus**.
@@ -448,12 +485,14 @@ Le reste :
   d'une série existante.
 
 ## C6. Le fichier
-Exemple complet (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répliques, environ 145 mots) :
+Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, avec `"slot"` et `"time"` du tableau C0,
+`board[0]` du tableau C0, et `first_comment` (C7). Exemple complet pour le créneau `insolite` (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répliques, environ 145 mots) :
 ```json
 {
   "date": "<AAAA-MM-JJ>",
   "kind": "sitcom",
-  "time": "20:30",
+  "slot": "insolite",
+  "time": "21:00",
   "story": {
     "edition": "<AAAA-MM-JJ>",
     "format": "<id>"
@@ -471,7 +510,7 @@ Exemple complet (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répl
   "episode": {
     "band": "UN EMPEREUR A\nTAXÉ LE PIPI ?!",
     "board": [
-      "QUESTION DU JOUR",
+      "HISTOIRE VRAIE",
       "le pipi taxé ?"
     ],
     "scenes": [
@@ -596,7 +635,8 @@ Exemple complet (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répl
       ]
     }
   },
-  "caption": "<1re ligne : l'accroche ou la question>\n\n<2 lignes de réponse>\n\n<lien en bio>\n\nEnvoie-le à <qui>.",
+  "caption": "<1re ligne : l'accroche ou la question>\n\n<2 lignes de réponse>\n\n<la demande du créneau (C7)>",
+  "first_comment": "<un bonus vrai et sourcé + une vraie question (C7)>",
   "hashtags": [
     "lesachoir",
     "culturegenerale",
@@ -607,5 +647,38 @@ Exemple complet (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répl
   ]
 }
 ```
-Légende (méthode `ig-caption`) : la première ligne doit donner envie d'ouvrir avant le « … plus » ; une seule demande, en
-priorité « Envoie-le à celui qui… » ; 4 à 6 hashtags. Valide avec `python3 -m json.tool`.
+Légende (méthode `ig-caption`) : voir C7. Valide avec `python3 -m json.tool`.
+
+## C7. Faire réagir : partages, commentaires, enregistrements (méthodes `ig-reel`, `ig-caption`, `ig-reply`)
+Ce qui fait voyager un Reel, dans l'ordre (déclarations d'Adam Mosseri, voir le doc `reel-v2`) : le temps de visionnage
+et la complétion, puis les **envois en message privé**, puis les commentaires et j'aime. Donc :
+
+Dans la vidéo (sans jamais d'appel à l'action) :
+- **Un crochet à commentaire** par Reel, tiré du sujet : une idée reçue cassée (« moi on m'avait dit que… »), un détail
+  qui fait dire « attends, quoi ? », une variante que les gens connaissent (« et en Belgique ? »), un chiffre qu'on a envie
+  de vérifier. Il est vrai et sourcé ; c'est souvent la chute.
+- La dernière réplique de Max fait écho à l'accroche (boucle) : un Reel revu compte double.
+
+Dans la légende (`caption`, méthode `ig-caption`) :
+- Ligne 1 : l'accroche ou la question (c'est ce qu'on lit avant « … plus ») ; puis 2 lignes de réponse ; puis
+  **une seule demande**, celle du créneau :
+  - `origine` : une vraie question ouverte qui appelle des commentaires : « Quelle expression on décortique demain ? Écris-la en
+    commentaire. » (ou une variante tirée du sujet : « Et chez toi, on dit comment ? ») ;
+  - `cultureg` : une question sur l'expérience du spectateur, précise et liée au sujet (« Toi, tu croyais que ça marchait
+    comment ? ») ;
+  - `insolite` : l'envoi, le levier du buzz : « Envoie-le à celui qui… » (le pote qui adore l'histoire, le collègue qui
+    râle contre les impôts…).
+- **Interdit, l'appât à réactions** (Instagram et TikTok le pénalisent) : « Tape 1 si… », « Commente OUI », « Like si… »,
+  « Tague 3 amis », concours.
+- 4 à 6 hashtags : `lesachoir`, `culturegenerale`, le hashtag de la rubrique (`expressionsfrancaises`, `histoire`, `anecdote`…),
+  1 ou 2 hashtags du sujet. Pas de lien (il ne marche pas en légende) : « lien en bio » seulement si la place le permet.
+- Ton de `social/instagram/voice.md` ; passe la légende dans `ig-human/detect.py`.
+
+Le premier commentaire (`first_comment`, publié par le compte au moment du post si Buffer le permet) : 1 ou 2 phrases,
+**un bonus vrai et sourcé qui n'est pas dans le Reel** + une vraie question qui donne envie de répondre (« Bonus : les
+vespasiennes ont presque toutes disparu, il en reste une seule à Paris, boulevard Arago. Tu en avais déjà vu une ? »).
+Jamais de lien, jamais d'emoji en premier caractère.
+
+Répondre aux commentaires dans la première heure fait beaucoup pour la portée, mais **aucune tâche ne commente ni ne
+répond automatiquement** (interdit par Instagram, et par les skills `ig-comment` et `ig-reply`). Greg répond lui-même ;
+la question la plus aimée en commentaire peut devenir le sujet d'un Reel (méthode `ig-reply`).

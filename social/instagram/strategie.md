@@ -12,11 +12,17 @@ lesachoir.fr. Les vues brutes ne servent qu'à repérer les posts « hors norme 
 
 ## Les trois rendez-vous quotidiens (fixes)
 
+Depuis le 19 novembre 2026 (décision de Greg) : trois Reels sitcom Max et le Prof, plus aucun carrousel.
+
 | créneau | format | heure | tâche |
 |---|---|---|---|
-| actu | carrousel récit (énigme) | 12:15 | Le Sachoir – Instagram |
-| culture | carrousel récit (énigme) + copie Reel 21:00 | 18:30 | Le Sachoir – Instagram |
-| sitcom | Reel Max et le Prof, 40 à 55 s | 20:30 | Le Sachoir – Reel sitcom |
+| origine | Reel sitcom « D'où ça vient ? », 40 à 55 s | 07:45 | Le Sachoir – Reels sitcom |
+| cultureg | Reel sitcom « Pilule de Culture G », 40 à 55 s | 12:30 | Le Sachoir – Reels sitcom |
+| insolite | Reel sitcom « Insolite historique », 40 à 55 s | 21:00 | Le Sachoir – Reels sitcom |
+
+Demande de la légende par créneau (partie C7 de `prompts/INSTAGRAM.md`) : origine → commentaire (« Quelle expression on
+décortique demain ? ») ; cultureg → commentaire (question sur l'expérience du spectateur) ; insolite → envoi
+(« Envoie-le à celui qui… »). Premier commentaire avec un bonus et une question sur chaque Reel.
 
 ## Règles en vigueur
 
@@ -30,3 +36,4 @@ Aucun.
 ## Journal des décisions
 
 - 2026-11-18 : mise en place (statistiques Buffer quotidiennes, bilan et ajustements chaque dimanche).
+- 2026-11-18 (soir) : décision de Greg, carrousels arrêtés, trois Reels sitcom par jour (origine 07:45, cultureg 12:30, insolite 21:00), demandes de légende par créneau, premier commentaire.

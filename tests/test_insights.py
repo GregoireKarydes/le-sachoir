@@ -19,3 +19,14 @@ def test_derive_sans_portee():
 
 def test_markdown_vide():
     assert "Aucune statistique" in si.render_md([])
+
+
+def test_creneau_des_reels_sitcom(tmp_path):
+    # 18 novembre 2026 (soir) : trois Reels sitcom par jour, le créneau vient du champ `slot` du post.json.
+    import social_insights
+    d = tmp_path / "2026-11-19-sitcom-origine"
+    d.mkdir()
+    f = social_insights.features(d, {"kind": "sitcom", "slot": "origine", "time": "07:45"}, {})
+    assert f["slot"] == "origine"
+    assert social_insights.features(tmp_path / "2026-11-18-sitcom", {"kind": "sitcom"}, {})["slot"] == "sitcom"
+    assert social_insights.features(tmp_path / "2026-11-18-actu", {}, {})["slot"] == "actu"

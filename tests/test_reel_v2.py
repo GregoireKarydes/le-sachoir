@@ -71,5 +71,21 @@ def test_publication_recupere_les_artefacts_des_trois_posts():
     # 18 novembre 2026 : le Reel sitcom restait bloqué (« fichiers pas encore en ligne ») car son artefact
     # instagram-<date>-sitcom n'était jamais téléchargé par la Publication.
     wf = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "publish.yml").read_text()
-    for n in ('"$d-sitcom"', '"$d-actu"', '"$d"'):
+    for n in ('"$d-sitcom"', '"$d-actu"', '"$d"', '"$d-sitcom-origine"', '"$d-sitcom-cultureg"', '"$d-sitcom-insolite"'):
         assert n in wf
+    # 18 novembre 2026 (soir) : trois Reels par jour ; tous les artefacts du jour sont listés, du plus ancien au plus récent.
+    assert 'startswith(\\"instagram-$d\\")' in wf and "| sort" in wf
+
+
+def test_premier_commentaire_buffer():
+    # 18 novembre 2026 (soir) : `first_comment` du post.json part en premier commentaire Instagram (Buffer).
+    from datetime import datetime
+    import social_publish
+    due = datetime(2026, 11, 19, 7, 45, tzinfo=social_publish.PARIS)
+    render = {"kind": "sitcom", "files": ["reel.mp4"]}
+    post = {"date": "2026-11-19", "time": "07:45", "caption": "Légende", "first_comment": "Quelle expression  demain ?"}
+    inp = social_publish.build_input("2026-11-19-sitcom-origine", post, render, "C", due)
+    assert inp["metadata"]["instagram"] == {"type": "reel", "shouldShareToFeed": True,
+                                            "firstComment": "Quelle expression demain ?"}
+    inp = social_publish.build_input("x", {"date": "2026-11-19"}, render, "C", due)
+    assert "firstComment" not in inp["metadata"]["instagram"]

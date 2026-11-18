@@ -126,8 +126,18 @@ def build_input(folder, post, render, channel, due):
         "mode": "customScheduled",
         "dueAt": due.astimezone(timezone.utc).isoformat().replace("+00:00", "Z"),
         "assets": assets,
-        "metadata": {"instagram": {"type": ig_type, "shouldShareToFeed": True}},
+        "metadata": {"instagram": instagram_meta(post, ig_type)},
     }
+
+
+def instagram_meta(post, ig_type):
+    """18 novembre 2026 : premier commentaire facultatif (`first_comment` du post.json), pour lancer la discussion
+    sous le Reel. Le champ existe dans l'API Buffer ; s'il est ignoré, le post part quand même."""
+    meta = {"type": ig_type, "shouldShareToFeed": True}
+    fc = " ".join(str(post.get("first_comment") or "").split())
+    if fc:
+        meta["firstComment"] = fc[:2200]
+    return meta
 
 
 CREATE = """mutation($input: CreatePostInput!) {

@@ -72,7 +72,8 @@ def features(folder, post, render):
         "post": folder.name,
         "date": post.get("date") or folder.name[:10],
         "kind": kind,
-        "slot": "actu" if folder.name.endswith("-actu") else ("sitcom" if kind == "sitcom" else "culture"),
+        # Depuis le 18 novembre 2026 (soir) : trois Reels sitcom par jour, chacun avec son `slot` (origine, cultureg, insolite).
+        "slot": post.get("slot") or ("actu" if folder.name.endswith("-actu") else ("sitcom" if kind == "sitcom" else "culture")),
         "rubrique": (post.get("story") or {}).get("format"),
         "time": post.get("time"),
         "slides": len(post.get("slides") or []) or None,

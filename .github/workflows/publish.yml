@@ -46,14 +46,25 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # 18 novembre 2026 (soir) : trois Reels sitcom par jour (<date>-sitcom-origine, -cultureg, -insolite), plus de
+          # carrousels. Un rendu commun porte le nom du dernier dossier rendu, des rendus séparés portent chacun le leur.
+          # On liste donc TOUS les artefacts « instagram-<date>… » encore valides et on les ouvre du plus ancien au plus
+          # récent : le rendu le plus récent d'un post gagne toujours.
           for i in 0 1 2; do
             d=$(TZ=Europe/Paris date -d "-$i day" +%F)
-            # Trois posts par jour : <date> (culture), <date>-actu et <date>-sitcom (Reel, depuis le 18 novembre 2026) ;
-            # un rendu commun porte le nom du dernier dossier (instagram-<date>-sitcom ou -actu), des rendus séparés
-            # portent chacun le leur. Le plus « large » d'abord, pour que les rendus séparés, plus récents, gagnent.
-            for n in "$d-sitcom" "$d-actu" "$d"; do
-              gh run download -n "instagram-$n" -D social/instagram >/dev/null 2>&1 && echo "Instagram $n : fichiers récupérés" || true
-            done
+            list=$(gh api --paginate "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" \
+              --jq ".artifacts[] | select(.expired | not) | select(.name | startswith(\"instagram-$d\")) | \"\(.created_at) \(.id) \(.name)\"" 2>/dev/null | sort || true)
+            if [ -n "$list" ]; then
+              echo "$list" | while read -r at id name; do
+                gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$id/zip" > /tmp/ig.zip 2>/dev/null \
+                  && unzip -o -q /tmp/ig.zip -d social/instagram && echo "Instagram $name ($at) : fichiers récupérés" || true
+              done
+            else
+              # Secours (liste indisponible) : les noms connus, le plus « large » d'abord.
+              for n in "$d-sitcom-origine" "$d-sitcom-insolite" "$d-sitcom-cultureg" "$d-sitcom" "$d-actu" "$d"; do
+                gh run download -n "instagram-$n" -D social/instagram >/dev/null 2>&1 && echo "Instagram $n : fichiers récupérés" || true
+              done
+            fi
           done
       - name: Publier l'édition du jour et construire le site
         run: python pipeline/publish.py
