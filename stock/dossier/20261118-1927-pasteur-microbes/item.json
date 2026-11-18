@@ -1,0 +1,506 @@
+{
+  "added": "20261118-1927",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Les microbes : comment Pasteur les a démasqués (sans jamais vous serrer la main)",
+      "tagline": "Du bouillon qui pourrit au vaccin contre la rage : comment un chimiste a prouvé que des êtres invisibles nous rendent malades",
+      "teaser": "Une mule chargée de soupe, des poules oubliées tout l'été, un vétérinaire qui parie son chapeau et un savant qui refuse toutes les poignées de main.",
+      "minutes": 3,
+      "theme": "Médecine et santé",
+      "art": {
+        "subject": "how Louis Pasteur proved that invisible germs carried by air dust make things rot and make us sick (1859-1888): the swan-neck flask against spontaneous generation, the duel with Félix Pouchet, wine pasteurisation, hygiene in surgery, the first vaccines (chicken cholera, anthrax at Pouilly-le-Fort) and the rabies vaccine given to young Joseph Meister in 1885",
+        "setting": "a cluttered naturalist's study in Rouen; Pasteur's small chemistry laboratory at the École normale in Paris with glassware and a gas burner; the Mer de Glace glacier above Chamonix; a snowy Pyrenees peak; the big lecture amphitheatre of the Sorbonne; an academy meeting hall; a wine cellar with barrels; a 19th-century hospital corridor; a farmyard and sheep pen at Pouilly-le-Fort near Melun; the courtyard of a Paris laboratory; the entrance of the new Institut Pasteur in 1888",
+        "era": "France from 1859 to 1888, Second Empire and early Third Republic: frock coats, top hats, long dresses, gas burners, glass flasks",
+        "props": {
+          "flask": "a round glass flask with a long thin glass neck bent down and up like a swan's neck, filled with clear golden-yellow broth",
+          "jar": "a wide open glass jar of brown broth covered with fuzzy green mould",
+          "handkerchief": "a spotless white handkerchief",
+          "syringe": "an old-fashioned 19th-century syringe of glass and brass",
+          "notebook": "a small black notebook with no visible writing"
+        }
+      },
+      "cast": [
+        {
+          "id": "pasteur",
+          "name": "Louis Pasteur",
+          "look": "Louis Pasteur, a short stocky chemist in his forties to sixties, broad square face, short dark-brown hair combed back and a short square greying beard, light skin, a small black velvet skullcap, a charcoal-grey frock coat as main colour over a white shirt with a small black bow tie, a white handkerchief always poking out of his breast pocket",
+          "role": "the chemist who hunts invisible germs; obsessively clean and stubborn, refuses every handshake, keeps his hands clasped behind his back and wipes everything with his handkerchief",
+          "file": "cast/dossier-pasteur.png",
+          "status": "pending"
+        },
+        {
+          "id": "pouchet",
+          "name": "Félix Pouchet",
+          "look": "Félix Pouchet, a very tall and very thin old naturalist about sixty, long bony face, wild white hair sticking up and long white sideburns, light skin, a pale sand-beige frock coat as main colour, a red-and-green tartan scarf, always holding a big brass magnifying glass",
+          "role": "Pasteur's rival from Rouen who believes life is born from nothing; proud and blind to his own mistakes, chin always up, waves his magnifying glass like a sword",
+          "file": "cast/dossier-pouchet.png",
+          "status": "pending"
+        },
+        {
+          "id": "rossignol",
+          "name": "Hippolyte Rossignol",
+          "look": "Hippolyte Rossignol, a very fat round country veterinarian in his forties, bald shiny head, a huge black walrus moustache, ruddy light skin, a bright peach-orange linen jacket as main colour, brown trousers and boots, a straw boater hat, always scribbling in the notebook with a pencil",
+          "role": "the sceptical vet who challenges Pasteur in public; a mocking gambler who bets on everything, laughs with his whole belly, always noting odds in his notebook",
+          "file": "cast/dossier-rossignol.png",
+          "status": "pending"
+        },
+        {
+          "id": "joseph",
+          "name": "Joseph Meister",
+          "look": "Joseph Meister in 1885, a small skinny nine-year-old Alsatian boy, short straw-blond hair under a dark-blue flat cap, light skin, a bright magenta knitted jumper as main colour, short brown trousers, grey socks, a white bandage around one forearm",
+          "role": "the bitten boy who becomes the first person saved by the rabies vaccine; brave, curious and chatty, looks at everything in the lab, swings his legs when he sits",
+          "file": "cast/dossier-joseph.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "Pasteur's small laboratory with glassware. Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) on the right proudly holds up the flask with its clear broth, his other hand hidden behind his back; Pouchet (very tall, thin, wild white hair, sand-beige coat, tartan scarf) on the left leans down holding out his hand for a handshake and the mouldy jar in the other. visual gag: Pasteur leans away from the offered hand. wide shot",
+        "cast": ["pasteur", "pouchet"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · La soupe qui pourrit toute seule",
+          "caption": "1859, à Rouen. Pourquoi le bouillon pourrit-il ? Le naturaliste Félix Pouchet croit que la vie y naît toute seule.",
+          "bubbles": [
+            { "who": "pouchet", "text": "Regardez : des petites bêtes nées de rien du tout !", "side": "l" },
+            { "who": "La bonne", "text": "Ou du bocal que monsieur laisse ouvert depuis juillet.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a cluttered naturalist's study in Rouen with stuffed birds on shelves. Pouchet (very tall, thin, wild white hair, sand-beige frock coat, tartan scarf) on the left proudly peers at the mouldy jar through his big magnifying glass, chin up; in the background on the right a small maid in a black dress and white apron, holding a feather duster, points at the jar's lid lying forgotten on a shelf, unimpressed. wide shot",
+            "cast": ["pouchet"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1860, Paris",
+          "caption": "À Paris, le chimiste Louis Pasteur, 38 ans, soupçonne autre chose : des germes invisibles apportés par les poussières de l'air.",
+          "bubbles": [
+            { "who": "Un collègue", "text": "Mon cher Pasteur, touchez là !", "side": "l" },
+            { "who": "pasteur", "text": "Jamais. Cette main a serré cent autres mains ce matin.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Pasteur's small chemistry laboratory with glass flasks on wooden shelves. A cheerful bearded colleague in a brown coat on the left holds out his hand wide open; Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) on the right leans far back, both hands hidden behind his back, eyeing the hand with suspicion. visual gag: the exaggerated backward lean. medium shot",
+            "cast": ["pasteur"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Louis Pasteur",
+          "text": "Louis Pasteur photographié par Paul Nadar. Il n'était pas médecin mais chimiste : il a commencé par étudier les cristaux, puis la fermentation.",
+          "photo": { "commons": "File:Louis Pasteur, foto av Paul Nadar, Crisco edit.jpg" }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1860",
+          "caption": "Pour trancher, Pasteur fabrique un piège : un ballon de verre au long col tordu, comme un cou de cygne.",
+          "bubbles": [
+            { "who": "pasteur", "text": "Si la vie naît de rien, elle naîtra là-dedans. Sinon…", "side": "r" }
+          ],
+          "image": {
+            "prompt": "in the dim laboratory, Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) on the right holds the flask up at eye level with two fingers, its bent swan neck catching the light of a gas burner, a mysterious half-smile, one eyebrow raised. medium close-up",
+            "cast": ["pasteur"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "L'expérience",
+          "caption": "Il fait bouillir le bouillon dans le ballon : la chaleur tue tout ce qui pouvait y vivre.",
+          "bubbles": [
+            { "who": "pasteur", "text": "Et je laisse le col ouvert. L'air entre comme il veut.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "seen from above, a laboratory table: the flask sits on an iron stand over a blue gas flame, steam puffing out of the end of its curved neck; Pasteur (black skullcap, square greying beard, charcoal-grey frock coat) bends over it on the left, carefully adjusting the flame, his handkerchief in the other hand. high angle",
+            "cast": ["pasteur"],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Le piège du col de cygne",
+          "steps": [
+            "On fait bouillir le bouillon : plus rien de vivant dedans",
+            "Le col reste ouvert : l'air entre librement",
+            "Les poussières, chargées de germes, se coincent dans le coude du col",
+            "Le bouillon reste limpide",
+            "On casse le col : les poussières tombent dedans, et il pourrit vite"
+          ],
+          "joke": "Ce n'est pas l'air qui fait pourrir : c'est ce qu'il transporte."
+        },
+        {
+          "n": 7,
+          "kind": "react",
+          "tag": "Des semaines plus tard",
+          "caption": "Des semaines plus tard, le bouillon du ballon reste limpide. Rien n'y est né tout seul.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the laboratory table: on the left the flask, perfectly clear and shining; next to it an ordinary open glass jar overflowing with a huge fuzzy green mould growing out like a hairdo. Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) leans on the table between them with folded arms, staring straight at the viewer, deadpan. visual gag: the monstrous mould next to the spotless flask. medium wide shot",
+            "cast": ["pasteur"],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Septembre 1860",
+          "caption": "En septembre 1860, Pasteur ouvre des ballons sur la Mer de Glace, à Chamonix : là-haut, presque aucun ne pourrit.",
+          "bubbles": [
+            { "who": "Le guide", "text": "Trente-trois bouteilles de soupe à dos de mule. Vous êtes sûr ?", "side": "l" },
+            { "who": "pasteur", "text": "Air pur, moins de poussières, moins de germes. Avancez.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a vast white glacier between grey mountains. A mountain guide with an ice axe and a felt hat walks ahead on the left, pulling a mule loaded with wooden crates full of flasks; Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) trudges behind on the right, slipping a little on the ice, holding one flask high above his head like a trophy. wide shot",
+            "cast": ["pasteur"],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Dans les Pyrénées",
+          "caption": "Pouchet riposte dans les Pyrénées, à 3 000 mètres : ses 8 ballons pourrissent tous. Pour lui, la preuve est faite.",
+          "bubbles": [
+            { "who": "pouchet", "text": "Même ici, ça pousse ! La vie naît de rien, partout !", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a snowy Pyrenees summit under a bright sky. Pouchet (very tall, thin, wild white hair, sand-beige frock coat, red-and-green tartan scarf flapping in the wind) stands triumphantly on the peak, one foot on a rock, raising a cloudy mouldy flask high like a sword, magnifying glass in the other hand. low angle",
+            "cast": ["pouchet"],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "react",
+          "tag": "L'erreur",
+          "caption": "Son erreur : il utilise du foin, qui cache des spores, des germes en armure qui survivent à l'ébullition.",
+          "bubbles": [
+            { "who": "pouchet", "text": "Mon foin est innocent. Il a une tête honnête.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Pouchet (very tall, thin, wild white hair, long white sideburns, sand-beige frock coat, tartan scarf) hugs a big bundle of dry hay protectively against his chest like a pet, chin up, offended look, a few hay strands sticking out of his hair. close-up",
+            "cast": ["pouchet"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "fact",
+          "tag": "7 avril 1864",
+          "caption": "Le 7 avril 1864, à la Sorbonne, Pasteur promet de montrer, selon ses mots, « par où les souris sont entrées ».",
+          "bubbles": [
+            { "who": "pasteur", "text": "Les souris, ce sont les poussières de l'air.", "side": "l" },
+            { "who": "Une spectatrice", "text": "Des souris ? Je garde les pieds sur la chaise.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the big lecture amphitheatre of the Sorbonne, seen from behind the lecture desk: Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) seen from behind, a row of flasks on the desk in front of him, facing tiers of elegant spectators in top hats and long dresses; in the front row a lady in a purple dress stands on her chair, holding up her skirt in fright and looking at the floor. from behind",
+            "cast": ["pasteur"],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "1864",
+          "caption": "La même année, l'Académie des sciences organise un duel d'expériences. Pouchet se retire avant de commencer : Pasteur gagne.",
+          "bubbles": [
+            { "who": "pouchet", "text": "Je me retire. Pour des raisons… atmosphériques.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a solemn academy hall with a long green table where three old judges in black coats sit waiting. Pouchet (very tall, thin, wild white hair, sand-beige frock coat, tartan scarf) walks out towards a door on the left with a suitcase, nose in the air, hay sticking out of the suitcase; in the background Pasteur (short, stocky, black skullcap, charcoal-grey coat) stands beside his flasks, puzzled. medium shot",
+            "cast": ["pouchet", "pasteur"],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Chauffer et laver (1865-1878)",
+          "caption": "Si des germes gâtent le bouillon, ils gâtent aussi le vin. En 1865, Pasteur dépose un brevet pour le protéger.",
+          "bubbles": [
+            { "who": "Un vigneron", "text": "Chauffer mon vin ? Vous voulez en faire du vin chaud ?", "side": "l" },
+            { "who": "pasteur", "text": "Quelques minutes vers 55 °C : les germes meurent, le goût reste.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a vaulted wine cellar with big oak barrels. Over the shoulder of a worried winemaker in a blue apron and beret on the left, we see Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) on the right gently heating a corked wine bottle in a pot of warm water on a small stove, a thermometer dipped in the water, calm and precise. over-the-shoulder",
+            "cast": ["pasteur"],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pasteuriser, c'est quoi ?",
+          "text": "Chauffer un aliment quelques minutes, sans le faire bouillir, pour tuer la plupart des germes sans abîmer le goût. Le mot « pasteurisation » apparaît vers 1867.",
+          "joke": "Aujourd'hui, Pasteur est dans votre frigo : sur chaque brique de lait."
+        },
+        {
+          "n": 15,
+          "kind": "fact",
+          "tag": "1878",
+          "caption": "Les germes voyagent aussi sur les mains et les outils. En 1878, Pasteur demande aux chirurgiens de tout laver.",
+          "bubbles": [
+            { "who": "Un chirurgien", "text": "Touchez là, Pasteur ! Je sors d'une opération.", "side": "l" },
+            { "who": "pasteur", "text": "Justement. Lavez-la. Et vos instruments. Et votre tablier.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a 19th-century hospital corridor with tall windows. A burly bald surgeon in a stained dark-brown leather apron strides in from the left, beaming, holding out his big hand; Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) on the right jumps one step back, one hand behind his back, the other pointing firmly at a basin of water and a bar of soap on a stool. visual gag: Pasteur's leap backwards. medium wide shot",
+            "cast": ["pasteur"],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 16,
+          "kind": "chap",
+          "tag": "Chapitre 3 · L'invention des vaccins (1879-1881)",
+          "caption": "En 1879, un bouillon du microbe du choléra des poules est oublié tout l'été. Injecté, il ne tue plus.",
+          "bubbles": [
+            { "who": "Un assistant", "text": "Les poules sont à peine malades. Le microbe a pris des vacances.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "seen from above, a laboratory bench: a white hen pecks grain happily on the table; a young assistant with curly red hair and a white smock on the left holds up an old dusty flask covered in cobwebs; Pasteur (black skullcap, square greying beard, charcoal-grey frock coat) leans in on the right, studying the hen closely. high angle",
+            "cast": ["pasteur"],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "react",
+          "tag": "1879",
+          "caption": "Puis ces poules reçoivent un microbe frais, normalement mortel. Elles résistent : le microbe affaibli a entraîné leurs défenses.",
+          "bubbles": [
+            { "who": "pasteur", "text": "Un microbe affaibli qui protège du vrai. Voilà un vaccin.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) holds the healthy white hen up in front of his face with both hands, eyes wide with wonder, small yellow sparkles around his head; the hen looks calmly back at him. medium close-up",
+            "cast": ["pasteur"],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 18,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Comment marche un vaccin",
+          "text": "Le mot vient de la « vaccine », une maladie des vaches : l'Anglais Jenner s'en servait dès 1796 contre la variole.",
+          "steps": [
+            "On affaiblit (ou on tue) le microbe",
+            "On l'injecte : il ne peut plus rendre malade",
+            "Le corps apprend à le reconnaître et prépare ses défenses",
+            "Le vrai microbe arrive : il est battu avant de faire des dégâts"
+          ]
+        },
+        {
+          "n": 19,
+          "kind": "fact",
+          "tag": "1881",
+          "caption": "En 1881, Hippolyte Rossignol, vétérinaire qui ne croit pas aux microbes, défie Pasteur sur le charbon, une maladie des troupeaux.",
+          "bubbles": [
+            { "who": "rossignol", "text": "Vaccinez une partie de mes bêtes. Puis on leur injecte le charbon à toutes.", "side": "l" },
+            { "who": "pasteur", "text": "Et on compte les survivants. Devant tout le monde.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a farmyard at Pouilly-le-Fort with a wooden sheep pen and a dozen sheep. Rossignol (very fat, bald, huge black walrus moustache, bright peach-orange linen jacket, straw boater) sits on the fence on the left, belly shaking with laughter, scribbling odds in the notebook; Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) stands in the pen on the right among the sheep, hands behind his back, chin firm. medium shot",
+            "cast": ["rossignol", "pasteur"],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 20,
+          "kind": "fact",
+          "tag": "5 mai 1881",
+          "caption": "Le 5 mai 1881, à Pouilly-le-Fort, près de Melun, des centaines de curieux viennent voir : élus, journalistes, fermiers.",
+          "bubbles": [
+            { "who": "Un fermier", "text": "Je mise deux poules sur les moutons vaccinés.", "side": "r" },
+            { "who": "rossignol", "text": "Et moi, mon chapeau sur le charbon !", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a crowded farmyard: dozens of spectators in top hats, bowler hats and peasant smocks press around the sheep pen. In the foreground on the left Rossignol (very fat, bald, huge black walrus moustache, bright peach-orange linen jacket) waves his straw boater high, laughing; on the right a skinny farmer in a blue smock holds two chickens under his arms like poker chips. wide shot",
+            "cast": ["rossignol"],
+            "file": "images/dossier-20.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 21,
+          "kind": "photo",
+          "tag": "Document d'époque",
+          "title": "Pouilly-le-Fort, dessiné en 1881",
+          "text": "Une illustration de l'expérience parue à l'époque. Le charbon est dû à une bactérie, repérée par l'Allemand Robert Koch en 1876.",
+          "photo": { "commons": "File:Louis Pasteur in Pouilly-le-Fort (Illustration - 1881).jpg" }
+        },
+        {
+          "n": 22,
+          "kind": "react",
+          "tag": "2 juin 1881",
+          "caption": "Le 2 juin 1881, verdict : tous les animaux vaccinés sont en vie. Les moutons non vaccinés, eux, sont morts.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Rossignol (very fat, bald, huge black walrus moustache, bright peach-orange linen jacket) stands frozen in the sheep pen, mouth wide open, his notebook dropped at his feet, while a healthy fluffy sheep calmly chews the brim of his straw boater still on his head; other healthy sheep graze around him. visual gag: the sheep eating the bet. low angle",
+            "cast": ["rossignol"],
+            "file": "images/dossier-22.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 23,
+          "kind": "conf",
+          "tag": "Un siècle plus tard",
+          "caption": "Ses carnets, publiés dans les années 1970, le révèlent : ce vaccin reprenait la méthode d'un rival, Henri Toussaint.",
+          "bubbles": [
+            { "who": "pasteur", "text": "Un détail. Ça ne mérite même pas une note de bas de page.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) faces the viewer with an innocent whistling face, eyes rolled up to the side, hiding the notebook behind his back with both hands; one corner of the notebook clearly sticks out. close-up",
+            "cast": ["pasteur"],
+            "file": "images/dossier-23.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 24,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Joseph (1885)",
+          "caption": "Le 6 juillet 1885, une mère alsacienne amène son fils Joseph Meister, 9 ans, mordu 14 fois par un chien enragé.",
+          "bubbles": [
+            { "who": "joseph", "text": "On m'a dit que vous guérissez les moutons.", "side": "l" },
+            { "who": "pasteur", "text": "Les moutons, les chiens, oui. Un enfant, c'est autre chose.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the doorway of Pasteur's laboratory. Joseph (small skinny boy, straw-blond hair under a dark-blue flat cap, bright magenta jumper, bandaged forearm) stands on the left holding the hand of his mother, seen from behind in a long dark Alsatian dress and black headscarf; Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) crouches on the right to the boy's height, serious and gentle. medium wide shot",
+            "cast": ["joseph", "pasteur"],
+            "file": "images/dossier-24.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 25,
+          "kind": "fact",
+          "tag": "Juillet 1885",
+          "caption": "Pasteur n'est pas médecin : le docteur Grancher fait à Joseph 13 injections en 10 jours, de plus en plus fortes.",
+          "bubbles": [
+            { "who": "Le docteur Grancher", "text": "Une fois déclarée, la rage ne pardonne presque jamais. On tente.", "side": "r" },
+            { "who": "joseph", "text": "Je pourrai revoir les lapins après ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small laboratory room with rabbit cages on a shelf. Joseph (small boy, straw-blond hair, dark-blue cap, bright magenta jumper) sits on a high stool on the left, swinging his legs and staring at the rabbits; a tall doctor with a white beard and a black coat on the right gives him the syringe in his side; Pasteur (black skullcap, charcoal-grey coat) behind them twists his handkerchief, a light-blue sweat drop on his forehead. medium shot",
+            "cast": ["joseph", "pasteur"],
+            "file": "images/dossier-25.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 26,
+          "kind": "react",
+          "tag": "Automne 1885",
+          "caption": "Joseph ne développe jamais la rage. En octobre, un berger de 15 ans, Jean-Baptiste Jupille, est sauvé à son tour.",
+          "bubbles": [
+            { "who": "joseph", "text": "Je suis guéri ! On se serre la main ?", "side": "l" },
+            { "who": "pasteur", "text": "… Pour toi, je fais une exception.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a sunny laboratory courtyard. Joseph (small boy, straw-blond hair, dark-blue cap, bright magenta jumper, no more bandage) runs in from the left, arm stretched out, beaming; Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) bends down on the right and shakes the boy's hand, a tiny reluctant smile, his handkerchief already half out of his pocket. wide shot",
+            "cast": ["joseph", "pasteur"],
+            "file": "images/dossier-26.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 27,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La salle d'attente de Pasteur",
+          "text": "Lithographie d'époque : des personnes mordues, venues de partout, attendent leur vaccin. En avril 1886, seize Russes sont soignés à Paris.",
+          "photo": { "commons": "File:Rabies vaccination in Pasteur's clinic in Paris. Lithograph Wellcome V0006860.jpg" }
+        },
+        {
+          "n": 28,
+          "kind": "react",
+          "tag": "14 novembre 1888",
+          "caption": "1888, l'Institut Pasteur ouvre. Les microbes ne naissent pas de rien : on les chauffe, on se lave, on se vaccine.",
+          "bubbles": [
+            { "who": "Un donateur", "text": "Bravo, monsieur Pasteur ! Une poignée de main ?", "side": "l" },
+            { "who": "pasteur", "text": "Le coude. Dans cent trente ans, tout le monde fera pareil.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the entrance steps of the new Institut Pasteur, a brick and stone building. A rich donor in a top hat on the left holds out his hand, which hangs in the air, puzzled; Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) on the right offers him his bent elbow instead, with total dignity, eyes half closed. visual gag: the elbow greeting. medium close-up",
+            "cast": ["pasteur"],
+            "file": "images/dossier-28.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Joseph Meister, premier humain sauvé par le vaccin contre la rage, avait été mordu 14 fois. Adulte, il est devenu gardien de l'Institut Pasteur.",
+        "source": "Institut Pasteur ; Wikipédia (Joseph Meister)"
+      },
+      "story": "Au milieu du XIXe siècle, beaucoup de savants pensent que la vie peut naître toute seule dans un bouillon qui pourrit : c'est la « génération spontanée ». Le naturaliste rouennais Félix Pouchet la défend dans un livre en 1859. Le chimiste Louis Pasteur pense au contraire que des germes invisibles, portés par les poussières de l'air, tombent dans le bouillon et s'y multiplient.\nPour le prouver, il fait bouillir du bouillon dans des ballons au col étiré en cou de cygne : l'air entre, mais les poussières se déposent dans le coude du col, et le bouillon reste limpide. En 1860, il ouvre des ballons sur la Mer de Glace : en altitude, l'air est plus pur et presque aucun ne s'altère. Pouchet, lui, échoue avec du foin qui cache des spores résistantes. Le 7 avril 1864, à la Sorbonne, Pasteur triomphe, et Pouchet renonce au duel organisé par l'Académie des sciences.\nPuisque des germes gâtent les aliments, Pasteur protège le vin en le chauffant (brevet de 1865) : c'est la pasteurisation. Il pousse les chirurgiens à laver mains et instruments. En 1879, une culture vieillie du choléra des poules protège les volailles : un microbe affaibli entraîne le corps, c'est un vaccin. En 1881, à Pouilly-le-Fort, les animaux vaccinés contre le charbon survivent tous, même si ses carnets révéleront qu'il avait repris la méthode d'un rival, Henri Toussaint.\nLe 6 juillet 1885, le petit Joseph Meister, mordu par un chien enragé, reçoit 13 injections en dix jours et ne développe jamais la rage. Grâce à une souscription internationale, l'Institut Pasteur est inauguré le 14 novembre 1888.",
+      "sources": [
+        { "title": "Institut Pasteur — Deuxième époque : 1862-1877", "url": "https://www.pasteur.fr/fr/institut-pasteur/notre-histoire/deuxieme-epoque-1862-1877" },
+        { "title": "Institut Pasteur — Du vaccin contre la rage à la création de l'Institut", "url": "https://www.pasteur.fr/fr/institut-pasteur/notre-histoire/du-vaccin-contre-rage-creation-institut" },
+        { "title": "Institut Pasteur — Louis Pasteur : un héritage universel", "url": "https://www.pasteur.fr/fr/en-ce-moment/nos-actualites/dossiers/louis-pasteur-un-heritage-universel" },
+        { "title": "Meer — Pasteur face au dogme de la génération spontanée", "url": "https://www.meer.com/fr/67427-pasteur-face-au-dogme-de-la-generation-spontanee" },
+        { "title": "Meer — La fin des générations spontanées", "url": "https://www.meer.com/fr/67428-la-fin-des-generations-spontanees" },
+        { "title": "Le Quotidien du médecin — C'est arrivé le 7 avril 1864", "url": "https://neurologie-psychiatrie.lequotidiendumedecin.fr/archives/cest-arrive-le-7-avril-1864" },
+        { "title": "Gavi — Comment Louis Pasteur a mis le vaccin contre l'anthrax à l'épreuve", "url": "https://www.gavi.org/fr/vaccineswork/exament-rigoureux-spectacle-public-comment-louis-pasteur-a-mis-vaccin-contre-anthrax-epreuve" },
+        { "title": "Meer — De Jenner à Pasteur", "url": "https://www.meer.com/fr/71342-de-jenner-a-pasteur" },
+        { "title": "Hérodote — Louis Pasteur, la rage de comprendre", "url": "https://www.herodote.net/La_rage_de_comprendre-synthese-2650.php" },
+        { "title": "Wikipédia — Joseph Meister", "url": "https://en.wikipedia.org/wiki/Joseph_Meister" },
+        { "title": "National Geographic — Robert Koch, le chasseur de bactéries", "url": "https://www.nationalgeographic.com/history/history-magazine/article/robert-koch-bacteria-tuberculosis-anthrax-cholera" }
+      ]
+    }
+  ]
+}
