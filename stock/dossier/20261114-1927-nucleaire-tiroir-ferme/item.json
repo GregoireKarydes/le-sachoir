@@ -65,6 +65,7 @@
           "ines"
         ],
         "file": "images/dossier-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -88,12 +89,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare modern room with a single wall socket. Inès (short, round, big curly red hair, pink puffer jacket) on the right crouching to plug the charger into the socket, puzzled; Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) on the left bending down towards her, carrying the drawer under his arm like a briefcase. visual gag: a 19th-century scientist carrying a whole desk drawer. wide shot",
+            "prompt": "a bare modern room with a single wall socket, plain pale wall, upper third of the picture empty. Inès (short, round young woman, big voluminous curly bright red hair, freckles, pink puffer jacket, purple leggings) on the right crouching to plug the white charger into the socket, puzzled; Henri (very tall, thin old man, long pointed grey beard and grey moustache, small round pince-nez, bottle-green frock coat, black bow tie) on the left bending down towards her, carrying the drawer under his arm like a briefcase. visual gag: a 19th-century scientist carrying a whole desk drawer. wide shot",
             "cast": [
               "ines",
               "becquerel"
             ],
             "file": "images/dossier-01.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -123,6 +125,7 @@
               "ines"
             ],
             "file": "images/dossier-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -196,6 +199,7 @@
               "ines"
             ],
             "file": "images/dossier-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -225,6 +229,7 @@
               "ines"
             ],
             "file": "images/dossier-05.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -265,6 +270,7 @@
               "becquerel"
             ],
             "file": "images/dossier-06.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -283,11 +289,12 @@
             }
           ],
           "image": {
-            "prompt": "a quiet bare museum room. Inès (short, round, big curly red hair, pink puffer jacket) standing alone on the right, hands clasped, serious and silent, looking at a closed dull grey lead box on a small table on the left. calm, sober scene. wide shot",
+            "prompt": "a quiet bare museum room drawn in the same flat cartoon style as the rest, plain pastel walls, no realistic background. Inès (short, round, big curly red hair, pink puffer jacket) standing alone on the right, seen in profile, hands clasped, mouth closed, sad and respectful expression, no smile, looking at a closed dull grey lead box on a small table on the left. calm, sober scene. wide shot",
             "cast": [
               "ines"
             ],
             "file": "images/dossier-07.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -333,6 +340,7 @@
               "ines"
             ],
             "file": "images/dossier-08.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -390,6 +398,7 @@
               "joliot"
             ],
             "file": "images/dossier-10.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -431,6 +440,7 @@
               "ines"
             ],
             "file": "images/dossier-11.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -459,6 +469,7 @@
               "ines"
             ],
             "file": "images/dossier-12.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -487,6 +498,7 @@
               "ines"
             ],
             "file": "images/dossier-13.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -516,6 +528,7 @@
               "ines"
             ],
             "file": "images/dossier-14.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -539,11 +552,12 @@
             }
           ],
           "image": {
-            "prompt": "a 1970s petrol station with one old pump. Inès (short, round, big curly red hair, pink puffer jacket) on the left holding an empty red jerrycan upside down, a single drop falling out, dismayed; on the right an engineer in a white hard hat and blue overalls, seen from behind, pointing at the tower being built on the far horizon. medium wide shot",
+            "prompt": "a 1970s petrol station with one plain old pump with no sign, no lettering and no logo anywhere. Inès (short, round, big curly red hair, pink puffer jacket) on the left holding an empty red jerrycan upside down, a single drop falling out, dismayed; on the right an engineer in a white hard hat and blue overalls, seen from behind, pointing at a half-built concrete cooling tower on the far horizon. medium wide shot",
             "cast": [
               "ines"
             ],
             "file": "images/dossier-15.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -584,6 +598,7 @@
               "ines"
             ],
             "file": "images/dossier-16.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 2,
             "same_place": false
@@ -612,6 +627,7 @@
               "ines"
             ],
             "file": "images/dossier-17.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -651,6 +667,7 @@
               "ines"
             ],
             "file": "images/dossier-18.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -668,6 +685,7 @@
               "ines"
             ],
             "file": "images/dossier-19.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -695,6 +713,7 @@
               "ines"
             ],
             "file": "images/dossier-20.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -718,11 +737,12 @@
             }
           ],
           "image": {
-            "prompt": "the bare modern room with the wall socket again. Close on Henri (very tall, thin, long pointed grey beard, bottle-green frock coat) sitting on the drawer turned upside down on the floor like a tiny stool, knees up to his chin, satisfied, alone in the picture, the face large and very expressive. close-up",
+            "prompt": "the bare modern room with the wall socket again, plain pale wall, upper third of the picture empty. Henri (very tall, thin, long pointed grey beard, pince-nez, bottle-green frock coat) sitting on the closed wooden drawer turned upside down on the floor like a tiny stool, his long legs folded with both knees up near his chin, arms wrapped around his knees, both feet flat on the floor, satisfied smile, alone in the picture. full body, medium shot",
             "cast": [
               "becquerel"
             ],
             "file": "images/dossier-21.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1,
             "same_place": false

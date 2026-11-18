@@ -69,6 +69,7 @@
           "pattinson"
         ],
         "file": "images/actu-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "fal"
@@ -95,6 +96,7 @@
               "pattinson"
             ],
             "file": "images/actu-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -177,6 +179,7 @@
               "directeur"
             ],
             "file": "images/actu-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -218,6 +221,7 @@
               "chercheuse"
             ],
             "file": "images/actu-03.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -266,6 +270,7 @@
               "deputee"
             ],
             "file": "images/actu-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"

@@ -34,6 +34,7 @@
           "pietro"
         ],
         "file": "images/cultureg-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -63,6 +64,7 @@
               "guido"
             ],
             "file": "images/cultureg-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -81,6 +83,7 @@
               "guido"
             ],
             "file": "images/cultureg-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 2
           }
@@ -109,6 +112,7 @@
               "pietro"
             ],
             "file": "images/cultureg-03.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -153,6 +157,7 @@
               "guido"
             ],
             "file": "images/cultureg-05.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 2
           }
@@ -219,12 +224,13 @@
             }
           ],
           "image": {
-            "prompt": "in front of the small arched monastery window. Pietro (short, round, ginger bowl cut) on the left straining to sing, cheeks puffed and bright red, lips pushed into a tiny circle; an offended brown owl sitting on the windowsill glaring at him; Guido (very tall, black habit, pink rope belt) on the right covering one ear with a hand, wincing. medium shot",
+            "prompt": "in front of the small arched monastery window, plain pale wall above them, upper third of the picture empty. Pietro (short, round, ginger bowl cut, light-brown robe, green songbook) on the left straining to sing a long note, eyes squeezed shut, cheeks puffed out, lips pushed forward into a tiny round O like a hooting owl; ONE single offended brown owl sitting on the windowsill, glaring at Pietro; Guido (very tall, thin, black habit, pink rope belt) on the right covering one ear with a hand, wincing. medium shot",
             "cast": [
               "pietro",
               "guido"
             ],
             "file": "images/cultureg-08.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -260,6 +266,7 @@
               "guido"
             ],
             "file": "images/cultureg-10.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 3
           }

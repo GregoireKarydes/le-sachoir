@@ -34,6 +34,7 @@
           "titus"
         ],
         "file": "images/insolite-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -63,6 +64,7 @@
               "titus"
             ],
             "file": "images/insolite-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -96,6 +98,7 @@
               "vespasien"
             ],
             "file": "images/insolite-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -125,6 +128,7 @@
               "vespasien"
             ],
             "file": "images/insolite-03.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -142,12 +146,13 @@
             }
           ],
           "image": {
-            "prompt": "a bare palace room. Titus (on the right) dramatically draped over a couch, one hand on his forehead, despairing; Vespasian (on the left) calmly counting coins on a small table, not even looking up. over-the-shoulder",
+            "prompt": "a bare palace room, plain wall, upper third of the picture empty. On the RIGHT: Titus (tall, slim, short curly black hair, white tunic, teal cloak) lying dramatically draped over a couch, one hand on his forehead, despairing, facing the viewer. On the LEFT: Vespasian (short, stocky, bald, purple toga, gold laurel wreath) sitting calmly at a small table, counting gold coins, relaxed, not even looking up. Both faces visible. medium wide shot",
             "cast": [
               "titus",
               "vespasien"
             ],
             "file": "images/insolite-04.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -181,6 +186,7 @@
               "titus"
             ],
             "file": "images/insolite-05.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
