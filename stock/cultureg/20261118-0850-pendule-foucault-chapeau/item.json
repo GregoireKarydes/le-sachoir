@@ -152,7 +152,13 @@
           "title": "Un pendule de Foucault aux Arts et Métiers",
           "text": "Un pendule de Foucault au musée des Arts et Métiers, à Paris, où la boule de 1851 a été conservée. Une copie oscille au Panthéon depuis 1995.",
           "photo": {
-            "commons": "File:Pendule de Foucault au musee des arts et metiers.jpg"
+            "commons": "File:Pendule de Foucault au musee des arts et metiers.jpg",
+            "credit": "Auteur inconnu",
+            "license": "CC BY-SA 3.0",
+            "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "source": "https://commons.wikimedia.org/wiki/File:Pendule_de_Foucault_au_musee_des_arts_et_metiers.jpg",
+            "file": "images/photo-5-pendule-de-foucault-au-musee-des-ar.webp",
+            "status": "done"
           }
         },
         {

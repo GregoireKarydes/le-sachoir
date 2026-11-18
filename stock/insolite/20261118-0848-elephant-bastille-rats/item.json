@@ -146,7 +146,13 @@
           "title": "Le projet dessiné par l’architecte Alavoine",
           "text": "Le dernier projet de la fontaine de l’Éléphant, vers 1809-1810, signé de l’architecte Jean-Antoine Alavoine. C’est ce bronze-là que la Bastille n’a jamais eu.",
           "photo": {
-            "commons": "File:Elephant de la Bastille aquarelle de Jean Alavoine.jpg"
+            "commons": "File:Elephant de la Bastille aquarelle de Jean Alavoine.jpg",
+            "credit": "Aquarelle de Jean-Antoine Alavoine (1776-1834)",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Elephant_de_la_Bastille_aquarelle_de_Jean_Alavoine.jpg",
+            "file": "images/photo-5-elephant-de-la-bastille-aquarelle-d.webp",
+            "status": "done"
           }
         },
         {
