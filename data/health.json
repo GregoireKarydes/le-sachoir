@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T19:05:52.438413+01:00",
+ "updated_at": "2026-11-18T19:31:01.739703+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -122,16 +122,16 @@
   },
   "dossier": {
    "ready": 0,
-   "waiting": 3,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 59,
+   "images_left": 82,
    "focus": "20261115-1923-krach-1929 (17 image(s) à faire)",
    "next": null,
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 3,
+ "days_ahead_written": 4,
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-18",
@@ -154,7 +154,7 @@
  },
  "rss": {
   "collected_at": "2026-11-18T19:05:09.017395+01:00",
-  "age_hours": 0.0,
+  "age_hours": 0.4,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 30,
