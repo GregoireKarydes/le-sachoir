@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T19:01:01.069150+01:00",
+ "updated_at": "2026-11-18T19:05:52.438413+01:00",
  "today": "2026-11-18",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -153,13 +153,13 @@
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-18T08:49:40.809615+01:00",
-  "age_hours": 10.2,
+  "collected_at": "2026-11-18T19:05:09.017395+01:00",
+  "age_hours": 0.0,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 30,
    "Le Monde": 16,
-   "Le Figaro": 20,
+   "Le Figaro": 19,
    "Libération": 50,
    "20 Minutes": 28,
    "Ouest-France": 10,
@@ -168,13 +168,13 @@
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 23,
-   "Le Monde Sciences": 6,
+   "BBC World": 33,
+   "Le Monde Sciences": 5,
    "Sciences et Avenir": 7,
-   "Le Monde Planète": 19,
-   "Le Monde Pixels": 13,
-   "Le Monde Santé": 7,
-   "Le Monde Culture": 14,
+   "Le Monde Planète": 17,
+   "Le Monde Pixels": 15,
+   "Le Monde Santé": 5,
+   "Le Monde Culture": 20,
    "HugoDécrypte - Actus du jour": 1
   },
   "empty_feeds": [
