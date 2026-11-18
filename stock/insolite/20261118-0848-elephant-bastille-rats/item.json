@@ -1,0 +1,224 @@
+{
+  "added": "20261118-0848",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Napoléon commande un éléphant, Paris reçoit des rats",
+      "tagline": "Une fontaine en bronze promise pour l’an prochain, un éléphant en plâtre resté trente-deux ans et des locataires à moustaches",
+      "teaser": "Place de la Bastille, un éléphant de quinze mètres attend son bronze. Il attendra longtemps. Ses voisins, eux, attendent un dératiseur.",
+      "minutes": 1,
+      "theme": "Architecture",
+      "art": {
+        "subject": "how Napoleon's planned bronze elephant fountain on the Place de la Bastille in Paris remained a crumbling full-size plaster model full of rats from 1814 to 1846",
+        "setting": "the Place de la Bastille in Paris: a wide cobbled square, plain old houses around it, the giant plaster elephant standing on one side, a round stone basin in the middle",
+        "era": "Paris from 1810 to 1846, end of the First Empire then the Restoration and the July Monarchy",
+        "props": {
+          "elephant": "a gigantic grey-white plaster elephant statue as tall as a five-storey house, with a small ornate tower on its back, cracked and flaking more and more over time",
+          "broom": "a big straw broom with a long wooden handle",
+          "keys": "a huge iron ring with three big old keys"
+        }
+      },
+      "cast": [
+        {
+          "id": "levasseur",
+          "name": "Levasseur, le gardien",
+          "look": "Levasseur, the elephant's guardian, a very old, very thin and hunched man, completely bald with a long drooping white moustache, light olive skin, a long mustard-yellow guardian's coat with brass buttons as main colour, brown trousers, the keys hanging from his belt",
+          "file": "cast/insolite-levasseur.png",
+          "status": "pending",
+          "role": "the proud guardian of the plaster elephant, loyal to the point of blindness, in total denial that it will never be bronze; pats the elephant like a pet, puffs out his thin chest"
+        },
+        {
+          "id": "voisine",
+          "name": "La voisine",
+          "look": "a short, broad and sturdy Parisian laundress in her forties, black hair pulled into a tight bun under a small white cap, warm light-brown skin, a bright royal-blue dress with rolled-up sleeves as main colour, a white apron, often holding the broom",
+          "file": "cast/insolite-voisine.png",
+          "status": "pending",
+          "role": "the neighbour who lives facing the elephant, practical and short-tempered, hands on hips, sighs loudly, has no patience left"
+        }
+      ],
+      "cover": {
+        "prompt": "the Place de la Bastille in Paris, the elephant towering in the background, cracked plaster, a few small grey rats peeking out of a hole in its belly. Levasseur (very thin, hunched, bald, long white moustache, mustard-yellow coat) in the foreground on the right proudly patting the elephant's huge foot; the voisine (short, sturdy, black bun, royal-blue dress) on the left pointing at the rats with the broom, outraged. medium wide shot",
+        "cast": [
+          "levasseur",
+          "voisine"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1814",
+          "caption": "1814, place de la Bastille : un éléphant de 15 mètres, haut comme cinq étages, se dresse. Pourquoi est-il en plâtre ?",
+          "bubbles": [
+            {
+              "who": "levasseur",
+              "text": "Provisoire ! L’an prochain, il sera en bronze.",
+              "side": "r"
+            },
+            {
+              "who": "voisine",
+              "text": "En attendant, il fait de l’ombre à mon linge.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the cobbled Place de la Bastille, the elephant brand new and spotless on the right side of the square. Levasseur (very thin, hunched, bald, long white moustache, mustard-yellow coat) on the right at the elephant's foot, polishing its giant toe with a rag, chest puffed out with pride; the voisine (short, sturdy, black bun, royal-blue dress) on the left hanging wet sheets on a line, frowning up at the huge shadow the elephant casts over her laundry. wide shot",
+            "cast": [
+              "levasseur",
+              "voisine"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "1810",
+          "caption": "Parce qu’en 1810, un décret de Napoléon commande ici une fontaine en forme d’éléphant, en bronze. L’eau jaillira de sa trompe.",
+          "bubbles": [
+            {
+              "who": "levasseur",
+              "text": "Une fontaine pour tout le quartier. Et moi, j’en serai le gardien.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a plain wooden table in a small office. Levasseur (very thin, hunched, bald, long white moustache, mustard-yellow coat) alone, leaning over a huge blank plan unrolled on the table showing the outline of an elephant spraying water from its trunk, eyes shining with wonder, yellow sparkles around his head, one finger tracing the trunk. high angle",
+            "cast": [
+              "levasseur"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Une fontaine en quatre étapes (dont trois)",
+          "steps": [
+            "1810 : le décret commande un éléphant en bronze, fondu dans des canons pris à l’ennemi",
+            "Avant la fonte, on bâtit un modèle grandeur nature en bois et en plâtre, fini en 1814",
+            "Le bronze prévu pèse 177 tonnes, autant qu’une baleine bleue",
+            "1815 : l’Empire tombe, plus personne ne paie la fonte"
+          ],
+          "joke": "La maquette devait servir quelques mois. Elle est restée trente-deux ans."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1815",
+          "caption": "En 1815, Napoléon perd son trône. Le projet s’arrête net, mais personne n’enlève l’éléphant de plâtre.",
+          "bubbles": [
+            {
+              "who": "levasseur",
+              "text": "L’an prochain, il sera en bronze. Promis.",
+              "side": "r"
+            },
+            {
+              "who": "voisine",
+              "text": "Vous disiez déjà ça l’an dernier.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "at the foot of the elephant on the cobbled square, the plaster now slightly cracked. Levasseur (very thin, hunched, bald, long white moustache, mustard-yellow coat) on the right hugging one huge elephant leg with both arms, while a chunk of plaster drops onto his bald head; the voisine (short, sturdy, black bun, royal-blue dress) in the background on the left, arms crossed, deadpan. low angle",
+            "cast": [
+              "levasseur",
+              "voisine"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Le projet dessiné par l’architecte Alavoine",
+          "text": "Le dernier projet de la fontaine de l’Éléphant, vers 1809-1810, signé de l’architecte Jean-Antoine Alavoine. C’est ce bronze-là que la Bastille n’a jamais eu.",
+          "photo": {
+            "commons": "File:Elephant de la Bastille aquarelle de Jean Alavoine.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Fin des années 1820",
+          "caption": "Le plâtre s’effrite et des rats s’installent dans l’éléphant. À la fin des années 1820, les voisins réclament sa démolition.",
+          "bubbles": [
+            {
+              "who": "voisine",
+              "text": "Vos rats dînent dans ma cuisine !",
+              "side": "l"
+            },
+            {
+              "who": "levasseur",
+              "text": "Ce sont des locataires. Très discrets.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "in front of the voisine's old house facing the elephant, which is now grey, cracked and flaking. The voisine (short, sturdy, black bun, royal-blue dress) in the foreground on the left running out of her door, swinging the broom at three small grey rats scurrying across the cobbles, red angry flush on her face; Levasseur (very thin, hunched, bald, long white moustache, mustard-yellow coat) in the background on the right, shrugging innocently. medium wide shot",
+            "cast": [
+              "voisine",
+              "levasseur"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "1846",
+          "caption": "En 1846, on le démolit enfin, et ses rats envahissent le quartier pendant des semaines. Le bronze promis n’est jamais venu.",
+          "bubbles": [
+            {
+              "who": "levasseur",
+              "text": "Eux, au moins, ne l’ont jamais trouvé provisoire.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "close on Levasseur (very thin, hunched, bald, long white moustache, mustard-yellow coat) standing among plaster rubble on the cobbled square, one forlorn hand holding the keys, eyes half-closed in weary dignity, while a line of small grey rats trots calmly over his shoes and away. close-up",
+            "cast": [
+              "levasseur"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Dans Les Misérables, Victor Hugo fait dormir Gavroche dans cet éléphant de plâtre, qui a vraiment existé place de la Bastille.",
+        "source": "Napoleon.org — Le mystérieux éléphant de la place de la Bastille"
+      },
+      "story": "En 1808, Napoléon veut embellir Paris et donner de l’eau aux quartiers. Pour la place de la Bastille, il choisit un monument spectaculaire : une fontaine en forme d’éléphant. Le décret du 9 février 1810 la veut en bronze, fondue dans des canons pris à l’ennemi, avec de l’eau qui jaillit de la trompe. L’animal doit mesurer environ 15 mètres de haut et 16 de long, 24 mètres avec son socle ; il faut quelque 177 tonnes de bronze.\nAvant la fonte, on construit un modèle grandeur nature en bois et en plâtre, achevé en 1814 et confié à un gardien, Levasseur. Mais en 1815, l’Empire s’effondre : plus personne ne finance le bronze. Les projets de le terminer, discutés encore en 1841 et 1843, n’aboutissent pas.\nLe modèle reste donc là, des années. Le plâtre se fissure, et des rats s’installent à l’intérieur ; dès la fin des années 1820, les habitants du quartier, qui les voient venir chez eux, demandent sa démolition. Victor Hugo en fait un décor des Misérables (1862) : en 1832, le petit Gavroche y dort à l’abri.\nEntre 1835 et 1840, la colonne de Juillet s’élève sur le socle prévu pour la fontaine. L’éléphant de plâtre est démoli en 1846, et ses rats envahissent le quartier pendant des semaines. Du rêve de bronze, il ne reste que le bassin rond qui porte aujourd’hui la colonne.",
+      "sources": [
+        {
+          "title": "Napoleon.org — Monuments napoléoniens : le mystérieux éléphant de la place de la Bastille",
+          "url": "https://www.napoleon.org/jeunes-historiens/napodoc/monuments-napoleoniens-le-mysterieux-elephant-de-la-place-de-la-bastille/"
+        },
+        {
+          "title": "Wikipedia — Elephant of the Bastille",
+          "url": "https://en.wikipedia.org/wiki/Elephant_of_the_Bastille"
+        },
+        {
+          "title": "Paris Zigzag — L’éléphant disparu de la Bastille",
+          "url": "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/lelephant-de-la-bastille/"
+        }
+      ]
+    }
+  ]
+}
