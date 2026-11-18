@@ -9,26 +9,26 @@
     "scenes": [
       {"kind": "home", "lines": [
         {"who": "max", "emo": "curious", "text": "Prof… un empereur romain a vraiment taxé le pipi ?"},
-        {"who": "prof", "emo": "deadpan", "text": "Oui. Et tu répètes sa leçon sans le savoir."},
+        {"who": "prof", "emo": "deadpan", "text": "Oui. Et tu répètes sa leçon."},
         {"who": "max", "emo": "shock", "shake": true, "text": "Moi ?!"}]},
       {"kind": "world", "set": "antiquite", "palette": "beige", "tag": "ROME, VERS L'AN 70", "big": "AMMONIAQUE", "small": "lave les toges",
        "image": {"bd": 3}, "bidule": true, "lines": [
-        {"who": "prof", "emo": "explain", "text": "Rome, vers l'an 70. On lave les toges à l'urine : ça détache.", "say": "Rome, vers l'an soixante-dix. On lave les toges à l'urine : ça détache."},
-        {"who": "max", "emo": "panic", "text": "Avec du pipi ?! Et ils en redemandent ?"},
-        {"who": "prof", "emo": "smug", "react": {"max": "shock"}, "text": "Ils l'achètent. Alors l'empereur Vespasien taxe ce commerce."}]},
+        {"who": "prof", "emo": "explain", "text": "Rome, vers l'an 70 : l'urine sert à laver les toges.", "say": "Rome, vers l'an soixante-dix : l'urine sert à laver les toges."},
+        {"who": "max", "emo": "panic", "text": "Et ils l'achètent ?!"},
+        {"who": "prof", "emo": "smug", "react": {"max": "shock"}, "text": "Oui. Donc Vespasien la taxe."}]},
       {"kind": "world", "set": "antiquite", "palette": "nuit", "tag": "SELON SUÉTONE", "big": "ÇA SENT ?", "small": "une pièce de la taxe",
        "image": {"bd": 7}, "lines": [
-        {"who": "prof", "emo": "explain", "text": "Son fils trouve ça indigne. Vespasien lui fait sentir une pièce."},
-        {"who": "max", "emo": "think", "text": "Et… elle sent ?"},
-        {"who": "prof", "emo": "deadpan", "text": "Rien. D'où : « l'argent n'a pas d'odeur »."}]},
+        {"who": "prof", "emo": "explain", "text": "Son fils râle. Vespasien lui fait sentir une pièce."},
+        {"who": "max", "emo": "think", "text": "Elle sent ?"},
+        {"who": "prof", "emo": "deadpan", "text": "Rien. L'argent n'a pas d'odeur."}]},
       {"kind": "home", "lines": [
-        {"who": "max", "emo": "curious", "text": "Attends… il a eu une récompense, au moins ?"},
-        {"who": "prof", "emo": "smug", "pause": 0.8, "text": "En 1834, les urinoirs de Paris prennent son nom : les vespasiennes.", "say": "En mille huit cent trente-quatre, les urinoirs de Paris prennent son nom : les vespasiennes."},
+        {"who": "max", "emo": "curious", "text": "Et il a eu une récompense ?"},
+        {"who": "prof", "emo": "smug", "pause": 0.8, "text": "Paris lui a dédié ses urinoirs : les vespasiennes."},
         {"who": "max", "emo": "proud", "text": "Il a taxé le pipi. Le pipi s'est vengé."}]}
     ],
     "end": {"url": "lesachoir.fr", "lines": ["Une question comme ça,", "chaque matin, en BD."]}
   },
-  "caption": "Un empereur romain a vraiment taxé le pipi. Et tu répètes sa leçon sans le savoir.\n\nÀ Rome, les blanchisseurs achetaient l'urine des toilettes publiques : son ammoniaque nettoyait les toges. Vespasien a taxé ce commerce. Quand son fils Titus s'en est plaint, il lui a fait sentir une pièce de la taxe. Elle ne sentait rien : c'est l'origine de « l'argent n'a pas d'odeur ».\n\nEn 1834, Paris a surnommé ses nouveaux urinoirs les « vespasiennes ».\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nEnvoie-le à celui qui dit toujours « l'argent n'a pas d'odeur ».",
+  "caption": "Un empereur romain a vraiment taxé le pipi. Et tu répètes sa leçon.\n\nÀ Rome, les blanchisseurs achetaient l'urine des toilettes publiques : son ammoniaque nettoyait les toges. Vespasien a taxé ce commerce. Quand son fils Titus s'en est plaint, il lui a fait sentir une pièce de la taxe. Elle ne sentait rien : c'est l'origine de « l'argent n'a pas d'odeur ».\n\nEn 1834, Paris a surnommé ses nouveaux urinoirs les « vespasiennes ».\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nEnvoie-le à celui qui dit toujours « l'argent n'a pas d'odeur ».",
   "hashtags": ["lesachoir", "culturegenerale", "histoire", "romeantique", "expressionfrancaise"],
   "sources": [
     "https://lexundria.com/suet_ves/23.3/r",
