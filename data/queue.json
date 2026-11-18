@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T20:46+01:00",
+ "updated_at": "2026-11-18T20:48+01:00",
  "stock": {
   "cultureg": [
    {
@@ -327,6 +327,23 @@
     "cases": 8,
     "photos": 1,
     "images_done": 6,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/origine/20261118-2046-chauvin-soldat-imaginaire",
+    "name": "20261118-2046-chauvin-soldat-imaginaire",
+    "added": "20261118-2046",
+    "status": "waiting",
+    "next": false,
+    "title": "« Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé",
+    "theme": "Expression française",
+    "tagline": "Dix-sept blessures, une pièce de théâtre et aucun acte de naissance",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
     "images_total": 6,
     "failed": 0,
     "redo": 0

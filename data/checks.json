@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T20:46+01:00",
+ "updated_at": "2026-11-18T20:48+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -150,6 +150,17 @@
    "errors": [],
    "warnings": [
     "notice : case 6 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/origine/20261118-2046-chauvin-soldat-imaginaire",
+   "titles": {
+    "origine": "« Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé"
+   },
+   "errors": [],
+   "warnings": [
+    "origine : fiches chauvin et karim : même couleur dominante (red), à différencier",
+    "origine : fiche karim : même tête qu'un personnage récent (bald hair, red main colour : 2026-11-07/cultureg, 2026-11-08/actu, 2026-11-08/insolite) ; changer coiffure ou couleur dominante"
    ]
   },
   {
