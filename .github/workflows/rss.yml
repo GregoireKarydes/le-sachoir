@@ -1,6 +1,10 @@
 name: Collecte RSS
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "data/heartbeat/rss.txt"   # « top » de 19 h poussé par la tâche Claude « Le Sachoir – Top départ »
   schedule:
     # Avant l'Actu du soir (19 h 47, heure de Paris) : 18 h 20 et 19 h 20 l'hiver (19 h 20 et 20 h 20 l'été).
     - cron: "20 17,18 * * *"
