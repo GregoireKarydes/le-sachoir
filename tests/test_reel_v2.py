@@ -89,3 +89,25 @@ def test_premier_commentaire_buffer():
                                             "firstComment": "Quelle expression demain ?"}
     inp = social_publish.build_input("x", {"date": "2026-11-19"}, render, "C", due)
     assert "firstComment" not in inp["metadata"]["instagram"]
+
+
+def test_sitcom_ouverture_a_froid():
+    # 18 novembre 2026 : le Reel peut démarrer DANS un monde (fait le plus fou, image du sujet), bandeau dès l'image 1.
+    import numpy as np
+    import sitcom_render as R
+    ep = {"band": "UNE TAXE\nSUR LE PIPI ?!", "scenes": [
+        {"kind": "world", "cold": True, "set": "antiquite", "big": "TAXE PIPI",
+         "lines": [{"who": "prof", "text": "En l'an 70, un empereur a taxé le pipi."}]},
+        {"kind": "home", "lines": [{"who": "max", "text": "Attends… pourquoi ?"}]},
+        {"kind": "world", "set": "antiquite", "lines": [{"who": "prof", "text": "L'urine servait à laver les toges."}]},
+        {"kind": "home", "lines": [{"who": "max", "text": "Pipi taxé."}]}]}
+    assert R.validate(ep) == []
+    audio = {L["id"]: np.zeros(int(2.5 * R.SR), dtype=np.float32) for S in ep["scenes"] for L in S["lines"]}
+    tl = R.build_timeline(ep, audio)
+    s0 = tl["scenes"][0]
+    assert s0.get("cold") and not s0.get("enter") and s0.get("exit")
+    assert tl["lines"][0]["t"] <= .1 and tl["band"]["t0"] == 0
+    assert tl["shots"][0]["cam"] == "screen" and tl["shots"][1]["cam"] == "two" and tl["shots"][1]["t0"] < 3
+    assert tl["scenes"][1].get("back")
+    bad = {"scenes": [{"kind": "world", "set": "antiquite", "lines": []}]}
+    assert R.validate(bad)

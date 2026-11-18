@@ -131,15 +131,22 @@ def build_timeline(ep, audio):
     for si, S in enumerate(raw):
         kind = S["kind"]
         s = {"kind": kind, "t0": round(float(t), 3)}
+        cold = si == 0 and kind == "world" and bool(S.get("cold"))
         if kind == "world":
             s.update({k: S.get(k) for k in ("set", "palette", "tag", "big", "small", "bidule") if S.get(k) is not None})
-            s["enter"] = True
+            # Ouverture à froid (18 novembre 2026) : le Reel démarre DANS le monde, sur le fait le plus fou, sans portail.
+            if cold:
+                s["cold"] = True
+            else:
+                s["enter"] = True
         if kind == "home" and si > 0:
             s["back"] = True; s["enter"] = True
         nxt = raw[si + 1]["kind"] if si + 1 < n_scenes else "end"
         leaves = nxt == "world" or (kind == "world" and nxt == "home")
-        cur = t + (.75 if s.get("enter") else .2)
-        if kind == "world":
+        cur = t + (.75 if s.get("enter") else (.05 if si == 0 else .2))
+        if cold:
+            shots.append({"t0": s["t0"], "cam": "screen", "push": .12})   # frame 1 : l'image du sujet, zoom rapide
+        elif kind == "world":
             shots.append({"t0": s["t0"], "cam": "two", "push": .02})   # landing shot
         first = True
         for li, L in enumerate(S.get("lines", [])):
@@ -173,6 +180,10 @@ def build_timeline(ep, audio):
                 if shots:
                     shots[-1]["t1"] = round(cur - .08, 3)
                 shots.append({"t0": round(cur - .08 if len(shots) else 0, 3), "cam": cam})
+            if cold and li == 0 and d > 1.6:
+                # ouverture à froid : on coupe sur la réaction (deux plans dans les 3 premières secondes)
+                shots[-1]["t1"] = round(cur + min(1.4, d * .55), 3)
+                shots.append({"t0": round(cur + min(1.4, d * .55), 3), "cam": "two", "push": .08})
             first = False
             cur += d + .18
         if kind == "home" and leaves:
@@ -218,7 +229,8 @@ def build_timeline(ep, audio):
         sc_end = next(s["t1"] for s in scenes if s["t0"] <= l["t"] < s["t1"])
         l["sub_t1"] = round(min(end, nxt, sc_end - .25 if sc_end - .25 > l["t"] + l["dur"] else sc_end), 3)
     return {"dur": dur, "fps": FPS, "scenes": scenes, "lines": lines, "shots": clean, "silences": silences,
-            "band": {"text": ep.get("band", ""), "t0": .15, "t1": round(scenes[0]["t1"] - 1.0, 3)},
+            # le bandeau est là dès la première image (18 novembre 2026 : on scrolle en moins d'une seconde)
+            "band": {"text": ep.get("band", ""), "t0": 0.0, "t1": round(max(scenes[0]["t1"] - (.3 if scenes[0].get("cold") else 1.0), 1.5), 3)},
             "board": ep.get("board") or ["QUESTION DU JOUR", ""], "end": ep.get("end") or {}}
 
 
@@ -341,8 +353,10 @@ def loudnorm(frames_dir, wav, out, dur):
 def validate(ep):
     errs = []
     sc = ep.get("scenes") or []
-    if not sc or sc[0].get("kind") != "home":
-        errs.append("la première scène doit être `home`")
+    if not sc or not (sc[0].get("kind") == "home" or (sc[0].get("kind") == "world" and sc[0].get("cold"))):
+        errs.append("la première scène doit être `home`, ou un `world` avec `\"cold\": true` (ouverture à froid)")
+    if sc and sc[0].get("cold") and (len(sc) < 2 or sc[1].get("kind") != "home"):
+        errs.append("l'ouverture à froid doit être suivie d'une scène `home`")
     ids = set()
     for i, S in enumerate(sc):
         if S.get("kind") not in ("home", "world"):

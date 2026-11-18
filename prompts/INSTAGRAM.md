@@ -361,6 +361,8 @@ bandeau, musique et carte de fin. Concrètement : n'utilise que les champs, mond
 dans cette partie, avec la même structure que l'exemple C6 ; n'invente aucun champ ni décor ; ne demande aucun autre style.
 Personne ne modifie `pipeline/sitcom/`, `pipeline/sitcom_render.py` ni `pipeline/sitcom_score.py` sans l'accord de Greg
 (la tâche « Stratège » non plus : un changement de rendu va dans « Propositions pour Greg »).
+Seul ajout validé par Greg depuis (18 novembre 2026, 21 h) : l'**ouverture à froid** (C4b), qui réutilise les mondes,
+l'écran et le bandeau existants.
 
 - **MAX** (sweat violet, casque vert autour du cou) : curieux, s'inquiète vite. Il pose LA question, la même que le
   spectateur. Il tutoie. Voix : Microsoft Fabrice.
@@ -428,18 +430,52 @@ Puis l'accroche :
   sur l'anglais) et garde la meilleure à ton jugement : **concrète, une vraie tension, une promesse que le Reel tient**.
   Une accroche qui pourrait servir à n'importe quel compte de culture G n'est pas la bonne : mets-y le détail du sujet
   (le pipi, l'empereur, l'avocat des rats).
-- L'accroche est la **première réplique de Max** (`text`) et, raccourcie en 2 lignes de 18 caractères au plus, le bandeau
-  jaune `band` (affiché pendant toute la première scène ; c'est aussi la couverture). Le bandeau n'est pas la phrase
+- L'accroche devient **la réplique de l'ouverture à froid** (C4b) et, raccourcie en 2 lignes de 18 caractères au plus,
+  le bandeau jaune `band` (affiché dès la première image ; c'est aussi la couverture). Le bandeau n'est pas la phrase
   dite : il est plus court et plus brutal (6 mots au plus).
 - Jamais de définition, de date, d'intro ni de « Le saviez-vous ? ». Indique la formule retenue dans `hook_formula`.
 
-## C5. Le script : 40 à 55 s, 11 à 15 répliques, 100 à 150 mots
+## C4b. L'ouverture à froid : les 2 premières secondes (obligatoire)
+Retour de Greg (18 novembre 2026, 21 h) : **la plupart des gens scrollent la vidéo instantanément.** Un Reel qui s'ouvre
+sur le labo et « Prof… c'est vrai que… » ressemble à celui de la veille : le pouce part. Chaque Reel s'ouvre donc
+**directement dans le monde du sujet, sur ce qu'il a de plus fou**, comme le pré-générique d'une série. On explique ensuite.
+
+Comment c'est fait : la scène 0 est un `world` avec `"cold": true` (pas de portail, pas d'arrivée : l'image 1 est déjà
+l'image du sujet sur l'écran flottant, avec le bandeau jaune et un « boing »). Le moteur fait un zoom rapide sur l'écran,
+puis coupe sur Max et le Prof vers 1,5 s, puis un portail ramène au labo (scène 1 `home`).
+- **Une seule réplique** (deux au plus), **10 mots au plus, dite en moins de 3 s**, avec `"shake": true` et
+  `"react": {"max": "shock"}` (ou l'inverse : Max qui découvre, le Prof impassible). Le **premier mot porte déjà le choc** :
+  jamais « Prof… », « Alors », « Tu savais que », « Aujourd'hui », « Le saviez-vous ».
+- **L'image** (`image`) : la plus forte du sujet (la case de la BD la plus spectaculaire ou drôle, ou une archive
+  Commons saisissante). `big` : le mot ou le nombre choc (14 caractères au plus : « TAXE PIPI », « 33 ANS », « INTERDIT »).
+- **Ce qui arrête le pouce** (choisis-en un, le plus fort pour ce sujet) :
+  1. l'absurde vrai, dit platement : « En l'an 70, un empereur a taxé le pipi. » ;
+  2. le nombre impossible : « Ce procès contre des rats a duré cinq ans. » ;
+  3. l'évidence contredite : « Les Gaulois ne portaient pas de casque à ailes. » ;
+  4. l'interdit, le danger : « Pendant 200 ans, ce mot pouvait t'envoyer en prison. » ;
+  5. en pleine scène, au pire moment : « … et là, l'empereur lui met la pièce sous le nez. » ;
+  6. le lien inattendu avec ton quotidien : « Ta poubelle porte le nom d'un préfet. »
+- **Le bandeau** (`band`) n'est pas la réponse : c'est la question que la réplique fait naître (« UNE TAXE / SUR LE PIPI ?! »),
+  6 mots au plus, en capitales, lisible en une demi-seconde. C'est aussi la couverture.
+- **Ne grille pas la réponse** : l'ouverture montre le « quoi » le plus fou, jamais le « pourquoi » (le Reel est là pour
+  ça). Il faut qu'on se dise « attends, quoi ?! ».
+- Puis scène 1 `home` : Max dit exactement ce que pense le spectateur (« Attends… une taxe sur le pipi ?! Pourquoi ? ») ;
+  le Prof donne l'enjeu ; le portail s'ouvre ; la suite comme en C5.
+
+Choisir l'ouverture : écris **5 ouvertures** de 5 types différents ci-dessus, note-les avec `hookscore.py` (indicatif) et
+le **test du pouce** : « Sur un écran qui défile, avec le son coupé, l'image + le bandeau me font-ils arrêter de scroller ?
+Et avec le son, la première phrase me donne-t-elle besoin de la suite ? ». Garde la plus forte ; mets son numéro de
+formule `hooks.json` dans `hook_formula` (#21 en pleine scène, #22 idée reçue retournée, #23 chiffre, #2 interdit…).
+Tant qu'aucune ne te fait dire « waouh », change d'angle ou de sujet.
+
+## C5. Le script : 40 à 55 s, 12 à 16 répliques, 100 à 150 mots
 **Le test du copain** (obligatoire) : quelqu'un qui ne connaît rien au sujet regarde le Reel une seule fois, sans lire la
 légende. Peut-il réexpliquer la réponse en deux phrases, avec le pourquoi, au dîner du soir ? Si non, réécris.
 Mieux vaut un Reel de 50 s compris qu'un Reel de 30 s que personne ne suit : **on coupe un gag, jamais un maillon.**
 
 Le déroulé (calé sur `ig-reel` : accroche, enjeu, corps, réponse, boucle) :
-- Scène 1 `home` (2 ou 3 répliques, 0 à 7 s) : Max pose la question (l'accroche). Le Prof donne **l'enjeu** en une phrase
+- Scène 0 `world` avec `"cold": true` (1 réplique, 0 à 3 s) : l'ouverture à froid (C4b).
+- Scène 1 `home` (2 ou 3 répliques, jusqu'à 9 s environ) : Max réagit et pose la question (celle du spectateur). Le Prof donne **l'enjeu** en une phrase
   qui intrigue sans tout dire (« Oui. Et c'est à cause de lui qu'on dit “l'argent n'a pas d'odeur”. »). Max relance avec
   la question que se pose le spectateur (« Attends… quel rapport ? »). Le Prof ouvre ensuite le portail tout seul
   (automatique, pas de réplique à écrire).
@@ -496,7 +532,7 @@ Le reste :
 
 ## C6. Le fichier
 Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, avec `"slot"` et `"time"` du tableau C0,
-`board[0]` du tableau C0, et `first_comment` (C7). Exemple complet pour le créneau `insolite` (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répliques, environ 145 mots) :
+`board[0]` du tableau C0, et `first_comment` (C7). Exemple complet pour le créneau `insolite` (avec son ouverture à froid) (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répliques, environ 145 mots) :
 ```json
 {
   "date": "<AAAA-MM-JJ>",
@@ -518,30 +554,51 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
   ],
   "hook_formula": 16,
   "episode": {
-    "band": "UN EMPEREUR A\nTAXÉ LE PIPI ?!",
+    "band": "UNE TAXE\nSUR LE PIPI ?!",
     "board": [
       "HISTOIRE VRAIE",
       "le pipi taxé ?"
     ],
     "scenes": [
       {
+        "kind": "world",
+        "cold": true,
+        "set": "antiquite",
+        "palette": "nuit",
+        "tag": "ROME, AN 70",
+        "big": "TAXE PIPI",
+        "image": {
+          "bd": 1
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "shake": true,
+            "react": {
+              "max": "shock"
+            },
+            "text": "En l'an 70, un empereur romain a taxé… le pipi."
+          }
+        ]
+      },
+      {
         "kind": "home",
         "lines": [
           {
             "who": "max",
-            "emo": "curious",
-            "text": "Prof… c'est vrai qu'un empereur romain a taxé le pipi ?"
+            "emo": "shock",
+            "text": "Attends… une taxe sur le pipi ?! Mais pourquoi ?"
           },
           {
             "who": "prof",
             "emo": "deadpan",
-            "text": "Oui. Et c'est à cause de lui qu'on dit « l'argent n'a pas d'odeur »."
+            "text": "Parce que le pipi rapportait de l'argent. Et c'est de là qu'on dit « l'argent n'a pas d'odeur »."
           },
           {
             "who": "max",
-            "emo": "shock",
-            "shake": true,
-            "text": "Attends… quel rapport entre le pipi et l'argent ?"
+            "emo": "think",
+            "text": "Du pipi qui rapporte de l'argent ? Explique."
           }
         ]
       },

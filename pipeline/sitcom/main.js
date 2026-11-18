@@ -100,7 +100,7 @@ function swirl(t, k) {
 // —— overlays (screen space) ——
 function band(t) {
   const B = TL.band; if (!B || t < B.t0 || t >= B.t1) return;
-  const k = Math.min(1, Math.floor((t - B.t0) * 12) / 2), lines = B.text.split('\n');
+  const k = B.t0 <= 0 ? 1 : Math.min(1, Math.floor((t - B.t0) * 12) / 2), lines = B.text.split('\n');
   g.setTransform(1, 0, 0, 1, 0, 0); g.save(); g.translate(W / 2, 250); g.rotate(-.03); g.scale(1, k);
   const h = 90 * lines.length + 50;
   g.fillStyle = '#17140f'; g.fillRect(-470 + 10, -h / 2 + 10, 940, h); g.fillStyle = '#f5b62a'; g.fillRect(-470, -h / 2, 940, h);
@@ -110,6 +110,7 @@ function band(t) {
 }
 function worldTag(t, scene) {
   if (scene.kind !== 'world' || !scene.tag) return;
+  if (TL.band && t >= TL.band.t0 && t < TL.band.t1) return;   // le bandeau d'accroche passe d'abord
   const lt = t - scene.t0 - .35; if (lt < 0) return;
   const s = scene.tag.slice(0, Math.floor(lt * 30)), P = palOf(scene.set, scene.palette);
   g.setTransform(1, 0, 0, 1, 0, 0); g.font = '400 56px VT323'; g.textAlign = 'left'; g.textBaseline = 'middle';
@@ -172,12 +173,12 @@ function render(t) {
   } else {
     const P = palOf(scene.set, scene.palette);
     world(scene.set, P, t);
-    const so = clamp(seg(lt, .55, .85)) * (scene.exit ? 1 - clamp(seg(t, scene.t1 - 1.1, scene.t1 - .8)) : 1);
+    const so = (scene.cold ? 1 : clamp(seg(lt, .55, .85))) * (scene.exit ? 1 - clamp(seg(t, scene.t1 - 1.1, scene.t1 - .8)) : 1);
     holoScreen(540, 520, 640, 440, t, { img: scene.img ? IMG[scene.img] : null, big: scene.img ? '' : scene.big, small: scene.img ? '' : scene.small, P, on: so });
-    if (scene.img) plate(540, 800, scene.big, t, clamp(seg(lt, .9, 1.1)) * so);
+    if (scene.img) plate(540, 800, scene.big, t, (scene.cold ? 1 : clamp(seg(lt, .9, 1.1))) * so);
     if (scene.exit) portal(PORTAL_WORLD[0], PORTAL_WORLD[1], 210, t, { open: clamp(back(seg(t, scene.t1 - 1.0, scene.t1 - .7), .9)) });
     if (scene.bidule) bidule(150, FLOOR + 20, .8, t, { col: P.acc, look: [.6, -.3], blink: blinkAt(t, 13), hop: (t * .7) % 1 < .25 ? ((t * .7) % 1) / .25 : 0 });
-    drawChars(t, scene, lt < .7 ? lt / .7 : null);
+    drawChars(t, scene, !scene.cold && lt < .7 ? lt / .7 : null);
   }
   // transitions: swirl in at the end of an exiting scene, swirl out at the start of an arriving one
   if (scene.exit && t > scene.t1 - .25) swirl(t, eio(seg(t, scene.t1 - .25, scene.t1)));
@@ -194,6 +195,7 @@ function events() {
     if (s.exit) { add('swirl', s.t1 - .45); }
     if (s.enter) { add('land', s.t0 + .18); if (s.kind === 'world') add('blip', s.t0 + .6); }
     if (s.bidule) add('glorp', s.t0 + 1.2);
+    if (s.cold) add('boing', s.t0 + .02);   // ouverture à froid : un coup de son dès la première image
     if (s.kind === 'end') add('ding', s.t0 + .05);
   }
   for (const l of TL.lines) if (l.shake) add('boing', l.t);
