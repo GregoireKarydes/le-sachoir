@@ -1,0 +1,30 @@
+{
+ "files": [
+  "slide-01.jpg",
+  "slide-02.jpg",
+  "slide-03.jpg",
+  "slide-04.jpg",
+  "slide-05.jpg",
+  "slide-06.jpg",
+  "slide-07.jpg",
+  "slide-08.jpg",
+  "slide-09.jpg"
+ ],
+ "version": 2,
+ "credits": [
+  "Pixabay"
+ ],
+ "tiktok_files": [
+  "tiktok-01.jpg",
+  "tiktok-02.jpg",
+  "tiktok-03.jpg",
+  "tiktok-04.jpg",
+  "tiktok-05.jpg",
+  "tiktok-06.jpg",
+  "tiktok-07.jpg",
+  "tiktok-08.jpg",
+  "tiktok-09.jpg"
+ ],
+ "fingerprint": "b32702d73a57",
+ "kind": "carousel"
+}
