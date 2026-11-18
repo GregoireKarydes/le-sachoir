@@ -149,7 +149,13 @@
           "title": "Charlet, l’homme qui dessinait les grognards",
           "text": "Le lithographe Nicolas-Toussaint Charlet, en 1830. Selon l’Académie française, ses images de vieux soldats de l’Empire ont popularisé la figure de Chauvin.",
           "photo": {
-            "commons": "File:Charlet (BM 1895,0617.298).jpg"
+            "commons": "File:Charlet (BM 1895,0617.298).jpg",
+            "credit": "Print made by: Louis Dupré Printed by: Lemercier & Cie",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Charlet_(BM_1895,0617.298).jpg",
+            "file": "images/photo-5-charlet-bm-1895-0617-298-jpg.webp",
+            "status": "done"
           }
         },
         {
