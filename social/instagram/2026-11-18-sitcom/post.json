@@ -2,34 +2,156 @@
   "date": "2026-11-18",
   "kind": "sitcom",
   "time": "20:30",
-  "story": {"edition": "2026-11-18", "format": "insolite"},
+  "story": {
+    "edition": "2026-11-18",
+    "format": "insolite"
+  },
+  "question": "Pourquoi on dit que l'argent n'a pas d'odeur ?",
+  "answer": "Les Romains lavaient leurs toges avec de l'urine, qui détache ; l'empereur Vespasien a taxé ce commerce et, quand son fils s'en est plaint, lui a fait sentir une pièce de la taxe : elle ne sentait rien.",
+  "chain": [
+    "l'urine vieillie donne de l'ammoniaque, qui détache",
+    "les blanchisseurs achètent l'urine pour laver les toges",
+    "Vespasien taxe ce commerce",
+    "Titus trouve ça dégoûtant ; la pièce de la taxe ne sent rien",
+    "d'où « l'argent n'a pas d'odeur » ; à Paris, les urinoirs s'appellent des vespasiennes"
+  ],
+  "hook_formula": 16,
   "episode": {
     "band": "UN EMPEREUR A\nTAXÉ LE PIPI ?!",
-    "board": ["QUESTION DU JOUR", "le pipi taxé ?"],
-    "scenes": [
-      {"kind": "home", "lines": [
-        {"who": "max", "emo": "curious", "text": "Prof… un empereur romain a vraiment taxé le pipi ?"},
-        {"who": "prof", "emo": "deadpan", "text": "Oui. Et tu répètes sa leçon."},
-        {"who": "max", "emo": "shock", "shake": true, "text": "Moi ?!"}]},
-      {"kind": "world", "set": "antiquite", "palette": "beige", "tag": "ROME, VERS L'AN 70", "big": "AMMONIAQUE", "small": "lave les toges",
-       "image": {"bd": 3}, "bidule": true, "lines": [
-        {"who": "prof", "emo": "explain", "text": "Rome, vers l'an 70 : l'urine sert à laver les toges.", "say": "Rome, vers l'an soixante-dix : l'urine sert à laver les toges."},
-        {"who": "max", "emo": "panic", "text": "Et ils l'achètent ?!"},
-        {"who": "prof", "emo": "smug", "react": {"max": "shock"}, "text": "Oui. Donc Vespasien la taxe."}]},
-      {"kind": "world", "set": "antiquite", "palette": "nuit", "tag": "SELON SUÉTONE", "big": "ÇA SENT ?", "small": "une pièce de la taxe",
-       "image": {"bd": 7}, "lines": [
-        {"who": "prof", "emo": "explain", "text": "Son fils râle. Vespasien lui fait sentir une pièce."},
-        {"who": "max", "emo": "think", "text": "Elle sent ?"},
-        {"who": "prof", "emo": "deadpan", "text": "Rien. L'argent n'a pas d'odeur."}]},
-      {"kind": "home", "lines": [
-        {"who": "max", "emo": "curious", "text": "Et il a eu une récompense ?"},
-        {"who": "prof", "emo": "smug", "pause": 0.8, "text": "Paris lui a dédié ses urinoirs : les vespasiennes."},
-        {"who": "max", "emo": "proud", "text": "Il a taxé le pipi. Le pipi s'est vengé."}]}
+    "board": [
+      "QUESTION DU JOUR",
+      "le pipi taxé ?"
     ],
-    "end": {"url": "lesachoir.fr", "lines": ["Une question comme ça,", "chaque matin, en BD."]}
+    "scenes": [
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Prof… c'est vrai qu'un empereur romain a taxé le pipi ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Oui. Et c'est à cause de lui qu'on dit « l'argent n'a pas d'odeur »."
+          },
+          {
+            "who": "max",
+            "emo": "shock",
+            "shake": true,
+            "text": "Attends… quel rapport entre le pipi et l'argent ?"
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "antiquite",
+        "palette": "beige",
+        "tag": "ROME, VERS L'AN 70",
+        "big": "AMMONIAQUE",
+        "small": "ça détache",
+        "image": {
+          "bd": 3
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "À Rome, les blanchisseurs lavent les toges avec de l'urine."
+          },
+          {
+            "who": "max",
+            "emo": "panic",
+            "text": "Pourquoi du pipi ?!"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "En vieillissant, l'urine donne de l'ammoniaque. Et l'ammoniaque, ça détache très bien."
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "react": {
+              "max": "shock"
+            },
+            "text": "Ils achètent donc l'urine des toilettes publiques. Et l'empereur Vespasien taxe ce commerce."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "antiquite",
+        "palette": "nuit",
+        "tag": "SELON SUÉTONE",
+        "big": "ÇA SENT ?",
+        "small": "une pièce de la taxe",
+        "image": {
+          "bd": 7
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Son fils Titus trouve ça dégoûtant. Vespasien lui met sous le nez une pièce de la taxe."
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Et il demande : « Elle sent mauvais ? »"
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Euh… non ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "text": "Voilà. Elle vient du pipi et elle ne sent rien. L'argent n'a pas d'odeur."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et aujourd'hui, il reste quoi de lui ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "À Paris, les urinoirs de rue s'appellent des vespasiennes."
+          },
+          {
+            "who": "max",
+            "emo": "proud",
+            "text": "Il a taxé le pipi… et le pipi porte son nom."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "Une question comme ça,",
+        "chaque matin, en BD."
+      ]
+    }
   },
-  "caption": "Un empereur romain a vraiment taxé le pipi. Et tu répètes sa leçon.\n\nÀ Rome, les blanchisseurs achetaient l'urine des toilettes publiques : son ammoniaque nettoyait les toges. Vespasien a taxé ce commerce. Quand son fils Titus s'en est plaint, il lui a fait sentir une pièce de la taxe. Elle ne sentait rien : c'est l'origine de « l'argent n'a pas d'odeur ».\n\nEn 1834, Paris a surnommé ses nouveaux urinoirs les « vespasiennes ».\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nEnvoie-le à celui qui dit toujours « l'argent n'a pas d'odeur ».",
-  "hashtags": ["lesachoir", "culturegenerale", "histoire", "romeantique", "expressionfrancaise"],
+  "caption": "Un empereur romain a vraiment taxé le pipi. Et c'est à cause de lui qu'on dit « l'argent n'a pas d'odeur ».\n\nÀ Rome, les blanchisseurs achetaient l'urine des toilettes publiques : son ammoniaque nettoyait les toges. Vespasien a taxé ce commerce. Quand son fils Titus s'en est plaint, il lui a fait sentir une pièce de la taxe. Elle ne sentait rien : c'est l'origine de « l'argent n'a pas d'odeur ».\n\nEn 1834, Paris a surnommé ses nouveaux urinoirs les « vespasiennes ».\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nEnvoie-le à celui qui dit toujours « l'argent n'a pas d'odeur ».",
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "histoire",
+    "romeantique",
+    "expressionfrancaise"
+  ],
   "sources": [
     "https://lexundria.com/suet_ves/23.3/r",
     "https://imperiumromanum.pl/en/curiosities/emperor-vespasians-urinary-tax/",
