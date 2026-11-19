@@ -25,7 +25,7 @@
           "name": "Jeanne",
           "look": "Jeanne, a short stout retired woman in her seventies, light tan skin, short spiky white pixie-cut hair, bright coral-pink windbreaker as main colour, beige walking trousers, rubber boots, the bucket always in her hand",
           "file": "cast/notice-jeanne.png",
-          "status": "pending",
+          "status": "done",
           "role": "the energetic holidaymaker who feels personally betrayed by the sea leaving; stomps around, hands on hips, takes everything as a challenge"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Pierre-Simon de Laplace",
           "look": "Pierre-Simon de Laplace, a tall imposing French mathematician around 1800 in his fifties, long straight nose, powdered grey hair tied back with a black ribbon, pale skin, dark midnight-blue velvet coat with gold embroidery on the collar as main colour, white cravat, white stockings, a quill pen behind his ear",
           "file": "cast/notice-laplace.png",
-          "status": "pending",
+          "status": "done",
           "role": "the solemn genius who calculated the tides and explains them calmly; very upright, hands clasped behind his back, slightly pompous but kind"
         }
       ],
@@ -44,8 +44,8 @@
           "laplace"
         ],
         "file": "images/notice-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -72,8 +72,9 @@
               "laplace"
             ],
             "file": "images/notice-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +101,8 @@
               "jeanne"
             ],
             "file": "images/notice-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +142,8 @@
               "laplace"
             ],
             "file": "images/notice-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -185,8 +186,8 @@
               "laplace"
             ],
             "file": "images/notice-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -220,8 +221,8 @@
               "jeanne"
             ],
             "file": "images/notice-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

@@ -25,7 +25,7 @@
           "name": "Nicolas Chauvin",
           "look": "Nicolas Chauvin, a short and stocky young French soldier of Napoleon's army, round chin always lifted, huge bushy chestnut-brown moustache and sideburns, light peach skin, a dark blue soldier's coat with white crossbelts and red cuffs as main colour, white trousers, a tall black bicorne hat with the cockade, the bandages all over him",
           "file": "cast/origine-chauvin.png",
-          "status": "pending",
+          "status": "done",
           "role": "the legendary over-the-top patriot who thinks everything French is the best in the world; naive, puffed-up chest, salutes at every occasion, never doubts for a second"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Karim",
           "look": "Karim, a tall and lanky football fan of today in his thirties, brown skin, cleanly shaved bald head, short black beard, a bright red hoodie as main colour, a blue-white-red stripe of face paint on one cheek, a glass of soda in his hand",
           "file": "cast/origine-karim.png",
-          "status": "pending",
+          "status": "done",
           "role": "a fan who swears his national team never commits a foul; arguing with total bad faith, jumps up and points at the screen"
         }
       ],
@@ -44,8 +44,9 @@
           "chauvin"
         ],
         "file": "images/origine-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -71,8 +72,9 @@
               "karim"
             ],
             "file": "images/origine-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -98,8 +100,8 @@
               "chauvin"
             ],
             "file": "images/origine-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -138,8 +140,8 @@
               "chauvin"
             ],
             "file": "images/origine-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -176,8 +178,8 @@
               "chauvin"
             ],
             "file": "images/origine-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -216,8 +218,8 @@
               "karim"
             ],
             "file": "images/origine-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
