@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T22:05+01:00",
+ "updated_at": "2026-11-19T01:14+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -159,32 +159,7 @@
    },
    "errors": [],
    "warnings": [
-    "origine : fiches chauvin et karim : même couleur dominante (red), à différencier",
-    "origine : fiche karim : même tête qu'un personnage récent (bald hair, red main colour : 2026-11-07/cultureg, 2026-11-08/actu, 2026-11-08/insolite) ; changer coiffure ou couleur dominante"
-   ]
-  },
-  {
-   "path": "editions/2026-11-18",
-   "titles": {
-    "dossier": "Le nucléaire : comment un tiroir fermé a fini par allumer la France",
-    "actu": "Un espion de nuit, un canon anti-pirates et des étoiles pressées",
-    "cultureg": "Do, ré, mi : un tube du XIe siècle pour voix enrouées",
-    "insolite": "L’empereur qui taxait le pipi",
-    "origine": "Chaque mardi soir, vous sortez « la poubelle »… c’est-à-dire un préfet",
-    "quiz": "Quatre mots, douze mensonges"
-   },
-   "errors": [],
-   "warnings": [
-    "dossier : fiche joliot : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »",
-    "dossier : case 26 : récitatif de 21 mots (max 20)",
-    "actu : fiche deputee : pas de silhouette marquée (grand, petit, rond, maigre, vieux…) dans « look »",
-    "actu : brève 2 : « Ce qui se passe vraiment » de 46 mots (max 45 pour une brève)",
-    "actu : brève 3 : « Ce qui se passe vraiment » de 47 mots (max 45 pour une brève)",
-    "cultureg : case 10 : récitatif de 21 mots (max 20)",
-    "origine : case 2 : récitatif de 22 mots (max 20)",
-    "origine : case 4 : récitatif de 21 mots (max 20)",
-    "origine : case 6 : récitatif de 21 mots (max 20)",
-    "origine : case 8 : récitatif de 21 mots (max 20)"
+    "origine : fiches chauvin et karim : même couleur dominante (red), à différencier"
    ]
   }
  ]

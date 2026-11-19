@@ -1,22 +1,10 @@
 {
- "updated_at": "2026-11-18T22:05:32.586203+01:00",
- "today": "2026-11-18",
+ "updated_at": "2026-11-19T01:14:01.188280+01:00",
+ "today": "2026-11-19",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
-  {
-   "date": "2026-11-18",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "origine": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-19",
    "status": "draft",
@@ -75,49 +63,43 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "origine"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-18",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 32,
-   "focus": "20261114-0402-greenwich-le-mot-interdit (1 image(s) à faire)",
-   "next": "20261114-2049-tennis-15-30-40",
+   "images_left": 31,
+   "focus": "20261115-2050-departements-taille-cheval (8 image(s) à faire)",
+   "next": "20261114-0402-greenwich-le-mot-interdit",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 30,
-   "focus": "20261114-2047-14-juillet-sans-annee (6 image(s) à faire)",
+   "images_left": 24,
+   "focus": "20261115-2053-perec-roman-sans-e (6 image(s) à faire)",
    "next": "20261114-0400-la-liberte-a-dabord-postule-en-egypte",
    "next_redo": 0
   },
   "notice": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 26,
-   "focus": "20261115-2047-maree-la-mer-suit-la-lune (6 image(s) à faire)",
+   "images_left": 20,
+   "focus": "20261117-0151-frigo-chaleur-a-la-porte (5 image(s) à faire)",
    "next": "20261115-2043-cocotte-minute-triche-avec-leau",
    "next_redo": 0
   },
   "origine": {
-   "ready": 1,
-   "waiting": 1,
+   "ready": 2,
+   "waiting": 0,
    "blocked": 0,
-   "images_left": 6,
-   "focus": "20261118-2046-chauvin-soldat-imaginaire (6 image(s) à faire)",
+   "images_left": 0,
+   "focus": null,
    "next": "20261118-2044-silhouette-ministre-radin",
    "next_redo": 0
   },
@@ -125,58 +107,57 @@
    "ready": 1,
    "waiting": 3,
    "blocked": 0,
-   "images_left": 65,
-   "focus": "20261116-1930-cathedrales-gothiques (21 image(s) à faire)",
+   "images_left": 48,
+   "focus": "20261116-1930-cathedrales-gothiques (4 image(s) à faire)",
    "next": "20261115-1923-krach-1929",
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-18",
-  "count": 51,
-  "neurons": 9000,
+  "day": "2026-11-19",
+  "count": 52,
+  "neurons": 8960,
   "exhausted": false,
   "by_kind": {
-   "case": 39,
-   "cast": 10,
-   "cover": 2
-  },
-  "exhausted_at": "2026-11-18T00:57:02.297880+00:00"
+   "case": 37,
+   "cast": 12,
+   "cover": 3
+  }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 2.48259,
-  "images": 222,
-  "today_usd": 0.32113,
+  "spent_usd": 2.66259,
+  "images": 228,
+  "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-18T19:05:09.017395+01:00",
-  "age_hours": 3.0,
+  "collected_at": "2026-11-19T00:23:49.779551+01:00",
+  "age_hours": 0.8,
   "feeds": {
    "Google Actualités": 34,
-   "franceinfo": 30,
+   "franceinfo": 29,
    "Le Monde": 16,
-   "Le Figaro": 19,
+   "Le Figaro": 17,
    "Libération": 50,
-   "20 Minutes": 28,
+   "20 Minutes": 27,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 33,
-   "Le Monde Sciences": 5,
-   "Sciences et Avenir": 7,
+   "BBC World": 32,
+   "Le Monde Sciences": 4,
+   "Sciences et Avenir": 6,
    "Le Monde Planète": 17,
-   "Le Monde Pixels": 15,
-   "Le Monde Santé": 5,
-   "Le Monde Culture": 20,
-   "HugoDécrypte - Actus du jour": 1
+   "Le Monde Pixels": 13,
+   "Le Monde Santé": 3,
+   "Le Monde Culture": 16,
+   "HugoDécrypte - Actus du jour": 2
   },
   "empty_feeds": [
    "Les Échos",
