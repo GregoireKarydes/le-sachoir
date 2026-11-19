@@ -1,0 +1,188 @@
+{
+  "date": "2026-11-19",
+  "kind": "sitcom",
+  "slot": "insolite",
+  "time": "21:00",
+  "story": {
+    "edition": "2026-11-19",
+    "format": "insolite"
+  },
+  "question": "C'est vrai que la statue de la Liberté devait d'abord aller en Égypte ?",
+  "answer": "Oui : vers 1869, le sculpteur Bartholdi a proposé au souverain de l'Égypte un phare géant pour le canal de Suez, une paysanne de 26 mètres qui lève une torche ; l'Égypte, ruinée par le canal, a refusé, et Bartholdi a recyclé l'idée en Liberté pour New York.",
+  "chain": [
+    "en 1855, Bartholdi visite l'Égypte et rêve de statues géantes comme celles des pharaons",
+    "vers 1869, il propose au souverain de l'Égypte un phare géant pour le canal de Suez",
+    "ce phare : une paysanne égyptienne de 26 mètres qui lève une torche pour guider les bateaux",
+    "l'Égypte s'est ruinée à creuser le canal : la statue coûte trop cher, refus",
+    "Bartholdi garde l'idée, en fait une déesse drapée à la grecque, inaugurée à New York en 1886"
+  ],
+  "hook_formula": 22,
+  "episode": {
+    "band": "LA LIBERTÉ\nÉGYPTIENNE ?!",
+    "board": [
+      "HISTOIRE VRAIE",
+      "Liberté à Suez ?"
+    ],
+    "scenes": [
+      {
+        "kind": "world",
+        "cold": true,
+        "set": "desert",
+        "palette": "nuit",
+        "tag": "ÉGYPTE, 1869",
+        "big": "REFUSÉE",
+        "image": {
+          "bd": 3
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "shake": true,
+            "react": {
+              "max": "shock"
+            },
+            "text": "La statue de la Liberté ? D'abord refusée en Égypte."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "shock",
+            "text": "Attends… la statue de la Liberté, en Égypte ? Pourquoi ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Parce qu'avant d'être américaine, elle devait être un phare pour le canal de Suez."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Un phare ? Elle ?"
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "desert",
+        "palette": "beige",
+        "tag": "PORT-SAÏD, VERS 1869",
+        "big": "26 MÈTRES",
+        "small": "paysanne à torche",
+        "image": {
+          "bd": 2
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "En 1855, le sculpteur Auguste Bartholdi visite l'Égypte. Les statues géantes des pharaons le font rêver.",
+            "say": "En mille huit cent cinquante-cinq, le sculpteur Auguste Bartholdi visite l'Égypte. Les statues géantes des pharaons le font rêver."
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Vers 1869, il propose au souverain de l'Égypte un phare géant pour le canal de Suez.",
+            "say": "Vers mille huit cent soixante-neuf, il propose au souverain de l'Égypte un phare géant pour le canal de Suez."
+          },
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Un phare en forme de dame ?"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Une paysanne égyptienne de 26 mètres qui lève une torche pour guider les bateaux.",
+            "say": "Une paysanne égyptienne de vingt-six mètres qui lève une torche pour guider les bateaux."
+          },
+          {
+            "who": "max",
+            "emo": "happy",
+            "text": "Et il dit oui ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "react": {
+              "max": "shock"
+            },
+            "text": "Non. L'Égypte s'est ruinée à creuser le canal. La statue coûte trop cher."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "mer",
+        "palette": "menthe",
+        "tag": "NEW YORK, 1886",
+        "big": "LIBERTÉ",
+        "small": "même torche",
+        "image": {
+          "bd": 7
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Bartholdi garde l'idée. La paysanne devient une déesse drapée à la grecque, avec la même torche levée."
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Et en 1886, on l'inaugure à New York.",
+            "say": "Et en mille huit cent quatre-vingt-six, on l'inaugure à New York."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et l'Égypte, elle a eu quoi à la place ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "Un phare normal. Sans bras."
+          },
+          {
+            "who": "max",
+            "emo": "proud",
+            "text": "Recalée en Égypte… embauchée à New York."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "L'actu et la culture G",
+        "en BD, chaque matin."
+      ]
+    }
+  },
+  "caption": "La statue de la Liberté a d'abord été proposée à l'Égypte. Refusée : trop chère.\n\nVers 1869, le sculpteur Bartholdi propose au souverain de l'Égypte un phare géant pour le canal de Suez : une paysanne égyptienne de 26 mètres qui lève une torche. L'Égypte, ruinée par le canal, dit non. Bartholdi recycle l'idée, et sa géante est inaugurée à New York en 1886.\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nEnvoie-le à ton pote qui rêve de New York.",
+  "first_comment": "Bonus : la charpente en métal cachée à l'intérieur de la statue a été conçue par Gustave Eiffel. Tu savais qu'elle était aussi un peu signée Eiffel ?",
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "histoire",
+    "anecdote",
+    "statuedelaliberte"
+  ],
+  "sources": [
+    "https://www.musee-orsay.fr/fr/oeuvres/liberte-4813",
+    "https://en.wikipedia.org/wiki/Egypt_Carrying_the_Light_to_Asia",
+    "https://www.britannica.com/story/who-was-the-woman-behind-the-statue-of-liberty",
+    "https://www.rtbf.be/article/la-minute-historique-a-l-origine-la-statue-de-la-liberte-devait-etre-offerte-aux-egyptiens-11382842"
+  ]
+}

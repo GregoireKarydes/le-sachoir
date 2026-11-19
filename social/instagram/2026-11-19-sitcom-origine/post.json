@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-19",
+  "kind": "sitcom",
+  "slot": "origine",
+  "time": "07:45",
+  "story": {
+    "edition": "2026-11-16",
+    "format": "origine"
+  },
+  "question": "Pourquoi on dit « se faire limoger » ?",
+  "answer": "En 1914, le général Joffre écarte les généraux qu'il juge trop lents et les envoie à l'arrière, loin du front, dans la région militaire de Limoges : être renvoyé, c'était partir vers Limoges, d'où « limoger ».",
+  "chain": [
+    "août 1914, la guerre commence mal : Joffre, chef de l'armée, trouve des généraux trop lents",
+    "il a le droit de les retirer, mais il faut les mettre quelque part",
+    "il les envoie à l'arrière, dans la région militaire de Limoges, loin du front",
+    "sans soldats à commander, ils attendent : on dit qu'ils sont « limogés »",
+    "le mot apparaît en 1916 et sert aujourd'hui pour un patron ou un entraîneur ; en vrai, moins d'une vingtaine sont restés dans la région"
+  ],
+  "hook_formula": 21,
+  "episode": {
+    "band": "VIRÉ ET ENVOYÉ\nÀ LIMOGES ?!",
+    "board": [
+      "D'OÙ ÇA VIENT ?",
+      "limoger ?"
+    ],
+    "scenes": [
+      {
+        "kind": "world",
+        "cold": true,
+        "set": "ville",
+        "palette": "nuit",
+        "tag": "FRANCE, 1914",
+        "big": "LIMOGES",
+        "image": {
+          "bd": 4
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "shake": true,
+            "react": {
+              "max": "shock"
+            },
+            "text": "… et là, le général reçoit son billet pour Limoges."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "shock",
+            "text": "Attends… on l'envoie à Limoges ? Mais pourquoi ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Parce qu'il est renvoyé. C'est de là que vient « limoger »."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Limoger… comme Limoges ? Explique."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "bureau",
+        "palette": "marine",
+        "tag": "QG, AOÛT 1914",
+        "big": "TROP LENTS",
+        "small": "des généraux écartés",
+        "image": {
+          "bd": 2
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "En août 1914, la guerre commence mal. Le général Joffre, chef de l'armée, trouve des généraux trop lents.",
+            "say": "En août mille neuf cent quatorze, la guerre commence mal. Le général Joffre, chef de l'armée, trouve des généraux trop lents."
+          },
+          {
+            "who": "max",
+            "emo": "panic",
+            "text": "Il les vire ?"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Il a le droit de les retirer. Mais où les mettre ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "react": {
+              "max": "shock"
+            },
+            "text": "Joffre les envoie à l'arrière, loin du front, dans la région militaire de Limoges."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "ville",
+        "palette": "orange",
+        "tag": "DIRECTION LIMOUSIN",
+        "big": "LIMOGÉS",
+        "small": "sans soldats",
+        "image": {
+          "bd": 6
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Et là-bas, ils commandent qui ?"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Personne. Sans soldats, ils attendent loin des combats. On dit qu'ils ont été « limogés »."
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "En 1916, le mot entre dans la langue. Aujourd'hui, on limoge un patron ou un entraîneur.",
+            "say": "En mille neuf cent seize, le mot entre dans la langue. Aujourd'hui, on limoge un patron ou un entraîneur."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et ils sont tous restés à Limoges ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "Même pas. Moins d'une vingtaine ont dû rester dans la région. Et pas forcément à Limoges."
+          },
+          {
+            "who": "max",
+            "emo": "proud",
+            "text": "Se faire limoger… sans jamais voir Limoges."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "L'actu et la culture G",
+        "en BD, chaque matin."
+      ]
+    }
+  },
+  "caption": "Pourquoi on dit « se faire limoger » ? Parce qu'en 1914, c'était un aller simple pour Limoges.\n\nAu début de la Première Guerre mondiale, le général Joffre écarte les généraux qu'il juge trop lents. Il les envoie à l'arrière, dans la région militaire de Limoges, loin du front. Sans troupes à commander, on les dit « limogés ».\n\nLe mot apparaît en 1916. Aujourd'hui, on limoge un patron ou un entraîneur, sans billet de train.\n\nQuelle expression on décortique demain ? Écris-la en commentaire.",
+  "first_comment": "Bonus : début septembre 1914, après un mois de guerre à peine, 58 officiers avaient déjà été écartés. Tu l'avais déjà entendue, cette histoire de Limoges ?",
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "expressionsfrancaises",
+    "histoire",
+    "limoges"
+  ],
+  "sources": [
+    "https://www.expressio.fr/expressions/se-faire-limoger",
+    "https://www.lalanguefrancaise.com/dictionnaire/definition/limoger",
+    "https://www.larousse.fr/encyclopedie/personnage/Joseph_Joffre/126011"
+  ]
+}

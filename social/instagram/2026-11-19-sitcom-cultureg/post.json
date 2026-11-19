@@ -1,0 +1,194 @@
+{
+  "date": "2026-11-19",
+  "kind": "sitcom",
+  "slot": "cultureg",
+  "time": "12:30",
+  "story": {
+    "edition": "2026-11-19",
+    "format": "cultureg"
+  },
+  "question": "Pourquoi la France a reculé toutes ses horloges de 9 minutes 21 secondes en 1911 ?",
+  "answer": "Parce qu'elle s'est enfin mise à l'heure de Greenwich, près de Londres, choisi en 1884 comme méridien zéro du monde : Greenwich est plus à l'ouest, le soleil y passe 9 min 21 s après Paris. Mais par fierté, la loi n'a jamais écrit le mot « Greenwich ».",
+  "chain": [
+    "en 1884, 25 pays choisissent Greenwich, près de Londres, comme méridien zéro du monde",
+    "un méridien est une ligne du pôle Nord au pôle Sud où il est midi au même moment",
+    "Paris voulait être ce zéro : la France s'abstient et garde l'heure de Paris",
+    "Greenwich est plus à l'ouest : le soleil y passe 9 min 21 s après Paris",
+    "en 1911 la France s'aligne et recule ses horloges de cet écart ; la loi dit « heure de Paris retardée de 9 min 21 s », jamais « Greenwich »"
+  ],
+  "hook_formula": 23,
+  "episode": {
+    "band": "POURQUOI\n9 MIN 21 ?!",
+    "board": [
+      "PILULE CULTURE G",
+      "9 min 21 ?"
+    ],
+    "scenes": [
+      {
+        "kind": "world",
+        "cold": true,
+        "set": "paris-ancien",
+        "palette": "nuit",
+        "tag": "FRANCE, MARS 1911",
+        "big": "9 MIN 21 S",
+        "image": {
+          "bd": 1
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "shake": true,
+            "react": {
+              "max": "shock"
+            },
+            "text": "9 minutes 21 secondes. Toute la France recule ses horloges.",
+            "say": "Neuf minutes vingt et une secondes. Toute la France recule ses horloges."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "shock",
+            "text": "Attends… pourquoi un chiffre aussi bizarre ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Parce qu'elle se met à l'heure d'un village anglais. Sans dire son nom."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Un village anglais ? Lequel ?"
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "ciel",
+        "palette": "marine",
+        "tag": "WASHINGTON, 1884",
+        "big": "GREENWICH",
+        "small": "le méridien zéro",
+        "image": {
+          "bd": 5
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Greenwich, près de Londres. En 1884, 25 pays en font le méridien zéro du monde.",
+            "say": "Greenwich, près de Londres. En mille huit cent quatre-vingt-quatre, vingt-cinq pays en font le méridien zéro du monde."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Un méridien… c'est quoi ?"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Une ligne du pôle Nord au pôle Sud, où il est midi au même moment."
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "react": {
+              "max": "shock"
+            },
+            "text": "Paris voulait être ce zéro. La France boude et s'abstient."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "paris-ancien",
+        "palette": "beige",
+        "tag": "LOI DU 9 MARS 1911",
+        "big": "9 MIN 21 S",
+        "small": "Paris → Greenwich",
+        "image": {
+          "bd": 7
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et les 9 minutes 21 ?",
+            "say": "Et les neuf minutes vingt et une ?"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Greenwich est plus à l'ouest : le soleil y passe 9 minutes 21 après Paris.",
+            "say": "Greenwich est plus à l'ouest : le soleil y passe neuf minutes vingt et une après Paris."
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "En 1911, la France s'aligne enfin et recule toutes ses horloges de cet écart.",
+            "say": "En mille neuf cent onze, la France s'aligne enfin et recule toutes ses horloges de cet écart."
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "react": {
+              "max": "shock"
+            },
+            "text": "Et la loi dit « heure de Paris retardée de 9 minutes 21 ». Jamais « Greenwich ».",
+            "say": "Et la loi dit : heure de Paris, retardée de neuf minutes vingt et une. Jamais Greenwich."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et les Français l'ont bien pris ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "Ils se sont consolés : la ligne de Greenwich passe aussi par Argentan, en Normandie."
+          },
+          {
+            "who": "max",
+            "emo": "proud",
+            "text": "9 minutes 21… pour éviter un mot.",
+            "say": "Neuf minutes vingt et une… pour éviter un mot."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "L'actu et la culture G",
+        "en BD, chaque matin."
+      ]
+    }
+  },
+  "caption": "Pourquoi la France a reculé ses horloges de 9 minutes 21 secondes en 1911 ?\n\nPour se mettre à l'heure de Greenwich, près de Londres, choisi en 1884 comme méridien zéro du monde. Le soleil y passe 9 min 21 s après Paris. Mais par fierté, la loi a écrit « heure de Paris retardée de 9 minutes 21 secondes », sans jamais nommer Greenwich.\n\nToute l'histoire en BD dans l'appli, lien en bio.\n\nToi, tu croyais que l'heure de ta montre venait d'où ? Dis-le en commentaire.",
+  "first_comment": "Bonus : en 1884, la France n'était pas seule à bouder Greenwich, le Brésil s'est abstenu aussi. Tu connaissais l'histoire du « village anglais » ?",
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "histoire",
+    "greenwich",
+    "anecdote"
+  ],
+  "sources": [
+    "https://www.herodote.net/9_mars_1911-evenement-19110309.php",
+    "https://www.herodote.net/Une_Histoire_tres_politique_de_l_heure-synthese-3184-101.php",
+    "https://www.amusingplanet.com/2020/06/the-meridian-that-stood-up-to-greenwich.html",
+    "https://mm.icann.org/pipermail/tz/2020-June/029101.html"
+  ]
+}
