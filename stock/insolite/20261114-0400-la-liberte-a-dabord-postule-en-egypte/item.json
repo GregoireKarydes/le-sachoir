@@ -28,12 +28,13 @@
         }
       ],
       "cover": {
-        "prompt": "a sandy canal bank with a big ship in the distance. Auguste (short, bushy dark beard, royal blue frock coat) on the left holding up a large sketch of a giant woman raising a torch, beaming, yellow sparkles; Ismail (plump, red fez, dark green frock coat) on the right turning out his empty pockets with an apologetic smile. wide shot",
+        "prompt": "a sandy canal bank with a big ship in the distance. Auguste (short and stocky, a big bushy dark brown beard and moustache covering his chin, wavy dark hair, royal blue frock coat) on the left holding up a large sketch of a giant woman raising a torch, beaming, yellow sparkles; Ismail (plump, red fez, dark green frock coat) on the right turning out his empty pockets with an apologetic smile. wide shot",
         "cast": [
           "bartholdi",
           "ismail"
         ],
         "file": "images/insolite-cover.webp",
+        "redo": true,
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -62,6 +63,7 @@
               "bartholdi"
             ],
             "file": "images/insolite-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -79,6 +81,7 @@
               "bartholdi"
             ],
             "file": "images/insolite-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -107,6 +110,7 @@
               "ismail"
             ],
             "file": "images/insolite-03.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -148,6 +152,7 @@
               "bartholdi"
             ],
             "file": "images/insolite-05.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -191,6 +196,7 @@
               "bartholdi"
             ],
             "file": "images/insolite-07.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -218,6 +224,7 @@
               "ismail"
             ],
             "file": "images/insolite-08.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }

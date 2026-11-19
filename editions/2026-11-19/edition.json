@@ -156,6 +156,7 @@
           "ingenieure"
         ],
         "file": "images/actu-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1
       },
@@ -181,6 +182,7 @@
               "senateur"
             ],
             "file": "images/actu-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -263,6 +265,7 @@
               "ingenieure"
             ],
             "file": "images/actu-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -319,6 +322,7 @@
               "organisateur"
             ],
             "file": "images/actu-03.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -371,6 +375,7 @@
               "xi"
             ],
             "file": "images/actu-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }

@@ -38,12 +38,13 @@
         }
       ],
       "cover": {
-        "prompt": "a small modern kitchen with a gas stove. On the stove, the cooker puffs a jet of steam from its valve. Samir (short, plump, black curly beard, top knot, red and white checked apron) on the left crouches behind the kitchen table holding a frying pan up as a shield; Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right bends over the cooker, listening to it lovingly like a doctor. wide shot",
+        "prompt": "a small modern kitchen with a gas stove. On the stove, the cooker puffs a jet of steam from its valve. Samir (short, plump, warm brown skin, thick black curly beard, black hair in a small top knot, bright red and white checked apron over a grey T-shirt) on the left crouches behind the kitchen table holding a frying pan up as a shield; Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right bends over the cooker, listening to it lovingly like a doctor. No text, no letters, no signature anywhere in the picture. wide shot",
         "cast": [
           "samir",
           "papin"
         ],
         "file": "images/notice-cover.webp",
+        "redo": true,
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -67,12 +68,13 @@
             }
           ],
           "image": {
-            "prompt": "a small modern kitchen with a gas stove, the cooker and the saucepan side by side on two burners. Samir (short, plump, black curly beard, top knot, red and white checked apron) on the left, wooden spoon raised, looking suspiciously from one pot to the other; Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right leaning on the counter, smiling proudly at the cooker. medium wide shot",
+            "prompt": "a small modern kitchen with a gas stove, the cooker and the saucepan side by side on two burners. Samir (short, plump, black curly beard, top knot, red and white checked apron) on the left, wooden spoon raised, looking suspiciously from one pot to the other; Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right leaning on the counter, smiling proudly at the cooker. Plain oven door with no text, no letters, no brand name anywhere. medium wide shot",
             "cast": [
               "samir",
               "papin"
             ],
             "file": "images/notice-01.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -102,6 +104,7 @@
               "papin"
             ],
             "file": "images/notice-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -143,6 +146,7 @@
               "papin"
             ],
             "file": "images/notice-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -187,6 +191,7 @@
               "samir"
             ],
             "file": "images/notice-06.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -227,6 +232,7 @@
               "samir"
             ],
             "file": "images/notice-08.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }

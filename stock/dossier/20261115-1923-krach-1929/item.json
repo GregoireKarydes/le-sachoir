@@ -64,6 +64,7 @@
           "awa"
         ],
         "file": "images/dossier-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -93,6 +94,7 @@
               "harold"
             ],
             "file": "images/dossier-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -121,6 +123,7 @@
               "awa"
             ],
             "file": "images/dossier-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -162,6 +165,7 @@
               "awa"
             ],
             "file": "images/dossier-03.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -235,6 +239,7 @@
               "awa"
             ],
             "file": "images/dossier-05.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -257,6 +262,7 @@
               "harold"
             ],
             "file": "images/dossier-06.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -285,6 +291,7 @@
               "harold"
             ],
             "file": "images/dossier-07.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 2,
             "same_place": false,
@@ -309,12 +316,13 @@
             }
           ],
           "image": {
-            "prompt": "a 1930s small-town bank with a marble counter and a closed iron grille. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left, relaxed, leaning on the counter with the phone; Harold (short, very round, orange checked suit, boater) on the right tapping her shoulder and pointing gravely at the shut grille. over-the-shoulder",
+            "prompt": "a 1930s small-town bank with a marble counter and a closed iron grille. Only two characters, nobody else in the scene. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left, relaxed, leaning on the counter with the phone; Harold (short, very round, orange checked suit, straw boater) on the right tapping her shoulder and pointing gravely at the shut grille. Harold is the only person in an orange suit. medium shot",
             "cast": [
               "awa",
               "harold"
             ],
             "file": "images/dossier-08.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -351,12 +359,13 @@
             }
           ],
           "image": {
-            "prompt": "a long queue of people in coats in front of the small-town bank door. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) near the back of the line, standing on tiptoe to see the door; Harold (short, very round, orange checked suit, boater) behind her, so short he only sees backs, jumping up and down to see over them. visual gag: tiny Harold jumping. from behind",
+            "prompt": "a long queue of ordinary human people in plain grey and brown coats, seen from behind, in front of the small-town bank door; no animals, no animal heads. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) near the back of the line, standing on tiptoe to see the door; Harold (short, very round, orange checked suit, boater) behind her, so short he only sees backs, jumping up and down to see over them. Harold is the only person in an orange suit and Awa the only one in purple. visual gag: tiny Harold jumping. from behind",
             "cast": [
               "awa",
               "harold"
             ],
             "file": "images/dossier-09.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -401,6 +410,7 @@
               "awa"
             ],
             "file": "images/dossier-10.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -424,6 +434,7 @@
               "awa"
             ],
             "file": "images/dossier-11.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -441,6 +452,7 @@
               "harold"
             ],
             "file": "images/dossier-12.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false
@@ -486,6 +498,7 @@
               "awa"
             ],
             "file": "images/dossier-13.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false,
@@ -510,6 +523,7 @@
               "awa"
             ],
             "file": "images/dossier-14.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false,
@@ -540,6 +554,7 @@
               "awa"
             ],
             "file": "images/dossier-15.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false,
@@ -594,6 +609,7 @@
               "marcel"
             ],
             "file": "images/dossier-17.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "same_place": false,
@@ -726,6 +742,7 @@
               "awa"
             ],
             "file": "images/dossier-21.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"

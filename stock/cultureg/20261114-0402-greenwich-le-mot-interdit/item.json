@@ -34,6 +34,7 @@
           "astro"
         ],
         "file": "images/cultureg-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1
       },
@@ -154,6 +155,7 @@
               "gaston"
             ],
             "file": "images/cultureg-05.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 2
           }
@@ -187,6 +189,7 @@
               "gaston"
             ],
             "file": "images/cultureg-07.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -215,6 +218,7 @@
               "astro"
             ],
             "file": "images/cultureg-08.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -242,6 +246,7 @@
               "astro"
             ],
             "file": "images/cultureg-09.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }

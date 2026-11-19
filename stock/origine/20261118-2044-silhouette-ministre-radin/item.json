@@ -40,12 +40,13 @@
         }
       ],
       "cover": {
-        "prompt": "a sunny square of Montmartre. Léa (short, round, copper-red braids, lilac raincoat) sits in profile on a small stool on the right, chin up, posing very seriously; behind her, Étienne de Silhouette (very tall, extremely thin, white powdered wig, mustard-yellow frock coat) bends down from the left and measures the length of her nose with his quill, frowning, the ledger open under his arm, as if calculating a tax. medium wide shot",
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no split screen, no grid, no inset pictures. Outdoors in a sunny square of Montmartre, plain pale sky, almost empty background, no posters, no signs, no text. Léa (short, round, copper-red braids, lilac raincoat) sits in profile on a small stool on the right, chin up, posing very seriously; behind her, Étienne de Silhouette (very tall, extremely thin, white powdered wig, mustard-yellow frock coat) bends down from the left and measures the length of her nose with his quill, frowning, the ledger open under his arm, as if calculating a tax. medium wide shot",
         "cast": [
           "silhouette",
           "lea"
         ],
         "file": "images/origine-cover.webp",
+        "redo": true,
         "status": "done",
         "attempts": 1,
         "via": "fal"
@@ -142,6 +143,7 @@
             "prompt": "a lavish 1750s dining table. The plump marquis (pink silk coat, huge grey wig) alone, sitting very straight, holding with silver tongs one single tiny green half olive above a gigantic empty white plate, smug, pinky finger raised, mocking. close-up",
             "cast": [],
             "file": "images/origine-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
