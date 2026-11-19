@@ -409,6 +409,12 @@ Le Reel doit **répondre vraiment à sa question de départ et vulgariser la ré
 un Reel compris est regardé jusqu'au bout et partagé, un Reel flou est zappé (le skill `ig-reel` le dit aussi : une
 accroche promet quelque chose, la vidéo doit le livrer).
 
+**Règle de Greg (19 novembre 2026, obligatoire) : chaque Reel commence par une question, et le Reel y répond.** La
+question crée la curiosité ; la réponse donne le sentiment que ça a du sens, que quelqu'un vient de nous vulgariser
+quelque chose. Modèle : la chaîne Épicurieux de Jamy (une vraie question précise, des étapes qui s'enchaînent avec des
+comparaisons du quotidien, un « ah, voilà pourquoi » à la fin). Et **le texte seul doit suffire à tout comprendre** :
+voir la lecture muette en C5.
+
 Avant toute réplique, écris dans le `post.json` :
 1. `question` : la question de départ, comme la poserait quelqu'un au café (« Pourquoi on dit que l'argent n'a pas
    d'odeur ? »).
@@ -418,24 +424,24 @@ Avant toute réplique, écris dans le `post.json` :
 
 Puis l'accroche :
 - Écris **3 accroches de 3 formules différentes** de `hooks.json` (pas 3 variantes d'une même phrase), en français
-  parlé, 6 à 14 mots. Celles qui marchent le mieux pour nous :
-  - **#22 l'idée reçue retournée** : « Non, le chewing-gum avalé ne reste pas sept ans dans ton ventre. »
-  - **#16 la question telle qu'on la pose** : « Prof… pourquoi on dit que l'argent n'a pas d'odeur ? »
-  - **#3 « personne ne te dit que… »** : « Personne ne te dit que les urinoirs de Paris portent le nom d'un empereur. »
-  - **#23 le chiffre qu'on répète au dîner** : « Huit araignées avalées par an pendant ton sommeil ? Faux. »
-  - **#2 l'interdit** : « Ne dis jamais à un Romain que l'argent n'a pas d'odeur. »
-  - **#21 en pleine scène** : « … et c'est là que l'empereur lui a fait sentir la pièce. » (la mise en place doit
-    arriver avant 8 s)
+  parlé, 6 à 14 mots, **chacune formulée en question** (elle se termine par « ? » et c'est `question` qu'elle pose).
+  Celles qui marchent le mieux pour nous :
+  - **#16 la question telle qu'on la pose** : « Pourquoi un empereur romain a-t-il taxé le pipi ? »
+  - **#22 l'idée reçue retournée, en question** : « Le chewing-gum avalé reste vraiment sept ans dans ton ventre ? »
+  - **#23 le chiffre qu'on répète au dîner, en question** : « Huit araignées avalées par an en dormant : vrai ou faux ? »
+  - **#2 l'interdit, en question** : « Pourquoi ne faut-il jamais dire à un Romain que l'argent n'a pas d'odeur ? »
+  - **#3 le lien inattendu, en question** : « Pourquoi les urinoirs de Paris portent-ils le nom d'un empereur ? »
+  - ~~#21 en pleine scène~~ : plus utilisée (elle ne pose pas de question).
 - Note-les avec `python3 social/instagram/ig-skills/skills/ig-reel/hookscore.py --hook "<accroche>"` (indicatif : réglé
   sur l'anglais) et garde la meilleure à ton jugement : **concrète, une vraie tension, une promesse que le Reel tient**.
   Une accroche qui pourrait servir à n'importe quel compte de culture G n'est pas la bonne : mets-y le détail du sujet
   (le pipi, l'empereur, l'avocat des rats).
 - L'accroche devient **la réplique de l'ouverture à froid** (C4b) et, raccourcie en 2 lignes de 18 caractères au plus,
-  le bandeau jaune `band` (affiché dès la première image ; c'est aussi la couverture). Le bandeau n'est pas la phrase
-  dite : il est plus court et plus brutal (6 mots au plus).
+  le bandeau jaune `band` (affiché dès la première image ; c'est aussi la couverture). Le bandeau est **la même
+  question en version courte** (6 mots au plus : « POURQUOI / UNE TAXE PIPI ? »), pas une autre phrase.
 - Jamais de définition, de date, d'intro ni de « Le saviez-vous ? ». Indique la formule retenue dans `hook_formula`.
 
-## C4b. L'ouverture à froid : les 2 premières secondes (obligatoire)
+## C4b. L'ouverture à froid : les 2 premières secondes (obligatoire) — toujours une question (Greg, 19 novembre 2026)
 Retour de Greg (18 novembre 2026, 21 h) : **la plupart des gens scrollent la vidéo instantanément.** Un Reel qui s'ouvre
 sur le labo et « Prof… c'est vrai que… » ressemble à celui de la veille : le pouce part. Chaque Reel s'ouvre donc
 **directement dans le monde du sujet, sur ce qu'il a de plus fou**, comme le pré-générique d'une série. On explique ensuite.
@@ -443,26 +449,29 @@ sur le labo et « Prof… c'est vrai que… » ressemble à celui de la veille :
 Comment c'est fait : la scène 0 est un `world` avec `"cold": true` (pas de portail, pas d'arrivée : l'image 1 est déjà
 l'image du sujet sur l'écran flottant, avec le bandeau jaune et un « boing »). Le moteur fait un zoom rapide sur l'écran,
 puis coupe sur Max et le Prof vers 1,5 s, puis un portail ramène au labo (scène 1 `home`).
-- **Une seule réplique** (deux au plus), **10 mots au plus, dite en moins de 3 s**, avec `"shake": true` et
-  `"react": {"max": "shock"}` (ou l'inverse : Max qui découvre, le Prof impassible). Le **premier mot porte déjà le choc** :
-  jamais « Prof… », « Alors », « Tu savais que », « Aujourd'hui », « Le saviez-vous ».
+- **Une seule réplique, et c'est la question du Reel** (`question` du `post.json`, reformulée pour l'oral) : elle se
+  termine par « ? », **12 mots au plus, dite en moins de 4 s**, avec `"shake": true` et `"react": {"max": "shock"}` (ou
+  l'inverse : Max qui découvre, le Prof impassible). Elle contient **le détail précis qui intrigue** (le pipi, l'empereur,
+  les rats), pas une question vague (« Pourquoi on dit ça ? »). Elle commence par « Pourquoi », « Comment », « C'est
+  vrai que » ou le fait lui-même ; jamais « Prof… », « Alors », « Tu savais que », « Aujourd'hui », « Le saviez-vous ».
+  **Le Reel doit répondre à cette question, mot pour mot celle-là**, avant la moitié (C5).
 - **L'image** (`image`) : la plus forte du sujet (la case de la BD la plus spectaculaire ou drôle, ou une archive
   Commons saisissante). `big` : le mot ou le nombre choc (14 caractères au plus : « TAXE PIPI », « 33 ANS », « INTERDIT »).
-- **Ce qui arrête le pouce** (choisis-en un, le plus fort pour ce sujet) :
-  1. l'absurde vrai, dit platement : « En l'an 70, un empereur a taxé le pipi. » ;
-  2. le nombre impossible : « Ce procès contre des rats a duré cinq ans. » ;
-  3. l'évidence contredite : « Les Gaulois ne portaient pas de casque à ailes. » ;
-  4. l'interdit, le danger : « Pendant 200 ans, ce mot pouvait t'envoyer en prison. » ;
-  5. en pleine scène, au pire moment : « … et là, l'empereur lui met la pièce sous le nez. » ;
-  6. le lien inattendu avec ton quotidien : « Ta poubelle porte le nom d'un préfet. »
-- **Le bandeau** (`band`) n'est pas la réponse : c'est la question que la réplique fait naître (« UNE TAXE / SUR LE PIPI ?! »),
-  6 mots au plus, en capitales, lisible en une demi-seconde. C'est aussi la couverture.
-- **Ne grille pas la réponse** : l'ouverture montre le « quoi » le plus fou, jamais le « pourquoi » (le Reel est là pour
-  ça). Il faut qu'on se dise « attends, quoi ?! ».
-- Puis scène 1 `home` : Max dit exactement ce que pense le spectateur (« Attends… une taxe sur le pipi ?! Pourquoi ? ») ;
-  le Prof donne l'enjeu ; le portail s'ouvre ; la suite comme en C5.
+- **Ce qui arrête le pouce** (choisis-en un, le plus fort pour ce sujet, mis en question) :
+  1. l'absurde vrai : « Pourquoi un empereur romain a-t-il taxé le pipi ? » ;
+  2. le nombre impossible : « Comment un procès contre des rats a-t-il pu durer cinq ans ? » ;
+  3. l'évidence contredite : « Les Gaulois portaient-ils vraiment des casques à ailes ? » ;
+  4. l'interdit, le danger : « Pourquoi ce mot pouvait-il t'envoyer en prison pendant 200 ans ? » ;
+  5. le lien inattendu avec ton quotidien : « Pourquoi ta poubelle porte-t-elle le nom d'un préfet ? »
+- **Le bandeau** (`band`) n'est pas la réponse : c'est la même question en version courte (« POURQUOI UNE / TAXE SUR LE PIPI ? »),
+  2 lignes de 18 caractères au plus, en capitales, lisible en une demi-seconde. C'est aussi la couverture.
+- **Ne grille pas la réponse** : la question montre le « quoi » le plus fou, jamais le « pourquoi » (le Reel est là pour
+  ça). Il faut qu'on se dise « attends, c'est vrai ça ? comment ? ».
+- Puis scène 1 `home` : Max relance avec le doute du spectateur (« Attends… c'est vrai ? Mais comment ça marche ? ») ;
+  le Prof promet une réponse qui a du sens (« Oui. Et la réponse tient en trois étapes. ») ; le portail s'ouvre ; la
+  suite comme en C5. Max ne répète pas la question mot pour mot.
 
-Choisir l'ouverture : écris **5 ouvertures** de 5 types différents ci-dessus, note-les avec `hookscore.py` (indicatif) et
+Choisir l'ouverture : écris **5 questions** de 5 types différents ci-dessus, note-les avec `hookscore.py` (indicatif) et
 le **test du pouce** : « Sur un écran qui défile, avec le son coupé, l'image + le bandeau me font-ils arrêter de scroller ?
 Et avec le son, la première phrase me donne-t-elle besoin de la suite ? ». Garde la plus forte ; mets son numéro de
 formule `hooks.json` dans `hook_formula` (#21 en pleine scène, #22 idée reçue retournée, #23 chiffre, #2 interdit…).
@@ -474,7 +483,7 @@ légende. Peut-il réexpliquer la réponse en deux phrases, avec le pourquoi, au
 Mieux vaut un Reel de 50 s compris qu'un Reel de 30 s que personne ne suit : **on coupe un gag, jamais un maillon.**
 
 Le déroulé (calé sur `ig-reel` : accroche, enjeu, corps, réponse, boucle) :
-- Scène 0 `world` avec `"cold": true` (1 réplique, 0 à 3 s) : l'ouverture à froid (C4b).
+- Scène 0 `world` avec `"cold": true` (1 réplique, 0 à 4 s) : la question du Reel (C4b).
 - Scène 1 `home` (2 ou 3 répliques, jusqu'à 9 s environ) : Max réagit et pose la question (celle du spectateur). Le Prof donne **l'enjeu** en une phrase
   qui intrigue sans tout dire (« Oui. Et c'est à cause de lui qu'on dit “l'argent n'a pas d'odeur”. »). Max relance avec
   la question que se pose le spectateur (« Attends… quel rapport ? »). Le Prof ouvre ensuite le portail tout seul
@@ -485,8 +494,10 @@ Le déroulé (calé sur `ig-reel` : accroche, enjeu, corps, réponse, boucle) :
 - Scène 3 `world` facultative (2 à 4 répliques) : le dernier maillon, le détail qui surprend, ou la mise en scène du fait
   (Max qui joue un rôle, la fausse piste prise au pied de la lettre).
 - Scène 4 `home` (2 ou 3 répliques) : Max pose la question de la fin ; le Prof donne la chute après un silence
-  (`"pause": 0.8`), un fait vrai et surprenant ; Max conclut d'une réplique courte qui fait écho à l'accroche (le
-  Reel boucle).
+  (`"pause": 0.8`), un fait vrai et surprenant ; Max conclut d'une réplique courte qui fait écho à la question (le
+  Reel boucle). **Avant la chute, le Prof reprend la question de départ et y répond en une phrase complète** (« Voilà
+  pourquoi un empereur a taxé le pipi : il rapportait de l'argent, et ça ne sentait rien. ») : c'est le « ça a du sens »
+  que le spectateur emporte et qu'il peut redire à quelqu'un.
 
 Écrire pour qu'on comprenne :
 - **Max est le spectateur.** Chaque fois qu'une explication laisse un « mais pourquoi ? » ou un « c'est qui ? », c'est
@@ -509,6 +520,10 @@ Le déroulé (calé sur `ig-reel` : accroche, enjeu, corps, réponse, boucle) :
   s'affichent en sous-titres deux lignes par deux lignes, au rythme de la voix.
 
 Relecture avant d'écrire le fichier (dans cet ordre) :
+0. **Lecture muette** (Greg, 19 novembre 2026 : « le texte seul doit suffire pour comprendre le Reel ») : lis les
+   sous-titres, le bandeau, `big`, `small` et `tag` comme un texte, sans voix ni images. On doit y trouver la question,
+   la réponse et le pourquoi, dans l'ordre. Si un seul maillon dépend d'un geste, d'une image ou d'un bruitage,
+   réécris la réplique : l'image illustre, elle ne porte jamais une information.
 1. Lis **seulement les répliques**, à voix haute, sans les images : chaque phrase se comprend-elle seule ?
 2. Coche chaque maillon de `chain` : est-il dit en entier ? La réponse (`answer`) est-elle dite avant la moitié ?
 3. Passe le texte parlé dans `python3 social/instagram/ig-skills/skills/ig-human/detect.py <fichier>` (tournures d'IA,
@@ -554,7 +569,7 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
   ],
   "hook_formula": 16,
   "episode": {
-    "band": "UNE TAXE\nSUR LE PIPI ?!",
+    "band": "POURQUOI UNE TAXE\nSUR LE PIPI ?",
     "board": [
       "HISTOIRE VRAIE",
       "le pipi taxé ?"
@@ -578,7 +593,7 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
             "react": {
               "max": "shock"
             },
-            "text": "En l'an 70, un empereur romain a taxé… le pipi."
+            "text": "Pourquoi un empereur romain a-t-il taxé le pipi ?"
           }
         ]
       },
@@ -588,12 +603,12 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
           {
             "who": "max",
             "emo": "shock",
-            "text": "Attends… une taxe sur le pipi ?! Mais pourquoi ?"
+            "text": "Attends… c'est vrai, ça ? Mais comment ça peut rapporter ?"
           },
           {
             "who": "prof",
             "emo": "deadpan",
-            "text": "Parce que le pipi rapportait de l'argent. Et c'est de là qu'on dit « l'argent n'a pas d'odeur »."
+            "text": "Oui. La réponse tient en trois étapes, et elle explique « l'argent n'a pas d'odeur »."
           },
           {
             "who": "max",
@@ -675,6 +690,11 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
       {
         "kind": "home",
         "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Voilà pourquoi un empereur a taxé le pipi : il rapportait de l'argent, et la pièce ne sentait rien."
+          },
           {
             "who": "max",
             "emo": "curious",
