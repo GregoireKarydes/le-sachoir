@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T03:05+01:00",
+ "updated_at": "2026-11-19T03:23+01:00",
  "stock": {
   "cultureg": [
    {
@@ -121,7 +121,7 @@
     "images_done": 7,
     "images_total": 7,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/insolite/20261114-2047-14-juillet-sans-annee",
@@ -225,7 +225,7 @@
     "images_done": 6,
     "images_total": 6,
     "failed": 0,
-    "redo": 0
+    "redo": 2
    },
    {
     "path": "stock/notice/20261115-2047-maree-la-mer-suit-la-lune",
@@ -329,7 +329,7 @@
     "images_done": 6,
     "images_total": 6,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/origine/20261118-2046-chauvin-soldat-imaginaire",
@@ -365,7 +365,7 @@
     "images_done": 22,
     "images_total": 22,
     "failed": 0,
-    "redo": 0
+    "redo": 2
    },
    {
     "path": "stock/dossier/20261116-1930-cathedrales-gothiques",
