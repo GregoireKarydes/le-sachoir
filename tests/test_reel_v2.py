@@ -77,13 +77,18 @@ def test_publication_recupere_les_artefacts_des_trois_posts():
     assert 'startswith(\\"instagram-$d\\")' in wf and "| sort" in wf
 
 
-def test_premier_commentaire_buffer():
+def test_premier_commentaire_buffer(monkeypatch):
     # 18 novembre 2026 (soir) : `first_comment` du post.json part en premier commentaire Instagram (Buffer).
+    # 19 novembre 2026 : seulement avec BUFFER_FIRST_COMMENT=1 (Buffer gratuit refuse le post entier sinon).
     from datetime import datetime
     import social_publish
     due = datetime(2026, 11, 19, 7, 45, tzinfo=social_publish.PARIS)
     render = {"kind": "sitcom", "files": ["reel.mp4"]}
     post = {"date": "2026-11-19", "time": "07:45", "caption": "Légende", "first_comment": "Quelle expression  demain ?"}
+    monkeypatch.delenv("BUFFER_FIRST_COMMENT", raising=False)
+    inp = social_publish.build_input("2026-11-19-sitcom-origine", post, render, "C", due)
+    assert inp["metadata"]["instagram"] == {"type": "reel", "shouldShareToFeed": True}
+    monkeypatch.setenv("BUFFER_FIRST_COMMENT", "1")
     inp = social_publish.build_input("2026-11-19-sitcom-origine", post, render, "C", due)
     assert inp["metadata"]["instagram"] == {"type": "reel", "shouldShareToFeed": True,
                                             "firstComment": "Quelle expression demain ?"}

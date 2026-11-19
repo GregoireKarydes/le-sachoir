@@ -132,10 +132,12 @@ def build_input(folder, post, render, channel, due):
 
 def instagram_meta(post, ig_type):
     """18 novembre 2026 : premier commentaire facultatif (`first_comment` du post.json), pour lancer la discussion
-    sous le Reel. Le champ existe dans l'API Buffer ; s'il est ignoré, le post part quand même."""
+    sous le Reel.
+    19 novembre 2026 : Buffer gratuit refuse TOUT le post quand il y a un premier commentaire (« First comment
+    requires a paid plan »). Il n'est donc envoyé que si la variable BUFFER_FIRST_COMMENT vaut 1 (offre payante)."""
     meta = {"type": ig_type, "shouldShareToFeed": True}
     fc = " ".join(str(post.get("first_comment") or "").split())
-    if fc:
+    if fc and os.environ.get("BUFFER_FIRST_COMMENT", "").strip() == "1":
         meta["firstComment"] = fc[:2200]
     return meta
 
@@ -200,6 +202,15 @@ def main(args):
             res = gql(key, CREATE, {"input": inp})["createPost"]
         except Exception as e:  # noqa
             res = {"message": str(e)}
+        if not res.get("post") and "first comment" in str(res.get("message", "")).lower() \
+                and "firstComment" in inp["metadata"]["instagram"]:
+            # Offre Buffer gratuite : on renvoie le post sans le premier commentaire plutôt que de le perdre.
+            inp["metadata"]["instagram"].pop("firstComment")
+            print(f"::warning::Instagram {d.name} : premier commentaire refusé par Buffer (offre gratuite), renvoi sans.")
+            try:
+                res = gql(key, CREATE, {"input": inp})["createPost"]
+            except Exception as e:  # noqa
+                res = {"message": str(e)}
         if res.get("post"):
             (d / "buffer.json").write_text(json.dumps({"id": res["post"]["id"], "due_at": res["post"].get("dueAt") or inp["dueAt"],
                                                        "sent_at": now.isoformat(timespec="seconds")}, indent=1) + "\n")
