@@ -1,0 +1,16 @@
+{
+ "files": [
+  "reel.mp4"
+ ],
+ "tiktok_files": [
+  "reel.mp4"
+ ],
+ "cover": "reel-cover.jpg",
+ "seconds": 65.7,
+ "voice": [
+  "edge"
+ ],
+ "credits": "Voix : Microsoft Edge TTS (Rémy, Fabrice) ; images : Wikimedia Commons (domaine public / CC0) ou cases du Sachoir",
+ "fingerprint": "c3119b2f7148",
+ "kind": "sitcom"
+}
