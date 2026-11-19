@@ -1,30 +1,13 @@
 {
- "updated_at": "2026-11-19T04:05+01:00",
+ "updated_at": "2026-11-19T05:04+01:00",
  "stock": {
   "cultureg": [
-   {
-    "path": "stock/cultureg/20261114-0402-greenwich-le-mot-interdit",
-    "name": "20261114-0402-greenwich-le-mot-interdit",
-    "added": "20261114-0402",
-    "status": "ready",
-    "next": true,
-    "title": "Greenwich, le mot que la France refusait de prononcer",
-    "theme": "Géographie",
-    "tagline": "En 1911, la France recule ses horloges de 9 minutes 21 secondes. Sans jamais écrire le nom du coupable.",
-    "minutes": 2,
-    "cases": 9,
-    "photos": 1,
-    "images_done": 8,
-    "images_total": 8,
-    "failed": 0,
-    "redo": 0
-   },
    {
     "path": "stock/cultureg/20261114-2049-tennis-15-30-40",
     "name": "20261114-2049-tennis-15-30-40",
     "added": "20261114-2049",
     "status": "ready",
-    "next": false,
+    "next": true,
     "title": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main",
     "theme": "Sports",
     "tagline": "Un jeu de moines, un poème de prince, trois théories et cinq points disparus",
@@ -107,28 +90,11 @@
   ],
   "insolite": [
    {
-    "path": "stock/insolite/20261114-0400-la-liberte-a-dabord-postule-en-egypte",
-    "name": "20261114-0400-la-liberte-a-dabord-postule-en-egypte",
-    "added": "20261114-0400",
-    "status": "ready",
-    "next": true,
-    "title": "La statue de la Liberté a d’abord postulé en Égypte",
-    "theme": "Arts plastiques",
-    "tagline": "Avant New York, Bartholdi avait proposé une géante à torche pour le canal de Suez. Refusée : trop chère.",
-    "minutes": 1,
-    "cases": 8,
-    "photos": 1,
-    "images_done": 7,
-    "images_total": 7,
-    "failed": 0,
-    "redo": 1
-   },
-   {
     "path": "stock/insolite/20261114-2047-14-juillet-sans-annee",
     "name": "20261114-2047-14-juillet-sans-annee",
     "added": "20261114-2047",
     "status": "ready",
-    "next": false,
+    "next": true,
     "title": "Le 14 Juillet a oublié de dire de quelle année il parlait",
     "theme": "Politique française",
     "tagline": "La fête nationale célèbre la Bastille. Ou la Fédération. Ou les deux. La loi n’a jamais tranché.",
@@ -211,28 +177,11 @@
   ],
   "notice": [
    {
-    "path": "stock/notice/20261115-2043-cocotte-minute-triche-avec-leau",
-    "name": "20261115-2043-cocotte-minute-triche-avec-leau",
-    "added": "20261115-2043",
-    "status": "ready",
-    "next": true,
-    "title": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
-    "theme": "Sciences physiques",
-    "tagline": "Une marmite qui siffle, une soupape qui tourne, et un physicien qui cuisait des os en 1679",
-    "minutes": 2,
-    "cases": 8,
-    "photos": 1,
-    "images_done": 6,
-    "images_total": 6,
-    "failed": 0,
-    "redo": 2
-   },
-   {
     "path": "stock/notice/20261115-2047-maree-la-mer-suit-la-lune",
     "name": "20261115-2047-maree-la-mer-suit-la-lune",
     "added": "20261115-2047",
     "status": "ready",
-    "next": false,
+    "next": true,
     "title": "La marée : la mer ne part pas, elle fait le tour de la Terre",
     "theme": "L’univers",
     "tagline": "Une Lune qui tire, une Terre qui tourne, et un cheval au galop qui n’a jamais existé",
@@ -351,23 +300,6 @@
   ],
   "dossier": [
    {
-    "path": "stock/dossier/20261115-1923-krach-1929",
-    "name": "20261115-1923-krach-1929",
-    "added": "20261115-1923",
-    "status": "ready",
-    "next": true,
-    "title": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
-    "theme": "Économie",
-    "tagline": "Du jeudi noir de Wall Street au New Deal de Roosevelt : comment un krach boursier est devenu la Grande Dépression, jusqu’en France",
-    "minutes": 3,
-    "cases": 27,
-    "photos": 3,
-    "images_done": 22,
-    "images_total": 22,
-    "failed": 0,
-    "redo": 2
-   },
-   {
     "path": "stock/dossier/20261116-1930-cathedrales-gothiques",
     "name": "20261116-1930-cathedrales-gothiques",
     "added": "20261116-1930",
@@ -424,15 +356,23 @@
   {
    "date": "2026-11-19",
    "path": "editions/2026-11-19",
-   "status": "draft",
+   "status": "published",
    "newsletter": true,
    "formats": [
     {
-     "id": "quiz",
-     "label": "Plus ou moins",
-     "kind": "plusmoins",
-     "title": "Vieilles pierres contre jeunes premières",
-     "questions": 1
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "kind": "",
+     "title": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
+     "theme": "Économie",
+     "tagline": "Du jeudi noir de Wall Street au New Deal de Roosevelt : comment un krach boursier est devenu la Grande Dépression, jusqu’en France",
+     "minutes": 7,
+     "cases": 27,
+     "photos": 3,
+     "images_done": 22,
+     "images_total": 22,
+     "failed": 0,
+     "redo": 2
     },
     {
      "id": "actu",
@@ -448,6 +388,58 @@
      "images_total": 5,
      "failed": 0,
      "redo": 0
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "kind": "",
+     "title": "Greenwich, le mot que la France refusait de prononcer",
+     "theme": "Géographie",
+     "tagline": "En 1911, la France recule ses horloges de 9 minutes 21 secondes. Sans jamais écrire le nom du coupable.",
+     "minutes": 2,
+     "cases": 9,
+     "photos": 1,
+     "images_done": 8,
+     "images_total": 8,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "kind": "",
+     "title": "La statue de la Liberté a d’abord postulé en Égypte",
+     "theme": "Arts plastiques",
+     "tagline": "Avant New York, Bartholdi avait proposé une géante à torche pour le canal de Suez. Refusée : trop chère.",
+     "minutes": 2,
+     "cases": 8,
+     "photos": 1,
+     "images_done": 7,
+     "images_total": 7,
+     "failed": 0,
+     "redo": 1
+    },
+    {
+     "id": "notice",
+     "label": "La Notice",
+     "kind": "",
+     "title": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
+     "theme": "Sciences physiques",
+     "tagline": "Une marmite qui siffle, une soupape qui tourne, et un physicien qui cuisait des os en 1679",
+     "minutes": 2,
+     "cases": 8,
+     "photos": 1,
+     "images_done": 6,
+     "images_total": 6,
+     "failed": 0,
+     "redo": 2
+    },
+    {
+     "id": "quiz",
+     "label": "Plus ou moins",
+     "kind": "plusmoins",
+     "title": "Vieilles pierres contre jeunes premières",
+     "questions": 1
     }
    ]
   },

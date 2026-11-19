@@ -1,6 +1,84 @@
 {
- "updated_at": "2026-11-19T04:05:02.042552+01:00",
+ "updated_at": "2026-11-19T05:04:37.735631+01:00",
  "editions": [
+  {
+   "date": "2026-11-19",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
+     "kind": "",
+     "url": "histoires/2026-11-19-1929-le-jour-ou-la-bourse-a-rate-une-marche-et-le-monde-entier-avec/",
+     "theme": "Économie",
+     "minutes": 7,
+     "tagline": "Du jeudi noir de Wall Street au New Deal de Roosevelt : comment un krach boursier est devenu la Grande Dépression, jusqu’en France",
+     "cases": 27,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un budget en garde alternée et une sonde à un jour de nous",
+     "kind": "",
+     "url": "histoires/2026-11-19-un-budget-en-garde-alternee-et-une-sonde-a-un-jour-de-nous/",
+     "theme": "",
+     "minutes": 4,
+     "tagline": "Le Sénat adopte le budget de la Sécu rejeté par les députés, Voyager 1 passe un cap historique, le Salon de l’agriculture encadre les candidats et Shenzhen prépare un sommet à trois.",
+     "cases": 12,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Greenwich, le mot que la France refusait de prononcer",
+     "kind": "",
+     "url": "histoires/2026-11-19-greenwich-le-mot-que-la-france-refusait-de-prononcer/",
+     "theme": "Géographie",
+     "minutes": 2,
+     "tagline": "En 1911, la France recule ses horloges de 9 minutes 21 secondes. Sans jamais écrire le nom du coupable.",
+     "cases": 9,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "title": "La statue de la Liberté a d’abord postulé en Égypte",
+     "kind": "",
+     "url": "histoires/2026-11-19-la-statue-de-la-liberte-a-d-abord-postule-en-egypte/",
+     "theme": "Arts plastiques",
+     "minutes": 2,
+     "tagline": "Avant New York, Bartholdi avait proposé une géante à torche pour le canal de Suez. Refusée : trop chère.",
+     "cases": 8,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "notice",
+     "label": "La Notice",
+     "title": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
+     "kind": "",
+     "url": "histoires/2026-11-19-la-cocotte-minute-triche-elle-fait-bouillir-l-eau-a-120-c/",
+     "theme": "Sciences physiques",
+     "minutes": 2,
+     "tagline": "Une marmite qui siffle, une soupape qui tourne, et un physicien qui cuisait des os en 1679",
+     "cases": 8,
+     "cover": "images/notice-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Plus ou moins",
+     "title": "Vieilles pierres contre jeunes premières",
+     "kind": "plusmoins",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-18",
    "demo": false,

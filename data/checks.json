@@ -1,18 +1,7 @@
 {
- "updated_at": "2026-11-19T04:05+01:00",
+ "updated_at": "2026-11-19T05:04+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
-  {
-   "path": "stock/cultureg/20261114-0402-greenwich-le-mot-interdit",
-   "titles": {
-    "cultureg": "Greenwich, le mot que la France refusait de prononcer"
-   },
-   "errors": [],
-   "warnings": [
-    "cultureg : case 2 : récitatif de 23 mots (max 20)",
-    "cultureg : case 9 : récitatif de 22 mots (max 20)"
-   ]
-  },
   {
    "path": "stock/cultureg/20261114-2049-tennis-15-30-40",
    "titles": {
@@ -98,17 +87,6 @@
    ]
   },
   {
-   "path": "stock/notice/20261115-2043-cocotte-minute-triche-avec-leau",
-   "titles": {
-    "notice": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C"
-   },
-   "errors": [],
-   "warnings": [
-    "notice : case 2 : récitatif de 24 mots (max 20)",
-    "notice : case 4 : récitatif de 23 mots (max 20)"
-   ]
-  },
-  {
    "path": "stock/notice/20261115-2047-maree-la-mer-suit-la-lune",
    "titles": {
     "notice": "La marée : la mer ne part pas, elle fait le tour de la Terre"
@@ -160,6 +138,24 @@
    "errors": [],
    "warnings": [
     "origine : fiches chauvin et karim : même couleur dominante (red), à différencier"
+   ]
+  },
+  {
+   "path": "editions/2026-11-19",
+   "titles": {
+    "dossier": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
+    "actu": "Un budget en garde alternée et une sonde à un jour de nous",
+    "cultureg": "Greenwich, le mot que la France refusait de prononcer",
+    "insolite": "La statue de la Liberté a d’abord postulé en Égypte",
+    "notice": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
+    "quiz": "Vieilles pierres contre jeunes premières"
+   },
+   "errors": [],
+   "warnings": [
+    "cultureg : case 2 : récitatif de 23 mots (max 20)",
+    "cultureg : case 9 : récitatif de 22 mots (max 20)",
+    "notice : case 2 : récitatif de 24 mots (max 20)",
+    "notice : case 4 : récitatif de 23 mots (max 20)"
    ]
   }
  ]

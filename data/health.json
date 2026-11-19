@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T04:05:02.042552+01:00",
+ "updated_at": "2026-11-19T05:04:37.735631+01:00",
  "today": "2026-11-19",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,8 +9,12 @@
    "date": "2026-11-19",
    "status": "draft",
    "formats": {
-    "quiz": "prêt",
-    "actu": "prêt"
+    "dossier": "prêt",
+    "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "notice": "prêt",
+    "quiz": "prêt"
    }
   },
   {
@@ -56,43 +60,54 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-19/cultureg : « Greenwich, le mot que la France refusait de prononcer » prise dans la file (20261114-0402-greenwich-le-mot-interdit)",
+  "2026-11-19/insolite : « La statue de la Liberté a d’abord postulé en Égypte » prise dans la file (20261114-0400-la-liberte-a-dabord-postule-en-egypte)",
+  "2026-11-19/notice : « La cocotte-minute triche : elle fait bouillir l’eau à 120 °C » prise dans la file (20261115-2043-cocotte-minute-triche-avec-leau)",
+  "2026-11-19/dossier : « 1929 : le jour où la Bourse a raté une marche (et le monde entier avec) » prise dans la file (20261115-1923-krach-1929)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-18",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite",
+  "notice"
+ ],
+ "last_published": "2026-11-19",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 31,
    "focus": "20261115-2050-departements-taille-cheval (8 image(s) à faire)",
-   "next": "20261114-0402-greenwich-le-mot-interdit",
+   "next": "20261114-2049-tennis-15-30-40",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 24,
    "focus": "20261115-2053-perec-roman-sans-e (6 image(s) à faire)",
-   "next": "20261114-0400-la-liberte-a-dabord-postule-en-egypte",
-   "next_redo": 1
+   "next": "20261114-2047-14-juillet-sans-annee",
+   "next_redo": 0
   },
   "notice": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 20,
    "focus": "20261117-0151-frigo-chaleur-a-la-porte (5 image(s) à faire)",
-   "next": "20261115-2043-cocotte-minute-triche-avec-leau",
-   "next_redo": 2
+   "next": "20261115-2047-maree-la-mer-suit-la-lune",
+   "next_redo": 0
   },
   "origine": {
    "ready": 2,
@@ -104,17 +119,17 @@
    "next_redo": 1
   },
   "dossier": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 3,
    "blocked": 0,
    "images_left": 48,
    "focus": "20261116-1930-cathedrales-gothiques (4 image(s) à faire)",
-   "next": "20261115-1923-krach-1929",
-   "next_redo": 2
+   "next": null,
+   "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 4,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-19",
@@ -136,7 +151,7 @@
  },
  "rss": {
   "collected_at": "2026-11-19T00:23:49.779551+01:00",
-  "age_hours": 3.7,
+  "age_hours": 4.7,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 29,

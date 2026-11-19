@@ -1,100 +1,807 @@
 {
   "date": "2026-11-19",
-  "status": "draft",
+  "status": "published",
   "formats": [
     {
-      "id": "quiz",
-      "kind": "plusmoins",
-      "label": "Plus ou moins",
-      "title": "Vieilles pierres contre jeunes premières",
-      "minutes": 1,
-      "theme": "",
-      "questions": [
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
+      "tagline": "Du jeudi noir de Wall Street au New Deal de Roosevelt : comment un krach boursier est devenu la Grande Dépression, jusqu’en France",
+      "teaser": "Acheter des actions avec l’argent des autres : idée géniale. Jusqu’au jour où tout le monde a voulu revendre en même temps.",
+      "minutes": 7,
+      "theme": "Économie",
+      "art": {
+        "subject": "the 1929 Wall Street crash and the Great Depression: buying shares on credit, Black Thursday and Black Tuesday, bank runs, tariffs, the crisis spreading to Europe and France, and Roosevelt's New Deal",
+        "setting": "a bare modern living room with a sofa, a 1920s New York street, a crowded 1920s stock exchange floor, a 1930s small-town bank with a marble counter, a dock with a wooden gate, a grey winter street, a modest 1930s Paris flat, a gold vault, a Paris café terrace, a 1930s presidential office",
+        "era": "the United States and France from 1925 to 1936, with one young woman from today",
+        "props": {
+          "phone": "a modern black smartphone",
+          "certificate": "a large cream-coloured stock certificate with an ornate green border and no writing",
+          "ticker": "a stock ticker machine under a glass dome, spitting a long curly strip of white paper tape",
+          "boater": "Harold's flat straw boater hat with a red band",
+          "sack": "a small brown cloth sack bulging with gold coins",
+          "chart": "a long sheet of white paper with a single thick red line plunging downward",
+          "mic": "a big round 1930s radio microphone on a chrome stand"
+        }
+      },
+      "cast": [
         {
-          "type": "chain",
-          "q": "Lequel est le plus ancien ?",
-          "hint": "Un monument parisien n’est pas forcément vieux.",
-          "crit": "plus ancien",
-          "pick": "min",
-          "items": [
+          "id": "harold",
+          "name": "Harold",
+          "look": "Harold, a short and very round 1920s Wall Street speculator, slicked-back shiny black hair with a centre parting, thin pencil moustache, light pink-beige skin, a loud orange checked three-piece suit as main colour, the boater on his head, a strip of ticker tape always spilling from his breast pocket",
+          "role": "the overconfident small speculator who bought everything on credit; struts with his chest out and never doubts, then deflates like a balloon",
+          "file": "cast/dossier-harold.png",
+          "status": "done"
+        },
+        {
+          "id": "awa",
+          "name": "Awa",
+          "look": "Awa, a tall slim young woman of today, short natural black afro hair with a bright yellow headband, dark brown skin, a bright purple hoodie as main colour, light grey jeans, white sneakers, holding the phone",
+          "role": "the curious young woman from today who asks the reader's questions; calm and sceptical, one eyebrow raised, arms often crossed",
+          "file": "cast/dossier-awa.png",
+          "status": "done"
+        },
+        {
+          "id": "marcel",
+          "name": "Marcel",
+          "look": "Marcel, a very old and very thin French saver of the 1930s, slightly hunched, bushy white walrus moustache, white tufts of hair under a black beret, pale skin, a sky-blue knitted cardigan as main colour over a white shirt, brown trousers, always hugging the sack",
+          "role": "the cautious French saver who trusts only gold; suspicious, clutches his sack tightly, very proud of the strong franc",
+          "file": "cast/dossier-marcel.png",
+          "status": "done"
+        },
+        {
+          "id": "roosevelt",
+          "name": "Franklin D. Roosevelt",
+          "look": "Franklin, a 1930s American president in his fifties, tall and broad-shouldered, big confident grin, grey hair combed back, small pince-nez glasses, light skin, a long dark navy-blue cape over a grey suit as main colour, a grey fedora hat",
+          "role": "the president who restores confidence; warm and theatrical, broad reassuring gestures, often speaking into the mic",
+          "file": "cast/dossier-roosevelt.png",
+          "status": "done"
+        }
+      ],
+      "cover": {
+        "prompt": "a 1920s stock exchange floor. Harold (short, very round, orange checked suit, boater) on the left, grinning, sliding down a giant red playground slide that plunges steeply down, certificates flying from his hands; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right at the bottom of the slide, holding up the phone as if filming him. visual gag: the stock market as a playground slide. wide shot",
+        "cast": [
+          "harold",
+          "awa"
+        ],
+        "file": "images/dossier-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · La grande fête",
+          "caption": "En 1929, la Bourse de New York s’effondre. Comment ce krach a-t-il plongé le monde entier dans la crise ?",
+          "bubbles": [
             {
-              "name": "La tour Eiffel",
-              "value": 1889,
-              "label": "1889",
-              "explain": "Construite pour l’Exposition universelle de 1889."
+              "who": "awa",
+              "text": "Mon appli de banque affiche « krach ». C’est grave ?",
+              "side": "r"
             },
             {
-              "name": "L’Arc de triomphe de l’Étoile",
-              "value": 1836,
-              "label": "1836",
-              "explain": "Voulu par Napoléon en 1806, inauguré seulement en 1836."
-            },
-            {
-              "name": "Notre-Dame de Paris",
-              "value": 1163,
-              "label": "1163",
-              "explain": "Le chantier commence vers 1163 et dure près de deux siècles."
-            },
-            {
-              "name": "Le pont du Gard",
-              "value": 50,
-              "label": "vers 50",
-              "explain": "Un aqueduc romain bâti vers l’an 50 pour alimenter Nîmes."
-            },
-            {
-              "name": "La pyramide du Louvre",
-              "value": 1989,
-              "label": "1989",
-              "explain": "Inaugurée le 29 mars 1989, œuvre de l’architecte Pei."
-            },
-            {
-              "name": "L’abbaye du Mont-Saint-Michel",
-              "value": 966,
-              "label": "966",
-              "explain": "Fondée en 966 par le duc de Normandie, confiée aux bénédictins."
-            },
-            {
-              "name": "Le château de Chambord",
-              "value": 1519,
-              "label": "1519",
-              "explain": "François Ier lance le chantier en 1519."
-            },
-            {
-              "name": "L’Opéra Garnier",
-              "value": 1875,
-              "label": "1875",
-              "explain": "Inauguré en 1875, sous la IIIe République."
+              "who": "harold",
+              "text": "Un krach ? J’en ai vécu un magnifique, en 1929.",
+              "side": "l"
             }
           ],
-          "explain": "Entre le pont du Gard et la pyramide du Louvre, presque deux mille ans d’écart. Et la tour Eiffel, qu’on croit éternelle, n’a « que » 137 ans.",
-          "source": {
-            "title": "Larousse — Le Mont-Saint-Michel",
-            "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946"
+          "image": {
+            "prompt": "a bare modern living room with a sofa. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right sitting on the sofa, frowning at the phone; Harold (short, very round, orange checked suit, boater) on the left bursting in through a door with his arms wide like an old friend, ticker tape trailing behind him. visual gag: a 1920s speculator walking into a modern flat. wide shot",
+            "cast": [
+              "awa",
+              "harold"
+            ],
+            "file": "images/dossier-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Années 1920",
+          "caption": "Après la guerre, l’Amérique s’enrichit et achète à crédit : en 1929, environ 70 % des voitures sont payées ainsi.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "Payer plus tard, c’est pratique.",
+              "side": "r"
+            },
+            {
+              "who": "harold",
+              "text": "Pareil pour les actions, ces petits bouts d’entreprise : je les achète à crédit !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a 1920s New York street with a shiny new black car at the kerb. Harold (short, very round, orange checked suit, boater) on the left proudly polishing the car's bonnet with his sleeve, a certificate tucked under his arm; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right leaning on a lamppost, one eyebrow raised. medium wide shot",
+            "cast": [
+              "harold",
+              "awa"
+            ],
+            "file": "images/dossier-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "title": "Acheter des actions avec l’argent des autres",
+          "text": "Les actions ont triplé en dix ans. On les achète « sur marge » : jusqu’à 90 % avec l’argent prêté par le courtier, l’intermédiaire.",
+          "steps": [
+            "Le prix monte : on revend, on rembourse, on empoche",
+            "Le prix baisse : le courtier exige son argent tout de suite",
+            "Pour payer, on vend… et les prix baissent encore"
+          ],
+          "joke": "Génial dans un sens. Catastrophique dans l’autre."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Octobre 1929",
+          "caption": "En octobre 1929, le célèbre économiste Irving Fisher l’assure : les actions ont atteint « un plateau haut permanent ».",
+          "bubbles": [
+            {
+              "who": "harold",
+              "text": "Permanent ! C’est un professeur qui le dit.",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Alors pourquoi tout le monde court vers la Bourse ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1920s New York street corner. Harold (short, very round, orange checked suit, boater) in the foreground on the left, lying back in a striped deckchair with a blank newspaper, eyes closed, blissful smile; behind him on the right Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) turning in alarm towards a crowd of small men in hats running past in the background. low angle",
+            "cast": [
+              "harold",
+              "awa"
+            ],
+            "file": "images/dossier-03.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La foule devant la Bourse de New York, octobre 1929",
+          "text": "Des milliers de personnes se massent à Wall Street : elles veulent savoir si leurs actions valent encore quelque chose.",
+          "photo": {
+            "commons": "File:Crowd outside nyse.jpg",
+            "credit": "US-gov",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Crowd_outside_nyse.jpg",
+            "file": "images/photo-5-crowd-outside-nyse-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Le krach",
+          "caption": "Jeudi 24 octobre, le « jeudi noir » : tout le monde vend. Près de 13 millions d’actions changent de main.",
+          "bubbles": [
+            {
+              "who": "harold",
+              "text": "Tout le monde vend ! Mais qui achète ?",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Personne. C’est bien le problème.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a crowded 1920s stock exchange floor. Harold (short, very round, orange checked suit, boater) in the centre buried up to his chin in a huge pile of tape spilling from the ticker, waving one arm in panic, light-blue sweat drop; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right calmly pulling a strip of tape off his boater. visual gag: drowning in ticker tape. high angle",
+            "cast": [
+              "harold",
+              "awa"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Le même après-midi",
+          "caption": "Pour rassurer, de grands banquiers rachètent des actions en masse. Le soir, la baisse est presque effacée.",
+          "bubbles": [
+            {
+              "who": "harold",
+              "text": "Ouf ! Les banquiers nous sauvent. J’avais raison !",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Attendez mardi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the stock exchange floor, now calm, tape scattered on the floor. Harold (short, very round, orange checked suit, boater) on the left doing a little victory dance on one leg, boater raised high; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right, arms crossed, glancing at a blank wall calendar, unimpressed. medium shot",
+            "cast": [
+              "harold",
+              "awa"
+            ],
+            "file": "images/dossier-05.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "Mardi 29 octobre 1929",
+          "caption": "Le « mardi noir », plus de 16 millions d’actions sont vendues. Le Dow Jones, l’indice des grandes actions, perd encore 12 %.",
+          "bubbles": [
+            {
+              "who": "harold",
+              "text": "Mon courtier exige son argent. Je dois tout vendre !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Harold (short, very round, orange checked suit, boater) alone on the stock exchange floor, pulling both trouser pockets inside out, a single small moth fluttering out of one pocket, his jaw dropped and his moustache drooping. visual gag: the moth escaping his empty pocket. medium close-up",
+            "cast": [
+              "harold"
+            ],
+            "file": "images/dossier-06.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "1929-1932",
+          "caption": "Et ce n’est qu’un début : en 1932, les actions ont perdu 89 % de leur valeur de 1929.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "Donc 100 dollars placés en 1929… il en reste 11 ?",
+              "side": "l"
+            },
+            {
+              "who": "harold",
+              "text": "Onze dollars. Et un très beau chapeau.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bare grey New York pavement. Harold (short, very round, orange checked suit, holding the boater) on the right sitting on the kerb, chin up with wounded dignity, pressing the boater against his chest like his last treasure; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left standing, counting on her fingers and wincing. wide shot",
+            "cast": [
+              "awa",
+              "harold"
+            ],
+            "file": "images/dossier-07.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 2,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 10,
+          "kind": "chap",
+          "tag": "Chapitre 3 · De la Bourse à la rue",
+          "caption": "Pourquoi un krach ruine-t-il aussi ceux qui n’ont jamais acheté une seule action ? À cause des banques.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "Moi, je n’ai pas d’actions. Je ne risque rien ?",
+              "side": "l"
+            },
+            {
+              "who": "harold",
+              "text": "Vous avez un compte en banque ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s small-town bank with a marble counter and a closed iron grille. Only two characters, nobody else in the scene. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left, relaxed, leaning on the counter with the phone; Harold (short, very round, orange checked suit, straw boater) on the right tapping her shoulder and pointing gravely at the shut grille. Harold is the only person in an orange suit. medium shot",
+            "cast": [
+              "awa",
+              "harold"
+            ],
+            "file": "images/dossier-08.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "title": "Comment la crise passe de la Bourse aux banques",
+          "text": "Entre 1929 et 1933, environ 9 000 banques américaines ferment pour de bon.",
+          "steps": [
+            "Ruinés, des emprunteurs ne remboursent plus leur banque",
+            "Inquiets, les clients courent retirer leur argent : c’est la panique bancaire",
+            "Une banque n’a pas tout en caisse, elle a prêté l’argent : elle ferme",
+            "Les entreprises n’ont plus de crédit : elles licencient, on achète moins"
+          ],
+          "joke": "Des dominos, mais avec vos économies."
+        },
+        {
+          "n": 12,
+          "kind": "",
+          "tag": "1930-1931",
+          "caption": "Partout aux États-Unis, des foules font la queue pour vider leur compte avant que leur banque ne ferme.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "Si tout le monde retire son argent en même temps…",
+              "side": "l"
+            },
+            {
+              "who": "harold",
+              "text": "La banque coule. Et le fond de la queue avec.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a long queue of ordinary human people in plain grey and brown coats, seen from behind, in front of the small-town bank door; no animals, no animal heads. Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) near the back of the line, standing on tiptoe to see the door; Harold (short, very round, orange checked suit, boater) behind her, so short he only sees backs, jumping up and down to see over them. Harold is the only person in an orange suit and Awa the only one in purple. visual gag: tiny Harold jumping. from behind",
+            "cast": [
+              "awa",
+              "harold"
+            ],
+            "file": "images/dossier-09.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 13,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Panique devant une banque de New York",
+          "text": "Au début de la crise, une foule se presse devant l’American Union Bank : chacun veut récupérer son argent avant les autres.",
+          "photo": {
+            "commons": "File:American union bank.gif",
+            "credit": "National Archives Photo",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:American_union_bank.gif",
+            "file": "images/photo-13-american-union-bank-gif.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 14,
+          "kind": "fact",
+          "tag": "1930",
+          "caption": "Pour protéger ses usines, l’Amérique taxe lourdement les produits étrangers, à environ 50 %. Les autres pays répliquent.",
+          "bubbles": [
+            {
+              "who": "harold",
+              "text": "Fermons les portes ! Personne n’entre !",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Et vos voitures, vous les vendrez à qui ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a harbour dock with a big wooden gate. Harold (short, very round, orange checked suit, boater) on the left frantically hammering planks across the gate, nails between his teeth, while behind him a pile of crates full of small new cars has no way out; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right pointing at the stuck crates. visual gag: he boards himself in with his own goods. medium wide shot",
+            "cast": [
+              "harold",
+              "awa"
+            ],
+            "file": "images/dossier-10.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 15,
+          "kind": "",
+          "tag": "1929-1932",
+          "caption": "Résultat : en trois ans, le commerce mondial s’effondre et la production mondiale recule de 35 %.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "Chacun se protège… et tout le monde coule ensemble.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) alone at the top of a long bare staircase, unrolling the chart; the red line runs off the edge of the paper and keeps going down the steps all the way to the bottom, she stares after it, bewildered. visual gag: the line escaping the paper. bird's-eye view",
+            "cast": [
+              "awa"
+            ],
+            "file": "images/dossier-11.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 16,
+          "kind": "",
+          "tag": "1933",
+          "caption": "En 1933, au moins un Américain sur quatre est au chômage. Beaucoup dépendent de soupes populaires gratuites.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a grey winter street. Harold (short, very round, faded and patched orange checked suit, boater) standing quietly in a long line of men in dark coats seen from behind, holding an empty tin bowl with both hands, head lowered. calm, sober scene. medium shot",
+            "cast": [
+              "harold"
+            ],
+            "file": "images/dossier-12.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false
+          }
+        },
+        {
+          "n": 17,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La soupe populaire, à Chicago, en 1931",
+          "text": "Des chômeurs attendent un repas gratuit, en février 1931. Cette soupe populaire avait été ouverte par le gangster Al Capone.",
+          "photo": {
+            "commons": "File:Unemployed men queued outside a depression soup kitchen opened in Chicago by Al Capone, 02-1931 - NARA - 541927.jpg",
+            "credit": "Unknown authorUnknown author or not provided",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone,_02-1931_-_NARA_-_541927.jpg",
+            "file": "images/photo-17-unemployed-men-queued-outside-a-dep.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 18,
+          "kind": "chap",
+          "tag": "Chapitre 4 · La crise fait le tour du monde",
+          "caption": "Ruinées, les banques américaines rapatrient l’argent prêté à l’Europe. En mai 1931, la grande banque autrichienne Kreditanstalt s’effondre.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "L’Amérique éternue, et c’est l’Europe qui s’enrhume ?",
+              "side": "r"
+            },
+            {
+              "who": "harold",
+              "text": "Pire : on lui reprend aussi son mouchoir.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room with a big world globe on a wooden stand. Harold (short, very round, orange checked suit, boater) on the left sneezing hugely onto the globe, his boater flying off; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right holding a tiny umbrella over Europe on the globe. visual gag: the tiny umbrella over a continent. wide shot",
+            "cast": [
+              "harold",
+              "awa"
+            ],
+            "file": "images/dossier-13.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 19,
+          "kind": "",
+          "tag": "Allemagne, 1932",
+          "caption": "En Allemagne, la crise fait 6 millions de chômeurs. Les nazis en profitent : Hitler devient chancelier en janvier 1933.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "La crise économique devient une crise politique. La pire de toutes.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) alone, serious and still, in front of a plain map of Europe pinned on a bare wall, Germany shaded dark grey, her hands in her hoodie pocket. calm, sober scene. medium close-up",
+            "cast": [
+              "awa"
+            ],
+            "file": "images/dossier-14.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 20,
+          "kind": "",
+          "tag": "Et la France ?",
+          "caption": "La France n’est touchée que vers 1931, en partie parce que peu de Français placent leur argent en Bourse.",
+          "bubbles": [
+            {
+              "who": "marcel",
+              "text": "La Bourse ? Très peu pour moi. Je garde mon or.",
+              "side": "r"
+            },
+            {
+              "who": "awa",
+              "text": "Sous le matelas ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a modest 1930s Paris bedroom with a flowery armchair and an iron bed. Marcel (very old, very thin, white walrus moustache, black beret, sky-blue cardigan) on the right hugging the sack tightly and eyeing Awa with suspicion; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left lifting the corner of the mattress to peek underneath. wide shot",
+            "cast": [
+              "marcel",
+              "awa"
+            ],
+            "file": "images/dossier-15.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 21,
+          "kind": "fact",
+          "tag": "1927-1930",
+          "caption": "La Banque de France entasse aussi de l’or : ses réserves passent de 18 à 80 milliards de francs.",
+          "bubbles": [
+            {
+              "who": "marcel",
+              "text": "Notre franc est solide comme un lingot.",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Solide… ou trop cher ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bank vault with gold bars stacked up to the walls. Marcel (very old, very thin, white walrus moustache, black beret, sky-blue cardigan) in the foreground on the left, tiny next to the huge wall of gold bars, gazing up with yellow sparkles in his eyes, still hugging the sack; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) further back on the right, hands on hips. low angle",
+            "cast": [
+              "marcel",
+              "awa"
+            ],
+            "file": "images/dossier-16.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 22,
+          "kind": "",
+          "tag": "1931",
+          "caption": "Le Royaume-Uni dévalue : sa livre vaut moins. Donc ses produits deviennent moins chers que les produits français.",
+          "bubbles": [
+            {
+              "who": "marcel",
+              "text": "Dévaluer le franc ? Jamais ! C’est sacré.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Marcel (very old, very thin, white walrus moustache, black beret, sky-blue cardigan) alone, clutching the sack with both arms and shaking his head furiously, red angry flush, his beret flying off his head. close-up",
+            "cast": [
+              "marcel"
+            ],
+            "file": "images/dossier-17.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 23,
+          "kind": "",
+          "tag": "1931-1936",
+          "caption": "Moins compétitive, la France s’enfonce dans la crise. Le franc n’est finalement dévalué qu’en 1936, d’environ 30 %.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "Cinq ans après les Anglais.",
+              "side": "l"
+            },
+            {
+              "who": "marcel",
+              "text": "Mais avec beaucoup de dignité.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s Paris café terrace. Marcel (very old, very thin, white walrus moustache, black beret, sky-blue cardigan) on the right sitting very upright at a small round table, sipping a tiny coffee with his nose in the air, the sack on his lap; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left leaning on the table, holding up a blank calendar, deadpan. medium shot",
+            "cast": [
+              "awa",
+              "marcel"
+            ],
+            "file": "images/dossier-18.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 24,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Comment on s’en sort",
+          "caption": "4 mars 1933, Franklin D. Roosevelt devient président. Il lance : « La seule chose à craindre, c’est la peur elle-même. »",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "Belle phrase. Et concrètement ?",
+              "side": "l"
+            },
+            {
+              "who": "roosevelt",
+              "text": "Concrètement ? Dès demain, je ferme toutes les banques.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1930s presidential office with a big wooden desk. Franklin (tall, broad-shouldered, pince-nez, navy-blue cape, grey fedora) on the right leaning towards the mic on the desk with a huge confident grin, one hand raised theatrically; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the left, arms crossed, sceptical. medium wide shot",
+            "cast": [
+              "roosevelt",
+              "awa"
+            ],
+            "file": "images/dossier-19.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 25,
+          "kind": "explain",
+          "title": "Le New Deal, la « nouvelle donne »",
+          "text": "Fermer les banques quelques jours sert à calmer la panique. Puis Roosevelt fait voter une avalanche de lois :",
+          "steps": [
+            "Les petits dépôts sont garantis : plus besoin de courir à la banque",
+            "Une loi encadre la Bourse et ses excès",
+            "De grands travaux donnent un emploi : 2,5 millions de jeunes travaillent dans les forêts"
+          ],
+          "joke": "Le message : votre argent ne s’évapore plus."
+        },
+        {
+          "n": 26,
+          "kind": "",
+          "tag": "Et aujourd’hui ?",
+          "caption": "En 2008, la banque centrale américaine prête massivement aux banques, pour éviter une vague de faillites comme en 1930.",
+          "bubbles": [
+            {
+              "who": "roosevelt",
+              "text": "Vous voyez ? La leçon a été retenue.",
+              "side": "l"
+            },
+            {
+              "who": "awa",
+              "text": "Et avec les dépôts garantis, les files devant les banques sont devenues rares.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bare modern living room with the sofa. Franklin (tall, broad-shouldered, pince-nez, navy-blue cape, grey fedora) on the left sitting stiffly on the sofa, holding the phone at arm's length and squinting at it through his pince-nez; Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) on the right leaning over the back of the sofa, pointing at the screen. visual gag: a 1930s president puzzled by a smartphone. high angle",
+            "cast": [
+              "roosevelt",
+              "awa"
+            ],
+            "file": "images/dossier-20.webp",
+            "status": "done",
+            "attempts": 1,
+            "same_place": false,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 27,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Des actions achetées à crédit, un krach, des banques qui tombent, des frontières fermées : la crise devient mondiale.",
+          "bubbles": [
+            {
+              "who": "awa",
+              "text": "Je coupe l’alerte « krach ». Vous m’avez assez fait peur.",
+              "side": "r"
+            },
+            {
+              "who": "harold",
+              "text": "Excellente idée. Et surtout, achetez !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the bare modern living room. Harold (short, very round, orange checked suit, boater) in the foreground, grinning madly with shining eyes, holding up a fresh certificate right at the viewer; small in the background, Awa (tall, slim, short black afro with yellow headband, bright purple hoodie) slapping her palm onto her forehead. close-up",
+            "cast": [
+              "harold",
+              "awa"
+            ],
+            "file": "images/dossier-21.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
+      "final": {
+        "text": "En 1931, à Chicago, une soupe populaire pour les chômeurs avait été ouverte par le gangster Al Capone.",
+        "source": "History.com — 1929 Stock Market Crash"
+      },
+      "story": "Dans les années 1920, l’Amérique vit à crédit. À Wall Street, la Bourse de New York, les actions triplent en dix ans, et beaucoup les achètent « sur marge », avec jusqu’à 90 % d’argent emprunté. En octobre 1929, l’économiste Irving Fisher parle encore d’un « plateau haut permanent ».\nLe jeudi 24 octobre, la panique éclate : près de 13 millions d’actions changent de main. Le mardi 29, plus de 16 millions sont vendues. Parce que les acheteurs sur marge doivent rembourser leur courtier, ils vendent, ce qui fait encore baisser les prix. En 1932, les actions ont perdu 89 % de leur valeur.\nLa crise gagne les banques : les clients retirent leur argent, et environ 9 000 banques américaines ferment entre 1929 et 1933. Les entreprises licencient ; en 1933, au moins un Américain sur quatre est au chômage. Les droits de douane de 1930 et les représailles font s’effondrer le commerce mondial. Les capitaux américains quittent l’Europe : la Kreditanstalt autrichienne tombe en 1931, l’Allemagne compte 6 millions de chômeurs et Hitler arrive au pouvoir en 1933.\nLa France, riche en or et peu tournée vers la Bourse, n’est touchée que vers 1931, mais elle refuse de dévaluer le franc jusqu’en 1936. Aux États-Unis, Roosevelt ferme les banques dès mars 1933, garantit les petits dépôts et lance de grands travaux : le New Deal. En 2008, la banque centrale américaine s’en est souvenue.",
       "sources": [
         {
-          "title": "Larousse — Le Mont-Saint-Michel",
-          "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946"
+          "title": "Banque de France — La crise de 1929",
+          "url": "https://www.banque-france.fr/fr/publications-et-statistiques/publications/la-crise-de-1929"
         },
         {
-          "title": "France.fr — Le Pont du Gard, merveille de l’Antiquité",
-          "url": "https://www.france.fr/fr/article/site-du-pont-du-gard/"
+          "title": "History.com — 1929 Stock Market Crash",
+          "url": "https://www.history.com/articles/1929-stock-market-crash"
         },
         {
-          "title": "Ministère de la Culture — Musée du Louvre, les trente ans de la pyramide",
-          "url": "https://www.culture.gouv.fr/actualites/Musee-du-Louvre-les-trente-ans-de-la-pyramide"
+          "title": "Larousse — La crise de 1929",
+          "url": "https://www.larousse.fr/encyclopedie/divers/la_crise_de_1929/187370"
         },
         {
-          "title": "France.fr — The Opéra Garnier: an icon of Parisian architecture",
-          "url": "https://www.france.fr/en/article/palais-garnier-opera-national-paris/"
+          "title": "Motley Fool — There’s no such thing as a “permanently high plateau”",
+          "url": "https://www.fool.com/investing/general/2013/10/15/theres-no-such-thing-as-a-permanently-high-plateau.aspx"
         },
         {
-          "title": "Sortir à Paris — 15 août, première pierre de l’Arc de triomphe",
-          "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/257448-ephemeride-du-15-aout-on-pose-la-premiere-pierre-de-l-arc-de-triomphe-a-paris"
+          "title": "Britannica — United States: The Great Depression",
+          "url": "https://www.britannica.com/place/United-States/The-Great-Depression"
+        },
+        {
+          "title": "Federal Reserve History — Banking Panics of 1930-31",
+          "url": "https://www.federalreservehistory.org/essays/banking_panics_1930_31"
+        },
+        {
+          "title": "Wikipedia — Great Depression in France",
+          "url": "https://en.wikipedia.org/wiki/Great_Depression_in_France"
+        },
+        {
+          "title": "Hérodote — 28 mars 1930, Brüning chancelier",
+          "url": "https://www.herodote.net/28_mars_1930-evenement-19300328.php"
+        },
+        {
+          "title": "Britannica — Germany: The end of the republic",
+          "url": "https://www.britannica.com/place/Germany/The-end-of-the-republic"
+        },
+        {
+          "title": "Federal Reserve — Bernanke, speech of April 8, 2010",
+          "url": "https://www.federalreserve.gov/newsevents/speech/bernanke20100408a.htm"
+        },
+        {
+          "title": "Rare Historical Photos — Al Capone’s soup kitchen, Chicago, 1931",
+          "url": "https://rarehistoricalphotos.com/al-capones-soup-kitchen-great-depression-chicago-1931/"
         }
-      ]
+      ],
+      "from_stock": "20261115-1923-krach-1929"
     },
     {
       "id": "actu",
@@ -475,6 +1182,914 @@
           "url": "https://selectra.info/telecom/actualites/marche/gta-6-18-novembre-midi-astuce-nouvelle-zelande"
         }
       ]
+    },
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Greenwich, le mot que la France refusait de prononcer",
+      "tagline": "En 1911, la France recule ses horloges de 9 minutes 21 secondes. Sans jamais écrire le nom du coupable.",
+      "teaser": "Pourquoi la France a-t-elle reculé toutes ses horloges de 9 minutes et 21 secondes ? Indice : par fierté, et un peu par jalousie.",
+      "minutes": 2,
+      "theme": "Géographie",
+      "cast": [
+        {
+          "id": "gaston",
+          "name": "Gaston, chef de gare",
+          "look": "Gaston, a short round French stationmaster of 1911 in his fifties, big droopy walrus moustache, rosy cheeks, light peach skin, navy blue railway uniform with brass buttons as main colour, a tall red stationmaster's kepi, a big brass pocket watch always in his hand",
+          "file": "cast/cultureg-gaston.png",
+          "status": "done",
+          "role": "the anxious stationmaster who asks the reader's questions and has to change all the clocks; round, fussy, forever checking his watch"
+        },
+        {
+          "id": "astro",
+          "name": "L’astronome",
+          "look": "an elderly very tall and thin astronomer of the Paris Observatory in 1911, long pointy white beard, bald head, small round spectacles, light peach skin, long teal frock coat as main colour, a brass telescope tucked under his arm",
+          "file": "cast/cultureg-astro.png",
+          "status": "done",
+          "role": "the dry, proud astronomer who explains simply but refuses, out of wounded national pride, to ever say the name of the English village; very tall, chin up, speaks with a raised finger"
+        }
+      ],
+      "cover": {
+        "prompt": "a railway station platform with one big round station clock on a post. Gaston (short, round, walrus moustache, navy uniform, red kepi) on the left standing on a wooden ladder, pushing the clock's minute hand backwards with both hands, sweating, light-blue sweat drop; the astronomer (very tall, thin, white beard, teal coat) on the right whistling innocently, hiding a folded map behind his back. wide shot",
+        "cast": [
+          "gaston",
+          "astro"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Mars 1911",
+          "caption": "En mars 1911, la France recule toutes ses horloges de 9 minutes et 21 secondes. Pourquoi un chiffre aussi bizarre ?",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Neuf minutes vingt et une. Pas dix. Pas neuf. Qui déteste les chefs de gare ?",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Un village anglais. Dont nous ne dirons pas le nom.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a railway station platform with one big round station clock on a post. Gaston (short, round, walrus moustache, navy uniform, red kepi) on the left at the foot of the clock, staring at his brass pocket watch, baffled; the astronomer (very tall, thin, white beard, teal coat) on the right leaning down to him with a finger on his lips, conspiratorial. wide shot",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Avant 1891",
+          "caption": "Avant, chaque ville vit à l’heure de son soleil : quand il est midi à Strasbourg, il n’est que 11 h 12 à Brest.",
+          "bubbles": [
+            {
+              "who": "astro",
+              "text": "Le soleil passe d’abord à l’est : Brest, à l’ouest, voit midi plus tard.",
+              "side": "r"
+            },
+            {
+              "who": "gaston",
+              "text": "Cinq montres, cinq heures. Je ne sais plus quand déjeuner.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bare room with a simple wall map of France and a small yellow sun drawn above its right side. Gaston (short, round, navy uniform, red kepi) on the left wearing five different pocket watches on both arms, looking from one to the other, dizzy; the astronomer (very tall, teal coat) on the right sliding the sun from right to left across the map with a pointer. low angle",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "done",
+            "attempts": 3
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "1891",
+          "caption": "Avec le train, c’est la pagaille. En 1891, une loi impose partout l’heure de Paris, celle de l’Observatoire.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Fini les gares avec deux horloges, l’heure d’ici et celle de Paris !",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Une seule heure. La nôtre, évidemment.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a station wall with two round clocks side by side showing different times. Gaston (short, round, navy uniform, red kepi) on the left happily unscrewing one of the two clocks, relieved, yellow sparkles; the astronomer (very tall, thin, white beard, teal coat) on the right puffing out his chest, chin high, hand on his heart, proud. medium shot",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Un méridien, c’est quoi ?",
+          "text": "Une ligne imaginaire tracée du pôle Nord au pôle Sud. Partout sur cette ligne, le soleil est au plus haut au même instant : il est midi en même temps. Pour compter les heures et les longitudes, le monde a besoin d’un méridien de départ, le « méridien zéro ».",
+          "joke": "Tout le monde veut être le zéro. Bizarrement."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "Washington, 1884",
+          "caption": "En 1884, à Washington, 25 pays choisissent le méridien zéro du monde : Greenwich, près de Londres. La France s’abstient.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "S’abstenir, c’est perdre, non ?",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "C’est perdre avec dignité.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a conference hall with a long table and a globe on it. the astronomer (very tall, thin, white beard, teal coat) on the right sitting with arms tightly crossed, nose in the air, turning his chair away from the globe, sulking; Gaston (short, round, navy uniform, red kepi) on the left peeking at him over the table edge, worried. over-the-shoulder",
+            "cast": [
+              "astro",
+              "gaston"
+            ],
+            "file": "images/cultureg-05.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "L’Observatoire de Paris, vu du ciel",
+          "text": "Le méridien de Paris traverse ce bâtiment. Jusqu’en 1911, c’est son heure qui règle les horloges de toute la France.",
+          "photo": {
+            "commons": "File:Observatoire de Paris.JPG",
+            "credit": "Pline",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Observatoire_de_Paris.JPG",
+            "file": "images/photo-6-observatoire-de-paris-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "1911",
+          "caption": "La France s’aligne. La loi dit : « temps moyen de Paris, retardée de neuf minutes vingt et une secondes ».",
+          "bubbles": [],
+          "image": {
+            "prompt": "a bright simple office with a wooden desk and a blank sheet of paper. the astronomer (very tall, thin, white beard, teal coat) on the right holding a quill pen above the paper, whistling innocently, eyes turned to the ceiling; Gaston (short, round, navy uniform, red kepi) on the left leaning on the desk, one eyebrow raised, amused. high angle",
+            "cast": [
+              "astro",
+              "gaston"
+            ],
+            "file": "images/cultureg-07.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "Petite consolation",
+          "caption": "Des patriotes trouvent la parade : la ligne de Greenwich traverse aussi la France, par Argentan, en Normandie.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Alors on vit à l’heure d’Argentan !",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Voilà. L’honneur est sauf.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet small-town square with a tiny church and a road sign post with no text. Gaston (short, round, navy uniform, red kepi) on the left holding up his pocket watch triumphantly toward the church, beaming, yellow sparkles; the astronomer (very tall, thin, white beard, teal coat) on the right planting a tiny French flag in the ground with great solemnity. wide shot",
+            "cast": [
+              "gaston",
+              "astro"
+            ],
+            "file": "images/cultureg-08.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "9 min 21 s, c’est l’écart entre l’heure de Paris et celle de Greenwich. La France a changé d’heure, pas de vocabulaire.",
+          "bubbles": [
+            {
+              "who": "gaston",
+              "text": "Bon. Je règle toutes mes horloges sur Gr…",
+              "side": "l"
+            },
+            {
+              "who": "astro",
+              "text": "Sur Argentan, monsieur. Sur Argentan.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back on the railway station platform, the big round station clock behind him. Close on the astronomer (very tall, thin, long pointy white beard, small round spectacles, teal coat) raising one finger with a sly, very dignified smile, one eyebrow up, as if sharing a secret with the reader. close-up",
+            "cast": [
+              "astro"
+            ],
+            "file": "images/cultureg-09.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "La loi française de 1911 adopte l’heure de Greenwich sans écrire son nom. Et ce méridien traverse aussi la Normandie, par Argentan.",
+        "source": "Hérodote — 9 mars 1911"
+      },
+      "story": "Jusqu’au XIXe siècle, chaque ville française vit à l’heure de son propre soleil. Comme le soleil passe d’abord à l’est, quand il est midi à Strasbourg, il n’est que 11 h 12 à Brest. Peu importe à cheval, mais avec les chemins de fer, c’est la confusion : les gares affichent deux horloges, l’heure locale et l’heure de Paris. En 1891, une loi fait donc de l’heure de Paris, celle de l’Observatoire que traverse le méridien de Paris, la seule heure légale du pays.\nOr, en 1884, une conférence internationale réunie à Washington avec 25 pays a choisi un méridien de référence pour le monde entier, d’où l’on compte les longitudes et les fuseaux horaires : celui de Greenwich, près de Londres. Paris était candidat ; la France s’abstient, comme le Brésil.\nIl faut attendre la loi de mars 1911 pour que la France s’aligne. Mais le texte évite soigneusement le nom de Greenwich : l’heure légale y est « le temps moyen de Paris, retardé de neuf minutes vingt et une secondes », soit exactement l’écart entre les deux méridiens. Les horloges reculent de 9 minutes 21 secondes. Pour se consoler, certains patriotes font remarquer que le méridien de Greenwich traverse aussi la France, notamment à Argentan, en Normandie.",
+      "sources": [
+        {
+          "title": "Hérodote — 9 mars 1911, la France adopte l’heure de Greenwich",
+          "url": "https://www.herodote.net/9_mars_1911-evenement-19110309.php"
+        },
+        {
+          "title": "Hérodote — Une histoire très politique de l’heure",
+          "url": "https://www.herodote.net/Une_Histoire_tres_politique_de_l_heure-synthese-3184-101.php"
+        },
+        {
+          "title": "Amusing Planet — The Meridian That Stood Up To Greenwich",
+          "url": "https://www.amusingplanet.com/2020/06/the-meridian-that-stood-up-to-greenwich.html"
+        },
+        {
+          "title": "Liste tz (IANA) — Texte de la loi du 9 mars 1911",
+          "url": "https://mm.icann.org/pipermail/tz/2020-June/029101.html"
+        }
+      ],
+      "art": {
+        "subject": "why France set its clocks back 9 minutes 21 seconds in 1911 to follow Greenwich time without naming it",
+        "setting": "a French railway station platform with a big round station clock, a bare room with a wall map of France, an international conference hall, a government office, a small Normandy town square",
+        "era": "France from 1884 to 1911, Belle Époque",
+        "props": {
+          "clock": "a big round white station clock with black hands on a cast-iron post",
+          "watch": "a big round brass pocket watch on a chain"
+        }
+      },
+      "from_stock": "20261114-0402-greenwich-le-mot-interdit"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "La statue de la Liberté a d’abord postulé en Égypte",
+      "tagline": "Avant New York, Bartholdi avait proposé une géante à torche pour le canal de Suez. Refusée : trop chère.",
+      "teaser": "La plus célèbre Américaine est française. Et avant de traverser l’Atlantique, elle a raté un entretien d’embauche au bord du canal de Suez.",
+      "minutes": 2,
+      "theme": "Arts plastiques",
+      "cast": [
+        {
+          "id": "bartholdi",
+          "name": "Auguste Bartholdi",
+          "look": "Auguste, a short energetic French sculptor in his thirties in the 1860s, stocky build, big bushy dark brown beard and moustache, wavy dark hair, light peach skin, bright royal blue frock coat as main colour over a white shirt, grey trousers, always carrying a large sketchbook and a pencil",
+          "file": "cast/insolite-bartholdi.png",
+          "status": "done",
+          "role": "the over-enthusiastic sculptor who only thinks in giant sizes; bouncing on his toes, waving his sketchbook"
+        },
+        {
+          "id": "ismail",
+          "name": "Le khédive Ismaïl",
+          "look": "Ismail, the plump ruler of Egypt in his late thirties in the 1860s, round belly, neat short grey-black beard, light brown skin, tall bright red fez with a black tassel, dark green long buttoned Ottoman frock coat as main colour with a few gold medals, a string of amber prayer beads in one hand",
+          "file": "cast/insolite-ismail.png",
+          "status": "done",
+          "role": "the polite but broke ruler who listens and then says no; seated, calm, counting his beads, sighing"
+        }
+      ],
+      "cover": {
+        "prompt": "a sandy canal bank with a big ship in the distance. Auguste (short and stocky, a big bushy dark brown beard and moustache covering his chin, wavy dark hair, royal blue frock coat) on the left holding up a large sketch of a giant woman raising a torch, beaming, yellow sparkles; Ismail (plump, red fez, dark green frock coat) on the right turning out his empty pockets with an apologetic smile. wide shot",
+        "cast": [
+          "bartholdi",
+          "ismail"
+        ],
+        "file": "images/insolite-cover.webp",
+        "redo": true,
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "New York, 1886",
+          "caption": "Inaugurée à New York en 1886, la statue de la Liberté est française. Mais l’Amérique n’était pas son premier projet.",
+          "bubbles": [
+            {
+              "who": "Un passant",
+              "text": "Belle statue. Très américaine.",
+              "side": "l"
+            },
+            {
+              "who": "bartholdi",
+              "text": "Américaine ? Elle a d’abord postulé en Égypte !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a harbour quay with the green Statue of Liberty small in the far background. a passer-by in a bowler hat seen from behind on the left, looking up at it; Auguste (short, bushy dark beard, royal blue frock coat) on the right leaning in with a hand cupped by his mouth as if telling a secret, mischievous grin. wide shot",
+            "cast": [
+              "bartholdi"
+            ],
+            "file": "images/insolite-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "1855",
+          "caption": "En 1855, en Égypte, le jeune sculpteur de Colmar découvre les statues géantes des pharaons. Il rêve d’aussi grand.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the foot of a gigantic seated ancient Egyptian stone statue, only its huge stone feet and knees visible. Auguste (short, bushy dark beard, royal blue frock coat) tiny at the bottom, head tilted all the way back, sketchbook open, eyes shining, small red hearts. low angle. low angle",
+            "cast": [
+              "bartholdi"
+            ],
+            "file": "images/insolite-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "1867-1869",
+          "caption": "Entre 1867 et 1869, il propose au khédive, souverain de l’Égypte, un phare géant pour l’entrée du canal de Suez.",
+          "bubbles": [
+            {
+              "who": "bartholdi",
+              "text": "Une paysanne égyptienne qui lève une torche pour guider les bateaux !",
+              "side": "l"
+            },
+            {
+              "who": "ismail",
+              "text": "Un phare avec des bras. C’est nouveau.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a palace room with a low cushioned sofa and a small brass table. Auguste (short, bushy dark beard, royal blue frock coat) on the left unrolling a huge sketch of a giant woman holding up a torch, the paper rolling far across the floor; Ismail (plump, red fez, dark green frock coat) on the right seated on the sofa, leaning forward politely, counting his amber beads. medium shot",
+            "cast": [
+              "bartholdi",
+              "ismail"
+            ],
+            "file": "images/insolite-03.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Le projet",
+          "title": "« L’Égypte apportant la lumière à l’Asie »",
+          "steps": [
+            "Où : Port-Saïd, à l’entrée nord du canal de Suez",
+            "Quoi : une paysanne égyptienne qui brandit une torche",
+            "À quoi ça sert : un phare pour les navires",
+            "Taille prévue : environ 26 mètres, sur un socle de 15 mètres"
+          ],
+          "joke": "Une statue qui fait phare. Ou un phare qui fait statue."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "1869",
+          "caption": "Refus : l’Égypte a déjà dépensé des fortunes pour le canal. La statue coûte trop cher, on construit un phare classique.",
+          "bubbles": [
+            {
+              "who": "ismail",
+              "text": "Le canal a vidé mes caisses. Votre dame attendra.",
+              "side": "r"
+            },
+            {
+              "who": "bartholdi",
+              "text": "Elle attendra… ailleurs.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the same palace room. Ismail (plump, red fez, dark green frock coat) on the right standing and turning out both empty coat pockets, a single moth flying out, apologetic shrug; Auguste (short, bushy dark beard, royal blue frock coat) on the left hugging his rolled-up sketch to his chest, shoulders drooping, light-blue sweat drop. over-the-shoulder",
+            "cast": [
+              "ismail",
+              "bartholdi"
+            ],
+            "file": "images/insolite-05.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Auguste Bartholdi",
+          "text": "Le sculpteur alsacien (1834-1904), photographié par Napoleon Sarony. Après l’échec égyptien, il garde son idée de géante à torche dans ses cartons.",
+          "photo": {
+            "commons": "File:Frederic Auguste Bartholdi.jpg",
+            "credit": "Napoleon Sarony",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Frederic_Auguste_Bartholdi.jpg",
+            "file": "images/photo-6-frederic-auguste-bartholdi-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "1871-1886",
+          "caption": "Bartholdi recycle l’idée : la paysanne devient une déesse drapée à la grecque, torche levée. Direction New York.",
+          "bubbles": [
+            {
+              "who": "bartholdi",
+              "text": "Même pose, même torche. Juste une nouvelle robe.",
+              "side": "r"
+            },
+            {
+              "who": "Un passant",
+              "text": "Et un nouveau continent.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a sculptor's workshop with a large plaster model of a woman raising a torch, draped in a simple Greek toga. Auguste (short, bushy dark beard, royal blue frock coat) on the right throwing a toga-like sheet over the model with a flourish like a magician; a passer-by in a bowler hat on the left, seen from behind, applauding. medium shot",
+            "cast": [
+              "bartholdi"
+            ],
+            "file": "images/insolite-07.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "La Liberté est née d’un phare refusé par l’Égypte, faute d’argent. Bartholdi l’a rhabillée pour l’Amérique.",
+          "bubbles": [
+            {
+              "who": "bartholdi",
+              "text": "Refusée à Suez, adorée à New York.",
+              "side": "r"
+            },
+            {
+              "who": "ismail",
+              "text": "J’aurais peut-être dû payer.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a sunny harbour quay, far away on the horizon a tiny green Statue of Liberty. Close on Ismail (plump, red fez, dark green frock coat) in the foreground, looking back over his shoulder at the distant statue, biting his lip, deeply regretful, a tiny light-blue sweat drop. close-up",
+            "cast": [
+              "ismail"
+            ],
+            "file": "images/insolite-08.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Le premier projet de Bartholdi s’appelait « L’Égypte apportant la lumière à l’Asie » : une paysanne à torche, haute d’environ 26 mètres.",
+        "source": "Musée d’Orsay — Liberté éclairant le monde"
+      },
+      "story": "Le sculpteur Auguste Bartholdi, né à Colmar, visite l’Égypte en 1855. Les statues colossales des pharaons le fascinent et lui donnent l’envie de créer, lui aussi, une œuvre gigantesque.\nEntre 1867 et 1869, pendant le percement du canal de Suez, il propose au khédive Ismaïl, souverain de l’Égypte, un phare monumental pour l’entrée nord du canal, à Port-Saïd. Son titre : « L’Égypte apportant la lumière à l’Asie ». Il s’agit d’une paysanne égyptienne qui brandit une torche, haute d’environ 26 mètres sur un socle de 15 mètres, inspirée du colosse de Rhodes. Mais l’Égypte s’est lourdement endettée pour creuser le canal : le khédive refuse, jugeant le projet trop coûteux. En 1869, c’est un phare classique qui est construit à Port-Saïd.\nBartholdi ne renonce pas à son idée. Il la transforme : la paysanne devient une figure drapée à la grecque, la lumière se concentre dans la torche levée. En 1871, il part aux États-Unis et repère l’île où elle se dressera. Gustave Eiffel conçoit la structure métallique intérieure, et « La Liberté éclairant le monde » est inaugurée à New York le 28 octobre 1886. La plus célèbre statue américaine est donc française… et a d’abord été pensée pour l’Égypte.",
+      "sources": [
+        {
+          "title": "Musée d’Orsay — Liberté éclairant le monde, Auguste Bartholdi",
+          "url": "https://www.musee-orsay.fr/fr/oeuvres/liberte-4813"
+        },
+        {
+          "title": "Wikipedia — Egypt Carrying the Light to Asia",
+          "url": "https://en.wikipedia.org/wiki/Egypt_Carrying_the_Light_to_Asia"
+        },
+        {
+          "title": "Britannica — Who Was the Woman Behind the Statue of Liberty?",
+          "url": "https://www.britannica.com/story/who-was-the-woman-behind-the-statue-of-liberty"
+        },
+        {
+          "title": "RTBF — À l’origine, la statue de la Liberté devait être offerte aux Égyptiens",
+          "url": "https://www.rtbf.be/article/la-minute-historique-a-l-origine-la-statue-de-la-liberte-devait-etre-offerte-aux-egyptiens-11382842"
+        }
+      ],
+      "art": {
+        "subject": "how Bartholdi's rejected giant lighthouse statue for the Suez Canal became the Statue of Liberty",
+        "setting": "the feet of a colossal ancient Egyptian statue, an Egyptian palace room with a low sofa, a sandy Suez canal bank, a Paris sculptor's workshop, a New York harbour quay",
+        "era": "1855 to 1886, Egypt, France and New York",
+        "props": {
+          "sketch": "a large rolled paper sketch of a giant robed woman raising a torch",
+          "beads": "a string of amber prayer beads"
+        }
+      },
+      "from_stock": "20261114-0400-la-liberte-a-dabord-postule-en-egypte"
+    },
+    {
+      "id": "notice",
+      "label": "La Notice",
+      "title": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
+      "tagline": "Une marmite qui siffle, une soupape qui tourne, et un physicien qui cuisait des os en 1679",
+      "teaser": "Votre cocotte ne chauffe pas plus fort que la casserole. Elle a juste trouvé comment désobéir à l’eau. Merci qui ? Un Français de 1679.",
+      "minutes": 2,
+      "theme": "Sciences physiques",
+      "art": {
+        "subject": "how a pressure cooker traps steam to make water boil hotter than usual, and how a French physicist invented it in 1679",
+        "setting": "a small modern French kitchen with a gas stove; a 17th-century scientist's workshop with a wooden table and a fireplace",
+        "era": "today, with a visit to a scientist's workshop around 1680",
+        "props": {
+          "cooker": "a shiny stainless steel pressure cooker with a black handle and a small round valve on the lid",
+          "saucepan": "an ordinary small open saucepan with boiling water",
+          "digester": "a heavy black iron pot closed by a thick lid held down by a large screw crossbar, with a weighted lever on top"
+        }
+      },
+      "cast": [
+        {
+          "id": "samir",
+          "name": "Samir",
+          "look": "Samir, a short plump man in his thirties, warm brown skin, thick black curly beard, black hair tied in a small top knot, bright cherry-red and white checked apron as main colour over a plain grey T-shirt, a wooden spoon always in his hand",
+          "file": "cast/notice-samir.png",
+          "status": "done",
+          "role": "the home cook who uses the pressure cooker every Sunday without understanding it, and is a little scared of it; jumpy, often hiding behind a lid or a tea towel"
+        },
+        {
+          "id": "papin",
+          "name": "Denis Papin",
+          "look": "Denis Papin, a tall lanky French physicist of the 1680s in his thirties, long thin face, pale skin, long curly brown periwig falling to his shoulders, deep forest green long coat with brass buttons as main colour, white lace cravat, a small brass weight in his hand",
+          "file": "cast/notice-papin.png",
+          "status": "done",
+          "role": "the patient inventor who explains simply; bends down from his height to talk, fascinated by anything that boils, taps the lid of pots affectionately"
+        }
+      ],
+      "cover": {
+        "prompt": "a small modern kitchen with a gas stove. On the stove, the cooker puffs a jet of steam from its valve. Samir (short, plump, warm brown skin, thick black curly beard, black hair in a small top knot, bright red and white checked apron over a grey T-shirt) on the left crouches behind the kitchen table holding a frying pan up as a shield; Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right bends over the cooker, listening to it lovingly like a doctor. No text, no letters, no signature anywhere in the picture. wide shot",
+        "cast": [
+          "samir",
+          "papin"
+        ],
+        "file": "images/notice-cover.webp",
+        "redo": true,
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Dimanche midi",
+          "caption": "La cocotte-minute cuit deux à quatre fois plus vite qu’une casserole, sur le même feu. Comment fait-elle ?",
+          "bubbles": [
+            {
+              "who": "samir",
+              "text": "Même feu, même eau… et elle va trois fois plus vite. Elle triche ?",
+              "side": "l"
+            },
+            {
+              "who": "papin",
+              "text": "Elle triche avec l’eau. C’est moi qui lui ai appris.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small modern kitchen with a gas stove, the cooker and the saucepan side by side on two burners. Samir (short, plump, black curly beard, top knot, red and white checked apron) on the left, wooden spoon raised, looking suspiciously from one pot to the other; Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right leaning on the counter, smiling proudly at the cooker. Plain oven door with no text, no letters, no brand name anywhere. medium wide shot",
+            "cast": [
+              "samir",
+              "papin"
+            ],
+            "file": "images/notice-01.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le principe",
+          "caption": "Dans une casserole ouverte, l’eau bout à 100 °C et n’en dépasse pas : la chaleur en plus sert seulement à faire de la vapeur.",
+          "bubbles": [
+            {
+              "who": "samir",
+              "text": "À fond ! Cette fois, elle va dépasser les 100 °C !",
+              "side": "l"
+            },
+            {
+              "who": "papin",
+              "text": "Non. Vous fabriquez seulement plus de vapeur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the modern kitchen, high angle looking down on the stove. Samir (plump, black curly beard, top knot, red and white checked apron) turning the gas knob of the saucepan to maximum with both hands, straining with effort, a tiny light-blue sweat drop; Denis Papin (long brown periwig, forest green coat) standing behind him, arms crossed, calmly shaking his head. high angle",
+            "cast": [
+              "samir",
+              "papin"
+            ],
+            "file": "images/notice-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Comment la cocotte dépasse les 100 °C",
+          "steps": [
+            "Le couvercle étanche empêche la vapeur de s’échapper",
+            "La vapeur prisonnière s’entasse et pousse : la pression monte, environ deux fois celle de l’air",
+            "Plus l’eau est comprimée, plus il lui faut de chaleur pour bouillir : elle monte vers 120 °C",
+            "Des aliments plus chauds cuisent plus vite"
+          ],
+          "joke": "En montagne, c’est l’inverse : l’eau bout avant 100 °C. Les pâtes y cuisent plus lentement."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Pourquoi elle siffle",
+          "caption": "Pour éviter que ça explose, une soupape, un petit clapet, laisse filer la vapeur en trop. C’est elle qui siffle et qui tourne.",
+          "bubbles": [
+            {
+              "who": "samir",
+              "text": "Donc ce sifflement, ce n’est pas une menace ?",
+              "side": "l"
+            },
+            {
+              "who": "papin",
+              "text": "C’est elle qui vous protège. Vous pouvez sortir de là.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the modern kitchen, the cooker on the stove whistling with a jet of steam from its spinning valve. Samir (short, plump, black curly beard, top knot, red and white checked apron) in the foreground on the left, hiding under the kitchen table, only his eyes and the wooden spoon showing, holding a frying pan as a shield; Denis Papin (tall, lanky, long brown periwig, forest green coat) in the background on the right, delicately touching the valve with one finger, delighted. low angle",
+            "cast": [
+              "samir",
+              "papin"
+            ],
+            "file": "images/notice-04.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Une marmite de Papin, au musée",
+          "text": "Une « marmite de Papin » du XVIIIe siècle, au musée des Arts et Métiers, à Paris : du fer, une vis pour serrer le couvercle. L’ancêtre de la cocotte.",
+          "photo": {
+            "commons": "File:Papin cooking pot-CnAM 1630-1-IMG 6614-white.jpg",
+            "credit": "Rama",
+            "license": "CC BY-SA 3.0 fr",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en",
+            "source": "https://commons.wikimedia.org/wiki/File:Papin_cooking_pot-CnAM_1630-1-IMG_6614-white.jpg",
+            "file": "images/photo-5-papin-cooking-pot-cnam-1630-1-img-6.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "1679",
+          "caption": "Le physicien français Denis Papin invente son « digesteur » : une marmite fermée par une vis, déjà avec une soupape.",
+          "bubbles": [
+            {
+              "who": "papin",
+              "text": "J’ai rendu des os de bœuf mous comme du fromage.",
+              "side": "r"
+            },
+            {
+              "who": "samir",
+              "text": "Vous avez inventé le pot-au-feu express pour des os ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a 17th-century scientist's workshop with a wooden table and a fireplace. Denis Papin (tall, lanky, long brown periwig, forest green coat) on the right proudly lifting the screw lid of the digester, holding up a big soft floppy beef bone that bends like rubber; Samir (short, plump, black curly beard, top knot, red and white checked apron) on the left, out of place in his apron, recoiling in disgust with the wooden spoon. medium shot",
+            "cast": [
+              "papin",
+              "samir"
+            ],
+            "file": "images/notice-06.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "De la marmite à os à votre cuisine",
+          "steps": [
+            "1679 : Papin invente le digesteur, pour ramollir les os",
+            "1682 : il cuisine avec devant la Royal Society de Londres",
+            "1953 : à Selongey, en Côte-d’Or, SEB lance sa « Super-Cocotte »",
+            "1954 : 130 000 exemplaires vendus ; plus de 70 millions depuis"
+          ],
+          "joke": "274 ans entre l’invention et le dîner du dimanche."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "La cocotte enferme la vapeur : la pression monte, l’eau bout vers 120 °C, donc tout cuit plus vite.",
+          "bubbles": [
+            {
+              "who": "samir",
+              "text": "Elle ne triche pas. Elle change les règles.",
+              "side": "l"
+            },
+            {
+              "who": "papin",
+              "text": "Comme tous les bons inventeurs.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back in the modern kitchen, Samir (short, plump, black curly beard, top knot, red and white checked apron) alone, sitting at the table in front of a steaming plate of potatoes, gently patting the cooker beside him like a pet, with a respectful little smile, yellow sparkles. close-up",
+            "cast": [
+              "samir"
+            ],
+            "file": "images/notice-08.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "L’ancêtre de la cocotte-minute date de 1679 : le « digesteur » de Denis Papin, conçu pour ramollir des os de bœuf.",
+        "source": "Wikipédia — Pressure cooker"
+      },
+      "story": "Dans une casserole ouverte, l’eau ne dépasse jamais 100 °C : dès qu’elle bout, toute la chaleur en plus sert à fabriquer de la vapeur, qui s’envole. La cocotte-minute contourne cette limite. Son couvercle étanche enferme la vapeur, qui s’accumule et fait monter la pression à l’intérieur, à environ un bar de plus que l’air ambiant, soit à peu près le double. Or plus l’eau est sous pression, plus il lui faut de chaleur pour bouillir : dans la cocotte, elle monte vers 120 °C. Les aliments, plus chauds, cuisent deux à quatre fois plus vite.\nPour que la pression ne monte pas sans fin, une soupape, un petit clapet réglé, laisse sortir la vapeur en trop : c’est elle qui tourne et qui siffle. Les modèles modernes ont en plus des soupapes de secours et un couvercle qui ne s’ouvre pas tant qu’il reste de la pression.\nL’idée est française. En 1679, le physicien Denis Papin invente le « digesteur », une marmite de fer fermée par une vis et munie d’une soupape. Il s’en sert pour ramollir des os, et en 1682 il cuisine avec devant la Royal Society de Londres : les os de bœuf ressortent « mous comme du fromage », note un témoin. Il faut pourtant attendre 1953 pour que l’autocuiseur entre dans les cuisines françaises : à Selongey, en Côte-d’Or, SEB lance la Super-Cocotte, vendue à 130 000 exemplaires dès 1954, puis à plus de 70 millions.",
+      "sources": [
+        {
+          "title": "Wikipédia (en) — Pressure cooker",
+          "url": "https://en.wikipedia.org/wiki/Pressure_cooker"
+        },
+        {
+          "title": "Futura Sciences — Autocuiseur : qu’est-ce que c’est ?",
+          "url": "https://www.futura-sciences.com/maison/definitions/maison-autocuiseur-11104/"
+        },
+        {
+          "title": "Amusing Planet — How the pressure cooker inspired the steam engine",
+          "url": "https://www.amusingplanet.com/2022/12/how-pressure-cooker-inspired-steam.html"
+        },
+        {
+          "title": "WMC — La cocotte-minute SEB, une sexagénaire entrée dans 70 millions de foyers",
+          "url": "https://www.webmanagercenter.com/2013/05/03/134328/la-cocotte-minute-seb-une-sexagenaire-entree-dans-70-millions-de-foyers/"
+        },
+        {
+          "title": "Wikimedia Commons — Papin cooking pot, CnAM",
+          "url": "https://download.osmand.net/wiki/File:Papin_cooking_pot-CnAM_1630-1-IMG_6614-white.jpg"
+        }
+      ],
+      "from_stock": "20261115-2043-cocotte-minute-triche-avec-leau"
+    },
+    {
+      "id": "quiz",
+      "kind": "plusmoins",
+      "label": "Plus ou moins",
+      "title": "Vieilles pierres contre jeunes premières",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "chain",
+          "q": "Lequel est le plus ancien ?",
+          "hint": "Un monument parisien n’est pas forcément vieux.",
+          "crit": "plus ancien",
+          "pick": "min",
+          "items": [
+            {
+              "name": "La tour Eiffel",
+              "value": 1889,
+              "label": "1889",
+              "explain": "Construite pour l’Exposition universelle de 1889."
+            },
+            {
+              "name": "L’Arc de triomphe de l’Étoile",
+              "value": 1836,
+              "label": "1836",
+              "explain": "Voulu par Napoléon en 1806, inauguré seulement en 1836."
+            },
+            {
+              "name": "Notre-Dame de Paris",
+              "value": 1163,
+              "label": "1163",
+              "explain": "Le chantier commence vers 1163 et dure près de deux siècles."
+            },
+            {
+              "name": "Le pont du Gard",
+              "value": 50,
+              "label": "vers 50",
+              "explain": "Un aqueduc romain bâti vers l’an 50 pour alimenter Nîmes."
+            },
+            {
+              "name": "La pyramide du Louvre",
+              "value": 1989,
+              "label": "1989",
+              "explain": "Inaugurée le 29 mars 1989, œuvre de l’architecte Pei."
+            },
+            {
+              "name": "L’abbaye du Mont-Saint-Michel",
+              "value": 966,
+              "label": "966",
+              "explain": "Fondée en 966 par le duc de Normandie, confiée aux bénédictins."
+            },
+            {
+              "name": "Le château de Chambord",
+              "value": 1519,
+              "label": "1519",
+              "explain": "François Ier lance le chantier en 1519."
+            },
+            {
+              "name": "L’Opéra Garnier",
+              "value": 1875,
+              "label": "1875",
+              "explain": "Inauguré en 1875, sous la IIIe République."
+            }
+          ],
+          "explain": "Entre le pont du Gard et la pyramide du Louvre, presque deux mille ans d’écart. Et la tour Eiffel, qu’on croit éternelle, n’a « que » 137 ans.",
+          "source": {
+            "title": "Larousse — Le Mont-Saint-Michel",
+            "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Larousse — Le Mont-Saint-Michel",
+          "url": "https://www.larousse.fr/encyclopedie/ville/Le_Mont-Saint-Michel_50116/133946"
+        },
+        {
+          "title": "France.fr — Le Pont du Gard, merveille de l’Antiquité",
+          "url": "https://www.france.fr/fr/article/site-du-pont-du-gard/"
+        },
+        {
+          "title": "Ministère de la Culture — Musée du Louvre, les trente ans de la pyramide",
+          "url": "https://www.culture.gouv.fr/actualites/Musee-du-Louvre-les-trente-ans-de-la-pyramide"
+        },
+        {
+          "title": "France.fr — The Opéra Garnier: an icon of Parisian architecture",
+          "url": "https://www.france.fr/en/article/palais-garnier-opera-national-paris/"
+        },
+        {
+          "title": "Sortir à Paris — 15 août, première pierre de l’Arc de triomphe",
+          "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/257448-ephemeride-du-15-aout-on-pose-la-premiere-pierre-de-l-arc-de-triomphe-a-paris"
+        }
+      ]
     }
   ],
   "newsletter": {
@@ -482,5 +2097,6 @@
     "intro": "Jeudi matin. Le Sénat a récupéré le budget, Voyager 1 a battu un record, et vous avez battu le réveil. Bravo à tous.",
     "game": "Plus ou moins : remettez huit monuments dans l’ordre, sans tricher par la Nouvelle-Zélande.",
     "ps": "P.-S. Si vous écrivez à Voyager 1 ce jeudi matin, ne guettez pas la réponse avant samedi. Elle est polie, mais loin."
-  }
+  },
+  "published_at": "2026-11-19T05:04:37.735631+01:00"
 }
