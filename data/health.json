@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T05:04:37.735631+01:00",
+ "updated_at": "2026-11-19T06:04:22.164418+01:00",
  "today": "2026-11-19",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-19",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -60,12 +60,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-19/cultureg : « Greenwich, le mot que la France refusait de prononcer » prise dans la file (20261114-0402-greenwich-le-mot-interdit)",
-  "2026-11-19/insolite : « La statue de la Liberté a d’abord postulé en Égypte » prise dans la file (20261114-0400-la-liberte-a-dabord-postule-en-egypte)",
-  "2026-11-19/notice : « La cocotte-minute triche : elle fait bouillir l’eau à 120 °C » prise dans la file (20261115-2043-cocotte-minute-triche-avec-leau)",
-  "2026-11-19/dossier : « 1929 : le jour où la Bourse a raté une marche (et le monde entier avec) » prise dans la file (20261115-1923-krach-1929)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -151,7 +146,7 @@
  },
  "rss": {
   "collected_at": "2026-11-19T00:23:49.779551+01:00",
-  "age_hours": 4.7,
+  "age_hours": 5.7,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 29,
