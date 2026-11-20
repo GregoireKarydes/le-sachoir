@@ -15,6 +15,10 @@ def examples():
     return [json.loads(p.read_text()) for p in sorted(EX.glob("*/post.json"))]
 
 
+def example_dirs():
+    return {json.loads(p.read_text())["style"]: p.parent for p in sorted(EX.glob("*/post.json"))}
+
+
 def test_les_cinq_exemples_sont_valides():
     np = pytest.importorskip("numpy")  # noqa: F841
     import film_render as F
@@ -98,11 +102,79 @@ def test_page_sans_erreur(tmp_path):
     import os
     import film_render as F
     os.environ["FILM_TTS"] = "silent"
+    dirs = example_dirs()
     for p in examples():
         try:
-            F.stills(p, tmp_path / p["style"], at=(0.4, 6.0, -1.0))
+            F.stills(p, tmp_path / p["style"], at=(0.4, 6.0, -1.0), folder=dirs[p["style"]])
         except Exception as e:  # noqa
             if "Executable doesn't exist" in str(e) or "BrowserType.launch" in str(e):
                 pytest.skip("Chromium absent")
             raise
         assert len(list((tmp_path / p["style"]).glob("*.jpg"))) == 3
+
+
+# ───────── réalisation par vidéo (film.scene, 20 novembre 2026, demande de Greg)
+
+def test_scene_valide_sans_decors():
+    pytest.importorskip("numpy")
+    import film_render as F
+    p = json.loads(json.dumps(next(x for x in examples() if x["film"].get("scene"))))
+    for b in p["film"]["beats"]:
+        b["set"] = "decor-de-la-scene"            # une scène dessine ses propres décors : aucun set imposé
+    assert F.validate(p) == []
+    p["film"]["beats"] = p["film"]["beats"] * 2  # jusqu'à 16 plans
+    assert F.validate(p) == []
+
+
+def test_kit_et_exports_des_styles():
+    page = ROOT / "pipeline" / "styles"
+    kit = (page / "kit.js").read_text()
+    for need in ("export function camera", "export function look", "export const TXT", "export const at", "export function shot"):
+        assert need in kit, need
+    for f in STYLE_FILES.values():
+        assert "export const KIT" in (page / f).read_text(), f
+    main = (page / "main.js").read_text()
+    assert "TL.scene" in main and "scene.js" in main
+
+
+def test_empreinte_suit_le_code_de_la_scene(tmp_path):
+    import social_render
+    d = example_dirs()["ink-wash"]
+    p = json.loads((d / "post.json").read_text())
+    (tmp_path / "scene.js").write_text("export function draw(t) {}")
+    a = social_render.fingerprint(p, tmp_path)
+    (tmp_path / "scene.js").write_text("export function draw(t) { /* autre plan */ }")
+    assert social_render.fingerprint(p, tmp_path) != a     # changer la réalisation refait la vidéo
+    wf = (ROOT / ".github" / "workflows" / "instagram.yml").read_text()
+    assert "scene.js" in wf and "fingerprint(json.loads(pj.read_text()), pj.parent)" in wf
+
+
+def test_scene_controlee_ou_refusee(tmp_path):
+    """Avec Chromium : l'exemple réalisé passe le contrôle ; une scène vide est refusée (images vides, plans figés)."""
+    pytest.importorskip("numpy"); pytest.importorskip("playwright")
+    import os
+    import shutil
+    import film_render as F
+    os.environ["FILM_TTS"] = "silent"
+    d = example_dirs()["ink-wash"]
+    post = json.loads((d / "post.json").read_text())
+    work = tmp_path / "ok"; work.mkdir(); shutil.copy(d / "scene.js", work / "scene.js")
+    try:
+        F.stills(post, work / "stills", at=(0.4,), folder=work)
+    except Exception as e:  # noqa
+        if "Executable doesn't exist" in str(e) or "BrowserType.launch" in str(e):
+            pytest.skip("Chromium absent")
+        raise
+    ep = F.PAGE / "ep"
+    import tempfile
+    for name, code, want in (("ok", None, True), ("vide", "export function draw(t) {}", False)):
+        w = tmp_path / name; w.mkdir(exist_ok=True)
+        if code:
+            (w / "scene.js").write_text(code)
+        shutil.rmtree(ep, ignore_errors=True); ep.mkdir(parents=True)
+        with tempfile.TemporaryDirectory() as td:
+            tl, _, _ = F._prepare(post, w, ep, Path(td))
+        ok, probs = F.check_scene(tl, w)
+        assert ok is want, (name, probs)
+        assert (w / "scene-check.jpg").exists()
+    shutil.rmtree(ep, ignore_errors=True)

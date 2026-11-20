@@ -466,7 +466,7 @@ def render_reel(post, out: Path):
 
 # ---------- main ----------
 
-def fingerprint(post):
+def fingerprint(post, day_dir=None):
     keys = ("kind", "story", "hook", "cases", "end", "voice")
     if post.get("version") == 2:
         keys = ("kind", "version", "story", "title", "number", "series_label", "beats", "slides", "tone", "end",
@@ -476,13 +476,16 @@ def fingerprint(post):
     if post.get("kind") == "film":
         keys = ("kind", "story", "style", "band", "film")
     keep = {k: post.get(k) for k in keys}
+    scene = (post.get("film") or {}).get("scene") if post.get("kind") == "film" else None
+    if scene and day_dir is not None and (Path(day_dir) / scene).exists():   # une vidéo réalisée : son code compte aussi
+        keep["scene_code"] = hashlib.sha1((Path(day_dir) / scene).read_bytes()).hexdigest()
     return hashlib.sha1(json.dumps(keep, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12]
 
 
 def render(day_dir: Path, force=False) -> bool:
     post = json.loads((day_dir / "post.json").read_text())
     rj = day_dir / "render.json"
-    fp = fingerprint(post)
+    fp = fingerprint(post, day_dir)
     if not force and rj.exists() and json.loads(rj.read_text()).get("fingerprint") == fp:
         return False
     for old in list(day_dir.glob("slide-*.jpg")) + list(day_dir.glob("tiktok-*.jpg")) + list(day_dir.glob("reel*")):

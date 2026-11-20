@@ -152,3 +152,16 @@ export function subtitles(t) {
 }
 
 export function events(add) { for (const b of TL.beats) if (b.i < N - 1) add('zoom', b.t1 - TR, { d: TR }); }
+
+// ---- toolbox for hand-directed scenes (film.scene): primitives only, no sets ----
+export const KIT = { flatImage, disc, glow, stars, blob, C, NIGHT, R1, R2, MIST,
+  /** the guide (the Sachoir bulb with a lens for an eye) at any place and size; look = [dx, dy] in -1..1, talk 0..1 */
+  guideAt(x, y, s, t, look = [0, 0], talk = 0) {
+    g.save(); g.translate(x, y); g.scale(s, s); g.rotate(Math.sin(t * 1.3) * .05);
+    disc(0, -40, 80, C.sun); g.fillStyle = C.cream[1]; g.beginPath(); g.roundRect(-38, 30, 76, 44, 12); g.fill(); g.fillStyle = C.cream[0]; g.beginPath(); g.roundRect(-38, 30, 56, 18, 9); g.fill();
+    g.fillStyle = C.cream[0]; g.beginPath(); g.arc(0, -46, 38, 0, 7); g.fill(); g.fillStyle = C.blue[1]; g.beginPath(); g.arc(look[0] * 10, -46 + look[1] * 10, 24, 0, 7); g.fill();
+    g.fillStyle = C.blue[0]; g.beginPath(); g.arc(look[0] * 10 - 6, -52 + look[1] * 10, 8, 0, 7); g.fill();
+    g.fillStyle = C.coral[0]; g.beginPath(); g.arc(-52, -10, 12, 0, 7); g.arc(52, -10, 12, 0, 7); g.fill();
+    g.fillStyle = NIGHT; g.beginPath(); g.ellipse(0, 4, 16, 3 + 12 * talk, 0, 0, 7); g.fill();
+    g.restore();
+  } };

@@ -21,8 +21,9 @@ la pause déjeuner ; 21 h, après le dîner, le créneau où les Reels sont le p
 Reels pour qu'ils ne se volent pas leur public. La tâche « Le Sachoir – Stratège Instagram » peut déplacer ces heures
 (entre 7 h et 22 h, dans le même ordre) d'après les statistiques.
 
-Ils sont écrits par la tâche « Le Sachoir – Reels sitcom » (son nom n'a pas changé). Tu n'écris que les `post.json` ;
-GitHub Actions fabrique les vidéos (`pipeline/film_render.py`, pages `pipeline/styles/`) et les envoie à Buffer.
+Ils sont écrits par la tâche « Le Sachoir – Reels sitcom » (son nom n'a pas changé). Tu écris, pour chaque créneau,
+le `post.json` **et la réalisation de la vidéo, `scene.js`** (partie **E**, obligatoire depuis le 20 novembre 2026 au
+soir) ; GitHub Actions fabrique les vidéos (`pipeline/film_render.py`, pages `pipeline/styles/`) et les envoie à Buffer.
 **Méthode** : C2, C3, C4, C4b et C7 s'appliquent telles quelles (lecture, sujets, question-réponse-accroche, ouverture
 par la question, réactions) ; la partie **D** remplace C1, C5 et C6 (série, script, fichier). Le Reel sitcom Max et le
 Prof (partie C, raccourci à 30 à 35 s) est **en pause** : n'en écris plus tant que Greg ne l'a pas redemandé. Les
@@ -799,7 +800,10 @@ Grille par défaut :
 | samedi | `ipad-sketch` | `flat-space-explainer` | `hd-2d` |
 | dimanche | `comic-history` | `flat-space-explainer` | `ink-wash` |
 
-## D1. Les cinq styles (ce que le moteur sait dessiner)
+## D1. Les cinq styles (le moteur de secours)
+**Depuis le 20 novembre 2026 au soir, chaque vidéo est réalisée à la main (partie E)** : les décors `set` ci-dessous ne
+servent plus qu'au **moteur de secours**, celui qui fabrique la vidéo si ta scène est refusée par le contrôle
+automatique. Mets quand même un `set` valable dans chaque plan.
 Champs de chaque plan (`beats[]`) : `text` (la phrase dite, aussi le sous-titre mot à mot), `say` (prononciation,
 facultatif, par exemple les nombres en lettres), `who` (`narr` : le narrateur, voix Rémy ; `perso` : un humain ou un
 animal réel du sujet, voix Fabrice, avec `name`), `set` (le décor, liste ci-dessous ; sans `set`, le décor par défaut),
@@ -868,7 +872,9 @@ racontent la question, la réponse et le pourquoi) ; `ig-human/detect.py` sur le
 corrige chaque alerte. `hookscore.py` est réglé sur l'anglais : ne t'y fie pas pour le français.
 
 ## D3. Le fichier
-Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, avec `"kind": "film"`, le `"style"` (D0),
+Deux fichiers par créneau, dans `social/instagram/<date>-sitcom-<slot>/` : `post.json` et **`scene.js`** (partie E),
+poussés dans le même commit. Dans `post.json`, `film` porte en plus `"scene": "scene.js"` et `"direction"` (E1).
+Le `post.json` a `"kind": "film"`, le `"style"` (D0),
 `"slot"` et `"time"` du tableau en tête, `question`, `answer`, `chain`, `hook_formula`, `band` (la question en 2 lignes
 de 22 caractères au plus, avec « \n »), `film`, `caption` (finit par « Et ça, maintenant, tu le sais. » puis la demande
 du créneau), `first_comment`, `hashtags`, `sources` (C7). Les exemples de `pipeline/styles/examples/*/post.json`
@@ -908,3 +914,101 @@ montrent chaque style (leurs images `file` sont des essais : toi, tu mets `bd` o
 }
 ```
 Valide avec `python3 -m json.tool`.
+
+
+# E. Réaliser chaque vidéo : `scene.js` (obligatoire depuis le 20 novembre 2026 au soir)
+
+Demande de Greg : « je ne veux pas une création de décor en avance, je veux vraiment des vidéos : angles, changements
+de plan, angles de caméra dédiés à chaque vidéo, avec des variations, des changements, des textes animés ».
+Donc **chaque Reel est réalisé pour lui seul** : tu écris le code de ses images, plan par plan. Le style (D0) donne la
+matière (le pinceau d'encre, les sprites et la lumière du pixel, les marionnettes de carton, le crayon, les formes
+plates) ; le décor, le cadrage, les mouvements de caméra, les transitions et le texte animé sont à toi, à chaque fois.
+Exemple complet à lire avant d'écrire : `pipeline/styles/examples/ink/post.json` et `scene.js`.
+
+## E1. La réalisation, avant le code (`film.direction` dans `post.json`)
+Méthode de réalisation de Lemo-Opuscar (`DIRECTOR.md`) : on juge un film au son, au rythme, à la caméra, à la mise en
+scène ; les belles images ne sont qu'un point de départ.
+```json
+"direction": {
+  "idee": "<le fil visuel en une phrase : ce que la caméra raconte>",
+  "signature": "<le plan dont on se souvient, propre au médium : une encre qui devient la transition, un zoom d'échelle…>",
+  "plans": [
+    {"plan": 0, "cadrage": "très gros plan", "angle": "plongée", "mouvement": "suivi puis recul", "transition": "coupe franche", "texte": "pop", "pourquoi": "…"}
+  ]
+}
+```
+Règles (le contrôle automatique et la relecture du dimanche les vérifient) :
+1. **L'image 1 bouge déjà et montre le sujet** : jamais de papier vide, jamais de fondu depuis le noir. La question
+   est dite à 0,06 s.
+2. **Chaque plan change de cadrage ou d'angle** (plan large, plan moyen, gros plan, très gros plan, insert ; plongée,
+   contre-plongée, vue du dessus, de profil). Aucun plan figé : quelque chose bouge toujours.
+3. **Au moins 4 mouvements de caméra différents** par vidéo : suivi, recul, poussée, travelling latéral, panoramique
+   vertical, rotation, zoom brutal, caméra à l'épaule (`shake`), plan fixe qui casse le rythme. Une accélération et un
+   temps calme au moins.
+4. **Un plan signature** que seul ce style peut faire, au moment fort (souvent la réponse ou le retournement).
+5. **Le texte est animé** : au moins 3 animations différentes du kit (`pop`, `slam`, `type`, `rise`, `highlight`,
+   `count`, `stamp`, `strike`, `focus`), jamais la même deux plans de suite ; 6 mots au plus par carton ; un nombre
+   défile avec `count`. Le carton se lit avant d'être entendu.
+6. **Jamais deux fois la même vidéo** : lis les `scene.js` des 7 derniers jours (`social/instagram/*/scene.js`) et ne
+   reprends ni leur ouverture, ni leur plan signature, ni leur trajet de caméra.
+7. **Les zones réservées** (1080 × 1920) : le bandeau jaune de la question (y = 230 à 450) pendant les ~3 premières
+   et les 3 dernières secondes ; les sous-titres mot à mot (y ≈ 1290 à 1480) tout le temps ; les 230 px de droite et
+   tout ce qui est sous y = 1480 sont couverts par Instagram. Le sujet et les cartons vivent entre y = 460 et 1280.
+8. **La dernière image** ressemble à la première (même cadre ou même sujet) : la vidéo repart en boucle sans heurt.
+
+## E2. Le fichier `scene.js`
+Un module JavaScript, dans le dossier du post. Au rendu il est copié dans `pipeline/styles/ep/scene.js` : importe donc
+avec `'../kit.js'` et `'../<style>.js'`.
+```js
+import { g, W, H, B, at, ub, prog, camera, look, reset, shake, talk, TXT, lerp } from '../kit.js';
+import { KIT } from '../ink.js';            // le module du style choisi : ink, pixel, comic, sketch ou zoom
+export const FONTS = ['700 110px "Cormorant Garamond"'];   // facultatif : polices à charger
+export function draw(t) { /* tout le cadre à l'instant t */ }  // obligatoire, déterministe
+export function events(add) { add('slap', at(3, .5)); }    // facultatif : bruitages (open, cut, cross, slap, zoom, brush, chime, chapter, bulb)
+```
+Le bandeau et les sous-titres sont posés par le moteur par-dessus ton image (`export const OWN_BAND = true` ou
+`OWN_SUBTITLES = true` seulement si ta scène les dessine elle-même, dans les mêmes zones).
+
+**Le temps vient de la voix** : n'écris jamais de secondes en dur. Le plan i (= la réplique i) va de `B(i).t0` à
+`B(i).t1` ; `at(i, f)` est l'instant à la fraction f du plan i ; `ub(t, i, f0, f1, ease)` la progression 0 → 1 dans ce
+plan ; `prog(t, a, b, ease)` entre deux instants. Easings : `'lin'`, `'io'`, `'out'`, `'in'`, `'back'`, `'spring'`.
+
+**Le kit (`pipeline/styles/kit.js`)** :
+- `camera([[at(0, 0), {x, y, z, r}], [at(0, .6), {x, y, z, r, e: 'out'}], …])` renvoie la caméra à l'instant t (le
+  point du monde au centre de l'image, le zoom `z`, la rotation `r`) ; `e: 'cut'` = coupe franche vers cette clé.
+  `look(cam)` règle `g` pour dessiner le monde à travers elle ; `reset()` revient à l'écran (pour le texte).
+- `shake(t, amplitude, fréquence)` : caméra à l'épaule ou impact. `twos(t)` : dessin « sur deux » (12 i/s).
+- Transitions : `whip` (filé), `iris`, `flash`, `wipe` (couleur du médium), `bars` (bandes cinéma).
+- `TXT.pop / slam / type / rise / highlight / count / stamp / strike / focus` : texte animé à partir d'un instant
+  (`font`, `color`, `box` + `boxColor` pour un cartouche, `stroke`, `rot`).
+- `talk(t)` (ouverture de bouche 0 → 1 de celui qui parle), `speaker(t)` (`'narr'` ou le nom du personnage).
+- `shot(t, [{from, to, …}])` : le plan actif et sa progression, si tu préfères découper en objets.
+
+**Les primitives de chaque style (`KIT`)** — de la matière, pas des décors :
+- `ink.js` : `brush(g, points, largeur, ton, {prog, dry, seed, bristles, loaded})`, `ridge(x0, x1, y, amplitude, seed)`,
+  `mountain(g, crête, profondeur, ton, prog, seed, mousse)`, `seal` (le sceau-ampoule, la seule couleur), `crane`,
+  `inkPic(img)`, `TONE` (`jiao` → `qing`), `paper()`. Grammaire : beaucoup de papier vide, tout naît d'un trait.
+- `pixel.js` : tampon basse résolution 270 × 480 (`lx` pour la scène, `ll` pour les lumières) ; `begin(t)` puis tes
+  `R(x, y, w, h, couleur)`, `lamp(x, y, rayon, couleur)`, `sprite(x, y, couleur, image, sens, {carry, hair, skin})`,
+  `shadowFrom`, `picOf(img)` ; termine par `present({x, y, z, r, tilt, vig, bloom})` (caméra, lumière, flou de maquette).
+  Interface : `plate`, `GOLD`. La lumière est le sujet ; une seule couleur saturée, celle du héros.
+- `comic.js` : `puppet(pays, x, y, échelle, t, {emo, talk, active, face})`, `coast`, `land`, `path`, `graticule`,
+  `compass`, `scaleBar`, `pin`, `card`, `patchOf(img)` ; couleurs `PAPER`, `INK`, `SEA`, `RED`, `BRASS`, `LAND`.
+  Un pays = une marionnette, jamais une personne réelle.
+- `sketch.js` : `pline(points, largeur, motif, prog)`, `wobblyRect`, `circlePts`, `block` (aplat de couleur), `hand`
+  (écriture manuscrite), `stylus`, `sketchOf(img, w, h)` ; `pats()` donne les motifs crayon (`graphite`, `coral`).
+- `zoom.js` : `disc(x, y, r, [base, ombre])`, `glow`, `stars`, `blob`, `flatImage(img, r)`, `guideAt(x, y, échelle, t,
+  regard, bouche)` (l'ampoule-guide), couleurs `C.blue / mint / coral / sun / cream`, `NIGHT`.
+- `core.js` (au besoin) : `IMG`, `imgOf(beat)` pour les images du sujet (`image` des plans), `fit`, `canvas`, `bulb`.
+
+**Contraintes techniques** : déterministe (jamais `Math.random`, `Date` ni `performance` : `hash`, `mulberry`) ; moins
+de ~150 ms par image (pas de `getImageData` à chaque image ; mets en cache ce qui est lourd, dans un `canvas`) ; aucune
+ressource externe (pas de `fetch`, pas d'URL) ; des coordonnées qui restent dans l'image aux moments clés.
+
+## E3. Le contrôle automatique et le secours
+Au rendu, `film_render.py` ouvre ta scène et tire trois images par plan. La scène est **refusée** si la page plante, si
+une image est presque unie (vide), si plus d'un quart des plans ne bougent pas, ou si plus d'un tiers des plans
+ressemblent au suivant (pas de vrai changement de plan). Elle est alors remplacée par le **moteur de secours** (les
+`set` de D1) et `render.json` porte `"scene": "refusée : <raisons>"` ; la planche `scene-check.jpg` (une image par
+plan) part dans l'artefact du jour. Avant de pousser, **relis ton code ligne par ligne** : imports exacts, parenthèses
+et accolades fermées, aucune variable inconnue — une faute de frappe = la vidéo de secours.

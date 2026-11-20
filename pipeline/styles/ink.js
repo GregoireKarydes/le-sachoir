@@ -166,3 +166,6 @@ export function subtitles(t) {
 }
 
 export function events(add) { for (const b of TL.beats) add('brush', b.t0 + .1, { d: 1.4 }); }
+
+// ---- toolbox for hand-directed scenes (film.scene): primitives only, no sets ----
+export const KIT = { brush, ridge, mountain, seal, crane, inkPic, TONE, PAPER, INKC, VERM, paper: () => paper };

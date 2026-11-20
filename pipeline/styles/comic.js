@@ -184,3 +184,7 @@ export function subtitles(t) {
 }
 
 export function events(add) { for (const b of TL.beats) if (imgOf(b)) add('slap', b.t0 + .44); }
+
+// ---- toolbox for hand-directed scenes (film.scene): primitives only, no sets ----
+export const KIT = { coast, path, land, graticule, compass, scaleBar, pin, card, puppet, patchOf, EMO, PAPER, INK, SEA, RED, BRASS, TABLE, LAND,
+  tex: () => ({ paper: paperTex, table: tableTex }) };

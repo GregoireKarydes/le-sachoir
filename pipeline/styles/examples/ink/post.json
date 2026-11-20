@@ -74,6 +74,7 @@
     "set": "etang",
     "big": "Longue, pas large"
    }
-  ]
+  ],
+  "scene": "scene.js"
  }
 }

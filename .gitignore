@@ -13,3 +13,4 @@ pipeline/styles/ep/
 pipeline/styles/examples/*/stills/
 pipeline/styles/examples/*/reel*
 pipeline/styles/examples/*/render.json
+pipeline/styles/examples/*/scene-check.jpg

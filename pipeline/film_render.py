@@ -56,8 +56,9 @@ def validate(post):
         return [f"style inconnu ({style}) ; choix : {', '.join(STYLES)}"]
     F = post.get("film") or {}
     beats = F.get("beats") or []
-    if not 6 <= len(beats) <= 14:
-        errs.append(f"il faut 6 à 14 plans (`beats`), il y en a {len(beats)}")
+    scene = bool(F.get("scene"))
+    if not 6 <= len(beats) <= (16 if scene else 14):
+        errs.append(f"il faut 6 à {16 if scene else 14} plans (`beats`), il y en a {len(beats)}")
     sets = STYLES[style]["sets"]
     for i, b in enumerate(beats):
         if not (b.get("text") or "").strip():
@@ -66,12 +67,12 @@ def validate(post):
             errs.append(f"plan {i} : who doit être narr ou perso")
         if b.get("who") == "perso" and not b.get("name"):
             errs.append(f"plan {i} : un personnage qui parle a besoin d'un `name`")
-        if b.get("set") and b["set"] not in sets:
+        if b.get("set") and b["set"] not in sets and not scene:
             errs.append(f"plan {i} : set inconnu pour {style} ({b['set']}) ; choix : {', '.join(sorted(sets))}")
         b["fx"] = [x for x in (b.get("fx") or []) if x in FX]
     if beats and not beats[0].get("text", "").strip().endswith("?"):
         errs.append("le premier plan doit être la question du Reel (il se termine par « ? »)")
-    if style == "comic-history" and len(F.get("cast") or []) < 1:
+    if style == "comic-history" and len(F.get("cast") or []) < 1 and not scene:
         errs.append("comic-history : `film.cast` (1 à 3 pays-marionnettes) est obligatoire")
     return errs
 
@@ -140,7 +141,7 @@ def build_timeline(post, audio):
     return {"style": style, "dur": dur, "fps": FPS, "beats": out, "lines": lines, "end_t0": dur + 99,
             "band": {"text": post.get("band", ""), "t0": 0.0, "t1": band_t1, "again": round(max(band_t1, dur - 3.0), 3),
                      "url": (F.get("end") or {}).get("url", "lesachoir.fr")},
-            "end": F.get("end") or {}, "cast": F.get("cast") or [], "hero": F.get("hero")}
+            "end": F.get("end") or {}, "cast": F.get("cast") or [], "hero": F.get("hero"), "scene": bool(F.get("scene"))}
 
 
 # ---------- images du sujet ----------
@@ -264,6 +265,62 @@ def mix(tl, audio):
     return np.clip(out, -.99, .99)
 
 
+def _prepare(post, folder, ep_dir, tmp):
+    """voix, minutage, images, page : renvoie (tl, audio, engines). Avec `film.scene`, copie le scene.js de la vidéo."""
+    audio, engines = voices(post["film"]["beats"], tmp, post["style"])
+    tl = build_timeline(post, audio)
+    imgs = fetch_images(post, ep_dir)
+    for i, name in imgs.items():
+        tl["beats"][i]["img"] = name
+    if tl.get("scene"):
+        src = Path(folder) / post["film"]["scene"]
+        if not src.exists():
+            raise FileNotFoundError(f"scène introuvable : {src}")
+        shutil.copy(src, ep_dir / "scene.js")
+    (ep_dir / "timeline.json").write_text(json.dumps(tl, ensure_ascii=False))
+    tl["events"] = page_events()
+    return tl, audio, engines
+
+
+# ---------- contrôle d'une vidéo réalisée (film.scene) ----------
+def check_scene(tl, folder: Path, workers=2):
+    """Rendu d'une image au début, au milieu et à la fin de chaque plan, puis quatre contrôles :
+    1) aucune image vide (presque unie) ; 2) chaque plan bouge (début ≠ fin) ; 3) les plans changent vraiment
+    (milieu d'un plan ≠ milieu du suivant) ; 4) le bandeau et le premier plan existent dès 0,1 s.
+    Écrit `scene-check.jpg` (planche contact) dans le dossier du post. Renvoie (ok, problèmes)."""
+    from PIL import Image, ImageChops, ImageStat
+    times, keys = [], []
+    for b in tl["beats"]:
+        d = b["t1"] - b["t0"]
+        for tag, f in (("a", .12), ("m", .5), ("z", .9)):
+            times.append((len(times), round(b["t0"] + d * f, 3))); keys.append((b["i"], tag))
+    times.append((len(times), .1)); keys.append((-1, "open"))
+    with tempfile.TemporaryDirectory() as td:
+        capture(tl["dur"], Path(td), min(workers, 4), times)
+        ims = [Image.open(Path(td) / f"{i:05d}.jpg").convert("L").resize((108, 192)) for i, _ in times]
+        thumbs = [Image.open(Path(td) / f"{i:05d}.jpg").convert("RGB").resize((180, 320)) for i, _ in times if keys[i][1] == "m"]
+    probs = []
+    by = {k: im for k, im in zip(keys, ims)}
+    diff = lambda a, b: ImageStat.Stat(ImageChops.difference(a, b)).mean[0]
+    blank = [k for k, im in by.items() if ImageStat.Stat(im).stddev[0] < 6]
+    if blank:
+        probs.append(f"images vides : {', '.join(f'plan {i} ({t})' for i, t in blank[:5])}")
+    n = len(tl["beats"])
+    still = [i for i in range(n) if diff(by[(i, "a")], by[(i, "z")]) < 2.0]
+    if len(still) > max(1, n // 4):
+        probs.append(f"plans figés (rien ne bouge) : {still}")
+    same = [i for i in range(n - 1) if diff(by[(i, "m")], by[(i + 1, "m")]) < 5.0]
+    if len(same) > max(1, n // 3):
+        probs.append(f"plans qui se ressemblent trop (pas de changement de plan) : {same}")
+    # planche contact pour la relecture
+    cols = 6
+    sheet = Image.new("RGB", (cols * 180, ((len(thumbs) + cols - 1) // cols) * 320), "white")
+    for k, th in enumerate(thumbs):
+        sheet.paste(th, ((k % cols) * 180, (k // cols) * 320))
+    sheet.save(folder / "scene-check.jpg", quality=85)
+    return (not probs), probs
+
+
 def render(post, out: Path, workers=None):
     post = json.loads(json.dumps(post))
     errs = validate(post)
@@ -272,16 +329,32 @@ def render(post, out: Path, workers=None):
     from sitcom_render import loudnorm, write_wav
     workers = workers or int(os.environ.get("SITCOM_WORKERS", os.cpu_count() or 2))
     ep_dir = PAGE / "ep"
-    shutil.rmtree(ep_dir, ignore_errors=True); ep_dir.mkdir(parents=True)
+    scene_note = None
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td)
-        audio, engines = voices(post["film"]["beats"], tmp, post["style"])
-        tl = build_timeline(post, audio)
-        imgs = fetch_images(post, ep_dir)
-        for i, name in imgs.items():
-            tl["beats"][i]["img"] = name
-        (ep_dir / "timeline.json").write_text(json.dumps(tl, ensure_ascii=False))
-        tl["events"] = page_events()
+        tl = None
+        if (post.get("film") or {}).get("scene"):
+            # vidéo réalisée à la main : on la contrôle ; si elle ne passe pas, on retombe sur le moteur classique
+            try:
+                shutil.rmtree(ep_dir, ignore_errors=True); ep_dir.mkdir(parents=True)
+                tl, audio, engines = _prepare(post, out, ep_dir, tmp)
+                ok, probs = check_scene(tl, out, workers)
+                if not ok:
+                    raise RuntimeError(" ; ".join(probs))
+                scene_note = "ok"
+            except Exception as e:  # noqa
+                print(f"::warning::scène refusée, rendu classique à la place : {e}")
+                scene_note = f"refusée : {e}"[:400]
+                post["film"].pop("scene", None)
+                for b in post["film"]["beats"]:
+                    if b.get("set") not in STYLES[post["style"]]["sets"]:
+                        b.pop("set", None)
+                if post["style"] == "comic-history" and not post["film"].get("cast"):
+                    post["film"]["cast"] = [{"name": "FRANCE", "color": "#6E93D6"}]
+                tl = None
+        if tl is None:
+            shutil.rmtree(ep_dir, ignore_errors=True); ep_dir.mkdir(parents=True)
+            tl, audio, engines = _prepare(post, out, ep_dir, tmp)
         st = mix(tl, audio)
         wav = tmp / "mix.wav"; write_wav(wav, st)
         frames = tmp / "frames"; frames.mkdir()
@@ -290,14 +363,18 @@ def render(post, out: Path, workers=None):
         loudnorm(frames, wav, mp4, tl["dur"])
         shutil.copy(frames / f"{int(.8 * FPS):05d}.jpg", out / "reel-cover.jpg")
     shutil.rmtree(ep_dir, ignore_errors=True)
-    return {"files": ["reel.mp4"], "tiktok_files": ["reel.mp4"], "cover": "reel-cover.jpg", "seconds": round(tl["dur"], 1),
+    info = {"files": ["reel.mp4"], "tiktok_files": ["reel.mp4"], "cover": "reel-cover.jpg", "seconds": round(tl["dur"], 1),
             "voice": sorted(engines), "style": post["style"],
             "credits": "Voix : Microsoft Edge TTS (Rémy, Fabrice) ; images : Wikimedia Commons ou cases du Sachoir ; "
                        "styles adaptés de Lemo-Opuscar (code MIT)"}
+    if scene_note:
+        info["scene"] = scene_note
+    return info
 
 
-def stills(post, out: Path, at=(0.5, 3, 7, 11, 16, 21, 26, -1.0)):
-    """Aperçu sans vidéo : quelques images fixes (pour vérifier un style). FILM_TTS=silent conseillé hors ligne."""
+def stills(post, out: Path, at=(0.5, 3, 7, 11, 16, 21, 26, -1.0), folder=None, check=False):
+    """Aperçu sans vidéo : quelques images fixes (pour vérifier un style ou une scène). FILM_TTS=silent conseillé hors ligne.
+    check=True lance aussi le contrôle des vidéos réalisées (scene-check.jpg)."""
     post = json.loads(json.dumps(post))
     errs = validate(post)
     if errs:
@@ -305,15 +382,14 @@ def stills(post, out: Path, at=(0.5, 3, 7, 11, 16, 21, 26, -1.0)):
     ep_dir = PAGE / "ep"
     shutil.rmtree(ep_dir, ignore_errors=True); ep_dir.mkdir(parents=True)
     with tempfile.TemporaryDirectory() as td:
-        audio, _ = voices(post["film"]["beats"], Path(td), post["style"])
-    tl = build_timeline(post, audio)
-    for i, name in fetch_images(post, ep_dir).items():
-        tl["beats"][i]["img"] = name
-    (ep_dir / "timeline.json").write_text(json.dumps(tl, ensure_ascii=False))
-    page_events()
+        tl, _, _ = _prepare(post, folder or out.parent, ep_dir, Path(td))
     times = [(k, (t if t >= 0 else tl["dur"] + t)) for k, t in enumerate(at)]
     out.mkdir(parents=True, exist_ok=True)
     capture(tl["dur"], out, min(len(times), 4), times)
+    if check and tl.get("scene"):
+        ok, probs = check_scene(tl, folder or out.parent)
+        print("contrôle :", "ok" if ok else " ; ".join(probs))
+    shutil.rmtree(ep_dir, ignore_errors=True)
     return tl
 
 
@@ -322,7 +398,7 @@ if __name__ == "__main__":
     p = Path(sys.argv[1]); d = p if p.is_dir() else p.parent
     post = json.loads((d / "post.json").read_text())
     if "--stills" in sys.argv:
-        tl = stills(post, d / "stills")
+        tl = stills(post, d / "stills", folder=d, check=True)
         print(f"{len(tl['beats'])} plans, {tl['dur']} s")
     else:
         print(json.dumps(render(post, d), ensure_ascii=False, indent=1))
