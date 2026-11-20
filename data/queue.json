@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:54+01:00",
+ "updated_at": "2026-11-20T06:55+01:00",
  "stock": {
   "cultureg": [
    {
@@ -149,6 +149,23 @@
     "title": "Napoléon commande un éléphant, Paris reçoit des rats",
     "theme": "Architecture",
     "tagline": "Une fontaine en bronze promise pour l’an prochain, un éléphant en plâtre resté trente-deux ans et des locataires à moustaches",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261120-0654-mario-prenom-proprietaire",
+    "name": "20261120-0654-mario-prenom-proprietaire",
+    "added": "20261120-0654",
+    "status": "waiting",
+    "next": false,
+    "title": "Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé)",
+    "theme": "Jeux vidéo",
+    "tagline": "Un plombier mondialement célèbre, un loyer en retard et une légende qui grossit à chaque récit",
     "minutes": 1,
     "cases": 7,
     "photos": 1,

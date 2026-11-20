@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:54:35.858242+01:00",
+ "updated_at": "2026-11-20T06:55:34.694739+01:00",
  "today": "2026-11-20",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -80,9 +80,9 @@
   },
   "insolite": {
    "ready": 1,
-   "waiting": 3,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 18,
+   "images_left": 24,
    "focus": "20261116-2045-talon-haut-cavalier-rouge (6 image(s) à faire)",
    "next": "20261115-2053-perec-roman-sans-e",
    "next_redo": 0

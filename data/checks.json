@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:54+01:00",
+ "updated_at": "2026-11-20T06:55+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -62,6 +62,16 @@
    "errors": [],
    "warnings": [
     "insolite : case 2 : récitatif de 21 mots (max 20)",
+    "insolite : case 7 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/insolite/20261120-0654-mario-prenom-proprietaire",
+   "titles": {
+    "insolite": "Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé)"
+   },
+   "errors": [],
+   "warnings": [
     "insolite : case 7 : récitatif de 21 mots (max 20)"
    ]
   },
