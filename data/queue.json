@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T20:46+01:00",
+ "updated_at": "2026-11-20T20:48+01:00",
  "stock": {
   "cultureg": [
    {
@@ -340,6 +340,23 @@
     "title": "« Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré",
     "theme": "Expression française",
     "tagline": "Un régisseur, des navets et un millier de soldats",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/origine/20261120-2046-points-sur-les-i-jambages",
+    "name": "20261120-2046-points-sur-les-i-jambages",
+    "added": "20261120-2046",
+    "status": "waiting",
+    "next": false,
+    "title": "« Mettre les points sur les i » : la faute aux moines qui écrivaient en palissade",
+    "theme": "Expression française",
+    "tagline": "Quinze bâtons, deux points et un mail passif-agressif",
     "minutes": 2,
     "cases": 8,
     "photos": 1,
