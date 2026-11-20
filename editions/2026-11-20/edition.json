@@ -1,7 +1,1441 @@
 {
   "date": "2026-11-20",
-  "status": "draft",
+  "status": "published",
   "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général)",
+      "tagline": "De Saint-Denis à la réouverture de Notre-Dame : l’arc brisé, la croisée d’ogives et l’arc-boutant expliqués sans vertige",
+      "teaser": "Un abbé qui veut de la lumière, un chanoine qui veut monter plus haut, un architecte qui veut son visage sur le toit.",
+      "minutes": 6,
+      "theme": "Architecture",
+      "art": {
+        "subject": "how Gothic cathedrals work and why they were built: Abbot Suger's bright choir at Saint-Denis, the pointed arch, the rib vault and the flying buttress carrying the weight outside so walls become stained glass, Chartres, the race for height and the 1284 collapse at Beauvais, the Renaissance insult 'Gothic', Victor Hugo and Viollet-le-Duc saving Notre-Dame de Paris, the 2019 fire and the 2024 reopening",
+        "setting": "a dark Romanesque abbey church with thick walls and tiny windows; the bright new Gothic choir of Saint-Denis with slender columns and tall stained-glass windows; a medieval building site with wooden scaffolding; a medieval glass workshop in Chartres; the very tall choir of Beauvais; a Renaissance Italian study; a shabby Notre-Dame de Paris in 1831; the roof of Notre-Dame in the 1850s and 1860s; Notre-Dame at night across the Seine; the bright restored nave of Notre-Dame",
+        "era": "France from 1140 to 1284, Italy around 1550, Paris from 1831 to 1861, and Paris in 2019 and 2024",
+        "props": {
+          "crozier": "Suger's tall golden crozier topped with a big glittering red jewel",
+          "compass": "a big wooden builder's compass with two long legs",
+          "manuscript": "a thick bundle of handwritten paper pages tied with a red ribbon, with no visible writing",
+          "rope": "a very long knotted measuring rope",
+          "drawing": "a large rolled architectural drawing on cream paper, with no visible writing",
+          "statue": "a tall copper statue of a bearded apostle with a green-grey patina, holding a long architect's ruler, its face exactly like Eugène's"
+        }
+      },
+      "cast": [
+        {
+          "id": "suger",
+          "name": "L’abbé Suger",
+          "look": "Suger, a very short and plump 12th-century abbot, round face, grey hair in a monk's tonsure ring around a bald crown, light pink-beige skin, a shimmering golden-yellow abbot's cope as main colour over a white robe, always holding the crozier",
+          "role": "the abbot of Saint-Denis who wants light everywhere; vain and impatient, chin raised, always pointing his crozier upwards, never satisfied",
+          "file": "cast/dossier-suger.png",
+          "status": "done"
+        },
+        {
+          "id": "maitre",
+          "name": "Le maître d’œuvre",
+          "look": "the master builder, a very tall and very thin 12th-century mason with hunched shoulders, a long gloomy face, shaggy chestnut-brown hair and a drooping moustache, olive skin, a terracotta-red work tunic as main colour with a brown leather apron, the compass hanging from his belt",
+          "role": "Suger's anxious master builder; a pessimist who always expects the vault to fall, taps walls nervously and wipes his brow",
+          "file": "cast/dossier-maitre.png",
+          "status": "done"
+        },
+        {
+          "id": "hugo",
+          "name": "Victor Hugo",
+          "look": "Victor Hugo, a slim young writer of 1831 in his late twenties, an enormous high domed forehead, wavy dark-brown hair swept back, clean-shaven, pale skin, a bright lime-green waistcoat as main colour under a black tailcoat, a white cravat, always holding the manuscript",
+          "role": "the passionate novelist who defends the cathedral; grandiloquent and dramatic, speaks with one arm flung up as if on stage",
+          "file": "cast/dossier-hugo.png",
+          "status": "done"
+        },
+        {
+          "id": "viollet",
+          "name": "Viollet-le-Duc",
+          "look": "Eugène, a stocky broad-chested 19th-century architect in his forties, receding salt-and-pepper grey hair, a full short grey-and-black beard, light skin, a bright copper-orange frock coat as main colour, grey trousers, a pencil behind his ear and the drawing under his arm",
+          "role": "the ambitious restorer who wants to improve the Middle Ages; vain, poses in heroic profile and admires his own work",
+          "file": "cast/dossier-viollet.png",
+          "status": "done"
+        }
+      ],
+      "cover": {
+        "prompt": "inside a soaring Gothic cathedral with huge stained-glass windows throwing patches of red and blue light on the floor. Suger (very short, plump, golden-yellow cope) in the centre, proudly pointing the crozier up at the vault; the master builder (very tall, thin, shaggy chestnut hair, terracotta-red tunic) beside him hugging a slender pillar with both arms, terrified, glancing up. visual gag: the builder clinging to the pillar. wide shot",
+        "cast": [
+          "suger",
+          "maitre"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "done",
+        "attempts": 2
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · L’abbé qui voulait de la lumière",
+          "caption": "Vers 1140, abbaye de Saint-Denis. Comment faire tenir un plafond de pierre sur des murs presque en verre ?",
+          "bubbles": [
+            {
+              "who": "suger",
+              "text": "Trois fois que je salue ce pilier.",
+              "side": "l"
+            },
+            {
+              "who": "maitre",
+              "text": "C’est frère Anselme, mon père.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "inside a dark Romanesque abbey church with thick walls and one tiny window letting in a thin ray of light. Suger (very short, plump, golden-yellow cope, crozier) on the left, squinting and bowing politely to a monk in a grey robe standing stiff and motionless against a thick column, the monk almost blending into the stone; the master builder (very tall, thin, terracotta-red tunic, leather apron) on the right holding a candle and rolling his eyes. visual gag: a monk mistaken for a pillar. wide shot",
+            "cast": [
+              "suger",
+              "maitre"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Vers 1140",
+          "caption": "L’église romane, du style d’avant, a de petites fenêtres : ses murs épais retiennent la voûte, le plafond de pierre.",
+          "bubbles": [
+            {
+              "who": "suger",
+              "text": "Je veux des murs de lumière. Plus de lumière !",
+              "side": "l"
+            },
+            {
+              "who": "maitre",
+              "text": "Si je troue ce mur, la voûte nous tombe dessus.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the dark Romanesque church. Suger (very short, plump, golden-yellow cope) in the foreground on the left, standing on tiptoe and stabbing the crozier towards a tiny window high in a massive wall; the master builder (very tall, thin, shaggy chestnut hair, terracotta-red tunic) behind him on the right pressing both palms flat against the thick wall as if holding it up, worried. medium shot",
+            "cast": [
+              "suger",
+              "maitre"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le chœur de Suger, à Saint-Denis",
+          "text": "Une chapelle du chœur consacré en 1144 : de grandes fenêtres entre de fins piliers. Des morceaux de ces vitraux datent encore du XIIe siècle.",
+          "photo": {
+            "commons": "File:Basilique Saint-Denis chapelle de la Vierge.jpg",
+            "credit": "Myrabella",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Basilique_Saint-Denis_chapelle_de_la_Vierge.jpg",
+            "file": "images/photo-3-basilique-saint-denis-chapelle-de-l.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "11 juin 1144",
+          "caption": "Le 11 juin 1144, le roi Louis VII et vingt-quatre évêques et archevêques découvrent le nouveau chœur, baigné de lumière.",
+          "bubbles": [
+            {
+              "who": "Un évêque",
+              "text": "Des murs en verre ? Mais qu’est-ce qui tient le plafond ?",
+              "side": "l"
+            },
+            {
+              "who": "suger",
+              "text": "Trois astuces. Et toute l’Europe va les copier.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bright new Gothic choir of Saint-Denis, tall slender columns and huge stained-glass windows throwing patches of red and blue light on the floor. In the foreground on the left three bishops in white mitres seen from behind, heads tilted far back, gaping up at the vault; Suger (very short, plump, golden-yellow cope, crozier) on the right facing them, chest puffed out, arms spread wide like a showman, yellow sparkles around him. low angle",
+            "cast": [
+              "suger"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "title": "Pourquoi un plafond de pierre écrase les murs",
+          "text": "Une voûte, c’est un plafond en pierre courbé. Son poids descend, mais il pousse aussi les murs vers l’extérieur : posez un livre ouvert en toit, ses pages s’écartent.",
+          "joke": "D’où les murs romans : épais, solides… et sombres."
+        },
+        {
+          "n": 6,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Trois astuces pour un mur de verre",
+          "caption": "Astuce 1, vers 1140 : l’arc brisé, pointu, envoie son poids plus droit vers le bas qu’un arc rond.",
+          "bubbles": [
+            {
+              "who": "maitre",
+              "text": "Pointu, il pousse moins sur les côtés. Les murs souffrent moins.",
+              "side": "l"
+            },
+            {
+              "who": "suger",
+              "text": "Pointu. Comme mon esprit.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a medieval building site with wooden scaffolding. The master builder (very tall, thin, shaggy chestnut hair, terracotta-red tunic) in the centre left, holding two long wooden planks leaning against each other to form a pointed arch above his head, arms trembling; Suger (very short, plump, golden-yellow cope) on the right, tapping the tip of the planks with the crozier, delighted. medium wide shot",
+            "cast": [
+              "maitre",
+              "suger"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Vers 1140",
+          "caption": "Astuce 2, la croisée d’ogives : deux arcs en croix portent la voûte et descendent son poids sur quatre piliers.",
+          "bubbles": [
+            {
+              "who": "maitre",
+              "text": "Entre deux piliers, le mur ne porte plus rien.",
+              "side": "r"
+            },
+            {
+              "who": "suger",
+              "text": "Alors enlevez-le. Encore plus de lumière !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "high on the wooden scaffolding under an unfinished vault: two stone ribs cross in an X, resting on four slender pillars. The master builder (very tall, thin, shaggy chestnut hair, terracotta-red tunic) on the right, kneeling on a plank and carefully fitting a keystone where the ribs cross, a light-blue sweat drop; far below on the left, Suger (very short, plump, golden-yellow cope) waving the crozier impatiently. high angle",
+            "cast": [
+              "maitre",
+              "suger"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "Vers 1180",
+          "caption": "Astuce 3, vers 1180, à Notre-Dame de Paris : l’arc-boutant, un demi-arc posé dehors, retient le mur qui pousse.",
+          "bubbles": [],
+          "image": {
+            "prompt": "outside the tall stone wall of a Gothic cathedral under construction in Paris. A stocky mason in a blue tunic seen from the side, lying stiffly on a slant in mid-air, his feet planted on a squat stone pillar and his hands pressed against the top of the cathedral wall, forming a human flying buttress, red angry flush of effort; small workers below look up at him, puzzled. visual gag: a man used as a flying buttress. wide shot",
+            "cast": [],
+            "file": "images/dossier-06.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 9,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Les arcs-boutants de Notre-Dame de Paris",
+          "text": "Ces demi-arcs de pierre, dehors, retiennent la poussée des voûtes. Dedans, le mur peut s’ouvrir en grandes fenêtres.",
+          "photo": {
+            "commons": "File:Notre Dame buttress.jpg",
+            "credit": "Jean Lemoine from Béthisy-Saint-Martin, France",
+            "license": "CC BY-SA 2.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Notre_Dame_buttress.jpg",
+            "file": "images/photo-9-notre-dame-buttress-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "Chartres, 1194-1235",
+          "caption": "Résultat : à Chartres, rebâtie en trente ans après l’incendie de 1194, les vitraux couvrent plus de 2 000 m².",
+          "bubbles": [
+            {
+              "who": "Un verrier",
+              "text": "Huit terrains de tennis en verre. Et pas un double vitrage.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a medieval glass workshop in Chartres: a long wooden table covered with pieces of red and deep-blue coloured glass and thin strips of lead. A skinny old glazier with a long white beard and a brown apron, seen in profile on the right, holding up a small blue glass piece against the light and squinting at it; behind him, stacks of finished stained-glass panels pile up against the wall. medium close-up",
+            "cast": [],
+            "file": "images/dossier-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "title": "Le trajet du poids, de la voûte au sol",
+          "text": "Le mur ne porte presque plus rien : place au vitrail, des morceaux de verre coloré tenus par du plomb.",
+          "steps": [
+            "La voûte pèse et pousse les murs vers l’extérieur",
+            "Les ogives rassemblent ce poids sur quelques piliers",
+            "Dehors, les arcs-boutants retiennent la poussée",
+            "De gros piliers extérieurs, les culées, la descendent dans le sol"
+          ],
+          "joke": "Un squelette de pierre, avec des fenêtres à la place de la peau."
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "Chartres, vers 1210",
+          "caption": "Qui paie ? Des dons venus de partout, et des métiers : bouchers ou porteurs d’eau offrent des vitraux.",
+          "bubbles": [
+            {
+              "who": "Un boucher",
+              "text": "J’ai payé la fenêtre. Je veux être dedans.",
+              "side": "l"
+            },
+            {
+              "who": "Un verrier",
+              "text": "En bas à gauche. Avec votre plus beau jambon.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the glass workshop in Chartres. Seen over the shoulder of a big burly butcher in a white apron, a ham tucked under his arm, in the foreground on the left, jabbing a finger at a nearly finished stained-glass panel on the table; the skinny old glazier with a long white beard on the right, sighing as he adds a tiny glass figure of a butcher holding a ham in the bottom corner of the panel. over-the-shoulder",
+            "cast": [],
+            "file": "images/dossier-08.webp",
+            "status": "done",
+            "attempts": 3
+          }
+        },
+        {
+          "n": 13,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "L’abbé Suger dans son propre vitrail",
+          "text": "À Saint-Denis, Suger s’est fait représenter, tout petit, aux pieds de la Vierge. Les bouchers de Chartres n’ont rien inventé.",
+          "photo": {
+            "commons": "File:Basilique Saint-Denis - Vitrail de l'Enfance du Christ - Suger.JPG",
+            "credit": "Jacques MOSSOT",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Basilique_Saint-Denis_-_Vitrail_de_l%27Enfance_du_Christ_-_Suger.JPG",
+            "file": "images/photo-13-basilique-saint-denis-vitrail-de-l.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 14,
+          "kind": "chap",
+          "tag": "Chapitre 3 · La course au ciel",
+          "caption": "Chaque ville veut plus haut. En 1225, Beauvais lance un chœur géant : sa voûte atteindra 48 mètres en 1272.",
+          "bubbles": [
+            {
+              "who": "Un chanoine",
+              "text": "Chartres, 37 mètres ? Mignon. Nous, ce sera vingt étages.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the tall unfinished choir of Beauvais wrapped in wooden scaffolding. A pompous plump canon in a black-and-white choir robe in the foreground on the left, chest out, proudly unrolling the rope, which climbs up and up the scaffolding out of sight; small workers on the right crane their necks to follow it. low angle",
+            "cast": [],
+            "file": "images/dossier-09.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 15,
+          "kind": "",
+          "tag": "28 novembre 1284",
+          "caption": "Le 28 novembre 1284, douze ans après, une partie de la voûte s’effondre.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the floor of the Beauvais choir in a cloud of pale dust, broken stone blocks scattered around. The pompous plump canon in his black-and-white choir robe, completely covered in white dust from head to toe, still holding the end of the rope, blinking slowly and staring straight at the viewer. visual gag: deadpan stare after the disaster. close-up",
+            "cast": [],
+            "file": "images/dossier-10.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 16,
+          "kind": "explain",
+          "title": "Pourquoi Beauvais s’est effondrée",
+          "text": "On en discute encore. Les pistes : des piliers trop fins et trop espacés, qui se tordent lentement sous la charge, et des vents violents qui font vibrer l’édifice.",
+          "joke": "À 48 mètres, la moindre erreur se voit de loin."
+        },
+        {
+          "n": 17,
+          "kind": "fact",
+          "tag": "Après 1284",
+          "caption": "Reconstruit à la même hauteur, avec plus de piliers, il reste le chœur gothique le plus haut du monde.",
+          "bubbles": [
+            {
+              "who": "Un maçon",
+              "text": "On redescend un peu, chanoine ?",
+              "side": "l"
+            },
+            {
+              "who": "Le chanoine",
+              "text": "Jamais. On ajoute des piliers.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the rebuilt Beauvais choir: a forest of extra slender pillars squeezed close together. A stocky mason in a blue tunic on the left, leaning on his mallet, looking doubtful; the pompous plump canon in his black-and-white choir robe on the right, still a little dusty, hugging a pillar possessively. medium shot",
+            "cast": [],
+            "file": "images/dossier-11.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 18,
+          "kind": "chap",
+          "tag": "Chapitre 4 · « Gothique », une insulte",
+          "caption": "Vers 1550, l’Italien Vasari juge ce style « monstrueux et barbare », digne des Goths, pillards de Rome.",
+          "bubbles": [
+            {
+              "who": "Giorgio Vasari",
+              "text": "Aucune colonne grecque ? C’est barbare. C’est… gothique.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Renaissance Italian study with a wooden desk, an open book and a small white marble model of a Greek column. A man with a black beard in a dark red Renaissance cap and robe, seen from behind, sitting at the desk and holding a drawing of a pointed Gothic arch at arm's length between two fingers, as if it smelled bad. visual gag: disgust at the drawing. from behind",
+            "cast": [],
+            "file": "images/dossier-12.webp",
+            "status": "done",
+            "attempts": 3
+          }
+        },
+        {
+          "n": 19,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Sauver Notre-Dame",
+          "caption": "Après la Révolution, Notre-Dame de Paris est délabrée. Le 16 mars 1831, Victor Hugo publie un roman qui la défend.",
+          "bubbles": [
+            {
+              "who": "hugo",
+              "text": "Mon roman parle de la cathédrale ! De ses pierres ! De son âme !",
+              "side": "l"
+            },
+            {
+              "who": "Un passant",
+              "text": "Moi, j’ai surtout retenu le bossu.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "in front of a shabby Notre-Dame de Paris in 1831, broken statues and weeds on the steps. Victor Hugo (slim, huge domed forehead, lime-green waistcoat, black tailcoat) on the left, standing on a pile of fallen stones, one arm flung up dramatically, waving the manuscript; a small passer-by in a top hat on the right, shrugging. wide shot",
+            "cast": [
+              "hugo"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 20,
+          "kind": "fact",
+          "tag": "Années 1840",
+          "caption": "Le roman est un succès. Dans les années 1840, l’architecte Viollet-le-Duc prend en main la restauration, finie en 1864.",
+          "bubbles": [
+            {
+              "who": "viollet",
+              "text": "Je ne restaure pas. J’améliore le Moyen Âge.",
+              "side": "l"
+            },
+            {
+              "who": "hugo",
+              "text": "Tant qu’elle tient debout, faites.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the nave of Notre-Dame full of wooden scaffolding in the 1840s. Eugène (stocky, salt-and-pepper beard, copper-orange frock coat) on the left, unrolling the drawing with a grand gesture, chin raised; Victor Hugo (slim, huge domed forehead, lime-green waistcoat, black tailcoat) on the right, clutching the manuscript to his chest and looking up nervously at the scaffolding. medium shot",
+            "cast": [
+              "viollet",
+              "hugo"
+            ],
+            "file": "images/dossier-14.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 21,
+          "kind": "",
+          "tag": "1858-1861",
+          "caption": "En 1858, Viollet-le-Duc fait autoriser une flèche, pointe au-dessus du toit, entourée en 1861 de seize statues.",
+          "bubbles": [
+            {
+              "who": "viollet",
+              "text": "Seize apôtres et évangélistes. Et j’ai soigné les visages.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "on the grey lead roof of Notre-Dame beside the base of a tall new wooden spire. Eugène (stocky, salt-and-pepper beard, copper-orange frock coat) on the left, climbing a ladder with the drawing between his teeth, waving to workers on the right who hoist the statue on a rope. high angle",
+            "cast": [
+              "viollet"
+            ],
+            "file": "images/dossier-15.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 22,
+          "kind": "",
+          "tag": "1861",
+          "caption": "Parmi elles, saint Thomas porte les traits de Viollet-le-Duc lui-même.",
+          "bubbles": [],
+          "image": {
+            "prompt": "on the roof of Notre-Dame. Eugène (stocky, salt-and-pepper beard, copper-orange frock coat) standing in strict profile right next to the statue, copying exactly its pose and holding a ruler the same way, the statue's bearded face identical to his own; he slowly turns his eyes to the viewer with a smug little smile. visual gag: the architect and his statue as twins. medium close-up",
+            "cast": [
+              "viollet"
+            ],
+            "file": "images/dossier-16.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 23,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Le feu, puis la lumière",
+          "caption": "Le 15 avril 2019, un incendie détruit la charpente de Notre-Dame et fait tomber la flèche de Viollet-le-Duc.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Notre-Dame de Paris at night seen from across the river Seine, its two square towers dark against an orange glow rising from the roof, small onlookers seen from behind on the river bank, standing still. calm, sober scene. wide shot",
+            "cast": [],
+            "file": "images/dossier-17.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 24,
+          "kind": "fact",
+          "tag": "11 avril 2019",
+          "caption": "Ses seize statues, elles, avaient été descendues quatre jours plus tôt, le 11 avril, pour être restaurées.",
+          "bubbles": [
+            {
+              "who": "Un ouvrier",
+              "text": "Quatre jours d’avance. Saint Thomas a toujours su partir à temps.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the statue lying safely on its back on a padded flatbed truck, wrapped in a grey moving blanket up to the chin like someone tucked into bed; a worker in a white helmet and an orange high-visibility vest on the right, tightening a strap and patting the statue's shoulder. bird's-eye view",
+            "cast": [],
+            "file": "images/dossier-18.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 25,
+          "kind": "fact",
+          "tag": "7 décembre 2024",
+          "caption": "Après cinq ans de chantier et environ 2 000 artisans, Notre-Dame rouvre le 7 décembre 2024.",
+          "bubbles": [
+            {
+              "who": "Un compagnon",
+              "text": "Cinq ans. Au Moyen Âge, Chartres en a pris trente.",
+              "side": "l"
+            },
+            {
+              "who": "Une visiteuse",
+              "text": "Et la pierre est toute blanche !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bright restored nave of Notre-Dame, pale cream-white stone, tall windows, rows of chairs. A young carpenter with a short blond ponytail in a navy-blue work jacket on the left, proudly running his hand along a pale stone pillar; a small elderly woman visitor with a red scarf on the right, gazing up with her mouth open. medium wide shot",
+            "cast": [],
+            "file": "images/dossier-19.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 26,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "En résumé : arc brisé, ogives et arcs-boutants envoient le poids dehors. Le mur, libéré, devient vitrail.",
+          "bubbles": [
+            {
+              "who": "suger",
+              "text": "Pas mal. Un peu sombre, non ?",
+              "side": "l"
+            },
+            {
+              "who": "maitre",
+              "text": "Ça tient, mon père. C’est déjà ça.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bright restored nave of Notre-Dame flooded with light. Suger (very short, plump, golden-yellow cope, crozier) in the foreground on the left, arms crossed, squinting critically up at the huge luminous windows as if they were far too dim; behind him on the right the master builder (very tall, thin, shaggy chestnut hair, terracotta-red tunic) knocking on a pillar with his knuckles, relieved. visual gag: unsatisfied in the brightest place. low angle",
+            "cast": [
+              "suger",
+              "maitre"
+            ],
+            "file": "images/dossier-20.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Les seize statues de la flèche de Notre-Dame avaient été descendues pour être restaurées quatre jours avant l’incendie de 2019.",
+        "source": "Ministère de la Culture — Les statues de la flèche"
+      },
+      "story": "Vers 1140, l’abbé Suger veut rebâtir l’église de Saint-Denis. Les églises romanes sont sombres : leur voûte, un plafond de pierre courbé, pousse les murs vers l’extérieur, donc il faut des murs épais percés de petites fenêtres. Le 11 juin 1144, le roi Louis VII et vingt-quatre évêques et archevêques découvrent son nouveau chœur, baigné de lumière.\nLe secret tient en trois astuces. L’arc brisé, pointu, envoie son poids plus droit vers le bas qu’un arc rond. La croisée d’ogives, deux arcs de pierre en croix, rassemble le poids de la voûte sur quelques piliers. Vers 1180, à Notre-Dame de Paris, l’arc-boutant, un demi-arc extérieur, retient la poussée. Le mur ne porte presque plus rien : il devient vitrail. À Chartres, rebâtie en une trentaine d’années après l’incendie de 1194, 172 vitraux couvrent plus de 2 000 m², offerts en partie par les métiers de la ville.\nLes villes rivalisent de hauteur : à Beauvais, la voûte atteint 48 mètres en 1272, mais s’effondre en partie en 1284. Vers 1550, l’Italien Vasari juge ce style barbare, digne des Goths ; au Moyen Âge, on parlait plutôt d’« œuvre à la française ».\nEn 1831, le roman de Victor Hugo relance l’intérêt pour Notre-Dame, restaurée par Lassus et Viollet-le-Duc jusqu’en 1864. Après l’incendie du 15 avril 2019, elle rouvre le 7 décembre 2024.",
+      "sources": [
+        {
+          "title": "Hérodote — 11 juin 1144, consécration du chœur de Saint-Denis",
+          "url": "https://www.herodote.net/11_juin_1144-evenement-11440611.php"
+        },
+        {
+          "title": "Hérodote — Suger, un fils de paysans au sommet de l’État",
+          "url": "https://www.herodote.net/Un_fils_de_paysans_au_sommet_de_l_Etat-synthese-2313-494.php"
+        },
+        {
+          "title": "Futura — Comment construisait-on les cathédrales au Moyen Âge ?",
+          "url": "https://www.futura-sciences.com/sciences/questions-reponses/moyen-age-cathedrales-construisait-on-moyen-age-5540/"
+        },
+        {
+          "title": "Smarthistory — Gothic architecture, an introduction",
+          "url": "https://smarthistory.org/gothic"
+        },
+        {
+          "title": "Vikidia — Arc-boutant",
+          "url": "https://fr.vikidia.org/wiki/Arc-boutant"
+        },
+        {
+          "title": "Wikipedia — Flying buttress",
+          "url": "https://en.wikipedia.org/wiki/Arc-boutant"
+        },
+        {
+          "title": "Larousse — Cathédrale Notre-Dame de Chartres",
+          "url": "https://www.larousse.fr/encyclopedie/divers/cath%C3%A9drale_Notre-Dame_de_Chartres/181638"
+        },
+        {
+          "title": "Wikipedia — French Gothic stained glass windows",
+          "url": "https://en.wikipedia.org/wiki/French_Gothic_stained_glass_windows"
+        },
+        {
+          "title": "Hérodote — Effondrement de la voûte de Beauvais (1284)",
+          "url": "https://www.herodote.net/almanach-ID-2236.php"
+        },
+        {
+          "title": "Wikipedia — Beauvais Cathedral",
+          "url": "https://en.wikipedia.org/wiki/Beauvais_Cathedral"
+        },
+        {
+          "title": "Medievalists — The Collapse of the Beauvais Cathedral in 1284",
+          "url": "https://www.medievalists.net/2010/10/the-collapse-of-the-beauvais-cathedral-in-1284-the-conjecture-of-the-creep-buckling-piers/"
+        },
+        {
+          "title": "Paris Zigzag — Beauvais, le chœur gothique le plus haut du monde",
+          "url": "https://www.pariszigzag.fr/france/cathedrale-beauvais/"
+        },
+        {
+          "title": "Hérodote — Pour en finir avec le « gothique »",
+          "url": "https://www.herodote.net/Pour_en_finir_avec_le_gothique_-synthese-2051.php"
+        },
+        {
+          "title": "Hérodote — 16 mars 1831, Notre-Dame de Paris de Victor Hugo",
+          "url": "https://www.herodote.net/16_mars_1831-evenement-18310316.php"
+        },
+        {
+          "title": "TheCollector — Viollet-le-Duc, the architect who reshaped Notre-Dame",
+          "url": "https://www.thecollector.com/eugene-violett-le-duc-notre-dame-de-paris-architect/"
+        },
+        {
+          "title": "Ministère de la Culture — Les statues de la flèche de Notre-Dame",
+          "url": "https://www.culture.gouv.fr/fr/regions/drac-ile-de-france/Actualites/actualite-a-la-une/les-statues-restaurees-de-notre-dame-de-paris2"
+        },
+        {
+          "title": "Ville de Paris — Cinq ans après, Notre-Dame rouvre ses portes",
+          "url": "https://www.paris.fr/pages/cinq-ans-apres-notre-dame-de-paris-s-apprete-a-rouvrir-ses-portes-29209"
+        },
+        {
+          "title": "Futura — Avant/après : cinq ans de travaux à Notre-Dame",
+          "url": "https://www.futura-sciences.com/sciences/actualites/histoire-avant-apres-5-ans-travaux-ont-change-visage-notre-dame-paris-118107/"
+        }
+      ],
+      "from_stock": "20261116-1930-cathedrales-gothiques"
+    },
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main",
+      "tagline": "Un jeu de moines, un poème de prince, trois théories et cinq points disparus",
+      "teaser": "Pourquoi le tennis saute-t-il de 30 à 40 ? Les Anglais n’y sont pour rien : cherchez plutôt du côté des cloîtres français.",
+      "minutes": 3,
+      "theme": "Sports",
+      "art": {
+        "subject": "why tennis is scored 15, 30, 40: the scoring comes from the medieval French game of jeu de paume, and nobody knows for sure why",
+        "setting": "a modern outdoor tennis court with a net and a scoreboard; a 17th-century indoor jeu de paume hall with high walls, a sloping roof gallery along one side and a net in the middle",
+        "era": "today, with visits to 17th-century France",
+        "props": {
+          "racket": "a modern bright turquoise tennis racket",
+          "ball": "a small hand-sewn white leather ball",
+          "clock": "an old round wall clock with a single hour hand only"
+        }
+      },
+      "cast": [
+        {
+          "id": "chloe",
+          "name": "Chloé",
+          "look": "Chloé, a very tall athletic young woman of today, black hair in a high bouncy ponytail, dark brown skin, bright turquoise tennis dress as main colour, white visor cap, white sneakers, the racket in her hand",
+          "file": "cast/cultureg-chloe.png",
+          "status": "done",
+          "role": "the beginner tennis player who hates losing and counts every single point she is owed; energetic, very competitive, keeps swinging her racket while she talks"
+        },
+        {
+          "id": "paumier",
+          "name": "Le maître paumier",
+          "look": "a short round French jeu de paume master of 1630 in his fifties, pointed grey goatee and upturned moustache, light peach skin, flat black velvet cap, big white ruff collar, puffy crimson red doublet as main colour, black breeches and white stockings, the ball always in his hand",
+          "file": "cast/cultureg-paumier.png",
+          "status": "done",
+          "role": "the proud old master of the game who explains simply and admits when nobody knows; small, chest out, waves the ball like a pointer"
+        }
+      ],
+      "cover": {
+        "prompt": "a modern outdoor tennis court with a scoreboard showing only blank panels. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left holding the racket, staring up at the scoreboard with a confused frown; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right climbing a small ladder to the scoreboard, proudly hanging up a big round old clock with a single hand. wide shot",
+        "cast": [
+          "chloe",
+          "paumier"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "Au tennis, on compte 15, 30, 40, puis « jeu ». Pourquoi pas 1, 2, 3, comme tout le monde ?",
+          "bubbles": [
+            {
+              "who": "chloe",
+              "text": "Quinze ? J’ai marqué un point. Un. Vous me devez quatorze explications.",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "En France, on compte ainsi depuis plus de cinq siècles.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a modern outdoor tennis court by the net. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left counting on her fingers with the racket under her arm, baffled; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right popping up from behind the net, bowing deeply with his flat black cap in his hand, very proud. wide shot",
+            "cast": [
+              "chloe",
+              "paumier"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "XIIe siècle",
+          "caption": "Le tennis descend du jeu de paume, joué en France dès le XIIe siècle, d’abord par des moines, à main nue.",
+          "bubbles": [],
+          "image": {
+            "prompt": "an indoor jeu de paume hall with high walls and a net in the middle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right holding up his bright red swollen palm next to the ball, wincing dramatically; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left hugging her racket protectively against her chest. low angle",
+            "cast": [
+              "paumier",
+              "chloe"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Vers 1435",
+          "caption": "Le comptage est déjà là au Moyen Âge : vers 1435, un poème du prince Charles d’Orléans parle de « quarante cinq ».",
+          "bubbles": [
+            {
+              "who": "chloe",
+              "text": "Quarante-cinq ? On m’a volé cinq points !",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "Patience. Le vol a lieu plus tard.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the indoor jeu de paume hall, close-up. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right unrolling a long blank parchment scroll that rolls all the way down to the floor, reading it with solemn pride; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left bending over it, squinting, one eyebrow raised. medium close-up",
+            "cast": [
+              "paumier",
+              "chloe"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi 15 ? Trois hypothèses, zéro certitude",
+          "steps": [
+            "L’horloge : chaque point avance l’aiguille d’un quart de tour, 15, 30, 45, et 60 pour le jeu",
+            "Le terrain : le serveur avançait vers le filet à chaque point gagné",
+            "Le compte par 60 : au Moyen Âge, on comptait souvent par soixante, et on pariait sur les parties"
+          ],
+          "joke": "Les historiens n’ont pas tranché. Ils comptent encore les points."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "La plus célèbre",
+          "caption": "L’horloge est la plus citée. Mais l’aiguille des minutes ne se répand que vers 1690, bien après le poème.",
+          "bubbles": [
+            {
+              "who": "chloe",
+              "text": "L’horloge ! Un quart de tour par point, c’est évident.",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "Évident, oui. Avec deux siècles et demi de retard.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the indoor jeu de paume hall, a wall with the clock hanging on it. Chloé (very tall, high black ponytail, turquoise tennis dress, white visor) on the left pointing at the clock and its single lonely hour hand, mouth open; the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right shrugging with both palms up, innocent little smile. wide shot",
+            "cast": [
+              "chloe",
+              "paumier"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Un jeu de paume français en 1632",
+          "text": "Gravure de Charles Hulpeau : une salle fermée, un filet, des murs où la balle rebondit. Le tennis moderne en garde le filet, la raquette et le comptage.",
+          "photo": {
+            "commons": "File:French Jeu de Paume in the 17th century.jpg",
+            "credit": "Charles Hulpeau",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:French_Jeu_de_Paume_in_the_17th_century.jpg",
+            "file": "images/photo-6-french-jeu-de-paume-in-the-17th-cen.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Et le 40 ?",
+          "caption": "Pourquoi 40 et pas 45 ? L’explication courante : « quarante », plus court, se crie plus clairement.",
+          "bubbles": [
+            {
+              "who": "chloe",
+              "text": "Ils ont supprimé cinq points pour gagner une syllabe ?",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "On est sportifs. Pas comptables.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the indoor jeu de paume hall, low angle. the paumier (short, round, grey goatee, white ruff, crimson doublet) on the right shouting across the court with both hands cupped around his mouth, cheeks puffed, ruff shaking; Chloé (very tall, high black ponytail, turquoise tennis dress) on the left covering her ears with her racket squeezed under her arm. over-the-shoulder",
+            "cast": [
+              "paumier",
+              "chloe"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "En clair",
+          "title": "Ces mots que le tennis a gardés du français",
+          "text": "« Tennis » viendrait de « Tenez ! », lancé par le serveur à son adversaire : le mot apparaît dans un texte vers 1400. Et l’anglais « deuce », pour l’égalité à 40, viendrait de « à deux » : il faut alors gagner deux points de suite.",
+          "joke": "Les Anglais ont gardé nos mots. Et pris nos trophées."
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "15, 30, 40 vient du jeu de paume français. Pourquoi 15 au départ ? Personne ne le sait avec certitude.",
+          "bubbles": [
+            {
+              "who": "chloe",
+              "text": "Je perds 40-0, mais en vieux français. Et mes cinq points ?",
+              "side": "l"
+            },
+            {
+              "who": "paumier",
+              "text": "Perdus depuis des siècles. Vous n’êtes pas la première à réclamer.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back on the modern outdoor tennis court, the net behind him. Close on the paumier (short, round, grey goatee, white ruff, crimson doublet) holding up an old leather tennis ball between two fingers like a precious jewel, chin up, very proud and refined smile. close-up",
+            "cast": [
+              "paumier"
+            ],
+            "file": "images/cultureg-09.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "« Tennis » viendrait du français « Tenez ! », lancé par le serveur ; et l’anglais « deuce », de « à deux ».",
+        "source": "Wikipedia — Tennis scoring system"
+      },
+      "story": "Le tennis moderne, mis au point en Angleterre au XIXe siècle, descend du jeu de paume, joué en France dès le XIIe siècle, d’abord par des moines dans les cloîtres, qui frappaient la balle de la paume de la main avant l’arrivée de la raquette. Le mot « tennis » viendrait d’ailleurs de « Tenez ! », lancé par le serveur à son adversaire ; il apparaît dans un texte vers 1400.\nLe comptage par 15 est très ancien : vers 1435, une ballade du prince-poète Charles d’Orléans parle déjà de « quarante cinq ». Pourquoi 15 ? Personne ne le sait avec certitude. L’hypothèse la plus citée est celle de l’horloge : chaque point ferait avancer l’aiguille d’un quart de tour, 15, 30, 45, et 60 pour le jeu. Mais l’aiguille des minutes ne se répand que vers 1690, ce qui la rend peu probable. Une autre veut que le serveur avançait de 15 pieds vers le filet à chaque point gagné, mais les terrains n’avaient pas de longueur standard. Une troisième rattache le système aux comptes par soixante, courants au Moyen Âge, quand on pariait sur les parties.\nLe 45 est ensuite devenu 40 : l’explication la plus répandue est que « quarante » est plus court et se crie plus clairement sur le terrain. Enfin, l’anglais « deuce », pour l’égalité à 40 partout, viendrait de « à deux » : il faut alors gagner deux points de suite pour remporter le jeu.",
+      "sources": [
+        {
+          "title": "Wikipedia — Tennis scoring system",
+          "url": "https://en.wikipedia.org/wiki/Tennis_scoring_system"
+        },
+        {
+          "title": "Europe 1 — Roland-Garros : pourquoi compte-t-on les points en 15, 30, 40 et jeu au tennis ?",
+          "url": "https://www.europe1.fr/sport/roland-garros-pourquoi-compte-on-les-points-en-15-30-40-et-jeu-au-tennis-4185785"
+        },
+        {
+          "title": "Mental Floss — Where did tennis get its scoring system?",
+          "url": "https://www.mentalfloss.com/sports/where-did-tennis-get-its-scoring-system"
+        },
+        {
+          "title": "Hérodote — Jeu des moines, jeu des rois",
+          "url": "https://www.herodote.net/Jeu_des_moines_jeu_des_rois-synthese-2037.php?resume=1"
+        }
+      ],
+      "from_stock": "20261114-2049-tennis-15-30-40"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Le 14 Juillet a oublié de dire de quelle année il parlait",
+      "tagline": "La fête nationale célèbre la Bastille. Ou la Fédération. Ou les deux. La loi n’a jamais tranché.",
+      "teaser": "Vous pensez fêter la prise de la Bastille chaque 14 juillet ? La loi, elle, s’est bien gardée de le dire.",
+      "minutes": 2,
+      "theme": "Politique française",
+      "art": {
+        "subject": "why the 1880 French law making 14 July the national holiday never says whether it celebrates 1789 or 1790",
+        "setting": "a riverside lawn in Paris at night with fireworks; a Third Republic parliament chamber with red benches; the huge Champ-de-Mars in 1790 with a crowd and a central altar",
+        "era": "today, 1880 Third Republic France, and 14 July 1790",
+        "props": {
+          "law": "a single sheet of paper with one short paragraph and a red wax seal",
+          "tower": "a small grey stone model of a medieval fortress tower, the size of a teapot",
+          "sparkler": "a lit handheld sparkler throwing tiny yellow sparks"
+        }
+      },
+      "cast": [
+        {
+          "id": "jules",
+          "name": "Jules",
+          "look": "Jules, a very tall and lanky young man of today, short bleached blond hair in a small quiff, light brown skin, bright yellow raincoat as main colour, blue jeans, white sneakers, the sparkler in his hand",
+          "file": "cast/insolite-jules.png",
+          "status": "done",
+          "role": "the cheerful party-goer who thinks he knows why he celebrates and asks the reader's questions; bouncy, arms always up"
+        },
+        {
+          "id": "martin",
+          "name": "Henri Martin",
+          "look": "Henri Martin, a short round elderly French historian and senator of 1880, long white hair down to his collar, clean-shaven round pink cheeks, light peach skin, dark plum frock coat as main colour, grey waistcoat, a thick brown history book under his arm",
+          "file": "cast/insolite-martin.png",
+          "status": "done",
+          "role": "the careful senator who wrote the report and explains with a sly smile; small, dignified, taps his book when he makes a point"
+        }
+      ],
+      "cover": {
+        "prompt": "a riverside lawn in Paris at night, fireworks bursting high in the sky. Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left cheering with the sparkler; Henri Martin (short, round, long white hair, dark plum frock coat) on the right holding up the law sheet and pointing with a puzzled frown at a blank spot on it where a year should be. wide shot",
+        "cast": [
+          "jules",
+          "martin"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Un 14 juillet",
+          "caption": "Chaque 14 juillet, on croit fêter la prise de la Bastille de 1789. Mais la loi ne précise pas l’année.",
+          "bubbles": [
+            {
+              "who": "jules",
+              "text": "Vive la Bastille !",
+              "side": "l"
+            },
+            {
+              "who": "martin",
+              "text": "Laquelle ? Il y a deux 14 juillet célèbres.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a riverside lawn in Paris at night, fireworks high in the sky. Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left jumping with both arms up, the sparkler in one hand; Henri Martin (short, round, long white hair, dark plum frock coat) on the right sitting calmly on a folding chair, one finger raised, eyebrow lifted. wide shot",
+            "cast": [
+              "jules",
+              "martin"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1880",
+          "caption": "En 1880, la jeune IIIe République cherche une fête nationale. Le député Benjamin Raspail propose le 14 juillet.",
+          "bubbles": [
+            {
+              "who": "martin",
+              "text": "Excellente date. Reste à savoir laquelle on fête.",
+              "side": "r"
+            },
+            {
+              "who": "jules",
+              "text": "Moi, tant qu’il y a un feu d’artifice, je vote pour.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a Third Republic parliament chamber with red benches. Henri Martin (short, round, long white hair, dark plum frock coat) on the right standing at a small lectern, holding up the law sheet with satisfaction; Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left squeezed onto a red bench far too small for his long legs, knees up to his chin, puzzled. low angle",
+            "cast": [
+              "martin",
+              "jules"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Deux 14 juillet pour le prix d’un",
+          "steps": [
+            "14 juillet 1789 : les Parisiens prennent la Bastille, une journée sanglante",
+            "14 juillet 1790 : la Fête de la Fédération célèbre l’unité du pays, dans la joie",
+            "1880 : la loi tient en une phrase, « le 14 juillet », sans aucune année"
+          ],
+          "joke": "Une date à double fond, comme une valise de contrebandier."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Au Sénat, juin 1880",
+          "caption": "Le rapporteur, l’historien Henri Martin, vante 1790, qui, dit-il, « a donné à la France conscience d’elle-même ».",
+          "bubbles": [
+            {
+              "who": "jules",
+              "text": "Vous cachez quelque chose dans votre dos.",
+              "side": "l"
+            },
+            {
+              "who": "martin",
+              "text": "Une journée un peu trop sanglante. Par prudence, on ne la cite pas.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the parliament chamber, close on the lectern. Henri Martin (short, round, long white hair, dark plum frock coat) on the right smiling innocently at the audience while hiding the tower model behind his back with both hands; Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left leaning over to peek behind him and spotting the tower, eyes wide. medium shot",
+            "cast": [
+              "martin",
+              "jules"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "La Fête de la Fédération, 14 juillet 1790",
+          "text": "Le Champ-de-Mars peint par Charles Thévenin : au centre, l’autel de la patrie, tout autour la foule. C’est ce 14 juillet-là que le Sénat avait en tête en 1880.",
+          "photo": {
+            "commons": "File:Charles Thévenin - La Fête de la Fédération.jpg",
+            "credit": "Charles Thévenin",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Charles_Th%C3%A9venin_-_La_F%C3%AAte_de_la_F%C3%A9d%C3%A9ration.jpg",
+            "file": "images/photo-5-charles-th-venin-la-f-te-de-la-f-d.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "14 juillet 1790",
+          "caption": "Environ 260 000 Parisiens et 100 000 gardes venus de toute la France fêtent l’unité au Champ-de-Mars. Talleyrand dit la messe.",
+          "bubbles": [
+            {
+              "who": "martin",
+              "text": "Aucun combat. Seulement la pluie, à la fin.",
+              "side": "r"
+            },
+            {
+              "who": "jules",
+              "text": "J’ai l’imperméable. Pour une fois que je suis prêt.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the huge Champ-de-Mars in 1790, a tiny crowd in the far background around a central altar, rain falling. Jules (very tall, lanky, bleached blond quiff, bright yellow raincoat) on the left, the only one perfectly dry in his raincoat, smugly pulling his hood up; Henri Martin (short, round, long white hair, dark plum frock coat) on the right soaked, white hair dripping flat, holding his book over his head, still smiling. wide shot",
+            "cast": [
+              "jules",
+              "martin"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "La loi de 1880 dit seulement « le 14 juillet ». Chacun y voit donc 1789, 1790, ou les deux à la fois.",
+          "bubbles": [],
+          "image": {
+            "prompt": "back on the riverside lawn in Paris at night, fireworks in the sky behind him. Close on Henri Martin (short, round, long white hair, dark plum frock coat) holding up two lit sparklers crossed like an X, wise half-smile, eyes twinkling. close-up",
+            "cast": [
+              "martin"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Le 14 juillet 1790, environ 260 000 Parisiens et 100 000 gardes fêtent l’unité du pays au Champ-de-Mars. Talleyrand y dit la messe.",
+        "source": "Hérodote — La fête nationale du 14 juillet"
+      },
+      "story": "En 1880, la IIIe République, encore jeune, veut une fête nationale qui rassemble les Français. Le député Benjamin Raspail propose le 14 juillet, préféré à d’autres dates de la Révolution comme le 5 mai ou le 20 juin 1789. La loi votée en juillet 1880 tient en un article unique : « La République adopte le 14 juillet comme jour de fête nationale annuelle. » Aucune année n’y figure.\nCe silence est voulu. Le 14 juillet 1789, la prise de la Bastille a été une journée sanglante, qui gêne une partie des élus. Or un autre 14 juillet existe : celui de 1790, la Fête de la Fédération. Ce jour-là, au Champ-de-Mars, environ 260 000 Parisiens et quelque 100 000 gardes fédérés venus de tous les départements célèbrent l’unité du pays. Talleyrand, évêque d’Autun, dit la messe sur l’autel de la patrie, La Fayette puis le roi Louis XVI prêtent serment, et la pluie finit par tomber sans gâcher la fête.\nAu Sénat, le rapporteur de la loi, l’historien Henri Martin, met en avant ce 14 juillet 1790, qui selon lui « a donné à la France conscience d’elle-même ». Résultat : la loi ne tranche pas. Pour les uns, on fête la Bastille ; pour les autres, la Fédération ; et pour beaucoup d’historiens et de juristes, les deux à la fois.",
+      "sources": [
+        {
+          "title": "Hérodote — La fête nationale du 14 juillet",
+          "url": "https://www.herodote.net/La_fete_nationale_du_14_juillet-synthese-1745.php"
+        },
+        {
+          "title": "Hérodote — 14 juillet 1790, la fête de la Fédération",
+          "url": "https://www.herodote.net/14_juillet_1790-evenement-17900714.php"
+        },
+        {
+          "title": "Blog Landot & associés — 14 juillet : en souvenir de 1789, de 1790, ou des deux ?",
+          "url": "https://blog.landot-avocats.net/2022/07/12/14-juillet-en-souvenir-de-celui-de-lete-1789-ou-en-celebration-de-la-fete-de-la-federation-de-1790-ou-des-deux/"
+        }
+      ],
+      "from_stock": "20261114-2047-14-juillet-sans-annee"
+    },
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "Vous « surveillez votre silhouette » ? Vous surveillez un ministre radin de 1759",
+      "tagline": "Huit mois au ministère, des impôts sur les fenêtres et un nom devenu synonyme de « strict minimum »",
+      "teaser": "Ce mot qu’on pense en se regardant dans la glace était le nom d’un ministre. Les nobles le détestaient tellement qu’ils l’ont transformé en blague.",
+      "minutes": 2,
+      "theme": "Expression française",
+      "art": {
+        "subject": "how the name of a stingy French finance minister of 1759 became the word for a cheap cut-out shadow profile portrait",
+        "setting": "a street artist's stool on a sunny square of Montmartre today; a minister's wooden office in Versailles in 1759 with a tall window; a candle-lit room of the 1760s with a sheet of paper pinned on the wall",
+        "era": "1759 Versailles and Paris under Louis XV, with a young woman of today",
+        "props": {
+          "ledger": "a thick brown leather account ledger with many paper slips sticking out",
+          "profile": "a small black paper cut-out of a head in profile, glued on a white card",
+          "candle": "a single tall white candle in a brass candlestick"
+        }
+      },
+      "cast": [
+        {
+          "id": "silhouette",
+          "name": "Étienne de Silhouette",
+          "look": "Étienne de Silhouette, a very tall and extremely thin French minister of 1759 in his fifties, long pointed nose, hollow cheeks, short white powdered wig with a black ribbon, light peach skin, a plain mustard-yellow frock coat as main colour with no lace and no gold, grey stockings, the ledger and a quill always in his hands",
+          "file": "cast/origine-silhouette.png",
+          "status": "done",
+          "role": "the stingy, overzealous finance minister who wants the rich to pay; counts everything, pinches pennies even on himself and is proud of it; thin as a rake, always peering closely at numbers",
+          "via": "fal"
+        },
+        {
+          "id": "lea",
+          "name": "Léa",
+          "look": "Léa, a short and round young woman of today in her twenties, light olive skin, long straight copper-red hair in two thick braids, a bright lilac raincoat as main colour, dark jeans, white sneakers, a canvas tote bag on her shoulder",
+          "file": "cast/origine-lea.png",
+          "status": "done",
+          "role": "a tourist in Montmartre who haggles over everything and wants the real thing for the price of the cheap one; leans forward, eyebrows raised, suspicious of every price",
+          "via": "fal"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no split screen, no grid, no inset pictures. Outdoors in a sunny square of Montmartre, plain pale sky, almost empty background, no posters, no signs, no text. Léa (short, round, copper-red braids, lilac raincoat) sits in profile on a small stool on the right, chin up, posing very seriously; behind her, Étienne de Silhouette (very tall, extremely thin, white powdered wig, mustard-yellow frock coat) bends down from the left and measures the length of her nose with his quill, frowning, the ledger open under his arm, as if calculating a tax. medium wide shot",
+        "cast": [
+          "silhouette",
+          "lea"
+        ],
+        "file": "images/origine-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "On « surveille sa silhouette », on dessine des silhouettes… Mais d’où sort ce mot ? D’un nom de famille.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "Une silhouette en papier ? Et un vrai portrait, plutôt ?",
+              "side": "r"
+            },
+            {
+              "who": "L’artiste",
+              "text": "Le vrai, c’est trois fois plus cher, madame.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a sunny square of Montmartre, a small easel and two folding stools. On the left, a bearded street artist in a beret holds small scissors and a sheet of black paper; Léa (short, round, copper-red braids, lilac raincoat, tote bag) sits on the right on a stool, leaning forward with narrowed eyes and one eyebrow raised, clutching her tote bag, suspicious of the price. wide shot",
+            "cast": [
+              "lea"
+            ],
+            "file": "images/origine-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Mars 1759",
+          "caption": "Mars 1759 : la guerre a vidé les caisses. Le ministre des Finances, Étienne de Silhouette, veut taxer le luxe.",
+          "bubbles": [
+            {
+              "who": "Un marquis",
+              "text": "Même mes fenêtres ?!",
+              "side": "l"
+            },
+            {
+              "who": "silhouette",
+              "text": "Les quatorze. J’ai compté. Deux fois.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a minister's wooden office in Versailles. Étienne de Silhouette (very tall, extremely thin, white powdered wig, mustard-yellow frock coat) on the right bends over his desk with a magnifying glass above a small drawing of a mansion facade, counting its windows on his long bony fingers, the ledger open; in the background on the left, a plump marquis in a pink silk coat and a huge grey wig bursts through the door, arms in the air, outraged. medium shot",
+            "cast": [
+              "silhouette"
+            ],
+            "file": "images/origine-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Huit mois de Silhouette au ministère",
+          "steps": [
+            "4 mars 1759 : il devient contrôleur général des Finances",
+            "Il propose un impôt sur les signes de richesse : portes, fenêtres, domestiques, objets de luxe",
+            "Cible : les nobles et le clergé, qui payaient très peu",
+            "26 octobre : l’argenterie doit partir à la fonte",
+            "20 novembre 1759 : il est renvoyé"
+          ],
+          "joke": "Même son mandat a été taillé au plus court."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Automne 1759",
+          "caption": "Les privilégiés détestent ces impôts. Ils se vengent : tout ce qui est maigre ou mesquin devient « à la Silhouette ».",
+          "bubbles": [
+            {
+              "who": "Un marquis",
+              "text": "Ce soir, dîner à la Silhouette : une olive.",
+              "side": "l"
+            },
+            {
+              "who": "Un marquis",
+              "text": "Coupée en deux.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a lavish 1750s dining table. The plump marquis (pink silk coat, huge grey wig) alone, sitting very straight, holding with silver tongs one single tiny green half olive above a gigantic empty white plate, smug, pinky finger raised, mocking. close-up",
+            "cast": [],
+            "file": "images/origine-04.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un portrait « à la silhouette »",
+          "text": "Un profil découpé dans du papier noir, vers 1850. Avant la photographie, c’était le portrait le moins cher : ni peinture, ni peintre célèbre, juste une ombre et des ciseaux.",
+          "photo": {
+            "commons": "File:Silhouette of a Man in Left Profile byWJHubard 19thc Harvard.png",
+            "credit": "William James Hubard",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Silhouette_of_a_Man_in_Left_Profile_byWJHubard_19thc_Harvard.png",
+            "file": "images/photo-5-silhouette-of-a-man-in-left-profile.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Années 1760",
+          "caption": "Le portrait le moins cher, une ombre de profil tracée puis découpée, prend le surnom de « portrait à la silhouette ».",
+          "bubbles": [
+            {
+              "who": "Un portraitiste",
+              "text": "À l’huile, c’est hors budget, monsieur.",
+              "side": "l"
+            },
+            {
+              "who": "silhouette",
+              "text": "Enfin un homme raisonnable.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a candle-lit room of the 1760s. Étienne de Silhouette (very tall, extremely thin, white powdered wig, mustard-yellow frock coat) sits sideways on a chair on the right, chin up, delighted, his long nose casting a huge sharp shadow on a sheet of paper pinned on the wall; on the left a small hunched portrait maker in a brown apron traces the shadow with a pencil, the candle between them. low angle",
+            "cast": [
+              "silhouette"
+            ],
+            "file": "images/origine-06.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi son nom ? Les spécialistes hésitent",
+          "steps": [
+            "L’Académie française : ses réformes n’ont été qu’« esquissées », comme ces portraits",
+            "L’écrivain Mercier, en 1781 : on se moquait de ses économies",
+            "Une légende : il traçait lui-même des profils dans son château de Bry-sur-Marne",
+            "Un texte de 1763 parle de portraits « à la Silhouette » dès 1758, avant son ministère"
+          ],
+          "joke": "Une seule certitude : c’est bien son nom."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "« Silhouette », c’est Étienne de Silhouette, ministre de 1759 si économe que son nom a désigné le strict minimum.",
+          "bubbles": [
+            {
+              "who": "lea",
+              "text": "En gros, je me suis offert un ministre.",
+              "side": "r"
+            },
+            {
+              "who": "L’artiste",
+              "text": "Au tarif réduit, madame.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the sunny square of Montmartre, seen over the shoulder of the bearded street artist in a beret on the left. Léa (short, round, copper-red braids, lilac raincoat) on the right holds the profile card next to her own face, comparing, proud and smug, wallet still firmly closed in her other hand. over-the-shoulder",
+            "cast": [
+              "lea"
+            ],
+            "file": "images/origine-08.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        }
+      ],
+      "final": {
+        "text": "Aucun portrait d’Étienne de Silhouette n’a survécu : ses tableaux ont été détruits pendant la Révolution. Il ne reste même pas sa silhouette.",
+        "source": "Wikipédia (en) — Étienne de Silhouette"
+      },
+      "story": "Le mot « silhouette » est un nom de famille. Étienne de Silhouette (1709-1767) devient contrôleur général des Finances, c’est-à-dire ministre des Finances de Louis XV, le 4 mars 1759. Les caisses du royaume sont vides. Pour les remplir, il propose une « subvention générale » : un impôt sur les signes visibles de richesse, comme les portes et les fenêtres, les domestiques ou les objets de luxe. Le but est de faire payer la noblesse et le clergé, qui échappaient en grande partie à l’impôt. Le 26 octobre 1759, il ordonne même de fondre l’argenterie. Ces mesures soulèvent une telle colère qu’il est renvoyé le 20 novembre, après huit mois.\nLes privilégiés se vengent par la moquerie : ce qui est maigre, mesquin ou réduit au minimum est dit « à la Silhouette ». Le nom finit par désigner le portrait le moins cher qui soit : l’ombre d’un profil, tracée puis découpée dans du papier noir.\nPourquoi ce portrait-là ? On n’en est pas sûr. L’Académie française estime que c’est parce que ses mesures fiscales ne furent qu’esquissées. L’écrivain Louis-Sébastien Mercier, en 1781, y voit une moquerie de ses économies. Une autre tradition raconte qu’il traçait lui-même des profils dans son château de Bry-sur-Marne. Et un texte publié en 1763 évoque des « portraits à la Silhouette » dès 1758, avant même son ministère. Ironie finale : aucun portrait de lui n’a survécu.",
+      "sources": [
+        {
+          "title": "Dictionnaire de l’Académie française, 9e édition — Silhouette",
+          "url": "https://dictionnaire-academie.fr/article/A9S1633"
+        },
+        {
+          "title": "Wikipédia (en) — Étienne de Silhouette",
+          "url": "https://en.wikipedia.org/wiki/%C3%89tienne_de_Silhouette"
+        },
+        {
+          "title": "Word Histories — The shadowy history of the word « silhouette »",
+          "url": "https://wordhistories.net/2018/03/30/silhouette-uncertain-origin/"
+        },
+        {
+          "title": "Musée de Bry-sur-Marne — Archives sur Étienne de Silhouette (1759)",
+          "url": "https://musee.brysurmarne.fr/fichier/3164/1444"
+        },
+        {
+          "title": "Wikimedia Commons — Silhouette of a Man in Left Profile, W. J. Hubard (Harvard)",
+          "url": "https://download.osmand.net/wiki/File:Silhouette_of_a_Man_in_Left_Profile_byWJHubard_19thc_Harvard.png"
+        }
+      ],
+      "from_stock": "20261118-2044-silhouette-ministre-radin"
+    },
     {
       "id": "quiz",
       "kind": "swipe",
@@ -15,28 +1449,88 @@
           "seconds": 90,
           "hint": "La moitié de ces phrases sont des idées reçues.",
           "items": [
-            { "text": "La tour Eiffel grandit quand il fait chaud.", "ok": true, "explain": "Le fer se dilate : jusqu’à environ 20 cm de plus par forte chaleur." },
-            { "text": "Les taureaux détestent la couleur rouge.", "ok": false, "explain": "Ils la distinguent à peine. C’est le mouvement de la cape qui les fait charger." },
-            { "text": "Louis XIV a régné plus de 70 ans.", "ok": true, "explain": "72 ans et 110 jours, de 1643 à 1715 : record du monde selon le Guinness." },
-            { "text": "Le poisson rouge oublie tout en trois secondes.", "ok": false, "explain": "Des expériences montrent qu’il se souvient d’un parcours au moins un mois." },
-            { "text": "La France compte plus de fuseaux horaires que la Russie.", "ok": true, "explain": "12 grâce aux outre-mer, contre 11 pour la Russie et les États-Unis." },
-            { "text": "On voit la Grande Muraille de Chine depuis l’espace, à l’œil nu.", "ok": false, "explain": "Trop étroite et de la couleur du sol : les astronautes ne la distinguent pas." },
-            { "text": "La Corse est plus proche de l’Italie que du continent français.", "ok": true, "explain": "Environ 83 km jusqu’à la Toscane, contre 164 km au plus court vers la France." },
-            { "text": "Les Vikings portaient des casques à cornes.", "ok": false, "explain": "Aucun casque viking à cornes n’a jamais été retrouvé. Légende tenace." }
+            {
+              "text": "La tour Eiffel grandit quand il fait chaud.",
+              "ok": true,
+              "explain": "Le fer se dilate : jusqu’à environ 20 cm de plus par forte chaleur."
+            },
+            {
+              "text": "Les taureaux détestent la couleur rouge.",
+              "ok": false,
+              "explain": "Ils la distinguent à peine. C’est le mouvement de la cape qui les fait charger."
+            },
+            {
+              "text": "Louis XIV a régné plus de 70 ans.",
+              "ok": true,
+              "explain": "72 ans et 110 jours, de 1643 à 1715 : record du monde selon le Guinness."
+            },
+            {
+              "text": "Le poisson rouge oublie tout en trois secondes.",
+              "ok": false,
+              "explain": "Des expériences montrent qu’il se souvient d’un parcours au moins un mois."
+            },
+            {
+              "text": "La France compte plus de fuseaux horaires que la Russie.",
+              "ok": true,
+              "explain": "12 grâce aux outre-mer, contre 11 pour la Russie et les États-Unis."
+            },
+            {
+              "text": "On voit la Grande Muraille de Chine depuis l’espace, à l’œil nu.",
+              "ok": false,
+              "explain": "Trop étroite et de la couleur du sol : les astronautes ne la distinguent pas."
+            },
+            {
+              "text": "La Corse est plus proche de l’Italie que du continent français.",
+              "ok": true,
+              "explain": "Environ 83 km jusqu’à la Toscane, contre 164 km au plus court vers la France."
+            },
+            {
+              "text": "Les Vikings portaient des casques à cornes.",
+              "ok": false,
+              "explain": "Aucun casque viking à cornes n’a jamais été retrouvé. Légende tenace."
+            }
           ],
-          "source": { "title": "Futura Sciences — Les taureaux n’aiment pas le rouge : vrai ou faux ?", "url": "https://www.futura-sciences.com/planete/questions-reponses/animaux-taureaux-naiment-pas-rouge-vrai-faux-18491/" }
+          "source": {
+            "title": "Futura Sciences — Les taureaux n’aiment pas le rouge : vrai ou faux ?",
+            "url": "https://www.futura-sciences.com/planete/questions-reponses/animaux-taureaux-naiment-pas-rouge-vrai-faux-18491/"
+          }
         }
       ],
       "sources": [
-        { "title": "Futura Sciences — La tour Eiffel change-t-elle de taille ?", "url": "https://www.futura-sciences.com/planete/questions-reponses/monuments-tour-eiffel-change-t-elle-taille-12124/" },
-        { "title": "Futura Sciences — Les taureaux n’aiment pas le rouge : vrai ou faux ?", "url": "https://www.futura-sciences.com/planete/questions-reponses/animaux-taureaux-naiment-pas-rouge-vrai-faux-18491/" },
-        { "title": "Guinness World Records — Longest ever reigns", "url": "https://www.guinnessworldrecords.com/world-records/longest-ever-reigns" },
-        { "title": "24matins — Les poissons rouges ont en fait bonne mémoire", "url": "https://www.24matins.fr/les-poissons-rouges-ont-en-fait-bonne-memoire-1341712" },
-        { "title": "timeanddate — Which Country Has the Most Time Zones?", "url": "https://www.timeanddate.com/time/country-with-the-most-time-zones.html" },
-        { "title": "Futura Sciences — La Grande Muraille de Chine est-elle visible depuis l’espace ?", "url": "https://www.futura-sciences.com/sciences/questions-reponses/espace-grande-muraille-chine-divisible-depuis-espace-vrai-faux-21652/" },
-        { "title": "TourMaG — Carte de la Corse, spécificités et géographie", "url": "https://www.tourmag.com/Carte-de-la-Corse-specificites-geographie_a113490.html" },
-        { "title": "Futura Sciences — Les Vikings n’ont jamais porté de casques à cornes", "url": "https://www.futura-sciences.com/sciences/questions-reponses/histoire-saviez-vous-vikings-nont-jamais-porte-casques-cornes-contrairement-legende-populaire-24958/" }
+        {
+          "title": "Futura Sciences — La tour Eiffel change-t-elle de taille ?",
+          "url": "https://www.futura-sciences.com/planete/questions-reponses/monuments-tour-eiffel-change-t-elle-taille-12124/"
+        },
+        {
+          "title": "Futura Sciences — Les taureaux n’aiment pas le rouge : vrai ou faux ?",
+          "url": "https://www.futura-sciences.com/planete/questions-reponses/animaux-taureaux-naiment-pas-rouge-vrai-faux-18491/"
+        },
+        {
+          "title": "Guinness World Records — Longest ever reigns",
+          "url": "https://www.guinnessworldrecords.com/world-records/longest-ever-reigns"
+        },
+        {
+          "title": "24matins — Les poissons rouges ont en fait bonne mémoire",
+          "url": "https://www.24matins.fr/les-poissons-rouges-ont-en-fait-bonne-memoire-1341712"
+        },
+        {
+          "title": "timeanddate — Which Country Has the Most Time Zones?",
+          "url": "https://www.timeanddate.com/time/country-with-the-most-time-zones.html"
+        },
+        {
+          "title": "Futura Sciences — La Grande Muraille de Chine est-elle visible depuis l’espace ?",
+          "url": "https://www.futura-sciences.com/sciences/questions-reponses/espace-grande-muraille-chine-divisible-depuis-espace-vrai-faux-21652/"
+        },
+        {
+          "title": "TourMaG — Carte de la Corse, spécificités et géographie",
+          "url": "https://www.tourmag.com/Carte-de-la-Corse-specificites-geographie_a113490.html"
+        },
+        {
+          "title": "Futura Sciences — Les Vikings n’ont jamais porté de casques à cornes",
+          "url": "https://www.futura-sciences.com/sciences/questions-reponses/histoire-saviez-vous-vikings-nont-jamais-porte-casques-cornes-contrairement-legende-populaire-24958/"
+        }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-20T06:05:04.501983+01:00"
 }

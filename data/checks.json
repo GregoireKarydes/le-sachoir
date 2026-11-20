@@ -1,17 +1,7 @@
 {
- "updated_at": "2026-11-20T01:43+01:00",
+ "updated_at": "2026-11-20T06:05+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
-  {
-   "path": "stock/cultureg/20261114-2049-tennis-15-30-40",
-   "titles": {
-    "cultureg": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main"
-   },
-   "errors": [],
-   "warnings": [
-    "cultureg : case 2 : récitatif de 21 mots (max 20)"
-   ]
-  },
   {
    "path": "stock/cultureg/20261115-2050-departements-taille-cheval",
    "titles": {
@@ -41,17 +31,6 @@
    "errors": [],
    "warnings": [
     "dossier : case 24 : récitatif de 21 mots (max 20)"
-   ]
-  },
-  {
-   "path": "stock/insolite/20261114-2047-14-juillet-sans-annee",
-   "titles": {
-    "insolite": "Le 14 Juillet a oublié de dire de quelle année il parlait"
-   },
-   "errors": [],
-   "warnings": [
-    "insolite : case 6 : récitatif de 21 mots (max 20)",
-    "insolite : case 7 : récitatif de 21 mots (max 20)"
    ]
   },
   {
@@ -128,6 +107,22 @@
    "errors": [],
    "warnings": [
     "origine : fiches chauvin et karim : même couleur dominante (red), à différencier"
+   ]
+  },
+  {
+   "path": "editions/2026-11-20",
+   "titles": {
+    "dossier": "Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général)",
+    "cultureg": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main",
+    "insolite": "Le 14 Juillet a oublié de dire de quelle année il parlait",
+    "origine": "Vous « surveillez votre silhouette » ? Vous surveillez un ministre radin de 1759",
+    "quiz": "Vrai, faux, ou légende de comptoir ?"
+   },
+   "errors": [],
+   "warnings": [
+    "cultureg : case 2 : récitatif de 21 mots (max 20)",
+    "insolite : case 6 : récitatif de 21 mots (max 20)",
+    "insolite : case 7 : récitatif de 21 mots (max 20)"
    ]
   }
  ]

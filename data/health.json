@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T01:43:59.282450+01:00",
+ "updated_at": "2026-11-20T06:05:04.501983+01:00",
  "today": "2026-11-20",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,6 +9,10 @@
    "date": "2026-11-20",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "origine": "prêt",
     "quiz": "prêt"
    }
   },
@@ -48,33 +52,43 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-20/cultureg : « 15, 30, 40 : le tennis compte comme un moine qui a mal à la main » prise dans la file (20261114-2049-tennis-15-30-40)",
+  "2026-11-20/insolite : « Le 14 Juillet a oublié de dire de quelle année il parlait » prise dans la file (20261114-2047-14-juillet-sans-annee)",
+  "2026-11-20/origine : « Vous « surveillez votre silhouette » ? Vous surveillez un ministre radin de 1759 » prise dans la file (20261118-2044-silhouette-ministre-radin)",
+  "2026-11-20/dossier : « Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général) » prise dans la file (20261116-1930-cathedrales-gothiques)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-19",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "cultureg",
+  "insolite",
+  "origine"
+ ],
+ "last_published": "2026-11-20",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 3,
    "blocked": 0,
    "images_left": 23,
    "focus": "20261116-2043-stethoscope-sans-rougir (9 image(s) à faire)",
-   "next": "20261114-2049-tennis-15-30-40",
+   "next": "20261115-2050-departements-taille-cheval",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 3,
    "blocked": 0,
    "images_left": 18,
    "focus": "20261116-2045-talon-haut-cavalier-rouge (6 image(s) à faire)",
-   "next": "20261114-2047-14-juillet-sans-annee",
+   "next": "20261115-2053-perec-roman-sans-e",
    "next_redo": 0
   },
   "notice": {
@@ -87,26 +101,26 @@
    "next_redo": 0
   },
   "origine": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 0,
    "blocked": 0,
    "images_left": 0,
    "focus": null,
-   "next": "20261118-2044-silhouette-ministre-radin",
+   "next": "20261118-2046-chauvin-soldat-imaginaire",
    "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 2,
    "blocked": 0,
    "images_left": 36,
    "focus": "20261117-1925-code-civil (13 image(s) à faire)",
-   "next": "20261116-1930-cathedrales-gothiques",
+   "next": null,
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 3,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 2,
  "quiz_days_ahead": 5,
  "quota": {
   "day": "2026-11-20",
@@ -128,7 +142,7 @@
  },
  "rss": {
   "collected_at": "2026-11-20T00:35:38.308137+01:00",
-  "age_hours": 1.1,
+  "age_hours": 5.5,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 28,

@@ -1,6 +1,72 @@
 {
- "updated_at": "2026-11-20T01:43:59.282450+01:00",
+ "updated_at": "2026-11-20T06:05:04.501983+01:00",
  "editions": [
+  {
+   "date": "2026-11-20",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général)",
+     "kind": "",
+     "url": "histoires/2026-11-20-cathedrales-gothiques-des-murs-en-verre-un-plafond-en-pierre-et-ca/",
+     "theme": "Architecture",
+     "minutes": 6,
+     "tagline": "De Saint-Denis à la réouverture de Notre-Dame : l’arc brisé, la croisée d’ogives et l’arc-boutant expliqués sans vertige",
+     "cases": 26,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main",
+     "kind": "",
+     "url": "histoires/2026-11-20-15-30-40-le-tennis-compte-comme-un-moine-qui-a-mal-a-la-main/",
+     "theme": "Sports",
+     "minutes": 3,
+     "tagline": "Un jeu de moines, un poème de prince, trois théories et cinq points disparus",
+     "cases": 9,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "title": "Le 14 Juillet a oublié de dire de quelle année il parlait",
+     "kind": "",
+     "url": "histoires/2026-11-20-le-14-juillet-a-oublie-de-dire-de-quelle-annee-il-parlait/",
+     "theme": "Politique française",
+     "minutes": 2,
+     "tagline": "La fête nationale célèbre la Bastille. Ou la Fédération. Ou les deux. La loi n’a jamais tranché.",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "origine",
+     "label": "D’où ça vient ?",
+     "title": "Vous « surveillez votre silhouette » ? Vous surveillez un ministre radin de 1759",
+     "kind": "",
+     "url": "histoires/2026-11-20-vous-surveillez-votre-silhouette-vous-surveillez-un-ministre-radin/",
+     "theme": "Expression française",
+     "minutes": 2,
+     "tagline": "Huit mois au ministère, des impôts sur les fenêtres et un nom devenu synonyme de « strict minimum »",
+     "cases": 8,
+     "cover": "images/origine-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Swipe",
+     "title": "Vrai, faux, ou légende de comptoir ?",
+     "kind": "swipe",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-19",
    "demo": false,
