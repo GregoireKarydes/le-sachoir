@@ -189,7 +189,13 @@
           "title": "La Magnavox Odyssey, première console de salon",
           "text": "La même année, en 1972, la Magnavox Odyssey arrive aux États-Unis : la première console qui se branche sur la télévision de la maison.",
           "photo": {
-            "commons": "File:Magnavox-Odyssey-Console-Set.jpg"
+            "commons": "File:Magnavox-Odyssey-Console-Set.jpg",
+            "credit": "Evan-Amos",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Magnavox-Odyssey-Console-Set.jpg",
+            "file": "images/photo-6-magnavox-odyssey-console-set-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -254,7 +260,13 @@
           "title": "Une vraie borne Pong",
           "text": "Une borne Pong d'époque : un téléviseur noir et blanc dans un meuble, deux boutons pour les raquettes, et une fente pour les pièces.",
           "photo": {
-            "commons": "File:Signed Pong Cabinet.jpg"
+            "commons": "File:Signed Pong Cabinet.jpg",
+            "credit": "Chris Rand",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Signed_Pong_Cabinet.jpg",
+            "file": "images/photo-9-signed-pong-cabinet-jpg.webp",
+            "status": "done"
           }
         },
         {

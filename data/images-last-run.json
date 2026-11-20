@@ -1,7 +1,7 @@
 {
- "at": "2026-11-20T06:59:47.958167+01:00",
- "generated": 0,
+ "at": "2026-11-20T07:02:18.996837+01:00",
+ "generated": 1,
  "log": [
-  "réserve: 8080 neurones estimés aujourd'hui, 2600 gardés pour l'Actu"
+  "réserve: 8160 neurones estimés aujourd'hui, 2600 gardés pour l'Actu"
  ]
 }

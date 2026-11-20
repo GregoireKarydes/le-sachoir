@@ -714,8 +714,7 @@
           "look": "a short, plump man in his sixties, light skin, bald on top with a white horseshoe fringe of hair, a burgundy knitted cardigan as main colour over a beige shirt, grey trousers, a big jangling ring of keys clipped to his belt",
           "role": "a landlord who must respect the rent cap; stingy and always looking for a loophole, rubs his hands, sly little grin",
           "file": "cast/actu-proprietaire.png",
-          "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (2960dac1-1e41-416b-8e67-3aa9e07940e2)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done"
         },
         {
           "id": "jadot",

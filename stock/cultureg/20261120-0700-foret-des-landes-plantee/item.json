@@ -39,7 +39,10 @@
       ],
       "cover": {
         "prompt": "a flat moor of low grass and puddles under a wide sky, a few sheep. The berger (very tall, on the stilts, black beard, black beret, cream sheepskin cape) on the right towering high, looking down with crossed arms on his staff; the ingenieur (short, plump, bald with ginger side-whiskers, royal-blue frock coat) on the left knee-deep in a puddle, proudly unrolling the plan up toward him. Behind them, a single young pine sprouting. medium wide shot",
-        "cast": ["berger", "ingenieur"],
+        "cast": [
+          "berger",
+          "ingenieur"
+        ],
         "file": "images/cultureg-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -51,12 +54,23 @@
           "tag": "Années 1850",
           "caption": "Années 1850, dans les Landes. Pourquoi la plus grande forêt d’Europe de l’Ouest est-elle née si récemment ?",
           "bubbles": [
-            { "who": "berger", "text": "Une forêt ? Ici, il n’y a que de l’eau et mes moutons.", "side": "r" },
-            { "who": "ingenieur", "text": "Pour l’instant.", "side": "l" }
+            {
+              "who": "berger",
+              "text": "Une forêt ? Ici, il n’y a que de l’eau et mes moutons.",
+              "side": "r"
+            },
+            {
+              "who": "ingenieur",
+              "text": "Pour l’instant.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "an endless flat moor of low grass and shallow puddles under a huge sky, a few scattered sheep. The berger (very tall, on the stilts, black beard, black beret, cream sheepskin cape) on the right standing high above the grass, leaning on his staff, smirking down; the ingenieur (short, plump, bald with ginger side-whiskers, round spectacles, royal-blue frock coat) far below on the left, the plan tucked under his arm, peering up at him with determination. wide shot",
-            "cast": ["berger", "ingenieur"],
+            "cast": [
+              "berger",
+              "ingenieur"
+            ],
             "file": "images/cultureg-01.webp",
             "status": "pending",
             "attempts": 0
@@ -68,12 +82,23 @@
           "tag": "L’hiver",
           "caption": "L’hiver, la pluie stagne sur ce sol tout plat : aucune pente pour l’évacuer. Le marais apporte aussi le paludisme.",
           "bubbles": [
-            { "who": "berger", "text": "D’où les échasses : je vois mes moutons de loin, et j’ai les pieds au sec.", "side": "r" },
-            { "who": "ingenieur", "text": "Moi, j’ai de l’eau jusqu’aux genoux.", "side": "l" }
+            {
+              "who": "berger",
+              "text": "D’où les échasses : je vois mes moutons de loin, et j’ai les pieds au sec.",
+              "side": "r"
+            },
+            {
+              "who": "ingenieur",
+              "text": "Moi, j’ai de l’eau jusqu’aux genoux.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "seen from very low, at puddle level. The berger (very tall, on the stilts, black beard, black beret, cream sheepskin cape) on the right striding easily over the water in long dry steps, staff in hand, nose in the air; the ingenieur (short, plump, bald, ginger side-whiskers, royal-blue frock coat) in the foreground on the left sunk to the knees in brown water, holding the plan above his head to keep it dry, a light-blue sweat drop. low angle",
-            "cast": ["berger", "ingenieur"],
+            "cast": [
+              "berger",
+              "ingenieur"
+            ],
             "file": "images/cultureg-02.webp",
             "status": "pending",
             "attempts": 0
@@ -98,12 +123,23 @@
           "tag": "19 juin 1857",
           "caption": "19 juin 1857 : une loi oblige les communes landaises et girondines à assécher leurs pâturages, puis à les boiser.",
           "bubbles": [
-            { "who": "berger", "text": "Et mes moutons, ils broutent où, sur votre plan ?", "side": "r" },
-            { "who": "ingenieur", "text": "Dans la marge. Très loin dans la marge.", "side": "l" }
+            {
+              "who": "berger",
+              "text": "Et mes moutons, ils broutent où, sur votre plan ?",
+              "side": "r"
+            },
+            {
+              "who": "ingenieur",
+              "text": "Dans la marge. Très loin dans la marge.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "bird's-eye view over the moor: the ingenieur (short, plump, bald, ginger side-whiskers, royal-blue frock coat) on the left kneeling on the grass and unrolling the enormous plan with its perfectly straight lines across the ground; the berger (on the stilts, black beret, cream sheepskin cape) on the right, his long shadow falling over the plan, three sheep squeezed at the very edge of the paper. bird's-eye view",
-            "cast": ["ingenieur", "berger"],
+            "cast": [
+              "ingenieur",
+              "berger"
+            ],
             "file": "images/cultureg-04.webp",
             "status": "pending",
             "attempts": 0
@@ -117,7 +153,9 @@
           "bubbles": [],
           "image": {
             "prompt": "the berger (very tall, on the stilts, black beard, black beret, cream sheepskin cape) alone in the middle of the moor, now cut by straight drainage ditches, frozen with his staff in both hands as dozens of young pine saplings pop up all around his stilts like mushrooms, one tickling his ankle; he stares down at them, outraged and bewildered. medium wide shot",
-            "cast": ["berger"],
+            "cast": [
+              "berger"
+            ],
             "file": "images/cultureg-05.webp",
             "status": "pending",
             "attempts": 0
@@ -129,7 +167,15 @@
           "tag": "En vrai",
           "title": "Les vrais bergers landais",
           "text": "Des bergers landais sur leurs échasses, sur une ancienne photographie. Perchés ainsi, ils surveillaient leurs troupeaux de loin et traversaient sans s’embourber une lande gorgée d’eau l’hiver.",
-          "photo": { "commons": "File:BergersLandais3.jpg" }
+          "photo": {
+            "commons": "File:BergersLandais3.jpg",
+            "credit": "The original uploader was Larrousiney at French Wikipedia.",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:BergersLandais3.jpg",
+            "file": "images/photo-6-bergerslandais3-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 7,
@@ -137,12 +183,23 @@
           "tag": "Quelques décennies plus tard",
           "caption": "Les pâturages disparaissent, et les bergers avec. Les remplace le résinier, qui récolte la résine des pins.",
           "bubbles": [
-            { "who": "ingenieur", "text": "Regardez : des lignes droites jusqu’à l’horizon.", "side": "l" },
-            { "who": "berger", "text": "Avant, au moins, je voyais l’horizon.", "side": "r" }
+            {
+              "who": "ingenieur",
+              "text": "Regardez : des lignes droites jusqu’à l’horizon.",
+              "side": "l"
+            },
+            {
+              "who": "berger",
+              "text": "Avant, au moins, je voyais l’horizon.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a dense forest of tall maritime pines planted in perfectly straight rows. The ingenieur (short, plump, bald with grey-ginger side-whiskers, royal-blue frock coat) on the left beaming and spreading his arms toward the rows; the berger (on the stilts, black beard now streaked with grey, cream sheepskin cape) on the right, his head lost among the low pine branches, pushing needles out of his face, grumpy. medium shot",
-            "cast": ["ingenieur", "berger"],
+            "cast": [
+              "ingenieur",
+              "berger"
+            ],
             "file": "images/cultureg-07.webp",
             "status": "pending",
             "attempts": 0
@@ -154,11 +211,17 @@
           "tag": "En résumé",
           "caption": "En résumé : drainée puis boisée sur ordre après 1857, la lande est devenue une forêt d’environ un million d’hectares.",
           "bubbles": [
-            { "who": "berger", "text": "Vous cherchiez une forêt. Moi, maintenant, je cherche mes moutons.", "side": "r" }
+            {
+              "who": "berger",
+              "text": "Vous cherchiez une forêt. Moi, maintenant, je cherche mes moutons.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "close on the berger (black beard streaked with grey, black beret, cream sheepskin cape) alone, peering left and right between two tall pine trunks with one hand shading his eyes, a single lost sheep peeking out from behind a trunk right next to him without him noticing. close-up",
-            "cast": ["berger"],
+            "cast": [
+              "berger"
+            ],
             "file": "images/cultureg-08.webp",
             "status": "pending",
             "attempts": 0
@@ -171,9 +234,18 @@
       },
       "story": "Jusqu’au milieu du XIXe siècle, les Landes de Gascogne ne sont pas une forêt mais une immense lande humide, presque déserte. Le sol est si plat que l’eau de pluie n’a nulle part où s’écouler : tout l’hiver, elle stagne en surface. Le paludisme y sévit. On y vit surtout de l’élevage de moutons, dont le fumier permet de cultiver un peu de seigle. Pour surveiller leurs troupeaux de loin et traverser les terrains détrempés, les bergers se déplacent sur des échasses en bois.\nDès le XVIIIe siècle, on plante des pins sur la côte pour fixer les dunes. Mais le grand tournant est la loi du 19 juin 1857, « relative à l’assainissement et à la mise en culture des Landes de Gascogne ». Elle oblige les communes des Landes et de la Gironde à assécher leurs pâturages : on creuse des fossés pour évacuer l’eau, puis on sème du pin maritime, qui pousse dans ce sable pauvre. Napoléon III donne l’exemple en achetant un domaine de 8 000 hectares près de Morcenx, baptisé Solférino, pour montrer que le bois rapporte.\nEn quelques décennies, les pâturages disparaissent et les bergers sur échasses avec eux ; le résinier, qui récolte la résine des pins, les remplace. Aujourd’hui, la forêt des Landes couvre environ un million d’hectares, presque entièrement en pins maritimes : c’est la plus grande forêt créée par l’homme en Europe de l’Ouest.",
       "sources": [
-        { "title": "Wikipedia — Landes forest", "url": "https://en.wikipedia.org/wiki/Landes_forest" },
-        { "title": "Wikipedia — 19 June 1857 law", "url": "https://wikipedia.com/wiki/19_June_1857_law" },
-        { "title": "Daily Geek Show — Comment un vaste marécage insalubre est devenu le plus grand massif forestier artificiel d’Europe occidentale", "url": "https://dailygeekshow.com/comment-un-vaste-marecage-insalubre-est-devenu-le-plus-grand-massif-forestier-artificiel-deurope-occidentale/" }
+        {
+          "title": "Wikipedia — Landes forest",
+          "url": "https://en.wikipedia.org/wiki/Landes_forest"
+        },
+        {
+          "title": "Wikipedia — 19 June 1857 law",
+          "url": "https://wikipedia.com/wiki/19_June_1857_law"
+        },
+        {
+          "title": "Daily Geek Show — Comment un vaste marécage insalubre est devenu le plus grand massif forestier artificiel d’Europe occidentale",
+          "url": "https://dailygeekshow.com/comment-un-vaste-marecage-insalubre-est-devenu-le-plus-grand-massif-forestier-artificiel-deurope-occidentale/"
+        }
       ]
     }
   ]
