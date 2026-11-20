@@ -4,11 +4,12 @@
  "slot": "insolite",
  "time": "21:00",
  "question": "La Grande Muraille se voit-elle depuis l'espace ?",
- "answer": "Non, pas à l'œil nu : elle est très longue mais étroite comme une route, et de la couleur du paysage.",
+ "answer": "Non : à l'œil nu, on ne la voit pas depuis l'espace, car elle est très longue mais pas plus large qu'une route, et de la couleur du paysage.",
  "chain": [
-  "elle fait plus de 20 000 km",
-  "mais elle est large comme une route",
-  "elle a la couleur du paysage"
+  "elle fait plus de 20 000 km de long",
+  "mais elle n'est pas plus large qu'une route",
+  "ses pierres ont la couleur des montagnes autour",
+  "depuis l'orbite, c'est comme voir un cheveu à un kilomètre"
  ],
  "band": "LA MURAILLE, VISIBLE\nDEPUIS L'ESPACE ?",
  "hook_formula": 22,
@@ -26,33 +27,23 @@
     "cold": true
    },
    {
-    "who": "perso",
-    "text": "On me l'a dit à l'école.",
-    "name": "La grue",
-    "set": "montagnes"
+    "who": "narr",
+    "text": "Non : depuis l'espace, la muraille ne se voit pas à l'œil nu.",
+    "set": "palais",
+    "big": "Invisible à l'œil nu",
+    "fx": [
+     "cross"
+    ]
    },
    {
     "who": "narr",
-    "text": "Logique, elle fait plus de vingt mille kilomètres.",
+    "text": "Parce qu'elle est très longue : plus de vingt mille kilomètres…",
     "set": "muraille",
     "big": "Plus de 20 000 km"
    },
    {
     "who": "narr",
-    "text": "Raté : depuis l'espace, la muraille ne se voit pas à l'œil nu.",
-    "set": "palais",
-    "big": "Pas à l'œil nu",
-    "fx": [
-     "cross"
-    ],
-    "pause": 0.3,
-    "image": {
-     "file": "editions/2026-11-18/images/dossier-08.webp"
-    }
-   },
-   {
-    "who": "narr",
-    "text": "Elle est très longue, mais pas plus large qu'une route.",
+    "text": "… mais pas plus large qu'une route.",
     "set": "montagnes",
     "big": "Large comme une route"
    },
@@ -64,9 +55,15 @@
    },
    {
     "who": "narr",
-    "text": "Le plus drôle ? Ce mythe existait avant les fusées.",
+    "text": "Depuis l'orbite, c'est comme chercher un cheveu à un kilomètre.",
     "set": "bambou-lune",
-    "big": "Plus vieux que les fusées"
+    "big": "Un cheveu à 1 km"
+   },
+   {
+    "who": "narr",
+    "text": "Même le premier astronaute chinois ne l'a pas vue.",
+    "set": "etang",
+    "big": "Il ne l'a pas vue"
    },
    {
     "who": "narr",
@@ -75,6 +72,81 @@
     "big": "Longue, pas large"
    }
   ],
-  "scene": "scene.js"
- }
+  "scene": "scene.js",
+  "direction": {
+   "idee": "un seul trait d'encre traverse le monde : on le suit, on s'en éloigne jusqu'à l'espace où il disparaît, puis on y revient",
+   "signature": "le recul vertigineux jusqu'à l'espace : le paysage peint devient une miette dans un cercle d'encre",
+   "plans": [
+    {
+     "plan": 0,
+     "cadrage": "très gros plan puis plan d'ensemble",
+     "angle": "face",
+     "mouvement": "suivi de la tête du pinceau puis recul",
+     "transition": "aucune",
+     "texte": "bandeau"
+    },
+    {
+     "plan": 1,
+     "cadrage": "plan d'ensemble → planète",
+     "angle": "plongée",
+     "mouvement": "zoom arrière brutal",
+     "transition": "tremblement à l'arrivée",
+     "texte": "focus puis trait barré"
+    },
+    {
+     "plan": 2,
+     "cadrage": "plan moyen",
+     "angle": "profil",
+     "mouvement": "travelling latéral",
+     "transition": "coupe franche",
+     "texte": "count"
+    },
+    {
+     "plan": 3,
+     "cadrage": "très gros plan",
+     "angle": "face",
+     "mouvement": "glissement lent",
+     "transition": "coupe franche",
+     "texte": "rise"
+    },
+    {
+     "plan": 4,
+     "cadrage": "plan large",
+     "angle": "face",
+     "mouvement": "travelling avant dans la brume",
+     "transition": "coupe franche",
+     "texte": "highlight"
+    },
+    {
+     "plan": 5,
+     "cadrage": "insert",
+     "angle": "face",
+     "mouvement": "plan fixe qui casse le rythme",
+     "transition": "coupe franche",
+     "texte": "type"
+    },
+    {
+     "plan": 6,
+     "cadrage": "plan large",
+     "angle": "contre-plongée",
+     "mouvement": "panoramique vertical vers le ciel",
+     "transition": "coupe franche",
+     "texte": "slam"
+    },
+    {
+     "plan": 7,
+     "cadrage": "plan d'ensemble",
+     "angle": "face",
+     "mouvement": "retour au cadre du plan 0",
+     "transition": "boucle",
+     "texte": "rise"
+    }
+   ]
+  }
+ },
+ "sources": [
+  "https://www.scientificamerican.com/article/no-you-cant-see-the-great-wall-of-china-from-space/",
+  "https://www.livescience.com/34212-great-wall-of-china-only-manmade-object-visible-from-space.html",
+  "https://www.nasa.gov/wp-content/uploads/static/history/PDFs/great_wall_less_great_from_space.pdf"
+ ]
 }
