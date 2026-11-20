@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T18:22+01:00",
+ "updated_at": "2026-11-20T01:43+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -101,16 +101,6 @@
    ]
   },
   {
-   "path": "stock/notice/20261117-0151-frigo-chaleur-a-la-porte",
-   "titles": {
-    "notice": "Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière)"
-   },
-   "errors": [],
-   "warnings": [
-    "notice : fiche ines : même tête qu'un personnage récent (black hair, teal main colour : 2026-11-18/insolite) ; changer coiffure ou couleur dominante"
-   ]
-  },
-  {
    "path": "stock/notice/20261117-0151-gps-ecoute-l-heure",
    "titles": {
     "notice": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)"
@@ -138,24 +128,6 @@
    "errors": [],
    "warnings": [
     "origine : fiches chauvin et karim : même couleur dominante (red), à différencier"
-   ]
-  },
-  {
-   "path": "editions/2026-11-19",
-   "titles": {
-    "dossier": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
-    "actu": "Un budget en garde alternée et une sonde à un jour de nous",
-    "cultureg": "Greenwich, le mot que la France refusait de prononcer",
-    "insolite": "La statue de la Liberté a d’abord postulé en Égypte",
-    "notice": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
-    "quiz": "Vieilles pierres contre jeunes premières"
-   },
-   "errors": [],
-   "warnings": [
-    "cultureg : case 2 : récitatif de 23 mots (max 20)",
-    "cultureg : case 9 : récitatif de 22 mots (max 20)",
-    "notice : case 2 : récitatif de 24 mots (max 20)",
-    "notice : case 4 : récitatif de 23 mots (max 20)"
    ]
   }
  ]

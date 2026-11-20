@@ -1,22 +1,10 @@
 {
- "updated_at": "2026-11-19T18:22:30.282914+01:00",
- "today": "2026-11-19",
+ "updated_at": "2026-11-20T01:43:59.282450+01:00",
+ "today": "2026-11-20",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
-  {
-   "date": "2026-11-19",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "notice": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-20",
    "status": "draft",
@@ -67,40 +55,34 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "notice"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-19",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 4,
+   "ready": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 31,
-   "focus": "20261115-2050-departements-taille-cheval (8 image(s) à faire)",
+   "images_left": 23,
+   "focus": "20261116-2043-stethoscope-sans-rougir (9 image(s) à faire)",
    "next": "20261114-2049-tennis-15-30-40",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
-   "waiting": 4,
+   "ready": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 24,
-   "focus": "20261115-2053-perec-roman-sans-e (6 image(s) à faire)",
+   "images_left": 18,
+   "focus": "20261116-2045-talon-haut-cavalier-rouge (6 image(s) à faire)",
    "next": "20261114-2047-14-juillet-sans-annee",
    "next_redo": 0
   },
   "notice": {
-   "ready": 1,
-   "waiting": 4,
+   "ready": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 20,
-   "focus": "20261117-0151-frigo-chaleur-a-la-porte (5 image(s) à faire)",
+   "images_left": 15,
+   "focus": "20261117-0151-gps-ecoute-l-heure (5 image(s) à faire)",
    "next": "20261115-2047-maree-la-mer-suit-la-lune",
    "next_redo": 0
   },
@@ -111,62 +93,62 @@
    "images_left": 0,
    "focus": null,
    "next": "20261118-2044-silhouette-ministre-radin",
-   "next_redo": 1
+   "next_redo": 0
   },
   "dossier": {
-   "ready": 0,
-   "waiting": 3,
+   "ready": 1,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 48,
-   "focus": "20261116-1930-cathedrales-gothiques (4 image(s) à faire)",
-   "next": null,
+   "images_left": 36,
+   "focus": "20261117-1925-code-civil (13 image(s) à faire)",
+   "next": "20261116-1930-cathedrales-gothiques",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 1,
  "days_ahead_written": 3,
- "quiz_days_ahead": 6,
+ "quiz_days_ahead": 5,
  "quota": {
-  "day": "2026-11-19",
-  "count": 52,
-  "neurons": 8960,
+  "day": "2026-11-20",
+  "count": 38,
+  "neurons": 6400,
   "exhausted": false,
   "by_kind": {
-   "case": 37,
-   "cast": 12,
-   "cover": 3
+   "cover": 2,
+   "case": 26,
+   "cast": 10
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 2.66259,
-  "images": 228,
+  "spent_usd": 2.84259,
+  "images": 234,
   "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-19T00:23:49.779551+01:00",
-  "age_hours": 18.0,
+  "collected_at": "2026-11-20T00:35:38.308137+01:00",
+  "age_hours": 1.1,
   "feeds": {
    "Google Actualités": 34,
-   "franceinfo": 29,
+   "franceinfo": 28,
    "Le Monde": 16,
-   "Le Figaro": 17,
+   "Le Figaro": 18,
    "Libération": 50,
-   "20 Minutes": 27,
+   "20 Minutes": 25,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 32,
+   "BBC World": 31,
    "Le Monde Sciences": 4,
-   "Sciences et Avenir": 6,
-   "Le Monde Planète": 17,
-   "Le Monde Pixels": 13,
-   "Le Monde Santé": 3,
-   "Le Monde Culture": 16,
+   "Sciences et Avenir": 7,
+   "Le Monde Planète": 20,
+   "Le Monde Pixels": 18,
+   "Le Monde Santé": 4,
+   "Le Monde Culture": 14,
    "HugoDécrypte - Actus du jour": 2
   },
   "empty_feeds": [

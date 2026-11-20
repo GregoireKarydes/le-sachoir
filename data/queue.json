@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T18:22+01:00",
+ "updated_at": "2026-11-20T01:43+01:00",
  "stock": {
   "cultureg": [
    {
@@ -23,7 +23,7 @@
     "path": "stock/cultureg/20261115-2050-departements-taille-cheval",
     "name": "20261115-2050-departements-taille-cheval",
     "added": "20261115-2050",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Le département, ou la France taillée à la mesure d’un cheval",
     "theme": "Histoire de France",
@@ -31,7 +31,7 @@
     "minutes": 2,
     "cases": 9,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 8,
     "images_total": 8,
     "failed": 0,
     "redo": 0
@@ -110,7 +110,7 @@
     "path": "stock/insolite/20261115-2053-perec-roman-sans-e",
     "name": "20261115-2053-perec-roman-sans-e",
     "added": "20261115-2053",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)",
     "theme": "Littérature",
@@ -118,7 +118,7 @@
     "minutes": 1,
     "cases": 7,
     "photos": 0,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -197,7 +197,7 @@
     "path": "stock/notice/20261117-0151-frigo-chaleur-a-la-porte",
     "name": "20261117-0151-frigo-chaleur-a-la-porte",
     "added": "20261117-0151",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière)",
     "theme": "Sciences physiques",
@@ -205,7 +205,7 @@
     "minutes": 2,
     "cases": 6,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 5,
     "images_total": 5,
     "failed": 0,
     "redo": 0
@@ -278,7 +278,7 @@
     "images_done": 6,
     "images_total": 6,
     "failed": 0,
-    "redo": 1
+    "redo": 0
    },
    {
     "path": "stock/origine/20261118-2046-chauvin-soldat-imaginaire",
@@ -303,15 +303,15 @@
     "path": "stock/dossier/20261116-1930-cathedrales-gothiques",
     "name": "20261116-1930-cathedrales-gothiques",
     "added": "20261116-1930",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général)",
     "theme": "Architecture",
     "tagline": "De Saint-Denis à la réouverture de Notre-Dame : l’arc brisé, la croisée d’ogives et l’arc-boutant expliqués sans vertige",
     "minutes": 3,
     "cases": 26,
     "photos": 3,
-    "images_done": 17,
+    "images_done": 21,
     "images_total": 21,
     "failed": 0,
     "redo": 0
@@ -328,7 +328,7 @@
     "minutes": 3,
     "cases": 26,
     "photos": 3,
-    "images_done": 0,
+    "images_done": 8,
     "images_total": 21,
     "failed": 0,
     "redo": 0
@@ -353,96 +353,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-19",
-   "path": "editions/2026-11-19",
-   "status": "published",
-   "newsletter": true,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "1929 : le jour où la Bourse a raté une marche (et le monde entier avec)",
-     "theme": "Économie",
-     "tagline": "Du jeudi noir de Wall Street au New Deal de Roosevelt : comment un krach boursier est devenu la Grande Dépression, jusqu’en France",
-     "minutes": 7,
-     "cases": 27,
-     "photos": 3,
-     "images_done": 22,
-     "images_total": 22,
-     "failed": 0,
-     "redo": 2
-    },
-    {
-     "id": "actu",
-     "label": "L’Actu du jour",
-     "kind": "",
-     "title": "Un budget en garde alternée et une sonde à un jour de nous",
-     "theme": "",
-     "tagline": "Le Sénat adopte le budget de la Sécu rejeté par les députés, Voyager 1 passe un cap historique, le Salon de l’agriculture encadre les candidats et Shenzhen prépare un sommet à trois.",
-     "minutes": 4,
-     "cases": 12,
-     "photos": 2,
-     "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Greenwich, le mot que la France refusait de prononcer",
-     "theme": "Géographie",
-     "tagline": "En 1911, la France recule ses horloges de 9 minutes 21 secondes. Sans jamais écrire le nom du coupable.",
-     "minutes": 2,
-     "cases": 9,
-     "photos": 1,
-     "images_done": 8,
-     "images_total": 8,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite historique",
-     "kind": "",
-     "title": "La statue de la Liberté a d’abord postulé en Égypte",
-     "theme": "Arts plastiques",
-     "tagline": "Avant New York, Bartholdi avait proposé une géante à torche pour le canal de Suez. Refusée : trop chère.",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 7,
-     "images_total": 7,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "notice",
-     "label": "La Notice",
-     "kind": "",
-     "title": "La cocotte-minute triche : elle fait bouillir l’eau à 120 °C",
-     "theme": "Sciences physiques",
-     "tagline": "Une marmite qui siffle, une soupape qui tourne, et un physicien qui cuisait des os en 1679",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 2
-    },
-    {
-     "id": "quiz",
-     "label": "Plus ou moins",
-     "kind": "plusmoins",
-     "title": "Vieilles pierres contre jeunes premières",
-     "questions": 1
-    }
-   ]
-  },
   {
    "date": "2026-11-20",
    "path": "editions/2026-11-20",
