@@ -1,11 +1,12 @@
 {
- "updated_at": "2026-11-19T14:07:01+00:00",
+ "updated_at": "2026-11-20T11:06:27+00:00",
  "rows": [
   {
    "post": "2026-11-17",
    "date": "2026-11-17",
    "kind": "reel",
    "slot": "culture",
+   "style": null,
    "rubrique": "notice",
    "time": null,
    "slides": null,
@@ -31,13 +32,14 @@
    "shares_per_reach": 0.0047,
    "saves_per_reach": 0.0,
    "engagement_rate": 0.0093,
-   "outlier": 2.59
+   "outlier": 1.61
   },
   {
    "post": "2026-11-18",
    "date": "2026-11-18",
    "kind": "carousel",
    "slot": "culture",
+   "style": null,
    "rubrique": "origine",
    "time": "18:30",
    "slides": 9,
@@ -62,13 +64,14 @@
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
    "follows_per_reach": 0.0,
-   "outlier": 0.03
+   "outlier": 0.02
   },
   {
    "post": "2026-11-18",
    "date": "2026-11-18",
    "kind": "carousel",
    "slot": "culture",
+   "style": null,
    "rubrique": "origine",
    "time": "18:30",
    "slides": 9,
@@ -92,13 +95,14 @@
    "interactions": 6,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0157,
-   "outlier": 1.64
+   "outlier": 1.65
   },
   {
    "post": "2026-11-18-actu",
    "date": "2026-11-18",
    "kind": "carousel",
    "slot": "actu",
+   "style": null,
    "rubrique": "actu",
    "time": "12:15",
    "slides": 8,
@@ -123,13 +127,14 @@
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
    "follows_per_reach": 0.0,
-   "outlier": 0.03
+   "outlier": 0.02
   },
   {
    "post": "2026-11-18-actu",
    "date": "2026-11-18",
    "kind": "carousel",
    "slot": "actu",
+   "style": null,
    "rubrique": "actu",
    "time": "12:15",
    "slides": 8,
@@ -153,13 +158,14 @@
    "interactions": 6,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0258,
-   "outlier": 1.0
+   "outlier": 1.01
   },
   {
    "post": "2026-11-18-sitcom",
    "date": "2026-11-18",
    "kind": "sitcom",
    "slot": "sitcom",
+   "style": "scifi-toon",
    "rubrique": "insolite",
    "time": "20:30",
    "slides": null,
@@ -184,13 +190,14 @@
    "interactions": null,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "outlier": 1.97
+   "outlier": 1.22
   },
   {
    "post": "2026-11-18-sitcom",
    "date": "2026-11-18",
    "kind": "sitcom",
    "slot": "sitcom",
+   "style": "scifi-toon",
    "rubrique": "insolite",
    "time": "20:30",
    "slides": null,
@@ -214,7 +221,131 @@
    "interactions": 6,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.026,
-   "outlier": 0.99
+   "outlier": 1.0
+  },
+  {
+   "post": "2026-11-19-sitcom-cultureg",
+   "date": "2026-11-19",
+   "kind": "sitcom",
+   "slot": "cultureg",
+   "style": "scifi-toon",
+   "rubrique": "cultureg",
+   "time": "12:30",
+   "slides": null,
+   "seconds": 65.7,
+   "hook": "POURQUOI 9 MIN 21 ?!",
+   "hook_formula": 23,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 88,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 5,
+    "comments": 0,
+    "engagementRate": 3.94,
+    "views": 147,
+    "shares": 0,
+    "saves": 0,
+    "totalTimeWatched": 25.18,
+    "averageTimeWatched": 11.9,
+    "reach": 127
+   },
+   "interactions": 5,
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0,
+   "engagement_rate": 0.0394,
+   "outlier": 1.0
+  },
+  {
+   "post": "2026-11-19-sitcom-cultureg",
+   "date": "2026-11-19",
+   "kind": "sitcom",
+   "slot": "cultureg",
+   "style": "scifi-toon",
+   "rubrique": "cultureg",
+   "time": "12:30",
+   "slides": null,
+   "seconds": 65.7,
+   "hook": "POURQUOI 9 MIN 21 ?!",
+   "hook_formula": 23,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 88,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 5,
+    "comments": 0,
+    "engagementRate": 4.03,
+    "views": 124,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 17.67,
+    "averageTimeWatched": 8.49
+   },
+   "interactions": 5,
+   "shares_per_reach": 0.0,
+   "engagement_rate": 0.0403,
+   "outlier": 0.54
+  },
+  {
+   "post": "2026-11-19-sitcom-insolite",
+   "date": "2026-11-19",
+   "kind": "sitcom",
+   "slot": "insolite",
+   "style": "scifi-toon",
+   "rubrique": "insolite",
+   "time": "21:00",
+   "slides": null,
+   "seconds": 67.2,
+   "hook": "LA LIBERTÉ ÉGYPTIENNE ?!",
+   "hook_formula": 22,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 82,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 0,
+    "comments": 0,
+    "engagementRate": 0,
+    "views": 0,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 0,
+    "averageTimeWatched": 0
+   },
+   "interactions": null,
+   "outlier": null
+  },
+  {
+   "post": "2026-11-19-sitcom-origine",
+   "date": "2026-11-19",
+   "kind": "sitcom",
+   "slot": "origine",
+   "style": "scifi-toon",
+   "rubrique": "origine",
+   "time": "07:45",
+   "slides": null,
+   "seconds": 63.9,
+   "hook": "VIRÉ ET ENVOYÉ À LIMOGES ?!",
+   "hook_formula": 21,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 85,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 14,
+    "comments": 0,
+    "engagementRate": 6.33,
+    "views": 221,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 46.73,
+    "averageTimeWatched": 11.69
+   },
+   "interactions": 14,
+   "shares_per_reach": 0.0,
+   "engagement_rate": 0.0633,
+   "outlier": 0.96
   }
  ]
 }
