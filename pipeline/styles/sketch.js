@@ -202,3 +202,7 @@ export function subtitles(t) {
 }
 
 export function events(add) { for (const b of TL.beats) add('scribble', b.t0 + .05, { d: .55 }); }
+
+// ---- toolbox for hand-directed scenes (film.scene): primitives only, no sets ----
+export const KIT = { pline, wobblyRect, circlePts, block, hand, stylus, sketchOf, PAPER, GRAPH, LIGHT, CORAL,
+  pats: () => ({ graphite: GRAPHITE, coral: CORALP, grain }) };

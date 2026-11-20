@@ -39,7 +39,7 @@
    },
    {
     "who": "narr",
-    "text": "Raté : à l'œil nu, on ne la voit pas.",
+    "text": "Raté : depuis l'espace, la muraille ne se voit pas à l'œil nu.",
     "set": "palais",
     "big": "Pas à l'œil nu",
     "fx": [
@@ -52,13 +52,13 @@
    },
    {
     "who": "narr",
-    "text": "Elle est très longue, mais à peine large comme une route.",
+    "text": "Elle est très longue, mais pas plus large qu'une route.",
     "set": "montagnes",
     "big": "Large comme une route"
    },
    {
     "who": "narr",
-    "text": "Et elle a la couleur du paysage autour.",
+    "text": "Et ses pierres ont la couleur des montagnes autour.",
     "set": "montagnes",
     "big": "Couleur du paysage"
    },
@@ -74,6 +74,7 @@
     "set": "etang",
     "big": "Longue, pas large"
    }
-  ]
+  ],
+  "scene": "scene.js"
  }
 }

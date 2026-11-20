@@ -175,3 +175,23 @@ export function subtitles(t) {
   g.shadowColor = '#000'; g.shadowBlur = 8; drawChunk(c, W / 2, y, PAPERW, YELLOW); g.shadowBlur = 0;
 }
 export function events(add) { for (const l of TL.lines) if (l.who === 'perso') add('chime', l.t - .05); for (const b of TL.beats) if (b.chapter) add('chapter', b.t0); }
+
+// ---- toolbox for hand-directed scenes (film.scene): primitives only, no sets ----
+/** start a frame: clear the light buffer, reset the practicals list */
+function begin(t) { T = t; LIGHTS = []; lx.setTransform(1, 0, 0, 1, 0, 0); ll.setTransform(1, 0, 0, 1, 0, 0); lx.clearRect(0, 0, LW, LH); ll.clearRect(0, 0, LW, LH); }
+/** finish a frame: lights added, upscaled ×4 nearest-neighbour with the camera, bloom, tilt-shift, vignette.
+ *  cam: {x, y} = low-res point at the frame centre (default the buffer centre), z (zoom, 1 = ×4), r (turn),
+ *  tilt: [y0, y1] screen band kept sharp (false = none), vig: vignette strength 0..1, bloom: 0..1 */
+function present(cam = {}) {
+  const z = cam.z ?? 1, cx = cam.x ?? LW / 2, cy = cam.y ?? LH / 2;
+  lx.globalCompositeOperation = 'lighter'; lx.drawImage(light, 0, 0); lx.globalCompositeOperation = 'source-over';
+  const place = c => { c.translate(W / 2, H / 2); c.rotate(cam.r || 0); c.scale(S * z, S * z); c.translate(-cx, -cy); };
+  bx.imageSmoothingEnabled = false; bx.setTransform(1, 0, 0, 1, 0, 0); bx.fillStyle = '#000'; bx.fillRect(0, 0, W, H); place(bx); bx.drawImage(lo, 0, 0);
+  g.setTransform(1, 0, 0, 1, 0, 0); g.imageSmoothingEnabled = false; g.drawImage(big, 0, 0);
+  g.save(); g.globalCompositeOperation = 'lighter'; g.filter = 'blur(26px)'; g.globalAlpha = .7 * (cam.bloom ?? 1); g.imageSmoothingEnabled = true; place(g); g.drawImage(light, 0, 0); g.restore();
+  const tilt = cam.tilt === undefined ? [620, 1350] : cam.tilt;
+  if (tilt) for (const [y0, y1] of [[0, tilt[0]], [tilt[1], H]]) { g.save(); g.beginPath(); g.rect(0, y0, W, y1 - y0); g.clip(); g.filter = 'blur(7px)'; g.drawImage(big, 0, 0); g.restore(); }
+  const v = g.createRadialGradient(W / 2, H / 2 - 80, 380, W / 2, H / 2, 1150); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, `rgba(0,0,0,${.72 * (cam.vig ?? 1)})`); g.fillStyle = v; g.fillRect(0, 0, W, H);
+  g.imageSmoothingEnabled = true;
+}
+export const KIT = { LW, LH, lo, lx, light, ll, R, lamp, sprite, shadowFrom, picOf, pal, plate, begin, present, GOLD, PAPERW, HERO, quantize };

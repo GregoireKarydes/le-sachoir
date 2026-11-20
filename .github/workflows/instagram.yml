@@ -14,6 +14,7 @@ on:
     branches: [main]
     paths:
       - "social/instagram/**/post.json"
+      - "social/instagram/**/scene.js"
   schedule:
     - cron: "10 8 * * *"
     - cron: "40 9 * * *"
@@ -57,7 +58,7 @@ jobs:
           need = []
           for pj in Path("social/instagram").glob("*/post.json"):
               rj = pj.parent / "render.json"
-              fp = fingerprint(json.loads(pj.read_text()))
+              fp = fingerprint(json.loads(pj.read_text()), pj.parent)
               if not rj.exists() or json.loads(rj.read_text()).get("fingerprint") != fp:
                   need.append(pj.parent.name)
           print("render=" + ("yes" if need else "no"))
