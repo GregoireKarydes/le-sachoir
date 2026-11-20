@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:59+01:00",
+ "updated_at": "2026-11-20T07:00+01:00",
  "stock": {
   "cultureg": [
    {
@@ -349,6 +349,23 @@
     "images_total": 19,
     "failed": 0,
     "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261120-0657-jeux-video-desert",
+    "name": "20261120-0657-jeux-video-desert",
+    "added": "20261120-0657",
+    "status": "waiting",
+    "next": false,
+    "title": "Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde)",
+    "theme": "Jeux vidéo",
+    "tagline": "Un physicien qui s'ennuie, une borne qui déborde de pièces, une pizza entamée et un robot déguisé en jouet : l'histoire du jeu vidéo",
+    "minutes": 3,
+    "cases": 22,
+    "photos": 2,
+    "images_done": 0,
+    "images_total": 18,
+    "failed": 0,
+    "redo": 0
    }
   ]
  },
@@ -530,6 +547,21 @@
      "kind": "dico",
      "title": "Quatre mots savants, douze baratins",
      "questions": 4
+    }
+   ]
+  },
+  {
+   "date": "2026-11-27",
+   "path": "editions/2026-11-27",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Plus ou moins",
+     "kind": "plusmoins",
+     "title": "Huit villes, un seul recensement, aucune pitié",
+     "questions": 1
     }
    ]
   }
