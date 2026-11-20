@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:57+01:00",
+ "updated_at": "2026-11-20T06:58+01:00",
  "stock": {
   "cultureg": [
    {
@@ -166,6 +166,23 @@
     "title": "Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé)",
     "theme": "Jeux vidéo",
     "tagline": "Un plombier mondialement célèbre, un loyer en retard et une légende qui grossit à chaque récit",
+    "minutes": 1,
+    "cases": 7,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261120-0656-france-moins-de-bebes",
+    "name": "20261120-0656-france-moins-de-bebes",
+    "added": "20261120-0656",
+    "status": "waiting",
+    "next": false,
+    "title": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)",
+    "theme": "Démographie",
+    "tagline": "Un statisticien qui compte les baptêmes, une fermière qui compte ses sillons, et la France qui ralentit en premier",
     "minutes": 1,
     "cases": 7,
     "photos": 1,

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:57+01:00",
+ "updated_at": "2026-11-20T06:58+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -73,6 +73,17 @@
    "errors": [],
    "warnings": [
     "insolite : case 7 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/insolite/20261120-0656-france-moins-de-bebes",
+   "titles": {
+    "insolite": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)"
+   },
+   "errors": [],
+   "warnings": [
+    "insolite : chute identique à « Le Chat de Schrödinger expliqué à mon chat » (« je vous l… »)",
+    "insolite : case 1 : bulle de 16 mots (max 15)"
    ]
   },
   {
