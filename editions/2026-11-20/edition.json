@@ -714,7 +714,8 @@
           "look": "a short, plump man in his sixties, light skin, bald on top with a white horseshoe fringe of hair, a burgundy knitted cardigan as main colour over a beige shirt, grey trousers, a big jangling ring of keys clipped to his belt",
           "role": "a landlord who must respect the rent cap; stingy and always looking for a loophole, rubs his hands, sly little grin",
           "file": "cast/actu-proprietaire.png",
-          "status": "pending"
+          "status": "pending",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (4bfd6379-6b59-4f53-8120-fae57adf0ab4)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         },
         {
           "id": "jadot",
@@ -730,7 +731,7 @@
           "look": "a tall, slim woman in her thirties, dark brown skin, short black braids tied in a high bun, a sky-blue suit jacket as main colour over a white blouse, black trousers, big gold hoop earrings, a black tablet in her hand",
           "role": "a stock trader watching a record listing; overconfident, trusts every tip she gets, raises one eyebrow when things get absurd",
           "file": "cast/actu-trader.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "agent",
@@ -743,10 +744,13 @@
       ],
       "cover": {
         "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A quiet Paris street corner in the morning, pale peach background. In the foreground on the left, proprietaire (short and plump, bald with white horseshoe fringe, burgundy cardigan, ring of keys on his belt) crouches and slyly sticks the tag on a doorstep, rubbing his hands. In the background on the right, trader (tall and slim, black braids in a high bun, sky-blue suit jacket, gold hoops) walks past staring amazed at her tablet. Wide shot.",
-        "cast": ["proprietaire", "trader"],
+        "cast": [
+          "proprietaire",
+          "trader"
+        ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -758,14 +762,21 @@
           "gag": "litteral",
           "caption": "Jeudi 19 novembre, le Parlement a prolongé de deux ans l’encadrement des loyers : à Paris, Lyon ou Lille, un loyer ne peut pas dépasser un plafond fixé par la préfecture.",
           "bubbles": [
-            { "who": "proprietaire", "text": "Le loyer a un plafond ? Très bien. Je facturerai le plancher à part.", "side": "r" }
+            {
+              "who": "proprietaire",
+              "text": "Le loyer a un plafond ? Très bien. Je facturerai le plancher à part.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. An empty Paris flat with a tall window and bare wooden floorboards, pale peach background. proprietaire (short and plump, bald with white horseshoe fringe, burgundy cardigan, ring of keys on his belt) kneels on the floor on the right and carefully sticks the tag onto the floorboards with a sly satisfied grin, one finger pointing down at it as if he had found a brilliant loophole. Low angle.",
-            "cast": ["proprietaire"],
+            "cast": [
+              "proprietaire"
+            ],
             "file": "images/actu-01.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (492e4dec-ea47-4d36-bb3a-131334d1c3c5)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -774,7 +785,15 @@
           "tag": "En vrai",
           "title": "Le Palais Bourbon, siège de l’Assemblée nationale",
           "text": "Le palais, au bord de la Seine à Paris : c’est là que les députés ont adopté la prolongation, jeudi en début de soirée.",
-          "photo": { "commons": "File:Palais Bourbon, Paris 7e, NW View 140402 1.jpg" }
+          "photo": {
+            "commons": "File:Palais Bourbon, Paris 7e, NW View 140402 1.jpg",
+            "credit": "DXR",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Palais_Bourbon,_Paris_7e,_NW_View_140402_1.jpg",
+            "file": "images/photo-2-palais-bourbon-paris-7e-nw-view-140.webp",
+            "status": "done"
+          }
         },
         {
           "n": 3,
@@ -783,8 +802,14 @@
           "title": "Encadrement des loyers : deux ans de plus",
           "text": "Quoi : les députés ont voté le texte du Sénat, 148 voix contre 95, juste avant la fin de l’expérimentation.\nPourquoi ça compte : 1,2 million de locataires, dans environ 70 communes, gardent un loyer plafonné.\nRepère : à Paris, l’encadrement a fait baisser les loyers de 4,2 % de 2019 à 2022, soit 64 € par mois (Apur).\nEt maintenant : loi publiée dans les prochains jours, valable jusqu’en novembre 2028.",
           "sources": [
-            { "title": "LCP", "url": "https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-prolonge-l-experimentation-du-dispositif-au-terme-d" },
-            { "title": "MySweetImmo (AFP)", "url": "https://www.mysweetimmo.com/2026/11/19/encadrement-loyers-prolonge-deux-ans/" }
+            {
+              "title": "LCP",
+              "url": "https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-prolonge-l-experimentation-du-dispositif-au-terme-d"
+            },
+            {
+              "title": "MySweetImmo (AFP)",
+              "url": "https://www.mysweetimmo.com/2026/11/19/encadrement-loyers-prolonge-deux-ans/"
+            }
           ]
         },
         {
@@ -801,8 +826,14 @@
             "Sénat puis Assemblée votent le même texte : deux ans de plus, sans nouvelle commune"
           ],
           "sources": [
-            { "title": "Actu-Juridique", "url": "https://www.actu-juridique.fr/civil/logement/encadrement-des-loyers-a-paris-des-effets-positifs-mesures/" },
-            { "title": "Stéphane Larue", "url": "https://stephanelarue.com/encadrement-des-loyers-le-parlement-prolonge-de-deux-ans-malgre-lobstacle-rn-udr/" }
+            {
+              "title": "Actu-Juridique",
+              "url": "https://www.actu-juridique.fr/civil/logement/encadrement-des-loyers-a-paris-des-effets-positifs-mesures/"
+            },
+            {
+              "title": "Stéphane Larue",
+              "url": "https://stephanelarue.com/encadrement-des-loyers-le-parlement-prolonge-de-deux-ans-malgre-lobstacle-rn-udr/"
+            }
           ]
         },
         {
@@ -812,20 +843,38 @@
           "major": true,
           "gag": "litote",
           "people": [
-            { "name": "Yannick Jadot", "party": "Les Écologistes", "role": "sénateur de Paris" },
-            { "name": "Marine Tondelier", "party": "Les Écologistes", "role": "cheffe des Écologistes" },
-            { "name": "Jean-Luc Mélenchon", "party": "La France insoumise", "role": "fondateur de La France insoumise" }
+            {
+              "name": "Yannick Jadot",
+              "party": "Les Écologistes",
+              "role": "sénateur de Paris"
+            },
+            {
+              "name": "Marine Tondelier",
+              "party": "Les Écologistes",
+              "role": "cheffe des Écologistes"
+            },
+            {
+              "name": "Jean-Luc Mélenchon",
+              "party": "La France insoumise",
+              "role": "fondateur de La France insoumise"
+            }
           ],
           "caption": "Jeudi 19 novembre, le sénateur Yannick Jadot a quitté Les Écologistes. La veille, la cheffe du parti, Marine Tondelier, s’était dite prête à une coalition autour de Jean-Luc Mélenchon.",
           "bubbles": [
-            { "who": "jadot", "text": "Petit changement d’adresse. Rien de politique.", "side": "l" }
+            {
+              "who": "jadot",
+              "text": "Petit changement d’adresse. Rien de politique.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A long party headquarters corridor with plain green walls and an exit door at the far end, pale mint background. jadot (lean and sporty, tousled salt-and-pepper hair, light green open-collar shirt under navy blazer) walks away towards the exit carrying the boxes, the plant wobbling on top, and glances back over his shoulder with a forced casual smile. From behind.",
-            "cast": ["jadot"],
+            "cast": [
+              "jadot"
+            ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -835,8 +884,14 @@
           "title": "Écologistes : la présidentielle divise le parti",
           "text": "Quoi : le député Jérémie Iordanoff part aussi ; Jean-Luc Mélenchon estime que l’alliance « devrait pouvoir se faire ».\nPourquoi ça compte : la gauche ne sait toujours pas si elle ira unie à la présidentielle de 2027.\nEt maintenant : les adhérents écologistes votent mi-décembre sur la stratégie.",
           "sources": [
-            { "title": "La DH (Belga)", "url": "https://www.dhnet.be/dernieres-depeches/2026/11/20/election-presidentielle-en-france-yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-tondelier-a-melenchon-3N54ENMRS5DHJORTGH6EAZFWH4/" },
-            { "title": "France 24 (AFP, via Shango)", "url": "https://www.shango.media/france-24-yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-marine-tondelier-a-jean-luc-melenchon-12067672" }
+            {
+              "title": "La DH (Belga)",
+              "url": "https://www.dhnet.be/dernieres-depeches/2026/11/20/election-presidentielle-en-france-yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-tondelier-a-melenchon-3N54ENMRS5DHJORTGH6EAZFWH4/"
+            },
+            {
+              "title": "France 24 (AFP, via Shango)",
+              "url": "https://www.shango.media/france-24-yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-marine-tondelier-a-jean-luc-melenchon-12067672"
+            }
           ]
         },
         {
@@ -847,14 +902,20 @@
           "gag": "escalade",
           "caption": "Jeudi 19 novembre, Anthropic, l’entreprise américaine qui crée l’IA Claude, est entrée en Bourse à Wall Street : 81,3 milliards de dollars levés, un record mondial.",
           "bubbles": [
-            { "who": "trader", "text": "J’ai demandé à l’IA s’il fallait acheter. Elle a dit oui, et réclamé sa commission.", "side": "l" }
+            {
+              "who": "trader",
+              "text": "J’ai demandé à l’IA s’il fallait acheter. Elle a dit oui, et réclamé sa commission.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A trading desk with one plain screen showing a steep green rising curve, pale sky-blue background. trader (tall and slim, black braids in a high bun, sky-blue suit jacket, gold hoop earrings) holds her tablet close to her face, one eyebrow raised in disbelief, while a tiny cartoon robot arm pokes out of the tablet screen holding out a small empty tip jar towards her. Medium close-up.",
-            "cast": ["trader"],
+            "cast": [
+              "trader"
+            ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -864,8 +925,14 @@
           "title": "Anthropic, plus grosse entrée en Bourse de l’histoire",
           "text": "Quoi : vendue 83 dollars, l’action a gagné 17 % ; le record précédent : SpaceX, 75 milliards, en juin.\nPourquoi ça compte : la Bourse valorise Anthropic près de 1 300 milliards de dollars, un pari géant sur l’IA.\nEt maintenant : 147 millions d’actions de plus peuvent être vendues d’ici 30 jours.",
           "sources": [
-            { "title": "Yahoo Finance", "url": "https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-said-to-price-stock-at-83-begin-trading-thursday-212656452.html" },
-            { "title": "Boursorama", "url": "https://www.boursorama.com/bourse/actualites/anthropic-entre-en-bourse-avec-une-levee-record-depassant-spacex-49c6a8701f5e3eebb9e407c17376594e" }
+            {
+              "title": "Yahoo Finance",
+              "url": "https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-said-to-price-stock-at-83-begin-trading-thursday-212656452.html"
+            },
+            {
+              "title": "Boursorama",
+              "url": "https://www.boursorama.com/bourse/actualites/anthropic-entre-en-bourse-avec-une-levee-record-depassant-spacex-49c6a8701f5e3eebb9e407c17376594e"
+            }
           ]
         },
         {
@@ -876,14 +943,20 @@
           "gag": "bureau",
           "caption": "Jeudi 19 novembre, l’Arcom, le gendarme de l’audiovisuel, a annoncé qu’en avril 2027 les grands créateurs de vidéos devront donner un temps de parole égal à chaque candidat.",
           "bubbles": [
-            { "who": "agent", "text": "Relevé de temps de parole à rendre chaque semaine. En trois exemplaires.", "side": "r" }
+            {
+              "who": "agent",
+              "text": "Relevé de temps de parole à rendre chaque semaine. En trois exemplaires.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A small bedroom video studio with a ring light and a camera on a tripod facing an empty gaming chair, pale lilac background. Seen from above: agent (stocky, straight grey bob, purple cardigan, black rectangular glasses) stands stiffly next to the empty chair, holding out the forms in one arm and raising the stopwatch in her other hand, perfectly serious. High angle.",
-            "cast": ["agent"],
+            "cast": [
+              "agent"
+            ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -893,8 +966,14 @@
           "title": "Présidentielle : les vidéastes soumis au pluralisme",
           "text": "Quoi : accès équitable aux candidats dès le 16 mars, temps de parole égal du 5 au 30 avril.\nPourquoi ça compte : jusqu’ici réservées à la télé et à la radio, ces règles visent des vidéastes très suivis.\nEt maintenant : premier tour le 18 avril ; mises en garde, puis sanctions possibles.",
           "sources": [
-            { "title": "Quartz", "url": "https://fr.qz.com/arcom-createurs-contenus-pluralisme-presidentielle-2027-111926" },
-            { "title": "Brut", "url": "https://brut-5857f8.brut.media/fr/articles/presidentielle-les-createurs-de-contenus-devront-desormais-respecter-le-pluralisme-annonce-l-arcom" }
+            {
+              "title": "Quartz",
+              "url": "https://fr.qz.com/arcom-createurs-contenus-pluralisme-presidentielle-2027-111926"
+            },
+            {
+              "title": "Brut",
+              "url": "https://brut-5857f8.brut.media/fr/articles/presidentielle-les-createurs-de-contenus-devront-desormais-respecter-le-pluralisme-annonce-l-arcom"
+            }
           ]
         },
         {
@@ -906,8 +985,14 @@
           "text": "Annoncé : premier sommet Chine-Russie-États-Unis, jeudi 19 novembre à Shenzhen.\nRésultat : une déclaration commune pour la paix et contre la guerre nucléaire, sans engagement contraignant ; pour Emmanuel Macron, elle « ne conduit pas à une réorganisation du monde ».",
           "of": "2026-11-19#11",
           "sources": [
-            { "title": "Le Figaro (via Shango)", "url": "https://www.shango.media/le-figaro-sommet-de-shenzhen-la-declaration-trump-xi-poutine-ne-conduit-pas-a-une-reorganisation-du-monde-dit-macron-12067614" },
-            { "title": "Quartz", "url": "https://fr.qz.com/emmanuel-macron-reagit-declaration-trump-xi-poutine-shenzhen-111926" }
+            {
+              "title": "Le Figaro (via Shango)",
+              "url": "https://www.shango.media/le-figaro-sommet-de-shenzhen-la-declaration-trump-xi-poutine-ne-conduit-pas-a-une-reorganisation-du-monde-dit-macron-12067614"
+            },
+            {
+              "title": "Quartz",
+              "url": "https://fr.qz.com/emmanuel-macron-reagit-declaration-trump-xi-poutine-shenzhen-111926"
+            }
           ]
         },
         {
@@ -918,8 +1003,13 @@
           "title": "Le nouveau Hunger Games est arrivé au cinéma",
           "why": "Pourquoi ça buzze : « Lever de soleil sur la moisson », tiré du roman de Suzanne Collins, est sorti mercredi 18 novembre ; il raconte les 50e Hunger Games.",
           "text": "Cinquante éditions qui tournent mal, et personne n’ose annuler : à Panem aussi, on ne touche pas à un programme qui marche.",
-          "source": { "title": "Pathé — Hunger Games : Lever de soleil sur la moisson", "url": "https://www.pathe.fr/films/hunger-games-lever-de-soleil-sur-la-moisson-49508" },
-          "video": { "url": "https://www.youtube.com/watch?v=CINFIAohu4U" }
+          "source": {
+            "title": "Pathé — Hunger Games : Lever de soleil sur la moisson",
+            "url": "https://www.pathe.fr/films/hunger-games-lever-de-soleil-sur-la-moisson-49508"
+          },
+          "video": {
+            "url": "https://www.youtube.com/watch?v=CINFIAohu4U"
+          }
         },
         {
           "n": 13,
@@ -929,8 +1019,19 @@
           "title": "La Wii de Nintendo fête ses 20 ans",
           "why": "Pourquoi ça buzze : la console est sortie aux États-Unis le 19 novembre 2006, avec sa manette qu’on agite comme une raquette ; les joueurs ressortent leurs souvenirs.",
           "text": "Vingt ans plus tard, la dragonne est toujours au poignet. Et l’écran de la télé porte encore la trace du revers.",
-          "source": { "title": "Westport Tech Museum — 19 novembre 2006, Nintendo sort la Wii", "url": "https://www.westporttechmuseum.com/blogs/techtastic/today-in-tech-history-november-19-2006-nintendo-releases-wii" },
-          "photo": { "commons": "File:Wii-console.jpg" }
+          "source": {
+            "title": "Westport Tech Museum — 19 novembre 2006, Nintendo sort la Wii",
+            "url": "https://www.westporttechmuseum.com/blogs/techtastic/today-in-tech-history-november-19-2006-nintendo-releases-wii"
+          },
+          "photo": {
+            "commons": "File:Wii-console.jpg",
+            "credit": "Evan-Amos",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Wii-console.jpg",
+            "file": "images/photo-13-wii-console-jpg.webp",
+            "status": "done"
+          }
         }
       ],
       "final": {
@@ -938,20 +1039,62 @@
         "source": "Actu-Juridique"
       },
       "sources": [
-        { "title": "LCP — Encadrement des loyers : l’Assemblée prolonge l’expérimentation", "url": "https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-prolonge-l-experimentation-du-dispositif-au-terme-d" },
-        { "title": "MySweetImmo (AFP) — Encadrement des loyers prolongé jusqu’en 2028", "url": "https://www.mysweetimmo.com/2026/11/19/encadrement-loyers-prolonge-deux-ans/" },
-        { "title": "Stéphane Larue — Le Parlement prolonge de deux ans l’encadrement des loyers", "url": "https://stephanelarue.com/encadrement-des-loyers-le-parlement-prolonge-de-deux-ans-malgre-lobstacle-rn-udr/" },
-        { "title": "Actu-Juridique — Encadrement des loyers à Paris : des effets positifs mesurés", "url": "https://www.actu-juridique.fr/civil/logement/encadrement-des-loyers-a-paris-des-effets-positifs-mesures/" },
-        { "title": "La DH (Belga) — Yannick Jadot quitte Les Écologistes", "url": "https://www.dhnet.be/dernieres-depeches/2026/11/20/election-presidentielle-en-france-yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-tondelier-a-melenchon-3N54ENMRS5DHJORTGH6EAZFWH4/" },
-        { "title": "France 24 (AFP, via Shango) — Yannick Jadot quitte Les Écologistes", "url": "https://www.shango.media/france-24-yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-marine-tondelier-a-jean-luc-melenchon-12067672" },
-        { "title": "Yahoo Finance — Anthropic IPO live", "url": "https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-said-to-price-stock-at-83-begin-trading-thursday-212656452.html" },
-        { "title": "Boursorama — Anthropic entre en Bourse avec une levée record dépassant SpaceX", "url": "https://www.boursorama.com/bourse/actualites/anthropic-entre-en-bourse-avec-une-levee-record-depassant-spacex-49c6a8701f5e3eebb9e407c17376594e" },
-        { "title": "Quartz — L’Arcom étend les règles de pluralisme aux créateurs de contenus", "url": "https://fr.qz.com/arcom-createurs-contenus-pluralisme-presidentielle-2027-111926" },
-        { "title": "Brut — Les créateurs de contenus devront respecter le pluralisme", "url": "https://brut-5857f8.brut.media/fr/articles/presidentielle-les-createurs-de-contenus-devront-desormais-respecter-le-pluralisme-annonce-l-arcom" },
-        { "title": "Le Figaro (via Shango) — Sommet de Shenzhen, la réaction d’Emmanuel Macron", "url": "https://www.shango.media/le-figaro-sommet-de-shenzhen-la-declaration-trump-xi-poutine-ne-conduit-pas-a-une-reorganisation-du-monde-dit-macron-12067614" },
-        { "title": "Quartz — Emmanuel Macron réagit à la déclaration Trump-Xi-Poutine", "url": "https://fr.qz.com/emmanuel-macron-reagit-declaration-trump-xi-poutine-shenzhen-111926" },
-        { "title": "Pathé — Hunger Games : Lever de soleil sur la moisson", "url": "https://www.pathe.fr/films/hunger-games-lever-de-soleil-sur-la-moisson-49508" },
-        { "title": "Westport Tech Museum — Nintendo sort la Wii", "url": "https://www.westporttechmuseum.com/blogs/techtastic/today-in-tech-history-november-19-2006-nintendo-releases-wii" }
+        {
+          "title": "LCP — Encadrement des loyers : l’Assemblée prolonge l’expérimentation",
+          "url": "https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-prolonge-l-experimentation-du-dispositif-au-terme-d"
+        },
+        {
+          "title": "MySweetImmo (AFP) — Encadrement des loyers prolongé jusqu’en 2028",
+          "url": "https://www.mysweetimmo.com/2026/11/19/encadrement-loyers-prolonge-deux-ans/"
+        },
+        {
+          "title": "Stéphane Larue — Le Parlement prolonge de deux ans l’encadrement des loyers",
+          "url": "https://stephanelarue.com/encadrement-des-loyers-le-parlement-prolonge-de-deux-ans-malgre-lobstacle-rn-udr/"
+        },
+        {
+          "title": "Actu-Juridique — Encadrement des loyers à Paris : des effets positifs mesurés",
+          "url": "https://www.actu-juridique.fr/civil/logement/encadrement-des-loyers-a-paris-des-effets-positifs-mesures/"
+        },
+        {
+          "title": "La DH (Belga) — Yannick Jadot quitte Les Écologistes",
+          "url": "https://www.dhnet.be/dernieres-depeches/2026/11/20/election-presidentielle-en-france-yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-tondelier-a-melenchon-3N54ENMRS5DHJORTGH6EAZFWH4/"
+        },
+        {
+          "title": "France 24 (AFP, via Shango) — Yannick Jadot quitte Les Écologistes",
+          "url": "https://www.shango.media/france-24-yannick-jadot-quitte-les-ecologistes-apres-la-main-tendue-de-marine-tondelier-a-jean-luc-melenchon-12067672"
+        },
+        {
+          "title": "Yahoo Finance — Anthropic IPO live",
+          "url": "https://finance.yahoo.com/technology/live/anthropic-ipo-live-company-said-to-price-stock-at-83-begin-trading-thursday-212656452.html"
+        },
+        {
+          "title": "Boursorama — Anthropic entre en Bourse avec une levée record dépassant SpaceX",
+          "url": "https://www.boursorama.com/bourse/actualites/anthropic-entre-en-bourse-avec-une-levee-record-depassant-spacex-49c6a8701f5e3eebb9e407c17376594e"
+        },
+        {
+          "title": "Quartz — L’Arcom étend les règles de pluralisme aux créateurs de contenus",
+          "url": "https://fr.qz.com/arcom-createurs-contenus-pluralisme-presidentielle-2027-111926"
+        },
+        {
+          "title": "Brut — Les créateurs de contenus devront respecter le pluralisme",
+          "url": "https://brut-5857f8.brut.media/fr/articles/presidentielle-les-createurs-de-contenus-devront-desormais-respecter-le-pluralisme-annonce-l-arcom"
+        },
+        {
+          "title": "Le Figaro (via Shango) — Sommet de Shenzhen, la réaction d’Emmanuel Macron",
+          "url": "https://www.shango.media/le-figaro-sommet-de-shenzhen-la-declaration-trump-xi-poutine-ne-conduit-pas-a-une-reorganisation-du-monde-dit-macron-12067614"
+        },
+        {
+          "title": "Quartz — Emmanuel Macron réagit à la déclaration Trump-Xi-Poutine",
+          "url": "https://fr.qz.com/emmanuel-macron-reagit-declaration-trump-xi-poutine-shenzhen-111926"
+        },
+        {
+          "title": "Pathé — Hunger Games : Lever de soleil sur la moisson",
+          "url": "https://www.pathe.fr/films/hunger-games-lever-de-soleil-sur-la-moisson-49508"
+        },
+        {
+          "title": "Westport Tech Museum — Nintendo sort la Wii",
+          "url": "https://www.westporttechmuseum.com/blogs/techtastic/today-in-tech-history-november-19-2006-nintendo-releases-wii"
+        }
       ]
     },
     {
