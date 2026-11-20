@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:05+01:00",
+ "updated_at": "2026-11-20T06:54+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -113,6 +113,7 @@
    "path": "editions/2026-11-20",
    "titles": {
     "dossier": "Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général)",
+    "actu": "Un plafond prolongé, un sénateur qui déménage et une IA en Bourse",
     "cultureg": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main",
     "insolite": "Le 14 Juillet a oublié de dire de quelle année il parlait",
     "origine": "Vous « surveillez votre silhouette » ? Vous surveillez un ministre radin de 1759",
@@ -120,6 +121,9 @@
    },
    "errors": [],
    "warnings": [
+    "actu : brève 3 : « Ce qui se passe vraiment » de 48 mots (max 45 pour une brève)",
+    "actu : brève 4 : « Ce qui se passe vraiment » de 50 mots (max 45 pour une brève)",
+    "actu : case 3 (Pour mieux comprendre) : 66 mots (max 65)",
     "cultureg : case 2 : récitatif de 21 mots (max 20)",
     "insolite : case 6 : récitatif de 21 mots (max 20)",
     "insolite : case 7 : récitatif de 21 mots (max 20)"

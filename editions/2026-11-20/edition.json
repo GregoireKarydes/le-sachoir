@@ -1008,7 +1008,18 @@
             "url": "https://www.pathe.fr/films/hunger-games-lever-de-soleil-sur-la-moisson-49508"
           },
           "video": {
-            "url": "https://www.youtube.com/watch?v=CINFIAohu4U"
+            "url": "https://www.youtube.com/watch?v=CINFIAohu4U",
+            "status": "ok",
+            "embed": {
+              "platform": "youtube",
+              "label": "YouTube",
+              "url": "https://www.youtube.com/watch?v=CINFIAohu4U",
+              "text": "The Hunger Games: Sunrise on the Reaping (2026) Official Trailer – Joseph Zada",
+              "author": "The Hunger Games",
+              "handle": "",
+              "date": "",
+              "thumb": "images/buzz-12.jpg"
+            }
           }
         },
         {

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:05+01:00",
+ "updated_at": "2026-11-20T06:54+01:00",
  "stock": {
   "cultureg": [
    {
@@ -67,6 +67,23 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 7,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261120-0652-jours-semaine-sept-astres",
+    "name": "20261120-0652-jours-semaine-sept-astres",
+    "added": "20261120-0652",
+    "status": "waiting",
+    "next": false,
+    "title": "Lundi, mardi, mercredi : votre agenda est un horoscope romain",
+    "theme": "Mythologies et religions",
+    "tagline": "Sept astres, sept dieux, un graveur payé à la ligne et deux jours rebaptisés en route",
+    "minutes": 2,
+    "cases": 9,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 8,
     "failed": 0,
     "redo": 0
    }
@@ -289,7 +306,7 @@
    "date": "2026-11-20",
    "path": "editions/2026-11-20",
    "status": "published",
-   "newsletter": false,
+   "newsletter": true,
    "formats": [
     {
      "id": "dossier",
@@ -303,6 +320,21 @@
      "photos": 3,
      "images_done": 21,
      "images_total": 21,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Un plafond prolongé, un sénateur qui déménage et une IA en Bourse",
+     "theme": "",
+     "tagline": "Le Parlement prolonge l’encadrement des loyers, Yannick Jadot quitte Les Écologistes, Anthropic signe une entrée en Bourse record et l’Arcom soumet les grands vidéastes au pluralisme.",
+     "minutes": 4,
+     "cases": 13,
+     "photos": 1,
+     "images_done": 4,
+     "images_total": 5,
      "failed": 0,
      "redo": 0
     },
