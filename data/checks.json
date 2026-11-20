@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T19:05+01:00",
+ "updated_at": "2026-11-20T19:58+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -148,6 +148,17 @@
     "cultureg : case 2 : récitatif de 21 mots (max 20)",
     "insolite : case 6 : récitatif de 21 mots (max 20)",
     "insolite : case 7 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "editions/2026-11-21",
+   "titles": {
+    "actu": "Un candidat de plus, deux plafonds et une COP qui déborde",
+    "quiz": "Au doigt mouillé (mais avec méthode)"
+   },
+   "errors": [],
+   "warnings": [
+    "actu : brève 2 : « Ce qui se passe vraiment » de 48 mots (max 45 pour une brève)"
    ]
   }
  ]

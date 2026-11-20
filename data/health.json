@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T19:05:21.279318+01:00",
+ "updated_at": "2026-11-20T19:58:29.754133+01:00",
  "today": "2026-11-20",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -21,6 +21,7 @@
    "date": "2026-11-21",
    "status": "draft",
    "formats": {
+    "actu": "prêt",
     "quiz": "prêt"
    }
   },
@@ -121,60 +122,60 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 0,
-   "waiting": 4,
+   "ready": 1,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 73,
-   "focus": "20261117-1925-code-civil (13 image(s) à faire)",
-   "next": null,
+   "images_left": 60,
+   "focus": "20261118-1927-pasteur-microbes (23 image(s) à faire)",
+   "next": "20261117-1925-code-civil",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 1,
  "days_ahead_written": 4,
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-20",
-  "count": 51,
-  "neurons": 8160,
+  "count": 55,
+  "neurons": 8840,
   "exhausted": false,
   "by_kind": {
-   "cover": 3,
-   "case": 31,
-   "cast": 17
+   "cover": 4,
+   "case": 33,
+   "cast": 18
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 2.84259,
-  "images": 234,
-  "today_usd": 0.18,
+  "spent_usd": 2.95097,
+  "images": 250,
+  "today_usd": 0.28838,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-20T00:35:38.308137+01:00",
-  "age_hours": 18.5,
+  "collected_at": "2026-11-20T19:04:44.192417+01:00",
+  "age_hours": 0.9,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 28,
    "Le Monde": 16,
-   "Le Figaro": 18,
+   "Le Figaro": 19,
    "Libération": 50,
-   "20 Minutes": 25,
+   "20 Minutes": 26,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 31,
-   "Le Monde Sciences": 4,
+   "BBC World": 21,
+   "Le Monde Sciences": 5,
    "Sciences et Avenir": 7,
    "Le Monde Planète": 20,
    "Le Monde Pixels": 18,
-   "Le Monde Santé": 4,
-   "Le Monde Culture": 14,
-   "HugoDécrypte - Actus du jour": 2
+   "Le Monde Santé": 2,
+   "Le Monde Culture": 20,
+   "HugoDécrypte - Actus du jour": 1
   },
   "empty_feeds": [
    "Les Échos",
@@ -183,13 +184,19 @@
  },
  "actu_balance": {
   "days": 14,
-  "editions": 10,
+  "editions": 11,
   "people": [
    {
     "name": "Aleksandar Vučić",
     "party": "étranger",
     "n": 1,
     "last": "2026-11-18"
+   },
+   {
+    "name": "Dominique de Villepin",
+    "party": "La France humaniste",
+    "n": 1,
+    "last": "2026-11-21"
    },
    {
     "name": "Donald Trump",
@@ -238,6 +245,10 @@
    {
     "party": "étranger",
     "n": 2
+   },
+   {
+    "party": "La France humaniste",
+    "n": 1
    },
    {
     "party": "La France insoumise",
