@@ -27,7 +27,7 @@
           "look": "Bonaparte in 1800, a short wiry young general about thirty years old, thin pale face, lank straight dark-brown hair falling to his collar, a deep navy-blue consul's coat with gold embroidery on collar and cuffs as main colour, white breeches, a red sash, always holding the watch",
           "role": "the First Consul who wants the code finished at once; impatient and bossy, always snapping open his pocket watch, arms crossed, foot tapping",
           "file": "cast/dossier-bonaparte.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "portalis",
@@ -35,7 +35,7 @@
           "look": "Portalis, a very tall and very thin jurist in his fifties, long bony face, white powdered hair tied in a short queue, small round spectacles, light skin, a forest-green frock coat as main colour, black breeches, always holding the speech",
           "role": "one of the four jurists who write the Code; long-winded orator who never stops talking, one bony finger always raised as if starting a speech",
           "file": "cast/dossier-portalis.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "marchand",
@@ -43,7 +43,8 @@
           "look": "the merchant, a very fat 1780s cloth merchant, ginger mutton-chop sideburns under a grey tricorn hat, ruddy light skin, a mustard-yellow coat and waistcoat as main colour, brown boots, clutching a small leather purse",
           "role": "a stingy cloth merchant travelling across the kingdom; easily outraged, clutches his purse to his belly whenever the law changes",
           "file": "cast/dossier-marchand.png",
-          "status": "pending"
+          "status": "pending",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (01b0f27b-c2d9-41f2-9b88-0fe787c27dab)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         },
         {
           "id": "madeleine",
@@ -51,7 +52,7 @@
           "look": "Madeleine, a small plump Parisian woman of 1965 in her forties, a tall blonde beehive hairdo, light olive skin, a bright coral-red dress as main colour, a white handbag and white gloves",
           "role": "a married Parisian of the 1960s who finally gets her own rights; proud show-off, waves every new right in the air like a trophy",
           "file": "cast/dossier-madeleine.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -61,8 +62,8 @@
           "portalis"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -88,8 +89,8 @@
               "marchand"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -104,8 +105,8 @@
               "marchand"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -145,8 +146,8 @@
             "prompt": "a revolutionary assembly hall buried under mountains of paper drafts. Two exhausted deputies with tricolour sashes slumped on the benches in the foreground, one asleep on a pile of drafts; far behind them, in a bright open doorway, the small dark silhouette of a short man in a bicorne hat, seen from behind the deputies, waiting. cliffhanger mood. high angle",
             "cast": [],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -185,7 +186,8 @@
             ],
             "file": "images/dossier-04.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (ca4b853c-011a-4b5e-b099-241868a49e10)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -211,8 +213,8 @@
               "portalis"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -239,8 +241,8 @@
               "bonaparte"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -282,8 +284,8 @@
               "bonaparte"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -309,8 +311,8 @@
               "bonaparte"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {

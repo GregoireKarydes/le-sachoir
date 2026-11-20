@@ -25,7 +25,7 @@
           "name": "Yanis",
           "look": "Yanis, a short skinny bicycle courier in his twenties, dark brown skin, tall black flat-top haircut, bright turquoise-blue delivery jacket as main colour, black cycling shorts over leggings, a big square delivery backpack, a phone strapped to his wrist",
           "file": "cast/cultureg-yanis.png",
-          "status": "pending",
+          "status": "done",
           "role": "the courier who crosses departments every day without wondering why they exist; restless, always bouncing on his toes, asks the reader's questions"
         },
         {
@@ -33,7 +33,7 @@
           "name": "L’abbé Sieyès",
           "look": "Emmanuel-Joseph Sieyès, a tall very thin French abbé and deputy of 1790 in his forties, long narrow face, sharp nose, thin lips, short powdered white hair, pale skin, olive-green frock coat as main colour over a black waistcoat, white cravat, a tricolour cockade on his black tricorn hat, the ruler under his arm",
           "file": "cast/cultureg-sieyes.png",
-          "status": "pending",
+          "status": "done",
           "role": "the brilliant, rigid revolutionary who loves straight lines and logic; stiff as a ruler, measures everything with his fingers, offended by anything crooked"
         }
       ],
@@ -44,8 +44,9 @@
           "sieyes"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "sieyes"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +102,8 @@
               "yanis"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -128,8 +130,8 @@
               "yanis"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -155,8 +157,8 @@
               "sieyes"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -196,8 +198,8 @@
               "sieyes"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -224,8 +226,8 @@
               "sieyes"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -257,8 +259,8 @@
               "sieyes"
             ],
             "file": "images/cultureg-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

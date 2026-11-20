@@ -313,9 +313,8 @@
             "prompt": "the glass workshop in Chartres. Seen over the shoulder of a big burly butcher in a white apron, a ham tucked under his arm, in the foreground on the left, jabbing a finger at a nearly finished stained-glass panel on the table; the skinny old glazier with a long white beard on the right, sighing as he adds a tiny glass figure of a butcher holding a ham in the bottom corner of the panel. over-the-shoulder",
             "cast": [],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 2,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (1a4c47ff-05ba-4cc1-8154-2d4f08ffcc08)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 3
           }
         },
         {
@@ -416,9 +415,8 @@
             "prompt": "a Renaissance Italian study with a wooden desk, an open book and a small white marble model of a Greek column. A man with a black beard in a dark red Renaissance cap and robe, seen from behind, sitting at the desk and holding a drawing of a pointed Gothic arch at arm's length between two fingers, as if it smelled bad. visual gag: disgust at the drawing. from behind",
             "cast": [],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (4ada7e00-da1f-4cc2-b4c8-10b4bdd34488)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 3
           }
         },
         {
@@ -510,9 +508,8 @@
               "viollet"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (545cc308-18c3-4751-afaf-0cad24ab0f5a)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -545,9 +542,8 @@
             "prompt": "the statue lying safely on its back on a padded flatbed truck, wrapped in a grey moving blanket up to the chin like someone tucked into bed; a worker in a white helmet and an orange high-visibility vest on the right, tightening a strap and patting the statue's shoulder. bird's-eye view",
             "cast": [],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (50c17b40-d5c8-4e98-ba58-3beb6505871c)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2
           }
         },
         {

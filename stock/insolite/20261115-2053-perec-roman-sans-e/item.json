@@ -25,7 +25,7 @@
           "name": "Georges Perec",
           "look": "Georges Perec, a lanky French writer of 1969 in his early thirties, a huge cloud of wild frizzy dark brown hair, a long pointed goatee beard, light peach skin, rust-orange corduroy jacket as main colour over a black polo neck, a cat-shaped mischievous grin, the manuscript under his arm",
           "file": "cast/insolite-perec.png",
-          "status": "pending",
+          "status": "done",
           "role": "the playful writer who loves impossible rules; restless, grins slyly, speaks carefully as if dodging something invisible in every sentence"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Odile, correctrice",
           "look": "Odile, a small round elderly proofreader of 1969, tight grey permed curls, cat-eye glasses hanging on a chain, light pink skin, bright royal-blue cardigan as main colour over a white blouse, a grey skirt, the pencil always behind her ear",
           "file": "cast/insolite-odile.png",
-          "status": "pending",
+          "status": "done",
           "role": "the meticulous publishing proofreader who has seen everything and believes nothing; sceptical, peers over her glasses, taps her pencil"
         }
       ],
@@ -44,8 +44,9 @@
           "odile"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "odile"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +102,8 @@
               "perec"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +143,8 @@
               "perec"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -176,8 +178,8 @@
               "perec"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -204,8 +206,8 @@
               "odile"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

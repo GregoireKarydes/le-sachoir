@@ -26,7 +26,7 @@
           "name": "Bernard",
           "look": "Bernard, a very tall and bony retired man in his sixties, long thin neck, light pink-beige skin, bald on top with a fringe of grey hair around the sides, big bushy grey eyebrows, mustard-yellow vest top as main colour, baggy khaki shorts, blue flip-flops, the red paper fan always in his hand",
           "file": "cast/notice-bernard.png",
-          "status": "pending",
+          "status": "done",
           "role": "the stingy pensioner who refuses to pay for anything and is sure he has outsmarted the heatwave; smug, slumped, fanning himself, never admits he is wrong"
         },
         {
@@ -34,7 +34,7 @@
           "name": "Inès",
           "look": "Inès, a short and round refrigeration technician in her forties, dark brown skin, black curly hair tied in a big high puff, small gold hoop earrings, teal work overalls as main colour, an orange tool belt, white sneakers, the thermometer always in her hand",
           "file": "cast/notice-ines.png",
-          "status": "pending",
+          "status": "done",
           "role": "the unflappable fridge repairwoman who has seen it all; calm, deadpan, one eyebrow raised, measures everything with her thermometer before speaking"
         }
       ],
@@ -45,8 +45,9 @@
           "ines"
         ],
         "file": "images/notice-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -67,8 +68,9 @@
               "bernard"
             ],
             "file": "images/notice-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -95,8 +97,8 @@
               "ines"
             ],
             "file": "images/notice-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -136,8 +138,8 @@
               "ines"
             ],
             "file": "images/notice-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -174,8 +176,8 @@
               "bernard"
             ],
             "file": "images/notice-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
