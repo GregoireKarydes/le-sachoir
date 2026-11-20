@@ -1,0 +1,163 @@
+{
+  "added": "20261120-0654",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé)",
+      "tagline": "Un plombier mondialement célèbre, un loyer en retard et une légende qui grossit à chaque récit",
+      "teaser": "Le héros le plus célèbre du jeu vidéo s’appelle comme un promoteur de Seattle qui n’a jamais touché un centime. Enquête.",
+      "minutes": 1,
+      "theme": "Jeux vidéo",
+      "art": {
+        "subject": "how Nintendo's jumping hero of Donkey Kong was renamed Mario in 1981 after Mario Segale, the landlord of Nintendo of America's warehouse near Seattle, and why the famous angry-landlord scene is doubtful",
+        "setting": "a big bare warehouse in Tukwila near Seattle full of wooden crates and rows of arcade cabinets, a small office corner with a metal desk",
+        "era": "1981, United States, early arcade era",
+        "props": {
+          "cabinet": "a tall wooden arcade cabinet painted bright red with a dark blank screen and a single joystick",
+          "crates": "stacks of plain wooden shipping crates"
+        }
+      },
+      "cast": [
+        {
+          "id": "magasinier",
+          "name": "Le magasinier",
+          "look": "a very tall lanky warehouse worker of 1981 in his twenties, huge feathered sandy-blond hair, big gold aviator glasses, light skin, a bright kelly-green satin baseball jacket without logo as main colour, faded jeans, a clipboard always under his arm",
+          "file": "cast/insolite-magasinier.png",
+          "status": "pending",
+          "role": "the Nintendo warehouse worker who tells the story; a confident storyteller who embellishes everything, every retelling makes the landlord bigger and angrier, wide arms when he exaggerates"
+        },
+        {
+          "id": "segale",
+          "name": "Mario Segale",
+          "look": "Mario Segale, a short broad-shouldered Italian-American construction businessman in his late forties, thick silver-grey hair slicked back, heavy black eyebrows, tanned skin, a camel-brown sheepskin coat as main colour over a brown suit, dark sunglasses",
+          "file": "cast/insolite-segale.png",
+          "status": "pending",
+          "role": "the warehouse landlord, a self-made builder who hates attention; very discreet, always half-hidden behind his sunglasses and his collar, embarrassed to be famous"
+        }
+      ],
+      "cover": {
+        "prompt": "a big bare warehouse full of crates and red arcade cabinets. The magasinier (very tall, lanky, feathered sandy-blond hair, aviator glasses, kelly-green jacket) on the left telling a story with both arms stretched wide; the segale (short, broad, silver slicked-back hair, sunglasses, camel sheepskin coat) on the right peeking out from behind a cabinet, collar raised to hide his face, embarrassed. medium wide shot",
+        "cast": ["magasinier", "segale"],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1981",
+          "caption": "Pourquoi Mario s’appelle Mario ? En 1981, près de Seattle, la filiale américaine de Nintendo cherche un nom à son héros.",
+          "bubbles": [
+            { "who": "magasinier", "text": "Je raconte cette histoire depuis 1981. Elle grandit un peu chaque année.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a big bare warehouse in Tukwila full of stacked crates and rows of red arcade cabinets. The magasinier (very tall, lanky, feathered sandy-blond hair, aviator glasses, kelly-green jacket) on the left sitting on a crate like a campfire storyteller, leaning toward the viewer with a knowing smile, clipboard on his knee; a single cabinet glowing behind him. wide shot",
+            "cast": ["magasinier"],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Avant Mario, il y avait Jumpman",
+          "steps": [
+            "1981 : au Japon, Shigeru Miyamoto crée le jeu d’arcade Donkey Kong",
+            "Son héros, un charpentier moustachu, doit sauver une jeune femme enlevée par un gorille",
+            "Il saute par-dessus des tonneaux : on l’appelle Jumpman, « l’homme qui saute »",
+            "La filiale américaine, installée dans un entrepôt de Tukwila, veut un nom plus humain"
+          ],
+          "joke": "Plombier ? Pas encore. À l’époque, il fait de la charpente."
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "La légende",
+          "caption": "La légende, racontée en 1993 dans le livre Game Over : le propriétaire, Mario Segale, débarque réclamer un loyer en retard.",
+          "bubbles": [
+            { "who": "segale", "text": "Le loyer. Aujourd’hui.", "side": "r" },
+            { "who": "magasinier", "text": "Il criait, il tapait du poing, il faisait trois mètres de haut.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the warehouse office corner, seen from very low. The segale (silver slicked-back hair, heavy black eyebrows, sunglasses, camel sheepskin coat) on the right drawn absurdly huge like a giant, towering over a metal desk and slamming his fist on it, papers flying; the magasinier (very tall, lanky, feathered blond hair, kelly-green jacket) on the left shrunk tiny in comparison, hiding behind his clipboard, a light-blue sweat drop. low angle",
+            "cast": ["segale", "magasinier"],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le baptême",
+          "caption": "Toujours selon la légende, une fois Segale parti, l’équipe rebaptise Jumpman en son honneur : il s’appellera Mario.",
+          "bubbles": [
+            { "who": "magasinier", "text": "Par vengeance. Par respect. Surtout par peur.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the magasinier (very tall, lanky, feathered sandy-blond hair, aviator glasses, kelly-green jacket) alone in front of the red cabinet, solemnly pressing a big paper sticker onto its side like a knight being dubbed, eyes closed with reverence, one hand on his heart; crates in the background. medium shot",
+            "cast": ["magasinier"],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Une vraie borne Donkey Kong",
+          "text": "Une borne d’arcade Donkey Kong. Le petit héros qui saute par-dessus les tonneaux du gorille, c’est Jumpman, devenu Mario pour son lancement en Amérique.",
+          "photo": { "commons": "File:Donkey Kong arcade at the QuakeCon 2005.png" }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "2012",
+          "caption": "En 2012, Don James, ancien responsable de l’entrepôt, dément : personne n’avait jamais vu Segale. Le prénom était une blague.",
+          "bubbles": [
+            { "who": "magasinier", "text": "Bon. Il ne faisait peut-être pas trois mètres.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "close on the magasinier (very tall, lanky, feathered sandy-blond hair, gold aviator glasses, kelly-green jacket), caught out, sliding his aviator glasses down his nose and glancing sideways at the viewer with a guilty little smile, one finger scratching his neck, tiny pink blush marks. close-up",
+            "cast": ["magasinier"],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Le prénom vient bien de Mario Segale, Miyamoto l’a confirmé ; la scène du loyer reste douteuse. Sa vraie phrase, en 1993 :",
+          "bubbles": [
+            { "who": "segale", "text": "J’attends toujours mes droits d’auteur.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "outside the warehouse at dusk. The segale (short, broad, silver slicked-back hair, sunglasses, camel sheepskin coat) in the foreground on the right, normal human size now, collar pulled up, standing by an empty mailbox and peering into it with a resigned shrug; the magasinier (very tall, lanky, feathered blond hair, kelly-green jacket) small in the background on the left, waving sheepishly from the warehouse door. medium close-up",
+            "cast": ["segale", "magasinier"],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Pendant des années, tout le monde a écrit « Segali » : le livre qui a lancé la légende avait fait une faute à son nom.",
+        "source": "Wikipedia — Mario Segale"
+      },
+      "story": "En 1981, Nintendo of America, la filiale américaine du fabricant japonais, s’installe dans un entrepôt loué à Tukwila, près de Seattle. Son propriétaire est Mario Segale, un promoteur immobilier qui a fondé sa propre entreprise de construction en 1957. Cette année-là, Nintendo prépare le lancement en Amérique de Donkey Kong, un jeu d’arcade imaginé au Japon par Shigeru Miyamoto : un petit charpentier moustachu y saute par-dessus des tonneaux pour sauver une jeune femme enlevée par un gorille. Le héros s’appelle alors Jumpman, « l’homme qui saute ».\nLa version la plus célèbre de son baptême paraît en 1993 dans le livre Game Over, de David Sheff : Segale serait venu réclamer un loyer en retard au président de la filiale, Minoru Arakawa, et l’aurait sermonné devant les employés ; l’équipe aurait ensuite rebaptisé le héros Mario en son honneur. Le livre écrit d’ailleurs son nom « Segali », une erreur répétée pendant des années.\nMais en 2012, Don James, ancien responsable de l’entrepôt, raconte une autre version : avec Arakawa, ils ont choisi ce prénom pour plaisanter, justement parce que personne n’avait jamais rencontré ce propriétaire très discret. Miyamoto a confirmé en 2015 que Mario devait son nom à Segale, sans trancher sur la scène du loyer.\nMario Segale, qui fuyait la notoriété, est mort en 2018, à 84 ans. En 1993, il plaisantait déjà : il attendait toujours ses droits d’auteur.",
+      "sources": [
+        { "title": "Wikipedia — Mario Segale", "url": "https://en.wikipedia.org/wiki/Mario_Segale" },
+        { "title": "Fox 5 New York — How a Seattle man inspired the name of Nintendo's most iconic character", "url": "https://www.fox5ny.com/news/mario-day-how-a-seattle-man-inspired-the-name-of-nintendos-most-iconic-character" },
+        { "title": "Kotaku — Mario's real-life namesake Mario Segale dies at 84", "url": "https://kotaku.com/marios-real-life-namesake-mario-segale-dies-at-84-1830154543" },
+        { "title": "History.com — Super Mario history: Nintendo, Donkey Kong facts", "url": "https://www.history.com/articles/super-mario-history-nintendo-donkey-kong-facts" }
+      ]
+    }
+  ]
+}
