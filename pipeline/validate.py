@@ -15,6 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import embeds  # noqa: E402
+import stock  # noqa: E402
 from seo import POLES  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -39,6 +40,7 @@ ACTU_SUITE_MAX = 45  # case « La suite »
 ACTU_MINUTES_MAX = 4  # l'Actu se lit en 3 à 4 minutes (elle en faisait 5 le 16 novembre)
 BUZZ_REAL_SINCE = "2026-11-18"  # « Sur Internet » : une vraie image par case, plus de faux post (même date que publish.py)
 HUMOUR_SINCE = "2026-11-18"  # éditions concernées par les contrôles d'humour (les BD déjà publiées ne sont pas relues)
+EPOQUE_SINCE = "20261120-1200"  # BD de la file écrites après ce moment : époque obligatoire (celles déjà écrites partent telles quelles)
 STORY_RANGE = (120, 300)    # mots de « L'histoire complète »  # plafonds fixés le 7 novembre 2026 pour tenir dans le quota gratuit d'images
 
 
@@ -583,6 +585,16 @@ def check_story(fmt: dict, d: Path, err, warn):
     want = {"cultureg": 1, "insolite": 1, "notice": 1, "origine": 1, "dossier": 2}.get(fid, 0)
     if n_photo < want:
         warn(f"{n_photo} vraie(s) photo(s) (« kind »: « photo »), il en faut au moins {want} si un document libre existe")
+    # 20 novembre 2026 (retour d'un bêta-testeur : « très axé sur le passé ») : époque du sujet et lien avec aujourd'hui.
+    if fid in stock.TYPES and fmt.get("epoque") not in (None, *stock.EPOQUES):
+        err(f"« epoque » vaut {fmt.get('epoque')!r} : passe, present ou futur")
+    new_item = "stock" in d.parts and d.name >= EPOQUE_SINCE
+    if new_item and fid in stock.TYPES:
+        if not stock.epoque(fmt):
+            warn("« epoque » absente : passe, present ou futur (environ un tiers chacun, voir prompts/STOCK.md)")
+        elif stock.epoque(fmt) == "passe" and fid != "origine" and not any(
+                isinstance(c, dict) and c.get("kind") == "explain" and c.get("tag") == "Et aujourd’hui ?" for c in cases):
+            warn("sujet du passé sans case « Et aujourd’hui ? » (case explain, tag exact) qui relie à aujourd'hui ou à demain")
     if fid != "actu":
         art = fmt.get("art") or {}
         missing = [k for k in ("subject", "setting", "era") if not art.get(k)]
@@ -733,9 +745,22 @@ def check_edition(d: Path) -> dict:
     return res
 
 
+def epoque_report():
+    """Bilan passé / présent / futur des 30 dernières BD (hors D'où ça vient ?), avertissement si le passé domine."""
+    c = stock.epoque_counts()
+    known = sum(c[e] for e in stock.EPOQUES)
+    print(f"Époques des 30 dernières BD : passé {c['passe']}, présent {c['present']}, futur {c['futur']}, non renseignée {c['?']}")
+    if known >= 6 and c["passe"] > 0.45 * known:
+        print(f"::warning::trop de passé ({c['passe']} sur {known}) : écrire les prochaines BD au présent ou au futur (prompts/STOCK.md, « Passé, présent, futur »)")
+    if known >= 6 and c["futur"] == 0:
+        print("::warning::aucune BD sur le futur parmi les dernières : en écrire une (prompts/STOCK.md, « Passé, présent, futur »)")
+
+
 def main(argv):
     dirs = [Path(a) for a in argv] or (sorted(p for p in EDITIONS.iterdir() if (p / "edition.json").exists())
                                        + sorted(p.parent for p in (ROOT / "stock").glob("*/*/item.json")))
+    if not argv:
+        epoque_report()
     n_err = 0
     for d in dirs:
         r = check_edition(d)

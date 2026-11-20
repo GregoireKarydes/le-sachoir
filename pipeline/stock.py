@@ -112,17 +112,55 @@ def next_out(kind: str) -> Path | None:
     return pick(kind, set())
 
 
-def pick(kind: str, avoid: set) -> Path | None:
-    """BD finie la plus ancienne, en évitant si possible les pôles déjà pris (veille, autres BD du jour)."""
+# Époque du sujet (20 novembre 2026, retour d'un bêta-testeur : « très axé sur le passé ») : chaque BD de la file
+# dit si elle parle du passé, du présent ou du futur. Objectif : environ un tiers chacun, et pas plus de 2 BD
+# « passé » dans une même édition. D'où ça vient ? est du passé par nature, La Notice du présent.
+EPOQUES = ("passe", "present", "futur")
+EPOQUE_DEFAULT = {"origine": "passe", "notice": "present"}
+MAX_PASSE_PAR_EDITION = 2
+
+
+def epoque(fmt: dict) -> str | None:
+    e = fmt.get("epoque") or EPOQUE_DEFAULT.get(fmt.get("id"))
+    return e if e in EPOQUES else None
+
+
+def pick(kind: str, avoid: set, avoid_epoque: set | None = None) -> Path | None:
+    """BD finie la plus ancienne, en évitant si possible une époque déjà trop présente dans l'édition (d'abord),
+    puis les pôles déjà pris (veille, autres BD du jour)."""
+    avoid_epoque = avoid_epoque or set()
     ready = []
     for p in items(kind):
         it = load(p)
         if it and not it.get("blocked") and is_ready(it["formats"][0], p):
-            ready.append((p, pole(it["formats"][0].get("theme"))))
-    for p, pl in ready:
-        if pl not in avoid:
-            return p
-    return ready[0][0] if ready else None
+            f = it["formats"][0]
+            ready.append((p, pole(f.get("theme")), epoque(f)))
+    if not ready:
+        return None
+    # Tri stable : l'ordre de la file reste le départage.
+    return min(ready, key=lambda r: (r[2] in avoid_epoque, r[1] in avoid))[0]
+
+
+def epoque_counts(last: int = 30) -> dict:
+    """Répartition passé / présent / futur des dernières BD écrites (file et éditions), hors D'où ça vient ?."""
+    seen = []
+    for d in sorted((ROOT / "editions").glob("*/edition.json")):
+        try:
+            seen += [(d.parent.name, f) for f in json.loads(d.read_text()).get("formats", []) if f.get("id") in TYPES]
+        except Exception:
+            pass
+    for kind in TYPES:
+        for p in items(kind):
+            it = load(p)
+            if it:
+                seen.append((p.name, it["formats"][0]))
+    out = {e: 0 for e in EPOQUES}
+    out["?"] = 0
+    for _, f in sorted(seen, key=lambda x: x[0])[-last:]:
+        if f.get("id") == "origine":
+            continue
+        out[epoque(f) or "?"] += 1
+    return out
 
 
 def _files(fmt: dict) -> list[str]:

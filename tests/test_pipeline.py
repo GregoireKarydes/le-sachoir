@@ -666,3 +666,34 @@ def test_checks_json_pour_les_taches(tmp_path, monkeypatch):
     out = json.loads((root / "data" / "checks.json").read_text())
     assert out["items"][0]["path"] == "stock/cultureg/20261201-0000-essai"
     assert any("formule usée en ouverture" in w for w in out["items"][0]["warnings"])
+
+
+def _queue(root, kind, name, ep, theme="Histoire de France"):
+    d = root / "stock" / kind / name
+    d.mkdir(parents=True)
+    f = story(kind)
+    f["theme"], f["epoque"] = theme, ep
+    for c in f["cases"]:
+        (d / c["image"]["file"]).parent.mkdir(parents=True, exist_ok=True)
+        (d / c["image"]["file"]).write_bytes(b"x")
+    (d / "item.json").write_text(json.dumps({"added": "x", "formats": [f]}))
+
+
+def test_pick_evite_un_troisieme_passe(site):
+    # 20 novembre 2026 : « très axé sur le passé ». Avec 2 BD « passé » déjà dans l'édition, la file sert d'abord du présent.
+    _queue(site, "insolite", "20261120-0100-vieux", "passe")
+    _queue(site, "insolite", "20261120-0200-actuel", "present")
+    assert stock.pick("insolite", set()).name == "20261120-0100-vieux"
+    assert stock.pick("insolite", set(), {"passe"}).name == "20261120-0200-actuel"
+
+
+def test_pick_garde_le_passe_si_rien_d_autre(site):
+    _queue(site, "insolite", "20261120-0100-vieux", "passe")
+    assert stock.pick("insolite", set(), {"passe"}).name == "20261120-0100-vieux"
+
+
+def test_epoque_par_defaut():
+    assert stock.epoque({"id": "origine"}) == "passe"
+    assert stock.epoque({"id": "notice"}) == "present"
+    assert stock.epoque({"id": "cultureg", "epoque": "futur"}) == "futur"
+    assert stock.epoque({"id": "cultureg"}) is None
