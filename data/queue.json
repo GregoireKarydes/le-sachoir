@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:58+01:00",
+ "updated_at": "2026-11-20T06:59+01:00",
  "stock": {
   "cultureg": [
    {
@@ -515,6 +515,21 @@
      "kind": "frise",
      "title": "Douze dates et un duel à l’épée en pleine ère spatiale",
      "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-26",
+   "path": "editions/2026-11-26",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Dico menteur",
+     "kind": "dico",
+     "title": "Quatre mots savants, douze baratins",
+     "questions": 4
     }
    ]
   }
