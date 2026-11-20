@@ -1,7 +1,351 @@
 {
   "date": "2026-11-21",
   "status": "draft",
+  "newsletter": {
+    "subject": "Samedi : un candidat de plus et une COP en prolongations",
+    "intro": "Samedi 21 novembre. La COP31 n’a pas fini à l’heure. Nous si : votre Sachoir est servi encore chaud.",
+    "game": "Trois curseurs, trois chiffres, zéro calculatrice : faites confiance à votre doigt mouillé.",
+    "ps": "P.-S. Pour être candidat, il faut 500 signatures d’élus. Pour lire le Sachoir, un pouce suffit. On a vérifié."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Un candidat de plus, deux plafonds et une COP qui déborde",
+      "tagline": "Dominique de Villepin se lance pour 2027, Londres et Bruxelles se rapprochent, le Sénat réforme les titres-restaurant et la COP31 joue les prolongations.",
+      "teaser": "Un candidat qui fait court (pour une fois), des Britanniques qui reviennent l’air de rien et un ticket-resto à deux étages.",
+      "minutes": 3,
+      "theme": "",
+      "art": {
+        "subject": "four news stories of the day, each told in one gag panel: a former prime minister launching a presidential bid with a huge programme, the United Kingdom moving closer to the European Union ten years after Brexit, meal vouchers with two spending ceilings, a climate conference running late into the night",
+        "setting": "a press conference stage with a plain wooden lectern, a cross-Channel ferry deck under a grey sky, a supermarket checkout counter, an empty conference hall at night with long tables",
+        "era": "present day, November 2026",
+        "props": {
+          "scroll": "an extremely long white paper scroll covered in blank grey lines, with no writing on it",
+          "basket": "a red plastic supermarket basket holding a packet of pasta, three green apples and one tin can",
+          "teacup": "a white china teacup on a saucer with a little steam rising",
+          "cups": "a dozen empty white paper coffee cups piled up"
+        }
+      },
+      "cast": [
+        {
+          "id": "villepin",
+          "name": "Dominique de Villepin",
+          "look": "a cartoon caricature of a very tall, slim statesman in his seventies, light skin, a thick wavy mane of swept-back silver-white hair, a strong nose, a charcoal grey three-piece suit as main colour, a bright red silk tie, a white pocket square",
+          "role": "a former prime minister launching a presidential bid; grandiloquent and theatrical, sweeping arm gestures, chin held high",
+          "file": "cast/actu-villepin.png",
+          "status": "pending"
+        },
+        {
+          "id": "britannique",
+          "name": "Un Britannique",
+          "look": "a short, round man in his fifties, light skin, bald under a brown flat tweed cap, a thick grey walrus moustache, a mustard-yellow knitted jumper as main colour, brown corduroy trousers",
+          "role": "a British traveller back on the continent; never admits anything, stiff upper lip, sips his tea calmly",
+          "file": "cast/actu-britannique.png",
+          "status": "skipped"
+        },
+        {
+          "id": "caissiere",
+          "name": "Une caissière",
+          "look": "a tall, bony woman in her forties, medium brown skin, curly black hair gathered in a high puff, a turquoise cashier tabard as main colour over a white T-shirt, red reading glasses on a chain",
+          "role": "a supermarket cashier who applies every rule to the letter; zealous, sorts each item with exaggerated precision",
+          "file": "cast/actu-caissiere.png",
+          "status": "skipped"
+        },
+        {
+          "id": "deleguee",
+          "name": "Une déléguée",
+          "look": "a small, slender woman in her thirties, East Asian, a short silver-grey pixie cut, an orange blazer as main colour over a dark grey turtleneck, a conference badge on a blue lanyard",
+          "role": "an exhausted climate negotiator at the end of the night; pretends everything is on schedule, clings to her coffee",
+          "file": "cast/actu-deleguee.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A wide empty street in Paris in the morning leading to a tall ornate palace gate in the far background. In the foreground, villepin (very tall and slim, swept-back silver-white mane, charcoal grey three-piece suit, red tie) strides towards the gate with great determination, dragging the scroll behind him; it unrolls along the pavement all the way back out of the picture. Medium wide shot.",
+        "cast": [
+          "villepin"
+        ],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Politique",
+          "lead": true,
+          "major": true,
+          "gag": "escalade",
+          "people": [
+            {
+              "name": "Dominique de Villepin",
+              "party": "La France humaniste",
+              "role": "ancien Premier ministre, candidat à la présidentielle"
+            }
+          ],
+          "caption": "Vendredi 20 novembre à Paris, l’ancien Premier ministre Dominique de Villepin a dit « Je suis candidat » à la présidentielle de 2027. Trois mots, pour un orateur réputé.",
+          "bubbles": [
+            {
+              "who": "villepin",
+              "text": "Ça, c’était le résumé. Le discours complet tient en trois tomes.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A press conference stage with a plain wooden lectern. villepin (very tall and slim, swept-back silver-white mane, charcoal grey three-piece suit, red tie) stands behind the lectern on the left, one arm flung wide in a grand theatrical gesture, while the scroll pours from his other hand, cascades off the stage and piles up in huge white loops on the floor below. Low angle.",
+            "cast": [
+              "villepin"
+            ],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le palais de l’Élysée, à Paris",
+          "text": "La résidence du président de la République, rue du Faubourg-Saint-Honoré : l’adresse que visent tous les candidats de 2027.",
+          "photo": {
+            "commons": "File:Elysée Palace, Paris 2005.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Dominique de Villepin entre dans la course",
+          "text": "Quoi : il a fondé son mouvement, La France humaniste, en 2025 ; son équipe annonce environ 300 promesses de parrainage.\nPourquoi ça compte : un ancien Premier ministre de Jacques Chirac rejoint une course encombrée.\nRepère : 33 candidats déclarés en septembre ; en 2022, 12 qualifiés seulement.\nEt maintenant : 500 signatures à réunir avant le 12 mars.",
+          "sources": [
+            {
+              "title": "BFMTV (via Yahoo Actualités)",
+              "url": "https://fr.news.yahoo.com/candidat-dominique-villepin-annonce-candidature-104053161.html"
+            },
+            {
+              "title": "Unidivers",
+              "url": "https://unidivers.fr/dominique-de-villepin-candidature-presidentielle-programme-parrainages/"
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Comment ça se fait ?",
+          "zoom": true,
+          "title": "Comment devient-on vraiment candidat à l’Élysée ?",
+          "steps": [
+            "Se déclarer ne suffit pas : il faut 500 parrainages, des signatures d’élus",
+            "Maires, parlementaires, élus départementaux et régionaux signent pour un seul candidat, sans retour possible",
+            "Ces signatures viennent d’au moins 30 départements ou outre-mer, 50 au plus par territoire",
+            "Dépôt avant le 12 mars à 18 h ; le Conseil constitutionnel vérifie, puis publie la liste officielle et les noms des parrains"
+          ],
+          "text": "Ce qu’on ne sait pas encore : combien de ces promesses deviendront des signatures validées.",
+          "sources": [
+            {
+              "title": "Public Sénat",
+              "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-une-multitude-de-candidats-mais-combien-seront-ils-reellement-sur-la-ligne-de-depart"
+            },
+            {
+              "title": "Sud Radio",
+              "url": "https://www.sudradio.fr/politique/presidentielle-2027-tout-savoir-sur-les-500-parrainages-pour-devenir-candidat"
+            },
+            {
+              "title": "LCP",
+              "url": "https://lcp.fr/actualites/presidentielle-2027-la-course-aux-500-signatures-d-elus-necessaires-pour-se-presenter-a"
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Monde",
+          "major": true,
+          "gag": "mauvaise-foi",
+          "caption": "Vendredi 20 novembre à Bruxelles, dix ans après le vote du Brexit, le Royaume-Uni et l’Union européenne ont annoncé trois accords pour se rapprocher.",
+          "bubbles": [
+            {
+              "who": "britannique",
+              "text": "On n’est jamais vraiment partis. On était juste sortis prendre l’air.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. The deck of a cross-Channel ferry under a grey sky, white cliffs far behind. britannique (short and round, bald under a brown flat cap, grey walrus moustache, mustard-yellow jumper) leans casually on the railing on the right, holding the teacup with his little finger raised, looking away with perfect innocence, a tiny suitcase at his feet. Medium close-up.",
+            "cast": [
+              "britannique"
+            ],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Londres et Bruxelles se rapprochent",
+          "text": "Quoi : moins de contrôles sur les aliments, marchés du carbone reliés, trois ans de séjour pour 100 000 jeunes de chaque côté.\nPourquoi ça compte : étudier ou travailler outre-Manche deviendra plus simple, d’ici 2030 au plus tard.\nEt maintenant : signature suspendue à un accord sur les frais d’université.",
+          "sources": [
+            {
+              "title": "Toute l’Europe",
+              "url": "https://www.touteleurope.eu/l-ue-dans-le-monde/un-bon-jour-pour-la-grande-bretagne-et-l-europe-dix-ans-apres-le-referendum-sur-le-brexit-londres-et-bruxelles-annoncent-trois-accords-historiques/"
+            },
+            {
+              "title": "Le Petit Journal Londres",
+              "url": "https://lepetitjournal.com/londres/actualites/royaume-uni-union-europeenne-andy-burnham-salue-un-accord-historique-459445"
+            }
+          ]
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Économie",
+          "gag": "bureau",
+          "caption": "Jeudi 19 novembre, le Sénat a voté à l’unanimité la réforme des titres-restaurant : courses alimentaires permises pour de bon dès 2028, avec deux plafonds selon les produits.",
+          "bubbles": [
+            {
+              "who": "caissiere",
+              "text": "Pâtes : plafond bas. Pommes : plafond haut. Raviolis : je saisis le service juridique.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A supermarket checkout counter seen from above. caissiere (tall and bony, curly black hair in a high puff, turquoise tabard, red glasses on a chain) sits at the till and holds a tin can at arm's length with a deeply suspicious frown, the pasta and apples from the basket lined up in two separate rows on the belt, as if sorted by a judge. High angle.",
+            "cast": [
+              "caissiere"
+            ],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le palais du Luxembourg, siège du Sénat",
+          "text": "À Paris, dans le 6e arrondissement : c’est là que les sénateurs ont voté la réforme, jeudi 19 novembre.",
+          "photo": {
+            "commons": "File:Palais du Luxembourg, South View 140116 1.jpg"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Titres-restaurant : les courses, mais avec deux plafonds",
+          "text": "Quoi : plafond haut pour le restaurant, les plats prêts à manger, fruits et légumes ; bas pour le reste.\nPourquoi ça compte : la réforme touche le déjeuner, et désormais les courses, de millions de salariés.\nEt maintenant : Assemblée et Sénat doivent s’accorder d’ici fin décembre.",
+          "sources": [
+            {
+              "title": "Économie Matin",
+              "url": "https://www.economiematin.fr/titres-restaurant-senat-vote-reforme-20-novembre-2026-0133"
+            },
+            {
+              "title": "Entrevue",
+              "url": "https://entrevue.fr/consommation/titres-restaurant-le-senat-valide-les-courses-alimentaires/"
+            }
+          ]
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "Environnement",
+          "gag": "litteral",
+          "caption": "Vendredi 20 novembre, la COP31, conférence de l’ONU sur le climat à Antalya (Turquie), devait finir à 18 h. Depuis 2013, aucune COP n’a fini à l’heure.",
+          "bubbles": [
+            {
+              "who": "deleguee",
+              "text": "Fin prévue vendredi à 18 h. On n’a jamais précisé quel vendredi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A huge empty conference hall at night with long tables and rows of empty chairs, dim and quiet. Far away on the right, deleguee (small and slender, silver-grey pixie cut, orange blazer, badge on a blue lanyard) sits alone at a table behind the cups, hugging one last coffee, eyes half closed but smiling stubbornly. Wide shot.",
+            "cast": [
+              "deleguee"
+            ],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "COP31 : les énergies fossiles disparaissent du texte",
+          "text": "Quoi : le projet n’évoque plus les énergies fossiles ; une douzaine de pays, dont la France, protestent.\nPourquoi ça compte : il mise sur l’électricité, sans dire si elle sera propre.\nEt maintenant : un compromis doit convaincre près de 200 pays.",
+          "due": "2026-11-21",
+          "sources": [
+            {
+              "title": "Boursorama (AFP)",
+              "url": "https://www.boursorama.com/actualite-economique/actualites/climat-la-cop31-entre-en-prolongations-pour-tenter-d-arracher-un-accord-20874ef0ae6eed95d08307fc8fd6ad26"
+            },
+            {
+              "title": "La Libre",
+              "url": "https://www.lalibre.be/planete/2026/11/20/la-cop-31-joue-les-prolongations-RIGC3WEFGNDDFBWA37TMKOHAQQ/"
+            }
+          ]
+        }
+      ],
+      "final": {
+        "text": "En 2022, Valérie Pécresse avait recueilli 2 636 parrainages d’élus, plus de cinq fois le minimum exigé pour se présenter.",
+        "source": "Public Sénat"
+      },
+      "sources": [
+        {
+          "title": "BFMTV (via Yahoo Actualités) — « Je suis candidat » : Dominique de Villepin annonce sa candidature",
+          "url": "https://fr.news.yahoo.com/candidat-dominique-villepin-annonce-candidature-104053161.html"
+        },
+        {
+          "title": "Unidivers — Dominique de Villepin candidat : 258 propositions, des parrainages à réunir",
+          "url": "https://unidivers.fr/dominique-de-villepin-candidature-presidentielle-programme-parrainages/"
+        },
+        {
+          "title": "LCP — Dominique de Villepin annonce avoir dépassé la barre des 300 signatures",
+          "url": "https://www.lcp.fr/actualites/presidentielle-dominique-de-villepin-annonce-avoir-depasse-la-barre-des-300-signatures"
+        },
+        {
+          "title": "Public Sénat — Présidentielle 2027 : combien de candidats sur la ligne de départ ?",
+          "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-une-multitude-de-candidats-mais-combien-seront-ils-reellement-sur-la-ligne-de-depart"
+        },
+        {
+          "title": "Sud Radio — Tout savoir sur les 500 parrainages",
+          "url": "https://www.sudradio.fr/politique/presidentielle-2027-tout-savoir-sur-les-500-parrainages-pour-devenir-candidat"
+        },
+        {
+          "title": "LCP — La course aux 500 signatures d’élus a commencé",
+          "url": "https://lcp.fr/actualites/presidentielle-2027-la-course-aux-500-signatures-d-elus-necessaires-pour-se-presenter-a"
+        },
+        {
+          "title": "Toute l’Europe — Londres et Bruxelles annoncent trois accords « historiques »",
+          "url": "https://www.touteleurope.eu/l-ue-dans-le-monde/un-bon-jour-pour-la-grande-bretagne-et-l-europe-dix-ans-apres-le-referendum-sur-le-brexit-londres-et-bruxelles-annoncent-trois-accords-historiques/"
+        },
+        {
+          "title": "Le Petit Journal Londres — Royaume-Uni et Union européenne : un accord historique",
+          "url": "https://lepetitjournal.com/londres/actualites/royaume-uni-union-europeenne-andy-burnham-salue-un-accord-historique-459445"
+        },
+        {
+          "title": "Économie Matin — Titres-restaurant : le Sénat vote leur usage élargi en 2028, avec deux plafonds",
+          "url": "https://www.economiematin.fr/titres-restaurant-senat-vote-reforme-20-novembre-2026-0133"
+        },
+        {
+          "title": "Entrevue — Titres-restaurant : le Sénat valide les courses alimentaires",
+          "url": "https://entrevue.fr/consommation/titres-restaurant-le-senat-valide-les-courses-alimentaires/"
+        },
+        {
+          "title": "Boursorama (AFP) — La COP31 entre en prolongations",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/climat-la-cop31-entre-en-prolongations-pour-tenter-d-arracher-un-accord-20874ef0ae6eed95d08307fc8fd6ad26"
+        },
+        {
+          "title": "La Libre — La COP31 joue les prolongations",
+          "url": "https://www.lalibre.be/planete/2026/11/20/la-cop-31-joue-les-prolongations-RIGC3WEFGNDDFBWA37TMKOHAQQ/"
+        }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "chiffre",
