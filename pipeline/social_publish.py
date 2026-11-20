@@ -113,8 +113,8 @@ def due_at(post, now):
 def build_input(folder, post, render, channel, due):
     url = f"{BASE}social/instagram/{folder}/"
     alt = (post.get("alt") or post.get("hook") or "Le Sachoir")[:400]
-    if render.get("kind") in ("reel", "sitcom"):
-        assets = [{"video": {"url": url + render["files"][0], "metadata": {"thumbnailOffset": 1500 if render.get("version") == 2 or render.get("kind") == "sitcom" else 500}}}]
+    if render.get("kind") in ("reel", "sitcom", "film"):
+        assets = [{"video": {"url": url + render["files"][0], "metadata": {"thumbnailOffset": 1500 if render.get("version") == 2 or render.get("kind") in ("sitcom", "film") else 500}}}]
         ig_type = "reel"
     else:
         assets = [{"image": {"url": url + f, "metadata": {"altText": alt}}} for f in render["files"]]

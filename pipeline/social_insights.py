@@ -63,7 +63,7 @@ def first_text(post):
     if post.get("hook"):
         return post["hook"]
     ep = post.get("episode") or {}
-    return " ".join(str(ep.get("band", "")).split())
+    return " ".join(str(ep.get("band") or post.get("band") or "").split())
 
 
 def features(folder, post, render):
@@ -74,6 +74,8 @@ def features(folder, post, render):
         "kind": kind,
         # Depuis le 18 novembre 2026 (soir) : trois Reels sitcom par jour, chacun avec son `slot` (origine, cultureg, insolite).
         "slot": post.get("slot") or ("actu" if folder.name.endswith("-actu") else ("sitcom" if kind == "sitcom" else "culture")),
+        # Depuis le 20 novembre 2026 : les Reels changent de style (kind « film ») ; le Stratège compare les styles.
+        "style": post.get("style") or ("scifi-toon" if kind == "sitcom" else None),
         "rubrique": (post.get("story") or {}).get("format"),
         "time": post.get("time"),
         "slides": len(post.get("slides") or []) or None,
@@ -197,14 +199,14 @@ def render_md(rows):
               "|" + "---|" * (len(cols) + 10)]
         for r in sel[-30:]:
             m = r["metrics"]
-            L.append("| " + " | ".join([r["post"], r["slot"], r["kind"], fmt(r["rubrique"]), fmt(r["time"]),
+            L.append("| " + " | ".join([r["post"], r["slot"], r.get("style") or r["kind"], fmt(r["rubrique"]), fmt(r["time"]),
                                          fmt(r["seconds"]) if r["seconds"] else fmt(r["slides"] and f"{r['slides']} diap.")]
                                         + [fmt(m.get(c)) for c in cols]
                                         + [fmt(r.get("shares_per_reach"), True), fmt(r.get("saves_per_reach"), True),
                                            fmt(r.get("outlier")), r["hook"][:70].replace("|", "/")]) + " |")
         L.append("")
         # Moyennes par créneau, format et rubrique (ce qui sert à décider).
-        for key, title in (("slot", "créneau"), ("kind", "format"), ("rubrique", "rubrique"), ("hook_formula", "formule d'accroche"), ("test", "test")):
+        for key, title in (("slot", "créneau"), ("style", "style"), ("kind", "format"), ("rubrique", "rubrique"), ("hook_formula", "formule d'accroche"), ("test", "test")):
             groups = {}
             for r in sel:
                 if r.get(key):

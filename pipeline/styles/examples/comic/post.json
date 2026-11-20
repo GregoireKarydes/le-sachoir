@@ -1,0 +1,111 @@
+{
+ "kind": "film",
+ "style": "comic-history",
+ "slot": "origine",
+ "time": "07:45",
+ "question": "Pourquoi on dit filer à l'anglaise ?",
+ "answer": "Les Anglais disent l'inverse (« French leave ») : partir sans saluer était malpoli, et chaque pays a collé ce défaut à son voisin.",
+ "chain": [
+  "les Anglais disent « French leave »",
+  "partir sans saluer était mal vu",
+  "chaque pays accuse son voisin"
+ ],
+ "band": "POURQUOI « FILER\nÀ L'ANGLAISE » ?",
+ "hook_formula": 16,
+ "caption": "Les Anglais, eux, partent à la française. 🇫🇷🇬🇧\n\nEt ça, maintenant, tu le sais. Quelle expression on décortique demain ?",
+ "first_comment": "Tu connais la version d'un autre pays ? Écris-la en commentaire.",
+ "film": {
+  "end": {
+   "url": "lesachoir.fr"
+  },
+  "cast": [
+   {
+    "name": "FRANCE",
+    "color": "#6E93D6"
+   },
+   {
+    "name": "ANGLETERRE",
+    "color": "#5D6672"
+   }
+  ],
+  "beats": [
+   {
+    "who": "narr",
+    "text": "Pourquoi on dit filer à l'anglaise ?",
+    "set": "manche",
+    "big": "Filer à l'anglaise",
+    "speaker": 0,
+    "emo": "fier",
+    "cold": true,
+    "image": {
+     "file": "editions/2026-11-18/images/origine-01.webp"
+    }
+   },
+   {
+    "who": "perso",
+    "text": "Excuse me ?!",
+    "name": "Angleterre",
+    "set": "manche",
+    "speaker": 1,
+    "emo": "vexe"
+   },
+   {
+    "who": "narr",
+    "text": "On croit que les Anglais partaient sans dire au revoir. Raté.",
+    "set": "manche",
+    "big": "Mal élevés ?",
+    "speaker": 0,
+    "fx": [
+     "cross"
+    ]
+   },
+   {
+    "who": "narr",
+    "text": "Eux disent l'inverse : take French leave. Filer à la française.",
+    "set": "manche",
+    "big": "« French leave »",
+    "speaker": 1,
+    "emo": "fier",
+    "pause": 0.3,
+    "image": {
+     "file": "editions/2026-11-18/images/origine-02.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Au dix-huitième siècle, quitter une fête sans saluer…",
+    "set": "traite",
+    "big": "XVIIIe siècle",
+    "speaker": 0,
+    "emo": "surpris"
+   },
+   {
+    "who": "narr",
+    "text": "c'est très mal vu.",
+    "set": "traite",
+    "big": "Très mal vu",
+    "speaker": 1,
+    "emo": "fache"
+   },
+   {
+    "who": "narr",
+    "text": "Alors chaque pays colle ce défaut à son voisin.",
+    "set": "europe",
+    "big": "La faute du voisin",
+    "speaker": 0,
+    "emo": "fache",
+    "image": {
+     "file": "editions/2026-11-18/images/origine-04.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Voilà pourquoi on file à l'anglaise : c'est toujours la faute du voisin.",
+    "set": "manche",
+    "big": "Toujours le voisin",
+    "speaker": 1,
+    "emo": "content"
+   }
+  ]
+ }
+}

@@ -9,3 +9,7 @@ indexnow.json
 social/instagram/*/*.jpg
 social/instagram/*/*.mp4
 pipeline/sitcom/ep/
+pipeline/styles/ep/
+pipeline/styles/examples/*/stills/
+pipeline/styles/examples/*/reel*
+pipeline/styles/examples/*/render.json
