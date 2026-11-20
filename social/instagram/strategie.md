@@ -16,9 +16,9 @@ Depuis le 19 novembre 2026 (décision de Greg) : trois Reels sitcom Max et le Pr
 
 | créneau | format | heure | tâche |
 |---|---|---|---|
-| origine | Reel sitcom « D'où ça vient ? », 40 à 55 s | 07:45 | Le Sachoir – Reels sitcom |
-| cultureg | Reel sitcom « Pilule de Culture G », 40 à 55 s | 12:30 | Le Sachoir – Reels sitcom |
-| insolite | Reel sitcom « Insolite historique », 40 à 55 s | 21:00 | Le Sachoir – Reels sitcom |
+| origine | Reel sitcom « D'où ça vient ? », 30 à 35 s | 07:45 | Le Sachoir – Reels sitcom |
+| cultureg | Reel sitcom « Pilule de Culture G », 30 à 35 s | 12:30 | Le Sachoir – Reels sitcom |
+| insolite | Reel sitcom « Insolite historique », 30 à 35 s | 21:00 | Le Sachoir – Reels sitcom |
 
 Demande de la légende par créneau (partie C7 de `prompts/INSTAGRAM.md`) : origine → commentaire (« Quelle expression on
 décortique demain ? ») ; cultureg → commentaire (question sur l'expérience du spectateur) ; insolite → envoi
@@ -44,3 +44,4 @@ Aucun.
 - 2026-11-18 (soir) : style d'animation figé sur le Reel du jour (décision de Greg).
 - 2026-11-18 (21 h) : ouverture à froid sur tous les Reels (moteur : scène 0 `world` + `cold`, bandeau dès l'image 1, coupe vers 1,5 s).
 - 2026-11-19 : décision de Greg, chaque Reel s'ouvre par une question à laquelle il répond (modèle Épicurieux), le texte seul suffit à tout comprendre (partie C4, C4b, C5 de `prompts/INSTAGRAM.md`).
+- 2026-11-20 : décision de Greg, les Reels passent à 30 à 35 s (partie C5 de `prompts/INSTAGRAM.md`) et, à terme, à 5 styles animés en rotation (bible `reels-styles.md` v3, partie D de `prompts/INSTAGRAM.md`). Pilote Tablet Sketch d'une semaine sur `cultureg` dès que son moteur existe.

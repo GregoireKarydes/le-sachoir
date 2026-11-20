@@ -20,6 +20,11 @@ vidéos (`pipeline/sitcom_render.py`) et les envoie à Buffer. Les parties A (ca
 sont **en pause** : n'en fais pas tant que Greg ne l'a pas demandé (la grille de viralité de la partie A2 sert encore à
 choisir les sujets).
 
+**Décision de Greg (20 novembre 2026) : les Reels durent 30 à 35 s, et ils passeront progressivement aux 5 styles animés**
+de la bible des Reels (doc projet `reels-styles.md`, version 3 : Tablet Sketch, Scale Zoom, Comic History, 2.5D Pixel,
+Ink Wash). Le premier style, Tablet Sketch, sera piloté une semaine sur le créneau `cultureg` dès que son moteur de rendu
+existera (partie D). D'ici là, les trois créneaux restent en sitcom, **à 30 à 35 s** (partie C5).
+
 **Le but : le buzz.** Un maximum de vues, de partages (envois en message privé), de commentaires et d'enregistrements,
 puis des visites sur lesachoir.fr (lien en bio `lesachoir.fr/insta`, qui ouvre l'histoire liée au post).
 
@@ -477,23 +482,24 @@ Et avec le son, la première phrase me donne-t-elle besoin de la suite ? ». Gar
 formule `hooks.json` dans `hook_formula` (#21 en pleine scène, #22 idée reçue retournée, #23 chiffre, #2 interdit…).
 Tant qu'aucune ne te fait dire « waouh », change d'angle ou de sujet.
 
-## C5. Le script : 40 à 55 s, 12 à 16 répliques, 100 à 150 mots
+## C5. Le script : 30 à 35 s, 8 à 10 répliques courtes, 60 à 75 mots (Greg, 20 novembre 2026)
 **Le test du copain** (obligatoire) : quelqu'un qui ne connaît rien au sujet regarde le Reel une seule fois, sans lire la
 légende. Peut-il réexpliquer la réponse en deux phrases, avec le pourquoi, au dîner du soir ? Si non, réécris.
-Mieux vaut un Reel de 50 s compris qu'un Reel de 30 s que personne ne suit : **on coupe un gag, jamais un maillon.**
+Un Reel court est vu jusqu'au bout et relancé : c'est ce qu'Instagram récompense d'abord. Mais **on coupe un gag ou une
+réaction, jamais un maillon.** Si le sujet ne tient pas en 75 mots avec tous ses maillons, il est trop gros pour un Reel :
+change de sujet ou garde un seul angle.
 
 Le déroulé (calé sur `ig-reel` : accroche, enjeu, corps, réponse, boucle) :
 - Scène 0 `world` avec `"cold": true` (1 réplique, 0 à 4 s) : la question du Reel (C4b).
-- Scène 1 `home` (2 ou 3 répliques, jusqu'à 9 s environ) : Max réagit et pose la question (celle du spectateur). Le Prof donne **l'enjeu** en une phrase
-  qui intrigue sans tout dire (« Oui. Et c'est à cause de lui qu'on dit “l'argent n'a pas d'odeur”. »). Max relance avec
-  la question que se pose le spectateur (« Attends… quel rapport ? »). Le Prof ouvre ensuite le portail tout seul
+- Scène 1 `home` (2 répliques, jusqu'à 7 s environ) : Max réagit et pose la question (celle du spectateur). Le Prof donne **l'enjeu** en une phrase
+  qui intrigue sans tout dire (« Oui. Et c'est à cause de lui qu'on dit “l'argent n'a pas d'odeur”. »). Le Prof ouvre ensuite le portail tout seul
   (automatique, pas de réplique à écrire).
-- Scène 2 `world` (3 à 5 répliques) : les premiers maillons de `chain`. Le Prof explique, Max pose le « pourquoi ? »
+- Scène 2 `world` (2 à 4 répliques) : les premiers maillons de `chain`. Le Prof explique, Max pose le « pourquoi ? »
   dès qu'un trou apparaît. **La réponse à la question de départ arrive avant la moitié du Reel**, ou au plus tard au
   début de la scène 3.
-- Scène 3 `world` facultative (2 à 4 répliques) : le dernier maillon, le détail qui surprend, ou la mise en scène du fait
+- Scène 3 `world` facultative (1 ou 2 répliques, seulement si la scène 2 en a 3 au plus) : le dernier maillon, le détail qui surprend, ou la mise en scène du fait
   (Max qui joue un rôle, la fausse piste prise au pied de la lettre).
-- Scène 4 `home` (2 ou 3 répliques) : Max pose la question de la fin ; le Prof donne la chute après un silence
+- Scène 4 `home` (2 répliques) : Max pose la question de la fin ; le Prof donne la chute après un silence
   (`"pause": 0.8`), un fait vrai et surprenant ; Max conclut d'une réplique courte qui fait écho à la question (le
   Reel boucle). **Avant la chute, le Prof reprend la question de départ et y répond en une phrase complète** (« Voilà
   pourquoi un empereur a taxé le pipi : il rapportait de l'argent, et ça ne sentait rien. ») : c'est le « ça a du sens »
@@ -528,7 +534,12 @@ Relecture avant d'écrire le fichier (dans cet ordre) :
 2. Coche chaque maillon de `chain` : est-il dit en entier ? La réponse (`answer`) est-elle dite avant la moitié ?
 3. Passe le texte parlé dans `python3 social/instagram/ig-skills/skills/ig-human/detect.py <fichier>` (tournures d'IA,
    triades, « ce n'est pas X, c'est Y ») et réécris à la main ce qui est signalé.
-4. Compte les mots : 100 à 150. Au-delà, coupe d'abord les gags et les réactions vides, jamais un maillon.
+4. Compte les mots : 60 à 75. Avec ces voix, portails et carte de fin compris, 75 mots font environ 34 s ; les 140 à
+   165 mots des Reels du 19 et du 20 novembre ont fait 64 à 70 s. Au-delà, coupe d'abord les gags et les réactions vides, jamais un maillon.
+5. **Minute le texte** (skill `ig-reel`) : mets les répliques dans un fichier, une par ligne, et lance
+   `python3 social/instagram/ig-skills/skills/ig-reel/beats.py <fichier> --target 32 --wpm 150` (réglage vérifié sur les rendus du 18 et du 20 novembre :
+   l'estimation tombe à 1 s près). Corrige chaque alerte : la question au-delà de 3 s (8 mots au plus, c'est l'idéal), une
+   réplique de plus de 4 s (coupe-la en deux), pas de mot de la question dans la dernière réplique.
 
 Le reste :
 - Mondes (`set`) : `paris-ancien`, `ville`, `ciel`, `espace`, `mer`, `nature`, `antiquite`, `moyen-age`, `desert`, `neige`,
@@ -547,7 +558,7 @@ Le reste :
 
 ## C6. Le fichier
 Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, avec `"slot"` et `"time"` du tableau C0,
-`board[0]` du tableau C0, et `first_comment` (C7). Exemple complet pour le créneau `insolite` (avec son ouverture à froid) (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répliques, environ 145 mots) :
+`board[0]` du tableau C0, et `first_comment` (C7). Exemple complet pour le créneau `insolite` (avec son ouverture à froid) (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 10 répliques courtes, environ 74 mots) :
 ```json
 {
   "date": "<AAAA-MM-JJ>",
@@ -561,10 +572,9 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
   "question": "Pourquoi on dit que l'argent n'a pas d'odeur ?",
   "answer": "Les Romains lavaient leurs toges avec de l'urine, qui détache ; l'empereur Vespasien a taxé ce commerce et, quand son fils s'en est plaint, lui a fait sentir une pièce de la taxe : elle ne sentait rien.",
   "chain": [
-    "l'urine vieillie donne de l'ammoniaque, qui détache",
-    "les blanchisseurs achètent l'urine pour laver les toges",
-    "Vespasien taxe ce commerce",
-    "Titus trouve ça dégoûtant ; la pièce de la taxe ne sent rien",
+    "l'urine vieillie donne de l'ammoniaque, qui détache les toges",
+    "l'empereur Vespasien taxe ce commerce",
+    "son fils Titus trouve ça dégoûtant ; la pièce de la taxe ne sent rien",
     "d'où « l'argent n'a pas d'odeur » ; à Paris, les urinoirs s'appellent des vespasiennes"
   ],
   "hook_formula": 16,
@@ -603,17 +613,12 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
           {
             "who": "max",
             "emo": "shock",
-            "text": "Attends… c'est vrai, ça ? Mais comment ça peut rapporter ?"
+            "text": "Attends… du pipi qui rapporte ?"
           },
           {
             "who": "prof",
             "emo": "deadpan",
-            "text": "Oui. La réponse tient en trois étapes, et elle explique « l'argent n'a pas d'odeur »."
-          },
-          {
-            "who": "max",
-            "emo": "think",
-            "text": "Du pipi qui rapporte de l'argent ? Explique."
+            "text": "Oui. D'où « l'argent n'a pas d'odeur »."
           }
         ]
       },
@@ -632,17 +637,12 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
           {
             "who": "prof",
             "emo": "explain",
-            "text": "À Rome, les blanchisseurs lavent les toges avec de l'urine."
+            "text": "À Rome, l'urine vieillie sert à détacher les toges."
           },
           {
             "who": "max",
             "emo": "panic",
-            "text": "Pourquoi du pipi ?!"
-          },
-          {
-            "who": "prof",
-            "emo": "explain",
-            "text": "En vieillissant, l'urine donne de l'ammoniaque. Et l'ammoniaque, ça détache très bien."
+            "text": "Avec du pipi ?!"
           },
           {
             "who": "prof",
@@ -650,7 +650,7 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
             "react": {
               "max": "shock"
             },
-            "text": "Ils achètent donc l'urine des toilettes publiques. Et l'empereur Vespasien taxe ce commerce."
+            "text": "Et l'empereur Vespasien taxe ce commerce."
           }
         ]
       },
@@ -668,22 +668,17 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
           {
             "who": "prof",
             "emo": "explain",
-            "text": "Son fils Titus trouve ça dégoûtant. Vespasien lui met sous le nez une pièce de la taxe."
+            "text": "Son fils Titus trouve ça sale."
           },
           {
             "who": "prof",
             "emo": "deadpan",
-            "text": "Et il demande : « Elle sent mauvais ? »"
+            "text": "Vespasien lui fait sentir une pièce de la taxe."
           },
           {
             "who": "max",
             "emo": "think",
-            "text": "Euh… non ?"
-          },
-          {
-            "who": "prof",
-            "emo": "smug",
-            "text": "Voilà. Elle vient du pipi et elle ne sent rien. L'argent n'a pas d'odeur."
+            "text": "Elle sent… rien !"
           }
         ]
       },
@@ -692,24 +687,14 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
         "lines": [
           {
             "who": "prof",
-            "emo": "explain",
-            "text": "Voilà pourquoi un empereur a taxé le pipi : il rapportait de l'argent, et la pièce ne sentait rien."
-          },
-          {
-            "who": "max",
-            "emo": "curious",
-            "text": "Et aujourd'hui, il reste quoi de lui ?"
-          },
-          {
-            "who": "prof",
             "emo": "smug",
             "pause": 0.8,
-            "text": "À Paris, les urinoirs de rue s'appellent des vespasiennes."
+            "text": "Voilà pourquoi il a taxé le pipi : l'argent n'a pas d'odeur."
           },
           {
             "who": "max",
             "emo": "proud",
-            "text": "Il a taxé le pipi… et le pipi porte son nom."
+            "text": "Et le pipi porte son nom : les vespasiennes !"
           }
         ]
       }
@@ -769,3 +754,22 @@ Jamais de lien, jamais d'emoji en premier caractère.
 Répondre aux commentaires dans la première heure fait beaucoup pour la portée, mais **aucune tâche ne commente ni ne
 répond automatiquement** (interdit par Instagram, et par les skills `ig-comment` et `ig-reply`). Greg répond lui-même ;
 la question la plus aimée en commentaire peut devenir le sujet d'un Reel (méthode `ig-reply`).
+
+# D. Les Reels en styles animés (pilote Tablet Sketch, en préparation)
+
+Décision de Greg (20 novembre 2026) : à terme, les Reels tournent sur **5 styles animés**, choisis selon le sujet
+(Tablet Sketch, Scale Zoom, Comic History, 2.5D Pixel, Ink Wash). La règle complète, les univers, les interdits et un
+script modèle par style sont dans la bible des Reels (doc projet `reels-styles.md`, version 3).
+
+**Pas encore actif** : aucun moteur de rendu n'existe pour ces styles. Tant que `pipeline/sketch_render.py` n'est pas
+dans le dépôt, n'écris **que** des Reels sitcom (partie C). Quand il le sera, le pilote démarre :
+- **Une semaine, créneau `cultureg` (12:30) seulement**, en Tablet Sketch ; `origine` et `insolite` restent en sitcom
+  pour comparer. Ajoute `"test": "pilote-sketch"` au `post.json`.
+- Même cerveau que la partie C : la question (8 mots au plus) dans le bandeau dès l'image 1, la réplique de l'objet en
+  1 s, la fausse piste « On croit que… Raté. », la réponse avant 12 s, 2 ou 3 maillons cause → effet, le retournement,
+  puis « Voilà pourquoi… » avec le mot de la question et une coupe sur l'image 1.
+- 30 à 35 s, 65 à 80 mots (une voix seule, sans portails), une phrase par plan, aucun plan de plus de 4 s (`beats.py --target 32`).
+- Pas de carte de fin : `lesachoir.fr` en petit sous le bandeau sur les 3 dernières secondes. « Et ça, maintenant, tu le
+  sais. » et la demande du créneau vont dans la légende.
+- Le Stratège du dimanche compare le pilote aux deux sitcoms de la semaine (complétion, envois, enregistrements) dans
+  « Propositions pour Greg » ; Greg décide de la suite (un style de plus par semaine si le pilote gagne).
