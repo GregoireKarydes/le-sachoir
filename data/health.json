@@ -1,22 +1,10 @@
 {
- "updated_at": "2026-11-20T20:48:53.330005+01:00",
- "today": "2026-11-20",
+ "updated_at": "2026-11-21T00:59:19.000284+01:00",
+ "today": "2026-11-21",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
-  {
-   "date": "2026-11-20",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "origine": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-21",
    "status": "draft",
@@ -75,22 +63,16 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "origine"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-20",
  "stock": {
   "cultureg": {
    "ready": 1,
    "waiting": 5,
    "blocked": 0,
-   "images_left": 38,
-   "focus": "20261116-2043-stethoscope-sans-rougir (9 image(s) à faire)",
+   "images_left": 36,
+   "focus": "20261116-2043-stethoscope-sans-rougir (7 image(s) à faire)",
    "next": "20261115-2050-departements-taille-cheval",
    "next_redo": 0
   },
@@ -133,7 +115,7 @@
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-20",
   "count": 57,
@@ -147,35 +129,35 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 2.95097,
-  "images": 250,
-  "today_usd": 0.28838,
+  "spent_usd": 3.01097,
+  "images": 252,
+  "today_usd": 0.06,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-20T19:04:44.192417+01:00",
-  "age_hours": 1.7,
+  "collected_at": "2026-11-21T00:05:40.214817+01:00",
+  "age_hours": 0.9,
   "feeds": {
    "Google Actualités": 34,
-   "franceinfo": 28,
+   "franceinfo": 26,
    "Le Monde": 16,
-   "Le Figaro": 19,
+   "Le Figaro": 18,
    "Libération": 50,
-   "20 Minutes": 26,
+   "20 Minutes": 28,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 21,
-   "Le Monde Sciences": 5,
-   "Sciences et Avenir": 7,
-   "Le Monde Planète": 20,
-   "Le Monde Pixels": 18,
-   "Le Monde Santé": 2,
+   "BBC World": 26,
+   "Le Monde Sciences": 4,
+   "Sciences et Avenir": 6,
+   "Le Monde Planète": 17,
+   "Le Monde Pixels": 14,
+   "Le Monde Santé": 1,
    "Le Monde Culture": 20,
-   "HugoDécrypte - Actus du jour": 1
+   "HugoDécrypte - Actus du jour": 2
   },
   "empty_feeds": [
    "Les Échos",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T20:48+01:00",
+ "updated_at": "2026-11-21T00:59+01:00",
  "stock": {
   "cultureg": [
    {
@@ -31,7 +31,7 @@
     "minutes": 2,
     "cases": 10,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 2,
     "images_total": 9,
     "failed": 0,
     "redo": 0
@@ -438,96 +438,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-20",
-   "path": "editions/2026-11-20",
-   "status": "published",
-   "newsletter": true,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Cathédrales gothiques : des murs en verre, un plafond en pierre (et ça tient, en général)",
-     "theme": "Architecture",
-     "tagline": "De Saint-Denis à la réouverture de Notre-Dame : l’arc brisé, la croisée d’ogives et l’arc-boutant expliqués sans vertige",
-     "minutes": 6,
-     "cases": 26,
-     "photos": 3,
-     "images_done": 21,
-     "images_total": 21,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "actu",
-     "label": "L’Actu du jour",
-     "kind": "",
-     "title": "Un plafond prolongé, un sénateur qui déménage et une IA en Bourse",
-     "theme": "",
-     "tagline": "Le Parlement prolonge l’encadrement des loyers, Yannick Jadot quitte Les Écologistes, Anthropic signe une entrée en Bourse record et l’Arcom soumet les grands vidéastes au pluralisme.",
-     "minutes": 4,
-     "cases": 13,
-     "photos": 1,
-     "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "15, 30, 40 : le tennis compte comme un moine qui a mal à la main",
-     "theme": "Sports",
-     "tagline": "Un jeu de moines, un poème de prince, trois théories et cinq points disparus",
-     "minutes": 3,
-     "cases": 9,
-     "photos": 1,
-     "images_done": 7,
-     "images_total": 7,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite historique",
-     "kind": "",
-     "title": "Le 14 Juillet a oublié de dire de quelle année il parlait",
-     "theme": "Politique française",
-     "tagline": "La fête nationale célèbre la Bastille. Ou la Fédération. Ou les deux. La loi n’a jamais tranché.",
-     "minutes": 2,
-     "cases": 7,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "origine",
-     "label": "D’où ça vient ?",
-     "kind": "",
-     "title": "Vous « surveillez votre silhouette » ? Vous surveillez un ministre radin de 1759",
-     "theme": "Expression française",
-     "tagline": "Huit mois au ministère, des impôts sur les fenêtres et un nom devenu synonyme de « strict minimum »",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "quiz",
-     "label": "Le Swipe",
-     "kind": "swipe",
-     "title": "Vrai, faux, ou légende de comptoir ?",
-     "questions": 1
-    }
-   ]
-  },
   {
    "date": "2026-11-21",
    "path": "editions/2026-11-21",
