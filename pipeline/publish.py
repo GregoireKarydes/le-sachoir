@@ -275,7 +275,10 @@ def fill_from_stock(now: datetime) -> list[str]:
                 if any(x.get("id") in (kind, ALTERNATE.get(kind)) for x in ed.get("formats", [])):
                     continue  # déjà là, ou sa rubrique jumelle l'est (La Notice / D'où ça vient ?)
                 taken = {stock.pole(x.get("theme")) for x in ed.get("formats", []) if x.get("id") in stock.TYPES}
-                item = stock.pick(kind, taken | {prev.get(kind)})
+                # 20 novembre 2026 : pas plus de 2 BD « passé » le même jour quand la file a du présent ou du futur.
+                passe = sum(stock.epoque(x) == "passe" for x in ed.get("formats", []) if x.get("id") in stock.TYPES)
+                item = stock.pick(kind, taken | {prev.get(kind)},
+                                  {"passe"} if passe >= stock.MAX_PASSE_PAR_EDITION else set())
                 if item:
                     fmt = stock.into_edition(item, d, ed)
                     notes.append(f"{d.name}/{kind} : « {fmt.get('title', '')} » prise dans la file ({item.name})")
