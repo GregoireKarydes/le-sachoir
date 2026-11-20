@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T19:58+01:00",
+ "updated_at": "2026-11-20T20:45+01:00",
  "stock": {
   "cultureg": [
    {
@@ -292,6 +292,23 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 5,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/notice/20261120-2043-arc-en-ciel-accroche-a-votre-tete",
+    "name": "20261120-2043-arc-en-ciel-accroche-a-votre-tete",
+    "added": "20261120-2043",
+    "status": "waiting",
+    "next": false,
+    "title": "L’arc-en-ciel n’a pas de pied : il est accroché à l’ombre de votre tête",
+    "theme": "Sciences physiques",
+    "tagline": "Un trésor introuvable, des milliards de gouttes et un angle de 42 degrés",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
     "failed": 0,
     "redo": 0
    }

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T19:58:29.754133+01:00",
+ "updated_at": "2026-11-20T20:45:49.824059+01:00",
  "today": "2026-11-20",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -105,9 +105,9 @@
   },
   "notice": {
    "ready": 2,
-   "waiting": 3,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 15,
+   "images_left": 21,
    "focus": "20261117-0151-gps-ecoute-l-heure (5 image(s) à faire)",
    "next": "20261115-2047-maree-la-mer-suit-la-lune",
    "next_redo": 0
@@ -136,13 +136,13 @@
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-20",
-  "count": 55,
-  "neurons": 8840,
+  "count": 57,
+  "neurons": 9000,
   "exhausted": false,
   "by_kind": {
    "cover": 4,
    "case": 33,
-   "cast": 18
+   "cast": 20
   }
  },
  "fal": {
@@ -154,7 +154,7 @@
  },
  "rss": {
   "collected_at": "2026-11-20T19:04:44.192417+01:00",
-  "age_hours": 0.9,
+  "age_hours": 1.7,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 28,
