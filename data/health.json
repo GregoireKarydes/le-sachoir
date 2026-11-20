@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T07:00:31.684907+01:00",
+ "updated_at": "2026-11-20T07:02:17.409155+01:00",
  "today": "2026-11-20",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -86,9 +86,9 @@
  "stock": {
   "cultureg": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 31,
+   "images_left": 38,
    "focus": "20261116-2043-stethoscope-sans-rougir (9 image(s) à faire)",
    "next": "20261115-2050-departements-taille-cheval",
    "next_redo": 0
