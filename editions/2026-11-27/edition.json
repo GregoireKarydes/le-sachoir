@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-27",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "plusmoins",
+      "label": "Plus ou moins",
+      "title": "Huit villes, un seul recensement, aucune pitié",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "chain",
+          "q": "Laquelle compte le plus d’habitants ?",
+          "crit": "plus peuplée",
+          "pick": "max",
+          "hint": "On compte la commune seule, pas toute l’agglomération autour.",
+          "items": [
+            { "name": "Lille", "value": 238246, "label": "238 000 habitants", "explain": "Sa métropole dépasse le million, mais la commune seule est quatre fois plus petite que Marseille." },
+            { "name": "Marseille", "value": 886040, "label": "886 000 habitants", "explain": "Deuxième ville de France, et de loin : une commune immense, plus de deux fois Paris en surface." },
+            { "name": "Nice", "value": 357737, "label": "358 000 habitants", "explain": "Cinquième ville de France, devant Nantes." },
+            { "name": "Brest", "value": 142346, "label": "142 000 habitants", "explain": "Grand port militaire, mais deux fois et demie moins peuplée que Nice." },
+            { "name": "Montpellier", "value": 310240, "label": "310 000 habitants", "explain": "Elle a dépassé Strasbourg et Bordeaux : septième ville de France." },
+            { "name": "Le Havre", "value": 166687, "label": "167 000 habitants", "explain": "Premier port à conteneurs de France, mais commune moyenne." },
+            { "name": "Toulouse", "value": 514819, "label": "515 000 habitants", "explain": "Quatrième ville de France, au coude-à-coude avec Lyon." },
+            { "name": "Reims", "value": 177674, "label": "178 000 habitants", "explain": "Plus peuplée que Le Havre, Saint-Étienne ou Dijon." }
+          ],
+          "explain": "Populations légales de l’Insee (millésime 2021, en vigueur depuis 2024). Le piège : la taille d’une agglomération ne dit rien de celle de la commune au centre.",
+          "source": { "title": "Villes à vivre — Classement des grandes villes par population (Insee)", "url": "https://www.villesavivre.fr/classements/population/grandes-villes/" }
+        }
+      ],
+      "sources": [
+        { "title": "Villes à vivre — Classement des grandes villes par population (Insee)", "url": "https://www.villesavivre.fr/classements/population/grandes-villes/" }
+      ]
+    }
+  ]
+}
