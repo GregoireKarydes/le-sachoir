@@ -269,7 +269,13 @@
           "title": "Le siège d'Orléans, peint au XVe siècle",
           "text": "Une miniature d'un manuscrit enluminé de la fin du XVe siècle, quelques décennies après les faits : la ville, ses remparts et les assiégeants.",
           "photo": {
-            "commons": "File:Siege orleans.jpg"
+            "commons": "File:Siege orleans.jpg",
+            "credit": "AnonymousUnknown author",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Siege_orleans.jpg",
+            "file": "images/photo-10-siege-orleans-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -301,7 +307,13 @@
           "title": "Le seul dessin fait de son vivant",
           "text": "Le 10 mai 1429, en apprenant la victoire d'Orléans, un greffier du parlement de Paris, Clément de Fauquembergue, dessine Jeanne en marge de son registre. Il ne l'a jamais vue.",
           "photo": {
-            "commons": "File:Jeanne d'Arc-Fauquembergue.jpg"
+            "commons": "File:Jeanne d'Arc-Fauquembergue.jpg",
+            "credit": "Clément de Fauquembergue, Registre du Parlement de Paris",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Jeanne_d%27Arc-Fauquembergue.jpg",
+            "file": "images/photo-12-jeanne-d-arc-fauquembergue-jpg.webp",
+            "status": "done"
           }
         },
         {

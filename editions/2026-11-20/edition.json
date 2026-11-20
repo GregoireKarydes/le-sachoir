@@ -715,7 +715,7 @@
           "role": "a landlord who must respect the rent cap; stingy and always looking for a loophole, rubs his hands, sly little grin",
           "file": "cast/actu-proprietaire.png",
           "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (4bfd6379-6b59-4f53-8120-fae57adf0ab4)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (b5910b26-dd94-4750-8441-81e2db69935d)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         },
         {
           "id": "jadot",
@@ -774,9 +774,8 @@
               "proprietaire"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (492e4dec-ea47-4d36-bb3a-131334d1c3c5)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2
           }
         },
         {
