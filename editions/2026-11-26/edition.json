@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-26",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "dico",
+      "label": "Le Dico menteur",
+      "title": "Quatre mots savants, douze baratins",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "choice",
+          "q": "Un galimatias, c’est…",
+          "hint": "On en entend parfois dans les notices de montage.",
+          "choices": [
+            "Un discours embrouillé, auquel on ne comprend rien",
+            "Un gâteau breton aux pommes et au sarrasin",
+            "Un coq de combat de race gauloise",
+            "Un défilé de carnaval à Nice"
+          ],
+          "answer": 0,
+          "explain": "Un charabia confus. Une vieille anecdote, sans doute légendaire, parle d’un avocat qui, plaidant en latin pour le coq (gallus) d’un certain Mathias, s’emmêla jusqu’à dire « galli Mathias ».",
+          "source": { "title": "La culture générale — Galimatias : définition et origine", "url": "https://www.laculturegenerale.com/galimatias-definition-signification-exemples/" }
+        },
+        {
+          "type": "choice",
+          "q": "Un pédiluve, c’est…",
+          "hint": "Vous y avez trempé les orteils avant de nager.",
+          "choices": [
+            "Un vélo de randonnée à trois roues",
+            "Un petit bassin où l’on se lave les pieds",
+            "Une crise de goutte au gros orteil",
+            "Un cireur de chaussures ambulant"
+          ],
+          "answer": 1,
+          "explain": "Le petit bain d’eau traitée qu’on traverse avant la piscine. Du latin pes, pedis, « pied », et luere, « laver » : un lave-pieds qui a fait du latin.",
+          "source": { "title": "Office québécois de la langue française — Pédiluve", "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17578856/pediluve" }
+        },
+        {
+          "type": "choice",
+          "q": "Une gabegie, c’est…",
+          "hint": "La Cour des comptes adore ce mot.",
+          "choices": [
+            "Une cage pour oiseaux chanteurs",
+            "Une petite fête de village",
+            "Un gâchis dû au désordre et à la mauvaise gestion",
+            "Un impôt sur le sel"
+          ],
+          "answer": 2,
+          "explain": "Un gaspillage par désordre. Le mot viendrait du vieux verbe « gaber », se moquer, tromper : à l’origine, la gabegie était une ruse. Le piège « impôt sur le sel », c’est la gabelle.",
+          "source": { "title": "La culture générale — Gabegie : définition et étymologie", "url": "https://www.laculturegenerale.com/gabegie-definition-synonymes-etymologie-exemples/" }
+        },
+        {
+          "type": "choice",
+          "q": "Une palinodie, c’est…",
+          "hint": "En grec, palin veut dire « en arrière ».",
+          "choices": [
+            "Une chanson à boire chantée à reculons",
+            "Une maladie qui fait pâlir",
+            "Un pas de danse sur la pointe des pieds",
+            "Un brusque retournement d’opinion"
+          ],
+          "answer": 3,
+          "explain": "Changer d’avis du tout au tout. Du grec palin, « en arrière », et ôdê, « chant » : un poème où l’on retire ce qu’on avait dit. Le poète Stésichore en aurait écrit une pour se faire pardonner d’Hélène.",
+          "source": { "title": "La culture générale — Palinodie : définition et étymologie", "url": "https://www.laculturegenerale.com/palinodie-definition-synonymes-etymologie-exemples/" }
+        }
+      ],
+      "sources": [
+        { "title": "La culture générale — Galimatias", "url": "https://www.laculturegenerale.com/galimatias-definition-signification-exemples/" },
+        { "title": "Office québécois de la langue française — Pédiluve", "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17578856/pediluve" },
+        { "title": "La culture générale — Gabegie", "url": "https://www.laculturegenerale.com/gabegie-definition-synonymes-etymologie-exemples/" },
+        { "title": "La culture générale — Palinodie", "url": "https://www.laculturegenerale.com/palinodie-definition-synonymes-etymologie-exemples/" }
+      ]
+    }
+  ]
+}
