@@ -44,7 +44,15 @@ VOICES = {   # voix brutes, sans traitement (choix de Greg, 17 novembre 2026)
     "narr": {"voice": "fr-FR-RemyMultilingualNeural", "rate": 0},
     "perso": {"voice": "fr-CH-FabriceNeural", "rate": 0},
 }
-SLOW = {"ink-wash": -8}   # le lavis se raconte plus lentement (immobilité avant l'action)
+SLOW = {"ink-wash": -8}
+# La fin de chaque vidéo (Greg, 20 novembre 2026 : « il manque à la fin un petit truc pour dire aux gens de nous rejoindre
+# sur le site ») : un écran « lesachoir.fr » et une phrase dite par le narrateur, après la dernière réplique.
+CTA_LINES = [
+    "Une BD comme ça chaque matin ? C'est gratuit, sur lesachoir.fr.",
+    "D'autres réponses en BD, chaque matin, sur lesachoir.fr.",
+    "La suite en BD, chaque matin, sur lesachoir.fr.",
+]
+CTA_HOLD = .9   # l'écran de fin reste encore un peu après la phrase   # le lavis se raconte plus lentement (immobilité avant l'action)
 FX = {"cross", "arrow", "count", "foule", "slap", "zoom"}
 
 
@@ -103,6 +111,23 @@ def voices(beats, tmp, style):
     return out, used
 
 
+def cta_text(post):
+    """La phrase de fin : `film.cta` si le post en donne une, sinon une des phrases de CTA_LINES (selon la date et le créneau)."""
+    F = post.get("film") or {}
+    if F.get("cta"):
+        return F["cta"]
+    import hashlib
+    k = int(hashlib.sha1(f"{post.get('date', '')}{post.get('slot', '')}".encode()).hexdigest(), 16)
+    return CTA_LINES[k % len(CTA_LINES)]
+
+
+def cta_voice(post, tmp, style):
+    """La voix de la phrase de fin (le narrateur)."""
+    beat = {"who": "narr", "text": cta_text(post)}
+    a, _ = voices([beat], tmp, style)
+    return a[0]
+
+
 def envelope(a):
     hop = SR // FPS
     n = int(np.ceil(len(a) / hop))
@@ -130,16 +155,24 @@ def build_timeline(post, audio):
                 nb[k] = b[k]
         out.append(nb)
         T = t1
+    # la fin : l'écran « lesachoir.fr » et la phrase dite, après la dernière réplique
+    cta = None
+    if "cta" in audio:
+        d = len(audio["cta"]) / SR
+        cta = {"t0": round(T, 3), "t": round(T + .25, 3), "dur": round(d, 3), "text": cta_text(post)}
+        T = round(T + .25 + d + CTA_HOLD, 3)
+        cta["t1"] = T
     # l'ampoule cachée : sur l'avant-dernier plan (ou celui que le post désigne)
     bi = F.get("bulb_beat", max(0, len(out) - 2))
     out[min(bi, len(out) - 1)]["bulb"] = True
     dur = round(T, 3)
     for k, l in enumerate(lines):
-        nxt = lines[k + 1]["t"] - .02 if k + 1 < len(lines) else dur
+        nxt = lines[k + 1]["t"] - .02 if k + 1 < len(lines) else (cta["t0"] if cta else dur)
         l["sub_t1"] = round(min(max(l["t"] + l["dur"] + .25, l["t"] + .8), nxt), 3)
     band_t1 = round(min(max(2.4, out[0]["t1"] + (out[1]["t1"] - out[1]["t0"] if len(out) > 1 else 0)), 6.0), 3)
-    return {"style": style, "dur": dur, "fps": FPS, "beats": out, "lines": lines, "end_t0": dur + 99,
-            "band": {"text": post.get("band", ""), "t0": 0.0, "t1": band_t1, "again": round(max(band_t1, dur - 3.0), 3),
+    again = None if cta else round(max(band_t1, dur - 3.0), 3)
+    return {"style": style, "dur": dur, "fps": FPS, "beats": out, "lines": lines, "end_t0": dur + 99, "cta": cta,
+            "band": {"text": post.get("band", ""), "t0": 0.0, "t1": band_t1, "again": again,
                      "url": (F.get("end") or {}).get("url", "lesachoir.fr")},
             "end": F.get("end") or {}, "cast": F.get("cast") or [], "hero": F.get("hero"), "scene": bool(F.get("scene"))}
 
@@ -254,6 +287,8 @@ def mix(tl, audio):
     vo = np.zeros((n, 2))
     for l in tl["lines"]:
         place(vo, audio[l["beat"]], l["t"], 1.0, .12 if l["who"] == "perso" else 0)
+    if tl.get("cta") and "cta" in audio:
+        place(vo, audio["cta"], tl["cta"]["t"], 1.0, 0)
     from scipy.ndimage import maximum_filter1d, uniform_filter1d
     act = (np.abs(vo).max(1) > .004).astype(float)
     duck = 1 - .55 * np.clip(uniform_filter1d(maximum_filter1d(act, int(.25 * SR)), int(.2 * SR)), 0, 1)
@@ -268,6 +303,7 @@ def mix(tl, audio):
 def _prepare(post, folder, ep_dir, tmp):
     """voix, minutage, images, page : renvoie (tl, audio, engines). Avec `film.scene`, copie le scene.js de la vidéo."""
     audio, engines = voices(post["film"]["beats"], tmp, post["style"])
+    audio["cta"] = cta_voice(post, tmp, post["style"])
     tl = build_timeline(post, audio)
     imgs = fetch_images(post, ep_dir)
     for i, name in imgs.items():

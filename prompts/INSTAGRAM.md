@@ -846,8 +846,11 @@ vide, un seul rouge (le sceau-ampoule du Sachoir). Narration un peu plus lente. 
 Humour plus mesuré. Jamais d'autre couleur, jamais de personnage ni de musique d'une œuvre existante.
 
 Partout, sans rien écrire : le bandeau jaune (`band`) dès l'image 1, les sous-titres mot à mot, l'ampoule du Sachoir
-cachée une fois (avant-dernier plan ; `film.bulb_beat` pour en choisir un autre), **pas de carte de fin** :
-`lesachoir.fr` en petit sous le bandeau, qui revient sur les 3 dernières secondes, et la vidéo repart sur l'image 1.
+cachée une fois (avant-dernier plan ; `film.bulb_beat` pour en choisir un autre), et **la fin « rejoins-nous »**
+(Greg, 20 novembre 2026) : après ta dernière réplique, le moteur ajoute tout seul un écran « Rejoins-nous sur
+lesachoir.fr » et une phrase dite par le narrateur (« Une BD comme ça chaque matin ? C'est gratuit, sur
+lesachoir.fr. »). Ne l'écris pas dans `beats` ; pour la personnaliser, mets `film.cta` (12 mots au plus, finit par
+« lesachoir.fr. »).
 
 ## D2. Le script : 30 à 35 s, 8 à 11 plans, 70 à 85 mots (bible v3)
 Un plan = une phrase = une idée = une image ; **aucun plan de plus de 4 s** (13 mots au plus ; une phrase trop longue se
@@ -862,6 +865,24 @@ coupe en deux plans avec « … »). Le déroulé en 6 temps :
    quotidien, puis « Le plus fou ? » ou « Pire : » et le détail inattendu, vrai et sourcé.
 6. **La boucle** (dernier plan) : « Voilà pourquoi… » qui reprend un mot de la question et y répond en une phrase.
    **« Et ça, maintenant, tu le sais. » ne se dit pas** : elle va dans la légende, avant la demande du créneau (C7).
+
+### D2b. Bien écrit, compris, et on répond vraiment à la question (Greg, 20 novembre 2026)
+Le spectateur doit pouvoir répéter la réponse à quelqu'un après une seule vue. Règles :
+1. **La question** est celle que tout le monde s'est déjà posée, en mots simples, sans jargon ni tournure savante.
+2. **La réponse est une phrase complète et autonome**, dite avant 12 s, qui **reprend les mots de la question** :
+   « L'éclair arrive avant le tonnerre parce que la lumière va un million de fois plus vite que le son. » — pas
+   « Tout est une question de vitesse. » (on ne sait pas de quoi on parle).
+3. **Chaque phrase se comprend seule** : un sujet, un verbe, un complément. Pas de « il », « ça », « elle » en début de
+   plan si on ne sait pas qui c'est ; on répète le nom. Une phrase coupée en deux plans n'est permise que si chaque
+   moitié a un sens.
+4. **Le pourquoi est enchaîné** : « parce que », « donc », « alors », dans l'ordre des causes. Aucun maillon sauté.
+5. **Un chiffre par phrase, avec une comparaison du quotidien** (« 6 mètres : la largeur d'une route »).
+6. **Les cartons à l'écran disent l'idée du plan** en 6 mots au plus, lisibles sans le son (« Large comme une route »),
+   jamais un mot isolé qu'on ne comprend pas hors contexte.
+7. **Pas de remplissage** : ni « C'est fou », ni « Accroche-toi », ni « Tu ne vas pas le croire ».
+8. **Le test avant de pousser** : écris dans `/tmp` en 2 phrases ce qu'un spectateur a appris. Si tu n'y arrives pas,
+   ou s'il faut avoir vu l'image pour comprendre, réécris le script. Relis à voix haute : aucun mot qu'un adolescent
+   de 14 ans ne comprendrait sans explication.
 
 Écrire pour qu'on comprenne (comme C5) : le narrateur parle en phrases complètes et courtes ; chaque nom a son rôle à
 la première mention, chaque mot rare est traduit ; des nombres plutôt que des adjectifs ; une seule idée par Reel ; on
@@ -954,7 +975,11 @@ Règles (le contrôle automatique et la relecture du dimanche les vérifient) :
 7. **Les zones réservées** (1080 × 1920) : le bandeau jaune de la question (y = 230 à 450) pendant les ~3 premières
    et les 3 dernières secondes ; les sous-titres mot à mot (y ≈ 1290 à 1480) tout le temps ; les 230 px de droite et
    tout ce qui est sous y = 1480 sont couverts par Instagram. Le sujet et les cartons vivent entre y = 460 et 1280.
-8. **La dernière image** ressemble à la première (même cadre ou même sujet) : la vidéo repart en boucle sans heurt.
+8. **La dernière image de ta scène** ressemble à la première (même cadre ou même sujet). Ensuite le moteur pose
+   l'écran « Rejoins-nous sur lesachoir.fr » par-dessus ta dernière image (D1) : ta caméra peut continuer à bouger
+   doucement pendant ce temps (`t` dépasse `B(-1).t1`). `export function cta(t, theme)` seulement pour une fin
+   dessinée dans ton style, qui garde le texte « Rejoins-nous sur lesachoir.fr » bien lisible.
+9. **Le texte à l'écran suit D2b** : il doit être compris sans le son.
 
 ## E2. Le fichier `scene.js`
 Un module JavaScript, dans le dossier du post. Au rendu il est copié dans `pipeline/styles/ep/scene.js` : importe donc

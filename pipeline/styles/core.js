@@ -150,6 +150,28 @@ export function bulb(x, y, s, o = {}) {
   g.restore();
 }
 
+// ---- the closing call (Greg, 20 November 2026): every video ends inviting people to join on the website ----
+// Drawn over the last frame of the video, in the style's colours; the narrator says the line (TL.cta.text).
+export function cta(t, th) {
+  const C = TL.cta; if (!C || t < C.t0) return;
+  const lt = t - C.t0, k = clamp(lt / .3), e = 1 - Math.pow(1 - k, 3);
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  g.globalAlpha = .94 * e; g.fillStyle = th.bg; g.fillRect(0, 0, W, H); g.globalAlpha = 1;
+  const s = .85 + .15 * e + (lt < .5 ? Math.sin(lt * 18) * .02 * (1 - lt * 2) : 0);
+  g.save(); g.translate(W / 2, 700); g.scale(s, s);
+  bulb(0, -250, 1.9, { ink: th.ink, fill: YELLOW, base: th.ink });
+  g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.font = th.small; g.fillStyle = th.ink; g.fillText('Rejoins-nous sur', 0, -40);
+  g.rotate(-.025); g.fillStyle = INK; g.fillRect(-370 + 10, 30 + 10, 740, 130); g.fillStyle = YELLOW; g.fillRect(-370, 30, 740, 130);
+  g.fillStyle = INK; g.font = '800 92px "Baloo 2"'; g.fillText('lesachoir.fr', 0, 98);
+  g.restore();
+  if (lt > .35) {
+    const u = clamp((lt - .35) / .3); g.globalAlpha = u; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = th.ink; g.font = th.small;
+    const lines = (C.lines || ['Une BD qui explique', 'chaque matin. Gratuit.']);
+    lines.forEach((L, i) => g.fillText(L, W / 2, 1000 + i * 66 + (1 - u) * 20)); g.globalAlpha = 1;
+  }
+}
+
 // ---- end card (logo + lesachoir.fr) in the style's own colours and fonts ----
 export function endCard(t, th) {
   const lt = t - TL.end_t0, k = clamp(lt / .25);

@@ -178,3 +178,21 @@ def test_scene_controlee_ou_refusee(tmp_path):
         assert ok is want, (name, probs)
         assert (w / "scene-check.jpg").exists()
     shutil.rmtree(ep, ignore_errors=True)
+
+
+def test_fin_rejoins_nous_sur_le_site():
+    """Greg, 20 novembre 2026 : chaque vidéo finit par un écran et une phrase qui invitent à rejoindre lesachoir.fr."""
+    np = pytest.importorskip("numpy")
+    import film_render as F
+    post = next(p for p in examples() if p["style"] == "ink-wash")
+    audio = {i: np.zeros(int(2.4 * F.SR)) for i in range(len(post["film"]["beats"]))}
+    audio["cta"] = np.zeros(int(2.0 * F.SR))
+    tl = F.build_timeline(post, audio)
+    C = tl["cta"]
+    assert C and C["t0"] == pytest.approx(tl["beats"][-1]["t1"]) and C["t1"] == tl["dur"]
+    assert "lesachoir.fr" in C["text"] and tl["band"]["again"] is None
+    assert all(l["sub_t1"] <= C["t0"] + 1e-6 for l in tl["lines"])      # pas de sous-titre sous l'écran de fin
+    assert F.cta_text({**post, "film": {**post["film"], "cta": "Viens sur lesachoir.fr."}}) == "Viens sur lesachoir.fr."
+    core = (ROOT / "pipeline" / "styles" / "core.js").read_text()
+    assert "export function cta" in core and "lesachoir.fr" in core
+    assert "cta" in (ROOT / "pipeline" / "styles" / "main.js").read_text()
