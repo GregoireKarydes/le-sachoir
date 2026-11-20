@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:56:35.815806+01:00",
+ "updated_at": "2026-11-20T06:57:33.876638+01:00",
  "today": "2026-11-20",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -10,7 +10,7 @@
    "status": "published",
    "formats": {
     "dossier": "prêt",
-    "actu": "1 image(s) à faire",
+    "actu": "prêt",
     "cultureg": "prêt",
     "insolite": "prêt",
     "origine": "prêt",
@@ -63,6 +63,7 @@
  "today_published": true,
  "today_stories": [
   "dossier",
+  "actu",
   "cultureg",
   "insolite",
   "origine"
@@ -120,13 +121,13 @@
  "quiz_days_ahead": 5,
  "quota": {
   "day": "2026-11-20",
-  "count": 45,
-  "neurons": 7560,
+  "count": 47,
+  "neurons": 7840,
   "exhausted": false,
   "by_kind": {
    "cover": 3,
-   "case": 30,
-   "cast": 12
+   "case": 31,
+   "cast": 13
   }
  },
  "fal": {
@@ -138,7 +139,7 @@
  },
  "rss": {
   "collected_at": "2026-11-20T00:35:38.308137+01:00",
-  "age_hours": 6.3,
+  "age_hours": 6.4,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 28,

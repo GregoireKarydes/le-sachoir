@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:56:35.815806+01:00",
+ "updated_at": "2026-11-20T06:57:33.876638+01:00",
  "editions": [
   {
    "date": "2026-11-20",
@@ -16,6 +16,18 @@
      "tagline": "De Saint-Denis à la réouverture de Notre-Dame : l’arc brisé, la croisée d’ogives et l’arc-boutant expliqués sans vertige",
      "cases": 26,
      "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un plafond prolongé, un sénateur qui déménage et une IA en Bourse",
+     "kind": "",
+     "url": "histoires/2026-11-20-un-plafond-prolonge-un-senateur-qui-demenage-et-une-ia-en-bourse/",
+     "theme": "",
+     "minutes": 4,
+     "tagline": "Le Parlement prolonge l’encadrement des loyers, Yannick Jadot quitte Les Écologistes, Anthropic signe une entrée en Bourse record et l’Arcom soumet les grands vidéastes au pluralisme.",
+     "cases": 13,
+     "cover": "images/actu-cover.webp"
     },
     {
      "id": "cultureg",
