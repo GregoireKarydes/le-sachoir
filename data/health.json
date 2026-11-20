@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T06:55:34.694739+01:00",
+ "updated_at": "2026-11-20T06:56:35.815806+01:00",
  "today": "2026-11-20",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -107,16 +107,16 @@
   },
   "dossier": {
    "ready": 0,
-   "waiting": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 36,
+   "images_left": 55,
    "focus": "20261117-1925-code-civil (13 image(s) à faire)",
    "next": null,
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 0,
- "days_ahead_written": 2,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 5,
  "quota": {
   "day": "2026-11-20",
