@@ -1,0 +1,162 @@
+{
+  "added": "20261120-0656",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)",
+      "tagline": "Un statisticien qui compte les baptêmes, une fermière qui compte ses sillons, et la France qui ralentit en premier",
+      "teaser": "Au XVIIIe siècle, les paysans français inventent une idée que personne en Europe n’a encore eue. Les curés sont furieux, les statisticiens perplexes.",
+      "minutes": 1,
+      "theme": "Démographie",
+      "art": {
+        "subject": "how French peasants, from the 1760s, became the first people in Europe to limit the number of their children, mainly to avoid cutting their farmland into tiny pieces among many heirs, as noticed by the statistician Moheau in 1778",
+        "setting": "a French farming village in the 1770s: a stone farmhouse with a wooden table, a field divided into strips by low hedges, the parish church door",
+        "era": "rural France in the 1770s, reign of Louis XVI",
+        "props": {
+          "ledger": "a huge thick leather-bound register full of blank columns",
+          "field": "a small green field cut into many thin strips by little rows of stones"
+        }
+      },
+      "cast": [
+        {
+          "id": "moheau",
+          "name": "Jean-Baptiste Moheau",
+          "look": "Jean-Baptiste Moheau, a small round French statistician of 1778 in his thirties, thick round spectacles, short powdered white wig with side rolls, light skin, a pistachio-green coat as main colour, cream stockings, always hugging the ledger",
+          "file": "cast/insolite-moheau.png",
+          "status": "pending",
+          "role": "the royal statistician who counts births in parish registers; zealous and anxious, panics when the numbers do not match his tables, pushes his glasses up whenever he is shocked"
+        },
+        {
+          "id": "fermiere",
+          "name": "La fermière",
+          "look": "a tall broad-shouldered French peasant woman in her thirties, strong arms, chestnut-brown hair under a white linen bonnet, tanned skin, a cornflower-blue bodice and skirt as main colour, white apron, a long wooden measuring stick in hand",
+          "file": "cast/insolite-fermiere.png",
+          "status": "pending",
+          "role": "a peasant who owns her land; shrewd and tight-fisted, calculates everything in fields and furrows, never lets go of her measuring stick, answers with a smug half-smile"
+        }
+      ],
+      "cover": {
+        "prompt": "a French village in the 1770s, a small field cut into many thin strips behind a stone farmhouse. Moheau (small, round, thick spectacles, white wig, pistachio-green coat) on the left hugging the ledger, staring in alarm at an almost empty wooden cradle; the fermiere (tall, broad, white bonnet, cornflower-blue dress) on the right leaning on her measuring stick with a smug half-smile, two children peeking behind her skirt. medium wide shot",
+        "cast": ["moheau", "fermiere"],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1778",
+          "caption": "Pourquoi les Français ont-ils fait moins d’enfants avant tous leurs voisins ? En 1778, Moheau compte les baptêmes des villages.",
+          "bubbles": [
+            { "who": "moheau", "text": "Il manque des baptêmes. Mes tableaux ne se trompent jamais. C’est la France qui se trompe.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "at the door of a village church. Moheau (small, round, thick spectacles, short white wig, pistachio-green coat) on the left sitting on the stone steps with the ledger open on his knees, running his finger down a column, pushing his glasses up with a horrified face; the church door half-open behind him. wide shot",
+            "cast": ["moheau"],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Années 1760",
+          "caption": "Depuis les années 1760, les paysans français espacent les naissances : 18 à 30 mois entre deux bébés.",
+          "bubbles": [
+            { "who": "moheau", "text": "Madame, votre village a trois bébés de retard.", "side": "l" },
+            { "who": "fermiere", "text": "De retard ? Moi, j’appelle ça de l’avance.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "inside a stone farmhouse with a rough wooden table. Moheau (small, round, thick spectacles, white wig, pistachio-green coat) in the foreground on the left, seen in profile, holding up the open ledger like an accusation; the fermiere (tall, broad, white bonnet, cornflower-blue dress) on the right, calmly shelling peas into a bowl at the table without looking up, only two small children sitting at a very long empty bench. medium shot",
+            "cast": ["moheau", "fermiere"],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment on fait moins d’enfants en 1770",
+          "steps": [
+            "On se marie tard : vers 26 ans pour les filles, 30 ans pour les garçons",
+            "On allaite plus longtemps chaque bébé, ce qui espace les grossesses",
+            "Les couples évitent aussi des grossesses par eux-mêmes, ce que les curés condamnent",
+            "Résultat : moins d’enfants par famille, génération après génération"
+          ],
+          "joke": "Aucune pilule, aucune loi : juste des paysans très organisés."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Pourquoi ?",
+          "caption": "Pourquoi ? Beaucoup de paysans possèdent leur terre, partagée entre les enfants à leur mort : plus d’enfants, plus petits morceaux.",
+          "bubbles": [
+            { "who": "fermiere", "text": "Dix enfants, dix bouts de champ. De quoi garer une chèvre chacun.", "side": "r" },
+            { "who": "moheau", "text": "Vous calculez mieux que le roi.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "outdoors at the edge of the field, seen from above. The fermiere (tall, broad, white bonnet, cornflower-blue dress) on the right pointing her measuring stick at one ridiculously thin strip of the field, barely wide enough for the single grumpy goat squeezed into it; Moheau (small, round, spectacles, white wig, pistachio-green coat) on the left on tiptoe peering at the strip, mouth open. high angle",
+            "cast": ["fermiere", "moheau"],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La grande famille, version tableau",
+          "text": "Jean-Baptiste Greuze peint en 1755 un père de famille lisant la Bible à une maisonnée nombreuse. C’est l’image rêvée de la famille paysanne, au moment même où elle commence à rétrécir.",
+          "photo": { "commons": "File:Lecture de la Bible (Greuze, Louvre) (cropped).jpg" }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "1789",
+          "caption": "En 1789, la France reste le pays le plus peuplé d’Europe : 28 millions d’habitants, trois fois l’Angleterre. Mais elle ralentit.",
+          "bubbles": [],
+          "image": {
+            "prompt": "close on Moheau (small, round, thick spectacles, short white wig, pistachio-green coat) alone, the ledger slipping out of his arms, his wig tilted sideways, glasses fogged, staring at the viewer in silent shock, a light-blue sweat drop on his forehead. close-up",
+            "cast": ["moheau"],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "En résumé : pour ne pas émietter leurs terres, les paysans français ont limité les naissances avant tous les autres Européens.",
+          "bubbles": [
+            { "who": "moheau", "text": "Trois bébés de retard. Je corrige : la France a de l’avance.", "side": "l" },
+            { "who": "fermiere", "text": "Je vous l’avais dit.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "back in the farmhouse, low angle from the floor. Moheau (small, round, spectacles, white wig, pistachio-green coat) in the foreground on the left, sitting on the bench, crossing out a line in the ledger with a long quill, resigned; the fermiere (tall, broad, white bonnet, cornflower-blue dress) in the background on the right, arms crossed over her measuring stick, triumphant smug smile. low angle",
+            "cast": ["moheau", "fermiere"],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Chez les ducs et pairs, la noblesse la plus haute, on était déjà passé de 6 enfants par famille vers 1650 à 2 vers 1750.",
+        "source": "Hérodote.net — La France invente la limitation des naissances"
+      },
+      "story": "Pendant des siècles, partout en Europe, les familles ont autant d’enfants que la nature le permet, et beaucoup meurent jeunes. La France est la première à rompre avec cette règle. Dès le XVIIe siècle, la très haute noblesse fait moins d’enfants : chez les ducs et pairs, on passe d’environ 6 enfants par famille vers 1650 à 2 vers 1750. Puis, à partir des années 1760, les paysans s’y mettent à leur tour.\nComment ? En se mariant tard, vers 26 ans pour les filles et 30 ans pour les garçons à la veille de la Révolution ; en allaitant plus longtemps, ce qui espace les naissances de dix-huit à trente mois ; et en évitant certaines grossesses. En 1778, le statisticien Jean-Baptiste Moheau, qui étudie les registres de baptêmes, s’en inquiète et dénonce ces « funestes secrets, inconnus à tout animal autre que l’homme ».\nPourquoi ? Beaucoup de paysans français possèdent leur ferme. À leur mort, elle est partagée entre les héritiers : avec beaucoup d’enfants, chacun ne reçoit qu’un lopin trop petit pour vivre. Limiter les naissances, c’est garder la terre familiale entière.\nEn 1789, la France est encore le pays le plus peuplé d’Europe, avec 28 millions d’habitants, trois fois plus que l’Angleterre. Mais sa croissance ralentit, et les autres pays d’Europe ne suivront ce chemin qu’au XIXe siècle.",
+      "sources": [
+        { "title": "Hérodote.net — La France invente la limitation des naissances", "url": "https://www.herodote.net/La_France_invente_la_limitation_des_naissances-synthese-3640-227.php" },
+        { "title": "Encyclopedia.com — Moheau, Jean-Baptiste", "url": "https://encyclopedia.com/social-sciences/encyclopedias-almanacs-transcripts-and-maps/moheau-jean-baptiste" },
+        { "title": "Journal of Economic History — Fertility Transition in Rural France, 1740–1829", "url": "https://core-prod.cambridgecore.org/core/journals/journal-of-economic-history/article/fertility-transition-in-rural-france-17401829/2E4B10F384DFCCE84B93118DDE67E8F7" }
+      ]
+    }
+  ]
+}
