@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-20",
+  "kind": "sitcom",
+  "slot": "cultureg",
+  "time": "12:30",
+  "story": {
+    "edition": "2026-11-20",
+    "format": "cultureg"
+  },
+  "question": "Pourquoi au tennis on compte 15, 30, 40 ?",
+  "answer": "Le tennis descend du jeu de paume français, où l'on comptait déjà 15, 30, 45 au XVe siècle ; personne ne sait vraiment pourquoi 15 (l'horloge, la piste la plus connue, est peu probable), et 45 est devenu 40, plus court à crier.",
+  "chain": [
+    "le tennis descend du jeu de paume, joué en France dès le XIIe siècle, d'abord à main nue par des moines",
+    "vers 1435, un poème parle déjà de « quarante-cinq » : on compte 15, 30, 45",
+    "la piste la plus connue, l'horloge (un quart d'heure par point), est peu probable : l'aiguille des minutes ne se répand que vers 1690",
+    "personne ne sait avec certitude pourquoi 15",
+    "45 est devenu 40 parce que « quarante » est plus court à crier"
+  ],
+  "hook_formula": 16,
+  "episode": {
+    "band": "POURQUOI\n15, 30, 40 ?",
+    "board": [
+      "PILULE CULTURE G",
+      "15, 30, 40 ?"
+    ],
+    "scenes": [
+      {
+        "kind": "world",
+        "cold": true,
+        "set": "ville",
+        "palette": "vert",
+        "tag": "SUR LE COURT",
+        "big": "15-30-40",
+        "image": {
+          "bd": 1
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "shake": true,
+            "react": {
+              "max": "shock"
+            },
+            "text": "Pourquoi au tennis, on compte 15, 30, 40 ?",
+            "say": "Pourquoi au tennis, on compte quinze, trente, quarante ?"
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "shock",
+            "text": "Attends… c'est vrai. Pourquoi pas un, deux, trois ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Parce que le tennis vient d'un jeu français du Moyen Âge qui comptait déjà ainsi."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Un jeu français ? Explique."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "moyen-age",
+        "palette": "beige",
+        "tag": "FRANCE, XIIe SIÈCLE",
+        "big": "JEU DE PAUME",
+        "small": "à main nue",
+        "image": {
+          "bd": 2
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Le jeu de paume : au XIIe siècle, des moines frappent la balle à main nue.",
+            "say": "Le jeu de paume : au douzième siècle, des moines frappent la balle à main nue."
+          },
+          {
+            "who": "max",
+            "emo": "panic",
+            "text": "Sans raquette ? Aïe."
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Vers 1435, un poème parle déjà de « quarante-cinq ». On compte 15, 30, 45.",
+            "say": "Vers mille quatre cent trente-cinq, un poème parle déjà de « quarante-cinq ». On compte quinze, trente, quarante-cinq."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Mais pourquoi quinze ?"
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "moyen-age",
+        "palette": "nuit",
+        "tag": "LA PISTE DE L'HORLOGE",
+        "big": "1/4 DE TOUR",
+        "small": "par point gagné",
+        "image": {
+          "bd": 5
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "La piste la plus connue : l'horloge. Chaque point avance l'aiguille d'un quart d'heure."
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Problème : l'aiguille des minutes se répand vers 1690, bien après le poème.",
+            "say": "Problème : l'aiguille des minutes se répand vers mille six cent quatre-vingt-dix, bien après le poème."
+          },
+          {
+            "who": "max",
+            "emo": "shock",
+            "text": "Alors personne ne sait ?"
+          },
+          {
+            "who": "prof",
+            "emo": "tired",
+            "text": "Personne. Les historiens hésitent encore."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Voilà pourquoi on compte par quinze : le tennis a gardé le compte du jeu de paume."
+          },
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et le quarante ? Ça devrait être quarante-cinq !"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "« Quarante » se crie plus vite sur le terrain. On a sacrifié cinq points."
+          },
+          {
+            "who": "max",
+            "emo": "shock",
+            "text": "Cinq points perdus… pour gagner une syllabe."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "L'actu et la culture G",
+        "en BD, chaque matin."
+      ]
+    }
+  },
+  "caption": "Pourquoi au tennis on compte 15, 30, 40 ?\n\nLe tennis descend du jeu de paume, joué en France dès le Moyen Âge. Vers 1435, on y comptait déjà 15, 30, 45. Pourquoi 15 ? Personne ne le sait vraiment, et la fameuse horloge arrive deux siècles trop tard. Le 45 est devenu 40, plus court à crier.\n\nToi, on t'avait expliqué ça comment ?",
+  "first_comment": "Bonus : le mot « tennis » viendrait de « Tenez ! », lancé par le serveur à son adversaire, et l'anglais « deuce », pour l'égalité à 40, de « à deux ». Tu savais que le tennis parlait français ?",
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "anecdote",
+    "tennis",
+    "sport"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Tennis_scoring_system",
+    "https://www.europe1.fr/sport/roland-garros-pourquoi-compte-on-les-points-en-15-30-40-et-jeu-au-tennis-4185785",
+    "https://www.herodote.net/Jeu_des_moines_jeu_des_rois-synthese-2037.php?resume=1"
+  ]
+}

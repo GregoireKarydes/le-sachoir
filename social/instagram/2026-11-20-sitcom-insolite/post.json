@@ -1,0 +1,187 @@
+{
+  "date": "2026-11-20",
+  "kind": "sitcom",
+  "slot": "insolite",
+  "time": "21:00",
+  "story": {
+    "edition": "2026-11-20",
+    "format": "insolite"
+  },
+  "question": "C'est vrai que le 14 Juillet ne fête pas forcément la prise de la Bastille ?",
+  "answer": "Oui : la loi de 1880 dit seulement « le 14 juillet », sans année, parce que la prise de la Bastille de 1789 avait été sanglante et gênait des élus ; on peut donc y voir aussi la Fête de la Fédération du 14 juillet 1790, ou les deux.",
+  "chain": [
+    "en 1880, la République choisit le 14 juillet comme fête nationale",
+    "le 14 juillet 1789, la prise de la Bastille, a été sanglant : ça gêne une partie des élus",
+    "un an plus tard, le 14 juillet 1790, la Fête de la Fédération a célébré l'unité du pays, sans combat",
+    "la loi tient en une phrase, « le 14 juillet », sans année",
+    "chacun y voit 1789, 1790, ou les deux ; le flou était voulu"
+  ],
+  "hook_formula": 22,
+  "episode": {
+    "band": "LE 14 JUILLET\nFÊTE LA BASTILLE ?",
+    "board": [
+      "HISTOIRE VRAIE",
+      "14 juillet ?"
+    ],
+    "scenes": [
+      {
+        "kind": "world",
+        "cold": true,
+        "set": "ciel",
+        "palette": "nuit",
+        "tag": "UN 14 JUILLET",
+        "big": "1789 ?",
+        "image": {
+          "bd": 1
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "shake": true,
+            "react": {
+              "max": "shock"
+            },
+            "text": "C'est vrai que le 14 Juillet ne fête pas forcément la Bastille ?",
+            "say": "C'est vrai que le quatorze Juillet ne fête pas forcément la Bastille ?"
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "shock",
+            "text": "Attends… on fête quoi, alors ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Peut-être la Bastille. Mais la loi ne dit pas de quelle année il s'agit."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Une loi sans année ? Explique."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "bureau",
+        "palette": "rouge",
+        "tag": "PARIS, 1880",
+        "big": "SANS ANNÉE",
+        "small": "une seule phrase",
+        "image": {
+          "bd": 2
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "En 1880, la République choisit le 14 juillet comme fête nationale.",
+            "say": "En mille huit cent quatre-vingts, la République choisit le quatorze juillet comme fête nationale."
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Mais le 14 juillet 1789, la prise de la Bastille, a été sanglant. Ça gêne des élus.",
+            "say": "Mais le quatorze juillet mille sept cent quatre-vingt-neuf, la prise de la Bastille, a été sanglant. Ça gêne des élus."
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "react": {
+              "max": "shock"
+            },
+            "text": "Heureusement, un an plus tard, il y a eu un autre 14 juillet.",
+            "say": "Heureusement, un an plus tard, il y a eu un autre quatorze juillet."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "nature",
+        "palette": "menthe",
+        "tag": "CHAMP-DE-MARS, 1790",
+        "big": "FÉDÉRATION",
+        "small": "la fête de l'unité",
+        "image": {
+          "bd": 5
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Le 14 juillet 1790, des centaines de milliers de Français fêtent l'unité du pays au Champ-de-Mars. Sans combat.",
+            "say": "Le quatorze juillet mille sept cent quatre-vingt-dix, des centaines de milliers de Français fêtent l'unité du pays au Champ-de-Mars. Sans combat."
+          },
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et la loi choisit laquelle ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Aucune. Elle tient en une phrase : « le 14 juillet ». Sans année.",
+            "say": "Aucune. Elle tient en une phrase : « le quatorze juillet ». Sans année."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Voilà pourquoi le 14 Juillet ne fête pas forcément la Bastille : la loi n'a jamais dit quelle année.",
+            "say": "Voilà pourquoi le quatorze Juillet ne fête pas forcément la Bastille : la loi n'a jamais dit quelle année."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Alors moi, je fête 1789 ou 1790 ?",
+            "say": "Alors moi, je fête mille sept cent quatre-vingt-neuf ou mille sept cent quatre-vingt-dix ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "Les deux, disent beaucoup d'historiens. Le flou était voulu."
+          },
+          {
+            "who": "max",
+            "emo": "proud",
+            "text": "Vive le 14 Juillet… peu importe lequel.",
+            "say": "Vive le quatorze Juillet… peu importe lequel."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "L'actu et la culture G",
+        "en BD, chaque matin."
+      ]
+    }
+  },
+  "caption": "C'est vrai que le 14 Juillet ne fête pas forcément la Bastille ?\n\nOui. La loi de 1880 dit seulement « le 14 juillet », sans année. La prise de la Bastille de 1789 avait été sanglante et gênait des élus, alors on a laissé la place à un autre 14 juillet : la Fête de la Fédération de 1790, qui célébrait l'unité du pays.\n\nEnvoie-le à celui qui crie « Vive la Bastille » devant chaque feu d'artifice.",
+  "first_comment": "Bonus : le 14 juillet 1790, environ 260 000 Parisiens et 100 000 gardes venus de toute la France étaient au Champ-de-Mars, et c'est Talleyrand, alors évêque, qui a dit la messe. Toi, tu pensais fêter quelle année ?",
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "histoire",
+    "anecdote",
+    "14juillet"
+  ],
+  "sources": [
+    "https://www.herodote.net/La_fete_nationale_du_14_juillet-synthese-1745.php",
+    "https://www.herodote.net/14_juillet_1790-evenement-17900714.php",
+    "https://blog.landot-avocats.net/2022/07/12/14-juillet-en-souvenir-de-celui-de-lete-1789-ou-en-celebration-de-la-fete-de-la-federation-de-1790-ou-des-deux/"
+  ]
+}

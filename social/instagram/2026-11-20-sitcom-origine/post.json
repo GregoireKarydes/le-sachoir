@@ -1,0 +1,190 @@
+{
+  "date": "2026-11-20",
+  "kind": "sitcom",
+  "slot": "origine",
+  "time": "07:45",
+  "story": {
+    "edition": "2026-11-20",
+    "format": "origine"
+  },
+  "question": "Pourquoi on dit « surveiller sa silhouette » ?",
+  "answer": "« Silhouette » est le nom d'Étienne de Silhouette, ministre des Finances en 1759, qui voulait taxer le luxe des nobles ; pour se venger, ils ont appelé « à la Silhouette » tout ce qui était maigre ou au strict minimum, y compris le portrait le moins cher, une ombre de profil découpée, et le mot a fini par désigner tout contour, dont le nôtre.",
+  "chain": [
+    "en 1759, la guerre a vidé les caisses ; Étienne de Silhouette devient ministre des Finances",
+    "il veut taxer le luxe des nobles et du clergé, qui payaient très peu d'impôts",
+    "les nobles sont furieux ; il est renvoyé au bout de huit mois",
+    "pour se venger, ils disent « à la Silhouette » de tout ce qui est maigre ou radin",
+    "le portrait le moins cher, une ombre de profil découpée, devient un portrait « à la silhouette », puis le mot désigne tout contour, dont le nôtre"
+  ],
+  "hook_formula": 3,
+  "episode": {
+    "band": "SILHOUETTE : UN\nMINISTRE RADIN ?",
+    "board": [
+      "D'OÙ ÇA VIENT ?",
+      "silhouette ?"
+    ],
+    "scenes": [
+      {
+        "kind": "world",
+        "cold": true,
+        "set": "paris-ancien",
+        "palette": "nuit",
+        "tag": "VERSAILLES, 1759",
+        "big": "SILHOUETTE",
+        "image": {
+          "bd": 6
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "shake": true,
+            "react": {
+              "max": "shock"
+            },
+            "text": "Pourquoi ta silhouette porte-t-elle le nom d'un ministre radin ?"
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "max",
+            "emo": "shock",
+            "text": "Attends… silhouette, c'est un nom ?"
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Oui. Celui d'Étienne de Silhouette, ministre des Finances en 1759.",
+            "say": "Oui. Celui d'Étienne de Silhouette, ministre des Finances en mille sept cent cinquante-neuf."
+          },
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Un ministre devenu un mot ? Explique."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "paris-ancien",
+        "palette": "beige",
+        "tag": "VERSAILLES, MARS 1759",
+        "big": "IMPÔTS",
+        "small": "fenêtres, luxe",
+        "image": {
+          "bd": 2
+        },
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "En 1759, la guerre a vidé les caisses. Silhouette doit trouver de l'argent.",
+            "say": "En mille sept cent cinquante-neuf, la guerre a vidé les caisses. Silhouette doit trouver de l'argent."
+          },
+          {
+            "who": "max",
+            "emo": "panic",
+            "text": "Il taxe qui ?"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Le luxe des nobles et du clergé, qui payaient très peu d'impôts. Même leurs fenêtres."
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "react": {
+              "max": "shock"
+            },
+            "text": "Les nobles sont furieux. Huit mois plus tard, Silhouette est renvoyé."
+          }
+        ]
+      },
+      {
+        "kind": "world",
+        "set": "musee",
+        "palette": "violet",
+        "tag": "PARIS, ANNÉES 1760",
+        "big": "STRICT MINIMUM",
+        "small": "« à la Silhouette »",
+        "image": {
+          "bd": 5
+        },
+        "bidule": true,
+        "lines": [
+          {
+            "who": "max",
+            "emo": "think",
+            "text": "Et le mot, alors ?"
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Les nobles se vengent : ce qui est maigre ou radin devient « à la Silhouette »."
+          },
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Même le portrait le moins cher, une ombre de profil découpée dans du papier noir, devient un portrait « à la silhouette »."
+          },
+          {
+            "who": "prof",
+            "emo": "deadpan",
+            "text": "Puis le mot désigne tout contour. Le tien compris."
+          }
+        ]
+      },
+      {
+        "kind": "home",
+        "lines": [
+          {
+            "who": "prof",
+            "emo": "explain",
+            "text": "Voilà pourquoi ta silhouette porte son nom : les nobles qu'il taxait s'en sont moqués."
+          },
+          {
+            "who": "max",
+            "emo": "curious",
+            "text": "Et son portrait à lui ?"
+          },
+          {
+            "who": "prof",
+            "emo": "smug",
+            "pause": 0.8,
+            "text": "Tous détruits pendant la Révolution. Il ne reste même pas sa silhouette."
+          },
+          {
+            "who": "max",
+            "emo": "wow",
+            "text": "Il a donné son nom aux ombres… et il n'a plus la sienne."
+          }
+        ]
+      }
+    ],
+    "end": {
+      "url": "lesachoir.fr",
+      "lines": [
+        "L'actu et la culture G",
+        "en BD, chaque matin."
+      ]
+    }
+  },
+  "caption": "Pourquoi ta silhouette porte-t-elle le nom d'un ministre radin ?\n\nEn 1759, Étienne de Silhouette, ministre des Finances de Louis XV, veut taxer le luxe des nobles, jusqu'à leurs fenêtres. Il est renvoyé au bout de huit mois. Pour se venger, les nobles appellent « à la Silhouette » tout ce qui est maigre ou au strict minimum, jusqu'au portrait le moins cher : une ombre de profil découpée dans du papier noir.\n\nEt toi, tu connais un autre mot qui vient d'un nom de famille ? Écris-le en commentaire, on le décortique.",
+  "first_comment": "Bonus : personne ne sait vraiment pourquoi son nom a fini sur ces portraits. L'Académie française pense que c'est parce que ses réformes n'ont été qu'« esquissées », comme ces profils. Tu savais que silhouette était un nom de famille ?",
+  "hashtags": [
+    "lesachoir",
+    "culturegenerale",
+    "expressionsfrancaises",
+    "histoire",
+    "etymologie"
+  ],
+  "sources": [
+    "https://dictionnaire-academie.fr/article/A9S1633",
+    "https://en.wikipedia.org/wiki/%C3%89tienne_de_Silhouette",
+    "https://wordhistories.net/2018/03/30/silhouette-uncertain-origin/"
+  ]
+}
