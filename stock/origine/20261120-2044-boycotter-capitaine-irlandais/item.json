@@ -41,7 +41,10 @@
       ],
       "cover": {
         "prompt": "a field of turnips in 1880 Ireland: Charles Boycott (tall, stiff, iron-grey hair, bushy grey beard, bottle-green tweed jacket) stands proudly in the middle with his riding crop, surrounded by a ring of soldiers in red coats each pointing a rifle at a single turnip on the ground; in the foreground, Sandrine of today (short, copper-red bun, cobalt-blue cardigan) clutches the thermos and stares at the scene, baffled. medium wide shot",
-        "cast": ["boycott", "sandrine"],
+        "cast": [
+          "boycott",
+          "sandrine"
+        ],
         "file": "images/origine-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -53,12 +56,22 @@
           "tag": "Aujourd’hui",
           "caption": "« Boycotter », c’est refuser en bloc d’acheter ou de fréquenter. Le mot est le nom d’un homme, en 1880.",
           "bubbles": [
-            { "who": "sandrine", "text": "Le café à 60 centimes ? Je boycotte cette machine. À vie.", "side": "l" },
-            { "who": "Un collègue", "text": "Hier, tu as tenu jusqu’à 10 h.", "side": "r" }
+            {
+              "who": "sandrine",
+              "text": "Le café à 60 centimes ? Je boycotte cette machine. À vie.",
+              "side": "l"
+            },
+            {
+              "who": "Un collègue",
+              "text": "Hier, tu as tenu jusqu’à 10 h.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a small office kitchenette of today with the machine. Sandrine (short, sturdy, copper-red bun, round glasses, cobalt-blue cardigan) on the left turns her back on the machine with her nose in the air, hugging the thermos like a shield; on the right a bored colleague with a grey hoodie leans on the counter, sipping from a paper cup. wide shot",
-            "cast": ["sandrine"],
+            "cast": [
+              "sandrine"
+            ],
             "file": "images/origine-01.webp",
             "status": "pending",
             "attempts": 0
@@ -70,12 +83,22 @@
           "tag": "Irlande, 1880",
           "caption": "En 1880, Charles Boycott gère les terres d’un lord absent, au bord du Lough Mask, dans le comté de Mayo.",
           "bubbles": [
-            { "who": "boycott", "text": "Mauvaise récolte ? Le lord vous offre 10 % de baisse. Pas un de plus.", "side": "r" },
-            { "who": "Un fermier", "text": "On en demandait 25.", "side": "l" }
+            {
+              "who": "boycott",
+              "text": "Mauvaise récolte ? Le lord vous offre 10 % de baisse. Pas un de plus.",
+              "side": "r"
+            },
+            {
+              "who": "Un fermier",
+              "text": "On en demandait 25.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "the stone steps of a big grey manor house in 1880 Ireland. Charles Boycott (tall, stiff, iron-grey hair, bushy grey beard, bottle-green tweed jacket, riding crop under his arm) on the right stands at the top of the steps, chin raised, looking down; at the bottom on the left, a thin farmer in a patched brown coat holds his cap in both hands. low angle",
-            "cast": ["boycott"],
+            "cast": [
+              "boycott"
+            ],
             "file": "images/origine-02.webp",
             "status": "pending",
             "attempts": 0
@@ -99,11 +122,17 @@
           "tag": "Septembre 1880",
           "caption": "Fin septembre 1880, ouvriers, forgeron, blanchisseuse et commerçants refusent de le servir. Même le courrier s’arrête.",
           "bubbles": [
-            { "who": "boycott", "text": "Bien. Comment ça se tient, une fourche ?", "side": "r" }
+            {
+              "who": "boycott",
+              "text": "Bien. Comment ça se tient, une fourche ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "Charles Boycott alone (tall, stiff, iron-grey hair, bushy grey beard, bottle-green tweed jacket) in an empty muddy field, holding the pitchfork upside down by its prongs with two fingers, at arm's length, as if it were a dead animal, eyebrows raised, a light-blue sweat drop on his temple. medium close-up",
-            "cast": ["boycott"],
+            "cast": [
+              "boycott"
+            ],
             "file": "images/origine-04.webp",
             "status": "pending",
             "attempts": 0
@@ -115,7 +144,15 @@
           "tag": "En vrai",
           "title": "Le vrai capitaine Boycott, en 1881",
           "text": "Charles Boycott caricaturé par Spy (Leslie Ward) dans le magazine britannique Vanity Fair, en janvier 1881. Officier quelques années dans sa jeunesse, il garde le surnom de « capitaine ».",
-          "photo": { "commons": "File:Charles Cunningham Boycott (Vanity Fair) crop.jpg" }
+          "photo": {
+            "commons": "File:Charles Cunningham Boycott (Vanity Fair) crop.jpg",
+            "credit": "Leslie Ward",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Charles_Cunningham_Boycott_(Vanity_Fair)_crop.jpg",
+            "file": "images/photo-5-charles-cunningham-boycott-vanity-f.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -123,12 +160,22 @@
           "tag": "Novembre 1880",
           "caption": "En novembre 1880, 50 volontaires d’Ulster récoltent ses champs, protégés par environ un millier de soldats et policiers.",
           "bubbles": [
-            { "who": "boycott", "text": "Enfin du personnel.", "side": "l" },
-            { "who": "Un soldat", "text": "Vingt hommes armés par ramasseur de navets. Une première.", "side": "r" }
+            {
+              "who": "boycott",
+              "text": "Enfin du personnel.",
+              "side": "l"
+            },
+            {
+              "who": "Un soldat",
+              "text": "Vingt hommes armés par ramasseur de navets. Une première.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a field of turnips with stone walls in 1880 Ireland. A few farm volunteers in flat caps dig up turnips while a crowd of soldiers in red coats stands guard all around them; in the middle on the left, Charles Boycott (tall, stiff, iron-grey hair, bushy grey beard, bottle-green tweed jacket) supervises with his riding crop, satisfied; on the right a young soldier solemnly points his rifle at the turnip lying at his feet. wide shot",
-            "cast": ["boycott"],
+            "cast": [
+              "boycott"
+            ],
             "file": "images/origine-06.webp",
             "status": "pending",
             "attempts": 0
@@ -153,12 +200,22 @@
           "tag": "En résumé",
           "caption": "« Boycotter » vient de Charles Boycott, l’homme que toute une campagne irlandaise a refusé de servir en 1880.",
           "bubbles": [
-            { "who": "sandrine", "text": "Mille soldats pour des navets ? Moi, je tiens sans renfort.", "side": "l" },
-            { "who": "Un collègue", "text": "Tu as un café dans la main.", "side": "r" }
+            {
+              "who": "sandrine",
+              "text": "Mille soldats pour des navets ? Moi, je tiens sans renfort.",
+              "side": "l"
+            },
+            {
+              "who": "Un collègue",
+              "text": "Tu as un café dans la main.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back in the office kitchenette of today, seen over the shoulder of the colleague in a grey hoodie. Sandrine (short, sturdy, copper-red bun, round glasses, cobalt-blue cardigan) stands in front of the machine, chin up with total bad faith, holding a steaming paper cup she has obviously just bought, the thermos forgotten on the counter behind her. over-the-shoulder",
-            "cast": ["sandrine"],
+            "cast": [
+              "sandrine"
+            ],
             "file": "images/origine-08.webp",
             "status": "pending",
             "attempts": 0
@@ -171,12 +228,30 @@
       },
       "story": "« Boycotter », c’est refuser en bloc d’acheter, de travailler ou d’avoir affaire à quelqu’un. Le mot vient d’un nom propre : Charles Cunningham Boycott, un Anglais né en 1832, ancien officier, devenu régisseur en Irlande. Depuis 1873, il gère pour un propriétaire absent, Lord Erne, des terres au bord du Lough Mask, dans le comté de Mayo.\nEn 1880, après une mauvaise récolte, les fermiers demandent une baisse de 25 % de leurs loyers. Lord Erne n’en offre que 10 %, et Boycott fait délivrer des avis d’expulsion à onze familles. Le 19 septembre, à Ennis, le leader irlandais Charles Stewart Parnell conseille d’isoler complètement ceux qui profitent des expulsions, au lieu de les frapper. La Ligue agraire, qui défend les fermiers, applique cette idée à Boycott : ses ouvriers partent, le forgeron, la blanchisseuse et les commerçants de Ballinrobe refusent de le servir, le courrier ne passe plus.\nEn novembre 1880, 50 volontaires venus d’Ulster rentrent sa récolte sous la protection d’environ un millier de soldats et policiers. L’opération coûte autour de 10 000 livres, pour une récolte qui en valait quelques centaines. Boycott quitte l’Irlande le 1er décembre 1880.\nSelon le journaliste américain James Redpath, c’est un prêtre, John O’Malley, qui propose d’appeler ce rejet par le nom de sa cible. Le verbe gagne la presse britannique fin 1880 et passe aussitôt en français.",
       "sources": [
-        { "title": "Wikipédia (en) — Charles Boycott", "url": "https://en.wikipedia.org/wiki/Charles_Boycott" },
-        { "title": "Wikipédia (en) — Boycott", "url": "https://en.wikipedia.org/wiki/Boycott" },
-        { "title": "Wordorigins.org — Boycott", "url": "https://www.wordorigins.org/big-list-entries/boycott" },
-        { "title": "History Ireland — Captain Boycott: man and myth", "url": "https://historyireland.com/?p=6391" },
-        { "title": "La Libre Belgique — Tiens, au fond, ça vient d’où le « boycott » ?", "url": "https://www.lalibre.be/lifestyle/magazine/2014/09/02/tiens-au-fond-ca-vient-dou-le-boycott-AENXDPJBGJDP3BAWGJADTN7NPE/" },
-        { "title": "Wikimedia Commons — Charles Cunningham Boycott (Vanity Fair)", "url": "https://commons.wikimedia.org/wiki/File:Charles_Cunningham_Boycott_(Vanity_Fair)_crop.jpg" }
+        {
+          "title": "Wikipédia (en) — Charles Boycott",
+          "url": "https://en.wikipedia.org/wiki/Charles_Boycott"
+        },
+        {
+          "title": "Wikipédia (en) — Boycott",
+          "url": "https://en.wikipedia.org/wiki/Boycott"
+        },
+        {
+          "title": "Wordorigins.org — Boycott",
+          "url": "https://www.wordorigins.org/big-list-entries/boycott"
+        },
+        {
+          "title": "History Ireland — Captain Boycott: man and myth",
+          "url": "https://historyireland.com/?p=6391"
+        },
+        {
+          "title": "La Libre Belgique — Tiens, au fond, ça vient d’où le « boycott » ?",
+          "url": "https://www.lalibre.be/lifestyle/magazine/2014/09/02/tiens-au-fond-ca-vient-dou-le-boycott-AENXDPJBGJDP3BAWGJADTN7NPE/"
+        },
+        {
+          "title": "Wikimedia Commons — Charles Cunningham Boycott (Vanity Fair)",
+          "url": "https://commons.wikimedia.org/wiki/File:Charles_Cunningham_Boycott_(Vanity_Fair)_crop.jpg"
+        }
       ]
     }
   ]
