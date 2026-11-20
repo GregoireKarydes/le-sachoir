@@ -25,7 +25,7 @@
           "name": "Le docteur Laennec",
           "look": "René Laennec, a very tall, very thin, slightly stooped French doctor of 35, pale skin, long narrow face, short curly sandy-blond hair with long sideburns, a deep crimson-red tailcoat as main colour, high white cravat, black trousers, a small black doctor's bag",
           "file": "cast/cultureg-laennec.png",
-          "status": "pending",
+          "status": "done",
           "role": "the painfully bashful doctor who blushes at the idea of touching a patient; fiddles with his cravat, always keeps an awkward polite distance, but lights up when he discovers something"
         },
         {
@@ -33,7 +33,7 @@
           "name": "La patiente",
           "look": "a short, plump, cheerful young Parisian woman of about 25, light olive skin, a big pile of glossy black ringlet curls under a frilly white lace bonnet, a high-waisted Empire dress in bright sky-blue as main colour, white shawl, the fan always in her hand",
           "file": "cast/cultureg-patiente.png",
-          "status": "pending",
+          "status": "done",
           "role": "the chatty patient who never stops talking about her symptoms and her cousin; waves the fan non-stop, totally unbothered by anything"
         }
       ],

@@ -1,11 +1,11 @@
 {
  "day": "2026-11-20",
- "count": 55,
- "neurons": 8840,
+ "count": 57,
+ "neurons": 9000,
  "exhausted": false,
  "by_kind": {
   "cover": 4,
   "case": 33,
-  "cast": 18
+  "cast": 20
  }
 }
