@@ -34,7 +34,7 @@
           "look": "a cartoon caricature of a very tall, slim statesman in his seventies, light skin, a thick wavy mane of swept-back silver-white hair, a strong nose, a charcoal grey three-piece suit as main colour, a bright red silk tie, a white pocket square",
           "role": "a former prime minister launching a presidential bid; grandiloquent and theatrical, sweeping arm gestures, chin held high",
           "file": "cast/actu-villepin.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "britannique",
@@ -67,8 +67,8 @@
           "villepin"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -99,8 +99,8 @@
               "villepin"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -110,7 +110,13 @@
           "title": "Le palais de l’Élysée, à Paris",
           "text": "La résidence du président de la République, rue du Faubourg-Saint-Honoré : l’adresse que visent tous les candidats de 2027.",
           "photo": {
-            "commons": "File:Elysée Palace, Paris 2005.jpg"
+            "commons": "File:Elysée Palace, Paris 2005.jpg",
+            "credit": "Eric Pouhier",
+            "license": "CC BY-SA 2.5",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+            "source": "https://commons.wikimedia.org/wiki/File:Elys%C3%A9e_Palace,_Paris_2005.jpg",
+            "file": "images/photo-2-elys-e-palace-paris-2005-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -178,8 +184,8 @@
               "britannique"
             ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -218,8 +224,9 @@
               "caissiere"
             ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -229,7 +236,13 @@
           "title": "Le palais du Luxembourg, siège du Sénat",
           "text": "À Paris, dans le 6e arrondissement : c’est là que les sénateurs ont voté la réforme, jeudi 19 novembre.",
           "photo": {
-            "commons": "File:Palais du Luxembourg, South View 140116 1.jpg"
+            "commons": "File:Palais du Luxembourg, South View 140116 1.jpg",
+            "credit": "DXR",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Palais_du_Luxembourg,_South_View_140116_1.jpg",
+            "file": "images/photo-8-palais-du-luxembourg-south-view-140.webp",
+            "status": "done"
           }
         },
         {
@@ -268,8 +281,9 @@
               "deleguee"
             ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {

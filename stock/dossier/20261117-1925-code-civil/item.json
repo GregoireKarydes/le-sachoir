@@ -43,8 +43,8 @@
           "look": "the merchant, a very fat 1780s cloth merchant, ginger mutton-chop sideburns under a grey tricorn hat, ruddy light skin, a mustard-yellow coat and waistcoat as main colour, brown boots, clutching a small leather purse",
           "role": "a stingy cloth merchant travelling across the kingdom; easily outraged, clutches his purse to his belly whenever the law changes",
           "file": "cast/dossier-marchand.png",
-          "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (01b0f27b-c2d9-41f2-9b88-0fe787c27dab)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "madeleine",
@@ -185,9 +185,9 @@
               "portalis"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (ca4b853c-011a-4b5e-b099-241868a49e10)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2,
+            "via": "fal"
           }
         },
         {
@@ -327,8 +327,9 @@
               "bonaparte"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -355,8 +356,9 @@
               "bonaparte"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -393,8 +395,9 @@
             "prompt": "a town hall wedding room in 1804 with a tricolour sash on the wall. A young bride in a white empire dress on the left, eyebrow raised, arms folded; her tiny skinny groom beside her puffs out his chest; on the right a round mayor with a tricolour sash reads solemnly from the code held at arm's length. medium wide shot",
             "cast": [],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -413,8 +416,9 @@
             "prompt": "a small sewing workshop in 1804. A seamstress with a brown bun and a lilac apron, pins between her lips, holding a contract out to her husband with an exasperated face; the husband, a sleepy man in a nightcap, signs it without even looking up from his newspaper with no visible writing. close-up",
             "cast": [],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -440,8 +444,9 @@
               "madeleine"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -467,8 +472,9 @@
               "madeleine"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -500,8 +506,9 @@
             "prompt": "a muddy road in 1807. A tall grenadier with a huge black bearskin hat and a white-and-blue uniform marching in the foreground, bent double under a big wooden crate full of copies of the code on his back; behind him a cannon pulled by horses. low angle",
             "cast": [],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -536,8 +543,9 @@
             "prompt": "a sunny New Orleans river quay around 1808 with barrels and a sailing ship. A sharp-featured lawyer in a cream linen suit and a straw hat on the right, sitting on a barrel with the code open on his knees, smiling slyly; on the left, far away, two American officials in dark coats walk past carrying a big rolled map. wide shot",
             "cast": [],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -558,8 +566,9 @@
               "bonaparte"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -583,8 +592,9 @@
             "prompt": "a modern university library. A young student with short pink hair and a yellow hoodie on the left, face flat on a very thick red law book, arms dangling; a tall student with dreadlocks in a grey sweater on the right, flicking through the same thick red book, sighing. medium shot",
             "cast": [],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -608,8 +618,9 @@
             "prompt": "a modern Paris street market. A delivery rider in a turquoise jacket and helmet on the left, sprawled on the ground next to his fallen scooter, melons rolling everywhere; a stout greengrocer with a grey beard and a green apron on the right, standing over him, holding up the code open at a page with a stern look. medium wide shot",
             "cast": [],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -636,8 +647,9 @@
               "portalis"
             ],
             "file": "images/dossier-20.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         }
       ],
