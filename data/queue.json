@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T20:45+01:00",
+ "updated_at": "2026-11-20T20:46+01:00",
  "stock": {
   "cultureg": [
    {
@@ -327,6 +327,23 @@
     "cases": 8,
     "photos": 1,
     "images_done": 6,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/origine/20261120-2044-boycotter-capitaine-irlandais",
+    "name": "20261120-2044-boycotter-capitaine-irlandais",
+    "added": "20261120-2044",
+    "status": "waiting",
+    "next": false,
+    "title": "« Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré",
+    "theme": "Expression française",
+    "tagline": "Un régisseur, des navets et un millier de soldats",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
     "images_total": 6,
     "failed": 0,
     "redo": 0
