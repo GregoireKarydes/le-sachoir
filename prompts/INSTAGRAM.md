@@ -3,8 +3,8 @@
 Version 4, depuis le 20 novembre 2026 (décisions de Greg : Reels de **30 à 35 s**, et « je te donne le go pour faire
 l'alternance des styles »). Chaque jour partent **trois Reels** sur Instagram (Reel) et TikTok (vidéo), un par
 rubrique, **chacun dans l'un des cinq styles animés de la partie D** (Tablet Sketch, Scale Zoom, Comic History,
-2.5D Pixel, Ink Wash), choisi selon le sujet et en rotation. Le cerveau ne change pas (une question, une fausse piste,
-une réponse qui a du sens, une dernière phrase qui reprend le mot de la question) ; la peau change à chaque Reel.
+2.5D Pixel, Ink Wash), choisi selon le sujet et en rotation. Le cerveau ne change pas : une question, puis PREP (le
+Point, la Raison, l'Explication par l'exemple, le Point redit, partie D2) ; la peau change à chaque Reel.
 Référence : la bible des Reels (doc projet `reels-styles.md`, version 3).
 
 | créneau (`slot`) | rubrique | heure (`time`) | dossier |
@@ -857,22 +857,29 @@ par « lesachoir.fr. ».
 
 ## D2. Le script : 30 à 35 s, 8 à 11 plans, 70 à 85 mots (bible v3)
 Un plan = une phrase = une idée = une image ; **aucun plan de plus de 4 s** (13 mots au plus ; une phrase trop longue se
-coupe en deux plans avec « … »). Le déroulé en 6 temps :
-1. **La question** (0 à 3 s, plan 0, `"cold": true`) : la question du Reel (C4b), **8 mots au plus**, finie par « ? »,
+coupe en deux plans avec « … »). **Le style d'écriture : PREP** (Greg, 20 novembre 2026, d'après un Reel de
+@etacademy.fr : « Point, raison, explication, point »). On donne l'idée tout de suite, on dit pourquoi, on la montre
+avec un exemple concret, et on la redit. Pas de suspense artificiel : la clarté retient mieux que la devinette.
+0. **La question** (0 à 3 s, plan 0, `"cold": true`) : la question du Reel (C4b), **8 mots au plus**, finie par « ? »,
    avec le détail précis qui intrigue. L'image la plus forte ; carton = le sujet en 1 à 3 mots.
-2. **La réplique** (3 à 4 s) : un personnage du sujet (humain ou animal réel) répond à côté, en 1 s (« Mais je l'ai à
-   peine touché ! », « Excuse me ?! »).
-3. **La fausse piste** (4 à 8 s) : ce qu'on croit tous, « On croit que… Raté. », avec `fx: ["cross"]`.
-4. **La réponse** (avant 12 s, `"pause": 0.3`) : une phrase nette, avec un chiffre ou un nom.
-5. **Le pourquoi puis le retournement** (12 à 28 s) : 2 ou 3 maillons de `chain` cause → effet, une comparaison du
-   quotidien, puis « Le plus fou ? » ou « Pire : » et le détail inattendu, vrai et sourcé.
-6. **La boucle** (dernier plan) : « Voilà pourquoi… » qui reprend un mot de la question et y répond en une phrase.
+1. **P — le Point** (plan 1, avant 5 s) : la réponse, tout de suite, en une phrase complète qui reprend les mots de la
+   question (D2b). « Non : à l'œil nu, la Grande Muraille ne se voit pas depuis l'espace. » Si une idée reçue existe,
+   elle tient dans cette phrase (« On croit que oui. Mais non : … »), pas dans un plan à part.
+2. **R — la Raison** (2 ou 3 plans) : le pourquoi, les maillons de `chain` dans l'ordre, reliés par « parce que »,
+   « donc », « alors ». Chaque maillon tient en une phrase qui se comprend seule.
+3. **E — l'Explication par l'exemple** (2 ou 3 plans) : on rend la raison concrète : une comparaison du quotidien
+   (« comme chercher un cheveu à trois kilomètres »), un cas réel, une scène, un chiffre ramené à notre échelle. Le
+   détail le plus surprenant (« Le plus fou ? ») vient ici, vrai et sourcé.
+4. **P — le Point redit** (dernier plan) : « Voilà pourquoi… » qui reprend les mots de la question et redit la réponse
+   en une phrase, plus courte qu'au plan 1 (« longue, pas large »).
    **« Et ça, maintenant, tu le sais. » ne se dit pas** : elle va dans la légende, avant la demande du créneau (C7).
+La réplique d'un personnage du sujet (`"who": "perso"`) reste permise, une fois, pour un exemple vivant (E) ; la
+fausse piste barrée (`fx: ["cross"]`) aussi, dans le plan du Point.
 
 ### D2b. Bien écrit, compris, et on répond vraiment à la question (Greg, 20 novembre 2026)
 Le spectateur doit pouvoir répéter la réponse à quelqu'un après une seule vue. Règles :
 1. **La question** est celle que tout le monde s'est déjà posée, en mots simples, sans jargon ni tournure savante.
-2. **La réponse est une phrase complète et autonome**, dite avant 12 s, qui **reprend les mots de la question** :
+2. **La réponse est une phrase complète et autonome**, dite au plan 1, avant 5 s (PREP), qui **reprend les mots de la question** :
    « L'éclair arrive avant le tonnerre parce que la lumière va un million de fois plus vite que le son. » — pas
    « Tout est une question de vitesse. » (on ne sait pas de quoi on parle).
 3. **Chaque phrase se comprend seule** : un sujet, un verbe, un complément. Pas de « il », « ça », « elle » en début de
