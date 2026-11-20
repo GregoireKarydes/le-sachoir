@@ -1,0 +1,178 @@
+{
+  "added": "20261120-2043",
+  "formats": [
+    {
+      "id": "notice",
+      "label": "La Notice",
+      "title": "L’arc-en-ciel n’a pas de pied : il est accroché à l’ombre de votre tête",
+      "tagline": "Un trésor introuvable, des milliards de gouttes et un angle de 42 degrés",
+      "teaser": "Gérard a un détecteur de métaux, des bottes et une certitude : le trésor est juste derrière la haie. La physique a d’autres projets.",
+      "minutes": 2,
+      "theme": "Sciences physiques",
+      "epoque": "present",
+      "art": {
+        "subject": "why you can never reach the foot of a rainbow: sunlight bounced back by raindrops at about 42 degrees around the shadow of your own head",
+        "setting": "wet green countryside of today after a rain shower: muddy fields, low hedges, puddles, a grey rain curtain on one side and a low sun on the other",
+        "era": "present-day France",
+        "props": {
+          "detector": "a long silver metal detector with a round black plate at the end",
+          "rainbow": "a large bright rainbow arc standing low over the far fields, red on the outside, violet on the inside",
+          "shadow": "a long dark shadow of a person stretched on the wet grass"
+        }
+      },
+      "cast": [
+        {
+          "id": "gerard",
+          "name": "Gérard",
+          "look": "Gérard, a short and very round retired man in his seventies, bald on top with a fluffy white horseshoe fringe and huge white eyebrows, light pink-beige skin, a bright lime-green rain poncho as main colour, brown corduroy trousers, tall black rubber boots covered in mud, always holding the detector",
+          "file": "cast/notice-gerard.png",
+          "status": "pending",
+          "role": "a stubborn, greedy treasure hunter convinced the pot of gold is behind the next hedge; charges forward chest first, never admits he is wrong"
+        },
+        {
+          "id": "ines",
+          "name": "Inès",
+          "look": "Inès, a tall and thin meteorologist in her thirties, dark brown skin, short cropped black afro with a yellow pencil tucked behind one ear, a deep magenta windbreaker as main colour, dark grey jeans, white sneakers, a small handheld wind gauge clipped to her pocket",
+          "file": "cast/notice-ines.png",
+          "status": "pending",
+          "role": "Gérard's niece, a calm, dry-humoured meteorologist; walks slowly with hands in her pockets, explains with one pointed finger"
+        }
+      ],
+      "cover": {
+        "prompt": "a muddy green field after a rain shower, the rainbow low over the far fields. Gérard (short, very round, white horseshoe fringe, bright lime-green poncho, muddy boots) charges toward the rainbow, sweeping the detector, tongue out in effort; behind him on the right, Inès (tall, thin, cropped black afro, deep magenta windbreaker) strolls with hands in her pockets, one eyebrow raised. medium wide shot",
+        "cast": ["gerard", "ines"],
+        "file": "images/notice-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Après l’averse",
+          "caption": "Pourquoi n’atteint-on jamais le pied d’un arc-en-ciel ? Gérard veut y déterrer le trésor de la légende.",
+          "bubbles": [
+            { "who": "gerard", "text": "Il touche le sol juste derrière cette haie. Le trésor est à moi !", "side": "l" },
+            { "who": "ines", "text": "Tonton, ça fait trois haies que tu dis ça.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "wet green countryside after rain, the rainbow low over the far fields. Gérard (short, very round, white horseshoe fringe, bright lime-green poncho) on the left scrambles over a low hedge with the detector, one muddy boot caught in the branches; far behind on the right, Inès (tall, thin, cropped black afro, deep magenta windbreaker) walks calmly along a muddy path, hands in her pockets. wide shot",
+            "cast": ["gerard", "ines"],
+            "file": "images/notice-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Le principe",
+          "caption": "Un arc-en-ciel n’est posé nulle part : c’est du soleil renvoyé vers vos yeux par des gouttes de pluie.",
+          "bubbles": [
+            { "who": "ines", "text": "Regarde : le soleil dans ton dos, la pluie devant toi. Toujours.", "side": "r" },
+            { "who": "gerard", "text": "Je creuse où, alors ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the same muddy field. Inès (tall, thin, cropped black afro, deep magenta windbreaker) on the right points one finger over her shoulder toward a low sun behind them, then at a grey curtain of rain ahead; Gérard (short, very round, white horseshoe fringe, bright lime-green poncho) on the left already holds a small shovel in one hand and the detector in the other, looking at her suspiciously. medium shot",
+            "cast": ["ines", "gerard"],
+            "file": "images/notice-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Ce qui se passe dans une goutte de pluie",
+          "steps": [
+            "La lumière du soleil entre dans la goutte et se courbe : c’est la réfraction",
+            "Chaque couleur se courbe un peu différemment : le blanc se sépare",
+            "La lumière rebondit sur le fond de la goutte, comme sur un miroir",
+            "Elle ressort vers l’arrière, à environ 42° pour le rouge et 40° pour le violet"
+          ],
+          "joke": "Chaque goutte ne vous envoie qu’une couleur. L’arc-en-ciel est un travail d’équipe."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le secret",
+          "caption": "Seules les gouttes vues à 42° de l’ombre de votre tête brillent pour vous : elles dessinent un cercle autour.",
+          "bubbles": [
+            { "who": "ines", "text": "Le centre de l’arc-en-ciel, c’est l’ombre de ta tête.", "side": "r" },
+            { "who": "gerard", "text": "Ma tête est le centre de quelque chose ? Enfin !", "side": "l" }
+          ],
+          "image": {
+            "prompt": "seen from above, the wet grass of the field: the shadow of Gérard stretched long on the grass, its round bald head shadow clearly visible. Gérard (short, very round, white horseshoe fringe, bright lime-green poncho) stands at the foot of his shadow, hands on his hips, chest puffed out with pride and yellow sparkles around him; Inès (tall, thin, cropped black afro, deep magenta windbreaker) kneels beside the shadow's head, pointing at it with her pencil. high angle",
+            "cast": ["gerard", "ines"],
+            "file": "images/notice-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le croquis de Descartes, en 1637",
+          "text": "Dans « Les Météores », publiés en 1637, le Français René Descartes explique l’arc-en-ciel par le trajet de la lumière dans les gouttes. Son schéma suit les rayons du soleil jusqu’à l’œil de l’observateur.",
+          "photo": { "commons": "File:Descartes Rainbow.png" }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Pourquoi on ne l’attrape pas",
+          "caption": "Quand Gérard avance, son ombre avance, et le cercle des 42° avec elle : l’arc recule à la même vitesse.",
+          "bubbles": [
+            { "who": "gerard", "text": "Alors je cours plus vite que lui !", "side": "r" },
+            { "who": "ines", "text": "Il te suivra. C’est ton arc-en-ciel à toi.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Inès (tall, thin, cropped black afro, deep magenta windbreaker) in the left foreground seen from behind, hands in her pockets, watching; far away in the middle of the muddy field, tiny Gérard (very round, bright lime-green poncho) sprints toward the rainbow with the detector raised like a spear, splashing through puddles, his long shadow running ahead of him. from behind",
+            "cast": ["ines", "gerard"],
+            "file": "images/notice-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi le matin ou en fin d’après-midi",
+          "text": "Le cercle est centré à l’opposé du soleil, sous l’horizon. Si le soleil monte à plus de 42°, tout l’arc passe sous le sol : invisible. D’où les arcs-en-ciel du matin et de fin d’après-midi.\nEn avion, le sol ne gêne plus : on aperçoit parfois le cercle entier.",
+          "joke": "Le pied de l’arc-en-ciel, c’est juste là où la Terre vous cache la suite."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "L’arc-en-ciel, c’est du soleil renvoyé par la pluie à 42° de votre ombre : il se déplace avec vous.",
+          "bubbles": [
+            { "who": "gerard", "text": "Un trésor qui me suit partout… En fait, je suis riche.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Gérard alone (short, very round, white horseshoe fringe, huge white eyebrows, bright lime-green poncho) sitting in a big mud puddle, soaked, the detector across his knees, with a huge satisfied grin and eyes closed, mud splashed on his bald head. close-up",
+            "cast": ["gerard"],
+            "file": "images/notice-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Deux personnes côte à côte ne voient jamais exactement le même arc-en-ciel : chacune reçoit la lumière de ses propres gouttes.",
+        "source": "MétéoMédia — Quelques faits que vous ignoriez sur les arcs-en-ciel"
+      },
+      "story": "Un arc-en-ciel n’est pas un objet posé dans le paysage : c’est de la lumière du soleil renvoyée vers nos yeux par des gouttes de pluie. Pour en voir un, il faut avoir le soleil dans le dos et la pluie devant soi.\nDans chaque goutte, la lumière du soleil entre et se courbe : c’est la réfraction. Comme chaque couleur se courbe un peu différemment, la lumière blanche se sépare en couleurs. La lumière rebondit ensuite sur le fond de la goutte, puis ressort vers l’arrière, à environ 42° de la direction du soleil pour le rouge et 40° pour le violet. C’est pourquoi le rouge est à l’extérieur de l’arc et le violet à l’intérieur.\nSeules les gouttes situées à cet angle autour du point opposé au soleil, là où tombe l’ombre de votre tête, vous envoient leur lumière. Elles forment donc un cercle centré sur cette ombre. Si l’on avance, l’ombre avance, et le cercle aussi : impossible d’atteindre le « pied » de l’arc. Deux personnes côte à côte ne voient d’ailleurs jamais exactement le même arc-en-ciel.\nLe centre du cercle est sous l’horizon : le sol en cache le bas. Quand le soleil monte à plus de 42° au-dessus de l’horizon, l’arc disparaît entièrement sous le sol, d’où les arcs-en-ciel du matin et de fin d’après-midi. Depuis un avion, on voit parfois le cercle entier. En 1637, dans « Les Météores », René Descartes avait déjà expliqué l’arc-en-ciel par le trajet de la lumière dans les gouttes.",
+      "sources": [
+        { "title": "Organisation météorologique mondiale, Atlas international des nuages — Primary rainbow", "url": "https://cloudatlas.wmo.int/en/primary-rainbow.html" },
+        { "title": "L’Encyclopédie canadienne — Arc-en-ciel", "url": "https://www.thecanadianencyclopedia.ca/fr/article/arc-en-ciel" },
+        { "title": "MétéoMédia — Quelques faits que vous ignoriez sur les arcs-en-ciel", "url": "https://www.meteomedia.com/fr/nouvelles/meteo/saisons/quelque-faits-que-vous-ignoriez-sur-les-arcs-en-ciel" },
+        { "title": "Les Sherpas — Dispersion de la lumière et formation de l’arc-en-ciel", "url": "https://sherpas.com/blog/dispersion-lumiere/" },
+        { "title": "University of Oklahoma Libraries — Descartes, Météores (1637)", "url": "https://galileo.ou.edu/exhibits/meteorology.html" },
+        { "title": "Wikimedia Commons — Descartes Rainbow.png", "url": "https://commons.wikimedia.org/wiki/File:Descartes_Rainbow.png" }
+      ]
+    }
+  ]
+}
