@@ -113,7 +113,7 @@ button{cursor:pointer}
 .nudge .em .ic{width:24px;height:24px;color:#9a6a00}
 .installmini{position:absolute;left:16px;top:50%;margin-top:-2px;transform:translateY(-50%);display:inline-flex;align-items:center;gap:4px;border:0;background:var(--yellow);border-radius:999px;padding:5px 10px 5px 8px;font-weight:700;font-size:13px;color:var(--ink)}
 .installmini svg{width:15px;height:15px}
-.installmini[hidden],.tb-install[hidden]{display:none}
+.installmini[hidden],.tb-install[hidden],.streakmini[hidden],.ab-today[hidden]{display:none}
 .logo img{height:46px;width:auto;display:block}
 .main{flex:1;overflow-y:auto;overflow-x:hidden}
 .view{display:none;padding:8px 18px 26px;flex-direction:column;gap:16px}
@@ -672,6 +672,20 @@ table.mx{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff;bo
 .si .tx{flex:1;display:flex;flex-direction:column}
 .si b{font-size:15px;font-weight:700}.si small{font-size:12.5px;color:var(--muted)}
 .si .chev{width:16px;height:16px;color:#b5ad9f}
+.startnow{display:flex;flex-direction:column;gap:8px}
+.startnow .nu-k{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;background:var(--ink);color:#fff;border-radius:999px;padding:5px 12px;font-weight:800;font-size:13px;letter-spacing:.2px}
+.card.hero{gap:10px;padding:14px}
+.card.hero .pic{border-radius:14px;overflow:hidden;background:#fff;aspect-ratio:16/9;width:100%}
+.card.hero .pic img{width:100%;height:100%;display:block;object-fit:cover}
+.card.hero .txt{display:flex;flex-direction:column;gap:9px}
+.card.hero .tag{align-self:flex-start}
+.card.hero h3{font-size:24px}
+.card.hero .tl{font-size:14.5px;font-weight:600;line-height:1.35;opacity:.92}
+.card.hero .cta{display:block;margin-top:2px}
+.card.hero.orange .cta,.card.hero.yellow .cta{background:var(--ink);color:#fff}
+.card.hero .tl{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.card.hero.again .pic{aspect-ratio:21/9}
+@media (min-width:900px){.startnow{max-width:820px}.card.hero{flex-direction:row;align-items:stretch;gap:20px}.card.hero .pic{flex:0 0 46%;aspect-ratio:auto;min-height:230px}.card.hero .txt{flex:1;justify-content:center}}
 .tprog{display:flex;align-items:center;gap:10px;margin-top:-8px;font-size:13px;color:var(--muted);font-weight:500}
 .tprog .dots{display:flex;gap:4px}
 .tprog i{width:18px;height:6px;border-radius:3px;background:var(--line)}
@@ -1197,7 +1211,7 @@ body{overscroll-behavior-y:none}
             <p class="ab-eyebrow"><span>Gratuit chaque jour</span><span>Sans pub</span><span>Newsletter du dimanche</span></p>
             <h1 id="abH1">L’actu et la culture G en BD.<br><em>Pour briller en société</em> (ou au moins faire semblant).</h1>
             <p class="ab-lead">Chaque jour, Le Sachoir transforme l’actualité et la culture générale en bandes dessinées courtes, drôles et vérifiées. Deux minutes par BD, zéro effort apparent, et vous voilà la personne qui « sait des trucs » au dîner.</p>
-            <div class="ab-ctas"><button class="ab-btn" data-go="home">Lire l’édition du jour</button><button class="ab-btn ghost" data-go="install">L’avoir dans ma poche</button></div>
+            <div class="ab-ctas"><button class="ab-btn" data-go="home">Lire l’édition du jour</button></div>
             <p class="ab-note">L’édition du jour est gratuite, sans carte bancaire. Aucune excuse.</p>
           </div>
           <div class="ab-visual" id="abCovers" aria-hidden="true">
@@ -1540,9 +1554,11 @@ function renderNav() {
   setHTML($("#navTop"), (SHOW_ABOUT() ? [about, ...tabs] : tabs).map(btn).join(""));
   ["#nav", "#navTop"].forEach(id => $(id).querySelectorAll("button").forEach(b => b.onclick = () => setTab(b.dataset.tab)));
   const s = streak();
-  const canInstall = !ME.installDone && !matchMedia("(display-mode: standalone)").matches;
+  // Nouveau lecteur (aucune BD lue) : ni « Installer » ni flamme à 0 dans l'en-tête (20 novembre 2026, retour d'un
+  // testeur : « on ne sait pas où cliquer »). Ils apparaissent après la première BD.
+  const canInstall = HAS_READ() && !ME.installDone && !matchMedia("(display-mode: standalone)").matches;
   ["#installMini", "#installTop"].forEach(id => { const b = $(id); b.hidden = !canInstall; b.onclick = openInstall; });
-  ["#streakMini", "#streakTop"].forEach(id => { $(id).innerHTML = `<span class="fl">${ic("flame")}</span>${s}`; $(id).setAttribute("aria-label", `Série de ${s} jours`); });
+  ["#streakMini", "#streakTop"].forEach(id => { $(id).hidden = !s && !HAS_READ(); $(id).innerHTML = `<span class="fl">${ic("flame")}</span>${s}`; $(id).setAttribute("aria-label", `Série de ${s} jours`); });
 }
 // La page « Le concept » explique l'objectif aux visiteurs sans compte ; une fois connecté, elle disparaît.
 const SHOW_ABOUT = () => !ACC;
@@ -1556,6 +1572,8 @@ function renderAbout() {
   const v = $("#v-about");
   // Bandeau du haut : l'édition du jour (ou la dernière publiée), à un toucher.
   const e = INDEX.find(x => x.date === TODAY) || INDEX.find(x => x.date <= TODAY);
+  // Premier passage : le bouton « Lire l'édition du jour » suffit, pas de bandeau en double (20 novembre 2026).
+  $("#abToday").hidden = !HAS_READ();
   if (e) {
     const titles = e.formats.filter(f => f.id !== "quiz").map(f => f.title).filter(Boolean);
     $("#abTodayT").textContent = e.date === TODAY ? `L’édition du ${new Date(TODAY + "T12:00:00Z").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" })} est servie` : "La dernière édition vous attend";
@@ -1640,34 +1658,42 @@ function renderHome() {
     small: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} small" data-f="${f.id}"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><div class="mid"><span class="dur">${ICON.clock}${f.minutes || 2} min</span>${c ? `<img class="thumb" src="${c}" alt="" loading="lazy">` : ""}</div><span class="tl">${readState(ed, f) || typo(f.tagline || "")}</span></button>`; },
     wide: f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} wide" data-f="${f.id}"><div class="txt"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || typo(f.tagline || "")}</span></div>${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}</button>`; }
   };
-  const duo = ["actu", "cultureg"].filter(id => F[id]);
   const others = ["actu", "cultureg", "insolite", "notice", "origine"].filter(id => F[id]);
+  // « Commencez ici » (20 novembre 2026, retour d'un testeur : « on ne sait pas où cliquer ») : une seule BD mise en
+  // avant, avec un vrai bouton. Nouveau lecteur : la même que « Bien démarrer » (univers choisis) ; ensuite, la
+  // prochaine BD offerte pas encore finie. Elle sort de la liste en dessous pour ne pas apparaître deux fois.
+  const NEW = !HAS_READ();
+  const unread = id => !(r => r && r.max >= F[id].cases.length)(ME.reads.find(x => x.date === ed.date && x.fid === id));
+  const fs = NEW ? firstStory() : null;
+  const heroId = ed.empty ? null : (fs && others.includes(fs.id) && unread(fs.id) ? fs.id : others.find(unread)) || null;
+  const rest = others.filter(id => id !== heroId);
+  const duo = ["actu", "cultureg"].filter(id => rest.includes(id));
+  card.hero = f => { const c = coverOf(ed, f), rs = readState(ed, f); return `<button class="card ${CLS[f.id]} hero${HAS_READ() ? " again" : ""}" data-f="${f.id}">${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}<div class="txt"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><span class="tl">${typo(f.tagline || "")}</span><span class="cta">${rs ? `Reprendre · ${rs}` : `Lire · ${f.minutes || 2} min`} →</span></div></button>`; };
   card.tile = f => { const c = coverOf(ed, f); return `<button class="card ${CLS[f.id]} tile" data-f="${f.id}">${c ? `<div class="pic"><img src="${c}" alt="" loading="lazy"></div>` : ""}<div class="txt"><span class="tag">${esc(f.label)}</span><h3>${typo(f.title)}</h3><span class="dur">${ICON.clock}${f.minutes || 2} min</span><span class="readstate">${readState(ed, f) || typo(f.tagline || "")}</span></div></button>`; };
   // Ordre de l'édition (18 novembre 2026, demande de Greg) : d'abord ce qui est offert, puis le jeu,
   // et le Grand Dossier en dernier, présenté comme le gros sujet « pour aller plus loin ».
   const showFree = PW() && !isPremium();
-  const freeMin = others.reduce((t, id) => t + (F[id].minutes || 2), 0);
-  const freeHead = others.length ? `<div class="sec-h"><h2>${showFree ? `${ic("checkc")} Offert aujourd’hui` : "Au menu du jour"}</h2><small>${others.length} BD · ~${freeMin} min${showFree ? " · gratuit, sans compte" : ""}</small></div>` : "";
+  // Un seul compteur pour l'édition (la ligne sous la date) : plus de « 4 BD » ici contre « 0 / 6 » au-dessus.
+  const heroHTML = heroId ? `<section class="startnow"><span class="nu-k">${NEW ? "👉 Commencez ici" : "👉 À lire maintenant"}</span>${card.hero(F[heroId])}</section>` : "";
+  const freeHead = rest.length ? `<div class="sec-h"><h2>${heroId ? (NEW ? "Ensuite, au menu" : "Aussi au menu") : showFree ? `${ic("checkc")} Offert aujourd’hui` : "Au menu du jour"}</h2>${showFree ? `<small>Offert, sans compte</small>` : ""}</div>` : "";
   const freeHTML = DESK.matches
-    ? `<div class="ed-grid n${others.length}" style="--n:${others.length === 4 ? 4 : Math.min(others.length, 3)}">${others.map(id => card.tile(F[id])).join("")}</div>`
+    ? `<div class="ed-grid n${rest.length}" style="--n:${rest.length === 4 ? 4 : Math.min(rest.length, 3)}">${rest.map(id => card.tile(F[id])).join("")}</div>`
     : `${duo.length === 2 ? `<div class="duo">${duo.map(id => card.small(F[id])).join("")}</div>` : duo.map(id => card.wide(F[id])).join("")}
-   ${F.insolite ? card.wide(F.insolite) : ""}
-   ${F.notice ? card.wide(F.notice) : ""}
-   ${F.origine ? card.wide(F.origine) : ""}`;
+   ${rest.filter(id => !duo.includes(id)).map(id => card.wide(F[id])).join("")}`;
   const dn = F.dossier ? F.dossier.cases.length + (F.dossier.locked || 0) : 0;
   // Les Grands Dossiers des jours précédents (18 novembre 2026, Greg) : 4 cases offertes dans chacun.
   const prevDossiers = allStories().filter(x => x.id === "dossier" && x.date < ed.date).slice(0, 10);
   const prevHTML = prevDossiers.length ? `<div class="bh sub2"><h3>Les Grands Dossiers précédents</h3><button class="linkbtn" data-act-home="dossiers">Tout voir</button></div><div class="hscroll">${prevDossiers.map(storyCard).join("")}</div>` : "";
   const moreHTML = F.dossier || prevHTML ? `<section class="ed-more"><div class="sec-h"><h2>${ic("book")} Pour aller plus loin</h2><small>${F.dossier ? `Le Grand Dossier : un gros sujet vu en entier, ${dn} cases, ~${F.dossier.minutes || 3} min.` : "Les Grands Dossiers : de gros sujets vus en entier."}${showFree ? ` Les ${FREE_CASES} premières cases de chaque dossier sont offertes, la suite avec ${ic("star")} Premium.` : ""}</small></div>${F.dossier ? card.dossier(F.dossier) : ""}${prevHTML}</section>` : "";
-  const cardsHTML = `${freeHead}${freeHTML}`;
+  const cardsHTML = `${heroHTML}${freeHead}${rest.length ? freeHTML : ""}`;
   const prog = isToday && !ed.empty ? todayProgress(ed) : null;
   const fresh = setHTML(v, `
    <div class="home-top"><div><h1 class="h1 hello">${hello}</h1><p class="lead">${prog && prog.done === prog.total ? "Édition bouclée. Vous pouvez briller en toute légalité." : prog && prog.done ? `Plus que ${prog.total - prog.done} à lire. Vous y êtes presque.` : "Prêt à briller en société (ou au moins à faire semblant) ?"}</p></div>
    ${startHTML()}</div>
    <div class="row"><h2 class="date">${fmtLong(ed.date)}</h2><button class="pill hist" id="hHist">${ICON.cal}Historique</button></div>
-   ${dayStripHTML(ed.date)}
-   ${prog ? `<div class="tprog" aria-label="Progression du jour : ${prog.done} sur ${prog.total}"><div class="dots">${prog.items.map(x => `<i class="${x.done ? "on" : ""}" style="--c:${COLOR[x.id]}" title="${esc(x.label)}"></i>`).join("")}</div><span>${prog.done === prog.total ? `${ic("party")} Tout lu aujourd’hui` : `${prog.done} / ${prog.total} aujourd’hui · ~${prog.left} min restantes`}</span></div>` : ""}
-   ${isToday ? `<button class="wx wait" id="wxLine"></button>` : ""}
+   ${NEW ? "" : dayStripHTML(ed.date)}
+   ${prog ? `<div class="tprog" aria-label="Progression du jour : ${prog.done} sur ${prog.total}"><div class="dots">${prog.items.map(x => `<i class="${x.done ? "on" : ""}" style="--c:${COLOR[x.id]}" title="${esc(x.label)}"></i>`).join("")}</div><span>${prog.done === prog.total ? `${ic("party")} Tout lu aujourd’hui` : prog.done ? `${prog.done} / ${prog.total} lus · ~${prog.left} min restantes` : `${prog.total} au menu · ~${prog.left} min`}</span></div>` : ""}
+   ${isToday && !NEW ? `<button class="wx wait" id="wxLine"></button>` : ""}
    ${ed.empty
       ? `<div class="empty-state"><h2>${isToday ? "L’édition du jour est encore sous le crayon" : "Pas d’édition ce jour-là"}</h2><p class="lead">${isToday ? "Le dessinateur taille ses mines. Revenez un peu plus tard." : "Le Sachoir dormait. Ça arrive aux meilleurs."}</p>${last ? `<button class="btn ghost sm" id="hLast">Lire la dernière édition (${fmtLong(last)})</button>` : ""}</div>`
       : cardsHTML}
@@ -1705,6 +1731,8 @@ function startSteps() {
   return st;
 }
 function startHTML() {
+  // Masquée tant qu'aucune BD n'est lue (20 novembre 2026) : la carte « Commencez ici » fait ce premier pas.
+  if (!HAS_READ()) return "";
   const first = lsGet("sachoir.start");
   if (!first) { if (ME.reads.length > 8) return ""; lsSet("sachoir.start", TODAY); }
   if (lsGet("sachoir.startOff") || (first && shift(first, 14) < TODAY)) return "";
