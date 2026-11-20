@@ -46,13 +46,14 @@ VOICES = {   # voix brutes, sans traitement (choix de Greg, 17 novembre 2026)
 }
 SLOW = {"ink-wash": -8}
 # La fin de chaque vidéo (Greg, 20 novembre 2026 : « il manque à la fin un petit truc pour dire aux gens de nous rejoindre
-# sur le site ») : un écran « lesachoir.fr » et une phrase dite par le narrateur, après la dernière réplique.
-CTA_LINES = [
-    "Une BD comme ça chaque matin ? C'est gratuit, sur lesachoir.fr.",
-    "D'autres réponses en BD, chaque matin, sur lesachoir.fr.",
-    "La suite en BD, chaque matin, sur lesachoir.fr.",
+# sur le site », puis « la dernière page doit vraiment expliquer ce qu'est lesachoir.fr, c'est le moment pub ») : une page
+# qui présente le Sachoir et une phrase dite par le narrateur, après la dernière réplique.
+CTA_LINES = [   # le moment « pub » : on dit ce qu'est le Sachoir, puis où le trouver (Greg, 20 novembre 2026)
+    "Le Sachoir, c'est l'actu et la culture G en BD, chaque matin, gratuitement. Rendez-vous sur lesachoir.fr.",
+    "Chaque matin, le Sachoir t'explique l'actu et la culture G en BD, en quelques minutes. C'est gratuit, sur lesachoir.fr.",
+    "Tu as aimé ? Chaque matin, le Sachoir t'explique l'actu en BD, avec de la culture G et un jeu. Gratuit, sur lesachoir.fr.",
 ]
-CTA_HOLD = .9   # l'écran de fin reste encore un peu après la phrase   # le lavis se raconte plus lentement (immobilité avant l'action)
+CTA_HOLD = 1.0   # l'écran de fin reste encore un peu après la phrase   # le lavis se raconte plus lentement (immobilité avant l'action)
 FX = {"cross", "arrow", "count", "foule", "slap", "zoom"}
 
 

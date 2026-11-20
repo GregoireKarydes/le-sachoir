@@ -150,26 +150,46 @@ export function bulb(x, y, s, o = {}) {
   g.restore();
 }
 
-// ---- the closing call (Greg, 20 November 2026): every video ends inviting people to join on the website ----
-// Drawn over the last frame of the video, in the style's colours; the narrator says the line (TL.cta.text).
+// ---- the closing « ad » page (Greg, 20 November 2026): every video ends by saying what Le Sachoir is and where to find it.
+// Drawn over the last frame of the video, in the style's colours and fonts; the narrator says TL.cta.text meanwhile.
 export function cta(t, th) {
   const C = TL.cta; if (!C || t < C.t0) return;
-  const lt = t - C.t0, k = clamp(lt / .3), e = 1 - Math.pow(1 - k, 3);
+  const lt = t - C.t0, sp = Math.max(2.5, C.dur || 4), at = f => .25 + sp * f, k = clamp(lt / .3), e = 1 - Math.pow(1 - k, 3);
+  const pop = (a, d = .28) => { const u = clamp((lt - a) / d); return u <= 0 ? 0 : 1 - Math.pow(1 - u, 3); };
   g.setTransform(1, 0, 0, 1, 0, 0);
-  g.globalAlpha = .94 * e; g.fillStyle = th.bg; g.fillRect(0, 0, W, H); g.globalAlpha = 1;
-  const s = .85 + .15 * e + (lt < .5 ? Math.sin(lt * 18) * .02 * (1 - lt * 2) : 0);
-  g.save(); g.translate(W / 2, 700); g.scale(s, s);
-  bulb(0, -250, 1.9, { ink: th.ink, fill: YELLOW, base: th.ink });
+  g.globalAlpha = e; g.fillStyle = th.bg; g.fillRect(0, 0, W, H); g.globalAlpha = 1;
   g.textAlign = 'center'; g.textBaseline = 'middle';
-  g.font = th.small; g.fillStyle = th.ink; g.fillText('Rejoins-nous sur', 0, -40);
-  g.rotate(-.025); g.fillStyle = INK; g.fillRect(-370 + 10, 30 + 10, 740, 130); g.fillStyle = YELLOW; g.fillRect(-370, 30, 740, 130);
-  g.fillStyle = INK; g.font = '800 92px "Baloo 2"'; g.fillText('lesachoir.fr', 0, 98);
+  // the brand
+  const u0 = pop(0, .35);
+  g.save(); g.globalAlpha = u0; g.translate(W / 2, 400); g.scale(.8 + .2 * u0, .8 + .2 * u0);
+  bulb(-345, -12, 1.25, { ink: th.ink, fill: YELLOW, base: th.ink });
+  g.font = th.logo.replace(/\d+px/, '104px'); g.fillStyle = th.ink; g.fillText('LE SACHOIR', 60, 0);
   g.restore();
-  if (lt > .35) {
-    const u = clamp((lt - .35) / .3); g.globalAlpha = u; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = th.ink; g.font = th.small;
-    const lines = (C.lines || ['Une BD qui explique', 'chaque matin. Gratuit.']);
-    lines.forEach((L, i) => g.fillText(L, W / 2, 1000 + i * 66 + (1 - u) * 20)); g.globalAlpha = 1;
+  // what it is
+  const u1 = pop(at(.08));
+  g.globalAlpha = u1; g.fillStyle = th.ink; g.font = th.small.replace(/\d+px/, '64px');
+  g.fillText("L'actu et la culture G", W / 2, 590 + (1 - u1) * 24); g.fillText('en BD, chaque matin.', W / 2, 670 + (1 - u1) * 24);
+  // what you get
+  const items = ["L'actu du jour, expliquée", 'Une BD de culture G', 'Le jeu du jour'];
+  g.font = th.small.replace(/\d+px/, '54px'); g.textAlign = 'left';
+  items.forEach((L, i) => {
+    const u = pop(at(.28 + i * .14)); if (u <= 0) return;
+    const y = 800 + i * 92, x = 250 + (1 - u) * -40;
+    g.globalAlpha = u; g.fillStyle = YELLOW; g.fillRect(x - 58, y - 18, 34, 34); g.strokeStyle = INK; g.lineWidth = 3; g.strokeRect(x - 58, y - 18, 34, 34);
+    g.fillStyle = th.ink; g.fillText(L, x, y + 2);
+  });
+  g.textAlign = 'center';
+  const u2 = pop(at(.72)); g.globalAlpha = u2; g.font = th.small.replace(/\d+px/, '50px'); g.fillStyle = th.ink;
+  g.fillText('Gratuit · quelques minutes par jour', W / 2, 1110);
+  // where
+  const u3 = pop(at(.8), .22);
+  if (u3 > 0) {
+    g.globalAlpha = 1; g.save(); g.translate(W / 2, 1250); g.rotate(-.025); const s = 1 + .5 * (1 - u3); g.scale(s, s); g.globalAlpha = u3;
+    g.fillStyle = INK; g.fillRect(-370 + 10, -62 + 10, 740, 124); g.fillStyle = YELLOW; g.fillRect(-370, -62, 740, 124);
+    g.fillStyle = INK; g.font = '800 88px "Baloo 2"'; g.fillText('lesachoir.fr', 0, 4); g.restore();
+    g.globalAlpha = u3; g.font = th.small.replace(/\d+px/, '42px'); g.fillStyle = th.ink; g.fillText('lien en bio', W / 2, 1375);
   }
+  g.globalAlpha = 1;
 }
 
 // ---- end card (logo + lesachoir.fr) in the style's own colours and fonts ----

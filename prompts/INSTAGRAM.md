@@ -847,10 +847,13 @@ Humour plus mesuré. Jamais d'autre couleur, jamais de personnage ni de musique 
 
 Partout, sans rien écrire : le bandeau jaune (`band`) dès l'image 1, les sous-titres mot à mot, l'ampoule du Sachoir
 cachée une fois (avant-dernier plan ; `film.bulb_beat` pour en choisir un autre), et **la fin « rejoins-nous »**
-(Greg, 20 novembre 2026) : après ta dernière réplique, le moteur ajoute tout seul un écran « Rejoins-nous sur
-lesachoir.fr » et une phrase dite par le narrateur (« Une BD comme ça chaque matin ? C'est gratuit, sur
-lesachoir.fr. »). Ne l'écris pas dans `beats` ; pour la personnaliser, mets `film.cta` (12 mots au plus, finit par
-« lesachoir.fr. »).
+(Greg, 20 novembre 2026 : « la dernière page doit vraiment expliquer ce qu'est lesachoir.fr, c'est le moment pub ») :
+après ta dernière réplique, le moteur ajoute tout seul une page qui présente le Sachoir (le logo, « L'actu et la
+culture G en BD, chaque matin », l'actu du jour expliquée, une BD de culture G, le jeu du jour, « Gratuit », et
+lesachoir.fr) pendant que le narrateur le dit (« Le Sachoir, c'est l'actu et la culture G en BD, chaque matin,
+gratuitement. Rendez-vous sur lesachoir.fr. »). Ne l'écris pas dans `beats`. Pour adapter la phrase au sujet, mets
+`film.cta` (25 mots au plus) : elle dit ce qu'est le Sachoir (BD, actu et culture G, chaque matin, gratuit) et finit
+par « lesachoir.fr. ».
 
 ## D2. Le script : 30 à 35 s, 8 à 11 plans, 70 à 85 mots (bible v3)
 Un plan = une phrase = une idée = une image ; **aucun plan de plus de 4 s** (13 mots au plus ; une phrase trop longue se
@@ -976,9 +979,9 @@ Règles (le contrôle automatique et la relecture du dimanche les vérifient) :
    et les 3 dernières secondes ; les sous-titres mot à mot (y ≈ 1290 à 1480) tout le temps ; les 230 px de droite et
    tout ce qui est sous y = 1480 sont couverts par Instagram. Le sujet et les cartons vivent entre y = 460 et 1280.
 8. **La dernière image de ta scène** ressemble à la première (même cadre ou même sujet). Ensuite le moteur pose
-   l'écran « Rejoins-nous sur lesachoir.fr » par-dessus ta dernière image (D1) : ta caméra peut continuer à bouger
+   la page « pub » du Sachoir par-dessus ta dernière image (D1) : ta caméra peut continuer à bouger
    doucement pendant ce temps (`t` dépasse `B(-1).t1`). `export function cta(t, theme)` seulement pour une fin
-   dessinée dans ton style, qui garde le texte « Rejoins-nous sur lesachoir.fr » bien lisible.
+   dessinée dans ton style, qui garde tout le contenu de la page « pub » (ce qu'est le Sachoir, gratuit, lesachoir.fr) bien lisible.
 9. **Le texte à l'écran suit D2b** : il doit être compris sans le son.
 
 ## E2. Le fichier `scene.js`

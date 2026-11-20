@@ -136,21 +136,29 @@ def gong(v=1.0):
     return sum(np.sin(2 * np.pi * f * t) * np.exp(-t / dcy) for f, dcy in ((110, .9), (166, .6), (247, .4), (330, .3))) * v * .4
 
 
+def air(d, top=1600, v=1.0):
+    """Un souffle doux (Greg, 20 novembre 2026 : les « whoosh » des transitions étaient violents) : du bruit filtré
+    dans les graves et les médiums, sans aigus, qui monte et retombe en douceur."""
+    k = max(64, int(d * SR)); x = lp(hp(rng.standard_normal(k), 120), top)
+    x = x / (np.abs(x).max() + 1e-9)
+    return x * np.sin(np.pi * ts(k) / d) ** 2.5 * v
+
+
 def foley(tl, events):
     dur = tl["dur"]; n = int(dur * SR) + SR
     out = np.zeros((n, 2)); st = tl["style"]
     for e in events:
         ty, t = e["type"], e["t"]
         if ty == "open":
-            place(out, kick(.8), t, .35); place(out, sweep(.4, 300, 4000), t, .2)
+            place(out, kick(.6), t, .22); place(out, air(.45, 1400), t, .05)
         elif ty == "cut" and st in ("flat-space-explainer", "hd-2d"):
             pass
         elif ty == "cut":
-            place(out, sweep(.25, 600, 5000), t, .12, .2)
+            place(out, air(.3, 1200), t, .035, .2)
         elif ty == "scribble":
             place(out, scribble(e.get("d", .5)), t, .5, -.1)
         elif ty == "zoom":
-            place(out, sweep(e.get("d", .7), 200, 7000), t, .35)
+            place(out, air(e.get("d", .7), 1800), t, .07)
         elif ty == "slap":
             place(out, slap(), t, .7)
         elif ty == "brush":
