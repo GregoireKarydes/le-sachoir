@@ -40,7 +40,10 @@
       ],
       "cover": {
         "prompt": "a stone scriptorium. Frère Odon (small, hunched, joined black eyebrows, slate-blue habit) proudly holds up the parchment covered in identical strokes like a picket fence; next to him, Mathieu of today (tall, lanky, blond quiff, mint-green shirt) leans in with his laptop under his arm, squinting hard at the page, totally lost. medium shot",
-        "cast": ["odon", "mathieu"],
+        "cast": [
+          "odon",
+          "mathieu"
+        ],
         "file": "images/origine-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -52,12 +55,22 @@
           "tag": "Aujourd’hui",
           "caption": "« Mettre les points sur les i », c’est tout préciser, souvent agacé. Mais pourquoi des points, et pourquoi le i ?",
           "bubbles": [
-            { "who": "mathieu", "text": "Troisième mail sans réponse. Cette fois, je mets les points sur les i.", "side": "l" },
-            { "who": "Une collègue", "text": "Tout en majuscules ? Les I majuscules n’ont pas de point.", "side": "r" }
+            {
+              "who": "mathieu",
+              "text": "Troisième mail sans réponse. Cette fois, je mets les points sur les i.",
+              "side": "l"
+            },
+            {
+              "who": "Une collègue",
+              "text": "Tout en majuscules ? Les I majuscules n’ont pas de point.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "an open-plan office of today. Mathieu (tall, lanky, blond quiff, mint-green shirt) on the left hammers the keyboard of the laptop with two stiff fingers, jaw clenched, leaning furiously toward the screen; on the right, a calm colleague with a grey bob and a burgundy sweater peeks over the partition, eyebrows raised. wide shot",
-            "cast": ["mathieu"],
+            "cast": [
+              "mathieu"
+            ],
             "file": "images/origine-01.webp",
             "status": "pending",
             "attempts": 0
@@ -69,12 +82,22 @@
           "tag": "Moyen Âge",
           "caption": "Au Moyen Âge, les copistes forment i, m, n et u avec les mêmes petits traits verticaux : les jambages.",
           "bubbles": [
-            { "who": "odon", "text": "Admirez ces jambages. Droits comme des soldats.", "side": "l" },
-            { "who": "Un vieux moine", "text": "Splendide. Et ça dit quoi ?", "side": "r" }
+            {
+              "who": "odon",
+              "text": "Admirez ces jambages. Droits comme des soldats.",
+              "side": "l"
+            },
+            {
+              "who": "Un vieux moine",
+              "text": "Splendide. Et ça dit quoi ?",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a stone monastery scriptorium seen from above, candles on a slanted writing desk. Frère Odon (small, hunched, joined black eyebrows, slate-blue habit) on the left presents the parchment with a proud sweep of the quill; on the right, a very old bald monk in a brown habit bends over the page with his nose almost touching it, eyes crossed. high angle",
-            "cast": ["odon"],
+            "cast": [
+              "odon"
+            ],
             "file": "images/origine-02.webp",
             "status": "pending",
             "attempts": 0
@@ -94,11 +117,17 @@
           "tag": "XIe siècle",
           "caption": "Dès le XIe siècle, des copistes ajoutent un petit trait au-dessus du i pour le repérer dans la palissade.",
           "bubbles": [
-            { "who": "odon", "text": "Un trait sur chaque i. Pour les gens qui ne savent pas lire.", "side": "r" }
+            {
+              "who": "odon",
+              "text": "Un trait sur chaque i. Pour les gens qui ne savent pas lire.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "Frère Odon alone (small, hunched, joined black eyebrows, black tonsure, slate-blue habit), his face right above the parchment, adding one tiny slanted stroke with the tip of the quill, tongue out in concentration, one eyebrow lifted in disdain, a light-blue sweat drop on his forehead. close-up",
-            "cast": ["odon"],
+            "cast": [
+              "odon"
+            ],
             "file": "images/origine-04.webp",
             "status": "pending",
             "attempts": 0
@@ -110,7 +139,15 @@
           "tag": "En vrai",
           "title": "Une Bible gothique copiée à la main",
           "text": "Une Bible latine copiée à la main à la fin du Moyen Âge, en écriture gothique. Regardez les m, n, u et i : les jambages s’y alignent comme des barreaux.",
-          "photo": { "commons": "File:Calligraphy.malmesbury.bible.arp.jpg" }
+          "photo": {
+            "commons": "File:Calligraphy.malmesbury.bible.arp.jpg",
+            "credit": "Gerard Brils",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Calligraphy.malmesbury.bible.arp.jpg",
+            "file": "images/photo-5-calligraphy-malmesbury-bible-arp-jp.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -118,7 +155,11 @@
           "tag": "Fin des années 1400",
           "caption": "Avec les caractères d’imprimerie romains, à la fin des années 1400, le grand trait rétrécit et devient notre point.",
           "bubbles": [
-            { "who": "Un imprimeur", "text": "Un point bien rond. Le moine du XIe siècle se retournerait dans sa tombe.", "side": "l" }
+            {
+              "who": "Un imprimeur",
+              "text": "Un point bien rond. Le moine du XIe siècle se retournerait dans sa tombe.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a late 15th-century printing workshop with a wooden press. A burly printer with a curly red beard and a leather apron, seen from below, proudly holds up between two huge fingers a tiny metal letter block, peering at it through a round magnifying glass, ink smudges on his nose. low angle",
@@ -146,12 +187,22 @@
           "tag": "En résumé",
           "caption": "Le point du i est né pour distinguer cette lettre des jambages voisins. L’expression veut dire : ne laisser aucun doute.",
           "bubbles": [
-            { "who": "mathieu", "text": "Je repasse en minuscules. Je veux mes points.", "side": "l" },
-            { "who": "Une collègue", "text": "Ton mail dit « minimum ». Quinze jambages, deux points.", "side": "r" }
+            {
+              "who": "mathieu",
+              "text": "Je repasse en minuscules. Je veux mes points.",
+              "side": "l"
+            },
+            {
+              "who": "Une collègue",
+              "text": "Ton mail dit « minimum ». Quinze jambages, deux points.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "back in the open-plan office. Mathieu (tall, lanky, blond quiff, mint-green shirt) sits very straight in front of the laptop, pressing a single key with one finger with enormous solemnity, chin raised; behind him the colleague with a grey bob and burgundy sweater holds her coffee mug, deadpan. medium shot",
-            "cast": ["mathieu"],
+            "cast": [
+              "mathieu"
+            ],
             "file": "images/origine-08.webp",
             "status": "pending",
             "attempts": 0
@@ -164,11 +215,26 @@
       },
       "story": "« Mettre les points sur les i », c’est s’expliquer nettement pour éviter toute contestation et lever toute ambiguïté, comme le dit le Dictionnaire de l’Académie française. Souvent, on le dit avec un peu d’agacement, à quelqu’un qui ne veut pas comprendre. L’image vient de l’histoire de l’écriture.\nDans les manuscrits du Moyen Âge, et surtout dans l’écriture gothique, les lettres i, m, n et u sont faites des mêmes petits traits verticaux, appelés jambages : un pour le i, deux pour le n et le u, trois pour le m. Collés les uns aux autres, ils forment une palissade où l’on ne sait plus où une lettre commence. Une phrase latine célèbre, faite presque uniquement de ces lettres, en est la caricature : « mimi numinum niuium minimi munium nimium uini muniminum… ».\nPour s’y retrouver, les copistes ont pris l’habitude, dès le XIe siècle, d’ajouter un petit trait au-dessus du i, pour le distinguer des lettres voisines. À la fin des années 1400, avec les caractères d’imprimerie de style romain, ce grand trait rétrécit et devient le petit point rond que l’on connaît. Le I majuscule, bien visible tout seul, n’en porte pas.\nMettre les points sur les i, c’est donc, au sens propre, rendre un mot impossible à lire de travers. Au sens figuré, c’est dire les choses si clairement que personne ne peut plus faire semblant de ne pas comprendre.",
       "sources": [
-        { "title": "Dictionnaire de l’Académie française, 9e édition — I", "url": "https://dictionnaire-academie.fr/article/A9I0001" },
-        { "title": "Dictionary.com — Tittle", "url": "https://www.dictionary.com/e/tittle/" },
-        { "title": "Wikipédia (en, miroir) — Minim (palaeography)", "url": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Minim_(palaeography)" },
-        { "title": "Expressio — Mettre les points sur les i", "url": "https://www.expressio.fr/expressions/mettre-les-points-sur-les-i" },
-        { "title": "Wikimedia Commons — Calligraphy.malmesbury.bible.arp.jpg", "url": "https://commons.wikipedia.com/wiki/File:Calligraphy.malmesbury.bible.arp.jpg" }
+        {
+          "title": "Dictionnaire de l’Académie française, 9e édition — I",
+          "url": "https://dictionnaire-academie.fr/article/A9I0001"
+        },
+        {
+          "title": "Dictionary.com — Tittle",
+          "url": "https://www.dictionary.com/e/tittle/"
+        },
+        {
+          "title": "Wikipédia (en, miroir) — Minim (palaeography)",
+          "url": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Minim_(palaeography)"
+        },
+        {
+          "title": "Expressio — Mettre les points sur les i",
+          "url": "https://www.expressio.fr/expressions/mettre-les-points-sur-les-i"
+        },
+        {
+          "title": "Wikimedia Commons — Calligraphy.malmesbury.bible.arp.jpg",
+          "url": "https://commons.wikipedia.com/wiki/File:Calligraphy.malmesbury.bible.arp.jpg"
+        }
       ]
     }
   ]
