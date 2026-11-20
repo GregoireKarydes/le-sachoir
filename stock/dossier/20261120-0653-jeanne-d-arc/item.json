@@ -1,0 +1,599 @@
+{
+  "added": "20261120-0653",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Jeanne d’Arc : 17 ans, pas d’armée, et elle remet un roi sur son trône",
+      "tagline": "De Domrémy au bûcher de Rouen : comment une paysanne a retourné la guerre de Cent Ans en deux ans",
+      "teaser": "Un dauphin qui se cache, des théologiens qui interrogent trois semaines, et une ado de 17 ans qui perd patience.",
+      "minutes": 3,
+      "theme": "Grandes personnalités",
+      "art": {
+        "subject": "how Joan of Arc, a 17-year-old peasant girl, helped the uncrowned dauphin Charles VII during the Hundred Years' War (1425-1456): her voices at Domrémy, Vaucouleurs, the meeting at Chinon, the relief of the siege of Orléans, the coronation at Reims, her capture at Compiègne, her trial and death at Rouen, her rehabilitation",
+        "setting": "a green meadow by the river Meuse at Domrémy; the muddy courtyard of the small fortress of Vaucouleurs; the torch-lit great hall of the castle of Chinon; a theologians' room at Poitiers; the narrow medieval streets of Orléans and a stone fort by the Loire bridge; the gothic cathedral of Reims; the walls of Compiègne; a gloomy stone courtroom in Rouen castle; the old market square of Rouen; an English Channel harbour",
+        "era": "France in the 1420s to 1450s, late Middle Ages: plate armour, chainmail, longbows, tunics and hose, fur hats, houppelande robes, bishops' mitres, parchment and wax seals",
+        "props": {
+          "standard": "a long white cloth banner on a wooden pole with a few small golden fleurs-de-lis, no letters",
+          "crown": "a golden royal crown with fleurs-de-lis, slightly too big",
+          "quill": "a long white goose-feather quill",
+          "letter": "a folded parchment letter with a red wax seal, no visible writing"
+        }
+      },
+      "cast": [
+        {
+          "id": "jeanne",
+          "name": "Jeanne",
+          "look": "Jeanne d'Arc, a small sturdy peasant girl of 13 to 19, short dark-brown hair cut in a round bowl cut above the ears, light tan skin, straight determined eyebrows, a bright cornflower-blue tunic as main colour (worn under polished silver plate armour once she is a soldier), dark brown hose and leather boots, often holding the standard",
+          "role": "the peasant girl who says saints sent her to save the kingdom; blunt, impatient and fearless, always walks straight ahead with her chin up and drags hesitant people along",
+          "file": "cast/dossier-jeanne.png",
+          "status": "pending"
+        },
+        {
+          "id": "charles",
+          "name": "Charles VII",
+          "look": "Charles VII in his late twenties, a very thin slightly hunched man with skinny legs, a long sad face and a big drooping nose, heavy-lidded worried eyes, light skin, short dark hair in a bowl cut under a tall round brown fur hat, a padded plum-purple velvet robe with puffed shoulders as main colour, black hose, several gold rings he keeps twisting",
+          "role": "the uncrowned dauphin who becomes king; indecisive and fearful, always hesitating or hiding behind others, then vainly takes the credit afterwards",
+          "file": "cast/dossier-charles.png",
+          "status": "pending"
+        },
+        {
+          "id": "cauchon",
+          "name": "Pierre Cauchon",
+          "look": "Pierre Cauchon, bishop of Beauvais, a very fat round man about sixty, bald with a fringe of white hair, heavy jowls, ruddy light skin, a tall white bishop's mitre, a bright crimson-red cape as main colour over a long white robe, always holding the quill",
+          "role": "the bishop who judges Jeanne and wants her condemned; pompous and fussy about procedure, buried in papers, waves his quill like a sceptre",
+          "file": "cast/dossier-cauchon.png",
+          "status": "pending"
+        },
+        {
+          "id": "baudricourt",
+          "name": "Robert de Baudricourt",
+          "look": "Robert de Baudricourt, captain of Vaucouleurs, a tall burly soldier in his forties with very broad shoulders, thick curly black hair and a bushy black beard, weathered light skin, an olive-brown leather jerkin over grey chainmail as main colour, a big sword at his belt, a roast chicken leg in his hand",
+          "role": "the gruff garrison captain who first sends Jeanne home, then gives in; lazy and grumpy, always munching something, sighs loudly",
+          "file": "cast/dossier-baudricourt.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a dusty road with the towers of a gothic cathedral far away on the horizon. Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) marches forward on the left holding the standard high and pulling Charles by the sleeve; Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) digs his heels into the road on the right, leaning backwards, clutching the crown to his chest. visual gag: the reluctant king dragged along. wide shot",
+        "cast": [
+          "jeanne",
+          "charles"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Un royaume, deux rois",
+          "caption": "1429. Comment une paysanne de 17 ans va-t-elle commander une armée ? D'abord, la France a deux rois.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Roi de France, c'est moi. Enfin, d'une moitié. Disons d'un tiers.",
+              "side": "r"
+            },
+            {
+              "who": "Un courtisan",
+              "text": "Votre Majesté, le tiers vient encore de rétrécir.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a cold, nearly empty stone hall of the castle of Chinon with one faded tapestry. Charles (very thin, hunched, big drooping nose, tall round fur hat, plum-purple robe) sits slumped on a small wooden throne on the right, chin in his hand; in the background on the left a courtier in a brown tunic unrolls a long blank map on the floor and snips a piece off it with big scissors. visual gag: the shrinking map. wide shot",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi deux rois pour une seule France ?",
+          "steps": [
+            "1328 : le roi Charles IV meurt sans fils",
+            "Le roi d'Angleterre Édouard III, petit-fils de Philippe le Bel par sa mère, réclame la couronne",
+            "1337 : la guerre commence ; elle durera 116 ans",
+            "1420, traité de Troyes : l'Anglais Henri V devient l'héritier, le dauphin Charles est écarté",
+            "1422 : les deux rois meurent ; les Anglais proclament un bébé, Henri VI, roi de France"
+          ]
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Vers 1425, Domrémy",
+          "caption": "Vers 1425, à Domrémy, village au bord de la Meuse, Jeanne a 13 ans. Elle dit entendre des saints.",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "Saint Michel veut que je chasse les Anglais. Moi. Avec mes moutons ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a green meadow by a small river with a few sheep. Jeanne as a 13-year-old girl (small, sturdy, dark-brown bowl cut, light tan skin, simple cornflower-blue peasant dress) stands frozen on the left holding a wooden shepherd's crook, staring up at a beam of pale golden light coming from the sky on the right; the sheep next to her looks up too, just as baffled. visual gag: the baffled sheep. medium wide shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Février 1429, Vaucouleurs",
+          "caption": "Rejetée en 1428, elle revient en février 1429 à Vaucouleurs. Cette fois, le capitaine lui donne une escorte.",
+          "bubbles": [
+            {
+              "who": "baudricourt",
+              "text": "Le dauphin ne reçoit même pas ses généraux. Bonne chance.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Il me recevra. Et dans quelques mois, il sera sacré roi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the muddy courtyard of the small fortress of Vaucouleurs. Baudricourt (tall, burly, bushy black beard, olive-brown leather jerkin over chainmail) leans on a wooden table on the left, munching a roast chicken leg, unconvinced; Jeanne (small, sturdy, dark-brown bowl cut, cornflower-blue tunic, dark travel cloak) stands on the right, fists on her hips, chin up, a saddled horse and two escort soldiers waiting behind her. low angle",
+            "cast": [
+              "baudricourt",
+              "jeanne"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Le dauphin et la ville assiégée",
+          "caption": "Le 25 février 1429, à Chinon, le dauphin la reçoit. Selon la tradition, il se cache parmi ses courtisans.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Le dauphin ? C'est lui, là-bas. Le grand, avec le chapeau.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Gentil dauphin, on vous reconnaît à votre air inquiet.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a crowded torch-lit great hall in the castle of Chinon full of colourful courtiers. Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) half-hides behind a fat courtier on the left, pointing at someone else across the room; Jeanne (small, sturdy, dark-brown bowl cut, men's travel clothes with a cornflower-blue tunic) walks straight towards him from the right, pointing right at him. high angle",
+            "cast": [
+              "charles",
+              "jeanne"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "Printemps 1429, Poitiers",
+          "caption": "Prudent, Charles la fait interroger trois semaines à Poitiers par des théologiens. Verdict : rien à lui reprocher.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a long wooden table piled with absurdly tall towers of thick books, behind which six old theologians in black robes and white caps lean forward, all frowning; in the foreground Jeanne (small, sturdy, dark-brown bowl cut, cornflower-blue tunic) sits alone on a tiny stool facing them, seen from behind, chin propped on her fist, slumping with boredom. visual gag: the towering piles of books. from behind",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi Orléans, c'est la clé",
+          "text": "Depuis le 12 octobre 1428, les Anglais assiègent Orléans : ils l'encerclent pour la forcer à se rendre.",
+          "steps": [
+            "Orléans garde un pont sur la Loire",
+            "Au nord du fleuve : les Anglais et leurs alliés bourguignons",
+            "Au sud : les terres restées fidèles à Charles",
+            "Si Orléans tombe, la route du sud est ouverte"
+          ],
+          "joke": "Orléans, c'est la porte. Et Charles est derrière."
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Fin avril 1429",
+          "caption": "Fin avril 1429, Jeanne entre dans Orléans en armure, avec des vivres et des soldats. La ville l'acclame.",
+          "bubbles": [
+            {
+              "who": "Un capitaine",
+              "text": "Les chefs préfèrent attendre des renforts.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Vous attendez depuis six mois. On essaie autre chose ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a narrow medieval street of Orléans packed with cheering townspeople waving from windows and doorways. Jeanne (small, sturdy, dark-brown bowl cut, polished silver armour over a cornflower-blue tunic) rides in on a white horse on the right, holding the standard high; on the left a grumpy grey-bearded captain in a dented helmet walks beside the horse with his arms crossed. medium wide shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "7 mai 1429",
+          "caption": "Le 7 mai, à l'assaut du fort des Tourelles, une flèche la blesse à l'épaule. Elle retourne au combat.",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "C'est une flèche, pas une excuse. On y retourne.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "at the foot of a stone fort by a river bridge, Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) sits on the grass on the left, gritting her teeth and gripping a broken arrow shaft near her shoulder while already pushing herself back up to her feet; behind her, soldiers carrying ladders charge towards the walls. medium close-up",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "photo",
+          "tag": "Document d'époque",
+          "title": "Le siège d'Orléans, peint au XVe siècle",
+          "text": "Une miniature d'un manuscrit enluminé de la fin du XVe siècle, quelques décennies après les faits : la ville, ses remparts et les assiégeants.",
+          "photo": {
+            "commons": "File:Siege orleans.jpg"
+          }
+        },
+        {
+          "n": 11,
+          "kind": "react",
+          "tag": "8 mai 1429",
+          "caption": "Le 8 mai 1429, les Anglais lèvent le siège. Orléans, encerclée depuis sept mois, est libre.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Elle a gagné ? Mais je n'avais rien prévu pour une victoire !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet castle room far from the battle. Charles (very thin, hunched, big drooping nose, plum-purple robe) on the left reads the letter, so stunned that his tall fur hat pops off his head into the air; on the right a breathless, mud-splattered messenger kneels on one knee. visual gag: the flying hat. medium shot",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "photo",
+          "tag": "Document d'époque",
+          "title": "Le seul dessin fait de son vivant",
+          "text": "Le 10 mai 1429, en apprenant la victoire d'Orléans, un greffier du parlement de Paris, Clément de Fauquembergue, dessine Jeanne en marge de son registre. Il ne l'a jamais vue.",
+          "photo": {
+            "commons": "File:Jeanne d'Arc-Fauquembergue.jpg"
+          }
+        },
+        {
+          "n": 13,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Le sacre de Reims",
+          "caption": "Jeanne veut emmener Charles à Reims, en terre ennemie, parce que les rois de France y sont sacrés.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Reims ? C'est loin. Et il y a des Anglais partout.",
+              "side": "r"
+            },
+            {
+              "who": "jeanne",
+              "text": "On les chassera en route. Ça fait de l'exercice.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a castle courtyard. Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) strides forward on the left pulling Charles by the sleeve; Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) digs his heels into the ground on the right, leaning far backwards like a stubborn mule. visual gag: the tug of war. low angle",
+            "cast": [
+              "jeanne",
+              "charles"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi le sacre change tout",
+          "text": "Au sacre, l'archevêque de Reims oint le roi d'une huile sainte : aux yeux de tous, c'est Dieu qui l'a choisi.\nSans sacre, ses ennemis surnomment Charles « le petit roi de Bourges ». Sacré, il devient le vrai roi, et l'Anglais passe pour un intrus.",
+          "joke": "Une couronne, ça se pose. Un sacre, ça ne se discute pas."
+        },
+        {
+          "n": 15,
+          "kind": "fact",
+          "tag": "17 juillet 1429",
+          "caption": "Le 17 juillet 1429, à Reims, Charles est sacré roi. Jeanne est près de lui, son étendard à la main.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Elle est un peu grande, cette couronne, non ?",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Vous grandirez dedans.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "inside a tall gothic cathedral with coloured stained-glass light. Charles (very thin, hunched, big drooping nose, plum-purple robe) kneels in the centre-left while an old archbishop in white lowers the crown onto his head; the crown slides right down over his eyes. Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) stands on the right holding the standard, biting back a smile. visual gag: the crown over his eyes. wide shot",
+            "cast": [
+              "charles",
+              "jeanne"
+            ],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 16,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Abandonnée",
+          "caption": "Après le sacre, Charles préfère négocier. Le 23 mai 1430, à Compiègne, des soldats bourguignons capturent Jeanne.",
+          "bubbles": [
+            {
+              "who": "Un soldat bourguignon",
+              "text": "Celle-là, elle vaut une fortune.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "outside the stone walls of Compiègne at dusk, seen from above: Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) is pulled down from her white horse by two soldiers in yellow-and-red tabards; her standard has fallen in the mud beside her. No blood, no wounds. high angle",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "fact",
+          "tag": "1430",
+          "caption": "Jean de Luxembourg la vend aux Anglais pour 10 000 écus. Charles VII ne fait rien pour la racheter.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Je vais leur écrire une lettre très ferme. Bientôt. Un jour.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) sits alone at a gilded desk, holding the quill above a blank parchment, his eyes drifting towards the window, clearly not writing a single word; a light-blue sweat drop on his temple. close-up",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 18,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Le procès de Rouen",
+          "caption": "En 1431, à Rouen, l'évêque Pierre Cauchon la juge pour hérésie, c'est-à-dire pour avoir désobéi à l'Église.",
+          "bubbles": [
+            {
+              "who": "cauchon",
+              "text": "Vous entendez des voix et vous portez des habits d'homme. Expliquez-vous.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Mes voix, je les écoute. Vous, un peu moins.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a gloomy stone courtroom in Rouen castle. Cauchon (very fat, round, bald with a white fringe, tall white mitre, crimson-red cape) sits high on a judge's chair on the left behind huge piles of papers, pointing the quill at the accused; Jeanne (small, sturdy, dark-brown bowl cut, worn cornflower-blue tunic, iron chains at her ankles) sits on a low bench on the right, back straight, arms crossed. medium shot",
+            "cast": [
+              "cauchon",
+              "jeanne"
+            ],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 19,
+          "kind": "react",
+          "tag": "1431",
+          "caption": "Un piège : « Êtes-vous en état de grâce ? » Oui, c'est de l'orgueil ; non, un aveu. Sa vraie réponse :",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "Si je n'y suis, Dieu m'y mette, et si j'y suis, Dieu m'y garde.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "over Jeanne's shoulder (small, dark-brown bowl cut, cornflower-blue tunic) in the left foreground, we see Cauchon (very fat, bald with a white fringe, tall white mitre, crimson-red cape) on his high chair, frozen with his mouth open, the quill snapped in two in his fist and ink splashing over his papers. visual gag: the snapped quill. over-the-shoulder",
+            "cast": [
+              "jeanne",
+              "cauchon"
+            ],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 20,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Condamnée à cause d'une tenue",
+          "steps": [
+            "24 mai 1431 : au cimetière Saint-Ouen, Jeanne abjure, c'est-à-dire renie ses erreurs, et promet de porter des habits de femme",
+            "27 mai : elle reprend ses habits d'homme",
+            "29 mai : les juges la déclarent « relapse », retombée dans l'hérésie",
+            "Pour un relapse, la peine est le bûcher"
+          ]
+        },
+        {
+          "n": 21,
+          "kind": "react",
+          "tag": "30 mai 1431",
+          "caption": "Le 30 mai 1431, Jeanne est brûlée vive à Rouen, place du Vieux-Marché. Elle a 19 ans.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the old market square of Rouen at dawn with half-timbered houses, a silent crowd of townspeople seen from behind, heads bowed; far in the distance a thin column of grey smoke rises into a pale sky. No fire, no person visible at the stake. Calm and sober. wide shot",
+            "cast": [],
+            "file": "images/dossier-21.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 22,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Après Jeanne",
+          "caption": "En 1456, un second procès voulu par Charles VII annule le premier. Le 7 juillet, Jeanne est déclarée innocente.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Vous voyez ? Quand il faut agir, j'agis. Vingt-cinq ans après.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bright royal chamber. Charles, now older (very thin, hunched, big drooping nose, grey hair under the tall fur hat, plum-purple robe), stands proudly on the right holding up a parchment with a big red wax seal, chest puffed out as if he had won a war; on the left a weary old clerk in black rolls his eyes. medium shot",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/dossier-22.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 23,
+          "kind": "fact",
+          "tag": "1453",
+          "caption": "En 1453, la bataille de Castillon met fin à la guerre de Cent Ans. Seule Calais reste anglaise.",
+          "bubbles": [
+            {
+              "who": "Un archer anglais",
+              "text": "Cent seize ans de guerre. Je peux rentrer chez moi, maintenant ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a grey harbour on the English Channel. An exhausted old English archer, seen from behind, with an absurdly long white beard trailing down to his knees and a faded red-and-white tunic, trudges up the gangway of a wooden ship, leaning on his bent longbow like a walking stick. visual gag: the endless beard. from behind",
+            "cast": [],
+            "file": "images/dossier-23.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 24,
+          "kind": "react",
+          "tag": "Et depuis",
+          "caption": "En deux ans, une paysanne a délivré Orléans et fait sacrer un roi. Canonisée en 1920, elle reste un symbole.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Roi de France en entier. Je savais que j'y arriverais tout seul.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a city square. Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) stands in the foreground on the left, chest puffed out, thumb pointing proudly at himself; behind him towers an enormous golden equestrian statue of Jeanne holding the standard, which makes him look tiny. visual gag: the giant statue dwarfing the boastful king. low angle",
+            "cast": [
+              "charles",
+              "jeanne"
+            ],
+            "file": "images/dossier-24.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le seul dessin de Jeanne fait de son vivant est un croquis griffonné en marge d'un registre par un greffier qui ne l'avait jamais vue.",
+        "source": "Jeanne-darc.info ; History Collection"
+      },
+      "story": "En 1429, la France a deux rois. Depuis 1337, les rois d'Angleterre réclament la couronne, et le traité de Troyes, en 1420, a écarté le dauphin Charles au profit de l'Anglais Henri V. Charles ne tient plus que les terres au sud de la Loire, et Orléans, assiégée depuis octobre 1428, risque de tomber.\nJeanne, née vers 1412 à Domrémy, dit entendre depuis ses 13 ans des voix de saints qui lui demandent de sauver le royaume. En février 1429, le capitaine de Vaucouleurs lui donne une escorte ; le 25 février, le dauphin la reçoit à Chinon, puis la fait examiner pendant trois semaines à Poitiers. Fin avril, elle entre dans Orléans ; blessée d'une flèche le 7 mai, elle repart au combat, et les Anglais lèvent le siège le 8 mai. Le 17 juillet, Charles est sacré à Reims : aux yeux de tous, il devient le vrai roi.\nPuis tout se grippe. Capturée à Compiègne le 23 mai 1430, Jeanne est vendue aux Anglais pour 10 000 écus. À Rouen, l'évêque Pierre Cauchon la juge pour hérésie. Elle abjure le 24 mai 1431, reprend ses habits d'homme le 27, est déclarée relapse et brûlée vive le 30 mai, à 19 ans.\nLe 7 juillet 1456, un procès de réhabilitation la déclare innocente. La guerre de Cent Ans s'achève en 1453 à Castillon. Canonisée en 1920, Jeanne est devenue l'un des grands symboles de la France.",
+      "sources": [
+        {
+          "title": "Larousse — Sainte Jeanne d'Arc",
+          "url": "https://www.larousse.fr/encyclopedie/personnage/wd/125788"
+        },
+        {
+          "title": "Universalis — Jeanne d'Arc : les procès",
+          "url": "https://www.universalis.fr/encyclopedie/jeanne-d-arc/2-les-proces/"
+        },
+        {
+          "title": "Futura — La guerre de Cent Ans en 5 dates clés",
+          "url": "https://www.futura-sciences.com/sciences/dossiers/histoire-guerre-cent-ans-5-dates-cles-1324/"
+        },
+        {
+          "title": "Futura — Pourquoi Édouard III veut-il le trône de France ?",
+          "url": "https://www.futura-sciences.com/sciences/questions-reponses/histoire-edouard-iii-veut-il-trone-france-18202/"
+        },
+        {
+          "title": "History.com — Siege of Orléans",
+          "url": "https://www.history.com/topics/middle-ages/siege-of-orleans"
+        },
+        {
+          "title": "Aleteia — Les incroyables réponses de Jeanne d'Arc lors de son procès",
+          "url": "https://fr.aleteia.org/2019/04/28/les-incroyables-reponses-de-jeanne-darc-lors-de-son-proces/"
+        },
+        {
+          "title": "Jeanne-darc.info — Art & Image",
+          "url": "https://www.jeanne-darc.info/art-image/"
+        },
+        {
+          "title": "History Collection — No verified portrait of Joan of Arc exists",
+          "url": "https://historycollection.com/joan-of-arc-painting-no-verified-portrait-exists/"
+        }
+      ]
+    }
+  ]
+}
