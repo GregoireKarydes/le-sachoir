@@ -1,0 +1,79 @@
+{
+ "kind": "film",
+ "style": "ink-wash",
+ "slot": "insolite",
+ "time": "21:00",
+ "question": "La Grande Muraille se voit-elle depuis l'espace ?",
+ "answer": "Non, pas à l'œil nu : elle est très longue mais étroite comme une route, et de la couleur du paysage.",
+ "chain": [
+  "elle fait plus de 20 000 km",
+  "mais elle est large comme une route",
+  "elle a la couleur du paysage"
+ ],
+ "band": "LA MURAILLE, VISIBLE\nDEPUIS L'ESPACE ?",
+ "hook_formula": 22,
+ "caption": "Longue, oui. Visible, non. 🧱\n\nEt ça, maintenant, tu le sais. Quel autre mythe tu veux qu'on casse ?",
+ "first_comment": "Envoie-le à celui qui te l'a affirmé au dernier repas de famille.",
+ "film": {
+  "end": {
+   "url": "lesachoir.fr"
+  },
+  "beats": [
+   {
+    "who": "narr",
+    "text": "La Grande Muraille se voit-elle depuis l'espace ?",
+    "set": "muraille",
+    "cold": true
+   },
+   {
+    "who": "perso",
+    "text": "On me l'a dit à l'école.",
+    "name": "La grue",
+    "set": "montagnes"
+   },
+   {
+    "who": "narr",
+    "text": "Logique, elle fait plus de vingt mille kilomètres.",
+    "set": "muraille",
+    "big": "Plus de 20 000 km"
+   },
+   {
+    "who": "narr",
+    "text": "Raté : à l'œil nu, on ne la voit pas.",
+    "set": "palais",
+    "big": "Pas à l'œil nu",
+    "fx": [
+     "cross"
+    ],
+    "pause": 0.3,
+    "image": {
+     "file": "editions/2026-11-18/images/dossier-08.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Elle est très longue, mais à peine large comme une route.",
+    "set": "montagnes",
+    "big": "Large comme une route"
+   },
+   {
+    "who": "narr",
+    "text": "Et elle a la couleur du paysage autour.",
+    "set": "montagnes",
+    "big": "Couleur du paysage"
+   },
+   {
+    "who": "narr",
+    "text": "Le plus drôle ? Ce mythe existait avant les fusées.",
+    "set": "bambou-lune",
+    "big": "Plus vieux que les fusées"
+   },
+   {
+    "who": "narr",
+    "text": "Voilà pourquoi on ne la voit pas depuis l'espace : longue, pas large.",
+    "set": "etang",
+    "big": "Longue, pas large"
+   }
+  ]
+ }
+}

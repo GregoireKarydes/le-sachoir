@@ -1,8 +1,11 @@
 # Instagram et TikTok : les posts du jour
 
-Version 3, depuis le 19 novembre 2026 (décision de Greg du 18 novembre au soir : « le Reel sitcom a beaucoup plus de
-potentiel de buzz »). **Les carrousels sont arrêtés.** Chaque jour partent **trois Reels « sitcom » Max et le Prof**
-(partie C), sur Instagram (Reel) et TikTok (vidéo), un par rubrique :
+Version 4, depuis le 20 novembre 2026 (décisions de Greg : Reels de **30 à 35 s**, et « je te donne le go pour faire
+l'alternance des styles »). Chaque jour partent **trois Reels** sur Instagram (Reel) et TikTok (vidéo), un par
+rubrique, **chacun dans l'un des cinq styles animés de la partie D** (Tablet Sketch, Scale Zoom, Comic History,
+2.5D Pixel, Ink Wash), choisi selon le sujet et en rotation. Le cerveau ne change pas (une question, une fausse piste,
+une réponse qui a du sens, une dernière phrase qui reprend le mot de la question) ; la peau change à chaque Reel.
+Référence : la bible des Reels (doc projet `reels-styles.md`, version 3).
 
 | créneau (`slot`) | rubrique | heure (`time`) | dossier |
 |---|---|---|---|
@@ -10,20 +13,26 @@ potentiel de buzz »). **Les carrousels sont arrêtés.** Chaque jour partent **
 | `cultureg` | La Pilule de Culture G | 12:30 | `social/instagram/<date>-sitcom-cultureg/` |
 | `insolite` | L'Insolite historique | 21:00 | `social/instagram/<date>-sitcom-insolite/` |
 
+Les dossiers gardent leur nom historique `-sitcom-` (la Publication, les statistiques et l'Orchestrateur les cherchent
+sous ce nom) : seul le contenu du `post.json` change (`"kind": "film"` et un `"style"`).
+
 Pourquoi ces heures : 7 h 45, le petit-déjeuner et les transports (le rendez-vous « chaque matin » du Sachoir) ; 12 h 30,
 la pause déjeuner ; 21 h, après le dîner, le créneau où les Reels sont le plus regardés et partagés. Plus de 4 h entre deux
 Reels pour qu'ils ne se volent pas leur public. La tâche « Le Sachoir – Stratège Instagram » peut déplacer ces heures
 (entre 7 h et 22 h, dans le même ordre) d'après les statistiques.
 
-Ils sont écrits par la tâche « Le Sachoir – Reels sitcom ». Tu n'écris que les `post.json` ; GitHub Actions fabrique les
-vidéos (`pipeline/sitcom_render.py`) et les envoie à Buffer. Les parties A (carrousels) et B (Reel « question du jour »)
-sont **en pause** : n'en fais pas tant que Greg ne l'a pas demandé (la grille de viralité de la partie A2 sert encore à
-choisir les sujets).
+Ils sont écrits par la tâche « Le Sachoir – Reels sitcom » (son nom n'a pas changé). Tu n'écris que les `post.json` ;
+GitHub Actions fabrique les vidéos (`pipeline/film_render.py`, pages `pipeline/styles/`) et les envoie à Buffer.
+**Méthode** : C2, C3, C4, C4b et C7 s'appliquent telles quelles (lecture, sujets, question-réponse-accroche, ouverture
+par la question, réactions) ; la partie **D** remplace C1, C5 et C6 (série, script, fichier). Le Reel sitcom Max et le
+Prof (partie C, raccourci à 30 à 35 s) est **en pause** : n'en écris plus tant que Greg ne l'a pas redemandé. Les
+parties A (carrousels) et B (Reel « question du jour ») sont aussi **en pause** (la grille de viralité de la partie A2
+sert encore à choisir les sujets).
 
 **Le but : le buzz.** Un maximum de vues, de partages (envois en message privé), de commentaires et d'enregistrements,
 puis des visites sur lesachoir.fr (lien en bio `lesachoir.fr/insta`, qui ouvre l'histoire liée au post).
 
-# 0. La stratégie en cours (tous les posts : les trois Reels sitcom)
+# 0. La stratégie en cours (tous les posts : les trois Reels du jour)
 
 Depuis le 18 novembre 2026, la tâche « Le Sachoir – Stratège Instagram » analyse chaque dimanche les statistiques
 (`social/instagram/stats.md`, mis à jour chaque jour par le workflow « Statistiques réseaux ») et tient à jour
@@ -328,7 +337,7 @@ Avant de finir : compte les mots dits (55 à 80), relis chaque phrase à voix ha
 « à qui on l'enverrait ? ». Valide le JSON (`python3 -m json.tool`), commit « Instagram <date> : <title> »,
 `git pull --rebase`, `git push origin main`. Le push déclenche le rendu ; ne touche à rien d'autre.
 
-# C. Les Reels « sitcom » : Max et le Prof (trois par jour, tâche « Le Sachoir – Reels sitcom »)
+# C. Les Reels « sitcom » : Max et le Prof (EN PAUSE depuis le 20 novembre 2026 ; C2, C3, C4, C4b et C7 servent à la partie D)
 
 Décision de Greg (17 novembre 2026) : un Reel par jour en dessin animé façon sitcom de science-fiction, aux couleurs du
 Sachoir, publié sur Instagram et TikTok. **Depuis le 19 novembre 2026 : trois par jour, à la place des carrousels**, un
@@ -353,6 +362,7 @@ Règles communes aux trois :
 
 ## C1. La série
 
+**Levé le 20 novembre 2026** (go de Greg pour l'alternance des styles, partie D). Pour mémoire, la règle d'alors :
 **Style d'animation figé (décision de Greg, 18 novembre 2026)** : tous les Reels gardent exactement le style du Reel du
 18 novembre 2026 (« L'empereur qui taxait le pipi », `social/instagram/2026-11-18-sitcom/post.json`, moteur tel qu'au
 commit `3a37503` (ouverture à froid comprise)) : mêmes personnages et voix, même labo et tableau, même Machine à Savoir et portail
@@ -477,23 +487,24 @@ Et avec le son, la première phrase me donne-t-elle besoin de la suite ? ». Gar
 formule `hooks.json` dans `hook_formula` (#21 en pleine scène, #22 idée reçue retournée, #23 chiffre, #2 interdit…).
 Tant qu'aucune ne te fait dire « waouh », change d'angle ou de sujet.
 
-## C5. Le script : 40 à 55 s, 12 à 16 répliques, 100 à 150 mots
+## C5. Le script : 30 à 35 s, 8 à 10 répliques courtes, 60 à 75 mots (Greg, 20 novembre 2026)
 **Le test du copain** (obligatoire) : quelqu'un qui ne connaît rien au sujet regarde le Reel une seule fois, sans lire la
 légende. Peut-il réexpliquer la réponse en deux phrases, avec le pourquoi, au dîner du soir ? Si non, réécris.
-Mieux vaut un Reel de 50 s compris qu'un Reel de 30 s que personne ne suit : **on coupe un gag, jamais un maillon.**
+Un Reel court est vu jusqu'au bout et relancé : c'est ce qu'Instagram récompense d'abord. Mais **on coupe un gag ou une
+réaction, jamais un maillon.** Si le sujet ne tient pas en 75 mots avec tous ses maillons, il est trop gros pour un Reel :
+change de sujet ou garde un seul angle.
 
 Le déroulé (calé sur `ig-reel` : accroche, enjeu, corps, réponse, boucle) :
 - Scène 0 `world` avec `"cold": true` (1 réplique, 0 à 4 s) : la question du Reel (C4b).
-- Scène 1 `home` (2 ou 3 répliques, jusqu'à 9 s environ) : Max réagit et pose la question (celle du spectateur). Le Prof donne **l'enjeu** en une phrase
-  qui intrigue sans tout dire (« Oui. Et c'est à cause de lui qu'on dit “l'argent n'a pas d'odeur”. »). Max relance avec
-  la question que se pose le spectateur (« Attends… quel rapport ? »). Le Prof ouvre ensuite le portail tout seul
+- Scène 1 `home` (2 répliques, jusqu'à 7 s environ) : Max réagit et pose la question (celle du spectateur). Le Prof donne **l'enjeu** en une phrase
+  qui intrigue sans tout dire (« Oui. Et c'est à cause de lui qu'on dit “l'argent n'a pas d'odeur”. »). Le Prof ouvre ensuite le portail tout seul
   (automatique, pas de réplique à écrire).
-- Scène 2 `world` (3 à 5 répliques) : les premiers maillons de `chain`. Le Prof explique, Max pose le « pourquoi ? »
+- Scène 2 `world` (2 à 4 répliques) : les premiers maillons de `chain`. Le Prof explique, Max pose le « pourquoi ? »
   dès qu'un trou apparaît. **La réponse à la question de départ arrive avant la moitié du Reel**, ou au plus tard au
   début de la scène 3.
-- Scène 3 `world` facultative (2 à 4 répliques) : le dernier maillon, le détail qui surprend, ou la mise en scène du fait
+- Scène 3 `world` facultative (1 ou 2 répliques, seulement si la scène 2 en a 3 au plus) : le dernier maillon, le détail qui surprend, ou la mise en scène du fait
   (Max qui joue un rôle, la fausse piste prise au pied de la lettre).
-- Scène 4 `home` (2 ou 3 répliques) : Max pose la question de la fin ; le Prof donne la chute après un silence
+- Scène 4 `home` (2 répliques) : Max pose la question de la fin ; le Prof donne la chute après un silence
   (`"pause": 0.8`), un fait vrai et surprenant ; Max conclut d'une réplique courte qui fait écho à la question (le
   Reel boucle). **Avant la chute, le Prof reprend la question de départ et y répond en une phrase complète** (« Voilà
   pourquoi un empereur a taxé le pipi : il rapportait de l'argent, et ça ne sentait rien. ») : c'est le « ça a du sens »
@@ -528,7 +539,12 @@ Relecture avant d'écrire le fichier (dans cet ordre) :
 2. Coche chaque maillon de `chain` : est-il dit en entier ? La réponse (`answer`) est-elle dite avant la moitié ?
 3. Passe le texte parlé dans `python3 social/instagram/ig-skills/skills/ig-human/detect.py <fichier>` (tournures d'IA,
    triades, « ce n'est pas X, c'est Y ») et réécris à la main ce qui est signalé.
-4. Compte les mots : 100 à 150. Au-delà, coupe d'abord les gags et les réactions vides, jamais un maillon.
+4. Compte les mots : 60 à 75. Avec ces voix, portails et carte de fin compris, 75 mots font environ 34 s ; les 140 à
+   165 mots des Reels du 19 et du 20 novembre ont fait 64 à 70 s. Au-delà, coupe d'abord les gags et les réactions vides, jamais un maillon.
+5. **Minute le texte** (skill `ig-reel`) : mets les répliques dans un fichier, une par ligne, et lance
+   `python3 social/instagram/ig-skills/skills/ig-reel/beats.py <fichier> --target 32 --wpm 150` (réglage vérifié sur les rendus du 18 et du 20 novembre :
+   l'estimation tombe à 1 s près). Corrige chaque alerte : la question au-delà de 3 s (8 mots au plus, c'est l'idéal), une
+   réplique de plus de 4 s (coupe-la en deux), pas de mot de la question dans la dernière réplique.
 
 Le reste :
 - Mondes (`set`) : `paris-ancien`, `ville`, `ciel`, `espace`, `mer`, `nature`, `antiquite`, `moyen-age`, `desert`, `neige`,
@@ -547,7 +563,7 @@ Le reste :
 
 ## C6. Le fichier
 Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, avec `"slot"` et `"time"` du tableau C0,
-`board[0]` du tableau C0, et `first_comment` (C7). Exemple complet pour le créneau `insolite` (avec son ouverture à froid) (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 14 répliques, environ 145 mots) :
+`board[0]` du tableau C0, et `first_comment` (C7). Exemple complet pour le créneau `insolite` (avec son ouverture à froid) (le Reel du 18 novembre 2026 réécrit selon C4 et C5 : 10 répliques courtes, environ 74 mots) :
 ```json
 {
   "date": "<AAAA-MM-JJ>",
@@ -561,10 +577,9 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
   "question": "Pourquoi on dit que l'argent n'a pas d'odeur ?",
   "answer": "Les Romains lavaient leurs toges avec de l'urine, qui détache ; l'empereur Vespasien a taxé ce commerce et, quand son fils s'en est plaint, lui a fait sentir une pièce de la taxe : elle ne sentait rien.",
   "chain": [
-    "l'urine vieillie donne de l'ammoniaque, qui détache",
-    "les blanchisseurs achètent l'urine pour laver les toges",
-    "Vespasien taxe ce commerce",
-    "Titus trouve ça dégoûtant ; la pièce de la taxe ne sent rien",
+    "l'urine vieillie donne de l'ammoniaque, qui détache les toges",
+    "l'empereur Vespasien taxe ce commerce",
+    "son fils Titus trouve ça dégoûtant ; la pièce de la taxe ne sent rien",
     "d'où « l'argent n'a pas d'odeur » ; à Paris, les urinoirs s'appellent des vespasiennes"
   ],
   "hook_formula": 16,
@@ -603,17 +618,12 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
           {
             "who": "max",
             "emo": "shock",
-            "text": "Attends… c'est vrai, ça ? Mais comment ça peut rapporter ?"
+            "text": "Attends… du pipi qui rapporte ?"
           },
           {
             "who": "prof",
             "emo": "deadpan",
-            "text": "Oui. La réponse tient en trois étapes, et elle explique « l'argent n'a pas d'odeur »."
-          },
-          {
-            "who": "max",
-            "emo": "think",
-            "text": "Du pipi qui rapporte de l'argent ? Explique."
+            "text": "Oui. D'où « l'argent n'a pas d'odeur »."
           }
         ]
       },
@@ -632,17 +642,12 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
           {
             "who": "prof",
             "emo": "explain",
-            "text": "À Rome, les blanchisseurs lavent les toges avec de l'urine."
+            "text": "À Rome, l'urine vieillie sert à détacher les toges."
           },
           {
             "who": "max",
             "emo": "panic",
-            "text": "Pourquoi du pipi ?!"
-          },
-          {
-            "who": "prof",
-            "emo": "explain",
-            "text": "En vieillissant, l'urine donne de l'ammoniaque. Et l'ammoniaque, ça détache très bien."
+            "text": "Avec du pipi ?!"
           },
           {
             "who": "prof",
@@ -650,7 +655,7 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
             "react": {
               "max": "shock"
             },
-            "text": "Ils achètent donc l'urine des toilettes publiques. Et l'empereur Vespasien taxe ce commerce."
+            "text": "Et l'empereur Vespasien taxe ce commerce."
           }
         ]
       },
@@ -668,22 +673,17 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
           {
             "who": "prof",
             "emo": "explain",
-            "text": "Son fils Titus trouve ça dégoûtant. Vespasien lui met sous le nez une pièce de la taxe."
+            "text": "Son fils Titus trouve ça sale."
           },
           {
             "who": "prof",
             "emo": "deadpan",
-            "text": "Et il demande : « Elle sent mauvais ? »"
+            "text": "Vespasien lui fait sentir une pièce de la taxe."
           },
           {
             "who": "max",
             "emo": "think",
-            "text": "Euh… non ?"
-          },
-          {
-            "who": "prof",
-            "emo": "smug",
-            "text": "Voilà. Elle vient du pipi et elle ne sent rien. L'argent n'a pas d'odeur."
+            "text": "Elle sent… rien !"
           }
         ]
       },
@@ -692,24 +692,14 @@ Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, ave
         "lines": [
           {
             "who": "prof",
-            "emo": "explain",
-            "text": "Voilà pourquoi un empereur a taxé le pipi : il rapportait de l'argent, et la pièce ne sentait rien."
-          },
-          {
-            "who": "max",
-            "emo": "curious",
-            "text": "Et aujourd'hui, il reste quoi de lui ?"
-          },
-          {
-            "who": "prof",
             "emo": "smug",
             "pause": 0.8,
-            "text": "À Paris, les urinoirs de rue s'appellent des vespasiennes."
+            "text": "Voilà pourquoi il a taxé le pipi : l'argent n'a pas d'odeur."
           },
           {
             "who": "max",
             "emo": "proud",
-            "text": "Il a taxé le pipi… et le pipi porte son nom."
+            "text": "Et le pipi porte son nom : les vespasiennes !"
           }
         ]
       }
@@ -769,3 +759,152 @@ Jamais de lien, jamais d'emoji en premier caractère.
 Répondre aux commentaires dans la première heure fait beaucoup pour la portée, mais **aucune tâche ne commente ni ne
 répond automatiquement** (interdit par Instagram, et par les skills `ig-comment` et `ig-reply`). Greg répond lui-même ;
 la question la plus aimée en commentaire peut devenir le sujet d'un Reel (méthode `ig-reply`).
+
+# D. Les Reels en styles alternés (depuis le 20 novembre 2026, trois par jour)
+
+Décisions de Greg (20 novembre 2026) : des Reels de **30 à 35 s**, et **l'alternance des cinq styles animés** de la
+bible des Reels (doc projet `reels-styles.md`, version 3), avec une écriture complète du style et du décor pour varier
+les vidéos, **en cohérence avec l'univers des BD du Sachoir** (humour franco-belge bienveillant, personnages qui
+changent à chaque histoire, anachronismes, ironie d'un personnage lucide ; **comme dans les BD, jamais d'objet, de
+cellule ni de molécule qui parle** : `prompts/CHARTE.md`), un vrai hook, une question, une intrigue, du storytelling,
+pour le buzz. Cinq exemples prêts à rendre : `pipeline/styles/examples/*/post.json` (les scripts de la bible).
+
+## D0. Choisir le style (avant d'écrire)
+1. **Le sujet choisit le style** (matrice ci-dessous). Si deux styles collent, prends le moins utilisé des 7 derniers
+   jours (lis le champ `style` des `post.json` des 7 derniers jours).
+2. **Jamais deux fois le même style le même jour**, et jamais le même style deux jours de suite sur le même créneau.
+3. Chaque style sort **au moins 2 fois et au plus 6 fois par semaine** (lundi à dimanche), pour que le bilan du
+   dimanche puisse comparer.
+4. Si la matrice hésite encore, suis la grille par défaut.
+
+| si le sujet parle de… | style n° 1 | style n° 2 |
+|---|---|---|
+| comment marche un objet, la cuisine, le corps au quotidien | `ipad-sketch` | `flat-space-explainer` |
+| un chiffre fou, une distance, une taille, l'espace, l'infiniment petit | `flat-space-explainer` | `ipad-sketch` |
+| une expression née d'un pays, d'une guerre, d'un peuple | `comic-history` | `ipad-sketch` |
+| une expression née d'un métier ou d'un objet | `ipad-sketch` | `comic-history` |
+| un fait historique avec un héros, un casse, une évasion, une enquête | `hd-2d` | `comic-history` |
+| des pays, un traité, une frontière absurde | `comic-history` | `hd-2d` |
+| l'Asie, l'Antiquité, une légende, la nature, un mythe à démonter | `ink-wash` | `hd-2d` |
+
+Grille par défaut :
+
+| | 07:45 `origine` | 12:30 `cultureg` | 21:00 `insolite` |
+|---|---|---|---|
+| lundi | `comic-history` | `ipad-sketch` | `hd-2d` |
+| mardi | `ipad-sketch` | `flat-space-explainer` | `ink-wash` |
+| mercredi | `comic-history` | `ipad-sketch` | `hd-2d` |
+| jeudi | `ipad-sketch` | `flat-space-explainer` | `comic-history` |
+| vendredi | `comic-history` | `ipad-sketch` | `ink-wash` |
+| samedi | `ipad-sketch` | `flat-space-explainer` | `hd-2d` |
+| dimanche | `comic-history` | `flat-space-explainer` | `ink-wash` |
+
+## D1. Les cinq styles (ce que le moteur sait dessiner)
+Champs de chaque plan (`beats[]`) : `text` (la phrase dite, aussi le sous-titre mot à mot), `say` (prononciation,
+facultatif, par exemple les nombres en lettres), `who` (`narr` : le narrateur, voix Rémy ; `perso` : un humain ou un
+animal réel du sujet, voix Fabrice, avec `name`), `set` (le décor, liste ci-dessous ; sans `set`, le décor par défaut),
+`big` (le carton du plan : 6 mots au plus, lu avant d'être entendu), `tag` (une note, une date, un lieu, 22 caractères
+au plus), `image` (`{"bd": <n° de case>}` de préférence, `{"commons": "<mots-clés anglais>"}` ou rien), `fx` (liste :
+`cross` barre le carton = fausse piste, `arrow`, `slap`, `foule`), `pause` (silence avant la phrase, en secondes :
+0,3 avant la réponse). Le premier plan porte `"cold": true`.
+
+**`ipad-sketch` — Tablet Sketch, « le croquis qui explique »**. Une page crème qui se remplit plan après plan : trait
+de crayon d'abord, couleur décalée ensuite, un stylet qui dessine ; au dernier plan on voit toute la page. Les cases de
+la BD sont redessinées au crayon. Décors (`set`) : `page` (cadre simple), `plan-de-travail` (une planche, cuisine),
+`coupe` (vue en coupe, ligne pointillée), `loupe` (zoom dans une loupe), `frise` (une ligne du temps, `tag` = la date),
+`nuancier` (les couleurs de l'image en pastilles : états successifs). Une phrase `perso` de 70 caractères au plus
+s'affiche dans une bulle au crayon. Un plan sans image écrit le carton en grand au milieu de la page.
+
+**`flat-space-explainer` — Scale Zoom, « la plongée d'échelle »**. Formes plates sur bleu nuit, un seul gros carton
+par plan, et entre deux plans une plongée continue dans un anneau jaune. Le guide est l'ampoule du Sachoir avec un
+objectif pour œil (il ne parle pas). Décors : `nuit` (deux astres et une distance), `terre`, `systeme-solaire`,
+`corps` (une cellule), `comptoir` (des tailles comparées), `compte-a-rebours` (une horloge). En plus : `scale`
+(l'échelle lue sur la règle de droite : « 150 M km », « la Terre »). Ici le carton est roi : un nombre en chiffres.
+
+**`comic-history` — Comic History, « la carte qui se dispute »**. Une planche de BD sur une table, une case par plan ;
+des pays en marionnettes de papier à attaches parisiennes, sur une carte gravée ; une case de BD plaquée comme un bout
+de papier ; au dernier plan, toute la planche. **Obligatoire** : `film.cast`, 1 à 3 pays ou camps
+(`{"name": "FRANCE", "color": "#6E93D6"}` ; jamais une personne réelle). Décors : `manche` (deux terres et la mer),
+`europe`, `explorateurs` (océan, bateaux), `traite` (la salle du traité), `sombre` (la même carte en froid, pour un
+passage grave, sans blague). En plus : `speaker` (l'indice du pays qui agit ou parle) et `emo` (`content`, `fache`,
+`vexe`, `fier`, `surpris`). Une phrase `perso` de 70 caractères au plus part dans une bulle depuis la marionnette.
+
+**`hd-2d` — 2.5D Pixel, « la quête insolite »**. Un diorama en pixels éclairé de lanternes, un petit héros qui
+traverse le décor, la case de la BD en pixels dans un cadre doré au mur, une interface de jeu de rôle. Décors :
+`musee`, `ruelle` (Paris la nuit, pluie), `port`, `trone`, `bureau` (enquête). En plus : `chapter` (une carte de
+chapitre en début de plan : « Chapitre I — 1911 », deux au plus par Reel), `film.hero` (la couleur du héros). Le carton
+s'affiche comme un objet trouvé ; un carton qui commence par « + » flotte comme un gain (« +1 suspect »). Les phrases
+`perso` passent dans une boîte de dialogue tapée lettre par lettre.
+
+**`ink-wash` — Ink Wash, « la légende peinte »**. Une peinture à l'encre qui se peint devant toi ; beaucoup de papier
+vide, un seul rouge (le sceau-ampoule du Sachoir). Narration un peu plus lente. Décors : `montagnes`, `muraille`,
+`bambou-lune`, `palais`, `etang`. Les phrases `perso` font apparaître une grue pince-sans-rire (le personnage lucide).
+Humour plus mesuré. Jamais d'autre couleur, jamais de personnage ni de musique d'une œuvre existante.
+
+Partout, sans rien écrire : le bandeau jaune (`band`) dès l'image 1, les sous-titres mot à mot, l'ampoule du Sachoir
+cachée une fois (avant-dernier plan ; `film.bulb_beat` pour en choisir un autre), **pas de carte de fin** :
+`lesachoir.fr` en petit sous le bandeau, qui revient sur les 3 dernières secondes, et la vidéo repart sur l'image 1.
+
+## D2. Le script : 30 à 35 s, 8 à 11 plans, 70 à 85 mots (bible v3)
+Un plan = une phrase = une idée = une image ; **aucun plan de plus de 4 s** (13 mots au plus ; une phrase trop longue se
+coupe en deux plans avec « … »). Le déroulé en 6 temps :
+1. **La question** (0 à 3 s, plan 0, `"cold": true`) : la question du Reel (C4b), **8 mots au plus**, finie par « ? »,
+   avec le détail précis qui intrigue. L'image la plus forte ; carton = le sujet en 1 à 3 mots.
+2. **La réplique** (3 à 4 s) : un personnage du sujet (humain ou animal réel) répond à côté, en 1 s (« Mais je l'ai à
+   peine touché ! », « Excuse me ?! »).
+3. **La fausse piste** (4 à 8 s) : ce qu'on croit tous, « On croit que… Raté. », avec `fx: ["cross"]`.
+4. **La réponse** (avant 12 s, `"pause": 0.3`) : une phrase nette, avec un chiffre ou un nom.
+5. **Le pourquoi puis le retournement** (12 à 28 s) : 2 ou 3 maillons de `chain` cause → effet, une comparaison du
+   quotidien, puis « Le plus fou ? » ou « Pire : » et le détail inattendu, vrai et sourcé.
+6. **La boucle** (dernier plan) : « Voilà pourquoi… » qui reprend un mot de la question et y répond en une phrase.
+   **« Et ça, maintenant, tu le sais. » ne se dit pas** : elle va dans la légende, avant la demande du créneau (C7).
+
+Écrire pour qu'on comprenne (comme C5) : le narrateur parle en phrases complètes et courtes ; chaque nom a son rôle à
+la première mention, chaque mot rare est traduit ; des nombres plutôt que des adjectifs ; une seule idée par Reel ; on
+coupe un gag, jamais un maillon. Relecture : **lecture muette** (le bandeau, les sous-titres et les cartons lus seuls
+racontent la question, la réponse et le pourquoi) ; `ig-human/detect.py` sur le texte parlé (seuls les contrôles
+« mots IA » et « empreinte » sont fiables en français) ; minute avec
+`python3 social/instagram/ig-skills/skills/ig-reel/beats.py <fichier> --target 32 --wpm 170` (une phrase par ligne) et
+corrige chaque alerte. `hookscore.py` est réglé sur l'anglais : ne t'y fie pas pour le français.
+
+## D3. Le fichier
+Un fichier par créneau : `social/instagram/<date>-sitcom-<slot>/post.json`, avec `"kind": "film"`, le `"style"` (D0),
+`"slot"` et `"time"` du tableau en tête, `question`, `answer`, `chain`, `hook_formula`, `band` (la question en 2 lignes
+de 22 caractères au plus, avec « \n »), `film`, `caption` (finit par « Et ça, maintenant, tu le sais. » puis la demande
+du créneau), `first_comment`, `hashtags`, `sources` (C7). Les exemples de `pipeline/styles/examples/*/post.json`
+montrent chaque style (leurs images `file` sont des essais : toi, tu mets `bd` ou `commons`). Exemple pour `cultureg` :
+```json
+{
+  "date": "<AAAA-MM-JJ>",
+  "kind": "film",
+  "style": "ipad-sketch",
+  "slot": "cultureg",
+  "time": "12:30",
+  "story": {"edition": "<AAAA-MM-JJ>", "format": "<id>"},
+  "question": "Pourquoi l'oignon te fait-il pleurer ?",
+  "answer": "Le couper casse ses cellules : deux substances se mélangent et font un gaz qui pique les yeux, et l'œil se rince.",
+  "chain": ["couper casse les cellules", "deux substances se mélangent et font un gaz", "le gaz monte aux yeux", "l'œil se croit attaqué et se rince"],
+  "hook_formula": 16,
+  "band": "POURQUOI L'OIGNON\nTE FAIT PLEURER ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "beats": [
+      {"who": "narr", "text": "Pourquoi l'oignon te fait pleurer ?", "set": "plan-de-travail", "big": "L'oignon", "cold": true, "image": {"bd": 1}},
+      {"who": "perso", "name": "Le cuisinier", "text": "Mais je l'ai à peine touché !", "set": "plan-de-travail", "big": "Innocent ?", "image": {"bd": 2}},
+      {"who": "narr", "text": "On croit que c'est le jus. Raté : c'est un gaz.", "big": "Le jus", "fx": ["cross"], "tag": "un gaz !"},
+      {"who": "narr", "text": "Quand tu le coupes, tu casses ses cellules.", "set": "loupe", "big": "Cellules cassées", "pause": 0.3, "image": {"bd": 3}},
+      {"who": "narr", "text": "Deux substances se mélangent et fabriquent un gaz qui pique.", "big": "2 substances = 1 gaz"},
+      {"who": "narr", "text": "Ce gaz monte jusqu'à tes yeux.", "set": "coupe", "big": "Direction : tes yeux", "fx": ["arrow"], "image": {"bd": 4}},
+      {"who": "narr", "text": "Ton œil se croit attaqué. Alors il se rince.", "big": "L'œil se rince", "image": {"bd": 5}},
+      {"who": "narr", "text": "Pire : un couteau mal aiguisé écrase plus de cellules.", "set": "nuancier", "big": "Couteau émoussé", "image": {"bd": 6}},
+      {"who": "narr", "text": "Plus de gaz, plus de larmes.", "big": "+ de gaz, + de larmes"},
+      {"who": "narr", "text": "Voilà pourquoi l'oignon te fait pleurer : il se défend.", "big": "Il se défend"}
+    ]
+  },
+  "caption": "Il ne t'a rien fait, mais il se défend. 🧅\n\nEt ça, maintenant, tu le sais. Ton astuce anti-larmes ?",
+  "first_comment": "Couteau bien aiguisé et oignon passé au frais avant : tu testes et tu reviens nous dire ?",
+  "hashtags": ["lesachoir", "culturegenerale", "..."],
+  "sources": ["<url>"]
+}
+```
+Valide avec `python3 -m json.tool`.

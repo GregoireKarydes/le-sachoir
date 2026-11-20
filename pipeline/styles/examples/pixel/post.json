@@ -1,0 +1,109 @@
+{
+ "kind": "film",
+ "style": "hd-2d",
+ "slot": "insolite",
+ "time": "21:00",
+ "question": "Pourquoi la Joconde est-elle si célèbre ?",
+ "answer": "Parce qu'on l'a volée en 1911 : le scandale mondial l'a rendue célèbre auprès du grand public.",
+ "chain": [
+  "en 1911 le grand public ne la connaît pas",
+  "un vitrier la vole",
+  "son visage fait la une du monde entier"
+ ],
+ "band": "POURQUOI LA JOCONDE\nEST SI CÉLÈBRE ?",
+ "hook_formula": 16,
+ "caption": "Son meilleur agent de pub ? Un voleur. 🖼️\n\nEt ça, maintenant, tu le sais. Envoie-le à celui qui pense que c'est son sourire.",
+ "first_comment": "Pendant plus de deux ans, le tableau est resté caché à Paris, chez le voleur. Tu devines où ?",
+ "film": {
+  "end": {
+   "url": "lesachoir.fr"
+  },
+  "hero": "#e0483e",
+  "beats": [
+   {
+    "who": "narr",
+    "text": "Pourquoi la Joconde est-elle si célèbre ?",
+    "set": "musee",
+    "cold": true,
+    "fx": [
+     "slap"
+    ],
+    "image": {
+     "file": "editions/2026-11-18/images/insolite-01.webp"
+    }
+   },
+   {
+    "who": "perso",
+    "text": "Grâce à son sourire, évidemment.",
+    "name": "Le gardien",
+    "set": "musee",
+    "big": "Son sourire ?"
+   },
+   {
+    "who": "narr",
+    "text": "Raté. En 1911, le grand public ne la connaît pas.",
+    "set": "musee",
+    "chapter": "Chapitre I — 1911",
+    "big": "Inconnue du public",
+    "fx": [
+     "cross"
+    ]
+   },
+   {
+    "who": "narr",
+    "text": "Puis un vitrier se cache au Louvre.",
+    "set": "musee",
+    "big": "Caché au Louvre",
+    "pause": 0.3
+   },
+   {
+    "who": "narr",
+    "text": "Il la décroche, et repart avec sous sa blouse.",
+    "set": "ruelle",
+    "big": "Sous sa blouse",
+    "fx": [
+     "slap"
+    ],
+    "image": {
+     "file": "editions/2026-11-18/images/insolite-04.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Scandale. Son visage fait la une des journaux du monde entier.",
+    "set": "ruelle",
+    "big": "À la une partout",
+    "fx": [
+     "foule"
+    ],
+    "image": {
+     "file": "editions/2026-11-18/images/insolite-07.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Le poète Apollinaire est arrêté. Picasso, interrogé.",
+    "set": "bureau",
+    "chapter": "Chapitre II — L'enquête",
+    "big": "+1 suspect",
+    "tag": "Paris, 1911"
+   },
+   {
+    "who": "narr",
+    "text": "Le voleur est retrouvé deux ans plus tard.",
+    "set": "port",
+    "big": "2 ans plus tard",
+    "tag": "Florence, 1913"
+   },
+   {
+    "who": "narr",
+    "text": "Voilà pourquoi la Joconde est si célèbre : grâce à son voleur.",
+    "set": "musee",
+    "big": "+1 célébrité",
+    "image": {
+     "file": "editions/2026-11-18/images/insolite-01.webp"
+    }
+   }
+  ]
+ }
+}

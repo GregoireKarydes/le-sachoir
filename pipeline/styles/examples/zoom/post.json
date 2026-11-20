@@ -1,0 +1,87 @@
+{
+ "kind": "film",
+ "style": "flat-space-explainer",
+ "slot": "cultureg",
+ "time": "12:30",
+ "question": "Soleil éteint : tu le saurais quand ?",
+ "answer": "Au bout de 8 minutes 20 : c'est le temps que met la lumière pour faire les 150 millions de km.",
+ "chain": [
+  "le Soleil est à 150 millions de km",
+  "la lumière met 8 min 20 pour venir",
+  "la gravité voyage aussi vite"
+ ],
+ "band": "SOLEIL ÉTEINT :\nTU LE SAIS QUAND ?",
+ "hook_formula": 16,
+ "caption": "8 minutes de sursis. ☀️\n\nEt ça, maintenant, tu le sais. Tu ferais quoi, toi, pendant ces 8 minutes ?",
+ "first_comment": "Bonus : la Lune, tu la vois avec à peine plus d'une seconde de retard.",
+ "film": {
+  "end": {
+   "url": "lesachoir.fr"
+  },
+  "beats": [
+   {
+    "who": "narr",
+    "text": "Soleil éteint : tu le saurais quand ?",
+    "set": "systeme-solaire",
+    "big": "Le Soleil",
+    "scale": "système solaire",
+    "cold": true
+   },
+   {
+    "who": "narr",
+    "text": "Pas tout de suite. Il est à cent cinquante millions de kilomètres.",
+    "set": "nuit",
+    "big": "150 000 000 km",
+    "scale": "150 M km"
+   },
+   {
+    "who": "narr",
+    "text": "Réponse : huit minutes et vingt secondes.",
+    "set": "compte-a-rebours",
+    "big": "8 min 20 s",
+    "pause": 0.3,
+    "tag": "le temps de la lumière"
+   },
+   {
+    "who": "narr",
+    "text": "Pendant huit minutes, tu verrais un Soleil qui n'existe plus.",
+    "set": "terre",
+    "big": "Un Soleil fantôme"
+   },
+   {
+    "who": "narr",
+    "text": "Et la Terre continuerait de tourner autour de lui.",
+    "set": "systeme-solaire",
+    "big": "La Terre ne sait pas"
+   },
+   {
+    "who": "narr",
+    "text": "Car la gravité voyage aussi vite que la lumière.",
+    "set": "nuit",
+    "big": "Gravité = lumière"
+   },
+   {
+    "who": "narr",
+    "text": "Le plus fou ? Cette lumière a mis des milliers d'années…",
+    "set": "corps",
+    "big": "Des milliers d'années",
+    "tag": "au cœur du Soleil",
+    "image": {
+     "file": "editions/2026-11-18/images/dossier-01.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "juste pour sortir du Soleil.",
+    "set": "systeme-solaire",
+    "big": "Juste pour sortir"
+   },
+   {
+    "who": "narr",
+    "text": "Voilà quand tu le saurais : huit minutes trop tard.",
+    "set": "terre",
+    "big": "8 minutes trop tard"
+   }
+  ]
+ }
+}

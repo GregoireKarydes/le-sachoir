@@ -1,0 +1,108 @@
+{
+ "kind": "film",
+ "style": "ipad-sketch",
+ "slot": "cultureg",
+ "time": "12:30",
+ "question": "Pourquoi l'oignon te fait-il pleurer ?",
+ "answer": "Le couper casse ses cellules : deux substances se mélangent et font un gaz qui pique les yeux, et l'œil se rince.",
+ "chain": [
+  "couper casse les cellules",
+  "deux substances se mélangent et font un gaz",
+  "le gaz monte aux yeux",
+  "l'œil se croit attaqué et se rince"
+ ],
+ "band": "POURQUOI L'OIGNON\nTE FAIT PLEURER ?",
+ "hook_formula": 16,
+ "caption": "Il ne t'a rien fait, mais il se défend. 🧅\n\nEt ça, maintenant, tu le sais. Ton astuce anti-larmes ?",
+ "first_comment": "Couteau bien aiguisé et oignon passé au frais avant : tu testes et tu reviens nous dire ?",
+ "film": {
+  "end": {
+   "url": "lesachoir.fr"
+  },
+  "beats": [
+   {
+    "who": "narr",
+    "text": "Pourquoi l'oignon te fait pleurer ?",
+    "set": "plan-de-travail",
+    "big": "L'oignon",
+    "cold": true,
+    "image": {
+     "file": "editions/2026-11-18/images/cultureg-01.webp"
+    }
+   },
+   {
+    "who": "perso",
+    "text": "Mais je l'ai à peine touché !",
+    "name": "Le cuisinier",
+    "set": "plan-de-travail",
+    "big": "Innocent ?",
+    "image": {
+     "file": "editions/2026-11-18/images/cultureg-03.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "On croit que c'est le jus. Raté : c'est un gaz.",
+    "big": "Le jus",
+    "fx": [
+     "cross"
+    ],
+    "tag": "un gaz !"
+   },
+   {
+    "who": "narr",
+    "text": "Quand tu le coupes, tu casses ses cellules.",
+    "set": "loupe",
+    "big": "Cellules cassées",
+    "pause": 0.3,
+    "image": {
+     "file": "editions/2026-11-18/images/cultureg-05.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Deux substances se mélangent et fabriquent un gaz qui pique.",
+    "big": "2 substances = 1 gaz"
+   },
+   {
+    "who": "narr",
+    "text": "Ce gaz monte jusqu'à tes yeux.",
+    "set": "coupe",
+    "big": "Direction : tes yeux",
+    "fx": [
+     "arrow"
+    ],
+    "image": {
+     "file": "editions/2026-11-18/images/cultureg-07.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Ton œil se croit attaqué. Alors il se rince.",
+    "big": "L'œil se rince",
+    "image": {
+     "file": "editions/2026-11-18/images/cultureg-08.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Pire : un couteau mal aiguisé écrase plus de cellules.",
+    "set": "nuancier",
+    "big": "Couteau émoussé",
+    "image": {
+     "file": "editions/2026-11-18/images/origine-02.webp"
+    }
+   },
+   {
+    "who": "narr",
+    "text": "Plus de gaz, plus de larmes.",
+    "big": "+ de gaz, + de larmes"
+   },
+   {
+    "who": "narr",
+    "text": "Voilà pourquoi l'oignon te fait pleurer : il se défend.",
+    "big": "Il se défend"
+   }
+  ]
+ }
+}
