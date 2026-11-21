@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-28",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "swipe",
+      "label": "Le Swipe",
+      "title": "Vrai, faux, ou politique de l’autruche ?",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "swipe",
+          "seconds": 90,
+          "hint": "Méfiez-vous des évidences : la moitié sont des idées reçues.",
+          "items": [
+            {
+              "text": "La France est le pays le plus visité au monde.",
+              "ok": true,
+              "explain": "Environ 102 millions de visiteurs étrangers en 2025, un record. Et la file d’attente du Louvre le confirme."
+            },
+            {
+              "text": "L’autruche cache sa tête dans le sable quand elle a peur.",
+              "ok": false,
+              "explain": "Menacée, elle fuit jusqu’à 50 km/h ou attaque. Le mythe vient de sa tête baissée pour manger ou couver."
+            },
+            {
+              "text": "Les JO d’hiver 2030 auront lieu dans les Alpes françaises.",
+              "ok": true,
+              "explain": "Le CIO les a attribués aux Alpes françaises le 24 juillet 2024, par 84 voix pour."
+            },
+            {
+              "text": "Le Soleil est jaune.",
+              "ok": false,
+              "explain": "Il est blanc. Notre air disperse le bleu, et le Soleil vu d’ici tire vers le jaune."
+            },
+            {
+              "text": "Un pot de miel fermé peut rester mangeable des milliers d’années.",
+              "ok": true,
+              "explain": "Presque pas d’eau et très acide : les microbes n’y survivent pas. On en a retrouvé dans des tombes égyptiennes."
+            },
+            {
+              "text": "Il y a plus de bovins que d’habitants en France.",
+              "ok": false,
+              "explain": "16,4 millions de bovins en 2024, veaux compris : environ quatre fois moins que d’habitants."
+            },
+            {
+              "text": "L’Everest est le sommet le plus éloigné du centre de la Terre.",
+              "ok": false,
+              "explain": "C’est le Chimborazo, en Équateur : la Terre est renflée à l’équateur, de 21 km de rayon en plus."
+            },
+            {
+              "text": "Le Grand Paris Express ajoutera plus de 200 km de métro.",
+              "ok": true,
+              "explain": "Plus de 200 km de métro automatique et 68 gares autour de Paris, presque tout sous terre. Les taupes sont jalouses."
+            }
+          ],
+          "source": {
+            "title": "Techno-Science — L’autruche se cache la tête dans le sable lorsqu’elle a peur ? Faux",
+            "url": "https://www.techno-science.net/fr/actualites/l-autruche-se-cache-la-tete-dans-le-sable-lorsqu-elle-a-peur-faux-21198"
+          }
+        }
+      ],
+      "sources": [
+        { "title": "Time Out — Avec 102 millions de visiteurs en 2025, la France reste le pays le plus visité au monde", "url": "https://www.timeout.fr/paris/actualites/avec-102-millions-de-visiteurs-en-2025-la-france-reste-le-pays-le-plus-visite-au-monde-022426" },
+        { "title": "Techno-Science — L’autruche se cache la tête dans le sable lorsqu’elle a peur ? Faux", "url": "https://www.techno-science.net/fr/actualites/l-autruche-se-cache-la-tete-dans-le-sable-lorsqu-elle-a-peur-faux-21198" },
+        { "title": "CIO — Élection des Alpes françaises comme hôte des Jeux d’hiver de 2030", "url": "https://olympics.com/cio/news/election-par-le-cio-des-alpes-francaises-comme-hote-des-jeux-olympiques-et-paralympiques-d-hiver-de-2030" },
+        { "title": "Futura Sciences — Le Soleil est-il jaune ?", "url": "https://www.futura-sciences.com/sciences/questions-reponses/astronomie-soleil-jaune-vrai-faux-17826/" },
+        { "title": "Smithsonian Magazine — Why honey never spoils", "url": "https://www.smithsonianmag.com/smart-news/why-honey-never-spoils-1218690/" },
+        { "title": "Réussir — Cheptel bovin : la France a perdu plus d’un million de vaches en huit ans", "url": "https://www.reussir.fr/lait/cheptel-bovin-la-france-perdu-plus-dun-million-de-vaches-en-huit-ans" },
+        { "title": "Futura Sciences — Quel est le point le plus éloigné du centre de la Terre ?", "url": "https://www.futura-sciences.com/planete/questions-reponses/geologie-point-plus-eloigne-centre-terre-5734/" },
+        { "title": "Ministère de la Transition écologique — Le Grand Paris Express", "url": "https://www.ecologie.gouv.fr/politiques-publiques/transports-ile-france-grand-paris-express" }
+      ]
+    }
+  ]
+}
