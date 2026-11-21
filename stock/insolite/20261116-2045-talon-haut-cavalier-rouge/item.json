@@ -26,14 +26,15 @@
           "look": "Louis XIV in his thirties, short but holding himself extremely upright, an enormous long black curly wig falling to his chest, thin black moustache, pale skin, a shimmering bright gold brocade coat as main colour, white lace cravat, white stockings, the redheels, the cane always in hand",
           "file": "cast/insolite-louis.png",
           "status": "pending",
-          "role": "the vain king who uses heels to look taller and treats red heels as a privilege; chin always raised, looks down his nose, enjoys making people wait"
+          "role": "the vain king who uses heels to look taller and treats red heels as a privilege; chin always raised, looks down his nose, enjoys making people wait",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (e664dce9-25be-4536-ba7d-570a20984564)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         },
         {
           "id": "marquis",
           "name": "Le marquis",
           "look": "a tall gangly courtier with very long thin legs and knobbly knees, a towering curly chestnut-brown wig, long face with a hopeful grin, pale skin, a pale mint-green silk coat as main colour, pink ribbons at the knees, the beigeheels",
           "file": "cast/insolite-marquis.png",
-          "status": "pending",
+          "status": "done",
           "role": "the envious social climber desperate for red heels; wobbles and trips constantly on his heels, flatters the king, never gives up"
         }
       ],
@@ -44,8 +45,9 @@
           "marquis"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +74,9 @@
               "louis"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -94,8 +97,8 @@
               "marquis"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -122,8 +125,8 @@
               "louis"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -150,8 +153,8 @@
               "marquis"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -201,8 +204,8 @@
               "marquis"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

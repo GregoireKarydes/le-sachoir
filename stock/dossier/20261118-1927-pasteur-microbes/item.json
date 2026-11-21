@@ -28,7 +28,7 @@
           "look": "Louis Pasteur, a short stocky chemist in his forties to sixties, broad square face, short dark-brown hair combed back and a short square greying beard, light skin, a small black velvet skullcap, a charcoal-grey frock coat as main colour over a white shirt with a small black bow tie, a white handkerchief always poking out of his breast pocket",
           "role": "the chemist who hunts invisible germs; obsessively clean and stubborn, refuses every handshake, keeps his hands clasped behind his back and wipes everything with his handkerchief",
           "file": "cast/dossier-pasteur.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "pouchet",
@@ -36,7 +36,7 @@
           "look": "Félix Pouchet, a very tall and very thin old naturalist about sixty, long bony face, wild white hair sticking up and long white sideburns, light skin, a pale sand-beige frock coat as main colour, a red-and-green tartan scarf, always holding a big brass magnifying glass",
           "role": "Pasteur's rival from Rouen who believes life is born from nothing; proud and blind to his own mistakes, chin always up, waves his magnifying glass like a sword",
           "file": "cast/dossier-pouchet.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "rossignol",
@@ -44,7 +44,7 @@
           "look": "Hippolyte Rossignol, a very fat round country veterinarian in his forties, bald shiny head, a huge black walrus moustache, ruddy light skin, a bright peach-orange linen jacket as main colour, brown trousers and boots, a straw boater hat, always scribbling in the notebook with a pencil",
           "role": "the sceptical vet who challenges Pasteur in public; a mocking gambler who bets on everything, laughs with his whole belly, always noting odds in his notebook",
           "file": "cast/dossier-rossignol.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "joseph",
@@ -52,7 +52,7 @@
           "look": "Joseph Meister in 1885, a small skinny nine-year-old Alsatian boy, short straw-blond hair under a dark-blue flat cap, light skin, a bright magenta knitted jumper as main colour, short brown trousers, grey socks, a white bandage around one forearm",
           "role": "the bitten boy who becomes the first person saved by the rabies vaccine; brave, curious and chatty, looks at everything in the lab, swings his legs when he sits",
           "file": "cast/dossier-joseph.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -62,8 +62,8 @@
           "pouchet"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -89,8 +89,8 @@
               "pouchet"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -116,8 +116,8 @@
               "pasteur"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -154,8 +154,8 @@
               "pasteur"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -176,8 +176,8 @@
               "pasteur"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -206,8 +206,8 @@
               "pasteur"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -233,8 +233,8 @@
               "pasteur"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -255,8 +255,8 @@
               "pouchet"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -277,8 +277,8 @@
               "pouchet"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -304,8 +304,8 @@
               "pasteur"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -327,8 +327,8 @@
               "pasteur"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -354,8 +354,8 @@
               "pasteur"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -389,8 +389,8 @@
               "pasteur"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -411,8 +411,8 @@
               "pasteur"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -433,8 +433,8 @@
               "pasteur"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -474,8 +474,8 @@
               "pasteur"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -501,8 +501,8 @@
               "rossignol"
             ],
             "file": "images/dossier-20.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -533,8 +533,8 @@
               "rossignol"
             ],
             "file": "images/dossier-22.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -555,8 +555,8 @@
               "pasteur"
             ],
             "file": "images/dossier-23.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -583,8 +583,8 @@
               "pasteur"
             ],
             "file": "images/dossier-24.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -611,8 +611,8 @@
               "pasteur"
             ],
             "file": "images/dossier-25.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -639,8 +639,8 @@
               "pasteur"
             ],
             "file": "images/dossier-26.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -682,8 +682,8 @@
               "pasteur"
             ],
             "file": "images/dossier-28.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

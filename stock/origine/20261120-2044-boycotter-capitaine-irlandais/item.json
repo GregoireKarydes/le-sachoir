@@ -27,7 +27,7 @@
           "name": "Charles Boycott",
           "look": "Charles Boycott, a tall and stiff man of 48 with a ramrod-straight back, neatly parted iron-grey hair and a big bushy grey beard, light pink skin, a bottle-green tweed riding jacket as main colour, buff breeches, brown riding boots, a short riding crop always under his arm",
           "file": "cast/origine-boycott.png",
-          "status": "pending",
+          "status": "done",
           "role": "the English land agent who refuses to give an inch; rigid, haughty, chin up, convinced everyone will come crawling back"
         },
         {
@@ -35,7 +35,7 @@
           "name": "Sandrine",
           "look": "Sandrine, a short and sturdy office worker in her forties, olive skin, a tight copper-red bun held by a big black hair clip, round tortoiseshell glasses, a cobalt-blue cardigan as main colour, grey trousers, the thermos clutched against her chest",
           "file": "cast/origine-sandrine.png",
-          "status": "pending",
+          "status": "done",
           "role": "an accountant who declares solemn boycotts and never keeps them; arms crossed, nose in the air, full of bad faith"
         }
       ],
@@ -46,8 +46,9 @@
           "sandrine"
         ],
         "file": "images/origine-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -73,8 +74,9 @@
               "sandrine"
             ],
             "file": "images/origine-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +102,8 @@
               "boycott"
             ],
             "file": "images/origine-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -134,8 +136,8 @@
               "boycott"
             ],
             "file": "images/origine-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -177,8 +179,8 @@
               "boycott"
             ],
             "file": "images/origine-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -217,8 +219,8 @@
               "sandrine"
             ],
             "file": "images/origine-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
