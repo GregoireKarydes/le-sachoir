@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T19:05+01:00",
+ "updated_at": "2026-11-21T19:29+01:00",
  "stock": {
   "cultureg": [
    {
@@ -361,6 +361,23 @@
     "tagline": "Un physicien qui s'ennuie, une borne qui déborde de pièces, une pizza entamée et un robot déguisé en jouet : l'histoire du jeu vidéo",
     "minutes": 3,
     "cases": 22,
+    "photos": 2,
+    "images_done": 0,
+    "images_total": 18,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261121-1925-climat-france-2050",
+    "name": "20261121-1925-climat-france-2050",
+    "added": "20261121-1925",
+    "status": "waiting",
+    "next": false,
+    "title": "Climat : la France à +2,7 °C en 2050, mode d’emploi (crème solaire non fournie)",
+    "theme": "Écologie et climat",
+    "tagline": "Un vigneron de mauvaise foi, un savant de 1824 et une courbe qui déborde du papier : pourquoi la France chauffe, et ce qui l’attend",
+    "minutes": 3,
+    "cases": 23,
     "photos": 2,
     "images_done": 0,
     "images_total": 18,
