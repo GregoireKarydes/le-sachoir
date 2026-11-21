@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-21",
+  "kind": "film",
+  "style": "flat-space-explainer",
+  "slot": "cultureg",
+  "time": "12:30",
+  "story": {"edition": "2026-11-21", "format": "cultureg"},
+  "question": "Pourquoi ton département a cette taille-là ?",
+  "answer": "Ton département a cette taille parce qu'en 1790, la règle voulait que, depuis son coin le plus éloigné, on puisse aller à cheval au chef-lieu et rentrer dans la journée : aucun département n'est donc trop grand, et ils ont tous des tailles proches.",
+  "chain": [
+    "en 1790, la Révolution redécoupe la France pour l'administrer plus simplement",
+    "le premier projet, des carrés de 70 km de côté, est jugé trop rigide et abandonné",
+    "la règle retenue : du coin le plus lointain, aller à cheval au chef-lieu et rentrer le soir",
+    "donc un département ne peut pas être trop grand : les 83 ont des tailles proches"
+  ],
+  "hooks": [
+    {"formula": 16, "text": "Pourquoi ton département a cette taille-là ?"},
+    {"formula": 3, "text": "Pourquoi ton département a la taille d'une balade à cheval ?"},
+    {"formula": 23, "text": "83 départements presque de la même taille : c'est voulu ?"}
+  ],
+  "hook_formula": 16,
+  "band": "POURQUOI CETTE TAILLE\nPOUR TON DÉPARTEMENT ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "scene": "scene.js",
+    "direction": {
+      "idee": "L'Hexagone en formes plates, pavé de cases toutes pareilles : la caméra plonge dans ta case, y suit un cavalier pendant toute une journée, puis remonte voir les 83.",
+      "signature": "La plongée d'échelle dans une seule case : un soleil traverse le ciel du matin au soir pendant que le cavalier va au chef-lieu et revient, et son trajet trace le cercle qui devient la frontière.",
+      "plans": [
+        {"plan": 0, "cadrage": "plan d'ensemble", "angle": "vue du dessus inclinée", "mouvement": "poussée tournante", "transition": "coupe franche (ouverture)", "texte": "pop", "pourquoi": "la carte de France est déjà là, ta case corail pulse : le sujet dès l'image 1"},
+        {"plan": 1, "cadrage": "gros plan", "angle": "vue du dessus", "mouvement": "poussée rapide avec rebond", "transition": "mouvement continu", "texte": "slam", "pourquoi": "la réponse tout de suite, et un premier aller-retour à cheval pour la voir"},
+        {"plan": 2, "cadrage": "plan d'ensemble", "angle": "vue du dessus", "mouvement": "rotation lente", "transition": "coupe franche", "texte": "rise", "pourquoi": "avant 1790 : des taches de toutes les tailles qui se chevauchent"},
+        {"plan": 3, "cadrage": "plan moyen", "angle": "vue du dessus penchée", "mouvement": "travelling latéral", "transition": "coupe franche", "texte": "type puis strike", "pourquoi": "la fausse piste : la grille de carrés se trace, puis se fait barrer"},
+        {"plan": 4, "cadrage": "très gros plan", "angle": "vue du dessus", "mouvement": "zoom brutal en accélération", "transition": "plongée d'échelle", "texte": "focus", "pourquoi": "on entre dans une seule case, au coin le plus lointain : le cavalier part"},
+        {"plan": 5, "cadrage": "très gros plan", "angle": "vue du dessus", "mouvement": "presque fixe, lente dérive (le temps calme)", "transition": "aucune, le plan continue", "texte": "highlight", "pourquoi": "plan signature : le soleil va du matin au soir, aller au chef-lieu et retour, le cercle se ferme"},
+        {"plan": 6, "cadrage": "très gros plan puis plan d'ensemble", "angle": "vue du dessus", "mouvement": "recul vertigineux", "transition": "plongée inverse", "texte": "count", "pourquoi": "toutes les cases s'allument : 83 départements de taille proche"},
+        {"plan": 7, "cadrage": "plan moyen", "angle": "rasant, légèrement penché", "mouvement": "travelling latéral", "transition": "coupe franche", "texte": "type", "pourquoi": "une rivière et des montagnes se dessinent, leurs noms apparaissent"},
+        {"plan": 8, "cadrage": "plan d'ensemble", "angle": "vue du dessus", "mouvement": "retour au cadre du début puis lente dérive", "transition": "mouvement continu", "texte": "stamp", "pourquoi": "la boucle : la même carte qu'au début, et la réponse en tampon"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "Pourquoi ton département a cette taille-là ?", "set": "terre", "big": "Ton département", "cold": true, "image": {"bd": 1}},
+      {"who": "narr", "text": "Ton département est taillé pour un aller-retour à cheval en un jour.", "set": "compte-a-rebours", "big": "1 jour à cheval", "pause": 0.3, "image": {"bd": 6}},
+      {"who": "narr", "text": "En 1790, la Révolution redécoupe toute la France.", "set": "comptoir", "big": "1790 : on redécoupe", "tag": "1790", "image": {"bd": 2}},
+      {"who": "narr", "text": "Premier projet : des carrés de 70 km. Trop rigide, abandonné.", "say": "Premier projet : des carrés de soixante-dix kilomètres. Trop rigide, abandonné.", "set": "comptoir", "big": "Carrés de 70 km", "fx": ["cross"], "scale": "70 km", "image": {"bd": 3}},
+      {"who": "narr", "text": "La règle : du coin le plus lointain, on part à cheval…", "set": "nuit", "big": "Du coin le plus lointain", "scale": "1 département"},
+      {"who": "narr", "text": "… jusqu'au chef-lieu, la ville de l'administration, et retour le soir.", "set": "compte-a-rebours", "big": "Aller-retour en 1 jour", "tag": "chef-lieu"},
+      {"who": "narr", "text": "Donc les 83 départements ont des tailles proches.", "say": "Donc les quatre-vingt-trois départements ont des tailles proches.", "set": "terre", "big": "83 départements", "scale": "la France"},
+      {"who": "narr", "text": "Et leurs noms viennent de rivières ou de montagnes.", "set": "terre", "big": "Rivières et montagnes", "image": {"bd": 7}},
+      {"who": "narr", "text": "Voilà pourquoi ton département a cette taille : un jour à cheval.", "set": "nuit", "big": "Un jour à cheval", "image": {"bd": 9}}
+    ]
+  },
+  "caption": "Pourquoi ton département a cette taille-là ?\n\nEn 1790, on abandonne l'idée de carrés de 70 km. La règle retenue : depuis le coin le plus lointain, on doit pouvoir aller à cheval au chef-lieu et rentrer avant la nuit. Résultat : des départements de taille proche.\n\nEt ça, maintenant, tu le sais. Toi, tu croyais que les départements avaient été tracés comment ?",
+  "first_comment": "Bonus : la carte est arrêtée le 15 janvier 1790 et le décret du 26 février fixe 83 départements. On en compte 101 aujourd'hui, outre-mer compris. Le tien porte le nom d'une rivière ou d'une montagne ?",
+  "hashtags": ["lesachoir", "culturegenerale", "histoiredefrance", "departements", "revolutionfrancaise"],
+  "sources": [
+    "https://www.futura-sciences.com/sciences/questions-reponses/histoire-histoire-creation-departements-francais-revolution-12312/",
+    "https://www.herodote.net/15_janvier_1790-evenement-17900115.php",
+    "https://www.vie-publique.fr/eclairage/126857-construction-de-lorganisation-territoriale-de-la-france-chronologie"
+  ]
+}

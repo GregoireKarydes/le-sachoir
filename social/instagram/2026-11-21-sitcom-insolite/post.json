@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-21",
+  "kind": "film",
+  "style": "hd-2d",
+  "slot": "insolite",
+  "time": "21:00",
+  "story": {"edition": "2026-11-21", "format": "insolite"},
+  "question": "300 pages sans un seul « e » : c'est possible ?",
+  "answer": "Oui : en 1969, Georges Perec publie « La Disparition », un roman d'environ 300 pages sans aucun « e » ; comme le « e » est partout (le, et, je, elle), il doit trouver d'autres mots à chaque phrase, et il ne peut même pas écrire son propre nom.",
+  "chain": [
+    "le « e » est dans les mots les plus courants : le, et, je, elle",
+    "donc tous ces mots sont interdits",
+    "donc à chaque phrase, Perec cherche d'autres mots qui disent la même chose",
+    "il ne peut même pas écrire son nom, et l'intrigue raconte une disparition, comme celle de la lettre"
+  ],
+  "hooks": [
+    {"formula": 23, "text": "300 pages sans un seul « e » : c'est possible ?"},
+    {"formula": 2, "text": "Pourquoi un écrivain s'est-il interdit la lettre « e » ?"},
+    {"formula": 22, "text": "Un roman entier sans « e », et personne n'aurait rien vu ?"}
+  ],
+  "hook_formula": 23,
+  "band": "300 PAGES SANS\nUN SEUL « E » ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "hero": "#c8642a",
+    "scene": "scene.js",
+    "direction": {
+      "idee": "Un bureau d'écrivain de 1969 en miniature éclairée à la lampe : la caméra part de la pile du manuscrit, plonge dans la machine à écrire, suit la page, s'échappe dans une ruelle et un salon de lecture, puis revient à la pile.",
+      "signature": "Zoom brutal dans le clavier : la touche E s'allume en rouge et s'arrache comme un objet ramassé dans un jeu de rôle, en laissant un trou noir dans la machine.",
+      "plans": [
+        {"plan": 0, "cadrage": "très gros plan puis plan d'ensemble", "angle": "plongée de maquette", "mouvement": "recul", "transition": "coupe franche (ouverture)", "texte": "count", "pourquoi": "les feuilles du manuscrit volent dès l'image 1, le compteur monte à 300"},
+        {"plan": 1, "cadrage": "plan moyen", "angle": "trois quarts haut", "mouvement": "travelling latéral qui suit Perec", "transition": "coupe franche", "texte": "slam", "pourquoi": "la réponse : oui, Perec l'a fait en 1969, le livre sous le bras"},
+        {"plan": 2, "cadrage": "plan rapproché", "angle": "contre-plongée penchée", "mouvement": "poussée lente", "transition": "coupe franche", "texte": "pop", "pourquoi": "Odile entre et doute : c'est le doute du spectateur"},
+        {"plan": 3, "cadrage": "plan d'ensemble puis très gros plan", "angle": "vue du dessus", "mouvement": "zoom brutal avec rebond", "transition": "coupe franche", "texte": "rise puis stamp", "pourquoi": "plan signature : la touche E s'arrache, les mots courants sont interdits"},
+        {"plan": 4, "cadrage": "plan moyen", "angle": "vue du dessus", "mouvement": "panoramique vertical", "transition": "coupe franche", "texte": "type", "pourquoi": "chaque ligne se tape sans la lettre : il faut d'autres mots"},
+        {"plan": 5, "cadrage": "gros plan", "angle": "penché", "mouvement": "poussée et redressement", "transition": "coupe franche", "texte": "lettres une à une, strike, highlight", "pourquoi": "l'exemple concret : son propre nom est plein de E"},
+        {"plan": 6, "cadrage": "plan large puis plan moyen", "angle": "trois quarts", "mouvement": "travelling et poussée lente (temps calme)", "transition": "coupe franche", "texte": "focus", "pourquoi": "l'intrigue : Anton Voyl s'efface pixel par pixel, comme la lettre"},
+        {"plan": 7, "cadrage": "plan d'ensemble puis plan moyen", "angle": "trois quarts haut", "mouvement": "zoom brutal et caméra à l'épaule", "transition": "coupe franche", "texte": "pop", "pourquoi": "le retournement : des lecteurs n'auraient rien vu"},
+        {"plan": 8, "cadrage": "gros plan", "angle": "face", "mouvement": "plan fixe qui casse le rythme", "transition": "coupe franche", "texte": "boîte de dialogue tapée", "pourquoi": "le lecteur imperturbable : rien à signaler"},
+        {"plan": 9, "cadrage": "plan moyen puis plan d'ensemble", "angle": "plongée de maquette", "mouvement": "recul vers le cadre du début", "transition": "coupe franche", "texte": "stamp", "pourquoi": "la boucle : retour à la pile du manuscrit, la réponse en tampon"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "300 pages sans un seul « e » : c'est possible ?", "say": "Trois cents pages sans un seul E : c'est possible ?", "set": "bureau", "big": "300 pages sans « e » ?", "cold": true, "image": {"bd": 1}},
+      {"who": "narr", "text": "Oui : en 1969, Georges Perec publie un roman sans aucun « e ».", "say": "Oui : en mille neuf cent soixante-neuf, Georges Perec publie un roman sans aucun E.", "set": "bureau", "big": "La Disparition, 1969", "chapter": "Paris, 1969", "pause": 0.3, "image": {"bd": 0}},
+      {"who": "perso", "name": "Odile, correctrice", "text": "Impossible ! Le « e » est partout.", "say": "Impossible ! Le E est partout.", "set": "bureau", "big": "Impossible ?", "image": {"bd": 2}},
+      {"who": "narr", "text": "Justement : « le », « et », « je », « elle »… tous interdits.", "say": "Justement : le, et, je, elle… tous interdits.", "set": "bureau", "big": "Le, et, je, elle", "fx": ["cross"]},
+      {"who": "narr", "text": "Donc à chaque phrase, Perec doit trouver d'autres mots.", "set": "bureau", "big": "D'autres mots"},
+      {"who": "narr", "text": "Exemple : Perec ne peut même pas écrire son propre nom.", "set": "musee", "big": "Pas même son nom", "image": {"bd": 6}},
+      {"who": "narr", "text": "L'intrigue ? Un homme, Anton Voyl, disparaît… comme la lettre.", "set": "ruelle", "big": "Anton Voyl a disparu"},
+      {"who": "narr", "text": "Le plus fou ? Des premiers lecteurs n'auraient rien remarqué.", "set": "musee", "big": "Rien remarqué ?", "image": {"bd": 4}},
+      {"who": "perso", "name": "Un lecteur de 1969", "text": "Excellent polar. Rien à signaler.", "set": "musee", "big": "Rien à signaler"},
+      {"who": "narr", "text": "Voilà pourquoi 300 pages sans « e », c'est possible.", "say": "Voilà pourquoi trois cents pages sans E, c'est possible.", "set": "bureau", "big": "300 pages, zéro « e »", "image": {"bd": 7}}
+    ]
+  },
+  "caption": "300 pages sans un seul « e » : c'est possible ?\n\nOui. En 1969, Georges Perec publie « La Disparition » sans jamais utiliser la lettre « e », pourtant partout en français. Adieu « le », « et », « je », « elle »… et même son propre nom. On raconte que des premiers lecteurs n'ont rien vu.\n\nEt ça, maintenant, tu le sais. Envoie-le à ton pote qui jure qu'il lit tout jusqu'au bout.",
+  "first_comment": "Bonus : Perec a aussi écrit « Les Revenentes », où le « e » est au contraire la seule voyelle. Tu tiendrais combien de phrases sans « e » ?",
+  "hashtags": ["lesachoir", "culturegenerale", "anecdote", "litterature", "perec"],
+  "sources": [
+    "https://en.wikipedia.org/wiki/A_Void",
+    "https://lareviewofbooks.org/article/avoided-georges-perec/",
+    "https://en.wikipedia.org/wiki/Oulipo",
+    "https://multimedia-ext.bnf.fr/pdf/fiche_Oulipo.pdf"
+  ]
+}

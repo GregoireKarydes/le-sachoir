@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-21",
+  "kind": "film",
+  "style": "ipad-sketch",
+  "slot": "origine",
+  "time": "07:45",
+  "story": {"edition": "2026-11-14", "format": "origine"},
+  "question": "Pourquoi « faire grève » vient d'une plage ?",
+  "answer": "« Faire grève » vient de la place de Grève, une rive de sable de la Seine à Paris : les sans-travail y attendaient l'embauche, donc faire grève voulait dire chercher du travail ; au 19e siècle, des ouvriers s'y rassemblent pour arrêter le travail et le mot change de sens.",
+  "chain": [
+    "une grève, c'est une rive de sable ou de gravier",
+    "à Paris, la place de Grève était cette rive, au bord de la Seine, devant l'Hôtel de Ville",
+    "les bateaux y déchargeaient bois, blé et vin, donc les patrons venaient y embaucher",
+    "les sans-travail y attendaient : faire grève, c'était chercher du travail",
+    "au 19e siècle, des ouvriers s'y rassemblent pour cesser le travail : le sens se retourne"
+  ],
+  "hooks": [
+    {"formula": 3, "text": "Pourquoi « faire grève » vient d'une plage ?"},
+    {"formula": 16, "text": "Pourquoi on dit « faire grève » quand on arrête de bosser ?"},
+    {"formula": 22, "text": "Faire grève, au départ, c'était chercher du travail ?"}
+  ],
+  "hook_formula": 3,
+  "band": "POURQUOI « GRÈVE »\nVIENT D'UNE PLAGE ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "scene": "scene.js",
+    "direction": {
+      "idee": "Une seule grande page de croquis que la caméra parcourt : du métro fermé d'aujourd'hui à la berge de sable de 1700, puis retour au métro, avec le mot GRÈVE qui devient littéralement la rive.",
+      "signature": "Le mot GRÈVE écrit au crayon : son soulignement se prolonge, plonge et devient la pente de sable de la berge, avec la Seine hachurée en dessous.",
+      "plans": [
+        {"plan": 0, "cadrage": "très gros plan puis plan moyen", "angle": "légèrement penché", "mouvement": "suivi du stylet puis recul rapide", "transition": "coupe franche (ouverture)", "texte": "écriture à la main", "pourquoi": "l'image 1 montre déjà le métro fermé en train d'être croqué : le sujet est là tout de suite"},
+        {"plan": 1, "cadrage": "plan moyen", "angle": "face", "mouvement": "filé latéral puis poussée lente", "transition": "filé (whip)", "texte": "slam", "pourquoi": "la réponse claque pendant que le mot devient la rive : on voit la plage naître du mot"},
+        {"plan": 2, "cadrage": "insert", "angle": "vue du dessus", "mouvement": "zoom brutal avec rebond dans la loupe", "transition": "poussée continue", "texte": "highlight", "pourquoi": "une grève = du sable : on le voit grain par grain"},
+        {"plan": 3, "cadrage": "plan large", "angle": "face", "mouvement": "panoramique vertical de l'eau vers l'Hôtel de Ville", "transition": "coupe franche", "texte": "rise", "pourquoi": "situer la place : la Seine en bas, l'Hôtel de Ville en haut"},
+        {"plan": 4, "cadrage": "plan d'ensemble", "angle": "de profil", "mouvement": "travelling latéral qui suit la péniche", "transition": "coupe franche", "texte": "pop", "pourquoi": "les bateaux chargés de bois expliquent pourquoi il fallait des bras"},
+        {"plan": 5, "cadrage": "gros plan", "angle": "contre-plongée penchée", "mouvement": "poussée lente", "transition": "coupe franche", "texte": "type (bulle)", "pourquoi": "Gustave vit la scène : l'attente de l'embauche, chaque matin"},
+        {"plan": 6, "cadrage": "plan moyen", "angle": "face", "mouvement": "plan fixe qui casse le rythme", "transition": "coupe franche", "texte": "stamp", "pourquoi": "le temps calme : le sens ancien posé comme une équation"},
+        {"plan": 7, "cadrage": "gros plan puis plan moyen", "angle": "penché", "mouvement": "caméra à l'épaule et recul", "transition": "coupe franche", "texte": "strike puis slam", "pourquoi": "le retournement : même place, sens inverse ; « chercher » barré, « arrêter » claque"},
+        {"plan": 8, "cadrage": "plan moyen", "angle": "face", "mouvement": "long retour au métro puis lente dérive", "transition": "mouvement continu", "texte": "focus", "pourquoi": "la boucle : on revient au métro fermé du début, un tas de sable à ses pieds"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "Pourquoi « faire grève » vient d'une plage ?", "set": "page", "big": "« Grève » ?", "cold": true, "image": {"bd": 1}},
+      {"who": "narr", "text": "« Faire grève » vient de la place de Grève, à Paris.", "set": "coupe", "big": "Place de Grève", "pause": 0.3, "image": {"bd": 2}},
+      {"who": "narr", "text": "Une grève, c'est une rive de sable : une plage.", "set": "loupe", "big": "Rive de sable = plage"},
+      {"who": "narr", "text": "Celle de Paris longeait la Seine, devant l'Hôtel de Ville.", "set": "page", "big": "Devant l'Hôtel de Ville", "image": {"bd": 2}},
+      {"who": "narr", "text": "Les bateaux y déchargeaient du bois : il fallait des bras.", "set": "plan-de-travail", "big": "Il faut des bras"},
+      {"who": "perso", "name": "Gustave, journalier", "text": "Chaque matin, on attendait là qu'un patron nous embauche !", "set": "page", "big": "L'embauche", "image": {"bd": 3}},
+      {"who": "narr", "text": "Faire grève, c'était donc chercher du travail.", "set": "page", "big": "Chercher du travail"},
+      {"who": "narr", "text": "Au 19e siècle, des ouvriers y viennent… pour arrêter le travail !", "say": "Au dix-neuvième siècle, des ouvriers y viennent… pour arrêter le travail !", "set": "page", "big": "Arrêter le travail", "tag": "19e siècle", "image": {"bd": 5}},
+      {"who": "narr", "text": "Voilà pourquoi « faire grève » vient d'une plage parisienne.", "set": "page", "big": "Une plage parisienne", "image": {"bd": 6}}
+    ]
+  },
+  "caption": "Pourquoi « faire grève » vient d'une plage ?\n\nÀ Paris, la place de Grève était une rive de sable au bord de la Seine. Les sans-travail y attendaient qu'un patron les embauche : faire grève, c'était chercher du boulot. Au 19e siècle, des ouvriers s'y réunissent pour arrêter le travail, et le mot change de camp.\n\nEt ça, maintenant, tu le sais. Quelle expression on décortique demain ? Écris-la en commentaire.",
+  "first_comment": "Bonus : « grève » désigne toujours une plage de sable ou de galets au bord de la mer ou d'un fleuve. Tu connais une plage qui s'appelle « la Grève » près de chez toi ?",
+  "hashtags": ["lesachoir", "culturegenerale", "expressionsfrancaises", "histoiredeparis", "greve"],
+  "sources": [
+    "https://books.openedition.org/enseditions/1677",
+    "https://www.larousse.fr/encyclopedie/divers/gr%C3%A8ve/56607",
+    "https://www.expressio.fr/expressions/faire-greve",
+    "https://www.herodote.net/La_greve_une_specialite_francaise-synthese-550-369.php"
+  ]
+}
