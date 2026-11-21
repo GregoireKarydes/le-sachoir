@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T20:50+01:00",
+ "updated_at": "2026-11-21T20:51+01:00",
  "stock": {
   "cultureg": [
    {
@@ -629,6 +629,21 @@
      "label": "Plus ou moins",
      "kind": "plusmoins",
      "title": "Huit villes, un seul recensement, aucune pitié",
+     "questions": 1
+    }
+   ]
+  },
+  {
+   "date": "2026-11-28",
+   "path": "editions/2026-11-28",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Swipe",
+     "kind": "swipe",
+     "title": "Vrai, faux, ou politique de l’autruche ?",
      "questions": 1
     }
    ]
