@@ -58,7 +58,10 @@
       ],
       "cover": {
         "prompt": "a sun-baked vineyard in a hot August. Gérard (very big and round, bushy grey beard, frayed straw hat, denim-blue overalls) stands in the middle of the vines with arms crossed, chin up, sweat pouring down, a basket of grapes melting into raisins at his feet; on the right the climatologist (wiry, spiky black hair with white streak, red glasses, teal rain jacket) raises one eyebrow and holds a small thermometer up next to him. visual gag: grapes shrivelling in the basket. wide shot",
-        "cast": ["gerard", "climato"],
+        "cast": [
+          "gerard",
+          "climato"
+        ],
         "file": "images/dossier-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -70,12 +73,23 @@
           "tag": "Chapitre 1 · Vendanges en août",
           "caption": "Août 2050 près de Saint-Émilion, si la trajectoire officielle se confirme. Pourquoi la France aura-t-elle 2,7 °C de plus ?",
           "bubbles": [
-            { "who": "gerard", "text": "Vendanger en août ? Mon grand-père vendangeait fin septembre !", "side": "l" },
-            { "who": "climato", "text": "Votre grand-père vivait dans une France plus fraîche.", "side": "r" }
+            {
+              "who": "gerard",
+              "text": "Vendanger en août ? Mon grand-père vendangeait fin septembre !",
+              "side": "l"
+            },
+            {
+              "who": "climato",
+              "text": "Votre grand-père vivait dans une France plus fraîche.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a sun-baked vineyard beside a small stone wine estate under a white-hot sky. Gérard (very big and round, bushy grey beard, frayed straw hat, denim-blue overalls) on the left waves the shears angrily at the sky, a few pickers bent over the vines behind him; on the right, in the shade of the only tree, the climatologist (wiry, spiky black hair with white streak, red glasses, teal rain jacket) calmly consults her tablet. wide shot",
-            "cast": ["gerard", "climato"],
+            "cast": [
+              "gerard",
+              "climato"
+            ],
             "file": "images/dossier-01.webp",
             "status": "pending",
             "attempts": 0
@@ -87,11 +101,17 @@
           "tag": "Déjà aujourd’hui",
           "caption": "Déjà aujourd’hui, les vendanges ont lieu en moyenne 24 jours plus tôt que dans les années 1970.",
           "bubbles": [
-            { "who": "gerard", "text": "C’est le raisin qui est pressé. Pas le climat.", "side": "l" }
+            {
+              "who": "gerard",
+              "text": "C’est le raisin qui est pressé. Pas le climat.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "between two rows of vines, Gérard (very big and round, bushy grey beard, frayed straw hat, denim-blue overalls) crouches with difficulty to cut a heavy bunch of grapes with the shears, a big light-blue sweat drop on his forehead, looking sideways at the reader with total bad faith. medium shot",
-            "cast": ["gerard"],
+            "cast": [
+              "gerard"
+            ],
             "file": "images/dossier-02.webp",
             "status": "pending",
             "attempts": 0
@@ -103,7 +123,11 @@
           "tag": "Pour mieux comprendre",
           "title": "La trajectoire officielle de la France",
           "text": "Depuis janvier 2026, une trajectoire de réchauffement de référence est inscrite dans le code de l’environnement. Pour la France hexagonale, par rapport à l’époque d’avant l’industrie :",
-          "steps": ["+2 °C en 2030", "+2,7 °C en 2050", "+4 °C en 2100"],
+          "steps": [
+            "+2 °C en 2030",
+            "+2,7 °C en 2050",
+            "+4 °C en 2100"
+          ],
           "joke": "C’est ce qui arrive si le monde ne fait pas mieux qu’aujourd’hui. Une prévision, pas une fatalité."
         },
         {
@@ -112,12 +136,22 @@
           "tag": "Le coupable",
           "caption": "Le mécanisme qui réchauffe la France a été décrit il y a deux siècles. Par un Français, à Paris.",
           "bubbles": [
-            { "who": "gerard", "text": "Un Parisien ! Je le savais.", "side": "l" },
-            { "who": "climato", "text": "Il s’appelle Fourier. Et il n’y est pour rien.", "side": "r" }
+            {
+              "who": "gerard",
+              "text": "Un Parisien ! Je le savais.",
+              "side": "l"
+            },
+            {
+              "who": "climato",
+              "text": "Il s’appelle Fourier. Et il n’y est pour rien.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "Gérard (very big and round, bushy grey beard, frayed straw hat, denim-blue overalls) alone, face red with triumphant anger, eyes narrowed, jabbing the shears towards the horizon as if he had finally found the culprit, red angry flush on his cheeks. close-up",
-            "cast": ["gerard"],
+            "cast": [
+              "gerard"
+            ],
             "file": "images/dossier-04.webp",
             "status": "pending",
             "attempts": 0
@@ -129,12 +163,22 @@
           "tag": "Chapitre 2 · La couverture de la Terre",
           "caption": "En 1824, à Paris, le savant Joseph Fourier se demande pourquoi la Terre n’est ni gelée ni brûlante.",
           "bubbles": [
-            { "who": "fourier", "text": "Le Soleil la chauffe, elle renvoie la chaleur. Il manque une pièce.", "side": "r" },
-            { "who": "Un élève", "text": "Vous allez encore parler deux heures ?", "side": "l" }
+            {
+              "who": "fourier",
+              "text": "Le Soleil la chauffe, elle renvoie la chaleur. Il manque une pièce.",
+              "side": "r"
+            },
+            {
+              "who": "Un élève",
+              "text": "Vous allez encore parler deux heures ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a Paris study of 1824 with piles of books and a candle on a desk. Fourier (short and stout, dark curly greying hair, cornflower-blue frock coat, huge white cravat) on the right turns the globe with one finger raised, lecturing; on the left a thin young student in a brown coat slumps in a chair, chin on his fist, fighting sleep. medium wide shot",
-            "cast": ["fourier"],
+            "cast": [
+              "fourier"
+            ],
             "file": "images/dossier-05.webp",
             "status": "pending",
             "attempts": 0
@@ -146,7 +190,15 @@
           "tag": "En vrai",
           "title": "Le vrai Joseph Fourier",
           "text": "Joseph Fourier (1768-1830), né à Auxerre, savant de l’expédition d’Égypte, publie en 1822 sa Théorie analytique de la chaleur, deux ans avant son article sur la température du globe.",
-          "photo": { "commons": "File:Fourier2 - restoration1.jpg" }
+          "photo": {
+            "commons": "File:Fourier2 - restoration1.jpg",
+            "credit": "Julien-Léopold Boilly",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Fourier2_-_restoration1.jpg",
+            "file": "images/photo-6-fourier2-restoration1-jpg.webp",
+            "status": "done"
+          }
         },
         {
           "n": 7,
@@ -154,11 +206,17 @@
           "tag": "1824",
           "caption": "Son idée, publiée en 1824 : l’air autour de la Terre agit comme le couvercle de verre d’une boîte.",
           "bubbles": [
-            { "who": "fourier", "text": "L’atmosphère est un couvercle. Invisible. Et c’est moi qui l’ai vu.", "side": "r" }
+            {
+              "who": "fourier",
+              "text": "L’atmosphère est un couvercle. Invisible. Et c’est moi qui l’ai vu.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "by a sunny window of the 1824 study, Fourier (short and stout, dark curly greying hair, cornflower-blue frock coat, huge white cravat) holds the glassbox up in the sunlight, peering proudly at the little thermometer inside, chest puffed out, yellow sparkles around his head. medium close-up",
-            "cast": ["fourier"],
+            "cast": [
+              "fourier"
+            ],
             "file": "images/dossier-07.webp",
             "status": "pending",
             "attempts": 0
@@ -185,7 +243,9 @@
           "bubbles": [],
           "image": {
             "prompt": "seen from above, Fourier (short and stout, dark curly greying hair, cornflower-blue frock coat, huge white cravat) tenderly tucks the globe into a small blanket on his desk like a baby; through the window behind him a smoking factory chimney blows a thick grey cloud that lands on the globe as a second, heavier blanket. visual gag: the Earth under two blankets. high angle",
-            "cast": ["fourier"],
+            "cast": [
+              "fourier"
+            ],
             "file": "images/dossier-09.webp",
             "status": "pending",
             "attempts": 0
@@ -197,11 +257,17 @@
           "tag": "Chapitre 3 · L’homme qui pesait l’air",
           "caption": "En mars 1958, l’Américain Charles David Keeling installe ses appareils au sommet du volcan Mauna Loa, à Hawaï.",
           "bubbles": [
-            { "who": "keeling", "text": "Loin des villes et des usines, je mesure l’air de toute la planète.", "side": "r" }
+            {
+              "who": "keeling",
+              "text": "Loin des villes et des usines, je mesure l’air de toute la planète.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the bare reddish-black top of a volcanic mountain above a sea of clouds, a small white hut with an antenna. Keeling (very tall and thin, sandy-blond side-parted hair, thin black glasses, bright orange short-sleeved shirt) stands far on the right, arm stretched up, holding the flask high in the wind like a butterfly net. wide shot",
-            "cast": ["keeling"],
+            "cast": [
+              "keeling"
+            ],
             "file": "images/dossier-10.webp",
             "status": "pending",
             "attempts": 0
@@ -213,12 +279,22 @@
           "tag": "29 mars 1958",
           "caption": "Premier relevé, le 29 mars 1958 : 313 ppm, soit 313 molécules de CO2 par million de molécules d’air.",
           "bubbles": [
-            { "who": "keeling", "text": "Parfait. Je recommence demain. Et après-demain. Et toute ma vie.", "side": "r" },
-            { "who": "Un technicien", "text": "Même le dimanche ?", "side": "l" }
+            {
+              "who": "keeling",
+              "text": "Parfait. Je recommence demain. Et après-demain. Et toute ma vie.",
+              "side": "r"
+            },
+            {
+              "who": "Un technicien",
+              "text": "Même le dimanche ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "inside the small white hut, Keeling (very tall and thin, sandy-blond side-parted hair, thin black glasses, bright orange short-sleeved shirt) stoops under the low ceiling over a bench covered with dozens of identical flasks, counting them on his fingers with delight; a short chubby technician in a grey jumpsuit on the left stares at the rows of flasks in despair. low angle",
-            "cast": ["keeling"],
+            "cast": [
+              "keeling"
+            ],
             "file": "images/dossier-11.webp",
             "status": "pending",
             "attempts": 0
@@ -230,7 +306,15 @@
           "tag": "En vrai",
           "title": "La courbe de Keeling",
           "text": "Les relevés du Mauna Loa depuis 1958 : le CO2 monte chaque année. Les petites vagues suivent les saisons, avec un maximum chaque année en mai.",
-          "photo": { "commons": "File:Mauna Loa CO2 monthly mean concentration FR.svg" }
+          "photo": {
+            "commons": "File:Mauna Loa CO2 monthly mean concentration FR.svg",
+            "credit": "Oeneis",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Mauna_Loa_CO2_monthly_mean_concentration_FR.svg",
+            "file": "images/photo-12-mauna-loa-co2-monthly-mean-concentr.webp",
+            "status": "done"
+          }
         },
         {
           "n": 13,
@@ -238,11 +322,17 @@
           "tag": "Mai 2026",
           "caption": "En mai 2026 : 432 ppm, contre environ 278 en 1750, avant l’industrie. Plus de moitié en plus.",
           "bubbles": [
-            { "who": "keeling", "text": "Il va me falloir une feuille plus grande.", "side": "r" }
+            {
+              "who": "keeling",
+              "text": "Il va me falloir une feuille plus grande.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "over the shoulder of Keeling (very tall and thin, sandy-blond side-parted hair, orange short-sleeved shirt) seated at his desk: the chart lies on the desk but its climbing line runs off the top of the paper, up the wall and onto the ceiling; Keeling looks up at it holding a tiny pencil. visual gag: the curve escaping the paper. over-the-shoulder",
-            "cast": ["keeling"],
+            "cast": [
+              "keeling"
+            ],
             "file": "images/dossier-13.webp",
             "status": "pending",
             "attempts": 0
@@ -267,12 +357,22 @@
           "tag": "Chapitre 4 · Pourquoi la France chauffe plus vite",
           "caption": "Entre 2015 et 2024, la France métropolitaine a été 2,1 °C plus chaude qu’en 1900-1930. Le monde : +1,2 °C.",
           "bubbles": [
-            { "who": "climato", "text": "La moyenne mondiale compte les océans. Et les océans chauffent lentement.", "side": "r" },
-            { "who": "Un journaliste", "text": "Et nous, on n’est pas un océan.", "side": "l" }
+            {
+              "who": "climato",
+              "text": "La moyenne mondiale compte les océans. Et les océans chauffent lentement.",
+              "side": "r"
+            },
+            {
+              "who": "Un journaliste",
+              "text": "Et nous, on n’est pas un océan.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a 2026 weather-service briefing room with rows of chairs and a big screen showing a plain map of France in deep red. The climatologist (wiry, spiky black hair with white streak, red glasses, teal rain jacket) stands on the right pointing at the map with her tablet, one eyebrow raised; in the front row on the left a journalist with a notepad fans himself with it. medium shot",
-            "cast": ["climato"],
+            "cast": [
+              "climato"
+            ],
             "file": "images/dossier-15.webp",
             "status": "pending",
             "attempts": 0
@@ -284,11 +384,17 @@
           "tag": "Le mécanisme",
           "caption": "Parce que la terre ferme chauffe plus vite que la mer, comme le sable brûlant d’une plage en août.",
           "bubbles": [
-            { "who": "climato", "text": "La mer garde la tête froide. Le sable, beaucoup moins.", "side": "l" }
+            {
+              "who": "climato",
+              "text": "La mer garde la tête froide. Le sable, beaucoup moins.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a hot sandy beach with a calm blue sea. The climatologist (wiry, spiky black hair with white streak, red glasses, teal rain jacket, trousers rolled up, barefoot) hops on one foot across the scorching sand towards the water, face scrunched in pain, while her other foot already rests blissfully in the cool sea. wide shot",
-            "cast": ["climato"],
+            "cast": [
+              "climato"
+            ],
             "file": "images/dossier-16.webp",
             "status": "pending",
             "attempts": 0
@@ -300,11 +406,17 @@
           "tag": "Janvier 2026",
           "caption": "Depuis janvier 2026, cette trajectoire est dans le code de l’environnement : l’État s’en sert pour adapter le pays.",
           "bubbles": [
-            { "who": "Un ingénieur", "text": "Ma gare est prévue pour +4 °C. Bancs à l’ombre, quai ventilé.", "side": "l" }
+            {
+              "who": "Un ingénieur",
+              "text": "Ma gare est prévue pour +4 °C. Bancs à l’ombre, quai ventilé.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a modern drawing office. On the left a bald engineer with a thick black beard and a mustard tie proudly unrolls a big blueprint of a railway station on the table, every bench drawn under a giant parasol; on the right the climatologist (wiry, spiky black hair with white streak, red glasses, teal rain jacket) leans over the plan and nods slowly. medium shot",
-            "cast": ["climato"],
+            "cast": [
+              "climato"
+            ],
             "file": "images/dossier-17.webp",
             "status": "pending",
             "attempts": 0
@@ -316,12 +428,23 @@
           "tag": "Chapitre 5 · Retour en 2050",
           "caption": "Retour en 2050, si la trajectoire tient. Selon Météo-France, des records locaux de 50 °C deviennent alors possibles.",
           "bubbles": [
-            { "who": "gerard", "text": "Cinquante degrés, c’est la prune de mon oncle. Pas la météo !", "side": "l" },
-            { "who": "climato", "text": "Votre oncle va avoir de la concurrence.", "side": "r" }
+            {
+              "who": "gerard",
+              "text": "Cinquante degrés, c’est la prune de mon oncle. Pas la météo !",
+              "side": "l"
+            },
+            {
+              "who": "climato",
+              "text": "Votre oncle va avoir de la concurrence.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the courtyard of the stone wine estate under a blazing sun. Gérard (very big and round, bushy grey beard, frayed straw hat, denim-blue overalls) on the left sits in a deckchair fanning himself furiously with his hat, feet in a bucket of water; the climatologist (wiry, spiky black hair with white streak, red glasses, teal rain jacket) stands in the background on the right reading a thermometer on the wall. medium wide shot",
-            "cast": ["gerard", "climato"],
+            "cast": [
+              "gerard",
+              "climato"
+            ],
             "file": "images/dossier-18.webp",
             "status": "pending",
             "attempts": 0
@@ -335,7 +458,9 @@
           "bubbles": [],
           "image": {
             "prompt": "Gérard (very big and round, bushy grey beard, frayed straw hat, denim-blue overalls) presses a strip of brown tape across a long zigzag crack in the stone wall of his house, looking at the reader with a tiny light-blue sweat drop, while the crack continues happily far beyond the end of the tape. visual gag: tape against a crack. close-up",
-            "cast": ["gerard"],
+            "cast": [
+              "gerard"
+            ],
             "file": "images/dossier-19.webp",
             "status": "pending",
             "attempts": 0
@@ -360,7 +485,11 @@
           "tag": "Vers 2100",
           "caption": "Vers 2100, Paris aurait en moyenne 15 °C sur l’année : le climat actuel de Montpellier.",
           "bubbles": [
-            { "who": "Une Parisienne", "text": "Le climat de Montpellier ! Il ne manque plus que la mer.", "side": "l" }
+            {
+              "who": "Une Parisienne",
+              "text": "Le climat de Montpellier ! Il ne manque plus que la mer.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "a Paris café terrace on a hot day with zinc rooftops behind, potted palm trees between the tables. A Parisian woman with a sleek grey bun and big sunglasses, in a black dress, sits under a parasol on the left with her feet in a small inflatable paddling pool, an ice cream melting down her hand. visual gag: the paddling pool on the pavement. high angle",
@@ -376,11 +505,17 @@
           "tag": "Chapitre 6 · Le thermostat",
           "caption": "Le 12 décembre 2015, au Bourget, 195 pays adoptent l’Accord de Paris : rester bien sous 2 °C, viser 1,5 °C.",
           "bubbles": [
-            { "who": "climato", "text": "Le +4 °C n’est pas une prophétie. C’est si le monde ne fait pas mieux.", "side": "r" }
+            {
+              "who": "climato",
+              "text": "Le +4 °C n’est pas une prophétie. C’est si le monde ne fait pas mieux.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a vast conference hall in 2015, tiny delegates far in the background standing and applauding under rows of lights. In the foreground on the right the climatologist (wiry, spiky black hair with white streak, red glasses, teal rain jacket) holds a large wall thermostat dial in both hands and turns it down firmly. low angle",
-            "cast": ["climato"],
+            "cast": [
+              "climato"
+            ],
             "file": "images/dossier-22.webp",
             "status": "pending",
             "attempts": 0
@@ -392,11 +527,17 @@
           "tag": "Août 2050",
           "caption": "En résumé : une couverture de gaz, décrite en 1824, que l’on épaissit en brûlant charbon, pétrole et gaz.",
           "bubbles": [
-            { "who": "gerard", "text": "Mon petit-fils vendangera en juillet. Et il dira : de mon temps, c’était août !", "side": "l" }
+            {
+              "who": "gerard",
+              "text": "Mon petit-fils vendangera en juillet. Et il dira : de mon temps, c’était août !",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "back in the vineyard at sunset, Gérard (very big and round, bushy grey beard, frayed straw hat, denim-blue overalls) holds up the shears like a grandfather telling an old story, eyes half closed with nostalgia, a small boy in a straw hat behind him already cutting grapes. close-up",
-            "cast": ["gerard"],
+            "cast": [
+              "gerard"
+            ],
             "file": "images/dossier-23.webp",
             "status": "pending",
             "attempts": 0
@@ -409,21 +550,66 @@
       },
       "story": "Pourquoi la France se réchauffe-t-elle, et à quoi ressemblera-t-elle en 2050 ? Tout part d'une idée de 1824. Le savant français Joseph Fourier se demande pourquoi la Terre n'est ni gelée ni brûlante sous le Soleil. Sa réponse : l'air qui l'entoure agit comme le couvercle de verre d'une boîte et retient une partie de la chaleur. Plus tard, on découvre que la vapeur d'eau et le dioxyde de carbone (CO2) jouent ce rôle : c'est l'effet de serre.\nLe CO2 sort de tout ce qu'on brûle, et surtout du charbon, du pétrole et du gaz, du carbone enfoui depuis des millions d'années. En mars 1958, l'Américain Charles David Keeling commence à le mesurer au sommet du Mauna Loa, à Hawaï : 313 ppm (molécules par million). En mai 2026, la mesure atteint 432 ppm, contre environ 278 en 1750. La couverture s'épaissit : le monde a gagné environ 1,2 °C.\nLa France chauffe plus vite : sur 2015-2024, elle est 2,1 °C plus chaude qu'en 1900-1930, parce que les continents se réchauffent plus vite que les océans. Depuis janvier 2026, une trajectoire de référence sert à préparer le pays : +2 °C en 2030, +2,7 °C en 2050, +4 °C en 2100 si le monde ne fait pas mieux. Les vendanges ont déjà avancé de 24 jours depuis les années 1970. À +4 °C, Paris aurait le climat actuel de Montpellier. L'Accord de Paris de 2015 vise, lui, nettement moins de 2 °C.",
       "sources": [
-        { "title": "Ministère de la Transition écologique — La trajectoire de réchauffement inscrite dans le code de l'environnement (janvier 2026)", "url": "https://www.ecologie.gouv.fr/actualites/climat-trajectoire-rechauffement-inscrite-code-lenvironnement" },
-        { "title": "Ministère de la Transition écologique — Dossier de presse TRACC (janvier 2026)", "url": "https://www.ecologie.gouv.fr/sites/default/files/documents/27012026_DP_TRACC.pdf" },
-        { "title": "Banque des Territoires — À quoi se préparer dans une France plus chaude de 4 °C (rapport Météo-France, mars 2025)", "url": "https://www.banquedesterritoires.fr/canicules-secheresses-inondations-quoi-se-preparer-dans-une-france-plus-chaude-de-4degc" },
-        { "title": "Banque des Territoires — L'agglomération parisienne pourrait connaître les températures de Montpellier", "url": "https://www.banquedesterritoires.fr/lagglomeration-parisienne-pourrait-connaitre-les-temperatures-de-montpellier-la-fin-du-siecle-selon" },
-        { "title": "SDES — Changement climatique en France : état des connaissances en 2025", "url": "https://www.statistiques.developpement-durable.gouv.fr/changement-climatique-en-france-etat-des-connaissances-en-2025" },
-        { "title": "SDES — Chiffres clés du climat 2026 : conséquences pour la France", "url": "https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/chiffres-cles-du-climat/fr/5-consequences-pour-la-france" },
-        { "title": "Pleinchamp — Vendanges 24 jours plus tôt en 50 ans", "url": "https://www.pleinchamp.com/actualite/vendanges-24-jours-plus-tot-en-50-ans-le-casse-tete-climatique-des-vignobles-francais" },
-        { "title": "SDES — Retrait-gonflement des argiles : plus de 10,4 millions de maisons", "url": "https://www.statistiques.developpement-durable.gouv.fr/nouveau-zonage-dexposition-au-retrait-gonflement-des-argiles-plus-de-104-millions-de-maisons" },
-        { "title": "History of Information — Fourier first describes the greenhouse effect (1824)", "url": "https://historyofinformation.com/detail.php?id=1810" },
-        { "title": "Scientific American — Why we know about the greenhouse gas effect", "url": "https://www.scientificamerican.com/blog/plugged-in/why-we-know-about-the-greenhouse-gas-effect/" },
-        { "title": "MacTutor — Jean Baptiste Joseph Fourier", "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Fourier/" },
-        { "title": "APS News — March 1958: Charles Keeling begins measurements of CO2 on Mauna Loa", "url": "https://www.aps.org/apsnews/2025/02/keeling-measurements-co2-mauna-loa" },
-        { "title": "UC San Diego — Annual carbon dioxide peak reaches 432 parts per million (juin 2026)", "url": "https://today.ucsd.edu/story/annual-carbon-dioxide-peak-reaches-432-parts-per-million" },
-        { "title": "Connaissance des énergies — COP21 et Accord de Paris", "url": "https://www.connaissancedesenergies.org/fiche-pedagogique/cop21-et-accord-de-paris" },
-        { "title": "CCNUCC — Historic Paris Agreement: 195 nations", "url": "https://unfccc.int/fr/node/13935" }
+        {
+          "title": "Ministère de la Transition écologique — La trajectoire de réchauffement inscrite dans le code de l'environnement (janvier 2026)",
+          "url": "https://www.ecologie.gouv.fr/actualites/climat-trajectoire-rechauffement-inscrite-code-lenvironnement"
+        },
+        {
+          "title": "Ministère de la Transition écologique — Dossier de presse TRACC (janvier 2026)",
+          "url": "https://www.ecologie.gouv.fr/sites/default/files/documents/27012026_DP_TRACC.pdf"
+        },
+        {
+          "title": "Banque des Territoires — À quoi se préparer dans une France plus chaude de 4 °C (rapport Météo-France, mars 2025)",
+          "url": "https://www.banquedesterritoires.fr/canicules-secheresses-inondations-quoi-se-preparer-dans-une-france-plus-chaude-de-4degc"
+        },
+        {
+          "title": "Banque des Territoires — L'agglomération parisienne pourrait connaître les températures de Montpellier",
+          "url": "https://www.banquedesterritoires.fr/lagglomeration-parisienne-pourrait-connaitre-les-temperatures-de-montpellier-la-fin-du-siecle-selon"
+        },
+        {
+          "title": "SDES — Changement climatique en France : état des connaissances en 2025",
+          "url": "https://www.statistiques.developpement-durable.gouv.fr/changement-climatique-en-france-etat-des-connaissances-en-2025"
+        },
+        {
+          "title": "SDES — Chiffres clés du climat 2026 : conséquences pour la France",
+          "url": "https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/chiffres-cles-du-climat/fr/5-consequences-pour-la-france"
+        },
+        {
+          "title": "Pleinchamp — Vendanges 24 jours plus tôt en 50 ans",
+          "url": "https://www.pleinchamp.com/actualite/vendanges-24-jours-plus-tot-en-50-ans-le-casse-tete-climatique-des-vignobles-francais"
+        },
+        {
+          "title": "SDES — Retrait-gonflement des argiles : plus de 10,4 millions de maisons",
+          "url": "https://www.statistiques.developpement-durable.gouv.fr/nouveau-zonage-dexposition-au-retrait-gonflement-des-argiles-plus-de-104-millions-de-maisons"
+        },
+        {
+          "title": "History of Information — Fourier first describes the greenhouse effect (1824)",
+          "url": "https://historyofinformation.com/detail.php?id=1810"
+        },
+        {
+          "title": "Scientific American — Why we know about the greenhouse gas effect",
+          "url": "https://www.scientificamerican.com/blog/plugged-in/why-we-know-about-the-greenhouse-gas-effect/"
+        },
+        {
+          "title": "MacTutor — Jean Baptiste Joseph Fourier",
+          "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Fourier/"
+        },
+        {
+          "title": "APS News — March 1958: Charles Keeling begins measurements of CO2 on Mauna Loa",
+          "url": "https://www.aps.org/apsnews/2025/02/keeling-measurements-co2-mauna-loa"
+        },
+        {
+          "title": "UC San Diego — Annual carbon dioxide peak reaches 432 parts per million (juin 2026)",
+          "url": "https://today.ucsd.edu/story/annual-carbon-dioxide-peak-reaches-432-parts-per-million"
+        },
+        {
+          "title": "Connaissance des énergies — COP21 et Accord de Paris",
+          "url": "https://www.connaissancedesenergies.org/fiche-pedagogique/cop21-et-accord-de-paris"
+        },
+        {
+          "title": "CCNUCC — Historic Paris Agreement: 195 nations",
+          "url": "https://unfccc.int/fr/node/13935"
+        }
       ]
     }
   ]
