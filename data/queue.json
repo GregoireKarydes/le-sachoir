@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T19:56+01:00",
+ "updated_at": "2026-11-21T20:48+01:00",
  "stock": {
   "cultureg": [
    {
@@ -79,6 +79,23 @@
     "title": "La forêt des Landes a été plantée sur ordre (les moutons n’ont pas eu leur mot à dire)",
     "theme": "Écologie et climat",
     "tagline": "Un marais, des bergers perchés sur des échasses, un ingénieur qui trace des lignes droites et un million d’hectares de pins",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 7,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261121-2044-soldes-dates-etat",
+    "name": "20261121-2044-soldes-dates-etat",
+    "added": "20261121-2044",
+    "status": "waiting",
+    "next": false,
+    "title": "Les soldes, le seul moment où perdre de l’argent est autorisé par décret",
+    "theme": "Droit",
+    "tagline": "Une montagne d’anoraks, un inspecteur à calendrier et deux mercredis par an",
     "minutes": 2,
     "cases": 8,
     "photos": 1,

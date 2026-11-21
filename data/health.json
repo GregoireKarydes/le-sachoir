@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T19:56:53.455648+01:00",
+ "updated_at": "2026-11-21T20:48:00.038746+01:00",
  "today": "2026-11-21",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -80,9 +80,9 @@
  "stock": {
   "cultureg": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 29,
+   "images_left": 36,
    "focus": "20261117-2048-gauche-droite-plan-de-table (7 image(s) à faire)",
    "next": "20261116-2043-stethoscope-sans-rougir",
    "next_redo": 0
@@ -147,7 +147,7 @@
  },
  "rss": {
   "collected_at": "2026-11-21T19:04:30.458620+01:00",
-  "age_hours": 0.9,
+  "age_hours": 1.7,
   "feeds": {
    "Google Actualités": 30,
    "franceinfo": 30,
