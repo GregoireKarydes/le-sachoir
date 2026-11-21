@@ -46,7 +46,8 @@
         "file": "images/origine-cover.webp",
         "status": "done",
         "attempts": 1,
-        "via": "premium"
+        "via": "premium",
+        "qa": "ok"
       },
       "cases": [
         {
@@ -67,14 +68,15 @@
             }
           ],
           "image": {
-            "prompt": "a small sports bar of today, the screen on the wall. Karim (tall, lanky, bald, black beard, bright red hoodie, face paint) leaps off his bar stool, soda splashing out of his glass, arm stretched toward the screen in outrage; on the right behind the counter, a calm waitress with grey curls and a black apron dries a glass, rolling her eyes. wide shot",
+            "prompt": "a small sports bar of today, the screen on the wall, nobody else in the room. Karim (tall, lanky, bald, brown skin, black beard, bright red hoodie, face paint) leaps off his bar stool on the left, soda splashing out of his glass, arm stretched toward the screen in outrage; on the right behind the counter, a calm waitress (light skin, grey curls, a mint-green blouse under a black apron) dries a glass, rolling her eyes. Only these two people, no crowd, no heads in the foreground, no animal; everything in bright flat colours. wide shot",
             "cast": [
               "karim"
             ],
             "file": "images/origine-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium"
+            "via": "premium",
+            "redo": true
           }
         },
         {
@@ -101,7 +103,8 @@
             ],
             "file": "images/origine-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -141,7 +144,8 @@
             ],
             "file": "images/origine-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -179,7 +183,8 @@
             ],
             "file": "images/origine-06.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -213,13 +218,14 @@
             }
           ],
           "image": {
-            "prompt": "back in the small sports bar of today. Karim (tall, lanky, bald, black beard, bright red hoodie, face paint) sits back on his stool, arms crossed, chin raised, eyes half-closed in total bad faith; the waitress with grey curls and a black apron leans on the counter on the right, pointing at him with her drying cloth, deadpan. medium shot",
+            "prompt": "back in the small sports bar of today, a simple flat cartoon screen on the wall. Karim (tall, lanky, bald, brown skin, black beard, bright red hoodie, face paint) sits back on his stool on the left, both arms firmly crossed on his chest (two arms only, he does not point), chin raised, eyes half-closed in total bad faith; the waitress (light skin, grey curls, mint-green blouse, black apron) leans on the counter on the right, pointing at him with her drying cloth, deadpan. medium shot",
             "cast": [
               "karim"
             ],
             "file": "images/origine-08.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         }
       ],

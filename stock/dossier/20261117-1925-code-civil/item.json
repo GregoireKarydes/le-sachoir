@@ -90,7 +90,8 @@
             ],
             "file": "images/dossier-01.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -106,7 +107,8 @@
             ],
             "file": "images/dossier-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -214,7 +216,8 @@
             ],
             "file": "images/dossier-05.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -285,7 +288,8 @@
             ],
             "file": "images/dossier-07.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -312,7 +316,8 @@
             ],
             "file": "images/dossier-08.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -329,7 +334,8 @@
             "file": "images/dossier-09.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -397,7 +403,8 @@
             "file": "images/dossier-11.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -418,7 +425,8 @@
             "file": "images/dossier-12.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -508,7 +516,8 @@
             "file": "images/dossier-15.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -545,7 +554,8 @@
             "file": "images/dossier-16.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -568,7 +578,8 @@
             "file": "images/dossier-17.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -594,7 +605,8 @@
             "file": "images/dossier-18.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {
@@ -620,7 +632,8 @@
             "file": "images/dossier-19.webp",
             "status": "done",
             "attempts": 1,
-            "via": "fal"
+            "via": "fal",
+            "qa": "ok"
           }
         },
         {

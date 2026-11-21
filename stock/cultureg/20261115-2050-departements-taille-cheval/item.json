@@ -31,7 +31,7 @@
         {
           "id": "sieyes",
           "name": "L’abbé Sieyès",
-          "look": "Emmanuel-Joseph Sieyès, a tall very thin French abbé and deputy of 1790 in his forties, long narrow face, sharp nose, thin lips, short powdered white hair, pale skin, olive-green frock coat as main colour over a black waistcoat, white cravat, a tricolour cockade on his black tricorn hat, the ruler under his arm",
+          "look": "Emmanuel-Joseph Sieyès, a tall very thin French abbé and deputy of 1790 in his forties, long narrow face, sharp nose, thin lips, short powdered white hair, pale skin, olive-green frock coat as main colour over a black waistcoat, white cravat, a black three-cornered tricorn hat (never a round-brimmed hat) with a small round French cockade on it (blue centre, white ring, red outer ring, never green), the ruler under his arm",
           "file": "cast/cultureg-sieyes.png",
           "status": "done",
           "role": "the brilliant, rigid revolutionary who loves straight lines and logic; stiff as a ruler, measures everything with his fingers, offended by anything crooked"
@@ -46,7 +46,8 @@
         "file": "images/cultureg-cover.webp",
         "status": "done",
         "attempts": 1,
-        "via": "premium"
+        "via": "premium",
+        "qa": "ok"
       },
       "cases": [
         {
@@ -67,7 +68,7 @@
             }
           ],
           "image": {
-            "prompt": "a modern bicycle courier stop with a big wall map of France. Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket, square backpack) on the left, one foot on his bike pedal, staring at the wall map with a puzzled frown; Sieyès (tall, very thin, powdered white hair, olive-green frock coat, tricorn hat) has appeared on the right, measuring the wall map with the ruler, very serious. wide shot",
+            "prompt": "a modern bicycle courier stop with a big wall map of France. Yanis (short, skinny young man with dark brown skin, a tall black flat-top haircut, turquoise-blue delivery jacket, square backpack) on the left, one foot on his bike pedal, staring at the wall map with a puzzled frown; Sieyès (tall, very thin, powdered white hair, olive-green frock coat, black tricorn hat) has appeared on the right, measuring the wall map with the ruler, very serious. wide shot",
             "cast": [
               "yanis",
               "sieyes"
@@ -75,7 +76,8 @@
             "file": "images/cultureg-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium"
+            "via": "premium",
+            "redo": true
           }
         },
         {
@@ -103,7 +105,8 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -131,7 +134,8 @@
             ],
             "file": "images/cultureg-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -158,7 +162,8 @@
             ],
             "file": "images/cultureg-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -192,14 +197,15 @@
             }
           ],
           "image": {
-            "prompt": "a country road in 1790 through green fields. Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket, square backpack) pedalling furiously on his bike in the foreground, overtaking; Sieyès (tall, very thin, powdered white hair, olive-green frock coat, tricorn hat) behind him riding the horse at a calm trot, the horse calmly chewing a mouthful of hay. wide shot",
+            "prompt": "a country road in 1790 through green fields. Yanis (short, skinny young man with dark brown skin, a tall black flat-top haircut, turquoise-blue delivery jacket, square backpack) pedalling furiously on his bike in the foreground, overtaking; Sieyès (tall, very thin, powdered white hair, olive-green frock coat, black tricorn hat) behind him riding the horse at a calm trot, the horse calmly chewing a mouthful of hay. wide shot",
             "cast": [
               "yanis",
               "sieyes"
             ],
             "file": "images/cultureg-06.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         },
         {
@@ -227,7 +233,8 @@
             ],
             "file": "images/cultureg-07.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -253,14 +260,15 @@
           "caption": "En 1790, l’Assemblée crée 83 départements de taille proche, nommés d’après la nature, pour une France plus simple à gouverner.",
           "bubbles": [],
           "image": {
-            "prompt": "the modern bicycle courier stop with the big wall map of France. Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket) on the left patting the neck of the horse, which is now parked among the bikes in the bike rack; Sieyès (tall, very thin, powdered white hair, olive-green frock coat, tricorn hat) on the right, folding the ruler away with quiet satisfaction. medium shot",
+            "prompt": "the modern bicycle courier stop with the big wall map of France. Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket) on the left patting the neck of the horse, which is now parked among the bikes in the bike rack; Sieyès (tall, very thin, short powdered white hair under a black tricorn hat, olive-green frock coat over a black waistcoat, white cravat) on the right, folding the ruler away with quiet satisfaction. medium shot",
             "cast": [
               "yanis",
               "sieyes"
             ],
             "file": "images/cultureg-09.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         }
       ],

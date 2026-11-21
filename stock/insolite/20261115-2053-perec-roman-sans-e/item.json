@@ -46,7 +46,8 @@
         "file": "images/insolite-cover.webp",
         "status": "done",
         "attempts": 1,
-        "via": "premium"
+        "via": "premium",
+        "qa": "ok"
       },
       "cases": [
         {
@@ -75,7 +76,8 @@
             "file": "images/insolite-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium"
+            "via": "premium",
+            "qa": "ok"
           }
         },
         {
@@ -103,7 +105,8 @@
             ],
             "file": "images/insolite-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -144,7 +147,8 @@
             ],
             "file": "images/insolite-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -179,7 +183,8 @@
             ],
             "file": "images/insolite-06.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -200,14 +205,15 @@
             }
           ],
           "image": {
-            "prompt": "back in the writer's study. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) on the right ripping the strip of tape off the typewriter and hammering the restored key with one finger, triumphant; Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) on the left, hands over her ears, pencil in her mouth. low angle",
+            "prompt": "back in the writer's study. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) on the right ripping the strip of tape off the typewriter and hammering the restored key with one finger, triumphant; Odile (small, round elderly woman, tight grey permed curls, cat-eye glasses on a chain, royal-blue cardigan, grey skirt) on the left, both hands pressed flat over her ears, pencil clenched in her mouth; an ordinary human woman, no tail, no animal features, the typewriter plain with no brand name. low angle",
             "cast": [
               "perec",
               "odile"
             ],
             "file": "images/insolite-07.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         }
       ],

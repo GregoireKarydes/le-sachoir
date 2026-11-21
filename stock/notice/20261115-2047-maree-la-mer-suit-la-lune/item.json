@@ -45,7 +45,8 @@
         ],
         "file": "images/notice-cover.webp",
         "status": "done",
-        "attempts": 1
+        "attempts": 1,
+        "qa": "ok"
       },
       "cases": [
         {
@@ -74,7 +75,8 @@
             "file": "images/notice-01.webp",
             "status": "done",
             "attempts": 1,
-            "via": "premium"
+            "via": "premium",
+            "qa": "ok"
           }
         },
         {
@@ -102,7 +104,8 @@
             ],
             "file": "images/notice-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -143,7 +146,8 @@
             ],
             "file": "images/notice-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -187,7 +191,8 @@
             ],
             "file": "images/notice-06.webp",
             "status": "done",
-            "attempts": 2
+            "attempts": 2,
+            "qa": "ok"
           }
         },
         {
@@ -222,7 +227,8 @@
             ],
             "file": "images/notice-08.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         }
       ],
