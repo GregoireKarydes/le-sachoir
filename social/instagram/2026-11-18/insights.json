@@ -2,18 +2,18 @@
  "instagram": {
   "buffer_id": "6afd58ed152518c7f46a948e",
   "sent_at": "2026-11-18T17:32:45.877Z",
-  "metrics_updated_at": "2026-11-19T13:27:21.244Z",
+  "metrics_updated_at": "2026-11-20T13:27:31.045Z",
   "metrics": {
    "reactions": 0,
    "comments": 0,
    "engagementRate": 0,
-   "views": 3,
+   "views": 4,
    "shares": 0,
    "saves": 0,
    "follows": 0,
    "reach": 2
   },
-  "checked_at": "2026-11-20T11:06:27+00:00"
+  "checked_at": "2026-11-21T07:15:06+00:00"
  },
  "instagram-reel": {
   "error": "Post not found for id: 6afd58ece7dde8d4fcd5e948"
@@ -21,17 +21,17 @@
  "tiktok": {
   "buffer_id": "6afd58ec0f01b387a167b5be",
   "sent_at": "2026-11-18T17:33:13.815Z",
-  "metrics_updated_at": "2026-11-19T13:18:39.266Z",
+  "metrics_updated_at": "2026-11-21T04:27:06.249Z",
   "metrics": {
    "reactions": 6,
    "comments": 0,
    "engagementRate": 1.57,
-   "views": 381,
+   "views": 382,
    "shares": 0,
-   "reach": 0,
-   "totalTimeWatched": 123.92,
-   "averageTimeWatched": 18.05
+   "reach": 366,
+   "totalTimeWatched": 124.72,
+   "averageTimeWatched": 17.99
   },
-  "checked_at": "2026-11-20T11:06:27+00:00"
+  "checked_at": "2026-11-21T07:15:06+00:00"
  }
 }

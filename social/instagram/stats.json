@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T11:06:27+00:00",
+ "updated_at": "2026-11-21T07:15:06+00:00",
  "rows": [
   {
    "post": "2026-11-17",
@@ -20,19 +20,19 @@
    "metrics": {
     "reactions": 1,
     "comments": 0,
-    "engagementRate": 1.4,
-    "views": 236,
+    "engagementRate": 1.39,
+    "views": 237,
     "shares": 1,
     "saves": 0,
-    "totalTimeWatched": 19.42,
-    "averageTimeWatched": 5.35,
-    "reach": 215
+    "totalTimeWatched": 19.94,
+    "averageTimeWatched": 5.46,
+    "reach": 216
    },
    "interactions": 2,
-   "shares_per_reach": 0.0047,
+   "shares_per_reach": 0.0046,
    "saves_per_reach": 0.0,
    "engagement_rate": 0.0093,
-   "outlier": 1.61
+   "outlier": 1.77
   },
   {
    "post": "2026-11-18",
@@ -54,7 +54,7 @@
     "reactions": 0,
     "comments": 0,
     "engagementRate": 0,
-    "views": 3,
+    "views": 4,
     "shares": 0,
     "saves": 0,
     "follows": 0,
@@ -64,7 +64,7 @@
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
    "follows_per_reach": 0.0,
-   "outlier": 0.02
+   "outlier": 0.03
   },
   {
    "post": "2026-11-18",
@@ -86,16 +86,16 @@
     "reactions": 6,
     "comments": 0,
     "engagementRate": 1.57,
-    "views": 381,
+    "views": 382,
     "shares": 0,
-    "reach": 0,
-    "totalTimeWatched": 123.92,
-    "averageTimeWatched": 18.05
+    "reach": 366,
+    "totalTimeWatched": 124.72,
+    "averageTimeWatched": 17.99
    },
    "interactions": 6,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.0157,
-   "outlier": 1.65
+   "engagement_rate": 0.0164,
+   "outlier": 1.64
   },
   {
    "post": "2026-11-18-actu",
@@ -151,14 +151,14 @@
     "engagementRate": 2.58,
     "views": 233,
     "shares": 0,
-    "reach": 0,
-    "totalTimeWatched": 25.4,
-    "averageTimeWatched": 5.98
+    "reach": 210,
+    "totalTimeWatched": 25.43,
+    "averageTimeWatched": 5.96
    },
    "interactions": 6,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.0258,
-   "outlier": 1.01
+   "engagement_rate": 0.0286,
+   "outlier": 1.0
   },
   {
    "post": "2026-11-18-sitcom",
@@ -180,17 +180,17 @@
     "reactions": 0,
     "comments": 0,
     "engagementRate": 0,
-    "views": 179,
+    "views": 182,
     "shares": 0,
     "saves": 0,
-    "totalTimeWatched": 26.72,
-    "averageTimeWatched": 9.78,
-    "reach": 162
+    "totalTimeWatched": 26.88,
+    "averageTimeWatched": 9.71,
+    "reach": 163
    },
    "interactions": null,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "outlier": 1.22
+   "outlier": 1.36
   },
   {
    "post": "2026-11-18-sitcom",
@@ -211,17 +211,17 @@
    "metrics": {
     "reactions": 6,
     "comments": 0,
-    "engagementRate": 2.6,
-    "views": 231,
+    "engagementRate": 2.54,
+    "views": 236,
     "shares": 0,
-    "reach": 0,
-    "totalTimeWatched": 47.22,
-    "averageTimeWatched": 11.03
+    "reach": 229,
+    "totalTimeWatched": 47.45,
+    "averageTimeWatched": 10.83
    },
    "interactions": 6,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.026,
-   "outlier": 1.0
+   "engagement_rate": 0.0262,
+   "outlier": 1.01
   },
   {
    "post": "2026-11-19-sitcom-cultureg",
@@ -240,21 +240,21 @@
    "caption_words": 88,
    "network": "instagram",
    "metrics": {
-    "reactions": 5,
+    "reactions": 9,
     "comments": 0,
-    "engagementRate": 3.94,
-    "views": 147,
+    "engagementRate": 3.09,
+    "views": 347,
     "shares": 0,
     "saves": 0,
-    "totalTimeWatched": 25.18,
-    "averageTimeWatched": 11.9,
-    "reach": 127
+    "totalTimeWatched": 87.13,
+    "averageTimeWatched": 17.25,
+    "reach": 291
    },
-   "interactions": 5,
+   "interactions": 9,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "engagement_rate": 0.0394,
-   "outlier": 1.0
+   "engagement_rate": 0.0309,
+   "outlier": 2.59
   },
   {
    "post": "2026-11-19-sitcom-cultureg",
@@ -273,19 +273,51 @@
    "caption_words": 88,
    "network": "tiktok",
    "metrics": {
-    "reactions": 5,
+    "reactions": 7,
     "comments": 0,
-    "engagementRate": 4.03,
-    "views": 124,
+    "engagementRate": 3.14,
+    "views": 223,
     "shares": 0,
-    "reach": 0,
-    "totalTimeWatched": 17.67,
-    "averageTimeWatched": 8.49
+    "reach": 222,
+    "totalTimeWatched": 48.13,
+    "averageTimeWatched": 11.74
    },
-   "interactions": 5,
+   "interactions": 7,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.0403,
-   "outlier": 0.54
+   "engagement_rate": 0.0315,
+   "outlier": 0.96
+  },
+  {
+   "post": "2026-11-19-sitcom-insolite",
+   "date": "2026-11-19",
+   "kind": "sitcom",
+   "slot": "insolite",
+   "style": "scifi-toon",
+   "rubrique": "insolite",
+   "time": "21:00",
+   "slides": null,
+   "seconds": 67.2,
+   "hook": "LA LIBERTÉ ÉGYPTIENNE ?!",
+   "hook_formula": 22,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 82,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 0,
+    "comments": 0,
+    "engagementRate": 0,
+    "views": 53,
+    "shares": 0,
+    "saves": 0,
+    "totalTimeWatched": 12.06,
+    "averageTimeWatched": 16.45,
+    "reach": 44
+   },
+   "interactions": null,
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0,
+   "outlier": 0.4
   },
   {
    "post": "2026-11-19-sitcom-insolite",
@@ -304,17 +336,52 @@
    "caption_words": 82,
    "network": "tiktok",
    "metrics": {
-    "reactions": 0,
+    "reactions": 4,
     "comments": 0,
-    "engagementRate": 0,
-    "views": 0,
+    "engagementRate": 1.75,
+    "views": 228,
     "shares": 0,
-    "reach": 0,
-    "totalTimeWatched": 0,
-    "averageTimeWatched": 0
+    "reach": 226,
+    "totalTimeWatched": 27.62,
+    "averageTimeWatched": 6.74
    },
-   "interactions": null,
-   "outlier": null
+   "interactions": 4,
+   "shares_per_reach": 0.0,
+   "engagement_rate": 0.0177,
+   "outlier": 0.98
+  },
+  {
+   "post": "2026-11-19-sitcom-origine",
+   "date": "2026-11-19",
+   "kind": "sitcom",
+   "slot": "origine",
+   "style": "scifi-toon",
+   "rubrique": "origine",
+   "time": "07:45",
+   "slides": null,
+   "seconds": 63.9,
+   "hook": "VIRÉ ET ENVOYÉ À LIMOGES ?!",
+   "hook_formula": 21,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 85,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 1,
+    "comments": 0,
+    "engagementRate": 0.78,
+    "views": 134,
+    "shares": 0,
+    "saves": 0,
+    "totalTimeWatched": 16.56,
+    "averageTimeWatched": 7.76,
+    "reach": 128
+   },
+   "interactions": 1,
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0,
+   "engagement_rate": 0.0078,
+   "outlier": 1.0
   },
   {
    "post": "2026-11-19-sitcom-origine",
@@ -333,19 +400,178 @@
    "caption_words": 85,
    "network": "tiktok",
    "metrics": {
-    "reactions": 14,
+    "reactions": 15,
     "comments": 0,
-    "engagementRate": 6.33,
+    "engagementRate": 5.79,
+    "views": 259,
+    "shares": 0,
+    "reach": 249,
+    "totalTimeWatched": 58.9,
+    "averageTimeWatched": 12.23
+   },
+   "interactions": 15,
+   "shares_per_reach": 0.0,
+   "engagement_rate": 0.0602,
+   "outlier": 1.11
+  },
+  {
+   "post": "2026-11-20-sitcom-cultureg",
+   "date": "2026-11-20",
+   "kind": "sitcom",
+   "slot": "cultureg",
+   "style": "scifi-toon",
+   "rubrique": "cultureg",
+   "time": "12:30",
+   "slides": null,
+   "seconds": 70.2,
+   "hook": "POURQUOI 15, 30, 40 ?",
+   "hook_formula": 16,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 65,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 1,
+    "comments": 0,
+    "engagementRate": 0.83,
+    "views": 131,
+    "shares": 0,
+    "saves": 0,
+    "totalTimeWatched": 17.84,
+    "averageTimeWatched": 8.92,
+    "reach": 120
+   },
+   "interactions": 1,
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0,
+   "engagement_rate": 0.0083,
+   "outlier": 0.98
+  },
+  {
+   "post": "2026-11-20-sitcom-cultureg",
+   "date": "2026-11-20",
+   "kind": "sitcom",
+   "slot": "cultureg",
+   "style": "scifi-toon",
+   "rubrique": "cultureg",
+   "time": "12:30",
+   "slides": null,
+   "seconds": 70.2,
+   "hook": "POURQUOI 15, 30, 40 ?",
+   "hook_formula": 16,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 65,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 19,
+    "comments": 0,
+    "engagementRate": 7.42,
+    "views": 256,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 59.03,
+    "averageTimeWatched": 12.65
+   },
+   "interactions": 19,
+   "shares_per_reach": 0.0,
+   "engagement_rate": 0.0742,
+   "outlier": 1.1
+  },
+  {
+   "post": "2026-11-20-sitcom-insolite",
+   "date": "2026-11-20",
+   "kind": "sitcom",
+   "slot": "insolite",
+   "style": "scifi-toon",
+   "rubrique": "insolite",
+   "time": "21:00",
+   "slides": null,
+   "seconds": 67.9,
+   "hook": "LE 14 JUILLET FÊTE LA BASTILLE ?",
+   "hook_formula": 22,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 79,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 10,
+    "comments": 0,
+    "engagementRate": 4.52,
     "views": 221,
     "shares": 0,
     "reach": 0,
-    "totalTimeWatched": 46.73,
-    "averageTimeWatched": 11.69
+    "totalTimeWatched": 36.15,
+    "averageTimeWatched": 9.23
    },
-   "interactions": 14,
+   "interactions": 10,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.0633,
-   "outlier": 0.96
+   "engagement_rate": 0.0452,
+   "outlier": 0.95
+  },
+  {
+   "post": "2026-11-20-sitcom-origine",
+   "date": "2026-11-20",
+   "kind": "sitcom",
+   "slot": "origine",
+   "style": "scifi-toon",
+   "rubrique": "origine",
+   "time": "07:45",
+   "slides": null,
+   "seconds": 68.7,
+   "hook": "SILHOUETTE : UN MINISTRE RADIN ?",
+   "hook_formula": 3,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 93,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 1,
+    "comments": 0,
+    "engagementRate": 0.66,
+    "views": 164,
+    "shares": 0,
+    "saves": 0,
+    "totalTimeWatched": 30.15,
+    "averageTimeWatched": 11.9,
+    "reach": 152
+   },
+   "interactions": 1,
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0,
+   "engagement_rate": 0.0066,
+   "outlier": 1.22
+  },
+  {
+   "post": "2026-11-20-sitcom-origine",
+   "date": "2026-11-20",
+   "kind": "sitcom",
+   "slot": "origine",
+   "style": "scifi-toon",
+   "rubrique": "origine",
+   "time": "07:45",
+   "slides": null,
+   "seconds": 68.7,
+   "hook": "SILHOUETTE : UN MINISTRE RADIN ?",
+   "hook_formula": 3,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 93,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 4,
+    "comments": 0,
+    "engagementRate": 1.98,
+    "views": 202,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 48.22,
+    "averageTimeWatched": 13.27
+   },
+   "interactions": 4,
+   "shares_per_reach": 0.0,
+   "engagement_rate": 0.0198,
+   "outlier": 0.87
   }
  ]
 }

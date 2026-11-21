@@ -1,0 +1,25 @@
+{
+ "instagram": {
+  "buffer_id": "6affe1464c1afd05def7330a",
+  "sent_at": "2026-11-20T20:03:36.384Z",
+  "metrics_updated_at": "2026-11-20T05:57:26.015Z",
+  "metrics": {},
+  "checked_at": "2026-11-21T07:15:06+00:00"
+ },
+ "tiktok": {
+  "buffer_id": "6affe1454c1afd05def732e1",
+  "sent_at": "2026-11-20T20:05:07.150Z",
+  "metrics_updated_at": "2026-11-21T04:27:06.267Z",
+  "metrics": {
+   "reactions": 10,
+   "comments": 0,
+   "engagementRate": 4.52,
+   "views": 221,
+   "shares": 0,
+   "reach": 0,
+   "totalTimeWatched": 36.15,
+   "averageTimeWatched": 9.23
+  },
+  "checked_at": "2026-11-21T07:15:06+00:00"
+ }
+}
