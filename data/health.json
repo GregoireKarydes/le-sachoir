@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T05:05:35.927713+01:00",
+ "updated_at": "2026-11-21T06:05:37.760000+01:00",
  "today": "2026-11-21",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-21",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -60,12 +60,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-21/cultureg : « Le département, ou la France taillée à la mesure d’un cheval » prise dans la file (20261115-2050-departements-taille-cheval)",
-  "2026-11-21/insolite : « Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle) » prise dans la file (20261115-2053-perec-roman-sans-e)",
-  "2026-11-21/notice : « La marée : la mer ne part pas, elle fait le tour de la Terre » prise dans la file (20261115-2047-maree-la-mer-suit-la-lune)",
-  "2026-11-21/dossier : « Le Code civil : 2 281 articles pour ranger le bazar de la France » prise dans la file (20261117-1925-code-civil)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -151,7 +146,7 @@
  },
  "rss": {
   "collected_at": "2026-11-21T00:05:40.214817+01:00",
-  "age_hours": 5.0,
+  "age_hours": 6.0,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 26,
