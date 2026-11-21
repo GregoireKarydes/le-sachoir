@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T00:59:19.000284+01:00",
+ "updated_at": "2026-11-21T01:13:25.033208+01:00",
  "today": "2026-11-21",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -68,20 +68,20 @@
  "last_published": "2026-11-20",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 36,
-   "focus": "20261116-2043-stethoscope-sans-rougir (7 image(s) à faire)",
+   "images_left": 29,
+   "focus": "20261117-2048-gauche-droite-plan-de-table (7 image(s) à faire)",
    "next": "20261115-2050-departements-taille-cheval",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 30,
-   "focus": "20261116-2045-talon-haut-cavalier-rouge (6 image(s) à faire)",
+   "images_left": 24,
+   "focus": "20261117-2047-napoleon-decore-un-sucrier (6 image(s) à faire)",
    "next": "20261115-2053-perec-roman-sans-e",
    "next_redo": 0
   },
@@ -95,48 +95,48 @@
    "next_redo": 0
   },
   "origine": {
-   "ready": 1,
-   "waiting": 2,
+   "ready": 2,
+   "waiting": 1,
    "blocked": 0,
-   "images_left": 12,
-   "focus": "20261120-2044-boycotter-capitaine-irlandais (6 image(s) à faire)",
+   "images_left": 6,
+   "focus": "20261120-2046-points-sur-les-i-jambages (6 image(s) à faire)",
    "next": "20261118-2046-chauvin-soldat-imaginaire",
    "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
-   "waiting": 3,
+   "ready": 2,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 60,
-   "focus": "20261118-1927-pasteur-microbes (23 image(s) à faire)",
+   "images_left": 37,
+   "focus": "20261120-0653-jeanne-d-arc (19 image(s) à faire)",
    "next": "20261117-1925-code-civil",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
+ "days_ahead_drawn": 2,
  "days_ahead_written": 4,
  "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-20",
-  "count": 57,
+  "day": "2026-11-21",
+  "count": 51,
   "neurons": 9000,
   "exhausted": false,
   "by_kind": {
-   "cover": 4,
-   "case": 33,
-   "cast": 20
+   "case": 40,
+   "cast": 10,
+   "cover": 1
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.01097,
-  "images": 252,
-  "today_usd": 0.06,
+  "spent_usd": 3.13097,
+  "images": 256,
+  "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-21T00:05:40.214817+01:00",
-  "age_hours": 0.9,
+  "age_hours": 1.1,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 26,

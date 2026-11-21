@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T00:59+01:00",
+ "updated_at": "2026-11-21T01:13+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -82,7 +82,6 @@
    },
    "errors": [],
    "warnings": [
-    "insolite : chute identique à « Le Chat de Schrödinger expliqué à mon chat » (« je vous l… »)",
     "insolite : case 1 : bulle de 16 mots (max 15)"
    ]
   },
