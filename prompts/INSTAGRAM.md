@@ -3,8 +3,8 @@
 Version 4, depuis le 20 novembre 2026 (décisions de Greg : Reels de **30 à 35 s**, et « je te donne le go pour faire
 l'alternance des styles »). Chaque jour partent **trois Reels** sur Instagram (Reel) et TikTok (vidéo), un par
 rubrique, **chacun dans l'un des cinq styles animés de la partie D** (Tablet Sketch, Scale Zoom, Comic History,
-2.5D Pixel, Ink Wash), choisi selon le sujet et en rotation. Le cerveau ne change pas (une question, une fausse piste,
-une réponse qui a du sens, une dernière phrase qui reprend le mot de la question) ; la peau change à chaque Reel.
+2.5D Pixel, Ink Wash), choisi selon le sujet et en rotation. Le cerveau ne change pas : une question, puis PREP (le
+Point, la Raison, l'Explication par l'exemple, le Point redit, partie D2) ; la peau change à chaque Reel.
 Référence : la bible des Reels (doc projet `reels-styles.md`, version 3).
 
 | créneau (`slot`) | rubrique | heure (`time`) | dossier |
@@ -24,8 +24,9 @@ Reels pour qu'ils ne se volent pas leur public. La tâche « Le Sachoir – Stra
 Ils sont écrits par la tâche « Le Sachoir – Reels sitcom » (son nom n'a pas changé). Tu écris, pour chaque créneau,
 le `post.json` **et la réalisation de la vidéo, `scene.js`** (partie **E**, obligatoire depuis le 20 novembre 2026 au
 soir) ; GitHub Actions fabrique les vidéos (`pipeline/film_render.py`, pages `pipeline/styles/`) et les envoie à Buffer.
-**Méthode** : C2, C3, C4, C4b et C7 s'appliquent telles quelles (lecture, sujets, question-réponse-accroche, ouverture
-par la question, réactions) ; la partie **D** remplace C1, C5 et C6 (série, script, fichier). Le Reel sitcom Max et le
+**Méthode** : C2, C3, C4 et C7 s'appliquent telles quelles (lecture, sujets, question-réponse, réactions) ; la partie
+**D** remplace C1, C5 et C6 (série, script, fichier), et **la triple accroche D2a remplace les formules d'accroche de
+C4 et l'ouverture C4b** (depuis le 21 novembre 2026). Le Reel sitcom Max et le
 Prof (partie C, raccourci à 30 à 35 s) est **en pause** : n'en écris plus tant que Greg ne l'a pas redemandé. Les
 parties A (carrousels) et B (Reel « question du jour ») sont aussi **en pause** (la grille de viralité de la partie A2
 sert encore à choisir les sujets).
@@ -338,7 +339,7 @@ Avant de finir : compte les mots dits (55 à 80), relis chaque phrase à voix ha
 « à qui on l'enverrait ? ». Valide le JSON (`python3 -m json.tool`), commit « Instagram <date> : <title> »,
 `git pull --rebase`, `git push origin main`. Le push déclenche le rendu ; ne touche à rien d'autre.
 
-# C. Les Reels « sitcom » : Max et le Prof (EN PAUSE depuis le 20 novembre 2026 ; C2, C3, C4, C4b et C7 servent à la partie D)
+# C. Les Reels « sitcom » : Max et le Prof (EN PAUSE depuis le 20 novembre 2026 ; C2, C3, C4 et C7 servent à la partie D ; pour elle, la triple accroche D2a remplace les formules de C4 et l’ouverture C4b)
 
 Décision de Greg (17 novembre 2026) : un Reel par jour en dessin animé façon sitcom de science-fiction, aux couleurs du
 Sachoir, publié sur Instagram et TikTok. **Depuis le 19 novembre 2026 : trois par jour, à la place des carrousels**, un
@@ -855,24 +856,99 @@ gratuitement. Rendez-vous sur lesachoir.fr. »). Ne l'écris pas dans `beats`. P
 `film.cta` (25 mots au plus) : elle dit ce qu'est le Sachoir (BD, actu et culture G, chaque matin, gratuit) et finit
 par « lesachoir.fr. ».
 
-## D2. Le script : 30 à 35 s, 8 à 11 plans, 70 à 85 mots (bible v3)
+## D2a. La triple accroche : les 3 premiers plans (Greg, 21 novembre 2026)
+Elle s'inspire de quatre Reels que Greg a donnés en modèle : @growwithmath (« le triple hook »), @robin.dormion,
+@eva.travel_ et @growithfanny (« 7 hooks qui fonctionnent à chaque fois »). Leur stratégie commune :
+- **On n'invente pas l'accroche : on reprend une structure qui a déjà fait des millions de vues** et on la remplit avec
+  le sujet (« un hook qui a explosé dans une niche explosera dans la tienne »). Les structures sont dans la banque
+  ci-dessous. On remplit les trous (X) et (Y) avec **le détail le plus concret du sujet** (le pipi, l'empereur, les
+  20 000 km), jamais avec un mot vague.
+- **Une seule accroche ne suffit plus : on en empile trois**, une par plan, sur 6 s et en 25 mots au plus :
+  1. **Arrêter le pouce** (plan 0, `"cold": true`, 2 s, 10 mots au plus) : une structure de la banque. En moins de
+     2 secondes, le spectateur **se reconnaît** (il a déjà dit, cru ou vu ça), **comprend le sujet** et **sait ce
+     qu'il a à y gagner**. On prend l'image la plus forte ; le carton donne le sujet en 1 à 3 mots ; le bandeau reprend
+     cette phrase en version courte.
+  2. **Créer la curiosité** (plan 1) : une boucle ouverte qui fait penser « mais c'est quoi ? ». C'est ici que se pose
+     **la question du Reel** (`question`), dite ou sous-entendue, car Greg veut depuis le 19 novembre que chaque Reel
+     réponde à une question. Exemples : « Et la raison tient en un seul mot. », « Il y a UNE raison, et elle remonte à
+     Rome. », « Pourquoi ? À cause d'un détail que personne ne regarde. » On annonce la réponse sans la donner.
+  3. **Verrouiller l'attention** (plan 2) : ce que le spectateur gagne à rester, concret et lié au sujet. Exemples :
+     « Après ça, tu gagnes ce débat à chaque repas de famille. », « Et une fois que tu le sais, tu le vois partout dans
+     Paris. » Jamais une promesse creuse (« tu vas halluciner »), jamais un appel à s'abonner.
+- Ensuite, **PREP** reprend (D2) : la réponse tombe au plan 3, **avant 7 s**. La triple accroche ne remplace pas la
+  réponse. Elle la fait attendre trois secondes, pas plus.
+- `hook_formula` reçoit le numéro de la structure du plan 0 (de 101 à 114 dans la banque ci-dessous).
+
+**La banque de structures**, adaptée des quatre Reels modèles. On dit « tu » au spectateur. Le narrateur ne raconte
+jamais une expérience personnelle qu'il n'a pas vécue.
+
+| n° | structure | exemple Le Sachoir |
+|---|---|---|
+| 101 | Tout le monde dit (X), mais personne n'explique pourquoi. | « Tout le monde dit "l'argent n'a pas d'odeur". Personne ne sait pourquoi. » |
+| 102 | (X), mais zéro (Y). | « 20 000 km de muraille, mais zéro visible depuis l'espace. » |
+| 103 | (X), c'est le plus gros mensonge de (l'école, ton enfance, l'histoire). | « Les casques à ailes des Gaulois : le plus gros mensonge de l'école. » |
+| 104 | On ne parle pas assez du fait que (X). | « On ne parle pas assez du fait qu'un pape a fait juger un cadavre. » |
+| 105 | Si tu (X) comme ça, c'est non. | « Si tu dis "au jour d'aujourd'hui", c'est non. » |
+| 106 | Ça, c'est ton (X) quand tu (Y). | « Ça, c'est ton cerveau quand tu entends le tonnerre. » |
+| 107 | Si aujourd'hui tu (X), il y a de grandes chances que ce soit à cause de ça. | « Si tu dis "à vos souhaits", il y a de grandes chances que ce soit à cause de la peste. » |
+| 108 | On ne fait pas (X) parce que (Y)… enfin, pas seulement. | « On ne trinque pas à l'eau par politesse… enfin, pas seulement. » |
+| 109 | Une vérité que les (X) ont du mal à accepter. | « Une vérité que les Parisiens ont du mal à accepter : la tour Eiffel devait être démontée. » |
+| 110 | Ça, c'est le (X) du pauvre. Ça, c'est le (X) du riche. | « Ça, c'était le sel du pauvre. Ça, le sel du roi. » |
+| 111 | Ça existe, et presque personne ne le sait en France. | « Un pays où il est interdit de mourir : ça existe, et presque personne ne le sait. » |
+| 112 | Arrête de dire (X) si tu veux (Y). | « Arrête de dire "c'est la faute à Voltaire" si tu ne sais pas qui l'a dit. » |
+| 113 | Beaucoup ne seront pas d'accord, mais (X). | « Beaucoup ne seront pas d'accord, mais Napoléon n'était pas petit. » |
+| 114 | Si tu ne devais retenir qu'une chose de (X), ce serait ça. | « Si tu ne devais retenir qu'une chose de la Révolution, ce serait ça. » |
+
+Règles :
+- Une fois remplie, la phrase est **vraie**. Pour 103, 109 et 113, on ne l'utilise que si les sources le disent.
+- La phrase ne se moque pas du spectateur : 105 et 112 restent taquines, jamais méprisantes.
+- Deux Reels du même jour n'utilisent pas la même structure, et un même créneau ne la reprend pas deux jours de suite.
+  Pour le vérifier, lis `hook_formula` dans les posts des 7 derniers jours.
+- Les anciennes formules de `hooks.json` restent permises si aucune structure de la banque ne colle.
+
+**Choisir** : écris 3 triples accroches, chacune sur une structure différente. Garde celle qui passe deux tests :
+- **le test des 2 secondes** : son coupé, sur un écran qui défile, l'image et le bandeau me font-ils arrêter ? Est-ce
+  que je me reconnais ? Est-ce que je sais ce que je vais gagner ?
+- **le test de la boucle** : après le plan 1, ai-je besoin de la suite ?
+
+**Exemple** (la Grande Muraille, structure 102) :
+0. « 20 000 km de muraille, mais zéro visible depuis l'espace. » (arrêter le pouce)
+1. « Et la raison n'est pas sa longueur. » (curiosité : la question « pourquoi ne la voit-on pas ? » est sous-entendue)
+2. « Retiens-la : c'est la question piège préférée des quiz. » (verrou)
+3. P : « Depuis l'orbite, à l'œil nu, la muraille est bien trop étroite pour être vue. » Puis R, E et P comme en D2.
+
+**Ce qu'on ne reprend pas des Reels modèles** :
+- leur fin « Commente MOT et je t'envoie… », car elle demande des messages privés automatiques, interdits ici (C7) ;
+- leurs montages de vidéos virales d'autres comptes, à cause des droits d'auteur.
+
+En revanche, on garde leur numérotation façon « partie 3 » d'une série : quand la rubrique a un numéro, mets-le dans le
+`tag` du plan 0 (« Expressions · n°12 »).
+
+## D2. Le script : 30 à 35 s, 9 à 11 plans, 70 à 85 mots (bible v3)
 Un plan = une phrase = une idée = une image ; **aucun plan de plus de 4 s** (13 mots au plus ; une phrase trop longue se
-coupe en deux plans avec « … »). Le déroulé en 6 temps :
-1. **La question** (0 à 3 s, plan 0, `"cold": true`) : la question du Reel (C4b), **8 mots au plus**, finie par « ? »,
-   avec le détail précis qui intrigue. L'image la plus forte ; carton = le sujet en 1 à 3 mots.
-2. **La réplique** (3 à 4 s) : un personnage du sujet (humain ou animal réel) répond à côté, en 1 s (« Mais je l'ai à
-   peine touché ! », « Excuse me ?! »).
-3. **La fausse piste** (4 à 8 s) : ce qu'on croit tous, « On croit que… Raté. », avec `fx: ["cross"]`.
-4. **La réponse** (avant 12 s, `"pause": 0.3`) : une phrase nette, avec un chiffre ou un nom.
-5. **Le pourquoi puis le retournement** (12 à 28 s) : 2 ou 3 maillons de `chain` cause → effet, une comparaison du
-   quotidien, puis « Le plus fou ? » ou « Pire : » et le détail inattendu, vrai et sourcé.
-6. **La boucle** (dernier plan) : « Voilà pourquoi… » qui reprend un mot de la question et y répond en une phrase.
+coupe en deux plans avec « … »). **Le style d'écriture est PREP** (Greg, 20 novembre 2026, d'après un Reel de
+@etacademy.fr : « Point, raison, explication, point »), **précédé de la triple accroche** (D2a, depuis le 21 novembre
+2026). On accroche, on donne l'idée, on dit pourquoi, on la montre avec un exemple concret, puis on la redit. Pas de
+suspense artificiel au-delà des trois plans d'accroche : la clarté retient mieux que la devinette.
+0. **La triple accroche** (plans 0 à 2, de 0 à 6 s, 25 mots au plus) : voir D2a. Le plan 0 porte `"cold": true`.
+1. **P — le Point** (plan 3, avant 7 s) : la réponse, tout de suite, en une phrase complète qui reprend les mots de la
+   question (D2b). « Depuis l'espace, à l'œil nu, la Grande Muraille ne se voit pas. » Si une idée reçue existe, elle
+   tient dans cette phrase (« On croit que oui. Mais non : … »), pas dans un plan à part.
+2. **R — la Raison** (2 ou 3 plans) : le pourquoi, les maillons de `chain` dans l'ordre, reliés par « parce que »,
+   « donc », « alors ». Chaque maillon tient en une phrase qui se comprend seule.
+3. **E — l'Explication par l'exemple** (2 ou 3 plans) : on rend la raison concrète : une comparaison du quotidien
+   (« comme chercher un cheveu à trois kilomètres »), un cas réel, une scène, un chiffre ramené à notre échelle. Le
+   détail le plus surprenant (« Le plus fou ? ») vient ici, vrai et sourcé.
+4. **P — le Point redit** (dernier plan) : « Voilà pourquoi… » qui reprend les mots de la question et redit la réponse
+   en une phrase, plus courte qu’au plan 3 (« longue, pas large »).
    **« Et ça, maintenant, tu le sais. » ne se dit pas** : elle va dans la légende, avant la demande du créneau (C7).
+La réplique d'un personnage du sujet (`"who": "perso"`) reste permise, une fois, pour un exemple vivant (E) ; la
+fausse piste barrée (`fx: ["cross"]`) aussi, dans le plan du Point.
 
 ### D2b. Bien écrit, compris, et on répond vraiment à la question (Greg, 20 novembre 2026)
 Le spectateur doit pouvoir répéter la réponse à quelqu'un après une seule vue. Règles :
 1. **La question** est celle que tout le monde s'est déjà posée, en mots simples, sans jargon ni tournure savante.
-2. **La réponse est une phrase complète et autonome**, dite avant 12 s, qui **reprend les mots de la question** :
+2. **La réponse est une phrase complète et autonome**, dite au plan 3, avant 7 s (PREP, juste après la triple accroche), qui **reprend les mots de la question** :
    « L'éclair arrive avant le tonnerre parce que la lumière va un million de fois plus vite que le son. » — pas
    « Tout est une question de vitesse. » (on ne sait pas de quoi on parle).
 3. **Chaque phrase se comprend seule** : un sujet, un verbe, un complément. Pas de « il », « ça », « elle » en début de
