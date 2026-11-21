@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T20:48+01:00",
+ "updated_at": "2026-11-21T20:49+01:00",
  "stock": {
   "cultureg": [
    {
@@ -188,6 +188,23 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261121-2044-fusees-jungle-kourou",
+    "name": "20261121-2044-fusees-jungle-kourou",
+    "added": "20261121-2044",
+    "status": "waiting",
+    "next": false,
+    "title": "Les fusées européennes décollent de la jungle (parce que la Terre y court plus vite)",
+    "theme": "L’univers",
+    "tagline": "Un Brestois en pull de laine, un manège géant et 460 mètres par seconde offerts",
+    "minutes": 1,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 7,
     "failed": 0,
     "redo": 0
    }

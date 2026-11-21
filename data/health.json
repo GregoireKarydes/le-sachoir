@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T20:48:00.038746+01:00",
+ "updated_at": "2026-11-21T20:49:02.716350+01:00",
  "today": "2026-11-21",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -89,9 +89,9 @@
   },
   "insolite": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 24,
+   "images_left": 31,
    "focus": "20261117-2047-napoleon-decore-un-sucrier (6 image(s) à faire)",
    "next": "20261116-2045-talon-haut-cavalier-rouge",
    "next_redo": 0
