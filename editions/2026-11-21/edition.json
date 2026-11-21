@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "status": "draft",
+  "status": "published",
   "newsletter": {
     "subject": "Samedi : un candidat de plus et une COP en prolongations",
     "intro": "Samedi 21 novembre. La COP31 n’a pas fini à l’heure. Nous si : votre Sachoir est servi encore chaud.",
@@ -8,6 +8,732 @@
     "ps": "P.-S. Pour être candidat, il faut 500 signatures d’élus. Pour lire le Sachoir, un pouce suffit. On a vérifié."
   },
   "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Le Code civil : 2 281 articles pour ranger le bazar de la France",
+      "tagline": "Des 300 coutumes de l’Ancien Régime à l’article 1240 : comment Bonaparte et quatre juristes ont donné une seule loi à tous les Français",
+      "teaser": "Trois cents lois différentes, quatre juristes, un général qui regarde sa montre : comment la France a écrit sa loi commune.",
+      "minutes": 6,
+      "theme": "Droit",
+      "art": {
+        "subject": "how France went from about 300 local customary laws to one single Civil Code in 1804: the Revolution's failed drafts, four jurists writing in four months, Bonaparte pushing the debates, what the Code changed, the married woman's inferior status and its reforms in 1965 and 1970, the Code spreading abroad, and why it is still in force today",
+        "setting": "a coaching inn and post relay on a French country road around 1780; a revolutionary assembly hall full of paper in the 1790s; a candle-lit council room in the Tuileries palace around 1801; a town hall wedding room in 1804; a Paris bank counter in 1965; a Paris park in 1970; a New Orleans river quay around 1808; a rocky shore on Saint Helena island; a modern university library; a modern Paris street market",
+        "era": "France from 1780 to 1807, Saint Helena after 1815, Paris in 1965 and 1970, and France today",
+        "props": {
+          "watch": "a round gold pocket watch on a gold chain",
+          "code": "a thick brown leather-bound book with gold edges and no visible writing",
+          "speech": "a thick bundle of handwritten paper pages tied with a green ribbon, with no visible writing",
+          "lawbooks": "small fat law books in many different colours, with no visible writing"
+        }
+      },
+      "cast": [
+        {
+          "id": "bonaparte",
+          "name": "Bonaparte",
+          "look": "Bonaparte in 1800, a short wiry young general about thirty years old, thin pale face, lank straight dark-brown hair falling to his collar, a deep navy-blue consul's coat with gold embroidery on collar and cuffs as main colour, white breeches, a red sash, always holding the watch",
+          "role": "the First Consul who wants the code finished at once; impatient and bossy, always snapping open his pocket watch, arms crossed, foot tapping",
+          "file": "cast/dossier-bonaparte.png",
+          "status": "done"
+        },
+        {
+          "id": "portalis",
+          "name": "Portalis",
+          "look": "Portalis, a very tall and very thin jurist in his fifties, long bony face, white powdered hair tied in a short queue, small round spectacles, light skin, a forest-green frock coat as main colour, black breeches, always holding the speech",
+          "role": "one of the four jurists who write the Code; long-winded orator who never stops talking, one bony finger always raised as if starting a speech",
+          "file": "cast/dossier-portalis.png",
+          "status": "done"
+        },
+        {
+          "id": "marchand",
+          "name": "Le marchand",
+          "look": "the merchant, a very fat 1780s cloth merchant, ginger mutton-chop sideburns under a grey tricorn hat, ruddy light skin, a mustard-yellow coat and waistcoat as main colour, brown boots, clutching a small leather purse",
+          "role": "a stingy cloth merchant travelling across the kingdom; easily outraged, clutches his purse to his belly whenever the law changes",
+          "file": "cast/dossier-marchand.png",
+          "status": "done",
+          "via": "fal"
+        },
+        {
+          "id": "madeleine",
+          "name": "Madeleine",
+          "look": "Madeleine, a small plump Parisian woman of 1965 in her forties, a tall blonde beehive hairdo, light olive skin, a bright coral-red dress as main colour, a white handbag and white gloves",
+          "role": "a married Parisian of the 1960s who finally gets her own rights; proud show-off, waves every new right in the air like a trophy",
+          "file": "cast/dossier-madeleine.png",
+          "status": "done"
+        }
+      ],
+      "cover": {
+        "prompt": "a candle-lit council room with a long table covered with piles of the lawbooks. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) in the foreground on the left, arms crossed, glaring at the watch; Portalis (very tall, thin, white powdered hair, forest-green coat) on the right, reading the speech aloud, one finger raised, the pages unrolling down to the floor. visual gag: the endless speech versus the watch. wide shot",
+        "cast": [
+          "bonaparte",
+          "portalis"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Le royaume aux 300 lois",
+          "caption": "Vers 1780, sur une route de France. Comment tout un pays a-t-il fini avec une seule loi ?",
+          "bubbles": [
+            {
+              "who": "marchand",
+              "text": "Mon contrat signé à Paris ne vaut rien ici ?",
+              "side": "l"
+            },
+            {
+              "who": "Le notaire",
+              "text": "Ici, monsieur, c’est une autre coutume. Une autre loi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the yard of a coaching inn on a French country road around 1780, a stagecoach with steaming horses. The merchant (very fat, ginger sideburns, grey tricorn, mustard-yellow coat) on the left, waving a paper contract, red angry flush; a skinny local notary in a black gown and white wig on the right, calmly shaking his head and pointing at one of the lawbooks under his arm. wide shot",
+            "cast": [
+              "marchand"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Avant 1789",
+          "caption": "Avant 1789, la France compte près de 300 coutumes, des lois locales : environ trois par département actuel.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the stagecoach on the country road. The roof of the coach is loaded with a towering, wobbling pile of the lawbooks, twice as high as the coach, tied with ropes; the merchant (very fat, ginger sideburns, grey tricorn, mustard-yellow coat) sits squashed on the driver's bench, clutching his purse to his belly, staring at the viewer in despair. visual gag: a coach crushed by law books. medium wide shot",
+            "cast": [
+              "marchand"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le livre qui va remplacer les coutumes",
+          "text": "La page de titre de l’édition originale du « Code civil des Français », publiée en 1804 : un seul livre pour tout le pays.",
+          "photo": {
+            "commons": "File:Code Civil 1804.png",
+            "credit": "Imprimerie nationale",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Code_Civil_1804.png",
+            "file": "images/photo-3-code-civil-1804-png.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1791-1796",
+          "caption": "En 1791, la Révolution promet un code commun. Mais en 1793, 1794 et 1796, trois projets échouent.",
+          "bubbles": [
+            {
+              "who": "Un député",
+              "text": "Un code, ça se discute. Pendant des années.",
+              "side": "l"
+            },
+            {
+              "who": "Un autre député",
+              "text": "Il nous faudrait quelqu’un qui déteste discuter.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a revolutionary assembly hall buried under mountains of paper drafts. Two exhausted deputies with tricolour sashes slumped on the benches in the foreground, one asleep on a pile of drafts; far behind them, in a bright open doorway, the small dark silhouette of a short man in a bicorne hat, seen from behind the deputies, waiting. cliffhanger mood. high angle",
+            "cast": [],
+            "file": "images/dossier-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "title": "Deux France, deux droits",
+          "steps": [
+            "Au nord, à peu près au-dessus de la Loire : les coutumes, comme celle de Paris, écrite en 1510",
+            "Au sud : le droit romain, écrit depuis l’Antiquité",
+            "Résultat : héritage, mariage et contrats changent d’une province à l’autre"
+          ],
+          "joke": "Voltaire s’en moquait : en voyage, on changeait aussi souvent de lois que de chevaux de poste."
+        },
+        {
+          "n": 6,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Quatre juristes, quatre mois",
+          "caption": "En août 1800, Bonaparte, Premier consul depuis neuf mois, confie le code à quatre juristes.",
+          "bubbles": [
+            {
+              "who": "portalis",
+              "text": "Un travail pareil ? Dix ans, au moins.",
+              "side": "r"
+            },
+            {
+              "who": "bonaparte",
+              "text": "Quatre mois.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a study in the Tuileries palace with one desk. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) on the left, sitting on the edge of the desk, snapping the watch open under the nose of Portalis (very tall, thin, white powdered hair, forest-green coat) on the right, who bends down towards him, stunned, the speech slipping from his hands. medium shot",
+            "cast": [
+              "bonaparte",
+              "portalis"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "done",
+            "attempts": 2,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "1800",
+          "caption": "Deux juristes viennent du Nord des coutumes, deux du Sud du droit romain : il faut marier les deux.",
+          "bubbles": [
+            {
+              "who": "Tronchet",
+              "text": "Le Nord a raison.",
+              "side": "l"
+            },
+            {
+              "who": "portalis",
+              "text": "Le Sud aussi. On écrit les deux, mais une seule fois.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a round table seen from above, covered with the lawbooks and quills. On the left a tiny bald old jurist in a black coat pulls the code towards him with both hands; on the right Portalis (very tall, thin, white powdered hair, forest-green coat) pulls it the other way, both leaning back like a tug of war over the book. bird's-eye view",
+            "cast": [
+              "portalis"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "1801",
+          "caption": "En 1801, Portalis présente le projet. Vraie phrase de son discours : « Les lois sont faites pour les hommes. »",
+          "bubbles": [
+            {
+              "who": "portalis",
+              "text": "… et non les hommes pour les lois. Deuxième partie !",
+              "side": "r"
+            },
+            {
+              "who": "bonaparte",
+              "text": "Il y en a combien ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a candle-lit council room. Portalis (very tall, thin, white powdered hair, forest-green coat) standing on the right, seen from below, reading the speech with one finger raised, the pages hanging down to the floor; Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) seated low on the left, chin in his hand, staring at the watch. low angle",
+            "cast": [
+              "portalis",
+              "bonaparte"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Portalis, peint par Gautherot",
+          "text": "Juriste provençal, Jean-Étienne-Marie Portalis est l’un des quatre rédacteurs. Son « Discours préliminaire » explique l’esprit du Code.",
+          "photo": {
+            "commons": "File:Jean-Étienne-Marie Portalis by Pierre Gautherot.jpg",
+            "credit": "Pierre-Claude Gautherot",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Jean-%C3%89tienne-Marie_Portalis_by_Pierre_Gautherot.jpg",
+            "file": "images/photo-9-jean-tienne-marie-portalis-by-pierr.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 10,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Le Premier consul s’en mêle",
+          "caption": "Dès juillet 1801, les juristes du gouvernement, le Conseil d’État, débattent du projet : plus de cent séances.",
+          "bubbles": [
+            {
+              "who": "bonaparte",
+              "text": "Personne ne sort avant d’avoir fini le mariage.",
+              "side": "l"
+            },
+            {
+              "who": "Un conseiller",
+              "text": "Il est deux heures du matin, Premier consul.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a long council table at night, candles burnt down, a dozen sleepy councillors in dark blue coats slumped over piles of paper. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) wide awake at the head of the table on the left, leaning forward on both fists; one old councillor on the right yawning hugely. wide shot",
+            "cast": [
+              "bonaparte"
+            ],
+            "file": "images/dossier-07.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 11,
+          "kind": "fact",
+          "tag": "1801",
+          "caption": "Bonaparte préside plus de la moitié des séances. Il tient à garder le divorce, créé en 1792.",
+          "bubbles": [
+            {
+              "who": "Un conseiller",
+              "text": "Le divorce ? L’Église va hurler.",
+              "side": "r"
+            },
+            {
+              "who": "bonaparte",
+              "text": "Une loi doit prévoir les accidents. Tous.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the council room. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) on the left, pointing firmly at a page of the code open on the table; a worried councillor in a dark blue coat on the right, half rising from his chair with both hands raised, a light-blue sweat drop. medium close-up",
+            "cast": [
+              "bonaparte"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 12,
+          "kind": "",
+          "tag": "1802",
+          "caption": "En 1802, le Tribunat, une assemblée qui discute les lois, freine le projet. Bonaparte écarte les opposants.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the tall doorway of an assembly hall. Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) holding the door wide open with one hand and the watch in the other, eyes on the watch; a line of grumpy tribunes in long blue robes walks out past him, each one carrying his own chair on his back. visual gag: opponents leaving with their chairs. medium wide shot",
+            "cast": [
+              "bonaparte"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 13,
+          "kind": "fact",
+          "tag": "21 mars 1804",
+          "caption": "Entre 1803 et 1804, 36 lois sont votées, puis réunies le 21 mars 1804 : 2 281 articles.",
+          "bubbles": [
+            {
+              "who": "portalis",
+              "text": "Deux mille deux cent quatre-vingt-un articles. Un par jour pendant six ans.",
+              "side": "r"
+            },
+            {
+              "who": "bonaparte",
+              "text": "Trop long. Mon nom est sur la couverture ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the Tuileries study. Portalis (very tall, thin, white powdered hair, forest-green coat) on the right, proudly holding up the finished code with both hands like a trophy, yellow sparkles; Bonaparte (short, lank dark-brown hair, navy-blue consul's coat) on the left, standing on tiptoe to peer at the cover, unimpressed. medium shot",
+            "cast": [
+              "portalis",
+              "bonaparte"
+            ],
+            "file": "images/dossier-10.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 14,
+          "kind": "explain",
+          "title": "Ce que le Code change pour tous",
+          "steps": [
+            "La même loi de Lille à Marseille",
+            "Tous égaux devant la loi : fini les privilèges de naissance",
+            "La propriété protégée, les droits féodaux balayés",
+            "Les enfants héritent à parts égales",
+            "Le juge applique la loi, il ne l’invente plus"
+          ],
+          "joke": "Le marchand peut enfin ranger sa malle."
+        },
+        {
+          "n": 15,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Égaux… sauf au mariage",
+          "caption": "En 1804, l’article 213 dit : « Le mari doit protection à sa femme, la femme obéissance à son mari. »",
+          "bubbles": [
+            {
+              "who": "La mariée",
+              "text": "Lui, il me protège de quoi, exactement ?",
+              "side": "l"
+            },
+            {
+              "who": "Le maire",
+              "text": "Ce n’est pas précisé, madame.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a town hall wedding room in 1804 with a tricolour sash on the wall. A young bride in a white empire dress on the left, eyebrow raised, arms folded; her tiny skinny groom beside her puffs out his chest; on the right a round mayor with a tricolour sash reads solemnly from the code held at arm's length. medium wide shot",
+            "cast": [],
+            "file": "images/dossier-11.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 16,
+          "kind": "fact",
+          "tag": "1804",
+          "caption": "Sans l’accord de son mari, l’épouse ne peut ni gérer ses biens ni choisir librement son métier.",
+          "bubbles": [
+            {
+              "who": "Une couturière",
+              "text": "Mon atelier, mes clientes, mon argent. Et sa signature.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small sewing workshop in 1804. A seamstress with a brown bun and a lilac apron, pins between her lips, holding a contract out to her husband with an exasperated face; the husband, a sleepy man in a nightcap, signs it without even looking up from his newspaper with no visible writing. close-up",
+            "cast": [],
+            "file": "images/dossier-12.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 17,
+          "kind": "",
+          "tag": "13 juillet 1965",
+          "caption": "Loi du 13 juillet 1965 : les femmes mariées gèrent enfin leurs biens et ouvrent un compte seules.",
+          "bubbles": [
+            {
+              "who": "madeleine",
+              "text": "Un compte à mon nom. Sans la signature de Gérard.",
+              "side": "l"
+            },
+            {
+              "who": "Le banquier",
+              "text": "C’est-à-dire que… euh… oui, madame.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Paris bank counter in 1965 with a wooden grille. Seen over the shoulder of a nervous bald bank clerk in a grey suit, holding a pen frozen in mid-air; Madeleine (small, plump, tall blonde beehive, coral-red dress) on the other side of the counter, slapping her white gloves down on the counter, chin raised, triumphant. over-the-shoulder",
+            "cast": [
+              "madeleine"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 18,
+          "kind": "fact",
+          "tag": "4 juin 1970",
+          "caption": "Le 4 juin 1970, l’« autorité parentale » partagée remplace la « puissance paternelle » du père seul.",
+          "bubbles": [
+            {
+              "who": "madeleine",
+              "text": "Partagée, Gérard. On décide à deux.",
+              "side": "l"
+            },
+            {
+              "who": "Gérard",
+              "text": "Et les couches, on les change aussi à deux ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Paris park in 1970 with one bench. Madeleine (small, plump, tall blonde beehive, coral-red dress) on the left, waving a document in the air like a trophy; on the right her husband, a lanky man with a thin moustache in a brown suit, holding a crying baby at arm's length with a baby bottle in his other hand, bewildered. medium shot",
+            "cast": [
+              "madeleine"
+            ],
+            "file": "images/dossier-14.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 19,
+          "kind": "explain",
+          "title": "Un code qui se réécrit",
+          "steps": [
+            "1816 : le divorce est supprimé",
+            "1884 : il revient, mais seulement pour faute",
+            "1965 : les femmes mariées gèrent leurs biens",
+            "1970 : l’autorité parentale est partagée",
+            "1975 : nouvelle loi, le divorce par consentement mutuel revient"
+          ],
+          "joke": "Le livre change, mais il garde sa couverture."
+        },
+        {
+          "n": 20,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Un livre qui voyage",
+          "caption": "En 1807, il devient « Code Napoléon ». Les conquêtes l’imposent en Belgique, aux Pays-Bas, en Italie.",
+          "bubbles": [
+            {
+              "who": "Un grenadier",
+              "text": "Des canons, des fusils… et deux mille articles de droit.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a muddy road in 1807. A tall grenadier with a huge black bearskin hat and a white-and-blue uniform marching in the foreground, bent double under a big wooden crate full of copies of the code on his back; behind him a cannon pulled by horses. low angle",
+            "cast": [],
+            "file": "images/dossier-15.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 21,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Les systèmes juridiques du monde",
+          "text": "Cette carte colore les familles de droit. Le droit civil, fait de codes écrits, couvre une large part du monde : le Code de 1804 en est un grand modèle.",
+          "photo": {
+            "commons": "File:CarteSystemesJuridiquesFR.png",
+            "credit": "I, Erasoft24",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:CarteSystemesJuridiquesFR.png",
+            "file": "images/photo-21-cartesystemesjuridiquesfr-png.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 22,
+          "kind": "fact",
+          "tag": "1808",
+          "caption": "Il inspire même hors d’Europe : la Louisiane en 1808, puis l’Égypte dans les années 1870 et 1880.",
+          "bubbles": [
+            {
+              "who": "Un avocat",
+              "text": "Les Américains ont acheté la Louisiane. Pas notre droit.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a sunny New Orleans river quay around 1808 with barrels and a sailing ship. A sharp-featured lawyer in a cream linen suit and a straw hat on the right, sitting on a barrel with the code open on his knees, smiling slyly; on the left, far away, two American officials in dark coats walk past carrying a big rolled map. wide shot",
+            "cast": [],
+            "file": "images/dossier-16.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 23,
+          "kind": "",
+          "tag": "Après 1815",
+          "caption": "En exil à Sainte-Hélène, après 1815, Napoléon affirme que son Code vivra plus longtemps que ses victoires.",
+          "bubbles": [
+            {
+              "who": "bonaparte",
+              "text": "Pour une fois, j’ai tout mon temps.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a lonely rocky shore on Saint Helena island facing a wide empty sea. Bonaparte (short, lank dark-brown hair, navy-blue coat) seen from behind, sitting alone on a rock with the code on his knees, holding the watch open in his hand, letting it dangle on its chain. calm, melancholy. from behind",
+            "cast": [
+              "bonaparte"
+            ],
+            "file": "images/dossier-17.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 24,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Toujours en vigueur",
+          "caption": "Il avait raison sur un point : une petite moitié des articles d’aujourd’hui datent encore de 1804.",
+          "bubbles": [
+            {
+              "who": "Une étudiante",
+              "text": "Mon examen porte sur un texte écrit sous Napoléon.",
+              "side": "l"
+            },
+            {
+              "who": "Un étudiant",
+              "text": "Et toujours pas de version courte.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a modern university library. A young student with short pink hair and a yellow hoodie on the left, face flat on a very thick red law book, arms dangling; a tall student with dreadlocks in a grey sweater on the right, flicking through the same thick red book, sighing. medium shot",
+            "cast": [],
+            "file": "images/dossier-18.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 25,
+          "kind": "fact",
+          "tag": "1804-2016",
+          "caption": "Exemple : « Tout fait quelconque de l’homme, qui cause à autrui un dommage » oblige à réparer. Même phrase depuis 1804.",
+          "bubbles": [
+            {
+              "who": "Le primeur",
+              "text": "Article 1240, ex-1382. Vous me devez trois melons.",
+              "side": "r"
+            },
+            {
+              "who": "Le livreur",
+              "text": "Napoléon, sérieux ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a modern Paris street market. A delivery rider in a turquoise jacket and helmet on the left, sprawled on the ground next to his fallen scooter, melons rolling everywhere; a stout greengrocer with a grey beard and a green apron on the right, standing over him, holding up the code open at a page with a stern look. medium wide shot",
+            "cast": [],
+            "file": "images/dossier-19.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 26,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "En résumé : en 1804, une seule loi écrite remplace 300 coutumes. Depuis, on la retouche sans la jeter.",
+          "bubbles": [
+            {
+              "who": "portalis",
+              "text": "Pour la nouvelle version, j’ai préparé un petit discours de…",
+              "side": "r"
+            },
+            {
+              "who": "bonaparte",
+              "text": "Quatre mois.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the candle-lit Tuileries study. Close on Bonaparte (short, lank dark-brown hair, navy-blue consul's coat), deadpan, holding the watch right up to the viewer; behind him, blurred and tiny, Portalis (very tall, thin, white powdered hair, forest-green coat) unrolling the speech, which pours over the floor like a carpet. visual gag: the endless speech again. close-up",
+            "cast": [
+              "bonaparte",
+              "portalis"
+            ],
+            "file": "images/dossier-20.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        }
+      ],
+      "final": {
+        "text": "Stendhal lisait quelques pages du Code civil chaque matin pour trouver le ton sec de La Chartreuse de Parme.",
+        "source": "Maison de Balzac — The Civil Code"
+      },
+      "story": "Avant 1789, la France n’a pas une loi, mais près de 300 coutumes : des règles locales nées des usages. Au nord, à peu près au-dessus de la Loire, on suit ces coutumes, comme celle de Paris, écrite en 1510 ; au sud, le droit romain. Héritage, mariage et contrats changent donc d’une province à l’autre. Voltaire s’en moquait : en voyage, on changeait aussi souvent de lois que de chevaux de poste.\nEn 1791, la Révolution promet un code commun, mais les projets de 1793, 1794 et 1796 échouent. En août 1800, le Premier consul Bonaparte confie le travail à quatre juristes : Tronchet et Bigot de Préameneu, venus des pays de coutumes, Portalis et Maleville, du droit écrit. En quatre mois, ils rédigent un projet. Dès juillet 1801, le Conseil d’État en débat en plus de cent séances, dont plus de la moitié présidées par Bonaparte, qui tient à garder le divorce. En 1802, il écarte les opposants du Tribunat. Entre 1803 et 1804, 36 lois sont votées, puis réunies le 21 mars 1804 : 2 281 articles.\nLe Code fixe l’égalité devant la loi, protège la propriété et partage l’héritage à égalité entre les enfants. Mais l’épouse doit « obéissance » à son mari : il faut attendre 1965 pour qu’elle gère ses biens seule, et 1970 pour l’autorité parentale partagée.\nRebaptisé Code Napoléon en 1807, il inspire la Louisiane, l’Égypte et une grande partie de l’Europe. Aujourd’hui encore, une petite moitié de ses articles date de 1804.",
+      "sources": [
+        {
+          "title": "Hérodote — 21 mars 1804, promulgation du Code civil",
+          "url": "https://www.herodote.net/21_mars_1804-evenement-18040322.php"
+        },
+        {
+          "title": "Fondation Napoléon — Le Code civil des Français, quelques points de repère",
+          "url": "https://www.napoleon.org/histoire-des-2-empires/articles/le-code-civil/"
+        },
+        {
+          "title": "Fondation Napoléon — Le Code civil (21 mars 1804) : naissance, principes et postérité",
+          "url": "https://www.napoleon.org/enseignants/documents/le-code-civil-21-mars-1804-naissance-principes-et-posterite"
+        },
+        {
+          "title": "Wikipedia — Old French law",
+          "url": "https://en.wikipedia.org/wiki/Old_French_law"
+        },
+        {
+          "title": "Wikipedia — Tribunat",
+          "url": "https://en.wikipedia.org/wiki/Tribunat"
+        },
+        {
+          "title": "Hérodote — Le droit du divorce vu par Bonaparte",
+          "url": "https://www.herodote.net/Le_droit_du_divorce_vu_par_Bonaparte-article-1587.php"
+        },
+        {
+          "title": "Justice Canada — Portalis, Discours préliminaire du premier projet de Code civil",
+          "url": "https://justice.gc.ca/fra/pr-rp/sjc-csj/pji-ilp/code/index.html"
+        },
+        {
+          "title": "Criminocorpus — Code civil, article 213 (version de 1804)",
+          "url": "https://criminocorpus.org/fr/legislation/droit/versions/718/213/pdf/"
+        },
+        {
+          "title": "Vie publique — Mariage, divorce et autorité parentale : deux siècles d’évolution",
+          "url": "https://www.vie-publique.fr/eclairage/24161-mariage-divorce-et-autorite-parentale-deux-siecles-devolution"
+        },
+        {
+          "title": "Info.gouv — « La femme mariée avait le statut de mineure »",
+          "url": "https://www.info.gouv.fr/actualite/la-femme-mariee-avait-le-statut-de-mineure-au-meme-titre-que-les-enfants"
+        },
+        {
+          "title": "Universalis — Code Napoléon, l’expansion",
+          "url": "https://www.universalis.fr/encyclopedie/code-napoleon/3-expansion/"
+        },
+        {
+          "title": "Legalplace — Article 1382 devenu 1240 du Code civil",
+          "url": "https://www.legalplace.fr/guides/article-1382-code-civil-1240/"
+        },
+        {
+          "title": "Maison de Balzac — The Civil Code (Stendhal)",
+          "url": "https://accueilmaisondebalzac.paris.fr/en/?p=1308"
+        }
+      ],
+      "from_stock": "20261117-1925-code-civil"
+    },
     {
       "id": "actu",
       "label": "L’Actu du jour",
@@ -366,6 +1092,799 @@
       ]
     },
     {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le département, ou la France taillée à la mesure d’un cheval",
+      "tagline": "Une règle, un compas, des rivières et un cheval qui doit rentrer avant la nuit",
+      "teaser": "Pourquoi votre département a cette taille-là ? Parce qu’en 1790, quelqu’un a calculé ce que tient un cheval dans une journée.",
+      "minutes": 2,
+      "theme": "Histoire de France",
+      "art": {
+        "subject": "why France was cut into departments of similar size in 1790, first imagined as a grid of squares, then sized so a rider could reach the main town and come back in one day",
+        "setting": "a modern bicycle courier stop with a big wall map of France; a 1789-1790 committee room of the French National Assembly with a long table covered in maps; a country road in 1790",
+        "era": "1789-1790 French Revolution, with a courier from today",
+        "props": {
+          "map": "a large old paper map of France spread on the table, with rivers drawn in blue and no writing",
+          "ruler": "a long wooden ruler and a big brass compass",
+          "horse": "a sturdy brown saddle horse with a white blaze"
+        }
+      },
+      "cast": [
+        {
+          "id": "yanis",
+          "name": "Yanis",
+          "look": "Yanis, a short skinny bicycle courier in his twenties, dark brown skin, tall black flat-top haircut, bright turquoise-blue delivery jacket as main colour, black cycling shorts over leggings, a big square delivery backpack, a phone strapped to his wrist",
+          "file": "cast/cultureg-yanis.png",
+          "status": "done",
+          "role": "the courier who crosses departments every day without wondering why they exist; restless, always bouncing on his toes, asks the reader's questions"
+        },
+        {
+          "id": "sieyes",
+          "name": "L’abbé Sieyès",
+          "look": "Emmanuel-Joseph Sieyès, a tall very thin French abbé and deputy of 1790 in his forties, long narrow face, sharp nose, thin lips, short powdered white hair, pale skin, olive-green frock coat as main colour over a black waistcoat, white cravat, a black three-cornered tricorn hat (never a round-brimmed hat) with a small round French cockade on it (blue centre, white ring, red outer ring, never green), the ruler under his arm",
+          "file": "cast/cultureg-sieyes.png",
+          "status": "done",
+          "role": "the brilliant, rigid revolutionary who loves straight lines and logic; stiff as a ruler, measures everything with his fingers, offended by anything crooked"
+        }
+      ],
+      "cover": {
+        "prompt": "a committee room of 1790 with a long table covered by the map. Sieyès (tall, very thin, powdered white hair, olive-green frock coat, tricorn hat) on the right leaning over the table, drawing a perfectly straight line across the map with the ruler, eyes narrowed; Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket, square backpack) on the left perched on the table, pointing at a mountain on the map that the line cuts in half, alarmed. wide shot",
+        "cast": [
+          "yanis",
+          "sieyes"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium",
+        "qa": "ok"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "La France compte aujourd’hui 101 départements, de tailles assez proches. Mais pourquoi ce découpage, et pourquoi cette taille-là ?",
+          "bubbles": [
+            {
+              "who": "yanis",
+              "text": "Regardez-moi ces frontières. On dirait une carte dessinée dans un bus.",
+              "side": "l"
+            },
+            {
+              "who": "sieyes",
+              "text": "Ne m’en parlez pas. Moi, j’avais prévu des carrés.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a modern bicycle courier stop with a big wall map of France. Yanis (short, skinny young man with dark brown skin, a tall black flat-top haircut, turquoise-blue delivery jacket, square backpack) on the left, one foot on his bike pedal, staring at the wall map with a puzzled frown; Sieyès (tall, very thin, powdered white hair, olive-green frock coat, black tricorn hat) has appeared on the right, measuring the wall map with the ruler, very serious. wide shot",
+            "cast": [
+              "yanis",
+              "sieyes"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium",
+            "redo": true
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Avant 1789",
+          "caption": "Avant la Révolution, provinces, diocèses et autres circonscriptions se chevauchent, avec des tailles très différentes. Un vrai casse-tête pour administrer.",
+          "bubbles": [
+            {
+              "who": "sieyes",
+              "text": "Mille ans de bricolage. Pas une ligne droite.",
+              "side": "r"
+            },
+            {
+              "who": "yanis",
+              "text": "Et pas un GPS. Je compatis.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a 1789 committee room of the National Assembly with a long table. Sieyès (tall, very thin, powdered white hair, olive-green frock coat) on the right holding up an old map covered in tangled, overlapping coloured patches like a messy patchwork quilt, disgusted; Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket) on the left tilting his head sideways trying to read it. medium shot",
+            "cast": [
+              "sieyes",
+              "yanis"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Le plan en carrés",
+          "caption": "En 1789, le comité de Sieyès propose une grille : 81 carrés d’environ 70 km de côté, découpés eux-mêmes en neuf.",
+          "bubbles": [
+            {
+              "who": "yanis",
+              "text": "Et les montagnes, vous les coupez en deux ?",
+              "side": "l"
+            },
+            {
+              "who": "sieyes",
+              "text": "La géométrie ne connaît pas les montagnes.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the committee room, the map spread on the long table. Sieyès (tall, very thin, powdered white hair, olive-green frock coat) standing on a chair, pressing the ruler down and drawing a neat grid of perfect squares across the map, rivers and mountains ignored; Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket) at the table edge, holding a tiny model mountain cut cleanly in two halves. high angle",
+            "cast": [
+              "sieyes",
+              "yanis"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Trop carré",
+          "caption": "Trop rigide : Mirabeau et d’autres députés s’y opposent. Les limites finales suivent souvent les anciennes provinces et le terrain.",
+          "bubbles": [
+            {
+              "who": "sieyes",
+              "text": "Mes beaux carrés…",
+              "side": "r"
+            },
+            {
+              "who": "sieyes",
+              "text": "Ils ont mis des virages partout.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the committee room. Sieyès (tall, very thin, powdered white hair, olive-green frock coat) alone, slumped over the table, holding up the map now covered in wobbly curvy borders, his ruler drooping sadly in his other hand, a tiny light-blue tear at the corner of one eye. close-up",
+            "cast": [
+              "sieyes"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "La règle du cheval",
+          "text": "Repère attribué à Condorcet : depuis le coin le plus éloigné du département, on doit pouvoir aller à cheval au chef-lieu, la ville où siège l’administration, et rentrer dans la journée.",
+          "steps": [
+            "Un cheval fait l’aller et le retour en un jour",
+            "Donc le département ne peut pas être trop grand",
+            "Donc ils ont tous une taille assez proche"
+          ],
+          "joke": "La France découpée à l’échelle d’un dos de cheval."
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Le test",
+          "caption": "Du coup, aucun département n’est démesuré : même du coin le plus lointain, le cavalier va au chef-lieu et rentre avant la nuit.",
+          "bubbles": [
+            {
+              "who": "yanis",
+              "text": "À vélo, je fais l’aller-retour avant le déjeuner !",
+              "side": "l"
+            },
+            {
+              "who": "sieyes",
+              "text": "Mon cheval, lui, exige son déjeuner.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a country road in 1790 through green fields. Yanis (short, skinny young man with dark brown skin, a tall black flat-top haircut, turquoise-blue delivery jacket, square backpack) pedalling furiously on his bike in the foreground, overtaking; Sieyès (tall, very thin, powdered white hair, olive-green frock coat, black tricorn hat) behind him riding the horse at a calm trot, the horse calmly chewing a mouthful of hay. wide shot",
+            "cast": [
+              "yanis",
+              "sieyes"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "done",
+            "attempts": 1,
+            "redo": true
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Les noms",
+          "caption": "Les noms aussi rompent avec les anciennes provinces : on choisit des rivières, des fleuves et des montagnes.",
+          "bubbles": [
+            {
+              "who": "yanis",
+              "text": "D’où la Seine-et-Marne, le Cher ou les Hautes-Pyrénées !",
+              "side": "l"
+            },
+            {
+              "who": "sieyes",
+              "text": "Une rivière, au moins, ne réclame pas de privilèges.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back in the committee room. Over the shoulder of Yanis (tall black flat-top, turquoise-blue delivery jacket) we see Sieyès (tall, very thin, powdered white hair, olive-green frock coat) on the far side of the table, solemnly dipping a quill in a small glass of river water as if to baptise the map, a little wooden boat placed on a blue river line. over-the-shoulder",
+            "cast": [
+              "yanis",
+              "sieyes"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 8,
+          "kind": "photo",
+          "tag": "Document",
+          "title": "Les 83 départements de 1790",
+          "text": "La carte des départements en 1790. Les formes ne sont pas des carrés, mais les tailles restent proches : c’est l’effet de la règle du cheval.",
+          "photo": {
+            "commons": "File:France location map-Departements 1790.svg",
+            "credit": "Sémhur",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:France_location_map-Departements_1790.svg",
+            "file": "images/photo-8-france-location-map-departements-17.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "En 1790, l’Assemblée crée 83 départements de taille proche, nommés d’après la nature, pour une France plus simple à gouverner.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the modern bicycle courier stop with the big wall map of France. Yanis (short, skinny, tall black flat-top, turquoise-blue delivery jacket) on the left patting the neck of the horse, which is now parked among the bikes in the bike rack; Sieyès (tall, very thin, short powdered white hair under a black tricorn hat, olive-green frock coat over a black waistcoat, white cravat) on the right, folding the ruler away with quiet satisfaction. medium shot",
+            "cast": [
+              "yanis",
+              "sieyes"
+            ],
+            "file": "images/cultureg-09.webp",
+            "status": "done",
+            "attempts": 1,
+            "redo": true
+          }
+        }
+      ],
+      "final": {
+        "text": "Le premier projet, en 1789, découpait la France en 81 carrés d’environ 70 km de côté. Trop rigide : il fut abandonné.",
+        "source": "Futura Sciences — La création des départements"
+      },
+      "story": "Avant la Révolution, la France était découpée en provinces, diocèses et autres circonscriptions qui se chevauchaient, de tailles très différentes, héritées de siècles d’histoire. Pour administrer le pays plus simplement, l’Assemblée constituante décide de tout redécouper.\nLe comité chargé du projet, où siège l’abbé Sieyès, part d’une idée géométrique : une grille de 81 carrés d’environ 70 kilomètres de côté (18 lieues sur 18), chacun divisé en neuf. Trop rigide : le plan, critiqué notamment par Mirabeau, est abandonné, et les limites finales suivent souvent celles des anciennes provinces et le relief.\nUn repère guide la taille des départements, attribué à Condorcet : depuis le point le plus éloigné, un habitant doit pouvoir se rendre à cheval au chef-lieu, la ville où siège l’administration, et revenir dans la journée. C’est pourquoi les départements ont des tailles assez proches. Pour rompre avec les anciennes provinces, on leur donne des noms de rivières, de fleuves et de montagnes.\nLe 15 janvier 1790, l’Assemblée arrête la carte ; le décret du 26 février 1790 fixe le nombre de 83 départements. Leur nombre a varié depuis avec l’histoire du pays : on en compte aujourd’hui 101, outre-mer compris.",
+      "sources": [
+        {
+          "title": "Futura Sciences — La création des départements français à la Révolution",
+          "url": "https://www.futura-sciences.com/sciences/questions-reponses/histoire-histoire-creation-departements-francais-revolution-12312/"
+        },
+        {
+          "title": "Hérodote — 15 janvier 1790 : la France découpée en 83 départements",
+          "url": "https://www.herodote.net/15_janvier_1790-evenement-17900115.php"
+        },
+        {
+          "title": "Vie publique — Construction de l’organisation territoriale de la France",
+          "url": "https://www.vie-publique.fr/eclairage/126857-construction-de-lorganisation-territoriale-de-la-france-chronologie"
+        },
+        {
+          "title": "Wikimedia Commons — France location map, Départements 1790 (Sémhur)",
+          "url": "https://download.osmand.net/wiki/File:France_location_map-Departements_1790.svg"
+        }
+      ],
+      "from_stock": "20261115-2050-departements-taille-cheval"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)",
+      "tagline": "Un écrivain, une machine à écrire amputée, et des lecteurs qui n’ont rien vu",
+      "teaser": "En 1969, un écrivain français publie un polar entier en se privant de la lettre la plus utile du français. Certains lecteurs n’ont rien remarqué.",
+      "minutes": 2,
+      "theme": "Littérature",
+      "art": {
+        "subject": "how the French writer Georges Perec wrote a whole 300-page novel in 1969 without ever using one letter of the alphabet",
+        "setting": "a cluttered Paris writer's study in 1969 with a desk and a typewriter, and a quiet publisher's office with a big armchair and piles of manuscripts",
+        "era": "late 1960s Paris",
+        "props": {
+          "typewriter": "a grey portable typewriter with one key missing, an empty hole in the keyboard covered by a small strip of brown tape",
+          "manuscript": "a very thick stack of typed white pages tied with string",
+          "pencil": "a long red proofreading pencil"
+        }
+      },
+      "cast": [
+        {
+          "id": "perec",
+          "name": "Georges Perec",
+          "look": "Georges Perec, a lanky French writer of 1969 in his early thirties, a huge cloud of wild frizzy dark brown hair, a long pointed goatee beard, light peach skin, rust-orange corduroy jacket as main colour over a black polo neck, a cat-shaped mischievous grin, the manuscript under his arm",
+          "file": "cast/insolite-perec.png",
+          "status": "done",
+          "role": "the playful writer who loves impossible rules; restless, grins slyly, speaks carefully as if dodging something invisible in every sentence"
+        },
+        {
+          "id": "odile",
+          "name": "Odile, correctrice",
+          "look": "Odile, a small round elderly proofreader of 1969, tight grey permed curls, cat-eye glasses hanging on a chain, light pink skin, bright royal-blue cardigan as main colour over a white blouse, a grey skirt, the pencil always behind her ear",
+          "file": "cast/insolite-odile.png",
+          "status": "done",
+          "role": "the meticulous publishing proofreader who has seen everything and believes nothing; sceptical, peers over her glasses, taps her pencil"
+        }
+      ],
+      "cover": {
+        "prompt": "a cluttered Paris writer's study in 1969. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) at his desk on the right, typing happily on the typewriter whose missing key is taped over; Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) on the left, bent over the keyboard with a magnifying glass, staring at the empty hole, scandalised. wide shot",
+        "cast": [
+          "perec",
+          "odile"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium",
+        "qa": "ok"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Paris, 1969",
+          "caption": "Georges Perec publie « La Disparition », un roman d’environ 300 pages écrit sans jamais utiliser la lettre « e ».",
+          "bubbles": [
+            {
+              "who": "odile",
+              "text": "Trois cents pages sans un seul « e » ? C’est impossible.",
+              "side": "l"
+            },
+            {
+              "who": "perec",
+              "text": "Si. Un gros roman, sans lui. Aucun.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a cluttered Paris writer's study in 1969 with a desk. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) on the right proudly dropping the manuscript on the desk with a loud thud, papers flying; Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) on the left, pencil raised, staring at the typewriter's taped-over missing key in disbelief. wide shot",
+            "cast": [
+              "perec",
+              "odile"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le défi",
+          "caption": "Or le « e » est partout : « le », « et », « je », « elle », « père », « mère »… Perec doit s’en passer à chaque phrase.",
+          "bubbles": [
+            {
+              "who": "odile",
+              "text": "Sans « je » ? Comment parlez-vous de vous, alors ?",
+              "side": "l"
+            },
+            {
+              "who": "perec",
+              "text": "Moi, toujours moi. Ça suffit.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the writer's study. Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) in the foreground on the left, leaning across the desk and pointing the pencil at him like an interrogator; Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) in the background on the right, tapping his own chest with both thumbs, smug. medium close-up",
+            "cast": [
+              "odile",
+              "perec"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Comment écrire un roman sans « e »",
+          "steps": [
+            "Interdits : « le », « et », « je », « elle » et tous les mots qui contiennent un « e »",
+            "À chaque phrase, il faut trouver d’autres mots qui disent la même chose",
+            "L’auteur ne peut même pas écrire son propre nom dans le livre",
+            "L’intrigue : un certain Anton Voyl disparaît… comme la lettre"
+          ],
+          "joke": "Un polar dont le coupable est l’alphabet."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le plus fou",
+          "caption": "Selon le récit souvent rapporté, plusieurs premiers lecteurs n’auraient même pas remarqué qu’une lettre manquait.",
+          "bubbles": [
+            {
+              "who": "odile",
+              "text": "J’ai tout lu. Très bien. Rien à signaler.",
+              "side": "l"
+            },
+            {
+              "who": "perec",
+              "text": "Ah. Bon. Un dur travail pour rien.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet publisher's office with a big armchair and piles of manuscripts. Odile (small, round, grey permed curls, cat-eye glasses, royal-blue cardigan) on the left sitting comfortably in the armchair, closing the manuscript with a satisfied smile; Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) on the right sliding slowly down the wall to the floor, deflated, his frizzy hair drooping. medium shot",
+            "cast": [
+              "odile",
+              "perec"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 5,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi s’imposer une règle pareille ?",
+          "text": "Perec fait partie de l’Oulipo, « Ouvroir de littérature potentielle », fondé le 24 novembre 1960 par Raymond Queneau et François Le Lionnais. Le principe : s’imposer une contrainte, comme se priver d’une lettre, oblige à inventer des phrases qu’on n’aurait jamais écrites.",
+          "joke": "La liberté par la contrainte. Comme un régime, mais pour les mots."
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Et en anglais ?",
+          "caption": "Dans les années 1990, le roman paraît en anglais, « A Void », traduit par Gilbert Adair… toujours sans « e ».",
+          "bubbles": [
+            {
+              "who": "perec",
+              "text": "Un Anglais l’a traduit. Sans lui aussi.",
+              "side": "r"
+            },
+            {
+              "who": "perec",
+              "text": "Il fallait un fou. Il y avait Adair.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the writer's study. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) alone, holding up a thin blank-covered book with both hands like a precious trophy, eyes shining with mischief, yellow sparkles around him. close-up",
+            "cast": [
+              "perec"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "« La Disparition » est un vrai roman de 300 pages sans un seul « e ». Un défi d’écrivain, pas une coquille.",
+          "bubbles": [
+            {
+              "who": "odile",
+              "text": "Et le prochain ? Vous vous privez du « a » ?",
+              "side": "l"
+            },
+            {
+              "who": "perec",
+              "text": "Non. Cette fois, je mets des « e » partout. Je me venge.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back in the writer's study. Georges Perec (lanky, huge frizzy dark hair, goatee, rust-orange corduroy jacket) on the right ripping the strip of tape off the typewriter and hammering the restored key with one finger, triumphant; Odile (small, round elderly woman, tight grey permed curls, cat-eye glasses on a chain, royal-blue cardigan, grey skirt) on the left, both hands pressed flat over her ears, pencil clenched in her mouth; an ordinary human woman, no tail, no animal features, the typewriter plain with no brand name. low angle",
+            "cast": [
+              "perec",
+              "odile"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "done",
+            "attempts": 1,
+            "redo": true
+          }
+        }
+      ],
+      "final": {
+        "text": "Dans les années 1990, « La Disparition » a été traduit en anglais par Gilbert Adair, sous le titre « A Void »… toujours sans « e ».",
+        "source": "Wikipédia — A Void"
+      },
+      "story": "En 1969, l’écrivain Georges Perec publie chez Gallimard « La Disparition », un roman d’environ 300 pages. Particularité : la lettre « e », pourtant partout en français, n’y apparaît jamais. Ce type de texte, qui se prive d’une ou de plusieurs lettres, s’appelle un lipogramme. Perec doit donc renoncer à « le », « et », « je », « elle » et à tous les mots qui contiennent la lettre interdite, en cherchant sans cesse d’autres façons de dire la même chose. Il ne peut même pas écrire son propre nom dans le livre.\nL’intrigue joue avec la contrainte : un groupe d’amis enquête sur la disparition d’un certain Anton Voyl, comme si l’histoire racontait sa propre lettre manquante. Selon un récit souvent rapporté, plusieurs premiers lecteurs n’auraient pas remarqué l’absence du « e ». Certains lecteurs y voient aussi l’écho d’une autre absence : la mère de Perec, déportée pendant la guerre, avait été déclarée « disparue » par l’administration.\nPerec appartient à l’Oulipo, l’« Ouvroir de littérature potentielle », fondé le 24 novembre 1960 par Raymond Queneau et François Le Lionnais : ses membres s’imposent des règles pour inventer de nouvelles formes. L’exploit a été refait en anglais par Gilbert Adair, dont la traduction sans « e », « A Void », a reçu en 1995 le prix Scott Moncrieff. Perec a aussi écrit « Les Revenentes », où le « e » est au contraire la seule voyelle.",
+      "sources": [
+        {
+          "title": "Wikipédia (en) — A Void",
+          "url": "https://en.wikipedia.org/wiki/A_Void"
+        },
+        {
+          "title": "Los Angeles Review of Books — Avoided: On Georges Perec",
+          "url": "https://lareviewofbooks.org/article/avoided-georges-perec/"
+        },
+        {
+          "title": "Wikipédia (en) — Oulipo",
+          "url": "https://en.wikipedia.org/wiki/Oulipo"
+        },
+        {
+          "title": "BnF — L’Oulipo : mode d’emploi",
+          "url": "https://multimedia-ext.bnf.fr/pdf/fiche_Oulipo.pdf"
+        }
+      ],
+      "from_stock": "20261115-2053-perec-roman-sans-e"
+    },
+    {
+      "id": "notice",
+      "label": "La Notice",
+      "title": "La marée : la mer ne part pas, elle fait le tour de la Terre",
+      "tagline": "Une Lune qui tire, une Terre qui tourne, et un cheval au galop qui n’a jamais existé",
+      "teaser": "Deux fois par jour, la mer fait ses valises au Mont-Saint-Michel. Elle ne part pas en vacances : elle suit quelqu’un.",
+      "minutes": 3,
+      "theme": "L’univers",
+      "art": {
+        "subject": "how the Moon's gravity makes two bulges of ocean water that the Earth turns under, causing two high tides a day",
+        "setting": "a vast flat sandy bay at low tide in Normandy, France, with a famous rocky island crowned by an abbey on the horizon",
+        "era": "today, visited by a French mathematician of around 1800",
+        "props": {
+          "bucket": "a bright yellow plastic beach bucket with a small red spade",
+          "globe": "a small blue globe of the Earth with a thin layer of shiny water around it",
+          "moon": "a small pale grey ball standing for the Moon"
+        }
+      },
+      "cast": [
+        {
+          "id": "jeanne",
+          "name": "Jeanne",
+          "look": "Jeanne, a short stout retired woman in her seventies, light tan skin, short spiky white pixie-cut hair, bright coral-pink windbreaker as main colour, beige walking trousers, rubber boots, the bucket always in her hand",
+          "file": "cast/notice-jeanne.png",
+          "status": "done",
+          "role": "the energetic holidaymaker who feels personally betrayed by the sea leaving; stomps around, hands on hips, takes everything as a challenge"
+        },
+        {
+          "id": "laplace",
+          "name": "Pierre-Simon de Laplace",
+          "look": "Pierre-Simon de Laplace, a tall imposing French mathematician around 1800 in his fifties, long straight nose, powdered grey hair tied back with a black ribbon, pale skin, dark midnight-blue velvet coat with gold embroidery on the collar as main colour, white cravat, white stockings, a quill pen behind his ear",
+          "file": "cast/notice-laplace.png",
+          "status": "done",
+          "role": "the solemn genius who calculated the tides and explains them calmly; very upright, hands clasped behind his back, slightly pompous but kind"
+        }
+      ],
+      "cover": {
+        "prompt": "a vast flat sandy bay at low tide, the rocky island with its abbey far on the horizon, the sea only a thin line very far away. Jeanne (short, stout, spiky white hair, coral-pink windbreaker, the bucket) in the foreground on the left, hands on hips, glaring at the distant sea; Laplace (tall, powdered grey hair, midnight-blue coat) on the right, calmly holding up the moon on one finger above the globe. wide shot",
+        "cast": [
+          "jeanne",
+          "laplace"
+        ],
+        "file": "images/notice-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "qa": "ok"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Marée basse",
+          "caption": "Au Mont-Saint-Michel, la mer s’en va à des kilomètres, puis revient, deux fois par jour. Qui la tire comme ça ?",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "Ce matin, la mer était là. Elle est partie sans prévenir.",
+              "side": "l"
+            },
+            {
+              "who": "laplace",
+              "text": "Elle suit la Lune, madame. Fidèlement.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a vast flat sandy bay at low tide, the rocky island with its abbey on the horizon, the sea a thin line far away. Jeanne (short, stout, spiky white hair, coral-pink windbreaker) on the left, standing beside a lonely sandcastle with the bucket, shading her eyes to look for the sea; Laplace (tall, powdered grey hair, midnight-blue coat) on the right, hands behind his back, pointing his chin at the sky. wide shot",
+            "cast": [
+              "jeanne",
+              "laplace"
+            ],
+            "file": "images/notice-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium",
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le principe",
+          "caption": "La Lune attire tout ce qui est sur Terre. L’eau des océans, qui est liquide, peut bouger : elle se déforme un peu.",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "La Lune tire sur la mer comme sur une nappe ?",
+              "side": "l"
+            },
+            {
+              "who": "laplace",
+              "text": "Oui. Une nappe qui fait le tour du globe.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "on the wet sand of the bay. Laplace (tall, powdered grey hair, midnight-blue coat) on the right holding the globe in one hand and the moon in the other, bringing them close, gently, like a teacher; Jeanne (short, stout, spiky white hair, coral-pink windbreaker) on the left, bending in to look very closely, nose almost touching the globe. medium close-up",
+            "cast": [
+              "laplace",
+              "jeanne"
+            ],
+            "file": "images/notice-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Pourquoi deux marées hautes par jour",
+          "steps": [
+            "La Lune tire plus fort sur l’océan qui lui fait face, plus proche, que sur le centre de la Terre",
+            "L’océan du côté opposé, plus loin, est tiré moins fort : il reste en arrière",
+            "Résultat : deux bosses d’eau, une face à la Lune, une à l’opposé",
+            "La Terre tourne sous ces deux bosses : deux marées hautes en 24 h 50 min"
+          ],
+          "joke": "D’où environ 50 minutes de retard chaque jour. La mer n’est jamais à l’heure."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Les grandes marées",
+          "caption": "Le Soleil tire aussi, environ deux fois moins fort. À la pleine et à la nouvelle lune, alignés, ils s’additionnent : grandes marées.",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "La Lune ET le Soleil ? Ils s’y mettent à deux, maintenant !",
+              "side": "l"
+            },
+            {
+              "who": "laplace",
+              "text": "À la pleine lune, oui. Ils tirent dans le même sens.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "on the sand of the bay. Jeanne (short, stout, spiky white hair, coral-pink windbreaker) and Laplace (tall, powdered grey hair, midnight-blue coat) both hauling hard on a long thick rope that goes off into the distant sea, one behind the other like a tug-of-war team, leaning back, heels digging into the sand, Laplace's wig slightly askew. low angle",
+            "cast": [
+              "jeanne",
+              "laplace"
+            ],
+            "file": "images/notice-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le Mont-Saint-Michel vu de la baie",
+          "text": "La baie a les plus fortes marées d’Europe : environ 10 mètres d’écart entre basse et haute mer en moyenne, jusqu’à 15 mètres lors des plus grandes.",
+          "photo": {
+            "commons": "File:Mont Saint Michel.jpg",
+            "credit": "Eric Pouhier",
+            "license": "CC BY-SA 2.5",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+            "source": "https://commons.wikimedia.org/wiki/File:Mont_Saint_Michel.jpg",
+            "file": "images/photo-5-mont-saint-michel-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Idée reçue",
+          "caption": "On dit qu’ici la mer monte « à la vitesse d’un cheval au galop ». Faux : au plus vite, environ 6 km/h, un pas pressé.",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "Un cheval au galop ? Je la double en bottes !",
+              "side": "l"
+            },
+            {
+              "who": "laplace",
+              "text": "Mais elle arrive par les côtés. Gardez un œil sur l’heure.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the bay as the tide comes in, a thin flat sheet of water sliding over the sand. Jeanne (short, stout, spiky white hair, coral-pink windbreaker, rubber boots) in the foreground striding briskly ahead of the water with the bucket, elbows pumping, smug; far behind her, Laplace (tall, powdered grey hair, midnight-blue coat) holding up a pocket watch, frowning. from behind",
+            "cast": [
+              "jeanne",
+              "laplace"
+            ],
+            "file": "images/notice-06.webp",
+            "status": "done",
+            "attempts": 2,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi la marée est plus forte ici qu’ailleurs",
+          "text": "La Lune tire partout pareil. Mais Laplace a montré que la forme des océans et des côtes change tout : selon l’endroit, la vague de marée est amplifiée ou réduite. Dans cette baie, elle est amplifiée comme nulle part ailleurs en Europe.",
+          "joke": "La Lune fournit l’effort. La baie fait le spectacle."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "La Lune, aidée du Soleil, soulève deux bosses d’eau. La Terre tourne dessous : la mer monte et descend deux fois par jour.",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "Elle ne m’a pas quittée. Elle fait juste le tour de la Terre.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Rendez-vous dans 12 h 25.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the bay at high tide, calm water now right up to the shore. Jeanne (short, stout, spiky white hair, coral-pink windbreaker) alone, sitting on a folding chair at the water's edge with the bucket on her lap, a tiny wave touching her rubber boots, a smug reconciled smile. close-up",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/notice-08.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        }
+      ],
+      "final": {
+        "text": "Au Mont-Saint-Michel, la mer ne monte pas « à la vitesse d’un cheval au galop » : au plus vite, environ 6 km/h.",
+        "source": "IMCCE — Les marées"
+      },
+      "story": "Les marées viennent surtout de la Lune. Elle attire tout ce qui se trouve sur Terre, mais d’autant plus fort que c’est proche d’elle. L’océan tourné vers la Lune est donc tiré un peu plus que le centre de la Terre, et l’océan du côté opposé un peu moins : il reste en arrière. Résultat, l’eau forme deux bosses, l’une face à la Lune, l’autre à l’opposé. En tournant sur elle-même, la Terre fait passer chaque côte sous ces deux bosses : deux marées hautes et deux marées basses en 24 h 50 min environ, d’où un décalage d’à peu près 50 minutes chaque jour.\nLe Soleil joue le même jeu, en environ deux fois moins fort. Quand il est aligné avec la Lune, à la pleine et à la nouvelle lune, leurs effets s’additionnent : ce sont les vives-eaux, les grandes marées. Quand ils tirent à angle droit, aux quartiers de lune, ils se contrarient : ce sont les mortes-eaux.\nLe mathématicien français Pierre-Simon de Laplace a compris que cela ne suffit pas : la forme des océans et des côtes amplifie ou réduit la marée selon l’endroit. La baie du Mont-Saint-Michel détient le record d’Europe, environ 10 mètres d’écart en moyenne et jusqu’à 15 mètres lors des plus grandes marées. La mer n’y monte pourtant pas « au galop » : sa vitesse maximale est d’environ 6 km/h, celle d’un marcheur pressé, mais elle avance vite sur une baie très plate.",
+      "sources": [
+        {
+          "title": "IMCCE — Promenade : les marées",
+          "url": "https://promenade.imcce.fr/fr/pages5/525.html"
+        },
+        {
+          "title": "Île d’Oléron — Les marées, comment ça fonctionne ?",
+          "url": "https://www.oleron.fr/marees-comment-fonctionne-306.html"
+        },
+        {
+          "title": "French Moments — Mont Saint-Michel Bay",
+          "url": "https://frenchmoments.eu/mont-saint-michel-bay/"
+        },
+        {
+          "title": "Wikimedia Commons — Mont Saint Michel (Eric Pouhier)",
+          "url": "https://c.enwp.org/wiki/File:Mont_Saint_Michel.jpg"
+        }
+      ],
+      "from_stock": "20261115-2047-maree-la-mer-suit-la-lune"
+    },
+    {
       "id": "quiz",
       "kind": "chiffre",
       "label": "Le Chiffre",
@@ -438,5 +1957,6 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-21T05:05:35.927713+01:00"
 }

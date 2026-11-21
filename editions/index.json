@@ -1,6 +1,84 @@
 {
- "updated_at": "2026-11-21T04:04:55.886111+01:00",
+ "updated_at": "2026-11-21T05:05:35.927713+01:00",
  "editions": [
+  {
+   "date": "2026-11-21",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Le Code civil : 2 281 articles pour ranger le bazar de la France",
+     "kind": "",
+     "url": "histoires/2026-11-21-le-code-civil-2-281-articles-pour-ranger-le-bazar-de-la-france/",
+     "theme": "Droit",
+     "minutes": 6,
+     "tagline": "Des 300 coutumes de l’Ancien Régime à l’article 1240 : comment Bonaparte et quatre juristes ont donné une seule loi à tous les Français",
+     "cases": 26,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Un candidat de plus, deux plafonds et une COP qui déborde",
+     "kind": "",
+     "url": "histoires/2026-11-21-un-candidat-de-plus-deux-plafonds-et-une-cop-qui-deborde/",
+     "theme": "",
+     "minutes": 3,
+     "tagline": "Dominique de Villepin se lance pour 2027, Londres et Bruxelles se rapprochent, le Sénat réforme les titres-restaurant et la COP31 joue les prolongations.",
+     "cases": 11,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Le département, ou la France taillée à la mesure d’un cheval",
+     "kind": "",
+     "url": "histoires/2026-11-21-le-departement-ou-la-france-taillee-a-la-mesure-d-un-cheval/",
+     "theme": "Histoire de France",
+     "minutes": 2,
+     "tagline": "Une règle, un compas, des rivières et un cheval qui doit rentrer avant la nuit",
+     "cases": 9,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "title": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)",
+     "kind": "",
+     "url": "histoires/2026-11-21-le-roman-de-300-pages-ou-il-manque-une-lettre-et-pas-n-importe/",
+     "theme": "Littérature",
+     "minutes": 2,
+     "tagline": "Un écrivain, une machine à écrire amputée, et des lecteurs qui n’ont rien vu",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "notice",
+     "label": "La Notice",
+     "title": "La marée : la mer ne part pas, elle fait le tour de la Terre",
+     "kind": "",
+     "url": "histoires/2026-11-21-la-maree-la-mer-ne-part-pas-elle-fait-le-tour-de-la-terre/",
+     "theme": "L’univers",
+     "minutes": 3,
+     "tagline": "Une Lune qui tire, une Terre qui tourne, et un cheval au galop qui n’a jamais existé",
+     "cases": 8,
+     "cover": "images/notice-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Chiffre",
+     "title": "Au doigt mouillé (mais avec méthode)",
+     "kind": "chiffre",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-20",
    "demo": false,

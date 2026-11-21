@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T04:04:55.886111+01:00",
+ "updated_at": "2026-11-21T05:05:35.927713+01:00",
  "today": "2026-11-21",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,7 +9,11 @@
    "date": "2026-11-21",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
     "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "notice": "prêt",
     "quiz": "prêt"
    }
   },
@@ -56,42 +60,53 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-21/cultureg : « Le département, ou la France taillée à la mesure d’un cheval » prise dans la file (20261115-2050-departements-taille-cheval)",
+  "2026-11-21/insolite : « Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle) » prise dans la file (20261115-2053-perec-roman-sans-e)",
+  "2026-11-21/notice : « La marée : la mer ne part pas, elle fait le tour de la Terre » prise dans la file (20261115-2047-maree-la-mer-suit-la-lune)",
+  "2026-11-21/dossier : « Le Code civil : 2 281 articles pour ranger le bazar de la France » prise dans la file (20261117-1925-code-civil)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-20",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite",
+  "notice"
+ ],
+ "last_published": "2026-11-21",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 29,
    "focus": "20261117-2048-gauche-droite-plan-de-table (7 image(s) à faire)",
-   "next": "20261115-2050-departements-taille-cheval",
-   "next_redo": 3
+   "next": "20261116-2043-stethoscope-sans-rougir",
+   "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 24,
    "focus": "20261117-2047-napoleon-decore-un-sucrier (6 image(s) à faire)",
-   "next": "20261115-2053-perec-roman-sans-e",
-   "next_redo": 1
+   "next": "20261116-2045-talon-haut-cavalier-rouge",
+   "next_redo": 0
   },
   "notice": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 21,
    "focus": "20261117-0151-gps-ecoute-l-heure (5 image(s) à faire)",
-   "next": "20261115-2047-maree-la-mer-suit-la-lune",
+   "next": "20261117-0151-frigo-chaleur-a-la-porte",
    "next_redo": 0
   },
   "origine": {
@@ -104,17 +119,17 @@
    "next_redo": 2
   },
   "dossier": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 2,
    "blocked": 0,
    "images_left": 37,
    "focus": "20261120-0653-jeanne-d-arc (19 image(s) à faire)",
-   "next": "20261117-1925-code-civil",
+   "next": "20261118-1927-pasteur-microbes",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 2,
- "days_ahead_written": 4,
+ "days_ahead_drawn": 1,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-21",
@@ -136,7 +151,7 @@
  },
  "rss": {
   "collected_at": "2026-11-21T00:05:40.214817+01:00",
-  "age_hours": 4.0,
+  "age_hours": 5.0,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 26,

@@ -1,17 +1,7 @@
 {
- "updated_at": "2026-11-21T04:04+01:00",
+ "updated_at": "2026-11-21T05:05+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
-  {
-   "path": "stock/cultureg/20261115-2050-departements-taille-cheval",
-   "titles": {
-    "cultureg": "Le département, ou la France taillée à la mesure d’un cheval"
-   },
-   "errors": [],
-   "warnings": [
-    "cultureg : case 6 : récitatif de 22 mots (max 20)"
-   ]
-  },
   {
    "path": "stock/cultureg/20261118-0850-pendule-foucault-chapeau",
    "titles": {
@@ -31,16 +21,6 @@
    "errors": [],
    "warnings": [
     "dossier : case 24 : récitatif de 21 mots (max 20)"
-   ]
-  },
-  {
-   "path": "stock/insolite/20261115-2053-perec-roman-sans-e",
-   "titles": {
-    "insolite": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)"
-   },
-   "errors": [],
-   "warnings": [
-    "insolite : 0 vraie(s) photo(s) (« kind »: « photo »), il en faut au moins 1 si un document libre existe"
    ]
   },
   {
@@ -86,20 +66,6 @@
    ]
   },
   {
-   "path": "stock/notice/20261115-2047-maree-la-mer-suit-la-lune",
-   "titles": {
-    "notice": "La marée : la mer ne part pas, elle fait le tour de la Terre"
-   },
-   "errors": [],
-   "warnings": [
-    "notice : case 2 : récitatif de 22 mots (max 20)",
-    "notice : case 3 (Pour mieux comprendre) : 75 mots (max 70)",
-    "notice : case 4 : récitatif de 22 mots (max 20)",
-    "notice : case 6 : récitatif de 23 mots (max 20)",
-    "notice : case 8 : récitatif de 22 mots (max 20)"
-   ]
-  },
-  {
    "path": "stock/notice/20261117-0151-gps-ecoute-l-heure",
    "titles": {
     "notice": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)"
@@ -132,12 +98,23 @@
   {
    "path": "editions/2026-11-21",
    "titles": {
+    "dossier": "Le Code civil : 2 281 articles pour ranger le bazar de la France",
     "actu": "Un candidat de plus, deux plafonds et une COP qui déborde",
+    "cultureg": "Le département, ou la France taillée à la mesure d’un cheval",
+    "insolite": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)",
+    "notice": "La marée : la mer ne part pas, elle fait le tour de la Terre",
     "quiz": "Au doigt mouillé (mais avec méthode)"
    },
    "errors": [],
    "warnings": [
-    "actu : brève 2 : « Ce qui se passe vraiment » de 48 mots (max 45 pour une brève)"
+    "actu : brève 2 : « Ce qui se passe vraiment » de 48 mots (max 45 pour une brève)",
+    "cultureg : case 6 : récitatif de 22 mots (max 20)",
+    "insolite : 0 vraie(s) photo(s) (« kind »: « photo »), il en faut au moins 1 si un document libre existe",
+    "notice : case 2 : récitatif de 22 mots (max 20)",
+    "notice : case 3 (Pour mieux comprendre) : 75 mots (max 70)",
+    "notice : case 4 : récitatif de 22 mots (max 20)",
+    "notice : case 6 : récitatif de 23 mots (max 20)",
+    "notice : case 8 : récitatif de 22 mots (max 20)"
    ]
   }
  ]
