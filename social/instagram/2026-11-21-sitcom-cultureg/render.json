@@ -1,0 +1,18 @@
+{
+ "files": [
+  "reel.mp4"
+ ],
+ "tiktok_files": [
+  "reel.mp4"
+ ],
+ "cover": "reel-cover.jpg",
+ "seconds": 42.2,
+ "voice": [
+  "edge"
+ ],
+ "style": "flat-space-explainer",
+ "credits": "Voix : Microsoft Edge TTS (Rémy, Fabrice) ; images : Wikimedia Commons ou cases du Sachoir ; styles adaptés de Lemo-Opuscar (code MIT)",
+ "scene": "ok",
+ "fingerprint": "b2c83c354a89",
+ "kind": "film"
+}
