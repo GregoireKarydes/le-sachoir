@@ -40,7 +40,10 @@
       ],
       "cover": {
         "prompt": "a snowy street market: Odile (tiny, very thin, lilac-white cloud of hair, cherry-red quilted coat, the mittens) on the left furiously jabs the phone with a mitten, glaring at it; behind the repair stall on the right, Yanis (tall, lanky, high top fade, sunflower-yellow apron, loupe on headband) leans forward on his elbows, amused. medium wide shot",
-        "cast": ["odile", "yanis"],
+        "cast": [
+          "odile",
+          "yanis"
+        ],
         "file": "images/notice-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -52,12 +55,23 @@
           "tag": "Au marché, en décembre",
           "caption": "Pourquoi un écran tactile ignore-t-il les gants ? Odile, en moufles, n’arrive pas à décrocher son téléphone.",
           "bubbles": [
-            { "who": "odile", "text": "Il est cassé ! Il ne m’obéit plus depuis l’hiver.", "side": "l" },
-            { "who": "yanis", "text": "Il marche très bien. C’est vous qui êtes trop bien couverte.", "side": "r" }
+            {
+              "who": "odile",
+              "text": "Il est cassé ! Il ne m’obéit plus depuis l’hiver.",
+              "side": "l"
+            },
+            {
+              "who": "yanis",
+              "text": "Il marche très bien. C’est vous qui êtes trop bien couverte.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "a snowy street market, a bus shelter on the left and the phone-repair stall on the right. Odile (tiny, very thin, lilac-white cloud of hair, cherry-red quilted coat) stands by the shelter jabbing the ringing phone with a mitten, her whole body leaning into it; Yanis (tall, lanky, high top fade, sunflower-yellow apron) watches from behind his stall, chin in hand. wide shot",
-            "cast": ["odile", "yanis"],
+            "cast": [
+              "odile",
+              "yanis"
+            ],
             "file": "images/notice-01.webp",
             "status": "pending",
             "attempts": 0
@@ -69,12 +83,23 @@
           "tag": "Le principe",
           "caption": "Sous la vitre, une couche transparente et conductrice forme une grille invisible, traversée d’un faible champ électrique.",
           "bubbles": [
-            { "who": "yanis", "text": "Votre peau conduit l’électricité. Votre doigt dérange la grille, pile là où il touche.", "side": "r" },
-            { "who": "odile", "text": "Électrique, moi ? À mon âge ?", "side": "l" }
+            {
+              "who": "yanis",
+              "text": "Votre peau conduit l’électricité. Votre doigt dérange la grille, pile là où il touche.",
+              "side": "r"
+            },
+            {
+              "who": "odile",
+              "text": "Électrique, moi ? À mon âge ?",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "at the repair stall: Yanis (tall, lanky, high top fade, sunflower-yellow apron, loupe lowered over one eye) on the right holds a phone up between two fingers and taps its glass with his tiny screwdriver like a teacher; Odile (tiny, very thin, lilac-white cloud of hair, cherry-red coat) on the left pulls back in surprise, mittens raised, looking at her own hands suspiciously. medium shot",
-            "cast": ["yanis", "odile"],
+            "cast": [
+              "yanis",
+              "odile"
+            ],
             "file": "images/notice-02.webp",
             "status": "pending",
             "attempts": 0
@@ -99,12 +124,23 @@
           "tag": "Le problème",
           "caption": "La laine isole : l’électricité de la peau ne passe pas, la grille ne remarque rien. Pareil pour un ongle.",
           "bubbles": [
-            { "who": "yanis", "text": "Il faut de la peau. N’importe laquelle.", "side": "r" },
-            { "who": "odile", "text": "Allô ? Oui, c’est mamie. Je décroche avec le nez.", "side": "l" }
+            {
+              "who": "yanis",
+              "text": "Il faut de la peau. N’importe laquelle.",
+              "side": "r"
+            },
+            {
+              "who": "odile",
+              "text": "Allô ? Oui, c’est mamie. Je décroche avec le nez.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "Odile (tiny, very thin, lilac-white cloud of hair, cherry-red coat, mittens on) in the foreground on the left, eyes crossed in concentration, pressing the phone screen firmly with the tip of her nose, and it lights up; behind the stall on the right Yanis (tall, lanky, high top fade, sunflower-yellow apron) covers his mouth to hide a laugh. medium close-up",
-            "cast": ["odile", "yanis"],
+            "cast": [
+              "odile",
+              "yanis"
+            ],
             "file": "images/notice-04.webp",
             "status": "pending",
             "attempts": 0
@@ -116,7 +152,15 @@
           "tag": "En vrai",
           "title": "Les premiers écrans tactiles du CERN",
           "text": "À droite, un écran tactile capacitif construit au CERN en 1972 ; à gauche, un prototype multipoint de 1977. Les ingénieurs Frank Beck et Bent Stumpe ont mis au point ces écrans transparents au début des années 1970.",
-          "photo": { "commons": "File:CERN-Stumpe Capacitance Touchscreen.jpg" }
+          "photo": {
+            "commons": "File:CERN-Stumpe Capacitance Touchscreen.jpg",
+            "credit": "Maximilien Brice",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:CERN-Stumpe_Capacitance_Touchscreen.jpg",
+            "file": "images/photo-5-cern-stumpe-capacitance-touchscreen.webp",
+            "status": "done"
+          }
         },
         {
           "n": 6,
@@ -124,12 +168,23 @@
           "tag": "Avant",
           "caption": "Les anciens écrans « résistifs », eux, sentaient la pression : deux couches qui se touchent quand on appuie.",
           "bubbles": [
-            { "who": "odile", "text": "Mon vieux GPS marchait avec les moufles, lui !", "side": "l" },
-            { "who": "yanis", "text": "Lui, il fallait l’écraser. Le vôtre, il suffit de l’effleurer.", "side": "r" }
+            {
+              "who": "odile",
+              "text": "Mon vieux GPS marchait avec les moufles, lui !",
+              "side": "l"
+            },
+            {
+              "who": "yanis",
+              "text": "Lui, il fallait l’écraser. Le vôtre, il suffit de l’effleurer.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "Odile (tiny, very thin, lilac-white cloud of hair, cherry-red coat) pulls the oldgps out of her big handbag and slams a mitten on its screen with a proud thump; Yanis (tall, lanky, high top fade, sunflower-yellow apron) behind the stall on the right winces, holding the small plastic stylus between two fingers. low angle",
-            "cast": ["odile", "yanis"],
+            "cast": [
+              "odile",
+              "yanis"
+            ],
             "file": "images/notice-06.webp",
             "status": "pending",
             "attempts": 0
@@ -149,11 +204,17 @@
           "tag": "En résumé",
           "caption": "Un écran tactile mesure l’électricité de votre peau : à travers une moufle isolante, il ne sent rien.",
           "bubbles": [
-            { "who": "odile", "text": "J’ai trouvé : la moufle décapotable.", "side": "l" }
+            {
+              "who": "odile",
+              "text": "J’ai trouvé : la moufle décapotable.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "Odile alone (tiny, very thin, lilac-white cloud of hair, cherry-red quilted coat) holds up one mitten with its tip cut open like a little hatch, a single bare finger poking out of it, a pair of scissors in the other hand, beaming with pride and yellow sparkles around her. close-up",
-            "cast": ["odile"],
+            "cast": [
+              "odile"
+            ],
             "file": "images/notice-08.webp",
             "status": "pending",
             "attempts": 0
@@ -166,11 +227,26 @@
       },
       "story": "La plupart des téléphones et tablettes d’aujourd’hui ont un écran tactile dit « capacitif ». Juste sous la vitre se trouve une couche très fine, transparente et conductrice d’électricité, généralement en oxyde d’indium-étain. Elle forme une grille de conducteurs en lignes et en colonnes, traversée d’un faible champ électrique. Elle doit être transparente pour laisser passer l’image de l’écran placé dessous.\nLe corps humain conduit l’électricité. Quand un doigt touche la vitre, il perturbe le champ électrique à cet endroit et modifie localement la charge mesurée. Une petite puce repère la ligne et la colonne concernées, en déduit la position du doigt et l’envoie au téléphone, plusieurs dizaines de fois par seconde. Elle peut suivre plusieurs doigts à la fois : c’est le multipoint.\nC’est pour cela qu’un ongle, la plupart des gants ou un stylet en plastique ordinaire ne fonctionnent pas : ils ne conduisent pas l’électricité, l’écran ne remarque rien. L’eau, elle, peut créer de fausses touches. Les anciens écrans « résistifs », comme ceux des premiers GPS ou de la Nintendo DS, marchaient autrement : deux couches séparées par de minuscules entretoises, qui se touchent quand on appuie. Ils acceptaient gants et stylets, mais un seul point à la fois.\nL’idée est ancienne : l’ingénieur britannique Eric Johnson décrit un écran tactile capacitif dès 1965 ; au CERN, Frank Beck et Bent Stumpe mettent au point un écran transparent au début des années 1970. Le premier téléphone à écran capacitif, le LG Prada, sort en mai 2007.",
       "sources": [
-        { "title": "Futura Sciences — Écran tactile capacitif : qu’est-ce que c’est ?", "url": "https://www.futura-sciences.com/tech/definitions/informatique-ecran-tactile-capacitif-12078/" },
-        { "title": "iGeneration — L’écran tactile, comment ça marche ?", "url": "https://www.igen.fr/iphone/2025/08/lecran-tactile-comment-ca-marche-151361" },
-        { "title": "Futura Sciences — Écran résistif : qu’est-ce que c’est ?", "url": "https://www.futura-sciences.com/tech/definitions/informatique-ecran-resistif-12080/" },
-        { "title": "Wikipedia — Touchscreen", "url": "https://wikipedia.com/wiki/Touchscreen" },
-        { "title": "Wikimedia Commons — CERN-Stumpe Capacitance Touchscreen", "url": "https://download.osmand.net/wiki/File:CERN-Stumpe_Capacitance_Touchscreen.jpg" }
+        {
+          "title": "Futura Sciences — Écran tactile capacitif : qu’est-ce que c’est ?",
+          "url": "https://www.futura-sciences.com/tech/definitions/informatique-ecran-tactile-capacitif-12078/"
+        },
+        {
+          "title": "iGeneration — L’écran tactile, comment ça marche ?",
+          "url": "https://www.igen.fr/iphone/2025/08/lecran-tactile-comment-ca-marche-151361"
+        },
+        {
+          "title": "Futura Sciences — Écran résistif : qu’est-ce que c’est ?",
+          "url": "https://www.futura-sciences.com/tech/definitions/informatique-ecran-resistif-12080/"
+        },
+        {
+          "title": "Wikipedia — Touchscreen",
+          "url": "https://wikipedia.com/wiki/Touchscreen"
+        },
+        {
+          "title": "Wikimedia Commons — CERN-Stumpe Capacitance Touchscreen",
+          "url": "https://download.osmand.net/wiki/File:CERN-Stumpe_Capacitance_Touchscreen.jpg"
+        }
       ]
     }
   ]
