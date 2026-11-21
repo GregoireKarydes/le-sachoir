@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T03:05+01:00",
+ "updated_at": "2026-11-21T03:26+01:00",
  "stock": {
   "cultureg": [
    {
@@ -17,7 +17,7 @@
     "images_done": 8,
     "images_total": 8,
     "failed": 0,
-    "redo": 0
+    "redo": 3
    },
    {
     "path": "stock/cultureg/20261116-2043-stethoscope-sans-rougir",
@@ -121,7 +121,7 @@
     "images_done": 6,
     "images_total": 6,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/insolite/20261116-2045-talon-haut-cavalier-rouge",
@@ -329,7 +329,7 @@
     "images_done": 6,
     "images_total": 6,
     "failed": 0,
-    "redo": 0
+    "redo": 2
    },
    {
     "path": "stock/origine/20261120-2044-boycotter-capitaine-irlandais",

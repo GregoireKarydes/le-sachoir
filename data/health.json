@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T03:05:46.231293+01:00",
+ "updated_at": "2026-11-21T03:26:03.784388+01:00",
  "today": "2026-11-21",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -74,7 +74,7 @@
    "images_left": 29,
    "focus": "20261117-2048-gauche-droite-plan-de-table (7 image(s) à faire)",
    "next": "20261115-2050-departements-taille-cheval",
-   "next_redo": 0
+   "next_redo": 3
   },
   "insolite": {
    "ready": 2,
@@ -83,7 +83,7 @@
    "images_left": 24,
    "focus": "20261117-2047-napoleon-decore-un-sucrier (6 image(s) à faire)",
    "next": "20261115-2053-perec-roman-sans-e",
-   "next_redo": 0
+   "next_redo": 1
   },
   "notice": {
    "ready": 2,
@@ -101,7 +101,7 @@
    "images_left": 6,
    "focus": "20261120-2046-points-sur-les-i-jambages (6 image(s) à faire)",
    "next": "20261118-2046-chauvin-soldat-imaginaire",
-   "next_redo": 0
+   "next_redo": 2
   },
   "dossier": {
    "ready": 2,
@@ -136,7 +136,7 @@
  },
  "rss": {
   "collected_at": "2026-11-21T00:05:40.214817+01:00",
-  "age_hours": 3.0,
+  "age_hours": 3.3,
   "feeds": {
    "Google Actualités": 34,
    "franceinfo": 26,
