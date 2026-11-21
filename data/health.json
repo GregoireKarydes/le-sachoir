@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T19:29:11.352175+01:00",
+ "updated_at": "2026-11-21T19:56:53.455648+01:00",
  "today": "2026-11-21",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -21,6 +21,7 @@
    "date": "2026-11-22",
    "status": "draft",
    "formats": {
+    "actu": "prêt",
     "quiz": "prêt"
    }
   },
@@ -139,14 +140,14 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.13097,
-  "images": 256,
-  "today_usd": 0.18,
+  "spent_usd": 3.16815,
+  "images": 262,
+  "today_usd": 0.21718,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-21T19:04:30.458620+01:00",
-  "age_hours": 0.4,
+  "age_hours": 0.9,
   "feeds": {
    "Google Actualités": 30,
    "franceinfo": 30,
@@ -176,13 +177,19 @@
  },
  "actu_balance": {
   "days": 14,
-  "editions": 11,
+  "editions": 12,
   "people": [
    {
     "name": "Aleksandar Vučić",
     "party": "étranger",
     "n": 1,
     "last": "2026-11-18"
+   },
+   {
+    "name": "Antonio Costa",
+    "party": "étranger",
+    "n": 1,
+    "last": "2026-11-22"
    },
    {
     "name": "Dominique de Villepin",
@@ -201,6 +208,18 @@
     "party": "Renaissance",
     "n": 1,
     "last": "2026-11-17"
+   },
+   {
+    "name": "François Ruffin",
+    "party": "Debout !",
+    "n": 1,
+    "last": "2026-11-22"
+   },
+   {
+    "name": "Friedrich Merz",
+    "party": "étranger",
+    "n": 1,
+    "last": "2026-11-22"
    },
    {
     "name": "Jean-Luc Mélenchon",
@@ -236,7 +255,11 @@
   "parties": [
    {
     "party": "étranger",
-    "n": 2
+    "n": 3
+   },
+   {
+    "party": "Debout !",
+    "n": 1
    },
    {
     "party": "La France humaniste",

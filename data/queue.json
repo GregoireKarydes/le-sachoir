@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T19:29+01:00",
+ "updated_at": "2026-11-21T19:56+01:00",
  "stock": {
   "cultureg": [
    {
@@ -481,8 +481,23 @@
    "date": "2026-11-22",
    "path": "editions/2026-11-22",
    "status": "draft",
-   "newsletter": false,
+   "newsletter": true,
    "formats": [
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Une preuve géante, un candidat de moins et un budget au régime",
+     "theme": "",
+     "tagline": "Un mathématicien et une IA disent avoir prouvé l’hypothèse de Riemann, François Ruffin renonce à 2027, la rue défile un sixième samedi et l’Europe rabote son budget.",
+     "minutes": 3,
+     "cases": 10,
+     "photos": 1,
+     "images_done": 5,
+     "images_total": 5,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "Qui a dit ça ?",
