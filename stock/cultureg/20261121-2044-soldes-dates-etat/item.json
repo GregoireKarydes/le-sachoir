@@ -1,0 +1,183 @@
+{
+  "added": "20261121-2044",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Les soldes, le seul moment où perdre de l’argent est autorisé par décret",
+      "tagline": "Une montagne d’anoraks, un inspecteur à calendrier et deux mercredis par an",
+      "teaser": "Sylvie veut tout brader en novembre. Un inspecteur en costume moutarde a un calendrier, un classeur et de mauvaises nouvelles.",
+      "minutes": 2,
+      "theme": "Droit",
+      "epoque": "present",
+      "art": {
+        "subject": "why sales periods in France have dates fixed by the State: selling below purchase price is forbidden all year, except during two official four-week sales periods",
+        "setting": "a small ski-gear shop in Grenoble today, crammed with racks of puffy anoraks, a wooden counter with a cash register, a glass shop door onto a snowy street",
+        "era": "present-day France, mid-November",
+        "props": {
+          "anoraks": "a huge pile of puffy anoraks in many bright colours",
+          "sign": "a large blank red cardboard sign with nothing written on it",
+          "calendar": "a giant blank paper wall calendar clipped to a thick grey binder",
+          "pricegun": "a chunky orange pricing gun"
+        }
+      },
+      "cast": [
+        {
+          "id": "sylvie",
+          "name": "Sylvie",
+          "look": "Sylvie, a short and wiry shop owner in her fifties, a tall grey-blond beehive bun pierced with two pencils, light olive skin, a bright turquoise ski fleece as main colour, black leggings, chunky orange après-ski boots, always holding the pricegun",
+          "file": "cast/cultureg-sylvie.png",
+          "status": "pending",
+          "role": "the impatient, cunning owner of the ski shop who wants to slash prices now; always hunting for a loophole, jabbing the pricegun like a weapon"
+        },
+        {
+          "id": "karim",
+          "name": "Karim",
+          "look": "Karim, a very tall, stiff and lanky inspector in his forties, completely bald shiny head, thin black pencil moustache, warm brown skin, a mustard-yellow three-piece suit as main colour, navy tie, round tortoiseshell glasses, the calendar binder always under his arm",
+          "file": "cast/cultureg-karim.png",
+          "status": "pending",
+          "role": "a zealous fraud-control inspector who loves rules a little too much; stands straight as a pole, recites articles of law with quiet delight, never smiles"
+        }
+      ],
+      "cover": {
+        "prompt": "inside the crammed ski shop: Sylvie (short, wiry, grey-blond beehive bun, bright turquoise fleece) on the left, half buried in the anoraks pile, aiming the pricegun at a coat with a wild grin; on the right Karim (very tall, bald, mustard-yellow suit) leans over her, calmly holding up the calendar binder like a stop sign. medium wide shot",
+        "cast": ["sylvie", "karim"],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Grenoble, mi-novembre",
+          "caption": "Pourquoi les soldes ont-elles des dates fixées par l’État ? Sylvie, vendeuse de ski, croule sous les anoraks invendus.",
+          "bubbles": [
+            { "who": "sylvie", "text": "Demain, je solde tout à moins cinquante pour cent !", "side": "l" },
+            { "who": "karim", "text": "En novembre ? Alors je reviens demain. Avec mon classeur.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the crammed ski shop seen from the street door. Sylvie (short, wiry, grey-blond beehive bun, bright turquoise fleece) on the left stands on top of the anoraks pile, firing the pricegun at coats with frantic energy; in the open glass door on the right, Karim (very tall, bald, thin moustache, mustard-yellow suit) has just stepped in, the calendar binder under his arm, one eyebrow raised. wide shot",
+            "cast": ["sylvie", "karim"],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "La règle",
+          "caption": "En France, le mot « soldes » n’a droit qu’à deux périodes de quatre semaines par an : l’hiver et l’été.",
+          "bubbles": [
+            { "who": "karim", "text": "Hors période, écrire « soldes », c’est jusqu’à 15 000 euros d’amende.", "side": "r" },
+            { "who": "sylvie", "text": "Alors j’écris « pas-soldes ». Avec un tiret.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "next day in the ski shop: Sylvie (short, wiry, grey-blond beehive bun, bright turquoise fleece) high up on a wobbly stepladder on the left, hanging the sign in the shop window with a sly smile; below her on the right, Karim (very tall, bald, mustard-yellow suit) taps a finger on the open calendar binder, unimpressed. low angle",
+            "cast": ["sylvie", "karim"],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Le vrai interdit",
+          "caption": "Pourquoi tant de règles ? Vendre moins cher qu’on a acheté, la « revente à perte », est interdit toute l’année.",
+          "bubbles": [
+            { "who": "karim", "text": "Une promo, oui. Sous le prix d’achat, non : 75 000 euros d’amende.", "side": "r" },
+            { "who": "sylvie", "text": "Soit 375 anoraks à 200 euros. Je m’assois.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "by the wooden counter of the ski shop: Sylvie (short, wiry, grey-blond beehive bun, bright turquoise fleece) on the left slowly melts backwards into the anoraks pile, arms limp, pricegun dangling, a light-blue sweat drop on her forehead; Karim (very tall, bald, thin moustache, mustard-yellow suit) on the right stands perfectly straight, reading from his binder with quiet delight. medium wide shot",
+            "cast": ["sylvie", "karim"],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Promo ou soldes : la différence",
+          "steps": [
+            "Promo : permise toute l’année, mais jamais sous le prix d’achat",
+            "Soldes : deux fois par an, quatre semaines, et là, vendre à perte est permis",
+            "Condition : des articles en vente et payés depuis au moins un mois",
+            "Impossible, donc, d’acheter du stock exprès pour le solder"
+          ],
+          "joke": "Le seul moment de l’année où perdre de l’argent est encadré par le Code de commerce."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "Le calendrier",
+          "caption": "Les soldes d’hiver commencent le 2e mercredi de janvier à 8 h, ou le 1er si le 2e tombe après le 12.",
+          "bubbles": [
+            { "who": "sylvie", "text": "Et en janvier 2027 ? J’ai des anoraks jusqu’au plafond.", "side": "l" },
+            { "who": "karim", "text": "Mercredi 6 janvier, 8 h pile. Pas 7 h 59.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "seen from above, the wooden counter of the ski shop with the giant calendar unfolded across it: Karim (very tall, bald, mustard-yellow suit) on the right bends stiffly over it, pointing at one square with a pen; Sylvie (short, wiry, grey-blond beehive bun, bright turquoise fleece) on the left, standing on tiptoe, circles the same square again and again with a thick marker. high angle",
+            "cast": ["sylvie", "karim"],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un catalogue d’hiver des Magasins Réunis, 1908",
+          "text": "Couverture d’un catalogue de vente des Magasins Réunis de Nancy pour l’hiver 1908-1909 : un manteau « Napolitain » en imitation fourrure, à 39 francs. Vendre la saison d’hiver, c’est une vieille affaire.",
+          "photo": { "commons": "File:Maison des Magasins Réunis, Nancy, Hiver 1908-1909.jpg" }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Les exceptions",
+          "caption": "Vendre à perte reste permis si le magasin ferme, en fin de saison ou pour des produits qui s’abîment vite.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Sylvie alone (short, wiry, grey-blond beehive bun pierced with pencils, bright turquoise fleece) in the ski shop, holding a puffy anorak up to her nose and sniffing it very seriously, eyes narrowed, as if checking whether it has gone off like old cheese, the anoraks pile behind her. medium close-up",
+            "cast": ["sylvie"],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Vendre à perte est interdit, sauf pendant les soldes : l’État fixe donc leurs dates, deux fois par an.",
+          "bubbles": [
+            { "who": "sylvie", "text": "En attendant janvier, j’en porte trois. Ça, c’est autorisé ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Sylvie alone (short, wiry, grey-blond beehive bun, only her face visible) wearing three puffy anoraks stacked on top of each other, so round she can barely move her arms, looking straight at the reader with a defiant little smile, the pricegun still in one hand. close-up",
+            "cast": ["sylvie"],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "En janvier 2027, les soldes d’hiver commenceront le 6 : le 2e mercredi tombe le 13, après le 12, donc la règle avance d’une semaine.",
+        "source": "CCI Paris Île-de-France — Les soldes"
+      },
+      "story": "En France, les soldes ne sont pas une simple promotion : c’est une période fixée par la loi. Il y en a deux par an, l’hiver et l’été, de quatre semaines chacune depuis le 1er janvier 2020. Les soldes d’hiver commencent le deuxième mercredi de janvier à 8 heures, ou le premier si le deuxième tombe après le 12 janvier ; ceux d’été, le dernier mercredi de juin, ou l’avant-dernier s’il tombe après le 28 juin. Quelques départements ont des dates propres, et la vente en ligne suit les mêmes dates.\nPourquoi tant de règles ? Parce que la revente à perte, c’est-à-dire revendre un produit en l’état moins cher que son prix d’achat effectif, est interdite par l’article L. 442-5 du Code de commerce : jusqu’à 75 000 euros d’amende pour une personne, 375 000 euros pour une société. Les soldes sont l’exception principale : pendant ces semaines-là, vendre à perte devient permis.\nPour éviter les abus, les articles soldés doivent avoir été proposés à la vente et payés depuis au moins un mois avant le début des soldes : on ne peut pas acheter du stock exprès pour le solder. Utiliser le mot « soldes » hors période coûte jusqu’à 15 000 euros d’amende à un commerçant individuel et 75 000 euros à une société. D’autres exceptions existent : fermeture du magasin, fin de saison, produits démodés ou périssables. Une promotion, elle, reste possible toute l’année, mais jamais sous le prix d’achat.",
+      "sources": [
+        { "title": "CCI Paris Île-de-France — Les soldes", "url": "https://entreprises.cci-paris-idf.fr/fiches-pratiques/les-soldes" },
+        { "title": "Justice.fr — Soldes : règles à respecter", "url": "https://www.justice.fr/fiche/soldes-regles-respecter" },
+        { "title": "Deloitte Société d’Avocats — Revente à perte : rappel de la législation applicable", "url": "https://blog.avocats.deloitte.fr/revente-a-perte-rappel-de-la-legislation-applicable/" },
+        { "title": "Wikimedia Commons — Maison des Magasins Réunis, Nancy, Hiver 1908-1909", "url": "https://download.osmand.net/wiki/File:Maison_des_Magasins_R%C3%A9unis,_Nancy,_Hiver_1908-1909.jpg" }
+      ]
+    }
+  ]
+}
