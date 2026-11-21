@@ -40,7 +40,10 @@
       ],
       "cover": {
         "prompt": "the hot coastal launch site at the edge of the tropical forest, the rocket far away on its pad. Bastien (short, chubby, blond buzz cut, thick navy wool jumper) on the left, drenched in sweat, points the fan at his face in despair; Maryse (tall, broad, orange madras headscarf, emerald-green polo) on the right, arms crossed, smiles calmly behind her sunglasses. medium wide shot",
-        "cast": ["bastien", "maryse"],
+        "cast": [
+          "bastien",
+          "maryse"
+        ],
         "file": "images/insolite-cover.webp",
         "status": "pending",
         "attempts": 0
@@ -52,12 +55,23 @@
           "tag": "Kourou, aujourd’hui",
           "caption": "Pourquoi l’Europe lance-t-elle ses fusées depuis la Guyane, au bord de la forêt amazonienne ?",
           "bubbles": [
-            { "who": "bastien", "text": "À Brest, il fait frais. On déménage la base ?", "side": "l" },
-            { "who": "maryse", "text": "À Brest, ta fusée partirait avec un handicap.", "side": "r" }
+            {
+              "who": "bastien",
+              "text": "À Brest, il fait frais. On déménage la base ?",
+              "side": "l"
+            },
+            {
+              "who": "maryse",
+              "text": "À Brest, ta fusée partirait avec un handicap.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the launch site at the edge of green tropical forest, the rocket tiny on its pad far away. Bastien (short, chubby, blond buzz cut, thick navy wool jumper) on the left gets out of a white jeep, swatting a cloud of mosquitoes with the fan, sweat flying off him; Maryse (tall, broad, orange madras headscarf, emerald-green polo) on the right leans on the jeep, arms crossed, unbothered. wide shot",
-            "cast": ["bastien", "maryse"],
+            "cast": [
+              "bastien",
+              "maryse"
+            ],
             "file": "images/insolite-01.webp",
             "status": "pending",
             "attempts": 0
@@ -69,12 +83,23 @@
           "tag": "Le manège",
           "caption": "La Terre tourne sur elle-même. À l’équateur, le sol file à environ 1 600 km/h, deux fois plus qu’au Canada.",
           "bubbles": [
-            { "who": "bastien", "text": "Je ne sens rien. Et je suis très sensible.", "side": "l" },
-            { "who": "maryse", "text": "Tu es sur un manège géant depuis ta naissance.", "side": "r" }
+            {
+              "who": "bastien",
+              "text": "Je ne sens rien. Et je suis très sensible.",
+              "side": "l"
+            },
+            {
+              "who": "maryse",
+              "text": "Tu es sur un manège géant depuis ta naissance.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "under a palm tree at the launch site: Bastien (short, chubby, blond buzz cut, thick navy wool jumper) on the left suddenly hugs the palm trunk with both arms and legs, eyes wide, as if the ground were spinning under him; Maryse (tall, broad, orange madras headscarf, emerald-green polo) on the right twirls one finger in the air to mime the rotation, deadpan. medium shot",
-            "cast": ["bastien", "maryse"],
+            "cast": [
+              "bastien",
+              "maryse"
+            ],
             "file": "images/insolite-02.webp",
             "status": "pending",
             "attempts": 0
@@ -86,12 +111,23 @@
           "tag": "L’élan gratuit",
           "caption": "Une fusée tirée vers l’est garde cet élan : à Kourou, il lui offre environ 460 mètres par seconde.",
           "bubbles": [
-            { "who": "maryse", "text": "Plus vite qu’un avion de ligne, avant même d’allumer les moteurs.", "side": "r" },
-            { "who": "bastien", "text": "Brest aussi tourne ! Moins vite, d’accord, mais avec conviction.", "side": "l" }
+            {
+              "who": "maryse",
+              "text": "Plus vite qu’un avion de ligne, avant même d’allumer les moteurs.",
+              "side": "r"
+            },
+            {
+              "who": "bastien",
+              "text": "Brest aussi tourne ! Moins vite, d’accord, mais avec conviction.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "on the observation terrace facing the distant rocket: Maryse (tall, broad, orange madras headscarf, emerald-green polo) in the right foreground, seen over her shoulder, sweeps her arm from left to right toward the rocket; in the background Bastien (short, chubby, blond buzz cut, thick navy wool jumper) on the left puffs out his chest, one hand on his heart, fan raised like a flag. over-the-shoulder",
-            "cast": ["maryse", "bastien"],
+            "cast": [
+              "maryse",
+              "bastien"
+            ],
             "file": "images/insolite-03.webp",
             "status": "pending",
             "attempts": 0
@@ -116,12 +152,23 @@
           "tag": "L’océan",
           "caption": "Autre atout : vers le nord et l’est, il n’y a que l’océan. Les fusées ne survolent aucune maison.",
           "bubbles": [
-            { "who": "bastien", "text": "À Brest aussi, il y a l’océan !", "side": "l" },
-            { "who": "maryse", "text": "À l’ouest. Ta fusée irait vers l’est… au-dessus de Rennes.", "side": "r" }
+            {
+              "who": "bastien",
+              "text": "À Brest aussi, il y a l’océan !",
+              "side": "l"
+            },
+            {
+              "who": "maryse",
+              "text": "À l’ouest. Ta fusée irait vers l’est… au-dessus de Rennes.",
+              "side": "r"
+            }
           ],
           "image": {
             "prompt": "the map spread on the hot bonnet of the white jeep, seen from above: Bastien (short, chubby, blond buzz cut, thick navy wool jumper) on the left jabs a finger triumphantly at the far side of the ocean; Maryse (tall, broad, orange madras headscarf, emerald-green polo) on the right slowly drags his finger the other way, across the land, with one calm finger. high angle",
-            "cast": ["bastien", "maryse"],
+            "cast": [
+              "bastien",
+              "maryse"
+            ],
             "file": "images/insolite-05.webp",
             "status": "pending",
             "attempts": 0
@@ -133,7 +180,15 @@
           "tag": "En vrai",
           "title": "Le télescope James-Webb décolle de Kourou",
           "text": "Le 25 décembre 2021, une fusée européenne Ariane 5 emporte le télescope spatial James-Webb depuis le Centre spatial guyanais. Même la NASA a confié son télescope géant à la base de Kourou.",
-          "photo": { "commons": "File:James Webb Space Telescope Launch (NHQ202112250006).jpg" }
+          "photo": {
+            "commons": "File:James Webb Space Telescope Launch (NHQ202112250006).jpg",
+            "credit": "Chris Gunn",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:James_Webb_Space_Telescope_Launch_(NHQ202112250006).jpg",
+            "file": "images/photo-6-james-webb-space-telescope-launch-n.webp",
+            "status": "done"
+          }
         },
         {
           "n": 7,
@@ -143,7 +198,9 @@
           "bubbles": [],
           "image": {
             "prompt": "Bastien alone (short, chubby, blond buzz cut, thick navy wool jumper) seen from behind, a tiny figure standing in the middle of an immense flat green launch site that stretches to the horizon, the rocket far away, his fan hanging limp at his side, shoulders dropped in total defeat. from behind",
-            "cast": ["bastien"],
+            "cast": [
+              "bastien"
+            ],
             "file": "images/insolite-07.webp",
             "status": "pending",
             "attempts": 0
@@ -155,11 +212,17 @@
           "tag": "En résumé",
           "caption": "Près de l’équateur, la Terre donne de l’élan aux fusées, et l’océan reçoit leurs étages usés : voilà Kourou.",
           "bubbles": [
-            { "who": "bastien", "text": "Bon, je reste. Mais le pull, je le garde pour Brest.", "side": "l" }
+            {
+              "who": "bastien",
+              "text": "Bon, je reste. Mais le pull, je le garde pour Brest.",
+              "side": "l"
+            }
           ],
           "image": {
             "prompt": "Bastien alone (short, chubby, blond buzz cut, very pale skin) finally pulling the thick navy wool jumper off over his head, face half stuck in the collar, the fan still whirring in one hand, a huge relieved sigh, palm leaves behind him. close-up",
-            "cast": ["bastien"],
+            "cast": [
+              "bastien"
+            ],
             "file": "images/insolite-08.webp",
             "status": "pending",
             "attempts": 0
@@ -172,10 +235,22 @@
       },
       "story": "L’Europe lance ses fusées depuis Kourou, en Guyane française, à environ 500 kilomètres au nord de l’équateur (5° de latitude). Ce n’est pas un hasard : c’est l’un des meilleurs endroits du monde pour partir dans l’espace.\nLa Terre tourne sur elle-même d’ouest en est, en un jour. À l’équateur, le tour à parcourir est le plus long, donc le sol y va le plus vite : environ 1 600 km/h, deux fois plus qu’au Canada. Une fusée lancée vers l’est profite de cet élan : à Kourou, il lui offre environ 460 mètres par seconde, selon l’Agence spatiale européenne. Elle a donc moins de vitesse à gagner et économise du carburant au décollage.\nAutre atout : la Guyane a une longue façade sur l’océan Atlantique. Les fusées peuvent partir vers le nord et vers l’est sans survoler de terres habitées. La base couvre 660 km², six fois la surface de Paris, et la région est à l’abri des cyclones et des tremblements de terre.\nLa France lançait d’abord ses fusées depuis Hammaguir, dans le désert algérien. Quand l’Algérie devient indépendante en 1962, il faut un autre site : Kourou est choisi en 1964. Ariane 1 y décolle le 24 décembre 1979 ; aujourd’hui partent de là Ariane 6 et Vega C. Le 25 décembre 2021, c’est une Ariane 5 qui y a emporté le télescope spatial James-Webb.",
       "sources": [
-        { "title": "CNES — Le Centre spatial guyanais, une porte vers l’espace", "url": "https://cnes.fr/dossiers/centre-spatial-guyanais-une-porte-vers-lespace" },
-        { "title": "ESA — About Europe’s Spaceport", "url": "https://m.esa.int/Enabling_Support/Space_Transportation/Europe_s_Spaceport/About_Europe_s_Spaceport" },
-        { "title": "MétéoMédia — Réaliser des économies grâce au pouvoir de l’équateur", "url": "https://www.meteomedia.com/fr/nouvelles/science/espace/realiser-des-economies-grace-au-pouvoir-de-lequateur?period=3" },
-        { "title": "Wikimedia Commons — James Webb Space Telescope Launch (NHQ202112250006)", "url": "https://Www.Wikipedia.org/wiki/File:James_Webb_Space_Telescope_Launch_(NHQ202112250006).jpg" }
+        {
+          "title": "CNES — Le Centre spatial guyanais, une porte vers l’espace",
+          "url": "https://cnes.fr/dossiers/centre-spatial-guyanais-une-porte-vers-lespace"
+        },
+        {
+          "title": "ESA — About Europe’s Spaceport",
+          "url": "https://m.esa.int/Enabling_Support/Space_Transportation/Europe_s_Spaceport/About_Europe_s_Spaceport"
+        },
+        {
+          "title": "MétéoMédia — Réaliser des économies grâce au pouvoir de l’équateur",
+          "url": "https://www.meteomedia.com/fr/nouvelles/science/espace/realiser-des-economies-grace-au-pouvoir-de-lequateur?period=3"
+        },
+        {
+          "title": "Wikimedia Commons — James Webb Space Telescope Launch (NHQ202112250006)",
+          "url": "https://Www.Wikipedia.org/wiki/File:James_Webb_Space_Telescope_Launch_(NHQ202112250006).jpg"
+        }
       ]
     }
   ]
