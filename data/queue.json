@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T20:49+01:00",
+ "updated_at": "2026-11-21T20:50+01:00",
  "stock": {
   "cultureg": [
    {
@@ -287,6 +287,23 @@
     "title": "L’arc-en-ciel n’a pas de pied : il est accroché à l’ombre de votre tête",
     "theme": "Sciences physiques",
     "tagline": "Un trésor introuvable, des milliards de gouttes et un angle de 42 degrés",
+    "minutes": 2,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/notice/20261121-2044-ecran-tactile-moufles",
+    "name": "20261121-2044-ecran-tactile-moufles",
+    "added": "20261121-2044",
+    "status": "waiting",
+    "next": false,
+    "title": "Votre écran tactile ne sent pas votre doigt : il sent votre électricité",
+    "theme": "Informatique et numérique",
+    "tagline": "Des moufles, un petit-fils qui appelle et une grille invisible sous la vitre",
     "minutes": 2,
     "cases": 8,
     "photos": 1,
