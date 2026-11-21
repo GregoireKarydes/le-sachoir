@@ -34,7 +34,8 @@
           "look": "a small, round woman in her sixties, dark brown skin, short white curly hair, a plum-purple cardigan as main colour over a white blouse, thick black-rimmed glasses, a stick of yellow chalk in her hand",
           "role": "a seasoned mathematician who refuses to be impressed by anything; understates everything, deadpan, never hurries",
           "file": "cast/actu-mathematicienne.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "ruffin",
@@ -67,8 +68,9 @@
           "mathematicienne"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -92,8 +94,9 @@
               "mathematicienne"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -103,7 +106,13 @@
           "title": "La fonction zêta sur la « droite critique »",
           "text": "Les deux courbes de la fonction zêta de Riemann : là où elles touchent zéro ensemble se trouvent les fameux zéros.",
           "photo": {
-            "commons": "File:RiemannCriticalLine.svg"
+            "commons": "File:RiemannCriticalLine.svg",
+            "credit": "Slonzor",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:RiemannCriticalLine.svg",
+            "file": "images/photo-2-riemanncriticalline-svg.webp",
+            "status": "done"
           }
         },
         {
@@ -174,8 +183,9 @@
               "ruffin"
             ],
             "file": "images/actu-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -215,8 +225,9 @@
               "manifestante"
             ],
             "file": "images/actu-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -267,8 +278,9 @@
               "costa"
             ],
             "file": "images/actu-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
