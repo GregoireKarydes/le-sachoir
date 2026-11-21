@@ -1,7 +1,338 @@
 {
   "date": "2026-11-22",
   "status": "draft",
+  "newsletter": {
+    "subject": "Dimanche : 167 ans d’attente et 17 millions de lignes 🧮",
+    "intro": "Dimanche 22 novembre. Une preuve de 17 millions de lignes est arrivée. Votre Sachoir, lui, se lit avant le café.",
+    "game": "Quatre phrases célèbres, quatre auteurs à retrouver. Attention : l’un d’eux n’a peut-être jamais rien dit.",
+    "ps": "P.-S. Si vous trouvez une erreur à la ligne 12 483 907 de la preuve, écrivez-nous. On transmettra."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Une preuve géante, un candidat de moins et un budget au régime",
+      "tagline": "Un mathématicien et une IA disent avoir prouvé l’hypothèse de Riemann, François Ruffin renonce à 2027, la rue défile un sixième samedi et l’Europe rabote son budget.",
+      "teaser": "Une énigme de 1859 enfin résolue (peut-être), un candidat qui reste debout en s’asseyant et un budget que personne n’aime.",
+      "minutes": 3,
+      "theme": "",
+      "art": {
+        "subject": "four news stories of the day, each told in one gag panel: a huge computer-checked proof of a famous 1859 math problem, a left-wing candidate withdrawing from the presidential race, a sixth Saturday of protests against the cost of living, a European budget cut with scissors",
+        "setting": "a quiet university office with a blackboard, an empty campaign meeting room with one chair, a wide street full of marchers, a Brussels meeting room with a long table",
+        "era": "present day, November 2026",
+        "props": {
+          "printout": "an endless strip of white fan-folded computer paper covered in tiny grey lines, with no readable writing",
+          "placard": "a plain brown cardboard placard on a wooden stick, with no writing on it",
+          "scissors": "a pair of giant shiny silver scissors, as long as an arm",
+          "chair": "a single empty orange plastic chair"
+        }
+      },
+      "cast": [
+        {
+          "id": "mathematicienne",
+          "name": "Une mathématicienne",
+          "look": "a small, round woman in her sixties, dark brown skin, short white curly hair, a plum-purple cardigan as main colour over a white blouse, thick black-rimmed glasses, a stick of yellow chalk in her hand",
+          "role": "a seasoned mathematician who refuses to be impressed by anything; understates everything, deadpan, never hurries",
+          "file": "cast/actu-mathematicienne.png",
+          "status": "pending"
+        },
+        {
+          "id": "ruffin",
+          "name": "François Ruffin",
+          "look": "a cartoon caricature of a lanky man in his fifties, light skin, messy short dark brown hair, light stubble, a crumpled navy-blue jacket as main colour over an open-collar white shirt, no tie, a rolled-up newspaper under his arm",
+          "role": "a left-wing member of parliament who withdraws from the presidential race; stubborn and proud, stands ramrod straight on principle",
+          "file": "cast/actu-ruffin.png",
+          "status": "skipped"
+        },
+        {
+          "id": "manifestante",
+          "name": "Une manifestante",
+          "look": "a tall, sturdy young woman in her twenties, light olive skin, a long black braid, a bright green rain jacket as main colour, grey jeans, white trainers",
+          "role": "a student marching for the sixth Saturday in a row; tireless and a little smug about her loyalty",
+          "file": "cast/actu-manifestante.png",
+          "status": "skipped"
+        },
+        {
+          "id": "costa",
+          "name": "Antonio Costa",
+          "look": "a cartoon caricature of a short, stocky man in his sixties, medium brown skin, bald on top with a ring of short grey hair, small round gold glasses, a burgundy suit as main colour, a light blue shirt, a broad satisfied smile",
+          "role": "the president of the European Council presenting a cut budget; unshakeably pleased with himself, takes every complaint as proof of success",
+          "file": "cast/actu-costa.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A quiet university office with a blackboard covered in chalk curves. The printout pours out of an old computer on a desk and spreads across the whole floor in huge white loops, out of the door. mathematicienne (small and round, short white curly hair, plum-purple cardigan, thick black glasses) stands calmly in the middle of the paper sea, holding the first page up to her nose. Wide shot.",
+        "cast": [
+          "mathematicienne"
+        ],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Sciences",
+          "lead": true,
+          "major": true,
+          "gag": "litote",
+          "caption": "Vendredi 20 novembre, un mathématicien d’Anthropic a dit avoir prouvé, avec l’IA Claude, l’hypothèse de Riemann, posée en 1859. Sa preuve : 17 millions de lignes de code.",
+          "bubbles": [
+            {
+              "who": "mathematicienne",
+              "text": "Dix-sept millions de lignes. Je regarde ça pendant ma pause café.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A quiet university office seen from the floor. mathematicienne (small and round, short white curly hair, plum-purple cardigan, thick black glasses) sits cross-legged on the floor on the right, almost buried up to her shoulders in the printout, which spreads in giant white loops all around her; she calmly holds a tiny cup of coffee in one hand and one page in the other, perfectly unbothered. Low angle.",
+            "cast": [
+              "mathematicienne"
+            ],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La fonction zêta sur la « droite critique »",
+          "text": "Les deux courbes de la fonction zêta de Riemann : là où elles touchent zéro ensemble se trouvent les fameux zéros.",
+          "photo": {
+            "commons": "File:RiemannCriticalLine.svg"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "L’hypothèse de Riemann, enfin prouvée ?",
+          "text": "Quoi : Levent Alpöge, chercheur d’Anthropic, a publié une preuve trouvée avec l’IA Claude, écrite en code.\nPourquoi ça compte : des centaines de théorèmes partent du principe qu’elle est vraie.\nRepère : 167 ans d’attente ; un seul des sept « problèmes du millénaire » est résolu à ce jour.\nEt maintenant : des mathématiciens doivent encore comprendre la preuve.",
+          "sources": [
+            {
+              "title": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/11/21/riemann-hypothesis-has-the-worlds-most-famous-maths-problem-been-cracked"
+            },
+            {
+              "title": "Planète Grandes Écoles",
+              "url": "https://www.planetegrandesecoles.com/hypothese-de-riemann-ia-claude"
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Comment ça se fait ?",
+          "zoom": true,
+          "title": "Comment sait-on si une preuve de 17 millions de lignes est juste ?",
+          "steps": [
+            "En 1859, Riemann relie les nombres premiers aux « zéros » d’une fonction, la fonction zêta",
+            "Il devine que tous sont alignés sur une droite ; tester des exemples ne suffit pas : ils sont infinis",
+            "Levent Alpöge, aidé de Claude, a rédigé la preuve en Lean, un logiciel qui contrôle chaque étape",
+            "Si le code passe ce contrôle, la logique tient ; reste à vérifier que l’énoncé est le bon"
+          ],
+          "text": "Ce qu’on ne sait pas encore : pourquoi c’est vrai.",
+          "sources": [
+            {
+              "title": "Planète Grandes Écoles",
+              "url": "https://www.planetegrandesecoles.com/hypothese-de-riemann-ia-claude"
+            },
+            {
+              "title": "Al Jazeera",
+              "url": "https://www.aljazeera.com/news/2026/11/21/riemann-hypothesis-has-the-worlds-most-famous-maths-problem-been-cracked"
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Politique",
+          "major": true,
+          "gag": "litteral",
+          "people": [
+            {
+              "name": "François Ruffin",
+              "party": "Debout !",
+              "role": "député de la Somme, ex-candidat à la présidentielle"
+            }
+          ],
+          "caption": "Samedi 21 novembre, le député de la Somme François Ruffin a retiré sa candidature pour 2027, faute de grande primaire à gauche. Il veut « remettre le pays debout ».",
+          "bubbles": [
+            {
+              "who": "ruffin",
+              "text": "Je retire ma candidature. Mais je reste debout : c’est dans le programme.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. An empty campaign meeting room with bare walls. ruffin (lanky, messy dark brown hair, stubble, crumpled navy-blue jacket, newspaper under his arm) stands ramrod straight on the left, chin up, arms stiff along his body, firmly refusing to sit, right next to the chair, which is pushed towards him by a hand coming from the edge of the picture. Medium shot.",
+            "cast": [
+              "ruffin"
+            ],
+            "file": "images/actu-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "François Ruffin renonce à la présidentielle",
+          "text": "Quoi : sur X, il dit prendre « acte de l’impasse » : les partis ont refusé sa primaire.\nPourquoi ça compte : un candidat de gauche de moins, à cinq mois de l’élection.\nEt maintenant : il souhaite « bonne campagne » aux candidats de gauche, sans en soutenir aucun.",
+          "sources": [
+            {
+              "title": "franceinfo",
+              "url": "https://www.franceinfo.fr/elections/francois-ruffin-retire-sa-candidature-a-l-election-presidentielle-et-souhaite-bonne-campagne-aux-candidats-de-gauche-encore-en-lice_8294003.html"
+            },
+            {
+              "title": "L’Express (via Orange Actualités)",
+              "url": "https://actu.orange.fr/politique/presidentielle-2027-francois-ruffin-annonce-le-retrait-de-sa-candidature-l-express-via-6medias-CNT000002tWgKp.html"
+            }
+          ]
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Société",
+          "major": true,
+          "gag": "escalade",
+          "caption": "Samedi 21 novembre, syndicats, jeunes et gilets jaunes ont défilé contre la vie chère pour le sixième samedi de suite : 82 500 selon l’Intérieur, 150 000 selon les syndicats.",
+          "bubbles": [
+            {
+              "who": "manifestante",
+              "text": "Six samedis de suite. Au dixième, je demande une carte de fidélité.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A wide street full of marchers seen from above, tiny figures holding blank placards. In the foreground on the right, manifestante (tall and sturdy, long black braid, bright green rain jacket) marches proudly with the placard over her shoulder, counting six on her fingers with a smug grin. High angle.",
+            "cast": [
+              "manifestante"
+            ],
+            "file": "images/actu-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Vie chère : un sixième samedi, moins de monde",
+          "text": "Quoi : des cortèges dans toute la France, au moins 144 personnes interpellées.\nPourquoi ça compte : la mobilisation recule ; l’Intérieur comptait 106 000 manifestants le 14 novembre.\nEt maintenant : reste à savoir si un septième samedi suivra.",
+          "sources": [
+            {
+              "title": "Europe 1",
+              "url": "https://www.europe1.fr/societe/mobilisation-du-21-novembre-82500-manifestants-selon-les-autorites-150000-selon-les-syndicats-1241815"
+            },
+            {
+              "title": "Ouest-France",
+              "url": "https://www.ouest-france.fr/societe/manifestation/direct-manifestations-du-21-novembre-entre-82-500-et-150-000-manifestants-en-france-au-moins-144-interpellations-183040e1-1e72-4a94-b536-4a410dc0fba2"
+            }
+          ]
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Économie",
+          "gag": "mauvaise-foi",
+          "people": [
+            {
+              "name": "Antonio Costa",
+              "party": "étranger",
+              "role": "président du Conseil européen"
+            },
+            {
+              "name": "Friedrich Merz",
+              "party": "étranger",
+              "role": "chancelier allemand"
+            }
+          ],
+          "caption": "Samedi 21 novembre, Antonio Costa, président du Conseil européen, a proposé un budget de l’UE 2028-2034 réduit de 204 milliards d’euros. Paris : trop peu. Berlin : encore trop.",
+          "bubbles": [
+            {
+              "who": "costa",
+              "text": "Tout le monde est mécontent : c’est donc un excellent compromis.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A Brussels meeting room with a long table. costa (short and stocky, bald with a ring of grey hair, round gold glasses, burgundy suit) leans towards the viewer with a broad satisfied smile, holding the scissors open over a long paper chain of cardboard coins lying on the table, snipping off a big piece with delight. Medium close-up.",
+            "cast": [
+              "costa"
+            ],
+            "file": "images/actu-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Budget européen : une taxe numérique et des mécontents",
+          "text": "Quoi : il propose aussi une taxe de 3 % sur le chiffre d’affaires en ligne des géants du numérique.\nPourquoi ça compte : Paris juge les aides aux revenus des agriculteurs insuffisantes.\nEt maintenant : sommet des 27 à Bruxelles, jeudi et vendredi.",
+          "due": "2026-11-27",
+          "sources": [
+            {
+              "title": "Boursorama (AFP)",
+              "url": "https://www.boursorama.com/actualite-economique/actualites-amp/budget-europeen-une-taxe-sur-les-geants-du-numerique-pour-debloquer-les-discussions-54a8d14b9fe35f0f4c3b1758936bfdfa"
+            },
+            {
+              "title": "La Télé (Keystone-ATS)",
+              "url": "https://latele.ch/articles/ue-les-frugaux-fustigent-un-projet-de-budget-revu-a-la-baisse"
+            }
+          ]
+        }
+      ],
+      "final": {
+        "text": "Les ordinateurs avaient déjà vérifié les 10 000 premiers milliards de zéros de Riemann : tous sur la droite. Ça ne prouvait toujours rien.",
+        "source": "Planète Grandes Écoles (d’après le Clay Mathematics Institute)"
+      },
+      "sources": [
+        {
+          "title": "Al Jazeera — Riemann hypothesis: has the world’s most famous maths problem been cracked?",
+          "url": "https://www.aljazeera.com/news/2026/11/21/riemann-hypothesis-has-the-worlds-most-famous-maths-problem-been-cracked"
+        },
+        {
+          "title": "Planète Grandes Écoles — Hypothèse de Riemann : un mathématicien d’Anthropic affirme l’avoir démontrée avec l’IA Claude",
+          "url": "https://www.planetegrandesecoles.com/hypothese-de-riemann-ia-claude"
+        },
+        {
+          "title": "OfficeChai — Lean community statement on Levent Alpöge’s Claude-assisted proof",
+          "url": "https://officechai.com/ai/lean-community-certifies-levent-alpoges-claude-assisted-proof-of-the-riemann-hypothesis-as-correct/"
+        },
+        {
+          "title": "franceinfo — François Ruffin retire sa candidature à l’élection présidentielle",
+          "url": "https://www.franceinfo.fr/elections/francois-ruffin-retire-sa-candidature-a-l-election-presidentielle-et-souhaite-bonne-campagne-aux-candidats-de-gauche-encore-en-lice_8294003.html"
+        },
+        {
+          "title": "L’Express (via Orange Actualités) — François Ruffin annonce le retrait de sa candidature",
+          "url": "https://actu.orange.fr/politique/presidentielle-2027-francois-ruffin-annonce-le-retrait-de-sa-candidature-l-express-via-6medias-CNT000002tWgKp.html"
+        },
+        {
+          "title": "Europe 1 — Mobilisation du 21 novembre : 82 500 manifestants selon les autorités, 150 000 selon les syndicats",
+          "url": "https://www.europe1.fr/societe/mobilisation-du-21-novembre-82500-manifestants-selon-les-autorites-150000-selon-les-syndicats-1241815"
+        },
+        {
+          "title": "Ouest-France — Manifestations du 21 novembre : entre 82 500 et 150 000 manifestants, au moins 144 interpellations",
+          "url": "https://www.ouest-france.fr/societe/manifestation/direct-manifestations-du-21-novembre-entre-82-500-et-150-000-manifestants-en-france-au-moins-144-interpellations-183040e1-1e72-4a94-b536-4a410dc0fba2"
+        },
+        {
+          "title": "Boursorama (AFP) — Budget européen : Paris et Berlin fustigent un nouveau projet revu à la baisse",
+          "url": "https://www.boursorama.com/actualite-economique/actualites-amp/budget-europeen-une-taxe-sur-les-geants-du-numerique-pour-debloquer-les-discussions-54a8d14b9fe35f0f4c3b1758936bfdfa"
+        },
+        {
+          "title": "La Télé (Keystone-ATS) — Les frugaux fustigent un projet de budget revu à la baisse",
+          "url": "https://latele.ch/articles/ue-les-frugaux-fustigent-un-projet-de-budget-revu-a-la-baisse"
+        }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "citation",
