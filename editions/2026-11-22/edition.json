@@ -1,6 +1,6 @@
 {
   "date": "2026-11-22",
-  "status": "draft",
+  "status": "published",
   "newsletter": {
     "subject": "Dimanche : 167 ans d’attente et 17 millions de lignes 🧮",
     "intro": "Dimanche 22 novembre. Une preuve de 17 millions de lignes est arrivée. Votre Sachoir, lui, se lit avant le café.",
@@ -8,6 +8,613 @@
     "ps": "P.-S. Si vous trouvez une erreur à la ligne 12 483 907 de la preuve, écrivez-nous. On transmettra."
   },
   "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Jeanne d’Arc : 17 ans, pas d’armée, et elle remet un roi sur son trône",
+      "tagline": "De Domrémy au bûcher de Rouen : comment une paysanne a retourné la guerre de Cent Ans en deux ans",
+      "teaser": "Un dauphin qui se cache, des théologiens qui interrogent trois semaines, et une ado de 17 ans qui perd patience.",
+      "minutes": 6,
+      "theme": "Grandes personnalités",
+      "art": {
+        "subject": "how Joan of Arc, a 17-year-old peasant girl, helped the uncrowned dauphin Charles VII during the Hundred Years' War (1425-1456): her voices at Domrémy, Vaucouleurs, the meeting at Chinon, the relief of the siege of Orléans, the coronation at Reims, her capture at Compiègne, her trial and death at Rouen, her rehabilitation",
+        "setting": "a green meadow by the river Meuse at Domrémy; the muddy courtyard of the small fortress of Vaucouleurs; the torch-lit great hall of the castle of Chinon; a theologians' room at Poitiers; the narrow medieval streets of Orléans and a stone fort by the Loire bridge; the gothic cathedral of Reims; the walls of Compiègne; a gloomy stone courtroom in Rouen castle; the old market square of Rouen; an English Channel harbour",
+        "era": "France in the 1420s to 1450s, late Middle Ages: plate armour, chainmail, longbows, tunics and hose, fur hats, houppelande robes, bishops' mitres, parchment and wax seals",
+        "props": {
+          "standard": "a long white cloth banner on a wooden pole with a few small golden fleurs-de-lis, no letters",
+          "crown": "a golden royal crown with fleurs-de-lis, slightly too big",
+          "quill": "a long white goose-feather quill",
+          "letter": "a folded parchment letter with a red wax seal, no visible writing"
+        }
+      },
+      "cast": [
+        {
+          "id": "jeanne",
+          "name": "Jeanne",
+          "look": "Jeanne d'Arc, a small sturdy peasant girl of 13 to 19, short dark-brown hair cut in a round bowl cut above the ears, light tan skin, straight determined eyebrows, a bright cornflower-blue tunic as main colour (worn under polished silver plate armour once she is a soldier), dark brown hose and leather boots, often holding the standard",
+          "role": "the peasant girl who says saints sent her to save the kingdom; blunt, impatient and fearless, always walks straight ahead with her chin up and drags hesitant people along",
+          "file": "cast/dossier-jeanne.png",
+          "status": "done"
+        },
+        {
+          "id": "charles",
+          "name": "Charles VII",
+          "look": "Charles VII in his late twenties, a very thin slightly hunched man with skinny legs, a long sad face and a big drooping nose, heavy-lidded worried eyes, light skin, short dark hair in a bowl cut under a tall round brown fur hat, a padded plum-purple velvet robe with puffed shoulders as main colour, black hose, several gold rings he keeps twisting",
+          "role": "the uncrowned dauphin who becomes king; indecisive and fearful, always hesitating or hiding behind others, then vainly takes the credit afterwards",
+          "file": "cast/dossier-charles.png",
+          "status": "done"
+        },
+        {
+          "id": "cauchon",
+          "name": "Pierre Cauchon",
+          "look": "Pierre Cauchon, bishop of Beauvais, a very fat round man about sixty, bald with a fringe of white hair, heavy jowls, ruddy light skin, a tall white bishop's mitre, a bright crimson-red cape as main colour over a long white robe, always holding the quill",
+          "role": "the bishop who judges Jeanne and wants her condemned; pompous and fussy about procedure, buried in papers, waves his quill like a sceptre",
+          "file": "cast/dossier-cauchon.png",
+          "status": "done"
+        },
+        {
+          "id": "baudricourt",
+          "name": "Robert de Baudricourt",
+          "look": "Robert de Baudricourt, captain of Vaucouleurs, a tall burly soldier in his forties with very broad shoulders, thick curly black hair and a bushy black beard, weathered light skin, an olive-brown leather jerkin over grey chainmail as main colour, a big sword at his belt, a roast chicken leg in his hand",
+          "role": "the gruff garrison captain who first sends Jeanne home, then gives in; lazy and grumpy, always munching something, sighs loudly",
+          "file": "cast/dossier-baudricourt.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "a dusty road with the towers of a gothic cathedral far away on the horizon. Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) marches forward on the left holding the standard high and pulling Charles by the sleeve; Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) digs his heels into the road on the right, leaning backwards, clutching the crown to his chest. visual gag: the reluctant king dragged along. wide shot",
+        "cast": [
+          "jeanne",
+          "charles"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Un royaume, deux rois",
+          "caption": "1429. Comment une paysanne de 17 ans va-t-elle commander une armée ? D'abord, la France a deux rois.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Roi de France, c'est moi. Enfin, d'une moitié. Disons d'un tiers.",
+              "side": "r"
+            },
+            {
+              "who": "Un courtisan",
+              "text": "Votre Majesté, le tiers vient encore de rétrécir.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a cold, nearly empty stone hall of the castle of Chinon with one faded tapestry. Charles (very thin, hunched, big drooping nose, tall round fur hat, plum-purple robe) sits slumped on a small wooden throne on the right, chin in his hand; in the background on the left a courtier in a brown tunic unrolls a long blank map on the floor and snips a piece off it with big scissors. visual gag: the shrinking map. wide shot",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi deux rois pour une seule France ?",
+          "steps": [
+            "1328 : le roi Charles IV meurt sans fils",
+            "Le roi d'Angleterre Édouard III, petit-fils de Philippe le Bel par sa mère, réclame la couronne",
+            "1337 : la guerre commence ; elle durera 116 ans",
+            "1420, traité de Troyes : l'Anglais Henri V devient l'héritier, le dauphin Charles est écarté",
+            "1422 : les deux rois meurent ; les Anglais proclament un bébé, Henri VI, roi de France"
+          ]
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Vers 1425, Domrémy",
+          "caption": "Vers 1425, à Domrémy, village au bord de la Meuse, Jeanne a 13 ans. Elle dit entendre des saints.",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "Saint Michel veut que je chasse les Anglais. Moi. Avec mes moutons ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a green meadow by a small river with a few sheep. Jeanne as a 13-year-old girl (small, sturdy, dark-brown bowl cut, light tan skin, simple cornflower-blue peasant dress) stands frozen on the left holding a wooden shepherd's crook, staring up at a beam of pale golden light coming from the sky on the right; the sheep next to her looks up too, just as baffled. visual gag: the baffled sheep. medium wide shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-03.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Février 1429, Vaucouleurs",
+          "caption": "Rejetée en 1428, elle revient en février 1429 à Vaucouleurs. Cette fois, le capitaine lui donne une escorte.",
+          "bubbles": [
+            {
+              "who": "baudricourt",
+              "text": "Le dauphin ne reçoit même pas ses généraux. Bonne chance.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Il me recevra. Et dans quelques mois, il sera sacré roi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the muddy courtyard of the small fortress of Vaucouleurs. Baudricourt (tall, burly, bushy black beard, olive-brown leather jerkin over chainmail) leans on a wooden table on the left, munching a roast chicken leg, unconvinced; Jeanne (small, sturdy, dark-brown bowl cut, cornflower-blue tunic, dark travel cloak) stands on the right, fists on her hips, chin up, a saddled horse and two escort soldiers waiting behind her. low angle",
+            "cast": [
+              "baudricourt",
+              "jeanne"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Le dauphin et la ville assiégée",
+          "caption": "Le 25 février 1429, à Chinon, le dauphin la reçoit. Selon la tradition, il se cache parmi ses courtisans.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Le dauphin ? C'est lui, là-bas. Le grand, avec le chapeau.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Gentil dauphin, on vous reconnaît à votre air inquiet.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a crowded torch-lit great hall in the castle of Chinon full of colourful courtiers. Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) half-hides behind a fat courtier on the left, pointing at someone else across the room; Jeanne (small, sturdy, dark-brown bowl cut, men's travel clothes with a cornflower-blue tunic) walks straight towards him from the right, pointing right at him. high angle",
+            "cast": [
+              "charles",
+              "jeanne"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "Printemps 1429, Poitiers",
+          "caption": "Prudent, Charles la fait interroger trois semaines à Poitiers par des théologiens. Verdict : rien à lui reprocher.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a long wooden table piled with absurdly tall towers of thick books, behind which six old theologians in black robes and white caps lean forward, all frowning; in the foreground Jeanne (small, sturdy, dark-brown bowl cut, cornflower-blue tunic) sits alone on a tiny stool facing them, seen from behind, chin propped on her fist, slumping with boredom. visual gag: the towering piles of books. from behind",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi Orléans, c'est la clé",
+          "text": "Depuis le 12 octobre 1428, les Anglais assiègent Orléans : ils l'encerclent pour la forcer à se rendre.",
+          "steps": [
+            "Orléans garde un pont sur la Loire",
+            "Au nord du fleuve : les Anglais et leurs alliés bourguignons",
+            "Au sud : les terres restées fidèles à Charles",
+            "Si Orléans tombe, la route du sud est ouverte"
+          ],
+          "joke": "Orléans, c'est la porte. Et Charles est derrière."
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "Fin avril 1429",
+          "caption": "Fin avril 1429, Jeanne entre dans Orléans en armure, avec des vivres et des soldats. La ville l'acclame.",
+          "bubbles": [
+            {
+              "who": "Un capitaine",
+              "text": "Les chefs préfèrent attendre des renforts.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Vous attendez depuis six mois. On essaie autre chose ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a narrow medieval street of Orléans packed with cheering townspeople waving from windows and doorways. Jeanne (small, sturdy, dark-brown bowl cut, polished silver armour over a cornflower-blue tunic) rides in on a white horse on the right, holding the standard high; on the left a grumpy grey-bearded captain in a dented helmet walks beside the horse with his arms crossed. medium wide shot",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "7 mai 1429",
+          "caption": "Le 7 mai, à l'assaut du fort des Tourelles, une flèche la blesse à l'épaule. Elle retourne au combat.",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "C'est une flèche, pas une excuse. On y retourne.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "at the foot of a stone fort by a river bridge, Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) sits on the grass on the left, gritting her teeth and gripping a broken arrow shaft near her shoulder while already pushing herself back up to her feet; behind her, soldiers carrying ladders charge towards the walls. medium close-up",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-09.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 10,
+          "kind": "photo",
+          "tag": "Document d'époque",
+          "title": "Le siège d'Orléans, peint au XVe siècle",
+          "text": "Une miniature d'un manuscrit enluminé de la fin du XVe siècle, quelques décennies après les faits : la ville, ses remparts et les assiégeants.",
+          "photo": {
+            "commons": "File:Siege orleans.jpg",
+            "credit": "AnonymousUnknown author",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Siege_orleans.jpg",
+            "file": "images/photo-10-siege-orleans-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 11,
+          "kind": "react",
+          "tag": "8 mai 1429",
+          "caption": "Le 8 mai 1429, les Anglais lèvent le siège. Orléans, encerclée depuis sept mois, est libre.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Elle a gagné ? Mais je n'avais rien prévu pour une victoire !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a quiet castle room far from the battle. Charles (very thin, hunched, big drooping nose, plum-purple robe) on the left reads the letter, so stunned that his tall fur hat pops off his head into the air; on the right a breathless, mud-splattered messenger kneels on one knee. visual gag: the flying hat. medium shot",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/dossier-11.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 12,
+          "kind": "photo",
+          "tag": "Document d'époque",
+          "title": "Le seul dessin fait de son vivant",
+          "text": "Le 10 mai 1429, en apprenant la victoire d'Orléans, un greffier du parlement de Paris, Clément de Fauquembergue, dessine Jeanne en marge de son registre. Il ne l'a jamais vue.",
+          "photo": {
+            "commons": "File:Jeanne d'Arc-Fauquembergue.jpg",
+            "credit": "Clément de Fauquembergue, Registre du Parlement de Paris",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Jeanne_d%27Arc-Fauquembergue.jpg",
+            "file": "images/photo-12-jeanne-d-arc-fauquembergue-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 13,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Le sacre de Reims",
+          "caption": "Jeanne veut emmener Charles à Reims, en terre ennemie, parce que les rois de France y sont sacrés.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Reims ? C'est loin. Et il y a des Anglais partout.",
+              "side": "r"
+            },
+            {
+              "who": "jeanne",
+              "text": "On les chassera en route. Ça fait de l'exercice.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a castle courtyard. Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) strides forward on the left pulling Charles by the sleeve; Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) digs his heels into the ground on the right, leaning far backwards like a stubborn mule. visual gag: the tug of war. low angle",
+            "cast": [
+              "jeanne",
+              "charles"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 14,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi le sacre change tout",
+          "text": "Au sacre, l'archevêque de Reims oint le roi d'une huile sainte : aux yeux de tous, c'est Dieu qui l'a choisi.\nSans sacre, ses ennemis surnomment Charles « le petit roi de Bourges ». Sacré, il devient le vrai roi, et l'Anglais passe pour un intrus.",
+          "joke": "Une couronne, ça se pose. Un sacre, ça ne se discute pas."
+        },
+        {
+          "n": 15,
+          "kind": "fact",
+          "tag": "17 juillet 1429",
+          "caption": "Le 17 juillet 1429, à Reims, Charles est sacré roi. Jeanne est près de lui, son étendard à la main.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Elle est un peu grande, cette couronne, non ?",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Vous grandirez dedans.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "inside a tall gothic cathedral with coloured stained-glass light. Charles (very thin, hunched, big drooping nose, plum-purple robe) kneels in the centre-left while an old archbishop in white lowers the crown onto his head; the crown slides right down over his eyes. Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) stands on the right holding the standard, biting back a smile. visual gag: the crown over his eyes. wide shot",
+            "cast": [
+              "charles",
+              "jeanne"
+            ],
+            "file": "images/dossier-15.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 16,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Abandonnée",
+          "caption": "Après le sacre, Charles préfère négocier. Le 23 mai 1430, à Compiègne, des soldats bourguignons capturent Jeanne.",
+          "bubbles": [
+            {
+              "who": "Un soldat bourguignon",
+              "text": "Celle-là, elle vaut une fortune.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "outside the stone walls of Compiègne at dusk, seen from above: Jeanne (small, sturdy, dark-brown bowl cut, silver armour over a cornflower-blue tunic) is pulled down from her white horse by two soldiers in yellow-and-red tabards; her standard has fallen in the mud beside her. No blood, no wounds. high angle",
+            "cast": [
+              "jeanne"
+            ],
+            "file": "images/dossier-16.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 17,
+          "kind": "fact",
+          "tag": "1430",
+          "caption": "Jean de Luxembourg la vend aux Anglais pour 10 000 écus. Charles VII ne fait rien pour la racheter.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Je vais leur écrire une lettre très ferme. Bientôt. Un jour.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) sits alone at a gilded desk, holding the quill above a blank parchment, his eyes drifting towards the window, clearly not writing a single word; a light-blue sweat drop on his temple. close-up",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/dossier-17.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 18,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Le procès de Rouen",
+          "caption": "En 1431, à Rouen, l'évêque Pierre Cauchon la juge pour hérésie, c'est-à-dire pour avoir désobéi à l'Église.",
+          "bubbles": [
+            {
+              "who": "cauchon",
+              "text": "Vous entendez des voix et vous portez des habits d'homme. Expliquez-vous.",
+              "side": "l"
+            },
+            {
+              "who": "jeanne",
+              "text": "Mes voix, je les écoute. Vous, un peu moins.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a gloomy stone courtroom in Rouen castle. Cauchon (very fat, round, bald with a white fringe, tall white mitre, crimson-red cape) sits high on a judge's chair on the left behind huge piles of papers, pointing the quill at the accused; Jeanne (small, sturdy, dark-brown bowl cut, worn cornflower-blue tunic, iron chains at her ankles) sits on a low bench on the right, back straight, arms crossed. medium shot",
+            "cast": [
+              "cauchon",
+              "jeanne"
+            ],
+            "file": "images/dossier-18.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 19,
+          "kind": "react",
+          "tag": "1431",
+          "caption": "Un piège : « Êtes-vous en état de grâce ? » Oui, c'est de l'orgueil ; non, un aveu. Sa vraie réponse :",
+          "bubbles": [
+            {
+              "who": "jeanne",
+              "text": "Si je n'y suis, Dieu m'y mette, et si j'y suis, Dieu m'y garde.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "over Jeanne's shoulder (small, dark-brown bowl cut, cornflower-blue tunic) in the left foreground, we see Cauchon (very fat, bald with a white fringe, tall white mitre, crimson-red cape) on his high chair, frozen with his mouth open, the quill snapped in two in his fist and ink splashing over his papers. visual gag: the snapped quill. over-the-shoulder",
+            "cast": [
+              "jeanne",
+              "cauchon"
+            ],
+            "file": "images/dossier-19.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 20,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Condamnée à cause d'une tenue",
+          "steps": [
+            "24 mai 1431 : au cimetière Saint-Ouen, Jeanne abjure, c'est-à-dire renie ses erreurs, et promet de porter des habits de femme",
+            "27 mai : elle reprend ses habits d'homme",
+            "29 mai : les juges la déclarent « relapse », retombée dans l'hérésie",
+            "Pour un relapse, la peine est le bûcher"
+          ]
+        },
+        {
+          "n": 21,
+          "kind": "react",
+          "tag": "30 mai 1431",
+          "caption": "Le 30 mai 1431, Jeanne est brûlée vive à Rouen, place du Vieux-Marché. Elle a 19 ans.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the old market square of Rouen at dawn with half-timbered houses, a silent crowd of townspeople seen from behind, heads bowed; far in the distance a thin column of grey smoke rises into a pale sky. No fire, no person visible at the stake. Calm and sober. wide shot",
+            "cast": [],
+            "file": "images/dossier-21.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 22,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Après Jeanne",
+          "caption": "En 1456, un second procès voulu par Charles VII annule le premier. Le 7 juillet, Jeanne est déclarée innocente.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Vous voyez ? Quand il faut agir, j'agis. Vingt-cinq ans après.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a bright royal chamber. Charles, now older (very thin, hunched, big drooping nose, grey hair under the tall fur hat, plum-purple robe), stands proudly on the right holding up a parchment with a big red wax seal, chest puffed out as if he had won a war; on the left a weary old clerk in black rolls his eyes. medium shot",
+            "cast": [
+              "charles"
+            ],
+            "file": "images/dossier-22.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 23,
+          "kind": "fact",
+          "tag": "1453",
+          "caption": "En 1453, la bataille de Castillon met fin à la guerre de Cent Ans. Seule Calais reste anglaise.",
+          "bubbles": [
+            {
+              "who": "Un archer anglais",
+              "text": "Cent seize ans de guerre. Je peux rentrer chez moi, maintenant ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a grey harbour on the English Channel. An exhausted old English archer, seen from behind, with an absurdly long white beard trailing down to his knees and a faded red-and-white tunic, trudges up the gangway of a wooden ship, leaning on his bent longbow like a walking stick. visual gag: the endless beard. from behind",
+            "cast": [],
+            "file": "images/dossier-23.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 24,
+          "kind": "react",
+          "tag": "Et depuis",
+          "caption": "En deux ans, une paysanne a délivré Orléans et fait sacrer un roi. Canonisée en 1920, elle reste un symbole.",
+          "bubbles": [
+            {
+              "who": "charles",
+              "text": "Roi de France en entier. Je savais que j'y arriverais tout seul.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a city square. Charles (very thin, hunched, big drooping nose, tall fur hat, plum-purple robe) stands in the foreground on the left, chest puffed out, thumb pointing proudly at himself; behind him towers an enormous golden equestrian statue of Jeanne holding the standard, which makes him look tiny. visual gag: the giant statue dwarfing the boastful king. low angle",
+            "cast": [
+              "charles",
+              "jeanne"
+            ],
+            "file": "images/dossier-24.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Le seul dessin de Jeanne fait de son vivant est un croquis griffonné en marge d'un registre par un greffier qui ne l'avait jamais vue.",
+        "source": "Jeanne-darc.info ; History Collection"
+      },
+      "story": "En 1429, la France a deux rois. Depuis 1337, les rois d'Angleterre réclament la couronne, et le traité de Troyes, en 1420, a écarté le dauphin Charles au profit de l'Anglais Henri V. Charles ne tient plus que les terres au sud de la Loire, et Orléans, assiégée depuis octobre 1428, risque de tomber.\nJeanne, née vers 1412 à Domrémy, dit entendre depuis ses 13 ans des voix de saints qui lui demandent de sauver le royaume. En février 1429, le capitaine de Vaucouleurs lui donne une escorte ; le 25 février, le dauphin la reçoit à Chinon, puis la fait examiner pendant trois semaines à Poitiers. Fin avril, elle entre dans Orléans ; blessée d'une flèche le 7 mai, elle repart au combat, et les Anglais lèvent le siège le 8 mai. Le 17 juillet, Charles est sacré à Reims : aux yeux de tous, il devient le vrai roi.\nPuis tout se grippe. Capturée à Compiègne le 23 mai 1430, Jeanne est vendue aux Anglais pour 10 000 écus. À Rouen, l'évêque Pierre Cauchon la juge pour hérésie. Elle abjure le 24 mai 1431, reprend ses habits d'homme le 27, est déclarée relapse et brûlée vive le 30 mai, à 19 ans.\nLe 7 juillet 1456, un procès de réhabilitation la déclare innocente. La guerre de Cent Ans s'achève en 1453 à Castillon. Canonisée en 1920, Jeanne est devenue l'un des grands symboles de la France.",
+      "sources": [
+        {
+          "title": "Larousse — Sainte Jeanne d'Arc",
+          "url": "https://www.larousse.fr/encyclopedie/personnage/wd/125788"
+        },
+        {
+          "title": "Universalis — Jeanne d'Arc : les procès",
+          "url": "https://www.universalis.fr/encyclopedie/jeanne-d-arc/2-les-proces/"
+        },
+        {
+          "title": "Futura — La guerre de Cent Ans en 5 dates clés",
+          "url": "https://www.futura-sciences.com/sciences/dossiers/histoire-guerre-cent-ans-5-dates-cles-1324/"
+        },
+        {
+          "title": "Futura — Pourquoi Édouard III veut-il le trône de France ?",
+          "url": "https://www.futura-sciences.com/sciences/questions-reponses/histoire-edouard-iii-veut-il-trone-france-18202/"
+        },
+        {
+          "title": "History.com — Siege of Orléans",
+          "url": "https://www.history.com/topics/middle-ages/siege-of-orleans"
+        },
+        {
+          "title": "Aleteia — Les incroyables réponses de Jeanne d'Arc lors de son procès",
+          "url": "https://fr.aleteia.org/2019/04/28/les-incroyables-reponses-de-jeanne-darc-lors-de-son-proces/"
+        },
+        {
+          "title": "Jeanne-darc.info — Art & Image",
+          "url": "https://www.jeanne-darc.info/art-image/"
+        },
+        {
+          "title": "History Collection — No verified portrait of Joan of Arc exists",
+          "url": "https://historycollection.com/joan-of-arc-painting-no-verified-portrait-exists/"
+        }
+      ],
+      "from_stock": "20261120-0653-jeanne-d-arc"
+    },
     {
       "id": "actu",
       "label": "L’Actu du jour",
@@ -351,6 +958,820 @@
       ]
     },
     {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le stéthoscope, ou comment écouter un cœur sans rougir",
+      "tagline": "En 1816, un médecin trop pudique roule un cahier en tube et invente l’objet le plus célèbre de la médecine",
+      "teaser": "Un médecin, une patiente, un cahier d’écolier et beaucoup de gêne : la naissance très pudique d’un objet que tout le monde connaît.",
+      "minutes": 2,
+      "theme": "Médecine et santé",
+      "art": {
+        "subject": "how the French doctor Laennec, too embarrassed to press his ear on a young woman's chest, rolled paper into a tube in 1816 and invented the stethoscope",
+        "setting": "a bright ward of a Paris hospital in 1816 with a simple wooden bed and white curtains; a small wooden courtyard with a long timber beam",
+        "era": "1810s France, Napoleonic-era clothes",
+        "props": {
+          "notebook": "a thick paper notebook of plain white pages, rolled into a tight tube",
+          "cylinder": "a plain light-brown wooden tube about one foot long with a wide funnel at one end, the early stethoscope",
+          "fan": "a small folding fan painted with pink flowers"
+        }
+      },
+      "cast": [
+        {
+          "id": "laennec",
+          "name": "Le docteur Laennec",
+          "look": "René Laennec, a very tall, very thin, slightly stooped French doctor of 35, pale skin, long narrow face, short curly sandy-blond hair with long sideburns, a deep crimson-red tailcoat as main colour, high white cravat, black trousers, a small black doctor's bag",
+          "file": "cast/cultureg-laennec.png",
+          "status": "done",
+          "role": "the painfully bashful doctor who blushes at the idea of touching a patient; fiddles with his cravat, always keeps an awkward polite distance, but lights up when he discovers something"
+        },
+        {
+          "id": "patiente",
+          "name": "La patiente",
+          "look": "a short, plump, cheerful young Parisian woman of about 25, light olive skin, a big pile of glossy black ringlet curls under a frilly white lace bonnet, a high-waisted Empire dress in bright sky-blue as main colour, white shawl, the fan always in her hand",
+          "file": "cast/cultureg-patiente.png",
+          "status": "done",
+          "role": "the chatty patient who never stops talking about her symptoms and her cousin; waves the fan non-stop, totally unbothered by anything"
+        }
+      ],
+      "cover": {
+        "prompt": "a bright hospital ward in 1816. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress, the fan) sits on the wooden bed on the right, chatting happily; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) stands on the left, leaning in from as far away as possible, pressing the rolled notebook to her chest with an outstretched arm, ear at the other end, blushing. medium wide shot",
+        "cast": [
+          "laennec",
+          "patiente"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1816",
+          "caption": "Paris, 1816. Comment le docteur Laennec va-t-il écouter ce cœur sans y coller l’oreille ?",
+          "bubbles": [
+            {
+              "who": "patiente",
+              "text": "Ça palpite, ça cogne, ça galope… Et ma cousine aussi, d’ailleurs !",
+              "side": "r"
+            },
+            {
+              "who": "laennec",
+              "text": "Je… vais écouter. Quelque part. Prudemment.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a bright hospital ward with white curtains and a simple wooden bed. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress) sits on the bed on the right, talking with big gestures, waving the fan; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) on the far left, clutching his black bag against his chest, tugging his cravat nervously, a light-blue sweat drop. wide shot",
+            "cast": [
+              "patiente",
+              "laennec"
+            ],
+            "file": "images/cultureg-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "Le problème",
+          "caption": "À l’époque, on écoute le cœur l’oreille collée à la poitrine. Sur une jeune femme, Laennec trouve ça indécent.",
+          "bubbles": [
+            {
+              "who": "patiente",
+              "text": "Allez-y, docteur, mon cœur ne mord pas.",
+              "side": "r"
+            },
+            {
+              "who": "laennec",
+              "text": "Mon oreille et votre poitrine n’ont pas été présentées.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the hospital ward. Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) alone in the frame, bent stiffly at the waist, his ear frozen a few centimetres away from an off-screen patient, eyes squeezed shut, pink blush on the cheeks, hands held up in a polite refusal. medium close-up",
+            "cast": [
+              "laennec"
+            ],
+            "file": "images/cultureg-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Plan B",
+          "caption": "Plan B : tapoter la poitrine et écouter si ça sonne creux. Mais la corpulence et les vêtements étouffent tout.",
+          "bubbles": [
+            {
+              "who": "laennec",
+              "text": "Toc, toc ?",
+              "side": "l"
+            },
+            {
+              "who": "patiente",
+              "text": "Entrez !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "in the hospital ward. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress, the fan) sits on the bed in the foreground on the right, wrapped in many layers of shawls; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) behind her on the left, tapping on her shoulder blade with two fingers like knocking on a door, head tilted to listen, puzzled frown. medium shot",
+            "cast": [
+              "laennec",
+              "patiente"
+            ],
+            "file": "images/cultureg-03.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Souvenir",
+          "caption": "Il pense à un jeu d’enfants : l’un gratte une poutre, l’autre, oreille collée au bout, entend tout.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a small paved courtyard in 1816 with one long timber beam lying on the ground across the whole picture. At the far right end of the beam a little boy (brown hair, 1810s brown jacket and short trousers, bare hands) kneels and scratches the wood with a pin; at the near left end a little girl (black braid, long 1810s pale-yellow dress) lies flat on her tummy with her ear pressed right against the end of the beam, eyes wide with wonder, clearly listening. In the background, Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) has stopped dead in his tracks, his one black bag dropped at his feet, staring at the children with a sudden idea, small yellow sparkles above his head. high angle",
+            "cast": [
+              "laennec"
+            ],
+            "file": "images/cultureg-04.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "L’idée",
+          "caption": "Il roule un cahier en tube bien serré, pose un bout sur la poitrine et l’oreille à l’autre.",
+          "bubbles": [
+            {
+              "who": "patiente",
+              "text": "Un cornet ? Vous allez me lire l’avenir ?",
+              "side": "r"
+            },
+            {
+              "who": "laennec",
+              "text": "Chut. Votre cœur parle. Laissez-le finir.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the hospital ward, seen over Laennec's shoulder. Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) in the foreground on the left, seen from behind, twisting the notebook into a tight tube with both hands, concentrating; the patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress) sitting on the bed on the right, chattering and pointing curiously at the tube with the closed fan. over-the-shoulder",
+            "cast": [
+              "laennec",
+              "patiente"
+            ],
+            "file": "images/cultureg-05.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 6,
+          "kind": "react",
+          "tag": "Surprise",
+          "caption": "Surprise : le cœur s’entend plus fort et plus net qu’avec l’oreille collée. Et sans toucher personne.",
+          "bubbles": [
+            {
+              "who": "laennec",
+              "text": "Je vous entends battre comme si j’étais dedans !",
+              "side": "l"
+            },
+            {
+              "who": "patiente",
+              "text": "Docteur… on n’a pas été présentés.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "close on Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) bent forward on the left, his ear pressed to one end of the rolled white paper tube held horizontally; the other end of the tube rests flat on the chest of the patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress) seated on the right, who looks down at the tube, startled. His eyes huge with joy, mouth open in amazement, small yellow sparkles around his head. No hearts, no animals, nothing in her arms except the closed fan. close-up",
+            "cast": [
+              "laennec",
+              "patiente"
+            ],
+            "file": "images/cultureg-06.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi le tube marche mieux que l’oreille",
+          "steps": [
+            "Le cœur fait vibrer la poitrine : c’est un son",
+            "À l’air libre, ce son s’éparpille dans toutes les directions",
+            "Dans un tube, il reste canalisé jusqu’à l’oreille",
+            "Moins de son perdu : on entend mieux, et sans contact"
+          ],
+          "joke": "La pudeur venait d’inventer un instrument médical."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "Le stéthoscope",
+          "caption": "Il remplace le papier par un tube de bois démontable, baptisé stéthoscope : « examiner la poitrine », en grec.",
+          "bubbles": [
+            {
+              "who": "laennec",
+              "text": "Enfin une distance respectable entre mes patients et moi.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) alone, seen from below, proudly holding the cylinder up at arm's length like a trophy, chin raised, a satisfied little smile, plain pale background with a simple wooden workbench and wood shavings at his feet. low angle",
+            "cast": [
+              "laennec"
+            ],
+            "file": "images/cultureg-08.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 9,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un vrai stéthoscope de Laennec, vers 1820",
+          "text": "Un simple tube de bois d’environ trente centimètres, percé au centre, qui se démonte pour tenir dans la poche. L’oreille d’un côté, la poitrine de l’autre.",
+          "photo": {
+            "commons": "File:Laennecs stethoscope, c 1820. (9660576833).jpg",
+            "credit": "Science Museum London / Science and Society Picture Library",
+            "license": "CC BY-SA 2.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Laennecs_stethoscope,_c_1820._(9660576833).jpg",
+            "file": "images/photo-9-laennecs-stethoscope-c-1820-9660576.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 10,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Le stéthoscope est né de la gêne : un tube canalise le son du cœur jusqu’à l’oreille du médecin.",
+          "bubbles": [
+            {
+              "who": "patiente",
+              "text": "Docteur, ça repalpite ! Et ma cousine aussi, d’ailleurs…",
+              "side": "r"
+            },
+            {
+              "who": "laennec",
+              "text": "Je vous écoute. D’une distance tout à fait convenable.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the hospital ward, seen from slightly above. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress, holding one single fan) sits on the bed on the right, chattering happily; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) stands on the left, bent forward, perfectly calm, his ear pressed to the narrow end of the wooden cylinder while its wide funnel end rests on her chest, the cylinder held horizontally between them like a listening tube (not a megaphone, not pointed at her face), his other hand behind his back, serene smile. high angle",
+            "cast": [
+              "patiente",
+              "laennec"
+            ],
+            "file": "images/cultureg-10.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Laennec, l’inventeur du stéthoscope, est mort en 1826, à peine dix ans plus tard, d’une tuberculose : la maladie des poumons qu’il avait appris à écouter.",
+        "source": "AP-HP — René Laennec ; PBS NewsHour"
+      },
+      "story": "En 1816, René Laennec, médecin à l’hôpital Necker à Paris, doit examiner une jeune femme qui souffre du cœur. À l’époque, on écoute le cœur en collant directement l’oreille contre la poitrine du malade. Laennec juge le geste inconvenant avec une jeune patiente, et l’autre méthode, tapoter la poitrine pour écouter si elle sonne creux, ne donne rien : sa corpulence et ses vêtements étouffent les sons.\nIl pense alors à un phénomène bien connu des enfants : quand on gratte une poutre à un bout, on entend nettement le bruit en collant l’oreille à l’autre bout. Il roule un cahier en tube serré, en pose une extrémité sur la poitrine de la patiente et l’oreille sur l’autre. Il entend les battements bien plus nettement qu’avec l’oreille posée directement, parce que le tube canalise le son au lieu de le laisser se disperser.\nIl remplace vite le papier par un cylindre de bois d’environ trente centimètres, percé au centre et démontable, qu’il baptise stéthoscope, du grec stethos, la poitrine, et skopein, examiner. En 1819, il publie un traité d’« auscultation médiate » qui relie chaque bruit entendu à une maladie du cœur ou des poumons, vérifiée lors des autopsies. Ironie cruelle : Laennec meurt en 1826, dix ans seulement après son invention, d’une tuberculose, la maladie des poumons qu’il avait appris à reconnaître à l’oreille.",
+      "sources": [
+        {
+          "title": "AP-HP — René Laennec, inventeur du stéthoscope",
+          "url": "https://aphp.fr/node/2326"
+        },
+        {
+          "title": "PBS NewsHour — A curious inspiration for the first stethoscope",
+          "url": "https://www.pbs.org/newshour/health/a-curious-inspiration-for-the-first-stethoscope"
+        },
+        {
+          "title": "Allodocteurs — Histoire de la médecine : l’invention du stéthoscope",
+          "url": "https://www.allodocteurs.fr/se-soigner/histoire-de-la-medecine/histoire-de-la-medecine-l-invention-du-stethoscope_22889.html"
+        },
+        {
+          "title": "Science Museum Group — Laennec’s stethoscope",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co90986/laennecs-stethoscope"
+        }
+      ],
+      "from_stock": "20261116-2043-stethoscope-sans-rougir"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite Historique",
+      "title": "Le talon haut, une chaussure de cavalier que Louis XIV a peinte en rouge",
+      "tagline": "Avant les escarpins, il y avait des cavaliers perses, des marquis qui boitent et un roi très pointilleux sur la couleur",
+      "teaser": "Ils boitaient, se tordaient les chevilles et en redemandaient. Non, ce n’est pas un défilé de mode : c’est la cour de Louis XIV.",
+      "minutes": 2,
+      "theme": "Mode et luxe",
+      "art": {
+        "subject": "how high heels were first men's riding shoes from Persia, became a sign of nobility in Europe, and how Louis XIV reserved red heels for a few chosen nobles",
+        "setting": "the gravel gardens and a gilded parquet gallery of a French royal palace in the 1670s, and its stone courtyard with a horse",
+        "era": "1670s France, court of Louis XIV",
+        "props": {
+          "redheels": "men's shoes with a tall red heel and a big ribbon bow on top",
+          "beigeheels": "men's shoes with a tall plain beige heel and a small bow",
+          "cane": "a tall ebony walking cane with a gold knob"
+        }
+      },
+      "cast": [
+        {
+          "id": "louis",
+          "name": "Louis XIV",
+          "look": "Louis XIV in his thirties, short but holding himself extremely upright, an enormous long black curly wig falling to his chest, thin black moustache, pale skin, a shimmering bright gold brocade coat as main colour, white lace cravat, white stockings, the redheels, the cane always in hand",
+          "file": "cast/insolite-louis.png",
+          "status": "pending",
+          "role": "the vain king who uses heels to look taller and treats red heels as a privilege; chin always raised, looks down his nose, enjoys making people wait",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (e664dce9-25be-4536-ba7d-570a20984564)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+        },
+        {
+          "id": "marquis",
+          "name": "Le marquis",
+          "look": "a tall gangly courtier with very long thin legs and knobbly knees, a towering curly chestnut-brown wig, long face with a hopeful grin, pale skin, a pale mint-green silk coat as main colour, pink ribbons at the knees, the beigeheels",
+          "file": "cast/insolite-marquis.png",
+          "status": "done",
+          "role": "the envious social climber desperate for red heels; wobbles and trips constantly on his heels, flatters the king, never gives up"
+        }
+      ],
+      "cover": {
+        "prompt": "a gilded parquet gallery in a 1670s French palace. Louis (short, very upright, enormous black curly wig, gold brocade coat, the redheels, the cane) stands proudly on the right, chin raised, showing off one red heel; the marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) on the left, wobbling with his arms out for balance, staring enviously at the red heel. medium wide shot",
+        "cast": [
+          "louis",
+          "marquis"
+        ],
+        "file": "images/insolite-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Années 1670",
+          "caption": "À la cour de Louis XIV, années 1670. Pourquoi ces messieurs marchent-ils tous perchés sur des talons hauts ?",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "J’ai gagné trois centimètres. Et une cheville foulée.",
+              "side": "l"
+            },
+            {
+              "who": "louis",
+              "text": "Tenez-vous droit, marquis. Nous sommes à la cour, pas à la ferme.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a long gilded parquet gallery in a French palace. The marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) in the foreground on the left, wobbling on one foot, arms flailing, one ankle bent; Louis (short, very upright, enormous black curly wig, gold brocade coat, the redheels, the cane) walking past further back on the right, perfectly steady, nose in the air. wide shot",
+            "cast": [
+              "marquis",
+              "louis"
+            ],
+            "file": "images/insolite-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "À l’origine",
+          "caption": "Le talon vient des cavaliers perses : il cale le pied dans l’étrier, pour tenir solidement en selle.",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "À cheval, c’est parfait. C’est la descente qui coince.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a stone palace courtyard. The marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) alone, trying to climb down from a brown horse, one heel stuck in the stirrup, his body hanging sideways upside down along the horse's flank, wig slipping; the horse looks back at him, unimpressed. low angle",
+            "cast": [
+              "marquis"
+            ],
+            "file": "images/insolite-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Vers 1600",
+          "caption": "Vers 1600, la mode gagne l’Europe. Les nobles adorent : marcher mal prouve qu’on ne travaille pas aux champs.",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "Impossible de labourer avec ça.",
+              "side": "l"
+            },
+            {
+              "who": "louis",
+              "text": "C’est exactement le but.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the palace gravel garden with a clipped hedge. The marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) on the left, heels sunk deep in the gravel, leaning on a garden rake to stay upright; Louis XIV (short, very upright, an enormous LONG black curly wig falling in ringlets down to his chest, thin black moustache, long gold brocade coat to the knees, white lace cravat, white stockings, the cane in hand) seated on a stone bench on the right in profile, legs crossed to show off men's shoes with tall red heels and big ribbon bows. medium shot",
+            "cast": [
+              "marquis",
+              "louis"
+            ],
+            "file": "images/insolite-03.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le talon rouge",
+          "caption": "Louis XIV les porte rouges. Au début des années 1670, il réserve le talon rouge à quelques nobles choisis.",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "Sire, un petit talon rouge ? Juste le gauche ?",
+              "side": "l"
+            },
+            {
+              "who": "louis",
+              "text": "Le rouge se mérite. Le beige vous va si bien.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "in the gilded parquet gallery, only two people. Louis XIV (short, very upright, enormous long black curly wig down to his chest, thin black moustache, gold brocade coat, the cane) stands on the right in profile, chin raised, looking down his nose, one foot with a red heel shoe pushed slightly forward; the marquis (tall, gangly, towering curly chestnut wig, mint-green coat, pink knee ribbons, beige heels) kneels on the floor on the left facing him, hands clasped in prayer, huge pleading puppy eyes. No other person, no one in the foreground. medium shot",
+            "cast": [
+              "louis",
+              "marquis"
+            ],
+            "file": "images/insolite-04.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Louis XIV et ses talons rouges, en 1701",
+          "text": "Sur son portrait officiel peint par Hyacinthe Rigaud, le roi a 63 ans. Il montre toujours ses jambes et ses talons rouges sous le manteau du sacre.",
+          "photo": {
+            "commons": "File:Louis XIV of France.jpg",
+            "credit": "Hyacinthe Rigaud",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Louis_XIV_of_France.jpg",
+            "file": "images/photo-5-louis-xiv-of-france-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment le talon a changé de pied",
+          "steps": [
+            "Perse : le talon cale le pied du cavalier dans l’étrier",
+            "Vers 1600 : la mode arrive en Europe, chez les nobles",
+            "XVIIIe siècle : les Lumières jugent le talon frivole ; les hommes passent au plat",
+            "1789 : la Révolution enterre les talons rouges de Versailles"
+          ],
+          "joke": "Les femmes, elles, l’ont gardé. Avec moins de chevaux autour."
+        },
+        {
+          "n": 7,
+          "kind": "react",
+          "tag": "En résumé",
+          "caption": "Né pour les cavaliers, adopté par les rois, le talon haut n’a été lâché par les hommes qu’au XVIIIe siècle.",
+          "bubbles": [
+            {
+              "who": "marquis",
+              "text": "Rouges ! Trois centimètres de plus. Et deux entorses.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the marquis (tall, gangly, chestnut wig askew, mint-green coat) alone, lying flat on his back on the gilded parquet, both legs raised in the air to show off brand-new redheels, a blissful ecstatic grin, small red hearts above his head. close-up",
+            "cast": [
+              "marquis"
+            ],
+            "file": "images/insolite-07.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Au début des années 1670, Louis XIV réservait les talons rouges à une poignée de nobles : un insigne d’honneur qu’on portait aux pieds.",
+        "source": "Getty Museum — Louis XIV’s red heels"
+      },
+      "story": "Le talon haut n’a pas été inventé pour les femmes. Il vient des cavaliers de Perse : un talon cale le pied dans l’étrier et aide à tenir solidement en selle. Vers 1600, cette mode arrive en Europe, et les nobles l’adoptent avec enthousiasme. À pied, le talon est peu pratique, mais c’est justement l’intérêt : il montre qu’on ne travaille pas aux champs, et il fait paraître plus grand.\nLouis XIV en fait un symbole. Le roi porte des talons rouges dès le début de son règne, et au début des années 1670 il en réserve l’usage, à la cour, à quelques nobles choisis : le talon rouge devient un insigne d’honneur. En 1701, sur le célèbre portrait peint par Hyacinthe Rigaud, le roi de 63 ans montre encore fièrement ses talons rouges. On en verra à Versailles jusqu’à la Révolution.\nAu XVIIIe siècle, la philosophie des Lumières valorise la raison et la simplicité : le talon passe pour frivole et féminin, et les hommes reviennent peu à peu aux chaussures plates. Après 1789, leurs vêtements deviennent plus sobres, ce que le psychologue John Carl Flügel appellera en 1930 la « grande renonciation masculine ». Les femmes, elles, gardent les talons, qui deviennent avec le temps un accessoire presque exclusivement féminin.",
+      "sources": [
+        {
+          "title": "Getty Museum — Louis XIV’s red heels",
+          "url": "https://blogs.getty.edu/iris/?p=23772"
+        },
+        {
+          "title": "Slate.fr — Les talons hauts, une histoire de pouvoir",
+          "url": "https://www.slate.fr/story/175827/mode-talons-hauts-histoire-pouvoir-genres"
+        },
+        {
+          "title": "Quartz — Why did men stop wearing high heels, anyway?",
+          "url": "https://qz.com/409254/why-did-men-stop-wearing-high-heels-anyway"
+        },
+        {
+          "title": "Wikimedia Commons — Louis XIV par Hyacinthe Rigaud (1701)",
+          "url": "https://en.vikidia.org/wiki/File:Louis_XIV_of_France.jpg"
+        }
+      ],
+      "from_stock": "20261116-2045-talon-haut-cavalier-rouge"
+    },
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "« Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé",
+      "tagline": "Dix-sept blessures, une pièce de théâtre et aucun acte de naissance",
+      "teaser": "Le soldat le plus fier de France a donné son nom à un défaut. Petit problème : personne n’a jamais retrouvé sa trace.",
+      "minutes": 2,
+      "theme": "Expression française",
+      "art": {
+        "subject": "how a legendary, probably invented Napoleonic soldier and a Paris stage comedy of 1831 gave French its word for blind, excessive patriotism",
+        "setting": "a small sports bar of today with a TV screen showing a football match; a 1810s army camp with tents; a small Paris theatre stage of 1831 with red curtains and footlights; a 19th-century café table",
+        "era": "Napoleonic wars and 1830s Paris, with a football fan of today",
+        "props": {
+          "cockade": "a large round blue-white-red ribbon cockade",
+          "bandages": "many white cloth bandages wrapped around the head, both arms and one leg",
+          "screen": "a big flat TV screen on the wall showing green football grass and tiny players, no logos"
+        }
+      },
+      "cast": [
+        {
+          "id": "chauvin",
+          "name": "Nicolas Chauvin",
+          "look": "Nicolas Chauvin, a short and stocky young French soldier of Napoleon's army, round chin always lifted, huge bushy chestnut-brown moustache and sideburns, light peach skin, a dark blue soldier's coat with white crossbelts and red cuffs as main colour, white trousers, a tall black bicorne hat with the cockade, the bandages all over him",
+          "file": "cast/origine-chauvin.png",
+          "status": "done",
+          "role": "the legendary over-the-top patriot who thinks everything French is the best in the world; naive, puffed-up chest, salutes at every occasion, never doubts for a second"
+        },
+        {
+          "id": "karim",
+          "name": "Karim",
+          "look": "Karim, a tall and lanky football fan of today in his thirties, brown skin, cleanly shaved bald head, short black beard, a bright red hoodie as main colour, a blue-white-red stripe of face paint on one cheek, a glass of soda in his hand",
+          "file": "cast/origine-karim.png",
+          "status": "done",
+          "role": "a fan who swears his national team never commits a foul; arguing with total bad faith, jumps up and points at the screen"
+        }
+      ],
+      "cover": {
+        "prompt": "a small sports bar of today. Karim (tall, lanky, bald, black beard, bright red hoodie, face paint) on the left jumps up from his stool, pointing furiously at the screen; next to him on the right, Nicolas Chauvin (short, stocky, huge chestnut moustache, dark blue Napoleonic coat, bicorne with the cockade, the bandages) stands on the next stool, saluting the screen, chest puffed out, tears of pride in his eyes. medium wide shot",
+        "cast": [
+          "karim",
+          "chauvin"
+        ],
+        "file": "images/origine-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium",
+        "qa": "ok"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "« Chauvin » se dit d’un patriote aveugle. Le mot vient d’un soldat… qui n’a peut-être jamais existé.",
+          "bubbles": [
+            {
+              "who": "karim",
+              "text": "Hors-jeu ? Impossible. Un Français n’est jamais hors-jeu !",
+              "side": "l"
+            },
+            {
+              "who": "La serveuse",
+              "text": "Ce que tu es chauvin, Karim…",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small sports bar of today, the screen on the wall, nobody else in the room. Karim (tall, lanky, bald, brown skin, black beard, bright red hoodie, face paint) leaps off his bar stool on the left, soda splashing out of his glass, arm stretched toward the screen in outrage; on the right behind the counter, a calm waitress (light skin, grey curls, a mint-green blouse under a black apron) dries a glass, rolling her eyes. Only these two people, no crowd, no heads in the foreground, no animal; everything in bright flat colours. wide shot",
+            "cast": [
+              "karim"
+            ],
+            "file": "images/origine-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "La légende",
+          "caption": "On raconte que Nicolas Chauvin, né à Rochefort vers 1780, a servi Napoléon et reçu dix-sept blessures.",
+          "bubbles": [
+            {
+              "who": "Un officier",
+              "text": "Vous pourriez en éviter une ou deux, Chauvin ?",
+              "side": "l"
+            },
+            {
+              "who": "chauvin",
+              "text": "Et priver la France de mon sang ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a Napoleonic army camp with a few tents. Nicolas Chauvin (short, stocky, huge chestnut moustache, dark blue coat with white crossbelts, bicorne with the cockade) on the right, covered with the bandages from head to toe, one arm in a sling, stands rigidly at attention and salutes proudly with the other hand; on the left an exhausted officer with a grey moustache and a green coat holds his forehead in despair. low angle",
+            "cast": [
+              "chauvin"
+            ],
+            "file": "images/origine-02.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le hic",
+          "title": "Dix-sept blessures, zéro trace",
+          "steps": [
+            "Aucun registre de l’armée ne mentionne ce Nicolas Chauvin",
+            "Pour l’historien Gérard de Puymège, c’est une légende née après 1815",
+            "Chansonniers, auteurs de vaudeville et dessinateurs l’ont façonnée peu à peu",
+            "Il rappelle un vieux personnage comique : le soldat fanfaron du théâtre romain"
+          ],
+          "joke": "Le héros a tout eu : des blessures, des médailles… sauf un acte de naissance."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Paris, 1831",
+          "caption": "19 mars 1831, aux Folies-Dramatiques : la pièce « La Cocarde tricolore » lance Chauvin et sa vraie réplique culte.",
+          "bubbles": [
+            {
+              "who": "chauvin",
+              "text": "Je suis Français, je suis Chauvin !",
+              "side": "r"
+            },
+            {
+              "who": "Le public",
+              "text": "Ha ha ha !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small Paris theatre of 1831 seen from behind the audience: rows of dark heads and top hats in the foreground, shaking with laughter. On the lit stage between red curtains, Nicolas Chauvin (short, stocky, huge chestnut moustache, dark blue coat with white crossbelts, bicorne with the cockade) strikes a heroic pose, one foot on a drum, fist on his heart, completely serious. from behind",
+            "cast": [
+              "chauvin"
+            ],
+            "file": "images/origine-04.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Charlet, l’homme qui dessinait les grognards",
+          "text": "Le lithographe Nicolas-Toussaint Charlet, en 1830. Selon l’Académie française, ses images de vieux soldats de l’Empire ont popularisé la figure de Chauvin.",
+          "photo": {
+            "commons": "File:Charlet (BM 1895,0617.298).jpg",
+            "credit": "Print made by: Louis Dupré Printed by: Lemercier & Cie",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Charlet_(BM_1895,0617.298).jpg",
+            "file": "images/photo-5-charlet-bm-1895-0617-298-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "XIXe siècle",
+          "caption": "Le nom devient un mot : un « chauvin » est un patriote naïf, qui juge son pays supérieur à tout.",
+          "bubbles": [
+            {
+              "who": "chauvin",
+              "text": "Le fromage étranger ? Inutile de goûter : il a perdu.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 19th-century café table. Nicolas Chauvin (short, stocky, huge chestnut moustache, bicorne with the cockade, dark blue coat) alone, pushing away a plate of pale foreign cheese with one finger without looking at it, nose turned up in disdain, while hugging a big round French cheese against his chest with his other arm. close-up",
+            "cast": [
+              "chauvin"
+            ],
+            "file": "images/origine-06.webp",
+            "status": "done",
+            "attempts": 1,
+            "qa": "ok"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment un soldat devient un défaut",
+          "steps": [
+            "Après 1815 : on surnomme ainsi les vieux soldats fous de Napoléon",
+            "1831 : la pièce rend le nom célèbre et ridicule",
+            "Le mot s’étend à tout patriotisme aveugle : le « chauvinisme »",
+            "Années 1930 : l’anglais parle de « male chauvinism » pour les sexistes"
+          ],
+          "joke": "Un mot français qui s’exporte bien. Chauvin aurait été ravi."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "« Chauvin » vient de Nicolas Chauvin, soldat de légende sans doute inventé, que le théâtre de 1831 a rendu ridicule.",
+          "bubbles": [
+            {
+              "who": "karim",
+              "text": "Un soldat inventé ? Encore un coup des Anglais.",
+              "side": "l"
+            },
+            {
+              "who": "La serveuse",
+              "text": "Tu vois ? Chauvin.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back in the small sports bar of today, the same as the first panel: wooden counter, bar stool, a TV screen on the wall showing only a plain flat green rectangle with a few tiny cartoon players, no photo, no text, no scoreboard. Karim (tall, lanky, bald, brown skin, black beard, bright red hoodie, face paint) sits back on his stool on the left, both arms firmly crossed on his chest with both hands tucked under his armpits (exactly two arms, no hand at his chin), chin raised, eyes half-closed in total bad faith; the waitress (light skin, a full head of shoulder-length wavy grey curls, NOT bald, mint-green blouse, long black apron) leans on the counter on the right, pointing at him with her drying cloth, deadpan. medium shot",
+            "cast": [
+              "karim"
+            ],
+            "file": "images/origine-08.webp",
+            "redo": true,
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Le mot « chauvinisme » est passé en anglais au XIXe siècle ; dans les années 1930, « male chauvinism » y désigne déjà le sexisme.",
+        "source": "Wordorigins.org — Chauvinism"
+      },
+      "story": "Un « chauvin », c’est quelqu’un qui admire son pays de façon naïve et excessive, au point de le juger supérieur à tout. Le mot vient d’un nom propre : Nicolas Chauvin. Selon la légende, ce soldat né à Rochefort vers 1780 aurait servi la République puis Napoléon, reçu dix-sept blessures, un sabre d’honneur et une petite pension, sans jamais cesser d’idolâtrer l’Empereur.\nLe problème, c’est que les historiens n’ont retrouvé aucune trace de lui. Pour Gérard de Puymège, Chauvin est une figure inventée peu à peu après la chute de Napoléon, sous la Restauration et la monarchie de Juillet, par des chansonniers, des auteurs de vaudeville et des dessinateurs. Il rappelle le soldat fanfaron du théâtre antique. Selon l’Académie française, les lithographies de Nicolas-Toussaint Charlet, qui montraient de vieux grognards, ont popularisé sa figure.\nLe 19 mars 1831, au théâtre des Folies-Dramatiques, à Paris, les frères Cogniard créent « La Cocarde tricolore ». Chauvin y est un jeune soldat ridicule, qui lance : « Je suis Français, je suis Chauvin ! » Le public rit, et le nom devient un mot pour désigner les patriotes aveugles, puis donne « chauvinisme ».\nLe mot voyage : l’anglais l’adopte au XIXe siècle et, dans les années 1930, parle de « male chauvinism » pour le sexisme.",
+      "sources": [
+        {
+          "title": "Dictionnaire de l’Académie française, 9e édition — Chauvin",
+          "url": "https://dictionnaire-academie.fr/article/A9C1838"
+        },
+        {
+          "title": "Wikipédia (en) — Nicolas Chauvin",
+          "url": "https://en.wikipedia.org/wiki/Nicolas_Chauvin"
+        },
+        {
+          "title": "Wikipédia (en) — The Tricolour Cockade",
+          "url": "https://en.wikipedia.org/wiki/The_Tricolour_Cockade"
+        },
+        {
+          "title": "Wordorigins.org — Chauvinism",
+          "url": "https://wordorigins.org/big-list-entries/chauvinism"
+        },
+        {
+          "title": "Wikimedia Commons — Charlet, lithographie de Louis Dupré (1830)",
+          "url": "https://download.osmand.net/wiki/File:Charlet_(BM_1895,0617.298).jpg"
+        }
+      ],
+      "from_stock": "20261118-2046-chauvin-soldat-imaginaire"
+    },
+    {
       "id": "quiz",
       "kind": "citation",
       "label": "Qui a dit ça ?",
@@ -447,5 +1868,6 @@
         }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-22T05:05:28.504114+01:00"
 }

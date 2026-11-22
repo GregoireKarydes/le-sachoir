@@ -1,6 +1,84 @@
 {
- "updated_at": "2026-11-22T04:05:00.563907+01:00",
+ "updated_at": "2026-11-22T05:05:28.504114+01:00",
  "editions": [
+  {
+   "date": "2026-11-22",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Jeanne d’Arc : 17 ans, pas d’armée, et elle remet un roi sur son trône",
+     "kind": "",
+     "url": "histoires/2026-11-22-jeanne-d-arc-17-ans-pas-d-armee-et-elle-remet-un-roi-sur-son-trone/",
+     "theme": "Grandes personnalités",
+     "minutes": 6,
+     "tagline": "De Domrémy au bûcher de Rouen : comment une paysanne a retourné la guerre de Cent Ans en deux ans",
+     "cases": 24,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Une preuve géante, un candidat de moins et un budget au régime",
+     "kind": "",
+     "url": "histoires/2026-11-22-une-preuve-geante-un-candidat-de-moins-et-un-budget-au-regime/",
+     "theme": "",
+     "minutes": 3,
+     "tagline": "Un mathématicien et une IA disent avoir prouvé l’hypothèse de Riemann, François Ruffin renonce à 2027, la rue défile un sixième samedi et l’Europe rabote son budget.",
+     "cases": 10,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Le stéthoscope, ou comment écouter un cœur sans rougir",
+     "kind": "",
+     "url": "histoires/2026-11-22-le-stethoscope-ou-comment-ecouter-un-cur-sans-rougir/",
+     "theme": "Médecine et santé",
+     "minutes": 2,
+     "tagline": "En 1816, un médecin trop pudique roule un cahier en tube et invente l’objet le plus célèbre de la médecine",
+     "cases": 10,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite Historique",
+     "title": "Le talon haut, une chaussure de cavalier que Louis XIV a peinte en rouge",
+     "kind": "",
+     "url": "histoires/2026-11-22-le-talon-haut-une-chaussure-de-cavalier-que-louis-xiv-a-peinte/",
+     "theme": "Mode et luxe",
+     "minutes": 2,
+     "tagline": "Avant les escarpins, il y avait des cavaliers perses, des marquis qui boitent et un roi très pointilleux sur la couleur",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "origine",
+     "label": "D’où ça vient ?",
+     "title": "« Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé",
+     "kind": "",
+     "url": "histoires/2026-11-22-arrete-d-etre-chauvin-le-plus-patriote-des-soldats-n-a-peut-etre/",
+     "theme": "Expression française",
+     "minutes": 2,
+     "tagline": "Dix-sept blessures, une pièce de théâtre et aucun acte de naissance",
+     "cases": 8,
+     "cover": "images/origine-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Qui a dit ça ?",
+     "title": "Ces phrases ont un propriétaire (sauf une)",
+     "kind": "citation",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-21",
    "demo": false,

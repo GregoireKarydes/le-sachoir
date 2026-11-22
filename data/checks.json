@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T04:05+01:00",
+ "updated_at": "2026-11-22T05:05+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -85,24 +85,19 @@
    ]
   },
   {
-   "path": "stock/origine/20261118-2046-chauvin-soldat-imaginaire",
-   "titles": {
-    "origine": "« Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé"
-   },
-   "errors": [],
-   "warnings": [
-    "origine : fiches chauvin et karim : même couleur dominante (red), à différencier"
-   ]
-  },
-  {
    "path": "editions/2026-11-22",
    "titles": {
+    "dossier": "Jeanne d’Arc : 17 ans, pas d’armée, et elle remet un roi sur son trône",
     "actu": "Une preuve géante, un candidat de moins et un budget au régime",
+    "cultureg": "Le stéthoscope, ou comment écouter un cœur sans rougir",
+    "insolite": "Le talon haut, une chaussure de cavalier que Louis XIV a peinte en rouge",
+    "origine": "« Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé",
     "quiz": "Ces phrases ont un propriétaire (sauf une)"
    },
    "errors": [],
    "warnings": [
-    "actu : « La suite » attendue : « COP31 : les énergies fossiles disparaissent du texte » annonçait une échéance le 2026-11-21 (2026-11-21#11) ; donner le résultat s'il est connu"
+    "actu : « La suite » attendue : « COP31 : les énergies fossiles disparaissent du texte » annonçait une échéance le 2026-11-21 (2026-11-21#11) ; donner le résultat s'il est connu",
+    "origine : fiches chauvin et karim : même couleur dominante (red), à différencier"
    ]
   }
  ]

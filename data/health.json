@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T04:05:00.563907+01:00",
+ "updated_at": "2026-11-22T05:05:28.504114+01:00",
  "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,7 +9,11 @@
    "date": "2026-11-22",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
     "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "origine": "prêt",
     "quiz": "prêt"
    }
   },
@@ -56,34 +60,45 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-22/cultureg : « Le stéthoscope, ou comment écouter un cœur sans rougir » prise dans la file (20261116-2043-stethoscope-sans-rougir)",
+  "2026-11-22/insolite : « Le talon haut, une chaussure de cavalier que Louis XIV a peinte en rouge » prise dans la file (20261116-2045-talon-haut-cavalier-rouge)",
+  "2026-11-22/origine : « « Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé » prise dans la file (20261118-2046-chauvin-soldat-imaginaire)",
+  "2026-11-22/dossier : « Jeanne d’Arc : 17 ans, pas d’armée, et elle remet un roi sur son trône » prise dans la file (20261120-0653-jeanne-d-arc)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-21",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite",
+  "origine"
+ ],
+ "last_published": "2026-11-22",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 25,
    "focus": "20261118-0850-pendule-foucault-chapeau (3 image(s) à faire)",
-   "next": "20261116-2043-stethoscope-sans-rougir",
-   "next_redo": 3
+   "next": "20261117-2048-gauche-droite-plan-de-table",
+   "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 25,
    "focus": "20261118-0848-elephant-bastille-rats (6 image(s) à faire)",
-   "next": "20261116-2045-talon-haut-cavalier-rouge",
-   "next_redo": 2
+   "next": "20261117-2047-napoleon-decore-un-sucrier",
+   "next_redo": 0
   },
   "notice": {
    "ready": 2,
@@ -95,16 +110,16 @@
    "next_redo": 0
   },
   "origine": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 1,
    "blocked": 0,
    "images_left": 6,
    "focus": "20261120-2046-points-sur-les-i-jambages (6 image(s) à faire)",
-   "next": "20261118-2046-chauvin-soldat-imaginaire",
-   "next_redo": 1
+   "next": "20261120-2044-boycotter-capitaine-irlandais",
+   "next_redo": 0
   },
   "dossier": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 2,
    "blocked": 0,
    "images_left": 36,
@@ -113,8 +128,8 @@
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 2,
- "days_ahead_written": 4,
+ "days_ahead_drawn": 1,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-22",
@@ -136,7 +151,7 @@
  },
  "rss": {
   "collected_at": "2026-11-21T23:11:40.292156+01:00",
-  "age_hours": 4.9,
+  "age_hours": 5.9,
   "feeds": {
    "Google Actualités": 31,
    "franceinfo": 31,
