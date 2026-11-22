@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T19:32+01:00",
+ "updated_at": "2026-11-22T19:57+01:00",
  "stock": {
   "cultureg": [
    {
@@ -481,8 +481,23 @@
    "date": "2026-11-23",
    "path": "editions/2026-11-23",
    "status": "draft",
-   "newsletter": false,
+   "newsletter": true,
    "formats": [
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "kind": "",
+     "title": "Une COP sans fin, une règle en or et une sonde bien garée",
+     "theme": "",
+     "tagline": "La COP31 finit sans accord sur les énergies fossiles, Emmanuel Macron pense à une « règle d’or », deux Français gagnent le Masters de double et BepiColombo tourne autour de Mercure.",
+     "minutes": 4,
+     "cases": 13,
+     "photos": 2,
+     "images_done": 5,
+     "images_total": 5,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "Le Quiz du jour",

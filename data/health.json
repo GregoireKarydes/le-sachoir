@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T19:32:02.770409+01:00",
+ "updated_at": "2026-11-22T19:57:07.392889+01:00",
  "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -21,6 +21,7 @@
    "date": "2026-11-23",
    "status": "draft",
    "formats": {
+    "actu": "prêt",
     "quiz": "prêt"
    }
   },
@@ -139,14 +140,14 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.35108,
-  "images": 269,
-  "today_usd": 0.18293,
+  "spent_usd": 3.38826,
+  "images": 275,
+  "today_usd": 0.22011,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-22T19:04:38.679239+01:00",
-  "age_hours": 0.5,
+  "age_hours": 0.9,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,
@@ -176,8 +177,14 @@
  },
  "actu_balance": {
   "days": 14,
-  "editions": 11,
+  "editions": 12,
   "people": [
+   {
+    "name": "Emmanuel Macron",
+    "party": "Renaissance",
+    "n": 2,
+    "last": "2026-11-23"
+   },
    {
     "name": "Aleksandar Vučić",
     "party": "étranger",
@@ -201,12 +208,6 @@
     "party": "étranger",
     "n": 1,
     "last": "2026-11-19"
-   },
-   {
-    "name": "Emmanuel Macron",
-    "party": "Renaissance",
-    "n": 1,
-    "last": "2026-11-17"
    },
    {
     "name": "François Ruffin",
@@ -233,6 +234,12 @@
     "last": "2026-11-20"
    },
    {
+    "name": "Murat Kurum",
+    "party": "étranger",
+    "n": 1,
+    "last": "2026-11-23"
+   },
+   {
     "name": "Vladimir Poutine",
     "party": "étranger",
     "n": 1,
@@ -254,7 +261,11 @@
   "parties": [
    {
     "party": "étranger",
-    "n": 3
+    "n": 4
+   },
+   {
+    "party": "Renaissance",
+    "n": 2
    },
    {
     "party": "Debout !",
@@ -270,10 +281,6 @@
    },
    {
     "party": "Les Écologistes",
-    "n": 1
-   },
-   {
-    "party": "Renaissance",
     "n": 1
    }
   ]
