@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T19:57:07.392889+01:00",
+ "updated_at": "2026-11-22T20:41:09.572127+01:00",
  "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -55,6 +55,13 @@
   },
   {
    "date": "2026-11-28",
+   "status": "draft",
+   "formats": {
+    "quiz": "prêt"
+   }
+  },
+  {
+   "date": "2026-11-29",
    "status": "draft",
    "formats": {
     "quiz": "prêt"
@@ -126,7 +133,7 @@
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 6,
+ "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-22",
   "count": 51,
@@ -147,7 +154,7 @@
  },
  "rss": {
   "collected_at": "2026-11-22T19:04:38.679239+01:00",
-  "age_hours": 0.9,
+  "age_hours": 1.6,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,

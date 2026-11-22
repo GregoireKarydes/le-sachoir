@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T19:57+01:00",
+ "updated_at": "2026-11-22T20:41+01:00",
  "stock": {
   "cultureg": [
    {
@@ -579,6 +579,21 @@
      "kind": "swipe",
      "title": "Vrai, faux, ou politique de l’autruche ?",
      "questions": 1
+    }
+   ]
+  },
+  {
+   "date": "2026-11-29",
+   "path": "editions/2026-11-29",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Le Chiffre",
+     "kind": "chiffre",
+     "title": "Trois curseurs, aucun mètre ruban",
+     "questions": 3
     }
    ]
   }
