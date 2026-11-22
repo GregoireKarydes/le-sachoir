@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T19:05+01:00",
+ "updated_at": "2026-11-22T19:32+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -31,6 +31,16 @@
    "errors": [],
    "warnings": [
     "dossier : case 24 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/dossier/20261122-1928-versailles-cage-doree",
+   "titles": {
+    "dossier": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)"
+   },
+   "errors": [],
+   "warnings": [
+    "dossier : case 7 (Pour mieux comprendre) : 72 mots (max 70)"
    ]
   },
   {

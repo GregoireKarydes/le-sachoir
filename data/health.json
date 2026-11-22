@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T19:05:00.641871+01:00",
+ "updated_at": "2026-11-22T19:32:02.770409+01:00",
  "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -115,16 +115,16 @@
   },
   "dossier": {
    "ready": 1,
-   "waiting": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 36,
+   "images_left": 54,
    "focus": "20261120-0657-jeux-video-desert (18 image(s) à faire)",
    "next": "20261118-1927-pasteur-microbes",
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 1,
- "days_ahead_written": 3,
+ "days_ahead_written": 4,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-22",
@@ -145,13 +145,13 @@
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-21T23:11:40.292156+01:00",
-  "age_hours": 19.9,
+  "collected_at": "2026-11-22T19:04:38.679239+01:00",
+  "age_hours": 0.5,
   "feeds": {
-   "Google Actualités": 31,
-   "franceinfo": 31,
+   "Google Actualités": 33,
+   "franceinfo": 30,
    "Le Monde": 16,
-   "Le Figaro": 17,
+   "Le Figaro": 18,
    "Libération": 50,
    "20 Minutes": 25,
    "Ouest-France": 10,
@@ -160,14 +160,14 @@
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 26,
-   "Le Monde Sciences": 5,
+   "BBC World": 12,
+   "Le Monde Sciences": 4,
    "Sciences et Avenir": 3,
-   "Le Monde Planète": 8,
-   "Le Monde Pixels": 8,
-   "Le Monde Santé": 2,
-   "Le Monde Culture": 14,
-   "HugoDécrypte - Actus du jour": 2
+   "Le Monde Planète": 5,
+   "Le Monde Pixels": 5,
+   "Le Monde Santé": 4,
+   "Le Monde Culture": 11,
+   "HugoDécrypte - Actus du jour": 1
   },
   "empty_feeds": [
    "Les Échos",

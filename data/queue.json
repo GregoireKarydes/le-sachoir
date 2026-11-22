@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T19:05+01:00",
+ "updated_at": "2026-11-22T19:32+01:00",
  "stock": {
   "cultureg": [
    {
@@ -362,6 +362,23 @@
     "minutes": 3,
     "cases": 23,
     "photos": 2,
+    "images_done": 0,
+    "images_total": 18,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/dossier/20261122-1928-versailles-cage-doree",
+    "name": "20261122-1928-versailles-cage-doree",
+    "added": "20261122-1928",
+    "status": "waiting",
+    "next": false,
+    "title": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)",
+    "theme": "Histoire moderne",
+    "tagline": "De la fuite de 1649 à la galerie des Glaces : pourquoi le Roi-Soleil a quitté Paris et comment son château a désarmé les grands nobles",
+    "minutes": 3,
+    "cases": 23,
+    "photos": 3,
     "images_done": 0,
     "images_total": 18,
     "failed": 0,
