@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T20:41:09.572127+01:00",
+ "updated_at": "2026-11-22T20:44:14.150831+01:00",
  "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -87,9 +87,9 @@
  "stock": {
   "cultureg": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 25,
+   "images_left": 32,
    "focus": "20261118-0850-pendule-foucault-chapeau (3 image(s) à faire)",
    "next": "20261117-2048-gauche-droite-plan-de-table",
    "next_redo": 0
@@ -154,7 +154,7 @@
  },
  "rss": {
   "collected_at": "2026-11-22T19:04:38.679239+01:00",
-  "age_hours": 1.6,
+  "age_hours": 1.7,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,

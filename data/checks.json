@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T20:41+01:00",
+ "updated_at": "2026-11-22T20:44+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -21,6 +21,16 @@
    "errors": [],
    "warnings": [
     "cultureg : case 5 : récitatif de 22 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/cultureg/20261122-2042-telephone-fixe-raccroche-2030",
+   "titles": {
+    "cultureg": "Le téléphone fixe raccroche pour de bon (rendez-vous en 2030)"
+   },
+   "errors": [],
+   "warnings": [
+    "cultureg : case 9 : récitatif de 21 mots (max 20)"
    ]
   },
   {

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T20:41+01:00",
+ "updated_at": "2026-11-22T20:44+01:00",
  "stock": {
   "cultureg": [
    {
@@ -81,6 +81,23 @@
     "tagline": "Une montagne d’anoraks, un inspecteur à calendrier et deux mercredis par an",
     "minutes": 2,
     "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 7,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/cultureg/20261122-2042-telephone-fixe-raccroche-2030",
+    "name": "20261122-2042-telephone-fixe-raccroche-2030",
+    "added": "20261122-2042",
+    "status": "waiting",
+    "next": false,
+    "title": "Le téléphone fixe raccroche pour de bon (rendez-vous en 2030)",
+    "theme": "Informatique et numérique",
+    "tagline": "Un fil des années 1970, un grand-père têtu et une technicienne qui a tout son temps",
+    "minutes": 2,
+    "cases": 9,
     "photos": 1,
     "images_done": 0,
     "images_total": 7,
