@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T20:46+01:00",
+ "updated_at": "2026-11-22T20:49+01:00",
  "stock": {
   "cultureg": [
    {
@@ -345,6 +345,23 @@
     "photos": 1,
     "images_done": 0,
     "images_total": 6,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/origine/20261122-2046-avoir-le-cafard-baudelaire",
+    "name": "20261122-2046-avoir-le-cafard-baudelaire",
+    "added": "20261122-2046",
+    "status": "waiting",
+    "next": false,
+    "title": "Avoir le cafard : un hypocrite, une blatte et un poète qui déprime",
+    "theme": "Expression française",
+    "tagline": "Comment un faux dévot du XVIe siècle a fini en bestiole, puis en idées noires",
+    "minutes": 2,
+    "cases": 6,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 5,
     "failed": 0,
     "redo": 0
    }

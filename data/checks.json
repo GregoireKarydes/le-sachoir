@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T20:46+01:00",
+ "updated_at": "2026-11-22T20:49+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -113,6 +113,16 @@
    "errors": [],
    "warnings": [
     "notice : case 6 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "stock/origine/20261122-2046-avoir-le-cafard-baudelaire",
+   "titles": {
+    "origine": "Avoir le cafard : un hypocrite, une blatte et un poète qui déprime"
+   },
+   "errors": [],
+   "warnings": [
+    "origine : case 6 : récitatif de 21 mots (max 20)"
    ]
   },
   {
