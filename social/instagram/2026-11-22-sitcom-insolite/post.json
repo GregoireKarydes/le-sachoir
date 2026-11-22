@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-22",
+  "kind": "film",
+  "style": "ink-wash",
+  "slot": "insolite",
+  "time": "21:00",
+  "story": {"edition": "2026-11-22", "format": "insolite"},
+  "question": "Pourquoi les talons hauts ont-ils d'abord été portés par des hommes ?",
+  "answer": "Le talon haut a été inventé pour les cavaliers perses, parce qu'il cale le pied dans l'étrier ; vers 1600, les nobles d'Europe l'adoptent à pied pour montrer qu'ils ne travaillent pas aux champs, et Louis XIV réserve même le talon rouge à quelques nobles.",
+  "chain": [
+    "les cavaliers perses portent un talon parce qu'il cale le pied dans l'étrier et aide à tenir en selle",
+    "vers 1600, la mode arrive en Europe et les nobles le portent aussi à pied",
+    "à pied, le talon gêne pour marcher : c'est la preuve qu'on ne travaille pas aux champs",
+    "au début des années 1670, Louis XIV réserve le talon rouge à quelques nobles choisis"
+  ],
+  "hooks": [
+    {"formula": 109, "text": "Une vérité que les hommes acceptent mal."},
+    {"formula": 104, "text": "On ne parle pas assez du fait que Louis XIV portait des talons."},
+    {"formula": 110, "text": "Ça, c'était le talon du cavalier. Ça, le talon du roi."}
+  ],
+  "hook_formula": 109,
+  "band": "LES TALONS HAUTS,\nD'ABORD POUR EUX ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "scene": "scene.js",
+    "direction": {
+      "idee": "Une chaussure d'homme à talon, peinte à l'encre, ouvre et ferme le film ; entre les deux on remonte son histoire, du cavalier perse aux nobles, dans un monde tout noir d'encre où le seul rouge sera celui du talon de Louis XIV.",
+      "signature": "Coupe en plongée très serrée sur le talon de la chaussure : le vermillon s'y peint de bas en haut, première et seule couleur du film, pendant que « LE TALON ROUGE » éclate.",
+      "plans": [
+        {"plan": 0, "cadrage": "très gros plan puis plan moyen", "angle": "penché qui se redresse", "mouvement": "recul en spirale", "transition": "ouverture directe sur la chaussure déjà à moitié peinte", "texte": "focus", "pourquoi": "le sujet est à l'image dès la première image : un talon haut"},
+        {"plan": 1, "cadrage": "plan moyen", "angle": "face", "mouvement": "travelling latéral", "transition": "coupe franche", "texte": "type", "pourquoi": "la curiosité : à la cour, ce sont les hommes qui sont perchés"},
+        {"plan": 2, "cadrage": "plan d'ensemble", "angle": "face", "mouvement": "plan fixe qui casse le rythme", "transition": "coupe franche", "texte": "rise", "pourquoi": "le verrou : tes chaussures, vues autrement, se peignent une à une"},
+        {"plan": 3, "cadrage": "plan large", "angle": "de profil", "mouvement": "travelling latéral qui accélère", "transition": "coupe franche", "texte": "slam", "pourquoi": "la réponse : le cavalier perse au galop"},
+        {"plan": 4, "cadrage": "plan large puis insert", "angle": "face", "mouvement": "zoom brutal puis choc", "transition": "coupe franche", "texte": "highlight", "pourquoi": "le mécanisme : le pied glisse, le talon bute contre l'étrier"},
+        {"plan": 5, "cadrage": "plan moyen", "angle": "face", "mouvement": "travelling avant dans la brume", "transition": "coupe franche", "texte": "count", "pourquoi": "vers 1600, les nobles d'Europe adoptent le talon"},
+        {"plan": 6, "cadrage": "plan moyen", "angle": "légèrement penché", "mouvement": "caméra à l'épaule", "transition": "coupe franche", "texte": "strike", "pourquoi": "l'exemple : un noble titube dans un champ, il ne travaille pas la terre"},
+        {"plan": 7, "cadrage": "plan moyen puis très gros plan", "angle": "plongée", "mouvement": "poussée puis coupe serrée", "transition": "coupe franche", "texte": "pop", "pourquoi": "le plan signature : la seule couleur du film, le rouge du roi"},
+        {"plan": 8, "cadrage": "plan moyen", "angle": "face", "mouvement": "recul qui se redresse vers le cadre du plan 0", "transition": "mouvement continu", "texte": "rise", "pourquoi": "la boucle : la chaussure du début, talon rouge, et le sceau"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "Une vérité que les hommes acceptent mal.", "set": "palais", "big": "Le talon haut", "cold": true, "image": {"bd": 1}},
+      {"who": "narr", "text": "Les talons hauts ? Pour eux. Pourquoi ?", "set": "palais", "big": "Pour les hommes ?", "image": {"bd": 1}},
+      {"who": "narr", "text": "Tes chaussures, tu les verras autrement.", "set": "etang", "big": "Tu les verras autrement"},
+      {"who": "narr", "text": "Le talon haut a été inventé pour les cavaliers perses.", "set": "montagnes", "big": "Cavaliers perses", "pause": 0.3, "image": {"bd": 2}},
+      {"who": "narr", "text": "Le talon cale le pied dans l'étrier du cheval.", "set": "montagnes", "big": "Calé dans l'étrier"},
+      {"who": "narr", "text": "Vers 1600, les nobles d'Europe le portent aussi à pied.", "say": "Vers mille six cents, les nobles d'Europe le portent aussi à pied.", "set": "palais", "big": "Vers 1600", "tag": "l'Europe", "image": {"bd": 3}},
+      {"who": "narr", "text": "Le talon gêne à pied : la preuve qu'on ne laboure pas.", "set": "bambou-lune", "big": "Pas de travail aux champs", "fx": ["cross"]},
+      {"who": "narr", "text": "Pire : Louis XIV réserve le talon rouge à quelques nobles.", "say": "Pire : Louis quatorze réserve le talon rouge à quelques nobles.", "set": "palais", "big": "Le talon rouge", "tag": "années 1670", "image": {"bd": 4}},
+      {"who": "narr", "text": "Voilà pourquoi les premiers talons hauts étaient pour les cavaliers.", "set": "montagnes", "big": "Venu du cheval", "image": {"bd": 7}}
+    ]
+  },
+  "caption": "Une vérité que les hommes acceptent mal : les talons hauts étaient d'abord pour eux.\n\nLe talon vient des cavaliers perses : il cale le pied dans l'étrier. Vers 1600, les nobles d'Europe le portent même à pied, justement parce qu'il gêne pour marcher : la preuve qu'on ne travaille pas aux champs. Et Louis XIV réserve le talon rouge à quelques nobles choisis.\n\nEt ça, maintenant, tu le sais. Envoie-le à celui qui se plaint de ses chaussures de mariage.",
+  "first_comment": "Bonus : au XVIIIe siècle, les Lumières jugent le talon frivole, et les hommes reviennent peu à peu aux chaussures plates. Tu remettrais des talons rouges, toi ?",
+  "hashtags": ["lesachoir", "culturegenerale", "histoire", "anecdote", "louisxiv", "mode"],
+  "sources": [
+    "https://blogs.getty.edu/iris/?p=23772",
+    "https://www.slate.fr/story/175827/mode-talons-hauts-histoire-pouvoir-genres",
+    "https://qz.com/409254/why-did-men-stop-wearing-high-heels-anyway"
+  ]
+}

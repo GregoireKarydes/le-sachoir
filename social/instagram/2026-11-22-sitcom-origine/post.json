@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-22",
+  "kind": "film",
+  "style": "comic-history",
+  "slot": "origine",
+  "time": "07:45",
+  "story": {"edition": "2026-11-22", "format": "origine"},
+  "question": "Pourquoi on dit « chauvin » ?",
+  "answer": "On dit « chauvin » à cause de Nicolas Chauvin, un soldat de Napoléon fou de la France ; mais aucun registre ne le connaît, c'est sans doute une légende, et une pièce de théâtre de 1831 l'a rendu si ridicule que son nom est devenu un défaut : le patriotisme aveugle.",
+  "chain": [
+    "la légende parle de Nicolas Chauvin, soldat de Napoléon aux dix-sept blessures, qui adorait la France sans réfléchir",
+    "aucun registre de l'armée ne parle de lui : c'est sans doute un personnage inventé après 1815",
+    "en 1831, la pièce « La Cocarde tricolore » en fait un soldat ridicule qui lance « Je suis Français, je suis Chauvin ! »",
+    "le public rit, et son nom devient un mot : un chauvin est un patriote aveugle"
+  ],
+  "hooks": [
+    {"formula": 101, "text": "Tout le monde dit « chauvin ». Personne ne sait pourquoi."},
+    {"formula": 113, "text": "Beaucoup ne seront pas d'accord, mais Chauvin n'a sans doute jamais existé."},
+    {"formula": 112, "text": "Arrête de dire « chauvin » si tu ne connais pas Nicolas."}
+  ],
+  "hook_formula": 101,
+  "band": "POURQUOI ON DIT\n« CHAUVIN » ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "cast": [
+      {"name": "FRANCE", "color": "#3E5C9A"},
+      {"name": "LE PUBLIC", "color": "#C98A4B"}
+    ],
+    "scene": "scene.js",
+    "direction": {
+      "idee": "Une grande feuille de papier sur une table : la caméra va du bar d'aujourd'hui à une carte gravée où le soldat n'est qu'un contour vide, puis aux registres de l'armée et à un théâtre de papier de 1831, avant de revenir au bar.",
+      "signature": "Le public rit, l'étiquette « CHAUVIN » se décolle du torse de la marionnette, vole à travers la feuille et devient le mot « chauvin » d'une fiche de dictionnaire : un nom qui devient un défaut.",
+      "plans": [
+        {"plan": 0, "cadrage": "gros plan puis plan moyen", "angle": "penché qui se redresse", "mouvement": "recul rapide avec rotation", "transition": "ouverture directe sur la case du bar", "texte": "slam", "pourquoi": "l'image 1 montre déjà le mot dans la vie de tous les jours (le supporter de mauvaise foi)"},
+        {"plan": 1, "cadrage": "plan large", "angle": "face", "mouvement": "filé latéral puis travelling latéral", "transition": "filé (whip)", "texte": "type", "pourquoi": "la curiosité : à la place du soldat, un contour vide et un point d'interrogation"},
+        {"plan": 2, "cadrage": "insert", "angle": "vue du dessus penchée", "mouvement": "poussée lente qui tourne", "transition": "coupe franche", "texte": "pop", "pourquoi": "le verrou : le ballon et l'écharpe, là où on se sert du mot"},
+        {"plan": 3, "cadrage": "plan large puis plan moyen", "angle": "face", "mouvement": "zoom brutal avec rebond", "transition": "coupe franche", "texte": "highlight", "pourquoi": "la réponse : la marionnette tombe dans le contour vide, son nom surligné"},
+        {"plan": 4, "cadrage": "plan moyen", "angle": "légèrement penché", "mouvement": "caméra à l'épaule", "transition": "coupe franche", "texte": "count", "pourquoi": "la légende se voit : dix-sept bandages plaqués un à un"},
+        {"plan": 5, "cadrage": "plan moyen", "angle": "vue du dessus", "mouvement": "panoramique vertical puis arrêt", "transition": "coupe franche", "texte": "stamp", "pourquoi": "la loupe parcourt le registre et ne trouve rien : introuvable"},
+        {"plan": 6, "cadrage": "plan large", "angle": "face, depuis la salle", "mouvement": "travelling avant lent", "transition": "coupe franche", "texte": "rise", "pourquoi": "on entre dans le théâtre de 1831, les rideaux s'ouvrent"},
+        {"plan": 7, "cadrage": "gros plan", "angle": "contre-plongée penchée", "mouvement": "poussée lente", "transition": "coupe franche", "texte": "type (bulle)", "pourquoi": "la vraie réplique de la pièce, dite par le personnage"},
+        {"plan": 8, "cadrage": "plan moyen puis plan d'ensemble", "angle": "face", "mouvement": "recul qui suit l'étiquette, secousses des rires", "transition": "coupe franche", "texte": "focus", "pourquoi": "le plan signature : le nom devient un mot"},
+        {"plan": 9, "cadrage": "plan moyen", "angle": "face", "mouvement": "long retour au bar puis dérive lente", "transition": "filé (whip) puis mouvement continu", "texte": "rise", "pourquoi": "la boucle : même cadre que le plan 0"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "Tout le monde dit « chauvin ». Personne ne sait pourquoi.", "set": "europe", "big": "« Chauvin »", "cold": true, "speaker": 0, "emo": "fier", "tag": "Expressions", "image": {"bd": 1}},
+      {"who": "narr", "text": "Le coupable : un soldat introuvable.", "set": "europe", "big": "Un soldat introuvable", "speaker": 0, "emo": "surpris"},
+      {"who": "narr", "text": "Parfait pour le prochain match.", "set": "manche", "big": "Au prochain match", "speaker": 1, "emo": "content"},
+      {"who": "narr", "text": "On dit « chauvin » à cause de Nicolas Chauvin, soldat de Napoléon.", "set": "europe", "big": "Nicolas Chauvin", "pause": 0.3, "speaker": 0, "emo": "fier", "image": {"bd": 2}},
+      {"who": "narr", "text": "On lui prête dix-sept blessures et un patriotisme aveugle.", "say": "On lui prête dix-sept blessures et un patriotisme aveugle.", "set": "europe", "big": "17 blessures", "speaker": 0, "emo": "fier"},
+      {"who": "narr", "text": "Mais aucun registre de l'armée ne parle de lui.", "set": "traite", "big": "Introuvable", "speaker": 0, "emo": "vexe"},
+      {"who": "narr", "text": "En 1831, une pièce de théâtre le rend ridicule.", "say": "En mille huit cent trente et un, une pièce de théâtre le rend ridicule.", "set": "traite", "big": "Une pièce, en 1831", "tag": "Paris, 1831", "speaker": 1, "emo": "content", "image": {"bd": 4}},
+      {"who": "perso", "name": "Chauvin, sur scène", "text": "Je suis Français, je suis Chauvin !", "set": "traite", "big": "« Je suis Chauvin ! »", "speaker": 0, "emo": "fier"},
+      {"who": "narr", "text": "Le public rit : son nom devient un défaut.", "set": "europe", "big": "Patriote aveugle", "speaker": 1, "emo": "content", "image": {"bd": 6}},
+      {"who": "narr", "text": "Voilà pourquoi on dit « chauvin » : un soldat sans doute inventé.", "set": "europe", "big": "Un soldat inventé", "speaker": 0, "emo": "vexe", "image": {"bd": 8}}
+    ]
+  },
+  "caption": "Tout le monde dit « chauvin ». Personne ne sait pourquoi.\n\nLe mot vient de Nicolas Chauvin, un soldat de Napoléon aux dix-sept blessures, fou de la France. Petit problème : aucun registre de l'armée ne le connaît. En 1831, une pièce de théâtre en fait un patriote ridicule (« Je suis Français, je suis Chauvin ! »), le public rit, et son nom devient un défaut.\n\nEt ça, maintenant, tu le sais. Quelle expression on décortique demain ? Écris-la en commentaire.",
+  "first_comment": "Bonus : le mot a traversé la Manche. Dans les années 1930, l'anglais parle déjà de « male chauvinism » pour désigner le sexisme. Tu connais un autre mot français qu'on utilise en anglais ?",
+  "hashtags": ["lesachoir", "culturegenerale", "expressionsfrancaises", "napoleon", "etymologie"],
+  "sources": [
+    "https://dictionnaire-academie.fr/article/A9C1838",
+    "https://en.wikipedia.org/wiki/Nicolas_Chauvin",
+    "https://en.wikipedia.org/wiki/The_Tricolour_Cockade",
+    "https://wordorigins.org/big-list-entries/chauvinism"
+  ]
+}

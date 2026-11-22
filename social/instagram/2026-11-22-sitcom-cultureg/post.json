@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-22",
+  "kind": "film",
+  "style": "ipad-sketch",
+  "slot": "cultureg",
+  "time": "12:30",
+  "story": {"edition": "2026-11-22", "format": "cultureg"},
+  "question": "Pourquoi le stéthoscope a-t-il été inventé ?",
+  "answer": "Le stéthoscope a été inventé en 1816 parce que le docteur Laennec était trop gêné pour coller son oreille sur la poitrine d'une jeune patiente : il a roulé un cahier en tube, et le tube guidait si bien le son qu'il entendait le cœur encore mieux.",
+  "chain": [
+    "en 1816, pour écouter le cœur, on colle l'oreille sur la poitrine du malade",
+    "avec une jeune patiente, le docteur Laennec trouve ce geste indécent",
+    "il se souvient d'un jeu d'enfants et roule un cahier en tube, un bout sur la poitrine, l'autre à son oreille",
+    "le tube guide le son au lieu de le laisser se disperser : le cœur s'entend plus fort et plus net",
+    "il en fait un tube de bois et l'appelle stéthoscope"
+  ],
+  "hooks": [
+    {"formula": 107, "text": "Si ton médecin a un stéthoscope, c'est par gêne."},
+    {"formula": 106, "text": "Ça, c'est ton médecin en 1816 quand il n'ose pas te toucher."},
+    {"formula": 104, "text": "On ne parle pas assez du fait que la gêne a inventé le stéthoscope."}
+  ],
+  "hook_formula": 107,
+  "band": "POURQUOI LE\nSTÉTHOSCOPE ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "scene": "scene.js",
+    "direction": {
+      "idee": "Un carnet de médecin crème que la caméra descend comme une page qu'on fait défiler : un cœur qui bat en haut, le docteur qui rougit au milieu, et en bas la feuille du carnet qui devient le premier stéthoscope.",
+      "signature": "La feuille du carnet s'enroule sous nos yeux en un tube, pivote et se pose entre une poitrine et une oreille dessinées au crayon : le croquis devient l'invention.",
+      "plans": [
+        {"plan": 0, "cadrage": "plan moyen puis gros plan", "angle": "penché qui se redresse", "mouvement": "poussée tournante", "transition": "ouverture directe", "texte": "pop", "pourquoi": "l'image 1 montre déjà le cœur qui bat et le stéthoscope que le stylet termine"},
+        {"plan": 1, "cadrage": "plan moyen", "angle": "face", "mouvement": "travelling latéral", "transition": "mouvement continu", "texte": "type", "pourquoi": "la curiosité : 1816, le docteur hésite devant la patiente"},
+        {"plan": 2, "cadrage": "insert", "angle": "penché", "mouvement": "poussée lente", "transition": "coupe franche", "texte": "rise", "pourquoi": "le verrou : la porte du cabinet, là où tu y repenseras"},
+        {"plan": 3, "cadrage": "plan large puis gros plan", "angle": "face", "mouvement": "zoom brutal avec rebond", "transition": "coupe franche", "texte": "slam", "pourquoi": "la réponse : le visage de Laennec rougit"},
+        {"plan": 4, "cadrage": "plan moyen", "angle": "face", "mouvement": "panoramique vertical", "transition": "coupe franche", "texte": "count", "pourquoi": "comment on écoutait le cœur en 1816 : l'oreille collée, jusqu'à la frise"},
+        {"plan": 5, "cadrage": "très gros plan", "angle": "légèrement penché", "mouvement": "plan fixe qui casse le rythme", "transition": "coupe franche", "texte": "stamp", "pourquoi": "le temps calme : il détourne les yeux, il transpire, il n'ose pas"},
+        {"plan": 6, "cadrage": "plan moyen puis plan large", "angle": "face", "mouvement": "poussée puis recul avec légère rotation", "transition": "coupe franche", "texte": "highlight", "pourquoi": "le plan signature : la feuille devient le tube"},
+        {"plan": 7, "cadrage": "gros plan", "angle": "contre-plongée penchée", "mouvement": "caméra à l'épaule", "transition": "coupe franche", "texte": "type (bulle)", "pourquoi": "la surprise de Laennec, dite par lui"},
+        {"plan": 8, "cadrage": "insert puis plan d'ensemble", "angle": "face", "mouvement": "recul", "transition": "coupe franche", "texte": "focus", "pourquoi": "l'exemple : on voit le son s'éparpiller à l'oreille et filer droit dans le tube"},
+        {"plan": 9, "cadrage": "gros plan", "angle": "face", "mouvement": "longue remontée vers le cœur puis dérive", "transition": "mouvement continu", "texte": "rise", "pourquoi": "la boucle : même cadre que le plan 0"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "Si ton médecin a un stéthoscope, c'est par gêne.", "set": "page", "big": "Le stéthoscope", "cold": true, "image": {"bd": 1}},
+      {"who": "narr", "text": "Pourquoi ? Un docteur trop timide.", "set": "page", "big": "Un docteur timide", "tag": "1816", "image": {"bd": 1}},
+      {"who": "narr", "text": "Tu y penseras chez le médecin.", "set": "page", "big": "Chez ton médecin"},
+      {"who": "narr", "text": "Le stéthoscope a été inventé par un docteur gêné : Laennec.", "set": "page", "big": "Laennec était gêné", "pause": 0.3, "image": {"bd": 2}},
+      {"who": "narr", "text": "En 1816, on écoutait le cœur l'oreille sur la poitrine.", "say": "En mille huit cent seize, on écoutait le cœur l'oreille sur la poitrine.", "set": "frise", "big": "L'oreille collée", "tag": "1816", "image": {"bd": 2}},
+      {"who": "narr", "text": "Avec une jeune patiente, Laennec n'ose pas.", "set": "page", "big": "Indécent !", "image": {"bd": 3}},
+      {"who": "narr", "text": "Laennec roule un cahier en tube, posé sur la poitrine.", "set": "coupe", "big": "Un cahier roulé", "image": {"bd": 5}},
+      {"who": "perso", "name": "Le docteur Laennec", "text": "Je vous entends comme si j'étais dedans !", "set": "page", "big": "Plus fort, plus net", "image": {"bd": 6}},
+      {"who": "narr", "text": "Le tube guide le son au lieu de le disperser.", "set": "coupe", "big": "Guidé, pas dispersé"},
+      {"who": "narr", "text": "Voilà pourquoi le stéthoscope a été inventé : un docteur trop gêné.", "set": "page", "big": "Un docteur trop gêné", "image": {"bd": 10}}
+    ]
+  },
+  "caption": "Si ton médecin a un stéthoscope, c'est par gêne.\n\nEn 1816, on écoutait le cœur l'oreille collée à la poitrine. Devant une jeune patiente, le docteur Laennec n'ose pas. Il roule un cahier en tube, le pose sur sa poitrine et entend le cœur mieux qu'avant, parce que le tube guide le son au lieu de le laisser se perdre.\n\nEt ça, maintenant, tu le sais. Toi, tu croyais qu'il servait à quoi, ce tube ?",
+  "first_comment": "Bonus : « stéthoscope » vient du grec stethos, la poitrine, et skopein, examiner. Laennec est mort en 1826 de la tuberculose, la maladie des poumons qu'il avait appris à écouter. Tu avais déjà entendu son nom ?",
+  "hashtags": ["lesachoir", "culturegenerale", "histoiredelamedecine", "stethoscope", "laennec"],
+  "sources": [
+    "https://aphp.fr/node/2326",
+    "https://www.pbs.org/newshour/health/a-curious-inspiration-for-the-first-stethoscope",
+    "https://www.allodocteurs.fr/se-soigner/histoire-de-la-medecine/histoire-de-la-medecine-l-invention-du-stethoscope_22889.html",
+    "https://collection.sciencemuseumgroup.org.uk/objects/co90986/laennecs-stethoscope"
+  ]
+}
