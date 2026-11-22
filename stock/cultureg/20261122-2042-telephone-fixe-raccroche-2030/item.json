@@ -170,7 +170,13 @@
           "title": "Une prise téléphonique française, ouverte",
           "text": "L’intérieur d’une prise téléphonique française, avec son petit condensateur. C’est par ce genre de prise que des millions de foyers branchaient leur téléphone, puis leur modem ADSL, au réseau cuivre.",
           "photo": {
-            "commons": "File:Condensateur de prise téléphonique française.jpg"
+            "commons": "File:Condensateur de prise téléphonique française.jpg",
+            "credit": "Fabien1309",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Condensateur_de_prise_t%C3%A9l%C3%A9phonique_fran%C3%A7aise.jpg",
+            "file": "images/photo-6-condensateur-de-prise-t-l-phonique.webp",
+            "status": "done"
           }
         },
         {
