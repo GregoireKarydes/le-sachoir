@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T03:13+01:00",
+ "updated_at": "2026-11-22T03:23+01:00",
  "stock": {
   "cultureg": [
    {
@@ -17,7 +17,7 @@
     "images_done": 9,
     "images_total": 9,
     "failed": 0,
-    "redo": 0
+    "redo": 3
    },
    {
     "path": "stock/cultureg/20261117-2048-gauche-droite-plan-de-table",
@@ -121,7 +121,7 @@
     "images_done": 6,
     "images_total": 6,
     "failed": 0,
-    "redo": 0
+    "redo": 2
    },
    {
     "path": "stock/insolite/20261117-2047-napoleon-decore-un-sucrier",
@@ -329,7 +329,7 @@
     "images_done": 6,
     "images_total": 6,
     "failed": 0,
-    "redo": 0
+    "redo": 1
    },
    {
     "path": "stock/origine/20261120-2044-boycotter-capitaine-irlandais",

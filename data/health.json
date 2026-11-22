@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T03:13:05.656197+01:00",
+ "updated_at": "2026-11-22T03:23:25.287745+01:00",
  "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -74,7 +74,7 @@
    "images_left": 25,
    "focus": "20261118-0850-pendule-foucault-chapeau (3 image(s) à faire)",
    "next": "20261116-2043-stethoscope-sans-rougir",
-   "next_redo": 0
+   "next_redo": 3
   },
   "insolite": {
    "ready": 2,
@@ -83,7 +83,7 @@
    "images_left": 25,
    "focus": "20261118-0848-elephant-bastille-rats (6 image(s) à faire)",
    "next": "20261116-2045-talon-haut-cavalier-rouge",
-   "next_redo": 0
+   "next_redo": 2
   },
   "notice": {
    "ready": 2,
@@ -101,7 +101,7 @@
    "images_left": 6,
    "focus": "20261120-2046-points-sur-les-i-jambages (6 image(s) à faire)",
    "next": "20261118-2046-chauvin-soldat-imaginaire",
-   "next_redo": 0
+   "next_redo": 1
   },
   "dossier": {
    "ready": 2,
@@ -136,7 +136,7 @@
  },
  "rss": {
   "collected_at": "2026-11-21T23:11:40.292156+01:00",
-  "age_hours": 4.0,
+  "age_hours": 4.2,
   "feeds": {
    "Google Actualités": 31,
    "franceinfo": 31,
