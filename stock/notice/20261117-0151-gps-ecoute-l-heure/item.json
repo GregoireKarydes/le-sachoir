@@ -25,7 +25,7 @@
           "name": "Gaston",
           "look": "Gaston, a short and stocky hiker in his fifties, light olive skin, thick bushy black beard, black hair under the foilcap, bright red rain poncho as main colour, brown corduroy trousers, heavy hiking boots, a wooden walking stick, the watch on his wrist",
           "file": "cast/notice-gaston.png",
-          "status": "pending",
+          "status": "done",
           "role": "the suspicious hiker convinced that satellites spy on him; hunched, eyes darting at the sky, clutching his foil-wrapped phone to his chest, never lets go of a theory"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Yasmine",
           "look": "Yasmine, a tall and slender satellite engineer from Toulouse in her thirties, warm brown skin, long straight dark brown hair in a high ponytail, round tortoiseshell glasses, lime-green fleece jacket as main colour, grey hiking trousers, a headlamp on her forehead",
           "file": "cast/notice-yasmine.png",
-          "status": "pending",
+          "status": "done",
           "role": "the patient engineer who builds navigation satellites and finds Gaston's theories hilarious; relaxed, hands in her fleece pockets, smiles with half her mouth"
         }
       ],
@@ -44,8 +44,9 @@
           "yasmine"
         ],
         "file": "images/notice-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,8 @@
               "yasmine"
             ],
             "file": "images/notice-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -100,8 +101,8 @@
               "yasmine"
             ],
             "file": "images/notice-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +142,8 @@
               "yasmine"
             ],
             "file": "images/notice-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -179,8 +180,8 @@
               "gaston"
             ],
             "file": "images/notice-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

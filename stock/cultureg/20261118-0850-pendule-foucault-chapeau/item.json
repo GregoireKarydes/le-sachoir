@@ -25,7 +25,7 @@
           "name": "Léon Foucault",
           "look": "Léon Foucault, a French physicist of 31 in 1851, slight and narrow-shouldered, nervous, neat dark-brown hair with a side parting and a short trimmed brown beard, light peach skin, a mossy olive-green frock coat as main colour, beige waistcoat, a small notebook always in hand",
           "file": "cast/cultureg-foucault.png",
-          "status": "pending",
+          "status": "done",
           "role": "the self-taught physicist who quit medicine because he could not stand blood; an anxious perfectionist who demands total silence and stillness around his pendulum, freezes everyone with a raised finger"
         },
         {
@@ -34,7 +34,8 @@
           "look": "a tall big-bellied Parisian bourgeois in his fifties, bushy grey mutton-chop sideburns, ruddy light skin, the hat always on his head, a bright sky-blue waistcoat as main colour, pale grey trousers, a gold watch chain across his belly",
           "file": "cast/cultureg-voisin.png",
           "status": "pending",
-          "role": "Foucault's sceptical neighbour, full of bad faith, certain the Earth stands still because he does not feel it move; clutches his hat whenever the Earth's rotation is mentioned"
+          "role": "Foucault's sceptical neighbour, full of bad faith, certain the Earth stands still because he does not feel it move; clutches his hat whenever the Earth's rotation is mentioned",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (419f5bea-707c-4b33-aaae-a9289c983217)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "cover": {
@@ -44,8 +45,8 @@
           "voisin"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -72,8 +73,8 @@
               "voisin"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -100,8 +101,8 @@
               "voisin"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +142,8 @@
               "voisin"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {

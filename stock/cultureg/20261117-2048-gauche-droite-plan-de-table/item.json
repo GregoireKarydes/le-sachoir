@@ -32,7 +32,7 @@
           "name": "Jean-Joseph Mounier",
           "look": "Jean-Joseph Mounier, a stocky self-important deputy in his early thirties, round face with a small double chin, short powdered white wig with side curls, pale skin, a long burnt-orange coat as main colour over a white cravat, black breeches, a black tricorn hat always under his arm",
           "file": "cast/cultureg-mounier.png",
-          "status": "pending",
+          "status": "done",
           "role": "the leader of the deputies who want a strong king; vain about rank and seats of honour, walks with his nose in the air, sulks with dignity when he loses"
         }
       ],
@@ -43,8 +43,9 @@
           "mounier"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -71,8 +72,9 @@
               "mounier"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -98,8 +100,8 @@
               "mounier"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -134,8 +136,8 @@
               "anselme"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -150,8 +152,8 @@
               "anselme"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -194,8 +196,8 @@
               "anselme"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -228,8 +230,8 @@
               "anselme"
             ],
             "file": "images/cultureg-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

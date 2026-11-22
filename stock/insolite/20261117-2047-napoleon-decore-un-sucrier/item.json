@@ -27,7 +27,7 @@
           "name": "Napoléon",
           "look": "Napoléon in 1810, a short paunchy man in his early forties, round pale face, short receding dark-brown hair combed forward, a black bicorne hat worn sideways, a dark green colonel's uniform coat with a red collar as main colour, white waistcoat and white breeches, black boots, the cross medal on his chest",
           "file": "cast/insolite-napoleon.png",
-          "status": "pending",
+          "status": "done",
           "role": "the Emperor with a sweet tooth who hates bitter coffee; impatient and vain, drums his fingers, hand tucked in his waistcoat, sulks like a child when deprived"
         },
         {
@@ -35,7 +35,7 @@
           "name": "Benjamin Delessert",
           "look": "Benjamin Delessert, a tall pear-shaped Parisian banker and industrialist of 39, chubby cheeks, curly light-brown hair with long sideburns, light pink skin, a high white cravat, a pale caramel-brown tailcoat as main colour, cream waistcoat, often holding the sugar loaf",
           "file": "cast/insolite-delessert.png",
-          "status": "pending",
+          "status": "done",
           "role": "the banker turned sugar maker, a smooth flatterer who takes credit for his chemist's work; bows too low, rubs his hands, smiles nervously"
         }
       ],
@@ -46,8 +46,9 @@
           "delessert"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -74,8 +75,9 @@
               "delessert"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -102,8 +104,8 @@
               "delessert"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +143,8 @@
               "delessert"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -174,8 +176,8 @@
               "delessert"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -201,8 +203,8 @@
               "delessert"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         }
       ],

@@ -27,7 +27,7 @@
           "look": "Jeanne d'Arc, a small sturdy peasant girl of 13 to 19, short dark-brown hair cut in a round bowl cut above the ears, light tan skin, straight determined eyebrows, a bright cornflower-blue tunic as main colour (worn under polished silver plate armour once she is a soldier), dark brown hose and leather boots, often holding the standard",
           "role": "the peasant girl who says saints sent her to save the kingdom; blunt, impatient and fearless, always walks straight ahead with her chin up and drags hesitant people along",
           "file": "cast/dossier-jeanne.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "charles",
@@ -35,7 +35,7 @@
           "look": "Charles VII in his late twenties, a very thin slightly hunched man with skinny legs, a long sad face and a big drooping nose, heavy-lidded worried eyes, light skin, short dark hair in a bowl cut under a tall round brown fur hat, a padded plum-purple velvet robe with puffed shoulders as main colour, black hose, several gold rings he keeps twisting",
           "role": "the uncrowned dauphin who becomes king; indecisive and fearful, always hesitating or hiding behind others, then vainly takes the credit afterwards",
           "file": "cast/dossier-charles.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "cauchon",
@@ -43,7 +43,7 @@
           "look": "Pierre Cauchon, bishop of Beauvais, a very fat round man about sixty, bald with a fringe of white hair, heavy jowls, ruddy light skin, a tall white bishop's mitre, a bright crimson-red cape as main colour over a long white robe, always holding the quill",
           "role": "the bishop who judges Jeanne and wants her condemned; pompous and fussy about procedure, buried in papers, waves his quill like a sceptre",
           "file": "cast/dossier-cauchon.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "baudricourt",
@@ -51,7 +51,7 @@
           "look": "Robert de Baudricourt, captain of Vaucouleurs, a tall burly soldier in his forties with very broad shoulders, thick curly black hair and a bushy black beard, weathered light skin, an olive-brown leather jerkin over grey chainmail as main colour, a big sword at his belt, a roast chicken leg in his hand",
           "role": "the gruff garrison captain who first sends Jeanne home, then gives in; lazy and grumpy, always munching something, sighs loudly",
           "file": "cast/dossier-baudricourt.png",
-          "status": "pending"
+          "status": "skipped"
         }
       ],
       "cover": {
@@ -61,8 +61,8 @@
           "charles"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -88,8 +88,8 @@
               "charles"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -123,8 +123,8 @@
               "jeanne"
             ],
             "file": "images/dossier-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -151,8 +151,8 @@
               "jeanne"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -179,8 +179,8 @@
               "jeanne"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -195,8 +195,8 @@
               "jeanne"
             ],
             "file": "images/dossier-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -236,8 +236,8 @@
               "jeanne"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -258,8 +258,8 @@
               "jeanne"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -296,8 +296,8 @@
               "charles"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -340,8 +340,8 @@
               "charles"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -376,8 +376,8 @@
               "jeanne"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -398,8 +398,8 @@
               "jeanne"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -420,8 +420,8 @@
               "charles"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -448,8 +448,8 @@
               "jeanne"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -471,8 +471,8 @@
               "cauchon"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -497,8 +497,8 @@
             "prompt": "the old market square of Rouen at dawn with half-timbered houses, a silent crowd of townspeople seen from behind, heads bowed; far in the distance a thin column of grey smoke rises into a pale sky. No fire, no person visible at the stake. Calm and sober. wide shot",
             "cast": [],
             "file": "images/dossier-21.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -519,8 +519,8 @@
               "charles"
             ],
             "file": "images/dossier-22.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -539,8 +539,8 @@
             "prompt": "a grey harbour on the English Channel. An exhausted old English archer, seen from behind, with an absurdly long white beard trailing down to his knees and a faded red-and-white tunic, trudges up the gangway of a wooden ship, leaning on his bent longbow like a walking stick. visual gag: the endless beard. from behind",
             "cast": [],
             "file": "images/dossier-23.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -562,8 +562,8 @@
               "jeanne"
             ],
             "file": "images/dossier-24.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
