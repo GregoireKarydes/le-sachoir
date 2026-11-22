@@ -6,13 +6,13 @@
   "reel.mp4"
  ],
  "cover": "reel-cover.jpg",
- "seconds": 40.5,
+ "seconds": 40.1,
  "voice": [
   "edge"
  ],
  "style": "ink-wash",
  "credits": "Voix : Microsoft Edge TTS (Rémy, Fabrice) ; images : Wikimedia Commons ou cases du Sachoir ; styles adaptés de Lemo-Opuscar (code MIT)",
  "scene": "ok",
- "fingerprint": "b552d10b601d",
+ "fingerprint": "8de81fb55675",
  "kind": "film"
 }
