@@ -15,7 +15,7 @@
     "il en fait un tube de bois et l'appelle stéthoscope"
   ],
   "hooks": [
-    {"formula": 107, "text": "Tu sais que le stéthoscope de ton médecin vient d'une gêne ?"},
+    {"formula": 107, "text": "Si ton médecin a un stéthoscope, c'est par gêne."},
     {"formula": 106, "text": "Ça, c'est ton médecin en 1816 quand il n'ose pas te toucher."},
     {"formula": 104, "text": "On ne parle pas assez du fait que la gêne a inventé le stéthoscope."}
   ],
@@ -41,7 +41,7 @@
       ]
     },
     "beats": [
-      {"who": "narr", "text": "Tu sais que le stéthoscope de ton médecin vient d'une gêne ?", "set": "page", "big": "Le stéthoscope", "cold": true, "image": {"bd": 1}},
+      {"who": "narr", "text": "Si ton médecin a un stéthoscope, c'est par gêne.", "set": "page", "big": "Le stéthoscope", "cold": true, "image": {"bd": 1}},
       {"who": "narr", "text": "Pourquoi ? Un docteur trop timide.", "set": "page", "big": "Un docteur timide", "tag": "1816", "image": {"bd": 1}},
       {"who": "narr", "text": "Tu y penseras chez le médecin.", "set": "page", "big": "Chez ton médecin"},
       {"who": "narr", "text": "Le stéthoscope a été inventé par un docteur gêné : Laennec.", "set": "page", "big": "Laennec était gêné", "pause": 0.3, "image": {"bd": 2}},
@@ -53,7 +53,7 @@
       {"who": "narr", "text": "Voilà pourquoi le stéthoscope a été inventé : un docteur trop gêné.", "set": "page", "big": "Un docteur trop gêné", "image": {"bd": 10}}
     ]
   },
-  "caption": "Tu sais que le stéthoscope de ton médecin vient d'une gêne ?\n\nEn 1816, on écoutait le cœur l'oreille collée à la poitrine. Devant une jeune patiente, le docteur Laennec n'ose pas. Il roule un cahier en tube, le pose sur sa poitrine et entend le cœur mieux qu'avant, parce que le tube guide le son au lieu de le laisser se perdre.\n\nEt ça, maintenant, tu le sais. Toi, tu croyais qu'il servait à quoi, ce tube ?",
+  "caption": "Si ton médecin a un stéthoscope, c'est par gêne.\n\nEn 1816, on écoutait le cœur l'oreille collée à la poitrine. Devant une jeune patiente, le docteur Laennec n'ose pas. Il roule un cahier en tube, le pose sur sa poitrine et entend le cœur mieux qu'avant, parce que le tube guide le son au lieu de le laisser se perdre.\n\nEt ça, maintenant, tu le sais. Toi, tu croyais qu'il servait à quoi, ce tube ?",
   "first_comment": "Bonus : « stéthoscope » vient du grec stethos, la poitrine, et skopein, examiner. Laennec est mort en 1826 de la tuberculose, la maladie des poumons qu'il avait appris à écouter. Tu avais déjà entendu son nom ?",
   "hashtags": ["lesachoir", "culturegenerale", "histoiredelamedecine", "stethoscope", "laennec"],
   "sources": [

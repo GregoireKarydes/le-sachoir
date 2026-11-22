@@ -79,12 +79,8 @@ def validate(post):
         if b.get("set") and b["set"] not in sets and not scene:
             errs.append(f"plan {i} : set inconnu pour {style} ({b['set']}) ; choix : {', '.join(sorted(sets))}")
         b["fx"] = [x for x in (b.get("fx") or []) if x in FX]
-    # Triple accroche (Greg, 21 novembre 2026) : la question du Reel se pose au plan 1, dite ou sous-entendue,
-    # donc on accepte `question` du post ou un « ? » dans l'un des trois premiers plans.
-    has_q = (post.get("question") or "").strip().endswith("?") or any(
-        (b.get("text") or "").strip().endswith("?") for b in beats[:3])
-    if beats and not has_q:
-        errs.append("la question du Reel manque (`question` qui se termine par « ? », ou un « ? » dans les trois premiers plans)")
+    # Plus de contrôle de « ? » (Greg, 22 novembre 2026) : l'ouverture suit la triple accroche D2a de prompts/INSTAGRAM.md,
+    # où la question peut être sous-entendue.
     if style == "comic-history" and len(F.get("cast") or []) < 1 and not scene:
         errs.append("comic-history : `film.cast` (1 à 3 pays-marionnettes) est obligatoire")
     return errs

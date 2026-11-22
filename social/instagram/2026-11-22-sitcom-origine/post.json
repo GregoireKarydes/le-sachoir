@@ -14,7 +14,7 @@
     "le public rit, et son nom devient un mot : un chauvin est un patriote aveugle"
   ],
   "hooks": [
-    {"formula": 101, "text": "Tout le monde dit « chauvin ». Mais tu sais pourquoi ?"},
+    {"formula": 101, "text": "Tout le monde dit « chauvin ». Personne ne sait pourquoi."},
     {"formula": 113, "text": "Beaucoup ne seront pas d'accord, mais Chauvin n'a sans doute jamais existé."},
     {"formula": 112, "text": "Arrête de dire « chauvin » si tu ne connais pas Nicolas."}
   ],
@@ -44,7 +44,7 @@
       ]
     },
     "beats": [
-      {"who": "narr", "text": "Tout le monde dit « chauvin ». Mais tu sais pourquoi ?", "set": "europe", "big": "« Chauvin »", "cold": true, "speaker": 0, "emo": "fier", "tag": "Expressions", "image": {"bd": 1}},
+      {"who": "narr", "text": "Tout le monde dit « chauvin ». Personne ne sait pourquoi.", "set": "europe", "big": "« Chauvin »", "cold": true, "speaker": 0, "emo": "fier", "tag": "Expressions", "image": {"bd": 1}},
       {"who": "narr", "text": "Le coupable : un soldat introuvable.", "set": "europe", "big": "Un soldat introuvable", "speaker": 0, "emo": "surpris"},
       {"who": "narr", "text": "Parfait pour le prochain match.", "set": "manche", "big": "Au prochain match", "speaker": 1, "emo": "content"},
       {"who": "narr", "text": "On dit « chauvin » à cause de Nicolas Chauvin, soldat de Napoléon.", "set": "europe", "big": "Nicolas Chauvin", "pause": 0.3, "speaker": 0, "emo": "fier", "image": {"bd": 2}},
@@ -56,7 +56,7 @@
       {"who": "narr", "text": "Voilà pourquoi on dit « chauvin » : un soldat sans doute inventé.", "set": "europe", "big": "Un soldat inventé", "speaker": 0, "emo": "vexe", "image": {"bd": 8}}
     ]
   },
-  "caption": "Tout le monde dit « chauvin ». Mais tu sais pourquoi ?\n\nLe mot vient de Nicolas Chauvin, un soldat de Napoléon aux dix-sept blessures, fou de la France. Petit problème : aucun registre de l'armée ne le connaît. En 1831, une pièce de théâtre en fait un patriote ridicule (« Je suis Français, je suis Chauvin ! »), le public rit, et son nom devient un défaut.\n\nEt ça, maintenant, tu le sais. Quelle expression on décortique demain ? Écris-la en commentaire.",
+  "caption": "Tout le monde dit « chauvin ». Personne ne sait pourquoi.\n\nLe mot vient de Nicolas Chauvin, un soldat de Napoléon aux dix-sept blessures, fou de la France. Petit problème : aucun registre de l'armée ne le connaît. En 1831, une pièce de théâtre en fait un patriote ridicule (« Je suis Français, je suis Chauvin ! »), le public rit, et son nom devient un défaut.\n\nEt ça, maintenant, tu le sais. Quelle expression on décortique demain ? Écris-la en commentaire.",
   "first_comment": "Bonus : le mot a traversé la Manche. Dans les années 1930, l'anglais parle déjà de « male chauvinism » pour désigner le sexisme. Tu connais un autre mot français qu'on utilise en anglais ?",
   "hashtags": ["lesachoir", "culturegenerale", "expressionsfrancaises", "napoleon", "etymologie"],
   "sources": [

@@ -14,7 +14,7 @@
     "au début des années 1670, Louis XIV réserve le talon rouge à quelques nobles choisis"
   ],
   "hooks": [
-    {"formula": 109, "text": "Tu connais la vérité que les hommes acceptent mal ?"},
+    {"formula": 109, "text": "Une vérité que les hommes acceptent mal."},
     {"formula": 104, "text": "On ne parle pas assez du fait que Louis XIV portait des talons."},
     {"formula": 110, "text": "Ça, c'était le talon du cavalier. Ça, le talon du roi."}
   ],
@@ -39,7 +39,7 @@
       ]
     },
     "beats": [
-      {"who": "narr", "text": "Tu connais la vérité que les hommes acceptent mal ?", "set": "palais", "big": "Le talon haut", "cold": true, "image": {"bd": 1}},
+      {"who": "narr", "text": "Une vérité que les hommes acceptent mal.", "set": "palais", "big": "Le talon haut", "cold": true, "image": {"bd": 1}},
       {"who": "narr", "text": "Les talons hauts ? Pour eux. Pourquoi ?", "set": "palais", "big": "Pour les hommes ?", "image": {"bd": 1}},
       {"who": "narr", "text": "Tes chaussures, tu les verras autrement.", "set": "etang", "big": "Tu les verras autrement"},
       {"who": "narr", "text": "Le talon haut a été inventé pour les cavaliers perses.", "set": "montagnes", "big": "Cavaliers perses", "pause": 0.3, "image": {"bd": 2}},
