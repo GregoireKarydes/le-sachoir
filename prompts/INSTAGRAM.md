@@ -789,17 +789,18 @@ pour le buzz. Cinq exemples prêts à rendre : `pipeline/styles/examples/*/post.
 | des pays, un traité, une frontière absurde | `comic-history` | `hd-2d` |
 | l'Asie, l'Antiquité, une légende, la nature, un mythe à démonter | `ink-wash` | `hd-2d` |
 
-Grille par défaut :
+Grille par défaut (révisée le 22 novembre 2026 par le bilan du dimanche : chaque style passe sur au moins deux
+créneaux, pour que le bilan puisse séparer l'effet du style de celui de l'heure) :
 
 | | 07:45 `origine` | 12:30 `cultureg` | 21:00 `insolite` |
 |---|---|---|---|
 | lundi | `comic-history` | `ipad-sketch` | `hd-2d` |
 | mardi | `ipad-sketch` | `flat-space-explainer` | `ink-wash` |
 | mercredi | `comic-history` | `ipad-sketch` | `hd-2d` |
-| jeudi | `ipad-sketch` | `flat-space-explainer` | `comic-history` |
+| jeudi | `hd-2d` | `flat-space-explainer` | `comic-history` |
 | vendredi | `comic-history` | `ipad-sketch` | `ink-wash` |
 | samedi | `ipad-sketch` | `flat-space-explainer` | `hd-2d` |
-| dimanche | `comic-history` | `flat-space-explainer` | `ink-wash` |
+| dimanche | `comic-history` | `ink-wash` | `flat-space-explainer` |
 
 ## D1. Les cinq styles (le moteur de secours)
 **Depuis le 20 novembre 2026 au soir, chaque vidéo est réalisée à la main (partie E)** : les décors `set` ci-dessous ne
