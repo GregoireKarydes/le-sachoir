@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-29",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "chiffre",
+      "label": "Le Chiffre",
+      "title": "Trois curseurs, aucun mètre ruban",
+      "teaser": "Un viaduc dans les nuages, une tour qui fait la queue, un métro qui creuse : trois chiffres à viser au jugé.",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "estimate",
+          "theme": "Architecture",
+          "q": "Combien de mètres mesure le viaduc de Millau au sommet de son plus haut mât ?",
+          "hint": "Un peu plus haut que la tour Eiffel (330 m).",
+          "answer": 343,
+          "unit": "m",
+          "min": 20,
+          "max": 3000,
+          "scale": "log",
+          "explain": "343 m, mât compris : le pont le plus haut du monde, ouvert en 2004 dans l’Aveyron. Les jours de brume, les voitures roulent au-dessus des nuages. Les nuages, eux, ne paient pas le péage.",
+          "source": {
+            "title": "France.fr — Le viaduc de Millau, un ouvrage d’art au milieu des nuages",
+            "url": "https://www.france.fr/fr/article/le-viaduc-de-millau-un-ouvrage-dart-au-milieu-des-nuages/"
+          }
+        },
+        {
+          "type": "estimate",
+          "theme": "Économie",
+          "q": "Combien de millions de visiteurs sont montés dans la tour Eiffel en 2024 ?",
+          "hint": "Environ la population de la région Hauts-de-France (6 millions).",
+          "answer": 6.3,
+          "unit": "millions de visiteurs",
+          "min": 0.5,
+          "max": 60,
+          "scale": "log",
+          "explain": "6,3 millions en 2024, l’année des Jeux : environ 17 000 personnes par jour, ascenseurs et escaliers compris. Les Parisiens, eux, la regardent d’en bas.",
+          "source": {
+            "title": "L’Écho touristique — 6,3 millions de visiteurs à la tour Eiffel en 2024",
+            "url": "https://www.lechotouristique.com/article/tour-eiffel-63-millions-de-visiteurs-a-la-tour-eiffel-en-2024"
+          }
+        },
+        {
+          "type": "estimate",
+          "theme": "Géographie",
+          "q": "Combien de kilomètres de nouvelles lignes de métro le Grand Paris Express doit-il ajouter autour de Paris ?",
+          "hint": "Presque autant que tout le métro parisien actuel.",
+          "answer": 200,
+          "unit": "km",
+          "min": 10,
+          "max": 2000,
+          "scale": "log",
+          "explain": "Environ 200 km et 68 gares, surtout sous terre, pour relier les banlieues sans passer par Paris. Mise en service par étapes jusqu’au début des années 2030, si le calendrier tient.",
+          "source": {
+            "title": "Ministère de la Transition écologique — Le Grand Paris Express",
+            "url": "https://www.ecologie.gouv.fr/politiques-publiques/transports-ile-france-grand-paris-express"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "France.fr — Le viaduc de Millau, un ouvrage d’art au milieu des nuages",
+          "url": "https://www.france.fr/fr/article/le-viaduc-de-millau-un-ouvrage-dart-au-milieu-des-nuages/"
+        },
+        {
+          "title": "L’Écho touristique — 6,3 millions de visiteurs à la tour Eiffel en 2024",
+          "url": "https://www.lechotouristique.com/article/tour-eiffel-63-millions-de-visiteurs-a-la-tour-eiffel-en-2024"
+        },
+        {
+          "title": "Ministère de la Transition écologique — Le Grand Paris Express",
+          "url": "https://www.ecologie.gouv.fr/politiques-publiques/transports-ile-france-grand-paris-express"
+        }
+      ]
+    }
+  ]
+}
