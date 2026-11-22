@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T20:44+01:00",
+ "updated_at": "2026-11-22T20:46+01:00",
  "stock": {
   "cultureg": [
    {
@@ -183,6 +183,23 @@
     "title": "Les fusées européennes décollent de la jungle (parce que la Terre y court plus vite)",
     "theme": "L’univers",
     "tagline": "Un Brestois en pull de laine, un manège géant et 460 mètres par seconde offerts",
+    "minutes": 1,
+    "cases": 8,
+    "photos": 1,
+    "images_done": 0,
+    "images_total": 7,
+    "failed": 0,
+    "redo": 0
+   },
+   {
+    "path": "stock/insolite/20261122-2044-la-poste-repond-au-pere-noel",
+    "name": "20261122-2044-la-poste-repond-au-pere-noel",
+    "added": "20261122-2044",
+    "status": "waiting",
+    "next": false,
+    "title": "Le Père Noël a une adresse : La Poste, service des lutins",
+    "theme": "Entreprises et marques",
+    "tagline": "Pas de timbre, pas d’adresse, et pourtant une réponse : merci les postières rebelles",
     "minutes": 1,
     "cases": 8,
     "photos": 1,

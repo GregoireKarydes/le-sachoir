@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T20:44+01:00",
+ "updated_at": "2026-11-22T20:46+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -92,6 +92,17 @@
    "errors": [],
    "warnings": [
     "insolite : case 1 : bulle de 16 mots (max 15)"
+   ]
+  },
+  {
+   "path": "stock/insolite/20261122-2044-la-poste-repond-au-pere-noel",
+   "titles": {
+    "insolite": "Le Père Noël a une adresse : La Poste, service des lutins"
+   },
+   "errors": [],
+   "warnings": [
+    "insolite : fiche lucas : même tête qu'un personnage récent (blond hair, yellow main colour : 2026-11-20/insolite) ; changer coiffure ou couleur dominante",
+    "insolite : case 2 : récitatif de 21 mots (max 20)"
    ]
   },
   {

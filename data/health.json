@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T20:44:14.150831+01:00",
+ "updated_at": "2026-11-22T20:46:30.589808+01:00",
  "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -96,9 +96,9 @@
   },
   "insolite": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 5,
    "blocked": 0,
-   "images_left": 25,
+   "images_left": 32,
    "focus": "20261118-0848-elephant-bastille-rats (6 image(s) à faire)",
    "next": "20261117-2047-napoleon-decore-un-sucrier",
    "next_redo": 0
