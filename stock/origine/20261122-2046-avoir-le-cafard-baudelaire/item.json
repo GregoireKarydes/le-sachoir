@@ -152,7 +152,13 @@
           "title": "Le vrai Baudelaire, vers 1862",
           "text": "Charles Baudelaire photographié par Étienne Carjat vers 1862, cinq ans après la sortie des Fleurs du mal. Le regard n’aide pas à prouver qu’il n’avait pas le cafard.",
           "photo": {
-            "commons": "File:Étienne Carjat, Portrait of Charles Baudelaire, circa 1862, BW.jpg"
+            "commons": "File:Étienne Carjat, Portrait of Charles Baudelaire, circa 1862, BW.jpg",
+            "credit": "Étienne Carjat",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:%C3%89tienne_Carjat,_Portrait_of_Charles_Baudelaire,_circa_1862,_BW.jpg",
+            "file": "images/photo-5-tienne-carjat-portrait-of-charles-b.webp",
+            "status": "done"
           }
         },
         {
