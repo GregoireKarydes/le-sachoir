@@ -1,0 +1,264 @@
+{
+  "added": "20261122-2042",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le téléphone fixe raccroche pour de bon (rendez-vous en 2030)",
+      "tagline": "Un fil des années 1970, un grand-père têtu et une technicienne qui a tout son temps",
+      "teaser": "Gérard a un téléphone à cadran, une prise en T et une certitude : ça a toujours marché. L’Arcep a un calendrier.",
+      "minutes": 2,
+      "theme": "Informatique et numérique",
+      "epoque": "futur",
+      "art": {
+        "subject": "why France is switching off its old copper telephone network (landlines and ADSL) commune by commune until 2030, replaced by fibre",
+        "setting": "the small cosy living room of an old village house in France: a wooden side table with the telephone, a wall socket near the skirting board, a chest of drawers, a window onto a winter garden",
+        "era": "near future, France, winter 2028",
+        "props": {
+          "phone": "an old beige rotary-dial telephone with a long curly beige cord",
+          "socket": "a small white T-shaped wall telephone socket near the floor",
+          "box": "a small flat white internet box with three tiny green lights",
+          "envelopes": "a thick pile of blank unopened white envelopes"
+        }
+      },
+      "cast": [
+        {
+          "id": "gerard",
+          "name": "Gérard",
+          "look": "Gérard, a very old, short and round retired man, a thick wild mane of white hair and huge bushy white eyebrows, pale skin, a brick-red knitted cardigan as main colour, brown corduroy trousers, tartan slippers, always holding the phone against his chest",
+          "file": "cast/cultureg-gerard.png",
+          "status": "pending",
+          "role": "a stubborn retiree who refuses all change in bad faith; clutches his old telephone like a pet, arms crossed, chin up"
+        },
+        {
+          "id": "ines",
+          "name": "Inès",
+          "look": "Inès, a very tall and lanky young telecom technician, black curly hair tied in a big high puff, dark brown skin, an emerald-green work jacket as main colour, grey cargo trousers, a tablet in one hand and a coil of thin orange cable over her shoulder",
+          "file": "cast/cultureg-ines.png",
+          "status": "pending",
+          "role": "an endlessly patient technician who explains everything calmly; bends down from her great height, smiles politely, never loses her temper"
+        }
+      ],
+      "cover": {
+        "prompt": "in the cosy village living room: Gérard (very old, short, round, wild white hair, brick-red cardigan) on the left hugs the phone protectively, chin up, glaring; on the right Inès (very tall, lanky, black curly high puff, emerald-green jacket) bends down towards him holding out the box with a polite smile. medium wide shot",
+        "cast": [
+          "gerard",
+          "ines"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Hiver 2028",
+          "caption": "Pourquoi va-t-on couper le vieux téléphone fixe ? Hiver 2028 : Inès vient prévenir Gérard que sa ligne s’éteint.",
+          "bubbles": [
+            {
+              "who": "gerard",
+              "text": "Mon téléphone marche depuis 1974. Et lui, il ne fait pas de mises à jour.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Lui, non. Mais le fil qui le relie, on va l’éteindre.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the cosy living room of an old village house seen from the doorway. Gérard (very old, short, round, wild white hair, brick-red cardigan) on the left, seated in an armchair, clutches the phone to his chest like a cat; Inès (very tall, lanky, black curly high puff, emerald-green jacket) has just stepped in on the right, ducking under the door frame, tablet in hand. wide shot",
+            "cast": [
+              "gerard",
+              "ines"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Le réseau cuivre",
+          "caption": "Ce fil, c’est le réseau cuivre : déployé en masse dans les années 1970, pour les téléphones fixes.",
+          "bubbles": [
+            {
+              "who": "gerard",
+              "text": "Du cuivre, ma petite. Ça a toujours marché.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Depuis les années 2000, il porte aussi l’ADSL, l’internet par le téléphone. Il fatigue.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Gérard (very old, short, round, wild white hair, brick-red cardigan) on his hands and knees on the left, lovingly patting the socket by the skirting board as if it were a pet; behind him on the right, Inès (very tall, lanky, black curly high puff, emerald-green jacket) crouches down, folding her long legs, pointing at the wall with her tablet. low angle",
+            "cast": [
+              "gerard",
+              "ines"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Pourquoi l’éteindre",
+          "caption": "La fibre le remplace : plus rapide, et quatre fois moins gourmande en électricité par abonné, selon l’Arcep.",
+          "bubbles": [
+            {
+              "who": "gerard",
+              "text": "Quatre fois moins ? Mon téléphone ne consomme rien. Il dort.",
+              "side": "l"
+            },
+            {
+              "who": "ines",
+              "text": "Le réseau, lui, ne dort jamais. L’Arcep, le gendarme des télécoms, a compté.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "by the wooden side table: Inès (very tall, lanky, black curly high puff, emerald-green jacket) on the right holds up the coil of thin orange cable next to an old thick grey copper cable, comparing them calmly; Gérard (very old, short, round, wild white hair, brick-red cardigan) on the left puts a finger to his lips and covers the phone with a knitted tea cosy, as if letting it sleep. medium shot",
+            "cast": [
+              "gerard",
+              "ines"
+            ],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Fermer un réseau, en deux temps",
+          "steps": [
+            "Au moins 3 ans avant : la commune et les opérateurs sont prévenus",
+            "Fermeture commerciale : plus aucun nouvel abonnement sur le cuivre",
+            "Fermeture technique : les lignes cuivre encore actives sont coupées",
+            "Commune par commune, par lots, un lot par an jusqu’en 2030"
+          ],
+          "joke": "Le seul déménagement où l’on vous prévient trois ans à l’avance."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "Le préavis",
+          "caption": "Les premiers essais datent de 2020 : Lévis-Saint-Nom (Yvelines), 700 logements. Puis 162 communes coupées début 2025.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Gérard alone (very old, short, round, wild white hair, brick-red cardigan) has just pulled open a drawer of the chest of drawers: the envelopes burst out in an avalanche over his tartan slippers; he stands frozen, eyebrows shooting up, a light-blue sweat drop on his forehead, the phone still pressed to his chest. high angle",
+            "cast": [
+              "gerard"
+            ],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Une prise téléphonique française, ouverte",
+          "text": "L’intérieur d’une prise téléphonique française, avec son petit condensateur. C’est par ce genre de prise que des millions de foyers branchaient leur téléphone, puis leur modem ADSL, au réseau cuivre.",
+          "photo": {
+            "commons": "File:Condensateur de prise téléphonique française.jpg"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Si on ne fait rien",
+          "caption": "À la coupure, plus de téléphone ni d’internet par le cuivre. Relais possibles : fibre, câble, box 4G ou 5G, satellite.",
+          "bubbles": [
+            {
+              "who": "ines",
+              "text": "Votre combiné se branche sur la box. Il garde son poste.",
+              "side": "r"
+            },
+            {
+              "who": "gerard",
+              "text": "Il sonne… Évidemment. Ça a toujours marché.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "over Inès's shoulder (very tall, lanky, black curly high puff, emerald-green jacket), who kneels on the right holding the box with its green lights: Gérard (very old, short, round, wild white hair, brick-red cardigan) on the left suspiciously plugs the curly cord of the phone into the box with two fingers, as if defusing a bomb, eyes squinting. over-the-shoulder",
+            "cast": [
+              "gerard",
+              "ines"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Le calendrier glisse",
+          "title": "2030, si tout va bien",
+          "text": "En décembre 2025, Orange a repoussé d’un an la fermeture de 8 095 communes, où la fibre n’était pas encore partout. Cela fait environ 23 millions de logements et locaux professionnels : plus de la moitié des quelque 44 millions à fermer.",
+          "joke": "Même le cuivre a obtenu un sursis."
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Le cuivre des années 1970 cède la place à la fibre, plus rapide et plus sobre : coupure par lots jusqu’en 2030.",
+          "bubbles": [
+            {
+              "who": "gerard",
+              "text": "La fibre ? Ça a toujours marché. Depuis mardi.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Gérard alone (very old, short, round, wild white hair, huge bushy eyebrows, brick-red cardigan), face only, holding the beige receiver of the phone to his ear with a smug half-smile, one bushy eyebrow raised, looking straight at the reader; a tiny box with green lights glows on the table beside him. close-up",
+            "cast": [
+              "gerard"
+            ],
+            "file": "images/cultureg-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le premier village de France débranché du cuivre est Lévis-Saint-Nom, dans les Yvelines : 700 logements, coupés en mars 2021.",
+        "source": "Arcep — Organisation d’Orange pour la fermeture du réseau cuivre"
+      },
+      "story": "Le réseau cuivre, c’est le fil qui relie depuis des décennies les prises téléphoniques des Français au central de l’opérateur. Il a été déployé massivement dans les années 1970 pour les téléphones fixes, puis, à partir des années 2000, il a aussi transporté l’internet par ADSL. Orange, son propriétaire, a décidé de le fermer et de le remplacer par la fibre optique, plus rapide (plus de 100 Mbit/s) et plus sobre : selon l’Arcep, le régulateur des télécoms, un abonné à la fibre consomme quatre fois moins d’électricité qu’un abonné au cuivre.\nLa fermeture se fait en deux temps, commune par commune. D’abord la fermeture commerciale : plus personne ne peut souscrire d’abonnement sur le cuivre. Puis la fermeture technique : les lignes encore actives sont coupées. Chaque lot est annoncé au moins trois ans à l’avance. Les essais ont commencé à Lévis-Saint-Nom (Yvelines), 700 logements, coupés en mars 2021 ; un premier lot de 162 communes a suivi fin janvier 2025. Orange prévoit de tout couper fin 2030, mais en décembre 2025 il a repoussé d’un an 8 095 communes où la fibre n’était pas complète, soit environ 23 millions de locaux sur près de 44 millions.\nPour les abonnés à l’ADSL ou au téléphone branché sur la prise murale, il faut changer d’offre avant la coupure : fibre, câble, box 4G ou 5G, ou satellite. Le combiné peut rester, branché sur la box. Seul piège : sans électricité, la box s’arrête, et le téléphone aussi.",
+      "sources": [
+        {
+          "title": "Arcep — Que va changer la fermeture du réseau cuivre ?",
+          "url": "https://www.arcep.fr/demarches-et-services/utilisateurs/que-va-changer-la-fermeture-du-reseau-cuivre.html"
+        },
+        {
+          "title": "Arcep — Organisation d’Orange pour la fermeture du réseau cuivre",
+          "url": "https://www.arcep.fr/la-regulation/grands-dossiers-reseaux-fixes/la-fermeture-du-reseau-cuivre/organisation-orange-fermeture-reseau-cuivre.html"
+        },
+        {
+          "title": "Banque des Territoires (Localtis) — Fermeture du cuivre : le calendrier poursuit son dérapage",
+          "url": "https://www.banquedesterritoires.fr/fermeture-du-cuivre-le-calendrier-poursuit-son-derapage"
+        },
+        {
+          "title": "Selectra — Fin de l’ADSL : un calendrier progressif",
+          "url": "https://selectra.info/telecom/actualites/marche/fermeture-adsl-31-janvier-2027-prochaine-echeance"
+        },
+        {
+          "title": "Wikimedia Commons — Condensateur de prise téléphonique française",
+          "url": "https://commons.wikimedia.org/wiki/File:Condensateur_de_prise_t%C3%A9l%C3%A9phonique_fran%C3%A7aise.jpg"
+        }
+      ]
+    }
+  ]
+}
