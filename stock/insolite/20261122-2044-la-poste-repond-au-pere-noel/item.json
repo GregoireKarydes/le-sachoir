@@ -1,0 +1,251 @@
+{
+  "added": "20261122-2044",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Le Père Noël a une adresse : La Poste, service des lutins",
+      "tagline": "Pas de timbre, pas d’adresse, et pourtant une réponse : merci les postières rebelles",
+      "teaser": "Lucas croyait trier du courrier. À Libourne, on lui demande de répondre à la place d’un monsieur barbu très occupé.",
+      "minutes": 1,
+      "theme": "Entreprises et marques",
+      "epoque": "present",
+      "art": {
+        "subject": "how the French postal service ended up officially answering children's letters to Santa Claus: two rebel postmistresses in the 1950s, an official service since 1962, about sixty postal elves today",
+        "setting": "a big bright sorting room of a postal office in Libourne today, long wooden sorting tables, grey metal shelves of pigeonholes, a window with winter light",
+        "era": "present-day France, December",
+        "props": {
+          "sack": "a huge grey canvas mail sack",
+          "letters": "colourful children's envelopes covered in crayon drawings, with no stamps",
+          "hat": "a small green felt elf hat with a tiny bell"
+        }
+      },
+      "cast": [
+        {
+          "id": "lucas",
+          "name": "Lucas",
+          "look": "Lucas, a short and stocky young postal worker in his twenties, spiky bleached-blond hair, round face, light tan skin, a bright yellow polo shirt as main colour, navy blue trousers, white sneakers, a pen always tucked behind his ear",
+          "file": "cast/insolite-lucas.png",
+          "status": "pending",
+          "role": "the overzealous new recruit who applies postal rules to the letter; stiff, holds every envelope at arm's length like evidence"
+        },
+        {
+          "id": "colette",
+          "name": "Colette",
+          "look": "Colette, a very tall and bony postal veteran in her sixties, a sleek silver bob, reading glasses on a beaded chain, pale skin, a deep plum-purple long cardigan as main colour, grey skirt, a red wooden letter opener always in hand",
+          "file": "cast/insolite-colette.png",
+          "status": "pending",
+          "role": "the dry, unflappable head of the Santa letters team who has seen everything; answers with a raised eyebrow and a sigh, never hurries"
+        }
+      ],
+      "cover": {
+        "prompt": "in the sorting room: Lucas (short, stocky, spiky bleached-blond hair, bright yellow polo) on the left holds a crayon-covered envelope at arm's length, horrified, as if it were evidence; on the right Colette (very tall, bony, silver bob, plum-purple cardigan) calmly places the elf hat on his head with the tip of her letter opener. medium wide shot",
+        "cast": [
+          "lucas",
+          "colette"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Libourne, en décembre",
+          "caption": "Pourquoi La Poste répond-elle à la place du Père Noël ? À Libourne (Gironde), Lucas trie son premier sac.",
+          "bubbles": [
+            {
+              "who": "lucas",
+              "text": "Pas de timbre, adresse « Père Noël ». Retour à l’envoyeur !",
+              "side": "l"
+            },
+            {
+              "who": "colette",
+              "text": "Malheureux. Ici, celui qui répond, c’est nous.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a big bright postal sorting room with long wooden tables and grey pigeonhole shelves. Lucas (short, stocky, spiky bleached-blond hair, bright yellow polo) on the left stands rigid by the sack, holding up a crayon-covered envelope at arm's length with a stern frown; in the background on the right, Colette (very tall, bony, silver bob, plum-purple cardigan) looks up from her desk over her reading glasses. wide shot",
+            "cast": [
+              "lucas",
+              "colette"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Gratuit",
+          "caption": "Écrire au Père Noël ne coûte rien : aucun timbre. En 2016, il a reçu 1,2 million de lettres, de 140 pays.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Lucas alone (short, stocky, spiky bleached-blond hair, bright yellow polo) buried up to his chin under an avalanche of letters pouring out of several tipped-over sacks, only his head and one raised hand still holding a single envelope visible, staring at the reader with a blank, defeated face. high angle",
+            "cast": [
+              "lucas"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Années 1950",
+          "caption": "Tout commence dans les années 1950 : deux receveuses des postes répondent aux enfants, en cachette, parce que c’est interdit.",
+          "bubbles": [
+            {
+              "who": "colette",
+              "text": "Ouvrir le courrier des autres ? Défendu. Elles l’ont fait quand même.",
+              "side": "r"
+            },
+            {
+              "who": "lucas",
+              "text": "Des hors-la-loi. En uniforme des PTT.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "at a long sorting table: Colette (very tall, bony, silver bob, plum-purple cardigan) on the right, seated, slits open an envelope with the letter opener in one slow, expert gesture; Lucas (short, stocky, spiky bleached-blond hair, bright yellow polo) on the left leans back in shock, both hands over his mouth as if witnessing a crime. medium shot",
+            "cast": [
+              "lucas",
+              "colette"
+            ],
+            "file": "images/insolite-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Des lettres perdues au service officiel",
+          "steps": [
+            "Avant : une lettre sans vraie adresse finissait au bureau des lettres mortes, à Paris",
+            "Années 1950 : Odette Ménager (Maine-et-Loire) et Magdeleine Homo (Seine-Maritime) répondent quand même",
+            "1962 : Magdeleine Homo alerte le ministre des Postes, Jacques Marette",
+            "Le ministre crée un secrétariat officiel du Père Noël"
+          ],
+          "joke": "La seule désobéissance qui a fini en service public."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "1962",
+          "caption": "La première réponse officielle, en 1962, est écrite par Françoise Dolto, psychanalyste des enfants… et sœur du ministre.",
+          "bubbles": [
+            {
+              "who": "lucas",
+              "text": "La sœur du ministre ? Ça s’appelle du piston.",
+              "side": "l"
+            },
+            {
+              "who": "colette",
+              "text": "Ça s’appelle une experte. Et un peu de piston.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Lucas (short, stocky, spiky bleached-blond hair, bright yellow polo) seen from behind in the foreground on the left, arms crossed, suspicious; facing him across the sorting table, Colette (very tall, bony, silver bob, reading glasses on a chain, plum-purple cardigan) shrugs with a tiny guilty smile, letter opener raised like a pointer. from behind",
+            "cast": [
+              "lucas",
+              "colette"
+            ],
+            "file": "images/insolite-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Une boîte aux lettres jaune de La Poste",
+          "text": "La boîte jaune de La Poste. En décembre, plus de 2 300 bureaux de poste installent aussi une boîte spéciale pour les lettres au Père Noël.",
+          "photo": {
+            "commons": "File:Boîte murale jaune de La Poste.jpg"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Aujourd’hui",
+          "caption": "Aujourd’hui, une soixantaine de « lutins » postiers répondent, en français ou en anglais, si l’adresse est écrite au dos.",
+          "bubbles": [
+            {
+              "who": "colette",
+              "text": "Sans adresse au dos, même le Père Noël ne sait pas où livrer.",
+              "side": "r"
+            },
+            {
+              "who": "lucas",
+              "text": "Il fait le tour du monde en une nuit, mais pas sans code postal.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "close on the sorting table: Lucas (short, stocky, spiky bleached-blond hair, bright yellow polo) on the left turns an envelope over and over, peering at its blank back through a big magnifying glass with intense concentration; Colette (very tall, bony, silver bob, plum-purple cardigan) on the right, already typing a reply on an old keyboard without even looking. medium close-up",
+            "cast": [
+              "lucas",
+              "colette"
+            ],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Des postières ont désobéi, le ministre a suivi : depuis 1962, La Poste répond gratuitement au courrier du Père Noël.",
+          "bubbles": [
+            {
+              "who": "lucas",
+              "text": "Signé : le Père Noël. Retour à l’envoyeur… avec plaisir.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Lucas alone (short, stocky, spiky bleached-blond hair, bright yellow polo), now wearing the elf hat slightly crooked, signing a letter with a big flourish of the pen, proud and serious, looking up at the reader with sparkling eyes, small yellow sparkles around him. close-up",
+            "cast": [
+              "lucas"
+            ],
+            "file": "images/insolite-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "La toute première réponse officielle du Père Noël, en 1962, a été écrite par la psychanalyste Françoise Dolto, sœur du ministre des Postes.",
+        "source": "CIDJ — Depuis longtemps, la lettre au Père Noël enchante les fêtes"
+      },
+      "story": "En France, un enfant peut écrire au Père Noël sans timbre, avec pour seule adresse « Père Noël » : la lettre arrive au secrétariat du Père Noël de La Poste, à Libourne, en Gironde, et l’enfant reçoit une réponse, à condition d’avoir écrit son nom et son adresse au dos. Une soixantaine de « lutins » de La Poste y répondent chaque année, en français ou en anglais, de la mi-novembre au 20 décembre. En 2016, ils ont reçu plus de 1,2 million de lettres et 123 600 e-mails venus de 140 pays.\nTout a commencé dans les années 1950. Les lettres sans vraie adresse finissaient alors au bureau des lettres mortes, à Paris. Deux receveuses des postes, Odette Ménager dans le Maine-et-Loire et Magdeleine Homo en Seine-Maritime, se sont mises à leur répondre, alors que leur fonction leur interdisait d’ouvrir le courrier.\nEn 1962, Magdeleine Homo s’adresse au ministre des Postes, Jacques Marette, qui officialise la chose : un secrétariat national du Père Noël est créé. La première réponse est rédigée par la psychanalyste Françoise Dolto, sœur du ministre et spécialiste des enfants. Depuis, des écrivains prêtent parfois leur plume : Michel Bussi et Olivia Ruiz en 2024, Nicolas Vanier en 2025. Chaque réponse est accompagnée d’une carte à colorier.",
+      "sources": [
+        {
+          "title": "CIDJ — Depuis longtemps, la lettre au Père Noël enchante les fêtes",
+          "url": "https://www.cidj.com/bien-vivre/ses-loisirs/depuis-longtemps-la-lettre-au-pere-noel-enchante-les-fetes"
+        },
+        {
+          "title": "La Poste — Communiqué : le Secrétariat du Père Noël 2025",
+          "url": "https://www.lapostegroupe.com/assets/media/le-groupe-laposte/aRxykLpReVYa4oBC_LaPoste-CP-Secr%C3%A9tariatduP%C3%A8reNo%C3%ABl2025.pdf"
+        },
+        {
+          "title": "The Connexion — Letters from Santa, a French idea",
+          "url": "https://www.connexionfrance.com/news/letters-from-santa-a-french-idea/497042"
+        },
+        {
+          "title": "Wikimedia Commons — Boîte murale jaune de La Poste",
+          "url": "https://commons.wikimedia.org/wiki/File:Bo%C3%AEte_murale_jaune_de_La_Poste.jpg"
+        }
+      ]
+    }
+  ]
+}
