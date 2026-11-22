@@ -1,0 +1,435 @@
+{
+  "added": "20261122-1928",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)",
+      "tagline": "De la fuite de 1649 à la galerie des Glaces : pourquoi le Roi-Soleil a quitté Paris et comment son château a désarmé les grands nobles",
+      "teaser": "Un roi qui fuit Paris à dix ans, un ministre trop bien logé et des fontaines qui ne coulent que quand on les regarde.",
+      "minutes": 3,
+      "theme": "Histoire moderne",
+      "epoque": "passe",
+      "art": {
+        "subject": "why Louis XIV left Paris and built Versailles to tame the French nobility (1649-1789): the night flight of the Fronde, the arrest of the too-rich minister Fouquet after his party at Vaux, the building site on marshland, the fountains short of water and the Marly machine, the court etiquette and the Hall of Mirrors, the nobles ruined by spending, the king's death in 1715 and Louis XVI taken back to Paris in 1789",
+        "setting": "a dark Paris street at night in winter 1649 with a royal carriage; a wood-panelled royal council room in 1661; the formal gardens and terraces of the château of Vaux-le-Vicomte at night with fireworks; a muddy building site with scaffolding on marshy ground; the gardens of Versailles with fountains and gravel alleys; a huge wooden water wheel on the Seine; the royal bedchamber at Versailles; the long Hall of Mirrors; a cramped courtier's room; a crowded palace courtyard in October 1789",
+        "era": "17th-century France under Louis XIV (long curly wigs, lace cravats, velvet coats, plumed hats, rapiers, candles), with a final scene in October 1789 (powdered wigs, tricolour cockades, a crowd of Parisian women)",
+        "props": {
+          "carriage": "a dark blue royal carriage with gold trim pulled by two black horses",
+          "plate": "a shiny gold-coloured dinner plate with a matching fork",
+          "whistle": "a small brass whistle on a cord",
+          "wheel": "a gigantic wooden water wheel, taller than a house, turning in the river",
+          "mirror": "a tall arched wall mirror in a gilded frame",
+          "notebook": "a small leather notebook and a goose quill"
+        }
+      },
+      "cast": [
+        {
+          "id": "louis",
+          "name": "Louis XIV",
+          "look": "Louis, a French king of the 1660s-1700s, medium height with an extremely straight back and chin always raised, an enormous voluminous chestnut-brown curly wig falling to his chest, thin dark moustache, light skin, a long golden-yellow coat embroidered with orange sun rays as main colour, white lace cravat, white stockings, a slim ebony cane with a gold knob",
+          "role": "the king who must be the centre of every room; vain, cannot bear to be outshone and never forgets an affront, always posing as if for a portrait, cane planted, chin up",
+          "file": "cast/dossier-louis.png",
+          "status": "pending"
+        },
+        {
+          "id": "fouquet",
+          "name": "Nicolas Fouquet",
+          "look": "Nicolas, a French finance minister in his forties in 1661, plump and short with a round beaming face, shoulder-length wavy light-brown hair, small fair moustache, light skin, a rich emerald-green velvet coat as main colour with gold buttons straining over his belly, a small gold squirrel brooch on his chest, rings on every finger",
+          "role": "the superintendent of finances who loves to show off; boastful, oblivious to danger, arms wide open as if presenting his whole estate, always smiling a little too much",
+          "file": "cast/dossier-fouquet.png",
+          "status": "pending"
+        },
+        {
+          "id": "dartagnan",
+          "name": "D’Artagnan",
+          "look": "d'Artagnan, a musketeer captain of about fifty in 1661, very tall and wiry with very long thin legs, black curled moustache and small pointed goatee, tanned skin, a wide grey felt hat with a big white plume, a sky-blue musketeer tabard with a white cross as main colour, tall black boots, a rapier at his side",
+          "role": "the zealous captain who follows every order to the letter; takes everything literally, stands stiff as a post, hand always on the hilt of his rapier",
+          "file": "cast/dossier-dartagnan.png",
+          "status": "pending"
+        },
+        {
+          "id": "saintsimon",
+          "name": "Le duc de Saint-Simon",
+          "look": "Saint-Simon, a French duke and courtier in his twenties around 1700, very small and skinny, sharp pointed nose, narrow suspicious eyes, short powdered pale-grey wig, light skin, a dark burgundy wine-red coat as main colour, black breeches, the small leather notebook and a goose quill always in his hands",
+          "role": "the sharp-tongued courtier who secretly writes down every vanity of the court; grumpy, jealous of his rank, hunched over his notebook, one eyebrow always raised",
+          "file": "cast/dossier-saintsimon.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "the long Hall of Mirrors at Versailles. Louis (huge chestnut curly wig, golden-yellow sun-ray coat) stands in the middle, chin raised, admiring dozens of reflections of himself in the tall arched mirrors; around him a crowd of tiny bowing courtiers in colourful coats, and in the foreground Saint-Simon (very small, pointed nose, burgundy coat) scribbling in his notebook with a sour look. visual gag: every reflection of the king poses differently. wide shot",
+        "cast": ["louis", "saintsimon"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · La nuit où tout commence",
+          "caption": "Pourquoi Louis XIV a-t-il quitté Paris pour un château à la campagne ? Tout commence une nuit de janvier 1649.",
+          "bubbles": [
+            { "who": "Le petit Louis, 10 ans", "text": "On déménage en pleine nuit ? Sans mes soldats de plomb ?", "side": "l" },
+            { "who": "Anne d’Autriche, sa mère", "text": "Le Parlement de Paris se révolte. En voiture, et sans bruit !", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a dark Paris street at night in winter, snow on the cobbles, the carriage waiting with a lantern. On the left, Louis as a ten-year-old boy (small chestnut curls, golden-yellow nightshirt) is carried half-asleep, hugging a small box of tin soldiers; on the right a queen mother in a black veil and dark gown pushes him urgently into the carriage, a finger on her lips. wide shot",
+            "cast": ["louis"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1661",
+          "caption": "En 1661, Mazarin, qui gouvernait pour lui depuis l’enfance, meurt. Louis, 22 ans, décide de gouverner seul.",
+          "bubbles": [
+            { "who": "louis", "text": "Désormais, mon Premier ministre, c’est moi.", "side": "l" },
+            { "who": "fouquet", "text": "Excellente idée, Sire. Et le deuxième, c’est qui ?", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a wood-panelled royal council room with a long table covered in papers and candles. Louis (huge chestnut curly wig, golden-yellow sun-ray coat) stands at the head of the table, chin raised, tapping the table with his ebony cane; Fouquet (plump, wavy light-brown hair, emerald-green velvet coat) leans far across the table towards him with a hopeful grin, hand raised like a schoolboy. medium shot",
+            "cast": ["louis", "fouquet"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Les jardins de Vaux, gravés par Israël Silvestre",
+          "text": "Vaux-le-Vicomte, le château que s’offre Nicolas Fouquet, surintendant des finances (le ministre de l’argent du roi). L’architecte Le Vau, le jardinier Le Nôtre et le peintre Le Brun y travaillent pour lui.",
+          "photo": { "commons": "File:Israël Silvestre, Veue des petittes Cascades de Vaux, NGA 60934.jpg" }
+        },
+        {
+          "n": 4,
+          "kind": "react",
+          "tag": "17 août 1661 · Vaux-le-Vicomte",
+          "caption": "À Vaux, Fouquet reçoit le roi et 600 courtisans, un village entier : Molière, feux d’artifice, vaisselle en vermeil.",
+          "bubbles": [
+            { "who": "fouquet", "text": "Du vermeil partout, Sire : de l’argent doré. Vous n’avez pas ça, vous ?", "side": "r" },
+            { "who": "louis", "text": "Charmant. Vraiment… charmant.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the gardens of Vaux-le-Vicomte at night, fireworks bursting low behind the château. Fouquet (plump, wavy light-brown hair, emerald-green velvet coat) on the right proudly holds up the plate and fork, arms wide, beaming; Louis (huge chestnut curly wig, golden-yellow sun-ray coat) on the left wears a frozen polite smile, eyes narrowed, knuckles white on his ebony cane. medium wide shot",
+            "cast": ["fouquet", "louis"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · 5 septembre 1661",
+          "caption": "Dix-neuf jours plus tard, à Nantes, d’Artagnan et ses mousquetaires arrêtent Fouquet, accusé par Colbert de piocher dans les caisses.",
+          "bubbles": [
+            { "who": "fouquet", "text": "Mais… il avait adoré le feu d’artifice !", "side": "r" },
+            { "who": "dartagnan", "text": "Le roi a dit de tout saisir. J’emporte aussi les fourchettes.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a stone street in front of a town castle in daylight. D'Artagnan (very tall and wiry, black curled moustache, plumed grey hat, sky-blue musketeer tabard) on the left towers over Fouquet, one hand on his rapier, the other gravely holding up the fork; Fouquet (plump, wavy light-brown hair, emerald-green velvet coat) on the right shrinks back, mouth open, a light-blue sweat drop on his forehead; two musketeers far in the background. low angle",
+            "cast": ["dartagnan", "fouquet"],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "1661-1680",
+          "caption": "Fouquet mourra en prison en 1680. Ses artistes, Le Vau, Le Nôtre et Le Brun, partent travailler pour le roi.",
+          "bubbles": [
+            { "who": "louis", "text": "Vous me referez la même chose. Mais en plus grand. Beaucoup plus grand.", "side": "l" },
+            { "who": "Le Nôtre, jardinier", "text": "Il faudra déplacer quelques collines, Sire.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a palace study with a big table covered in plans. Seen over the shoulder of Louis (huge chestnut curly wig, golden-yellow sun-ray coat), who points his ebony cane at a drawing of a palace; facing him across the table, three artists: an architect holding a roll of plans, a grey-haired gardener with a rake and a painter with a brush, all three gulping nervously. over-the-shoulder",
+            "cast": ["louis"],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi Versailles et pas Paris ?",
+          "steps": [
+            "1648-1652 : la Fronde. Le Parlement de Paris, puis des princes, se révoltent contre les impôts de la guerre",
+            "La cour doit fuir la capitale : le roi en garde la peur de Paris et des grands nobles",
+            "Sa solution : un palais loin de la ville, où il garde les nobles sous les yeux",
+            "Le 6 mai 1682, le gouvernement s’y installe pour de bon"
+          ],
+          "joke": "Le déménagement le plus rancunier de l’histoire de France."
+        },
+        {
+          "n": 8,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Le chantier",
+          "caption": "En 1661, Versailles n’est qu’un petit château de chasse de Louis XIII, son père, bâti sur des marais.",
+          "bubbles": [
+            { "who": "louis", "text": "C’est ici. Je le sens.", "side": "l" },
+            { "who": "Le Nôtre, jardinier", "text": "Ce que vous sentez, Sire, c’est le marécage.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a small brick and stone hunting lodge in the distance on flat marshy ground with reeds and puddles. In the foreground Louis (huge chestnut curly wig, golden-yellow sun-ray coat) strides forward, arm stretched out grandly, sinking ankle-deep into the mud without noticing; behind him the grey-haired gardener holds his nose with one hand and his rake with the other. medium wide shot",
+            "cast": ["louis"],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Versailles en 1668, peint par Pierre Patel",
+          "text": "Le château vu depuis l’avenue de Paris, en plein agrandissement. Au centre, le petit château de Louis XIII ; autour, les ailes neuves et les jardins tracés au cordeau par Le Nôtre.",
+          "photo": { "commons": "File:Chateau de Versailles 1668 Pierre Patel.jpg" }
+        },
+        {
+          "n": 10,
+          "kind": "react",
+          "tag": "1685",
+          "caption": "En 1685, plus de 36 000 ouvriers travaillent sur les chantiers : soixante fois les invités de la fête de Vaux.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a gigantic building site seen from above: scaffolding, piles of stones, carts and hundreds of tiny workers in brown and grey carrying beams and buckets in every direction. Exactly in the middle, on a small gilded armchair placed on a clean red carpet in the mud, Louis (huge chestnut curly wig, golden-yellow sun-ray coat) sits perfectly still, chin raised, posing calmly while a tiny painter paints his portrait. wide shot",
+            "cast": ["louis"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "chap",
+          "tag": "Chapitre 4 · L’eau · 1666",
+          "caption": "En 1666, l’eau manque pour toutes les fontaines. Un sifflet signale l’arrivée du roi : on les ouvre devant lui.",
+          "bubbles": [
+            { "who": "Un fontainier", "text": "Il tourne à gauche ! Ouvrez à gauche, fermez à droite !", "side": "r" },
+            { "who": "louis", "text": "Quel domaine : l’eau jaillit partout où je passe.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the gravel alleys of the Versailles gardens. In the background Louis (huge chestnut curly wig, golden-yellow sun-ray coat) strolls slowly with his cane, admiring a fountain shooting up right beside him; in the foreground a red-faced fountain keeper in a brown smock runs flat out, blowing the whistle, while another worker behind a hedge frantically turns a valve, and the fountain behind the king has already stopped. high angle",
+            "cast": ["louis"],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "1684",
+          "caption": "En 1684, la machine de Marly s’achève : 14 roues de 12 m hissent la Seine 150 m plus haut.",
+          "bubbles": [
+            { "who": "Un ingénieur", "text": "La moitié de la tour Eiffel, Sire. Vous verrez, c’est très haut.", "side": "r" },
+            { "who": "louis", "text": "La tour de qui ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "on the bank of the Seine, the wheel turns, spraying water, with more giant wheels in a row behind it. Louis (huge chestnut curly wig, golden-yellow sun-ray coat) on the left looks up at it, head tilted far back, puzzled; on the right a stocky engineer in a leather apron proudly points a measuring rod up towards the top of a hill. low angle",
+            "cast": ["louis"],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "chap",
+          "tag": "Chapitre 5 · La cage dorée · 6 mai 1682",
+          "caption": "Le 6 mai 1682, Versailles devient le siège du gouvernement. Les grands nobles suivent : loin du roi, aucune faveur.",
+          "bubbles": [
+            { "who": "louis", "text": "Paris ? Jamais entendu parler.", "side": "l" },
+            { "who": "Colbert, ministre", "text": "Sire, j’y ai encore tous mes bureaux.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the vast courtyard of the new palace of Versailles, a long line of carriages arriving and nobles in colourful coats stepping out with trunks and hatboxes. Louis (huge chestnut curly wig, golden-yellow sun-ray coat) stands on the front steps on the left, arms open in welcome; on the right a stern minister in a plain black coat with a skullcap carries a tall pile of files, sighing. wide shot",
+            "cast": ["louis"],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "fact",
+          "tag": "Vers 1700 · Le lever du roi",
+          "caption": "Chaque matin, des dizaines de courtisans assistent au lever du roi, rang par rang. Y être admis est un honneur.",
+          "bubbles": [
+            { "who": "saintsimon", "text": "Mon voisin a vu le roi bâiller. Il va le raconter trente ans.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the royal bedchamber with a huge canopied bed. Louis (chestnut curly wig not yet on, short brown hair, golden-yellow sun-ray dressing gown) sits up in bed yawning widely, arms stretched; a crowd of courtiers stands behind a gilded railing, leaning forward with awe as if watching a show; Saint-Simon (very small, pointed nose, burgundy coat) on the right, squeezed in the front row, whispers sideways and writes in the notebook. medium shot",
+            "cast": ["louis", "saintsimon"],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 15,
+          "kind": "fact",
+          "tag": "Vers 1700 · Vraie réplique, rapportée par Saint-Simon",
+          "caption": "Le roi note les absents. Pour un noble rarement là qui demande une faveur, il a une phrase toute prête.",
+          "bubbles": [
+            { "who": "Un noble de province", "text": "Sire, une petite pension pour mon château qui prend l’eau ?", "side": "r" },
+            { "who": "louis", "text": "Je ne le connais pas.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a long palace gallery. Seen from behind, Louis (huge chestnut curly wig, golden-yellow sun-ray coat) walks straight past without turning his head, cane swinging; on the right a provincial noble in a muddy old brown coat kneels with a petition held out, frozen in mid-sentence; in the background Saint-Simon (very small, burgundy coat) peeks from behind a pillar, quill on the notebook. from behind",
+            "cast": ["louis", "saintsimon"],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 16,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "La galerie des Glaces, gravée en 1684",
+          "text": "Achevée en 1684 par Hardouin-Mansart : 73 mètres de long, 357 miroirs face aux fenêtres, et au plafond 30 tableaux de Le Brun à la gloire du roi.",
+          "photo": { "commons": "File:Sébastien Leclerc I, Galerie des Glaces at Versailles, 1684.jpg" }
+        },
+        {
+          "n": 17,
+          "kind": "react",
+          "tag": "1665-1684",
+          "caption": "Ces miroirs viennent d’une manufacture française, créée en 1665 par Colbert pour casser le monopole de Venise.",
+          "bubbles": [
+            { "who": "louis", "text": "Trois cent cinquante-sept rois. Enfin une cour à ma hauteur.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "inside the Hall of Mirrors. Louis (huge chestnut curly wig, golden-yellow sun-ray coat) faces the arched mirrors, chin raised, one hand on his heart, deeply moved, small yellow sparkles around him; the mirror behind him shows a long row of identical reflections of the king. medium close-up",
+            "cast": ["louis"],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 18,
+          "kind": "fact",
+          "tag": "Vers 1700",
+          "caption": "Pour plaire, il faut dépenser : habits, table, jeu. Le roi pousse les nobles à vivre au-dessus de leurs moyens.",
+          "bubbles": [
+            { "who": "saintsimon", "text": "Encore un habit neuf. Je finirai par porter mon château sur le dos.", "side": "l" },
+            { "who": "Le tailleur", "text": "Monsieur le duc a un dos très élégant.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a cramped little room in the palace attic with a sloping ceiling and a narrow bed. Saint-Simon (very small and skinny, pointed nose, burgundy coat) on the left stands on a stool, arms out, being fitted for a dazzling new coat covered in gold embroidery, staring in horror at a bill as long as his arm; on the right a smiling tailor kneels with pins in his mouth. medium shot",
+            "cast": ["saintsimon"],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 19,
+          "kind": "react",
+          "tag": "Vers 1700",
+          "caption": "Ruinés, les nobles dépendent des pensions et des faveurs du roi. Plus question de se révolter : on guette un sourire.",
+          "bubbles": [
+            { "who": "saintsimon", "text": "Il m’a fait un signe de tête. Ma semaine est faite.", "side": "l", "thought": true }
+          ],
+          "image": {
+            "prompt": "close on Saint-Simon (very small, pointed nose, short powdered grey wig, burgundy coat) in a palace corridor, melting with bliss, eyes closed, hands clasped over the notebook on his chest, small red hearts floating around his head; just behind his shoulder, out of focus, the golden-yellow sleeve of the king walking away. close-up",
+            "cast": ["saintsimon"],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 20,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "La cage dorée, en quatre étapes",
+          "steps": [
+            "Le roi installe la cour et le gouvernement à Versailles (1682)",
+            "Être vu par le roi devient le seul moyen d’obtenir pensions, postes et faveurs",
+            "Pour briller, les nobles dépensent jusqu’à se ruiner",
+            "Ruinés et loin de leurs terres, ils dépendent du roi : finie la Fronde"
+          ],
+          "joke": "Une prison où les détenus paient eux-mêmes la décoration."
+        },
+        {
+          "n": 21,
+          "kind": "chap",
+          "tag": "Chapitre 6 · 1715 · conseil authentique, résumé",
+          "caption": "Le 1er septembre 1715, il meurt après 72 ans de règne, un record. Son héritier, Louis XV, a 5 ans.",
+          "bubbles": [
+            { "who": "louis", "text": "Évitez la guerre autant que vous pourrez : c’est la ruine des peuples.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the royal bedchamber in soft candlelight, calm and sober. Louis (now old and thin, wig flattened, golden-yellow sun-ray dressing gown) lies in the great bed, gently holding the hand of a solemn five-year-old boy in a little blue coat who stands at the bedside; a doctor in black waits quietly at the back. medium shot",
+            "cast": ["louis"],
+            "file": "images/dossier-21.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 22,
+          "kind": "explain",
+          "tag": "Et aujourd’hui ?",
+          "title": "Un palais sans roi, mais pas sans foule",
+          "text": "Plus aucun roi n’y vit après 1789. En 1837, Louis-Philippe en fait un musée de l’histoire de France. En 2024, 8,4 millions de visiteurs s’y sont pressés, soit environ 23 000 par jour.",
+          "joke": "Le lever du roi a enfin trouvé son public."
+        },
+        {
+          "n": 23,
+          "kind": "react",
+          "tag": "6 octobre 1789",
+          "caption": "Né de la peur de Paris, Versailles a tenu les nobles en laisse. En octobre 1789, Paris reprend le roi.",
+          "bubbles": [
+            { "who": "Louis XVI", "text": "Paris ? En plein jour ? Sans mes affaires ?", "side": "l" },
+            { "who": "Une Parisienne", "text": "Votre ancêtre est parti en douce. Vous, on vous raccompagne.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the palace courtyard crowded with Parisian women in caps and aprons, tricolour cockades, some carrying loaves of bread. Seen from below, at the open window of the carriage, a plump king in a powdered white wig and a pale blue coat stares out, dismayed; on the right a sturdy market woman with her fists on her hips leans in with a satisfied smile. low angle",
+            "cast": [],
+            "file": "images/dossier-23.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "La manufacture de glaces créée par Colbert en 1665, qui fournit Versailles en miroirs, est l’ancêtre de Saint-Gobain, toujours en activité.",
+        "source": "Saint-Gobain, « Our history »"
+      },
+      "story": "En janvier 1649, pendant la Fronde, la cour fuit Paris : le Parlement de Paris, puis des princes, se révoltent contre les impôts de la guerre. Louis XIV, 10 ans, gardera la méfiance de Paris et des grands nobles.\nÀ la mort de Mazarin, le 9 mars 1661, il gouverne seul. Le 17 août, le surintendant des finances Nicolas Fouquet le reçoit à Vaux-le-Vicomte avec 600 courtisans, Molière, un feu d’artifice et une vaisselle de vermeil que le roi n’a pas. Le 5 septembre, d’Artagnan l’arrête à Nantes ; accusé de malversations par Colbert, Fouquet mourra en prison. Ses artistes, Le Vau, Le Nôtre et Le Brun, passent au service du roi.\nLe petit château de chasse de Louis XIII, bâti sur des marais, devient un chantier géant. L’eau manque : on ouvre les fontaines au passage du roi, et la machine de Marly hisse la Seine sur la colline. Le 6 mai 1682, la cour et le gouvernement s’y installent. Pour obtenir pensions et faveurs, il faut être vu du roi, et dépenser. Ruinés, les nobles dépendent de lui et ne songent plus à se révolter.\nLouis XIV meurt en 1715, après 72 ans de règne. Le 6 octobre 1789, une foule venue de Paris ramène Louis XVI dans la capitale : aucun roi ne vivra plus à Versailles, devenu musée en 1837.",
+      "sources": [
+        { "title": "Château de Versailles — Versailles, capital of the kingdom (1682)", "url": "https://en.chateauversailles.fr/discover/history/key-dates/versailles-capital-kingdom-1682" },
+        { "title": "Herodote — 13 mai 1648 - 11 mars 1649, la Fronde parlementaire", "url": "https://www.herodote.net/13_mai_1648_11_mars_1649-evenement-16490311.php" },
+        { "title": "Wikipedia — Cardinal Mazarin", "url": "https://en.wikipedia.org/wiki/Cardinal_Mazarin" },
+        { "title": "Herodote — 17 août 1661, la fête de Vaux-le-Vicomte", "url": "https://www.herodote.net/17_aout_1661-evenement-16610817.php" },
+        { "title": "Herodote — 5 septembre 1661, arrestation de Fouquet", "url": "https://www.herodote.net/5_septembre_1661-evenement-16610905.php" },
+        { "title": "Larousse — Nicolas Fouquet", "url": "https://www.larousse.fr/encyclopedie/personnage/Fouquet/187131" },
+        { "title": "Wikipedia — History of the Palace of Versailles", "url": "https://en.wikipedia.org/wiki/History_of_the_Palace_of_Versailles" },
+        { "title": "Château de Versailles — Water at Versailles", "url": "https://en.chateauversailles.fr/discover/history/key-dates/water-versailles" },
+        { "title": "Wikipedia — Machine de Marly", "url": "https://en.wikipedia.org/wiki/Machine_de_Marly" },
+        { "title": "Herodote — Dans l’intimité de la chambre du Roi-Soleil", "url": "https://www.herodote.net/Dans_l_intimite_de_la_chambre_du_Roi_Soleil_-synthese-3014.php" },
+        { "title": "Saint-Simon, Mémoires (extraits) — Fordham Modern History Sourcebook", "url": "https://sourcebooks.web.fordham.edu/mod/17stsimon.asp" },
+        { "title": "Château de Versailles — The Hall of Mirrors", "url": "https://en.chateauversailles.fr/discover/estate/palace/hall-mirrors" },
+        { "title": "Saint-Gobain — Our history", "url": "https://saint-gobain.com/en/group/our-history" },
+        { "title": "Château de Versailles — Death of Louis XIV (1715)", "url": "https://en.chateauversailles.fr/discover/history/key-dates/death-louis-xiv-1715" },
+        { "title": "Château de Versailles — Departure of the king (1789)", "url": "https://en.chateauversailles.fr/discover/history/key-dates/departure-king-1789" },
+        { "title": "Wikipedia — Musée de l’Histoire de France (Versailles)", "url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_de_l%27Histoire_de_France_(Versailles)" },
+        { "title": "L’Essentiel de l’Éco — Tourisme de masse : Versailles tire la sonnette d’alarme", "url": "https://lessentieldeleco.fr/2552-tourisme-de-masse-versailles-tire-la-sonnette-dalarme/" }
+      ]
+    }
+  ]
+}
