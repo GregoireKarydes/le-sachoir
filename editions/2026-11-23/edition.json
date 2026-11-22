@@ -1,7 +1,389 @@
 {
   "date": "2026-11-23",
   "status": "draft",
+  "newsletter": {
+    "subject": "Lundi : une COP sans fin et une sonde enfin garée 🛰️",
+    "intro": "Lundi 23 novembre. Deux cents pays n’ont pas réussi à se mettre d’accord. Vous, vous avez juste à ouvrir le Sachoir.",
+    "game": "Cinq questions, un aigle impérial et zéro prolongation. Promis, on finit à l’heure.",
+    "ps": "P.-S. BepiColombo a mis huit ans pour arriver à destination. Le Sachoir, quatre minutes. On ne compare pas, on constate."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Une COP sans fin, une règle en or et une sonde bien garée",
+      "tagline": "La COP31 finit sans accord sur les énergies fossiles, Emmanuel Macron pense à une « règle d’or », deux Français gagnent le Masters de double et BepiColombo tourne autour de Mercure.",
+      "teaser": "Deux cents pays qui ne s’entendent pas, une règle qui coûte cher, deux Français très forts et une sonde qui a trouvé sa place.",
+      "minutes": 3,
+      "theme": "",
+      "art": {
+        "subject": "four news stories of the day, each told in one gag panel: a climate conference ending without agreement after record overtime, a president wanting a golden budget rule in the constitution, two French tennis players winning a big doubles title, a space probe finally entering orbit around Mercury",
+        "setting": "a huge empty conference hall with rows of chairs, a gilded palace hall, an indoor tennis court, a space agency control room with screens",
+        "era": "present day, November 2026",
+        "props": {
+          "trophy": "a tiny shiny gold trophy cup, smaller than a hand",
+          "ruler": "a giant shiny solid-gold ruler, as long as a man is tall, with plain notches and no numbers",
+          "cup": "a big silver tennis trophy cup with two handles",
+          "probe": "a small model of a boxy space probe with long blue solar panels, hanging on a thin string"
+        }
+      },
+      "cast": [
+        {
+          "id": "presidentcop",
+          "name": "Murat Kurum",
+          "look": "a cartoon caricature of a stocky man in his fifties, light olive skin, short neat black hair with grey temples, a thick trimmed black moustache, a dark teal suit as main colour, white shirt, a conference badge on a red lanyard",
+          "role": "the Turkish minister presiding over the climate conference; never admits a failure, turns every flop into a triumph, chest always puffed out",
+          "file": "cast/actu-presidentcop.png",
+          "status": "pending"
+        },
+        {
+          "id": "president",
+          "name": "Emmanuel Macron",
+          "look": "a cartoon caricature of a slim middle-aged French president, short swept-back brown-grey hair, big eager smile, navy blue suit as main colour, white shirt, thin dark tie, standing very straight",
+          "role": "the head of state who wants a golden rule against overspending; earnest and proud, does not notice his rule is made of solid gold",
+          "file": "cast/actu-president.png",
+          "status": "skipped"
+        },
+        {
+          "id": "geant",
+          "name": "Albano Olivetti",
+          "look": "a cartoon caricature of a very tall, broad-shouldered tennis player in his thirties, light skin, short dark brown hair, short dark beard, a bright royal-blue tennis shirt as main colour, white shorts, a white sweatband on the wrist",
+          "role": "the giant of the French doubles pair; unflappable, understates everything, barely smiles even when he wins",
+          "file": "cast/actu-geant.png",
+          "status": "skipped"
+        },
+        {
+          "id": "partenaire",
+          "name": "Théo Arribagé",
+          "look": "a cartoon caricature of a lean, much shorter tennis player in his twenties, light skin, short curly light-brown hair, a sunny yellow tennis shirt as main colour, navy shorts, a racket held up high",
+          "role": "the explosive partner who celebrates everything twice as hard as his teammate",
+          "file": "cast/actu-partenaire.png",
+          "status": "skipped"
+        },
+        {
+          "id": "ingenieure",
+          "name": "Une ingénieure de l’ESA",
+          "look": "a tall, thin woman in her forties, dark brown skin, a high puffy black afro bun, a mustard-orange cardigan as main colour over a grey t-shirt, a headset with a microphone, a coffee mug",
+          "role": "a space engineer who has followed the probe for eight years; exhausted and relieved, compares everything to ordinary daily life",
+          "file": "cast/actu-ingenieure.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A huge empty conference hall at dawn, rows of empty chairs, crumpled papers on the floor, one delegate asleep across three chairs in the background. presidentcop (stocky, thick black moustache, dark teal suit, red lanyard) stands alone on the stage, chest puffed out, raising the trophy above his head with a huge proud grin. Wide shot.",
+        "cast": [
+          "presidentcop"
+        ],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Environnement",
+          "lead": true,
+          "major": true,
+          "gag": "mauvaise-foi",
+          "people": [
+            {
+              "name": "Murat Kurum",
+              "party": "étranger",
+              "role": "ministre turc, président de la COP31"
+            }
+          ],
+          "caption": "Dimanche 22 novembre, à Antalya, la COP31 sur le climat, présidée par le ministre turc Murat Kurum, a fini sans accord, après 48 heures de prolongations.",
+          "bubbles": [
+            {
+              "who": "presidentcop",
+              "text": "Un échec ? Non : un record du monde de prolongations.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A vast conference hall seen from above, rows of empty blue chairs, a cleaner in grey overalls sweeping crumpled papers far away. presidentcop (stocky, thick black moustache, dark teal suit, red lanyard) stands on the right on a small stage, beaming, proudly holding up the trophy as if he had won something big. High angle.",
+            "cast": [
+              "presidentcop"
+            ],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "L’ancien site de l’Expo 2016, où s’est tenue la COP31",
+          "text": "Les terrains de l’exposition horticole de 2016, près d’Antalya, transformés pour accueillir les délégations de la COP31.",
+          "photo": {
+            "commons": "File:Expo 2016 Antalya - West View.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "COP31 : pas d’accord sur les énergies fossiles",
+          "text": "Quoi : près de 200 pays n’ont pas adopté de déclaration finale ; seuls des textes techniques sont passés.\nPourquoi ça compte : aucun nouvel engagement commun pour s’éloigner des énergies fossiles, trois ans après le premier appel, à Dubaï.\nRepère : la plus longue COP de l’histoire, devant celle de Madrid en 2019.\nEt maintenant : le projet de texte, qui misait sur l’électricité, reste lettre morte.",
+          "sources": [
+            {
+              "title": "franceinfo",
+              "url": "https://www.franceinfo.fr/environnement/crise-climatique/cop-climat/la-cop31-s-acheve-a-antalya-sans-que-les-pays-ne-s-accordent-sur-une-declaration-finale-divises-sur-la-question-des-energies-fossiles_8295011.html"
+            },
+            {
+              "title": "24 heures",
+              "url": "https://www.24heures.ch/cop31-la-conference-climat-devient-la-plus-longue-de-lhistoire-610323575525"
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Comment ça se fait ?",
+          "zoom": true,
+          "title": "Pourquoi 200 pays n’ont-ils pas pu s’entendre ?",
+          "steps": [
+            "À une COP, une décision n’est adoptée que si tous les pays l’acceptent : c’est le consensus",
+            "L’Arabie saoudite, grand producteur de pétrole, refusait toute mention claire des énergies fossiles : le dernier texte n’en parlait plus",
+            "L’Union européenne, le Panama, le Vanuatu ou les îles Marshall ont refusé un texte muet sur le sujet",
+            "Un seul « non » suffit à bloquer : la déclaration finale tombe, seuls les textes techniques passent"
+          ],
+          "text": "Ce qu’on ne sait pas encore : le sort de l’objectif turc de 35 % d’électricité en 2035.",
+          "sources": [
+            {
+              "title": "Courrier international (via Headtopics)",
+              "url": "https://fr.headtopics.com/news/la-cop31-se-termine-sur-un-echec-apres-le-rejet-du-projet-90084291"
+            },
+            {
+              "title": "franceinfo",
+              "url": "https://www.franceinfo.fr/environnement/crise-climatique/cop-climat/la-cop31-s-acheve-a-antalya-sans-que-les-pays-ne-s-accordent-sur-une-declaration-finale-divises-sur-la-question-des-energies-fossiles_8295011.html"
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Politique",
+          "gag": "litteral",
+          "people": [
+            {
+              "name": "Emmanuel Macron",
+              "party": "Renaissance",
+              "role": "président de la République"
+            }
+          ],
+          "caption": "Dimanche 22 novembre, selon La Tribune Dimanche, le président Emmanuel Macron envisage de réunir le Parlement à Versailles en janvier pour inscrire une « règle d’or » budgétaire dans la Constitution.",
+          "bubbles": [
+            {
+              "who": "president",
+              "text": "Elle est en or massif. Les économies, on les fera après.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A gilded palace hall with tall mirrors, almost empty. president (slim, swept-back brown-grey hair, navy blue suit, thin dark tie) on the left, beaming with pride, hugs the ruler against his shoulder like a precious treasure; it is so heavy that his knees bend slightly and a tiny light-blue sweat drop flies off his forehead. Medium close-up.",
+            "cast": [
+              "president"
+            ],
+            "file": "images/actu-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Une « règle d’or » dans la Constitution ?",
+          "text": "Quoi : le projet reprendrait un texte de 2011 qui impose aux budgets une trajectoire vers l’équilibre.\nPourquoi ça compte : la dette atteint 119 % du PIB ; la règle encadrerait les budgets futurs.\nEt maintenant : il faut 3/5 des voix ; la droite et le RN se disent favorables.",
+          "sources": [
+            {
+              "title": "La Libre (AFP)",
+              "url": "https://www.lalibre.be/international/europe/2026/11/22/macron-envisage-dinscrire-une-regle-dor-dans-la-constitution-FAGIDWQN3FAKDIV5YTFA4LFERU/"
+            },
+            {
+              "title": "L’Express (via Orange Actualités)",
+              "url": "https://actu.orange.fr/politique/emmanuel-macron-envisagerait-de-faire-adopter-par-le-parlement-une-regle-d-or-budgetaire-dans-la-constitution-l-express-via-6medias-CNT000002tWVBU.html"
+            }
+          ]
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Sport",
+          "gag": "litote",
+          "caption": "Dimanche 22 novembre, à Turin, les Français Théo Arribagé et Albano Olivetti ont gagné le Masters de double, treize mois après avoir débuté ensemble par une défaite à Valence.",
+          "bubbles": [
+            {
+              "who": "geant",
+              "text": "Bon. C’est un peu mieux que Valence.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. An indoor tennis court under bright lights, seen from the ground. geant (very tall, short dark beard, royal-blue tennis shirt) stands on the left, totally calm, holding the cup under one arm like a grocery bag; partenaire (much shorter, curly light-brown hair, sunny yellow shirt) leaps high in the air behind him, racket raised, mouth wide open in a shout of joy. Low angle.",
+            "cast": [
+              "geant",
+              "partenaire"
+            ],
+            "file": "images/actu-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Deux Français maîtres du double",
+          "text": "Quoi : ils battent Marcelo Arévalo et Mate Pavic 3-6, 7-6, 10-6, qui les avaient battus une semaine plus tôt.\nPourquoi ça compte : premiers Français sacrés depuis Herbert et Mahut en 2021, ils finissent 4es mondiaux.\nEt maintenant : ils visent un titre du Grand Chelem.",
+          "sources": [
+            {
+              "title": "Eurosport",
+              "url": "https://www.eurosport.fr/tennis/atp-finals-1/2026/atp-finals-albano-olivetti-et-theo-arribage-sacres-en-finale-du-double-apres-leur-victoire-sur-la-paire-pavic-arevalo_sto23357740/story.shtml"
+            },
+            {
+              "title": "Fédération française de tennis",
+              "url": "https://www.fft.fr/actualites/theo-arribage-albano-olivetti-atp-finals-turin-finale-resultats-arevalo-pavic"
+            }
+          ]
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Espace",
+          "gag": "comparaison",
+          "caption": "Samedi 21 novembre, la sonde européenne et japonaise BepiColombo s’est placée en orbite autour de Mercure, après huit ans de voyage et neuf survols pour ajuster sa vitesse.",
+          "bubbles": [
+            {
+              "who": "ingenieure",
+              "text": "Neuf tours pour se garer. Même le parking de l’hypermarché le samedi, c’est plus simple.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A space agency control room with dark screens showing simple circles. ingenieure (tall and thin, high black afro bun, mustard-orange cardigan, headset) on the right slumps back in her office chair with relief, arms dangling, mug tilted; on the desk in the foreground the probe on its string circles a small grey ball, still swinging round and round. Medium shot.",
+            "cast": [
+              "ingenieure"
+            ],
+            "file": "images/actu-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Mercure vue par BepiColombo en 2024",
+          "text": "Le sol de Mercure photographié le 4 septembre 2024 par une caméra de la sonde, lors d’un survol à environ 177 km.",
+          "photo": {
+            "commons": "File:BepiColombo’s closest view of Mercury ESA501138.jpg"
+          }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "BepiColombo est arrivée autour de Mercure",
+          "text": "Quoi : lancée en 2018, la sonde tourne enfin autour de Mercure.\nPourquoi ça compte : c’est la planète la moins explorée du Système solaire intérieur ; on y cherche de la glace.\nEt maintenant : ses deux satellites se séparent les 9 et 10 décembre.",
+          "due": "2026-12-10",
+          "sources": [
+            {
+              "title": "Euronews",
+              "url": "https://www.euronews.com/2026/11/22/bepicolombo-space-probe-enters-mercurys-orbit-after-eight-year-journey"
+            },
+            {
+              "title": "EarthSky",
+              "url": "https://earthsky.org/space/bepicolombo-mission-mercury/"
+            }
+          ]
+        },
+        {
+          "n": 12,
+          "kind": "explain",
+          "suite": true,
+          "tag": "La suite",
+          "title": "COP31 : le compromis n’est pas venu",
+          "text": "Annoncé : un compromis devait convaincre près de 200 pays.\nRésultat : rejeté dimanche 22 novembre, notamment par l’Union européenne ; la COP31 s’achève sans déclaration finale.",
+          "of": "2026-11-21#11",
+          "sources": [
+            {
+              "title": "franceinfo",
+              "url": "https://www.franceinfo.fr/environnement/crise-climatique/cop-climat/la-cop31-s-acheve-a-antalya-sans-que-les-pays-ne-s-accordent-sur-une-declaration-finale-divises-sur-la-question-des-energies-fossiles_8295011.html"
+            }
+          ]
+        },
+        {
+          "n": 13,
+          "kind": "buzz",
+          "tag": "Pendant ce temps, sur Internet",
+          "trend": "GTA VI",
+          "title": "GTA VI : les maillots « Vice City » du Miami Heat épuisés",
+          "why": "Pourquoi ça buzze : pour la sortie de GTA VI, jeudi 19 novembre, le Miami Heat a vendu des maillots « Vice City » roses et noirs, épuisés en 90 minutes.",
+          "text": "Treize ans d’attente pour le jeu, 90 minutes pour vider le stock de maillots. Les fans, eux, ne traînent pas.",
+          "source": {
+            "title": "Axios Miami",
+            "url": "https://www.axios.com/local/miami/2026/11/19/miami-heat-fans-celebrate-gta-pre-release-party-with-exclusive-jerseys"
+          },
+          "photo": {
+            "commons": "File:Kaseya Center prior to a Miami Heat game during the 2024-25 season.jpg"
+          }
+        }
+      ],
+      "final": {
+        "text": "Selon l’ESA, il est plus difficile de se mettre en orbite autour de Mercure que de Saturne : le Soleil accélère tout ce qui approche.",
+        "source": "Euronews, d’après l’Agence spatiale européenne ; EarthSky"
+      },
+      "sources": [
+        {
+          "title": "franceinfo — La COP31 s'achève à Antalya sans que les pays ne s'accordent sur une déclaration finale",
+          "url": "https://www.franceinfo.fr/environnement/crise-climatique/cop-climat/la-cop31-s-acheve-a-antalya-sans-que-les-pays-ne-s-accordent-sur-une-declaration-finale-divises-sur-la-question-des-energies-fossiles_8295011.html"
+        },
+        {
+          "title": "24 heures — COP31 : la conférence climat devient la plus longue de l'histoire",
+          "url": "https://www.24heures.ch/cop31-la-conference-climat-devient-la-plus-longue-de-lhistoire-610323575525"
+        },
+        {
+          "title": "Courrier international (via Headtopics) — La COP31 se termine sur un échec après le rejet du projet de déclaration finale",
+          "url": "https://fr.headtopics.com/news/la-cop31-se-termine-sur-un-echec-apres-le-rejet-du-projet-90084291"
+        },
+        {
+          "title": "Designboom — Antalya’s former expo grounds get a second life for COP31",
+          "url": "https://www.designboom.com/?p=1216530"
+        },
+        {
+          "title": "La Libre (AFP) — Macron envisage d'inscrire une « règle d'or » dans la Constitution",
+          "url": "https://www.lalibre.be/international/europe/2026/11/22/macron-envisage-dinscrire-une-regle-dor-dans-la-constitution-FAGIDWQN3FAKDIV5YTFA4LFERU/"
+        },
+        {
+          "title": "L’Express (via Orange Actualités) — Emmanuel Macron envisagerait une règle d’or budgétaire dans la Constitution",
+          "url": "https://actu.orange.fr/politique/emmanuel-macron-envisagerait-de-faire-adopter-par-le-parlement-une-regle-d-or-budgetaire-dans-la-constitution-l-express-via-6medias-CNT000002tWVBU.html"
+        },
+        {
+          "title": "Eurosport — Olivetti et Arribagé sacrés en finale du double des ATP Finals",
+          "url": "https://www.eurosport.fr/tennis/atp-finals-1/2026/atp-finals-albano-olivetti-et-theo-arribage-sacres-en-finale-du-double-apres-leur-victoire-sur-la-paire-pavic-arevalo_sto23357740/story.shtml"
+        },
+        {
+          "title": "FFT — Théo Arribagé et Albano Olivetti, champions à Turin",
+          "url": "https://www.fft.fr/actualites/theo-arribage-albano-olivetti-atp-finals-turin-finale-resultats-arevalo-pavic"
+        },
+        {
+          "title": "Euronews — BepiColombo space probe enters Mercury's orbit after eight-year journey",
+          "url": "https://www.euronews.com/2026/11/22/bepicolombo-space-probe-enters-mercurys-orbit-after-eight-year-journey"
+        },
+        {
+          "title": "EarthSky — BepiColombo went into orbit around Mercury",
+          "url": "https://earthsky.org/space/bepicolombo-mission-mercury/"
+        },
+        {
+          "title": "Axios Miami — Miami Heat fans celebrate GTA pre-release party with exclusive jerseys",
+          "url": "https://www.axios.com/local/miami/2026/11/19/miami-heat-fans-celebrate-gta-pre-release-party-with-exclusive-jerseys"
+        }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "culture",
