@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T05:05:28.504114+01:00",
+ "updated_at": "2026-11-22T06:04:42.243925+01:00",
  "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-22",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -60,12 +60,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-22/cultureg : « Le stéthoscope, ou comment écouter un cœur sans rougir » prise dans la file (20261116-2043-stethoscope-sans-rougir)",
-  "2026-11-22/insolite : « Le talon haut, une chaussure de cavalier que Louis XIV a peinte en rouge » prise dans la file (20261116-2045-talon-haut-cavalier-rouge)",
-  "2026-11-22/origine : « « Arrête d’être chauvin ! » : le plus patriote des soldats n’a peut-être jamais existé » prise dans la file (20261118-2046-chauvin-soldat-imaginaire)",
-  "2026-11-22/dossier : « Jeanne d’Arc : 17 ans, pas d’armée, et elle remet un roi sur son trône » prise dans la file (20261120-0653-jeanne-d-arc)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -144,14 +139,14 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.34815,
-  "images": 268,
-  "today_usd": 0.18,
+  "spent_usd": 3.35108,
+  "images": 269,
+  "today_usd": 0.18293,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-21T23:11:40.292156+01:00",
-  "age_hours": 5.9,
+  "age_hours": 6.9,
   "feeds": {
    "Google Actualités": 31,
    "franceinfo": 31,
