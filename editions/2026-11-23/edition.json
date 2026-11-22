@@ -34,7 +34,8 @@
           "look": "a cartoon caricature of a stocky man in his fifties, light olive skin, short neat black hair with grey temples, a thick trimmed black moustache, a dark teal suit as main colour, white shirt, a conference badge on a red lanyard",
           "role": "the Turkish minister presiding over the climate conference; never admits a failure, turns every flop into a triumph, chest always puffed out",
           "file": "cast/actu-presidentcop.png",
-          "status": "pending"
+          "status": "done",
+          "via": "fal"
         },
         {
           "id": "president",
@@ -75,8 +76,9 @@
           "presidentcop"
         ],
         "file": "images/actu-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "fal"
       },
       "cases": [
         {
@@ -107,8 +109,9 @@
               "presidentcop"
             ],
             "file": "images/actu-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -118,7 +121,13 @@
           "title": "L’ancien site de l’Expo 2016, où s’est tenue la COP31",
           "text": "Les terrains de l’exposition horticole de 2016, près d’Antalya, transformés pour accueillir les délégations de la COP31.",
           "photo": {
-            "commons": "File:Expo 2016 Antalya - West View.jpg"
+            "commons": "File:Expo 2016 Antalya - West View.jpg",
+            "credit": "Hendric Stattmann",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Expo_2016_Antalya_-_West_View.jpg",
+            "file": "images/photo-2-expo-2016-antalya-west-view-jpg.webp",
+            "status": "done"
           }
         },
         {
@@ -188,8 +197,9 @@
               "president"
             ],
             "file": "images/actu-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -229,8 +239,9 @@
               "partenaire"
             ],
             "file": "images/actu-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -269,8 +280,9 @@
               "ingenieure"
             ],
             "file": "images/actu-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -280,7 +292,13 @@
           "title": "Mercure vue par BepiColombo en 2024",
           "text": "Le sol de Mercure photographié le 4 septembre 2024 par une caméra de la sonde, lors d’un survol à environ 177 km.",
           "photo": {
-            "commons": "File:BepiColombo’s closest view of Mercury ESA501138.jpg"
+            "commons": "File:BepiColombo’s closest view of Mercury ESA501138.jpg",
+            "credit": "European Space Agency",
+            "license": "CC BY-SA 3.0 igo",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+            "source": "https://commons.wikimedia.org/wiki/File:BepiColombo%E2%80%99s_closest_view_of_Mercury_ESA501138.jpg",
+            "file": "images/photo-10-bepicolombo-s-closest-view-of-mercu.webp",
+            "status": "done"
           }
         },
         {
@@ -329,7 +347,13 @@
             "url": "https://www.axios.com/local/miami/2026/11/19/miami-heat-fans-celebrate-gta-pre-release-party-with-exclusive-jerseys"
           },
           "photo": {
-            "commons": "File:Kaseya Center prior to a Miami Heat game during the 2024-25 season.jpg"
+            "commons": "File:Kaseya Center prior to a Miami Heat game during the 2024-25 season.jpg",
+            "credit": "Gatorfan252525",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Kaseya_Center_prior_to_a_Miami_Heat_game_during_the_2024-25_season.jpg",
+            "file": "images/photo-13-kaseya-center-prior-to-a-miami-heat.webp",
+            "status": "done"
           }
         }
       ],
@@ -404,7 +428,10 @@
           ],
           "answer": 1,
           "explain": "L’écureuil volant et le colugo planent seulement ; le poisson volant n’est pas un mammifère. Les chauves-souris, plus de 1 400 espèces, sont les seules à voler pour de bon. Les autres font du parapente.",
-          "source": { "title": "Espace des sciences — Les chauves-souris, reines de la nuit", "url": "https://espace-sciences.org/sciences-ouest/420/actualite/les-chauves-souris-reines-de-la-nuit" }
+          "source": {
+            "title": "Espace des sciences — Les chauves-souris, reines de la nuit",
+            "url": "https://espace-sciences.org/sciences-ouest/420/actualite/les-chauves-souris-reines-de-la-nuit"
+          }
         },
         {
           "theme": "Sports",
@@ -418,7 +445,10 @@
           ],
           "answer": 2,
           "explain": "L’Auto, qui organisait le Tour, était imprimé sur papier jaune. Le maillot apparaît officiellement en 1919, porté d’abord par Eugène Christophe. Un coureur habillé en une de journal.",
-          "source": { "title": "DH — Pourquoi le maillot du leader du Tour est-il jaune ?", "url": "https://www.dhnet.be/sports/cyclisme/tour-de-france/tour-de-france-pourquoi-le-maillot-du-leader-est-il-jaune-62b06bbb7b50a6292b246a9b" }
+          "source": {
+            "title": "DH — Pourquoi le maillot du leader du Tour est-il jaune ?",
+            "url": "https://www.dhnet.be/sports/cyclisme/tour-de-france/tour-de-france-pourquoi-le-maillot-du-leader-est-il-jaune-62b06bbb7b50a6292b246a9b"
+          }
         },
         {
           "theme": "Histoire de France",
@@ -432,7 +462,10 @@
           ],
           "answer": 2,
           "explain": "Le Conseil d’État avait choisi le coq, Napoléon préférait le lion ; il impose finalement l’aigle, oiseau de la Rome impériale. Un éléphant était aussi en lice. On l’a échappé belle.",
-          "source": { "title": "Fondation Napoléon — Symbolique impériale", "url": "https://www.napoleon.org/histoire-des-2-empires/symbolique-imperiale/" }
+          "source": {
+            "title": "Fondation Napoléon — Symbolique impériale",
+            "url": "https://www.napoleon.org/histoire-des-2-empires/symbolique-imperiale/"
+          }
         },
         {
           "theme": "Architecture",
@@ -446,7 +479,10 @@
           ],
           "answer": 1,
           "explain": "En 1887-1888, ses pièces reçoivent deux couches de rouge Venise. Elle a porté sept couleurs depuis ; elle a retrouvé en 2024 le jaune brun de 1907. Une dame qui change souvent de robe.",
-          "source": { "title": "Ville de Paris — Les sept couleurs de la tour Eiffel", "url": "https://www.paris.fr/pages/les-sept-couleurs-de-la-tour-eiffel-16827" }
+          "source": {
+            "title": "Ville de Paris — Les sept couleurs de la tour Eiffel",
+            "url": "https://www.paris.fr/pages/les-sept-couleurs-de-la-tour-eiffel-16827"
+          }
         },
         {
           "theme": "Géographie",
@@ -460,15 +496,33 @@
           ],
           "answer": 3,
           "explain": "Le Nord compte environ 2,6 millions d’habitants, devant Paris puis les Bouches-du-Rhône. Lille, Roubaix, Tourcoing, Dunkerque, Valenciennes : ça fait du monde à la braderie.",
-          "source": { "title": "Insee — Un portrait du Nord, département français le plus peuplé", "url": "https://www.insee.fr/fr/statistiques/2538231" }
+          "source": {
+            "title": "Insee — Un portrait du Nord, département français le plus peuplé",
+            "url": "https://www.insee.fr/fr/statistiques/2538231"
+          }
         }
       ],
       "sources": [
-        { "title": "Espace des sciences — Les chauves-souris, reines de la nuit", "url": "https://espace-sciences.org/sciences-ouest/420/actualite/les-chauves-souris-reines-de-la-nuit" },
-        { "title": "DH — Pourquoi le maillot du leader du Tour est-il jaune ?", "url": "https://www.dhnet.be/sports/cyclisme/tour-de-france/tour-de-france-pourquoi-le-maillot-du-leader-est-il-jaune-62b06bbb7b50a6292b246a9b" },
-        { "title": "Fondation Napoléon — Symbolique impériale", "url": "https://www.napoleon.org/histoire-des-2-empires/symbolique-imperiale/" },
-        { "title": "Ville de Paris — Les sept couleurs de la tour Eiffel", "url": "https://www.paris.fr/pages/les-sept-couleurs-de-la-tour-eiffel-16827" },
-        { "title": "Insee — Un portrait du Nord, département français le plus peuplé", "url": "https://www.insee.fr/fr/statistiques/2538231" }
+        {
+          "title": "Espace des sciences — Les chauves-souris, reines de la nuit",
+          "url": "https://espace-sciences.org/sciences-ouest/420/actualite/les-chauves-souris-reines-de-la-nuit"
+        },
+        {
+          "title": "DH — Pourquoi le maillot du leader du Tour est-il jaune ?",
+          "url": "https://www.dhnet.be/sports/cyclisme/tour-de-france/tour-de-france-pourquoi-le-maillot-du-leader-est-il-jaune-62b06bbb7b50a6292b246a9b"
+        },
+        {
+          "title": "Fondation Napoléon — Symbolique impériale",
+          "url": "https://www.napoleon.org/histoire-des-2-empires/symbolique-imperiale/"
+        },
+        {
+          "title": "Ville de Paris — Les sept couleurs de la tour Eiffel",
+          "url": "https://www.paris.fr/pages/les-sept-couleurs-de-la-tour-eiffel-16827"
+        },
+        {
+          "title": "Insee — Un portrait du Nord, département français le plus peuplé",
+          "url": "https://www.insee.fr/fr/statistiques/2538231"
+        }
       ]
     }
   ]
