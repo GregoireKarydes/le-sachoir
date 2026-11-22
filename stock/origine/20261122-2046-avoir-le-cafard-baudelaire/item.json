@@ -1,0 +1,218 @@
+{
+  "added": "20261122-2046",
+  "formats": [
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "Avoir le cafard : un hypocrite, une blatte et un poète qui déprime",
+      "tagline": "Comment un faux dévot du XVIe siècle a fini en bestiole, puis en idées noires",
+      "teaser": "Alençon, 1857. Un éditeur traque une bestiole dans ses épreuves. Son poète, lui, la trouve très inspirante.",
+      "minutes": 2,
+      "theme": "Expression française",
+      "epoque": "passe",
+      "art": {
+        "subject": "how an old French word for a religious hypocrite became the name of the cockroach, then of gloomy thoughts, around the poet Charles Baudelaire in 1857",
+        "setting": "a small cluttered provincial print shop in Alençon, Normandy:a wooden hand press, a long table covered with proof sheets, an ink pot, a dim corner under a cupboard",
+        "era": "1850s provincial France",
+        "props": {
+          "proofs": "a messy stack of blank printed proof sheets with no readable text",
+          "roach": "a small shiny dark brown cockroach with long antennae",
+          "quill": "a long black goose-feather quill"
+        }
+      },
+      "cast": [
+        {
+          "id": "baudelaire",
+          "name": "Charles Baudelaire",
+          "look": "Charles, a tall, thin and slightly stooped poet in his late thirties, short dark hair receding at the temples, clean-shaven, pale skin, intense dark eyes with heavy lids, a midnight-blue frock coat as main colour, a loose crimson cravat, always holding the quill",
+          "file": "cast/origine-baudelaire.png",
+          "status": "pending",
+          "role": "the gloomy, theatrical poet who turns everything into melancholy; drapes himself over furniture, sighs at the ceiling, takes offence when anyone cuts a word"
+        },
+        {
+          "id": "malassis",
+          "name": "Poulet-Malassis",
+          "look": "Auguste, a short, plump and energetic printer-publisher in his thirties, bald on top with bushy brown mutton-chop sideburns, ruddy pale skin, an ochre-orange leather apron as main colour over a white shirt with rolled sleeves, ink-stained fingers, a heavy wooden ruler in hand",
+          "file": "cast/origine-malassis.png",
+          "status": "pending",
+          "role": "the practical, hurried publisher who hates delays and bugs in his shop; always bustling, waving the ruler, short-tempered but fond of his poet"
+        }
+      ],
+      "cover": {
+        "prompt": "in the cluttered provincial print shop: Poulet-Malassis (short, plump, bald with brown mutton chops, ochre-orange apron) on the right raises the wooden ruler to swat the roach running across the proofs; on the left Baudelaire (tall, thin, receding dark hair, midnight-blue frock coat, crimson cravat) shields the little insect with his hand, looking tragically moved. medium wide shot",
+        "cast": [
+          "baudelaire",
+          "malassis"
+        ],
+        "file": "images/origine-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Alençon, 1857",
+          "caption": "Pourquoi « avoir le cafard », c’est avoir le moral à zéro ? En 1857, Poulet-Malassis imprime Les Fleurs du mal.",
+          "bubbles": [
+            {
+              "who": "malassis",
+              "text": "Encore une blatte dans vos épreuves ! Je l’écrase.",
+              "side": "r"
+            },
+            {
+              "who": "baudelaire",
+              "text": "Épargnez-la. Elle a l’air aussi sombre que moi.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small cluttered provincial print shop with a wooden hand press. Poulet-Malassis (short, plump, bald with brown mutton chops, ochre-orange apron) on the right, on tiptoe on a stool, raises the wooden ruler high above the proofs where the roach scurries; Baudelaire (tall, thin, receding dark hair, midnight-blue frock coat, crimson cravat) on the left, slumped in a chair, gazes at the insect with deep sympathy. wide shot",
+            "cast": [
+              "baudelaire",
+              "malassis"
+            ],
+            "file": "images/origine-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "XVIe siècle",
+          "caption": "Dès 1512, un « cafard », de l’arabe kāfir (incroyant), désigne un faux dévot : un hypocrite qui joue les saints.",
+          "bubbles": [
+            {
+              "who": "malassis",
+              "text": "Un cafard, c’est un tartuffe en habit noir qui se cache.",
+              "side": "r"
+            },
+            {
+              "who": "baudelaire",
+              "text": "Comme la bestiole. Noire, cachée, et personne ne l’aime.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a low view from the floor of the print shop: the roach in the foreground scuttles into the dark gap under a cupboard; behind it, Poulet-Malassis (short, plump, bald with brown mutton chops, ochre-orange apron) on all fours on the right peers under the cupboard with a candle, while Baudelaire (tall, thin, midnight-blue frock coat, crimson cravat) on the left leans on the wall, arms crossed, amused. low angle",
+            "cast": [
+              "baudelaire",
+              "malassis"
+            ],
+            "file": "images/origine-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Du faux dévot aux idées noires",
+          "steps": [
+            "1512 : « caphar », le faux dévot, de l’arabe kāfir, l’incroyant",
+            "1542 : la blatte devient un « cafard » : elle fuit la lumière, comme lui",
+            "1857 : Baudelaire l’emploie dans Les Fleurs du mal, première trace liée aux idées noires selon le TLFi",
+            "Fin du XIXe siècle : les soldats d’Afrique et de la Légion disent « avoir le cafard »",
+            "1914-1918 : les tranchées le répandent partout"
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le poème",
+          "caption": "Vraie citation, tirée du poème « La Destruction » : « sous de spécieux prétextes de cafard ». Son sens exact reste discuté.",
+          "bubbles": [
+            {
+              "who": "malassis",
+              "text": "Votre cafard, il est hypocrite ou il déprime ? Je dois imprimer ce soir.",
+              "side": "r"
+            },
+            {
+              "who": "baudelaire",
+              "text": "Les deux. C’est de la poésie.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Baudelaire alone (tall, thin, receding dark hair, heavy-lidded eyes, midnight-blue frock coat, crimson cravat), draped theatrically across the long table on his back, one arm flung over his eyes, the quill held up dramatically in the other hand, proof sheets sliding off around him. medium close-up",
+            "cast": [
+              "baudelaire"
+            ],
+            "file": "images/origine-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Baudelaire, vers 1862",
+          "text": "Charles Baudelaire photographié par Étienne Carjat vers 1862, cinq ans après la sortie des Fleurs du mal. Le regard n’aide pas à prouver qu’il n’avait pas le cafard.",
+          "photo": {
+            "commons": "File:Étienne Carjat, Portrait of Charles Baudelaire, circa 1862, BW.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Le cafard, faux dévot puis blatte qui fuit la lumière, est devenu le nom des idées noires, popularisé par les soldats.",
+          "bubbles": [
+            {
+              "who": "baudelaire",
+              "text": "Je ne l’écrase pas. Je la publie.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "close on Baudelaire (tall, thin, receding dark hair, heavy-lidded eyes, crimson cravat), face and shoulders, gently holding the roach on the tip of his finger at eye level, staring at it with a deep, gloomy, tender look; behind him, out of focus, Poulet-Malassis's ochre-orange apron and raised ruler frozen in mid-air. close-up",
+            "cast": [
+              "baudelaire"
+            ],
+            "file": "images/origine-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Avant d’être une blatte ou un coup de blues, le « cafard » était un faux dévot, d’un mot arabe qui veut dire « incroyant ».",
+        "source": "La langue française — Avoir le cafard"
+      },
+      "story": "Aujourd’hui, « avoir le cafard », c’est avoir des idées noires. Mais le mot a eu plusieurs vies. Au XVIe siècle (la forme « caphar » est attestée en 1512), un cafard est un faux dévot, un hypocrite qui fait semblant d’être très croyant. Le mot vient de l’arabe kāfir, « incroyant ».\nDès 1542, le mot désigne aussi la blatte. Pourquoi ? Parce que cette bestiole sombre fuit la lumière et vit cachée, comme le faux dévot vêtu de noir qui agit en cachette.\nLe sens de mélancolie apparaît au XIXe siècle. Le Trésor de la langue française date de 1857 la première trace du cafard lié aux idées noires : Charles Baudelaire écrit, dans le poème « La Destruction » des Fleurs du mal, « sous de spécieux prétextes de cafard ». Le sens du mot y est discuté : certains y lisent encore l’hypocrisie, d’autres un sens nouveau.\nLa locution « avoir le cafard », elle, se répand à la fin du XIXe siècle chez les soldats des troupes d’Afrique et de la Légion étrangère, selon le linguiste Maurice Rat. Pendant la Première Guerre mondiale, elle envahit les lettres des soldats. Les Fleurs du mal sont imprimées en 1857 à Alençon par l’éditeur Auguste Poulet-Malassis, que Baudelaire épuise de corrections ; la scène de la blatte, elle, est imaginée.",
+      "sources": [
+        {
+          "title": "La langue française — Avoir le cafard",
+          "url": "https://www.lalanguefrancaise.com/expressions/avoir-le-cafard"
+        },
+        {
+          "title": "Expressio — Avoir le cafard",
+          "url": "https://www.expressio.fr/expressions/avoir-le-cafard"
+        },
+        {
+          "title": "Guichet du Savoir (Bibliothèque municipale de Lyon) — Origine de l’expression « avoir le cafard »",
+          "url": "https://www.guichetdusavoir.org/question/voir/139505"
+        },
+        {
+          "title": "ConsoGlobe — Pourquoi dit-on qu’on « a le cafard » ?",
+          "url": "https://www.consoglobe.com/pourquoi-dit-quon-le-cafard-quand-na-pas-le-moral-cg"
+        },
+        {
+          "title": "BnF — Charles Baudelaire, Les Fleurs du mal",
+          "url": "https://www.bnf.fr/fr/mediatheque/charles-baudelaire-les-fleurs-du-mal"
+        },
+        {
+          "title": "Édition originale — Lettre de Baudelaire à Poulet-Malassis sur ses corrections d’épreuves des Fleurs du mal (1857)",
+          "url": "https://edition-originale.com/en/works/autograph-letters-and-manuscripts-18/literary-manuscripts-167/baudelaire-lettre-autographe-signee-de-charles-baudelaire-a-poulet-malassis-relative-a-ses-interminables-corrections-d-epreuves-des-fleurs-du-mal-1857-65654"
+        },
+        {
+          "title": "Wikimedia Commons — Étienne Carjat, Portrait of Charles Baudelaire, circa 1862",
+          "url": "https://commons.wikimedia.org/wiki/File:%C3%89tienne_Carjat,_Portrait_of_Charles_Baudelaire,_circa_1862,_BW.jpg"
+        }
+      ]
+    }
+  ]
+}
