@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T22:38+01:00",
+ "updated_at": "2026-11-22T01:53+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -40,7 +40,6 @@
    },
    "errors": [],
    "warnings": [
-    "insolite : fiche napoleon : même tête qu'un personnage récent (brown hair, red main colour : 2026-11-09/actu) ; changer coiffure ou couleur dominante",
     "insolite : case 2 : récitatif de 25 mots (max 20)"
    ]
   },
@@ -76,16 +75,6 @@
    ]
   },
   {
-   "path": "stock/notice/20261117-0151-gps-ecoute-l-heure",
-   "titles": {
-    "notice": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)"
-   },
-   "errors": [],
-   "warnings": [
-    "notice : fiche gaston : même tête qu'un personnage récent (black hair, red main colour : 2026-11-14/origine, 2026-11-16/dossier, 2026-11-16/insolite) ; changer coiffure ou couleur dominante"
-   ]
-  },
-  {
    "path": "stock/notice/20261117-2046-carte-sans-contact-sans-pile",
    "titles": {
     "notice": "Votre carte sans contact n’a pas de pile : c’est le terminal qui la réveille"
@@ -103,28 +92,6 @@
    "errors": [],
    "warnings": [
     "origine : fiches chauvin et karim : même couleur dominante (red), à différencier"
-   ]
-  },
-  {
-   "path": "editions/2026-11-21",
-   "titles": {
-    "dossier": "Le Code civil : 2 281 articles pour ranger le bazar de la France",
-    "actu": "Un candidat de plus, deux plafonds et une COP qui déborde",
-    "cultureg": "Le département, ou la France taillée à la mesure d’un cheval",
-    "insolite": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)",
-    "notice": "La marée : la mer ne part pas, elle fait le tour de la Terre",
-    "quiz": "Au doigt mouillé (mais avec méthode)"
-   },
-   "errors": [],
-   "warnings": [
-    "actu : brève 2 : « Ce qui se passe vraiment » de 48 mots (max 45 pour une brève)",
-    "cultureg : case 6 : récitatif de 22 mots (max 20)",
-    "insolite : 0 vraie(s) photo(s) (« kind »: « photo »), il en faut au moins 1 si un document libre existe",
-    "notice : case 2 : récitatif de 22 mots (max 20)",
-    "notice : case 3 (Pour mieux comprendre) : 75 mots (max 70)",
-    "notice : case 4 : récitatif de 22 mots (max 20)",
-    "notice : case 6 : récitatif de 23 mots (max 20)",
-    "notice : case 8 : récitatif de 22 mots (max 20)"
    ]
   },
   {

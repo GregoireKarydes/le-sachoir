@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T22:38+01:00",
+ "updated_at": "2026-11-22T01:53+01:00",
  "stock": {
   "cultureg": [
    {
@@ -23,7 +23,7 @@
     "path": "stock/cultureg/20261117-2048-gauche-droite-plan-de-table",
     "name": "20261117-2048-gauche-droite-plan-de-table",
     "added": "20261117-2048",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "La gauche et la droite, ou le plan de table qui a mal tourné",
     "theme": "Politique française",
@@ -31,7 +31,7 @@
     "minutes": 2,
     "cases": 9,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 7,
     "images_total": 7,
     "failed": 0,
     "redo": 0
@@ -48,7 +48,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 4,
     "images_total": 7,
     "failed": 0,
     "redo": 0
@@ -127,7 +127,7 @@
     "path": "stock/insolite/20261117-2047-napoleon-decore-un-sucrier",
     "name": "20261117-2047-napoleon-decore-un-sucrier",
     "added": "20261117-2047",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
     "theme": "Économie",
@@ -135,7 +135,7 @@
     "minutes": 1,
     "cases": 7,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -231,7 +231,7 @@
     "path": "stock/notice/20261117-0151-gps-ecoute-l-heure",
     "name": "20261117-0151-gps-ecoute-l-heure",
     "added": "20261117-0151",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)",
     "theme": "Informatique et numérique",
@@ -239,7 +239,7 @@
     "minutes": 2,
     "cases": 6,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 5,
     "images_total": 5,
     "failed": 0,
     "redo": 0
@@ -329,7 +329,7 @@
     "images_done": 6,
     "images_total": 6,
     "failed": 0,
-    "redo": 2
+    "redo": 0
    },
    {
     "path": "stock/origine/20261120-2044-boycotter-capitaine-irlandais",
@@ -388,7 +388,7 @@
     "path": "stock/dossier/20261120-0653-jeanne-d-arc",
     "name": "20261120-0653-jeanne-d-arc",
     "added": "20261120-0653",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Jeanne d’Arc : 17 ans, pas d’armée, et elle remet un roi sur son trône",
     "theme": "Grandes personnalités",
@@ -396,7 +396,7 @@
     "minutes": 3,
     "cases": 24,
     "photos": 2,
-    "images_done": 0,
+    "images_done": 19,
     "images_total": 19,
     "failed": 0,
     "redo": 0
@@ -438,96 +438,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-21",
-   "path": "editions/2026-11-21",
-   "status": "published",
-   "newsletter": true,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Le Code civil : 2 281 articles pour ranger le bazar de la France",
-     "theme": "Droit",
-     "tagline": "Des 300 coutumes de l’Ancien Régime à l’article 1240 : comment Bonaparte et quatre juristes ont donné une seule loi à tous les Français",
-     "minutes": 6,
-     "cases": 26,
-     "photos": 3,
-     "images_done": 21,
-     "images_total": 21,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "actu",
-     "label": "L’Actu du jour",
-     "kind": "",
-     "title": "Un candidat de plus, deux plafonds et une COP qui déborde",
-     "theme": "",
-     "tagline": "Dominique de Villepin se lance pour 2027, Londres et Bruxelles se rapprochent, le Sénat réforme les titres-restaurant et la COP31 joue les prolongations.",
-     "minutes": 3,
-     "cases": 11,
-     "photos": 2,
-     "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Le département, ou la France taillée à la mesure d’un cheval",
-     "theme": "Histoire de France",
-     "tagline": "Une règle, un compas, des rivières et un cheval qui doit rentrer avant la nuit",
-     "minutes": 2,
-     "cases": 9,
-     "photos": 1,
-     "images_done": 8,
-     "images_total": 8,
-     "failed": 0,
-     "redo": 3
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite historique",
-     "kind": "",
-     "title": "Le roman de 300 pages où il manque une lettre (et pas n’importe laquelle)",
-     "theme": "Littérature",
-     "tagline": "Un écrivain, une machine à écrire amputée, et des lecteurs qui n’ont rien vu",
-     "minutes": 2,
-     "cases": 7,
-     "photos": 0,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 1
-    },
-    {
-     "id": "notice",
-     "label": "La Notice",
-     "kind": "",
-     "title": "La marée : la mer ne part pas, elle fait le tour de la Terre",
-     "theme": "L’univers",
-     "tagline": "Une Lune qui tire, une Terre qui tourne, et un cheval au galop qui n’a jamais existé",
-     "minutes": 3,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "quiz",
-     "label": "Le Chiffre",
-     "kind": "chiffre",
-     "title": "Au doigt mouillé (mais avec méthode)",
-     "questions": 3
-    }
-   ]
-  },
   {
    "date": "2026-11-22",
    "path": "editions/2026-11-22",

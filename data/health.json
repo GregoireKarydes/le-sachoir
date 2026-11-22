@@ -1,22 +1,10 @@
 {
- "updated_at": "2026-11-21T22:38:50.823022+01:00",
- "today": "2026-11-21",
+ "updated_at": "2026-11-22T01:53:09.911197+01:00",
+ "today": "2026-11-22",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
-  {
-   "date": "2026-11-21",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "notice": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-22",
    "status": "draft",
@@ -75,40 +63,34 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "notice"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-21",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 36,
-   "focus": "20261117-2048-gauche-droite-plan-de-table (7 image(s) à faire)",
+   "images_left": 25,
+   "focus": "20261118-0850-pendule-foucault-chapeau (3 image(s) à faire)",
    "next": "20261116-2043-stethoscope-sans-rougir",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 31,
-   "focus": "20261117-2047-napoleon-decore-un-sucrier (6 image(s) à faire)",
+   "images_left": 25,
+   "focus": "20261118-0848-elephant-bastille-rats (6 image(s) à faire)",
    "next": "20261116-2045-talon-haut-cavalier-rouge",
    "next_redo": 0
   },
   "notice": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 27,
-   "focus": "20261117-0151-gps-ecoute-l-heure (5 image(s) à faire)",
+   "images_left": 22,
+   "focus": "20261117-0153-savon-escorte-la-graisse (5 image(s) à faire)",
    "next": "20261117-0151-frigo-chaleur-a-la-porte",
    "next_redo": 0
   },
@@ -119,47 +101,47 @@
    "images_left": 6,
    "focus": "20261120-2046-points-sur-les-i-jambages (6 image(s) à faire)",
    "next": "20261118-2046-chauvin-soldat-imaginaire",
-   "next_redo": 2
+   "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
-   "waiting": 3,
+   "ready": 2,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 55,
-   "focus": "20261120-0653-jeanne-d-arc (19 image(s) à faire)",
+   "images_left": 36,
+   "focus": "20261120-0657-jeux-video-desert (18 image(s) à faire)",
    "next": "20261118-1927-pasteur-microbes",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
+ "days_ahead_drawn": 2,
  "days_ahead_written": 4,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-21",
+  "day": "2026-11-22",
   "count": 51,
   "neurons": 9000,
   "exhausted": false,
   "by_kind": {
-   "case": 40,
+   "case": 39,
    "cast": 10,
-   "cover": 1
+   "cover": 2
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.16815,
-  "images": 262,
-  "today_usd": 0.21718,
+  "spent_usd": 3.34815,
+  "images": 268,
+  "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-21T19:04:30.458620+01:00",
-  "age_hours": 3.6,
+  "collected_at": "2026-11-21T23:11:40.292156+01:00",
+  "age_hours": 2.7,
   "feeds": {
-   "Google Actualités": 30,
-   "franceinfo": 30,
+   "Google Actualités": 31,
+   "franceinfo": 31,
    "Le Monde": 16,
-   "Le Figaro": 14,
+   "Le Figaro": 17,
    "Libération": 50,
    "20 Minutes": 25,
    "Ouest-France": 10,
@@ -168,14 +150,14 @@
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 25,
-   "Le Monde Sciences": 4,
-   "Sciences et Avenir": 6,
-   "Le Monde Planète": 10,
-   "Le Monde Pixels": 10,
+   "BBC World": 26,
+   "Le Monde Sciences": 5,
+   "Sciences et Avenir": 3,
+   "Le Monde Planète": 8,
+   "Le Monde Pixels": 8,
    "Le Monde Santé": 2,
-   "Le Monde Culture": 17,
-   "HugoDécrypte - Actus du jour": 1
+   "Le Monde Culture": 14,
+   "HugoDécrypte - Actus du jour": 2
   },
   "empty_feeds": [
    "Les Échos",
@@ -184,7 +166,7 @@
  },
  "actu_balance": {
   "days": 14,
-  "editions": 12,
+  "editions": 11,
   "people": [
    {
     "name": "Aleksandar Vučić",
