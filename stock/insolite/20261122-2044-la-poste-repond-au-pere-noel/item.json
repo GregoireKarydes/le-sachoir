@@ -169,7 +169,13 @@
           "title": "Une boîte aux lettres jaune de La Poste",
           "text": "La boîte jaune de La Poste. En décembre, plus de 2 300 bureaux de poste installent aussi une boîte spéciale pour les lettres au Père Noël.",
           "photo": {
-            "commons": "File:Boîte murale jaune de La Poste.jpg"
+            "commons": "File:Boîte murale jaune de La Poste.jpg",
+            "credit": "JoF",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Bo%C3%AEte_murale_jaune_de_La_Poste.jpg",
+            "file": "images/photo-6-bo-te-murale-jaune-de-la-poste-jpg.webp",
+            "status": "done"
           }
         },
         {
