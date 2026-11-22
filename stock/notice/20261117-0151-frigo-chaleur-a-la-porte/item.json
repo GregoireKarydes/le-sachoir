@@ -45,6 +45,7 @@
           "ines"
         ],
         "file": "images/notice-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -68,6 +69,7 @@
               "bernard"
             ],
             "file": "images/notice-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -97,6 +99,7 @@
               "ines"
             ],
             "file": "images/notice-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -176,6 +179,7 @@
               "bernard"
             ],
             "file": "images/notice-06.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }

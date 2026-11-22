@@ -44,6 +44,7 @@
           "patiente"
         ],
         "file": "images/cultureg-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -73,6 +74,7 @@
               "laennec"
             ],
             "file": "images/cultureg-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -101,6 +103,7 @@
               "laennec"
             ],
             "file": "images/cultureg-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -129,6 +132,7 @@
               "patiente"
             ],
             "file": "images/cultureg-03.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -140,11 +144,12 @@
           "caption": "Il pense à un jeu d’enfants : l’un gratte une poutre, l’autre, oreille collée au bout, entend tout.",
           "bubbles": [],
           "image": {
-            "prompt": "a small courtyard with a long timber beam lying on the ground. At the far end a little boy scratches the wood with a pin; in the foreground a little girl lies with her ear pressed to the other end of the beam, eyes wide with wonder; in the background Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) has stopped dead in his tracks, bag dropped, staring at them with a sudden idea, yellow sparkles. high angle",
+            "prompt": "a small paved courtyard in 1816 with one long timber beam lying on the ground across the whole picture. At the far right end of the beam a little boy (brown hair, 1810s brown jacket and short trousers, bare hands) kneels and scratches the wood with a pin; at the near left end a little girl (black braid, long 1810s pale-yellow dress) lies flat on her tummy with her ear pressed right against the end of the beam, eyes wide with wonder, clearly listening. In the background, Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) has stopped dead in his tracks, his one black bag dropped at his feet, staring at the children with a sudden idea, small yellow sparkles above his head. high angle",
             "cast": [
               "laennec"
             ],
             "file": "images/cultureg-04.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -173,6 +178,7 @@
               "patiente"
             ],
             "file": "images/cultureg-05.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -195,12 +201,13 @@
             }
           ],
           "image": {
-            "prompt": "close on Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) with his ear pressed to one end of the rolled notebook, the other end resting on the patient's sky-blue dress at the edge of the frame on the right; his eyes huge with joy, mouth open in amazement, yellow sparkles around his head. close-up",
+            "prompt": "close on Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) bent forward on the left, his ear pressed to one end of the rolled white paper tube held horizontally; the other end of the tube rests flat on the chest of the patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress) seated on the right, who looks down at the tube, startled. His eyes huge with joy, mouth open in amazement, small yellow sparkles around his head. No hearts, no animals, nothing in her arms except the closed fan. close-up",
             "cast": [
               "laennec",
               "patiente"
             ],
             "file": "images/cultureg-06.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -236,6 +243,7 @@
               "laennec"
             ],
             "file": "images/cultureg-08.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -274,12 +282,13 @@
             }
           ],
           "image": {
-            "prompt": "the hospital ward, seen from high up. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress, the fan) sits on the bed on the right, chattering happily; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) on the left, perfectly calm and relaxed now, holding the cylinder to her chest at full arm's length, the other hand behind his back, serene smile. bird's-eye view",
+            "prompt": "the hospital ward, seen from slightly above. The patient (short, plump, black ringlets under a lace bonnet, sky-blue Empire dress, holding one single fan) sits on the bed on the right, chattering happily; Laennec (very tall, very thin, sandy-blond curls, crimson-red tailcoat) stands on the left, bent forward, perfectly calm, his ear pressed to the narrow end of the wooden cylinder while its wide funnel end rests on her chest, the cylinder held horizontally between them like a listening tube (not a megaphone, not pointed at her face), his other hand behind his back, serene smile. high angle",
             "cast": [
               "patiente",
               "laennec"
             ],
             "file": "images/cultureg-10.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }

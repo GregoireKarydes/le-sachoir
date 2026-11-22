@@ -68,6 +68,7 @@
           "mathematicienne"
         ],
         "file": "images/actu-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "fal"
@@ -94,6 +95,7 @@
               "mathematicienne"
             ],
             "file": "images/actu-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -183,6 +185,7 @@
               "ruffin"
             ],
             "file": "images/actu-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -225,6 +228,7 @@
               "manifestante"
             ],
             "file": "images/actu-03.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -278,6 +282,7 @@
               "costa"
             ],
             "file": "images/actu-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"

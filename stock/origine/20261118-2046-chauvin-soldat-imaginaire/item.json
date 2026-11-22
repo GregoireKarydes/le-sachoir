@@ -73,6 +73,7 @@
               "karim"
             ],
             "file": "images/origine-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -217,11 +218,12 @@
             }
           ],
           "image": {
-            "prompt": "back in the small sports bar of today, a simple flat cartoon screen on the wall. Karim (tall, lanky, bald, brown skin, black beard, bright red hoodie, face paint) sits back on his stool on the left, both arms firmly crossed on his chest (two arms only, he does not point), chin raised, eyes half-closed in total bad faith; the waitress (light skin, grey curls, mint-green blouse, black apron) leans on the counter on the right, pointing at him with her drying cloth, deadpan. medium shot",
+            "prompt": "back in the small sports bar of today, the same as the first panel: wooden counter, bar stool, a TV screen on the wall showing only a plain flat green rectangle with a few tiny cartoon players, no photo, no text, no scoreboard. Karim (tall, lanky, bald, brown skin, black beard, bright red hoodie, face paint) sits back on his stool on the left, both arms firmly crossed on his chest with both hands tucked under his armpits (exactly two arms, no hand at his chin), chin raised, eyes half-closed in total bad faith; the waitress (light skin, a full head of shoulder-length wavy grey curls, NOT bald, mint-green blouse, long black apron) leans on the counter on the right, pointing at him with her drying cloth, deadpan. medium shot",
             "cast": [
               "karim"
             ],
             "file": "images/origine-08.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }

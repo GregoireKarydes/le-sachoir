@@ -62,6 +62,7 @@
           "pouchet"
         ],
         "file": "images/dossier-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1
       },
@@ -89,6 +90,7 @@
               "pouchet"
             ],
             "file": "images/dossier-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -116,6 +118,7 @@
               "pasteur"
             ],
             "file": "images/dossier-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -154,6 +157,7 @@
               "pasteur"
             ],
             "file": "images/dossier-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -233,6 +237,7 @@
               "pasteur"
             ],
             "file": "images/dossier-08.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -255,6 +260,7 @@
               "pouchet"
             ],
             "file": "images/dossier-09.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 2
           }

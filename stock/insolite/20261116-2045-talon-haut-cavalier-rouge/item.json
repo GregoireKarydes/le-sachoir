@@ -45,6 +45,7 @@
           "marquis"
         ],
         "file": "images/insolite-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -74,6 +75,7 @@
               "louis"
             ],
             "file": "images/insolite-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -97,6 +99,7 @@
               "marquis"
             ],
             "file": "images/insolite-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -119,12 +122,13 @@
             }
           ],
           "image": {
-            "prompt": "the palace gravel garden with a clipped hedge. The marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) on the left, heels sunk deep in the gravel, leaning on a garden rake to stay upright; Louis (short, very upright, enormous black curly wig, gold brocade coat, the cane) seated on a stone bench on the right in profile, legs crossed to show off the redheels. medium shot",
+            "prompt": "the palace gravel garden with a clipped hedge. The marquis (tall, gangly, chestnut wig, mint-green coat, the beigeheels) on the left, heels sunk deep in the gravel, leaning on a garden rake to stay upright; Louis XIV (short, very upright, an enormous LONG black curly wig falling in ringlets down to his chest, thin black moustache, long gold brocade coat to the knees, white lace cravat, white stockings, the cane in hand) seated on a stone bench on the right in profile, legs crossed to show off men's shoes with tall red heels and big ribbon bows. medium shot",
             "cast": [
               "marquis",
               "louis"
             ],
             "file": "images/insolite-03.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -147,12 +151,13 @@
             }
           ],
           "image": {
-            "prompt": "in the gilded parquet gallery, seen over Louis's shoulder. Louis (short, very upright, enormous black curly wig, gold brocade coat, the cane) in the foreground on the right, seen from behind, one redheel shoe raised slightly; the marquis (tall, gangly, chestnut wig, mint-green coat) kneeling on the floor in front of him on the left, hands clasped in prayer, huge pleading puppy eyes. over-the-shoulder",
+            "prompt": "in the gilded parquet gallery, only two people. Louis XIV (short, very upright, enormous long black curly wig down to his chest, thin black moustache, gold brocade coat, the cane) stands on the right in profile, chin raised, looking down his nose, one foot with a red heel shoe pushed slightly forward; the marquis (tall, gangly, towering curly chestnut wig, mint-green coat, pink knee ribbons, beige heels) kneels on the floor on the left facing him, hands clasped in prayer, huge pleading puppy eyes. No other person, no one in the foreground. medium shot",
             "cast": [
               "louis",
               "marquis"
             ],
             "file": "images/insolite-04.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -204,6 +209,7 @@
               "marquis"
             ],
             "file": "images/insolite-07.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
