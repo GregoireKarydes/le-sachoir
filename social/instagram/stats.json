@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T07:15:06+00:00",
+ "updated_at": "2026-11-22T04:05:55+00:00",
  "rows": [
   {
    "post": "2026-11-17",
@@ -32,7 +32,7 @@
    "shares_per_reach": 0.0046,
    "saves_per_reach": 0.0,
    "engagement_rate": 0.0093,
-   "outlier": 1.77
+   "outlier": 1.66
   },
   {
    "post": "2026-11-18",
@@ -95,7 +95,7 @@
    "interactions": 6,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0164,
-   "outlier": 1.64
+   "outlier": 1.63
   },
   {
    "post": "2026-11-18-actu",
@@ -158,7 +158,7 @@
    "interactions": 6,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0286,
-   "outlier": 1.0
+   "outlier": 0.99
   },
   {
    "post": "2026-11-18-sitcom",
@@ -190,7 +190,7 @@
    "interactions": null,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "outlier": 1.36
+   "outlier": 1.27
   },
   {
    "post": "2026-11-18-sitcom",
@@ -242,19 +242,19 @@
    "metrics": {
     "reactions": 9,
     "comments": 0,
-    "engagementRate": 3.09,
-    "views": 347,
+    "engagementRate": 2.76,
+    "views": 388,
     "shares": 0,
     "saves": 0,
-    "totalTimeWatched": 87.13,
-    "averageTimeWatched": 17.25,
-    "reach": 291
+    "totalTimeWatched": 94.77,
+    "averageTimeWatched": 16.72,
+    "reach": 326
    },
    "interactions": 9,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "engagement_rate": 0.0309,
-   "outlier": 2.59
+   "engagement_rate": 0.0276,
+   "outlier": 2.71
   },
   {
    "post": "2026-11-19-sitcom-cultureg",
@@ -285,7 +285,7 @@
    "interactions": 7,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0315,
-   "outlier": 0.96
+   "outlier": 0.95
   },
   {
    "post": "2026-11-19-sitcom-insolite",
@@ -304,20 +304,21 @@
    "caption_words": 82,
    "network": "instagram",
    "metrics": {
-    "reactions": 0,
+    "reactions": 1,
     "comments": 0,
-    "engagementRate": 0,
-    "views": 53,
+    "engagementRate": 1.33,
+    "views": 88,
     "shares": 0,
     "saves": 0,
-    "totalTimeWatched": 12.06,
-    "averageTimeWatched": 16.45,
-    "reach": 44
+    "totalTimeWatched": 18.26,
+    "averageTimeWatched": 14.8,
+    "reach": 75
    },
-   "interactions": null,
+   "interactions": 1,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "outlier": 0.4
+   "engagement_rate": 0.0133,
+   "outlier": 0.62
   },
   {
    "post": "2026-11-19-sitcom-insolite",
@@ -348,7 +349,7 @@
    "interactions": 4,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0177,
-   "outlier": 0.98
+   "outlier": 0.97
   },
   {
    "post": "2026-11-19-sitcom-origine",
@@ -381,7 +382,7 @@
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
    "engagement_rate": 0.0078,
-   "outlier": 1.0
+   "outlier": 0.94
   },
   {
    "post": "2026-11-19-sitcom-origine",
@@ -406,13 +407,13 @@
     "views": 259,
     "shares": 0,
     "reach": 249,
-    "totalTimeWatched": 58.9,
-    "averageTimeWatched": 12.23
+    "totalTimeWatched": 58.93,
+    "averageTimeWatched": 12.19
    },
    "interactions": 15,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0602,
-   "outlier": 1.11
+   "outlier": 1.1
   },
   {
    "post": "2026-11-20-sitcom-cultureg",
@@ -433,19 +434,19 @@
    "metrics": {
     "reactions": 1,
     "comments": 0,
-    "engagementRate": 0.83,
-    "views": 131,
+    "engagementRate": 0.82,
+    "views": 133,
     "shares": 0,
     "saves": 0,
-    "totalTimeWatched": 17.84,
-    "averageTimeWatched": 8.92,
-    "reach": 120
+    "totalTimeWatched": 17.86,
+    "averageTimeWatched": 8.85,
+    "reach": 122
    },
    "interactions": 1,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "engagement_rate": 0.0083,
-   "outlier": 0.98
+   "engagement_rate": 0.0082,
+   "outlier": 0.93
   },
   {
    "post": "2026-11-20-sitcom-cultureg",
@@ -464,19 +465,52 @@
    "caption_words": 65,
    "network": "tiktok",
    "metrics": {
-    "reactions": 19,
+    "reactions": 20,
     "comments": 0,
-    "engagementRate": 7.42,
-    "views": 256,
+    "engagementRate": 7.46,
+    "views": 268,
     "shares": 0,
     "reach": 0,
-    "totalTimeWatched": 59.03,
-    "averageTimeWatched": 12.65
+    "totalTimeWatched": 60.98,
+    "averageTimeWatched": 12.45
    },
-   "interactions": 19,
+   "interactions": 20,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.0742,
-   "outlier": 1.1
+   "engagement_rate": 0.0746,
+   "outlier": 1.14
+  },
+  {
+   "post": "2026-11-20-sitcom-insolite",
+   "date": "2026-11-20",
+   "kind": "sitcom",
+   "slot": "insolite",
+   "style": "scifi-toon",
+   "rubrique": "insolite",
+   "time": "21:00",
+   "slides": null,
+   "seconds": 67.9,
+   "hook": "LE 14 JUILLET FÊTE LA BASTILLE ?",
+   "hook_formula": 22,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 79,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 1,
+    "comments": 0,
+    "engagementRate": 0.73,
+    "views": 152,
+    "shares": 0,
+    "saves": 0,
+    "totalTimeWatched": 21.28,
+    "averageTimeWatched": 9.25,
+    "reach": 137
+   },
+   "interactions": 1,
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0,
+   "engagement_rate": 0.0073,
+   "outlier": 1.06
   },
   {
    "post": "2026-11-20-sitcom-insolite",
@@ -495,19 +529,19 @@
    "caption_words": 79,
    "network": "tiktok",
    "metrics": {
-    "reactions": 10,
+    "reactions": 11,
     "comments": 0,
-    "engagementRate": 4.52,
-    "views": 221,
+    "engagementRate": 4.87,
+    "views": 226,
     "shares": 0,
     "reach": 0,
-    "totalTimeWatched": 36.15,
-    "averageTimeWatched": 9.23
+    "totalTimeWatched": 37.63,
+    "averageTimeWatched": 9.3
    },
-   "interactions": 10,
+   "interactions": 11,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.0452,
-   "outlier": 0.95
+   "engagement_rate": 0.0487,
+   "outlier": 0.96
   },
   {
    "post": "2026-11-20-sitcom-origine",
@@ -528,19 +562,19 @@
    "metrics": {
     "reactions": 1,
     "comments": 0,
-    "engagementRate": 0.66,
-    "views": 164,
+    "engagementRate": 0.65,
+    "views": 167,
     "shares": 0,
     "saves": 0,
-    "totalTimeWatched": 30.15,
-    "averageTimeWatched": 11.9,
-    "reach": 152
+    "totalTimeWatched": 30.45,
+    "averageTimeWatched": 11.79,
+    "reach": 155
    },
    "interactions": 1,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "engagement_rate": 0.0066,
-   "outlier": 1.22
+   "engagement_rate": 0.0065,
+   "outlier": 1.17
   },
   {
    "post": "2026-11-20-sitcom-origine",
@@ -571,7 +605,162 @@
    "interactions": 4,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0198,
-   "outlier": 0.87
+   "outlier": 0.86
+  },
+  {
+   "post": "2026-11-21-sitcom-cultureg",
+   "date": "2026-11-21",
+   "kind": "film",
+   "slot": "cultureg",
+   "style": "flat-space-explainer",
+   "rubrique": "cultureg",
+   "time": "12:30",
+   "slides": null,
+   "seconds": 42.2,
+   "hook": "POURQUOI CETTE TAILLE POUR TON DÉPARTEMENT ?",
+   "hook_formula": 16,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 64,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 1,
+    "comments": 0,
+    "engagementRate": 0.74,
+    "views": 149,
+    "shares": 0,
+    "saves": 0,
+    "totalTimeWatched": 26.08,
+    "averageTimeWatched": 11.59,
+    "reach": 136
+   },
+   "interactions": 1,
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0,
+   "engagement_rate": 0.0074,
+   "outlier": 1.04
+  },
+  {
+   "post": "2026-11-21-sitcom-cultureg",
+   "date": "2026-11-21",
+   "kind": "film",
+   "slot": "cultureg",
+   "style": "flat-space-explainer",
+   "rubrique": "cultureg",
+   "time": "12:30",
+   "slides": null,
+   "seconds": 42.2,
+   "hook": "POURQUOI CETTE TAILLE POUR TON DÉPARTEMENT ?",
+   "hook_formula": 16,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 64,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 0,
+    "comments": 0,
+    "engagementRate": 0,
+    "views": 0,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 0,
+    "averageTimeWatched": 0
+   },
+   "interactions": null,
+   "outlier": null
+  },
+  {
+   "post": "2026-11-21-sitcom-insolite",
+   "date": "2026-11-21",
+   "kind": "film",
+   "slot": "insolite",
+   "style": "hd-2d",
+   "rubrique": "insolite",
+   "time": "21:00",
+   "slides": null,
+   "seconds": 44.3,
+   "hook": "300 PAGES SANS UN SEUL « E » ?",
+   "hook_formula": 23,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 78,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 0,
+    "comments": 0,
+    "engagementRate": 0,
+    "views": 0,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 0,
+    "averageTimeWatched": 0
+   },
+   "interactions": null,
+   "outlier": null
+  },
+  {
+   "post": "2026-11-21-sitcom-origine",
+   "date": "2026-11-21",
+   "kind": "film",
+   "slot": "origine",
+   "style": "ipad-sketch",
+   "rubrique": "origine",
+   "time": "07:45",
+   "slides": null,
+   "seconds": 38.0,
+   "hook": "POURQUOI « GRÈVE » VIENT D'UNE PLAGE ?",
+   "hook_formula": 3,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 72,
+   "network": "instagram",
+   "metrics": {
+    "reactions": 0,
+    "comments": 0,
+    "engagementRate": 0.77,
+    "views": 137,
+    "shares": 0,
+    "saves": 1,
+    "totalTimeWatched": 15.88,
+    "averageTimeWatched": 7.39,
+    "reach": 130
+   },
+   "interactions": 1,
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0077,
+   "engagement_rate": 0.0077,
+   "outlier": 0.96
+  },
+  {
+   "post": "2026-11-21-sitcom-origine",
+   "date": "2026-11-21",
+   "kind": "film",
+   "slot": "origine",
+   "style": "ipad-sketch",
+   "rubrique": "origine",
+   "time": "07:45",
+   "slides": null,
+   "seconds": 38.0,
+   "hook": "POURQUOI « GRÈVE » VIENT D'UNE PLAGE ?",
+   "hook_formula": 3,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 72,
+   "network": "tiktok",
+   "metrics": {
+    "reactions": 23,
+    "comments": 0,
+    "engagementRate": 9.7,
+    "views": 237,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 72.67,
+    "averageTimeWatched": 17.66
+   },
+   "interactions": 23,
+   "shares_per_reach": 0.0,
+   "engagement_rate": 0.097,
+   "outlier": 1.01
   }
  ]
 }
