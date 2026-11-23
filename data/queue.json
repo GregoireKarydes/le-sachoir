@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T03:46+01:00",
+ "updated_at": "2026-11-23T03:48+01:00",
  "stock": {
   "cultureg": [
    {
@@ -555,6 +555,21 @@
      "kind": "chiffre",
      "title": "Trois curseurs, aucun mètre ruban",
      "questions": 3
+    }
+   ]
+  },
+  {
+   "date": "2026-11-30",
+   "path": "editions/2026-11-30",
+   "status": "draft",
+   "newsletter": false,
+   "formats": [
+    {
+     "id": "quiz",
+     "label": "Qui a dit ça ?",
+     "kind": "citation",
+     "title": "Quatre phrases cultes, un seul faussaire",
+     "questions": 4
     }
    ]
   }
