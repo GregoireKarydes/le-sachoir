@@ -1,6 +1,84 @@
 {
- "updated_at": "2026-11-23T04:05:28.824090+01:00",
+ "updated_at": "2026-11-23T05:04:59.104589+01:00",
  "editions": [
+  {
+   "date": "2026-11-23",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Les microbes : comment Pasteur les a démasqués (sans jamais vous serrer la main)",
+     "kind": "",
+     "url": "histoires/2026-11-23-les-microbes-comment-pasteur-les-a-demasques-sans-jamais-vous-serrer/",
+     "theme": "Médecine et santé",
+     "minutes": 7,
+     "tagline": "Du bouillon qui pourrit au vaccin contre la rage : comment un chimiste a prouvé que des êtres invisibles nous rendent malades",
+     "cases": 28,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "actu",
+     "label": "L’Actu du jour",
+     "title": "Une COP sans fin, une règle en or et une sonde bien garée",
+     "kind": "",
+     "url": "histoires/2026-11-23-une-cop-sans-fin-une-regle-en-or-et-une-sonde-bien-garee/",
+     "theme": "",
+     "minutes": 4,
+     "tagline": "La COP31 finit sans accord sur les énergies fossiles, Emmanuel Macron pense à une « règle d’or », deux Français gagnent le Masters de double et BepiColombo tourne autour de Mercure.",
+     "cases": 13,
+     "cover": "images/actu-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "La gauche et la droite, ou le plan de table qui a mal tourné",
+     "kind": "",
+     "url": "histoires/2026-11-23-la-gauche-et-la-droite-ou-le-plan-de-table-qui-a-mal-tourne/",
+     "theme": "Politique française",
+     "minutes": 2,
+     "tagline": "Un huissier, un plan des places, un roi qui veut dire non, et deux camps qui ne se sont jamais rassis ailleurs",
+     "cases": 9,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "title": "Napoléon commande un éléphant, Paris reçoit des rats",
+     "kind": "",
+     "url": "histoires/2026-11-23-napoleon-commande-un-elephant-paris-recoit-des-rats/",
+     "theme": "Architecture",
+     "minutes": 2,
+     "tagline": "Une fontaine en bronze promise pour l’an prochain, un éléphant en plâtre resté trente-deux ans et des locataires à moustaches",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "notice",
+     "label": "La Notice",
+     "title": "Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière)",
+     "kind": "",
+     "url": "histoires/2026-11-23-le-frigo-ne-fabrique-pas-de-froid-il-met-la-chaleur-a-la-porte/",
+     "theme": "Sciences physiques",
+     "minutes": 2,
+     "tagline": "Un fluide qui bout dans le froid, un moteur qui ronronne, et une grille noire qui chauffe votre cuisine",
+     "cases": 6,
+     "cover": "images/notice-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Quiz du jour",
+     "title": "Cinq questions, un aigle et zéro pédale",
+     "kind": "culture",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-22",
    "demo": false,

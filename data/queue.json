@@ -1,30 +1,13 @@
 {
- "updated_at": "2026-11-23T04:05+01:00",
+ "updated_at": "2026-11-23T05:04+01:00",
  "stock": {
   "cultureg": [
-   {
-    "path": "stock/cultureg/20261117-2048-gauche-droite-plan-de-table",
-    "name": "20261117-2048-gauche-droite-plan-de-table",
-    "added": "20261117-2048",
-    "status": "ready",
-    "next": true,
-    "title": "La gauche et la droite, ou le plan de table qui a mal tourné",
-    "theme": "Politique française",
-    "tagline": "Un huissier, un plan des places, un roi qui veut dire non, et deux camps qui ne se sont jamais rassis ailleurs",
-    "minutes": 2,
-    "cases": 9,
-    "photos": 1,
-    "images_done": 7,
-    "images_total": 7,
-    "failed": 0,
-    "redo": 0
-   },
    {
     "path": "stock/cultureg/20261118-0850-pendule-foucault-chapeau",
     "name": "20261118-0850-pendule-foucault-chapeau",
     "added": "20261118-0850",
     "status": "ready",
-    "next": false,
+    "next": true,
     "title": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
     "theme": "Sciences physiques",
     "tagline": "Une boule, un fil, un cercle de sable et un voisin qui refuse de tourner avec la planète",
@@ -124,23 +107,6 @@
     "redo": 0
    },
    {
-    "path": "stock/insolite/20261118-0848-elephant-bastille-rats",
-    "name": "20261118-0848-elephant-bastille-rats",
-    "added": "20261118-0848",
-    "status": "ready",
-    "next": false,
-    "title": "Napoléon commande un éléphant, Paris reçoit des rats",
-    "theme": "Architecture",
-    "tagline": "Une fontaine en bronze promise pour l’an prochain, un éléphant en plâtre resté trente-deux ans et des locataires à moustaches",
-    "minutes": 1,
-    "cases": 7,
-    "photos": 1,
-    "images_done": 6,
-    "images_total": 6,
-    "failed": 0,
-    "redo": 0
-   },
-   {
     "path": "stock/insolite/20261120-0654-mario-prenom-proprietaire",
     "name": "20261120-0654-mario-prenom-proprietaire",
     "added": "20261120-0654",
@@ -211,28 +177,11 @@
   ],
   "notice": [
    {
-    "path": "stock/notice/20261117-0151-frigo-chaleur-a-la-porte",
-    "name": "20261117-0151-frigo-chaleur-a-la-porte",
-    "added": "20261117-0151",
-    "status": "ready",
-    "next": true,
-    "title": "Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière)",
-    "theme": "Sciences physiques",
-    "tagline": "Un fluide qui bout dans le froid, un moteur qui ronronne, et une grille noire qui chauffe votre cuisine",
-    "minutes": 2,
-    "cases": 6,
-    "photos": 1,
-    "images_done": 5,
-    "images_total": 5,
-    "failed": 0,
-    "redo": 0
-   },
-   {
     "path": "stock/notice/20261117-0151-gps-ecoute-l-heure",
     "name": "20261117-0151-gps-ecoute-l-heure",
     "added": "20261117-0151",
     "status": "ready",
-    "next": false,
+    "next": true,
     "title": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)",
     "theme": "Informatique et numérique",
     "tagline": "Des satellites qui crient l’heure, un téléphone qui tend l’oreille, et un randonneur en papier d’alu",
@@ -368,23 +317,6 @@
   ],
   "dossier": [
    {
-    "path": "stock/dossier/20261118-1927-pasteur-microbes",
-    "name": "20261118-1927-pasteur-microbes",
-    "added": "20261118-1927",
-    "status": "ready",
-    "next": true,
-    "title": "Les microbes : comment Pasteur les a démasqués (sans jamais vous serrer la main)",
-    "theme": "Médecine et santé",
-    "tagline": "Du bouillon qui pourrit au vaccin contre la rage : comment un chimiste a prouvé que des êtres invisibles nous rendent malades",
-    "minutes": 3,
-    "cases": 28,
-    "photos": 3,
-    "images_done": 23,
-    "images_total": 23,
-    "failed": 0,
-    "redo": 4
-   },
-   {
     "path": "stock/dossier/20261120-0657-jeux-video-desert",
     "name": "20261120-0657-jeux-video-desert",
     "added": "20261120-0657",
@@ -441,9 +373,24 @@
   {
    "date": "2026-11-23",
    "path": "editions/2026-11-23",
-   "status": "draft",
+   "status": "published",
    "newsletter": true,
    "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "kind": "",
+     "title": "Les microbes : comment Pasteur les a démasqués (sans jamais vous serrer la main)",
+     "theme": "Médecine et santé",
+     "tagline": "Du bouillon qui pourrit au vaccin contre la rage : comment un chimiste a prouvé que des êtres invisibles nous rendent malades",
+     "minutes": 7,
+     "cases": 28,
+     "photos": 3,
+     "images_done": 23,
+     "images_total": 23,
+     "failed": 0,
+     "redo": 4
+    },
     {
      "id": "actu",
      "label": "L’Actu du jour",
@@ -458,6 +405,51 @@
      "images_total": 5,
      "failed": 0,
      "redo": 2
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "kind": "",
+     "title": "La gauche et la droite, ou le plan de table qui a mal tourné",
+     "theme": "Politique française",
+     "tagline": "Un huissier, un plan des places, un roi qui veut dire non, et deux camps qui ne se sont jamais rassis ailleurs",
+     "minutes": 2,
+     "cases": 9,
+     "photos": 1,
+     "images_done": 7,
+     "images_total": 7,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "kind": "",
+     "title": "Napoléon commande un éléphant, Paris reçoit des rats",
+     "theme": "Architecture",
+     "tagline": "Une fontaine en bronze promise pour l’an prochain, un éléphant en plâtre resté trente-deux ans et des locataires à moustaches",
+     "minutes": 2,
+     "cases": 7,
+     "photos": 1,
+     "images_done": 6,
+     "images_total": 6,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "notice",
+     "label": "La Notice",
+     "kind": "",
+     "title": "Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière)",
+     "theme": "Sciences physiques",
+     "tagline": "Un fluide qui bout dans le froid, un moteur qui ronronne, et une grille noire qui chauffe votre cuisine",
+     "minutes": 2,
+     "cases": 6,
+     "photos": 1,
+     "images_done": 5,
+     "images_total": 5,
+     "failed": 0,
+     "redo": 0
     },
     {
      "id": "quiz",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T04:05:28.824090+01:00",
+ "updated_at": "2026-11-23T05:04:59.104589+01:00",
  "today": "2026-11-23",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,7 +9,11 @@
    "date": "2026-11-23",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
     "actu": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "notice": "prêt",
     "quiz": "prêt"
    }
   },
@@ -63,28 +67,39 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-23/cultureg : « La gauche et la droite, ou le plan de table qui a mal tourné » prise dans la file (20261117-2048-gauche-droite-plan-de-table)",
+  "2026-11-23/insolite : « Napoléon commande un éléphant, Paris reçoit des rats » prise dans la file (20261118-0848-elephant-bastille-rats)",
+  "2026-11-23/notice : « Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière) » prise dans la file (20261117-0151-frigo-chaleur-a-la-porte)",
+  "2026-11-23/dossier : « Les microbes : comment Pasteur les a démasqués (sans jamais vous serrer la main) » prise dans la file (20261118-1927-pasteur-microbes)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-22",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "actu",
+  "cultureg",
+  "insolite",
+  "notice"
+ ],
+ "last_published": "2026-11-23",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 29,
    "focus": "20261120-0652-jours-semaine-sept-astres (8 image(s) à faire)",
-   "next": "20261117-2048-gauche-droite-plan-de-table",
+   "next": "20261118-0850-pendule-foucault-chapeau",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 26,
@@ -93,12 +108,12 @@
    "next_redo": 0
   },
   "notice": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 4,
    "blocked": 0,
    "images_left": 22,
    "focus": "20261117-0153-savon-escorte-la-graisse (5 image(s) à faire)",
-   "next": "20261117-0151-frigo-chaleur-a-la-porte",
+   "next": "20261117-0151-gps-ecoute-l-heure",
    "next_redo": 0
   },
   "origine": {
@@ -111,17 +126,17 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 3,
    "blocked": 0,
    "images_left": 34,
    "focus": "20261120-0657-jeux-video-desert (2 image(s) à faire)",
-   "next": "20261118-1927-pasteur-microbes",
-   "next_redo": 4
+   "next": null,
+   "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 4,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 7,
  "quota": {
   "day": "2026-11-23",
@@ -144,7 +159,7 @@
  },
  "rss": {
   "collected_at": "2026-11-22T23:28:23.388661+01:00",
-  "age_hours": 4.6,
+  "age_hours": 5.6,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,
