@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-23",
+  "kind": "film",
+  "style": "hd-2d",
+  "slot": "insolite",
+  "time": "21:00",
+  "story": {"edition": "2026-11-23", "format": "insolite"},
+  "question": "Pourquoi il y avait un éléphant en plâtre place de la Bastille ?",
+  "answer": "C'était la maquette grandeur nature d'une fontaine en bronze commandée par Napoléon en 1810 ; en 1815, l'Empire tombe, plus personne ne paie le bronze, et la maquette reste trente-deux ans, jusqu'en 1846, pleine de rats.",
+  "chain": [
+    "en 1810, un décret de Napoléon commande pour la Bastille une fontaine en bronze en forme d'éléphant, l'eau sortant de la trompe",
+    "avant de fondre le bronze, on construit un modèle grandeur nature en bois et en plâtre, achevé en 1814",
+    "en 1815, Napoléon perd le pouvoir : plus personne ne finance les 177 tonnes de bronze",
+    "le modèle reste, le plâtre s'effrite et des rats s'y installent ; Victor Hugo y fait dormir Gavroche, et l'éléphant n'est démoli qu'en 1846"
+  ],
+  "hooks": [
+    {"formula": 102, "text": "Un éléphant géant, mais zéro gramme de bronze."},
+    {"formula": 111, "text": "Un éléphant de quinze mètres à la Bastille : ça a existé, et presque personne ne le sait."},
+    {"formula": 104, "text": "On ne parle pas assez du fait que Paris a gardé un éléphant en plâtre pendant 32 ans."}
+  ],
+  "hook_formula": 102,
+  "band": "UN ÉLÉPHANT EN PLÂTRE\nÀ LA BASTILLE ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "hero": "#c0503a",
+    "scene": "scene.js",
+    "direction": {
+      "idee": "La place de la Bastille la nuit, en miniature éclairée aux réverbères : un éléphant de plâtre de quinze mètres et son gardien à la lanterne ; la caméra monte le long de l'éléphant, rêve son bronze, voit la lumière baisser, plonge dans une fissure, entre dans son ventre et revient au début.",
+      "signature": "Zoom brutal dans une fissure du ventre de l'éléphant : les rats s'en déversent par dizaines sur les pavés, comme le butin d'un jeu de rôle, pendant que « +1 RAT » puis « + DES LOCATAIRES » montent à l'écran.",
+      "plans": [
+        {"plan": 0, "cadrage": "très gros plan puis plan d'ensemble", "angle": "contre-plongée qui se redresse", "mouvement": "grue qui monte et recule", "transition": "ouverture directe sur la lanterne du gardien", "texte": "count", "pourquoi": "arrêter le pouce : un éléphant géant en plein Paris, sa taille qui défile"},
+        {"plan": 1, "cadrage": "plan moyen", "angle": "face", "mouvement": "travelling latéral le long du flanc", "transition": "coupe franche", "texte": "slam", "pourquoi": "la curiosité : trente-deux ans, et en plâtre"},
+        {"plan": 2, "cadrage": "insert", "angle": "légèrement penché", "mouvement": "poussée lente", "transition": "coupe franche", "texte": "type", "pourquoi": "le verrou : un livre à la bougie, un petit éléphant dans la marge des Misérables"},
+        {"plan": 3, "cadrage": "plan d'ensemble", "angle": "face", "mouvement": "zoom avec rebond", "transition": "coupe franche", "texte": "stamp", "pourquoi": "la réponse : une maquette, l'étiquette épinglée sur le flanc"},
+        {"plan": 4, "cadrage": "gros plan puis plan moyen", "angle": "contre-plongée penchée", "mouvement": "recul tournant", "transition": "flash", "texte": "rise", "pourquoi": "le rêve de 1810 : l'éléphant devient or, l'eau jaillit de la trompe"},
+        {"plan": 5, "cadrage": "plan moyen", "angle": "face", "mouvement": "panoramique vertical ascendant", "transition": "coupe franche", "texte": "pop", "pourquoi": "le chantier : les échafaudages montent avec les ouvriers"},
+        {"plan": 6, "cadrage": "plan d'ensemble", "angle": "face", "mouvement": "plan fixe qui casse le rythme", "transition": "coupe franche", "texte": "focus puis strike", "pourquoi": "1815 : les réverbères baissent, l'eau s'arrête, le bronze est barré"},
+        {"plan": 7, "cadrage": "très gros plan puis plan moyen", "angle": "face", "mouvement": "zoom brutal puis caméra à l'épaule", "transition": "coupe franche", "texte": "pop", "pourquoi": "le plan signature : les rats sortent de la fissure"},
+        {"plan": 8, "cadrage": "plan moyen", "angle": "contre-plongée penchée", "mouvement": "poussée lente", "transition": "coupe franche", "texte": "rise", "pourquoi": "l'exemple vivant : Gavroche dort dans le ventre, des yeux de rats autour"},
+        {"plan": 9, "cadrage": "plan d'ensemble", "angle": "face", "mouvement": "recul puis dérive lente", "transition": "coupe puis mouvement continu", "texte": "stamp", "pourquoi": "la boucle : le cadre de la fin du plan 0, le gardien et sa lanterne"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "Un éléphant géant, mais zéro gramme de bronze.", "set": "ruelle", "big": "15 mètres de plâtre", "cold": true, "tag": "Paris, Bastille", "image": {"bd": 1}},
+      {"who": "narr", "text": "L'éléphant est resté trente-deux ans. En plâtre.", "set": "ruelle", "big": "32 ans en plâtre", "chapter": "Chapitre I — 1814", "image": {"bd": 4}},
+      {"who": "narr", "text": "Et il cache une scène des Misérables.", "set": "bureau", "big": "Les Misérables"},
+      {"who": "narr", "text": "L'éléphant était une maquette en plâtre, jamais finie.", "set": "musee", "big": "Une maquette", "pause": 0.3, "image": {"bd": 5}},
+      {"who": "narr", "text": "En 1810, Napoléon commande une fontaine-éléphant en bronze.", "say": "En dix-huit cent dix, Napoléon commande une fontaine-éléphant en bronze.", "set": "trone", "big": "1810 : le rêve en bronze", "image": {"bd": 2}},
+      {"who": "narr", "text": "On construit d'abord le modèle, grandeur nature.", "set": "musee", "big": "Grandeur nature"},
+      {"who": "narr", "text": "En 1815, Napoléon tombe : plus personne ne paie.", "say": "En dix-huit cent quinze, Napoléon tombe : plus personne ne paie.", "set": "trone", "big": "177 tonnes de bronze", "fx": ["cross"], "chapter": "Chapitre II — 1815"},
+      {"who": "narr", "text": "Le plâtre s'effrite, des rats s'installent dedans.", "set": "ruelle", "big": "+1 rat", "image": {"bd": 6}},
+      {"who": "narr", "text": "Dans Les Misérables, Gavroche y dort.", "set": "bureau", "big": "Gavroche y dort"},
+      {"who": "narr", "text": "Voilà pourquoi l'éléphant était en plâtre : jamais de bronze.", "set": "ruelle", "big": "Jamais de bronze", "tag": "démoli en 1846", "image": {"bd": 7}}
+    ]
+  },
+  "caption": "Un éléphant géant, mais zéro gramme de bronze.\n\nEn 1810, Napoléon commande pour la place de la Bastille une fontaine en bronze en forme d'éléphant. On construit d'abord la maquette grandeur nature, en plâtre. En 1815, l'Empire tombe, plus personne ne paie, et la maquette reste là trente-deux ans, jusqu'en 1846. Le plâtre s'effrite, les rats s'installent, et Victor Hugo y fait dormir Gavroche dans Les Misérables.\n\nEt ça, maintenant, tu le sais. Envoie-le à celui qui te donne toujours rendez-vous à Bastille.",
+  "first_comment": "Bonus : du rêve de bronze, il reste le bassin rond qui porte aujourd'hui la colonne de Juillet, place de la Bastille. Tu l'avais déjà remarqué ?",
+  "hashtags": ["lesachoir", "culturegenerale", "histoire", "paris", "anecdote"],
+  "sources": [
+    "https://www.napoleon.org/jeunes-historiens/napodoc/monuments-napoleoniens-le-mysterieux-elephant-de-la-place-de-la-bastille/",
+    "https://en.wikipedia.org/wiki/Elephant_of_the_Bastille",
+    "https://www.pariszigzag.fr/insolite/histoire-insolite-paris/lelephant-de-la-bastille/"
+  ]
+}

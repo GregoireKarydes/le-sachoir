@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-23",
+  "kind": "film",
+  "style": "comic-history",
+  "slot": "cultureg",
+  "time": "12:30",
+  "story": {"edition": "2026-11-23", "format": "cultureg"},
+  "question": "Pourquoi on parle de la gauche et de la droite en politique ?",
+  "answer": "À cause des places des députés en 1789 : pendant le débat sur le veto du roi, ceux qui voulaient un roi fort se sont assis à droite du président, ceux qui voulaient limiter son pouvoir à gauche, et chaque camp a gardé son côté.",
+  "chain": [
+    "fin août 1789, l'Assemblée débat : le roi pourra-t-il bloquer les lois votées (le droit de veto) ?",
+    "les partisans d'un veto absolu, un roi fort, se rangent à droite du président, côté des places d'honneur",
+    "ceux qui veulent seulement un veto suspensif, un roi limité, se rangent en face, à gauche",
+    "le 11 septembre 1789, la gauche gagne par 673 voix contre 325 ; chaque camp garde son côté, et les côtés deviennent des familles d'opinion"
+  ],
+  "hooks": [
+    {"formula": 101, "text": "Tout le monde dit gauche et droite. Personne ne sait pourquoi."},
+    {"formula": 113, "text": "Beaucoup ne seront pas d'accord, mais la droite est née d'une défaite."},
+    {"formula": 114, "text": "Si tu ne devais retenir qu'une chose de 1789, ce serait ce plan de table."}
+  ],
+  "hook_formula": 101,
+  "band": "POURQUOI LA GAUCHE\nET LA DROITE ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "cast": [
+      {"name": "LA GAUCHE", "color": "#C98A4B"},
+      {"name": "LA DROITE", "color": "#5D6672"}
+    ],
+    "scene": "scene.js",
+    "direction": {
+      "idee": "Une grande feuille posée sur une table, avec au centre le plan des places de l'Assemblée de 1789 en demi-cercle, le président vu de dos ; deux marionnettes de papier, LA GAUCHE et LA DROITE, vont chacune de leur côté, et le plan finit déchiré en deux.",
+      "signature": "Quand LA GAUCHE rejoint son côté, la caméra recule et le plan des places se déchire en deux au milieu : les deux moitiés s'écartent, chacune garde sa couleur, et à la fin une étiquette GAUCHE et une étiquette DROITE y sont épinglées.",
+      "plans": [
+        {"plan": 0, "cadrage": "gros plan puis plan d'ensemble", "angle": "penché qui se redresse", "mouvement": "recul rapide, léger tremblé", "transition": "ouverture directe sur les deux marionnettes qui se disputent", "texte": "slam", "pourquoi": "arrêter le pouce : deux mots qu'on entend tous les jours, incarnés par deux camps de papier"},
+        {"plan": 1, "cadrage": "plan moyen", "angle": "face", "mouvement": "filé latéral puis poussée", "transition": "filé (whip)", "texte": "type", "pourquoi": "la curiosité : la case de l'huissier et un plan des places qui se déplie"},
+        {"plan": 2, "cadrage": "insert", "angle": "vue du dessus penchée", "mouvement": "poussée", "transition": "coupe franche", "texte": "pop", "pourquoi": "le verrou : le repas de famille où le débat éclate"},
+        {"plan": 3, "cadrage": "plan d'ensemble", "angle": "face", "mouvement": "zoom avec rebond", "transition": "coupe franche", "texte": "highlight", "pourquoi": "la réponse : les places du demi-cercle s'allument une à une"},
+        {"plan": 4, "cadrage": "plan moyen", "angle": "face", "mouvement": "travelling latéral et descendant", "transition": "coupe franche", "texte": "rise", "pourquoi": "le débat : une loi de papier, la couronne qui descend, le sceau VETO"},
+        {"plan": 5, "cadrage": "plan moyen", "angle": "léger roulis à droite", "mouvement": "poussée lente", "transition": "coupe franche", "texte": "slam", "pourquoi": "LA DROITE s'installe, les sièges de droite prennent sa couleur"},
+        {"plan": 6, "cadrage": "plan moyen puis plan d'ensemble", "angle": "léger roulis à gauche", "mouvement": "filé puis recul", "transition": "filé (whip)", "texte": "type", "pourquoi": "le plan signature : LA GAUCHE s'installe et le plan se déchire en deux"},
+        {"plan": 7, "cadrage": "plan moyen", "angle": "face", "mouvement": "caméra à l'épaule", "transition": "coupe franche", "texte": "count", "pourquoi": "le vote : 673 contre 325, la gauche fière, la droite vexée"},
+        {"plan": 8, "cadrage": "plan d'ensemble", "angle": "face", "mouvement": "recul puis dérive lente", "transition": "mouvement continu", "texte": "stamp", "pourquoi": "la boucle : le plan entier du plan 0, les deux étiquettes épinglées"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "Tout le monde dit gauche et droite. Personne ne sait pourquoi.", "set": "traite", "big": "Gauche ? Droite ?", "cold": true, "speaker": 0, "emo": "fache", "tag": "Culture G", "image": {"bd": 5}},
+      {"who": "narr", "text": "Tout vient d'un plan de table.", "set": "traite", "big": "Un plan de table", "speaker": 1, "emo": "surpris", "image": {"bd": 1}},
+      {"who": "narr", "text": "Parfait pour le prochain repas de famille.", "set": "europe", "big": "Pour le repas de famille", "speaker": 0, "emo": "content"},
+      {"who": "narr", "text": "On dit gauche et droite à cause des places des députés.", "set": "traite", "big": "Les places de 1789", "pause": 0.3, "speaker": 0, "emo": "fier", "image": {"bd": 6}},
+      {"who": "narr", "text": "En 1789, ils débattent : le roi pourra-t-il bloquer les lois ?", "say": "En dix-sept cent quatre-vingt-neuf, ils débattent : le roi pourra-t-il bloquer les lois ?", "set": "traite", "big": "Le roi peut-il dire non ?", "tag": "Versailles, 1789", "speaker": 1, "emo": "surpris", "image": {"bd": 2}},
+      {"who": "narr", "text": "Pour un roi fort ? On s'assoit à droite du président.", "set": "traite", "big": "À droite : un roi fort", "speaker": 1, "emo": "fier", "image": {"bd": 4}},
+      {"who": "narr", "text": "Pour le limiter ? On s'assoit à gauche.", "set": "traite", "big": "À gauche : le limiter", "speaker": 0, "emo": "fier"},
+      {"who": "narr", "text": "La gauche gagne le vote : 673 voix contre 325.", "say": "La gauche gagne le vote : six cent soixante-treize voix contre trois cent vingt-cinq.", "set": "traite", "big": "673 contre 325", "tag": "11 septembre 1789", "speaker": 1, "emo": "vexe", "image": {"bd": 7}},
+      {"who": "narr", "text": "Voilà pourquoi on dit gauche et droite : les places sont restées.", "set": "traite", "big": "Les places sont restées", "speaker": 0, "emo": "content", "image": {"bd": 9}}
+    ]
+  },
+  "caption": "Tout le monde dit gauche et droite. Personne ne sait pourquoi.\n\nFin août 1789, l'Assemblée débat : le roi pourra-t-il bloquer les lois votées ? Ceux qui veulent un roi fort se rangent à droite du président, ceux qui veulent le limiter en face, à gauche. Le 11 septembre, la gauche gagne par 673 voix contre 325, et chacun garde sa place.\n\nEt ça, maintenant, tu le sais. Toi, tu croyais que ça venait d'où ?",
+  "first_comment": "Bonus : en octobre 1789, l'Assemblée quitte Versailles pour Paris, dans la salle du Manège, et chaque camp y garde son côté. Les mots se sont exportés depuis dans le monde entier. Tu les entends aussi dans une autre langue ?",
+  "hashtags": ["lesachoir", "culturegenerale", "histoire", "revolutionfrancaise", "anecdote"],
+  "sources": [
+    "https://www.herodote.net/almanach-ID-1703.php",
+    "https://www.larousse.fr/encyclopedie/divers/wd/44839",
+    "https://en.wikipedia.org/wiki/French_Constitution_of_1791"
+  ]
+}

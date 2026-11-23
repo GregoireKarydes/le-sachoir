@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-23",
+  "kind": "film",
+  "style": "ipad-sketch",
+  "slot": "origine",
+  "time": "07:45",
+  "question": "Pourquoi on dit « quarantaine » ?",
+  "answer": "On dit « quarantaine » parce qu'à la fin du Moyen Âge, contre la peste, les ports isolaient quarante jours les bateaux et les voyageurs suspects : « quaranta », c'est quarante en italien. Raguse (Dubrovnik) avait commencé en 1377 par trente jours, puis les autres ports sont passés à quarante.",
+  "chain": [
+    "au Moyen Âge, la peste arrive dans les villes par les bateaux et leurs marins",
+    "en 1377, le port de Raguse (aujourd'hui Dubrovnik) isole trente jours les voyageurs venus des zones de peste",
+    "d'autres ports allongent l'isolement à quarante jours, « quaranta » en italien",
+    "le mot « quarantaine » reste, même pour un isolement bien plus court"
+  ],
+  "hooks": [
+    {"formula": 104, "text": "On ne parle pas assez du 40 caché dans « quarantaine »."},
+    {"formula": 107, "text": "Si tu as déjà été en quarantaine, c'est à cause d'un port de 1377."},
+    {"formula": 102, "text": "Quarante jours d'isolement, mais zéro jour à terre."}
+  ],
+  "hook_formula": 104,
+  "band": "POURQUOI ON DIT\n« QUARANTAINE » ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "scene": "scene.js",
+    "direction": {
+      "idee": "Une grande page crème où le stylet écrit « quarantaine » : la caméra quitte le mot pour un port croqué au crayon, un bateau à l'ancre, puis une frise de 1377 où des bâtons de prisonnier comptent les jours, avant de revenir au mot.",
+      "signature": "Les bâtons de prisonnier : trente traits au crayon pour Raguse, puis dix traits corail qui s'ajoutent sous nos yeux ; trente devient quarante, et le tampon « QUARANTA = 40 » tombe.",
+      "plans": [
+        {"plan": 0, "cadrage": "très gros plan puis plan moyen", "angle": "penché qui se redresse", "mouvement": "suivi du stylet puis recul", "transition": "ouverture directe sur le mot en train de s'écrire", "texte": "slam", "pourquoi": "arrêter le pouce : un mot que tout le monde a vécu depuis 2020, et le « quarant » surligné"},
+        {"plan": 1, "cadrage": "plan moyen", "angle": "face", "mouvement": "filé latéral puis poussée lente", "transition": "filé (whip)", "texte": "type", "pourquoi": "la curiosité : un 40 géant et un point d'interrogation"},
+        {"plan": 2, "cadrage": "insert", "angle": "vue du dessus penchée", "mouvement": "poussée", "transition": "coupe franche", "texte": "pop", "pourquoi": "le verrou : le collègue enrhumé à qui on racontera l'histoire"},
+        {"plan": 3, "cadrage": "plan d'ensemble puis plan moyen", "angle": "face", "mouvement": "zoom avec rebond", "transition": "coupe franche", "texte": "highlight", "pourquoi": "la réponse : le bateau à l'ancre devant une ville où il n'a pas le droit d'entrer"},
+        {"plan": 4, "cadrage": "plan moyen", "angle": "face", "mouvement": "travelling latéral du bateau vers la ville", "transition": "coupe franche", "texte": "rise", "pourquoi": "la raison : la peste suit la mer, une flèche corail du bateau au quai"},
+        {"plan": 5, "cadrage": "plan moyen", "angle": "face", "mouvement": "panoramique vertical", "transition": "coupe franche", "texte": "count", "pourquoi": "Raguse, 1377 : trente traits au crayon, un par jour"},
+        {"plan": 6, "cadrage": "très gros plan", "angle": "penché", "mouvement": "plan presque fixe, puis secousse au tampon", "transition": "coupe franche", "texte": "stamp", "pourquoi": "le plan signature : dix traits corail, trente devient quarante"},
+        {"plan": 7, "cadrage": "gros plan", "angle": "contre-plongée penchée", "mouvement": "caméra à l'épaule", "transition": "coupe franche", "texte": "bulle du marin", "pourquoi": "l'exemple vécu : quarante jours à regarder le port sans y poser le pied"},
+        {"plan": 8, "cadrage": "plan moyen", "angle": "face", "mouvement": "longue remontée puis dérive lente", "transition": "coupe puis mouvement continu", "texte": "focus", "pourquoi": "la boucle : retour au mot du plan 0, « = 40 jours » écrit dessous"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "On ne parle pas assez du 40 caché dans « quarantaine ».", "say": "On ne parle pas assez du quarante caché dans quarantaine.", "set": "page", "big": "Quarantaine = 40 ?", "cold": true, "tag": "Expressions"},
+      {"who": "narr", "text": "Quarante quoi ? Et pourquoi ce nombre ?", "set": "page", "big": "40 quoi ?"},
+      {"who": "narr", "text": "Une histoire à ressortir au prochain collègue enrhumé.", "set": "plan-de-travail", "big": "Pour le collègue enrhumé"},
+      {"who": "narr", "text": "On dit « quarantaine » car les ports isolaient les bateaux quarante jours.", "set": "coupe", "big": "40 jours à l'écart", "pause": 0.3, "image": {"commons": "Lazzaretto Vecchio Venice"}},
+      {"who": "narr", "text": "Au Moyen Âge, la peste arrive par les bateaux.", "set": "loupe", "big": "La peste vient par la mer", "fx": ["arrow"]},
+      {"who": "narr", "text": "En 1377, le port de Raguse isole les voyageurs trente jours.", "say": "En treize cent soixante-dix-sept, le port de Raguse isole les voyageurs trente jours.", "set": "frise", "big": "30 jours d'abord", "tag": "1377", "image": {"commons": "Dubrovnik old port Lazareti"}},
+      {"who": "narr", "text": "D'autres ports passent à quarante : « quaranta », en italien.", "set": "nuancier", "big": "Quaranta = 40"},
+      {"who": "perso", "name": "Le marin", "text": "Quarante jours à fixer le port sans y entrer !", "set": "page", "big": "40 jours à l'ancre"},
+      {"who": "narr", "text": "Voilà pourquoi on dit « quarantaine » : quarante jours au port.", "set": "page", "big": "40 jours au port"}
+    ]
+  },
+  "caption": "On ne parle pas assez du 40 caché dans « quarantaine ».\n\nContre la peste, les ports de la fin du Moyen Âge isolaient les bateaux suspects avant de les laisser accoster. En 1377, Raguse (l'actuelle Dubrovnik) impose trente jours ; d'autres ports passent ensuite à quarante, « quaranta » en italien. Le mot est resté, même pour une semaine de rhume.\n\nEt ça, maintenant, tu le sais. Quelle expression on décortique demain ? Écris-la en commentaire.",
+  "first_comment": "Bonus : pourquoi quarante et pas trente-cinq ? Personne n'en est sûr. Peut-être par prudence, peut-être en écho aux quarante jours du Déluge dans la Bible. Toi, tu penches pour quoi ?",
+  "hashtags": ["lesachoir", "culturegenerale", "expressionsfrancaises", "etymologie", "histoire"],
+  "sources": [
+    "https://wwwnc.cdc.gov/eid/article/19/2/ET-1902",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3559069/",
+    "https://www.npr.org/2021/07/06/1012490871/how-a-medieval-city-dealing-with-the-black-death-invented-quarantine",
+    "https://history.com/news/quarantine-black-death-medieval"
+  ]
+}
