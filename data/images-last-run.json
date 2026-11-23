@@ -1,7 +1,7 @@
 {
- "at": "2026-11-23T06:04:46.125534+01:00",
+ "at": "2026-11-23T08:44:24.313222+01:00",
  "generated": 0,
  "log": [
-  "quota: 8920 neurones estimés aujourd'hui (plafond 9000) ; 9999-12-31 trop lointaine pour le renfort payant"
+  "réserve: 8920 neurones estimés aujourd'hui, 2600 gardés pour l'Actu"
  ]
 }
