@@ -251,8 +251,9 @@
               "alcorn"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
@@ -283,8 +284,9 @@
               "alcorn"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
           }
         },
         {
