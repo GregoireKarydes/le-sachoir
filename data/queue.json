@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T03:44+01:00",
+ "updated_at": "2026-11-23T03:46+01:00",
  "stock": {
   "cultureg": [
    {
@@ -388,7 +388,7 @@
     "path": "stock/dossier/20261120-0657-jeux-video-desert",
     "name": "20261120-0657-jeux-video-desert",
     "added": "20261120-0657",
-    "status": "blocked",
+    "status": "waiting",
     "next": false,
     "title": "Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde)",
     "theme": "Jeux vidéo",
@@ -398,7 +398,7 @@
     "photos": 2,
     "images_done": 16,
     "images_total": 18,
-    "failed": 2,
+    "failed": 0,
     "redo": 0
    },
    {

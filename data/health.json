@@ -1,8 +1,7 @@
 {
- "updated_at": "2026-11-23T03:44:30.370357+01:00",
+ "updated_at": "2026-11-23T03:46:24.597505+01:00",
  "today": "2026-11-23",
  "problems": [
-  "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock",
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
@@ -106,16 +105,16 @@
   },
   "dossier": {
    "ready": 1,
-   "waiting": 2,
-   "blocked": 1,
-   "images_left": 32,
-   "focus": "20261121-1925-climat-france-2050 (14 image(s) à faire)",
+   "waiting": 3,
+   "blocked": 0,
+   "images_left": 34,
+   "focus": "20261120-0657-jeux-video-desert (2 image(s) à faire)",
    "next": "20261118-1927-pasteur-microbes",
    "next_redo": 4
   }
  },
  "days_ahead_drawn": 1,
- "days_ahead_written": 3,
+ "days_ahead_written": 4,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-23",
