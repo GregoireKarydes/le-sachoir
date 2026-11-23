@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T02:05+01:00",
+ "updated_at": "2026-11-23T03:13+01:00",
  "stock": {
   "cultureg": [
    {
@@ -23,7 +23,7 @@
     "path": "stock/cultureg/20261118-0850-pendule-foucault-chapeau",
     "name": "20261118-0850-pendule-foucault-chapeau",
     "added": "20261118-0850",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
     "theme": "Sciences physiques",
@@ -31,7 +31,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 4,
+    "images_done": 7,
     "images_total": 7,
     "failed": 0,
     "redo": 0
@@ -127,7 +127,7 @@
     "path": "stock/insolite/20261118-0848-elephant-bastille-rats",
     "name": "20261118-0848-elephant-bastille-rats",
     "added": "20261118-0848",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Napoléon commande un éléphant, Paris reçoit des rats",
     "theme": "Architecture",
@@ -135,7 +135,7 @@
     "minutes": 1,
     "cases": 7,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -335,7 +335,7 @@
     "path": "stock/origine/20261120-2046-points-sur-les-i-jambages",
     "name": "20261120-2046-points-sur-les-i-jambages",
     "added": "20261120-2046",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "« Mettre les points sur les i » : la faute aux moines qui écrivaient en palissade",
     "theme": "Expression française",
@@ -343,7 +343,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -388,7 +388,7 @@
     "path": "stock/dossier/20261120-0657-jeux-video-desert",
     "name": "20261120-0657-jeux-video-desert",
     "added": "20261120-0657",
-    "status": "waiting",
+    "status": "blocked",
     "next": false,
     "title": "Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde)",
     "theme": "Jeux vidéo",
@@ -396,9 +396,9 @@
     "minutes": 3,
     "cases": 22,
     "photos": 2,
-    "images_done": 0,
+    "images_done": 16,
     "images_total": 18,
-    "failed": 0,
+    "failed": 2,
     "redo": 0
    },
    {
@@ -413,7 +413,7 @@
     "minutes": 3,
     "cases": 23,
     "photos": 2,
-    "images_done": 0,
+    "images_done": 4,
     "images_total": 18,
     "failed": 0,
     "redo": 0

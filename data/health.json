@@ -1,7 +1,8 @@
 {
- "updated_at": "2026-11-23T02:05:42.358701+01:00",
+ "updated_at": "2026-11-23T03:13:10.226998+01:00",
  "today": "2026-11-23",
  "problems": [
+  "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock",
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
@@ -68,20 +69,20 @@
  "last_published": "2026-11-22",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 32,
-   "focus": "20261118-0850-pendule-foucault-chapeau (3 image(s) à faire)",
+   "images_left": 29,
+   "focus": "20261120-0652-jours-semaine-sept-astres (8 image(s) à faire)",
    "next": "20261117-2048-gauche-droite-plan-de-table",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
-   "waiting": 5,
+   "ready": 2,
+   "waiting": 4,
    "blocked": 0,
-   "images_left": 32,
-   "focus": "20261118-0848-elephant-bastille-rats (6 image(s) à faire)",
+   "images_left": 26,
+   "focus": "20261120-0654-mario-prenom-proprietaire (6 image(s) à faire)",
    "next": "20261117-2047-napoleon-decore-un-sucrier",
    "next_redo": 0
   },
@@ -95,47 +96,49 @@
    "next_redo": 0
   },
   "origine": {
-   "ready": 1,
-   "waiting": 2,
+   "ready": 2,
+   "waiting": 1,
    "blocked": 0,
-   "images_left": 11,
-   "focus": "20261120-2046-points-sur-les-i-jambages (6 image(s) à faire)",
+   "images_left": 5,
+   "focus": "20261122-2046-avoir-le-cafard-baudelaire (5 image(s) à faire)",
    "next": "20261120-2044-boycotter-capitaine-irlandais",
    "next_redo": 0
   },
   "dossier": {
    "ready": 1,
-   "waiting": 3,
-   "blocked": 0,
-   "images_left": 54,
-   "focus": "20261120-0657-jeux-video-desert (18 image(s) à faire)",
+   "waiting": 2,
+   "blocked": 1,
+   "images_left": 32,
+   "focus": "20261121-1925-climat-france-2050 (14 image(s) à faire)",
    "next": "20261118-1927-pasteur-microbes",
    "next_redo": 0
   }
  },
  "days_ahead_drawn": 1,
- "days_ahead_written": 4,
+ "days_ahead_written": 3,
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-23",
-  "count": 0,
-  "neurons": 0,
-  "exhausted": true,
+  "count": 53,
+  "neurons": 8920,
+  "exhausted": false,
   "by_kind": {
-   "cast": 0
+   "cast": 14,
+   "case": 38,
+   "cover": 1
   },
   "exhausted_at": "2026-11-23T00:04:28.527149+00:00"
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.38826,
-  "images": 275,
-  "today_usd": 0,
+  "spent_usd": 3.56826,
+  "images": 281,
+  "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-22T23:28:23.388661+01:00",
-  "age_hours": 2.6,
+  "age_hours": 3.7,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,
