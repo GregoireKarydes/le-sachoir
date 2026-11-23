@@ -2,34 +2,34 @@
  "instagram": {
   "buffer_id": "6affe144ca85ebefb0fd623d",
   "sent_at": "2026-11-20T11:32:12.989Z",
-  "metrics_updated_at": "2026-11-21T13:27:41.587Z",
+  "metrics_updated_at": "2026-11-22T13:27:51.506Z",
   "metrics": {
-   "reactions": 1,
+   "reactions": 2,
    "comments": 0,
-   "engagementRate": 0.82,
-   "views": 133,
+   "engagementRate": 1.61,
+   "views": 135,
    "shares": 0,
    "saves": 0,
-   "totalTimeWatched": 17.86,
-   "averageTimeWatched": 8.85,
-   "reach": 122
+   "totalTimeWatched": 18.02,
+   "averageTimeWatched": 8.72,
+   "reach": 124
   },
-  "checked_at": "2026-11-22T04:05:55+00:00"
+  "checked_at": "2026-11-23T01:06:17+00:00"
  },
  "tiktok": {
   "buffer_id": "6affe1430f5eda1a57c62123",
   "sent_at": "2026-11-20T11:32:04.801Z",
-  "metrics_updated_at": "2026-11-21T11:20:42.729Z",
+  "metrics_updated_at": "2026-11-22T10:21:34.279Z",
   "metrics": {
    "reactions": 20,
    "comments": 0,
-   "engagementRate": 7.46,
-   "views": 268,
+   "engagementRate": 7.33,
+   "views": 273,
    "shares": 0,
-   "reach": 0,
-   "totalTimeWatched": 60.98,
-   "averageTimeWatched": 12.45
+   "reach": 254,
+   "totalTimeWatched": 61.6,
+   "averageTimeWatched": 12.2
   },
-  "checked_at": "2026-11-22T04:05:55+00:00"
+  "checked_at": "2026-11-23T01:06:17+00:00"
  }
 }
