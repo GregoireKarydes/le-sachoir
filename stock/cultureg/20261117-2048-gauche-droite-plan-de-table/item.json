@@ -43,6 +43,7 @@
           "mounier"
         ],
         "file": "images/cultureg-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -72,6 +73,7 @@
               "mounier"
             ],
             "file": "images/cultureg-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -100,6 +102,7 @@
               "mounier"
             ],
             "file": "images/cultureg-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -136,6 +139,7 @@
               "anselme"
             ],
             "file": "images/cultureg-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -152,6 +156,7 @@
               "anselme"
             ],
             "file": "images/cultureg-05.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -196,6 +201,7 @@
               "anselme"
             ],
             "file": "images/cultureg-07.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -225,7 +231,7 @@
             }
           ],
           "image": {
-            "prompt": "Anselme (small, skinny, huge round spectacles, royal-blue livery coat, silver chain) proudly holding up a brand-new plan showing only two big blank halves, chest puffed out, chin high, yellow sparkles around the paper; the empty wooden benches of the hall behind him. medium close-up",
+            "prompt": "Anselme (small, skinny, huge round spectacles, royal-blue livery coat, silver chain) proudly holding up a brand-new sheet of paper divided by one single vertical line into two big empty halves (no grid, no small boxes), chest puffed out, chin high, yellow sparkles around the paper; the empty wooden benches of the hall behind him. medium close-up",
             "cast": [
               "anselme"
             ],

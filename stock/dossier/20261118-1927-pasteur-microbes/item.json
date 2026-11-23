@@ -175,7 +175,7 @@
             }
           ],
           "image": {
-            "prompt": "seen from above, a laboratory table: the flask sits on an iron stand over a blue gas flame, steam puffing out of the end of its curved neck; Pasteur (black skullcap, square greying beard, charcoal-grey frock coat) bends over it on the left, carefully adjusting the flame, his handkerchief in the other hand. high angle",
+            "prompt": "seen from above, a laboratory table: the flask sits on an iron stand over a blue gas flame, steam puffing out of the open end of its long S-curved swan neck, which points away from him to the right, far from his face; Pasteur (black skullcap, square greying beard, charcoal-grey frock coat) bends over it on the left, carefully adjusting the flame, his handkerchief in the other hand. high angle",
             "cast": [
               "pasteur"
             ],
@@ -205,11 +205,12 @@
           "caption": "Des semaines plus tard, le bouillon du ballon reste limpide. Rien n'y est né tout seul.",
           "bubbles": [],
           "image": {
-            "prompt": "the laboratory table: on the left the flask, perfectly clear and shining; next to it an ordinary open glass jar overflowing with a huge fuzzy green mould growing out like a hairdo. Pasteur (short, stocky, black skullcap, charcoal-grey frock coat) leans on the table between them with folded arms, staring straight at the viewer, deadpan. visual gag: the monstrous mould next to the spotless flask. medium wide shot",
+            "prompt": "the laboratory table: on the left the flask (round glass flask with a long thin S-curved swan neck), its broth perfectly clear and shining; next to it an ordinary open glass jar overflowing with a huge fuzzy green mould growing out like a hairdo. Pasteur (short, stocky, small black velvet skullcap on top of short dark-brown hair, short square greying beard, charcoal-grey frock coat, white handkerchief in breast pocket) leans on the table between them with folded arms, staring straight at the viewer, deadpan. visual gag: the monstrous mould next to the spotless flask. medium wide shot",
             "cast": [
               "pasteur"
             ],
             "file": "images/dossier-07.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -283,6 +284,7 @@
               "pouchet"
             ],
             "file": "images/dossier-10.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -310,6 +312,7 @@
               "pasteur"
             ],
             "file": "images/dossier-11.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 2
           }
@@ -333,6 +336,7 @@
               "pasteur"
             ],
             "file": "images/dossier-12.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -360,6 +364,7 @@
               "pasteur"
             ],
             "file": "images/dossier-13.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -395,6 +400,7 @@
               "pasteur"
             ],
             "file": "images/dossier-15.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -417,6 +423,7 @@
               "pasteur"
             ],
             "file": "images/dossier-16.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -434,11 +441,12 @@
             }
           ],
           "image": {
-            "prompt": "Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) holds the healthy white hen up in front of his face with both hands, eyes wide with wonder, small yellow sparkles around his head; the hen looks calmly back at him. medium close-up",
+            "prompt": "in the laboratory, Pasteur (short, stocky, small black velvet skullcap on top of short dark-brown hair, short square greying beard, charcoal-grey frock coat) holds a healthy white farm hen (a real chicken: beak, red comb, feathers, yellow legs; not a cat) up in front of his face with both hands, eyes wide with wonder; the hen looks calmly back at him. medium close-up",
             "cast": [
               "pasteur"
             ],
             "file": "images/dossier-17.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -480,6 +488,7 @@
               "pasteur"
             ],
             "file": "images/dossier-19.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -507,6 +516,7 @@
               "rossignol"
             ],
             "file": "images/dossier-20.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -539,6 +549,7 @@
               "rossignol"
             ],
             "file": "images/dossier-22.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -561,6 +572,7 @@
               "pasteur"
             ],
             "file": "images/dossier-23.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -589,6 +601,7 @@
               "pasteur"
             ],
             "file": "images/dossier-24.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -611,12 +624,13 @@
             }
           ],
           "image": {
-            "prompt": "a small laboratory room with rabbit cages on a shelf. Joseph (small boy, straw-blond hair, dark-blue cap, bright magenta jumper) sits on a high stool on the left, swinging his legs and staring at the rabbits; a tall doctor with a white beard and a black coat on the right gives him the syringe in his side; Pasteur (black skullcap, charcoal-grey coat) behind them twists his handkerchief, a light-blue sweat drop on his forehead. medium shot",
+            "prompt": "a small laboratory room with rabbit cages on a shelf. Joseph (small boy, straw-blond hair, dark-blue cap, bright magenta jumper) sits on a high stool on the left, swinging his legs and staring at the rabbits; a tall thin doctor on the right, bareheaded with a long white beard and a black coat, no hat and no cap, gives him the syringe in his side; Pasteur (short, stocky, small black velvet skullcap on short dark-brown hair, short square greying beard, charcoal-grey frock coat) in the background between them, anxiously twisting his white handkerchief. Only Pasteur wears a skullcap. medium shot",
             "cast": [
               "joseph",
               "pasteur"
             ],
             "file": "images/dossier-25.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }
@@ -645,6 +659,7 @@
               "pasteur"
             ],
             "file": "images/dossier-26.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -683,11 +698,12 @@
             }
           ],
           "image": {
-            "prompt": "the entrance steps of the new Institut Pasteur, a brick and stone building. A rich donor in a top hat on the left holds out his hand, which hangs in the air, puzzled; Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) on the right offers him his bent elbow instead, with total dignity, eyes half closed. visual gag: the elbow greeting. medium close-up",
+            "prompt": "the entrance steps of the new Institut Pasteur, a brick and stone building. A rich donor in a top hat on the left holds out his open hand, which hangs alone in the air, untouched, puzzled; Pasteur (short, stocky, square greying beard, black skullcap, charcoal-grey frock coat) on the right does NOT take the hand: both his hands are hidden behind his back and he pokes his bent elbow out towards the donor instead, with total dignity, eyes half closed. Their hands never touch. visual gag: the elbow greeting. medium shot",
             "cast": [
               "pasteur"
             ],
             "file": "images/dossier-28.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1
           }

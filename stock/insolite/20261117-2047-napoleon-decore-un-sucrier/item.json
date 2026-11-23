@@ -46,6 +46,7 @@
           "delessert"
         ],
         "file": "images/insolite-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "premium"
@@ -75,6 +76,7 @@
               "delessert"
             ],
             "file": "images/insolite-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "premium"
@@ -104,6 +106,7 @@
               "delessert"
             ],
             "file": "images/insolite-02.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -143,6 +146,7 @@
               "delessert"
             ],
             "file": "images/insolite-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -176,6 +180,7 @@
               "delessert"
             ],
             "file": "images/insolite-06.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }
@@ -203,6 +208,7 @@
               "delessert"
             ],
             "file": "images/insolite-07.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 2
           }

@@ -141,6 +141,7 @@
               "ines"
             ],
             "file": "images/notice-04.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1
           }

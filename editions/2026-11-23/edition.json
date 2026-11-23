@@ -76,6 +76,7 @@
           "presidentcop"
         ],
         "file": "images/actu-cover.webp",
+        "qa": "ok",
         "status": "done",
         "attempts": 1,
         "via": "fal"
@@ -109,6 +110,7 @@
               "presidentcop"
             ],
             "file": "images/actu-01.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -192,11 +194,12 @@
             }
           ],
           "image": {
-            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A gilded palace hall with tall mirrors, almost empty. president (slim, swept-back brown-grey hair, navy blue suit, thin dark tie) on the left, beaming with pride, hugs the ruler against his shoulder like a precious treasure; it is so heavy that his knees bend slightly and a tiny light-blue sweat drop flies off his forehead. Medium close-up.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A gilded palace hall with tall mirrors, completely empty except for him. president (slim, swept-back brown-grey hair, navy blue suit, thin dark tie) is the ONLY person in the picture, standing alone on the left, beaming with pride, hugging the ruler (a giant solid-gold ruler as long as he is tall, plain notches) upright against his shoulder like a precious treasure; it is so heavy that his knees bend slightly. No second person, no other face. Medium shot, full body.",
             "cast": [
               "president"
             ],
             "file": "images/actu-05.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -233,12 +236,13 @@
             }
           ],
           "image": {
-            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. An indoor tennis court under bright lights, seen from the ground. geant (very tall, short dark beard, royal-blue tennis shirt) stands on the left, totally calm, holding the cup under one arm like a grocery bag; partenaire (much shorter, curly light-brown hair, sunny yellow shirt) leaps high in the air behind him, racket raised, mouth wide open in a shout of joy. Low angle.",
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. An indoor tennis court under bright lights, seen from the ground. geant (very tall, broad-shouldered, short dark beard, royal-blue tennis shirt, white shorts) stands on the left, totally calm, the silver cup tucked casually under one arm; no bag, no other trophy. partenaire (a grown adult man in his twenties, lean, only a head shorter than geant, curly light-brown hair, sunny yellow tennis shirt, navy shorts) leaps high in the air behind him on the right, his own tennis racket raised in his hand, mouth wide open in a shout of joy. Two adult professional athletes, no child. Low angle.",
             "cast": [
               "geant",
               "partenaire"
             ],
             "file": "images/actu-07.webp",
+            "redo": true,
             "status": "done",
             "attempts": 1,
             "via": "fal"
@@ -280,6 +284,7 @@
               "ingenieure"
             ],
             "file": "images/actu-09.webp",
+            "qa": "ok",
             "status": "done",
             "attempts": 1,
             "via": "fal"
