@@ -11,7 +11,7 @@
       "theme": "Jeux vidéo",
       "art": {
         "subject": "the history of video games from 1958 to today: a physicist's tennis game on an oscilloscope, the first home console, Pong in a Californian bar whose coin box overflowed, Pac-Man inspired by food, the 1983 crash and the cartridges buried in the New Mexico desert, and a toy robot used to sell a console to wary shops in 1985",
-        "setting": "a 1958 science lab open day hall with grey control panels; a small 1972 Californian start-up workshop with soldering benches; a dim 1972 bar with a pinball machine; a 1980 Tokyo game studio with drawing desks; a 1980 Tokyo cinema lobby; an office of 1982 piled with cartridges; a desert landfill in New Mexico; a 1985 New York toy shop; a 2014 excavation in the desert",
+        "setting": "a 1958 science lab open day hall with grey control panels; a small 1972 Californian start-up workshop with soldering benches; a cosy 1972 diner with a pinball machine; a 1980 Tokyo game studio with drawing desks; a 1980 Tokyo cinema lobby; an office of 1982 piled with cartridges; a desert landfill in New Mexico; a 1985 New York toy shop; a 2014 excavation in the desert",
         "era": "from the late 1950s (short-sleeved shirts, horn-rimmed glasses) through the 1970s (wide collars, flared jeans) and 1980s to 2014",
         "props": {
           "oscilloscope": "a small grey 1950s oscilloscope with a round greenish screen showing a glowing dot bouncing over a short line, two small boxy controllers with a knob and a button",
@@ -246,14 +246,13 @@
             }
           ],
           "image": {
-            "prompt": "a dim 1970s bar with wooden tables and a flashing pinball machine. The engineer (short, stocky, big square glasses, black curly mop, apple-green polo) on the left pushes the cabinet on a hand truck into a corner; on the right a big bald bar owner in a red apron, drying a glass, watches with total disbelief. medium wide shot",
+            "prompt": "a cosy 1970s diner with wooden tables and a colourful pinball machine. The engineer (short, stocky, big square glasses, black curly mop, apple-green polo) on the left rolls the yellow game cabinet into a corner; on the right a big bald owner in a red apron, holding a cloth, raises a sceptical eyebrow. medium wide shot",
             "cast": [
               "alcorn"
             ],
             "file": "images/dossier-08.webp",
-            "status": "failed",
-            "attempts": 3,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (713565a9-9174-475a-a40a-a25b50848603)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -279,14 +278,13 @@
           "caption": "Deux semaines plus tard, le patron appelle : panne. Alcorn ouvre la machine. Le bac à pièces déborde.",
           "bubbles": [],
           "image": {
-            "prompt": "in the dim bar, the engineer (short, stocky, black curly mop, apple-green polo), seen from behind, kneels in front of the open cabinet while a flood of silver coins pours out over his knees onto the floor; the bar owner in his red apron stands behind him with his mouth wide open. visual gag: the coin avalanche. from behind",
+            "prompt": "in the cosy diner, the engineer (short, stocky, black curly mop, apple-green polo), seen from behind, sits on the floor in front of the open yellow game cabinet, a big pile of shiny silver coins spilling out around him; the owner in his red apron stands behind, amazed. visual gag: the mountain of coins. from behind",
             "cast": [
               "alcorn"
             ],
             "file": "images/dossier-10.webp",
-            "status": "failed",
-            "attempts": 3,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (b20b80f8-1663-4e7f-b2f0-0a2e6db10225)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "pending",
+            "attempts": 0
           }
         },
         {
@@ -581,6 +579,5 @@
         }
       ]
     }
-  ],
-  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
+  ]
 }
