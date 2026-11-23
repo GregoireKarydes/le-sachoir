@@ -1,22 +1,10 @@
 {
- "updated_at": "2026-11-22T22:47:17.122087+01:00",
- "today": "2026-11-22",
+ "updated_at": "2026-11-23T01:04:57.610370+01:00",
+ "today": "2026-11-23",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
-  {
-   "date": "2026-11-22",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "origine": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-23",
    "status": "draft",
@@ -75,14 +63,8 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "actu",
-  "cultureg",
-  "insolite",
-  "origine"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-22",
  "stock": {
   "cultureg": {
@@ -133,48 +115,47 @@
  },
  "days_ahead_drawn": 1,
  "days_ahead_written": 4,
- "quiz_days_ahead": 7,
+ "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-22",
-  "count": 51,
-  "neurons": 9000,
-  "exhausted": false,
+  "day": "2026-11-23",
+  "count": 0,
+  "neurons": 0,
+  "exhausted": true,
   "by_kind": {
-   "case": 39,
-   "cast": 10,
-   "cover": 2
-  }
+   "cast": 0
+  },
+  "exhausted_at": "2026-11-23T00:04:28.527149+00:00"
  },
  "fal": {
   "month": "2026-11",
   "spent_usd": 3.38826,
   "images": 275,
-  "today_usd": 0.22011,
+  "today_usd": 0,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-22T19:04:38.679239+01:00",
-  "age_hours": 3.7,
+  "collected_at": "2026-11-22T23:28:23.388661+01:00",
+  "age_hours": 1.6,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,
    "Le Monde": 16,
    "Le Figaro": 18,
-   "Libération": 50,
-   "20 Minutes": 25,
+   "Libération": 48,
+   "20 Minutes": 26,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 12,
+   "BBC World": 18,
    "Le Monde Sciences": 4,
-   "Sciences et Avenir": 3,
+   "Sciences et Avenir": 2,
    "Le Monde Planète": 5,
    "Le Monde Pixels": 5,
    "Le Monde Santé": 4,
-   "Le Monde Culture": 11,
+   "Le Monde Culture": 10,
    "HugoDécrypte - Actus du jour": 1
   },
   "empty_feeds": [
@@ -184,7 +165,7 @@
  },
  "actu_balance": {
   "days": 14,
-  "editions": 12,
+  "editions": 11,
   "people": [
    {
     "name": "Emmanuel Macron",
