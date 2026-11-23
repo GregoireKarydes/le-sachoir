@@ -25,7 +25,7 @@
           "name": "Levasseur, le gardien",
           "look": "Levasseur, the elephant's guardian, a very old, very thin and hunched man, completely bald with a long drooping white moustache, light olive skin, a long mustard-yellow guardian's coat with brass buttons as main colour, brown trousers, the keys hanging from his belt",
           "file": "cast/insolite-levasseur.png",
-          "status": "pending",
+          "status": "done",
           "role": "the proud guardian of the plaster elephant, loyal to the point of blindness, in total denial that it will never be bronze; pats the elephant like a pet, puffs out his thin chest"
         },
         {
@@ -33,7 +33,7 @@
           "name": "La voisine",
           "look": "a short, broad and sturdy Parisian laundress in her forties, black hair pulled into a tight bun under a small white cap, warm light-brown skin, a bright royal-blue dress with rolled-up sleeves as main colour, a white apron, often holding the broom",
           "file": "cast/insolite-voisine.png",
-          "status": "pending",
+          "status": "done",
           "role": "the neighbour who lives facing the elephant, practical and short-tempered, hands on hips, sighs loudly, has no patience left"
         }
       ],
@@ -44,8 +44,9 @@
           "voisine"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "voisine"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -94,8 +96,8 @@
               "levasseur"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -135,8 +137,8 @@
               "voisine"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -179,8 +181,8 @@
               "levasseur"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -201,8 +203,8 @@
               "levasseur"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

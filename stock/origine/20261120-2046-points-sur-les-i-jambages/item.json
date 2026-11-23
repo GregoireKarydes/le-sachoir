@@ -26,7 +26,7 @@
           "name": "Mathieu",
           "look": "Mathieu, a tall and lanky office worker in his late twenties, pale skin, a tall swooping blond quiff, thin blond moustache, a mint-green short-sleeve shirt as main colour with a pen in the pocket, navy chinos, a wireless headset around his neck",
           "file": "cast/origine-mathieu.png",
-          "status": "pending",
+          "status": "done",
           "role": "a project manager who writes passive-aggressive emails; types with two stiff fingers, jaw clenched, sure he is always perfectly clear"
         },
         {
@@ -34,7 +34,7 @@
           "name": "Frère Odon",
           "look": "Frère Odon, a small hunched medieval monk in his fifties, thick black eyebrows joined in the middle, a black tonsure ring of hair, light olive skin, a slate-blue wool habit with a rope belt as main colour, ink-stained fingers, always holding the quill",
           "file": "cast/origine-odon.png",
-          "status": "pending",
+          "status": "done",
           "role": "a vain perfectionist copyist, proud of his perfectly straight strokes; nose almost on the page, sniffs with contempt at anyone who cannot read them"
         }
       ],
@@ -45,8 +45,9 @@
           "mathieu"
         ],
         "file": "images/origine-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "mathieu"
             ],
             "file": "images/origine-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -99,8 +101,8 @@
               "odon"
             ],
             "file": "images/origine-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -129,8 +131,8 @@
               "odon"
             ],
             "file": "images/origine-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -165,8 +167,8 @@
             "prompt": "a late 15th-century printing workshop with a wooden press. A burly printer with a curly red beard and a leather apron, seen from below, proudly holds up between two huge fingers a tiny metal letter block, peering at it through a round magnifying glass, ink smudges on his nose. low angle",
             "cast": [],
             "file": "images/origine-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -204,8 +206,8 @@
               "mathieu"
             ],
             "file": "images/origine-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

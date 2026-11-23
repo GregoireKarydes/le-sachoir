@@ -29,7 +29,7 @@
           "look": "Gérard, a winegrower of 62 in 2050, very big and round with a huge belly, bushy grey beard, wide frayed straw hat, tanned light skin, faded denim-blue work overalls as main colour over a white vest, the red-handled pruning shears always in his hand",
           "role": "the stubborn winegrower who refuses to admit anything has changed; of total bad faith, blames everything but the climate, arms crossed and chin up even while sweating",
           "file": "cast/dossier-gerard.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "climato",
@@ -37,7 +37,7 @@
           "look": "a French climatologist in her forties, medium height and wiry, short spiky black hair with one white streak, thick bright red-framed glasses, light brown skin, a teal-green rain jacket as main colour over a grey T-shirt, a tablet under her arm",
           "role": "the deadpan scientist who calmly deflates every excuse with one dry sentence; never raises her voice, one eyebrow always slightly raised",
           "file": "cast/dossier-climato.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "fourier",
@@ -45,7 +45,7 @@
           "look": "Joseph Fourier, a French mathematician of 56 in 1824, short and stout, dark curly hair greying at the temples, round clean-shaven face, light pink skin, a cornflower-blue frock coat as main colour with a huge white cravat wound high up to his chin, a goose quill in his hand",
           "role": "the brilliant, rather vain savant of 1824 who wants everyone to remember the date of his idea; chest puffed out, finger raised as if lecturing the Academy",
           "file": "cast/dossier-fourier.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "keeling",
@@ -53,7 +53,7 @@
           "look": "Charles David Keeling, an American chemist of 30 in 1958, very tall and thin like a pole, short sandy-blond side-parted hair, thin black-framed glasses, light skin, a bright orange short-sleeved shirt as main colour, khaki trousers, the glass air-sampling flask always in his hands",
           "role": "the obsessive measurer who repeats every reading and never wants to stop; zealous perfectionist, bent over his instruments, counting on his fingers",
           "file": "cast/dossier-keeling.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -63,8 +63,8 @@
           "climato"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -91,8 +91,8 @@
               "climato"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -113,8 +113,8 @@
               "gerard"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -153,8 +153,8 @@
               "gerard"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {

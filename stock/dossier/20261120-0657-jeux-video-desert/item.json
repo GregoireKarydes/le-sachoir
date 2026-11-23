@@ -28,7 +28,7 @@
           "look": "William Higinbotham, a tall lanky American physicist of 48 in 1958, long friendly face, receding light-brown hair combed back, thick black horn-rimmed glasses, light pink skin, a lemon-yellow short-sleeved shirt with a thin black tie as main colour, grey trousers, a screwdriver in his breast pocket",
           "role": "the lab physicist who builds a game so that visitors stop yawning; restless tinkerer, thrilled while building, bored once it works, always fiddling with knobs",
           "file": "cast/dossier-higinbotham.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "bushnell",
@@ -36,7 +36,7 @@
           "look": "the founder of a young games company in 1972, a very tall lanky man of 29, shoulder-length wavy dark-brown hair and a thick dark-brown beard, light skin, a wide-lapel cream-white 1970s suit as main colour, a huge wide chocolate-brown tie, always jingling a fistful of coins",
           "role": "the boss of the start-up; boastful showman who turns everything into a product, arms always spread wide as if pitching to investors",
           "file": "cast/dossier-bushnell.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "alcorn",
@@ -44,7 +44,7 @@
           "look": "a young electronics engineer of 24 in 1972, short and stocky with a round face, big square glasses, a thick black curly mop of hair, light olive skin, a bright apple-green 1970s polo shirt with a wide collar as main colour, flared blue jeans, a soldering iron always in his hand",
           "role": "the engineer whose training exercise becomes a hit; anxious and modest, never thinks his work matters, scratches his head when things go wrong",
           "file": "cast/dossier-alcorn.png",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": "iwatani",
@@ -52,7 +52,7 @@
           "look": "a slim young Japanese game designer of 25 in 1980, neat straight black hair with a side parting, thin round wire glasses, light skin, a soft lilac-purple cardigan as main colour over a white shirt, beige trousers, always holding a sketchbook and a pencil",
           "role": "the gentle designer who wants a game without shooting; dreamy and always hungry, sees food everywhere, doodles circles in his sketchbook",
           "file": "cast/dossier-iwatani.png",
-          "status": "pending"
+          "status": "done"
         }
       ],
       "cover": {
@@ -62,8 +62,9 @@
           "bushnell"
         ],
         "file": "images/dossier-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -89,8 +90,9 @@
               "higinbotham"
             ],
             "file": "images/dossier-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -111,8 +113,8 @@
               "higinbotham"
             ],
             "file": "images/dossier-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -150,8 +152,8 @@
               "higinbotham"
             ],
             "file": "images/dossier-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -178,8 +180,8 @@
               "alcorn"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -222,8 +224,8 @@
               "alcorn"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -249,8 +251,9 @@
               "alcorn"
             ],
             "file": "images/dossier-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "failed",
+            "attempts": 3,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (713565a9-9174-475a-a40a-a25b50848603)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -281,8 +284,9 @@
               "alcorn"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "failed",
+            "attempts": 3,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (b20b80f8-1663-4e7f-b2f0-0a2e6db10225)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -315,8 +319,8 @@
               "iwatani"
             ],
             "file": "images/dossier-12.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -337,8 +341,8 @@
               "iwatani"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -364,8 +368,8 @@
               "iwatani"
             ],
             "file": "images/dossier-14.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -389,8 +393,8 @@
             "prompt": "a glossy 1982 executive office with a big desk. A round executive in a pinstriped navy suit and gold watch on the left taps a calendar on the wall with a fat finger; on the right a young programmer with curly brown hair and a faded T-shirt, holding a floppy disk, goes pale, a light-blue sweat drop on his forehead. medium shot",
             "cast": [],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -409,8 +413,8 @@
             "prompt": "seen from above, the executive office is filled to the ceiling with a mountain of the cartridge; the round executive in a pinstriped navy suit sits on top of the pile on the left, holding a single cartridge, staring blankly; on the right a tiny delivery boy carries away just one small box. visual gag: the mountain of unsold cartridges. high angle",
             "cast": [],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -436,8 +440,8 @@
             "prompt": "a vast sandy desert landfill under a hot sky: several big trucks tip their loads, and a waterfall of the cartridge pours into a huge pit; a bulldozer flattens them; at the edge of the pit a lonely cactus seems to stare at the scene. visual gag: the cactus watching. bird's-eye view",
             "cast": [],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -461,8 +465,8 @@
             "prompt": "a 1985 New York toy shop full of teddy bears and toy trains. A stern shopkeeper with a grey moustache and a brown waistcoat on the right blocks the way with his arms crossed; on the left a smiling saleswoman in a red blazer with big 1980s curly hair opens a cardboard box from which the robot pops its head out. medium wide shot",
             "cast": [],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -481,8 +485,8 @@
             "prompt": "the stern shopkeeper with a grey moustache and a brown waistcoat now hugs the robot against his cheek, eyes closed with delight, small red hearts around his head, while the console box sits forgotten under his arm. visual gag: the grumpy man in love with a toy robot. medium close-up",
             "cast": [],
             "file": "images/dossier-20.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 3
           }
         },
         {
@@ -501,8 +505,8 @@
             "prompt": "a desert excavation site with a big yellow digger and a crowd of fans behind a rope. An archaeologist in a khaki shirt and wide sun hat kneels in the dirt on the left, solemnly lifting a dusty cartridge with both hands like a precious ancient relic, brushing it with a small paintbrush. visual gag: treating a cheap cartridge like a pharaoh's treasure. wide shot",
             "cast": [],
             "file": "images/dossier-21.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -528,8 +532,8 @@
               "higinbotham"
             ],
             "file": "images/dossier-22.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
@@ -577,5 +581,6 @@
         }
       ]
     }
-  ]
+  ],
+  "blocked": "image en échec après plusieurs essais : simplifier son prompt et remettre attempts à 0"
 }
