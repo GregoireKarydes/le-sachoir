@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T13:11:44.891609+01:00",
+ "updated_at": "2026-11-23T15:10:56.758153+01:00",
  "today": "2026-11-23",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -154,7 +154,7 @@
  },
  "rss": {
   "collected_at": "2026-11-22T23:28:23.388661+01:00",
-  "age_hours": 13.7,
+  "age_hours": 15.7,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,
