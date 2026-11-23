@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T05:04:59.104589+01:00",
+ "updated_at": "2026-11-23T06:05:26.046843+01:00",
  "today": "2026-11-23",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-23",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "actu": "prêt",
@@ -67,12 +67,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-23/cultureg : « La gauche et la droite, ou le plan de table qui a mal tourné » prise dans la file (20261117-2048-gauche-droite-plan-de-table)",
-  "2026-11-23/insolite : « Napoléon commande un éléphant, Paris reçoit des rats » prise dans la file (20261118-0848-elephant-bastille-rats)",
-  "2026-11-23/notice : « Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière) » prise dans la file (20261117-0151-frigo-chaleur-a-la-porte)",
-  "2026-11-23/dossier : « Les microbes : comment Pasteur les a démasqués (sans jamais vous serrer la main) » prise dans la file (20261118-1927-pasteur-microbes)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -126,16 +121,16 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 0,
-   "waiting": 3,
+   "ready": 1,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 34,
-   "focus": "20261120-0657-jeux-video-desert (2 image(s) à faire)",
-   "next": null,
+   "images_left": 32,
+   "focus": "20261121-1925-climat-france-2050 (14 image(s) à faire)",
+   "next": "20261120-0657-jeux-video-desert",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 1,
  "days_ahead_written": 3,
  "quiz_days_ahead": 7,
  "quota": {
@@ -152,14 +147,14 @@
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.56826,
-  "images": 281,
-  "today_usd": 0.18,
+  "spent_usd": 3.5833,
+  "images": 283,
+  "today_usd": 0.19504,
   "blocked": null
  },
  "rss": {
   "collected_at": "2026-11-22T23:28:23.388661+01:00",
-  "age_hours": 5.6,
+  "age_hours": 6.6,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,
