@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T03:25:13.795635+01:00",
+ "updated_at": "2026-11-23T03:44:30.370357+01:00",
  "today": "2026-11-23",
  "problems": [
   "file dossier : 1 BD bloquée(s) (image en échec), à corriger par la tâche Stock",
@@ -138,7 +138,7 @@
  },
  "rss": {
   "collected_at": "2026-11-22T23:28:23.388661+01:00",
-  "age_hours": 3.9,
+  "age_hours": 4.3,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 30,
