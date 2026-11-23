@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-30",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "citation",
+      "label": "Qui a dit ça ?",
+      "title": "Quatre phrases cultes, un seul faussaire",
+      "teaser": "Un commentateur aux anges, un patron en col roulé, un romancier sous terre et un roi à qui l’on prête des mots. À vous de rendre chaque phrase.",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "choice",
+          "q": "« Je crois qu’après avoir vu ça, on peut mourir tranquille. »",
+          "hint": "Un soir de juillet 1998, au micro de TF1, la France vient de gagner.",
+          "choices": [
+            "Zinedine Zidane",
+            "Thierry Roland",
+            "Aimé Jacquet",
+            "Didier Deschamps"
+          ],
+          "answer": 1,
+          "explain": "Le commentateur de TF1, le 12 juillet 1998, après France-Brésil (3-0). Il a aussitôt ajouté : « enfin, le plus tard possible ». Prudent, même au paradis.",
+          "source": {
+            "title": "Larousse — Finale de la Coupe du monde, 12 juillet 1998, Thierry Roland",
+            "url": "https://www.larousse.fr/encyclopedie/sons/Football_coupe_du_monde_1998_Thierry_Roland/1102391"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "« Aujourd’hui, Apple va réinventer le téléphone. »",
+          "hint": "Un patron en col roulé noir, sur scène, en janvier 2007.",
+          "choices": [
+            "Bill Gates",
+            "Mark Zuckerberg",
+            "Elon Musk",
+            "Steve Jobs"
+          ],
+          "answer": 3,
+          "explain": "Steve Jobs, le 9 janvier 2007 à San Francisco, en présentant le premier iPhone (en anglais : « reinvent the phone »). Pari tenu : on s’en sert pour tout, sauf parfois pour téléphoner.",
+          "source": {
+            "title": "Mental Floss — 10 years ago today, Steve Jobs announced the iPhone",
+            "url": "https://www.mentalfloss.com/article/90663/10-years-ago-today-steve-jobs-announced-iphone"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "« La science, mon garçon, est faite d’erreurs, mais d’erreurs qu’il est bon de commettre. »",
+          "hint": "Un romancier français qui envoie ses héros jusqu’au cœur de la Terre.",
+          "choices": [
+            "Jules Verne",
+            "Louis Pasteur",
+            "Marie Curie",
+            "Victor Hugo"
+          ],
+          "answer": 0,
+          "explain": "Dans Voyage au centre de la Terre (1864) : « elles mènent peu à peu à la vérité ». Un savant qui le dit, c’est sage ; un romancier, c’est malin : ses héros se trompent de chemin tout le livre.",
+          "source": {
+            "title": "Today in Science History — Jules Verne quotations",
+            "url": "https://todayinsci.com/V/Verne_Jules/VerneJules-Quotations.htm"
+          }
+        },
+        {
+          "type": "choice",
+          "q": "« Paris vaut bien une messe. »",
+          "hint": "La phrase apparaît dans un recueil d’anecdotes, des années après les faits.",
+          "choices": [
+            "Henri IV",
+            "Louis XIV",
+            "Personne de connu",
+            "François Ier"
+          ],
+          "answer": 2,
+          "explain": "On la prête à Henri IV, converti au catholicisme en 1593 pour régner. Mais sa première trace date de 1622, dans un recueil anonyme… et c’est Sully qui parle : « la couronne vaut bien une messe ».",
+          "source": {
+            "title": "Wikipedia — Paris is well worth a mass",
+            "url": "https://en.wikipedia.org/wiki/Paris_is_well_worth_a_mass"
+          }
+        }
+      ],
+      "sources": [
+        {
+          "title": "Larousse — Finale de la Coupe du monde, 12 juillet 1998, Thierry Roland",
+          "url": "https://www.larousse.fr/encyclopedie/sons/Football_coupe_du_monde_1998_Thierry_Roland/1102391"
+        },
+        {
+          "title": "Mental Floss — 10 years ago today, Steve Jobs announced the iPhone",
+          "url": "https://www.mentalfloss.com/article/90663/10-years-ago-today-steve-jobs-announced-iphone"
+        },
+        {
+          "title": "Today in Science History — Jules Verne quotations",
+          "url": "https://todayinsci.com/V/Verne_Jules/VerneJules-Quotations.htm"
+        },
+        {
+          "title": "Wikipedia — Paris is well worth a mass",
+          "url": "https://en.wikipedia.org/wiki/Paris_is_well_worth_a_mass"
+        }
+      ]
+    }
+  ]
+}
