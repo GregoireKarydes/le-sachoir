@@ -617,7 +617,7 @@
           "file": "cast/cultureg-voisin.png",
           "status": "pending",
           "role": "Foucault's sceptical neighbour, full of bad faith, certain the Earth stands still because he does not feel it move; clutches his hat whenever the Earth's rotation is mentioned",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (16a56a86-0304-43a1-8ee0-86556c84ba18)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (81994405-bfab-4c33-898f-5088d01de8ca)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "cover": {
