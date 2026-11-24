@@ -1,7 +1,1338 @@
 {
   "date": "2026-11-24",
-  "status": "draft",
+  "status": "published",
   "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde)",
+      "tagline": "Un physicien qui s'ennuie, une borne qui déborde de pièces, une pizza entamée et un robot déguisé en jouet : l'histoire du jeu vidéo",
+      "teaser": "Une borne qui déborde de pièces, des cartouches enterrées dans le désert et un robot pour rassurer les vendeurs.",
+      "minutes": 5,
+      "theme": "Jeux vidéo",
+      "art": {
+        "subject": "the history of video games from 1958 to today: a physicist's tennis game on an oscilloscope, the first home console, Pong in a Californian bar whose coin box overflowed, Pac-Man inspired by food, the 1983 crash and the cartridges buried in the New Mexico desert, and a toy robot used to sell a console to wary shops in 1985",
+        "setting": "a 1958 science lab open day hall with grey control panels; a small 1972 Californian start-up workshop with soldering benches; a cosy 1972 diner with a pinball machine; a 1980 Tokyo game studio with drawing desks; a 1980 Tokyo cinema lobby; an office of 1982 piled with cartridges; a desert landfill in New Mexico; a 1985 New York toy shop; a 2014 excavation in the desert",
+        "era": "from the late 1950s (short-sleeved shirts, horn-rimmed glasses) through the 1970s (wide collars, flared jeans) and 1980s to 2014",
+        "props": {
+          "oscilloscope": "a small grey 1950s oscilloscope with a round greenish screen showing a glowing dot bouncing over a short line, two small boxy controllers with a knob and a button",
+          "cabinet": "a tall wooden 1970s arcade cabinet painted bright yellow with a black-and-white TV screen, two knobs and a coin slot, no text or logo",
+          "cartridge": "a small black plastic game cartridge, no text or logo",
+          "robot": "a small grey-and-white toy robot with a round head, two big eyes and two clamp arms, no logo",
+          "pizza": "a round pizza with one slice missing"
+        }
+      },
+      "cast": [
+        {
+          "id": "higinbotham",
+          "name": "William Higinbotham",
+          "look": "William Higinbotham, a tall lanky American physicist of 48 in 1958, long friendly face, receding light-brown hair combed back, thick black horn-rimmed glasses, light pink skin, a lemon-yellow short-sleeved shirt with a thin black tie as main colour, grey trousers, a screwdriver in his breast pocket",
+          "role": "the lab physicist who builds a game so that visitors stop yawning; restless tinkerer, thrilled while building, bored once it works, always fiddling with knobs",
+          "file": "cast/dossier-higinbotham.png",
+          "status": "done"
+        },
+        {
+          "id": "bushnell",
+          "name": "Nolan Bushnell",
+          "look": "the founder of a young games company in 1972, a very tall lanky man of 29, shoulder-length wavy dark-brown hair and a thick dark-brown beard, light skin, a wide-lapel cream-white 1970s suit as main colour, a huge wide chocolate-brown tie, always jingling a fistful of coins",
+          "role": "the boss of the start-up; boastful showman who turns everything into a product, arms always spread wide as if pitching to investors",
+          "file": "cast/dossier-bushnell.png",
+          "status": "done"
+        },
+        {
+          "id": "alcorn",
+          "name": "Al Alcorn",
+          "look": "a young electronics engineer of 24 in 1972, short and stocky with a round face, big square glasses, a thick black curly mop of hair, light olive skin, a bright apple-green 1970s polo shirt with a wide collar as main colour, flared blue jeans, a soldering iron always in his hand",
+          "role": "the engineer whose training exercise becomes a hit; anxious and modest, never thinks his work matters, scratches his head when things go wrong",
+          "file": "cast/dossier-alcorn.png",
+          "status": "done"
+        },
+        {
+          "id": "iwatani",
+          "name": "Toru Iwatani",
+          "look": "a slim young Japanese game designer of 25 in 1980, neat straight black hair with a side parting, thin round wire glasses, light skin, a soft lilac-purple cardigan as main colour over a white shirt, beige trousers, always holding a sketchbook and a pencil",
+          "role": "the gentle designer who wants a game without shooting; dreamy and always hungry, sees food everywhere, doodles circles in his sketchbook",
+          "file": "cast/dossier-iwatani.png",
+          "status": "done"
+        }
+      ],
+      "cover": {
+        "prompt": "a dim 1970s bar. The engineer (short, stocky, big square glasses, black curly mop, apple-green polo) kneels in front of the open cabinet as a flood of silver coins pours out onto his knees; behind him the boss (very tall, lanky, wavy dark hair and beard, cream-white suit) spreads his arms wide in triumph. visual gag: the avalanche of coins. wide shot",
+        "cast": [
+          "alcorn",
+          "bushnell"
+        ],
+        "file": "images/dossier-cover.webp",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Le savant qui voulait réveiller ses visiteurs",
+          "caption": "Octobre 1958, près de New York. Comment un jeu de physicien a-t-il conquis 40 millions de Français ?",
+          "bubbles": [
+            {
+              "who": "higinbotham",
+              "text": "Nos visiteurs regardent nos expositions. Enfin, ils bâillent devant.",
+              "side": "r"
+            },
+            {
+              "who": "Un visiteur",
+              "text": "C'est très joli, votre tableau de boutons. Il fait quoi ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a 1958 laboratory open-day hall with rows of grey control panels covered in dials. On the left a family of visitors in 1950s clothes stands in front of a panel, the father yawning hugely, the child asleep on his shoulder; on the right, in the background, Higinbotham (tall, lanky, thick black horn-rimmed glasses, lemon-yellow short-sleeved shirt, thin black tie) watches them, arms crossed, worried. wide shot",
+            "cast": [
+              "higinbotham"
+            ],
+            "file": "images/dossier-01.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1958, Brookhaven",
+          "caption": "Pour la journée portes ouvertes, le physicien William Higinbotham veut une démonstration où l'on peut toucher.",
+          "bubbles": [
+            {
+              "who": "higinbotham",
+              "text": "Un jeu. Les gens adorent les jeux. Même les physiciens.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "at a cluttered lab workbench full of wires and vacuum tubes, Higinbotham (tall, lanky, thick black horn-rimmed glasses, lemon-yellow short-sleeved shirt, thin black tie) leans over the oscilloscope, screwdriver raised, eyes shining behind his glasses, small yellow sparkles around his head. medium close-up",
+            "cast": [
+              "higinbotham"
+            ],
+            "file": "images/dossier-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Tennis for Two, le premier match sur écran",
+          "text": "L'écran est celui d'un oscilloscope, un appareil de labo qui affiche des signaux électriques. Il fait 5 pouces de diamètre : 13 cm, la taille d'une soucoupe.",
+          "steps": [
+            "Un calculateur fait voler une balle",
+            "L'écran montre un court de tennis vu de côté",
+            "Deux joueurs renvoient la balle avec une petite manette"
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1958-1960",
+          "caption": "Les visiteurs font la queue pour jouer. Deux ans plus tard, Higinbotham démonte son jeu pour récupérer les pièces.",
+          "bubbles": [
+            {
+              "who": "Un enfant",
+              "text": "Encore une partie, monsieur ! Juste une !",
+              "side": "l"
+            },
+            {
+              "who": "higinbotham",
+              "text": "Il me faut l'oscilloscope. Pour de la vraie science.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "seen from above, the lab workbench: Higinbotham (tall, lanky, thick black horn-rimmed glasses, lemon-yellow short-sleeved shirt) on the right cheerfully unscrews the back of the oscilloscope, parts spread on the table; on the left a small boy in a striped red cap tugs at his sleeve, pleading, close to tears. high angle",
+            "cast": [
+              "higinbotham"
+            ],
+            "file": "images/dossier-04.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · La pièce de 25 cents",
+          "caption": "En 1972, en Californie, Nolan Bushnell fonde Atari avec Ted Dabney et embauche un jeune ingénieur, Al Alcorn.",
+          "bubbles": [
+            {
+              "who": "bushnell",
+              "text": "Premier exercice : un ping-pong. Une balle, deux raquettes. Simple.",
+              "side": "l"
+            },
+            {
+              "who": "alcorn",
+              "text": "Un exercice. D'accord. Personne ne le verra, de toute façon.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small 1972 start-up workshop with soldering benches and piles of TV sets. The boss (very tall, lanky, wavy dark-brown hair and beard, cream-white suit, wide brown tie) on the left spreads his arms wide as if presenting a masterpiece; the engineer (short, stocky, big square glasses, black curly mop, apple-green polo) sits on a stool on the right, shrugging, soldering iron in hand. medium shot",
+            "cast": [
+              "bushnell",
+              "alcorn"
+            ],
+            "file": "images/dossier-05.webp",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La Magnavox Odyssey, première console de salon",
+          "text": "La même année, en 1972, la Magnavox Odyssey arrive aux États-Unis : la première console qui se branche sur la télévision de la maison.",
+          "photo": {
+            "commons": "File:Magnavox-Odyssey-Console-Set.jpg",
+            "credit": "Evan-Amos",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Magnavox-Odyssey-Console-Set.jpg",
+            "file": "images/photo-6-magnavox-odyssey-console-set-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "1972",
+          "caption": "L'exercice d'Alcorn est si réussi que Bushnell décide de le vendre. Le jeu s'appellera Pong.",
+          "bubbles": [
+            {
+              "who": "alcorn",
+              "text": "C'était un exercice. Pour m'entraîner.",
+              "side": "r"
+            },
+            {
+              "who": "bushnell",
+              "text": "Et maintenant, c'est un produit. Bienvenue dans les affaires.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the workshop, the boss (very tall, lanky, wavy dark-brown hair and beard, cream-white suit) stands on a workbench on the left, holding a small TV set above his head like a trophy; below him on the right the engineer (short, stocky, big square glasses, black curly mop, apple-green polo) scratches his head, bewildered. low angle",
+            "cast": [
+              "bushnell",
+              "alcorn"
+            ],
+            "file": "images/dossier-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "1972, Sunnyvale",
+          "caption": "En 1972, Atari installe le prototype dans un bar de Sunnyvale, en Californie : l'Andy Capp's Tavern.",
+          "bubbles": [
+            {
+              "who": "Le patron du bar",
+              "text": "Du tennis sur une télé ? Mes clients préfèrent le flipper.",
+              "side": "r"
+            },
+            {
+              "who": "alcorn",
+              "text": "Je comprends. Je le reprendrai dans un mois.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a cosy 1970s diner with wooden tables and a colourful pinball machine. The engineer (short, stocky, big square glasses, black curly mop, apple-green polo) on the left rolls the yellow game cabinet into a corner; on the right a big bald owner in a red apron, holding a cloth, raises a sceptical eyebrow. medium wide shot",
+            "cast": [
+              "alcorn"
+            ],
+            "file": "images/dossier-08.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 9,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Une vraie borne Pong",
+          "text": "Une borne Pong d'époque : un téléviseur noir et blanc dans un meuble, deux boutons pour les raquettes, et une fente pour les pièces.",
+          "photo": {
+            "commons": "File:Signed Pong Cabinet.jpg",
+            "credit": "Chris Rand",
+            "license": "CC BY-SA 3.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Signed_Pong_Cabinet.jpg",
+            "file": "images/photo-9-signed-pong-cabinet-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 10,
+          "kind": "react",
+          "tag": "Deux semaines plus tard",
+          "caption": "Deux semaines plus tard, le patron appelle : panne. Alcorn ouvre la machine. Le bac à pièces déborde.",
+          "bubbles": [],
+          "image": {
+            "prompt": "in the cosy diner, the engineer (short, stocky, black curly mop, apple-green polo), seen from behind, sits on the floor in front of the open yellow game cabinet, a big pile of shiny silver coins spilling out around him; the owner in his red apron stands behind, amazed. visual gag: the mountain of coins. from behind",
+            "cast": [
+              "alcorn"
+            ],
+            "file": "images/dossier-10.webp",
+            "status": "done",
+            "attempts": 1,
+            "via": "fal"
+          }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Pourquoi une borne rapporte autant",
+          "steps": [
+            "Le joueur glisse une pièce de 25 cents, un quart de dollar",
+            "Il joue une partie de quelques minutes",
+            "Il perd, et il en remet une"
+          ],
+          "joke": "Le premier grand succès du jeu vidéo est tombé en panne… de succès."
+        },
+        {
+          "n": 12,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Un rond jaune contre les extraterrestres",
+          "caption": "Au Japon, les jeux de tir dominent. En 1980, Toru Iwatani veut un jeu qui plaise aussi aux femmes.",
+          "bubbles": [
+            {
+              "who": "iwatani",
+              "text": "Des extraterrestres, des explosions… Et si on mangeait, plutôt ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a 1980 Tokyo game studio with drawing desks. The designer (slim, neat side-parted black hair, thin round wire glasses, lilac-purple cardigan) sits on the right with his sketchbook, looking away dreamily; on the left a colleague in a white shirt, headphones on, furiously pounds the fire button of a space-shooting game, sweating. medium shot",
+            "cast": [
+              "iwatani"
+            ],
+            "file": "images/dossier-12.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 13,
+          "kind": "react",
+          "tag": "1980",
+          "caption": "La légende dit qu'une pizza entamée lui a donné la forme du héros. Lui-même dit : à moitié vrai.",
+          "bubbles": [
+            {
+              "who": "iwatani",
+              "text": "L'autre moitié : le signe japonais de la bouche, un carré. Je l'ai arrondi.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the designer (slim, neat side-parted black hair, thin round wire glasses, lilac-purple cardigan) holds up the pizza with one slice missing right in front of his face, staring at it in wonder, yellow sparkles around his head; his sketchbook on the table shows a simple round yellow circle with a wedge cut out. close-up",
+            "cast": [
+              "iwatani"
+            ],
+            "file": "images/dossier-13.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 14,
+          "kind": "fact",
+          "tag": "22 mai 1980",
+          "caption": "Le 22 mai 1980, Puck-Man arrive dans un cinéma de Tokyo. Son nom vient de « paku paku » : croquer.",
+          "bubbles": [
+            {
+              "who": "Une joueuse",
+              "text": "Enfin un jeu où on mange au lieu de tirer !",
+              "side": "l"
+            },
+            {
+              "who": "iwatani",
+              "text": "Des fantômes roses et orange. Personne n'a peur, tout le monde joue.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the lobby of a 1980 Tokyo cinema with red carpet. A young woman in a sky-blue dress plays at a bright yellow arcade cabinet on the left, laughing, a small crowd of couples gathering behind her; the designer (slim, neat side-parted black hair, round wire glasses, lilac-purple cardigan) peeks proudly from behind a pillar on the right, munching a rice ball. wide shot",
+            "cast": [
+              "iwatani"
+            ],
+            "file": "images/dossier-14.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 15,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Le crash",
+          "caption": "En 1982, les consoles se vendent partout. Atari veut le jeu du film E.T. pour Noël.",
+          "bubbles": [
+            {
+              "who": "Un patron d'Atari",
+              "text": "Le film est un triomphe. Le jeu sera un triomphe.",
+              "side": "l"
+            },
+            {
+              "who": "Le programmeur",
+              "text": "En cinq semaines ? D'habitude, il faut des mois !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a glossy 1982 executive office with a big desk. A round executive in a pinstriped navy suit and gold watch on the left taps a calendar on the wall with a fat finger; on the right a young programmer with curly brown hair and a faded T-shirt, holding a floppy disk, goes pale, a light-blue sweat drop on his forehead. medium shot",
+            "cast": [],
+            "file": "images/dossier-15.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 16,
+          "kind": "fact",
+          "tag": "Décembre 1982",
+          "caption": "Howard Scott Warshaw a cinq semaines pour le coder. Atari en fabrique 5 millions ; 1,5 million se vendent.",
+          "bubbles": [
+            {
+              "who": "Un patron d'Atari",
+              "text": "Il nous reste… trois millions et demi de cartouches.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "seen from above, the executive office is filled to the ceiling with a mountain of the cartridge; the round executive in a pinstriped navy suit sits on top of the pile on the left, holding a single cartridge, staring blankly; on the right a tiny delivery boy carries away just one small box. visual gag: the mountain of unsold cartridges. high angle",
+            "cast": [],
+            "file": "images/dossier-16.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 17,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi tout s'effondre en 1983",
+          "steps": [
+            "Trop de jeux, souvent bâclés, inondent les magasins",
+            "Les joueurs, déçus, achètent moins",
+            "Les magasins perdent confiance et ne veulent plus de jeux vidéo",
+            "En 1983, Atari perd 536 millions de dollars"
+          ],
+          "joke": "On l'appellera le krach du jeu vidéo. Game over, version comptable."
+        },
+        {
+          "n": 18,
+          "kind": "react",
+          "tag": "Septembre 1983",
+          "caption": "En septembre 1983, à Alamogordo, au Nouveau-Mexique, des camions déversent des cartouches invendues dans une décharge.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a vast sandy desert landfill under a hot sky: several big trucks tip their loads, and a waterfall of the cartridge pours into a huge pit; a bulldozer flattens them; at the edge of the pit a lonely cactus seems to stare at the scene. visual gag: the cactus watching. bird's-eye view",
+            "cast": [],
+            "file": "images/dossier-18.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 19,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Le robot cheval de Troie",
+          "caption": "En 1985, Nintendo veut vendre sa console aux États-Unis. Mais les magasins ne veulent plus de jeux vidéo.",
+          "bubbles": [
+            {
+              "who": "Un vendeur",
+              "text": "Des jeux vidéo ? Ici, on vend des jouets. Des vrais.",
+              "side": "r"
+            },
+            {
+              "who": "Une représentante de Nintendo",
+              "text": "Parfait. Voici un robot.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a 1985 New York toy shop full of teddy bears and toy trains. A stern shopkeeper with a grey moustache and a brown waistcoat on the right blocks the way with his arms crossed; on the left a smiling saleswoman in a red blazer with big 1980s curly hair opens a cardboard box from which the robot pops its head out. medium wide shot",
+            "cast": [],
+            "file": "images/dossier-19.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 20,
+          "kind": "react",
+          "tag": "Octobre 1985",
+          "caption": "Astuce : la console est vendue avec R.O.B., un robot. En octobre 1985, à New York, elle passe pour un jouet.",
+          "bubbles": [
+            {
+              "who": "Un vendeur",
+              "text": "Un robot ! Ça, c'est un jouet. Mettez-m'en cinquante.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the stern shopkeeper with a grey moustache and a brown waistcoat now hugs the robot against his cheek, eyes closed with delight, small red hearts around his head, while the console box sits forgotten under his arm. visual gag: the grumpy man in love with a toy robot. medium close-up",
+            "cast": [],
+            "file": "images/dossier-20.webp",
+            "status": "done",
+            "attempts": 3
+          }
+        },
+        {
+          "n": 21,
+          "kind": "chap",
+          "tag": "Chapitre 6 · Retour dans le désert",
+          "caption": "Le 26 avril 2014, des fouilles rouvrent la décharge d'Alamogordo : environ 1 300 cartouches ressortent, sur 700 000 enterrées.",
+          "bubbles": [
+            {
+              "who": "Une archéologue",
+              "text": "On a retrouvé E.T. Il n'a jamais téléphoné maison.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a desert excavation site with a big yellow digger and a crowd of fans behind a rope. An archaeologist in a khaki shirt and wide sun hat kneels in the dirt on the left, solemnly lifting a dusty cartridge with both hands like a precious ancient relic, brushing it with a small paintbrush. visual gag: treating a cheap cartridge like a pharaoh's treasure. wide shot",
+            "cast": [],
+            "file": "images/dossier-21.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 22,
+          "kind": "react",
+          "tag": "Aujourd'hui",
+          "caption": "Du labo de 1958 au salon : en 2025, 40,2 millions de Français ont joué, plus de 7 sur 10.",
+          "bubbles": [
+            {
+              "who": "higinbotham",
+              "text": "Vous voyez ? Plus personne ne bâille.",
+              "side": "r"
+            },
+            {
+              "who": "Un visiteur",
+              "text": "Chut. Je joue.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a modern living room. A grandfather, a mother and two children slump on a sofa on the left, all wide awake and gripping game controllers, totally absorbed by a big TV; on the right Higinbotham (tall, lanky, thick black horn-rimmed glasses, lemon-yellow short-sleeved shirt, thin black tie), out of his era, leans in proudly with a hand on the sofa, completely ignored. visual gag: nobody looks at him. low angle",
+            "cast": [
+              "higinbotham"
+            ],
+            "file": "images/dossier-22.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Pong, le premier grand succès du jeu vidéo, est tombé en panne au bout de deux semaines : son bac à pièces débordait.",
+        "source": "Computer History Museum"
+      },
+      "story": "En octobre 1958, au laboratoire de Brookhaven, près de New York, le physicien William Higinbotham trouve les expositions de la journée portes ouvertes ennuyeuses. Il bricole Tennis for Two : une balle qui rebondit sur l'écran d'un oscilloscope de 13 cm. Les visiteurs font la queue pour jouer. Lui n'y voit rien d'innovant : au bout de deux ans, le matériel retourne à d'autres usages.\nEn 1972, la Magnavox Odyssey est la première console qui se branche sur la télévision de la maison. La même année, en Californie, Nolan Bushnell et Ted Dabney lancent Atari. Pour l'entraîner, Bushnell demande au jeune ingénieur Al Alcorn un jeu de ping-pong : ce sera Pong. Le prototype, installé dans un bar de Sunnyvale, tombe en panne deux semaines plus tard, parce que son bac à pièces déborde. Le jeu vidéo devient un commerce.\nEn 1980 au Japon, Toru Iwatani veut un jeu sans tir, qui plaise aussi aux femmes : Puck-Man, qui deviendra Pac-Man.\nMais le marché s'emballe. Pour Noël 1982, Atari fait coder le jeu E.T. en cinq semaines, en fabrique 5 millions et en vend 1,5 million. En 1983, Atari perd 536 millions de dollars et enterre des cartouches invendues dans le désert du Nouveau-Mexique. Les magasins ne veulent plus de jeux vidéo. En 1985, Nintendo contourne le problème en vendant sa console avec un robot, R.O.B., qui la fait passer pour un jouet. En 2025, 40,2 millions de Français ont joué.",
+      "sources": [
+        {
+          "title": "APS News — October 1958: Physicist Invents First Video Game",
+          "url": "https://www.aps.org/apsnews/2008/09/first-video-game"
+        },
+        {
+          "title": "Computer History Museum — Pong",
+          "url": "https://www.computerhistory.org/revolution/story/183"
+        },
+        {
+          "title": "IEEE Spectrum — 50th anniversary of Pong",
+          "url": "https://spectrum.ieee.org/pong-video-game"
+        },
+        {
+          "title": "Lithub — The very first video game was just a box in the corner of a bar",
+          "url": "https://lithub.com/the-very-first-video-game-was-just-a-box-in-the-corner-of-a-bar"
+        },
+        {
+          "title": "Mental Floss — 10 Fast Facts About Pac-Man",
+          "url": "https://mentalfloss.com/article/90920/10-fast-facts-about-pac-man"
+        },
+        {
+          "title": "Wikipedia — Atari video game burial",
+          "url": "https://en.wikipedia.org/wiki/Atari_video_game_burial"
+        },
+        {
+          "title": "The Henry Ford — Unearthing the Atari Tomb",
+          "url": "https://www.thehenryford.org/collections/explore/articles/detail/articles/2015/07/10/atari-tomb"
+        },
+        {
+          "title": "Wikipedia — R.O.B.",
+          "url": "https://en.wikipedia.org/wiki/R.O.B."
+        },
+        {
+          "title": "SELL — Les Français et le jeu vidéo en 2025",
+          "url": "https://www.sell.fr/sites/default/files/espace-presse/cp_etude_les_francais_et_le_jeu_video_en_2025.pdf"
+        }
+      ],
+      "from_stock": "20261120-0657-jeux-video-desert"
+    },
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
+      "tagline": "Une boule, un fil, un cercle de sable et un voisin qui refuse de tourner avec la planète",
+      "teaser": "En 1851, un Parisien jure que si la Terre tournait, son chapeau s’envolerait. Un physicien insomniaque décide de lui prouver le contraire.",
+      "minutes": 2,
+      "theme": "Sciences physiques",
+      "art": {
+        "subject": "how Léon Foucault proved in 1851, with a long pendulum swinging over a circle of sand, that the Earth turns on itself, first in his cellar, then at the Paris Observatory, then under the dome of the Panthéon",
+        "setting": "a small stone cellar lit by a candle in a Paris house, a big bare hall of the Paris Observatory with tall windows, the vast stone interior of the Panthéon under its dome",
+        "era": "Paris in 1851, Second Republic",
+        "props": {
+          "ball": "a shiny round brass ball hanging from a very long thin steel wire, with a small pointed tip underneath",
+          "sand": "a wide flat circle of pale sand on a low wooden platform, marked with thin straight grooves",
+          "hat": "a very tall shiny black top hat"
+        }
+      },
+      "cast": [
+        {
+          "id": "foucault",
+          "name": "Léon Foucault",
+          "look": "Léon Foucault, a French physicist of 31 in 1851, slight and narrow-shouldered, nervous, neat dark-brown hair with a side parting and a short trimmed brown beard, light peach skin, a mossy olive-green frock coat as main colour, beige waistcoat, a small notebook always in hand",
+          "file": "cast/cultureg-foucault.png",
+          "status": "done",
+          "role": "the self-taught physicist who quit medicine because he could not stand blood; an anxious perfectionist who demands total silence and stillness around his pendulum, freezes everyone with a raised finger"
+        },
+        {
+          "id": "voisin",
+          "name": "Le voisin",
+          "look": "a tall big-bellied Parisian bourgeois in his fifties, bushy grey mutton-chop sideburns, ruddy light skin, the hat always on his head, a bright sky-blue waistcoat as main colour, pale grey trousers, a gold watch chain across his belly",
+          "file": "cast/cultureg-voisin.png",
+          "status": "pending",
+          "role": "Foucault's sceptical neighbour, full of bad faith, certain the Earth stands still because he does not feel it move; clutches his hat whenever the Earth's rotation is mentioned",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (16a56a86-0304-43a1-8ee0-86556c84ba18)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+        }
+      ],
+      "cover": {
+        "prompt": "the vast stone interior of the Panthéon under its dome, the ball swinging low over the sand circle on its very long wire. Foucault (slight, short brown beard, olive-green frock coat) on the left kneeling by the sand, raising one finger for silence; the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) on the right holding the hat firmly on his head with both hands, eyes wide. medium wide shot",
+        "cast": [
+          "foucault",
+          "voisin"
+        ],
+        "file": "images/cultureg-cover.webp",
+        "status": "done",
+        "attempts": 1
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Janvier 1851",
+          "caption": "Janvier 1851, à Paris. Personne ne sent la Terre tourner sur elle-même. Comment le prouver sans quitter le sol ?",
+          "bubbles": [
+            {
+              "who": "voisin",
+              "text": "Si la Terre tournait, mon chapeau s’envolerait.",
+              "side": "r"
+            },
+            {
+              "who": "foucault",
+              "text": "Gardez-le bien. Descendez, je vais vous montrer.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a small stone cellar lit by a single candle, the ball hanging from a beam on a short wire. Foucault (slight, short brown beard, olive-green frock coat) on the left beckoning with one hand, notebook in the other; the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) on the right halfway down the stone stairs in a long white nightshirt but still wearing the hat, pressing it down on his head, suspicious. wide shot",
+            "cast": [
+              "foucault",
+              "voisin"
+            ],
+            "file": "images/cultureg-01.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "La cave",
+          "caption": "Cave, la nuit : une boule de 5 kilos, un fil de 2 mètres. Le jour, les fiacres font trembler le sol.",
+          "bubbles": [
+            {
+              "who": "foucault",
+              "text": "Ne bougez plus ! Vos chaussons font trembler la planète.",
+              "side": "l"
+            },
+            {
+              "who": "voisin",
+              "text": "Je suis en chaussons, justement !",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "the same candle-lit stone cellar seen from above. Foucault (slight, short brown beard, olive-green frock coat) lying flat on his stomach on the floor, nose an inch from the small swinging ball, one arm raised behind him in a frantic stop gesture; the voisin (tall, big-bellied, grey mutton-chops, white nightshirt, the hat) frozen mid-step on tiptoe in fluffy slippers, one leg in the air. high angle",
+            "cast": [
+              "foucault",
+              "voisin"
+            ],
+            "file": "images/cultureg-02.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi un pendule trahit la Terre",
+          "steps": [
+            "On lance une lourde boule au bout d’un long fil",
+            "Rien ne la pousse sur le côté : elle oscille toujours dans le même plan",
+            "Pendant ce temps, la Terre tourne sous elle",
+            "Vu du sol, la ligne d’oscillation pivote lentement : au pôle Nord, un tour en 24 heures ; à Paris, en 32 heures environ"
+          ],
+          "joke": "Le pendule ne fait rien du tout. C’est tout son talent."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "3 février 1851",
+          "caption": "3 février 1851, Observatoire de Paris : un fil de 11 mètres. Il invite les savants à « venir voir tourner la Terre ».",
+          "bubbles": [
+            {
+              "who": "foucault",
+              "text": "La ligne glisse vers la droite. C’est nous qui tournons, pas elle.",
+              "side": "l"
+            },
+            {
+              "who": "voisin",
+              "text": "J’ai mis mon chapeau le plus lourd. Par précaution.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a big bare hall of the Paris Observatory with tall windows, the ball swinging on a long wire. Foucault (slight, short brown beard, olive-green frock coat) on the left crouching and pointing at the floor where the swing line has shifted; the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) on the right in a smart coat, the hat strapped under his chin with a scarf tied in a bow, standing stiff as a post. medium shot",
+            "cast": [
+              "foucault",
+              "voisin"
+            ],
+            "file": "images/cultureg-04.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un pendule de Foucault aux Arts et Métiers",
+          "text": "Un pendule de Foucault au musée des Arts et Métiers, à Paris, où la boule de 1851 a été conservée. Une copie oscille au Panthéon depuis 1995.",
+          "photo": {
+            "commons": "File:Pendule de Foucault au musee des arts et metiers.jpg",
+            "credit": "Auteur inconnu",
+            "license": "CC BY-SA 3.0",
+            "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+            "source": "https://commons.wikimedia.org/wiki/File:Pendule_de_Foucault_au_musee_des_arts_et_metiers.jpg",
+            "file": "images/photo-5-pendule-de-foucault-au-musee-des-ar.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Mars 1851",
+          "caption": "Mars 1851, au Panthéon : un fil de 67 mètres, haut comme vingt étages, et une boule de 28 kilos.",
+          "bubbles": [
+            {
+              "who": "foucault",
+              "text": "Plus le fil est long, plus la boule va lentement : on la suit mieux.",
+              "side": "l"
+            },
+            {
+              "who": "voisin",
+              "text": "Et si elle se décroche, elle tombe sur qui ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "inside the vast stone Panthéon under its dome, the ball hanging from a dizzyingly long wire. Foucault (slight, short brown beard, olive-green frock coat) on the left kneeling and carefully raking the sand circle flat with a small wooden rake; the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) on the right peeking from behind a stone column, holding the hat down, staring nervously up the wire. low angle",
+            "cast": [
+              "foucault",
+              "voisin"
+            ],
+            "file": "images/cultureg-06.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Le sable",
+          "caption": "Sous la boule, un cercle de sable. Sa pointe y trace un sillon, chaque fois un peu décalé : la preuve.",
+          "bubbles": [],
+          "image": {
+            "prompt": "close on the voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) alone, bent over the sand circle with its fan of thin grooves, jaw dropped, eyes huge, slowly lifting the hat off his head in stunned respect, a light-blue sweat drop on his temple. close-up",
+            "cast": [
+              "voisin"
+            ],
+            "file": "images/cultureg-07.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "La boule garde sa direction, la Terre tourne dessous. À Paris, la ligne fait un tour en 32 heures environ.",
+          "bubbles": [
+            {
+              "who": "voisin",
+              "text": "Elle tourne. Et je ne lâche plus jamais ce chapeau.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "on the steps outside the Panthéon. The voisin (tall, big-bellied, grey mutton-chops, sky-blue waistcoat) in the foreground on the right clinging to a stone column with one arm and jamming the hat on his head with the other, legs wobbly as if on a ship deck; Foucault (slight, short brown beard, olive-green frock coat) small in the background on the left, calmly writing in his notebook. medium close-up",
+            "cast": [
+              "voisin",
+              "foucault"
+            ],
+            "file": "images/cultureg-08.webp",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Léon Foucault avait abandonné ses études de médecine parce qu’il ne supportait pas la vue du sang.",
+        "source": "APS News — February 3, 1851: Léon Foucault Demonstrates That Earth Rotates"
+      },
+      "story": "Depuis Copernic, les savants savent que la Terre tourne sur elle-même. Mais personne ne le sent, et en 1851 on n’a encore jamais vu cette rotation de ses propres yeux. Léon Foucault, physicien parisien qui a abandonné la médecine parce qu’il ne supportait pas le sang, a une idée : un pendule.\nUne boule lourde au bout d’un long fil oscille toujours dans le même plan, car rien ne la pousse sur le côté. Si la Terre tourne sous elle, la ligne de ses allers-retours semble donc pivoter lentement pour qui reste au sol. Au pôle Nord, elle ferait un tour en 24 heures ; à la latitude de Paris, elle pivote d’environ 11 degrés par heure, vers la droite, soit un tour en 32 heures environ.\nEn janvier 1851, Foucault essaie dans la cave de sa maison, rue d’Assas, avec une boule de 5 kilos et un fil de 2 mètres, la nuit pour éviter les vibrations des voitures. Le 3 février, il refait l’expérience à l’Observatoire de Paris avec un fil de 11 mètres et invite les savants à « venir voir tourner la Terre ». En mars, le grand public la découvre au Panthéon : une boule de 28 kilos et 38 centimètres de diamètre, au bout d’un fil de 67 mètres, dont la pointe trace des sillons dans un cercle de sable.\nLa boule de 1851 est partie au musée des Arts et Métiers ; une copie oscille sous le dôme du Panthéon depuis 1995.",
+      "sources": [
+        {
+          "title": "APS News — February 3, 1851: Léon Foucault Demonstrates That Earth Rotates",
+          "url": "https://aps.org/apsnews/2007/02/foucault-earth-rotates"
+        },
+        {
+          "title": "Paris Zigzag — Le pendule de Foucault, une révolution sous le Panthéon",
+          "url": "https://www.pariszigzag.fr/?p=142110"
+        },
+        {
+          "title": "Wikipedia — Foucault pendulum",
+          "url": "https://en.wikipedia.org/wiki/Foucault_pendulum"
+        }
+      ],
+      "from_stock": "20261118-0850-pendule-foucault-chapeau"
+    },
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
+      "tagline": "Un blocus, un café trop amer, une betterave et une Légion d’honneur arrachée à la poitrine de l’Empereur",
+      "teaser": "Napoléon boit son café amer depuis des années. Un banquier de Passy promet du sucre… qui pousse dans un champ.",
+      "minutes": 2,
+      "theme": "Économie",
+      "art": {
+        "subject": "how the British blockade cut France off from cane sugar, and how Napoleon pushed beet sugar until he pinned his own Legion of Honour on the industrialist Benjamin Delessert (1806-1812)",
+        "setting": "Napoleon's study at the Tuileries palace in Paris (a desk with a map of Europe and a coffee cup), then Delessert's sugar workshop at Passy (a big copper cauldron, piles of white beets, steam)",
+        "era": "1806-1812 France, First Empire",
+        "props": {
+          "cup": "a small white porcelain coffee cup with a gold rim",
+          "beet": "a big pale white sugar beet root with green leaves",
+          "loaf": "a tall white cone-shaped sugar loaf",
+          "cauldron": "a huge round copper cauldron full of steaming brownish syrup",
+          "cross": "a small white-enamelled star medal on a red ribbon"
+        }
+      },
+      "cast": [
+        {
+          "id": "napoleon",
+          "name": "Napoléon",
+          "look": "Napoléon in 1810, a short paunchy man in his early forties, round pale face, short receding dark-brown hair combed forward, a black bicorne hat worn sideways, a dark green colonel's uniform coat with a red collar as main colour, white waistcoat and white breeches, black boots, the cross medal on his chest",
+          "file": "cast/insolite-napoleon.png",
+          "status": "done",
+          "role": "the Emperor with a sweet tooth who hates bitter coffee; impatient and vain, drums his fingers, hand tucked in his waistcoat, sulks like a child when deprived"
+        },
+        {
+          "id": "delessert",
+          "name": "Benjamin Delessert",
+          "look": "Benjamin Delessert, a tall pear-shaped Parisian banker and industrialist of 39, chubby cheeks, curly light-brown hair with long sideburns, light pink skin, a high white cravat, a pale caramel-brown tailcoat as main colour, cream waistcoat, often holding the sugar loaf",
+          "file": "cast/insolite-delessert.png",
+          "status": "done",
+          "role": "the banker turned sugar maker, a smooth flatterer who takes credit for his chemist's work; bows too low, rubs his hands, smiles nervously"
+        }
+      ],
+      "cover": {
+        "prompt": "Delessert's sugar workshop at Passy, steam and piles of white beets. Napoléon (short, paunchy, sideways bicorne, dark green uniform) on the left, standing on tiptoe to pin the cross medal on the chest of Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) on the right, who bows while proudly holding the tall white sugar loaf. medium wide shot",
+        "cast": [
+          "napoleon",
+          "delessert"
+        ],
+        "file": "images/insolite-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "1806",
+          "caption": "1806 : Napoléon interdit les marchandises anglaises en Europe. Pourquoi finira-t-il par décorer un fabricant de sucre ?",
+          "bubbles": [
+            {
+              "who": "napoleon",
+              "text": "Ce café est amer. Comme l’Angleterre.",
+              "side": "l"
+            },
+            {
+              "who": "delessert",
+              "text": "C’est que le sucre, Sire, voyage par la mer. Anglaise.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Napoleon's study at the Tuileries palace, a desk with a big map of Europe. Napoléon (short, paunchy, sideways bicorne, dark green uniform) sitting on the left behind the desk, grimacing with disgust after a sip from the small cup, tongue out; Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) standing near the door on the right, bowing very low, hat in hand. wide shot",
+            "cast": [
+              "napoleon",
+              "delessert"
+            ],
+            "file": "images/insolite-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1804-1806",
+          "caption": "Le sucre de canne n’arrive plus : la flotte anglaise bloque les ports. En 1804, un pain de sucre coûte dix fois son prix d’avant 1789.",
+          "bubbles": [
+            {
+              "who": "napoleon",
+              "text": "Trouvez-moi du sucre qui pousse en France.",
+              "side": "l"
+            },
+            {
+              "who": "delessert",
+              "text": "Dans un champ, Sire ? Le sucre ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Napoleon's study at the Tuileries, seen from above. Napoléon (short, paunchy, sideways bicorne, dark green uniform) on the left, angrily stabbing his finger on the map of Europe spread on the desk; Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) on the right, leaning over the map, eyebrows raised in disbelief, holding the empty cup. high angle",
+            "cast": [
+              "napoleon",
+              "delessert"
+            ],
+            "file": "images/insolite-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Le sucre caché dans le potager",
+          "steps": [
+            "1747 : le chimiste prussien Marggraf tire des cristaux de sucre de la betterave",
+            "Son élève Achard monte en Silésie la première sucrerie de betterave, qui échoue",
+            "À Passy, près de Paris, Delessert et son chimiste Jean-Baptiste Quéruel cherchent un procédé rentable"
+          ],
+          "joke": "Le sucre poussait en Europe depuis le début. Il fallait juste le sortir de terre."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "1811",
+          "caption": "En 1811, Napoléon fait semer 32 000 hectares de betteraves, trois fois Paris. À Passy, Delessert cuit le jus.",
+          "bubbles": [
+            {
+              "who": "delessert",
+              "text": "Quéruel ! Ça sent le chou bouilli. C’est normal ?",
+              "side": "l"
+            },
+            {
+              "who": "Jean-Baptiste Quéruel",
+              "text": "Le sucre, c’est après l’odeur.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Delessert's sugar workshop at Passy, piles of white beets and thick steam. Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat, sleeves rolled up) on the left, stirring the huge copper cauldron with a long wooden paddle, pinching his nose with his other hand, a light-blue sweat drop; in the background on the right a small chemist in a leather apron seen from behind, busy with glass flasks. medium shot",
+            "cast": [
+              "delessert"
+            ],
+            "file": "images/insolite-04.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La betterave, héroïne de l’Empire",
+          "text": "Une betterave dessinée en 1885 par le botaniste Otto Wilhelm Thomé. Sa grosse racine cache du sucre, repéré dès 1747.",
+          "photo": {
+            "commons": "File:Illustration Beta vulgaris var.JPG",
+            "credit": "Illustration_Beta_vulgaris_var._rapacea0.jpg: Otto Wilhelm Thomé derivative work: Thiotrix",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Illustration_Beta_vulgaris_var.JPG",
+            "file": "images/photo-5-illustration-beta-vulgaris-var-jpg.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Janvier 1812",
+          "caption": "Début janvier 1812, Passy sort deux pains de sucre blanc de betterave. Napoléon accourt goûter.",
+          "bubbles": [],
+          "image": {
+            "prompt": "in the sugar workshop at Passy. Napoléon (short, paunchy, sideways bicorne, dark green uniform) in the foreground licking a pinch of white sugar from his fingertips, eyes closed in pure bliss, melting with happiness, yellow sparkles; behind him Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) holding up the tall white sugar loaf with both trembling hands, anxious smile. low angle",
+            "cast": [
+              "napoleon",
+              "delessert"
+            ],
+            "file": "images/insolite-06.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "La chute",
+          "caption": "Ravi, Napoléon épingle sa propre Légion d’honneur sur Delessert. La France apprend à tirer son sucre de ses champs.",
+          "bubbles": [
+            {
+              "who": "delessert",
+              "text": "Je la partagerai avec mon chimiste. Un peu.",
+              "side": "r"
+            },
+            {
+              "who": "napoleon",
+              "text": "Et mon café. Avec deux sucres français.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Delessert (tall, pear-shaped, curly light-brown sideburns, caramel-brown tailcoat) puffing out his chest with smug pride, chin up, admiring the cross medal pinned on his chest, the sugar loaf tucked under his arm; a hand in a dark green sleeve holding out the small cup into the frame from the left. close-up",
+            "cast": [
+              "delessert"
+            ],
+            "file": "images/insolite-07.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 2
+          }
+        }
+      ],
+      "final": {
+        "text": "Grâce aux progrès de la betterave, le prix du sucre est passé en moins d’un siècle de 15 francs à 7 centimes le kilo.",
+        "source": "Hérodote — 2 janvier 1812"
+      },
+      "story": "Au début du XIXe siècle, le sucre de la France vient de la canne, cultivée aux colonies. Mais la guerre avec l’Angleterre change tout : la flotte britannique bloque les ports, Haïti, premier producteur mondial, est devenue indépendante en 1804, et en 1806 Napoléon répond par le Blocus continental, qui interdit les marchandises anglaises en Europe. Le sucre devient un luxe : un pain de sucre qui valait environ 3 francs avant la Révolution en coûte plus de 30 en 1804.\nLa solution pousse pourtant en Europe. En 1747, le chimiste prussien Marggraf a tiré des cristaux de sucre de la betterave ; son élève Achard a ensuite monté en Silésie une première sucrerie, sans succès durable. Napoléon décide de miser sur la betterave : en 1811, un décret réserve 100 000 arpents à sa culture et promet un million de francs à la recherche. Dès cette année-là, 32 000 hectares sont ensemencés.\nÀ Passy, près de Paris, le banquier Benjamin Delessert et son chimiste Jean-Baptiste Quéruel mettent au point une fabrication industrielle. Début janvier 1812, ils obtiennent deux pains de sucre blanc. Napoléon vient voir la fabrique et, séduit, épingle sa propre croix de la Légion d’honneur sur la poitrine de Delessert, qui sera fait baron d’Empire. L’Empire tombe avant que la filière ne s’impose, mais elle survivra : en moins d’un siècle, le prix du sucre passe de 15 francs à 7 centimes le kilo.",
+      "sources": [
+        {
+          "title": "Hérodote — 2 janvier 1812 : Napoléon décore le sucre de betterave",
+          "url": "https://www.herodote.net/2_janvier_1812-evenement-18120102.php"
+        },
+        {
+          "title": "Fondation Napoléon — La bataille du sucre",
+          "url": "https://www.napoleon.org/histoire-des-2-empires/articles/la-bataille-du-sucre/"
+        },
+        {
+          "title": "Wikipedia — Benjamin Delessert",
+          "url": "https://en.wikipedia.org/wiki/Benjamin_Delessert"
+        },
+        {
+          "title": "Wikimedia Commons — Illustration Beta vulgaris var. (Thomé, 1885, domaine public)",
+          "url": "https://download.osmand.net/wiki/File:Illustration_Beta_vulgaris_var.JPG"
+        }
+      ],
+      "from_stock": "20261117-2047-napoleon-decore-un-sucrier"
+    },
+    {
+      "id": "origine",
+      "label": "D’où ça vient ?",
+      "title": "« Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré",
+      "tagline": "Un régisseur, des navets et un millier de soldats",
+      "teaser": "En 1880, tout un village irlandais arrête de parler à un homme. Résultat : son nom est dans votre bouche chaque fois que vous râlez.",
+      "minutes": 2,
+      "theme": "Expression française",
+      "epoque": "passe",
+      "art": {
+        "subject": "how a stiff English land agent in Ireland, shunned by a whole countryside in 1880, gave his surname to the verb for collective refusal",
+        "setting": "a small office kitchenette of today with a coffee vending machine; the green fields, stone walls and big grey manor house of Lough Mask in County Mayo, Ireland, in autumn 1880; a field of turnips guarded by soldiers",
+        "era": "rural Ireland in 1880, with an office worker of today",
+        "props": {
+          "machine": "a tall grey coffee vending machine with buttons and a small cup slot, no logos and no text",
+          "thermos": "a big battered silver thermos flask",
+          "pitchfork": "a long wooden pitchfork with three iron prongs",
+          "turnip": "a large purple and white turnip"
+        }
+      },
+      "cast": [
+        {
+          "id": "boycott",
+          "name": "Charles Boycott",
+          "look": "Charles Boycott, a tall and stiff man of 48 with a ramrod-straight back, neatly parted iron-grey hair and a big bushy grey beard, light pink skin, a bottle-green tweed riding jacket as main colour, buff breeches, brown riding boots, a short riding crop always under his arm",
+          "file": "cast/origine-boycott.png",
+          "status": "done",
+          "role": "the English land agent who refuses to give an inch; rigid, haughty, chin up, convinced everyone will come crawling back"
+        },
+        {
+          "id": "sandrine",
+          "name": "Sandrine",
+          "look": "Sandrine, a short and sturdy office worker in her forties, olive skin, a tight copper-red bun held by a big black hair clip, round tortoiseshell glasses, a cobalt-blue cardigan as main colour, grey trousers, the thermos clutched against her chest",
+          "file": "cast/origine-sandrine.png",
+          "status": "done",
+          "role": "an accountant who declares solemn boycotts and never keeps them; arms crossed, nose in the air, full of bad faith"
+        }
+      ],
+      "cover": {
+        "prompt": "a field of turnips in 1880 Ireland: Charles Boycott (tall, stiff, iron-grey hair, bushy grey beard, bottle-green tweed jacket) stands proudly in the middle with his riding crop, surrounded by a ring of soldiers in red coats each pointing a rifle at a single turnip on the ground; in the foreground, Sandrine of today (short, copper-red bun, cobalt-blue cardigan) clutches the thermos and stares at the scene, baffled. medium wide shot",
+        "cast": [
+          "boycott",
+          "sandrine"
+        ],
+        "file": "images/origine-cover.webp",
+        "qa": "ok",
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "« Boycotter », c’est refuser en bloc d’acheter ou de fréquenter. Le mot est le nom d’un homme, en 1880.",
+          "bubbles": [
+            {
+              "who": "sandrine",
+              "text": "Le café à 60 centimes ? Je boycotte cette machine. À vie.",
+              "side": "l"
+            },
+            {
+              "who": "Un collègue",
+              "text": "Hier, tu as tenu jusqu’à 10 h.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small office kitchenette of today with the machine. Sandrine (short, sturdy, copper-red bun, round glasses, cobalt-blue cardigan) on the left turns her back on the machine with her nose in the air, hugging the thermos like a shield; on the right a bored colleague with a grey hoodie leans on the counter, sipping from a paper cup. wide shot",
+            "cast": [
+              "sandrine"
+            ],
+            "file": "images/origine-01.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Irlande, 1880",
+          "caption": "En 1880, Charles Boycott gère les terres d’un lord absent, au bord du Lough Mask, dans le comté de Mayo.",
+          "bubbles": [
+            {
+              "who": "boycott",
+              "text": "Mauvaise récolte ? Le lord vous offre 10 % de baisse. Pas un de plus.",
+              "side": "r"
+            },
+            {
+              "who": "Un fermier",
+              "text": "On en demandait 25.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "the stone steps of a big grey manor house in 1880 Ireland. Charles Boycott (tall, stiff, iron-grey hair, bushy grey beard, bottle-green tweed jacket, riding crop under his arm) on the right stands at the top of the steps, chin raised, looking down; at the bottom on the left, a thin farmer in a patched brown coat holds his cap in both hands. low angle",
+            "cast": [
+              "boycott"
+            ],
+            "file": "images/origine-02.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 2
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le contexte",
+          "title": "Pourquoi tout le monde lui tourne le dos",
+          "steps": [
+            "Le lord refuse la baisse de 25 % ; Boycott fait délivrer des avis d’expulsion à onze familles",
+            "19 septembre 1880 : le leader irlandais Parnell conseille d’isoler complètement ceux qui profitent des expulsions, au lieu de les frapper",
+            "La Ligue agraire, qui défend les fermiers, applique l’idée à Boycott"
+          ],
+          "joke": "Pas un coup de poing. Juste plus personne."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Septembre 1880",
+          "caption": "Fin septembre 1880, ouvriers, forgeron, blanchisseuse et commerçants refusent de le servir. Même le courrier s’arrête.",
+          "bubbles": [
+            {
+              "who": "boycott",
+              "text": "Bien. Comment ça se tient, une fourche ?",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Charles Boycott alone (tall, stiff, iron-grey hair, bushy grey beard, bottle-green tweed jacket) in an empty muddy field, holding the pitchfork upside down by its prongs with two fingers, at arm's length, as if it were a dead animal, eyebrows raised, a light-blue sweat drop on his temple. medium close-up",
+            "cast": [
+              "boycott"
+            ],
+            "file": "images/origine-04.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai capitaine Boycott, en 1881",
+          "text": "Charles Boycott caricaturé par Spy (Leslie Ward) dans le magazine britannique Vanity Fair, en janvier 1881. Officier quelques années dans sa jeunesse, il garde le surnom de « capitaine ».",
+          "photo": {
+            "commons": "File:Charles Cunningham Boycott (Vanity Fair) crop.jpg",
+            "credit": "Leslie Ward",
+            "license": "Public domain",
+            "license_url": "",
+            "source": "https://commons.wikimedia.org/wiki/File:Charles_Cunningham_Boycott_(Vanity_Fair)_crop.jpg",
+            "file": "images/photo-5-charles-cunningham-boycott-vanity-f.webp",
+            "status": "done"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Novembre 1880",
+          "caption": "En novembre 1880, 50 volontaires d’Ulster récoltent ses champs, protégés par environ un millier de soldats et policiers.",
+          "bubbles": [
+            {
+              "who": "boycott",
+              "text": "Enfin du personnel.",
+              "side": "l"
+            },
+            {
+              "who": "Un soldat",
+              "text": "Vingt hommes armés par ramasseur de navets. Une première.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a field of turnips with stone walls in 1880 Ireland. A few farm volunteers in flat caps dig up turnips while a crowd of soldiers in red coats stands guard all around them; in the middle on the left, Charles Boycott (tall, stiff, iron-grey hair, bushy grey beard, bottle-green tweed jacket) supervises with his riding crop, satisfied; on the right a young soldier solemnly points his rifle at the turnip lying at his feet. wide shot",
+            "cast": [
+              "boycott"
+            ],
+            "file": "images/origine-06.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment un nom devient un verbe",
+          "steps": [
+            "L’opération coûte environ 10 000 livres, au moins vingt fois la valeur de la récolte",
+            "1er décembre 1880 : Boycott quitte l’Irlande pour l’Angleterre",
+            "Le prêtre John O’Malley propose son nom pour désigner ce rejet collectif",
+            "Fin 1880, le verbe est déjà dans la presse anglaise, et il passe en français"
+          ],
+          "joke": "Il voulait que son nom reste. Il est resté."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "« Boycotter » vient de Charles Boycott, l’homme que toute une campagne irlandaise a refusé de servir en 1880.",
+          "bubbles": [
+            {
+              "who": "sandrine",
+              "text": "Mille soldats pour des navets ? Moi, je tiens sans renfort.",
+              "side": "l"
+            },
+            {
+              "who": "Un collègue",
+              "text": "Tu as un café dans la main.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "back in the office kitchenette of today, seen over the shoulder of the colleague in a grey hoodie. Sandrine (short, sturdy, copper-red bun, round glasses, cobalt-blue cardigan) stands in front of the machine, chin up with total bad faith, holding a steaming paper cup she has obviously just bought, the thermos forgotten on the counter behind her. over-the-shoulder",
+            "cast": [
+              "sandrine"
+            ],
+            "file": "images/origine-08.webp",
+            "qa": "ok",
+            "status": "done",
+            "attempts": 1
+          }
+        }
+      ],
+      "final": {
+        "text": "Le verbe « boycotter » est passé en français dès la fin de 1880, quelques semaines à peine après les faits.",
+        "source": "Wordorigins.org — Boycott"
+      },
+      "story": "« Boycotter », c’est refuser en bloc d’acheter, de travailler ou d’avoir affaire à quelqu’un. Le mot vient d’un nom propre : Charles Cunningham Boycott, un Anglais né en 1832, ancien officier, devenu régisseur en Irlande. Depuis 1873, il gère pour un propriétaire absent, Lord Erne, des terres au bord du Lough Mask, dans le comté de Mayo.\nEn 1880, après une mauvaise récolte, les fermiers demandent une baisse de 25 % de leurs loyers. Lord Erne n’en offre que 10 %, et Boycott fait délivrer des avis d’expulsion à onze familles. Le 19 septembre, à Ennis, le leader irlandais Charles Stewart Parnell conseille d’isoler complètement ceux qui profitent des expulsions, au lieu de les frapper. La Ligue agraire, qui défend les fermiers, applique cette idée à Boycott : ses ouvriers partent, le forgeron, la blanchisseuse et les commerçants de Ballinrobe refusent de le servir, le courrier ne passe plus.\nEn novembre 1880, 50 volontaires venus d’Ulster rentrent sa récolte sous la protection d’environ un millier de soldats et policiers. L’opération coûte autour de 10 000 livres, pour une récolte qui en valait quelques centaines. Boycott quitte l’Irlande le 1er décembre 1880.\nSelon le journaliste américain James Redpath, c’est un prêtre, John O’Malley, qui propose d’appeler ce rejet par le nom de sa cible. Le verbe gagne la presse britannique fin 1880 et passe aussitôt en français.",
+      "sources": [
+        {
+          "title": "Wikipédia (en) — Charles Boycott",
+          "url": "https://en.wikipedia.org/wiki/Charles_Boycott"
+        },
+        {
+          "title": "Wikipédia (en) — Boycott",
+          "url": "https://en.wikipedia.org/wiki/Boycott"
+        },
+        {
+          "title": "Wordorigins.org — Boycott",
+          "url": "https://www.wordorigins.org/big-list-entries/boycott"
+        },
+        {
+          "title": "History Ireland — Captain Boycott: man and myth",
+          "url": "https://historyireland.com/?p=6391"
+        },
+        {
+          "title": "La Libre Belgique — Tiens, au fond, ça vient d’où le « boycott » ?",
+          "url": "https://www.lalibre.be/lifestyle/magazine/2014/09/02/tiens-au-fond-ca-vient-dou-le-boycott-AENXDPJBGJDP3BAWGJADTN7NPE/"
+        },
+        {
+          "title": "Wikimedia Commons — Charles Cunningham Boycott (Vanity Fair)",
+          "url": "https://commons.wikimedia.org/wiki/File:Charles_Cunningham_Boycott_(Vanity_Fair)_crop.jpg"
+        }
+      ],
+      "from_stock": "20261120-2044-boycotter-capitaine-irlandais"
+    },
     {
       "id": "quiz",
       "kind": "geo",
@@ -15,19 +1346,33 @@
           "map": "france",
           "q": "Où se trouve Brest ?",
           "hint": "Allez tout à l’ouest. Encore un peu. Voilà.",
-          "target": { "lat": 48.388, "lon": -4.49 },
+          "target": {
+            "lat": 48.388,
+            "lon": -4.49
+          },
           "name": "Brest",
           "explain": "Au bout du Finistère, dont le nom vient du latin « finis terrae », la fin de la terre. Brest est un grand port militaire. Après, c’est l’Atlantique, et l’Amérique si on insiste.",
-          "source": { "title": "Cartes France — Brest", "url": "https://www.cartesfrance.fr/Brest-29200/carte-Brest.html" }
+          "source": {
+            "title": "Cartes France — Brest",
+            "url": "https://www.cartesfrance.fr/Brest-29200/carte-Brest.html"
+          }
         },
         {
           "type": "choice",
           "q": "Quelle est la capitale de la Turquie ?",
           "hint": "Ce n’est pas la ville la plus célèbre du pays.",
-          "choices": ["Istanbul", "Ankara", "Izmir", "Antalya"],
+          "choices": [
+            "Istanbul",
+            "Ankara",
+            "Izmir",
+            "Antalya"
+          ],
           "answer": 1,
           "explain": "Ankara devient la capitale définitive en 1923 : au centre du pays, reliée par le train, alors qu’Istanbul était jugée trop excentrée. Istanbul reste la plus grande ville. La star, mais pas la cheffe.",
-          "source": { "title": "Larousse — Ankara", "url": "https://www.larousse.fr/encyclopedie/ville/Ankara/105544" }
+          "source": {
+            "title": "Larousse — Ankara",
+            "url": "https://www.larousse.fr/encyclopedie/ville/Ankara/105544"
+          }
         },
         {
           "type": "order",
@@ -35,22 +1380,57 @@
           "q": "Du nord au sud : classez ces quatre villes.",
           "hint": "Le Québec est plus au sud qu’on ne le croit.",
           "items": [
-            { "name": "Montréal", "lat": 45.502, "lon": -73.567 },
-            { "name": "Paris", "lat": 48.857, "lon": 2.352 },
-            { "name": "Lyon", "lat": 45.764, "lon": 4.836 },
-            { "name": "Londres", "lat": 51.507, "lon": -0.128 }
+            {
+              "name": "Montréal",
+              "lat": 45.502,
+              "lon": -73.567
+            },
+            {
+              "name": "Paris",
+              "lat": 48.857,
+              "lon": 2.352
+            },
+            {
+              "name": "Lyon",
+              "lat": 45.764,
+              "lon": 4.836
+            },
+            {
+              "name": "Londres",
+              "lat": 51.507,
+              "lon": -0.128
+            }
           ],
           "explain": "Londres, Paris, Lyon, puis Montréal, à peu près à la latitude de Lyon. Si Montréal est bien plus froide, c’est que l’Europe a le Gulf Stream et pas le Canada. Pas de chance.",
-          "source": { "title": "La Drôme Montagne — Latitude de Montréal : pourquoi fait-il plus froid qu’à Paris ?", "url": "https://www.ladromemontagne.fr/latitude-montreal-pourquoi-fait-il-plus-froid-qua-paris-situee-plus-nord/" }
+          "source": {
+            "title": "La Drôme Montagne — Latitude de Montréal : pourquoi fait-il plus froid qu’à Paris ?",
+            "url": "https://www.ladromemontagne.fr/latitude-montreal-pourquoi-fait-il-plus-froid-qua-paris-situee-plus-nord/"
+          }
         }
       ],
       "sources": [
-        { "title": "Cartes France — Brest", "url": "https://www.cartesfrance.fr/Brest-29200/carte-Brest.html" },
-        { "title": "Wikipedia — Finistère", "url": "https://en.wikipedia.org/wiki/Finist%C3%A8re" },
-        { "title": "Larousse — Ankara", "url": "https://www.larousse.fr/encyclopedie/ville/Ankara/105544" },
-        { "title": "Partir.com — Quelles villes partagent la même latitude ?", "url": "https://www.partir.com/cartedumonde/appli-latitude.html" },
-        { "title": "La Drôme Montagne — Latitude de Montréal", "url": "https://www.ladromemontagne.fr/latitude-montreal-pourquoi-fait-il-plus-froid-qua-paris-situee-plus-nord/" }
+        {
+          "title": "Cartes France — Brest",
+          "url": "https://www.cartesfrance.fr/Brest-29200/carte-Brest.html"
+        },
+        {
+          "title": "Wikipedia — Finistère",
+          "url": "https://en.wikipedia.org/wiki/Finist%C3%A8re"
+        },
+        {
+          "title": "Larousse — Ankara",
+          "url": "https://www.larousse.fr/encyclopedie/ville/Ankara/105544"
+        },
+        {
+          "title": "Partir.com — Quelles villes partagent la même latitude ?",
+          "url": "https://www.partir.com/cartedumonde/appli-latitude.html"
+        },
+        {
+          "title": "La Drôme Montagne — Latitude de Montréal",
+          "url": "https://www.ladromemontagne.fr/latitude-montreal-pourquoi-fait-il-plus-froid-qua-paris-situee-plus-nord/"
+        }
       ]
     }
-  ]
+  ],
+  "published_at": "2026-11-24T05:52:03.233533+01:00"
 }

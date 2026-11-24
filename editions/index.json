@@ -1,6 +1,72 @@
 {
- "updated_at": "2026-11-23T21:11:30.875359+01:00",
+ "updated_at": "2026-11-24T05:52:03.233533+01:00",
  "editions": [
+  {
+   "date": "2026-11-24",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde)",
+     "kind": "",
+     "url": "histoires/2026-11-24-jeux-video-comment-un-jouet-de-labo-a-fini-enterre-dans-le-desert-puis/",
+     "theme": "Jeux vidéo",
+     "minutes": 5,
+     "tagline": "Un physicien qui s'ennuie, une borne qui déborde de pièces, une pizza entamée et un robot déguisé en jouet : l'histoire du jeu vidéo",
+     "cases": 22,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
+     "kind": "",
+     "url": "histoires/2026-11-24-le-pendule-de-foucault-ou-comment-voir-la-terre-tourner-sans-perdre/",
+     "theme": "Sciences physiques",
+     "minutes": 2,
+     "tagline": "Une boule, un fil, un cercle de sable et un voisin qui refuse de tourner avec la planète",
+     "cases": 8,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "title": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
+     "kind": "",
+     "url": "histoires/2026-11-24-napoleon-a-decore-un-sucrier-et-c-est-la-faute-des-anglais/",
+     "theme": "Économie",
+     "minutes": 2,
+     "tagline": "Un blocus, un café trop amer, une betterave et une Légion d’honneur arrachée à la poitrine de l’Empereur",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "origine",
+     "label": "D’où ça vient ?",
+     "title": "« Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré",
+     "kind": "",
+     "url": "histoires/2026-11-24-je-boycotte-vous-citez-un-anglais-que-toute-l-irlande-a-ignore/",
+     "theme": "Expression française",
+     "minutes": 2,
+     "tagline": "Un régisseur, des navets et un millier de soldats",
+     "cases": 8,
+     "cover": "images/origine-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Quiz géo",
+     "title": "Trois questions, un phare et un parallèle menteur",
+     "kind": "geo",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-23",
    "demo": false,

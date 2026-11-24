@@ -1,18 +1,7 @@
 {
- "updated_at": "2026-11-23T21:11+01:00",
+ "updated_at": "2026-11-24T05:52+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
-  {
-   "path": "stock/cultureg/20261118-0850-pendule-foucault-chapeau",
-   "titles": {
-    "cultureg": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau"
-   },
-   "errors": [],
-   "warnings": [
-    "cultureg : case 2 : récitatif de 21 mots (max 20)",
-    "cultureg : case 4 : récitatif de 21 mots (max 20)"
-   ]
-  },
   {
    "path": "stock/cultureg/20261121-2044-soldes-dates-etat",
    "titles": {
@@ -41,16 +30,6 @@
    "errors": [],
    "warnings": [
     "dossier : case 7 (Pour mieux comprendre) : 72 mots (max 70)"
-   ]
-  },
-  {
-   "path": "stock/insolite/20261117-2047-napoleon-decore-un-sucrier",
-   "titles": {
-    "insolite": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)"
-   },
-   "errors": [],
-   "warnings": [
-    "insolite : case 2 : récitatif de 25 mots (max 20)"
    ]
   },
   {
@@ -105,22 +84,19 @@
    ]
   },
   {
-   "path": "editions/2026-11-23",
+   "path": "editions/2026-11-24",
    "titles": {
-    "dossier": "Les microbes : comment Pasteur les a démasqués (sans jamais vous serrer la main)",
-    "actu": "Une COP sans fin, une règle en or et une sonde bien garée",
-    "cultureg": "La gauche et la droite, ou le plan de table qui a mal tourné",
-    "insolite": "Napoléon commande un éléphant, Paris reçoit des rats",
-    "notice": "Le frigo ne fabrique pas de froid : il met la chaleur à la porte (de derrière)",
-    "quiz": "Cinq questions, un aigle et zéro pédale"
+    "dossier": "Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde)",
+    "cultureg": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
+    "insolite": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
+    "origine": "« Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré",
+    "quiz": "Trois questions, un phare et un parallèle menteur"
    },
    "errors": [],
    "warnings": [
-    "dossier : case 24 : récitatif de 21 mots (max 20)",
-    "actu : fiches geant et partenaire trop proches (brown, caricature, cartoon, hair, light, main)",
-    "actu : brève 2 : « Ce qui se passe vraiment » de 46 mots (max 45 pour une brève)",
-    "insolite : case 2 : récitatif de 21 mots (max 20)",
-    "insolite : case 7 : récitatif de 21 mots (max 20)"
+    "cultureg : case 2 : récitatif de 21 mots (max 20)",
+    "cultureg : case 4 : récitatif de 21 mots (max 20)",
+    "insolite : case 2 : récitatif de 25 mots (max 20)"
    ]
   }
  ]

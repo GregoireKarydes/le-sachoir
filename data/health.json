@@ -1,26 +1,18 @@
 {
- "updated_at": "2026-11-23T21:11:30.875359+01:00",
- "today": "2026-11-23",
+ "updated_at": "2026-11-24T05:52:03.233533+01:00",
+ "today": "2026-11-24",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
   {
-   "date": "2026-11-23",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "actu": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "notice": "prêt",
-    "quiz": "prêt"
-   }
-  },
-  {
    "date": "2026-11-24",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "origine": "prêt",
     "quiz": "prêt"
    }
   },
@@ -67,7 +59,12 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-24/cultureg : « Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau » prise dans la file (20261118-0850-pendule-foucault-chapeau)",
+  "2026-11-24/insolite : « Napoléon a décoré un sucrier (et c’est la faute des Anglais) » prise dans la file (20261117-2047-napoleon-decore-un-sucrier)",
+  "2026-11-24/origine : « « Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré » prise dans la file (20261120-2044-boycotter-capitaine-irlandais)",
+  "2026-11-24/dossier : « Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde) » prise dans la file (20261120-0657-jeux-video-desert)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -77,90 +74,87 @@
  "today_published": true,
  "today_stories": [
   "dossier",
-  "actu",
   "cultureg",
   "insolite",
-  "notice"
+  "origine"
  ],
- "last_published": "2026-11-23",
+ "last_published": "2026-11-24",
  "stock": {
   "cultureg": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 29,
-   "focus": "20261120-0652-jours-semaine-sept-astres (8 image(s) à faire)",
-   "next": "20261118-0850-pendule-foucault-chapeau",
+   "images_left": 21,
+   "focus": "20261120-0700-foret-des-landes-plantee (7 image(s) à faire)",
+   "next": "20261120-0652-jours-semaine-sept-astres",
    "next_redo": 0
   },
   "insolite": {
    "ready": 1,
-   "waiting": 4,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 26,
-   "focus": "20261120-0654-mario-prenom-proprietaire (6 image(s) à faire)",
-   "next": "20261117-2047-napoleon-decore-un-sucrier",
+   "images_left": 20,
+   "focus": "20261120-0656-france-moins-de-bebes (6 image(s) à faire)",
+   "next": "20261120-0654-mario-prenom-proprietaire",
    "next_redo": 0
   },
   "notice": {
-   "ready": 1,
-   "waiting": 4,
+   "ready": 2,
+   "waiting": 3,
    "blocked": 0,
-   "images_left": 22,
-   "focus": "20261117-0153-savon-escorte-la-graisse (5 image(s) à faire)",
+   "images_left": 17,
+   "focus": "20261117-2046-carte-sans-contact-sans-pile (5 image(s) à faire)",
    "next": "20261117-0151-gps-ecoute-l-heure",
    "next_redo": 0
   },
   "origine": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 1,
    "blocked": 0,
    "images_left": 5,
    "focus": "20261122-2046-avoir-le-cafard-baudelaire (5 image(s) à faire)",
-   "next": "20261120-2044-boycotter-capitaine-irlandais",
+   "next": "20261120-2046-points-sur-les-i-jambages",
    "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 2,
    "blocked": 0,
-   "images_left": 32,
-   "focus": "20261121-1925-climat-france-2050 (14 image(s) à faire)",
-   "next": "20261120-0657-jeux-video-desert",
+   "images_left": 19,
+   "focus": "20261121-1925-climat-france-2050 (1 image(s) à faire)",
+   "next": null,
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 3,
- "quiz_days_ahead": 7,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 2,
+ "quiz_days_ahead": 6,
  "quota": {
-  "day": "2026-11-23",
-  "count": 53,
-  "neurons": 8920,
+  "day": "2026-11-24",
+  "count": 35,
+  "neurons": 6280,
   "exhausted": false,
   "by_kind": {
-   "cast": 14,
-   "case": 38,
-   "cover": 1
-  },
-  "exhausted_at": "2026-11-23T00:04:28.527149+00:00"
+   "cast": 6,
+   "case": 29
+  }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.5833,
-  "images": 283,
-  "today_usd": 0.19504,
+  "spent_usd": 3.7633,
+  "images": 289,
+  "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-22T23:28:23.388661+01:00",
-  "age_hours": 21.7,
+  "collected_at": "2026-11-24T04:20:21.662090+01:00",
+  "age_hours": 1.5,
   "feeds": {
    "Google Actualités": 33,
-   "franceinfo": 30,
+   "franceinfo": 27,
    "Le Monde": 16,
-   "Le Figaro": 18,
-   "Libération": 48,
+   "Le Figaro": 20,
+   "Libération": 50,
    "20 Minutes": 26,
    "Ouest-France": 10,
    "Le Parisien": 100,
@@ -168,13 +162,13 @@
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 18,
+   "BBC World": 21,
    "Le Monde Sciences": 4,
-   "Sciences et Avenir": 2,
-   "Le Monde Planète": 5,
-   "Le Monde Pixels": 5,
-   "Le Monde Santé": 4,
-   "Le Monde Culture": 10,
+   "Sciences et Avenir": 9,
+   "Le Monde Planète": 11,
+   "Le Monde Pixels": 7,
+   "Le Monde Santé": 2,
+   "Le Monde Culture": 7,
    "HugoDécrypte - Actus du jour": 1
   },
   "empty_feeds": [
@@ -184,7 +178,7 @@
  },
  "actu_balance": {
   "days": 14,
-  "editions": 11,
+  "editions": 10,
   "people": [
    {
     "name": "Emmanuel Macron",
