@@ -24,7 +24,7 @@
           "name": "Le magasinier",
           "look": "a very tall lanky warehouse worker of 1981 in his twenties, huge feathered sandy-blond hair, big gold aviator glasses, light skin, a bright kelly-green satin baseball jacket without logo as main colour, faded jeans, a clipboard always under his arm",
           "file": "cast/insolite-magasinier.png",
-          "status": "pending",
+          "status": "done",
           "role": "the Nintendo warehouse worker who tells the story; a confident storyteller who embellishes everything, every retelling makes the landlord bigger and angrier, wide arms when he exaggerates"
         },
         {
@@ -32,7 +32,7 @@
           "name": "Mario Segale",
           "look": "Mario Segale, a short broad-shouldered Italian-American construction businessman in his late forties, thick silver-grey hair slicked back, heavy black eyebrows, tanned skin, a camel-brown sheepskin coat as main colour over a brown suit, dark sunglasses",
           "file": "cast/insolite-segale.png",
-          "status": "pending",
+          "status": "done",
           "role": "the warehouse landlord, a self-made builder who hates attention; very discreet, always half-hidden behind his sunglasses and his collar, embarrassed to be famous"
         }
       ],
@@ -43,8 +43,9 @@
           "segale"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -65,8 +66,9 @@
               "magasinier"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -106,8 +108,8 @@
               "magasinier"
             ],
             "file": "images/insolite-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -128,8 +130,8 @@
               "magasinier"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -166,8 +168,8 @@
               "magasinier"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -189,8 +191,8 @@
               "magasinier"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         }
       ],

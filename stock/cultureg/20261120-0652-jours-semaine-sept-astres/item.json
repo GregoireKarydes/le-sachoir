@@ -25,7 +25,7 @@
           "name": "Le graveur",
           "look": "a short and very stocky Gallo-Roman stone carver in his forties, thick neck, bushy jet-black curly hair and one bushy black unibrow, olive skin, a burnt-orange wool tunic as main colour, a brown leather apron covered in white stone dust, always holding the chisel and mallet",
           "file": "cast/cultureg-graveur.png",
-          "status": "pending",
+          "status": "done",
           "role": "the stone carver hired to engrave the weekly calendar; stingy and lazy, counts every letter because he is paid by the line, sighs and slumps at every long word"
         },
         {
@@ -33,7 +33,7 @@
           "name": "L’astrologue",
           "look": "a very tall and very thin elderly Roman astrologer, long thin wisps of white hair, a long forked white beard, pale skin, a midnight-blue robe sprinkled with tiny gold dots as main colour, always holding the sphere",
           "file": "cast/cultureg-astrologue.png",
-          "status": "pending",
+          "status": "done",
           "role": "the vain astrologer who ordered the calendar and believes the sky runs the world; chin always raised, sweeping theatrical gestures toward the sky, takes every change as a personal insult"
         }
       ],
@@ -44,8 +44,9 @@
           "astrologue"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "astrologue"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +102,8 @@
               "astrologue"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +143,8 @@
               "astrologue"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -157,8 +159,8 @@
               "graveur"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -185,8 +187,8 @@
               "astrologue"
             ],
             "file": "images/cultureg-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -229,8 +231,8 @@
               "graveur"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -251,8 +253,8 @@
               "graveur"
             ],
             "file": "images/cultureg-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

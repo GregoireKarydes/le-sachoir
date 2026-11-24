@@ -25,7 +25,7 @@
           "name": "Rémi",
           "look": "Rémi, a big burly car mechanic in his thirties, broad shoulders, light tan skin, a tall sandy-blond quiff shiny with hair gel, burgundy work shirt with rolled-up sleeves as main colour, dark grey trousers, both hands and forearms black with engine grease",
           "file": "cast/notice-remi.png",
-          "status": "pending",
+          "status": "done",
           "role": "the vain, impatient mechanic who wants everything done in three seconds; checks his quiff in every reflection, taps his foot, sighs loudly"
         },
         {
@@ -33,7 +33,7 @@
           "name": "Mireille",
           "look": "Mireille, a tiny very old soap maker in her eighties, slightly hunched, pale wrinkled skin, snow-white hair in a tight round bun, cat-eye glasses on a little chain, lavender-purple apron over a white blouse as main colour, the soap always in her hands",
           "file": "cast/notice-mireille.png",
-          "status": "pending",
+          "status": "done",
           "role": "the soap maker from the shop next door, sharp-tongued and unhurried; peers over her glasses, takes her time on purpose to annoy Rémi"
         }
       ],
@@ -44,8 +44,9 @@
           "mireille"
         ],
         "file": "images/notice-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "mireille"
             ],
             "file": "images/notice-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +102,8 @@
               "remi"
             ],
             "file": "images/notice-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +143,8 @@
               "mireille"
             ],
             "file": "images/notice-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -179,8 +181,8 @@
               "remi"
             ],
             "file": "images/notice-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

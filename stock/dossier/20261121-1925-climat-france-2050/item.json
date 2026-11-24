@@ -180,8 +180,8 @@
               "fourier"
             ],
             "file": "images/dossier-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -218,8 +218,8 @@
               "fourier"
             ],
             "file": "images/dossier-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -247,8 +247,8 @@
               "fourier"
             ],
             "file": "images/dossier-09.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -269,8 +269,8 @@
               "keeling"
             ],
             "file": "images/dossier-10.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -297,7 +297,8 @@
             ],
             "file": "images/dossier-11.webp",
             "status": "pending",
-            "attempts": 0
+            "attempts": 1,
+            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (bfb17835-7666-478a-9a75-7d9a962361c9)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
           }
         },
         {
@@ -334,8 +335,8 @@
               "keeling"
             ],
             "file": "images/dossier-13.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -374,8 +375,8 @@
               "climato"
             ],
             "file": "images/dossier-15.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -396,8 +397,8 @@
               "climato"
             ],
             "file": "images/dossier-16.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -418,8 +419,8 @@
               "climato"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -446,8 +447,8 @@
               "climato"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -462,8 +463,8 @@
               "gerard"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -495,8 +496,8 @@
             "prompt": "a Paris café terrace on a hot day with zinc rooftops behind, potted palm trees between the tables. A Parisian woman with a sleek grey bun and big sunglasses, in a black dress, sits under a parasol on the left with her feet in a small inflatable paddling pool, an ice cream melting down her hand. visual gag: the paddling pool on the pavement. high angle",
             "cast": [],
             "file": "images/dossier-21.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -517,8 +518,8 @@
               "climato"
             ],
             "file": "images/dossier-22.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -539,8 +540,8 @@
               "gerard"
             ],
             "file": "images/dossier-23.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
