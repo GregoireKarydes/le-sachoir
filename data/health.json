@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T05:52:03.233533+01:00",
+ "updated_at": "2026-11-24T10:58:27.750642+01:00",
  "today": "2026-11-24",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-24",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "cultureg": "prêt",
@@ -59,12 +59,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-24/cultureg : « Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau » prise dans la file (20261118-0850-pendule-foucault-chapeau)",
-  "2026-11-24/insolite : « Napoléon a décoré un sucrier (et c’est la faute des Anglais) » prise dans la file (20261117-2047-napoleon-decore-un-sucrier)",
-  "2026-11-24/origine : « « Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré » prise dans la file (20261120-2044-boycotter-capitaine-irlandais)",
-  "2026-11-24/dossier : « Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde) » prise dans la file (20261120-0657-jeux-video-desert)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -131,11 +126,11 @@
  "quiz_days_ahead": 6,
  "quota": {
   "day": "2026-11-24",
-  "count": 35,
-  "neurons": 6280,
+  "count": 36,
+  "neurons": 6360,
   "exhausted": false,
   "by_kind": {
-   "cast": 6,
+   "cast": 7,
    "case": 29
   }
  },
@@ -148,7 +143,7 @@
  },
  "rss": {
   "collected_at": "2026-11-24T04:20:21.662090+01:00",
-  "age_hours": 1.5,
+  "age_hours": 6.6,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 27,
