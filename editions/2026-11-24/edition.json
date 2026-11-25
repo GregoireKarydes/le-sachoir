@@ -615,9 +615,8 @@
           "name": "Le voisin",
           "look": "a tall big-bellied Parisian bourgeois in his fifties, bushy grey mutton-chop sideburns, ruddy light skin, the hat always on his head, a bright sky-blue waistcoat as main colour, pale grey trousers, a gold watch chain across his belly",
           "file": "cast/cultureg-voisin.png",
-          "status": "pending",
-          "role": "Foucault's sceptical neighbour, full of bad faith, certain the Earth stands still because he does not feel it move; clutches his hat whenever the Earth's rotation is mentioned",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (81994405-bfab-4c33-898f-5088d01de8ca)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done",
+          "role": "Foucault's sceptical neighbour, full of bad faith, certain the Earth stands still because he does not feel it move; clutches his hat whenever the Earth's rotation is mentioned"
         }
       ],
       "cover": {

@@ -24,7 +24,7 @@
           "name": "Jean-Baptiste Moheau",
           "look": "Jean-Baptiste Moheau, a small round French statistician of 1778 in his thirties, thick round spectacles, short powdered white wig with side rolls, light skin, a pistachio-green coat as main colour, cream stockings, always hugging the ledger",
           "file": "cast/insolite-moheau.png",
-          "status": "pending",
+          "status": "done",
           "role": "the royal statistician who counts births in parish registers; zealous and anxious, panics when the numbers do not match his tables, pushes his glasses up whenever he is shocked"
         },
         {
@@ -32,7 +32,7 @@
           "name": "La fermière",
           "look": "a tall broad-shouldered French peasant woman in her thirties, strong arms, chestnut-brown hair under a white linen bonnet, tanned skin, a cornflower-blue bodice and skirt as main colour, white apron, a long wooden measuring stick in hand",
           "file": "cast/insolite-fermiere.png",
-          "status": "pending",
+          "status": "done",
           "role": "a peasant who owns her land; shrewd and tight-fisted, calculates everything in fields and furrows, never lets go of her measuring stick, answers with a smug half-smile"
         }
       ],
@@ -43,8 +43,9 @@
           "fermiere"
         ],
         "file": "images/insolite-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -65,8 +66,9 @@
               "moheau"
             ],
             "file": "images/insolite-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -93,8 +95,8 @@
               "fermiere"
             ],
             "file": "images/insolite-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -134,8 +136,8 @@
               "moheau"
             ],
             "file": "images/insolite-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -166,8 +168,8 @@
               "moheau"
             ],
             "file": "images/insolite-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -194,8 +196,8 @@
               "fermiere"
             ],
             "file": "images/insolite-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

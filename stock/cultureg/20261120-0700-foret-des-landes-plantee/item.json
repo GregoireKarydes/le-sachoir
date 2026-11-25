@@ -25,7 +25,7 @@
           "name": "Le berger",
           "look": "a very tall lanky Landes shepherd of the 1850s perched on the stilts, deep-tanned weathered skin, long black hair and a black beard, a black beret, a thick cream-white sheepskin cape as main colour, brown trousers, the long staff in hand",
           "file": "cast/cultureg-berger.png",
-          "status": "pending",
+          "status": "done",
           "role": "a proud Landes shepherd who literally looks down on everyone from his stilts; haughty and stubborn, arms crossed on his staff, convinced the moor will never change"
         },
         {
@@ -33,7 +33,7 @@
           "name": "L’ingénieur",
           "look": "a short plump state engineer of the 1850s in his forties, shiny bald dome with bushy ginger side-whiskers, light freckled skin, small round spectacles, a royal-blue frock coat as main colour, grey trousers always splashed with mud, the plan under his arm",
           "file": "cast/cultureg-ingenieur.png",
-          "status": "pending",
+          "status": "done",
           "role": "a zealous engineer obsessed with straight lines and drainage; tireless and stubborn, always unrolling the plan, never notices he is sinking in the mud"
         }
       ],
@@ -44,8 +44,9 @@
           "ingenieur"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -72,8 +73,9 @@
               "ingenieur"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -100,8 +102,8 @@
               "ingenieur"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +143,8 @@
               "berger"
             ],
             "file": "images/cultureg-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -157,8 +159,8 @@
               "berger"
             ],
             "file": "images/cultureg-05.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -201,8 +203,8 @@
               "berger"
             ],
             "file": "images/cultureg-07.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -223,8 +225,8 @@
               "berger"
             ],
             "file": "images/cultureg-08.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

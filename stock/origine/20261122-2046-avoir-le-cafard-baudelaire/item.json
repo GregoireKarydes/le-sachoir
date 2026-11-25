@@ -26,7 +26,7 @@
           "name": "Charles Baudelaire",
           "look": "Charles, a tall, thin and slightly stooped poet in his late thirties, short dark hair receding at the temples, clean-shaven, pale skin, intense dark eyes with heavy lids, a midnight-blue frock coat as main colour, a loose crimson cravat, always holding the quill",
           "file": "cast/origine-baudelaire.png",
-          "status": "pending",
+          "status": "done",
           "role": "the gloomy, theatrical poet who turns everything into melancholy; drapes himself over furniture, sighs at the ceiling, takes offence when anyone cuts a word"
         },
         {
@@ -34,7 +34,7 @@
           "name": "Poulet-Malassis",
           "look": "Auguste, a short, plump and energetic printer-publisher in his thirties, bald on top with bushy brown mutton-chop sideburns, ruddy pale skin, an ochre-orange leather apron as main colour over a white shirt with rolled sleeves, ink-stained fingers, a heavy wooden ruler in hand",
           "file": "cast/origine-malassis.png",
-          "status": "pending",
+          "status": "done",
           "role": "the practical, hurried publisher who hates delays and bugs in his shop; always bustling, waving the ruler, short-tempered but fond of his poet"
         }
       ],
@@ -45,8 +45,9 @@
           "malassis"
         ],
         "file": "images/origine-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -73,8 +74,9 @@
               "malassis"
             ],
             "file": "images/origine-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1,
+            "via": "premium"
           }
         },
         {
@@ -101,8 +103,8 @@
               "malassis"
             ],
             "file": "images/origine-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -141,8 +143,8 @@
               "baudelaire"
             ],
             "file": "images/origine-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -179,8 +181,8 @@
               "baudelaire"
             ],
             "file": "images/origine-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
