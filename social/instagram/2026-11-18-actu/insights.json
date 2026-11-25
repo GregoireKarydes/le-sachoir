@@ -2,23 +2,23 @@
  "instagram": {
   "buffer_id": "6afd58f4739d5342ff12dc42",
   "sent_at": "2026-11-18T11:16:02.993Z",
-  "metrics_updated_at": "2026-11-23T13:43:01.544Z",
+  "metrics_updated_at": "2026-11-24T13:28:12.105Z",
   "metrics": {
    "reactions": 0,
    "comments": 0,
    "engagementRate": 0,
-   "views": 6,
+   "views": 15,
    "shares": 0,
    "saves": 0,
    "follows": 0,
-   "reach": 3
+   "reach": 5
   },
-  "checked_at": "2026-11-24T04:53:01+00:00"
+  "checked_at": "2026-11-25T03:38:57+00:00"
  },
  "tiktok": {
   "buffer_id": "6afd58f3739d5342ff12dbda",
   "sent_at": "2026-11-18T11:16:56.844Z",
-  "metrics_updated_at": "2026-11-23T09:22:39.596Z",
+  "metrics_updated_at": "2026-11-24T08:23:28.605Z",
   "metrics": {
    "reactions": 6,
    "comments": 0,
@@ -29,6 +29,6 @@
    "totalTimeWatched": 25.43,
    "averageTimeWatched": 5.96
   },
-  "checked_at": "2026-11-24T04:53:01+00:00"
+  "checked_at": "2026-11-25T03:38:57+00:00"
  }
 }

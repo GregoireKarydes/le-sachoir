@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T04:53:01+00:00",
+ "updated_at": "2026-11-25T03:38:57+00:00",
  "rows": [
   {
    "post": "2026-11-17",
@@ -54,17 +54,17 @@
     "reactions": 0,
     "comments": 0,
     "engagementRate": 0,
-    "views": 4,
+    "views": 13,
     "shares": 0,
     "saves": 0,
     "follows": 0,
-    "reach": 2
+    "reach": 4
    },
    "interactions": null,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
    "follows_per_reach": 0.0,
-   "outlier": 0.02
+   "outlier": 0.07
   },
   {
    "post": "2026-11-18",
@@ -86,16 +86,16 @@
     "reactions": 6,
     "comments": 0,
     "engagementRate": 1.57,
-    "views": 382,
+    "views": 383,
     "shares": 0,
     "reach": 366,
-    "totalTimeWatched": 124.85,
-    "averageTimeWatched": 17.92
+    "totalTimeWatched": 124.88,
+    "averageTimeWatched": 17.88
    },
    "interactions": 6,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0164,
-   "outlier": 1.61
+   "outlier": 1.63
   },
   {
    "post": "2026-11-18-actu",
@@ -117,17 +117,17 @@
     "reactions": 0,
     "comments": 0,
     "engagementRate": 0,
-    "views": 6,
+    "views": 15,
     "shares": 0,
     "saves": 0,
     "follows": 0,
-    "reach": 3
+    "reach": 5
    },
    "interactions": null,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
    "follows_per_reach": 0.0,
-   "outlier": 0.03
+   "outlier": 0.08
   },
   {
    "post": "2026-11-18-actu",
@@ -158,7 +158,7 @@
    "interactions": 6,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0286,
-   "outlier": 0.98
+   "outlier": 0.99
   },
   {
    "post": "2026-11-18-sitcom",
@@ -211,17 +211,17 @@
    "metrics": {
     "reactions": 6,
     "comments": 0,
-    "engagementRate": 2.54,
-    "views": 236,
+    "engagementRate": 2.53,
+    "views": 237,
     "shares": 0,
     "reach": 230,
-    "totalTimeWatched": 47.48,
-    "averageTimeWatched": 10.79
+    "totalTimeWatched": 47.5,
+    "averageTimeWatched": 10.76
    },
    "interactions": 6,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0261,
-   "outlier": 1.0
+   "outlier": 1.01
   },
   {
    "post": "2026-11-19-sitcom-cultureg",
@@ -275,17 +275,17 @@
    "metrics": {
     "reactions": 7,
     "comments": 0,
-    "engagementRate": 3.14,
-    "views": 223,
+    "engagementRate": 3.13,
+    "views": 224,
     "shares": 0,
     "reach": 223,
-    "totalTimeWatched": 48.13,
-    "averageTimeWatched": 11.74
+    "totalTimeWatched": 48.27,
+    "averageTimeWatched": 11.63
    },
    "interactions": 7,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0314,
-   "outlier": 0.94
+   "outlier": 0.95
   },
   {
    "post": "2026-11-19-sitcom-insolite",
@@ -349,7 +349,7 @@
    "interactions": 4,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0175,
-   "outlier": 0.96
+   "outlier": 0.97
   },
   {
    "post": "2026-11-19-sitcom-origine",
@@ -413,7 +413,7 @@
    "interactions": 15,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0588,
-   "outlier": 1.09
+   "outlier": 1.1
   },
   {
    "post": "2026-11-20-sitcom-cultureg",
@@ -477,7 +477,7 @@
    "interactions": 20,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0746,
-   "outlier": 1.15
+   "outlier": 1.16
   },
   {
    "post": "2026-11-20-sitcom-insolite",
@@ -541,7 +541,7 @@
    "interactions": 11,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0462,
-   "outlier": 1.0
+   "outlier": 1.01
   },
   {
    "post": "2026-11-20-sitcom-origine",
@@ -605,7 +605,7 @@
    "interactions": 4,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.0201,
-   "outlier": 0.85
+   "outlier": 0.86
   },
   {
    "post": "2026-11-21-sitcom-cultureg",
@@ -627,18 +627,18 @@
     "reactions": 23,
     "comments": 0,
     "engagementRate": 1.91,
-    "views": 1528,
+    "views": 1529,
     "shares": 2,
     "saves": 2,
-    "totalTimeWatched": 413.71,
-    "averageTimeWatched": 17.6,
-    "reach": 1412
+    "totalTimeWatched": 413.73,
+    "averageTimeWatched": 17.59,
+    "reach": 1414
    },
    "interactions": 27,
    "shares_per_reach": 0.0014,
    "saves_per_reach": 0.0014,
    "engagement_rate": 0.0191,
-   "outlier": 8.35
+   "outlier": 8.36
   },
   {
    "post": "2026-11-21-sitcom-cultureg",
@@ -662,14 +662,14 @@
     "engagementRate": 6.5,
     "views": 431,
     "shares": 1,
-    "reach": 374,
+    "reach": 430,
     "totalTimeWatched": 95.67,
     "averageTimeWatched": 11.88
    },
    "interactions": 28,
-   "shares_per_reach": 0.0027,
-   "engagement_rate": 0.0749,
-   "outlier": 1.82
+   "shares_per_reach": 0.0023,
+   "engagement_rate": 0.0651,
+   "outlier": 1.83
   },
   {
    "post": "2026-11-21-sitcom-insolite",
@@ -690,19 +690,19 @@
    "metrics": {
     "reactions": 70,
     "comments": 0,
-    "engagementRate": 4.73,
-    "views": 2038,
+    "engagementRate": 4.72,
+    "views": 2045,
     "shares": 5,
     "saves": 10,
-    "totalTimeWatched": 509.35,
-    "averageTimeWatched": 16.82,
-    "reach": 1796
+    "totalTimeWatched": 510.44,
+    "averageTimeWatched": 16.81,
+    "reach": 1801
    },
    "interactions": 85,
    "shares_per_reach": 0.0028,
    "saves_per_reach": 0.0056,
-   "engagement_rate": 0.0473,
-   "outlier": 11.14
+   "engagement_rate": 0.0472,
+   "outlier": 11.17
   },
   {
    "post": "2026-11-21-sitcom-insolite",
@@ -723,17 +723,17 @@
    "metrics": {
     "reactions": 30,
     "comments": 0,
-    "engagementRate": 10.87,
-    "views": 276,
+    "engagementRate": 10.56,
+    "views": 284,
     "shares": 0,
-    "reach": 244,
-    "totalTimeWatched": 60.4,
-    "averageTimeWatched": 12.29
+    "reach": 259,
+    "totalTimeWatched": 60.73,
+    "averageTimeWatched": 12.03
    },
    "interactions": 30,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.123,
-   "outlier": 1.16
+   "engagement_rate": 0.1158,
+   "outlier": 1.21
   },
   {
    "post": "2026-11-21-sitcom-origine",
@@ -755,18 +755,18 @@
     "reactions": 0,
     "comments": 0,
     "engagementRate": 0.74,
-    "views": 143,
+    "views": 144,
     "shares": 0,
     "saves": 1,
-    "totalTimeWatched": 16.64,
-    "averageTimeWatched": 7.45,
-    "reach": 135
+    "totalTimeWatched": 16.66,
+    "averageTimeWatched": 7.41,
+    "reach": 136
    },
    "interactions": 1,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0074,
    "engagement_rate": 0.0074,
-   "outlier": 0.78
+   "outlier": 0.79
   },
   {
    "post": "2026-11-21-sitcom-origine",
@@ -797,7 +797,7 @@
    "interactions": 23,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.1031,
-   "outlier": 1.01
+   "outlier": 1.02
   },
   {
    "post": "2026-11-22-sitcom-cultureg",
@@ -818,19 +818,19 @@
    "metrics": {
     "reactions": 13,
     "comments": 0,
-    "engagementRate": 1.44,
-    "views": 1007,
+    "engagementRate": 1.42,
+    "views": 1019,
     "shares": 0,
     "saves": 0,
-    "totalTimeWatched": 173.81,
-    "averageTimeWatched": 11.5,
-    "reach": 904
+    "totalTimeWatched": 174.41,
+    "averageTimeWatched": 11.42,
+    "reach": 914
    },
    "interactions": 13,
    "shares_per_reach": 0.0,
    "saves_per_reach": 0.0,
-   "engagement_rate": 0.0144,
-   "outlier": 5.5
+   "engagement_rate": 0.0142,
+   "outlier": 5.57
   },
   {
    "post": "2026-11-22-sitcom-cultureg",
@@ -851,17 +851,17 @@
    "metrics": {
     "reactions": 7,
     "comments": 0,
-    "engagementRate": 3.07,
-    "views": 228,
+    "engagementRate": 3.06,
+    "views": 229,
     "shares": 0,
-    "reach": 0,
-    "totalTimeWatched": 32.22,
-    "averageTimeWatched": 8.16
+    "reach": 215,
+    "totalTimeWatched": 32.25,
+    "averageTimeWatched": 8.13
    },
    "interactions": 7,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.0307,
-   "outlier": 0.96
+   "engagement_rate": 0.0326,
+   "outlier": 0.97
   },
   {
    "post": "2026-11-22-sitcom-insolite",
@@ -880,21 +880,21 @@
    "caption_words": 81,
    "network": "instagram",
    "metrics": {
-    "reactions": 9,
+    "reactions": 10,
     "comments": 0,
-    "engagementRate": 0.73,
-    "views": 1377,
+    "engagementRate": 0.86,
+    "views": 1431,
     "shares": 0,
-    "saves": 0,
-    "totalTimeWatched": 259.87,
-    "averageTimeWatched": 12.35,
-    "reach": 1227
+    "saves": 1,
+    "totalTimeWatched": 266.01,
+    "averageTimeWatched": 12.17,
+    "reach": 1279
    },
-   "interactions": 9,
+   "interactions": 11,
    "shares_per_reach": 0.0,
-   "saves_per_reach": 0.0,
-   "engagement_rate": 0.0073,
-   "outlier": 7.52
+   "saves_per_reach": 0.0008,
+   "engagement_rate": 0.0086,
+   "outlier": 7.82
   },
   {
    "post": "2026-11-22-sitcom-insolite",
@@ -915,17 +915,17 @@
    "metrics": {
     "reactions": 13,
     "comments": 0,
-    "engagementRate": 5.94,
-    "views": 219,
+    "engagementRate": 5.88,
+    "views": 221,
     "shares": 0,
-    "reach": 0,
-    "totalTimeWatched": 37.92,
-    "averageTimeWatched": 9.85
+    "reach": 213,
+    "totalTimeWatched": 38.52,
+    "averageTimeWatched": 9.88
    },
    "interactions": 13,
    "shares_per_reach": 0.0,
-   "engagement_rate": 0.0594,
-   "outlier": 0.92
+   "engagement_rate": 0.061,
+   "outlier": 0.94
   },
   {
    "post": "2026-11-22-sitcom-origine",
@@ -947,18 +947,18 @@
     "reactions": 21,
     "comments": 0,
     "engagementRate": 1.82,
-    "views": 1649,
+    "views": 1652,
     "shares": 2,
     "saves": 3,
-    "totalTimeWatched": 270.36,
-    "averageTimeWatched": 10.95,
+    "totalTimeWatched": 270.51,
+    "averageTimeWatched": 10.94,
     "reach": 1487
    },
    "interactions": 26,
    "shares_per_reach": 0.0013,
    "saves_per_reach": 0.002,
    "engagement_rate": 0.0175,
-   "outlier": 9.01
+   "outlier": 9.03
   },
   {
    "post": "2026-11-22-sitcom-origine",
@@ -982,14 +982,14 @@
     "engagementRate": 8.15,
     "views": 270,
     "shares": 1,
-    "reach": 0,
+    "reach": 249,
     "totalTimeWatched": 58.67,
     "averageTimeWatched": 12.14
    },
    "interactions": 22,
-   "shares_per_reach": 0.0037,
-   "engagement_rate": 0.0815,
-   "outlier": 1.14
+   "shares_per_reach": 0.004,
+   "engagement_rate": 0.0884,
+   "outlier": 1.15
   },
   {
    "post": "2026-11-23-sitcom-cultureg",
@@ -1008,21 +1008,21 @@
    "caption_words": 76,
    "network": "instagram",
    "metrics": {
-    "reactions": 1,
+    "reactions": 7,
     "comments": 0,
-    "engagementRate": 0.63,
-    "views": 183,
-    "shares": 0,
-    "saves": 0,
-    "totalTimeWatched": 25.22,
-    "averageTimeWatched": 9.52,
-    "reach": 159
+    "engagementRate": 2.45,
+    "views": 611,
+    "shares": 1,
+    "saves": 5,
+    "totalTimeWatched": 107.2,
+    "averageTimeWatched": 12.32,
+    "reach": 530
    },
-   "interactions": 1,
-   "shares_per_reach": 0.0,
-   "saves_per_reach": 0.0,
-   "engagement_rate": 0.0063,
-   "outlier": 1.0
+   "interactions": 13,
+   "shares_per_reach": 0.0019,
+   "saves_per_reach": 0.0094,
+   "engagement_rate": 0.0245,
+   "outlier": 3.34
   },
   {
    "post": "2026-11-23-sitcom-cultureg",
@@ -1041,17 +1041,51 @@
    "caption_words": 76,
    "network": "tiktok",
    "metrics": {
+    "reactions": 21,
+    "comments": 0,
+    "engagementRate": 9.17,
+    "views": 229,
+    "shares": 0,
+    "reach": 0,
+    "totalTimeWatched": 51.55,
+    "averageTimeWatched": 12.63
+   },
+   "interactions": 21,
+   "shares_per_reach": 0.0,
+   "engagement_rate": 0.0917,
+   "outlier": 0.97
+  },
+  {
+   "post": "2026-11-23-sitcom-insolite",
+   "date": "2026-11-23",
+   "kind": "film",
+   "slot": "insolite",
+   "style": "hd-2d",
+   "rubrique": "insolite",
+   "time": "21:00",
+   "slides": null,
+   "seconds": 39.6,
+   "hook": "UN ÉLÉPHANT EN PLÂTRE À LA BASTILLE ?",
+   "hook_formula": 102,
+   "test": null,
+   "hashtags": 5,
+   "caption_words": 83,
+   "network": "instagram",
+   "metrics": {
     "reactions": 0,
     "comments": 0,
     "engagementRate": 0,
-    "views": 0,
+    "views": 76,
     "shares": 0,
-    "reach": 0,
-    "totalTimeWatched": 0,
-    "averageTimeWatched": 0
+    "saves": 0,
+    "totalTimeWatched": 9.36,
+    "averageTimeWatched": 8.51,
+    "reach": 67
    },
    "interactions": null,
-   "outlier": null
+   "shares_per_reach": 0.0,
+   "saves_per_reach": 0.0,
+   "outlier": 0.42
   },
   {
    "post": "2026-11-23-sitcom-insolite",
@@ -1070,17 +1104,19 @@
    "caption_words": 83,
    "network": "tiktok",
    "metrics": {
-    "reactions": 0,
+    "reactions": 9,
     "comments": 0,
-    "engagementRate": 0,
-    "views": 0,
-    "shares": 0,
+    "engagementRate": 4.76,
+    "views": 210,
+    "shares": 1,
     "reach": 0,
-    "totalTimeWatched": 0,
-    "averageTimeWatched": 0
+    "totalTimeWatched": 36.35,
+    "averageTimeWatched": 9.61
    },
-   "interactions": null,
-   "outlier": null
+   "interactions": 10,
+   "shares_per_reach": 0.0048,
+   "engagement_rate": 0.0476,
+   "outlier": 0.89
   },
   {
    "post": "2026-11-23-sitcom-origine",
@@ -1099,21 +1135,21 @@
    "caption_words": 77,
    "network": "instagram",
    "metrics": {
-    "reactions": 5,
+    "reactions": 7,
     "comments": 0,
-    "engagementRate": 2.07,
-    "views": 328,
+    "engagementRate": 1.65,
+    "views": 539,
     "shares": 0,
     "saves": 1,
-    "totalTimeWatched": 42.53,
-    "averageTimeWatched": 8.51,
-    "reach": 290
+    "totalTimeWatched": 74.74,
+    "averageTimeWatched": 9.1,
+    "reach": 484
    },
-   "interactions": 6,
+   "interactions": 8,
    "shares_per_reach": 0.0,
-   "saves_per_reach": 0.0034,
-   "engagement_rate": 0.0207,
-   "outlier": 1.79
+   "saves_per_reach": 0.0021,
+   "engagement_rate": 0.0165,
+   "outlier": 2.95
   },
   {
    "post": "2026-11-23-sitcom-origine",
@@ -1132,19 +1168,19 @@
    "caption_words": 77,
    "network": "tiktok",
    "metrics": {
-    "reactions": 18,
+    "reactions": 19,
     "comments": 0,
     "engagementRate": 9,
-    "views": 200,
+    "views": 211,
     "shares": 0,
     "reach": 0,
-    "totalTimeWatched": 43.15,
-    "averageTimeWatched": 12.76
+    "totalTimeWatched": 48.43,
+    "averageTimeWatched": 12.69
    },
-   "interactions": 18,
+   "interactions": 19,
    "shares_per_reach": 0.0,
    "engagement_rate": 0.09,
-   "outlier": 0.84
+   "outlier": 0.9
   }
  ]
 }
