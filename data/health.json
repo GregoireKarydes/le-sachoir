@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T09:41:23.136952+01:00",
+ "updated_at": "2026-11-25T13:33:54.739317+01:00",
  "today": "2026-11-25",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-25",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "cultureg": "prêt",
@@ -52,12 +52,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-25/cultureg : « Lundi, mardi, mercredi : votre agenda est un horoscope romain » prise dans la file (20261120-0652-jours-semaine-sept-astres)",
-  "2026-11-25/insolite : « Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé) » prise dans la file (20261120-0654-mario-prenom-proprietaire)",
-  "2026-11-25/notice : « Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein) » prise dans la file (20261117-0151-gps-ecoute-l-heure)",
-  "2026-11-25/dossier : « Climat : la France à +2,7 °C en 2050, mode d’emploi (crème solaire non fournie) » prise dans la file (20261121-1925-climat-france-2050)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -142,7 +137,7 @@
  },
  "rss": {
   "collected_at": "2026-11-25T02:25:57.870843+01:00",
-  "age_hours": 7.3,
+  "age_hours": 11.1,
   "feeds": {
    "Google Actualités": 32,
    "franceinfo": 29,
