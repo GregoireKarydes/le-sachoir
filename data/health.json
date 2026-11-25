@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T04:38:18.523985+01:00",
+ "updated_at": "2026-11-25T09:41:23.136952+01:00",
  "today": "2026-11-25",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,6 +9,10 @@
    "date": "2026-11-25",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "notice": "prêt",
     "quiz": "prêt"
    }
   },
@@ -48,42 +52,52 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-25/cultureg : « Lundi, mardi, mercredi : votre agenda est un horoscope romain » prise dans la file (20261120-0652-jours-semaine-sept-astres)",
+  "2026-11-25/insolite : « Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé) » prise dans la file (20261120-0654-mario-prenom-proprietaire)",
+  "2026-11-25/notice : « Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein) » prise dans la file (20261117-0151-gps-ecoute-l-heure)",
+  "2026-11-25/dossier : « Climat : la France à +2,7 °C en 2050, mode d’emploi (crème solaire non fournie) » prise dans la file (20261121-1925-climat-france-2050)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-24",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "cultureg",
+  "insolite",
+  "notice"
+ ],
+ "last_published": "2026-11-25",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 2,
    "blocked": 0,
    "images_left": 14,
    "focus": "20261121-2044-soldes-dates-etat (7 image(s) à faire)",
-   "next": "20261120-0652-jours-semaine-sept-astres",
+   "next": "20261120-0700-foret-des-landes-plantee",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 2,
    "blocked": 0,
    "images_left": 14,
    "focus": "20261121-2044-fusees-jungle-kourou (7 image(s) à faire)",
-   "next": "20261120-0654-mario-prenom-proprietaire",
+   "next": "20261120-0656-france-moins-de-bebes",
    "next_redo": 0
   },
   "notice": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 3,
    "blocked": 0,
    "images_left": 17,
    "focus": "20261117-2046-carte-sans-contact-sans-pile (5 image(s) à faire)",
-   "next": "20261117-0151-gps-ecoute-l-heure",
+   "next": "20261117-0153-savon-escorte-la-graisse",
    "next_redo": 0
   },
   "origine": {
@@ -96,17 +110,17 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 1,
    "blocked": 0,
    "images_left": 6,
    "focus": "20261122-1928-versailles-cage-doree (6 image(s) à faire)",
-   "next": "20261121-1925-climat-france-2050",
+   "next": null,
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 2,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 1,
  "quiz_days_ahead": 5,
  "quota": {
   "day": "2026-11-25",
@@ -128,7 +142,7 @@
  },
  "rss": {
   "collected_at": "2026-11-25T02:25:57.870843+01:00",
-  "age_hours": 2.2,
+  "age_hours": 7.3,
   "feeds": {
    "Google Actualités": 32,
    "franceinfo": 29,

@@ -1,6 +1,72 @@
 {
- "updated_at": "2026-11-25T04:38:18.523985+01:00",
+ "updated_at": "2026-11-25T09:41:23.136952+01:00",
  "editions": [
+  {
+   "date": "2026-11-25",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Climat : la France à +2,7 °C en 2050, mode d’emploi (crème solaire non fournie)",
+     "kind": "",
+     "url": "histoires/2026-11-25-climat-la-france-a-2-7-c-en-2050-mode-d-emploi-creme-solaire-non/",
+     "theme": "Écologie et climat",
+     "minutes": 5,
+     "tagline": "Un vigneron de mauvaise foi, un savant de 1824 et une courbe qui déborde du papier : pourquoi la France chauffe, et ce qui l’attend",
+     "cases": 23,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "Lundi, mardi, mercredi : votre agenda est un horoscope romain",
+     "kind": "",
+     "url": "histoires/2026-11-25-lundi-mardi-mercredi-votre-agenda-est-un-horoscope-romain/",
+     "theme": "Mythologies et religions",
+     "minutes": 3,
+     "tagline": "Sept astres, sept dieux, un graveur payé à la ligne et deux jours rebaptisés en route",
+     "cases": 9,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "title": "Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé)",
+     "kind": "",
+     "url": "histoires/2026-11-25-mario-porte-le-prenom-de-son-proprietaire-qui-ne-l-a-peut-etre-jamais/",
+     "theme": "Jeux vidéo",
+     "minutes": 2,
+     "tagline": "Un plombier mondialement célèbre, un loyer en retard et une légende qui grossit à chaque récit",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "notice",
+     "label": "La Notice",
+     "title": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)",
+     "kind": "",
+     "url": "histoires/2026-11-25-votre-gps-ne-vous-espionne-pas-il-ecoute-l-heure-et-dit-merci/",
+     "theme": "Informatique et numérique",
+     "minutes": 2,
+     "tagline": "Des satellites qui crient l’heure, un téléphone qui tend l’oreille, et un randonneur en papier d’alu",
+     "cases": 6,
+     "cover": "images/notice-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "La Frise",
+     "title": "Douze dates et un duel à l’épée en pleine ère spatiale",
+     "kind": "frise",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-24",
    "demo": false,

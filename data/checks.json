@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T04:38+01:00",
+ "updated_at": "2026-11-25T09:41+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -30,16 +30,6 @@
    "errors": [],
    "warnings": [
     "dossier : case 7 (Pour mieux comprendre) : 72 mots (max 70)"
-   ]
-  },
-  {
-   "path": "stock/insolite/20261120-0654-mario-prenom-proprietaire",
-   "titles": {
-    "insolite": "Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé)"
-   },
-   "errors": [],
-   "warnings": [
-    "insolite : case 7 : récitatif de 21 mots (max 20)"
    ]
   },
   {
@@ -81,6 +71,20 @@
    "errors": [],
    "warnings": [
     "origine : case 6 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "editions/2026-11-25",
+   "titles": {
+    "dossier": "Climat : la France à +2,7 °C en 2050, mode d’emploi (crème solaire non fournie)",
+    "cultureg": "Lundi, mardi, mercredi : votre agenda est un horoscope romain",
+    "insolite": "Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé)",
+    "notice": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)",
+    "quiz": "Douze dates et un duel à l’épée en pleine ère spatiale"
+   },
+   "errors": [],
+   "warnings": [
+    "insolite : case 7 : récitatif de 21 mots (max 20)"
    ]
   }
  ]
