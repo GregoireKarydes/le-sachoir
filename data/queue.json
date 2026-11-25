@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T20:30+01:00",
+ "updated_at": "2026-11-25T04:38+01:00",
  "stock": {
   "cultureg": [
    {
@@ -23,7 +23,7 @@
     "path": "stock/cultureg/20261120-0700-foret-des-landes-plantee",
     "name": "20261120-0700-foret-des-landes-plantee",
     "added": "20261120-0700",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "La forêt des Landes a été plantée sur ordre (les moutons n’ont pas eu leur mot à dire)",
     "theme": "Écologie et climat",
@@ -31,7 +31,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 7,
     "images_total": 7,
     "failed": 0,
     "redo": 0
@@ -93,7 +93,7 @@
     "path": "stock/insolite/20261120-0656-france-moins-de-bebes",
     "name": "20261120-0656-france-moins-de-bebes",
     "added": "20261120-0656",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)",
     "theme": "Démographie",
@@ -101,7 +101,7 @@
     "minutes": 1,
     "cases": 7,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 6,
     "failed": 0,
     "redo": 0
@@ -250,7 +250,7 @@
     "path": "stock/origine/20261122-2046-avoir-le-cafard-baudelaire",
     "name": "20261122-2046-avoir-le-cafard-baudelaire",
     "added": "20261122-2046",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Avoir le cafard : un hypocrite, une blatte et un poète qui déprime",
     "theme": "Expression française",
@@ -258,7 +258,7 @@
     "minutes": 2,
     "cases": 6,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 5,
     "images_total": 5,
     "failed": 0,
     "redo": 0
@@ -269,15 +269,15 @@
     "path": "stock/dossier/20261121-1925-climat-france-2050",
     "name": "20261121-1925-climat-france-2050",
     "added": "20261121-1925",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "Climat : la France à +2,7 °C en 2050, mode d’emploi (crème solaire non fournie)",
     "theme": "Écologie et climat",
     "tagline": "Un vigneron de mauvaise foi, un savant de 1824 et une courbe qui déborde du papier : pourquoi la France chauffe, et ce qui l’attend",
     "minutes": 3,
     "cases": 23,
     "photos": 2,
-    "images_done": 17,
+    "images_done": 18,
     "images_total": 18,
     "failed": 0,
     "redo": 0
@@ -294,7 +294,7 @@
     "minutes": 3,
     "cases": 23,
     "photos": 3,
-    "images_done": 0,
+    "images_done": 12,
     "images_total": 18,
     "failed": 0,
     "redo": 0
@@ -302,81 +302,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-24",
-   "path": "editions/2026-11-24",
-   "status": "published",
-   "newsletter": false,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde)",
-     "theme": "Jeux vidéo",
-     "tagline": "Un physicien qui s'ennuie, une borne qui déborde de pièces, une pizza entamée et un robot déguisé en jouet : l'histoire du jeu vidéo",
-     "minutes": 5,
-     "cases": 22,
-     "photos": 2,
-     "images_done": 18,
-     "images_total": 18,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
-     "theme": "Sciences physiques",
-     "tagline": "Une boule, un fil, un cercle de sable et un voisin qui refuse de tourner avec la planète",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 7,
-     "images_total": 7,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite historique",
-     "kind": "",
-     "title": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
-     "theme": "Économie",
-     "tagline": "Un blocus, un café trop amer, une betterave et une Légion d’honneur arrachée à la poitrine de l’Empereur",
-     "minutes": 2,
-     "cases": 7,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "origine",
-     "label": "D’où ça vient ?",
-     "kind": "",
-     "title": "« Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré",
-     "theme": "Expression française",
-     "tagline": "Un régisseur, des navets et un millier de soldats",
-     "minutes": 2,
-     "cases": 8,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "quiz",
-     "label": "Le Quiz géo",
-     "kind": "geo",
-     "title": "Trois questions, un phare et un parallèle menteur",
-     "questions": 3
-    }
-   ]
-  },
   {
    "date": "2026-11-25",
    "path": "editions/2026-11-25",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T20:30+01:00",
+ "updated_at": "2026-11-25T04:38+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -81,22 +81,6 @@
    "errors": [],
    "warnings": [
     "origine : case 6 : récitatif de 21 mots (max 20)"
-   ]
-  },
-  {
-   "path": "editions/2026-11-24",
-   "titles": {
-    "dossier": "Jeux vidéo : comment un jouet de labo a fini enterré dans le désert (puis a conquis le monde)",
-    "cultureg": "Le pendule de Foucault, ou comment voir la Terre tourner sans perdre son chapeau",
-    "insolite": "Napoléon a décoré un sucrier (et c’est la faute des Anglais)",
-    "origine": "« Je boycotte ! » : vous citez un Anglais que toute l’Irlande a ignoré",
-    "quiz": "Trois questions, un phare et un parallèle menteur"
-   },
-   "errors": [],
-   "warnings": [
-    "cultureg : case 2 : récitatif de 21 mots (max 20)",
-    "cultureg : case 4 : récitatif de 21 mots (max 20)",
-    "insolite : case 2 : récitatif de 25 mots (max 20)"
    ]
   }
  ]

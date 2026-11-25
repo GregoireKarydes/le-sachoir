@@ -1,21 +1,10 @@
 {
- "updated_at": "2026-11-24T20:30:11.487218+01:00",
- "today": "2026-11-24",
+ "updated_at": "2026-11-25T04:38:18.523985+01:00",
+ "today": "2026-11-25",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
-  {
-   "date": "2026-11-24",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "origine": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-25",
    "status": "draft",
@@ -66,30 +55,25 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "cultureg",
-  "insolite",
-  "origine"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-24",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 3,
+   "ready": 2,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 21,
-   "focus": "20261120-0700-foret-des-landes-plantee (7 image(s) à faire)",
+   "images_left": 14,
+   "focus": "20261121-2044-soldes-dates-etat (7 image(s) à faire)",
    "next": "20261120-0652-jours-semaine-sept-astres",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
-   "waiting": 3,
+   "ready": 2,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 20,
-   "focus": "20261120-0656-france-moins-de-bebes (6 image(s) à faire)",
+   "images_left": 14,
+   "focus": "20261121-2044-fusees-jungle-kourou (7 image(s) à faire)",
    "next": "20261120-0654-mario-prenom-proprietaire",
    "next_redo": 0
   },
@@ -103,67 +87,68 @@
    "next_redo": 0
   },
   "origine": {
-   "ready": 1,
-   "waiting": 1,
+   "ready": 2,
+   "waiting": 0,
    "blocked": 0,
-   "images_left": 5,
-   "focus": "20261122-2046-avoir-le-cafard-baudelaire (5 image(s) à faire)",
+   "images_left": 0,
+   "focus": null,
    "next": "20261120-2046-points-sur-les-i-jambages",
    "next_redo": 0
   },
   "dossier": {
-   "ready": 0,
-   "waiting": 2,
+   "ready": 1,
+   "waiting": 1,
    "blocked": 0,
-   "images_left": 19,
-   "focus": "20261121-1925-climat-france-2050 (1 image(s) à faire)",
-   "next": null,
+   "images_left": 6,
+   "focus": "20261122-1928-versailles-cage-doree (6 image(s) à faire)",
+   "next": "20261121-1925-climat-france-2050",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 1,
  "days_ahead_written": 2,
- "quiz_days_ahead": 6,
+ "quiz_days_ahead": 5,
  "quota": {
-  "day": "2026-11-24",
-  "count": 36,
-  "neurons": 6360,
+  "day": "2026-11-25",
+  "count": 38,
+  "neurons": 6400,
   "exhausted": false,
   "by_kind": {
-   "cast": 7,
-   "case": 29
+   "cast": 10,
+   "case": 27,
+   "cover": 1
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.7633,
-  "images": 289,
+  "spent_usd": 3.9433,
+  "images": 295,
   "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-24T04:20:21.662090+01:00",
-  "age_hours": 16.2,
+  "collected_at": "2026-11-25T02:25:57.870843+01:00",
+  "age_hours": 2.2,
   "feeds": {
-   "Google Actualités": 33,
-   "franceinfo": 27,
+   "Google Actualités": 32,
+   "franceinfo": 29,
    "Le Monde": 16,
-   "Le Figaro": 20,
+   "Le Figaro": 19,
    "Libération": 50,
-   "20 Minutes": 26,
+   "20 Minutes": 25,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 21,
-   "Le Monde Sciences": 4,
-   "Sciences et Avenir": 9,
-   "Le Monde Planète": 11,
-   "Le Monde Pixels": 7,
-   "Le Monde Santé": 2,
-   "Le Monde Culture": 7,
+   "BBC World": 22,
+   "Le Monde Sciences": 3,
+   "Sciences et Avenir": 8,
+   "Le Monde Planète": 12,
+   "Le Monde Pixels": 9,
+   "Le Monde Santé": 4,
+   "Le Monde Culture": 15,
    "HugoDécrypte - Actus du jour": 1
   },
   "empty_feeds": [
