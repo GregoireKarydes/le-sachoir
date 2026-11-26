@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T03:56:58.300456+01:00",
+ "updated_at": "2026-11-26T09:25:33.357211+01:00",
  "today": "2026-11-26",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -9,6 +9,10 @@
    "date": "2026-11-26",
    "status": "draft",
    "formats": {
+    "dossier": "prêt",
+    "cultureg": "prêt",
+    "insolite": "prêt",
+    "origine": "prêt",
     "quiz": "prêt"
    }
   },
@@ -41,33 +45,43 @@
    }
   }
  ],
- "stock_moves": [],
+ "stock_moves": [
+  "2026-11-26/cultureg : « La forêt des Landes a été plantée sur ordre (les moutons n’ont pas eu leur mot à dire) » prise dans la file (20261120-0700-foret-des-landes-plantee)",
+  "2026-11-26/insolite : « Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs) » prise dans la file (20261120-0656-france-moins-de-bebes)",
+  "2026-11-26/origine : « « Mettre les points sur les i » : la faute aux moines qui écrivaient en palissade » prise dans la file (20261120-2046-points-sur-les-i-jambages)",
+  "2026-11-26/dossier : « Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse) » prise dans la file (20261122-1928-versailles-cage-doree)"
+ ],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": false,
- "today_stories": [],
- "last_published": "2026-11-25",
+ "today_published": true,
+ "today_stories": [
+  "dossier",
+  "cultureg",
+  "insolite",
+  "origine"
+ ],
+ "last_published": "2026-11-26",
  "stock": {
   "cultureg": {
-   "ready": 2,
+   "ready": 1,
    "waiting": 1,
    "blocked": 0,
    "images_left": 3,
    "focus": "20261122-2042-telephone-fixe-raccroche-2030 (3 image(s) à faire)",
-   "next": "20261120-0700-foret-des-landes-plantee",
+   "next": "20261121-2044-soldes-dates-etat",
    "next_redo": 0
   },
   "insolite": {
-   "ready": 1,
+   "ready": 0,
    "waiting": 2,
    "blocked": 0,
    "images_left": 8,
    "focus": "20261121-2044-fusees-jungle-kourou (1 image(s) à faire)",
-   "next": "20261120-0656-france-moins-de-bebes",
+   "next": null,
    "next_redo": 0
   },
   "notice": {
@@ -80,26 +94,26 @@
    "next_redo": 0
   },
   "origine": {
-   "ready": 2,
-   "waiting": 0,
-   "blocked": 0,
-   "images_left": 0,
-   "focus": null,
-   "next": "20261120-2046-points-sur-les-i-jambages",
-   "next_redo": 0
-  },
-  "dossier": {
    "ready": 1,
    "waiting": 0,
    "blocked": 0,
    "images_left": 0,
    "focus": null,
-   "next": "20261122-1928-versailles-cage-doree",
+   "next": "20261122-2046-avoir-le-cafard-baudelaire",
+   "next_redo": 0
+  },
+  "dossier": {
+   "ready": 0,
+   "waiting": 0,
+   "blocked": 0,
+   "images_left": 0,
+   "focus": null,
+   "next": null,
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 1,
- "days_ahead_written": 1,
+ "days_ahead_drawn": 0,
+ "days_ahead_written": 0,
  "quiz_days_ahead": 4,
  "quota": {
   "day": "2026-11-26",
@@ -121,7 +135,7 @@
  },
  "rss": {
   "collected_at": "2026-11-26T01:59:47.763604+01:00",
-  "age_hours": 2.0,
+  "age_hours": 7.4,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 29,

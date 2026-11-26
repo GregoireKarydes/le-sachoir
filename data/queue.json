@@ -1,30 +1,13 @@
 {
- "updated_at": "2026-11-26T03:56+01:00",
+ "updated_at": "2026-11-26T09:25+01:00",
  "stock": {
   "cultureg": [
-   {
-    "path": "stock/cultureg/20261120-0700-foret-des-landes-plantee",
-    "name": "20261120-0700-foret-des-landes-plantee",
-    "added": "20261120-0700",
-    "status": "ready",
-    "next": true,
-    "title": "La forêt des Landes a été plantée sur ordre (les moutons n’ont pas eu leur mot à dire)",
-    "theme": "Écologie et climat",
-    "tagline": "Un marais, des bergers perchés sur des échasses, un ingénieur qui trace des lignes droites et un million d’hectares de pins",
-    "minutes": 2,
-    "cases": 8,
-    "photos": 1,
-    "images_done": 7,
-    "images_total": 7,
-    "failed": 0,
-    "redo": 0
-   },
    {
     "path": "stock/cultureg/20261121-2044-soldes-dates-etat",
     "name": "20261121-2044-soldes-dates-etat",
     "added": "20261121-2044",
     "status": "ready",
-    "next": false,
+    "next": true,
     "title": "Les soldes, le seul moment où perdre de l’argent est autorisé par décret",
     "theme": "Droit",
     "tagline": "Une montagne d’anoraks, un inspecteur à calendrier et deux mercredis par an",
@@ -55,23 +38,6 @@
    }
   ],
   "insolite": [
-   {
-    "path": "stock/insolite/20261120-0656-france-moins-de-bebes",
-    "name": "20261120-0656-france-moins-de-bebes",
-    "added": "20261120-0656",
-    "status": "ready",
-    "next": true,
-    "title": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)",
-    "theme": "Démographie",
-    "tagline": "Un statisticien qui compte les baptêmes, une fermière qui compte ses sillons, et la France qui ralentit en premier",
-    "minutes": 1,
-    "cases": 7,
-    "photos": 1,
-    "images_done": 6,
-    "images_total": 6,
-    "failed": 0,
-    "redo": 0
-   },
    {
     "path": "stock/insolite/20261121-2044-fusees-jungle-kourou",
     "name": "20261121-2044-fusees-jungle-kourou",
@@ -179,28 +145,11 @@
   ],
   "origine": [
    {
-    "path": "stock/origine/20261120-2046-points-sur-les-i-jambages",
-    "name": "20261120-2046-points-sur-les-i-jambages",
-    "added": "20261120-2046",
-    "status": "ready",
-    "next": true,
-    "title": "« Mettre les points sur les i » : la faute aux moines qui écrivaient en palissade",
-    "theme": "Expression française",
-    "tagline": "Quinze bâtons, deux points et un mail passif-agressif",
-    "minutes": 2,
-    "cases": 8,
-    "photos": 1,
-    "images_done": 6,
-    "images_total": 6,
-    "failed": 0,
-    "redo": 0
-   },
-   {
     "path": "stock/origine/20261122-2046-avoir-le-cafard-baudelaire",
     "name": "20261122-2046-avoir-le-cafard-baudelaire",
     "added": "20261122-2046",
     "status": "ready",
-    "next": false,
+    "next": true,
     "title": "Avoir le cafard : un hypocrite, une blatte et un poète qui déprime",
     "theme": "Expression française",
     "tagline": "Comment un faux dévot du XVIe siècle a fini en bestiole, puis en idées noires",
@@ -213,33 +162,75 @@
     "redo": 0
    }
   ],
-  "dossier": [
-   {
-    "path": "stock/dossier/20261122-1928-versailles-cage-doree",
-    "name": "20261122-1928-versailles-cage-doree",
-    "added": "20261122-1928",
-    "status": "ready",
-    "next": true,
-    "title": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)",
-    "theme": "Histoire moderne",
-    "tagline": "De la fuite de 1649 à la galerie des Glaces : pourquoi le Roi-Soleil a quitté Paris et comment son château a désarmé les grands nobles",
-    "minutes": 3,
-    "cases": 23,
-    "photos": 3,
-    "images_done": 18,
-    "images_total": 18,
-    "failed": 0,
-    "redo": 0
-   }
-  ]
+  "dossier": []
  },
  "editions": [
   {
    "date": "2026-11-26",
    "path": "editions/2026-11-26",
-   "status": "draft",
+   "status": "published",
    "newsletter": false,
    "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "kind": "",
+     "title": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)",
+     "theme": "Histoire moderne",
+     "tagline": "De la fuite de 1649 à la galerie des Glaces : pourquoi le Roi-Soleil a quitté Paris et comment son château a désarmé les grands nobles",
+     "minutes": 6,
+     "cases": 23,
+     "photos": 3,
+     "images_done": 18,
+     "images_total": 18,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "kind": "",
+     "title": "La forêt des Landes a été plantée sur ordre (les moutons n’ont pas eu leur mot à dire)",
+     "theme": "Écologie et climat",
+     "tagline": "Un marais, des bergers perchés sur des échasses, un ingénieur qui trace des lignes droites et un million d’hectares de pins",
+     "minutes": 2,
+     "cases": 8,
+     "photos": 1,
+     "images_done": 7,
+     "images_total": 7,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "kind": "",
+     "title": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)",
+     "theme": "Démographie",
+     "tagline": "Un statisticien qui compte les baptêmes, une fermière qui compte ses sillons, et la France qui ralentit en premier",
+     "minutes": 2,
+     "cases": 7,
+     "photos": 1,
+     "images_done": 6,
+     "images_total": 6,
+     "failed": 0,
+     "redo": 0
+    },
+    {
+     "id": "origine",
+     "label": "D’où ça vient ?",
+     "kind": "",
+     "title": "« Mettre les points sur les i » : la faute aux moines qui écrivaient en palissade",
+     "theme": "Expression française",
+     "tagline": "Quinze bâtons, deux points et un mail passif-agressif",
+     "minutes": 2,
+     "cases": 8,
+     "photos": 1,
+     "images_done": 6,
+     "images_total": 6,
+     "failed": 0,
+     "redo": 0
+    },
     {
      "id": "quiz",
      "label": "Le Dico menteur",

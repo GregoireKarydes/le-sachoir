@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T03:56+01:00",
+ "updated_at": "2026-11-26T09:25+01:00",
  "note": "Avertissements de pipeline/validate.py, réécrits à chaque publication. Chaque ligne commence par le format concerné.",
  "items": [
   {
@@ -20,26 +20,6 @@
    "errors": [],
    "warnings": [
     "cultureg : case 9 : récitatif de 21 mots (max 20)"
-   ]
-  },
-  {
-   "path": "stock/dossier/20261122-1928-versailles-cage-doree",
-   "titles": {
-    "dossier": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)"
-   },
-   "errors": [],
-   "warnings": [
-    "dossier : case 7 (Pour mieux comprendre) : 72 mots (max 70)"
-   ]
-  },
-  {
-   "path": "stock/insolite/20261120-0656-france-moins-de-bebes",
-   "titles": {
-    "insolite": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)"
-   },
-   "errors": [],
-   "warnings": [
-    "insolite : case 1 : bulle de 16 mots (max 15)"
    ]
   },
   {
@@ -71,6 +51,21 @@
    "errors": [],
    "warnings": [
     "origine : case 6 : récitatif de 21 mots (max 20)"
+   ]
+  },
+  {
+   "path": "editions/2026-11-26",
+   "titles": {
+    "dossier": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)",
+    "cultureg": "La forêt des Landes a été plantée sur ordre (les moutons n’ont pas eu leur mot à dire)",
+    "insolite": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)",
+    "origine": "« Mettre les points sur les i » : la faute aux moines qui écrivaient en palissade",
+    "quiz": "Quatre mots savants, douze baratins"
+   },
+   "errors": [],
+   "warnings": [
+    "dossier : case 7 (Pour mieux comprendre) : 72 mots (max 70)",
+    "insolite : case 1 : bulle de 16 mots (max 15)"
    ]
   }
  ]

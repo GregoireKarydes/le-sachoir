@@ -1,6 +1,72 @@
 {
- "updated_at": "2026-11-26T03:56:58.300456+01:00",
+ "updated_at": "2026-11-26T09:25:33.357211+01:00",
  "editions": [
+  {
+   "date": "2026-11-26",
+   "demo": false,
+   "formats": [
+    {
+     "id": "dossier",
+     "label": "Le Grand Dossier",
+     "title": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)",
+     "kind": "",
+     "url": "histoires/2026-11-26-versailles-la-cage-doree-ou-louis-xiv-a-enferme-la-noblesse-vue/",
+     "theme": "Histoire moderne",
+     "minutes": 6,
+     "tagline": "De la fuite de 1649 à la galerie des Glaces : pourquoi le Roi-Soleil a quitté Paris et comment son château a désarmé les grands nobles",
+     "cases": 23,
+     "cover": "images/dossier-cover.webp"
+    },
+    {
+     "id": "cultureg",
+     "label": "La Pilule de Culture G",
+     "title": "La forêt des Landes a été plantée sur ordre (les moutons n’ont pas eu leur mot à dire)",
+     "kind": "",
+     "url": "histoires/2026-11-26-la-foret-des-landes-a-ete-plantee-sur-ordre-les-moutons-n-ont-pas-eu/",
+     "theme": "Écologie et climat",
+     "minutes": 2,
+     "tagline": "Un marais, des bergers perchés sur des échasses, un ingénieur qui trace des lignes droites et un million d’hectares de pins",
+     "cases": 8,
+     "cover": "images/cultureg-cover.webp"
+    },
+    {
+     "id": "insolite",
+     "label": "L’Insolite historique",
+     "title": "Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs)",
+     "kind": "",
+     "url": "histoires/2026-11-26-les-francais-ont-fait-moins-de-bebes-avant-tout-le-monde-la-faute/",
+     "theme": "Démographie",
+     "minutes": 2,
+     "tagline": "Un statisticien qui compte les baptêmes, une fermière qui compte ses sillons, et la France qui ralentit en premier",
+     "cases": 7,
+     "cover": "images/insolite-cover.webp"
+    },
+    {
+     "id": "origine",
+     "label": "D’où ça vient ?",
+     "title": "« Mettre les points sur les i » : la faute aux moines qui écrivaient en palissade",
+     "kind": "",
+     "url": "histoires/2026-11-26-mettre-les-points-sur-les-i-la-faute-aux-moines-qui-ecrivaient/",
+     "theme": "Expression française",
+     "minutes": 2,
+     "tagline": "Quinze bâtons, deux points et un mail passif-agressif",
+     "cases": 8,
+     "cover": "images/origine-cover.webp"
+    },
+    {
+     "id": "quiz",
+     "label": "Le Dico menteur",
+     "title": "Quatre mots savants, douze baratins",
+     "kind": "dico",
+     "url": "",
+     "theme": "",
+     "minutes": 1,
+     "tagline": "",
+     "cases": 0,
+     "cover": null
+    }
+   ]
+  },
   {
    "date": "2026-11-25",
    "demo": false,
