@@ -2,18 +2,18 @@
  "instagram": {
   "buffer_id": "6afcaa01dfd7767b00743c9c",
   "sent_at": "2026-11-17T19:36:01.778Z",
-  "metrics_updated_at": "2026-11-24T13:28:12.074Z",
+  "metrics_updated_at": "2026-11-25T13:28:21.253Z",
   "metrics": {
    "reactions": 1,
    "comments": 0,
-   "engagementRate": 0.92,
-   "views": 242,
+   "engagementRate": 0.91,
+   "views": 243,
    "shares": 1,
    "saves": 0,
-   "totalTimeWatched": 20.23,
-   "averageTimeWatched": 5.47,
-   "reach": 218
+   "totalTimeWatched": 20.24,
+   "averageTimeWatched": 5.45,
+   "reach": 219
   },
-  "checked_at": "2026-11-25T03:38:57+00:00"
+  "checked_at": "2026-11-26T02:57:35+00:00"
  }
 }
