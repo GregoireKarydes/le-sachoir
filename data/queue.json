@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T19:39+01:00",
+ "updated_at": "2026-11-26T03:56+01:00",
  "stock": {
   "cultureg": [
    {
@@ -23,7 +23,7 @@
     "path": "stock/cultureg/20261121-2044-soldes-dates-etat",
     "name": "20261121-2044-soldes-dates-etat",
     "added": "20261121-2044",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Les soldes, le seul moment où perdre de l’argent est autorisé par décret",
     "theme": "Droit",
@@ -31,7 +31,7 @@
     "minutes": 2,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 7,
     "images_total": 7,
     "failed": 0,
     "redo": 0
@@ -48,7 +48,7 @@
     "minutes": 2,
     "cases": 9,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 4,
     "images_total": 7,
     "failed": 0,
     "redo": 0
@@ -84,7 +84,7 @@
     "minutes": 1,
     "cases": 8,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 6,
     "images_total": 7,
     "failed": 0,
     "redo": 0
@@ -129,7 +129,7 @@
     "path": "stock/notice/20261117-2046-carte-sans-contact-sans-pile",
     "name": "20261117-2046-carte-sans-contact-sans-pile",
     "added": "20261117-2046",
-    "status": "waiting",
+    "status": "ready",
     "next": false,
     "title": "Votre carte sans contact n’a pas de pile : c’est le terminal qui la réveille",
     "theme": "Informatique et numérique",
@@ -137,7 +137,7 @@
     "minutes": 2,
     "cases": 6,
     "photos": 1,
-    "images_done": 0,
+    "images_done": 5,
     "images_total": 5,
     "failed": 0,
     "redo": 0
@@ -218,15 +218,15 @@
     "path": "stock/dossier/20261122-1928-versailles-cage-doree",
     "name": "20261122-1928-versailles-cage-doree",
     "added": "20261122-1928",
-    "status": "waiting",
-    "next": false,
+    "status": "ready",
+    "next": true,
     "title": "Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse)",
     "theme": "Histoire moderne",
     "tagline": "De la fuite de 1649 à la galerie des Glaces : pourquoi le Roi-Soleil a quitté Paris et comment son château a désarmé les grands nobles",
     "minutes": 3,
     "cases": 23,
     "photos": 3,
-    "images_done": 12,
+    "images_done": 18,
     "images_total": 18,
     "failed": 0,
     "redo": 0
@@ -234,81 +234,6 @@
   ]
  },
  "editions": [
-  {
-   "date": "2026-11-25",
-   "path": "editions/2026-11-25",
-   "status": "published",
-   "newsletter": false,
-   "formats": [
-    {
-     "id": "dossier",
-     "label": "Le Grand Dossier",
-     "kind": "",
-     "title": "Climat : la France à +2,7 °C en 2050, mode d’emploi (crème solaire non fournie)",
-     "theme": "Écologie et climat",
-     "tagline": "Un vigneron de mauvaise foi, un savant de 1824 et une courbe qui déborde du papier : pourquoi la France chauffe, et ce qui l’attend",
-     "minutes": 5,
-     "cases": 23,
-     "photos": 2,
-     "images_done": 18,
-     "images_total": 18,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "cultureg",
-     "label": "La Pilule de Culture G",
-     "kind": "",
-     "title": "Lundi, mardi, mercredi : votre agenda est un horoscope romain",
-     "theme": "Mythologies et religions",
-     "tagline": "Sept astres, sept dieux, un graveur payé à la ligne et deux jours rebaptisés en route",
-     "minutes": 3,
-     "cases": 9,
-     "photos": 1,
-     "images_done": 8,
-     "images_total": 8,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "insolite",
-     "label": "L’Insolite historique",
-     "kind": "",
-     "title": "Mario porte le prénom de son propriétaire (qui ne l’a peut-être jamais croisé)",
-     "theme": "Jeux vidéo",
-     "tagline": "Un plombier mondialement célèbre, un loyer en retard et une légende qui grossit à chaque récit",
-     "minutes": 2,
-     "cases": 7,
-     "photos": 1,
-     "images_done": 6,
-     "images_total": 6,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "notice",
-     "label": "La Notice",
-     "kind": "",
-     "title": "Votre GPS ne vous espionne pas : il écoute l’heure (et dit merci à Einstein)",
-     "theme": "Informatique et numérique",
-     "tagline": "Des satellites qui crient l’heure, un téléphone qui tend l’oreille, et un randonneur en papier d’alu",
-     "minutes": 2,
-     "cases": 6,
-     "photos": 1,
-     "images_done": 5,
-     "images_total": 5,
-     "failed": 0,
-     "redo": 0
-    },
-    {
-     "id": "quiz",
-     "label": "La Frise",
-     "kind": "frise",
-     "title": "Douze dates et un duel à l’épée en pleine ère spatiale",
-     "questions": 3
-    }
-   ]
-  },
   {
    "date": "2026-11-26",
    "path": "editions/2026-11-26",

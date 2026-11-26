@@ -1,21 +1,10 @@
 {
- "updated_at": "2026-11-25T19:39:15.036862+01:00",
- "today": "2026-11-25",
+ "updated_at": "2026-11-26T03:56:58.300456+01:00",
+ "today": "2026-11-26",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
  ],
  "days": [
-  {
-   "date": "2026-11-25",
-   "status": "published",
-   "formats": {
-    "dossier": "prêt",
-    "cultureg": "prêt",
-    "insolite": "prêt",
-    "notice": "prêt",
-    "quiz": "prêt"
-   }
-  },
   {
    "date": "2026-11-26",
    "status": "draft",
@@ -59,21 +48,16 @@
   "2026-11-06|insolite",
   "2026-11-07|cultureg"
  ],
- "today_published": true,
- "today_stories": [
-  "dossier",
-  "cultureg",
-  "insolite",
-  "notice"
- ],
+ "today_published": false,
+ "today_stories": [],
  "last_published": "2026-11-25",
  "stock": {
   "cultureg": {
-   "ready": 1,
-   "waiting": 2,
+   "ready": 2,
+   "waiting": 1,
    "blocked": 0,
-   "images_left": 14,
-   "focus": "20261121-2044-soldes-dates-etat (7 image(s) à faire)",
+   "images_left": 3,
+   "focus": "20261122-2042-telephone-fixe-raccroche-2030 (3 image(s) à faire)",
    "next": "20261120-0700-foret-des-landes-plantee",
    "next_redo": 0
   },
@@ -81,17 +65,17 @@
    "ready": 1,
    "waiting": 2,
    "blocked": 0,
-   "images_left": 14,
-   "focus": "20261121-2044-fusees-jungle-kourou (7 image(s) à faire)",
+   "images_left": 8,
+   "focus": "20261121-2044-fusees-jungle-kourou (1 image(s) à faire)",
    "next": "20261120-0656-france-moins-de-bebes",
    "next_redo": 0
   },
   "notice": {
-   "ready": 1,
-   "waiting": 3,
+   "ready": 2,
+   "waiting": 2,
    "blocked": 0,
-   "images_left": 17,
-   "focus": "20261117-2046-carte-sans-contact-sans-pile (5 image(s) à faire)",
+   "images_left": 12,
+   "focus": "20261120-2043-arc-en-ciel-accroche-a-votre-tete (6 image(s) à faire)",
    "next": "20261117-0153-savon-escorte-la-graisse",
    "next_redo": 0
   },
@@ -105,60 +89,60 @@
    "next_redo": 0
   },
   "dossier": {
-   "ready": 0,
-   "waiting": 1,
+   "ready": 1,
+   "waiting": 0,
    "blocked": 0,
-   "images_left": 6,
-   "focus": "20261122-1928-versailles-cage-doree (6 image(s) à faire)",
-   "next": null,
+   "images_left": 0,
+   "focus": null,
+   "next": "20261122-1928-versailles-cage-doree",
    "next_redo": 0
   }
  },
- "days_ahead_drawn": 0,
+ "days_ahead_drawn": 1,
  "days_ahead_written": 1,
- "quiz_days_ahead": 5,
+ "quiz_days_ahead": 4,
  "quota": {
-  "day": "2026-11-25",
+  "day": "2026-11-26",
   "count": 38,
-  "neurons": 6400,
+  "neurons": 6280,
   "exhausted": false,
   "by_kind": {
-   "cast": 10,
-   "case": 27,
+   "cast": 11,
+   "case": 26,
    "cover": 1
   }
  },
  "fal": {
   "month": "2026-11",
-  "spent_usd": 3.9433,
-  "images": 295,
+  "spent_usd": 4.1233,
+  "images": 301,
   "today_usd": 0.18,
   "blocked": null
  },
  "rss": {
-  "collected_at": "2026-11-25T02:25:57.870843+01:00",
-  "age_hours": 17.2,
+  "collected_at": "2026-11-26T01:59:47.763604+01:00",
+  "age_hours": 2.0,
   "feeds": {
-   "Google Actualités": 32,
+   "Google Actualités": 33,
    "franceinfo": 29,
    "Le Monde": 16,
-   "Le Figaro": 19,
+   "Le Figaro": 18,
    "Libération": 50,
-   "20 Minutes": 25,
+   "20 Minutes": 24,
    "Ouest-France": 10,
    "Le Parisien": 100,
    "BFMTV": 30,
    "Les Échos": 0,
    "Les Échos Tech": 0,
    "Le Monde International": 20,
-   "BBC World": 22,
-   "Le Monde Sciences": 3,
+   "BBC World": 29,
+   "Le Monde Sciences": 4,
    "Sciences et Avenir": 8,
-   "Le Monde Planète": 12,
-   "Le Monde Pixels": 9,
-   "Le Monde Santé": 4,
-   "Le Monde Culture": 15,
-   "HugoDécrypte - Actus du jour": 1
+   "Le Monde Planète": 10,
+   "Le Monde Pixels": 8,
+   "Le Monde Santé": 3,
+   "Le Monde Culture": 11,
+   "HugoDécrypte - Actus du jour": 2
   },
   "empty_feeds": [
    "Les Échos",
