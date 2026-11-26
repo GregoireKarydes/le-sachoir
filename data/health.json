@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T09:25:33.357211+01:00",
+ "updated_at": "2026-11-26T13:12:49.668678+01:00",
  "today": "2026-11-26",
  "problems": [
   "flux d'actualité vides à la dernière collecte : Les Échos, Les Échos Tech (adresse à vérifier dans pipeline/feeds.json)"
@@ -7,7 +7,7 @@
  "days": [
   {
    "date": "2026-11-26",
-   "status": "draft",
+   "status": "published",
    "formats": {
     "dossier": "prêt",
     "cultureg": "prêt",
@@ -45,12 +45,7 @@
    }
   }
  ],
- "stock_moves": [
-  "2026-11-26/cultureg : « La forêt des Landes a été plantée sur ordre (les moutons n’ont pas eu leur mot à dire) » prise dans la file (20261120-0700-foret-des-landes-plantee)",
-  "2026-11-26/insolite : « Les Français ont fait moins de bébés avant tout le monde (la faute au partage des champs) » prise dans la file (20261120-0656-france-moins-de-bebes)",
-  "2026-11-26/origine : « « Mettre les points sur les i » : la faute aux moines qui écrivaient en palissade » prise dans la file (20261120-2046-points-sur-les-i-jambages)",
-  "2026-11-26/dossier : « Versailles : la cage dorée où Louis XIV a enfermé la noblesse (vue sur jardin incluse) » prise dans la file (20261122-1928-versailles-cage-doree)"
- ],
+ "stock_moves": [],
  "paywall": true,
  "hidden": [
   "2026-11-06|cultureg",
@@ -135,7 +130,7 @@
  },
  "rss": {
   "collected_at": "2026-11-26T01:59:47.763604+01:00",
-  "age_hours": 7.4,
+  "age_hours": 11.2,
   "feeds": {
    "Google Actualités": 33,
    "franceinfo": 29,
