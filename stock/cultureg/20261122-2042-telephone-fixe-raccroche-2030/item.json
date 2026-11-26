@@ -27,7 +27,7 @@
           "name": "Gérard",
           "look": "Gérard, a very old, short and round retired man, a thick wild mane of white hair and huge bushy white eyebrows, pale skin, a brick-red knitted cardigan as main colour, brown corduroy trousers, tartan slippers, always holding the phone against his chest",
           "file": "cast/cultureg-gerard.png",
-          "status": "pending",
+          "status": "done",
           "role": "a stubborn retiree who refuses all change in bad faith; clutches his old telephone like a pet, arms crossed, chin up"
         },
         {
@@ -35,7 +35,7 @@
           "name": "Inès",
           "look": "Inès, a very tall and lanky young telecom technician, black curly hair tied in a big high puff, dark brown skin, an emerald-green work jacket as main colour, grey cargo trousers, a tablet in one hand and a coil of thin orange cable over her shoulder",
           "file": "cast/cultureg-ines.png",
-          "status": "pending",
+          "status": "done",
           "role": "an endlessly patient technician who explains everything calmly; bends down from her great height, smiles politely, never loses her temper"
         }
       ],
@@ -46,8 +46,8 @@
           "ines"
         ],
         "file": "images/cultureg-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1
       },
       "cases": [
         {
@@ -74,8 +74,8 @@
               "ines"
             ],
             "file": "images/cultureg-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -102,8 +102,8 @@
               "ines"
             ],
             "file": "images/cultureg-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -130,8 +130,8 @@
               "ines"
             ],
             "file": "images/cultureg-03.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {

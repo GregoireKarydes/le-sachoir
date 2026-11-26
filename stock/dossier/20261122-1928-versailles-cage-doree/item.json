@@ -30,8 +30,7 @@
           "look": "Louis, a French king of the 1660s-1700s, medium height with an extremely straight back and chin always raised, an enormous voluminous chestnut-brown curly wig falling to his chest, thin dark moustache, light skin, a long golden-yellow coat embroidered with orange sun rays as main colour, white lace cravat, white stockings, a slim ebony cane with a gold knob",
           "role": "the king who must be the centre of every room; vain, cannot bear to be outshone and never forgets an affront, always posing as if for a portrait, cane planted, chin up",
           "file": "cast/dossier-louis.png",
-          "status": "pending",
-          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (1b5a01ee-0454-442a-a091-7acff6d81d61)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+          "status": "done"
         },
         {
           "id": "fouquet",
@@ -318,9 +317,8 @@
               "louis"
             ],
             "file": "images/dossier-11.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (8be1e032-4512-4b66-99dc-f603508ca4bc)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -462,9 +460,8 @@
               "louis"
             ],
             "file": "images/dossier-17.webp",
-            "status": "pending",
-            "attempts": 1,
-            "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (55e42cd0-cab2-4ff8-b975-441421b3752e)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -490,8 +487,8 @@
               "saintsimon"
             ],
             "file": "images/dossier-18.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -513,8 +510,8 @@
               "saintsimon"
             ],
             "file": "images/dossier-19.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -548,8 +545,8 @@
               "louis"
             ],
             "file": "images/dossier-21.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 2
           }
         },
         {
@@ -581,8 +578,8 @@
             "prompt": "the palace courtyard crowded with Parisian women in caps and aprons, tricolour cockades, some carrying loaves of bread. Seen from below, at the open window of the carriage, a plump king in a powdered white wig and a pale blue coat stares out, dismayed; on the right a sturdy market woman with her fists on her hips leans in with a satisfied smile. low angle",
             "cast": [],
             "file": "images/dossier-23.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],

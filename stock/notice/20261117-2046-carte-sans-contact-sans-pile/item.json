@@ -24,7 +24,7 @@
           "name": "Bastien",
           "look": "Bastien, a short wiry young man in his twenties, warm beige skin, dark-brown hair in a small messy man-bun, thin dark stubble, a puffy sunflower-yellow puffer jacket as main colour, black joggers, white sneakers, the card always in his hand",
           "file": "cast/notice-bastien.png",
-          "status": "pending",
+          "status": "done",
           "role": "the hurried customer of bad faith: always blames the machine, never himself; waves his arms, puffs out his chest when he thinks he is right"
         },
         {
@@ -33,7 +33,8 @@
           "look": "Odette, a tall broad-shouldered baker in her fifties, deep brown skin, steel-grey hair cut in a sharp short bob, a pencil behind her ear, a flour-dusted navy-blue apron as main colour over a white baker's blouse, flour on her forearms",
           "file": "cast/notice-odette.png",
           "status": "pending",
-          "role": "the bakery owner, a former electronics technician, dry and deadpan; answers without raising her voice, one eyebrow up, arms crossed"
+          "role": "the bakery owner, a former electronics technician, dry and deadpan; answers without raising her voice, one eyebrow up, arms crossed",
+          "error": "HTTP 400 : {\"errors\":[{\"message\":\"AiError: AiError: Your output has been flagged. Please choose another prompt / input image combination (7b68b676-2194-4726-8c95-4d206e94bf1b)\",\"code\":3030}],\"success\":false,\"result\":{},\"messages\":[]}"
         }
       ],
       "cover": {
@@ -43,8 +44,9 @@
           "odette"
         ],
         "file": "images/notice-cover.webp",
-        "status": "pending",
-        "attempts": 0
+        "status": "done",
+        "attempts": 1,
+        "via": "premium"
       },
       "cases": [
         {
@@ -71,8 +73,8 @@
               "odette"
             ],
             "file": "images/notice-01.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -99,8 +101,8 @@
               "bastien"
             ],
             "file": "images/notice-02.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -140,8 +142,8 @@
               "odette"
             ],
             "file": "images/notice-04.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         },
         {
@@ -178,8 +180,8 @@
               "bastien"
             ],
             "file": "images/notice-06.webp",
-            "status": "pending",
-            "attempts": 0
+            "status": "done",
+            "attempts": 1
           }
         }
       ],
