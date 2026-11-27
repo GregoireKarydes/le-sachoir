@@ -1,0 +1,170 @@
+{
+  "added": "20261127-1505",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Se baigner dans la Seine : 102 ans d’interdiction, un plongeon",
+      "tagline": "Une nageuse qui attend depuis 1988, un maître-nageur qui ne jure que par ses drapeaux",
+      "teaser": "Gisèle a mis son bonnet de bain en 1988, quand on lui a promis la Seine pour 1993. Elle a un peu attendu.",
+      "minutes": 1,
+      "theme": "Écologie et climat",
+      "epoque": "present",
+      "art": {
+        "subject": "how swimming in the Seine in Paris, banned since 1923, reopened to the public on 5 July 2025 after a huge clean-up, and why rain still closes it",
+        "setting": "the Bras Marie swimming spot in Paris: a wooden floating pontoon with metal ladders on the Seine, old stone quays, the trees and pale stone houses of the Île Saint-Louis across the water, a tall white lifeguard chair",
+        "era": "today, Paris, summer 2025",
+        "props": {
+          "flags": "two small square flags on short poles, one green and one red",
+          "chair": "a tall white wooden lifeguard high chair on the pontoon",
+          "tube": "a small transparent test tube of river water"
+        }
+      },
+      "cast": [
+        {
+          "id": "gisele",
+          "name": "Gisèle",
+          "look": "Gisèle, a tiny and very old Parisian woman in her eighties, a bright yellow swimming cap covered in rubber flowers, wrinkled light skin, a cherry-red one-piece swimsuit as main colour, round white sunglasses pushed up on her cap, a rolled-up towel under her arm",
+          "role": "an impatient, boastful old swimmer who has waited for this dive since 1988 and reminds everyone of it; bounces on her toes, always half in the water already",
+          "file": "cast/insolite-gisele.png",
+          "status": "pending"
+        },
+        {
+          "id": "karim",
+          "name": "Karim",
+          "look": "Karim, a huge and muscular lifeguard in his thirties, a tall black flat-top haircut, dark olive skin, a turquoise lifeguard t-shirt as main colour, navy shorts, a silver whistle on a cord, holding the flags",
+          "role": "a zealous lifeguard who lives by the rulebook and his coloured flags; stands stiff as a post, blows his whistle at everything",
+          "file": "cast/insolite-karim.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "on the wooden pontoon of the Bras Marie in Paris, Île Saint-Louis across the water: Gisèle (tiny, very old, yellow flowered swimming cap, cherry-red swimsuit) on the left leaps joyfully off the edge towards the Seine, towel flying; on the right Karim (huge, muscular, tall black flat-top, turquoise lifeguard t-shirt) stands stiffly on the chair, raising the green flag and blowing his whistle. medium wide shot",
+        "cast": ["gisele", "karim"],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "5 juillet 2025",
+          "caption": "Peut-on vraiment se baigner dans la Seine ? Samedi 5 juillet 2025, 8 heures, au bras Marie, à Paris.",
+          "bubbles": [
+            { "who": "gisele", "text": "J’attends depuis 1988. Chirac avait promis la baignade pour 1993 !", "side": "l" },
+            { "who": "karim", "text": "Drapeau vert. Vous avez trente-deux ans de retard, madame.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the Bras Marie swimming spot in the early morning: old stone quays, the trees and pale stone houses of the Île Saint-Louis across the Seine, a wooden floating pontoon; Gisèle (tiny, very old, yellow flowered swimming cap, cherry-red swimsuit) on the left hurries down the quay steps, towel under her arm; Karim (huge, muscular, tall black flat-top, turquoise lifeguard t-shirt) on the right sits on the chair raising the green flag. wide shot",
+            "cast": ["gisele", "karim"],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Depuis 1923",
+          "caption": "La baignade y était interdite depuis 1923, par arrêté du préfet, à cause des bateaux et de la pollution.",
+          "bubbles": [
+            { "who": "karim", "text": "Cent deux ans après, on rouvre : trois sites gratuits, pour qui sait nager.", "side": "r" },
+            { "who": "gisele", "text": "Je sais nager. J’ai eu le temps d’apprendre.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "on the pontoon: Karim (huge, muscular, tall black flat-top, turquoise lifeguard t-shirt, whistle) on the right blocks the ladder with one enormous arm, reading a clipboard with great seriousness; Gisèle (tiny, very old, yellow flowered swimming cap, cherry-red swimsuit) on the left does energetic arm circles and knee bends right under his nose to prove she can swim. medium shot",
+            "cast": ["gisele", "karim"],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment on a lavé la Seine",
+          "steps": [
+            "Depuis 2015, plus de 1,4 milliard d’euros pour dépolluer la Seine et la Marne",
+            "En amont de Paris, environ 23 000 logements mal branchés sont raccordés aux égouts",
+            "Depuis l’été 2022, les péniches des quais parisiens sont raccordées elles aussi",
+            "Mai 2024 : le bassin d’Austerlitz stocke 50 000 m³ d’eau d’orage"
+          ],
+          "joke": "La plus grosse douche jamais offerte à un fleuve."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le contrôle",
+          "caption": "Chaque jour, on mesure deux bactéries venues des eaux usées, E. coli et les entérocoques, aux seuils fixés par l’Europe.",
+          "bubbles": [
+            { "who": "karim", "text": "Si le drapeau passe au rouge, plus personne ne bouge.", "side": "r" },
+            { "who": "gisele", "text": "Je ne bouge plus. J’y suis déjà.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "over the shoulder of Karim (huge, muscular, tall black flat-top, turquoise lifeguard t-shirt) in the foreground on the right, who holds the test tube up to the light, squinting at it like a jeweller: behind him on the left, Gisèle (tiny, very old, yellow flowered swimming cap, cherry-red swimsuit) is already floating on her back in the Seine, waving one hand innocently. over-the-shoulder",
+            "cast": ["gisele", "karim"],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "La Seine autour des îles, à Paris",
+          "text": "La Seine entre l’île de la Cité et l’île Saint-Louis. Le site du bras Marie, ouvert à l’été 2025, longe l’île Saint-Louis, côté rive droite.",
+          "photo": { "commons": "File:Paris ile Cite ile Saint Louis pont Tournelle.jpg" }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Le point faible",
+          "caption": "Le point faible, c’est la pluie : à Paris, pluie et eaux usées partagent les tuyaux, et un gros orage déborde dans la Seine.",
+          "bubbles": [
+            { "who": "karim", "text": "Un orage cette nuit, et demain, drapeau rouge.", "side": "r" },
+            { "who": "gisele", "text": "Cent deux ans d’attente, et c’est la météo qui décide.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "seen from the water's surface: Karim (huge, muscular, tall black flat-top, turquoise lifeguard t-shirt) towers on his white chair on the right, solemnly raising the red flag towards a big dark cloud; Gisèle (tiny, very old, yellow flowered swimming cap, cherry-red swimsuit) on the left clings to the pontoon ladder, shaking her fist at the cloud. low angle",
+            "cast": ["gisele", "karim"],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Interdite depuis 1923, la baignade dans la Seine a rouvert le 5 juillet 2025 grâce à son grand nettoyage, sauf après les fortes pluies.",
+          "bubbles": [
+            { "who": "gisele", "text": "Trente-deux ans de retard. Elle est parfaite.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Gisèle alone (tiny, very old, yellow flowered swimming cap, round white sunglasses now on her nose), only her face and shoulders above the water of the Seine, floating blissfully with eyes closed and a huge peaceful smile, tiny yellow sparkles around her. close-up",
+            "cast": ["gisele"],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le bassin d’Austerlitz, en service depuis mai 2024, peut stocker 50 000 m³ d’eau d’orage : l’équivalent de vingt piscines olympiques sous Paris.",
+        "source": "Ville de Paris — La Seine s’ouvre à la baignade"
+      },
+      "story": "Au début du XXe siècle, les Parisiens se baignaient encore dans la Seine. Mais en 1923, un arrêté préfectoral l’interdit, sous peine d’amende, à cause des dangers de la navigation et de la pollution. En 1988, Jacques Chirac, alors maire de Paris, promet qu’on pourra s’y baigner « dans cinq ans ». La promesse attendra.\nIl a fallu un très gros chantier. Depuis le milieu des années 2010, les pouvoirs publics ont investi plus de 1,4 milliard d’euros pour dépolluer la Seine et la Marne. Environ 23 000 logements mal raccordés, en amont de Paris, ont été rebranchés sur les égouts ; depuis l’été 2022, les péniches des quais parisiens sont raccordées elles aussi. En mai 2024, le bassin d’Austerlitz est mis en service : 50 000 m³, l’équivalent de vingt piscines olympiques, pour stocker l’eau d’orage au lieu de la rejeter dans le fleuve. Car à Paris, la pluie et les eaux usées partagent les mêmes tuyaux : quand il pleut fort, le trop-plein part dans la Seine.\nAprès les Jeux olympiques de 2024, la baignade a rouvert au public le samedi 5 juillet 2025, sur trois sites gratuits : le bras Marie, Grenelle et Bercy, réservés à ceux qui savent nager. Chaque jour, on y mesure deux bactéries venues des eaux usées, E. coli et les entérocoques, et des drapeaux vert, jaune ou rouge disent si l’on peut nager. Le lendemain d’un gros orage, c’est souvent fermé.",
+      "sources": [
+        { "title": "Ville de Paris — La Seine s’ouvre à la baignade", "url": "https://www.paris.fr/pages/se-baigner-dans-la-seine-en-2024-et-au-dela-6935" },
+        { "title": "DH (AFP) — À Paris, premières baignades dans la Seine sous étroite surveillance", "url": "https://www.dhnet.be/dernieres-depeches/2025/07/05/a-paris-la-saison-de-la-baignade-dans-la-seine-demarre-sous-etroite-surveillance-JF3D6MEULJGVJLPXZM5G3WMOLE/" },
+        { "title": "Figaro Nautisme — La baignade dans la Seine, héritage des JO 2024 et de l’Ancien Régime", "url": "https://figaronautisme.meteoconsult.fr/actus-nautisme-flash/2025-07-05/79438-la-baignade-dans-la-seine-heritage-des-jo-2024-et-de-l-ancien-regime" },
+        { "title": "Paris Match — Après 100 ans d’interdiction, les baigneurs sont de retour dans la Seine", "url": "https://www.parismatch.be/actualites/monde/2025/07/05/apres-100-ans-dinterdiction-les-baigneurs-sont-de-retour-dans-la-seine-une-fierte-pour-le-pays-photos-LDHPU2HWARFIZNVEGGC7ZZBWNY/" },
+        { "title": "Futura Santé — On pourra se baigner dans la Seine cet été : bonne nouvelle ou risque sanitaire ?", "url": "https://www.futura-sciences.com/sante/breves/bacteries-on-pourra-baigner-seine-cet-ete-bonne-nouvelle-risque-sanitaire-masque-10638/" },
+        { "title": "Wikimedia Commons — Paris ile Cite ile Saint Louis pont Tournelle", "url": "https://c.enwp.org/wiki/File:Paris_ile_Cite_ile_Saint_Louis_pont_Tournelle.jpg" }
+      ]
+    }
+  ]
+}
