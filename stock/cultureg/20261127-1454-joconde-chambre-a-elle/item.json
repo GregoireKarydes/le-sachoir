@@ -1,0 +1,182 @@
+{
+  "added": "20261127-1454",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "La Joconde va enfin avoir sa chambre à elle (vers 2031, si tout va bien)",
+      "tagline": "Une gardienne qui a dit « avancez » un million de fois, un architecte qui veut son nom sur la porte",
+      "teaser": "Josiane garde la dame la plus regardée du monde. Elle aimerait qu’on la regarde un peu moins, et ailleurs.",
+      "minutes": 2,
+      "theme": "Histoire de l’art",
+      "epoque": "futur",
+      "art": {
+        "subject": "why the Louvre plans a new eastern entrance and a dedicated space for the overcrowded Mona Lisa room, around 2031",
+        "setting": "the crowded Louvre gallery where the famous small portrait hangs alone on a wide dark wall behind a wooden barrier, a sea of raised phones; later the same room after closing time, empty, with a polished wooden floor",
+        "era": "today, Paris, 2026",
+        "props": {
+          "portrait": "a small famous Renaissance portrait of a softly smiling woman, behind a thick glass case on a wide dark wall",
+          "blueprint": "a long rolled-up blueprint of pale blue paper with blank white lines",
+          "barrier": "a curved wooden barrier with a velvet rope in front of the wall"
+        }
+      },
+      "cast": [
+        {
+          "id": "josiane",
+          "name": "Josiane",
+          "look": "Josiane, a short and stout museum guard in her sixties, a big puffy auburn perm, light skin, a dark burgundy guard blazer as main colour with a small gold badge, grey trousers, black comfortable shoes, one arm always held out in a weary move-along gesture",
+          "role": "a worn-out, melodramatic museum guard who has said the same sentence twenty thousand times a day; sighs theatrically, slumps, sarcastic about everything",
+          "file": "cast/cultureg-josiane.png",
+          "status": "pending"
+        },
+        {
+          "id": "theo",
+          "name": "Théo",
+          "look": "Théo, a very tall and skinny young architect, slicked-back jet-black hair with one white streak, light olive skin, a pistachio-green turtleneck as main colour, thick round black glasses, always carrying the blueprint under his arm",
+          "role": "a vain young architect of the renovation team who already sees his name on the building; strikes grand poses, sweeps his arms, talks about himself",
+          "file": "cast/cultureg-theo.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "in the crowded Louvre gallery: Josiane (short, stout, puffy auburn perm, dark burgundy guard blazer) on the left, slumped against the barrier, arm wearily held out; Théo (very tall, skinny, slicked black hair with a white streak, pistachio-green turtleneck, round black glasses) on the right unrolls the blueprint high above the crowd of raised phones, beaming; the portrait small on the dark wall behind them. medium wide shot",
+        "cast": ["josiane", "theo"],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "2026, au Louvre",
+          "caption": "Pourquoi la Joconde va-t-elle déménager ? En 2026, au Louvre, Josiane, gardienne, répète la même phrase devant le tableau.",
+          "bubbles": [
+            { "who": "josiane", "text": "Avancez, s’il vous plaît. Avancez.", "side": "l" },
+            { "who": "theo", "text": "Bonjour ! Je viens mesurer la pièce. Pour son déménagement.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the crowded Louvre gallery seen from the back of the room: a dense crowd with raised phones in front of the barrier, the portrait small and far away on the dark wall; Josiane (short, stout, puffy auburn perm, dark burgundy guard blazer) on the left by the barrier, arm wearily held out; Théo (very tall, skinny, slicked black hair with a white streak, pistachio-green turtleneck) towers over the crowd on the right, waving the blueprint. wide shot",
+            "cast": ["josiane", "theo"],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Le trop-plein",
+          "caption": "Parce que le Louvre déborde : près de 9 millions de visiteurs en 2024, et environ 20 000 par jour devant la Joconde.",
+          "bubbles": [
+            { "who": "josiane", "text": "Vingt mille « avancez » par jour. Ma voix a pris sa retraite avant moi.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Josiane alone (short, stout, puffy auburn perm, dark burgundy guard blazer, gold badge), head and shoulders, slumped against the velvet rope of the barrier, eyes half closed, mouth still mechanically saying the same words, a little throat lozenge box in her outstretched hand, phones raised all around her head. medium close-up",
+            "cast": ["josiane"],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "L’entrée trop petite",
+          "caption": "La Pyramide, l’entrée actuelle, a été prévue pour 4 millions de visiteurs par an : deux fois moins qu’aujourd’hui.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a sea of tourists' heads and raised phones filling the whole gallery, seen from above; in the middle, only the rolled blueprint of Théo (very tall, skinny, pistachio-green turtleneck) sticks up out of the crowd like a periscope, with the top of his slicked black hair with a white streak and his round black glasses peeking out in panic. high angle",
+            "cast": ["theo"],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Le plan « Nouvelle Renaissance » du Louvre",
+          "steps": [
+            "28 janvier 2025 : le président de la République annonce le projet",
+            "Une nouvelle grande entrée côté est, près de la colonnade",
+            "Un espace rien que pour la Joconde, pour désengorger sa salle",
+            "18 mai 2026 : STUDIOS Architecture et Selldorf Architects gagnent le concours"
+          ],
+          "joke": "Cinq siècles d’attente pour avoir sa propre chambre."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "La facture",
+          "caption": "Coût estimé : 700 à 800 millions d’euros sur une dizaine d’années, soit environ 80 € par visiteur de 2024.",
+          "bubbles": [
+            { "who": "theo", "text": "Une partie viendra du billet, plus cher depuis janvier 2026 pour les visiteurs hors Union européenne.", "side": "r" },
+            { "who": "josiane", "text": "Ils paieront plus cher pour qu’on leur dise « avancez ».", "side": "l" }
+          ],
+          "image": {
+            "prompt": "after closing time in the now empty gallery: Théo (very tall, skinny, slicked black hair with a white streak, pistachio-green turtleneck, round black glasses) on the right strikes a grand pose, one arm sweeping towards the ceiling as if presenting a palace; Josiane (short, stout, puffy auburn perm, dark burgundy guard blazer) on the left sits on a museum bench, shoes off, rubbing her feet, unimpressed. medium shot",
+            "cast": ["josiane", "theo"],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "La façade est du Louvre et sa colonnade",
+          "text": "La façade est du Louvre, avec sa colonnade du XVIIe siècle. C’est de ce côté que le projet prévoit la nouvelle grande entrée du musée.",
+          "photo": { "commons": "File:Louvre-facade-est.jpg" }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Le calendrier",
+          "caption": "Objectif : une ouverture d’ici 2031, si tout va bien. En mai 2026, aucune date de début des travaux n’était annoncée.",
+          "bubbles": [
+            { "who": "theo", "text": "Ici, son salon. Là, sa file d’attente. Là, mon nom sur la plaque.", "side": "r" },
+            { "who": "josiane", "text": "Écrivez petit. On le photographiera sans le lire.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the blueprint unrolled flat on the polished wooden floor of the empty gallery: Théo (very tall, skinny, slicked black hair with a white streak, pistachio-green turtleneck) on all fours on the right, nose almost touching the paper, drawing a big square with a pencil; Josiane (short, stout, puffy auburn perm, dark burgundy guard blazer) stands at the edge on the left, holding her shoes in one hand, peering down sceptically. bird's-eye view",
+            "cast": ["josiane", "theo"],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "La Joconde attire trop de monde pour une seule salle : le Louvre prévoit une nouvelle entrée et un espace à elle, vers 2031.",
+          "bubbles": [
+            { "who": "josiane", "text": "Avancez, s’il vous plaît… jusqu’en 2031.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Josiane alone (short, stout, puffy auburn perm, dark burgundy guard blazer, gold badge), head and shoulders, back at her post in front of the barrier, arm held out once more, glancing at the reader with a tiny resigned smile, a wall calendar with many crossed-out pages peeking from her blazer pocket. close-up",
+            "cast": ["josiane"],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "La Pyramide du Louvre a été conçue pour accueillir 4 millions de visiteurs par an ; le musée en a reçu près de 9 millions en 2024.",
+        "source": "DH / AFP — « Nouvelle Renaissance du Louvre »"
+      },
+      "story": "Le Louvre est victime de son succès. En 2024, il a reçu près de neuf millions de visiteurs, dont 80 % d’étrangers, et environ 20 000 personnes par jour se pressent devant la Joconde, accrochée dans une grande salle qu’elle partage avec d’autres tableaux. Or la Pyramide, l’entrée actuelle du musée, avait été prévue pour quatre millions de visiteurs par an. Résultat : files d’attente, bousculade et visiteurs qui ne voient le tableau que quelques secondes.\nLe 28 janvier 2025, le président de la République a annoncé un grand plan baptisé « Louvre – Nouvelle Renaissance ». Il prévoit une nouvelle grande entrée côté est, au niveau de la colonnade de Perrault, et un espace dédié à la Joconde, pour que ses admirateurs ne bloquent plus le reste du musée. L’ensemble est estimé entre 700 et 800 millions d’euros sur une dizaine d’années ; une partie doit venir des ressources propres du musée et d’un billet plus cher, depuis janvier 2026, pour les visiteurs venus de pays hors de l’Union européenne.\nUn concours international d’architecture a été lancé. Le 18 mai 2026, la ministre de la Culture a annoncé l’équipe lauréate, menée par l’agence STUDIOS Architecture, avec Selldorf Architects et BASE paysagistes. L’objectif est une inauguration d’ici 2031, mais en mai 2026, aucune date de début des travaux n’avait été annoncée : la Joconde attend son nouvel appartement avec son célèbre sourire, et beaucoup de patience.",
+      "sources": [
+        { "title": "DH / AFP — « Nouvelle Renaissance du Louvre » : Macron veut une seconde entrée et un lieu dédié pour la Joconde", "url": "https://www.dhnet.be/dernieres-depeches/2025/01/28/emmanuel-macron-au-chevet-du-louvre-annonces-a-la-cle-3UVYG3LYLVC55FR2V25NSVNLFY/" },
+        { "title": "Ministère de la Culture — Annonce de l’équipe lauréate du concours « Louvre – Nouvelle Renaissance »", "url": "https://www.culture.gouv.fr/presse/communiques-de-presse/catherine-pegard-ministre-de-la-culture-annonce-l-equipe-laureate-du-concours-international-d-architecture-de-louvre-nouvelle-renaissance-studio" },
+        { "title": "Musée du Louvre — Concours international d’architecture « Louvre – Nouvelle Renaissance »", "url": "https://www.louvre.fr/decouvrir/vie-du-musee/concours-international-d-architecture-louvre-nouvelle-renaissance" },
+        { "title": "Time Out — On sait enfin qui va dessiner le nouveau Louvre", "url": "https://www.timeout.fr/paris/actualites/on-sait-enfin-qui-va-dessiner-le-nouveau-louvre-051926" },
+        { "title": "Wikimedia Commons — Louvre facade est", "url": "https://download.osmand.net/wiki/File:Louvre-facade-est.jpg" }
+      ]
+    }
+  ]
+}
