@@ -1,0 +1,78 @@
+{
+  "date": "2026-12-04",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "dico",
+      "label": "Le Dico menteur",
+      "title": "Deux mots d’hier, deux mots de maintenant, douze bobards",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "choice",
+          "q": "Divulgâcher, c’est…",
+          "hint": "Un mot-valise : regardez bien les deux verbes cachés dedans.",
+          "choices": [
+            "Saler un plat au point de le rendre immangeable",
+            "Révéler à l’avance la fin d’un film ou d’une série",
+            "Laisser fuiter un secret d’État par maladresse",
+            "Partir d’une fête sans dire au revoir"
+          ],
+          "answer": 1,
+          "explain": "Divulguer + gâcher : le mot français pour « spoiler ». Il est entré dans le Petit Larousse 2020, annoncé en mai 2019. Les fans de séries l’attendaient, sans savoir comment ça finissait.",
+          "source": { "title": "Journal du Geek — Divulgâcher, datacratie, slasheur : les nouveaux mots", "url": "https://www.journaldugeek.com/2019/05/21/divulgacher-datacratie-slasheur-nouveaux-mots-de-langue-francaise-arrives/" }
+        },
+        {
+          "type": "choice",
+          "q": "Un margoulin, c’est…",
+          "hint": "Méfiez-vous de lui au marché.",
+          "choices": [
+            "Un petit oiseau des marais qui glousse au lever du jour",
+            "Un mousse chargé de lover les cordages",
+            "Un individu peu scrupuleux en affaires, un petit escroc",
+            "Une galette de sarrasin roulée au fromage"
+          ],
+          "answer": 2,
+          "explain": "Un petit escroc, peu scrupuleux en affaires, dit l’Académie française. Le mot date du XIXe siècle et vient du verbe dialectal « margouliner », colporter des marchandises. Le colporteur a mal tourné.",
+          "source": { "title": "Dictionnaire de l’Académie française, 9e édition — Margoulin", "url": "https://dictionnaire-academie.fr/article/A9M1097" }
+        },
+        {
+          "type": "choice",
+          "q": "Prompter, c’est…",
+          "hint": "Un mot tout neuf, arrivé avec ChatGPT et ses cousins.",
+          "choices": [
+            "Souffler son texte à un acteur qui a un trou",
+            "Répondre à un message en moins d’une minute",
+            "Faire une pause café entre deux réunions",
+            "Donner une instruction à une intelligence artificielle"
+          ],
+          "answer": 3,
+          "explain": "Envoyer un « prompt », une instruction, à une IA générative pour obtenir une réponse ciblée. Le mot entre dans le Petit Larousse 2027, annoncé en mai 2026. Le souffleur de théâtre, lui, reste au chômage.",
+          "source": { "title": "Paris Match (AFP) — Charo, dinguerie, prompter : 150 nouveaux mots dans le dictionnaire", "url": "https://www.parismatch.be/actualites/societe/2026/05/12/charo-dinguerie-prompter-150-nouveaux-mots-ont-fait-leur-entree-officielle-dans-le-dictionnaire-VBTAVR2HLNC6HATNBYNFCCMTIQ/" }
+        },
+        {
+          "type": "choice",
+          "q": "Le mitan, c’est…",
+          "hint": "Ni au début, ni à la fin.",
+          "choices": [
+            "Le milieu",
+            "Un gant sans doigts",
+            "Un chat de gouttière",
+            "La veille de la Saint-Jean"
+          ],
+          "answer": 0,
+          "explain": "Le milieu, dans une langue un peu ancienne : « au mitan de la rivière », « au mitan de sa vie ». Le gant sans doigts, c’est la mitaine : un cousin d’orthographe, pas de sens.",
+          "source": { "title": "Larousse — Mitan", "url": "https://www.larousse.fr/dictionnaires/francais/mitan/51801" }
+        }
+      ],
+      "sources": [
+        { "title": "Journal du Geek — Divulgâcher, datacratie, slasheur : les nouveaux mots", "url": "https://www.journaldugeek.com/2019/05/21/divulgacher-datacratie-slasheur-nouveaux-mots-de-langue-francaise-arrives/" },
+        { "title": "Dictionnaire de l’Académie française, 9e édition — Margoulin", "url": "https://dictionnaire-academie.fr/article/A9M1097" },
+        { "title": "Paris Match (AFP) — Charo, dinguerie, prompter : 150 nouveaux mots dans le dictionnaire", "url": "https://www.parismatch.be/actualites/societe/2026/05/12/charo-dinguerie-prompter-150-nouveaux-mots-ont-fait-leur-entree-officielle-dans-le-dictionnaire-VBTAVR2HLNC6HATNBYNFCCMTIQ/" },
+        { "title": "Larousse — Mitan", "url": "https://www.larousse.fr/dictionnaires/francais/mitan/51801" }
+      ]
+    }
+  ]
+}
