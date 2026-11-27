@@ -1,0 +1,190 @@
+{
+  "added": "20261127-1450",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Plus de cercueils que de berceaux, et pourtant la France grandit",
+      "tagline": "Une officière d’état civil qui tient le score, un statisticien qui tient les comptes",
+      "teaser": "Monique arbitre chaque année le match berceaux contre cercueils. En 2025, l’arbitre a dû vérifier la vidéo.",
+      "minutes": 2,
+      "theme": "Démographie",
+      "epoque": "present",
+      "art": {
+        "subject": "why France recorded more deaths than births in 2025 for the first time since 1945, yet its population still grew thanks to migration",
+        "setting": "the civil registry office of a French town hall: a long wooden counter, filing shelves full of folders, a small French flag on a pole in a corner, a window onto a winter square",
+        "era": "today, France, January 2026",
+        "props": {
+          "scoreboard": "a small green chalkboard on a wooden easel, split into two blank columns of white tally marks",
+          "registers": "two thick leather-bound registers, one light blue and one black",
+          "stamp": "a big wooden rubber stamp with a red handle"
+        }
+      },
+      "cast": [
+        {
+          "id": "monique",
+          "name": "Monique",
+          "look": "Monique, a tall and bony registrar in her fifties, steel-grey hair in a tight high bun, light skin, a mustard-yellow cardigan as main colour, a black pencil skirt, half-moon glasses on a beaded chain, always holding the stamp",
+          "role": "an overzealous civil registrar who treats births versus deaths like a football match she must win; fiercely competitive, fists clenched, stamping papers like scoring goals",
+          "file": "cast/cultureg-monique.png",
+          "status": "pending"
+        },
+        {
+          "id": "bastien",
+          "name": "Bastien",
+          "look": "Bastien, a short and plump young statistician, shaved head and a neat black beard, warm brown skin, a navy-blue puffer jacket as main colour, light jeans, a laptop clutched under his arm and a pocket calculator in his hand",
+          "role": "a deadpan number-cruncher from the statistics institute who corrects everyone with total calm; never smiles, taps his calculator before every sentence",
+          "file": "cast/cultureg-bastien.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "in the town hall registry office: Monique (tall, bony, steel-grey high bun, mustard-yellow cardigan) on the left fiercely chalks a tally mark on the scoreboard like a football coach; on the right Bastien (short, plump, shaved head, black beard, navy-blue puffer jacket) taps his calculator, unimpressed, the two registers on the counter between them. medium wide shot",
+        "cast": ["monique", "bastien"],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Janvier 2026",
+          "caption": "Plus de décès que de naissances en 2025, et pourtant plus d’habitants : comment ? Janvier 2026, dans une mairie.",
+          "bubbles": [
+            { "who": "monique", "text": "Berceaux contre cercueils : chaque année, je tiens le score.", "side": "l" },
+            { "who": "bastien", "text": "L’Insee veut le score final. Sans arbitrage maison.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the registry office of a French town hall seen from the entrance: behind the long wooden counter on the left, Monique (tall, bony, steel-grey high bun, mustard-yellow cardigan) stands proudly next to the scoreboard on its easel, stamp raised like a trophy; Bastien (short, plump, shaved head, black beard, navy-blue puffer jacket) walks in on the right, laptop under his arm, snow on his shoulders. wide shot",
+            "cast": ["monique", "bastien"],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Le décompte",
+          "caption": "Chaque naissance et chaque décès est inscrit en mairie ; l’Insee, l’institut de la statistique, fait le total national.",
+          "bubbles": [
+            { "who": "monique", "text": "645 000 naissances en 2025. Un bébé toutes les 49 secondes !", "side": "l" },
+            { "who": "bastien", "text": "Et 651 000 décès. Un peu plus souvent.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Monique (tall, bony, steel-grey high bun, mustard-yellow cardigan) on the left slams the light-blue register open on the counter, triumphant, pointing at a page; on the right, seated on a stool in the background, Bastien (short, plump, shaved head, black beard, navy-blue puffer jacket) calmly opens the black register on his knees and taps his calculator. medium shot",
+            "cast": ["monique", "bastien"],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Le score",
+          "caption": "Résultat : 6 000 décès de plus que de naissances. Une première depuis la fin de la Seconde Guerre mondiale, en 1945.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Monique alone (tall, bony, steel-grey high bun, half-moon glasses, mustard-yellow cardigan), face and shoulders, frozen in shock in front of the scoreboard, mouth wide open, the piece of white chalk slipping from her fingers and breaking, her glasses sliding down her nose, a light-blue sweat drop on her temple. close-up",
+            "cast": ["monique"],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi les décès passent devant",
+          "steps": [
+            "1946 à 1974 : le baby-boom fait naître des générations très nombreuses",
+            "Depuis 2011, elles arrivent aux âges où l’on meurt le plus",
+            "Les plus anciens de ces enfants du baby-boom ont 80 ans en 2026",
+            "En face, moins de bébés : la fécondité baisse depuis 2010"
+          ],
+          "joke": "Les bébés du baby-boom ont désormais des déambulateurs."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "Moins de bébés",
+          "caption": "1,56 enfant par femme en 2025, le plus bas depuis 1918 : pas moins de femmes, mais moins d’enfants chacune.",
+          "bubbles": [
+            { "who": "monique", "text": "J’affiche partout : « Naissez chez nous, accueil chaleureux ! »", "side": "l" },
+            { "who": "bastien", "text": "Les bébés ne lisent pas, madame. Pas encore.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Monique (tall, bony, steel-grey high bun, mustard-yellow cardigan) climbs a wobbly stepladder on the left and frantically tapes a big blank poster with a drawn stork onto the wall of the registry office; below on the right, Bastien (short, plump, shaved head, black beard, navy-blue puffer jacket) holds the ladder with one hand, reading his calculator with the other, expressionless. low angle",
+            "cast": ["monique", "bastien"],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un acte de naissance de 1825",
+          "text": "Un acte de naissance rédigé en mairie en 1825. Aujourd’hui encore, chaque naissance et chaque décès donne un acte d’état civil : ce sont eux que l’Insee additionne chaque année.",
+          "photo": { "commons": "File:JAMMES Jean-Vital Birth Certificate 1825.JPG" }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "La troisième colonne",
+          "caption": "La France gagne pourtant des habitants : 69,1 millions début 2026, +0,25 % en un an, grâce aux arrivées de l’étranger.",
+          "bubbles": [
+            { "who": "bastien", "text": "Il manque une colonne : ceux qui s’installent en France, moins ceux qui partent.", "side": "r" },
+            { "who": "monique", "text": "On a droit aux remplaçants ? Personne ne me l’avait dit !", "side": "l" }
+          ],
+          "image": {
+            "prompt": "over the shoulder of Bastien (short, plump, shaved head, black beard, navy-blue puffer jacket) in the foreground on the right, who draws a third column on the scoreboard with chalk: Monique (tall, bony, steel-grey high bun, mustard-yellow cardigan) on the left leans in, wide-eyed, clutching the stamp to her chest as if a new player had entered the pitch. over-the-shoulder",
+            "cast": ["monique", "bastien"],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Deux soldes, un seul total",
+          "text": "Solde naturel : naissances moins décès, –6 000 en 2025.\nSolde migratoire : arrivées moins départs du pays. Positif, c’est lui qui fait encore grandir la population.",
+          "joke": "Le match se joue aussi aux frontières."
+        },
+        {
+          "n": 9,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Le baby-boom vieillit et les naissances baissent : les décès passent devant. La population grandit encore grâce au solde migratoire.",
+          "bubbles": [
+            { "who": "monique", "text": "Score final : on perd le match, mais on monte au classement.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Monique alone (tall, bony, steel-grey high bun, half-moon glasses, mustard-yellow cardigan), head and shoulders, raising the stamp like a winner's cup with a proud, slightly vexed grin, one eyebrow cocked at the reader; behind her the scoreboard now has three columns. medium close-up",
+            "cast": ["monique"],
+            "file": "images/cultureg-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "En 2025, la fécondité française est tombée à 1,56 enfant par femme : son plus bas niveau depuis 1918, à la fin de la Première Guerre mondiale.",
+        "source": "Vidal (APMnews) — Bilan démographique Insee 2025"
+      },
+      "story": "Chaque naissance et chaque décès est inscrit sur les registres d’état civil des mairies, et l’Insee, l’institut national de la statistique, en fait le total chaque année. Son bilan publié le 13 janvier 2026 a marqué un tournant : en 2025, la France a compté environ 645 000 naissances et 651 000 décès. Le solde naturel, c’est-à-dire les naissances moins les décès, est donc négatif, à –6 000, pour la première fois depuis la fin de la Seconde Guerre mondiale.\nDeux mouvements se croisent. D’un côté, les décès augmentent parce que les générations très nombreuses du baby-boom, nées entre 1946 et 1974, arrivent depuis 2011 aux âges où la mortalité est forte ; les plus anciennes ont 80 ans en 2026. De l’autre, les naissances baissent : l’indicateur de fécondité est tombé à 1,56 enfant par femme en 2025, contre 1,61 en 2024, son plus bas niveau depuis 1918. Ce n’est pas faute de mères potentielles : le nombre de femmes en âge d’avoir des enfants ne diminue pas depuis 2016 ; chacune en a simplement moins.\nPourtant, la population continue d’augmenter : 69,1 millions d’habitants au 1er janvier 2026, soit 0,25 % de plus en un an. La différence vient du solde migratoire, les arrivées dans le pays moins les départs, qui reste positif. Pour l’instant, c’est lui qui fait grandir la France.",
+      "sources": [
+        { "title": "Vidal (APMnews) — La baisse des naissances s’est poursuivie en 2025, les décès sont désormais plus nombreux (Insee)", "url": "https://www.vidal.fr/actualites/37334-la-baisse-des-naissances-s-est-poursuivie-en-2025-en-france-les-deces-sont-desormais-plus-nombreux-insee.html" },
+        { "title": "Insee — Bilan démographique 2025", "url": "https://www.insee.fr/fr/statistiques/8721209" },
+        { "title": "Public Sénat — Démographie : il y a désormais plus de décès que de naissances en France, une première depuis 1945", "url": "https://www.publicsenat.fr/actualites/societe/demographie-il-y-a-desormais-plus-de-deces-que-de-naissances-en-france-une-premiere-depuis-1945" },
+        { "title": "Wikimedia Commons — JAMMES Jean-Vital Birth Certificate 1825", "url": "https://en.wikipedia.com/wiki/File:JAMMES_Jean-Vital_Birth_Certificate_1825.JPG" }
+      ]
+    }
+  ]
+}
