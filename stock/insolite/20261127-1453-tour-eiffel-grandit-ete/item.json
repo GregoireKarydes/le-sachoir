@@ -1,0 +1,168 @@
+{
+  "added": "20261127-1453",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "La tour Eiffel prend des centimètres l’été (et se penche pour fuir le soleil)",
+      "tagline": "Un guide qui ne jure que par les chiffres, une ingénieure suspendue qui les fait bouger",
+      "teaser": "Hervé annonce la hauteur de la tour Eiffel au mètre près depuis vingt ans. Elle n’a jamais été d’accord.",
+      "minutes": 1,
+      "theme": "Sciences physiques",
+      "epoque": "present",
+      "art": {
+        "subject": "why the iron Eiffel Tower grows taller in summer heat, shrinks in winter and leans away from the sun",
+        "setting": "the second-floor viewing platform of the Eiffel Tower on a scorching summer afternoon: brown iron girders and rivets, a metal railing, Paris rooftops far below",
+        "era": "today, Paris, summer heatwave",
+        "props": {
+          "umbrella": "a folded bright red umbrella held up high as a tour guide's flag",
+          "laser": "a small yellow laser measuring device",
+          "rope": "a thick orange climbing rope with a steel carabiner"
+        }
+      },
+      "cast": [
+        {
+          "id": "herve",
+          "name": "Hervé",
+          "look": "Hervé, a short pot-bellied tour guide in his fifties, a big curly ginger moustache, a shiny bald head under a straw boater hat, light skin, a bright orange polo shirt as main colour, beige shorts, always holding the umbrella",
+          "role": "a pompous tour guide obsessed with exact figures who cannot stand being contradicted; chest puffed out, umbrella raised high, sulks when proven wrong",
+          "file": "cast/insolite-herve.png",
+          "status": "pending"
+        },
+        {
+          "id": "lucie",
+          "name": "Lucie",
+          "look": "Lucie, a tall and wiry rope-access engineer in her thirties, short silver-blond pixie cut, freckled light skin, a royal-blue harness work suit as main colour, a white safety helmet, the laser clipped to her belt",
+          "role": "a calm, amused structural engineer who dangles from the rope as casually as sitting in an armchair; often upside down, never in a hurry",
+          "file": "cast/insolite-lucie.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "on the Eiffel Tower viewing platform in the heat: Hervé (short, pot-bellied, ginger moustache, straw boater, bright orange polo) on the left proudly raises the umbrella, sweating; on the right Lucie (tall, wiry, silver-blond pixie cut, royal-blue harness suit, white helmet) hangs upside down from the rope beside a brown iron girder, pointing the laser at him with an amused smile. medium wide shot",
+        "cast": ["herve", "lucie"],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Un été de canicule",
+          "caption": "La tour Eiffel a-t-elle toujours la même taille ? Un après-midi de canicule, le guide Hervé l’annonce au mètre près.",
+          "bubbles": [
+            { "who": "herve", "text": "330 mètres, antenne de 2022 comprise. Pas un millimètre de plus.", "side": "l" },
+            { "who": "lucie", "text": "Ce matin, peut-être. Là, il fait très chaud.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the second-floor platform of the Eiffel Tower, Paris rooftops far below: Hervé (short, pot-bellied, ginger moustache, straw boater, bright orange polo) on the left stands on tiptoe on a bench, umbrella raised high, lecturing an unseen group; on the right Lucie (tall, wiry, silver-blond pixie cut, royal-blue harness suit, white helmet) slides down the rope beside a brown iron girder and stops right next to his head. wide shot",
+            "cast": ["herve", "lucie"],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Le fer puddlé",
+          "caption": "Parce que la tour est en fer puddlé, un fer affiné à chaud, et que le métal s’allonge quand il chauffe : c’est la dilatation.",
+          "bubbles": [
+            { "who": "lucie", "text": "Près de 4 millimètres de plus par degré, sur toute la hauteur.", "side": "r" },
+            { "who": "herve", "text": "Elle grandit pendant ma visite ? C’est d’un sans-gêne.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Lucie (tall, wiry, silver-blond pixie cut, royal-blue harness suit, white helmet) on the right, dangling sideways from the rope, aims the laser at a brown riveted iron girder; in the foreground on the left Hervé (short, pot-bellied, ginger moustache, straw boater, bright orange polo) furiously measures the same girder with a tiny pocket tape measure, nose against the metal. medium shot",
+            "cast": ["herve", "lucie"],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment une tour de fer grandit",
+          "steps": [
+            "Le soleil chauffe les 7 300 tonnes de fer de la charpente",
+            "Chaque mètre de fer s’allonge d’environ 12 millièmes de millimètre par degré",
+            "Sur 300 mètres, ça fait près de 4 mm par degré",
+            "D’un hiver glacial à une canicule : jusqu’à une quinzaine de centimètres"
+          ],
+          "joke": "La seule Parisienne qui prend des centimètres en vacances."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le côté au soleil",
+          "caption": "Mieux : le soleil ne chauffe qu’un côté à la fois. Ce côté s’allonge plus, donc le sommet penche de l’autre côté.",
+          "bubbles": [
+            { "who": "herve", "text": "Elle fuit le soleil ? Comme tout Paris au mois d’août.", "side": "l" },
+            { "who": "lucie", "text": "De quelques centimètres. Son sommet tourne avec le soleil, toute la journée.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "from behind Hervé (short, pot-bellied, ginger moustache, straw boater, bright orange polo), who leans far over the railing on the left, shielding his eyes, opening the umbrella like a parasol towards the blazing sun as if to protect the tower; Lucie (tall, wiry, silver-blond pixie cut, royal-blue harness suit, white helmet) on the right hangs from the rope, tilting her whole body to one side to mimic the leaning tower. from behind",
+            "cast": ["herve", "lucie"],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le fer de la tour, vu d’en dessous",
+          "text": "Le pilier sud de la tour Eiffel vu d’en dessous : des poutrelles de fer puddlé assemblées par des rivets. C’est ce métal qui s’allonge au soleil et se rétracte l’hiver.",
+          "photo": { "commons": "File:Tour Eiffel pilier sud vu de dessous.jpg" }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "Décembre 1999",
+          "caption": "Le vent aussi la fait bouger : en décembre 1999, pendant la tempête Lothar, son sommet a oscillé de 13 centimètres.",
+          "bubbles": [
+            { "who": "herve", "text": "Je ne fais plus la visite. Je m’accroche.", "side": "l" },
+            { "who": "lucie", "text": "Treize centimètres, au bout de 300 mètres. Elle a à peine dansé.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Hervé (short, pot-bellied, ginger moustache, straw boater, bright orange polo) on the left hugs a brown iron girder with arms and legs like a koala, eyes shut, straw boater flying off in the wind, a light-blue sweat drop; on the right Lucie (tall, wiry, silver-blond pixie cut, royal-blue harness suit, white helmet) swings gently on the rope, sipping from a small water bottle. high angle",
+            "cast": ["herve", "lucie"],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Le fer se dilate à la chaleur : l’été, la tour grandit et penche à l’opposé du soleil ; l’hiver, elle rapetisse.",
+          "bubbles": [
+            { "who": "herve", "text": "Mesdames et messieurs : 330 mètres. Environ. Selon la météo.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Hervé alone (short, pot-bellied, ginger moustache, straw boater, bright orange polo), head and shoulders, umbrella raised but drooping, holding a small weather thermometer in his other hand, with a sulky, defeated half-smile and one eyebrow raised at the reader. close-up",
+            "cast": ["herve"],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Au fil d’une journée ensoleillée, le sommet de la tour Eiffel décrit une courbe d’environ 15 centimètres de diamètre, en s’écartant du soleil.",
+        "source": "Sortiraparis — Did you know the Eiffel Tower changes size with the weather?"
+      },
+      "story": "La tour Eiffel, inaugurée en 1889 pour l’Exposition universelle, est faite d’environ 7 300 tonnes de fer puddlé, un fer affiné à chaud. Comme tous les métaux, ce fer se dilate quand il chauffe : il s’allonge d’environ 12 millionièmes de sa longueur par degré. Sur une structure d’environ 300 mètres, cela fait près de 4 millimètres par degré. Entre un hiver glacial et une canicule, la tour peut ainsi gagner une quinzaine de centimètres ; certaines sources parlent même de 20. L’hiver, elle rapetisse d’autant.\nLe soleil ajoute une bizarrerie : il ne chauffe qu’un côté à la fois. Ce côté s’allonge un peu plus que les autres, donc le sommet s’incline légèrement du côté opposé, de quelques centimètres. Comme le soleil tourne dans la journée, le sommet suit une courbe d’environ 15 centimètres de diamètre.\nLe vent la fait aussi bouger, sans danger : pendant la tempête Lothar, en décembre 1999, son sommet a oscillé de 13 centimètres. Avec l’antenne ajoutée en 2022, la tour mesure aujourd’hui 330 mètres, au lieu de 312 à son ouverture. Sa hauteur officielle reste donc un chiffre… à température ambiante.",
+      "sources": [
+        { "title": "Futura Sciences — La tour Eiffel change-t-elle de taille ?", "url": "https://www.futura-sciences.com/planete/questions-reponses/monuments-tour-eiffel-change-t-elle-taille-12124/" },
+        { "title": "Sortiraparis — Did you know the Eiffel Tower changes size with the weather?", "url": "https://www.sortiraparis.com/en/what-to-visit-in-paris/history-heritage/articles/331658-anecdote-did-you-know-the-eiffel-tower-changes-size-with-the-weather-heat-season" },
+        { "title": "Le Tribunal du Net — La tour Eiffel grandit-elle l’été ? Vrai ou faux", "url": "https://www.letribunaldunet.fr/insolite/tour-eiffel-grandit-ete-vrai-faux.html" },
+        { "title": "Wikimedia Commons — Tour Eiffel pilier sud vu de dessous", "url": "https://commons.wikipedia.com/wiki/File:Tour_Eiffel_pilier_sud_vu_de_dessous.jpg" }
+      ]
+    }
+  ]
+}
