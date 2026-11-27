@@ -1,0 +1,182 @@
+{
+  "added": "20261127-1506",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le Parlement européen fait ses valises tous les mois (et c’est écrit dans les traités)",
+      "tagline": "Une assistante qui étiquette tout, un déménageur qui commence à connaître l’autoroute",
+      "teaser": "Léonie numérote les malles. Piet les porte. Tous les mois, depuis des années, et personne n’a le droit d’arrêter.",
+      "minutes": 2,
+      "theme": "Géopolitique",
+      "epoque": "present",
+      "art": {
+        "subject": "why the European Parliament moves every month from Brussels to Strasbourg for its plenary sessions, as required by the EU treaties",
+        "setting": "the loading bay of the glass-and-steel European Parliament buildings in Brussels on a Monday morning, with a removal lorry; the motorway; then the circular Strasbourg parliament building by the river",
+        "era": "today, Brussels and Strasbourg, 2026",
+        "props": {
+          "trunk": "a big dark-grey metal trunk with brass corners and a blank white number label",
+          "lorry": "a white removal lorry with its back doors wide open",
+          "labeller": "a small yellow handheld label maker"
+        }
+      },
+      "cast": [
+        {
+          "id": "leonie",
+          "name": "Léonie",
+          "look": "Léonie, a tall and rigid young parliamentary assistant, a severe sleek platinum-blond bob, pale skin, a cobalt-blue trouser suit as main colour, a lanyard badge, always holding a clipboard and the labeller",
+          "role": "an obsessively organised assistant who labels everything and quotes the rules by heart; stands bolt upright, ticks boxes, never doubts",
+          "file": "cast/cultureg-leonie.png",
+          "status": "pending"
+        },
+        {
+          "id": "piet",
+          "name": "Piet",
+          "look": "Piet, a stocky round-bellied Belgian removal driver in his fifties, a bushy brown beard, a grey woolly bobble hat, ruddy light skin, a moss-green work overall as main colour, heavy work gloves, a pencil behind his ear",
+          "role": "a weary, grumbling removal driver who has carried the same trunks a hundred times; sighs, rolls his eyes, slumps on every trunk he can sit on",
+          "file": "cast/cultureg-piet.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "at the loading bay of the glass-and-steel parliament buildings in Brussels: Léonie (tall, rigid, sleek platinum-blond bob, cobalt-blue trouser suit) on the left sticks a label on a trunk with the labeller; on the right Piet (stocky, round belly, bushy brown beard, grey bobble hat, moss-green overall) staggers under a tower of trunks towards the open lorry, eyes rolled up to the sky. medium wide shot",
+        "cast": ["leonie", "piet"],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Un lundi de 2026",
+          "caption": "Pourquoi le Parlement européen part-il chaque mois de Bruxelles à Strasbourg ? Un lundi matin de 2026, à Bruxelles.",
+          "bubbles": [
+            { "who": "leonie", "text": "Malle 1 : les dossiers. Malle 2 : les dossiers sur les dossiers.", "side": "l" },
+            { "who": "piet", "text": "Encore Strasbourg ? On en revient.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the loading bay of the glass-and-steel parliament buildings in Brussels on a grey Monday morning: rows of trunks on the pavement; Léonie (tall, rigid, sleek platinum-blond bob, cobalt-blue trouser suit) on the left ticks her clipboard; Piet (stocky, round belly, bushy brown beard, grey bobble hat, moss-green overall) on the right leans against the open lorry, coffee in hand, already exhausted. wide shot",
+            "cast": ["leonie", "piet"],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "La règle",
+          "caption": "Parce que les traités l’imposent : douze sessions plénières par an à Strasbourg, où les eurodéputés votent en séance.",
+          "bubbles": [
+            { "who": "leonie", "text": "Du lundi 17 heures au jeudi 17 heures. Pas une minute de plus.", "side": "l" },
+            { "who": "piet", "text": "Quatre jours là-bas, quatre cents kilomètres de route.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Léonie (tall, rigid, sleek platinum-blond bob, cobalt-blue trouser suit) on the left reads aloud from a thick rulebook held at arm's length, chin high; on the right Piet (stocky, round belly, bushy brown beard, grey bobble hat, moss-green overall) sits slumped on a trunk, counting on his gloved fingers with a long-suffering face. medium shot",
+            "cast": ["leonie", "piet"],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "D’où vient cette navette",
+          "steps": [
+            "Décembre 1992, sommet d’Édimbourg : les pays fixent le siège du Parlement à Strasbourg",
+            "1997 : cette décision est inscrite dans le traité d’Amsterdam",
+            "Le secrétariat général reste à Luxembourg, le travail courant se fait à Bruxelles",
+            "Pour changer, il faut l’accord unanime des pays de l’Union"
+          ],
+          "joke": "Trois villes, un Parlement : la garde alternée version européenne."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le convoi",
+          "caption": "Chaque mois, 2 000 à 3 000 eurodéputés et fonctionnaires font le trajet, suivis de camions chargés de malles de dossiers.",
+          "bubbles": [],
+          "image": {
+            "prompt": "inside the open back of the lorry seen from above: an avalanche of dark-grey trunks has collapsed, and only one gloved arm of Piet (moss-green overall sleeve) and the grey bobble of his hat stick out of the pile, the arm limply holding a pencil; a single trunk on top bears a blank white label. high angle",
+            "cast": ["piet"],
+            "file": "images/cultureg-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "La facture",
+          "caption": "Le coût est discuté : 50 à 200 millions d’euros par an selon les estimations, et 20 000 tonnes de CO2 selon les Verts, en 2007.",
+          "bubbles": [
+            { "who": "piet", "text": "Et si on votait pour rester à Bruxelles ?", "side": "r" },
+            { "who": "leonie", "text": "Il faudrait l’unanimité. Et la France dirait non.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "in the cab of the lorry on the motorway, seen from behind the seats: Piet (stocky, bushy brown beard, grey bobble hat, moss-green overall) on the right drives, glancing hopefully at Léonie; Léonie (tall, rigid, sleek platinum-blond bob, cobalt-blue trouser suit) on the left in the passenger seat, sitting bolt upright, labels the glovebox with the labeller without looking up. from behind",
+            "cast": ["leonie", "piet"],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "L’hémicycle de Strasbourg",
+          "text": "L’hémicycle du bâtiment Louise-Weiss, à Strasbourg, érigé en 1999. C’est ici que les eurodéputés se réunissent en séance plénière douze fois par an.",
+          "photo": { "commons": "File:Hemicycle of Louise Weiss building of the European Parliament, Strasbourg.jpg" }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Décembre 2012",
+          "caption": "Le Parlement a voulu couper une session de Strasbourg en deux. Le 13 décembre 2012, la Cour de justice de l’UE a annulé : il en faut douze.",
+          "bubbles": [
+            { "who": "leonie", "text": "Même les juges l’ont dit : douze. Pas onze et deux moitiés.", "side": "l" },
+            { "who": "piet", "text": "Douze malles par mois. Un seul dos.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "in front of the circular Strasbourg parliament building by the river: Léonie (tall, rigid, sleek platinum-blond bob, cobalt-blue trouser suit) on the left stands on a trunk like on a podium, holding up the rulebook in triumph; on the right Piet (stocky, round belly, bushy brown beard, grey bobble hat, moss-green overall) drags two trunks at once behind him, bent in half. low angle",
+            "cast": ["leonie", "piet"],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Un compromis de 1992, inscrit dans les traités en 1997 et modifiable seulement à l’unanimité : le Parlement fait la navette chaque mois.",
+          "bubbles": [
+            { "who": "piet", "text": "À dans un mois, Strasbourg. Je laisse tourner le moteur.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Piet alone (stocky, bushy brown beard, grey bobble hat, moss-green overall), head and shoulders, leaning out of the lorry's driver window with his elbow on the door, giving the reader a weary, resigned little wave, a tiny calendar with every month circled taped to the inside of the windscreen. close-up",
+            "cast": ["piet"],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "En 2012, la Cour de justice de l’UE a annulé le calendrier du Parlement européen : il avait osé couper en deux une session de Strasbourg.",
+        "source": "CJUE, 13 décembre 2012, France contre Parlement (aff. C-237/11 et C-238/11)"
+      },
+      "story": "Le Parlement européen a trois adresses. Ses commissions et son travail courant sont à Bruxelles, son secrétariat général à Luxembourg, et ses grandes séances de vote, les sessions plénières, à Strasbourg. Ce partage vient d’un compromis entre pays : en décembre 1992, au sommet d’Édimbourg, les gouvernements fixent le siège du Parlement à Strasbourg, avec douze sessions plénières mensuelles par an. En 1997, cette décision est inscrite dans un protocole du traité d’Amsterdam, et elle figure toujours dans les traités actuels.\nRésultat : chaque mois, entre 2 000 et 3 000 eurodéputés et fonctionnaires parcourent les quelque 400 kilomètres entre Bruxelles et Strasbourg, suivis de camions chargés de malles de dossiers. La session dure en général quatre jours, du lundi 17 heures au jeudi 17 heures. Le coût de cette navette est discuté : de 50 à 200 millions d’euros par an selon les estimations, et environ 20 000 tonnes de CO2 par an selon un rapport des Verts de 2007.\nBeaucoup d’eurodéputés aimeraient un siège unique. Mais seul l’accord unanime des États membres peut changer la règle, et la France, attachée à Strasbourg, y est opposée. Le Parlement a bien tenté de gagner du temps en coupant une session en deux : le 13 décembre 2012, saisie par la France et le Luxembourg, la Cour de justice de l’Union européenne a annulé son calendrier. Les malles continuent donc de voyager.",
+      "sources": [
+        { "title": "La Libre — Les allers et retours entre Bruxelles et Strasbourg, prescrits par les traités européens", "url": "https://www.lalibre.be/international/europe/2023/05/28/les-allers-et-retours-entre-bruxelles-et-strasbourg-prescrits-par-les-traites-europeens-SIUTQMIBZBAQFKBE6FNM4TLPCY/" },
+        { "title": "CJUE, 13 décembre 2012, France c/ Parlement (aff. jtes C-237/11 et C-238/11), via Dalloz Actualité", "url": "https://www.dalloz-actualite.fr/document/cjue-13-dec-2012-france-c-parlement-aff-jtes-c-23711-et-c-23811" },
+        { "title": "EUobserver — Strasbourg « travelling circus » must go on, says EU court advisor", "url": "https://euobserver.com/institutional/117464" },
+        { "title": "Wikimedia Commons — Hemicycle of Louise Weiss building of the European Parliament, Strasbourg", "url": "https://www.Wikipedia.com/wiki/File:Hemicycle_of_Louise_Weiss_building_of_the_European_Parliament,_Strasbourg.jpg" }
+      ]
+    }
+  ]
+}
