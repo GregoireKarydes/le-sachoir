@@ -1,0 +1,421 @@
+{
+  "added": "20261127-1512",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Haute couture : comment un Anglais a fait de Paris la capitale de la mode (sans parler français)",
+      "tagline": "De la rue de la Paix en 1858 au label protégé par la loi : Worth, Chanel et Dior, ou comment Paris a appris au monde à s’habiller",
+      "teaser": "Un Anglais fauché, une épouse qui tourne sur elle-même et une petite robe comparée à une voiture : Paris, capitale de la mode.",
+      "minutes": 4,
+      "theme": "Mode et luxe",
+      "epoque": "passe",
+      "art": {
+        "subject": "how Paris became the world capital of fashion: Charles Frederick Worth, an Englishman who arrived penniless in 1846, opened his house in 1858 and invented the fashion designer, the label sewn in the dress and the live model; Empress Eugénie as his client; the 1868 couture trade body; Gabrielle Chanel's supple jersey and little black dress of 1926; Christian Dior's lavish New Look of 1947 after wartime rationing; and the legally protected haute couture label since 1945",
+        "setting": "a Paris street in 1846; an elegant 1858 dressmaking salon on the rue de la Paix with mirrors, rolls of silk and a small round platform; a palace room of the Second Empire; a 1920s Paris boutique with a staircase of mirrors; a grey Paris street in 1947; a 1947 salon with rows of gilt chairs; a modern fashion runway in Paris",
+        "era": "from the 1850s Second Empire (crinolines, frock coats, gaslight) through the 1920s (short bobs, jersey suits, pearls) and 1947 (post-war suits, hats) to today's Paris runways",
+        "props": {
+          "label": "a small rectangular woven fabric label, no readable text",
+          "tape": "a long yellow tailor's measuring tape",
+          "silk": "a large roll of shimmering sky-blue silk",
+          "blackdress": "a simple straight knee-length little black dress with long sleeves on a dress form",
+          "fabric": "an enormous mountain of soft ivory fabric"
+        }
+      },
+      "cast": [
+        {
+          "id": "worth",
+          "name": "Charles Frederick Worth",
+          "look": "Charles Frederick Worth, an English dressmaker of 32 in 1858, tall and imposing with a big round belly, thick dark brown hair and a heavy drooping moustache, light pink skin, a floppy bottle-green velvet artist's beret and a matching bottle-green cape trimmed with brown fur as main colour, the yellow measuring tape always around his neck",
+          "role": "the vain dressmaker who sees himself as a great artist and tells empresses what to wear; haughty, chin up, waving a hand dismissively at anyone who disagrees",
+          "file": "cast/dossier-worth.png",
+          "status": "pending"
+        },
+        {
+          "id": "marie",
+          "name": "Marie Vernet",
+          "look": "Marie Vernet, Worth's French wife and his model, 25 in 1858, slim and very upright, glossy black hair in a low bun with two ringlets, light skin, a wide sky-blue silk crinoline gown with ruffles as main colour, small pearl earrings, a resigned polite smile",
+          "role": "the endlessly patient wife who becomes the first fashion model and spins on the platform for hours; deadpan, polite, slightly dizzy",
+          "file": "cast/dossier-marie.png",
+          "status": "pending"
+        },
+        {
+          "id": "chanel",
+          "name": "Gabrielle Chanel",
+          "look": "Gabrielle Chanel, a French designer of 43 in 1926, small, thin and very straight, short dark wavy bob with a small black bow, thick dark eyebrows, light olive skin, a cream-white jersey suit with a long loose jacket as main colour, many long strings of white pearls, a pair of big tailor's scissors in her hand",
+          "role": "the sharp-tongued designer who despises frills and corsets and mocks every rival; cutting and sarcastic, one eyebrow up, snipping the air with her scissors",
+          "file": "cast/dossier-chanel.png",
+          "status": "pending"
+        },
+        {
+          "id": "dior",
+          "name": "Christian Dior",
+          "look": "Christian Dior, a French designer of 42 in 1947, short and round with a soft pink face, receding thinning light brown hair combed back, light skin, a dove-grey three-piece suit as main colour with a small white flower in his buttonhole, a pencil behind his ear",
+          "role": "the shy, gentle designer who hates being in the spotlight but dreams of extravagant dresses; timid, hiding behind curtains, blushing when praised",
+          "file": "cast/dossier-dior.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "an elegant 1858 Paris salon with tall mirrors. Worth (tall with a big belly, heavy moustache, floppy bottle-green velvet beret and fur-trimmed cape, yellow measuring tape) stands on the left with one arm flung out like an orchestra conductor, while Marie Vernet (slim, black low bun with ringlets, wide sky-blue crinoline gown) spins on a small round platform on the right, her skirt flaring like a bell. visual gag: Worth conducting the spin. wide shot",
+        "cast": ["worth", "marie"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Un Anglais à Paris",
+          "caption": "Pourquoi le monde entier regarde-t-il Paris pour savoir comment s’habiller ? Tout commence en 1846, avec un Anglais.",
+          "bubbles": [
+            { "who": "worth", "text": "Je ne parle pas un mot de français. Mais j’ai du goût.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a busy Paris street in 1846 with tall stone buildings and horse carriages. Worth (tall with a big belly, heavy moustache, floppy bottle-green velvet beret and fur-trimmed cape, yellow measuring tape) stands on the left in the middle of the pavement holding one small battered suitcase, chin raised, gazing at the elegant passers-by as if he already owned the city. wide shot",
+            "cast": ["worth"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1846",
+          "caption": "En 1846, Charles Frederick Worth, 20 ans, débarque à Paris sans parler français, avec 5 livres anglaises en poche.",
+          "bubbles": [
+            { "who": "worth", "text": "Cinq livres. Largement de quoi conquérir Paris.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Worth (tall with a big belly, heavy moustache, floppy bottle-green velvet beret and fur-trimmed cape) sits on his suitcase on a Paris bench and proudly counts a few coins in his open palm, which hold almost nothing, while a pigeon at his feet looks at the coins with pity. visual gag: the tiny fortune. low angle",
+            "cast": ["worth"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "L’idée",
+          "caption": "Son idée : la cliente ne dicte plus sa robe. Le couturier crée, comme un artiste, et la cliente choisit.",
+          "bubbles": [
+            { "who": "Une cliente", "text": "Et vous ajouterez trois volants ici.", "side": "r" },
+            { "who": "worth", "text": "Madame, je ne fais pas les volants. Je fais l’art.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "an elegant salon with mirrors and the roll of silk on a table. On the right a plump lady in a pink bonnet points firmly at a sketch; on the left Worth (tall with a big belly, heavy moustache, bottle-green velvet beret and fur-trimmed cape) turns his back to her with his nose in the air, one hand raised dismissively. medium shot",
+            "cast": ["worth"],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "react",
+          "tag": "1858",
+          "caption": "En 1858, il ouvre sa maison au 7, rue de la Paix. Deux inventions vont changer la mode.",
+          "bubbles": [
+            { "who": "worth", "text": "Paris ne le sait pas encore. Mais Paris m’attendait.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a shop front on a Paris street in 1858 with large windows and a heavy wooden door. Worth (tall with a big belly, heavy moustache, bottle-green velvet beret and fur-trimmed cape) throws both doors wide open from inside, arms outstretched, chest puffed out, as a stunned crowd of elegant ladies gathers on the pavement. medium wide shot",
+            "cast": ["worth"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Les inventions de Worth",
+          "caption": "Première invention : coudre une étiquette à son nom dans chaque robe, comme un peintre signe son tableau.",
+          "bubbles": [
+            { "who": "worth", "text": "Une robe sans signature, c’est un tableau anonyme.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Worth (tall with a big belly, heavy moustache, bottle-green velvet beret) bends over a sky-blue gown laid on a table and solemnly sews the label inside its collar with a needle held high like a painter's brush, eyes half closed with pride. medium close-up",
+            "cast": ["worth"],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "Années 1850",
+          "caption": "Deuxième invention : montrer ses robes portées par une femme vivante. Son épouse, Marie Vernet, devient le premier mannequin.",
+          "bubbles": [
+            { "who": "marie", "text": "Je tourne encore une fois ?", "side": "r" },
+            { "who": "worth", "text": "Douze. Et souriez.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the salon with mirrors. Marie Vernet (slim, black low bun with ringlets, wide sky-blue crinoline gown) stands on the small round platform on the right, turning slowly with a polite smile; Worth (tall with a big belly, heavy moustache, bottle-green beret and cape) sits on a gilded chair on the left, twirling one finger in the air to make her turn, while two ladies watch. medium shot",
+            "cast": ["marie", "worth"],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "react",
+          "tag": "La douzième",
+          "caption": "Les clientes ne regardent plus des robes posées sur une table : elles voient comment elles bougent sur quelqu’un.",
+          "bubbles": [],
+          "image": {
+            "prompt": "seen from above, Marie Vernet (slim, black low bun with ringlets, wide sky-blue crinoline gown) has just stopped spinning on the round platform: her eyes swirl with dizziness, she leans at a dangerous angle, still holding her polite smile, her skirt still swinging. visual gag: the dizzy model. high angle",
+            "cast": ["marie"],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Ce que Worth a inventé",
+          "steps": [
+            "Le couturier crée ses modèles, la cliente choisit",
+            "Les robes sont présentées sur des femmes vivantes",
+            "Chaque robe porte une étiquette au nom de la maison",
+            "Puis la robe est ajustée sur mesure à chaque cliente"
+          ],
+          "joke": "Il a inventé le défilé, la griffe et le caprice d’artiste. On le dit « père de la haute couture »."
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Second Empire",
+          "caption": "Sa cliente la plus importante : l’impératrice Eugénie, épouse de Napoléon III. Worth devient son couturier attitré.",
+          "bubbles": [
+            { "who": "worth", "text": "Une impératrice pour cliente. Qui dit mieux ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a gilded Second Empire palace room. A graceful empress with auburn hair and a tiara stands in the centre in a huge white crinoline; Worth (tall with a big belly, heavy moustache, bottle-green beret and fur-trimmed cape) kneels beside her with the measuring tape, but turns his head to wink at the reader, very pleased with himself. wide shot",
+            "cast": ["worth"],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "1868",
+          "caption": "En 1868, les couturiers parisiens fondent leur chambre syndicale, ancêtre de la Fédération de la haute couture et de la mode.",
+          "bubbles": [
+            { "who": "Un couturier", "text": "Un syndicat de grands artistes. Les réunions vont être calmes.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "seen from above, a round meeting table in 1868 where eight dressmakers in frock coats all talk at once, pulling a single roll of silk in every direction like a tug of war, measuring tapes flying; Worth (tall with a big belly, bottle-green beret) at the head of the table pulls the hardest. bird's-eye view",
+            "cast": ["worth"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Chanel coupe court",
+          "caption": "Dans les années 1910, Gabrielle Chanel ose le jersey, un tissu souple, et des coupes empruntées aux vêtements d’homme.",
+          "bubbles": [
+            { "who": "chanel", "text": "On doit pouvoir s’asseoir dans une robe. Révolutionnaire, je sais.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a bright 1920s Paris boutique with a staircase of mirrors. Gabrielle Chanel (small and thin, short dark wavy bob with small black bow, cream-white jersey suit, many long pearl strings) sits casually on the stairs with her legs crossed in a supple suit, snipping the air with her scissors, while behind her a stiff old-fashioned corset hangs abandoned on a hook. medium wide shot",
+            "cast": ["chanel"],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "photo",
+          "tag": "Document d’époque",
+          "title": "Du Chanel en jersey, en 1917",
+          "text": "Illustration parue en mars 1917 dans Les Élégances parisiennes : des tenues de jour signées Chanel, vestes ceinturées et jupes amples en jersey.",
+          "photo": { "commons": "File:Chanel jersey casual wear 1917,.jpg" }
+        },
+        {
+          "n": 13,
+          "kind": "fact",
+          "tag": "Octobre 1926",
+          "caption": "En octobre 1926, Vogue publie sa petite robe noire et la compare à la Ford T, la voiture de tout le monde.",
+          "bubbles": [
+            { "who": "chanel", "text": "Simple, noire, pour toutes. Comme la voiture, sans le klaxon.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "in the 1920s boutique, Gabrielle Chanel (small and thin, short dark wavy bob with small black bow, cream-white jersey suit, pearl strings) presents the blackdress on its dress form with one sweeping gesture, while parked absurdly right next to it inside the shop stands a small old black car from the 1920s. visual gag: the car in the boutique. low angle",
+            "cast": ["chanel"],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "react",
+          "tag": "Le noir",
+          "caption": "Le noir était la couleur du deuil et des domestiques. Chanel en fait la couleur de l’élégance.",
+          "bubbles": [
+            { "who": "Une cliente", "text": "Du noir ? Mais personne n’est mort !", "side": "l" },
+            { "who": "chanel", "text": "Votre ancienne robe, si.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "over the shoulder of a shocked lady in an enormous feathered hat and a frilly pink dress, we see Gabrielle Chanel (small and thin, short dark wavy bob, cream-white jersey suit, pearl strings) calmly cutting a large frill off the lady's sleeve with her scissors, one eyebrow raised. over-the-shoulder",
+            "cast": ["chanel"],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 15,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Gabrielle Chanel dans l’entre-deux-guerres",
+          "text": "Gabrielle Chanel pose en marinière dans l’entre-deux-guerres : une tenue simple, bien loin des crinolines du temps de Worth.",
+          "photo": { "commons": "File:Gabrielle Chanel en marinière.jpg" }
+        },
+        {
+          "n": 16,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Le New Look",
+          "caption": "Le 12 février 1947, après la guerre et ses privations, Christian Dior présente sa toute première collection à Paris.",
+          "bubbles": [
+            { "who": "dior", "text": "J’ai voulu des femmes-fleurs.", "side": "r" },
+            { "who": "Une journaliste", "text": "C’est un look complètement nouveau !", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a 1947 salon with rows of gilt chairs full of applauding guests in hats. A model in a tight-waisted jacket and a huge flared skirt walks down the middle; Christian Dior (short and round, soft pink face, thinning light brown hair, dove-grey suit with a white buttonhole flower) peeks out shyly from behind a curtain on the right, blushing. wide shot",
+            "cast": ["dior"],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "fact",
+          "tag": "1947",
+          "caption": "Taille serrée, jupes longues et très larges, des mètres de tissu : un luxe, alors que la France rationne encore tout.",
+          "bubbles": [
+            { "who": "dior", "text": "Un peu plus de tissu ici. Et là. Et partout.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "in a workshop, Christian Dior (short and round, soft pink face, thinning light brown hair, dove-grey suit) stands almost buried in the fabric mountain, only his head and one arm visible, still pulling more ivory cloth from a roll with a dreamy smile. visual gag: drowning in fabric. medium shot",
+            "cast": ["dior"],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 18,
+          "kind": "react",
+          "tag": "La rivale",
+          "caption": "Chanel n’aime pas du tout. Sa phrase, restée célèbre : « Dior n’habille pas les femmes, il les tapisse ! »",
+          "bubbles": [],
+          "image": {
+            "prompt": "Christian Dior (short and round, soft pink face, thinning light brown hair, dove-grey suit) alone, frozen, mouth slightly open, slowly sinking down into an upholstered armchair whose flowery fabric is exactly the same as the fabric of his dresses, a tiny light-blue sweat drop on his forehead. close-up",
+            "cast": ["dior"],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 19,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Un mot protégé",
+          "caption": "Depuis un décret du 23 janvier 1945, « haute couture » est une appellation protégée par la loi en France.",
+          "bubbles": [
+            { "who": "Un marchand", "text": "Bon. Alors j’écris « couture à mi-hauteur ».", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a lively Paris street market. A skinny market trader with a flat cap and a striped apron on the left stands behind a stall of cheap dresses, rubbing out a sign with his sleeve, looking guilty, while a stern inspector in a grey raincoat with a notebook watches him from the right. medium wide shot",
+            "cast": [],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 20,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Pour avoir le droit de dire « haute couture »",
+          "steps": [
+            "Des ateliers d’au moins 20 salariés en Île-de-France",
+            "Au moins 25 passages par défilé, deux saisons par an, à Paris",
+            "Être au calendrier officiel depuis au moins quatre saisons",
+            "Un label accordé chaque année par le ministre de l’Industrie"
+          ],
+          "joke": "Seules 13 maisons l’ont, dont Chanel et Dior."
+        },
+        {
+          "n": 21,
+          "kind": "fact",
+          "tag": "Janvier et juillet",
+          "caption": "Deux fois par an, en janvier et en juillet, les maisons présentent leurs collections à Paris.",
+          "bubbles": [
+            { "who": "Une première main", "text": "Des semaines de couture pour trente secondes de podium. Ne trébuchez pas.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "seen from behind, backstage at a modern Paris fashion show: a grey-haired seamstress with a pincushion on her wrist and a black smock kneels to fix the hem of a model's long gown at the very last second, just before the model steps out into the bright light of the runway. from behind",
+            "cast": [],
+            "file": "images/dossier-21.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 22,
+          "kind": "explain",
+          "tag": "Et aujourd’hui ?",
+          "title": "Une exception française",
+          "text": "Treize maisons portent aujourd’hui le label, et de grandes marques étrangères viennent défiler à Paris. Les ateliers, d’une quarantaine de personnes au plus, gardent des gestes rares. La haute couture est inscrite à l’inventaire français du patrimoine culturel immatériel, comme un savoir-faire à transmettre."
+        },
+        {
+          "n": 23,
+          "kind": "react",
+          "tag": "Aujourd’hui",
+          "caption": "En résumé : Worth invente le couturier-artiste, Chanel libère le corps, Dior le refleurit, et la loi protège le mot.",
+          "bubbles": [
+            { "who": "marie", "text": "Je peux m’arrêter de tourner, maintenant ?", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a sleek modern Paris runway with bright lights and a seated audience. In the middle of a line of modern models in minimalist outfits, Marie Vernet (slim, black low bun with ringlets, wide sky-blue crinoline gown) is still spinning on her little round platform from 1858, looking at the reader with a polite but exhausted face. visual gag: the 1858 model on today's runway. high angle",
+            "cast": ["marie"],
+            "file": "images/dossier-23.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le père de la haute couture parisienne était anglais : Charles Frederick Worth, arrivé à Paris en 1846 sans parler français.",
+        "source": "Wikipédia — Charles Frederick Worth"
+      },
+      "story": "Pourquoi Paris est-elle la capitale de la mode ? Tout commence avec un Anglais. En 1846, Charles Frederick Worth, 20 ans, arrive à Paris sans parler français, avec 5 livres en poche. En 1858, il ouvre sa maison au 7, rue de la Paix et change les règles : c’est le couturier qui crée, comme un artiste, et la cliente choisit. Il coud une étiquette à son nom dans ses robes et les fait présenter sur une femme vivante, son épouse Marie Vernet, considérée comme le premier mannequin. Sa cliente la plus célèbre, l’impératrice Eugénie, en fait son couturier attitré.\nAu XXe siècle, Gabrielle Chanel libère le corps : jersey souple, coupes empruntées aux hommes. En octobre 1926, Vogue compare sa petite robe noire à la Ford T. Le noir, couleur du deuil et des domestiques, devient chic.\nLe 12 février 1947, Christian Dior présente sa première collection : taille serrée, jupes immenses, des mètres de tissu alors qu’on rationne encore.\nDepuis un décret du 23 janvier 1945, « haute couture » est une appellation protégée : il faut des ateliers d’au moins 20 salariés, des défilés d’au moins 25 passages à Paris chaque saison, et un label renouvelé chaque année. Treize maisons le portent aujourd’hui.",
+      "sources": [
+        { "title": "Wikipédia — Charles Frederick Worth", "url": "https://en.wikipedia.org/wiki/Charles_Frederick_Worth" },
+        { "title": "Fondation Napoléon — Le couturier Charles Frédéric Worth", "url": "https://www.napoleon.org/magazine/plaisirs-napoleoniens/le-couturier-charles-frederic-worth" },
+        { "title": "Ministère de la Culture — La haute couture, fiche de l’inventaire du patrimoine culturel immatériel", "url": "https://www.culture.gouv.fr/Media/Thematiques/Patrimoine-culturel-immateriel/Files/Fiches-inventaire-du-PCI/la-haute-couture" },
+        { "title": "Fédération de la Haute Couture et de la Mode — Notre histoire", "url": "https://fhcm.paris/en/node/1936" },
+        { "title": "Smithsonian Magazine — Why Coco Chanel created the little black dress", "url": "https://www.smithsonianmag.com/smart-news/why-coco-chanel-created-lbd-180965024/" },
+        { "title": "History.com — Christian Dior launches “New Look” fashion designs", "url": "https://www.history.com/this-day-in-history/christian-dior-launches-new-look-fashion-designs" },
+        { "title": "Dior — The New Look", "url": "https://www.dior.com/en_ch/one/the-new-look" }
+      ]
+    }
+  ]
+}
