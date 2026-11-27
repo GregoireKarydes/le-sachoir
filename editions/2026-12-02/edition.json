@@ -1,0 +1,49 @@
+{
+  "date": "2026-12-02",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "geo",
+      "label": "Le Quiz géo",
+      "title": "Trois questions, zéro GPS (et un numéro à deviner)",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "map",
+          "map": "france",
+          "q": "Où se trouve Montpellier ?",
+          "hint": "Une grande ville du bord de la Méditerranée.",
+          "target": { "lat": 43.612, "lon": 3.877 },
+          "name": "Montpellier",
+          "explain": "Montpellier, dans l’Hérault, entre Nîmes et Béziers, à deux pas de la Méditerranée. Si vous avez visé Marseille, vous étiez au bon bord de mer, juste un peu trop à droite.",
+          "source": { "title": "LatLong.net — Montpellier, Occitanie, France", "url": "https://www.latlong.net/place/montpellier-occitan-france-30089.html" }
+        },
+        {
+          "type": "choice",
+          "q": "Wellington est la capitale de quel pays ?",
+          "hint": "Pensez au pays des All Blacks.",
+          "choices": ["Australie", "Nouvelle-Zélande", "Canada", "Afrique du Sud"],
+          "answer": 1,
+          "explain": "La Nouvelle-Zélande. Le Parlement s’y installe en 1865 ; avant, il siégeait à Auckland, la plus grande ville du pays. Comme quoi, être la plus grande ne suffit pas.",
+          "source": { "title": "NZHistory — Wellington, capitale depuis 150 ans", "url": "https://nzhistory.govt.nz/politics/capital-150" }
+        },
+        {
+          "type": "choice",
+          "q": "Le numéro : quel département porte le numéro 74 ?",
+          "hint": "Un grand lac, des montagnes, et sa voisine porte le 73.",
+          "choices": ["Haute-Savoie", "Savoie", "Haute-Garonne", "Vosges"],
+          "answer": 0,
+          "explain": "La Haute-Savoie, préfecture Annecy. Sa voisine la Savoie a le 73 : deux numéros qui se suivent pour deux départements qui se touchent, pour une fois c’est logique.",
+          "source": { "title": "Larousse — Haute-Savoie (74)", "url": "https://www.larousse.fr/encyclopedie/departement/wd/143404" }
+        }
+      ],
+      "sources": [
+        { "title": "LatLong.net — Montpellier, Occitanie, France", "url": "https://www.latlong.net/place/montpellier-occitan-france-30089.html" },
+        { "title": "NZHistory — Wellington, capitale depuis 150 ans", "url": "https://nzhistory.govt.nz/politics/capital-150" },
+        { "title": "Larousse — Haute-Savoie (74)", "url": "https://www.larousse.fr/encyclopedie/departement/wd/143404" }
+      ]
+    }
+  ]
+}
