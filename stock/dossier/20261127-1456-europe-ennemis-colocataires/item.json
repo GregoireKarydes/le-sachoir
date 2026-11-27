@@ -1,0 +1,435 @@
+{
+  "added": "20261127-1456",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "L’Europe : comment de vieux ennemis sont devenus colocataires (27 noms sur la boîte aux lettres)",
+      "tagline": "Du charbon partagé de 1950 à l’euro dans nos poches : comment la France et l’Allemagne ont transformé trois guerres en marché commun, pas à pas",
+      "teaser": "Un marchand de vin qui chuchote, un ministre qui a été allemand et une chaise vide : l’Europe, petit pas par petit pas.",
+      "minutes": 4,
+      "theme": "Géopolitique",
+      "epoque": "passe",
+      "art": {
+        "subject": "how the European Union was built step by step after the Second World War: Jean Monnet's idea of pooling French and German coal and steel, Robert Schuman's declaration of 9 May 1950, the coal and steel community of 1951, the failed European army of 1954, the Treaty of Rome common market of 1957, de Gaulle's vetoes and the empty chair crisis of 1965, the first European elections of 1979, the Schengen agreement signed on a river boat in 1985, the Maastricht vote of 1992, the euro coins of 2002 and Brexit in 2020",
+        "setting": "a 1950 Paris office with a big map of Europe; a gilded salon in the French foreign ministry in 1950; a Lorraine town with timbered houses around 1900; a signing table in 1951; a modest office in Luxembourg; the French National Assembly in 1954; a border post with a barrier in 1957; a press conference room at the Élysée in 1963; a long meeting table in Brussels in 1965; a white river boat on the Moselle in 1985; a polling station in 1992; a bakery in 2002; a small museum in 2026",
+        "era": "from 1950s France (double-breasted suits, hats, fountain pens) through the 1960s and 1980s to 2002 and 2026",
+        "props": {
+          "coal": "a shiny black lump of coal",
+          "ingot": "a small grey steel ingot",
+          "stamp": "a huge wooden customs rubber stamp with a bright red handle",
+          "boat": "a white river cruise boat with a long row of windows and a small flag pole, no text",
+          "chair": "an empty wooden meeting chair with a dark green leather seat"
+        }
+      },
+      "cast": [
+        {
+          "id": "monnet",
+          "name": "Jean Monnet",
+          "look": "Jean Monnet, a French businessman of 61 in 1950, short and round like a barrel, bald dome with a thin fringe of white hair and a neat white moustache, light pink skin, a warm chestnut-brown double-breasted suit as main colour with a pale blue tie, a small black notebook and a pencil always in his hand",
+          "role": "the patient schemer who never seeks the spotlight and always pushes one small concrete step; obstinate, whispering in people's ears, leaning in with a finger raised",
+          "file": "cast/dossier-monnet.png",
+          "status": "pending"
+        },
+        {
+          "id": "schuman",
+          "name": "Robert Schuman",
+          "look": "Robert Schuman, the French foreign minister of 63 in 1950, very tall and thin, slightly stooped, completely bald long head with big ears and a long nose, light skin, a slate-grey-blue three-piece suit as main colour with a white shirt, small round steel glasses, a thin folder of papers held against his chest",
+          "role": "the shy, overly modest minister who would rather be anywhere than in front of the press; hunched, hands clasped, eyes down, blushing at compliments",
+          "file": "cast/dossier-schuman.png",
+          "status": "pending"
+        },
+        {
+          "id": "degaulle",
+          "name": "Charles de Gaulle",
+          "look": "Charles de Gaulle, the French president of 72 in 1963, enormously tall and stiff like a lighthouse, a very long nose, small eyes, thin dark grey moustache, light skin, a khaki-olive general's uniform as main colour with a round khaki kepi trimmed with gold oak leaves, white gloves",
+          "role": "the proud, touchy president who says no to anything that threatens French grandeur; chin raised, arms crossed, looking down his nose at everyone",
+          "file": "cast/dossier-degaulle.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a long wooden table in a bright room. Jean Monnet (short and round, bald with white moustache, chestnut-brown suit) on the left slides the lump of coal and the ingot across the table with a sly smile towards Robert Schuman (very tall and thin, bald long head, big ears, slate-grey-blue suit) who stoops to look at them shyly, blushing. visual gag: the coal treated like a precious gift. wide shot",
+        "cast": ["monnet", "schuman"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Le même bateau",
+          "caption": "Paris, printemps 1950. France et Allemagne se sont fait trois guerres en 70 ans. Comment en faire des partenaires ?",
+          "bubbles": [
+            { "who": "monnet", "text": "Il faut les mettre dans le même bateau. Ou dans la même usine.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a 1950 Paris office with a big map of Europe pinned on the wall and a desk covered with papers. Jean Monnet (short and round, bald with white moustache, chestnut-brown double-breasted suit) stands on tiptoe on the left, pressing two map pins together over France and Germany with his notebook under his arm, eyes narrowed with a sly idea. wide shot",
+            "cast": ["monnet"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "L’idée",
+          "caption": "Charbon et acier font les armes. Jean Monnet, fils d’un négociant en vins de Cognac, propose de les partager.",
+          "bubbles": [
+            { "who": "monnet", "text": "Si on partage les usines, on ne peut plus se bombarder.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Jean Monnet (short and round, bald with white moustache, chestnut-brown suit) sits at his desk holding the lump of coal in one hand and the ingot in the other, weighing them like a merchant tasting wine, with a satisfied little smile. medium close-up",
+            "cast": ["monnet"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Mai 1950",
+          "caption": "Monnet n’est pas ministre : il lui faut un porte-voix. Ce sera Robert Schuman, ministre des Affaires étrangères.",
+          "bubbles": [
+            { "who": "schuman", "text": "Et c’est moi qui dois l’annoncer ? En public ?", "side": "r" },
+            { "who": "monnet", "text": "Vous lirez. Je chuchoterai.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a corridor of the foreign ministry with tall doors. Jean Monnet (short and round, bald with white moustache, chestnut-brown suit) on the left stands on tiptoe to whisper into the ear of Robert Schuman (very tall and thin, stooped, bald long head, big ears, slate-grey-blue suit), who clutches his folder to his chest, looking terrified. low angle",
+            "cast": ["monnet", "schuman"],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "react",
+          "tag": "9 mai 1950",
+          "caption": "Le 9 mai 1950, Schuman lit le plan au Quai d’Orsay. Détail : ce ministre français a été allemand jusqu’en 1919.",
+          "bubbles": [
+            { "who": "Un journaliste", "text": "Pardon ? Allemand ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a gilded salon with a tall ornate clock and rows of journalists. Robert Schuman (very tall and thin, stooped, bald long head, big ears, slate-grey-blue suit) reads from his folder at a lectern, eyes down; in the foreground on the left a journalist in a trench coat freezes mid-note, pencil snapping in his hand, staring at Schuman. medium wide shot",
+            "cast": ["schuman"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Robert Schuman, en 1949",
+          "text": "Robert Schuman à l’ambassade de France à Washington, le 14 avril 1949, un an avant sa déclaration. Il est alors ministre des Affaires étrangères.",
+          "photo": { "commons": "File:Schuman Washington.jpg" }
+        },
+        {
+          "n": 6,
+          "kind": "fact",
+          "tag": "1886-1919",
+          "caption": "Né au Luxembourg en 1886 d’un père lorrain, il est allemand à cause de l’annexion de la Lorraine. Français en 1919.",
+          "bubbles": [
+            { "who": "schuman", "text": "Mon passeport a changé plus souvent que mon chapeau.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a quiet Lorraine street with timbered houses. Robert Schuman (very tall and thin, stooped, bald long head, big ears, slate-grey-blue suit) stands perfectly still on his own doorstep holding his folder, while behind him a workman on a ladder swaps one plain flag on the house front for another plain flag of different colours; Schuman shrugs at the reader. from behind",
+            "cast": ["schuman"],
+            "file": "images/dossier-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Ce que propose la déclaration du 9 mai",
+          "steps": [
+            "Placer le charbon et l’acier français et allemands sous une « Haute Autorité » commune",
+            "Ouvrir l’accord aux autres pays d’Europe",
+            "Rendre la guerre « non seulement impensable, mais matériellement impossible »",
+            "Avancer par « réalisations concrètes », pas d’un seul coup"
+          ],
+          "joke": "La méthode Monnet : des petits pas, mais dans la même direction."
+        },
+        {
+          "n": 8,
+          "kind": "fact",
+          "tag": "18 avril 1951",
+          "caption": "Le 18 avril 1951, à Paris, six pays fondent la CECA, la Communauté européenne du charbon et de l’acier.",
+          "bubbles": [
+            { "who": "monnet", "text": "Premier petit pas. J’en ai prévu quelques milliers.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a long signing table seen from above with six ministers in dark suits bent over documents, fountain pens in hand. Standing a little behind them, Jean Monnet (short and round, bald with white moustache, chestnut-brown suit) ticks a box in his notebook, which unrolls down to the floor like an endless list. visual gag: the endless to-do list. high angle",
+            "cast": ["monnet"],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "react",
+          "tag": "Luxembourg",
+          "caption": "Les six : France, Allemagne de l’Ouest, Italie, Belgique, Pays-Bas, Luxembourg. Monnet préside la Haute Autorité, installée à Luxembourg.",
+          "bubbles": [],
+          "image": {
+            "prompt": "a modest office in Luxembourg. Jean Monnet (short and round, bald with white moustache, chestnut-brown suit) sits behind a huge desk, lovingly polishing the lump of coal with a white handkerchief as if it were a diamond, the coal displayed on a little velvet cushion. visual gag: coal as a jewel. medium shot",
+            "cast": ["monnet"],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Les coups de frein",
+          "caption": "Le 30 août 1954, les députés français enterrent l’armée européenne prévue, la CED, sans même débattre du traité.",
+          "bubbles": [
+            { "who": "monnet", "text": "Une armée commune, c’était un trop grand pas.", "side": "r" },
+            { "who": "Un député", "text": "On préfère marcher chacun de son côté.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the French National Assembly in 1954, a half-circle of red benches full of deputies standing and shouting, papers flying in the air. In the foreground on the right Jean Monnet (short and round, bald with white moustache, chestnut-brown suit) sits alone in the public gallery, head in his hands, his notebook closed. wide shot",
+            "cast": ["monnet"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "fact",
+          "tag": "25 mars 1957",
+          "caption": "Retour aux petits pas : le 25 mars 1957, le traité de Rome crée la CEE, un marché commun qui doit supprimer les droits de douane entre eux.",
+          "bubbles": [
+            { "who": "Un douanier", "text": "Plus de taxes à la frontière ? Je tamponne quoi, moi ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small border post in 1957 with a red-and-white barrier and a wooden hut. A thin customs officer with a big black moustache and a navy uniform cap stands by the barrier holding the stamp in both hands, looking desperately for something to stamp, while a lorry full of crates drives past without stopping. medium wide shot",
+            "cast": [],
+            "file": "images/dossier-11.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 12,
+          "kind": "chap",
+          "tag": "14 janvier 1963",
+          "caption": "Le 14 janvier 1963, le président de Gaulle ferme la porte au Royaume-Uni, candidat à la CEE. Récidive en 1967.",
+          "bubbles": [
+            { "who": "degaulle", "text": "Non. Et dans quatre ans, je redirai non. Pour être sûr.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a grand press conference room with chandeliers kept low. Charles de Gaulle (enormously tall and stiff, long nose, khaki uniform and kepi) stands on the right behind a lectern and stretches one white-gloved arm to firmly close a tall door, while on the left a small man in a bowler hat with an umbrella is gently pushed back out of the doorway. low angle",
+            "cast": ["degaulle"],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "react",
+          "tag": "Juillet 1965",
+          "caption": "En juillet 1965, la France boycotte les réunions européennes plus de six mois : c’est la crise de la « chaise vide ».",
+          "bubbles": [],
+          "image": {
+            "prompt": "a long meeting table in Brussels: five ministers in dark suits sit on both sides staring in silence at the chair, which stands empty at the end of the table with de Gaulle's round khaki kepi placed alone on its seat. One minister checks his watch. visual gag: the kepi on the empty chair. bird's-eye view",
+            "cast": [],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi la chaise est restée vide",
+          "steps": [
+            "De Gaulle refuse que la France soit mise en minorité sur ses intérêts essentiels",
+            "La France quitte les réunions en juillet 1965",
+            "En janvier 1966, le « compromis de Luxembourg » : si un pays juge un intérêt très important menacé, on cherche l’unanimité"
+          ],
+          "joke": "En clair : un droit de veto qui ne dit pas son nom."
+        },
+        {
+          "n": 15,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Sans frontières",
+          "caption": "En juin 1979, les Européens élisent leurs députés pour la première fois. Le 17 juillet, Simone Veil préside leur Parlement.",
+          "bubbles": [
+            { "who": "Un député", "text": "Une femme au perchoir dès le premier jour. Les petits pas accélèrent.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a large modern hemicycle in Strasbourg in 1979 seen from the back rows, hundreds of tiny deputies standing and applauding; far away at the presidential desk a small woman with a neat dark chignon and a pale suit raises a gavel. In the foreground on the left an old deputy with a white beard and a red tie claps with surprise. wide shot",
+            "cast": [],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 16,
+          "kind": "fact",
+          "tag": "14 juin 1985",
+          "caption": "Le 14 juin 1985, cinq pays signent l’accord de Schengen sur un bateau, là où se touchent Luxembourg, France et Allemagne.",
+          "bubbles": [
+            { "who": "Un douanier", "text": "Supprimer les contrôles aux frontières ? Et mon tampon ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the boat moored on a calm river between green vineyard hills. On the riverbank in the foreground on the left a customs officer with a grey moustache and a navy uniform cap hugs the stamp against his chest like a teddy bear, watching sadly as men in suits shake hands on the deck. medium shot",
+            "cast": [],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "La Moselle à Schengen",
+          "text": "La Moselle à Schengen, au Luxembourg : la frontière avec la France passe au milieu de la rivière. L’accord a été signé à bord du Princesse Marie-Astrid, amarré ici.",
+          "photo": { "commons": "File:Schengen Moselle 01.jpg" }
+        },
+        {
+          "n": 18,
+          "kind": "fact",
+          "tag": "1995",
+          "caption": "La convention d’application, signée en 1990, entre en vigueur en 1995 : on passe la frontière sans montrer ses papiers.",
+          "bubbles": [
+            { "who": "Un douanier", "text": "Bonne route. Enfin, je suppose. Personne ne me dit plus rien.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "an open road crossing a border with the old barrier raised for good and a hut with closed shutters. A grey-moustached customs officer in a navy uniform cap sits on a folding stool next to the hut, the stamp on his knees, waving weakly at a family car that zooms past. medium close-up",
+            "cast": [],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 19,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Une monnaie et des non",
+          "caption": "Le 20 septembre 1992, les Français approuvent le traité de Maastricht, qui prévoit une monnaie commune : 51,04 % de oui.",
+          "bubbles": [
+            { "who": "Une électrice", "text": "Un oui à un cheveu. Mais un oui.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a French polling station in a school gym with a transparent ballot box. A tall woman with a grey bob and a big orange scarf on the right holds a single hair up between two fingers next to the ballot box, squinting at it, while a polling clerk with a moustache counts envelopes on the table. over-the-shoulder",
+            "cast": [],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 20,
+          "kind": "fact",
+          "tag": "1er janvier 2002",
+          "caption": "Le 1er janvier 2002, les pièces et billets en euros arrivent dans les poches de douze pays, dont la France.",
+          "bubbles": [
+            { "who": "Une boulangère", "text": "Je convertis tout en francs. Depuis 2002. Chaque matin.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small French bakery with baguettes in baskets. A plump baker with a white flour-dusted apron and a high grey bun stands behind the counter on the left, frantically tapping on a big pocket calculator, a tiny light-blue sweat drop on her forehead, while a customer waits holding out a single coin. medium shot",
+            "cast": [],
+            "file": "images/dossier-20.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 21,
+          "kind": "react",
+          "tag": "29 mai 2005",
+          "caption": "Le 29 mai 2005, 54,67 % des Français votent non au traité établissant une Constitution pour l’Europe.",
+          "bubbles": [
+            { "who": "Un électeur", "text": "Les petits pas, oui. Les grands sauts, non merci.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "outside the school polling station, a lanky young man with a black beanie and a green parka stands at the edge of a wide puddle, refusing to jump, arms crossed, while a neat stepping-stone path goes around it. visual gag: refusing the big jump. low angle",
+            "cast": [],
+            "file": "images/dossier-21.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 22,
+          "kind": "fact",
+          "tag": "31 janvier 2020",
+          "caption": "Le 31 janvier 2020, le Royaume-Uni, entré en 1973, quitte l’Union : c’est le premier pays à en sortir.",
+          "bubbles": [
+            { "who": "Un Anglais", "text": "Le général avait dit non. On aurait dû l’écouter… ou pas.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small man in a bowler hat with an umbrella, the same as the one pushed out of the door earlier, walks away carrying a heavy suitcase down a long empty corridor, glancing back over his shoulder with mixed feelings; at the far end of the corridor a tall door stands open. from behind",
+            "cast": [],
+            "file": "images/dossier-22.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 23,
+          "kind": "explain",
+          "tag": "Et aujourd’hui ?",
+          "title": "Les six sont devenus vingt-sept",
+          "text": "L’Union européenne compte 27 pays et environ 450 millions d’habitants, presque sept fois la France. L’euro est la monnaie de 21 pays depuis l’arrivée de la Bulgarie, le 1er janvier 2026. Et le 9 mai, jour de la déclaration Schuman, est devenu la Journée de l’Europe."
+        },
+        {
+          "n": 24,
+          "kind": "react",
+          "tag": "Aujourd’hui",
+          "caption": "En résumé : après le charbon et l’acier, l’Europe a partagé, pas à pas, son marché, ses frontières et sa monnaie.",
+          "bubbles": [
+            { "who": "Un ancien douanier", "text": "Mon tampon est au musée. Moi, presque.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a small history museum in 2026. A very old man with a long white moustache, in a navy cardigan, leans on a cane in front of a glass display case where the stamp rests on a velvet cushion under a spotlight; he looks at it with tender nostalgia, a single light-blue tear on his cheek. close-up",
+            "cast": [],
+            "file": "images/dossier-24.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Robert Schuman, le ministre français qui a tendu la main à l’Allemagne en 1950, avait lui-même été citoyen allemand jusqu’en 1919.",
+        "source": "Union européenne — Les pionniers de l’UE : Robert Schuman"
+      },
+      "story": "Comment la France et l’Allemagne, ennemies de trois guerres, ont-elles fini par partager une monnaie ? En 1950, Jean Monnet, fils d’un négociant en vins de Cognac, a une idée : le charbon et l’acier servent à faire les armes, alors mettons-les en commun. Le ministre des Affaires étrangères Robert Schuman, né au Luxembourg en 1886 et allemand jusqu’en 1919 à cause de l’annexion de la Lorraine, lit ce plan le 9 mai 1950 au Quai d’Orsay. Il veut rendre la guerre « matériellement impossible », par des « réalisations concrètes ».\nLe 18 avril 1951, six pays fondent la CECA ; Monnet préside sa Haute Autorité. Le grand pas suivant, une armée européenne, échoue le 30 août 1954 devant les députés français. On revient aux petits pas : le 25 mars 1957, le traité de Rome crée la CEE, un marché commun.\nLe général de Gaulle freine : il refuse l’entrée du Royaume-Uni en 1963, puis en 1967, et pratique en 1965 la « chaise vide », jusqu’au compromis de Luxembourg de janvier 1966. En 1979, les Européens élisent leur Parlement, présidé par Simone Veil. En 1985, l’accord de Schengen, signé sur un bateau, prépare la fin des contrôles aux frontières.\nLes Français approuvent Maastricht à 51,04 % en 1992 ; l’euro arrive dans les poches de douze pays en 2002. Mais ils rejettent la Constitution européenne en 2005, et le Royaume-Uni part en 2020. Aujourd’hui, l’Union compte 27 pays et 450 millions d’habitants.",
+      "sources": [
+        { "title": "Union européenne — La déclaration Schuman, mai 1950", "url": "https://european-union.europa.eu/principles-countries-history/history-eu/1945-1959/schuman-declaration-may-1950_fr" },
+        { "title": "Union européenne — Les pionniers de l’UE : Robert Schuman", "url": "https://european-union.europa.eu/system/files/2021-06/eu-pioneers-robert-schuman_fr.pdf" },
+        { "title": "France Diplomatie — La construction européenne", "url": "https://www.diplomatie.gouv.fr/fr/le-ministere-en-action/promouvoir-une-europe-souveraine/la-france-et-l-union-europeenne/la-construction-europeenne" },
+        { "title": "Parlement européen — Jean Monnet, président de la Haute Autorité de la CECA à Luxembourg (1952-1955)", "url": "https://multimedia.europarl.europa.eu/nl/photo/jean-monnet-archive-picture-of-one-of-the-founding-fathers-of-the-european-union-from-1950-the-frenchman-jean-monnet-commissioner-general-of-the-french-national-planning-board-played-an-active-role-in-the-establishment-of-the-european-coal-and-steel-community-ecsc-serving-as-president-of-the-ecsc-high-authority-in-luxembourg-from-1952-to-1955-picture-taken-in-brussels-may-11-1973_00000000_MONNET_138" },
+        { "title": "Hérodote — Jean Monnet (1888-1979), un négociant dévoué à la construction européenne", "url": "https://www.herodote.net/Un_negociant_devoue_a_la_construction_europeenne-synthese-206.php" },
+        { "title": "CVCE — Débats à l’Assemblée nationale du 30 août 1954", "url": "https://www.cvce.eu/obj/debates_in_the_national_assembly_on_30_august_1954-en-b7be6e26-f125-4f20-af78-5699906abc9a.html" },
+        { "title": "Hérodote — 25 mars 1957 : le traité de Rome", "url": "https://www.herodote.net/25_mars_1957-evenement-19570325.php" },
+        { "title": "CVCE — Conférence de presse du général de Gaulle (14 janvier 1963)", "url": "https://www.cvce.eu/obj/press_conference_held_by_general_de_gaulle_14_january_1963-en-5b5d0d35-4266-49bc-b770-b24826858e1f.html" },
+        { "title": "Wikipédia — Luxembourg compromise", "url": "https://en.wikipedia.org/wiki/Luxembourg_compromise" },
+        { "title": "CVCE — Élection de Simone Veil à la présidence du Parlement européen (17 juillet 1979)", "url": "https://www.cvce.eu/obj/election_of_simone_veil_as_president_of_the_european_parliament_17_july_1979-en-6f0908ca-d3d3-43a9-9cce-986108d0936e.html" },
+        { "title": "Luxembourg.public.lu — Schengen : 40 ans d’histoire européenne sur un bateau", "url": "https://luxembourg.public.lu/en/society-and-culture/international-openness/schengen-40-years-european-history-ship.html" },
+        { "title": "Vie publique — Les référendums de la Ve République et leurs résultats", "url": "https://www.vie-publique.fr/fiches/23970-les-referendums-de-la-ve-republique-et-leurs-resultats" },
+        { "title": "BCE — Le passage à l’euro fiduciaire en 2002", "url": "https://ecb.europa.eu/euro/changeover/2002/html/index.fr.html" },
+        { "title": "Vie publique — Brexit : retrait effectif du Royaume-Uni de l’UE le 31 janvier 2020", "url": "https://vie-publique.fr/eclairage/272932-brexit-retrait-effectif-du-royaume-uni-de-lue-le-31-janvier-2020" },
+        { "title": "Eurostat — EU population increases for the 4th consecutive year", "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250711-1" },
+        { "title": "Banque de France — La Bulgarie rejoint la zone euro", "url": "https://www.banque-france.fr/fr/actualites/la-bulgarie-rejoint-la-zone-euro" }
+      ]
+    }
+  ]
+}
