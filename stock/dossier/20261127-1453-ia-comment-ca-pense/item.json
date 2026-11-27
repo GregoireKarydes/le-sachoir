@@ -1,0 +1,442 @@
+{
+  "added": "20261127-1453",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Comment pense une IA ? (Pas comme vous, et votre dissertation en souffre)",
+      "tagline": "Un test de 1950, une machine de 5 tonnes, un Français qui lisait les chèques et une IA qui invente des livres : l’intelligence artificielle expliquée mot à mot",
+      "teaser": "Une étudiante pressée, une IA trop sûre d’elle et un livre qui n’existe pas : l’enquête commence en 1950.",
+      "minutes": 4,
+      "theme": "Informatique et numérique",
+      "epoque": "present",
+      "art": {
+        "subject": "how today's AI chatbots really work, told through a lazy Paris student in 2026 whose AI-written essay cites a book that does not exist: Turing's imitation game in 1950, Rosenblatt's learning perceptron on a huge IBM computer in 1958, the 1969 setback, Yann LeCun's neural network reading handwritten zip codes and bank cheques at Bell Labs from 1989, and large language models that guess the next word",
+        "setting": "a messy student bedroom in Paris in 2026 with a desk, a laptop and fairy lights; a university library; a 1950 university office in Manchester with a blackboard; a 1958 room-sized computer hall in the United States with tall grey cabinets; a 1989 research lab near New York with piles of mail; a bank back office around 2001; a Paris street in 2026",
+        "era": "from 1950 England (tweed jackets, chalk, teacups) through 1958 America (suits, bow ties, punch cards) and 1989 (big monitors, sweaters) to Paris in 2026 (hoodies, smartphones, laptops)",
+        "props": {
+          "laptop": "a slim silver laptop covered in round stickers with simple shapes, no text",
+          "phone": "a smartphone in a bright green case",
+          "teacup": "a white china teacup on a saucer, always full and forgotten",
+          "punchcards": "a thick stack of pale beige punch cards with rows of small rectangular holes",
+          "cabinet": "a tall grey metal computer cabinet with rows of round dials and blinking little lamps",
+          "envelopes": "a stack of white envelopes with messy handwritten scribbles drawn as squiggles, no readable text"
+        }
+      },
+      "cast": [
+        {
+          "id": "ines",
+          "name": "Inès",
+          "look": "Inès, a Paris student of 20 in 2026, small and always slouching, a big round puff of very curly dark brown hair tied on top of her head with a lime-green scrunchie, warm brown skin, a huge bright tomato-red oversized hoodie as main colour with sleeves covering her hands, grey jogging trousers, big white headphones around her neck, the phone always in her hand",
+          "role": "the lazy, last-minute student who wants the AI to do all her homework; lazy and overconfident, slumped in her chair, thumbs always on her phone",
+          "file": "cast/dossier-ines.png",
+          "status": "pending"
+        },
+        {
+          "id": "turing",
+          "name": "Alan Turing",
+          "look": "Alan Turing, an English mathematician of 38 in 1950, tall and lanky like a long-distance runner, untidy dark brown hair falling over his forehead, thick eyebrows, pale skin, a rumpled oatmeal-beige tweed jacket as main colour over a white shirt with a loose dark tie, chalk dust on his sleeves, the teacup nearby",
+          "role": "the absent-minded genius so absorbed by his idea that he forgets everything else, starting with his tea; distracted, staring into space, scribbling",
+          "file": "cast/dossier-turing.png",
+          "status": "pending"
+        },
+        {
+          "id": "rosen",
+          "name": "Frank Rosenblatt",
+          "look": "Frank Rosenblatt, an American psychologist of 30 in 1958, compact and bouncy, a thick wavy black pompadour, bushy black eyebrows, light olive skin, a bright royal-blue suit as main colour with a red bow tie, a showman's wide grin, the punch cards always in one hand",
+          "role": "the showman inventor who promises far too much to the press; boastful and vain, arms wide open as if on stage",
+          "file": "cast/dossier-rosen.png",
+          "status": "pending"
+        },
+        {
+          "id": "lecun",
+          "name": "Yann LeCun",
+          "look": "a French computer researcher of 29 in 1989, stocky and broad-shouldered, a big mop of dark curly hair, round wire glasses, light skin, a soft lilac-purple sweater as main colour over a white shirt collar, brown corduroy trousers, the stack of envelopes under his arm",
+          "role": "the stubborn researcher who keeps working on artificial neurons when everyone else has given up; obstinate and calm, arms folded, a small sure smile",
+          "file": "cast/dossier-lecun.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "a messy Paris student bedroom at night with fairy lights. Inès (small and slouching, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) lies sprawled back in her desk chair, feet on the desk next to the open laptop, while a long paper essay pours out of the laptop and piles up on the floor; behind her, an old leather-bound book floats in the air as a faint see-through ghost. visual gag: the ghost book. wide shot",
+        "cast": ["ines"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · La dissertation",
+          "caption": "Paris, novembre 2026. Une IA écrit la dissertation d’Inès en dix secondes. Mais comment une IA « pense »-t-elle ?",
+          "bubbles": [
+            { "who": "ines", "text": "Dix secondes. Moi, il me faut trois jours rien que pour le titre.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a messy Paris student bedroom with fairy lights, an unmade bed and a desk. Inès (small and slouching, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) sits on the left melted deep into her desk chair, one finger lazily pressing a single key of the laptop, a bag of crisps on her lap, looking delighted and lazy. wide shot",
+            "cast": ["ines"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "30 novembre 2022",
+          "caption": "Ces IA s’appellent des grands modèles de langage. ChatGPT, sorti fin 2022, gagne un million d’utilisateurs en cinq jours.",
+          "bubbles": [
+            { "who": "ines", "text": "Un million en cinq jours. Tous avaient une dissertation à rendre.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "seen from above, Inès (small, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) lies on her bedroom carpet holding the phone above her face with both hands, grinning, surrounded by scattered textbooks she has clearly never opened, their pages still tied with ribbons. high angle",
+            "cast": ["ines"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "Le lendemain",
+          "caption": "Avant de rendre son devoir, Inès vérifie un livre de 1987 que l’IA cite avec beaucoup d’assurance.",
+          "bubbles": [
+            { "who": "ines", "text": "Pour une fois que je vérifie quelque chose…", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a quiet university library with tall wooden shelves. Over the shoulder of Inès (big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie), we see her standing on tiptoe on a little rolling step, reaching for an empty gap on a shelf of old books, the phone held up in her other hand. over-the-shoulder",
+            "cast": ["ines"],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "react",
+          "tag": "Le mystère",
+          "caption": "Le livre n’existe pas. Son auteur non plus. Pourquoi une IA si douée invente-t-elle ? L’enquête commence en 1950.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Inès (small, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) alone between library shelves, frozen in shock, mouth wide open, the phone slipping from her fingers, staring at the reader, a big light-blue sweat drop on her forehead; next to her face, the empty gap on the shelf. close-up",
+            "cast": ["ines"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · Le jeu de l’imitation",
+          "caption": "En 1950, en Angleterre, le mathématicien Alan Turing publie un article qui s’ouvre sur une question : « Les machines peuvent-elles penser ? »",
+          "bubbles": [
+            { "who": "turing", "text": "La question est mal posée. Changeons-la.", "side": "r" },
+            { "who": "Une collègue", "text": "Changez plutôt votre thé. Il est froid depuis midi.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a cramped 1950 university office in Manchester with a blackboard covered in chalk scribbles and a wooden desk. Turing (tall and lanky, untidy dark brown hair, oatmeal-beige tweed jacket) stands on the right staring into space, chalk in hand, lost in thought; on the left a short colleague with a grey bun and a navy cardigan points sternly at the forgotten teacup on the desk. medium wide shot",
+            "cast": ["turing"],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai Alan Turing, à 16 ans",
+          "text": "Photo de passeport d’Alan Turing vers 1928. Vingt-deux ans plus tard, ce mathématicien anglais imagine le test qui porte encore son nom.",
+          "photo": { "commons": "File:Alan Turing Aged 16.jpg" }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Le test",
+          "caption": "Son test : un juge discute par écrit avec un humain et une machine cachés. S’il les confond, la machine gagne.",
+          "bubbles": [
+            { "who": "turing", "text": "Si on ne la distingue pas d’un humain, à quoi bon chicaner ?", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a corridor with two closed wooden doors side by side. Turing (tall and lanky, untidy dark brown hair, oatmeal-beige tweed jacket) on the right slips a folded paper note under the left door with a mischievous look, while in the foreground on the left a bald judge in a dark suit sits at a small table holding two notes, looking from one door to the other, totally lost. medium shot",
+            "cast": ["turing"],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "react",
+          "tag": "Le pari",
+          "caption": "Turing parie que vers l’an 2000, après cinq minutes de questions, le juge se trompera au moins trois fois sur dix.",
+          "bubbles": [
+            { "who": "turing", "text": "Cinquante ans. Le temps de finir mon thé.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Turing (tall and lanky, untidy dark brown hair, oatmeal-beige tweed jacket) sits at his desk and finally lifts the teacup to his lips with a satisfied smile, unaware that a thick layer of dust and a little spider web cover the cup. visual gag: the dusty forgotten tea. medium close-up",
+            "cast": ["turing"],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "chap",
+          "tag": "Chapitre 3 · La machine qui apprend",
+          "caption": "En juillet 1958, aux États-Unis, le psychologue Frank Rosenblatt présente à la presse le perceptron, un programme qui apprend.",
+          "bubbles": [
+            { "who": "rosen", "text": "Messieurs, voici une machine qui apprend toute seule !", "side": "r" },
+            { "who": "Un journaliste", "text": "Elle apprend quoi, exactement ?", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a 1958 computer hall filled with the tall grey cabinets of a room-sized computer. Rosenblatt (compact and bouncy, wavy black pompadour, royal-blue suit, red bow tie) stands on the right on a little wooden crate like on a stage, arms wide open, the punch cards in one hand; on the left, a small group of reporters in hats with notepads look doubtful. wide shot",
+            "cast": ["rosen"],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "50 essais",
+          "caption": "Sur un IBM 704 de 5 tonnes, il apprend à dire si une carte est marquée à gauche ou à droite.",
+          "bubbles": [
+            { "who": "Un journaliste", "text": "Cinq tonnes, le poids d’un éléphant, pour trouver la gauche ?", "side": "l" },
+            { "who": "rosen", "text": "En seulement 50 essais !", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Rosenblatt (compact and bouncy, wavy black pompadour, royal-blue suit, red bow tie) proudly feeds the punch cards into the slot of the cabinet, which towers above him like a wardrobe; on the left a reporter in a hat holds up one card marked with a single dot on its left side, frowning. low angle",
+            "cast": ["rosen"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Un IBM 704, grand comme une pièce",
+          "text": "L’IBM 704, ordinateur des années 1950 : armoires, pupitre et bandes magnétiques occupaient une salle entière. C’est sur ce modèle que tourne la démonstration de 1958.",
+          "photo": { "commons": "File:IBM 704 mainframe.gif" }
+        },
+        {
+          "n": 12,
+          "kind": "react",
+          "tag": "Juillet 1958",
+          "caption": "La presse s’emballe : un journal parle d’un « embryon d’ordinateur » conçu pour lire et « devenir plus sage ».",
+          "bubbles": [],
+          "image": {
+            "prompt": "in the computer hall, Rosenblatt (compact and bouncy, wavy black pompadour, royal-blue suit, red bow tie) tenderly rocks a giant wooden baby cradle in which lies the tall grey cabinet wrapped in a pale blue baby blanket with a frilly bonnet on top, its little lamps blinking; he looks at the reader with a proud father's smile. visual gag: the computer as a baby. medium shot",
+            "cast": ["rosen"],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Comment une machine apprend",
+          "steps": [
+            "Chaque petit morceau de l’image envoie un signal",
+            "Chaque signal est multiplié par un « poids », un bouton de réglage",
+            "Si le total dépasse un seuil, la machine répond « droite »",
+            "Si elle se trompe, on tourne un peu les boutons, et on recommence"
+          ],
+          "joke": "Apprendre, pour une machine, c’est se tromper beaucoup, puis de moins en moins."
+        },
+        {
+          "n": 14,
+          "kind": "fact",
+          "tag": "1969",
+          "caption": "En 1969, le livre « Perceptrons », de Minsky et Papert, montre ses limites. La piste des neurones artificiels est délaissée.",
+          "bubbles": [
+            { "who": "rosen", "text": "Un livre entier contre ma machine ? Je suis flatté.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "seen from behind, Rosenblatt (compact, wavy black pompadour, royal-blue suit, red bow tie) stands chest out in front of a desk where a thick closed book has been dropped like a brick, cracking the desktop; only his proud posture and the back of his pompadour are visible. from behind",
+            "cast": ["rosen"],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 15,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Le Français qui lisait les chèques",
+          "caption": "En 1989, aux laboratoires Bell, dans le New Jersey, le Français Yann LeCun, lui, n’a pas lâché les neurones artificiels.",
+          "bubbles": [
+            { "who": "Un collègue", "text": "Tout le monde a laissé tomber, Yann.", "side": "l" },
+            { "who": "lecun", "text": "Ça marche. Il leur faut juste beaucoup d’exemples.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a 1989 research lab with bulky beige computer monitors and cables on long tables. LeCun (stocky, mop of dark curly hair, round wire glasses, lilac-purple sweater) sits on the right, arms folded with a small calm smile, in front of a monitor; on the left a tall thin colleague with a grey moustache and a brown tie shrugs, holding a coffee mug. medium wide shot",
+            "cast": ["lecun"],
+            "file": "images/dossier-15.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 16,
+          "kind": "fact",
+          "tag": "1989",
+          "caption": "Nourri de milliers de chiffres écrits à la main, son réseau apprend à lire les codes postaux du courrier américain.",
+          "bubbles": [
+            { "who": "lecun", "text": "Envoyez-moi les pires écritures. Les médecins d’abord.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "in the lab, an avalanche of the envelopes pours from a big canvas mail sack hanging from the ceiling; LeCun (stocky, mop of dark curly hair, round wire glasses, lilac-purple sweater) stands underneath, buried up to the waist in envelopes, calmly holding one up to read it through his glasses. visual gag: the mail avalanche. high angle",
+            "cast": ["lecun"],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "react",
+          "tag": "Vers 2001",
+          "caption": "Vers 2001, sa technique lit environ 20 millions de chèques par jour aux États-Unis : un chèque sur dix.",
+          "bubbles": [
+            { "who": "Un banquier", "text": "Et il ne réclame jamais d’augmentation.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a bank back office around 2001 with a long conveyor belt carrying hundreds of small paper cheques into a humming grey machine. On the left a plump banker with a shiny bald head and a striped pink shirt leans on the machine, patting it affectionately like a loyal employee, beaming. medium shot",
+            "cast": [],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 18,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi on parle d’apprentissage « profond »",
+          "text": "Les réseaux de LeCun empilent plusieurs couches de neurones artificiels : la première repère des traits, la suivante des boucles et des angles, la dernière des chiffres entiers.",
+          "joke": "Ce « deep learning » lui vaut le prix Turing 2018, avec Geoffrey Hinton et Yoshua Bengio. Turing aurait sûrement oublié son thé."
+        },
+        {
+          "n": 19,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Le mot suivant",
+          "caption": "Retour en 2026. Depuis 2017, une invention, le « transformeur », permet d’entraîner ces réseaux sur des montagnes de textes.",
+          "bubbles": [
+            { "who": "ines", "text": "Mon téléphone aussi devine le mot suivant. Il propose toujours « ok ».", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a Paris street in 2026 with a café and a bus stop. Inès (small and slouching, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) walks while typing on the phone with both thumbs, so absorbed that she is about to bump into a lamppost, her headphones on her neck. bird's-eye view",
+            "cast": ["ines"],
+            "file": "images/dossier-19.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 20,
+          "kind": "fact",
+          "tag": "Le secret",
+          "caption": "Un grand modèle de langage fait pareil, en géant : il calcule le mot le plus probable après les précédents, puis recommence.",
+          "bubbles": [
+            { "who": "ines", "text": "Il ne réfléchit pas. Il parie.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Inès (small, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) sits on the edge of the café terrace, rubbing her forehead after bumping the lamppost, and slowly raises one finger with the face of someone who has just understood everything, small yellow sparkles around her head. medium close-up",
+            "cast": ["ines"],
+            "file": "images/dossier-20.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 21,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Comment l’IA écrit une phrase",
+          "steps": [
+            "Entraînement : elle lit des milliards de pages, livres, articles, sites",
+            "Elle découpe le texte en morceaux de mots, les « tokens »",
+            "Pour le morceau suivant, elle calcule la probabilité de chaque possibilité",
+            "Elle en choisit un, l’ajoute, et recommence, mot après mot"
+          ],
+          "joke": "Personne ne lui a appris la grammaire : elle l’a devinée à force de lire."
+        },
+        {
+          "n": 22,
+          "kind": "react",
+          "tag": "L’hallucination",
+          "caption": "D’où le faux livre : l’IA produit ce qui ressemble à une bonne réponse, vraie ou pas. C’est une « hallucination ».",
+          "bubbles": [
+            { "who": "ines", "text": "Un livre « probable ». Mon prof va adorer.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "back in her bedroom, Inès (small, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) holds her printed essay at arm's length with two fingers like a smelly sock, nose wrinkled, one eyebrow raised, looking sideways at the reader. close-up",
+            "cast": ["ines"],
+            "file": "images/dossier-22.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 23,
+          "kind": "fact",
+          "tag": "La France dans la course",
+          "caption": "Fondée à Paris en avril 2023, Mistral AI, du nom du vent, est devenue l’entreprise d’IA la plus valorisée d’Europe.",
+          "bubbles": [
+            { "who": "ines", "text": "Une IA nommée d’après un vent. Elle souffle les réponses.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a windy Paris street in 2026, autumn leaves flying. Inès (small, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) leans forward against a strong gust of wind, her hair puff blown sideways, while sheets of her essay fly away out of her hands down the street. visual gag: the wind stealing the homework. wide shot",
+            "cast": ["ines"],
+            "file": "images/dossier-23.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 24,
+          "kind": "react",
+          "tag": "Le soir même",
+          "caption": "En résumé : une IA ne pense pas comme nous. Nourrie de montagnes de textes, elle devine le mot suivant.",
+          "bubbles": [
+            { "who": "ines", "text": "Bon. Trois jours pour le titre, alors.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Inès (small, big curly dark hair puff with lime-green scrunchie, huge tomato-red hoodie) sits upright at her desk for the first time, the laptop firmly closed and pushed aside, chewing a pencil over a blank sheet of paper with a resigned but determined face. close-up",
+            "cast": ["ines"],
+            "file": "images/dossier-24.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Vers 2001, un réseau de neurones conçu par le Français Yann LeCun lisait déjà environ un chèque sur dix aux États-Unis.",
+        "source": "Wikipédia — LeNet"
+      },
+      "story": "Comment « pense » une intelligence artificielle comme ChatGPT, sortie le 30 novembre 2022 et adoptée par un million de personnes en cinq jours ? Pas comme nous. L’histoire commence en 1950 : le mathématicien anglais Alan Turing publie un article qui s’ouvre sur la question « Les machines peuvent-elles penser ? ». Il propose de la remplacer par un test : un juge discute par écrit avec un humain et une machine cachés ; s’il ne sait plus qui est qui, la machine a gagné.\nEn 1958, l’Américain Frank Rosenblatt présente le perceptron, un programme qui apprend. Chaque signal d’entrée est multiplié par un « poids », un réglage ; quand la machine se trompe, on corrige les poids. Sur un ordinateur IBM 704 de 5 tonnes, il apprend en 50 essais à dire si une carte est marquée à gauche ou à droite. En 1969, le livre « Perceptrons » de Minsky et Papert montre ses limites, et la piste est délaissée.\nLe Français Yann LeCun, lui, insiste. En 1989, aux laboratoires Bell, son réseau de neurones à plusieurs couches apprend à lire les codes postaux écrits à la main ; vers 2001, sa technique lit environ un chèque sur dix aux États-Unis.\nDepuis 2017, l’architecture du « transformeur » permet d’entraîner ces réseaux sur des milliards de pages. Un grand modèle de langage découpe le texte en morceaux, calcule le morceau suivant le plus probable, l’ajoute et recommence. Il produit donc ce qui ressemble à une bonne réponse, vraie ou non : ce sont les « hallucinations ».",
+      "sources": [
+        { "title": "A. M. Turing — Computing Machinery and Intelligence (Mind, 1950)", "url": "https://courses.cs.umbc.edu/471/papers/turing.shtml" },
+        { "title": "Wikipédia — Computing Machinery and Intelligence", "url": "https://www.Wikipedia.com/wiki/Computing_Machinery_and_Intelligence" },
+        { "title": "Cornell University — Professor’s perceptron paved the way for AI, 60 years too soon", "url": "https://psychology.cornell.edu/news/professors-perceptron-paved-way-ai-60-years-too-soon" },
+        { "title": "Wikipédia — Mark I Perceptron", "url": "https://en.wikipedia.org/wiki/Mark_I_Perceptron" },
+        { "title": "IEEE ETHW — Milestones: Convolutional Neural Networks, 1989", "url": "https://ethw.org/Milestones:Convolutional_Neural_Networks%2C_1989" },
+        { "title": "Wikipédia — LeNet", "url": "https://en.wikipedia.org/wiki/LeNet" },
+        { "title": "Futura Sciences — Yann LeCun, le Français qui a révolutionné l’IA", "url": "https://futura-sciences.com/tech/actualites/intelligence-artificielle-ils-ont-invente-intelligence-artificielle-yann-lecun-francais-revolutionne-ia-129601/" },
+        { "title": "History.com — ChatGPT is released (30 novembre 2022)", "url": "https://www.history.com/this-day-in-history/november-30/chatgpt-released-openai" },
+        { "title": "Mission Open Data — Qu’est-ce qu’un LLM ?", "url": "https://www.mission-open-data.fr/llm-grand-modele-de-langage/" },
+        { "title": "Wikipédia — Mistral AI", "url": "https://en.wikipedia.org/wiki/Mistral_AI" }
+      ]
+    }
+  ]
+}
