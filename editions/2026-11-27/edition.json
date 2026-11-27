@@ -1,7 +1,260 @@
 {
   "date": "2026-11-27",
   "status": "draft",
+  "newsletter": {
+    "subject": "Vendredi : des taxes, un cratère et zéro promo 🛒",
+    "intro": "Vendredi 27 novembre, jour de Black Friday. Ici, rien à vendre : juste quatre minutes pour comprendre la semaine.",
+    "game": "Huit villes, une question : laquelle est la plus peuplée ? Votre GPS ne vous sauvera pas.",
+    "ps": "P.-S. La NASA a foncé exprès dans un astéroïde. Nous, on fonce seulement dans l’actu. Moins de cratères, autant de vitesse."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Une taxe en plus, un mandat en plus, un cratère en plus",
+      "tagline": "Washington prépare de nouveaux droits de douane contre l’Europe, David Lisnard garde les maires, la grippe frappe à la porte et Hera découvre l’œuvre de DART.",
+      "teaser": "Une taxe qui se cherche une loi, un maire qui en veut plus, un nez qui coule et un astéroïde cabossé.",
+      "minutes": 4,
+      "theme": "",
+      "art": {
+        "subject": "four news stories, each told in one gag panel: the US administration proposing new customs duties on Europe and Asia, a French mayor re-elected head of the mayors' association while running for president, the flu arriving in France, a European probe revealing a giant crater on a small asteroid hit on purpose in 2022",
+        "setting": "a busy harbour quay with stacked shipping crates, a big congress hall full of mayors, a cold street, a space science lab",
+        "era": "present day, November 2026",
+        "props": {
+          "stamp": "a huge wooden rubber stamp as big as a suitcase, with a plain blank rubber face",
+          "crates": "plain wooden shipping crates of different colours, without any writing",
+          "asteroid": "a big grey potato-shaped asteroid model on a stand, with a huge round dent covering almost its whole front face"
+        }
+      },
+      "cast": [
+        {
+          "id": "trump",
+          "name": "Donald Trump",
+          "look": "a cartoon caricature of a tall, heavyset older man, light orange-tan skin, voluminous swept-back golden-blond hair, a dark navy suit as main colour, white shirt, a very long bright red tie, a wide satisfied grin",
+          "role": "the American president who taxes everything that arrives; always sure he is doing everyone a favour, chest pushed forward, big theatrical gestures",
+          "file": "cast/actu-trump.png",
+          "status": "pending"
+        },
+        {
+          "id": "lisnard",
+          "name": "David Lisnard",
+          "look": "a cartoon caricature of a slim man in his fifties, light skin, short dark brown hair neatly combed to the side, thin rimless glasses, a charcoal grey suit as main colour, a blue-white-red mayor's sash across the chest",
+          "role": "the mayor re-elected head of the French mayors who is also running for president; ambitious, always already looking at the next step, leaning forward",
+          "file": "cast/actu-lisnard.png",
+          "status": "skipped"
+        },
+        {
+          "id": "enrhume",
+          "name": "Un enrhumé",
+          "look": "a short round man in his sixties, light-brown skin, bald head with a fringe of white hair, a forest-green wool coat as main colour, a thick mustard-yellow knitted scarf, a bright red runny nose, a crumpled white tissue in hand",
+          "role": "an ordinary man catching the flu early; turns his misery into a privilege, proud and miserable at once",
+          "file": "cast/actu-enrhume.png",
+          "status": "skipped"
+        },
+        {
+          "id": "planetologue",
+          "name": "Une planétologue",
+          "look": "a tall, lanky woman in her thirties, dark brown skin, short black braids tied up on top of her head, a bright purple lab coat as main colour over a white t-shirt, round orange safety goggles pushed up on her forehead",
+          "role": "a planetary scientist on the mission; minimises the damage like a driver after a parking scrape, sheepish and very calm",
+          "file": "cast/actu-planetologue.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A busy harbour quay with a cargo ship in the background and a long line of crates being unloaded. trump (heavyset, swept-back golden-blond hair, dark navy suit, very long red tie) stands in the foreground on the right, lifting the stamp high above his head with both hands, about to slam it onto the first crate, grinning proudly. Wide shot.",
+        "cast": ["trump"],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Économie",
+          "lead": true,
+          "major": true,
+          "gag": "mauvaise-foi",
+          "people": [
+            { "name": "Donald Trump", "party": "étranger", "role": "président des États-Unis" }
+          ],
+          "caption": "Mercredi 25 novembre, l’administration du président américain Donald Trump a proposé de nouveaux droits de douane contre 14 partenaires, dont l’Union européenne, accusée de trop produire.",
+          "bubbles": [
+            { "who": "trump", "text": "Ce n’est pas une taxe, c’est un cadeau : vous travaillerez moins.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A harbour quay piled with crates, a crane in the far background. trump (heavyset, swept-back golden-blond hair, dark navy suit, very long red tie) stands on the right on top of a crate, slamming the stamp down on the crate below with a huge generous smile, one hand open toward the other crates as if handing out presents. Low angle.",
+            "cast": ["trump"],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le Winder Building, siège du négociateur commercial américain",
+          "text": "Ce bâtiment de Washington abrite l’USTR, le service qui a mené les enquêtes et proposé les nouvelles taxes.",
+          "photo": { "commons": "File:Winder Building.jpg" }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Washington veut taxer davantage les produits européens",
+          "text": "Quoi : Washington propose 15 % de droits en plus sur les produits européens, voire 20 %, et vise aussi la Chine ou le Japon.\nPourquoi ça compte : vendre aux États-Unis coûterait plus cher ; voitures, acier et médicaments brevetés sont exclus.\nRepère : l’UE y a vendu 554 milliards d’euros de biens en 2025.\nEt maintenant : avis du public jusqu’au 5 janvier, auditions dès le 25 janvier 2027.",
+          "due": "2027-01-25",
+          "sources": [
+            { "title": "Euronews", "url": "https://fr.euronews.com/2026/11/25/etats-unis-trump-propose-de-nouveaux-droits-de-douane-visant-14-partenaires-dont-lue" },
+            { "title": "Toute l’Europe", "url": "https://www.touteleurope.eu/economie-et-social/droits-de-douane-les-etats-unis-annoncent-de-nouvelles-taxes-visant-notamment-l-union-europeenne/" }
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Comment ça se fait ?",
+          "zoom": true,
+          "title": "Pourquoi Trump peut-il encore taxer après son revers en justice ?",
+          "steps": [
+            "Le 20 février 2026, la Cour suprême a annulé une grande partie de ses taxes, fondées sur une loi d’urgence",
+            "La Maison-Blanche s’est rabattue sur une taxe de 10 %, permise 150 jours au plus par une loi de 1974",
+            "En mars, son service du commerce a enquêté sur 16 partenaires grâce à un autre article de cette loi, visant les pratiques déloyales",
+            "Le 25 novembre, il conclut à une « surcapacité » chez 14 d’entre eux : de quoi proposer de nouvelles taxes"
+          ],
+          "text": "Ce qu’on ne sait pas encore : la date d’entrée en vigueur.",
+          "sources": [
+            { "title": "Le Club des juristes", "url": "https://www.leclubdesjuristes.com/en-bref/administration-trump-annonce-de-nouveaux-droits-de-douane-a-lencontre-de-lunion-europeenne-la-chine-et-le-mexique-et-dautres-etats-18688/" },
+            { "title": "Euronews", "url": "https://fr.euronews.com/2026/11/25/etats-unis-trump-propose-de-nouveaux-droits-de-douane-visant-14-partenaires-dont-lue" }
+          ]
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Politique",
+          "gag": "escalade",
+          "people": [
+            { "name": "David Lisnard", "party": "Nouvelle Énergie", "role": "maire de Cannes, président de l’Association des maires de France" }
+          ],
+          "caption": "Mercredi 25 novembre, le maire de Cannes, David Lisnard, candidat à la présidentielle, a été réélu président de l’Association des maires de France avec 72 % des voix.",
+          "bubbles": [
+            { "who": "lisnard", "text": "Les maires, c’est fait. Prochaine étape : tous leurs administrés.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A big congress hall; in the foreground, rows of small mayors seen from behind, each with a blue-white-red sash, applauding. lisnard (slim, neatly combed dark brown hair, rimless glasses, charcoal grey suit, mayor's sash) stands on the left on the stage, ignoring the applause, leaning forward with a pair of binoculars pointed at the far exit door. Medium wide shot.",
+            "cast": ["lisnard"],
+            "file": "images/actu-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "David Lisnard garde la tête des maires",
+          "text": "Quoi : face à Philippe Laurent, maire UDI de Sceaux, il entame un troisième mandat à la tête de l’association.\nPourquoi ça compte : l’AMF porte la voix des communes face à l’État, sur leurs finances et leurs règles.\nEt maintenant : il prévoit de se mettre en retrait pendant la campagne présidentielle.",
+          "sources": [
+            { "title": "Public Sénat", "url": "https://www.publicsenat.fr/actualites/politique/david-lisnard-largement-reelu-a-la-tete-de-lassociation-des-maires-de-france" },
+            { "title": "Entrevue", "url": "https://entrevue.fr/politique/david-lisnard-largement-reelu-a-la-tete-de-lamf-avec-72-des-voix/" }
+          ]
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Santé",
+          "gag": "comparaison",
+          "caption": "Mercredi 25 novembre, Santé publique France a annoncé que sept régions de l’Hexagone, dont l’Île-de-France et la Bretagne, sont en « pré-épidémie » de grippe, l’étape avant l’épidémie.",
+          "bubbles": [
+            { "who": "enrhume", "text": "Pré-épidémie ? J’ai la grippe en avant-première.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. enrhume (short and round, bald with a white fringe, forest-green wool coat, mustard-yellow scarf, bright red runny nose) wears cardboard cinema 3D glasses and holds a red-and-white striped popcorn box, sneezing hard into his tissue with a proud, smug expression, popcorn flying out of the box. Plain cold blue-grey background. Close-up.",
+            "cast": ["enrhume"],
+            "file": "images/actu-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "La grippe s’installe dans sept régions",
+          "text": "Quoi : cinq régions ont rejoint en une semaine les Hauts-de-France et l’Île-de-France ; Mayotte est en épidémie.\nPourquoi ça compte : les consultations pour grippe sont plus nombreuses qu’à la même période l’an dernier.\nEt maintenant : les plus de 65 ans et les malades chroniques sont appelés à se faire vacciner.",
+          "sources": [
+            { "title": "Pharmactu", "url": "https://pharmactu.fr/articles/grippe-epidemie-2026-2027-point-semaine-par-semaine" },
+            { "title": "Libnanews", "url": "https://libnanews.com/grippe-en-france-sept-regions-en-pre-epidemie/" }
+          ]
+        },
+        {
+          "n": 9,
+          "kind": "fact",
+          "tag": "Espace",
+          "gag": "litote",
+          "caption": "Mercredi 25 novembre, la sonde européenne Hera a dévoilé un cratère de la taille d’un stade sur l’astéroïde Dimorphos, percuté exprès par la sonde américaine DART en 2022.",
+          "bubbles": [
+            { "who": "planetologue", "text": "Bon. On a un peu abîmé la carrosserie.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A bare space science lab. The asteroid model stands on the left on its stand, much bigger than a person, its front face almost entirely caved in. planetologue (tall and lanky, black braids tied up, bright purple lab coat, orange goggles on her forehead) stands on the right, small next to it, calmly dabbing at the giant dent with a tiny paintbrush and a tiny pot of grey touch-up paint. Wide shot.",
+            "cast": ["planetologue"],
+            "file": "images/actu-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Dimorphos vu par DART, juste avant l’impact",
+          "text": "L’une des dernières images prises par la sonde DART, le 26 septembre 2022, avant de percuter l’astéroïde.",
+          "photo": { "commons": "File:Last image showing all of Dimorphos by DART.png" }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Hera voit enfin les dégâts de DART",
+          "text": "Quoi : le cratère couvre presque toute la face touchée de Dimorphos, large de 151 m, qui tourne désormais de façon chaotique.\nPourquoi ça compte : on apprend comment dévier un astéroïde qui menacerait un jour la Terre.\nEt maintenant : en janvier 2027, Hera larguera deux mini-satellites, Juventas et Milani.",
+          "sources": [
+            { "title": "CNES", "url": "https://cnes.fr/actualites/hera-devoile-premiers-secrets-de-dimorphos-lasteroide-touche-dart" },
+            { "title": "RTBF", "url": "https://www.rtbf.be/article/ca-fait-quels-degats-une-sonde-spatiale-qui-percute-expressement-un-asteroide-la-reponse-en-images-une-premiere-avec-la-mission-hera-11820969" }
+          ]
+        },
+        {
+          "n": 12,
+          "kind": "explain",
+          "suite": true,
+          "tag": "La suite",
+          "title": "Budget de la Sécu : pas de compromis",
+          "text": "Annoncé : députés et sénateurs devaient chercher un texte commun le 26 novembre.\nRésultat : échec jeudi 26 novembre, après une heure et quart ; nouvelle lecture à l’Assemblée, en séance à partir du 7 décembre.",
+          "of": "2026-11-19#3",
+          "sources": [
+            { "title": "Public Sénat", "url": "https://www.publicsenat.fr/actualites/politique/budget-2027-de-la-securite-sociale-echec-de-la-tentative-de-compromis-entre-deputes-et-senateurs" },
+            { "title": "France Mag", "url": "https://www.francemag.fr/article/4234/budget-securite-sociale-2027-echec-commission-mixte-paritaire-retour-assemblee" }
+          ]
+        }
+      ],
+      "final": {
+        "text": "La sonde DART pesait 580 kg et fonçait à plus de 20 000 km/h quand elle a percuté Dimorphos, un astéroïde de 151 m.",
+        "source": "RTBF, d’après Patrick Michel (CNRS) ; CNES"
+      },
+      "sources": [
+        { "title": "Euronews — Trump propose de nouveaux droits de douane visant 14 partenaires, dont l’UE", "url": "https://fr.euronews.com/2026/11/25/etats-unis-trump-propose-de-nouveaux-droits-de-douane-visant-14-partenaires-dont-lue" },
+        { "title": "Toute l’Europe — Les États-Unis annoncent de nouvelles taxes visant notamment l’Union européenne", "url": "https://www.touteleurope.eu/economie-et-social/droits-de-douane-les-etats-unis-annoncent-de-nouvelles-taxes-visant-notamment-l-union-europeenne/" },
+        { "title": "Le Club des juristes — Nouveaux droits de douane de l’administration Trump", "url": "https://www.leclubdesjuristes.com/en-bref/administration-trump-annonce-de-nouveaux-droits-de-douane-a-lencontre-de-lunion-europeenne-la-chine-et-le-mexique-et-dautres-etats-18688/" },
+        { "title": "Public Sénat — David Lisnard largement réélu à la tête de l’AMF", "url": "https://www.publicsenat.fr/actualites/politique/david-lisnard-largement-reelu-a-la-tete-de-lassociation-des-maires-de-france" },
+        { "title": "Entrevue — David Lisnard réélu à la tête de l’AMF avec 72 % des voix", "url": "https://entrevue.fr/politique/david-lisnard-largement-reelu-a-la-tete-de-lamf-avec-72-des-voix/" },
+        { "title": "Pharmactu — Grippe 2026-2027 : sept régions en pré-épidémie", "url": "https://pharmactu.fr/articles/grippe-epidemie-2026-2027-point-semaine-par-semaine" },
+        { "title": "Libnanews — Grippe en France : sept régions en pré-épidémie", "url": "https://libnanews.com/grippe-en-france-sept-regions-en-pre-epidemie/" },
+        { "title": "CNES — Hera dévoile les premiers secrets de Dimorphos", "url": "https://cnes.fr/actualites/hera-devoile-premiers-secrets-de-dimorphos-lasteroide-touche-dart" },
+        { "title": "RTBF — Ça fait quels dégâts, une sonde qui percute un astéroïde ?", "url": "https://www.rtbf.be/article/ca-fait-quels-degats-une-sonde-spatiale-qui-percute-expressement-un-asteroide-la-reponse-en-images-une-premiere-avec-la-mission-hera-11820969" },
+        { "title": "Public Sénat — Budget 2027 de la Sécurité sociale : échec de la CMP", "url": "https://www.publicsenat.fr/actualites/politique/budget-2027-de-la-securite-sociale-echec-de-la-tentative-de-compromis-entre-deputes-et-senateurs" },
+        { "title": "France Mag — Budget de la Sécu : échec de la CMP, retour à l’Assemblée", "url": "https://www.francemag.fr/article/4234/budget-securite-sociale-2027-echec-commission-mixte-paritaire-retour-assemblee" }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "plusmoins",
