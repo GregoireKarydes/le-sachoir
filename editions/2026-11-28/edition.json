@@ -1,12 +1,224 @@
 {
   "date": "2026-11-28",
   "status": "draft",
+  "newsletter": {
+    "subject": "Samedi : 27 pays, zéro accord et un bébé Univers 🔭",
+    "intro": "Samedi 28 novembre. Pendant que l’Europe recompte ses milliards, un télescope compte en milliards d’années. Chacun ses additions.",
+    "game": "Le Swipe : huit affirmations, deux directions. L’autruche, elle, a déjà perdu.",
+    "ps": "P.-S. Si le budget européen tenait en quatre minutes comme notre Actu, il serait voté depuis longtemps. Bruxelles, on est joignables."
+  },
   "formats": [
+    {
+      "id": "actu",
+      "label": "L’Actu du jour",
+      "title": "Un budget raboté, une manif à la pause, un quasar en photo",
+      "tagline": "Les Vingt-Sept se quittent sans budget, des policiers réclament leur prime pendant la pause, et Euclid repère le quasar le plus lointain jamais vu.",
+      "teaser": "Vingt-sept pays et pas d’addition commune, des policiers qui manifestent à l’heure du sandwich, et la photo de maternelle de l’Univers.",
+      "minutes": 3,
+      "theme": "",
+      "art": {
+        "subject": "three news stories, each told in one gag panel: European leaders failing to agree on the EU's seven-year budget while the German chancellor wants even more cuts, French police officers protesting in front of their police stations during their lunch break for a higher risk bonus, a European space telescope finding the most distant quasar ever seen",
+        "setting": "a vast summit meeting room with a huge round table, the pavement in front of a small French police station at lunchtime, a dark astronomy control room with a big screen",
+        "era": "present day, November 2026",
+        "props": {
+          "table": "a huge round conference table in pale blue wood, ringed with small empty chairs, with no flags and no writing",
+          "plane": "a big old-fashioned wooden carpenter's plane, the hand tool used to shave thin curls off wood",
+          "quasar": "a tiny bright white-and-gold glowing dot with a soft halo, on a dark blue screen speckled with faint stars"
+        }
+      },
+      "cast": [
+        {
+          "id": "merz",
+          "name": "Friedrich Merz",
+          "look": "a cartoon caricature of a very tall, lean older man, light skin, mostly bald head with short grey hair on the sides, thin rimless glasses, a dark charcoal-blue suit as main colour, white shirt, a pale sky-blue tie",
+          "role": "the German chancellor who finds every budget too fat; tight-fisted and stubborn, stands very straight, already rolling up his sleeves to cut more",
+          "file": "cast/actu-merz.png",
+          "status": "pending"
+        },
+        {
+          "id": "policier",
+          "name": "Un policier",
+          "look": "a stocky man in his forties, medium-brown skin, shaved head and a thick short black beard, a plain navy-blue uniform jacket without any badge, insignia or writing as main colour, grey trousers, a half-eaten baguette sandwich in one hand",
+          "role": "a police officer protesting during his lunch break; very organised and strict about the schedule, keeps checking his wristwatch",
+          "file": "cast/actu-policier.png",
+          "status": "skipped"
+        },
+        {
+          "id": "astronome",
+          "name": "Une astronome",
+          "look": "a small, round woman in her sixties, light skin, curly white hair gathered in a big messy bun, a mustard-yellow cardigan as main colour over a teal blouse, large round red glasses",
+          "role": "an astronomer on the space telescope team; sentimental and over-enthusiastic, treats the Universe like a family photo album",
+          "file": "cast/actu-astronome.png",
+          "status": "skipped"
+        }
+      ],
+      "cover": {
+        "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid, no inset pictures. A vast summit meeting room with the table in the middle, small empty chairs all around. merz (very tall and lean, mostly bald with grey sides, rimless glasses, charcoal-blue suit) leans over the table with the plane in both hands, shaving a long curl of pale blue wood off its edge with great determination, wood shavings piling on the floor. Wide shot.",
+        "cast": ["merz"],
+        "file": "images/actu-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "fact",
+          "tag": "Monde",
+          "lead": true,
+          "major": true,
+          "gag": "escalade",
+          "people": [
+            { "name": "Friedrich Merz", "party": "étranger", "role": "chancelier allemand" }
+          ],
+          "caption": "Jeudi 26 novembre à Bruxelles, les 27 dirigeants européens n’ont pas trouvé d’accord sur le budget 2028-2034. Pour le chancelier allemand, Friedrich Merz, 200 milliards d’économies restent un minimum.",
+          "bubbles": [
+            { "who": "merz", "text": "Moins 200 milliards, c’est un début. Maintenant, je rabote la table.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. The summit meeting room: the table already shaved into a much smaller, lopsided shape, piles of pale blue wood curls on the floor. merz (very tall and lean, mostly bald with grey sides, rimless glasses, charcoal-blue suit, sleeves rolled up) stands on the right, pushing the plane along the table edge with a satisfied, thrifty smile. Medium wide shot.",
+            "cast": ["merz"],
+            "file": "images/actu-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le bâtiment Europa, siège du Conseil européen à Bruxelles",
+          "text": "C’est dans ce bâtiment, avec sa grande « lanterne » de verre, que se réunissent les dirigeants des 27 pays de l’Union.",
+          "photo": { "commons": "File:Europa building European Union Brussels 01.jpg" }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Pas de budget européen pour les sept prochaines années",
+          "text": "Quoi : le compromis d’António Costa, président du Conseil européen, ramenait le budget à 1 780 milliards d’euros sur sept ans. Trop pour Berlin, pas assez pour Rome.\nPourquoi ça compte : il finance les aides aux agriculteurs et aux régions pauvres de 2028 à 2034.\nRepère : la Commission demandait près de 2 000 milliards ; Costa en retirait 204.\nEt maintenant : nouveau sommet les 17 et 18 décembre.",
+          "due": "2026-12-18",
+          "sources": [
+            { "title": "Toute l’Europe", "url": "https://www.touteleurope.eu/economie-et-social/budget-2028-2034-de-l-ue-a-des-annees-lumiere-d-un-accord-apres-un-sommet-extraordinaire-les-etats-membres-toujours-divises/" },
+            { "title": "L’Économiste Maghrébin", "url": "https://www.leconomistemaghrebin.com/2026/11/27/ue-echec-des-negociations-sur-le-budget-2028-2034/" }
+          ]
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Comment ça se fait ?",
+          "zoom": true,
+          "title": "Pourquoi 27 pays n’arrivent-ils pas à voter un budget ?",
+          "steps": [
+            "Ce budget de sept ans doit être adopté à l’unanimité : un seul pays peut tout bloquer",
+            "Les « frugaux » (Allemagne, Pays-Bas, Suède…), qui versent plus qu’ils ne reçoivent, refusent de payer davantage",
+            "Les pays du Sud et de l’Est (Italie, Grèce, Roumanie…) refusent de couper les aides aux agriculteurs et aux régions",
+            "L’Allemagne lie aussi son accord à un prêt à l’Ukraine que la Hongrie, la Slovaquie et la Tchéquie refusent de financer"
+          ],
+          "text": "Ce qu’on ne sait pas encore : si un accord viendra avant le 31 décembre, comme le souhaite Emmanuel Macron.",
+          "sources": [
+            { "title": "Toute l’Europe", "url": "https://www.touteleurope.eu/fonctionnement-de-l-ue/budget-europeen-ukraine-bce-les-grands-dossiers-du-sommet-europeen-des-26-et-27-novembre/" },
+            { "title": "L’Économiste Maghrébin", "url": "https://www.leconomistemaghrebin.com/2026/11/27/ue-echec-des-negociations-sur-le-budget-2028-2034/" }
+          ]
+        },
+        {
+          "n": 5,
+          "kind": "fact",
+          "tag": "Société",
+          "major": true,
+          "gag": "bureau",
+          "caption": "Jeudi 26 novembre, pendant leur pause, des policiers se sont rassemblés devant leurs commissariats : ils veulent une prime de risque à 35 % du salaire de base, contre 28,5 %.",
+          "bubbles": [
+            { "who": "policier", "text": "Point revendications de 12 h à 12 h 45. Ensuite, retour en patrouille.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. The pavement in front of a small police station with a blue door. policier (stocky, shaved head, thick black beard, navy-blue jacket) holds a blank white protest placard high in one hand and his half-eaten baguette sandwich in the other, glancing very seriously at the wristwatch on the arm holding the placard. Close-up.",
+            "cast": ["policier"],
+            "file": "images/actu-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Les policiers veulent leur prime tout de suite",
+          "text": "Quoi : le ministère de l’Intérieur propose 33,5 % en 2029, avec une première hausse en avril 2027 ; les syndicats refusent.\nPourquoi ça compte : policiers et gendarmes n’ont pas le droit de grève.\nEt maintenant : le ministère dit que les discussions continuent ; les syndicats promettent d’autres actions.",
+          "sources": [
+            { "title": "Euronews", "url": "https://www.euronews.com/2026/11/27/frances-government-faces-mounting-pressure-from-both-sides-of-the-barricades" },
+            { "title": "Actu17", "url": "https://actu17.fr/societe/policiers-blesses-prime-de-risque-la-colere-des-syndicats-apres-l-audience-avec-laurent-nunez.html" }
+          ]
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "Espace",
+          "gag": "comparaison",
+          "caption": "Mardi 24 novembre, l’Agence spatiale européenne a annoncé que son télescope Euclid a repéré le quasar le plus lointain connu, vu 630 millions d’années après le Big Bang.",
+          "bubbles": [
+            { "who": "astronome", "text": "En gros, on vient de retrouver la photo de maternelle de l’Univers.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "ONE single scene, one single picture, not a comic page: no panels, no grid of small pictures. A dark astronomy control room seen from above: the big screen shows the quasar. astronome (small and round, curly white hair in a big bun, mustard-yellow cardigan, big red glasses) sits in front of it, holding an old silver baby-photo frame up next to the screen and wiping a happy tear, with light-blue tears. High angle.",
+            "cast": ["astronome"],
+            "file": "images/actu-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le télescope spatial européen Euclid",
+          "text": "Euclid a repéré ce quasar parmi des millions d’objets de son grand relevé du ciel.",
+          "photo": { "commons": "File:Euclid spacecraft ESA24912474.jpg" }
+        },
+        {
+          "n": 9,
+          "kind": "explain",
+          "tag": "Ce qui se passe vraiment",
+          "title": "Euclid bat son propre record de distance",
+          "text": "Quoi : un quasar est un cœur de galaxie très brillant, nourri par un trou noir géant ; celui-ci bat un record d’Euclid.\nPourquoi ça compte : son trou noir de 360 millions de Soleils a grossi trop vite pour les modèles.\nEt maintenant : le relevé d’Euclid pourrait en livrer quelques dizaines à cette distance.",
+          "sources": [
+            { "title": "ESA", "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years" },
+            { "title": "Futura", "url": "https://www.futura-sciences.com/sciences/actualites/astronomie-telescopes-spatiaux-euclid-james-webb-decouvrent-monstre-cosmique-bouscule-theories-trous-noirs-139633/" }
+          ]
+        },
+        {
+          "n": 10,
+          "kind": "explain",
+          "suite": true,
+          "tag": "La suite",
+          "title": "Budget européen : le sommet n’a rien donné",
+          "text": "Annoncé : un sommet des 27 jeudi et vendredi, à Bruxelles, sur le budget 2028-2034.\nRésultat : pas d’accord jeudi 26 novembre ; les dirigeants ne se sont pas retrouvés vendredi.",
+          "of": "2026-11-22#10",
+          "sources": [
+            { "title": "Toute l’Europe", "url": "https://www.touteleurope.eu/economie-et-social/budget-2028-2034-de-l-ue-a-des-annees-lumiere-d-un-accord-apres-un-sommet-extraordinaire-les-etats-membres-toujours-divises/" }
+          ]
+        }
+      ],
+      "final": {
+        "text": "Le quasar le plus lointain connu est surnommé « Dún Aonghasa », du nom d’un fort préhistorique de l’île d’Inis Mór, en Irlande.",
+        "source": "ESA"
+      },
+      "sources": [
+        { "title": "Toute l’Europe — Budget 2028-2034 de l’UE : « à des années-lumière d’un accord » après un sommet extraordinaire", "url": "https://www.touteleurope.eu/economie-et-social/budget-2028-2034-de-l-ue-a-des-annees-lumiere-d-un-accord-apres-un-sommet-extraordinaire-les-etats-membres-toujours-divises/" },
+        { "title": "Toute l’Europe — Budget européen, Ukraine, BCE : les grands dossiers du sommet des 26 et 27 novembre", "url": "https://www.touteleurope.eu/fonctionnement-de-l-ue/budget-europeen-ukraine-bce-les-grands-dossiers-du-sommet-europeen-des-26-et-27-novembre/" },
+        { "title": "L’Économiste Maghrébin — UE : échec des négociations sur le budget 2028-2034", "url": "https://www.leconomistemaghrebin.com/2026/11/27/ue-echec-des-negociations-sur-le-budget-2028-2034/" },
+        { "title": "Euronews — France’s government faces mounting pressure from both sides of the barricades", "url": "https://www.euronews.com/2026/11/27/frances-government-faces-mounting-pressure-from-both-sides-of-the-barricades" },
+        { "title": "Actu17 — Policiers blessés, prime de risque : la colère des syndicats après l’audience avec Laurent Nuñez", "url": "https://actu17.fr/societe/policiers-blesses-prime-de-risque-la-colere-des-syndicats-apres-l-audience-avec-laurent-nunez.html" },
+        { "title": "Ouest-France — Paris, Rennes, Hendaye… Les policiers manifestent devant leurs commissariats", "url": "https://ouest-france.fr/societe/police/paris-rennes-hendaye-les-policiers-manifestent-devant-leurs-commissariats-pour-demander-une-hausse-de-leur-prime-de-risque-c426356e-e985-11f1-9b33-2f81462d3339" },
+        { "title": "ESA — Euclid breaks own quasar record by 40 million years", "url": "https://www.esa.int/articles/about-us/directorates/science/euclid/euclid-breaks-own-quasar-record-by-40-million-years" },
+        { "title": "Futura — Euclid et James-Webb découvrent un monstre cosmique", "url": "https://www.futura-sciences.com/sciences/actualites/astronomie-telescopes-spatiaux-euclid-james-webb-decouvrent-monstre-cosmique-bouscule-theories-trous-noirs-139633/" }
+      ]
+    },
     {
       "id": "quiz",
       "kind": "swipe",
       "label": "Le Swipe",
       "title": "Vrai, faux, ou politique de l’autruche ?",
+      "teaser": "Huit affirmations, deux directions, et une autruche qui n’a jamais rien caché.",
       "minutes": 1,
       "theme": "",
       "questions": [
