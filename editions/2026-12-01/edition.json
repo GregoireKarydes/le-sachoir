@@ -1,0 +1,70 @@
+{
+  "date": "2026-12-01",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "culture",
+      "label": "Le Quiz du jour",
+      "title": "Cinq questions pour faire le tour de la France (avec escale en Californie)",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "theme": "Sports",
+          "q": "Quelle ville accueillera les Jeux olympiques d’été de 2028 ?",
+          "hint": "Pensez Hollywood, palmiers et plages de Californie.",
+          "choices": ["Brisbane", "Los Angeles", "Rome", "Madrid"],
+          "answer": 1,
+          "explain": "Los Angeles, du 14 au 30 juillet 2028, quatre ans après Paris. Les athlètes passeront des quais de Seine aux plages du Pacifique : on a connu pire mutation.",
+          "source": { "title": "CIO — LA28 : les dates des Jeux confirmées, du 14 au 30 juillet", "url": "https://olympics.com/ioc/news/la28-countdown-begins-as-olympic-games-dates-confirmed-for-14-to-30-july" }
+        },
+        {
+          "theme": "Médecine et santé",
+          "q": "Quel groupe sanguin peut donner ses globules rouges à presque tout le monde ?",
+          "hint": "Sa lettre ressemble à un zéro.",
+          "choices": ["AB positif", "A positif", "O négatif", "B négatif"],
+          "answer": 2,
+          "explain": "Le O négatif, dit « donneur universel » pour les globules rouges. Seuls 6 % des Français l’ont, selon l’Établissement français du sang : rare et généreux, le profil idéal.",
+          "source": { "title": "Futura Santé — Donneur universel : qu’est-ce que c’est ?", "url": "https://www.futura-sciences.com/sante/definitions/medecine-donneur-universel-17430/" }
+        },
+        {
+          "theme": "Géographie",
+          "q": "Après Paris, quelle est la ville la plus peuplée de France ?",
+          "hint": "Pensez au sud, et à la mer.",
+          "choices": ["Lyon", "Toulouse", "Nice", "Marseille"],
+          "answer": 3,
+          "explain": "Marseille, avec près de 900 000 habitants au recensement de 2023, loin devant Lyon et Toulouse, autour de 520 000 chacune. Le match Lyon-Toulouse pour la troisième place, lui, se joue à quelques milliers près.",
+          "source": { "title": "LyonMag — Recensement : Lyon reste troisième ville de France", "url": "https://www.lyonmag.com/article/149045/recensement-lyon-reste-troisieme-ville-de-france-villeurbanne-poursuit-sa-forte-progression" }
+        },
+        {
+          "theme": "Économie",
+          "q": "Depuis le 1er janvier 2026, combien de pays de l’Union européenne utilisent l’euro ?",
+          "hint": "La Bulgarie vient de rejoindre le club.",
+          "choices": ["21", "15", "27", "19"],
+          "answer": 0,
+          "explain": "21, avec l’arrivée de la Bulgarie le 1er janvier 2026. Sur les 27 pays de l’Union européenne, six gardent donc leur propre monnaie. Le club est ouvert, mais pas obligatoire.",
+          "source": { "title": "Banque de France — La Bulgarie rejoint la zone euro", "url": "https://www.banque-france.fr/fr/actualites/la-bulgarie-rejoint-la-zone-euro" }
+        },
+        {
+          "theme": "Société",
+          "q": "Quel prénom de garçon a été le plus donné en France en 2024 ?",
+          "hint": "C’est aussi le nom d’un archange.",
+          "choices": ["Léo", "Gabriel", "Raphaël", "Louis"],
+          "answer": 1,
+          "explain": "Gabriel, avec environ 4 550 naissances selon l’Insee. Chez les filles, Louise arrive en tête. Conseil aux maîtresses de 2030 : prévoir des initiales sur les porte-manteaux.",
+          "source": { "title": "Brut — Le top 10 des prénoms les plus donnés en France en 2024", "url": "https://www.brut.media/fr/articles/le-top-10-des-prenoms-les-plus-donnes-en-france-en-2024" }
+        }
+      ],
+      "sources": [
+        { "title": "CIO — LA28 : les dates des Jeux confirmées, du 14 au 30 juillet", "url": "https://olympics.com/ioc/news/la28-countdown-begins-as-olympic-games-dates-confirmed-for-14-to-30-july" },
+        { "title": "Futura Santé — Donneur universel : qu’est-ce que c’est ?", "url": "https://www.futura-sciences.com/sante/definitions/medecine-donneur-universel-17430/" },
+        { "title": "LyonMag — Recensement : Lyon reste troisième ville de France", "url": "https://www.lyonmag.com/article/149045/recensement-lyon-reste-troisieme-ville-de-france-villeurbanne-poursuit-sa-forte-progression" },
+        { "title": "Ryo — Les 15 plus grandes villes de France par population", "url": "https://ryo.co/fr/articles/france/paris/15-plus-grandes-villes-france/" },
+        { "title": "Banque de France — La Bulgarie rejoint la zone euro", "url": "https://www.banque-france.fr/fr/actualites/la-bulgarie-rejoint-la-zone-euro" },
+        { "title": "Brut — Le top 10 des prénoms les plus donnés en France en 2024", "url": "https://www.brut.media/fr/articles/le-top-10-des-prenoms-les-plus-donnes-en-france-en-2024" },
+        { "title": "Europe 1 — Les prénoms les plus donnés en France en 2024", "url": "https://www.europe1.fr/societe/romy-leon-quels-sont-les-prenoms-les-plus-donnes-en-france-en-2024-decouvrez-le-classement-763177" }
+      ]
+    }
+  ]
+}
