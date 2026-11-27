@@ -1,0 +1,253 @@
+{
+  "added": "20261127-2043",
+  "formats": [
+    {
+      "id": "notice",
+      "label": "La Notice",
+      "title": "L’éolienne ne se fait pas pousser par le vent : elle vole sur place, en rond",
+      "tagline": "Un jour de tempête, une éolienne immobile et une casquette qui, elle, n’a pas de frein",
+      "teaser": "Il y a enfin du vent sur la ferme d’Hervé, et son éolienne choisit ce jour-là pour s’arrêter. Il n’est pas content.",
+      "minutes": 2,
+      "theme": "Écologie et climat",
+      "epoque": "present",
+      "art": {
+        "subject": "how a wind turbine makes electricity: blades shaped like aeroplane wings are pulled round by the wind, a gearbox and a generator in the nacelle turn the rotation into current, and the turbine stops itself in storms",
+        "setting": "a wide flat wheat field in the Beauce plain in France today, on a windy day, with one tall white wind turbine and its small door at the foot of the mast",
+        "era": "present-day France",
+        "props": {
+          "turbine": "a very tall plain white three-bladed wind turbine with a smooth white mast and a white nacelle on top",
+          "paper": "a small plain sheet of white paper",
+          "cap": "a red flat cap"
+        }
+      },
+      "cast": [
+        {
+          "id": "herve",
+          "name": "Hervé",
+          "look": "Hervé, a huge broad-shouldered farmer in his fifties, curly salt-and-pepper hair and a big grey beard, weathered light skin, a royal-blue work overall as main colour, the cap on his head, muddy green rubber boots",
+          "file": "cast/notice-herve.png",
+          "status": "pending",
+          "role": "the farmer who rents his field to the wind farm; grumpy and suspicious, takes the turbine's every stop as a personal insult, crosses his arms like a wall"
+        },
+        {
+          "id": "sanaa",
+          "name": "Sanaa",
+          "look": "Sanaa, a small and wiry wind turbine technician in her thirties, long black hair in a thick braid, warm brown skin, a bright red work jumpsuit as main colour, a white safety helmet, a climbing harness with silver carabiners",
+          "file": "cast/notice-sanaa.png",
+          "status": "pending",
+          "role": "the unflappable technician who climbs turbines for a living; cheerful and unshakeable, explains everything with quick hands-on demonstrations"
+        }
+      ],
+      "cover": {
+        "prompt": "a windy wheat field with the turbine standing still: Hervé (huge, broad-shouldered, big grey beard, royal-blue overall, red flat cap) on the left points furiously up at the motionless blades, his beard blown sideways by the wind; Sanaa (small, wiry, black braid, bright red jumpsuit, white helmet, harness) on the right stands calmly at the turbine door, smiling. medium wide shot",
+        "cast": [
+          "herve",
+          "sanaa"
+        ],
+        "file": "images/notice-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Dans la Beauce, un jour de tempête",
+          "caption": "Comment une éolienne fait-elle du courant avec du vent ? Celle du champ d’Hervé, elle, reste immobile en pleine tempête.",
+          "bubbles": [
+            {
+              "who": "herve",
+              "text": "Le seul jour où ça souffle vraiment, elle fait grève !",
+              "side": "l"
+            },
+            {
+              "who": "sanaa",
+              "text": "Elle ne fait pas grève. Elle se protège.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a wide flat wheat field bent by a strong wind, the turbine towering in the middle with its blades standing still. Hervé (huge, broad-shouldered, big grey beard, royal-blue overall, red flat cap) in the foreground on the left shakes his fist at the motionless blades; Sanaa (small, wiry, black braid, bright red jumpsuit, white helmet) further back on the right steps out of the small door at the foot of the mast. wide shot",
+            "cast": [
+              "herve",
+              "sanaa"
+            ],
+            "file": "images/notice-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Le principe",
+          "caption": "Une pale est profilée comme une aile d’avion : l’air qui la contourne l’aspire sur le côté, et elle tourne.",
+          "bubbles": [
+            {
+              "who": "sanaa",
+              "text": "Le vent ne la pousse pas vraiment. Elle vole sur place, en rond.",
+              "side": "r"
+            },
+            {
+              "who": "herve",
+              "text": "Un avion qui tourne en rond dans mon champ. Formidable.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "at the foot of the turbine mast: Sanaa (small, wiry, black braid, bright red jumpsuit, white helmet) on the right holds the paper just under her lower lip and blows over it, and the paper lifts up as if by magic; Hervé (huge, big grey beard, royal-blue overall, red flat cap) on the left leans down towards it, arms crossed, one eyebrow raised in deep suspicion. medium close-up",
+            "cast": [
+              "sanaa",
+              "herve"
+            ],
+            "file": "images/notice-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Du vent au courant, en quatre étapes",
+          "steps": [
+            "Le vent fait tourner les trois pales, lentement : une quinzaine de tours par minute",
+            "En haut du mât, dans la nacelle, un multiplicateur accélère la rotation, comme les vitesses d’un vélo",
+            "La génératrice fait tourner des aimants près de bobines de cuivre : le courant naît",
+            "Il descend le long du mât et part vers le réseau électrique"
+          ],
+          "joke": "Une dynamo de vélo, version géante."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le problème",
+          "caption": "Au-delà d’environ 90 km/h de vent, l’éolienne tourne ses pales de profil, le vent glisse dessus : elle s’arrête.",
+          "bubbles": [
+            {
+              "who": "sanaa",
+              "text": "90 km/h, c’est une voiture sur la route. Au-delà, elle s’abîmerait.",
+              "side": "r"
+            },
+            {
+              "who": "herve",
+              "text": "Ma casquette, elle, n’a pas de mode tempête !",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "a gust sweeps the wheat field: the cap flies off Hervé's head and tumbles away; Hervé (huge, broad-shouldered, big grey beard, royal-blue overall, curly salt-and-pepper hair now bare) runs after it on the left, arms stretched out, boots splashing mud; Sanaa (small, wiry, black braid, bright red jumpsuit, white helmet) on the right holds on to the turbine door handle, perfectly steady. high angle",
+            "cast": [
+              "herve",
+              "sanaa"
+            ],
+            "file": "images/notice-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le premier parc éolien en mer de France",
+          "text": "Au large de Saint-Nazaire, 80 éoliennes tournent depuis 2022 : c’est le premier parc éolien en mer de France. En mer, le vent est plus fort et plus régulier qu’à terre.",
+          "photo": {
+            "commons": "File:SaintNazaireWindFarm.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "La surprise",
+          "caption": "Au bout des pales, qui semblent lentes, la vitesse atteint près de 300 km/h, celle d’un TGV.",
+          "bubbles": [
+            {
+              "who": "herve",
+              "text": "Elle a l’air de faire la sieste. Et elle double les TGV.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Hervé alone (huge, broad-shouldered, big grey beard, royal-blue overall, red flat cap back on his head) lies flat on his back in the calm wheat, hands behind his head, staring up wide-eyed at the turbine blades now slowly turning far above him, his mouth open in astonishment. from behind",
+            "cast": [
+              "herve"
+            ],
+            "file": "images/notice-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi elle ne prend jamais tout le vent",
+          "text": "Une éolienne ne peut jamais récupérer plus de 59 % de l’énergie du vent : si elle l’arrêtait complètement, l’air ne passerait plus à travers. C’est la limite de Betz, calculée par le physicien allemand Albert Betz en 1919.",
+          "joke": "Même une éolienne doit laisser le vent repartir."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Le vent fait tourner les pales comme des ailes, une génératrice en fait du courant ; trop de vent, elle s’arrête.",
+          "bubbles": [
+            {
+              "who": "herve",
+              "text": "Elle a repris le travail. Moi, je cherche toujours ma casquette.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Hervé alone (huge, broad-shouldered, big grey beard, royal-blue overall, curly salt-and-pepper hair, no cap) stands in the calm field with a resigned, grumpy pout, while far behind him the cap dangles caught on the tip of a slowly turning turbine blade. close-up",
+            "cast": [
+              "herve"
+            ],
+            "file": "images/notice-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Même parfaite, une éolienne ne peut capter plus de 59 % de l’énergie du vent : il faut bien que l’air ressorte derrière.",
+        "source": "Wikipedia — Betz’s law"
+      },
+      "story": "Une éolienne transforme le mouvement de l’air en électricité. Ses pales ne sont pas de simples planches que le vent pousserait : elles ont le profil d’une aile d’avion. L’air qui les contourne crée une différence de pression entre leurs deux faces, une force appelée portance, qui les entraîne en rotation. Le rotor tourne lentement, une quinzaine de tours par minute, mais au bout des pales, très longues, la vitesse approche 300 km/h.\nEn haut du mât, la nacelle s’oriente face au vent. Elle contient, sur la plupart des modèles, un multiplicateur qui accélère la rotation, un peu comme les vitesses d’un vélo, et une génératrice : des aimants qui tournent près de bobines de cuivre font naître un courant électrique, comme dans une dynamo. Ce courant descend le long du mât et rejoint le réseau.\nUne éolienne démarre quand le vent dépasse environ 10 à 15 km/h. Au-delà d’environ 90 km/h, elle se met en sécurité : ses pales pivotent pour se présenter de profil au vent, qui glisse alors dessus sans les entraîner, et le rotor s’arrête pour éviter les dégâts. C’est pourquoi on voit parfois des éoliennes immobiles en pleine tempête.\nMême parfaite, une éolienne ne peut récupérer plus de 59 % de l’énergie du vent qui la traverse : si elle arrêtait l’air complètement, il ne passerait plus. C’est la limite de Betz, publiée en 1919. En France, le premier parc éolien en mer, 80 éoliennes au large de Saint-Nazaire, fonctionne depuis 2022.",
+      "sources": [
+        {
+          "title": "EDF — Le fonctionnement d’une éolienne",
+          "url": "https://www.edf.fr/groupe-edf/comprendre/production/eolien/fonctionnement-eolienne"
+        },
+        {
+          "title": "Connaissance des Énergies — Pourquoi les éoliennes sont-elles parfois arrêtées alors que le vent souffle ?",
+          "url": "https://www.connaissancedesenergies.org/questions-et-reponses-energies/pourquoi-les-eoliennes-sont-elles-parfois-arretees-alors-que-le-vent-souffle"
+        },
+        {
+          "title": "Futura — Les éoliennes ne peuvent pas exploiter tous les vents",
+          "url": "https://www.futura-sciences.com/planete/questions-reponses/energie-renouvelable-eoliennes-ne-peuvent-exploiter-tous-vents-1098/"
+        },
+        {
+          "title": "ADEME — Guide : l’éolien en 10 questions",
+          "url": "https://librairie.ademe.fr/ged/6427/guide-defi-eolien-10-questions-202301.pdf"
+        },
+        {
+          "title": "Reporterre — Les éoliennes : pourquoi si hautes, comment ça marche",
+          "url": "https://reporterre.net/Les-eoliennes-pourquoi-si-hautes-comment-ca-marche-combien-sont-elles"
+        },
+        {
+          "title": "Wikipedia — Betz’s law",
+          "url": "https://en.wikipedia.org/wiki/Betz%27s_law"
+        },
+        {
+          "title": "Wikipedia — Saint-Nazaire Offshore Wind Farm",
+          "url": "https://en.wikipedia.org/wiki/Saint-Nazaire_Offshore_Wind_Farm"
+        },
+        {
+          "title": "Wikimedia Commons — SaintNazaireWindFarm",
+          "url": "https://wikipedia.com/wiki/File:SaintNazaireWindFarm.jpg"
+        }
+      ]
+    }
+  ]
+}
