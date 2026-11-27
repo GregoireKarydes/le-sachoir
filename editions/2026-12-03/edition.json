@@ -1,0 +1,71 @@
+{
+  "date": "2026-12-03",
+  "status": "draft",
+  "formats": [
+    {
+      "id": "quiz",
+      "kind": "frise",
+      "label": "La Frise",
+      "title": "Douze dates, de Rome aux pistes de ski de 2030",
+      "minutes": 1,
+      "theme": "",
+      "questions": [
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "hint": "Les Jeux d’hiver des Alpes arrivent après ceux de Paris.",
+          "items": [
+            { "name": "Jeux olympiques d’hiver dans les Alpes françaises", "year": 2030, "label": "prévu en 2030" },
+            { "name": "Arrivée des pièces et billets en euros", "year": 2002 },
+            { "name": "Jeux olympiques d’été de Paris", "year": 2024 },
+            { "name": "Adoption de l’accord de Paris sur le climat", "year": 2015 }
+          ],
+          "explain": "Euro en poche le 1er janvier 2002, accord de Paris le 12 décembre 2015, JO de Paris à l’été 2024, et Jeux d’hiver dans les Alpes prévus du 1er au 17 février 2030. Paris a le sens du rendez-vous.",
+          "source": { "title": "Team Belgium — Jeux olympiques d’hiver Alpes françaises 2030", "url": "https://www.teambelgium.be/fr/jeux/Jeux-Olympiques-d-hiver-Alpes-francaises-2030-01022030-French-Alps-84-fr" }
+        },
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "hint": "Le bac est plus vieux que le droit de vote des Françaises.",
+          "items": [
+            { "name": "Les Françaises obtiennent le droit de vote", "year": 1944 },
+            { "name": "Victoire de François Ier à Marignan", "year": 1515 },
+            { "name": "Abolition de la peine de mort en France", "year": 1981 },
+            { "name": "Napoléon crée le baccalauréat", "year": 1808 }
+          ],
+          "explain": "Marignan en 1515, le bac en 1808, le vote des femmes par l’ordonnance du 21 avril 1944, l’abolition le 9 octobre 1981. Il a fallu 136 ans de bac avant que les bachelières puissent voter.",
+          "source": { "title": "Info.gouv.fr — Le 9 octobre 1981, la peine de mort est abolie en France", "url": "https://www.info.gouv.fr/actualite/le-9-octobre-1981-la-peine-de-mort-est-abolie-en-france" }
+        },
+        {
+          "type": "order",
+          "by": "chrono",
+          "q": "Du plus ancien au plus récent",
+          "hint": "Alexandre le Grand n’a jamais connu l’Empire romain.",
+          "items": [
+            { "name": "Éruption du Vésuve qui ensevelit Pompéi", "year": 79 },
+            { "name": "Fondation de Rome, selon la tradition", "year": -753, "label": "753 av. J.-C." },
+            { "name": "Fin de l’Empire romain d’Occident", "year": 476 },
+            { "name": "Mort d’Alexandre le Grand, à Babylone", "year": -323, "label": "323 av. J.-C." }
+          ],
+          "explain": "Rome naît en 753 av. J.-C. selon la légende, Alexandre meurt en 323 av. J.-C., le Vésuve engloutit Pompéi en 79, et l’Empire d’Occident s’éteint en 476. Rome aura duré plus de douze siècles.",
+          "source": { "title": "Hérodote — Survol de l’histoire de Rome, de 750 av. J.-C. à 476", "url": "https://www.herodote.net/De_750_av_J_C_a_476_un_millenaire_qui_dure_toujours-synthese-3180-594.php" }
+        }
+      ],
+      "sources": [
+        { "title": "Banque de France — L’euro dans nos poches depuis vingt ans", "url": "https://www.banque-france.fr/fr/publications-et-statistiques/publications/leuro-dans-nos-poches-depuis-vingt-ans" },
+        { "title": "Vie publique — Qu’est-ce que l’accord de Paris sur le climat ?", "url": "https://www.vie-publique.fr/fiches/274839-quest-ce-que-laccord-de-paris-sur-le-climat" },
+        { "title": "Paris.fr — La Seine, superstar de la cérémonie d’ouverture des Jeux de Paris 2024", "url": "https://www.paris.fr/pages/la-seine-superstar-de-la-ceremonie-d-ouverture-des-jeux-de-paris-2024-19965" },
+        { "title": "Team Belgium — Jeux olympiques d’hiver Alpes françaises 2030", "url": "https://www.teambelgium.be/fr/jeux/Jeux-Olympiques-d-hiver-Alpes-francaises-2030-01022030-French-Alps-84-fr" },
+        { "title": "Universalis — Bataille de Marignan (13-14 sept. 1515)", "url": "https://www.universalis.fr/encyclopedie/bataille-de-marignan/" },
+        { "title": "Hérodote — 17 mars 1808, naissance du baccalauréat", "url": "https://www.herodote.net/almanach-ID-2681.php" },
+        { "title": "Slate — Le 21 avril 1944, le droit de vote était accordé aux femmes en France", "url": "https://www.slate.fr/grand-format/droit-vote-femmes-france-21-avril-1944-histoire-feminisme-egalite-hommes-suffrage-universel" },
+        { "title": "Info.gouv.fr — Le 9 octobre 1981, la peine de mort est abolie en France", "url": "https://www.info.gouv.fr/actualite/le-9-octobre-1981-la-peine-de-mort-est-abolie-en-france" },
+        { "title": "Hérodote — 13 juin 323 av. J.-C., mort d’Alexandre", "url": "https://www.herodote.net/13_juin_323_av_J_C-evenement--3230613.php" },
+        { "title": "Hérodote — Éruption du Vésuve, an 79", "url": "https://www.herodote.net/24_octobre_79-evenement-00790824.php" },
+        { "title": "Hérodote — Survol de l’histoire de Rome, de 750 av. J.-C. à 476", "url": "https://www.herodote.net/De_750_av_J_C_a_476_un_millenaire_qui_dure_toujours-synthese-3180-594.php" }
+      ]
+    }
+  ]
+}
