@@ -1,0 +1,183 @@
+{
+  "added": "20261127-1504",
+  "formats": [
+    {
+      "id": "cultureg",
+      "label": "La Pilule de Culture G",
+      "title": "Le moustique tigre ne vient pas chez vous : il y est né",
+      "tagline": "Un jardinier qui jure que son jardin est impeccable, une entomologiste qui soulève les soucoupes",
+      "teaser": "Raymond voulait juste déjeuner dehors. Une entomologiste a trouvé une maternité de moustiques dans son nain de jardin.",
+      "minutes": 2,
+      "theme": "Sciences du vivant",
+      "epoque": "present",
+      "art": {
+        "subject": "why the tiger mosquito now bites in daytime almost everywhere in France: it breeds in tiny pools of still water in our gardens and barely travels",
+        "setting": "a small suburban garden near Lyon in summer: a garden table set for lunch, potted plants, a low green hedge, a garden shed",
+        "era": "today, France, summer 2026",
+        "props": {
+          "saucer": "a terracotta plant pot standing on a saucer full of still water",
+          "gnome": "a small garden gnome with a tall red pointed hat",
+          "can": "a green metal watering can",
+          "net": "a small white butterfly net with a wooden handle"
+        }
+      },
+      "cast": [
+        {
+          "id": "raymond",
+          "name": "Raymond",
+          "look": "Raymond, a short and wiry retired gardener in his seventies, bald on top with a white horseshoe fringe and a big white handlebar moustache, tanned light skin, a faded denim-blue gardening apron as main colour over a white vest, green rubber boots, a red-and-white checked napkin tucked into his collar",
+          "role": "a proud gardener in total denial who swears his garden is spotless; chin up, arms crossed, gets bitten while saying it",
+          "file": "cast/cultureg-raymond.png",
+          "status": "pending"
+        },
+        {
+          "id": "aicha",
+          "name": "Aïcha",
+          "look": "Aïcha, a tall and broad-shouldered entomologist in her forties, thick black curly hair in a low bun under a wide-brimmed khaki hat, brown skin, a bright tangerine-orange field vest with many pockets as main colour, beige trousers, a big magnifying glass and the net",
+          "role": "a cheerful, unstoppable mosquito hunter from the health agency who finds stagnant water everywhere; kneels, crawls, lifts everything with delight",
+          "file": "cast/cultureg-aicha.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "in a small suburban garden in summer: Raymond (short, wiry, white handlebar moustache, faded denim-blue apron, checked napkin in his collar) on the left sits at the garden table with his lunch, swatting the air; on the right Aïcha (tall, broad, black curly bun under a khaki hat, tangerine-orange field vest) kneels by the pots, lifting the saucer full of water with a triumphant grin, magnifying glass in hand. medium wide shot",
+        "cast": ["raymond", "aicha"],
+        "file": "images/cultureg-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Juillet 2026",
+          "caption": "Pourquoi le moustique tigre pique-t-il désormais presque partout en France ? Juillet 2026 : Raymond veut déjeuner dans son jardin.",
+          "bubbles": [
+            { "who": "raymond", "text": "Un moustique à midi ? Les moustiques, c’est le soir.", "side": "l" },
+            { "who": "aicha", "text": "Pas lui. Le moustique tigre pique surtout le jour.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a small suburban garden near Lyon in summer, seen from the shed: Raymond (short, wiry, white handlebar moustache, faded denim-blue apron, checked napkin in his collar) on the left sits at the garden table, fork raised, slapping his own neck; on the right Aïcha (tall, broad, black curly bun under a khaki hat, tangerine-orange field vest) pops her head over the low hedge, net raised. wide shot",
+            "cast": ["raymond", "aicha"],
+            "file": "images/cultureg-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Depuis 2004",
+          "caption": "Ce moustique noir rayé de blanc, d’environ 5 mm, a été repéré pour la première fois en France en 2004, dans les Alpes-Maritimes.",
+          "bubbles": [
+            { "who": "raymond", "text": "Les Alpes-Maritimes ? On est à Lyon, ici.", "side": "l" },
+            { "who": "aicha", "text": "Il a pris son temps, mais il est monté.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Aïcha (tall, broad, black curly bun under a khaki hat, tangerine-orange field vest) on the right, now inside the garden, holds her big magnifying glass over the garden table, enlarging a tiny black-and-white striped mosquito on the bread basket; Raymond (short, wiry, white handlebar moustache, faded denim-blue apron) on the left leans back in his chair, arms crossed, sceptical. medium shot",
+            "cast": ["raymond", "aicha"],
+            "file": "images/cultureg-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "",
+          "tag": "Mai 2026",
+          "caption": "En mai 2026, il avait colonisé 83 départements sur 96 en métropole : plus de huit sur dix, en vingt-deux ans.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Raymond alone (short, wiry, bald top with white horseshoe fringe, white handlebar moustache, faded denim-blue apron, checked napkin in his collar), head and shoulders, slumped at the table, his bald head, nose and arms dotted with small red bite marks, staring blankly at the reader while one tiny striped mosquito sits on the tip of his moustache. close-up",
+            "cast": ["raymond"],
+            "file": "images/cultureg-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi il adore nos jardins",
+          "steps": [
+            "Seule la femelle pique : il lui faut du sang pour ses œufs",
+            "Elle pond environ 150 œufs tous les 12 jours, dans de petites eaux stagnantes",
+            "Soucoupes, arrosoirs, gouttières, bâches : 80 % de ces gîtes sont créés par l’homme",
+            "En une semaine environ, les larves deviennent des moustiques adultes"
+          ],
+          "joke": "Une coupelle oubliée, c’est une maternité ouverte jour et nuit."
+        },
+        {
+          "n": 5,
+          "kind": "",
+          "tag": "Le voisinage",
+          "caption": "Il vole peu : quelques centaines de mètres dans toute sa vie. Celui qui vous pique est souvent né tout près.",
+          "bubbles": [
+            { "who": "raymond", "text": "Chez moi ? Impossible. Mon jardin est impeccable.", "side": "l" },
+            { "who": "aicha", "text": "Et ça ? Une piscine olympique, pour une larve.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "seen from ground level among the pots: Aïcha (tall, broad, black curly bun under a khaki hat, tangerine-orange field vest) on her knees on the right lifts the terracotta pot, revealing the saucer full of still water with tiny wriggling larvae; behind her on the left Raymond (short, wiry, white handlebar moustache, faded denim-blue apron, green rubber boots) stands with hands on hips, chin up, offended. low angle",
+            "cast": ["raymond", "aicha"],
+            "file": "images/cultureg-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le vrai moustique tigre",
+          "text": "Une femelle moustique tigre en train de piquer : corps noir, rayures blanches sur les pattes et l’abdomen. Ce pelage rayé lui a donné son nom.",
+          "photo": { "commons": "File:CDC-Gathany-Aedes-albopictus-2.jpg" }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "Le risque",
+          "caption": "Il peut transmettre dengue, chikungunya ou Zika. En 2025 : environ 800 cas de chikungunya attrapés en France, 26 fois plus qu’en 2024.",
+          "bubbles": [
+            { "who": "raymond", "text": "Bon. J’inspecte. Personnellement.", "side": "l" },
+            { "who": "aicha", "text": "L’arrosoir, la bâche, la gouttière… et votre nain de jardin.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "the garden seen from above: Raymond (short, wiry, white handlebar moustache, faded denim-blue apron, green rubber boots) runs across the lawn on the left, emptying the green watering can upside down in a big splash; Aïcha (tall, broad, black curly bun under a khaki hat, tangerine-orange field vest) on the right points her net at the garden gnome by the hedge. high angle",
+            "cast": ["raymond", "aicha"],
+            "file": "images/cultureg-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Arrivé en 2004, le moustique tigre pond dans nos petites eaux stagnantes et voyage peu : on le combat en les vidant.",
+          "bubbles": [
+            { "who": "raymond", "text": "Même lui cachait une piscine. Le traître.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Raymond alone (short, wiry, white handlebar moustache, faded denim-blue apron, checked napkin in his collar), head and shoulders, holding the garden gnome upside down at arm's length as water pours out of its red pointed hat, glaring at it with deep betrayal, one eyebrow raised. medium close-up",
+            "cast": ["raymond"],
+            "file": "images/cultureg-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Le moustique tigre ne parcourt que quelques centaines de mètres dans sa vie : celui qui vous pique est souvent né dans votre jardin ou chez le voisin.",
+        "source": "ARS Provence-Alpes-Côte d’Azur — Le moustique tigre"
+      },
+      "story": "Le moustique tigre (Aedes albopictus) est un petit moustique d’environ 5 millimètres, noir, avec des rayures blanches sur les pattes et l’abdomen. Il a été observé pour la première fois en France métropolitaine en 2004, dans les Alpes-Maritimes. En mai 2026, il avait colonisé 83 départements sur 96. Contrairement aux moustiques que l’on connaît, il pique surtout le jour, tôt le matin et en fin d’après-midi, de mai à fin novembre.\nSon succès tient à sa façon de se reproduire. Seule la femelle pique, parce qu’elle a besoin de sang pour développer ses œufs. Elle en pond environ 150 tous les 12 jours dans de toutes petites quantités d’eau stagnante : coupelles de pots de fleurs, arrosoirs, récupérateurs d’eau de pluie, gouttières bouchées, bâches, jouets. Selon l’ARS, 80 % de ces « gîtes » sont créés par l’homme. En une semaine environ, les larves deviennent des adultes. Et comme le moustique ne se déplace que de quelques centaines de mètres dans sa vie, celui qui pique est presque toujours né tout près.\nIl peut transmettre la dengue, le chikungunya et le Zika, mais seulement si ces virus circulent. En 2025, la France hexagonale a compté environ 800 cas de chikungunya contractés sur place, 26 fois plus qu’en 2024. Le meilleur moyen de lutte est simple : vider, couvrir ou ranger tout ce qui retient l’eau, au moins une fois par semaine.",
+      "sources": [
+        { "title": "ARS Provence-Alpes-Côte d’Azur — Le moustique tigre : comment se protéger ?", "url": "https://www.paca.ars.sante.fr/moustique-tigre-comment-se-proteger-0" },
+        { "title": "Vidal (AFP) — Maladies transmises par les moustiques : appels à la vigilance après une année 2025 record", "url": "https://www.vidal.fr/actualites/37793-maladies-transmises-par-les-moustiques-appels-a-la-vigilance-apres-une-annee-2025-record.html" },
+        { "title": "Santé publique France — Lancement de la surveillance renforcée de la dengue, du chikungunya et du Zika (2025)", "url": "https://www.santepubliquefrance.fr/presse/2025/a-l-occasion-du-lancement-de-la-surveillance-renforcee-de-la-dengue-du-chikungunya-et-du-zika-en-france-metropolitaine-les-autorites-sanitaires-r" },
+        { "title": "Wikimedia Commons — CDC-Gathany-Aedes-albopictus-2", "url": "https://commons.wikipedia.com/wiki/File:CDC-Gathany-Aedes-albopictus-2.jpg" }
+      ]
+    }
+  ]
+}
