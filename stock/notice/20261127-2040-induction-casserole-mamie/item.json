@@ -1,0 +1,250 @@
+{
+  "added": "20261127-2040",
+  "formats": [
+    {
+      "id": "notice",
+      "label": "La Notice",
+      "title": "La plaque à induction ne chauffe rien : elle fait travailler votre casserole",
+      "tagline": "Des pâtes qui attendent, une casserole de mamie et un aimant en forme de fraise",
+      "teaser": "Bastien attend que ses pâtes cuisent depuis vingt minutes. Sa voisine a la solution : un aimant de frigo. Si si.",
+      "minutes": 2,
+      "theme": "Sciences physiques",
+      "epoque": "present",
+      "art": {
+        "subject": "how an induction hob works: a copper coil under the glass makes a fast-changing magnetic field that creates electric currents inside the iron bottom of the pan, so the pan heats itself, and aluminium pans stay cold",
+        "setting": "a small, freshly moved-into French flat today: a tiny kitchen corner with a black glass induction hob, a few unopened moving boxes on the floor",
+        "era": "present-day France",
+        "props": {
+          "hob": "a flat black glass induction hob with two plain painted circles and no knobs",
+          "oldpot": "a dented old silver aluminium saucepan with a wooden handle",
+          "newpot": "a heavy dark grey cast-iron cooking pot",
+          "magnet": "a small red fridge magnet shaped like a strawberry"
+        }
+      },
+      "cast": [
+        {
+          "id": "bastien",
+          "name": "Bastien",
+          "look": "Bastien, a short and very stocky man in his thirties, spiky dark brown hair, light olive skin, a thick bushy moustache, a bright orange rugby jersey as main colour, navy shorts, a checked dish towel over his shoulder",
+          "file": "cast/notice-bastien.png",
+          "status": "pending",
+          "role": "the new tenant who just moved in; in total bad faith, convinced the hob is broken and never his beloved old pot; waves his arms when outraged"
+        },
+        {
+          "id": "ndiaye",
+          "name": "Mme Ndiaye",
+          "look": "Mme Ndiaye, a tall, very upright woman in her sixties, short grey natural hair, dark brown skin, round red-framed glasses, a long teal-green cardigan as main colour over a white blouse, the magnet always in her hand",
+          "file": "cast/notice-ndiaye.png",
+          "status": "pending",
+          "role": "the retired physics teacher from the flat next door, came to borrow salt; cannot resist turning anything into a lesson, raises one finger before every explanation"
+        }
+      ],
+      "cover": {
+        "prompt": "a tiny kitchen corner among moving boxes: Bastien (short, very stocky, spiky dark brown hair, bushy moustache, bright orange rugby jersey) on the left glares at the oldpot sitting on the hob, arms spread in outrage; Mme Ndiaye (tall, upright, short grey hair, red round glasses, teal-green cardigan) on the right raises one finger and holds up the magnet like a detective's clue. medium wide shot",
+        "cast": [
+          "bastien",
+          "ndiaye"
+        ],
+        "file": "images/notice-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Le jour du déménagement",
+          "caption": "Pourquoi une plaque à induction boude-t-elle certaines casseroles ? Bastien vient d’emménager, et ses pâtes attendent.",
+          "bubbles": [
+            {
+              "who": "bastien",
+              "text": "Vingt minutes, et l’eau est toujours froide. La plaque est en panne.",
+              "side": "l"
+            },
+            {
+              "who": "ndiaye",
+              "text": "Votre casserole est en aluminium. Pour la plaque, elle n’existe pas.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small flat full of moving boxes, a tiny kitchen corner with the hob. Bastien (short, very stocky, spiky dark brown hair, bushy moustache, bright orange rugby jersey) on the left stares down at the oldpot full of still water on the hob, arms spread in outrage; in the open doorway on the right Mme Ndiaye (tall, upright, short grey hair, red round glasses, teal-green cardigan) holds an empty salt cellar and raises one eyebrow. wide shot",
+            "cast": [
+              "bastien",
+              "ndiaye"
+            ],
+            "file": "images/notice-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Le principe",
+          "caption": "Sous la vitre, une bobine de cuivre crée un champ magnétique qui s’inverse sans cesse, très vite.",
+          "bubbles": [
+            {
+              "who": "ndiaye",
+              "text": "Ce champ ne chauffe pas. Il fait tourner du courant dans le fond de la casserole.",
+              "side": "r"
+            },
+            {
+              "who": "bastien",
+              "text": "Vous mettez la main sur une plaque allumée, là ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "in the tiny kitchen: Mme Ndiaye (tall, upright, short grey hair, red round glasses, teal-green cardigan) on the right calmly lays her bare hand flat on the switched-on empty hob, one finger of the other hand raised like a teacher; Bastien (short, very stocky, spiky dark brown hair, bushy moustache, orange rugby jersey) on the left jumps back in horror, clutching his dish towel with both hands, a light-blue sweat drop. medium shot",
+            "cast": [
+              "ndiaye",
+              "bastien"
+            ],
+            "file": "images/notice-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Comment la casserole devient le feu",
+          "steps": [
+            "La bobine reçoit un courant qui change de sens des milliers de fois par seconde",
+            "Elle crée un champ magnétique qui s’inverse au même rythme",
+            "Ce champ fait naître des courants en boucle dans le fond de la casserole",
+            "Le métal freine ces courants et s’échauffe : la chaleur naît dans la casserole"
+          ],
+          "joke": "La plaque ne cuit rien. Elle sous-traite."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Le problème",
+          "caption": "Il faut un fond en fer, magnétique : l’aluminium et le cuivre laissent filer ces courants presque sans chauffer.",
+          "bubbles": [
+            {
+              "who": "ndiaye",
+              "text": "Le test : si l’aimant colle au fond, la casserole chauffera.",
+              "side": "r"
+            },
+            {
+              "who": "bastien",
+              "text": "Il tombe. Ma casserole de mamie est virée ?",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Bastien (short, very stocky, spiky dark brown hair, bushy moustache, orange rugby jersey) on the left holds the oldpot upside down while the magnet slides off its bottom and falls; next to him on the right Mme Ndiaye (tall, upright, short grey hair, red round glasses, teal-green cardigan) shows the newpot, another strawberry magnet firmly stuck under it. Bastien's face falls, mouth open. high angle",
+            "cast": [
+              "bastien",
+              "ndiaye"
+            ],
+            "file": "images/notice-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Léon Foucault, le Français des courants",
+          "text": "Le physicien Léon Foucault (1819-1868), célèbre pour son pendule, a montré en 1855 qu’un disque de cuivre tournant près d’un aimant s’échauffe. Ces courants portent son nom : les courants de Foucault.",
+          "photo": {
+            "commons": "File:Foucault portre crop.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "La surprise",
+          "caption": "La vitre, elle, n’est chauffée que par la casserole posée dessus : allumée à vide, la plaque reste froide.",
+          "bubbles": [
+            {
+              "who": "bastien",
+              "text": "Elle est allumée et elle est froide. Je crois que je l’aime.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Bastien alone (short, very stocky, spiky dark brown hair, bushy moustache, bright orange rugby jersey) kneels by the counter and rests his cheek tenderly on the switched-on empty hob, eyes closed, hugging it with both arms like a pillow, small red hearts above his head. medium close-up",
+            "cast": [
+              "bastien"
+            ],
+            "file": "images/notice-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Pourquoi l’eau bout plus vite qu’au gaz",
+          "text": "Au gaz, une bonne partie de la chaleur de la flamme passe à côté de la casserole et part dans l’air de la cuisine. Avec l’induction, la chaleur naît directement dans le fond de la casserole : presque toute l’énergie sert à cuire.",
+          "joke": "Votre cuisine a moins chaud. Vous aussi."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "L’induction chauffe la casserole de l’intérieur, par magnétisme : sans fer dans le fond, rien ne se passe.",
+          "bubbles": [
+            {
+              "who": "bastien",
+              "text": "Mamie, ta casserole a trouvé un nouveau poste : pot de fleurs.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Bastien alone (short, very stocky, spiky dark brown hair, bushy moustache, bright orange rugby jersey) proudly holds up the oldpot, now planted with a small green basil plant, next to the newpot steaming on the hob behind him, a dish towel over his shoulder and yellow sparkles around his grin. close-up",
+            "cast": [
+              "bastien"
+            ],
+            "file": "images/notice-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Les courants qui chauffent votre casserole portent le nom de Léon Foucault, l’homme du pendule, qui les a étudiés en 1855.",
+        "source": "National MagLab — Foucault’s Disk"
+      },
+      "story": "Une plaque à induction ne produit pas de chaleur elle-même. Sous sa vitre en vitrocéramique se trouve une bobine de fil de cuivre parcourue par un courant alternatif, qui change de sens des dizaines de milliers de fois par seconde. Cette bobine crée un champ magnétique qui s’inverse au même rythme.\nQuand on pose dessus une casserole à fond en fer ou en acier magnétique, ce champ fait naître dans le métal des courants électriques qui tournent en boucle : les courants de Foucault. Le métal résiste au passage de ces courants et s’échauffe, un peu comme le fil d’un grille-pain. Dans un métal magnétique s’ajoute un second effet, l’aimantation qui s’inverse sans cesse et dégage elle aussi de la chaleur. La chaleur naît donc directement dans le fond de la casserole.\nC’est pour cela qu’une casserole en aluminium, en cuivre ou en verre ne chauffe pas sur une plaque ordinaire : ces matériaux ne sont pas magnétiques et conduisent trop bien le courant pour s’échauffer. Le test le plus simple : si un aimant colle au fond, la casserole convient. La vitre, elle, n’est chauffée que par le contact de la casserole brûlante ; allumée à vide, la plaque reste froide, et elle se coupe d’ailleurs automatiquement.\nComme la chaleur ne se perd presque pas dans l’air de la cuisine, l’induction chauffe plus vite et gaspille moins d’énergie que le gaz. Les courants portent le nom du physicien français Léon Foucault, l’homme du célèbre pendule, qui a montré en 1855 qu’un disque de cuivre tournant entre les pôles d’un aimant s’échauffe.",
+      "sources": [
+        {
+          "title": "Wikipedia — Induction cooking",
+          "url": "https://wikipedia.com/wiki/Induction_hob"
+        },
+        {
+          "title": "HowStuffWorks — How Induction Cooktops Work",
+          "url": "https://home.howstuffworks.com/induction-cooktops3.htm"
+        },
+        {
+          "title": "PBS Nova — How do induction stoves work?",
+          "url": "https://www.pbs.org/wgbh/nova/article/how-induction-stoves-work/"
+        },
+        {
+          "title": "Que Choisir — Plaques de cuisson à induction : conseils",
+          "url": "https://www.quechoisir.org/conseils-plaques-de-cuisson-a-induction-conseils-n2113/"
+        },
+        {
+          "title": "National MagLab — Foucault’s Disk",
+          "url": "https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/foucault-s-disk/"
+        },
+        {
+          "title": "Techno-Science — Léon Foucault",
+          "url": "https://www.techno-science.net/fr/definitions/leon-foucault"
+        },
+        {
+          "title": "Wikimedia Commons — Foucault portre crop",
+          "url": "https://en.wikipedia.com/wiki/File:Foucault_portre_crop.jpg"
+        }
+      ]
+    }
+  ]
+}
