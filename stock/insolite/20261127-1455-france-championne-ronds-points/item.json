@@ -1,0 +1,168 @@
+{
+  "added": "20261127-1455",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "La France, championne du monde de tourner en rond",
+      "tagline": "Un maire fier de son escargot en bronze, une livreuse qui cherche la sortie",
+      "teaser": "Gilbert inaugure son rond-point avec ruban, fanfare et escargot géant. Sandrine, elle, voudrait juste sortir.",
+      "minutes": 1,
+      "theme": "Société",
+      "epoque": "present",
+      "art": {
+        "subject": "why France has more roundabouts than any other country in the world (about 43,000)",
+        "setting": "a brand-new roundabout at the edge of a small French town: a round grassy island in the middle, a giant bronze sculpture on it, a road ring around it, a retail park in the distance",
+        "era": "today, France",
+        "props": {
+          "snail": "a giant shiny bronze snail sculpture on a stone base in the middle of the roundabout",
+          "van": "a small white delivery van, slightly dented, packed with parcels",
+          "ribbon": "a long blue, white and red inauguration ribbon and a big pair of golden scissors"
+        }
+      },
+      "cast": [
+        {
+          "id": "gilbert",
+          "name": "Gilbert",
+          "look": "Gilbert, a round and very short small-town mayor in his sixties, a thick shock of snow-white hair combed into a high wave, pink-beige skin, a bottle-green three-piece suit as main colour, a blue, white and red sash across his chest, holding the golden scissors",
+          "role": "a vain mayor convinced his roundabout is a masterpiece; chest out, chin high, polishes his sculpture like a trophy",
+          "file": "cast/insolite-gilbert.png",
+          "status": "pending"
+        },
+        {
+          "id": "sandrine",
+          "name": "Sandrine",
+          "look": "Sandrine, a lanky delivery driver in her forties, a long black braid under a backwards cap, dark brown skin, a bright purple fleece jacket as main colour, black work trousers, a phone with a map app clipped to her dashboard",
+          "role": "a weary, sarcastic delivery driver stuck going round and round; one elbow out of the van window, eyes rolling, getting dizzier each lap",
+          "file": "cast/insolite-sandrine.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "at a brand-new roundabout: Gilbert (very short, round, high white hair wave, bottle-green suit, tricolour sash) on the left proudly cuts the ribbon in front of the snail; behind him on the right Sandrine (lanky, long black braid, backwards cap, bright purple fleece) drives the van around the ring, leaning out of the window with dizzy spiral eyes. medium wide shot",
+        "cast": ["gilbert", "sandrine"],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Aujourd’hui",
+          "caption": "Pourquoi la France a-t-elle plus de ronds-points que n’importe quel pays ? Aujourd’hui, le maire Gilbert inaugure le sien.",
+          "bubbles": [
+            { "who": "gilbert", "text": "Mon rond-point ! Avec, au centre, un escargot géant en bronze.", "side": "l" },
+            { "who": "sandrine", "text": "Je cherche la sortie depuis trois tours.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a brand-new roundabout at the edge of a small French town, a retail park in the distance: Gilbert (very short, round, high white hair wave, bottle-green suit, tricolour sash) stands on the grassy island on the left, arms spread wide before the snail, golden scissors in hand; on the right the van drives around the ring, Sandrine (lanky, long black braid, backwards cap, bright purple fleece) leaning out of the window, elbow out. wide shot",
+            "cast": ["gilbert", "sandrine"],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Le compte",
+          "caption": "Il y en aurait environ 43 000, d’après un classement de 2024 tiré de la carte collaborative OpenStreetMap : 65 % de plus qu’au Royaume-Uni.",
+          "bubbles": [
+            { "who": "gilbert", "text": "Quarante-trois mille ! Et le mien est le plus beau.", "side": "l" },
+            { "who": "sandrine", "text": "Il n’y a même pas de chiffre officiel. Personne n’est ressorti pour compter.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "inside the van, from the passenger seat: Sandrine (lanky, long black braid, backwards cap, bright purple fleece) on the right grips the wheel, eyes spinning, the map app on her phone showing an endless circle; through the window on the left, Gilbert (very short, round, high white hair wave, bottle-green suit, tricolour sash) waves proudly as she passes him again. medium close-up",
+            "cast": ["gilbert", "sandrine"],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Comment la France s’est couverte de ronds-points",
+          "steps": [
+            "Années 1960 : les études d’accidents montrent que les carrefours à priorité à droite sont dangereux",
+            "Le giratoire supprime les chocs à angle droit : on y entre au ralenti",
+            "1er mai 1984 : priorité à ceux qui tournent déjà, l’anneau ne se bloque plus",
+            "Années 1980 : les zones commerciales se multiplient, et les ronds-points avec"
+          ],
+          "joke": "Le seul carrefour où l’on a raison de tourner en rond."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "Avant 1984",
+          "caption": "Avant le 1er mai 1984, ceux qui entraient avaient la priorité, et l’anneau se bouchait. Place de l’Étoile, à Paris, c’est toujours le cas.",
+          "bubbles": [
+            { "who": "gilbert", "text": "L’Étoile ! C’est là que tout a commencé, au début des années 1900.", "side": "l" },
+            { "who": "sandrine", "text": "Et c’est là que tout s’arrête. Surtout la circulation.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Gilbert (very short, round, high white hair wave, bottle-green suit, tricolour sash) on the left climbs onto the stone base of the snail and points dramatically into the distance like a general; below on the right Sandrine (lanky, long black braid, backwards cap, bright purple fleece) has stopped the van, slumped over the wheel, forehead on her arms. low angle",
+            "cast": ["gilbert", "sandrine"],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "La place de l’Étoile, vue d’en haut",
+          "text": "La place de l’Étoile, autour de l’Arc de triomphe : l’un des premiers grands carrefours giratoires, aménagé par l’urbaniste Eugène Hénard au début du XXe siècle. On y garde la priorité à droite.",
+          "photo": { "commons": "File:ParisPlaceEtoile.jpg" }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "La facture",
+          "caption": "Un rond-point coûte de 300 000 à 800 000 € selon sa taille, et il s’en construisait environ 500 par an en 2017.",
+          "bubbles": [
+            { "who": "gilbert", "text": "L’escargot était en option. J’ai pris l’option.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Gilbert alone (very short, round, high white hair wave, bottle-green suit, tricolour sash) standing on tiptoe on a small stool, lovingly polishing the shell of the giant bronze snail with a cloth and his own breath, his reflection gleaming in the bronze, eyes closed in delight. medium shot",
+            "cast": ["gilbert"],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Plus sûrs que les carrefours à priorité à droite et multipliés depuis les années 1980, les ronds-points ont fait de la France la championne.",
+          "bubbles": [
+            { "who": "sandrine", "text": "Cinquième tour. Je commence à l’aimer, son escargot.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Sandrine alone (lanky, long black braid, backwards cap, bright purple fleece), head and shoulders leaning out of the van window, cheek resting on her arm, dizzy little spiral eyes and a dreamy, resigned smile, the shiny bronze snail reflected in her side mirror. close-up",
+            "cast": ["sandrine"],
+            "file": "images/insolite-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "Place de l’Étoile, à Paris, on roule toujours à l’ancienne : priorité à droite, donc à ceux qui entrent, pas à ceux qui tournent.",
+        "source": "Journal du Geek — Rond-point ou carrefour giratoire : la différence"
+      },
+      "story": "Personne n’a compté officiellement les ronds-points de France, mais un classement publié en 2024, tiré de la carte collaborative OpenStreetMap, en recense environ 43 000 : 65 % de plus qu’au Royaume-Uni (près de 26 000), loin devant l’Italie et l’Espagne. Il s’en construisait encore environ 500 par an en 2017, pour 300 000 à 800 000 euros chacun selon la taille.\nTout part de la sécurité routière. Dans les années 1960, les premières études d’accidents montrent que les carrefours à priorité à droite sont dangereux. Le carrefour giratoire évite les chocs à angle droit : on y entre au ralenti et on se croise dans le même sens. Encore fallait-il qu’il ne se bouche pas. Au début, ceux qui entraient avaient la priorité sur ceux qui tournaient, et l’anneau finissait bloqué. Le 1er mai 1984, la France inverse la règle : priorité à ceux qui sont déjà sur l’anneau, signalée par un panneau « Cédez le passage » à chaque entrée.\nLe nombre de ronds-points explose alors, porté par les zones commerciales et industrielles des années 1980, et décoré au passage de sculptures. Le doyen, lui, n’a pas changé : la place de l’Étoile, aménagée par l’urbaniste Eugène Hénard au début du XXe siècle, garde la priorité à droite. Ceux qui y entrent passent devant ceux qui tournent.",
+      "sources": [
+        { "title": "L’info durable (AFP) — La France, championne du monde des ronds-points", "url": "https://www.linfodurable.fr/la-france-championne-du-monde-des-ronds-points-43342" },
+        { "title": "Caradisiac — 500 nouveaux ronds-points par an en France", "url": "https://www.caradisiac.com/500-nouveaux-ronds-points-par-an-en-france-165118.htm" },
+        { "title": "Journal du Geek — Rond-point ou carrefour giratoire : personne ne connaît la différence", "url": "https://www.journaldugeek.com/2026/06/15/rond-point-ou-carrefour-giratoire-personne-ne-connait-la-difference-mais-elle-peut-vous-couter-cher/" },
+        { "title": "Techno-Science — Carrefour giratoire", "url": "https://www.techno-science.net/fr/definitions/carrefour-giratoire" },
+        { "title": "Wikimedia Commons — ParisPlaceEtoile", "url": "https://download.osmand.net/wiki/File:ParisPlaceEtoile.jpg" }
+      ]
+    }
+  ]
+}
