@@ -1,0 +1,407 @@
+{
+  "added": "20261127-1508",
+  "formats": [
+    {
+      "id": "dossier",
+      "label": "Le Grand Dossier",
+      "title": "Retour sur la Lune : 56 ans pour retrouver les clés (et une place au pôle Sud)",
+      "tagline": "D’Apollo 17 à Artemis : pourquoi on n’est plus retourné sur la Lune depuis 1972, pourquoi on y retourne, et pourquoi cette fois on veut y rester",
+      "teaser": "Une ingénieure qui vérifie tout trois fois, un astronaute impatient et de la glace au fond d’un trou : la Lune, le retour.",
+      "minutes": 4,
+      "theme": "L’univers",
+      "epoque": "futur",
+      "art": {
+        "subject": "why humans have not walked on the Moon since 1972 and how they plan to return around 2028: the Apollo race of 1969, the end of Apollo for budget reasons, the Artemis II flight around the Moon in April 2026, water ice hidden in dark craters at the lunar south pole, the European Service Module of the Orion capsule assembled in Bremen, the Artemis III test in Earth orbit and the race with China",
+        "setting": "a launch pad in Florida with a tall white rocket; a 1969 mission control room with rows of consoles; a European spacecraft factory clean room in Bremen; a living room with a television in 2026; the grey rocky lunar south pole with long shadows and dark craters in a credible near future around 2028",
+        "era": "from 1969 (short-sleeved shirts, skinny ties, consoles with buttons) to 2026 and a credible near future around 2028 (orange flight suits, clean rooms, tablets)",
+        "props": {
+          "rocket": "a very tall white rocket with two slim white side boosters and a small grey capsule on top, no text or logos",
+          "checklist": "a thick clipboard checklist with dozens of tick boxes, no readable text",
+          "module": "a short white cylinder spacecraft module with four long blue solar panel wings in an X shape",
+          "flask": "a small transparent flask of sparkling ice crystals",
+          "console": "a bulky 1960s grey control console with rows of round buttons and small screens"
+        }
+      },
+      "cast": [
+        {
+          "id": "helene",
+          "name": "Hélène, ingénieure",
+          "look": "Hélène, a French spacecraft engineer of 45 in 2026, short and wiry, a sharp silver-grey pixie cut, big round tortoiseshell glasses, light skin, a lemon-yellow engineer's polo shirt as main colour under a white clean-room overcoat left open, dark blue trousers, the checklist always clutched to her chest, a little magnifying glass on a cord around her neck",
+          "role": "the perfectionist engineer who checks everything three times and never lets anyone leave before the last box is ticked; anxious and meticulous, frowning over details, pen always ready",
+          "file": "cast/dossier-helene.png",
+          "status": "pending"
+        },
+        {
+          "id": "sam",
+          "name": "Sam, astronaute",
+          "look": "Sam, an astronaut of 40 in a near future, very tall and broad-shouldered like a rugby player, shaved head, short black beard, dark brown skin, a bright orange astronaut flight suit as main colour with white boots, a white helmet often carried under his arm, a huge confident grin",
+          "role": "the impatient, boastful astronaut who wants to leave right now and thinks he could fly to the Moon by himself; restless, bouncing on his heels, arms spread wide",
+          "file": "cast/dossier-sam.png",
+          "status": "pending"
+        },
+        {
+          "id": "gene",
+          "name": "Gene, contrôleur de 1969",
+          "look": "Gene, a NASA flight controller of 35 in 1969, short and stout, slicked-back black hair with long sideburns, thick black-rimmed glasses, light pink skin, a mint-green short-sleeved shirt as main colour with a skinny dark tie, a pocket protector full of pens, a telephone headset on his head",
+          "role": "the nostalgic 1960s controller who brags that everything was simpler and faster in his day; boastful and cocky, leaning back in his chair with his thumbs in his belt",
+          "file": "cast/dossier-gene.png",
+          "status": "pending"
+        }
+      ],
+      "cover": {
+        "prompt": "the grey rocky lunar south pole with long black shadows and a dark crater in a near future. Sam (very tall and broad, shaved head, black beard, bright orange flight suit, white helmet under his arm) bounds forward impatiently towards the crater with one giant step, while Hélène (short and wiry, silver-grey pixie cut, tortoiseshell glasses, lemon-yellow polo under white overcoat) pulls him back by the sleeve, pointing at the checklist. visual gag: the checklist trailing to the ground. wide shot",
+        "cast": ["sam", "helene"],
+        "file": "images/dossier-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "Chapitre 1 · Le grand retour",
+          "caption": "2028, si le calendrier tient : des astronautes doivent remarcher sur la Lune. Pourquoi y retourner, et pourquoi si tard ?",
+          "bubbles": [
+            { "who": "sam", "text": "On attend ça depuis 1972. On peut y aller, là ?", "side": "r" },
+            { "who": "helene", "text": "Pas avant ma 412e vérification.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a launch pad in Florida at dawn with the rocket towering behind. Sam (very tall and broad, shaved head, black beard, bright orange flight suit, white helmet under his arm) bounces impatiently on his heels on the right, pointing up at the rocket; on the left Hélène (short and wiry, silver-grey pixie cut, tortoiseshell glasses, lemon-yellow polo under white overcoat) blocks his way, reading the checklist without looking up. wide shot",
+            "cast": ["sam", "helene"],
+            "file": "images/dossier-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "fact",
+          "tag": "1969-1972",
+          "caption": "Entre 1969 et 1972, douze hommes ont marché sur la Lune. Le dernier l’a quittée en décembre 1972, avec Apollo 17.",
+          "bubbles": [
+            { "who": "gene", "text": "Douze ! En trois ans ! Avec des règles à calcul et du café.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a 1969 mission control room with rows of the console and men in short-sleeved shirts. Gene (short and stout, slicked-back black hair with sideburns, thick black glasses, mint-green short-sleeved shirt, headset) leans far back in his chair with his feet on the console, thumbs in his belt, a huge smug grin, a pile of empty coffee cups next to him. low angle",
+            "cast": ["gene"],
+            "file": "images/dossier-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "fact",
+          "tag": "1er avril 2026",
+          "caption": "Le 1er avril 2026, Artemis II emmène quatre astronautes, dont un Canadien, faire le tour de la Lune.",
+          "bubbles": [
+            { "who": "sam", "text": "Le tour sans s’arrêter. Comme un rond-point.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a cosy living room in 2026. Sam (very tall and broad, shaved head, black beard, bright orange flight suit) sits squeezed on a small sofa, knees up to his chin, watching a rocket launch on the television with a bowl of popcorn, half admiring, half jealous. over-the-shoulder",
+            "cast": ["sam"],
+            "file": "images/dossier-03.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 4,
+          "kind": "react",
+          "tag": "10 avril 2026",
+          "caption": "Record : 406 771 km de la Terre, dix fois son tour. Mais toujours aucun pas sur la Lune. Pourquoi est-ce si dur ?",
+          "bubbles": [],
+          "image": {
+            "prompt": "Sam (very tall and broad, shaved head, black beard, bright orange flight suit) alone at night by an open window, staring up at the full Moon with an intense longing look, stretching one arm out of the window as if he could grab it between two fingers. visual gag: pinching the Moon. close-up",
+            "cast": ["sam"],
+            "file": "images/dossier-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "chap",
+          "tag": "Chapitre 2 · La course de 1969",
+          "caption": "Retour en arrière. Apollo est né d’une course : en pleine guerre froide, les États-Unis veulent battre l’URSS sur la Lune.",
+          "bubbles": [
+            { "who": "gene", "text": "On n’y va pas pour les cailloux. On y va pour gagner.", "side": "l" },
+            { "who": "Un collègue", "text": "Et les cailloux, on les ramène quand même ?", "side": "r" }
+          ],
+          "image": {
+            "prompt": "in the 1969 mission control room, Gene (short and stout, slicked-back black hair with sideburns, thick black glasses, mint-green short-sleeved shirt, headset) stands on his chair, fist raised like a coach before a match; on the right a thin bald colleague in a white shirt holds up a small grey rock with a puzzled face. medium wide shot",
+            "cast": ["gene"],
+            "file": "images/dossier-05.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 6,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "La Terre vue de la Lune, en 1968",
+          "text": "Le « lever de Terre », photographié le 24 décembre 1968 par l’équipage d’Apollo 8, la première mission habitée à faire le tour de la Lune.",
+          "photo": { "commons": "File:NASA-Apollo8-Dec24-Earthrise.jpg" }
+        },
+        {
+          "n": 7,
+          "kind": "fact",
+          "tag": "1970",
+          "caption": "Une fois la course gagnée, l’argent manque : en 1970, la NASA annule la mission Apollo 20 pour faire des économies.",
+          "bubbles": [
+            { "who": "gene", "text": "On gagne la course, et on nous retire la voiture.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Gene (short and stout, slicked-back black hair with sideburns, thick black glasses, mint-green short-sleeved shirt) in a corridor of the space centre watches, outraged, as two removal men in grey overalls carry away a big model of the rocket on their shoulders; he clutches a long paper budget sheet that drags to the floor. medium shot",
+            "cast": ["gene"],
+            "file": "images/dossier-07.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 8,
+          "kind": "react",
+          "tag": "Décembre 1972",
+          "caption": "Après Apollo 17, plus aucun humain ne retourne sur la Lune. Pendant des décennies, on préfère les stations autour de la Terre.",
+          "bubbles": [],
+          "image": {
+            "prompt": "the 1969 mission control room now empty and dim, chairs pushed in. Gene (short and stout, slicked-back black hair with sideburns, thick black glasses, mint-green short-sleeved shirt) alone at the door, hand on the light switch, looks back at the console one last time with a single light-blue tear, the rest of the room already in shadow. from behind",
+            "cast": ["gene"],
+            "file": "images/dossier-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 9,
+          "kind": "chap",
+          "tag": "Chapitre 3 · Rendez-vous au pôle Sud",
+          "caption": "Cette fois, la NASA ne vise plus l’équateur comme Apollo, mais les environs du pôle Sud de la Lune.",
+          "bubbles": [
+            { "who": "sam", "text": "Le pôle Sud ? Il fait noir, il fait froid…", "side": "r" },
+            { "who": "helene", "text": "Et il y a de l’eau.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a European spacecraft factory clean room with white walls. Hélène (short and wiry, silver-grey pixie cut, tortoiseshell glasses, lemon-yellow polo under white overcoat) taps a large grey globe of the Moon on a stand, pointing at its bottom; Sam (very tall and broad, shaved head, black beard, bright orange flight suit) bends down to look, wrinkling his nose. medium close-up",
+            "cast": ["helene", "sam"],
+            "file": "images/dossier-09.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 10,
+          "kind": "fact",
+          "tag": "La glace",
+          "caption": "Dans des cratères jamais éclairés par le Soleil, il fait si froid que de la glace d’eau y reste piégée.",
+          "bubbles": [
+            { "who": "helene", "text": "De l’eau sur place, ce sont des tonnes de bouteilles en moins.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "in a near future, at the rim of a pitch-dark lunar crater with long shadows. Hélène (short and wiry, silver-grey pixie cut visible through a clear helmet visor, white spacesuit with a lemon-yellow band on the arm) kneels and holds up the flask of sparkling ice crystals, beaming, yellow sparkles around it. low angle",
+            "cast": ["helene"],
+            "file": "images/dossier-10.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 11,
+          "kind": "explain",
+          "tag": "Le mécanisme",
+          "title": "Pourquoi l’eau change tout",
+          "steps": [
+            "Tout ce qu’on emporte depuis la Terre coûte très cher à lancer",
+            "La glace des cratères peut fondre en eau à boire",
+            "Coupée par l’électricité, l’eau donne de l’oxygène et de l’hydrogène",
+            "Oxygène pour respirer ; hydrogène et oxygène pour les fusées"
+          ],
+          "joke": "La Lune pourrait devenir la première station-service de l’espace."
+        },
+        {
+          "n": 12,
+          "kind": "fact",
+          "tag": "Le Soleil",
+          "caption": "Juste à côté, des sommets restent au Soleil au moins 6,5 jours d’affilée : de l’énergie, et moins d’écarts de température.",
+          "bubbles": [
+            { "who": "sam", "text": "Glace d’un côté, soleil de l’autre. La Lune a inventé la station de ski.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a lunar ridge in a near future, half in blinding sunlight, half in deep shadow. Sam (very tall and broad, white spacesuit with an orange band, helmet visor up showing his black beard and grin) lies back on a folding deckchair on the sunny side like a skier on holiday, sunglasses over his visor, while the dark crater yawns just behind him. high angle",
+            "cast": ["sam"],
+            "file": "images/dossier-12.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 13,
+          "kind": "chap",
+          "tag": "Chapitre 4 · Le module européen",
+          "caption": "Pour y aller : la capsule américaine Orion. Son module de service est européen, assemblé par Airbus à Brême, en Allemagne.",
+          "bubbles": [
+            { "who": "helene", "text": "Française, en Allemagne, pour une capsule américaine. Ça, c’est l’Europe.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "the European clean room in Bremen. The module stands on a big stand, its four blue solar wings folded. Hélène (short and wiry, silver-grey pixie cut, tortoiseshell glasses, lemon-yellow polo under white overcoat) climbs a tall rolling ladder beside it, checklist in her teeth, reaching to inspect a bolt with her magnifying glass. wide shot",
+            "cast": ["helene"],
+            "file": "images/dossier-13.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 14,
+          "kind": "fact",
+          "tag": "Le module",
+          "caption": "Ce module fournit l’air, l’eau, une température vivable, l’électricité de quatre panneaux solaires et la poussée de 33 moteurs.",
+          "bubbles": [
+            { "who": "sam", "text": "33 moteurs ? Ma voiture n’en a qu’un, et elle ne démarre pas.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "under the module in the clean room, Sam (very tall and broad, shaved head, black beard, bright orange flight suit) lies on his back on a mechanic's creeper, counting the many small engine nozzles on his fingers with growing disbelief, a tiny light-blue sweat drop on his forehead. bird's-eye view",
+            "cast": ["sam"],
+            "file": "images/dossier-14.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 15,
+          "kind": "photo",
+          "tag": "En vrai",
+          "title": "Le décollage d’Artemis II",
+          "text": "La fusée SLS et la capsule Orion décollent du centre spatial Kennedy, en Floride, le 1er avril 2026, avec leur module de service européen.",
+          "photo": { "commons": "File:Artemis II Launch (NHQ20260401 admin 0025).jpg" }
+        },
+        {
+          "n": 16,
+          "kind": "react",
+          "tag": "Vérification",
+          "caption": "Chaque pièce est testée et retestée : un équipage à 400 000 km ne peut pas faire demi-tour en cas de panne.",
+          "bubbles": [],
+          "image": {
+            "prompt": "Hélène (short and wiry, silver-grey pixie cut, tortoiseshell glasses, lemon-yellow polo under white overcoat) presses her face so close to a single tiny screw on the module that her magnifying glass fogs up, one eye hugely enlarged by the lens, totally absorbed. visual gag: the giant eye in the magnifier. extreme close-up",
+            "cast": ["helene"],
+            "file": "images/dossier-16.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 17,
+          "kind": "chap",
+          "tag": "Chapitre 5 · Le calendrier",
+          "caption": "Prévue pour l’été 2027, Artemis III restera autour de la Terre : quatre astronautes y testeront l’amarrage à deux atterrisseurs.",
+          "bubbles": [
+            { "who": "sam", "text": "Encore un tour pour rien ?", "side": "r" },
+            { "who": "helene", "text": "Un essai. Comme Apollo avant 1969.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "a briefing room in a near future with a big plain white board. Sam (very tall and broad, shaved head, black beard, bright orange flight suit) slumps theatrically over a table, arms dangling; Hélène (short and wiry, silver-grey pixie cut, tortoiseshell glasses, lemon-yellow polo under white overcoat) stands behind him, calmly drawing a small circle around a ball on the board with a marker. medium shot",
+            "cast": ["sam", "helene"],
+            "file": "images/dossier-17.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 18,
+          "kind": "fact",
+          "tag": "2028",
+          "caption": "Ces atterrisseurs viennent de SpaceX et Blue Origin. Le vrai retour sur la Lune est visé pour 2028, avec Artemis IV.",
+          "bubbles": [
+            { "who": "sam", "text": "Deux taxis pour un seul client. Je prends le premier qui arrive.", "side": "r" }
+          ],
+          "image": {
+            "prompt": "a launch area in a near future: two different tall lander spacecraft, one shiny silver and one white, stand side by side like taxis at a rank. Sam (very tall and broad, shaved head, black beard, bright orange flight suit) stands in front of them with one arm raised as if hailing a cab, helmet under his other arm. low angle",
+            "cast": ["sam"],
+            "file": "images/dossier-18.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 19,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Une nouvelle course",
+          "text": "Comme en 1969, c’est une course. La Chine vise elle aussi un équipage sur la Lune avant 2030, si tout va bien :",
+          "steps": [
+            "Sa capsule Mengzhou emmènera trois astronautes",
+            "Son atterrisseur Lanyue en déposera deux sur la Lune",
+            "Il faudra deux fusées Longue Marche 10 par mission"
+          ]
+        },
+        {
+          "n": 20,
+          "kind": "fact",
+          "tag": "Et après",
+          "caption": "Cette fois, l’objectif n’est plus de planter un drapeau puis rentrer : la NASA veut une base près du pôle Sud.",
+          "bubbles": [
+            { "who": "gene", "text": "Une base ? Nous, on y allait trois jours et on rentrait.", "side": "l" }
+          ],
+          "image": {
+            "prompt": "Gene (short and stout, slicked-back black hair with sideburns, thick black glasses, mint-green short-sleeved shirt) in his 1969 control room holds up a small paper drawing of a dome base on the Moon, peering at it over his glasses with a mix of envy and disbelief, one eyebrow very high. medium close-up",
+            "cast": ["gene"],
+            "file": "images/dossier-20.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 21,
+          "kind": "react",
+          "tag": "2028 ?",
+          "caption": "En résumé : en 1969, on allait sur la Lune pour gagner. On y retourne pour rester, grâce à l’eau du pôle Sud.",
+          "bubbles": [
+            { "who": "helene", "text": "Vérification 413 : c’est bon. Vous pouvez y aller.", "side": "l" },
+            { "who": "sam", "text": "Enfin !", "side": "r" }
+          ],
+          "image": {
+            "prompt": "at the foot of the rocket on the launch pad, Hélène (short and wiry, silver-grey pixie cut, tortoiseshell glasses, lemon-yellow polo under white overcoat) ticks the very last box of the checklist with a satisfied little smile, while in the background Sam (very tall and broad, orange flight suit, white helmet) is already sprinting towards the rocket, a cloud of dust behind him. medium wide shot",
+            "cast": ["helene", "sam"],
+            "file": "images/dossier-21.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 22,
+          "kind": "react",
+          "tag": "Le soir même",
+          "caption": "Dans l’espace, le calendrier glisse souvent : 2028 reste un objectif, pas une promesse.",
+          "bubbles": [
+            { "who": "sam", "text": "Hélène… pourquoi la porte est encore fermée ?", "side": "r" }
+          ],
+          "image": {
+            "prompt": "Sam (very tall and broad, shaved head, black beard, bright orange flight suit, white helmet on) presses his face against the closed round hatch of the capsule at the top of the launch tower, his helmet visor squashed on the window, looking at the reader with a mournful face. close-up",
+            "cast": ["sam"],
+            "file": "images/dossier-22.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "En avril 2026, l’équipage d’Artemis II est allé à 406 771 km de la Terre : plus loin que tous les astronautes d’Apollo.",
+        "source": "Euronews, 11 avril 2026"
+      },
+      "story": "Pourquoi n’est-on pas retourné sur la Lune depuis 1972, et pourquoi y retourner ? Entre 1969 et 1972, douze Américains y ont marché. Apollo était né d’une course : en pleine guerre froide, les États-Unis voulaient battre l’URSS. Une fois la course gagnée, l’argent a manqué : dès 1970, la NASA annule Apollo 20 par économie, et après Apollo 17, en décembre 1972, plus personne n’y retourne.\nLe programme Artemis relance l’aventure. Le 1er avril 2026, Artemis II décolle de Floride avec quatre astronautes, dont un Canadien, et fait le tour de la Lune ; à son retour, le 10 avril, l’équipage détient le record de distance, 406 771 km de la Terre. Sa capsule Orion est américaine, mais son module de service, qui fournit l’air, l’eau, l’électricité et la poussée de 33 moteurs, est européen, assemblé par Airbus à Brême.\nCette fois, la NASA vise les environs du pôle Sud lunaire : au fond de cratères jamais éclairés, de la glace d’eau est restée piégée, et des sommets voisins restent au Soleil plusieurs jours de suite. Cette eau pourrait donner à boire, de l’oxygène et du carburant, sans tout apporter de la Terre.\nArtemis III, prévue à l’été 2027, testera l’amarrage à deux atterrisseurs de SpaceX et Blue Origin en orbite autour de la Terre ; le retour sur la Lune est visé pour 2028 avec Artemis IV, puis une base. La Chine, elle, vise un équipage sur la Lune avant 2030.",
+      "sources": [
+        { "title": "Euronews — Artemis II : les quatre astronautes de retour sur Terre (11 avril 2026)", "url": "https://fr.euronews.com/2026/04/11/artemis-ii-les-quatre-astronautes-de-retour-sur-terre-apres-une-mission-test-autour-de-la-" },
+        { "title": "Euronews — Artemis III : la NASA précise les prochaines étapes (14 mai 2026)", "url": "https://fr.euronews.com/next/2026/05/14/artemis-iii-la-nasa-precise-les-prochaines-etapes-de-son-programme-lunaire" },
+        { "title": "AP — NASA adopting Apollo's urgency to build a moon base and land astronauts within two years (23 octobre 2026)", "url": "https://www.clickondetroit.com/tech/2026/10/23/nasa-adopting-apollos-urgency-to-build-a-moon-base-and-land-astronauts-within-two-years/" },
+        { "title": "Futura — Artemis III sera une mission de premières décisives", "url": "https://www.futura-sciences.com/sciences/actualites/astronautique-artemis-iii-sera-mission-premieres-decisives-retour-lune-133684/" },
+        { "title": "Futura — Retour sur la Lune : les sites choisis par la NASA près du pôle Sud", "url": "https://www.futura-sciences.com/sciences/actualites/exploration-lunaire-retour-lune-sont-sites-choisis-nasa-missions-artemis-100328/" },
+        { "title": "ESA — What is the European Service Module", "url": "https://www.esa.int/ESA_Multimedia/Images/2020/10/What_is_the_European_Service_Module" },
+        { "title": "NASA — 50 years ago, NASA cancels Apollo 20 mission", "url": "https://www.nasa.gov/history/50-years-ago-nasa-cancels-apollo-20-mission" },
+        { "title": "Smithsonian Air and Space — Ending Apollo", "url": "https://airandspace.si.edu/stories/editorial/ending-apollo" },
+        { "title": "Smithsonian Magazine — China announces a plan to put astronauts on the Moon by 2030", "url": "https://www.smithsonianmag.com/smart-news/china-announces-a-plan-to-put-astronauts-on-the-moon-by-2030-revealing-details-of-four-upcoming-missions-180989810/" },
+        { "title": "NASA — Earthrise, Apollo 8 (APOD, 24 décembre 2005)", "url": "https://science.nasa.gov/image-article/apod-2005-december-24-earthrise/" }
+      ]
+    }
+  ]
+}
