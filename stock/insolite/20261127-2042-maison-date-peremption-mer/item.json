@@ -1,0 +1,261 @@
+{
+  "added": "20261127-2042",
+  "formats": [
+    {
+      "id": "insolite",
+      "label": "L’Insolite historique",
+      "title": "Votre maison au bord de la mer a peut-être une date de péremption (et la mairie la connaît)",
+      "tagline": "Une véranda vue mer, une ligne rouge sur une carte et un crayon qu’on ne déplace pas",
+      "teaser": "Gérard voulait une véranda face à l’océan. La mairie lui a montré une carte. Il a fait un bateau en papier.",
+      "minutes": 1,
+      "theme": "Géographie",
+      "epoque": "futur",
+      "art": {
+        "subject": "how French seaside towns now must draw maps of where the coastline will be in 30 and 100 years, because the sea is eating the sandy coast, and what that means for houses",
+        "setting": "the small urban-planning office of a French seaside town hall today: a desk covered in folders, a big window onto dunes and the grey Atlantic ocean",
+        "era": "present-day France",
+        "props": {
+          "map": "a huge unrolled paper coastal map in pale blue and beige, with one thick red line and one thick orange line running along the coast, no writing",
+          "plans": "a roll of white architect plans of a glass veranda",
+          "stamp": "a big wooden rubber stamp with a red handle"
+        }
+      },
+      "cast": [
+        {
+          "id": "gerard",
+          "name": "Gérard",
+          "look": "Gérard, a short potbellied man in his seventies, a single tuft of fluffy white hair, sunburnt light-pink-beige skin, a coral-red Hawaiian shirt with white flowers as main colour, khaki shorts, sunglasses pushed up on his forehead, the plans always under his arm",
+          "file": "cast/insolite-gerard.png",
+          "status": "pending",
+          "role": "a stubborn retiree who wants a sea-view veranda; in total denial that his dune can move, bargains with the map as if it were a market trader"
+        },
+        {
+          "id": "clemence",
+          "name": "Clémence",
+          "look": "Clémence, a tall and very thin town planner in her forties, a sleek straight black bob, light tan skin, a cobalt-blue blazer as main colour over a white t-shirt, thin silver glasses, a pencil behind her ear",
+          "file": "cast/insolite-clemence.png",
+          "status": "pending",
+          "role": "the town hall's overzealous urban planner who adores her maps and her stamp; calm, precise, stamps things a little too enthusiastically"
+        }
+      ],
+      "cover": {
+        "prompt": "a seaside town hall office with a window onto dunes and the ocean: Gérard (short, potbellied, white tuft of hair, coral-red Hawaiian shirt) on the left hugs the plans to his chest, horrified; Clémence (tall, very thin, black bob, cobalt-blue blazer) on the right unrolls the map across the whole desk and taps the red line with her pencil. medium wide shot",
+        "cast": [
+          "gerard",
+          "clemence"
+        ],
+        "file": "images/insolite-cover.webp",
+        "status": "pending",
+        "attempts": 0
+      },
+      "cases": [
+        {
+          "n": 1,
+          "kind": "chap",
+          "tag": "À la mairie, aujourd’hui",
+          "caption": "Peut-on savoir dès aujourd’hui quelles maisons la mer prendra ? Gérard vient déposer les plans de sa véranda, face à l’océan.",
+          "bubbles": [
+            {
+              "who": "gerard",
+              "text": "Une véranda vue mer. Ma dune est là depuis toujours.",
+              "side": "l"
+            },
+            {
+              "who": "clemence",
+              "text": "Votre dune recule. Et j’ai la carte qui le prouve.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "a small town hall planning office, a big window behind showing dunes and the grey ocean. Gérard (short, potbellied, white tuft of hair, coral-red Hawaiian shirt, sunglasses on forehead) on the left proudly slaps the plans down on the desk; Clémence (tall, very thin, black bob, cobalt-blue blazer, silver glasses) sits on the right behind the desk and slowly slides a rolled map out of a drawer. wide shot",
+            "cast": [
+              "gerard",
+              "clemence"
+            ],
+            "file": "images/insolite-01.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 2,
+          "kind": "",
+          "tag": "Depuis 2021",
+          "caption": "Depuis la loi Climat de 2021, les communes menacées cartographient la côte dans 30 ans et dans 100 ans.",
+          "bubbles": [
+            {
+              "who": "clemence",
+              "text": "La ligne rouge, c’est la mer dans 30 ans. Votre jardin est dedans.",
+              "side": "r"
+            },
+            {
+              "who": "gerard",
+              "text": "Vous pouvez la décaler un peu ? C’est du crayon.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "over Gérard's shoulder: the map spread across the desk, the thick red line running right through a tiny drawn house; Clémence (tall, very thin, black bob, cobalt-blue blazer) on the right leans over it and taps the red line with her pencil; in the foreground Gérard (white tuft of hair, coral-red Hawaiian shirt) secretly reaches for an eraser. over-the-shoulder",
+            "cast": [
+              "gerard",
+              "clemence"
+            ],
+            "file": "images/insolite-02.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 3,
+          "kind": "explain",
+          "tag": "Pour mieux comprendre",
+          "title": "Ce que changent les deux lignes",
+          "steps": [
+            "Entre la mer et la ligne des 30 ans : on ne construit plus rien de neuf",
+            "Entre 30 et 100 ans : on peut construire, mais il faudra démolir quand la mer approchera",
+            "Plus de 370 communes adaptent ainsi leur urbanisme, de la Manche à la Méditerranée"
+          ],
+          "joke": "Une véranda, oui. Démontable, de préférence."
+        },
+        {
+          "n": 4,
+          "kind": "",
+          "tag": "2050",
+          "caption": "Selon le Cerema, organisme public d’expertise, environ 5 200 logements pourraient être atteints par la mer d’ici 2050.",
+          "bubbles": [
+            {
+              "who": "clemence",
+              "text": "Autant de logements qu’une petite ville entière.",
+              "side": "r"
+            },
+            {
+              "who": "gerard",
+              "text": "En 2050, j’aurai 98 ans. On en reparlera.",
+              "side": "l"
+            }
+          ],
+          "image": {
+            "prompt": "Clémence (tall, very thin, black bob, cobalt-blue blazer) on the right stands and stacks a tower of folders taller than herself on the desk, one by one; Gérard (short, potbellied, white tuft of hair, coral-red Hawaiian shirt) on the left counts on his fingers with a smug, unbothered smile, eyes half-closed. medium shot",
+            "cast": [
+              "clemence",
+              "gerard"
+            ],
+            "file": "images/insolite-04.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 5,
+          "kind": "photo",
+          "tag": "Le vrai lieu",
+          "title": "La plage de Soulac-sur-Mer, en Gironde",
+          "text": "Sur cette côte sableuse du Médoc, l’une de celles qui reculent le plus vite en France, les tempêtes de l’hiver 2013-2014 ont emporté des pans entiers de dune.",
+          "photo": {
+            "commons": "File:La plage de Soulac-sur-Mer embrumée à l'horizon.jpg"
+          }
+        },
+        {
+          "n": 6,
+          "kind": "",
+          "tag": "2100",
+          "caption": "Et si la mer monte d’un mètre d’ici 2100 sans digues entretenues, jusqu’à 450 000 logements seraient touchés.",
+          "bubbles": [
+            {
+              "who": "clemence",
+              "text": "Plus d’un logement français sur cent. C’est le pire des scénarios.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Gérard alone (short, potbellied, white tuft of hair, coral-red Hawaiian shirt, sunglasses on forehead) sits slumped on the office chair, silently folding his veranda plans into a little paper boat, staring blankly at it, shoulders drooping, a light-blue sweat drop. medium close-up",
+            "cast": [
+              "gerard"
+            ],
+            "file": "images/insolite-06.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        },
+        {
+          "n": 7,
+          "kind": "explain",
+          "tag": "Ce qui est sûr, ce qui ne l’est pas",
+          "title": "Une prévision, pas une prophétie",
+          "text": "Sûr : près d’un cinquième des côtes françaises recule déjà. Pas sûr : la vitesse exacte, qui dépend de la montée de la mer, donc du réchauffement, et des digues qu’on entretiendra. Les cartes sont revues régulièrement.",
+          "joke": "La ligne rouge n’est pas gravée. Juste très bien dessinée."
+        },
+        {
+          "n": 8,
+          "kind": "",
+          "tag": "En résumé",
+          "caption": "Oui : les communes menacées ont des cartes de la côte à 30 et 100 ans, et y règlent les constructions.",
+          "bubbles": [
+            {
+              "who": "gerard",
+              "text": "Une véranda vue mer. Sur roulettes.",
+              "side": "l"
+            },
+            {
+              "who": "clemence",
+              "text": "Ça, je peux tamponner.",
+              "side": "r"
+            }
+          ],
+          "image": {
+            "prompt": "Clémence (tall, very thin, black bob, cobalt-blue blazer, silver glasses) raises the stamp high above her head with both hands, beaming, about to slam it down on a new sheet of plans showing a small glass veranda on four big wheels, yellow sparkles around her. low angle",
+            "cast": [
+              "clemence"
+            ],
+            "file": "images/insolite-08.webp",
+            "status": "pending",
+            "attempts": 0
+          }
+        }
+      ],
+      "final": {
+        "text": "À Soulac-sur-Mer, l’immeuble Le Signal, bâti en 1967 à environ 200 mètres de l’océan, a été évacué en 2014 puis démoli en 2023 : la mer était à sa porte.",
+        "source": "L’info durable (AFP) — Le Signal, dix ans de bataille autour de l’érosion côtière"
+      },
+      "story": "Une partie des côtes françaises recule : près d’un cinquième du littoral, surtout les côtes sableuses et les falaises tendres, perd du terrain sous l’effet des vagues, des tempêtes et de la montée du niveau de la mer. L’exemple le plus célèbre est l’immeuble Le Signal, à Soulac-sur-Mer, en Gironde : construit en 1967 à environ 200 mètres de l’océan, il a été évacué en 2014, quand la dune s’est effondrée presque à ses pieds, puis démoli en 2023.\nPour ne plus construire là où la mer arrivera, la loi Climat et résilience de 2021 a changé les règles. Les communes inscrites sur une liste officielle, établie par décret en 2022 puis élargie, doivent cartographier deux zones : celle que la mer devrait atteindre d’ici 30 ans, où l’on ne peut plus construire de bâtiment neuf, et celle de 30 à 100 ans, où l’on peut encore construire à condition de démolir quand la côte s’approchera. Plus de 370 communes sont concernées.\nEn avril 2024, le Cerema, l’organisme public d’expertise sur les territoires, a publié des projections nationales : environ un millier de bâtiments pourraient être touchés dès 2028, environ 5 200 logements d’ici 2050, et jusqu’à 450 000 logements en 2100 dans le scénario le plus pessimiste, avec une mer plus haute d’un mètre et des digues qui ne seraient plus entretenues.\nCes chiffres sont des scénarios, pas des certitudes : la vitesse du recul dépendra du réchauffement climatique et des choix d’aménagement, et les cartes seront revues.",
+      "sources": [
+        {
+          "title": "Ministère de la Transition écologique — Érosion côtière : scénarios nationaux et cartographie (avril 2024)",
+          "url": "https://www.ecologie.gouv.fr/erosion-cotiere-christophe-bechu-presente-scenarios-nationaux-et-cartographie-nationales-ainsi"
+        },
+        {
+          "title": "Banque des Territoires — Érosion côtière : les principaux scénarios du Cerema sur la table",
+          "url": "https://www.banquedesterritoires.fr/erosion-cotiere-les-principaux-scenarios-du-cerema-sur-la-table"
+        },
+        {
+          "title": "Batiweb — Érosion littorale : 450 000 logements menacés en France à l’horizon 2100",
+          "url": "https://www.batiweb.com/actualites/prevention/erosion-littorale-450-000-logements-menaces-en-france-a-l-horizon-2100-46536"
+        },
+        {
+          "title": "Weka — Un millier de bâtiments pourraient être touchés par l’érosion côtière en 2028",
+          "url": "https://www.weka.fr/actualite/?p=179162"
+        },
+        {
+          "title": "Weka — Recul du trait de côte : plus de 370 communes adapteront l’urbanisme",
+          "url": "https://www.weka.fr/actualite/?p=211386"
+        },
+        {
+          "title": "Banque des Territoires — Érosion côtière : une liste de 126 communes établie",
+          "url": "https://www.banquedesterritoires.fr/prise-en-compte-de-lerosion-cotiere-dans-les-documents-durbanisme-une-liste-de-126-communes-etablie"
+        },
+        {
+          "title": "L’info durable (AFP) — Le Signal, dix ans de bataille autour de l’érosion côtière",
+          "url": "https://www.linfodurable.fr/le-signal-dix-ans-de-bataille-autour-de-lerosion-cotiere-36724"
+        },
+        {
+          "title": "Service-public.fr — Érosion côtière",
+          "url": "https://www.service-public.gouv.fr/particuliers/actualites/A18977"
+        },
+        {
+          "title": "Wikimedia Commons — La plage de Soulac-sur-Mer embrumée à l’horizon",
+          "url": "https://download.osmand.net/wiki/File:La_plage_de_Soulac-sur-Mer_embrum%C3%A9e_%C3%A0_l%27horizon.jpg"
+        }
+      ]
+    }
+  ]
+}
