@@ -39,7 +39,7 @@
         }
       ],
       "cover": {
-        "prompt": "in the cluttered provincial print shop: Poulet-Malassis (short, plump, bald with brown mutton chops, ochre-orange apron) on the right raises the wooden ruler to swat the roach running across the proofs; on the left Baudelaire (tall, thin, receding dark hair, midnight-blue frock coat, crimson cravat) shields the little insect with his hand, looking tragically moved. medium wide shot",
+        "prompt": "in the cluttered provincial print shop: Poulet-Malassis (short, plump, bald with brown mutton chops, ochre-orange apron) on the right raises the wooden ruler to swat the roach running across the proofs; on the left Baudelaire (tall, thin, receding dark hair, midnight-blue frock coat, crimson cravat) shields the little insect (no bigger than his thumb) with his cupped hand, looking tragically moved. The proof sheets are completely blank white paper, no name plates, no labels, no writing anywhere. medium wide shot",
         "cast": [
           "baudelaire",
           "malassis"
@@ -47,6 +47,7 @@
         "file": "images/origine-cover.webp",
         "status": "done",
         "attempts": 1,
+        "redo": true,
         "via": "premium"
       },
       "cases": [
@@ -76,6 +77,7 @@
             "file": "images/origine-01.webp",
             "status": "done",
             "attempts": 1,
+            "qa": "ok",
             "via": "premium"
           }
         },
@@ -104,7 +106,8 @@
             ],
             "file": "images/origine-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -144,7 +147,8 @@
             ],
             "file": "images/origine-04.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -182,7 +186,8 @@
             ],
             "file": "images/origine-06.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         }
       ],

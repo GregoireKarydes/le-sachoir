@@ -48,6 +48,7 @@
         "file": "images/cultureg-cover.webp",
         "status": "done",
         "attempts": 1,
+        "qa": "ok",
         "via": "premium"
       },
       "cases": [
@@ -77,6 +78,7 @@
             "file": "images/cultureg-01.webp",
             "status": "done",
             "attempts": 1,
+            "qa": "ok",
             "via": "premium"
           }
         },
@@ -105,7 +107,8 @@
             ],
             "file": "images/cultureg-02.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -133,7 +136,8 @@
             ],
             "file": "images/cultureg-03.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -174,7 +178,8 @@
             ],
             "file": "images/cultureg-05.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -206,7 +211,8 @@
             ],
             "file": "images/cultureg-07.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "qa": "ok"
           }
         },
         {
@@ -222,13 +228,14 @@
             }
           ],
           "image": {
-            "prompt": "Sylvie alone (short, wiry, grey-blond beehive bun, only her face visible) wearing three puffy anoraks stacked on top of each other, so round she can barely move her arms, looking straight at the reader with a defiant little smile, the pricegun still in one hand. close-up",
+            "prompt": "Sylvie alone (short, wiry, grey-blond beehive bun pierced with pencils) bundled in three thick puffy anoraks worn one over the other, a red one over a yellow one over a purple one, three collars visible stacked up to her chin, her body a huge round ball, arms sticking out stiffly sideways, looking straight at the reader with a defiant little smile, the pricegun in one hand; plain empty wall behind her, no signs. medium close-up",
             "cast": [
               "sylvie"
             ],
             "file": "images/cultureg-08.webp",
             "status": "done",
-            "attempts": 1
+            "attempts": 1,
+            "redo": true
           }
         }
       ],
