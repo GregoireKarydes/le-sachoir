@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-28",
+  "kind": "film",
+  "style": "ipad-sketch",
+  "slot": "origine",
+  "time": "07:45",
+  "story": {"edition": "2026-11-26", "format": "origine"},
+  "question": "Pourquoi on dit « mettre les points sur les i » ?",
+  "answer": "On dit « mettre les points sur les i » parce qu'au Moyen Âge, les lettres i, m, n et u s'écrivaient avec les mêmes petits bâtons : pour reconnaître le i, les copistes l'ont coiffé d'un trait, devenu notre point avec l'imprimerie. Mettre ce point, c'est ne laisser aucun doute.",
+  "chain": [
+    "au Moyen Âge, les copistes forment i, m, n et u avec les mêmes petits traits verticaux, les jambages",
+    "collés les uns aux autres, ces bâtons deviennent illisibles : on ne sait plus où finit une lettre",
+    "alors, dès le XIe siècle, les copistes ajoutent un petit trait au-dessus du i pour le repérer",
+    "avec les caractères d'imprimerie, à la fin des années 1400, ce trait rétrécit et devient un point",
+    "mettre les points sur les i, c'est donc rendre un mot impossible à lire de travers : ne laisser aucun doute"
+  ],
+  "hooks": [
+    {"formula": 106, "text": "Ça, c'est « minimum » sans points sur les i. / Pourquoi des points ? Et pourquoi le i ? / Ton mail agacé cache mille ans d'histoire."},
+    {"formula": 104, "text": "On ne parle pas assez du fait que le i n'avait pas de point. / Et tout le monde le lui a mis. / Ton prochain mail agacé saura pourquoi."},
+    {"formula": 101, "text": "Tout le monde met les points sur les i. Personne ne sait pourquoi. / La réponse tient en quinze bâtons. / Après ça, tu ne regardes plus un i pareil."}
+  ],
+  "hook_formula": 106,
+  "band": "METTRE LES POINTS\nSUR LES I ?",
+  "film": {
+    "end": {"url": "lesachoir.fr"},
+    "scene": "scene.js",
+    "direction": {
+      "idee": "Une palissade de quinze bâtons de plume, le mot « minimum » écrit à la gothique, que personne ne sait lire : la caméra la longe comme un œil qui lit, s'en échappe (un point qui tombe, un mail agacé, la table des lettres, un moine vexé, une presse) et y revient, quand deux points suffisent à la rendre lisible.",
+      "signature": "La palissade devient un mot : le stylet coiffe chaque i d'un trait corail, puis les lettres se colorent une à une et « m i n i m u m » s'écrit dessous, pendant que la caméra se redresse d'une rotation.",
+      "plans": [
+        {"plan": 0, "cadrage": "très gros plan puis plan large", "angle": "penché qui se redresse", "mouvement": "travelling latéral qui suit le stylet, puis recul", "transition": "ouverture directe sur les bâtons en train de s'aligner", "texte": "slam", "pourquoi": "arrêter le pouce : un mot qu'on connaît, illisible sous nos yeux"},
+        {"plan": 1, "cadrage": "plan moyen", "angle": "face", "mouvement": "filé latéral puis poussée lente", "transition": "filé (whip)", "texte": "type", "pourquoi": "la curiosité : un bâton géant, un point corail qui tombe dessus, un « ? »"},
+        {"plan": 2, "cadrage": "insert", "angle": "vue du dessus penchée", "mouvement": "poussée", "transition": "coupe franche", "texte": "pop", "pourquoi": "le verrou : le mail agacé de tous les jours, « Je mets les points sur les i. »"},
+        {"plan": 3, "cadrage": "plan large puis très gros plan", "angle": "face", "mouvement": "zoom brutal avec rebond", "transition": "coupe franche", "texte": "highlight", "pourquoi": "la réponse : sous la loupe, un seul bâton surligné, c'est le i qu'il faut reconnaître"},
+        {"plan": 4, "cadrage": "plan moyen", "angle": "face", "mouvement": "panoramique vertical", "transition": "coupe franche", "texte": "rise", "pourquoi": "la raison : i = 1 bâton, n = 2, u = 2, m = 3"},
+        {"plan": 5, "cadrage": "très gros plan", "angle": "légèrement penché", "mouvement": "travelling latéral à ras des bâtons, caméra à l'épaule", "transition": "coupe franche", "texte": "stamp", "pourquoi": "collés, les bâtons ne se lisent plus : tampon « ILLISIBLE »"},
+        {"plan": 6, "cadrage": "plan moyen puis plan large", "angle": "rotation qui se redresse", "mouvement": "poussée tournante puis recul", "transition": "coupe franche", "texte": "slam", "pourquoi": "le plan signature : les traits corail sur les i, et la palissade devient « minimum »"},
+        {"plan": 7, "cadrage": "gros plan", "angle": "contre-plongée penchée", "mouvement": "caméra à l'épaule, légère poussée", "transition": "coupe franche", "texte": "bulle de Frère Odon", "pourquoi": "l'exemple vécu : le copiste vaniteux et son trait pour ceux qui lisent mal"},
+        {"plan": 8, "cadrage": "plan moyen", "angle": "face", "mouvement": "panoramique vertical qui accélère, secousse à l'impact", "transition": "coupe franche puis flash", "texte": "count", "pourquoi": "la presse tombe, le trait se ramasse en point : 1000 devient 1500"},
+        {"plan": 9, "cadrage": "plan large", "angle": "face", "mouvement": "filé puis longue remontée, dérive lente", "transition": "filé (whip)", "texte": "focus", "pourquoi": "la boucle : même cadre qu'à la fin du plan 0, mais les points sont là et « minimum » se lit"}
+      ]
+    },
+    "beats": [
+      {"who": "narr", "text": "Ça, c'est « minimum » sans points sur les i.", "set": "page", "big": "« Minimum » ?", "cold": true, "tag": "Expressions", "image": {"bd": 2}},
+      {"who": "narr", "text": "Pourquoi des points ? Et pourquoi le i ?", "set": "loupe", "big": "Pourquoi le i ?"},
+      {"who": "narr", "text": "Ton mail agacé cache mille ans d'histoire.", "set": "plan-de-travail", "big": "1000 ans dans ton mail", "image": {"bd": 1}},
+      {"who": "narr", "text": "Les points sur les i servaient à reconnaître les i.", "set": "loupe", "big": "Pour reconnaître le i", "pause": 0.3, "image": {"bd": 5}},
+      {"who": "narr", "text": "Au Moyen Âge, i, m, n, u : que des bâtons.", "say": "Au Moyen Âge, i, emme, enne, u : que des bâtons.", "set": "nuancier", "big": "i, n, u, m : des bâtons", "tag": "Moyen Âge"},
+      {"who": "narr", "text": "Collés, ces bâtons deviennent illisibles.", "set": "coupe", "big": "Illisible", "image": {"bd": 2}},
+      {"who": "narr", "text": "Alors les moines coiffent chaque i d'un petit trait.", "set": "frise", "big": "Un trait sur le i", "tag": "XIe siècle", "image": {"bd": 4}},
+      {"who": "perso", "name": "Frère Odon", "text": "Un trait par i. Pour les gens qui lisent mal.", "set": "page", "big": "Le copiste vexé", "image": {"bd": 4}},
+      {"who": "narr", "text": "Vers 1500, l'imprimerie réduit ce trait en point.", "say": "Vers quinze cents, l'imprimerie réduit ce trait en point.", "set": "frise", "big": "Le trait devient point", "tag": "fin des années 1400", "image": {"bd": 6}},
+      {"who": "narr", "text": "Voilà pourquoi les points sur les i ne laissent aucun doute.", "set": "page", "big": "Aucun doute", "image": {"bd": 8}}
+    ]
+  },
+  "caption": "Ça, c'est « minimum » sans points sur les i.\n\nAu Moyen Âge, les copistes écrivaient i, m, n et u avec les mêmes petits bâtons, les jambages. Collés, ils devenaient illisibles. Dès le XIe siècle, ils coiffent donc le i d'un trait pour le repérer, et l'imprimerie de la fin des années 1400 en fait notre point. Mettre les points sur les i, c'est ne laisser aucun doute.\n\nEt ça, maintenant, tu le sais. Quelle expression on décortique demain ? Écris-la en commentaire.",
+  "first_comment": "Bonus : le I majuscule n'a jamais eu de point, il se voit très bien tout seul. Et ce petit point a même un nom en anglais, le « tittle ». Tu en connais d'autres, des expressions nées de l'écriture ?",
+  "hashtags": ["lesachoir", "culturegenerale", "expressionsfrancaises", "etymologie", "moyenage"],
+  "sources": [
+    "https://dictionnaire-academie.fr/article/A9I0001",
+    "https://www.dictionary.com/e/tittle/",
+    "https://www.expressio.fr/expressions/mettre-les-points-sur-les-i",
+    "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Minim_(palaeography)"
+  ]
+}
